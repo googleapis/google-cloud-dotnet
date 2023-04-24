@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Gaming.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Gaming.V1Beta;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;

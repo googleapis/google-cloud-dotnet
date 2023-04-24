@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Talent.V4.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START jobs_v4_generated_JobService_DeleteJob_async]
     using Google.Cloud.Talent.V4;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Vision.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START vision_v1_generated_ProductSearch_GetProduct_async]
     using Google.Cloud.Vision.V1;

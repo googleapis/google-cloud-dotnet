@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v2_generated_KnowledgeBases_ListKnowledgeBases_async_flattened_resourceNames2]
     using Google.Api.Gax;

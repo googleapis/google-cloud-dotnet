@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dlp.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dlp_v2_generated_DlpService_GetInspectTemplate_async_flattened_resourceNames]
     using Google.Cloud.Dlp.V2;

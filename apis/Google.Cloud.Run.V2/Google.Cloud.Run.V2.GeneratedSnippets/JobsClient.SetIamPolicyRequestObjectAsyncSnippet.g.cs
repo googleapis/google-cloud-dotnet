@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Jobs_SetIamPolicy_async]
     using Google.Api.Gax;
@@ -38,7 +38,7 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task SetIamPolicyRequestObjectAsync()
         {
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {

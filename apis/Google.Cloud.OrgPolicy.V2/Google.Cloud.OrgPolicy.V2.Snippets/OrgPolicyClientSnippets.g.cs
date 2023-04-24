@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.OrgPolicy.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.OrgPolicy.V2;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;

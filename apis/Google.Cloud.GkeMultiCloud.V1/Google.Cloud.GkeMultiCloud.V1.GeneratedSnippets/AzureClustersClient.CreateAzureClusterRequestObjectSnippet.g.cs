@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.GkeMultiCloud.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START gkemulticloud_v1_generated_AzureClusters_CreateAzureCluster_sync]
     using Google.Api.Gax.ResourceNames;

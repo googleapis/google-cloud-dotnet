@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ApigeeRegistry.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START apigeeregistry_v1_generated_Provisioning_DeleteInstance_async_flattened]
     using Google.Cloud.ApigeeRegistry.V1;

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2_generated_CloudTasks_GetTask_async]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Tasks.V2.Snippets
         public async Task GetTaskRequestObjectAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            GetTaskRequest request = new GetTaskRequest
+            gctv::GetTaskRequest request = new gctv::GetTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                TaskName = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
                 ResponseView = gctv::Task.Types.View.Unspecified,
             };
             // Make the request

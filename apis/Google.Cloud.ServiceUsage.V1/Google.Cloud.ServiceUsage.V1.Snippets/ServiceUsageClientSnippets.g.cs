@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ServiceUsage.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.ServiceUsage.V1;
     using Google.LongRunning;
     using System;
     using System.Linq;

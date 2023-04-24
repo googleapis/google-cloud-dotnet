@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Domains.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START domains_v1beta1_generated_Domains_RetrieveRegisterParameters_async]
     using Google.Api.Gax.ResourceNames;

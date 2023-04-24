@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_MetadataService_DeleteEntity_async]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task DeleteEntityRequestObjectAsync()
         {
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteEntityRequest request = new DeleteEntityRequest
+            gcdv::DeleteEntityRequest request = new gcdv::DeleteEntityRequest
             {
-                EntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                EntityName = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
                 Etag = "",
             };
             // Make the request

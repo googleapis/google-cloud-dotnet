@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2_generated_CloudTasks_ListTasks_async_flattened_resourceNames]
     using Google.Api.Gax;
@@ -38,11 +38,11 @@ namespace Google.Cloud.Tasks.V2.Snippets
         public async Task ListTasksResourceNamesAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            QueueName parent = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            gctv::QueueName parent = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(parent);
+            PagedAsyncEnumerable<gctv::ListTasksResponse, gctv::Task> response = cloudTasksClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gctv::Task item) =>
@@ -52,7 +52,7 @@ namespace Google.Cloud.Tasks.V2.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gctv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

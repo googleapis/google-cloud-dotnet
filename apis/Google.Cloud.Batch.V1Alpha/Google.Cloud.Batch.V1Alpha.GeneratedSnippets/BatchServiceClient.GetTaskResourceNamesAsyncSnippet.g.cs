@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Batch.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START batch_v1alpha_generated_BatchService_GetTask_async_flattened_resourceNames]
     using System.Threading.Tasks;
@@ -35,9 +35,9 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         public async Task GetTaskResourceNamesAsync()
         {
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationJobTaskGroupTask("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]", "[TASK]");
+            gcbv::TaskName name = gcbv::TaskName.FromProjectLocationJobTaskGroupTask("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]", "[TASK]");
             // Make the request
             gcbv::Task response = await batchServiceClient.GetTaskAsync(name);
         }

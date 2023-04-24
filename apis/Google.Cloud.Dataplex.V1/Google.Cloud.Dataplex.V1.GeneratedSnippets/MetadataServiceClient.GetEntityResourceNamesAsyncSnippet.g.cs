@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_MetadataService_GetEntity_async_flattened_resourceNames]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task GetEntityResourceNamesAsync()
         {
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            EntityName name = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            gcdv::EntityName name = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
             // Make the request
-            Entity response = await metadataServiceClient.GetEntityAsync(name);
+            gcdv::Entity response = await metadataServiceClient.GetEntityAsync(name);
         }
     }
     // [END dataplex_v1_generated_MetadataService_GetEntity_async_flattened_resourceNames]

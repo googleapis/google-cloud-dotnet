@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START analyticshub_v1beta1_generated_AnalyticsHubService_UpdateDataExchange_async_flattened]
     using Google.Cloud.BigQuery.DataExchange.V1Beta1;

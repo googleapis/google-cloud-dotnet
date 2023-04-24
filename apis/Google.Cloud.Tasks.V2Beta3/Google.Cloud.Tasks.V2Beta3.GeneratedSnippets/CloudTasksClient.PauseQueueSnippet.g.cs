@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Tasks.V2Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2beta3_generated_CloudTasks_PauseQueue_sync_flattened]
     using Google.Cloud.Tasks.V2Beta3;

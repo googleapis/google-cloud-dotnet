@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.NetworkConnectivity.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START networkconnectivity_v1_generated_HubService_UpdateSpoke_async]
     using Google.Cloud.NetworkConnectivity.V1;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Tpu.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START tpu_v1_generated_Tpu_GetNode_sync]
     using Google.Cloud.Tpu.V1;

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.DataFusion.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
@@ -35,15 +35,15 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: ListAvailableVersions(ListAvailableVersionsRequest, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
-            ListAvailableVersionsRequest request = new ListAvailableVersionsRequest
+            gcdv::ListAvailableVersionsRequest request = new gcdv::ListAvailableVersionsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 LatestPatchOnly = false,
             };
             // Make the request
-            PagedEnumerable<ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersions(request);
+            PagedEnumerable<gcdv::ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Version item in response)
@@ -53,7 +53,7 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAvailableVersionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListAvailableVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -84,15 +84,15 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: ListAvailableVersionsAsync(ListAvailableVersionsRequest, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
-            ListAvailableVersionsRequest request = new ListAvailableVersionsRequest
+            gcdv::ListAvailableVersionsRequest request = new gcdv::ListAvailableVersionsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 LatestPatchOnly = false,
             };
             // Make the request
-            PagedAsyncEnumerable<ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersionsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Version item) =>
@@ -102,7 +102,7 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAvailableVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListAvailableVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -133,11 +133,11 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: ListAvailableVersions(string, string, int?, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersions(parent);
+            PagedEnumerable<gcdv::ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Version item in response)
@@ -147,7 +147,7 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAvailableVersionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListAvailableVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -178,11 +178,11 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: ListAvailableVersionsAsync(string, string, int?, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Version item) =>
@@ -192,7 +192,7 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAvailableVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListAvailableVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -223,11 +223,11 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: ListAvailableVersions(LocationName, string, int?, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersions(parent);
+            PagedEnumerable<gcdv::ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdv::Version item in response)
@@ -237,7 +237,7 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAvailableVersionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListAvailableVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -268,11 +268,11 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: ListAvailableVersionsAsync(LocationName, string, int?, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Version item) =>
@@ -282,7 +282,7 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAvailableVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListAvailableVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -313,30 +313,30 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: ListInstances(ListInstancesRequest, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
-            ListInstancesRequest request = new ListInstancesRequest
+            gcdv::ListInstancesRequest request = new gcdv::ListInstancesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListInstancesResponse, Instance> response = dataFusionClient.ListInstances(request);
+            PagedEnumerable<gcdv::ListInstancesResponse, gcdv::Instance> response = dataFusionClient.ListInstances(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Instance item in response)
+            foreach (gcdv::Instance item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListInstancesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListInstancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Instance item in page)
+                foreach (gcdv::Instance item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -345,10 +345,10 @@ namespace Google.Cloud.DataFusion.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Instance> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Instance> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Instance item in singlePage)
+            foreach (gcdv::Instance item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -363,30 +363,30 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: ListInstancesAsync(ListInstancesRequest, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
-            ListInstancesRequest request = new ListInstancesRequest
+            gcdv::ListInstancesRequest request = new gcdv::ListInstancesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListInstancesResponse, Instance> response = dataFusionClient.ListInstancesAsync(request);
+            PagedAsyncEnumerable<gcdv::ListInstancesResponse, gcdv::Instance> response = dataFusionClient.ListInstancesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Instance item) =>
+            await response.ForEachAsync((gcdv::Instance item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListInstancesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Instance item in page)
+                foreach (gcdv::Instance item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -395,10 +395,10 @@ namespace Google.Cloud.DataFusion.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Instance> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Instance> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Instance item in singlePage)
+            foreach (gcdv::Instance item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -413,14 +413,14 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: GetInstance(GetInstanceRequest, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
-            GetInstanceRequest request = new GetInstanceRequest
+            gcdv::GetInstanceRequest request = new gcdv::GetInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = gcdv::InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
-            Instance response = dataFusionClient.GetInstance(request);
+            gcdv::Instance response = dataFusionClient.GetInstance(request);
             // End snippet
         }
 
@@ -430,14 +430,14 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             // Snippet: GetInstanceAsync(GetInstanceRequest, CallSettings)
             // Additional: GetInstanceAsync(GetInstanceRequest, CancellationToken)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
-            GetInstanceRequest request = new GetInstanceRequest
+            gcdv::GetInstanceRequest request = new gcdv::GetInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = gcdv::InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
-            Instance response = await dataFusionClient.GetInstanceAsync(request);
+            gcdv::Instance response = await dataFusionClient.GetInstanceAsync(request);
             // End snippet
         }
 
@@ -446,31 +446,31 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: CreateInstance(CreateInstanceRequest, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
-            CreateInstanceRequest request = new CreateInstanceRequest
+            gcdv::CreateInstanceRequest request = new gcdv::CreateInstanceRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 InstanceId = "",
-                Instance = new Instance(),
+                Instance = new gcdv::Instance(),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = dataFusionClient.CreateInstance(request);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> response = dataFusionClient.CreateInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Instance, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcdv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = dataFusionClient.PollOnceCreateInstance(operationName);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> retrievedResponse = dataFusionClient.PollOnceCreateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcdv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -481,31 +481,31 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             // Snippet: CreateInstanceAsync(CreateInstanceRequest, CallSettings)
             // Additional: CreateInstanceAsync(CreateInstanceRequest, CancellationToken)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
-            CreateInstanceRequest request = new CreateInstanceRequest
+            gcdv::CreateInstanceRequest request = new gcdv::CreateInstanceRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 InstanceId = "",
-                Instance = new Instance(),
+                Instance = new gcdv::Instance(),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await dataFusionClient.CreateInstanceAsync(request);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> response = await dataFusionClient.CreateInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Instance, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcdv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceCreateInstanceAsync(operationName);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceCreateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcdv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -515,28 +515,28 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: CreateInstance(string, Instance, string, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Instance instance = new Instance();
+            gcdv::Instance instance = new gcdv::Instance();
             string instanceId = "";
             // Make the request
-            Operation<Instance, OperationMetadata> response = dataFusionClient.CreateInstance(parent, instance, instanceId);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> response = dataFusionClient.CreateInstance(parent, instance, instanceId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Instance, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcdv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = dataFusionClient.PollOnceCreateInstance(operationName);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> retrievedResponse = dataFusionClient.PollOnceCreateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcdv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -547,28 +547,28 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             // Snippet: CreateInstanceAsync(string, Instance, string, CallSettings)
             // Additional: CreateInstanceAsync(string, Instance, string, CancellationToken)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Instance instance = new Instance();
+            gcdv::Instance instance = new gcdv::Instance();
             string instanceId = "";
             // Make the request
-            Operation<Instance, OperationMetadata> response = await dataFusionClient.CreateInstanceAsync(parent, instance, instanceId);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> response = await dataFusionClient.CreateInstanceAsync(parent, instance, instanceId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Instance, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcdv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceCreateInstanceAsync(operationName);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceCreateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcdv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -578,28 +578,28 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: CreateInstance(LocationName, Instance, string, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Instance instance = new Instance();
+            gcdv::Instance instance = new gcdv::Instance();
             string instanceId = "";
             // Make the request
-            Operation<Instance, OperationMetadata> response = dataFusionClient.CreateInstance(parent, instance, instanceId);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> response = dataFusionClient.CreateInstance(parent, instance, instanceId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Instance, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcdv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = dataFusionClient.PollOnceCreateInstance(operationName);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> retrievedResponse = dataFusionClient.PollOnceCreateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcdv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -610,28 +610,28 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             // Snippet: CreateInstanceAsync(LocationName, Instance, string, CallSettings)
             // Additional: CreateInstanceAsync(LocationName, Instance, string, CancellationToken)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            Instance instance = new Instance();
+            gcdv::Instance instance = new gcdv::Instance();
             string instanceId = "";
             // Make the request
-            Operation<Instance, OperationMetadata> response = await dataFusionClient.CreateInstanceAsync(parent, instance, instanceId);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> response = await dataFusionClient.CreateInstanceAsync(parent, instance, instanceId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Instance, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcdv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceCreateInstanceAsync(operationName);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceCreateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcdv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -641,24 +641,24 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: DeleteInstance(DeleteInstanceRequest, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
-            DeleteInstanceRequest request = new DeleteInstanceRequest
+            gcdv::DeleteInstanceRequest request = new gcdv::DeleteInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = gcdv::InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataFusionClient.DeleteInstance(request);
+            Operation<Empty, gcdv::OperationMetadata> response = dataFusionClient.DeleteInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataFusionClient.PollOnceDeleteInstance(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataFusionClient.PollOnceDeleteInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -674,24 +674,24 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             // Snippet: DeleteInstanceAsync(DeleteInstanceRequest, CallSettings)
             // Additional: DeleteInstanceAsync(DeleteInstanceRequest, CancellationToken)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteInstanceRequest request = new DeleteInstanceRequest
+            gcdv::DeleteInstanceRequest request = new gcdv::DeleteInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = gcdv::InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataFusionClient.DeleteInstanceAsync(request);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataFusionClient.DeleteInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceDeleteInstanceAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceDeleteInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -706,21 +706,21 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: DeleteInstance(string, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataFusionClient.DeleteInstance(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataFusionClient.DeleteInstance(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataFusionClient.PollOnceDeleteInstance(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataFusionClient.PollOnceDeleteInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -736,21 +736,21 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             // Snippet: DeleteInstanceAsync(string, CallSettings)
             // Additional: DeleteInstanceAsync(string, CancellationToken)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataFusionClient.DeleteInstanceAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataFusionClient.DeleteInstanceAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceDeleteInstanceAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceDeleteInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -765,21 +765,21 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: DeleteInstance(InstanceName, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
-            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            gcdv::InstanceName name = gcdv::InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = dataFusionClient.DeleteInstance(name);
+            Operation<Empty, gcdv::OperationMetadata> response = dataFusionClient.DeleteInstance(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = dataFusionClient.PollOnceDeleteInstance(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = dataFusionClient.PollOnceDeleteInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -795,21 +795,21 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             // Snippet: DeleteInstanceAsync(InstanceName, CallSettings)
             // Additional: DeleteInstanceAsync(InstanceName, CancellationToken)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            gcdv::InstanceName name = gcdv::InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = await dataFusionClient.DeleteInstanceAsync(name);
+            Operation<Empty, gcdv::OperationMetadata> response = await dataFusionClient.DeleteInstanceAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceDeleteInstanceAsync(operationName);
+            Operation<Empty, gcdv::OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceDeleteInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -824,30 +824,30 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: UpdateInstance(UpdateInstanceRequest, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
-            UpdateInstanceRequest request = new UpdateInstanceRequest
+            gcdv::UpdateInstanceRequest request = new gcdv::UpdateInstanceRequest
             {
-                Instance = new Instance(),
+                Instance = new gcdv::Instance(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = dataFusionClient.UpdateInstance(request);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> response = dataFusionClient.UpdateInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Instance, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcdv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = dataFusionClient.PollOnceUpdateInstance(operationName);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> retrievedResponse = dataFusionClient.PollOnceUpdateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcdv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -858,30 +858,30 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             // Snippet: UpdateInstanceAsync(UpdateInstanceRequest, CallSettings)
             // Additional: UpdateInstanceAsync(UpdateInstanceRequest, CancellationToken)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateInstanceRequest request = new UpdateInstanceRequest
+            gcdv::UpdateInstanceRequest request = new gcdv::UpdateInstanceRequest
             {
-                Instance = new Instance(),
+                Instance = new gcdv::Instance(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await dataFusionClient.UpdateInstanceAsync(request);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> response = await dataFusionClient.UpdateInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Instance, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcdv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceUpdateInstanceAsync(operationName);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceUpdateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcdv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -891,27 +891,27 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: UpdateInstance(Instance, FieldMask, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
-            Instance instance = new Instance();
+            gcdv::Instance instance = new gcdv::Instance();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Instance, OperationMetadata> response = dataFusionClient.UpdateInstance(instance, updateMask);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> response = dataFusionClient.UpdateInstance(instance, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Instance, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcdv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = dataFusionClient.PollOnceUpdateInstance(operationName);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> retrievedResponse = dataFusionClient.PollOnceUpdateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcdv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -922,27 +922,27 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             // Snippet: UpdateInstanceAsync(Instance, FieldMask, CallSettings)
             // Additional: UpdateInstanceAsync(Instance, FieldMask, CancellationToken)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
-            Instance instance = new Instance();
+            gcdv::Instance instance = new gcdv::Instance();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<Instance, OperationMetadata> response = await dataFusionClient.UpdateInstanceAsync(instance, updateMask);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> response = await dataFusionClient.UpdateInstanceAsync(instance, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Instance, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcdv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceUpdateInstanceAsync(operationName);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceUpdateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcdv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -952,29 +952,29 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         {
             // Snippet: RestartInstance(RestartInstanceRequest, CallSettings)
             // Create client
-            DataFusionClient dataFusionClient = DataFusionClient.Create();
+            gcdv::DataFusionClient dataFusionClient = gcdv::DataFusionClient.Create();
             // Initialize request argument(s)
-            RestartInstanceRequest request = new RestartInstanceRequest
+            gcdv::RestartInstanceRequest request = new gcdv::RestartInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = gcdv::InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = dataFusionClient.RestartInstance(request);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> response = dataFusionClient.RestartInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcdv::Instance, gcdv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcdv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = dataFusionClient.PollOnceRestartInstance(operationName);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> retrievedResponse = dataFusionClient.PollOnceRestartInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcdv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -985,29 +985,29 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             // Snippet: RestartInstanceAsync(RestartInstanceRequest, CallSettings)
             // Additional: RestartInstanceAsync(RestartInstanceRequest, CancellationToken)
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
-            RestartInstanceRequest request = new RestartInstanceRequest
+            gcdv::RestartInstanceRequest request = new gcdv::RestartInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                InstanceName = gcdv::InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await dataFusionClient.RestartInstanceAsync(request);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> response = await dataFusionClient.RestartInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Instance, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcdv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceRestartInstanceAsync(operationName);
+            Operation<gcdv::Instance, gcdv::OperationMetadata> retrievedResponse = await dataFusionClient.PollOnceRestartInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcdv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

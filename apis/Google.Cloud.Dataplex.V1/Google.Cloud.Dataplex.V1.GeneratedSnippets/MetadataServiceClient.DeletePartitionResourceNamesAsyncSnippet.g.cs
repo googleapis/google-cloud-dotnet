@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_MetadataService_DeletePartition_async_flattened_resourceNames]
     using System.Threading.Tasks;
@@ -35,9 +35,9 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task DeletePartitionResourceNamesAsync()
         {
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            PartitionName name = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]");
+            gcdv::PartitionName name = gcdv::PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]");
             // Make the request
             await metadataServiceClient.DeletePartitionAsync(name);
         }

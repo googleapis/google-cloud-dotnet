@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Deploy.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START clouddeploy_v1_generated_CloudDeploy_GetTarget_sync_flattened_resourceNames]
     using Google.Cloud.Deploy.V1;

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Services_GetService_async]
     using System.Threading.Tasks;
@@ -35,14 +35,14 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task GetServiceRequestObjectAsync()
         {
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
-            GetServiceRequest request = new GetServiceRequest
+            gcrv::GetServiceRequest request = new gcrv::GetServiceRequest
             {
-                ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                ServiceName = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
             };
             // Make the request
-            Service response = await servicesClient.GetServiceAsync(request);
+            gcrv::Service response = await servicesClient.GetServiceAsync(request);
         }
     }
     // [END run_v2_generated_Services_GetService_async]

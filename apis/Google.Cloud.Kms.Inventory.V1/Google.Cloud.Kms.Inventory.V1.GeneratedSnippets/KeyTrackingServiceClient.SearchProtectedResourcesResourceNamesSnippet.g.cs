@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Kms.Inventory.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START kmsinventory_v1_generated_KeyTrackingService_SearchProtectedResources_sync_flattened_resourceNames]
     using Google.Api.Gax;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.Migration.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START bigquerymigration_v2_generated_MigrationService_GetMigrationWorkflow_async_flattened]
     using Google.Cloud.BigQuery.Migration.V2;

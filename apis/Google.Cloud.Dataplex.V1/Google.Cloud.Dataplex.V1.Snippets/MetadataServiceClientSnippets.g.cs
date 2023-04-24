@@ -14,12 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+#pragma warning disable CS8981
+
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using gcdv = Google.Cloud.Dataplex.V1;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedMetadataServiceClientSnippets
@@ -29,16 +32,16 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateEntity(CreateEntityRequest, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            CreateEntityRequest request = new CreateEntityRequest
+            gcdv::CreateEntityRequest request = new gcdv::CreateEntityRequest
             {
-                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
-                Entity = new Entity(),
+                ParentAsZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                Entity = new gcdv::Entity(),
                 ValidateOnly = false,
             };
             // Make the request
-            Entity response = metadataServiceClient.CreateEntity(request);
+            gcdv::Entity response = metadataServiceClient.CreateEntity(request);
             // End snippet
         }
 
@@ -48,16 +51,16 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateEntityAsync(CreateEntityRequest, CallSettings)
             // Additional: CreateEntityAsync(CreateEntityRequest, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateEntityRequest request = new CreateEntityRequest
+            gcdv::CreateEntityRequest request = new gcdv::CreateEntityRequest
             {
-                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
-                Entity = new Entity(),
+                ParentAsZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                Entity = new gcdv::Entity(),
                 ValidateOnly = false,
             };
             // Make the request
-            Entity response = await metadataServiceClient.CreateEntityAsync(request);
+            gcdv::Entity response = await metadataServiceClient.CreateEntityAsync(request);
             // End snippet
         }
 
@@ -66,12 +69,12 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateEntity(string, Entity, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
-            Entity entity = new Entity();
+            gcdv::Entity entity = new gcdv::Entity();
             // Make the request
-            Entity response = metadataServiceClient.CreateEntity(parent, entity);
+            gcdv::Entity response = metadataServiceClient.CreateEntity(parent, entity);
             // End snippet
         }
 
@@ -81,12 +84,12 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateEntityAsync(string, Entity, CallSettings)
             // Additional: CreateEntityAsync(string, Entity, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
-            Entity entity = new Entity();
+            gcdv::Entity entity = new gcdv::Entity();
             // Make the request
-            Entity response = await metadataServiceClient.CreateEntityAsync(parent, entity);
+            gcdv::Entity response = await metadataServiceClient.CreateEntityAsync(parent, entity);
             // End snippet
         }
 
@@ -95,12 +98,12 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreateEntity(ZoneName, Entity, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            ZoneName parent = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
-            Entity entity = new Entity();
+            gcdv::ZoneName parent = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::Entity entity = new gcdv::Entity();
             // Make the request
-            Entity response = metadataServiceClient.CreateEntity(parent, entity);
+            gcdv::Entity response = metadataServiceClient.CreateEntity(parent, entity);
             // End snippet
         }
 
@@ -110,12 +113,12 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreateEntityAsync(ZoneName, Entity, CallSettings)
             // Additional: CreateEntityAsync(ZoneName, Entity, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ZoneName parent = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
-            Entity entity = new Entity();
+            gcdv::ZoneName parent = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::Entity entity = new gcdv::Entity();
             // Make the request
-            Entity response = await metadataServiceClient.CreateEntityAsync(parent, entity);
+            gcdv::Entity response = await metadataServiceClient.CreateEntityAsync(parent, entity);
             // End snippet
         }
 
@@ -124,15 +127,15 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: UpdateEntity(UpdateEntityRequest, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            UpdateEntityRequest request = new UpdateEntityRequest
+            gcdv::UpdateEntityRequest request = new gcdv::UpdateEntityRequest
             {
-                Entity = new Entity(),
+                Entity = new gcdv::Entity(),
                 ValidateOnly = false,
             };
             // Make the request
-            Entity response = metadataServiceClient.UpdateEntity(request);
+            gcdv::Entity response = metadataServiceClient.UpdateEntity(request);
             // End snippet
         }
 
@@ -142,15 +145,15 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: UpdateEntityAsync(UpdateEntityRequest, CallSettings)
             // Additional: UpdateEntityAsync(UpdateEntityRequest, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateEntityRequest request = new UpdateEntityRequest
+            gcdv::UpdateEntityRequest request = new gcdv::UpdateEntityRequest
             {
-                Entity = new Entity(),
+                Entity = new gcdv::Entity(),
                 ValidateOnly = false,
             };
             // Make the request
-            Entity response = await metadataServiceClient.UpdateEntityAsync(request);
+            gcdv::Entity response = await metadataServiceClient.UpdateEntityAsync(request);
             // End snippet
         }
 
@@ -159,11 +162,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteEntity(DeleteEntityRequest, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            DeleteEntityRequest request = new DeleteEntityRequest
+            gcdv::DeleteEntityRequest request = new gcdv::DeleteEntityRequest
             {
-                EntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                EntityName = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
                 Etag = "",
             };
             // Make the request
@@ -177,11 +180,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteEntityAsync(DeleteEntityRequest, CallSettings)
             // Additional: DeleteEntityAsync(DeleteEntityRequest, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteEntityRequest request = new DeleteEntityRequest
+            gcdv::DeleteEntityRequest request = new gcdv::DeleteEntityRequest
             {
-                EntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                EntityName = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
                 Etag = "",
             };
             // Make the request
@@ -194,7 +197,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteEntity(string, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]";
             // Make the request
@@ -208,7 +211,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteEntityAsync(string, CallSettings)
             // Additional: DeleteEntityAsync(string, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]";
             // Make the request
@@ -221,9 +224,9 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeleteEntity(EntityName, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            EntityName name = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            gcdv::EntityName name = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
             // Make the request
             metadataServiceClient.DeleteEntity(name);
             // End snippet
@@ -235,9 +238,9 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeleteEntityAsync(EntityName, CallSettings)
             // Additional: DeleteEntityAsync(EntityName, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            EntityName name = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            gcdv::EntityName name = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
             // Make the request
             await metadataServiceClient.DeleteEntityAsync(name);
             // End snippet
@@ -248,15 +251,15 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetEntity(GetEntityRequest, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            GetEntityRequest request = new GetEntityRequest
+            gcdv::GetEntityRequest request = new gcdv::GetEntityRequest
             {
-                EntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
-                View = GetEntityRequest.Types.EntityView.Unspecified,
+                EntityName = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                View = gcdv::GetEntityRequest.Types.EntityView.Unspecified,
             };
             // Make the request
-            Entity response = metadataServiceClient.GetEntity(request);
+            gcdv::Entity response = metadataServiceClient.GetEntity(request);
             // End snippet
         }
 
@@ -266,15 +269,15 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetEntityAsync(GetEntityRequest, CallSettings)
             // Additional: GetEntityAsync(GetEntityRequest, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetEntityRequest request = new GetEntityRequest
+            gcdv::GetEntityRequest request = new gcdv::GetEntityRequest
             {
-                EntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
-                View = GetEntityRequest.Types.EntityView.Unspecified,
+                EntityName = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                View = gcdv::GetEntityRequest.Types.EntityView.Unspecified,
             };
             // Make the request
-            Entity response = await metadataServiceClient.GetEntityAsync(request);
+            gcdv::Entity response = await metadataServiceClient.GetEntityAsync(request);
             // End snippet
         }
 
@@ -283,11 +286,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetEntity(string, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]";
             // Make the request
-            Entity response = metadataServiceClient.GetEntity(name);
+            gcdv::Entity response = metadataServiceClient.GetEntity(name);
             // End snippet
         }
 
@@ -297,11 +300,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetEntityAsync(string, CallSettings)
             // Additional: GetEntityAsync(string, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]";
             // Make the request
-            Entity response = await metadataServiceClient.GetEntityAsync(name);
+            gcdv::Entity response = await metadataServiceClient.GetEntityAsync(name);
             // End snippet
         }
 
@@ -310,11 +313,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetEntity(EntityName, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            EntityName name = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            gcdv::EntityName name = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
             // Make the request
-            Entity response = metadataServiceClient.GetEntity(name);
+            gcdv::Entity response = metadataServiceClient.GetEntity(name);
             // End snippet
         }
 
@@ -324,11 +327,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetEntityAsync(EntityName, CallSettings)
             // Additional: GetEntityAsync(EntityName, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            EntityName name = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            gcdv::EntityName name = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
             // Make the request
-            Entity response = await metadataServiceClient.GetEntityAsync(name);
+            gcdv::Entity response = await metadataServiceClient.GetEntityAsync(name);
             // End snippet
         }
 
@@ -337,30 +340,30 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListEntities(ListEntitiesRequest, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            ListEntitiesRequest request = new ListEntitiesRequest
+            gcdv::ListEntitiesRequest request = new gcdv::ListEntitiesRequest
             {
-                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
-                View = ListEntitiesRequest.Types.EntityView.Unspecified,
+                ParentAsZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                View = gcdv::ListEntitiesRequest.Types.EntityView.Unspecified,
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListEntitiesResponse, Entity> response = metadataServiceClient.ListEntities(request);
+            PagedEnumerable<gcdv::ListEntitiesResponse, gcdv::Entity> response = metadataServiceClient.ListEntities(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Entity item in response)
+            foreach (gcdv::Entity item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEntitiesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListEntitiesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Entity item in page)
+                foreach (gcdv::Entity item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -369,10 +372,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Entity> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Entity> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Entity item in singlePage)
+            foreach (gcdv::Entity item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -387,30 +390,30 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListEntitiesAsync(ListEntitiesRequest, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListEntitiesRequest request = new ListEntitiesRequest
+            gcdv::ListEntitiesRequest request = new gcdv::ListEntitiesRequest
             {
-                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
-                View = ListEntitiesRequest.Types.EntityView.Unspecified,
+                ParentAsZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                View = gcdv::ListEntitiesRequest.Types.EntityView.Unspecified,
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListEntitiesResponse, Entity> response = metadataServiceClient.ListEntitiesAsync(request);
+            PagedAsyncEnumerable<gcdv::ListEntitiesResponse, gcdv::Entity> response = metadataServiceClient.ListEntitiesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Entity item) =>
+            await response.ForEachAsync((gcdv::Entity item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEntitiesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListEntitiesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Entity item in page)
+                foreach (gcdv::Entity item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -419,10 +422,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Entity> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Entity> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Entity item in singlePage)
+            foreach (gcdv::Entity item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -437,25 +440,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListEntities(string, string, int?, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
             // Make the request
-            PagedEnumerable<ListEntitiesResponse, Entity> response = metadataServiceClient.ListEntities(parent);
+            PagedEnumerable<gcdv::ListEntitiesResponse, gcdv::Entity> response = metadataServiceClient.ListEntities(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Entity item in response)
+            foreach (gcdv::Entity item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEntitiesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListEntitiesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Entity item in page)
+                foreach (gcdv::Entity item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -464,10 +467,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Entity> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Entity> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Entity item in singlePage)
+            foreach (gcdv::Entity item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -482,25 +485,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListEntitiesAsync(string, string, int?, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]";
             // Make the request
-            PagedAsyncEnumerable<ListEntitiesResponse, Entity> response = metadataServiceClient.ListEntitiesAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListEntitiesResponse, gcdv::Entity> response = metadataServiceClient.ListEntitiesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Entity item) =>
+            await response.ForEachAsync((gcdv::Entity item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEntitiesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListEntitiesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Entity item in page)
+                foreach (gcdv::Entity item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -509,10 +512,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Entity> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Entity> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Entity item in singlePage)
+            foreach (gcdv::Entity item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -527,25 +530,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListEntities(ZoneName, string, int?, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            ZoneName parent = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::ZoneName parent = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
             // Make the request
-            PagedEnumerable<ListEntitiesResponse, Entity> response = metadataServiceClient.ListEntities(parent);
+            PagedEnumerable<gcdv::ListEntitiesResponse, gcdv::Entity> response = metadataServiceClient.ListEntities(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Entity item in response)
+            foreach (gcdv::Entity item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEntitiesResponse page in response.AsRawResponses())
+            foreach (gcdv::ListEntitiesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Entity item in page)
+                foreach (gcdv::Entity item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -554,10 +557,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Entity> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Entity> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Entity item in singlePage)
+            foreach (gcdv::Entity item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -572,25 +575,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListEntitiesAsync(ZoneName, string, int?, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ZoneName parent = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
+            gcdv::ZoneName parent = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]");
             // Make the request
-            PagedAsyncEnumerable<ListEntitiesResponse, Entity> response = metadataServiceClient.ListEntitiesAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListEntitiesResponse, gcdv::Entity> response = metadataServiceClient.ListEntitiesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Entity item) =>
+            await response.ForEachAsync((gcdv::Entity item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEntitiesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListEntitiesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Entity item in page)
+                foreach (gcdv::Entity item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -599,10 +602,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Entity> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Entity> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Entity item in singlePage)
+            foreach (gcdv::Entity item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -617,16 +620,16 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreatePartition(CreatePartitionRequest, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            CreatePartitionRequest request = new CreatePartitionRequest
+            gcdv::CreatePartitionRequest request = new gcdv::CreatePartitionRequest
             {
-                ParentAsEntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
-                Partition = new Partition(),
+                ParentAsEntityName = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                Partition = new gcdv::Partition(),
                 ValidateOnly = false,
             };
             // Make the request
-            Partition response = metadataServiceClient.CreatePartition(request);
+            gcdv::Partition response = metadataServiceClient.CreatePartition(request);
             // End snippet
         }
 
@@ -636,16 +639,16 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreatePartitionAsync(CreatePartitionRequest, CallSettings)
             // Additional: CreatePartitionAsync(CreatePartitionRequest, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreatePartitionRequest request = new CreatePartitionRequest
+            gcdv::CreatePartitionRequest request = new gcdv::CreatePartitionRequest
             {
-                ParentAsEntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
-                Partition = new Partition(),
+                ParentAsEntityName = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                Partition = new gcdv::Partition(),
                 ValidateOnly = false,
             };
             // Make the request
-            Partition response = await metadataServiceClient.CreatePartitionAsync(request);
+            gcdv::Partition response = await metadataServiceClient.CreatePartitionAsync(request);
             // End snippet
         }
 
@@ -654,12 +657,12 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreatePartition(string, Partition, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]";
-            Partition partition = new Partition();
+            gcdv::Partition partition = new gcdv::Partition();
             // Make the request
-            Partition response = metadataServiceClient.CreatePartition(parent, partition);
+            gcdv::Partition response = metadataServiceClient.CreatePartition(parent, partition);
             // End snippet
         }
 
@@ -669,12 +672,12 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreatePartitionAsync(string, Partition, CallSettings)
             // Additional: CreatePartitionAsync(string, Partition, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]";
-            Partition partition = new Partition();
+            gcdv::Partition partition = new gcdv::Partition();
             // Make the request
-            Partition response = await metadataServiceClient.CreatePartitionAsync(parent, partition);
+            gcdv::Partition response = await metadataServiceClient.CreatePartitionAsync(parent, partition);
             // End snippet
         }
 
@@ -683,12 +686,12 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: CreatePartition(EntityName, Partition, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            EntityName parent = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
-            Partition partition = new Partition();
+            gcdv::EntityName parent = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            gcdv::Partition partition = new gcdv::Partition();
             // Make the request
-            Partition response = metadataServiceClient.CreatePartition(parent, partition);
+            gcdv::Partition response = metadataServiceClient.CreatePartition(parent, partition);
             // End snippet
         }
 
@@ -698,12 +701,12 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: CreatePartitionAsync(EntityName, Partition, CallSettings)
             // Additional: CreatePartitionAsync(EntityName, Partition, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            EntityName parent = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
-            Partition partition = new Partition();
+            gcdv::EntityName parent = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            gcdv::Partition partition = new gcdv::Partition();
             // Make the request
-            Partition response = await metadataServiceClient.CreatePartitionAsync(parent, partition);
+            gcdv::Partition response = await metadataServiceClient.CreatePartitionAsync(parent, partition);
             // End snippet
         }
 
@@ -712,11 +715,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeletePartition(DeletePartitionRequest, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            DeletePartitionRequest request = new DeletePartitionRequest
+            gcdv::DeletePartitionRequest request = new gcdv::DeletePartitionRequest
             {
-                PartitionName = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
+                PartitionName = gcdv::PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
             };
             // Make the request
             metadataServiceClient.DeletePartition(request);
@@ -729,11 +732,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeletePartitionAsync(DeletePartitionRequest, CallSettings)
             // Additional: DeletePartitionAsync(DeletePartitionRequest, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeletePartitionRequest request = new DeletePartitionRequest
+            gcdv::DeletePartitionRequest request = new gcdv::DeletePartitionRequest
             {
-                PartitionName = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
+                PartitionName = gcdv::PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
             };
             // Make the request
             await metadataServiceClient.DeletePartitionAsync(request);
@@ -745,7 +748,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeletePartition(string, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]/partitions/[PARTITION]";
             // Make the request
@@ -759,7 +762,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeletePartitionAsync(string, CallSettings)
             // Additional: DeletePartitionAsync(string, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]/partitions/[PARTITION]";
             // Make the request
@@ -772,9 +775,9 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: DeletePartition(PartitionName, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            PartitionName name = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]");
+            gcdv::PartitionName name = gcdv::PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]");
             // Make the request
             metadataServiceClient.DeletePartition(name);
             // End snippet
@@ -786,9 +789,9 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: DeletePartitionAsync(PartitionName, CallSettings)
             // Additional: DeletePartitionAsync(PartitionName, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            PartitionName name = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]");
+            gcdv::PartitionName name = gcdv::PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]");
             // Make the request
             await metadataServiceClient.DeletePartitionAsync(name);
             // End snippet
@@ -799,14 +802,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetPartition(GetPartitionRequest, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            GetPartitionRequest request = new GetPartitionRequest
+            gcdv::GetPartitionRequest request = new gcdv::GetPartitionRequest
             {
-                PartitionName = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
+                PartitionName = gcdv::PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
             };
             // Make the request
-            Partition response = metadataServiceClient.GetPartition(request);
+            gcdv::Partition response = metadataServiceClient.GetPartition(request);
             // End snippet
         }
 
@@ -816,14 +819,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetPartitionAsync(GetPartitionRequest, CallSettings)
             // Additional: GetPartitionAsync(GetPartitionRequest, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetPartitionRequest request = new GetPartitionRequest
+            gcdv::GetPartitionRequest request = new gcdv::GetPartitionRequest
             {
-                PartitionName = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
+                PartitionName = gcdv::PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]"),
             };
             // Make the request
-            Partition response = await metadataServiceClient.GetPartitionAsync(request);
+            gcdv::Partition response = await metadataServiceClient.GetPartitionAsync(request);
             // End snippet
         }
 
@@ -832,11 +835,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetPartition(string, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]/partitions/[PARTITION]";
             // Make the request
-            Partition response = metadataServiceClient.GetPartition(name);
+            gcdv::Partition response = metadataServiceClient.GetPartition(name);
             // End snippet
         }
 
@@ -846,11 +849,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetPartitionAsync(string, CallSettings)
             // Additional: GetPartitionAsync(string, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]/partitions/[PARTITION]";
             // Make the request
-            Partition response = await metadataServiceClient.GetPartitionAsync(name);
+            gcdv::Partition response = await metadataServiceClient.GetPartitionAsync(name);
             // End snippet
         }
 
@@ -859,11 +862,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: GetPartition(PartitionName, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            PartitionName name = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]");
+            gcdv::PartitionName name = gcdv::PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]");
             // Make the request
-            Partition response = metadataServiceClient.GetPartition(name);
+            gcdv::Partition response = metadataServiceClient.GetPartition(name);
             // End snippet
         }
 
@@ -873,11 +876,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             // Snippet: GetPartitionAsync(PartitionName, CallSettings)
             // Additional: GetPartitionAsync(PartitionName, CancellationToken)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            PartitionName name = PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]");
+            gcdv::PartitionName name = gcdv::PartitionName.FromProjectLocationLakeZoneEntityPartition("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]", "[PARTITION]");
             // Make the request
-            Partition response = await metadataServiceClient.GetPartitionAsync(name);
+            gcdv::Partition response = await metadataServiceClient.GetPartitionAsync(name);
             // End snippet
         }
 
@@ -886,29 +889,29 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListPartitions(ListPartitionsRequest, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            ListPartitionsRequest request = new ListPartitionsRequest
+            gcdv::ListPartitionsRequest request = new gcdv::ListPartitionsRequest
             {
-                ParentAsEntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                ParentAsEntityName = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListPartitionsResponse, Partition> response = metadataServiceClient.ListPartitions(request);
+            PagedEnumerable<gcdv::ListPartitionsResponse, gcdv::Partition> response = metadataServiceClient.ListPartitions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Partition item in response)
+            foreach (gcdv::Partition item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListPartitionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListPartitionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Partition item in page)
+                foreach (gcdv::Partition item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -917,10 +920,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Partition> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Partition> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Partition item in singlePage)
+            foreach (gcdv::Partition item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -935,29 +938,29 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListPartitionsAsync(ListPartitionsRequest, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListPartitionsRequest request = new ListPartitionsRequest
+            gcdv::ListPartitionsRequest request = new gcdv::ListPartitionsRequest
             {
-                ParentAsEntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                ParentAsEntityName = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListPartitionsResponse, Partition> response = metadataServiceClient.ListPartitionsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListPartitionsResponse, gcdv::Partition> response = metadataServiceClient.ListPartitionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Partition item) =>
+            await response.ForEachAsync((gcdv::Partition item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPartitionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListPartitionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Partition item in page)
+                foreach (gcdv::Partition item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -966,10 +969,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Partition> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Partition> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Partition item in singlePage)
+            foreach (gcdv::Partition item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -984,25 +987,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListPartitions(string, string, int?, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]";
             // Make the request
-            PagedEnumerable<ListPartitionsResponse, Partition> response = metadataServiceClient.ListPartitions(parent);
+            PagedEnumerable<gcdv::ListPartitionsResponse, gcdv::Partition> response = metadataServiceClient.ListPartitions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Partition item in response)
+            foreach (gcdv::Partition item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListPartitionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListPartitionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Partition item in page)
+                foreach (gcdv::Partition item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1011,10 +1014,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Partition> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Partition> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Partition item in singlePage)
+            foreach (gcdv::Partition item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1029,25 +1032,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListPartitionsAsync(string, string, int?, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/zones/[ZONE]/entities/[ENTITY]";
             // Make the request
-            PagedAsyncEnumerable<ListPartitionsResponse, Partition> response = metadataServiceClient.ListPartitionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListPartitionsResponse, gcdv::Partition> response = metadataServiceClient.ListPartitionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Partition item) =>
+            await response.ForEachAsync((gcdv::Partition item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPartitionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListPartitionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Partition item in page)
+                foreach (gcdv::Partition item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1056,10 +1059,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Partition> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Partition> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Partition item in singlePage)
+            foreach (gcdv::Partition item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1074,25 +1077,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListPartitions(EntityName, string, int?, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = MetadataServiceClient.Create();
+            gcdv::MetadataServiceClient metadataServiceClient = gcdv::MetadataServiceClient.Create();
             // Initialize request argument(s)
-            EntityName parent = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            gcdv::EntityName parent = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
             // Make the request
-            PagedEnumerable<ListPartitionsResponse, Partition> response = metadataServiceClient.ListPartitions(parent);
+            PagedEnumerable<gcdv::ListPartitionsResponse, gcdv::Partition> response = metadataServiceClient.ListPartitions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Partition item in response)
+            foreach (gcdv::Partition item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListPartitionsResponse page in response.AsRawResponses())
+            foreach (gcdv::ListPartitionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Partition item in page)
+                foreach (gcdv::Partition item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1101,10 +1104,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Partition> singlePage = response.ReadPage(pageSize);
+            Page<gcdv::Partition> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Partition item in singlePage)
+            foreach (gcdv::Partition item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1119,25 +1122,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         {
             // Snippet: ListPartitionsAsync(EntityName, string, int?, CallSettings)
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            EntityName parent = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            gcdv::EntityName parent = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
             // Make the request
-            PagedAsyncEnumerable<ListPartitionsResponse, Partition> response = metadataServiceClient.ListPartitionsAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListPartitionsResponse, gcdv::Partition> response = metadataServiceClient.ListPartitionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Partition item) =>
+            await response.ForEachAsync((gcdv::Partition item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPartitionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListPartitionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Partition item in page)
+                foreach (gcdv::Partition item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1146,10 +1149,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Partition> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Partition> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Partition item in singlePage)
+            foreach (gcdv::Partition item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.OsLogin.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Cloud.OsLogin.Common;
+    using Google.Cloud.OsLogin.V1Beta;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 

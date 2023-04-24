@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Executions_GetExecution_async_flattened]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task GetExecutionAsync()
         {
             // Create client
-            ExecutionsClient executionsClient = await ExecutionsClient.CreateAsync();
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/executions/[EXECUTION]";
             // Make the request
-            Execution response = await executionsClient.GetExecutionAsync(name);
+            gcrv::Execution response = await executionsClient.GetExecutionAsync(name);
         }
     }
     // [END run_v2_generated_Executions_GetExecution_async_flattened]

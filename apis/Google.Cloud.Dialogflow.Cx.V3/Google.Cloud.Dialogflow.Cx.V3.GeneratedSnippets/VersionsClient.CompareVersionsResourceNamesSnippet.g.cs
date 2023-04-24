@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v3_generated_Versions_CompareVersions_sync_flattened_resourceNames]
     using Google.Cloud.Dialogflow.Cx.V3;

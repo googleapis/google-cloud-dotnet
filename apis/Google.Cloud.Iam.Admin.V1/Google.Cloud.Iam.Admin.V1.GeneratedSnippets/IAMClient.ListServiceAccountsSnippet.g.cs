@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Iam.Admin.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START iam_v1_generated_IAM_ListServiceAccounts_sync_flattened]
     using Google.Api.Gax;

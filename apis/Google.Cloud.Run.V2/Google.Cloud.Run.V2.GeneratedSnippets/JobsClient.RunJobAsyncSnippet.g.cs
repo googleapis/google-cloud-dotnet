@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Jobs_RunJob_async_flattened]
     using Google.LongRunning;
@@ -36,26 +36,26 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task RunJobAsync()
         {
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
             // Make the request
-            Operation<Execution, Execution> response = await jobsClient.RunJobAsync(name);
+            Operation<gcrv::Execution, gcrv::Execution> response = await jobsClient.RunJobAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = await jobsClient.PollOnceRunJobAsync(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = await jobsClient.PollOnceRunJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
         }
     }

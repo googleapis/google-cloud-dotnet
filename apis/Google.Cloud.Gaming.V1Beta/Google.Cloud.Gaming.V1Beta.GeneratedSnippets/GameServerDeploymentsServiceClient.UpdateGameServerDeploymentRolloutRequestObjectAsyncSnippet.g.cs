@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Gaming.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START gameservices_v1beta_generated_GameServerDeploymentsService_UpdateGameServerDeploymentRollout_async]
     using Google.Cloud.Gaming.V1Beta;

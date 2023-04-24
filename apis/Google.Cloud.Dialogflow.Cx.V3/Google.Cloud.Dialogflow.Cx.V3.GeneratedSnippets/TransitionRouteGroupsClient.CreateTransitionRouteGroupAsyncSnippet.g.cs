@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_async_flattened]
     using Google.Cloud.Dialogflow.Cx.V3;

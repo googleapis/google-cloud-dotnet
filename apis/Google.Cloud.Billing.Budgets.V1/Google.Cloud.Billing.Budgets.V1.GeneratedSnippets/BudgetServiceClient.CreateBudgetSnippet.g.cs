@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Billing.Budgets.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START billingbudgets_v1_generated_BudgetService_CreateBudget_sync_flattened]
     using Google.Cloud.Billing.Budgets.V1;

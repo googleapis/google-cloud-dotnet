@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Billing.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudbilling_v1_generated_CloudBilling_UpdateBillingAccount_async_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;

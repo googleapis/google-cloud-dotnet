@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using System;
@@ -32,11 +32,11 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetTask(GetTaskRequest, CallSettings)
             // Create client
-            TasksClient tasksClient = TasksClient.Create();
+            gcrv::TasksClient tasksClient = gcrv::TasksClient.Create();
             // Initialize request argument(s)
-            GetTaskRequest request = new GetTaskRequest
+            gcrv::GetTaskRequest request = new gcrv::GetTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationJobExecutionTask("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]", "[TASK]"),
+                TaskName = gcrv::TaskName.FromProjectLocationJobExecutionTask("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]", "[TASK]"),
             };
             // Make the request
             gcrv::Task response = tasksClient.GetTask(request);
@@ -49,11 +49,11 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetTaskAsync(GetTaskRequest, CallSettings)
             // Additional: GetTaskAsync(GetTaskRequest, CancellationToken)
             // Create client
-            TasksClient tasksClient = await TasksClient.CreateAsync();
+            gcrv::TasksClient tasksClient = await gcrv::TasksClient.CreateAsync();
             // Initialize request argument(s)
-            GetTaskRequest request = new GetTaskRequest
+            gcrv::GetTaskRequest request = new gcrv::GetTaskRequest
             {
-                TaskName = TaskName.FromProjectLocationJobExecutionTask("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]", "[TASK]"),
+                TaskName = gcrv::TaskName.FromProjectLocationJobExecutionTask("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]", "[TASK]"),
             };
             // Make the request
             gcrv::Task response = await tasksClient.GetTaskAsync(request);
@@ -65,7 +65,7 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetTask(string, CallSettings)
             // Create client
-            TasksClient tasksClient = TasksClient.Create();
+            gcrv::TasksClient tasksClient = gcrv::TasksClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/executions/[EXECUTION]/tasks/[TASK]";
             // Make the request
@@ -79,7 +79,7 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetTaskAsync(string, CallSettings)
             // Additional: GetTaskAsync(string, CancellationToken)
             // Create client
-            TasksClient tasksClient = await TasksClient.CreateAsync();
+            gcrv::TasksClient tasksClient = await gcrv::TasksClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/executions/[EXECUTION]/tasks/[TASK]";
             // Make the request
@@ -92,9 +92,9 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetTask(TaskName, CallSettings)
             // Create client
-            TasksClient tasksClient = TasksClient.Create();
+            gcrv::TasksClient tasksClient = gcrv::TasksClient.Create();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationJobExecutionTask("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]", "[TASK]");
+            gcrv::TaskName name = gcrv::TaskName.FromProjectLocationJobExecutionTask("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]", "[TASK]");
             // Make the request
             gcrv::Task response = tasksClient.GetTask(name);
             // End snippet
@@ -106,9 +106,9 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetTaskAsync(TaskName, CallSettings)
             // Additional: GetTaskAsync(TaskName, CancellationToken)
             // Create client
-            TasksClient tasksClient = await TasksClient.CreateAsync();
+            gcrv::TasksClient tasksClient = await gcrv::TasksClient.CreateAsync();
             // Initialize request argument(s)
-            TaskName name = TaskName.FromProjectLocationJobExecutionTask("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]", "[TASK]");
+            gcrv::TaskName name = gcrv::TaskName.FromProjectLocationJobExecutionTask("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]", "[TASK]");
             // Make the request
             gcrv::Task response = await tasksClient.GetTaskAsync(name);
             // End snippet
@@ -119,15 +119,15 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListTasks(ListTasksRequest, CallSettings)
             // Create client
-            TasksClient tasksClient = TasksClient.Create();
+            gcrv::TasksClient tasksClient = gcrv::TasksClient.Create();
             // Initialize request argument(s)
-            ListTasksRequest request = new ListTasksRequest
+            gcrv::ListTasksRequest request = new gcrv::ListTasksRequest
             {
-                ParentAsExecutionName = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
+                ParentAsExecutionName = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
                 ShowDeleted = false,
             };
             // Make the request
-            PagedEnumerable<ListTasksResponse, gcrv::Task> response = tasksClient.ListTasks(request);
+            PagedEnumerable<gcrv::ListTasksResponse, gcrv::Task> response = tasksClient.ListTasks(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcrv::Task item in response)
@@ -137,7 +137,7 @@ namespace Google.Cloud.Run.V2.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTasksResponse page in response.AsRawResponses())
+            foreach (gcrv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -168,15 +168,15 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListTasksAsync(ListTasksRequest, CallSettings)
             // Create client
-            TasksClient tasksClient = await TasksClient.CreateAsync();
+            gcrv::TasksClient tasksClient = await gcrv::TasksClient.CreateAsync();
             // Initialize request argument(s)
-            ListTasksRequest request = new ListTasksRequest
+            gcrv::ListTasksRequest request = new gcrv::ListTasksRequest
             {
-                ParentAsExecutionName = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
+                ParentAsExecutionName = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
                 ShowDeleted = false,
             };
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gcrv::Task> response = tasksClient.ListTasksAsync(request);
+            PagedAsyncEnumerable<gcrv::ListTasksResponse, gcrv::Task> response = tasksClient.ListTasksAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcrv::Task item) =>
@@ -186,7 +186,7 @@ namespace Google.Cloud.Run.V2.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -217,11 +217,11 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListTasks(string, string, int?, CallSettings)
             // Create client
-            TasksClient tasksClient = TasksClient.Create();
+            gcrv::TasksClient tasksClient = gcrv::TasksClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/executions/[EXECUTION]";
             // Make the request
-            PagedEnumerable<ListTasksResponse, gcrv::Task> response = tasksClient.ListTasks(parent);
+            PagedEnumerable<gcrv::ListTasksResponse, gcrv::Task> response = tasksClient.ListTasks(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcrv::Task item in response)
@@ -231,7 +231,7 @@ namespace Google.Cloud.Run.V2.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTasksResponse page in response.AsRawResponses())
+            foreach (gcrv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -262,11 +262,11 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListTasksAsync(string, string, int?, CallSettings)
             // Create client
-            TasksClient tasksClient = await TasksClient.CreateAsync();
+            gcrv::TasksClient tasksClient = await gcrv::TasksClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/executions/[EXECUTION]";
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gcrv::Task> response = tasksClient.ListTasksAsync(parent);
+            PagedAsyncEnumerable<gcrv::ListTasksResponse, gcrv::Task> response = tasksClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcrv::Task item) =>
@@ -276,7 +276,7 @@ namespace Google.Cloud.Run.V2.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -307,11 +307,11 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListTasks(ExecutionName, string, int?, CallSettings)
             // Create client
-            TasksClient tasksClient = TasksClient.Create();
+            gcrv::TasksClient tasksClient = gcrv::TasksClient.Create();
             // Initialize request argument(s)
-            ExecutionName parent = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
+            gcrv::ExecutionName parent = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
             // Make the request
-            PagedEnumerable<ListTasksResponse, gcrv::Task> response = tasksClient.ListTasks(parent);
+            PagedEnumerable<gcrv::ListTasksResponse, gcrv::Task> response = tasksClient.ListTasks(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcrv::Task item in response)
@@ -321,7 +321,7 @@ namespace Google.Cloud.Run.V2.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTasksResponse page in response.AsRawResponses())
+            foreach (gcrv::ListTasksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -352,11 +352,11 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListTasksAsync(ExecutionName, string, int?, CallSettings)
             // Create client
-            TasksClient tasksClient = await TasksClient.CreateAsync();
+            gcrv::TasksClient tasksClient = await gcrv::TasksClient.CreateAsync();
             // Initialize request argument(s)
-            ExecutionName parent = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
+            gcrv::ExecutionName parent = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gcrv::Task> response = tasksClient.ListTasksAsync(parent);
+            PagedAsyncEnumerable<gcrv::ListTasksResponse, gcrv::Task> response = tasksClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcrv::Task item) =>
@@ -366,7 +366,7 @@ namespace Google.Cloud.Run.V2.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Analytics.Admin.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Analytics.Admin.V1Alpha;
     using Google.Api.Gax;
     using Google.Protobuf.WellKnownTypes;
     using System;

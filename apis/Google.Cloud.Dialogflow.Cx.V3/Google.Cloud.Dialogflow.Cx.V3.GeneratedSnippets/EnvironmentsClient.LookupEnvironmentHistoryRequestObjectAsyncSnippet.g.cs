@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v3_generated_Environments_LookupEnvironmentHistory_async]
     using Google.Api.Gax;
@@ -38,14 +38,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
         public async Task LookupEnvironmentHistoryRequestObjectAsync()
         {
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcdcv::EnvironmentsClient environmentsClient = await gcdcv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
-            LookupEnvironmentHistoryRequest request = new LookupEnvironmentHistoryRequest
+            gcdcv::LookupEnvironmentHistoryRequest request = new gcdcv::LookupEnvironmentHistoryRequest
             {
-                EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+                EnvironmentName = gcdcv::EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
             };
             // Make the request
-            PagedAsyncEnumerable<LookupEnvironmentHistoryResponse, gcdcv::Environment> response = environmentsClient.LookupEnvironmentHistoryAsync(request);
+            PagedAsyncEnumerable<gcdcv::LookupEnvironmentHistoryResponse, gcdcv::Environment> response = environmentsClient.LookupEnvironmentHistoryAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdcv::Environment item) =>
@@ -55,7 +55,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((LookupEnvironmentHistoryResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdcv::LookupEnvironmentHistoryResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

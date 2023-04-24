@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v3_generated_Environments_LookupEnvironmentHistory_sync]
     using Google.Api.Gax;
@@ -36,14 +36,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
         public void LookupEnvironmentHistoryRequestObject()
         {
             // Create client
-            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            gcdcv::EnvironmentsClient environmentsClient = gcdcv::EnvironmentsClient.Create();
             // Initialize request argument(s)
-            LookupEnvironmentHistoryRequest request = new LookupEnvironmentHistoryRequest
+            gcdcv::LookupEnvironmentHistoryRequest request = new gcdcv::LookupEnvironmentHistoryRequest
             {
-                EnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+                EnvironmentName = gcdcv::EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
             };
             // Make the request
-            PagedEnumerable<LookupEnvironmentHistoryResponse, gcdcv::Environment> response = environmentsClient.LookupEnvironmentHistory(request);
+            PagedEnumerable<gcdcv::LookupEnvironmentHistoryResponse, gcdcv::Environment> response = environmentsClient.LookupEnvironmentHistory(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdcv::Environment item in response)
@@ -53,7 +53,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (LookupEnvironmentHistoryResponse page in response.AsRawResponses())
+            foreach (gcdcv::LookupEnvironmentHistoryResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

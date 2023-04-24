@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.BigQuery.DataExchange.V1Beta1;
     using Google.Cloud.Iam.V1;
     using Google.Protobuf.WellKnownTypes;
     using System;

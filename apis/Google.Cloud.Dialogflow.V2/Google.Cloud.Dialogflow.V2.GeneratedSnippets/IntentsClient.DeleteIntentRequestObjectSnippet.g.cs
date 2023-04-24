@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v2_generated_Intents_DeleteIntent_sync]
     using Google.Cloud.Dialogflow.V2;

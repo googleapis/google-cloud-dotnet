@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ServiceUsage.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START serviceusage_v1_generated_ServiceUsage_DisableService_async]
     using Google.Cloud.ServiceUsage.V1;

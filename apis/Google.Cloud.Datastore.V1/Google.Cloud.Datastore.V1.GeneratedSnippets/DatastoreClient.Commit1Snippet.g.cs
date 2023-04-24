@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Datastore.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datastore_v1_generated_Datastore_Commit_sync_flattened1]
     using Google.Cloud.Datastore.V1;

@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.LongRunning.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;

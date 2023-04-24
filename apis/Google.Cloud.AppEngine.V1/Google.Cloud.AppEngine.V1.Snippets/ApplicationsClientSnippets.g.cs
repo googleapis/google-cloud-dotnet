@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AppEngine.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.AppEngine.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;

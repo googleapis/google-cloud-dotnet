@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Security.PrivateCA.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START privateca_v1_generated_CertificateAuthorityService_ListCaPools_sync_flattened]
     using Google.Api.Gax;

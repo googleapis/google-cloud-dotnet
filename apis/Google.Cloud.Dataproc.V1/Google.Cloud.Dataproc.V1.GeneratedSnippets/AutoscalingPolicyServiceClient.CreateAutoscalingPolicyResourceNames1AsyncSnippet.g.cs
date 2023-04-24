@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dataproc.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataproc_v1_generated_AutoscalingPolicyService_CreateAutoscalingPolicy_async_flattened_resourceNames1]
     using Google.Api.Gax.ResourceNames;

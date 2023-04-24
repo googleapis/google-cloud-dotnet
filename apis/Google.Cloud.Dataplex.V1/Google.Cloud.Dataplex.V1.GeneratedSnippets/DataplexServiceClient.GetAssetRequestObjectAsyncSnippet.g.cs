@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_GetAsset_async]
     using System.Threading.Tasks;
@@ -35,14 +35,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task GetAssetRequestObjectAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetAssetRequest request = new GetAssetRequest
+            gcdv::GetAssetRequest request = new gcdv::GetAssetRequest
             {
-                AssetName = AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
+                AssetName = gcdv::AssetName.FromProjectLocationLakeZoneAsset("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ASSET]"),
             };
             // Make the request
-            Asset response = await dataplexServiceClient.GetAssetAsync(request);
+            gcdv::Asset response = await dataplexServiceClient.GetAssetAsync(request);
         }
     }
     // [END dataplex_v1_generated_DataplexService_GetAsset_async]

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Firestore.Admin.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START firestore_v1_generated_FirestoreAdmin_ListIndexes_async]
     using Google.Api.Gax;
@@ -38,15 +38,15 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         public async Task ListIndexesRequestObjectAsync()
         {
             // Create client
-            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ListIndexesRequest request = new ListIndexesRequest
+            gcfav::ListIndexesRequest request = new gcfav::ListIndexesRequest
             {
-                ParentAsCollectionGroupName = CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]"),
+                ParentAsCollectionGroupName = gcfav::CollectionGroupName.FromProjectDatabaseCollection("[PROJECT]", "[DATABASE]", "[COLLECTION]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListIndexesResponse, gcfav::Index> response = firestoreAdminClient.ListIndexesAsync(request);
+            PagedAsyncEnumerable<gcfav::ListIndexesResponse, gcfav::Index> response = firestoreAdminClient.ListIndexesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcfav::Index item) =>
@@ -56,7 +56,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListIndexesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcfav::ListIndexesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

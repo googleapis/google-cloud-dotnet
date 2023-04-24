@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Billing.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudbilling_v1_generated_CloudBilling_SetIamPolicy_async_flattened]
     using Google.Cloud.Billing.V1;

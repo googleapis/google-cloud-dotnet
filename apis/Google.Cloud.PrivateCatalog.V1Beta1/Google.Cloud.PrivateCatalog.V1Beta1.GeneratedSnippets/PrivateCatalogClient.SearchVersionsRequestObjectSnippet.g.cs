@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudprivatecatalog_v1beta1_generated_PrivateCatalog_SearchVersions_sync]
     using Google.Api.Gax;
@@ -36,15 +36,15 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
         public void SearchVersionsRequestObject()
         {
             // Create client
-            PrivateCatalogClient privateCatalogClient = PrivateCatalogClient.Create();
+            gcpv::PrivateCatalogClient privateCatalogClient = gcpv::PrivateCatalogClient.Create();
             // Initialize request argument(s)
-            SearchVersionsRequest request = new SearchVersionsRequest
+            gcpv::SearchVersionsRequest request = new gcpv::SearchVersionsRequest
             {
                 Resource = "",
                 Query = "",
             };
             // Make the request
-            PagedEnumerable<SearchVersionsResponse, gcpv::Version> response = privateCatalogClient.SearchVersions(request);
+            PagedEnumerable<gcpv::SearchVersionsResponse, gcpv::Version> response = privateCatalogClient.SearchVersions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcpv::Version item in response)
@@ -54,7 +54,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (SearchVersionsResponse page in response.AsRawResponses())
+            foreach (gcpv::SearchVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

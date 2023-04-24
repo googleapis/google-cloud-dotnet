@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Tasks.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2_generated_CloudTasks_UpdateQueue_sync]
     using Google.Cloud.Tasks.V2;

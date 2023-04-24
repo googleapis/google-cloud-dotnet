@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AlloyDb.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START alloydb_v1_generated_AlloyDBAdmin_RestoreCluster_async]
     using Google.Api.Gax.ResourceNames;

@@ -14,13 +14,16 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Run.V2.Snippets
+#pragma warning disable CS8981
+
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.LongRunning;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using gcrv = Google.Cloud.Run.V2;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedExecutionsClientSnippets
@@ -30,14 +33,14 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetExecution(GetExecutionRequest, CallSettings)
             // Create client
-            ExecutionsClient executionsClient = ExecutionsClient.Create();
+            gcrv::ExecutionsClient executionsClient = gcrv::ExecutionsClient.Create();
             // Initialize request argument(s)
-            GetExecutionRequest request = new GetExecutionRequest
+            gcrv::GetExecutionRequest request = new gcrv::GetExecutionRequest
             {
-                ExecutionName = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
+                ExecutionName = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
             };
             // Make the request
-            Execution response = executionsClient.GetExecution(request);
+            gcrv::Execution response = executionsClient.GetExecution(request);
             // End snippet
         }
 
@@ -47,14 +50,14 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetExecutionAsync(GetExecutionRequest, CallSettings)
             // Additional: GetExecutionAsync(GetExecutionRequest, CancellationToken)
             // Create client
-            ExecutionsClient executionsClient = await ExecutionsClient.CreateAsync();
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
             // Initialize request argument(s)
-            GetExecutionRequest request = new GetExecutionRequest
+            gcrv::GetExecutionRequest request = new gcrv::GetExecutionRequest
             {
-                ExecutionName = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
+                ExecutionName = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
             };
             // Make the request
-            Execution response = await executionsClient.GetExecutionAsync(request);
+            gcrv::Execution response = await executionsClient.GetExecutionAsync(request);
             // End snippet
         }
 
@@ -63,11 +66,11 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetExecution(string, CallSettings)
             // Create client
-            ExecutionsClient executionsClient = ExecutionsClient.Create();
+            gcrv::ExecutionsClient executionsClient = gcrv::ExecutionsClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/executions/[EXECUTION]";
             // Make the request
-            Execution response = executionsClient.GetExecution(name);
+            gcrv::Execution response = executionsClient.GetExecution(name);
             // End snippet
         }
 
@@ -77,11 +80,11 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetExecutionAsync(string, CallSettings)
             // Additional: GetExecutionAsync(string, CancellationToken)
             // Create client
-            ExecutionsClient executionsClient = await ExecutionsClient.CreateAsync();
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/executions/[EXECUTION]";
             // Make the request
-            Execution response = await executionsClient.GetExecutionAsync(name);
+            gcrv::Execution response = await executionsClient.GetExecutionAsync(name);
             // End snippet
         }
 
@@ -90,11 +93,11 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: GetExecution(ExecutionName, CallSettings)
             // Create client
-            ExecutionsClient executionsClient = ExecutionsClient.Create();
+            gcrv::ExecutionsClient executionsClient = gcrv::ExecutionsClient.Create();
             // Initialize request argument(s)
-            ExecutionName name = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
+            gcrv::ExecutionName name = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
             // Make the request
-            Execution response = executionsClient.GetExecution(name);
+            gcrv::Execution response = executionsClient.GetExecution(name);
             // End snippet
         }
 
@@ -104,11 +107,11 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: GetExecutionAsync(ExecutionName, CallSettings)
             // Additional: GetExecutionAsync(ExecutionName, CancellationToken)
             // Create client
-            ExecutionsClient executionsClient = await ExecutionsClient.CreateAsync();
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
             // Initialize request argument(s)
-            ExecutionName name = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
+            gcrv::ExecutionName name = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
             // Make the request
-            Execution response = await executionsClient.GetExecutionAsync(name);
+            gcrv::Execution response = await executionsClient.GetExecutionAsync(name);
             // End snippet
         }
 
@@ -117,29 +120,29 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListExecutions(ListExecutionsRequest, CallSettings)
             // Create client
-            ExecutionsClient executionsClient = ExecutionsClient.Create();
+            gcrv::ExecutionsClient executionsClient = gcrv::ExecutionsClient.Create();
             // Initialize request argument(s)
-            ListExecutionsRequest request = new ListExecutionsRequest
+            gcrv::ListExecutionsRequest request = new gcrv::ListExecutionsRequest
             {
-                ParentAsJobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                ParentAsJobName = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 ShowDeleted = false,
             };
             // Make the request
-            PagedEnumerable<ListExecutionsResponse, Execution> response = executionsClient.ListExecutions(request);
+            PagedEnumerable<gcrv::ListExecutionsResponse, gcrv::Execution> response = executionsClient.ListExecutions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Execution item in response)
+            foreach (gcrv::Execution item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListExecutionsResponse page in response.AsRawResponses())
+            foreach (gcrv::ListExecutionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Execution item in page)
+                foreach (gcrv::Execution item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -148,10 +151,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Execution> singlePage = response.ReadPage(pageSize);
+            Page<gcrv::Execution> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Execution item in singlePage)
+            foreach (gcrv::Execution item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -166,29 +169,29 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListExecutionsAsync(ListExecutionsRequest, CallSettings)
             // Create client
-            ExecutionsClient executionsClient = await ExecutionsClient.CreateAsync();
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
             // Initialize request argument(s)
-            ListExecutionsRequest request = new ListExecutionsRequest
+            gcrv::ListExecutionsRequest request = new gcrv::ListExecutionsRequest
             {
-                ParentAsJobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                ParentAsJobName = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 ShowDeleted = false,
             };
             // Make the request
-            PagedAsyncEnumerable<ListExecutionsResponse, Execution> response = executionsClient.ListExecutionsAsync(request);
+            PagedAsyncEnumerable<gcrv::ListExecutionsResponse, gcrv::Execution> response = executionsClient.ListExecutionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Execution item) =>
+            await response.ForEachAsync((gcrv::Execution item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExecutionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListExecutionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Execution item in page)
+                foreach (gcrv::Execution item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -197,10 +200,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Execution> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcrv::Execution> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Execution item in singlePage)
+            foreach (gcrv::Execution item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -215,25 +218,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListExecutions(string, string, int?, CallSettings)
             // Create client
-            ExecutionsClient executionsClient = ExecutionsClient.Create();
+            gcrv::ExecutionsClient executionsClient = gcrv::ExecutionsClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
             // Make the request
-            PagedEnumerable<ListExecutionsResponse, Execution> response = executionsClient.ListExecutions(parent);
+            PagedEnumerable<gcrv::ListExecutionsResponse, gcrv::Execution> response = executionsClient.ListExecutions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Execution item in response)
+            foreach (gcrv::Execution item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListExecutionsResponse page in response.AsRawResponses())
+            foreach (gcrv::ListExecutionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Execution item in page)
+                foreach (gcrv::Execution item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -242,10 +245,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Execution> singlePage = response.ReadPage(pageSize);
+            Page<gcrv::Execution> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Execution item in singlePage)
+            foreach (gcrv::Execution item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -260,25 +263,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListExecutionsAsync(string, string, int?, CallSettings)
             // Create client
-            ExecutionsClient executionsClient = await ExecutionsClient.CreateAsync();
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
             // Make the request
-            PagedAsyncEnumerable<ListExecutionsResponse, Execution> response = executionsClient.ListExecutionsAsync(parent);
+            PagedAsyncEnumerable<gcrv::ListExecutionsResponse, gcrv::Execution> response = executionsClient.ListExecutionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Execution item) =>
+            await response.ForEachAsync((gcrv::Execution item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExecutionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListExecutionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Execution item in page)
+                foreach (gcrv::Execution item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -287,10 +290,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Execution> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcrv::Execution> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Execution item in singlePage)
+            foreach (gcrv::Execution item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -305,25 +308,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListExecutions(JobName, string, int?, CallSettings)
             // Create client
-            ExecutionsClient executionsClient = ExecutionsClient.Create();
+            gcrv::ExecutionsClient executionsClient = gcrv::ExecutionsClient.Create();
             // Initialize request argument(s)
-            JobName parent = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            gcrv::JobName parent = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            PagedEnumerable<ListExecutionsResponse, Execution> response = executionsClient.ListExecutions(parent);
+            PagedEnumerable<gcrv::ListExecutionsResponse, gcrv::Execution> response = executionsClient.ListExecutions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Execution item in response)
+            foreach (gcrv::Execution item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListExecutionsResponse page in response.AsRawResponses())
+            foreach (gcrv::ListExecutionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Execution item in page)
+                foreach (gcrv::Execution item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -332,10 +335,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Execution> singlePage = response.ReadPage(pageSize);
+            Page<gcrv::Execution> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Execution item in singlePage)
+            foreach (gcrv::Execution item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -350,25 +353,25 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: ListExecutionsAsync(JobName, string, int?, CallSettings)
             // Create client
-            ExecutionsClient executionsClient = await ExecutionsClient.CreateAsync();
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
             // Initialize request argument(s)
-            JobName parent = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            gcrv::JobName parent = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            PagedAsyncEnumerable<ListExecutionsResponse, Execution> response = executionsClient.ListExecutionsAsync(parent);
+            PagedAsyncEnumerable<gcrv::ListExecutionsResponse, gcrv::Execution> response = executionsClient.ListExecutionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Execution item) =>
+            await response.ForEachAsync((gcrv::Execution item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExecutionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListExecutionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Execution item in page)
+                foreach (gcrv::Execution item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -377,10 +380,10 @@ namespace Google.Cloud.Run.V2.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Execution> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcrv::Execution> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Execution item in singlePage)
+            foreach (gcrv::Execution item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -395,31 +398,31 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: DeleteExecution(DeleteExecutionRequest, CallSettings)
             // Create client
-            ExecutionsClient executionsClient = ExecutionsClient.Create();
+            gcrv::ExecutionsClient executionsClient = gcrv::ExecutionsClient.Create();
             // Initialize request argument(s)
-            DeleteExecutionRequest request = new DeleteExecutionRequest
+            gcrv::DeleteExecutionRequest request = new gcrv::DeleteExecutionRequest
             {
-                ExecutionName = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
+                ExecutionName = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
                 ValidateOnly = false,
                 Etag = "",
             };
             // Make the request
-            Operation<Execution, Execution> response = executionsClient.DeleteExecution(request);
+            Operation<gcrv::Execution, gcrv::Execution> response = executionsClient.DeleteExecution(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = executionsClient.PollOnceDeleteExecution(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = executionsClient.PollOnceDeleteExecution(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -430,31 +433,31 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: DeleteExecutionAsync(DeleteExecutionRequest, CallSettings)
             // Additional: DeleteExecutionAsync(DeleteExecutionRequest, CancellationToken)
             // Create client
-            ExecutionsClient executionsClient = await ExecutionsClient.CreateAsync();
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteExecutionRequest request = new DeleteExecutionRequest
+            gcrv::DeleteExecutionRequest request = new gcrv::DeleteExecutionRequest
             {
-                ExecutionName = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
+                ExecutionName = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]"),
                 ValidateOnly = false,
                 Etag = "",
             };
             // Make the request
-            Operation<Execution, Execution> response = await executionsClient.DeleteExecutionAsync(request);
+            Operation<gcrv::Execution, gcrv::Execution> response = await executionsClient.DeleteExecutionAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = await executionsClient.PollOnceDeleteExecutionAsync(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = await executionsClient.PollOnceDeleteExecutionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -464,26 +467,26 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: DeleteExecution(string, CallSettings)
             // Create client
-            ExecutionsClient executionsClient = ExecutionsClient.Create();
+            gcrv::ExecutionsClient executionsClient = gcrv::ExecutionsClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/executions/[EXECUTION]";
             // Make the request
-            Operation<Execution, Execution> response = executionsClient.DeleteExecution(name);
+            Operation<gcrv::Execution, gcrv::Execution> response = executionsClient.DeleteExecution(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = executionsClient.PollOnceDeleteExecution(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = executionsClient.PollOnceDeleteExecution(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -494,26 +497,26 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: DeleteExecutionAsync(string, CallSettings)
             // Additional: DeleteExecutionAsync(string, CancellationToken)
             // Create client
-            ExecutionsClient executionsClient = await ExecutionsClient.CreateAsync();
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/executions/[EXECUTION]";
             // Make the request
-            Operation<Execution, Execution> response = await executionsClient.DeleteExecutionAsync(name);
+            Operation<gcrv::Execution, gcrv::Execution> response = await executionsClient.DeleteExecutionAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = await executionsClient.PollOnceDeleteExecutionAsync(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = await executionsClient.PollOnceDeleteExecutionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -523,26 +526,26 @@ namespace Google.Cloud.Run.V2.Snippets
         {
             // Snippet: DeleteExecution(ExecutionName, CallSettings)
             // Create client
-            ExecutionsClient executionsClient = ExecutionsClient.Create();
+            gcrv::ExecutionsClient executionsClient = gcrv::ExecutionsClient.Create();
             // Initialize request argument(s)
-            ExecutionName name = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
+            gcrv::ExecutionName name = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
             // Make the request
-            Operation<Execution, Execution> response = executionsClient.DeleteExecution(name);
+            Operation<gcrv::Execution, gcrv::Execution> response = executionsClient.DeleteExecution(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = response.PollUntilCompleted();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = executionsClient.PollOnceDeleteExecution(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = executionsClient.PollOnceDeleteExecution(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -553,26 +556,26 @@ namespace Google.Cloud.Run.V2.Snippets
             // Snippet: DeleteExecutionAsync(ExecutionName, CallSettings)
             // Additional: DeleteExecutionAsync(ExecutionName, CancellationToken)
             // Create client
-            ExecutionsClient executionsClient = await ExecutionsClient.CreateAsync();
+            gcrv::ExecutionsClient executionsClient = await gcrv::ExecutionsClient.CreateAsync();
             // Initialize request argument(s)
-            ExecutionName name = ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
+            gcrv::ExecutionName name = gcrv::ExecutionName.FromProjectLocationJobExecution("[PROJECT]", "[LOCATION]", "[JOB]", "[EXECUTION]");
             // Make the request
-            Operation<Execution, Execution> response = await executionsClient.DeleteExecutionAsync(name);
+            Operation<gcrv::Execution, gcrv::Execution> response = await executionsClient.DeleteExecutionAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, Execution> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Execution, gcrv::Execution> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcrv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, Execution> retrievedResponse = await executionsClient.PollOnceDeleteExecutionAsync(operationName);
+            Operation<gcrv::Execution, gcrv::Execution> retrievedResponse = await executionsClient.PollOnceDeleteExecutionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcrv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

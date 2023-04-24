@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BeyondCorp.AppGateways.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START beyondcorp_v1_generated_AppGatewaysService_GetAppGateway_async_flattened]
     using Google.Cloud.BeyondCorp.AppGateways.V1;

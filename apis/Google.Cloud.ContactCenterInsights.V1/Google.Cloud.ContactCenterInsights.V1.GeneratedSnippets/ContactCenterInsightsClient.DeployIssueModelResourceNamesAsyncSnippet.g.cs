@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ContactCenterInsights.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START contactcenterinsights_v1_generated_ContactCenterInsights_DeployIssueModel_async_flattened_resourceNames]
     using Google.Cloud.ContactCenterInsights.V1;

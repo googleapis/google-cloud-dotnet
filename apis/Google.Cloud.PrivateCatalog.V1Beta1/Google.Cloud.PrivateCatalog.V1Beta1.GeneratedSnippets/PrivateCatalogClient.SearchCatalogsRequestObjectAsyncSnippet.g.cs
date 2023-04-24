@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.PrivateCatalog.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudprivatecatalog_v1beta1_generated_PrivateCatalog_SearchCatalogs_async]
     using Google.Api.Gax;

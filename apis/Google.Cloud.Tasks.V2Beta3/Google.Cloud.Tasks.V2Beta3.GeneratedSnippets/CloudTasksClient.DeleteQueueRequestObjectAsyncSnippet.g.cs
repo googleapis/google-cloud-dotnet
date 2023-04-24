@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2beta3_generated_CloudTasks_DeleteQueue_async]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         public async Task DeleteQueueRequestObjectAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteQueueRequest request = new DeleteQueueRequest
+            gctv::DeleteQueueRequest request = new gctv::DeleteQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
             await cloudTasksClient.DeleteQueueAsync(request);

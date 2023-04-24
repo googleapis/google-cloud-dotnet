@@ -14,12 +14,13 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Logging.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api;
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Logging.V2;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;

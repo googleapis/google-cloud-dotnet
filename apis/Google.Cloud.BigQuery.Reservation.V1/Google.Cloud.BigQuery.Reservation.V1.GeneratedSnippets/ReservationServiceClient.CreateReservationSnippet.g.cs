@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START bigqueryreservation_v1_generated_ReservationService_CreateReservation_sync_flattened]
     using Google.Cloud.BigQuery.Reservation.V1;

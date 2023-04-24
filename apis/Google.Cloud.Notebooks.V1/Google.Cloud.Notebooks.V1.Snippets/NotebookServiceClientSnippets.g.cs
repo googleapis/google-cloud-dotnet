@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Notebooks.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.LongRunning;
@@ -34,25 +34,25 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListInstances(ListInstancesRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ListInstancesRequest request = new ListInstancesRequest { Parent = "", };
+            gcnv::ListInstancesRequest request = new gcnv::ListInstancesRequest { Parent = "", };
             // Make the request
-            PagedEnumerable<ListInstancesResponse, Instance> response = notebookServiceClient.ListInstances(request);
+            PagedEnumerable<gcnv::ListInstancesResponse, gcnv::Instance> response = notebookServiceClient.ListInstances(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Instance item in response)
+            foreach (gcnv::Instance item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListInstancesResponse page in response.AsRawResponses())
+            foreach (gcnv::ListInstancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Instance item in page)
+                foreach (gcnv::Instance item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -61,10 +61,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Instance> singlePage = response.ReadPage(pageSize);
+            Page<gcnv::Instance> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Instance item in singlePage)
+            foreach (gcnv::Instance item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -79,25 +79,25 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListInstancesAsync(ListInstancesRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListInstancesRequest request = new ListInstancesRequest { Parent = "", };
+            gcnv::ListInstancesRequest request = new gcnv::ListInstancesRequest { Parent = "", };
             // Make the request
-            PagedAsyncEnumerable<ListInstancesResponse, Instance> response = notebookServiceClient.ListInstancesAsync(request);
+            PagedAsyncEnumerable<gcnv::ListInstancesResponse, gcnv::Instance> response = notebookServiceClient.ListInstancesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Instance item) =>
+            await response.ForEachAsync((gcnv::Instance item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcnv::ListInstancesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Instance item in page)
+                foreach (gcnv::Instance item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -106,10 +106,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Instance> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcnv::Instance> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Instance item in singlePage)
+            foreach (gcnv::Instance item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -124,25 +124,25 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListInstances(string, string, int?, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedEnumerable<ListInstancesResponse, Instance> response = notebookServiceClient.ListInstances(parent);
+            PagedEnumerable<gcnv::ListInstancesResponse, gcnv::Instance> response = notebookServiceClient.ListInstances(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Instance item in response)
+            foreach (gcnv::Instance item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListInstancesResponse page in response.AsRawResponses())
+            foreach (gcnv::ListInstancesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Instance item in page)
+                foreach (gcnv::Instance item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -151,10 +151,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Instance> singlePage = response.ReadPage(pageSize);
+            Page<gcnv::Instance> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Instance item in singlePage)
+            foreach (gcnv::Instance item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -169,25 +169,25 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListInstancesAsync(string, string, int?, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedAsyncEnumerable<ListInstancesResponse, Instance> response = notebookServiceClient.ListInstancesAsync(parent);
+            PagedAsyncEnumerable<gcnv::ListInstancesResponse, gcnv::Instance> response = notebookServiceClient.ListInstancesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Instance item) =>
+            await response.ForEachAsync((gcnv::Instance item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListInstancesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcnv::ListInstancesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Instance item in page)
+                foreach (gcnv::Instance item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -196,10 +196,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Instance> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcnv::Instance> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Instance item in singlePage)
+            foreach (gcnv::Instance item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -214,11 +214,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: GetInstance(GetInstanceRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            GetInstanceRequest request = new GetInstanceRequest { Name = "", };
+            gcnv::GetInstanceRequest request = new gcnv::GetInstanceRequest { Name = "", };
             // Make the request
-            Instance response = notebookServiceClient.GetInstance(request);
+            gcnv::Instance response = notebookServiceClient.GetInstance(request);
             // End snippet
         }
 
@@ -228,11 +228,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: GetInstanceAsync(GetInstanceRequest, CallSettings)
             // Additional: GetInstanceAsync(GetInstanceRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetInstanceRequest request = new GetInstanceRequest { Name = "", };
+            gcnv::GetInstanceRequest request = new gcnv::GetInstanceRequest { Name = "", };
             // Make the request
-            Instance response = await notebookServiceClient.GetInstanceAsync(request);
+            gcnv::Instance response = await notebookServiceClient.GetInstanceAsync(request);
             // End snippet
         }
 
@@ -241,11 +241,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: GetInstance(string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Instance response = notebookServiceClient.GetInstance(name);
+            gcnv::Instance response = notebookServiceClient.GetInstance(name);
             // End snippet
         }
 
@@ -255,11 +255,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: GetInstanceAsync(string, CallSettings)
             // Additional: GetInstanceAsync(string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Instance response = await notebookServiceClient.GetInstanceAsync(name);
+            gcnv::Instance response = await notebookServiceClient.GetInstanceAsync(name);
             // End snippet
         }
 
@@ -268,31 +268,31 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: CreateInstance(CreateInstanceRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            CreateInstanceRequest request = new CreateInstanceRequest
+            gcnv::CreateInstanceRequest request = new gcnv::CreateInstanceRequest
             {
                 Parent = "",
                 InstanceId = "",
-                Instance = new Instance(),
+                Instance = new gcnv::Instance(),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.CreateInstance(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.CreateInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateInstance(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -303,31 +303,31 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: CreateInstanceAsync(CreateInstanceRequest, CallSettings)
             // Additional: CreateInstanceAsync(CreateInstanceRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateInstanceRequest request = new CreateInstanceRequest
+            gcnv::CreateInstanceRequest request = new gcnv::CreateInstanceRequest
             {
                 Parent = "",
                 InstanceId = "",
-                Instance = new Instance(),
+                Instance = new gcnv::Instance(),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.CreateInstanceAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.CreateInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateInstanceAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -337,28 +337,28 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: CreateInstance(string, Instance, string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string parent = "";
-            Instance instance = new Instance();
+            gcnv::Instance instance = new gcnv::Instance();
             string instanceId = "";
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.CreateInstance(parent, instance, instanceId);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.CreateInstance(parent, instance, instanceId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateInstance(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -369,28 +369,28 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: CreateInstanceAsync(string, Instance, string, CallSettings)
             // Additional: CreateInstanceAsync(string, Instance, string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "";
-            Instance instance = new Instance();
+            gcnv::Instance instance = new gcnv::Instance();
             string instanceId = "";
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.CreateInstanceAsync(parent, instance, instanceId);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.CreateInstanceAsync(parent, instance, instanceId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateInstanceAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -400,30 +400,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: RegisterInstance(RegisterInstanceRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            RegisterInstanceRequest request = new RegisterInstanceRequest
+            gcnv::RegisterInstanceRequest request = new gcnv::RegisterInstanceRequest
             {
                 Parent = "",
                 InstanceId = "",
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.RegisterInstance(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.RegisterInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceRegisterInstance(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceRegisterInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -434,30 +434,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: RegisterInstanceAsync(RegisterInstanceRequest, CallSettings)
             // Additional: RegisterInstanceAsync(RegisterInstanceRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RegisterInstanceRequest request = new RegisterInstanceRequest
+            gcnv::RegisterInstanceRequest request = new gcnv::RegisterInstanceRequest
             {
                 Parent = "",
                 InstanceId = "",
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.RegisterInstanceAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.RegisterInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceRegisterInstanceAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceRegisterInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -467,31 +467,31 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: SetInstanceAccelerator(SetInstanceAcceleratorRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            SetInstanceAcceleratorRequest request = new SetInstanceAcceleratorRequest
+            gcnv::SetInstanceAcceleratorRequest request = new gcnv::SetInstanceAcceleratorRequest
             {
                 Name = "",
-                Type = Instance.Types.AcceleratorType.Unspecified,
+                Type = gcnv::Instance.Types.AcceleratorType.Unspecified,
                 CoreCount = 0L,
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.SetInstanceAccelerator(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.SetInstanceAccelerator(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceSetInstanceAccelerator(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceSetInstanceAccelerator(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -502,31 +502,31 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: SetInstanceAcceleratorAsync(SetInstanceAcceleratorRequest, CallSettings)
             // Additional: SetInstanceAcceleratorAsync(SetInstanceAcceleratorRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SetInstanceAcceleratorRequest request = new SetInstanceAcceleratorRequest
+            gcnv::SetInstanceAcceleratorRequest request = new gcnv::SetInstanceAcceleratorRequest
             {
                 Name = "",
-                Type = Instance.Types.AcceleratorType.Unspecified,
+                Type = gcnv::Instance.Types.AcceleratorType.Unspecified,
                 CoreCount = 0L,
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.SetInstanceAcceleratorAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.SetInstanceAcceleratorAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceSetInstanceAcceleratorAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceSetInstanceAcceleratorAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -536,30 +536,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: SetInstanceMachineType(SetInstanceMachineTypeRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            SetInstanceMachineTypeRequest request = new SetInstanceMachineTypeRequest
+            gcnv::SetInstanceMachineTypeRequest request = new gcnv::SetInstanceMachineTypeRequest
             {
                 Name = "",
                 MachineType = "",
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.SetInstanceMachineType(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.SetInstanceMachineType(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceSetInstanceMachineType(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceSetInstanceMachineType(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -570,30 +570,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: SetInstanceMachineTypeAsync(SetInstanceMachineTypeRequest, CallSettings)
             // Additional: SetInstanceMachineTypeAsync(SetInstanceMachineTypeRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SetInstanceMachineTypeRequest request = new SetInstanceMachineTypeRequest
+            gcnv::SetInstanceMachineTypeRequest request = new gcnv::SetInstanceMachineTypeRequest
             {
                 Name = "",
                 MachineType = "",
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.SetInstanceMachineTypeAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.SetInstanceMachineTypeAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceSetInstanceMachineTypeAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceSetInstanceMachineTypeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -603,30 +603,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: UpdateInstanceConfig(UpdateInstanceConfigRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            UpdateInstanceConfigRequest request = new UpdateInstanceConfigRequest
+            gcnv::UpdateInstanceConfigRequest request = new gcnv::UpdateInstanceConfigRequest
             {
                 Name = "",
-                Config = new InstanceConfig(),
+                Config = new gcnv::InstanceConfig(),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.UpdateInstanceConfig(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.UpdateInstanceConfig(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceUpdateInstanceConfig(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceUpdateInstanceConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -637,30 +637,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: UpdateInstanceConfigAsync(UpdateInstanceConfigRequest, CallSettings)
             // Additional: UpdateInstanceConfigAsync(UpdateInstanceConfigRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateInstanceConfigRequest request = new UpdateInstanceConfigRequest
+            gcnv::UpdateInstanceConfigRequest request = new gcnv::UpdateInstanceConfigRequest
             {
                 Name = "",
-                Config = new InstanceConfig(),
+                Config = new gcnv::InstanceConfig(),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.UpdateInstanceConfigAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.UpdateInstanceConfigAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceUpdateInstanceConfigAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceUpdateInstanceConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -670,30 +670,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: UpdateShieldedInstanceConfig(UpdateShieldedInstanceConfigRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            UpdateShieldedInstanceConfigRequest request = new UpdateShieldedInstanceConfigRequest
+            gcnv::UpdateShieldedInstanceConfigRequest request = new gcnv::UpdateShieldedInstanceConfigRequest
             {
                 Name = "",
-                ShieldedInstanceConfig = new Instance.Types.ShieldedInstanceConfig(),
+                ShieldedInstanceConfig = new gcnv::Instance.Types.ShieldedInstanceConfig(),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.UpdateShieldedInstanceConfig(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.UpdateShieldedInstanceConfig(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceUpdateShieldedInstanceConfig(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceUpdateShieldedInstanceConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -704,30 +704,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: UpdateShieldedInstanceConfigAsync(UpdateShieldedInstanceConfigRequest, CallSettings)
             // Additional: UpdateShieldedInstanceConfigAsync(UpdateShieldedInstanceConfigRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateShieldedInstanceConfigRequest request = new UpdateShieldedInstanceConfigRequest
+            gcnv::UpdateShieldedInstanceConfigRequest request = new gcnv::UpdateShieldedInstanceConfigRequest
             {
                 Name = "",
-                ShieldedInstanceConfig = new Instance.Types.ShieldedInstanceConfig(),
+                ShieldedInstanceConfig = new gcnv::Instance.Types.ShieldedInstanceConfig(),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.UpdateShieldedInstanceConfigAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.UpdateShieldedInstanceConfigAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceUpdateShieldedInstanceConfigAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceUpdateShieldedInstanceConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -737,30 +737,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: SetInstanceLabels(SetInstanceLabelsRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            SetInstanceLabelsRequest request = new SetInstanceLabelsRequest
+            gcnv::SetInstanceLabelsRequest request = new gcnv::SetInstanceLabelsRequest
             {
                 Name = "",
                 Labels = { { "", "" }, },
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.SetInstanceLabels(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.SetInstanceLabels(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceSetInstanceLabels(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceSetInstanceLabels(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -771,30 +771,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: SetInstanceLabelsAsync(SetInstanceLabelsRequest, CallSettings)
             // Additional: SetInstanceLabelsAsync(SetInstanceLabelsRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SetInstanceLabelsRequest request = new SetInstanceLabelsRequest
+            gcnv::SetInstanceLabelsRequest request = new gcnv::SetInstanceLabelsRequest
             {
                 Name = "",
                 Labels = { { "", "" }, },
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.SetInstanceLabelsAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.SetInstanceLabelsAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceSetInstanceLabelsAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceSetInstanceLabelsAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -804,15 +804,15 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: UpdateInstanceMetadataItems(UpdateInstanceMetadataItemsRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            UpdateInstanceMetadataItemsRequest request = new UpdateInstanceMetadataItemsRequest
+            gcnv::UpdateInstanceMetadataItemsRequest request = new gcnv::UpdateInstanceMetadataItemsRequest
             {
                 Name = "",
                 Items = { { "", "" }, },
             };
             // Make the request
-            UpdateInstanceMetadataItemsResponse response = notebookServiceClient.UpdateInstanceMetadataItems(request);
+            gcnv::UpdateInstanceMetadataItemsResponse response = notebookServiceClient.UpdateInstanceMetadataItems(request);
             // End snippet
         }
 
@@ -822,15 +822,15 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: UpdateInstanceMetadataItemsAsync(UpdateInstanceMetadataItemsRequest, CallSettings)
             // Additional: UpdateInstanceMetadataItemsAsync(UpdateInstanceMetadataItemsRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateInstanceMetadataItemsRequest request = new UpdateInstanceMetadataItemsRequest
+            gcnv::UpdateInstanceMetadataItemsRequest request = new gcnv::UpdateInstanceMetadataItemsRequest
             {
                 Name = "",
                 Items = { { "", "" }, },
             };
             // Make the request
-            UpdateInstanceMetadataItemsResponse response = await notebookServiceClient.UpdateInstanceMetadataItemsAsync(request);
+            gcnv::UpdateInstanceMetadataItemsResponse response = await notebookServiceClient.UpdateInstanceMetadataItemsAsync(request);
             // End snippet
         }
 
@@ -839,21 +839,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: DeleteInstance(DeleteInstanceRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            DeleteInstanceRequest request = new DeleteInstanceRequest { Name = "", };
+            gcnv::DeleteInstanceRequest request = new gcnv::DeleteInstanceRequest { Name = "", };
             // Make the request
-            Operation<Empty, OperationMetadata> response = notebookServiceClient.DeleteInstance(request);
+            Operation<Empty, gcnv::OperationMetadata> response = notebookServiceClient.DeleteInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteInstance(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -869,21 +869,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: DeleteInstanceAsync(DeleteInstanceRequest, CallSettings)
             // Additional: DeleteInstanceAsync(DeleteInstanceRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteInstanceRequest request = new DeleteInstanceRequest { Name = "", };
+            gcnv::DeleteInstanceRequest request = new gcnv::DeleteInstanceRequest { Name = "", };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await notebookServiceClient.DeleteInstanceAsync(request);
+            Operation<Empty, gcnv::OperationMetadata> response = await notebookServiceClient.DeleteInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteInstanceAsync(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -898,21 +898,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: DeleteInstance(string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Operation<Empty, OperationMetadata> response = notebookServiceClient.DeleteInstance(name);
+            Operation<Empty, gcnv::OperationMetadata> response = notebookServiceClient.DeleteInstance(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteInstance(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -928,21 +928,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: DeleteInstanceAsync(string, CallSettings)
             // Additional: DeleteInstanceAsync(string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await notebookServiceClient.DeleteInstanceAsync(name);
+            Operation<Empty, gcnv::OperationMetadata> response = await notebookServiceClient.DeleteInstanceAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteInstanceAsync(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -957,26 +957,26 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: StartInstance(StartInstanceRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            StartInstanceRequest request = new StartInstanceRequest { Name = "", };
+            gcnv::StartInstanceRequest request = new gcnv::StartInstanceRequest { Name = "", };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.StartInstance(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.StartInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceStartInstance(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceStartInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -987,26 +987,26 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: StartInstanceAsync(StartInstanceRequest, CallSettings)
             // Additional: StartInstanceAsync(StartInstanceRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            StartInstanceRequest request = new StartInstanceRequest { Name = "", };
+            gcnv::StartInstanceRequest request = new gcnv::StartInstanceRequest { Name = "", };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.StartInstanceAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.StartInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceStartInstanceAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceStartInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1016,26 +1016,26 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: StopInstance(StopInstanceRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            StopInstanceRequest request = new StopInstanceRequest { Name = "", };
+            gcnv::StopInstanceRequest request = new gcnv::StopInstanceRequest { Name = "", };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.StopInstance(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.StopInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceStopInstance(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceStopInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1046,26 +1046,26 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: StopInstanceAsync(StopInstanceRequest, CallSettings)
             // Additional: StopInstanceAsync(StopInstanceRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            StopInstanceRequest request = new StopInstanceRequest { Name = "", };
+            gcnv::StopInstanceRequest request = new gcnv::StopInstanceRequest { Name = "", };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.StopInstanceAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.StopInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceStopInstanceAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceStopInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1075,26 +1075,26 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ResetInstance(ResetInstanceRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ResetInstanceRequest request = new ResetInstanceRequest { Name = "", };
+            gcnv::ResetInstanceRequest request = new gcnv::ResetInstanceRequest { Name = "", };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.ResetInstance(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.ResetInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceResetInstance(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceResetInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1105,26 +1105,26 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: ResetInstanceAsync(ResetInstanceRequest, CallSettings)
             // Additional: ResetInstanceAsync(ResetInstanceRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ResetInstanceRequest request = new ResetInstanceRequest { Name = "", };
+            gcnv::ResetInstanceRequest request = new gcnv::ResetInstanceRequest { Name = "", };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.ResetInstanceAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.ResetInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceResetInstanceAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceResetInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1134,31 +1134,31 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ReportInstanceInfo(ReportInstanceInfoRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ReportInstanceInfoRequest request = new ReportInstanceInfoRequest
+            gcnv::ReportInstanceInfoRequest request = new gcnv::ReportInstanceInfoRequest
             {
                 Name = "",
                 VmId = "",
                 Metadata = { { "", "" }, },
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.ReportInstanceInfo(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.ReportInstanceInfo(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceReportInstanceInfo(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceReportInstanceInfo(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1169,31 +1169,31 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: ReportInstanceInfoAsync(ReportInstanceInfoRequest, CallSettings)
             // Additional: ReportInstanceInfoAsync(ReportInstanceInfoRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ReportInstanceInfoRequest request = new ReportInstanceInfoRequest
+            gcnv::ReportInstanceInfoRequest request = new gcnv::ReportInstanceInfoRequest
             {
                 Name = "",
                 VmId = "",
                 Metadata = { { "", "" }, },
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.ReportInstanceInfoAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.ReportInstanceInfoAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceReportInstanceInfoAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceReportInstanceInfoAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1203,15 +1203,15 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: IsInstanceUpgradeable(IsInstanceUpgradeableRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            IsInstanceUpgradeableRequest request = new IsInstanceUpgradeableRequest
+            gcnv::IsInstanceUpgradeableRequest request = new gcnv::IsInstanceUpgradeableRequest
             {
                 NotebookInstance = "",
-                Type = UpgradeType.Unspecified,
+                Type = gcnv::UpgradeType.Unspecified,
             };
             // Make the request
-            IsInstanceUpgradeableResponse response = notebookServiceClient.IsInstanceUpgradeable(request);
+            gcnv::IsInstanceUpgradeableResponse response = notebookServiceClient.IsInstanceUpgradeable(request);
             // End snippet
         }
 
@@ -1221,15 +1221,15 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: IsInstanceUpgradeableAsync(IsInstanceUpgradeableRequest, CallSettings)
             // Additional: IsInstanceUpgradeableAsync(IsInstanceUpgradeableRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            IsInstanceUpgradeableRequest request = new IsInstanceUpgradeableRequest
+            gcnv::IsInstanceUpgradeableRequest request = new gcnv::IsInstanceUpgradeableRequest
             {
                 NotebookInstance = "",
-                Type = UpgradeType.Unspecified,
+                Type = gcnv::UpgradeType.Unspecified,
             };
             // Make the request
-            IsInstanceUpgradeableResponse response = await notebookServiceClient.IsInstanceUpgradeableAsync(request);
+            gcnv::IsInstanceUpgradeableResponse response = await notebookServiceClient.IsInstanceUpgradeableAsync(request);
             // End snippet
         }
 
@@ -1238,14 +1238,14 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: GetInstanceHealth(GetInstanceHealthRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            GetInstanceHealthRequest request = new GetInstanceHealthRequest
+            gcnv::GetInstanceHealthRequest request = new gcnv::GetInstanceHealthRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcnv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
-            GetInstanceHealthResponse response = notebookServiceClient.GetInstanceHealth(request);
+            gcnv::GetInstanceHealthResponse response = notebookServiceClient.GetInstanceHealth(request);
             // End snippet
         }
 
@@ -1255,14 +1255,14 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: GetInstanceHealthAsync(GetInstanceHealthRequest, CallSettings)
             // Additional: GetInstanceHealthAsync(GetInstanceHealthRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetInstanceHealthRequest request = new GetInstanceHealthRequest
+            gcnv::GetInstanceHealthRequest request = new gcnv::GetInstanceHealthRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstanceName = gcnv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
-            GetInstanceHealthResponse response = await notebookServiceClient.GetInstanceHealthAsync(request);
+            gcnv::GetInstanceHealthResponse response = await notebookServiceClient.GetInstanceHealthAsync(request);
             // End snippet
         }
 
@@ -1271,11 +1271,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: GetInstanceHealth(string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/instances/[INSTANCE]";
             // Make the request
-            GetInstanceHealthResponse response = notebookServiceClient.GetInstanceHealth(name);
+            gcnv::GetInstanceHealthResponse response = notebookServiceClient.GetInstanceHealth(name);
             // End snippet
         }
 
@@ -1285,11 +1285,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: GetInstanceHealthAsync(string, CallSettings)
             // Additional: GetInstanceHealthAsync(string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/instances/[INSTANCE]";
             // Make the request
-            GetInstanceHealthResponse response = await notebookServiceClient.GetInstanceHealthAsync(name);
+            gcnv::GetInstanceHealthResponse response = await notebookServiceClient.GetInstanceHealthAsync(name);
             // End snippet
         }
 
@@ -1298,11 +1298,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: GetInstanceHealth(InstanceName, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            gcnv::InstanceName name = gcnv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
             // Make the request
-            GetInstanceHealthResponse response = notebookServiceClient.GetInstanceHealth(name);
+            gcnv::GetInstanceHealthResponse response = notebookServiceClient.GetInstanceHealth(name);
             // End snippet
         }
 
@@ -1312,11 +1312,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: GetInstanceHealthAsync(InstanceName, CallSettings)
             // Additional: GetInstanceHealthAsync(InstanceName, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            gcnv::InstanceName name = gcnv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
             // Make the request
-            GetInstanceHealthResponse response = await notebookServiceClient.GetInstanceHealthAsync(name);
+            gcnv::GetInstanceHealthResponse response = await notebookServiceClient.GetInstanceHealthAsync(name);
             // End snippet
         }
 
@@ -1325,30 +1325,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: UpgradeInstance(UpgradeInstanceRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            UpgradeInstanceRequest request = new UpgradeInstanceRequest
+            gcnv::UpgradeInstanceRequest request = new gcnv::UpgradeInstanceRequest
             {
                 Name = "",
-                Type = UpgradeType.Unspecified,
+                Type = gcnv::UpgradeType.Unspecified,
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.UpgradeInstance(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.UpgradeInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceUpgradeInstance(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceUpgradeInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1359,30 +1359,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: UpgradeInstanceAsync(UpgradeInstanceRequest, CallSettings)
             // Additional: UpgradeInstanceAsync(UpgradeInstanceRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpgradeInstanceRequest request = new UpgradeInstanceRequest
+            gcnv::UpgradeInstanceRequest request = new gcnv::UpgradeInstanceRequest
             {
                 Name = "",
-                Type = UpgradeType.Unspecified,
+                Type = gcnv::UpgradeType.Unspecified,
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.UpgradeInstanceAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.UpgradeInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceUpgradeInstanceAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceUpgradeInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1392,30 +1392,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: RollbackInstance(RollbackInstanceRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            RollbackInstanceRequest request = new RollbackInstanceRequest
+            gcnv::RollbackInstanceRequest request = new gcnv::RollbackInstanceRequest
             {
                 Name = "",
                 TargetSnapshot = "",
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.RollbackInstance(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.RollbackInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceRollbackInstance(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceRollbackInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1426,30 +1426,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: RollbackInstanceAsync(RollbackInstanceRequest, CallSettings)
             // Additional: RollbackInstanceAsync(RollbackInstanceRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RollbackInstanceRequest request = new RollbackInstanceRequest
+            gcnv::RollbackInstanceRequest request = new gcnv::RollbackInstanceRequest
             {
                 Name = "",
                 TargetSnapshot = "",
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.RollbackInstanceAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.RollbackInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceRollbackInstanceAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceRollbackInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1459,30 +1459,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: DiagnoseInstance(DiagnoseInstanceRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            DiagnoseInstanceRequest request = new DiagnoseInstanceRequest
+            gcnv::DiagnoseInstanceRequest request = new gcnv::DiagnoseInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
-                DiagnosticConfig = new DiagnosticConfig(),
+                InstanceName = gcnv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DiagnosticConfig = new gcnv::DiagnosticConfig(),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.DiagnoseInstance(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.DiagnoseInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDiagnoseInstance(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDiagnoseInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1493,30 +1493,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: DiagnoseInstanceAsync(DiagnoseInstanceRequest, CallSettings)
             // Additional: DiagnoseInstanceAsync(DiagnoseInstanceRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DiagnoseInstanceRequest request = new DiagnoseInstanceRequest
+            gcnv::DiagnoseInstanceRequest request = new gcnv::DiagnoseInstanceRequest
             {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
-                DiagnosticConfig = new DiagnosticConfig(),
+                InstanceName = gcnv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                DiagnosticConfig = new gcnv::DiagnosticConfig(),
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.DiagnoseInstanceAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.DiagnoseInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDiagnoseInstanceAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDiagnoseInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1526,27 +1526,27 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: DiagnoseInstance(string, DiagnosticConfig, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/instances/[INSTANCE]";
-            DiagnosticConfig diagnosticConfig = new DiagnosticConfig();
+            gcnv::DiagnosticConfig diagnosticConfig = new gcnv::DiagnosticConfig();
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.DiagnoseInstance(name, diagnosticConfig);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.DiagnoseInstance(name, diagnosticConfig);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDiagnoseInstance(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDiagnoseInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1557,27 +1557,27 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: DiagnoseInstanceAsync(string, DiagnosticConfig, CallSettings)
             // Additional: DiagnoseInstanceAsync(string, DiagnosticConfig, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/instances/[INSTANCE]";
-            DiagnosticConfig diagnosticConfig = new DiagnosticConfig();
+            gcnv::DiagnosticConfig diagnosticConfig = new gcnv::DiagnosticConfig();
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.DiagnoseInstanceAsync(name, diagnosticConfig);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.DiagnoseInstanceAsync(name, diagnosticConfig);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDiagnoseInstanceAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDiagnoseInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1587,27 +1587,27 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: DiagnoseInstance(InstanceName, DiagnosticConfig, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
-            DiagnosticConfig diagnosticConfig = new DiagnosticConfig();
+            gcnv::InstanceName name = gcnv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            gcnv::DiagnosticConfig diagnosticConfig = new gcnv::DiagnosticConfig();
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.DiagnoseInstance(name, diagnosticConfig);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.DiagnoseInstance(name, diagnosticConfig);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDiagnoseInstance(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDiagnoseInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1618,27 +1618,27 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: DiagnoseInstanceAsync(InstanceName, DiagnosticConfig, CallSettings)
             // Additional: DiagnoseInstanceAsync(InstanceName, DiagnosticConfig, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName name = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
-            DiagnosticConfig diagnosticConfig = new DiagnosticConfig();
+            gcnv::InstanceName name = gcnv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            gcnv::DiagnosticConfig diagnosticConfig = new gcnv::DiagnosticConfig();
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.DiagnoseInstanceAsync(name, diagnosticConfig);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.DiagnoseInstanceAsync(name, diagnosticConfig);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDiagnoseInstanceAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDiagnoseInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1648,31 +1648,31 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: UpgradeInstanceInternal(UpgradeInstanceInternalRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            UpgradeInstanceInternalRequest request = new UpgradeInstanceInternalRequest
+            gcnv::UpgradeInstanceInternalRequest request = new gcnv::UpgradeInstanceInternalRequest
             {
                 Name = "",
                 VmId = "",
-                Type = UpgradeType.Unspecified,
+                Type = gcnv::UpgradeType.Unspecified,
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = notebookServiceClient.UpgradeInstanceInternal(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = notebookServiceClient.UpgradeInstanceInternal(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceUpgradeInstanceInternal(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceUpgradeInstanceInternal(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1683,31 +1683,31 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: UpgradeInstanceInternalAsync(UpgradeInstanceInternalRequest, CallSettings)
             // Additional: UpgradeInstanceInternalAsync(UpgradeInstanceInternalRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpgradeInstanceInternalRequest request = new UpgradeInstanceInternalRequest
+            gcnv::UpgradeInstanceInternalRequest request = new gcnv::UpgradeInstanceInternalRequest
             {
                 Name = "",
                 VmId = "",
-                Type = UpgradeType.Unspecified,
+                Type = gcnv::UpgradeType.Unspecified,
             };
             // Make the request
-            Operation<Instance, OperationMetadata> response = await notebookServiceClient.UpgradeInstanceInternalAsync(request);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> response = await notebookServiceClient.UpgradeInstanceInternalAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Instance, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Instance result = completedResponse.Result;
+            gcnv::Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Instance, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceUpgradeInstanceInternalAsync(operationName);
+            Operation<gcnv::Instance, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceUpgradeInstanceInternalAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Instance retrievedResult = retrievedResponse.Result;
+                gcnv::Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1717,11 +1717,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListEnvironments(ListEnvironmentsRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ListEnvironmentsRequest request = new ListEnvironmentsRequest { Parent = "", };
+            gcnv::ListEnvironmentsRequest request = new gcnv::ListEnvironmentsRequest { Parent = "", };
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironments(request);
+            PagedEnumerable<gcnv::ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironments(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcnv::Environment item in response)
@@ -1731,7 +1731,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcnv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1762,11 +1762,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListEnvironmentsAsync(ListEnvironmentsRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListEnvironmentsRequest request = new ListEnvironmentsRequest { Parent = "", };
+            gcnv::ListEnvironmentsRequest request = new gcnv::ListEnvironmentsRequest { Parent = "", };
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironmentsAsync(request);
+            PagedAsyncEnumerable<gcnv::ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironmentsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcnv::Environment item) =>
@@ -1776,7 +1776,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcnv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1807,11 +1807,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListEnvironments(string, string, int?, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedEnumerable<ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironments(parent);
+            PagedEnumerable<gcnv::ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironments(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcnv::Environment item in response)
@@ -1821,7 +1821,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListEnvironmentsResponse page in response.AsRawResponses())
+            foreach (gcnv::ListEnvironmentsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1852,11 +1852,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListEnvironmentsAsync(string, string, int?, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "";
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironmentsAsync(parent);
+            PagedAsyncEnumerable<gcnv::ListEnvironmentsResponse, gcnv::Environment> response = notebookServiceClient.ListEnvironmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcnv::Environment item) =>
@@ -1866,7 +1866,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcnv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1897,9 +1897,9 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: GetEnvironment(GetEnvironmentRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            GetEnvironmentRequest request = new GetEnvironmentRequest { Name = "", };
+            gcnv::GetEnvironmentRequest request = new gcnv::GetEnvironmentRequest { Name = "", };
             // Make the request
             gcnv::Environment response = notebookServiceClient.GetEnvironment(request);
             // End snippet
@@ -1911,9 +1911,9 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: GetEnvironmentAsync(GetEnvironmentRequest, CallSettings)
             // Additional: GetEnvironmentAsync(GetEnvironmentRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetEnvironmentRequest request = new GetEnvironmentRequest { Name = "", };
+            gcnv::GetEnvironmentRequest request = new gcnv::GetEnvironmentRequest { Name = "", };
             // Make the request
             gcnv::Environment response = await notebookServiceClient.GetEnvironmentAsync(request);
             // End snippet
@@ -1924,7 +1924,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: GetEnvironment(string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string name = "";
             // Make the request
@@ -1938,7 +1938,7 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: GetEnvironmentAsync(string, CallSettings)
             // Additional: GetEnvironmentAsync(string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
@@ -1951,26 +1951,26 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: CreateEnvironment(CreateEnvironmentRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            CreateEnvironmentRequest request = new CreateEnvironmentRequest
+            gcnv::CreateEnvironmentRequest request = new gcnv::CreateEnvironmentRequest
             {
                 Parent = "",
                 EnvironmentId = "",
                 Environment = new gcnv::Environment(),
             };
             // Make the request
-            Operation<gcnv::Environment, OperationMetadata> response = notebookServiceClient.CreateEnvironment(request);
+            Operation<gcnv::Environment, gcnv::OperationMetadata> response = notebookServiceClient.CreateEnvironment(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcnv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Environment, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcnv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcnv::Environment, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateEnvironment(operationName);
+            Operation<gcnv::Environment, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1986,26 +1986,26 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: CreateEnvironmentAsync(CreateEnvironmentRequest, CallSettings)
             // Additional: CreateEnvironmentAsync(CreateEnvironmentRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateEnvironmentRequest request = new CreateEnvironmentRequest
+            gcnv::CreateEnvironmentRequest request = new gcnv::CreateEnvironmentRequest
             {
                 Parent = "",
                 EnvironmentId = "",
                 Environment = new gcnv::Environment(),
             };
             // Make the request
-            Operation<gcnv::Environment, OperationMetadata> response = await notebookServiceClient.CreateEnvironmentAsync(request);
+            Operation<gcnv::Environment, gcnv::OperationMetadata> response = await notebookServiceClient.CreateEnvironmentAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcnv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Environment, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcnv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcnv::Environment, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateEnvironmentAsync(operationName);
+            Operation<gcnv::Environment, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2020,23 +2020,23 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: CreateEnvironment(string, Environment, string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string parent = "";
             gcnv::Environment environment = new gcnv::Environment();
             string environmentId = "";
             // Make the request
-            Operation<gcnv::Environment, OperationMetadata> response = notebookServiceClient.CreateEnvironment(parent, environment, environmentId);
+            Operation<gcnv::Environment, gcnv::OperationMetadata> response = notebookServiceClient.CreateEnvironment(parent, environment, environmentId);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcnv::Environment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Environment, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcnv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcnv::Environment, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateEnvironment(operationName);
+            Operation<gcnv::Environment, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2052,23 +2052,23 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: CreateEnvironmentAsync(string, Environment, string, CallSettings)
             // Additional: CreateEnvironmentAsync(string, Environment, string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "";
             gcnv::Environment environment = new gcnv::Environment();
             string environmentId = "";
             // Make the request
-            Operation<gcnv::Environment, OperationMetadata> response = await notebookServiceClient.CreateEnvironmentAsync(parent, environment, environmentId);
+            Operation<gcnv::Environment, gcnv::OperationMetadata> response = await notebookServiceClient.CreateEnvironmentAsync(parent, environment, environmentId);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcnv::Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Environment, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcnv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcnv::Environment, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateEnvironmentAsync(operationName);
+            Operation<gcnv::Environment, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2083,21 +2083,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: DeleteEnvironment(DeleteEnvironmentRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            DeleteEnvironmentRequest request = new DeleteEnvironmentRequest { Name = "", };
+            gcnv::DeleteEnvironmentRequest request = new gcnv::DeleteEnvironmentRequest { Name = "", };
             // Make the request
-            Operation<Empty, OperationMetadata> response = notebookServiceClient.DeleteEnvironment(request);
+            Operation<Empty, gcnv::OperationMetadata> response = notebookServiceClient.DeleteEnvironment(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteEnvironment(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2113,21 +2113,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: DeleteEnvironmentAsync(DeleteEnvironmentRequest, CallSettings)
             // Additional: DeleteEnvironmentAsync(DeleteEnvironmentRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteEnvironmentRequest request = new DeleteEnvironmentRequest { Name = "", };
+            gcnv::DeleteEnvironmentRequest request = new gcnv::DeleteEnvironmentRequest { Name = "", };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await notebookServiceClient.DeleteEnvironmentAsync(request);
+            Operation<Empty, gcnv::OperationMetadata> response = await notebookServiceClient.DeleteEnvironmentAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteEnvironmentAsync(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2142,21 +2142,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: DeleteEnvironment(string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Operation<Empty, OperationMetadata> response = notebookServiceClient.DeleteEnvironment(name);
+            Operation<Empty, gcnv::OperationMetadata> response = notebookServiceClient.DeleteEnvironment(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteEnvironment(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteEnvironment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2172,21 +2172,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: DeleteEnvironmentAsync(string, CallSettings)
             // Additional: DeleteEnvironmentAsync(string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await notebookServiceClient.DeleteEnvironmentAsync(name);
+            Operation<Empty, gcnv::OperationMetadata> response = await notebookServiceClient.DeleteEnvironmentAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteEnvironmentAsync(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2201,30 +2201,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListSchedules(ListSchedulesRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ListSchedulesRequest request = new ListSchedulesRequest
+            gcnv::ListSchedulesRequest request = new gcnv::ListSchedulesRequest
             {
-                ParentAsScheduleName = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
+                ParentAsScheduleName = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListSchedulesResponse, Schedule> response = notebookServiceClient.ListSchedules(request);
+            PagedEnumerable<gcnv::ListSchedulesResponse, gcnv::Schedule> response = notebookServiceClient.ListSchedules(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Schedule item in response)
+            foreach (gcnv::Schedule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSchedulesResponse page in response.AsRawResponses())
+            foreach (gcnv::ListSchedulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Schedule item in page)
+                foreach (gcnv::Schedule item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2233,10 +2233,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Schedule> singlePage = response.ReadPage(pageSize);
+            Page<gcnv::Schedule> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Schedule item in singlePage)
+            foreach (gcnv::Schedule item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2251,30 +2251,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListSchedulesAsync(ListSchedulesRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListSchedulesRequest request = new ListSchedulesRequest
+            gcnv::ListSchedulesRequest request = new gcnv::ListSchedulesRequest
             {
-                ParentAsScheduleName = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
+                ParentAsScheduleName = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListSchedulesResponse, Schedule> response = notebookServiceClient.ListSchedulesAsync(request);
+            PagedAsyncEnumerable<gcnv::ListSchedulesResponse, gcnv::Schedule> response = notebookServiceClient.ListSchedulesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Schedule item) =>
+            await response.ForEachAsync((gcnv::Schedule item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSchedulesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcnv::ListSchedulesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Schedule item in page)
+                foreach (gcnv::Schedule item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2283,10 +2283,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Schedule> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcnv::Schedule> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Schedule item in singlePage)
+            foreach (gcnv::Schedule item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2301,25 +2301,25 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListSchedules(string, string, int?, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/location/[LOCATION]/schedules/[SCHEDULE]";
             // Make the request
-            PagedEnumerable<ListSchedulesResponse, Schedule> response = notebookServiceClient.ListSchedules(parent);
+            PagedEnumerable<gcnv::ListSchedulesResponse, gcnv::Schedule> response = notebookServiceClient.ListSchedules(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Schedule item in response)
+            foreach (gcnv::Schedule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSchedulesResponse page in response.AsRawResponses())
+            foreach (gcnv::ListSchedulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Schedule item in page)
+                foreach (gcnv::Schedule item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2328,10 +2328,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Schedule> singlePage = response.ReadPage(pageSize);
+            Page<gcnv::Schedule> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Schedule item in singlePage)
+            foreach (gcnv::Schedule item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2346,25 +2346,25 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListSchedulesAsync(string, string, int?, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/location/[LOCATION]/schedules/[SCHEDULE]";
             // Make the request
-            PagedAsyncEnumerable<ListSchedulesResponse, Schedule> response = notebookServiceClient.ListSchedulesAsync(parent);
+            PagedAsyncEnumerable<gcnv::ListSchedulesResponse, gcnv::Schedule> response = notebookServiceClient.ListSchedulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Schedule item) =>
+            await response.ForEachAsync((gcnv::Schedule item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSchedulesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcnv::ListSchedulesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Schedule item in page)
+                foreach (gcnv::Schedule item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2373,10 +2373,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Schedule> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcnv::Schedule> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Schedule item in singlePage)
+            foreach (gcnv::Schedule item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2391,25 +2391,25 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListSchedules(ScheduleName, string, int?, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ScheduleName parent = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
+            gcnv::ScheduleName parent = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
             // Make the request
-            PagedEnumerable<ListSchedulesResponse, Schedule> response = notebookServiceClient.ListSchedules(parent);
+            PagedEnumerable<gcnv::ListSchedulesResponse, gcnv::Schedule> response = notebookServiceClient.ListSchedules(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Schedule item in response)
+            foreach (gcnv::Schedule item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSchedulesResponse page in response.AsRawResponses())
+            foreach (gcnv::ListSchedulesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Schedule item in page)
+                foreach (gcnv::Schedule item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2418,10 +2418,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Schedule> singlePage = response.ReadPage(pageSize);
+            Page<gcnv::Schedule> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Schedule item in singlePage)
+            foreach (gcnv::Schedule item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2436,25 +2436,25 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListSchedulesAsync(ScheduleName, string, int?, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ScheduleName parent = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
+            gcnv::ScheduleName parent = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
             // Make the request
-            PagedAsyncEnumerable<ListSchedulesResponse, Schedule> response = notebookServiceClient.ListSchedulesAsync(parent);
+            PagedAsyncEnumerable<gcnv::ListSchedulesResponse, gcnv::Schedule> response = notebookServiceClient.ListSchedulesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Schedule item) =>
+            await response.ForEachAsync((gcnv::Schedule item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSchedulesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcnv::ListSchedulesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Schedule item in page)
+                foreach (gcnv::Schedule item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2463,10 +2463,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Schedule> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcnv::Schedule> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Schedule item in singlePage)
+            foreach (gcnv::Schedule item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2481,14 +2481,14 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: GetSchedule(GetScheduleRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            GetScheduleRequest request = new GetScheduleRequest
+            gcnv::GetScheduleRequest request = new gcnv::GetScheduleRequest
             {
-                ScheduleName = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
+                ScheduleName = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
             };
             // Make the request
-            Schedule response = notebookServiceClient.GetSchedule(request);
+            gcnv::Schedule response = notebookServiceClient.GetSchedule(request);
             // End snippet
         }
 
@@ -2498,14 +2498,14 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: GetScheduleAsync(GetScheduleRequest, CallSettings)
             // Additional: GetScheduleAsync(GetScheduleRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetScheduleRequest request = new GetScheduleRequest
+            gcnv::GetScheduleRequest request = new gcnv::GetScheduleRequest
             {
-                ScheduleName = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
+                ScheduleName = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
             };
             // Make the request
-            Schedule response = await notebookServiceClient.GetScheduleAsync(request);
+            gcnv::Schedule response = await notebookServiceClient.GetScheduleAsync(request);
             // End snippet
         }
 
@@ -2514,11 +2514,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: GetSchedule(string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/location/[LOCATION]/schedules/[SCHEDULE]";
             // Make the request
-            Schedule response = notebookServiceClient.GetSchedule(name);
+            gcnv::Schedule response = notebookServiceClient.GetSchedule(name);
             // End snippet
         }
 
@@ -2528,11 +2528,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: GetScheduleAsync(string, CallSettings)
             // Additional: GetScheduleAsync(string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/location/[LOCATION]/schedules/[SCHEDULE]";
             // Make the request
-            Schedule response = await notebookServiceClient.GetScheduleAsync(name);
+            gcnv::Schedule response = await notebookServiceClient.GetScheduleAsync(name);
             // End snippet
         }
 
@@ -2541,11 +2541,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: GetSchedule(ScheduleName, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ScheduleName name = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
+            gcnv::ScheduleName name = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
             // Make the request
-            Schedule response = notebookServiceClient.GetSchedule(name);
+            gcnv::Schedule response = notebookServiceClient.GetSchedule(name);
             // End snippet
         }
 
@@ -2555,11 +2555,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: GetScheduleAsync(ScheduleName, CallSettings)
             // Additional: GetScheduleAsync(ScheduleName, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ScheduleName name = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
+            gcnv::ScheduleName name = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
             // Make the request
-            Schedule response = await notebookServiceClient.GetScheduleAsync(name);
+            gcnv::Schedule response = await notebookServiceClient.GetScheduleAsync(name);
             // End snippet
         }
 
@@ -2568,24 +2568,24 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: DeleteSchedule(DeleteScheduleRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            DeleteScheduleRequest request = new DeleteScheduleRequest
+            gcnv::DeleteScheduleRequest request = new gcnv::DeleteScheduleRequest
             {
-                ScheduleName = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
+                ScheduleName = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = notebookServiceClient.DeleteSchedule(request);
+            Operation<Empty, gcnv::OperationMetadata> response = notebookServiceClient.DeleteSchedule(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteSchedule(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteSchedule(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2601,24 +2601,24 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: DeleteScheduleAsync(DeleteScheduleRequest, CallSettings)
             // Additional: DeleteScheduleAsync(DeleteScheduleRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteScheduleRequest request = new DeleteScheduleRequest
+            gcnv::DeleteScheduleRequest request = new gcnv::DeleteScheduleRequest
             {
-                ScheduleName = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
+                ScheduleName = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await notebookServiceClient.DeleteScheduleAsync(request);
+            Operation<Empty, gcnv::OperationMetadata> response = await notebookServiceClient.DeleteScheduleAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteScheduleAsync(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteScheduleAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2633,21 +2633,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: DeleteSchedule(string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/location/[LOCATION]/schedules/[SCHEDULE]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = notebookServiceClient.DeleteSchedule(name);
+            Operation<Empty, gcnv::OperationMetadata> response = notebookServiceClient.DeleteSchedule(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteSchedule(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteSchedule(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2663,21 +2663,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: DeleteScheduleAsync(string, CallSettings)
             // Additional: DeleteScheduleAsync(string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/location/[LOCATION]/schedules/[SCHEDULE]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await notebookServiceClient.DeleteScheduleAsync(name);
+            Operation<Empty, gcnv::OperationMetadata> response = await notebookServiceClient.DeleteScheduleAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteScheduleAsync(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteScheduleAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2692,21 +2692,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: DeleteSchedule(ScheduleName, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ScheduleName name = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
+            gcnv::ScheduleName name = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = notebookServiceClient.DeleteSchedule(name);
+            Operation<Empty, gcnv::OperationMetadata> response = notebookServiceClient.DeleteSchedule(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteSchedule(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteSchedule(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2722,21 +2722,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: DeleteScheduleAsync(ScheduleName, CallSettings)
             // Additional: DeleteScheduleAsync(ScheduleName, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ScheduleName name = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
+            gcnv::ScheduleName name = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = await notebookServiceClient.DeleteScheduleAsync(name);
+            Operation<Empty, gcnv::OperationMetadata> response = await notebookServiceClient.DeleteScheduleAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteScheduleAsync(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteScheduleAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2751,31 +2751,31 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: CreateSchedule(CreateScheduleRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            CreateScheduleRequest request = new CreateScheduleRequest
+            gcnv::CreateScheduleRequest request = new gcnv::CreateScheduleRequest
             {
-                ParentAsScheduleName = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
+                ParentAsScheduleName = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
                 ScheduleId = "",
-                Schedule = new Schedule(),
+                Schedule = new gcnv::Schedule(),
             };
             // Make the request
-            Operation<Schedule, OperationMetadata> response = notebookServiceClient.CreateSchedule(request);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> response = notebookServiceClient.CreateSchedule(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Schedule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Schedule result = completedResponse.Result;
+            gcnv::Schedule result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Schedule, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateSchedule(operationName);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateSchedule(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Schedule retrievedResult = retrievedResponse.Result;
+                gcnv::Schedule retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2786,31 +2786,31 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: CreateScheduleAsync(CreateScheduleRequest, CallSettings)
             // Additional: CreateScheduleAsync(CreateScheduleRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateScheduleRequest request = new CreateScheduleRequest
+            gcnv::CreateScheduleRequest request = new gcnv::CreateScheduleRequest
             {
-                ParentAsScheduleName = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
+                ParentAsScheduleName = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
                 ScheduleId = "",
-                Schedule = new Schedule(),
+                Schedule = new gcnv::Schedule(),
             };
             // Make the request
-            Operation<Schedule, OperationMetadata> response = await notebookServiceClient.CreateScheduleAsync(request);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> response = await notebookServiceClient.CreateScheduleAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Schedule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Schedule result = completedResponse.Result;
+            gcnv::Schedule result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Schedule, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateScheduleAsync(operationName);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateScheduleAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Schedule retrievedResult = retrievedResponse.Result;
+                gcnv::Schedule retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2820,28 +2820,28 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: CreateSchedule(string, Schedule, string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/location/[LOCATION]/schedules/[SCHEDULE]";
-            Schedule schedule = new Schedule();
+            gcnv::Schedule schedule = new gcnv::Schedule();
             string scheduleId = "";
             // Make the request
-            Operation<Schedule, OperationMetadata> response = notebookServiceClient.CreateSchedule(parent, schedule, scheduleId);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> response = notebookServiceClient.CreateSchedule(parent, schedule, scheduleId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Schedule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Schedule result = completedResponse.Result;
+            gcnv::Schedule result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Schedule, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateSchedule(operationName);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateSchedule(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Schedule retrievedResult = retrievedResponse.Result;
+                gcnv::Schedule retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2852,28 +2852,28 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: CreateScheduleAsync(string, Schedule, string, CallSettings)
             // Additional: CreateScheduleAsync(string, Schedule, string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/location/[LOCATION]/schedules/[SCHEDULE]";
-            Schedule schedule = new Schedule();
+            gcnv::Schedule schedule = new gcnv::Schedule();
             string scheduleId = "";
             // Make the request
-            Operation<Schedule, OperationMetadata> response = await notebookServiceClient.CreateScheduleAsync(parent, schedule, scheduleId);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> response = await notebookServiceClient.CreateScheduleAsync(parent, schedule, scheduleId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Schedule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Schedule result = completedResponse.Result;
+            gcnv::Schedule result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Schedule, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateScheduleAsync(operationName);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateScheduleAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Schedule retrievedResult = retrievedResponse.Result;
+                gcnv::Schedule retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2883,28 +2883,28 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: CreateSchedule(ScheduleName, Schedule, string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ScheduleName parent = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
-            Schedule schedule = new Schedule();
+            gcnv::ScheduleName parent = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
+            gcnv::Schedule schedule = new gcnv::Schedule();
             string scheduleId = "";
             // Make the request
-            Operation<Schedule, OperationMetadata> response = notebookServiceClient.CreateSchedule(parent, schedule, scheduleId);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> response = notebookServiceClient.CreateSchedule(parent, schedule, scheduleId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Schedule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Schedule result = completedResponse.Result;
+            gcnv::Schedule result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Schedule, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateSchedule(operationName);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateSchedule(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Schedule retrievedResult = retrievedResponse.Result;
+                gcnv::Schedule retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2915,28 +2915,28 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: CreateScheduleAsync(ScheduleName, Schedule, string, CallSettings)
             // Additional: CreateScheduleAsync(ScheduleName, Schedule, string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ScheduleName parent = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
-            Schedule schedule = new Schedule();
+            gcnv::ScheduleName parent = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]");
+            gcnv::Schedule schedule = new gcnv::Schedule();
             string scheduleId = "";
             // Make the request
-            Operation<Schedule, OperationMetadata> response = await notebookServiceClient.CreateScheduleAsync(parent, schedule, scheduleId);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> response = await notebookServiceClient.CreateScheduleAsync(parent, schedule, scheduleId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Schedule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Schedule result = completedResponse.Result;
+            gcnv::Schedule result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Schedule, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateScheduleAsync(operationName);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateScheduleAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Schedule retrievedResult = retrievedResponse.Result;
+                gcnv::Schedule retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2946,29 +2946,29 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: TriggerSchedule(TriggerScheduleRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            TriggerScheduleRequest request = new TriggerScheduleRequest
+            gcnv::TriggerScheduleRequest request = new gcnv::TriggerScheduleRequest
             {
-                ScheduleName = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
+                ScheduleName = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
             };
             // Make the request
-            Operation<Schedule, OperationMetadata> response = notebookServiceClient.TriggerSchedule(request);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> response = notebookServiceClient.TriggerSchedule(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Schedule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Schedule result = completedResponse.Result;
+            gcnv::Schedule result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Schedule, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceTriggerSchedule(operationName);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceTriggerSchedule(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Schedule retrievedResult = retrievedResponse.Result;
+                gcnv::Schedule retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2979,29 +2979,29 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: TriggerScheduleAsync(TriggerScheduleRequest, CallSettings)
             // Additional: TriggerScheduleAsync(TriggerScheduleRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            TriggerScheduleRequest request = new TriggerScheduleRequest
+            gcnv::TriggerScheduleRequest request = new gcnv::TriggerScheduleRequest
             {
-                ScheduleName = ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
+                ScheduleName = gcnv::ScheduleName.FromProjectLocationSchedule("[PROJECT]", "[LOCATION]", "[SCHEDULE]"),
             };
             // Make the request
-            Operation<Schedule, OperationMetadata> response = await notebookServiceClient.TriggerScheduleAsync(request);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> response = await notebookServiceClient.TriggerScheduleAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Schedule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Schedule result = completedResponse.Result;
+            gcnv::Schedule result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Schedule, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceTriggerScheduleAsync(operationName);
+            Operation<gcnv::Schedule, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceTriggerScheduleAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Schedule retrievedResult = retrievedResponse.Result;
+                gcnv::Schedule retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -3011,30 +3011,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListExecutions(ListExecutionsRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ListExecutionsRequest request = new ListExecutionsRequest
+            gcnv::ListExecutionsRequest request = new gcnv::ListExecutionsRequest
             {
-                ParentAsExecutionName = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
+                ParentAsExecutionName = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListExecutionsResponse, Execution> response = notebookServiceClient.ListExecutions(request);
+            PagedEnumerable<gcnv::ListExecutionsResponse, gcnv::Execution> response = notebookServiceClient.ListExecutions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Execution item in response)
+            foreach (gcnv::Execution item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListExecutionsResponse page in response.AsRawResponses())
+            foreach (gcnv::ListExecutionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Execution item in page)
+                foreach (gcnv::Execution item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3043,10 +3043,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Execution> singlePage = response.ReadPage(pageSize);
+            Page<gcnv::Execution> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Execution item in singlePage)
+            foreach (gcnv::Execution item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3061,30 +3061,30 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListExecutionsAsync(ListExecutionsRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListExecutionsRequest request = new ListExecutionsRequest
+            gcnv::ListExecutionsRequest request = new gcnv::ListExecutionsRequest
             {
-                ParentAsExecutionName = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
+                ParentAsExecutionName = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
                 Filter = "",
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListExecutionsResponse, Execution> response = notebookServiceClient.ListExecutionsAsync(request);
+            PagedAsyncEnumerable<gcnv::ListExecutionsResponse, gcnv::Execution> response = notebookServiceClient.ListExecutionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Execution item) =>
+            await response.ForEachAsync((gcnv::Execution item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExecutionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcnv::ListExecutionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Execution item in page)
+                foreach (gcnv::Execution item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3093,10 +3093,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Execution> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcnv::Execution> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Execution item in singlePage)
+            foreach (gcnv::Execution item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3111,25 +3111,25 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListExecutions(string, string, int?, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/location/[LOCATION]/executions/[EXECUTION]";
             // Make the request
-            PagedEnumerable<ListExecutionsResponse, Execution> response = notebookServiceClient.ListExecutions(parent);
+            PagedEnumerable<gcnv::ListExecutionsResponse, gcnv::Execution> response = notebookServiceClient.ListExecutions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Execution item in response)
+            foreach (gcnv::Execution item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListExecutionsResponse page in response.AsRawResponses())
+            foreach (gcnv::ListExecutionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Execution item in page)
+                foreach (gcnv::Execution item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3138,10 +3138,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Execution> singlePage = response.ReadPage(pageSize);
+            Page<gcnv::Execution> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Execution item in singlePage)
+            foreach (gcnv::Execution item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3156,25 +3156,25 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListExecutionsAsync(string, string, int?, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/location/[LOCATION]/executions/[EXECUTION]";
             // Make the request
-            PagedAsyncEnumerable<ListExecutionsResponse, Execution> response = notebookServiceClient.ListExecutionsAsync(parent);
+            PagedAsyncEnumerable<gcnv::ListExecutionsResponse, gcnv::Execution> response = notebookServiceClient.ListExecutionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Execution item) =>
+            await response.ForEachAsync((gcnv::Execution item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExecutionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcnv::ListExecutionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Execution item in page)
+                foreach (gcnv::Execution item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3183,10 +3183,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Execution> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcnv::Execution> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Execution item in singlePage)
+            foreach (gcnv::Execution item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3201,25 +3201,25 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListExecutions(ExecutionName, string, int?, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ExecutionName parent = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
+            gcnv::ExecutionName parent = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
             // Make the request
-            PagedEnumerable<ListExecutionsResponse, Execution> response = notebookServiceClient.ListExecutions(parent);
+            PagedEnumerable<gcnv::ListExecutionsResponse, gcnv::Execution> response = notebookServiceClient.ListExecutions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Execution item in response)
+            foreach (gcnv::Execution item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListExecutionsResponse page in response.AsRawResponses())
+            foreach (gcnv::ListExecutionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Execution item in page)
+                foreach (gcnv::Execution item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3228,10 +3228,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Execution> singlePage = response.ReadPage(pageSize);
+            Page<gcnv::Execution> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Execution item in singlePage)
+            foreach (gcnv::Execution item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3246,25 +3246,25 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: ListExecutionsAsync(ExecutionName, string, int?, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ExecutionName parent = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
+            gcnv::ExecutionName parent = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
             // Make the request
-            PagedAsyncEnumerable<ListExecutionsResponse, Execution> response = notebookServiceClient.ListExecutionsAsync(parent);
+            PagedAsyncEnumerable<gcnv::ListExecutionsResponse, gcnv::Execution> response = notebookServiceClient.ListExecutionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Execution item) =>
+            await response.ForEachAsync((gcnv::Execution item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListExecutionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcnv::ListExecutionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Execution item in page)
+                foreach (gcnv::Execution item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -3273,10 +3273,10 @@ namespace Google.Cloud.Notebooks.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Execution> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcnv::Execution> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Execution item in singlePage)
+            foreach (gcnv::Execution item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3291,14 +3291,14 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: GetExecution(GetExecutionRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            GetExecutionRequest request = new GetExecutionRequest
+            gcnv::GetExecutionRequest request = new gcnv::GetExecutionRequest
             {
-                ExecutionName = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
+                ExecutionName = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
             };
             // Make the request
-            Execution response = notebookServiceClient.GetExecution(request);
+            gcnv::Execution response = notebookServiceClient.GetExecution(request);
             // End snippet
         }
 
@@ -3308,14 +3308,14 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: GetExecutionAsync(GetExecutionRequest, CallSettings)
             // Additional: GetExecutionAsync(GetExecutionRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetExecutionRequest request = new GetExecutionRequest
+            gcnv::GetExecutionRequest request = new gcnv::GetExecutionRequest
             {
-                ExecutionName = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
+                ExecutionName = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
             };
             // Make the request
-            Execution response = await notebookServiceClient.GetExecutionAsync(request);
+            gcnv::Execution response = await notebookServiceClient.GetExecutionAsync(request);
             // End snippet
         }
 
@@ -3324,11 +3324,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: GetExecution(string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/location/[LOCATION]/executions/[EXECUTION]";
             // Make the request
-            Execution response = notebookServiceClient.GetExecution(name);
+            gcnv::Execution response = notebookServiceClient.GetExecution(name);
             // End snippet
         }
 
@@ -3338,11 +3338,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: GetExecutionAsync(string, CallSettings)
             // Additional: GetExecutionAsync(string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/location/[LOCATION]/executions/[EXECUTION]";
             // Make the request
-            Execution response = await notebookServiceClient.GetExecutionAsync(name);
+            gcnv::Execution response = await notebookServiceClient.GetExecutionAsync(name);
             // End snippet
         }
 
@@ -3351,11 +3351,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: GetExecution(ExecutionName, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ExecutionName name = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
+            gcnv::ExecutionName name = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
             // Make the request
-            Execution response = notebookServiceClient.GetExecution(name);
+            gcnv::Execution response = notebookServiceClient.GetExecution(name);
             // End snippet
         }
 
@@ -3365,11 +3365,11 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: GetExecutionAsync(ExecutionName, CallSettings)
             // Additional: GetExecutionAsync(ExecutionName, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ExecutionName name = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
+            gcnv::ExecutionName name = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
             // Make the request
-            Execution response = await notebookServiceClient.GetExecutionAsync(name);
+            gcnv::Execution response = await notebookServiceClient.GetExecutionAsync(name);
             // End snippet
         }
 
@@ -3378,24 +3378,24 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: DeleteExecution(DeleteExecutionRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            DeleteExecutionRequest request = new DeleteExecutionRequest
+            gcnv::DeleteExecutionRequest request = new gcnv::DeleteExecutionRequest
             {
-                ExecutionName = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
+                ExecutionName = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = notebookServiceClient.DeleteExecution(request);
+            Operation<Empty, gcnv::OperationMetadata> response = notebookServiceClient.DeleteExecution(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteExecution(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteExecution(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3411,24 +3411,24 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: DeleteExecutionAsync(DeleteExecutionRequest, CallSettings)
             // Additional: DeleteExecutionAsync(DeleteExecutionRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteExecutionRequest request = new DeleteExecutionRequest
+            gcnv::DeleteExecutionRequest request = new gcnv::DeleteExecutionRequest
             {
-                ExecutionName = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
+                ExecutionName = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await notebookServiceClient.DeleteExecutionAsync(request);
+            Operation<Empty, gcnv::OperationMetadata> response = await notebookServiceClient.DeleteExecutionAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteExecutionAsync(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteExecutionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3443,21 +3443,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: DeleteExecution(string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/location/[LOCATION]/executions/[EXECUTION]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = notebookServiceClient.DeleteExecution(name);
+            Operation<Empty, gcnv::OperationMetadata> response = notebookServiceClient.DeleteExecution(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteExecution(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteExecution(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3473,21 +3473,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: DeleteExecutionAsync(string, CallSettings)
             // Additional: DeleteExecutionAsync(string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/location/[LOCATION]/executions/[EXECUTION]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await notebookServiceClient.DeleteExecutionAsync(name);
+            Operation<Empty, gcnv::OperationMetadata> response = await notebookServiceClient.DeleteExecutionAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteExecutionAsync(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteExecutionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3502,21 +3502,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: DeleteExecution(ExecutionName, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ExecutionName name = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
+            gcnv::ExecutionName name = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = notebookServiceClient.DeleteExecution(name);
+            Operation<Empty, gcnv::OperationMetadata> response = notebookServiceClient.DeleteExecution(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteExecution(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceDeleteExecution(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3532,21 +3532,21 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: DeleteExecutionAsync(ExecutionName, CallSettings)
             // Additional: DeleteExecutionAsync(ExecutionName, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ExecutionName name = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
+            gcnv::ExecutionName name = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = await notebookServiceClient.DeleteExecutionAsync(name);
+            Operation<Empty, gcnv::OperationMetadata> response = await notebookServiceClient.DeleteExecutionAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteExecutionAsync(operationName);
+            Operation<Empty, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceDeleteExecutionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3561,31 +3561,31 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: CreateExecution(CreateExecutionRequest, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            CreateExecutionRequest request = new CreateExecutionRequest
+            gcnv::CreateExecutionRequest request = new gcnv::CreateExecutionRequest
             {
-                ParentAsExecutionName = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
+                ParentAsExecutionName = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
                 ExecutionId = "",
-                Execution = new Execution(),
+                Execution = new gcnv::Execution(),
             };
             // Make the request
-            Operation<Execution, OperationMetadata> response = notebookServiceClient.CreateExecution(request);
+            Operation<gcnv::Execution, gcnv::OperationMetadata> response = notebookServiceClient.CreateExecution(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Execution, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcnv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateExecution(operationName);
+            Operation<gcnv::Execution, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateExecution(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcnv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -3596,31 +3596,31 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: CreateExecutionAsync(CreateExecutionRequest, CallSettings)
             // Additional: CreateExecutionAsync(CreateExecutionRequest, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateExecutionRequest request = new CreateExecutionRequest
+            gcnv::CreateExecutionRequest request = new gcnv::CreateExecutionRequest
             {
-                ParentAsExecutionName = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
+                ParentAsExecutionName = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]"),
                 ExecutionId = "",
-                Execution = new Execution(),
+                Execution = new gcnv::Execution(),
             };
             // Make the request
-            Operation<Execution, OperationMetadata> response = await notebookServiceClient.CreateExecutionAsync(request);
+            Operation<gcnv::Execution, gcnv::OperationMetadata> response = await notebookServiceClient.CreateExecutionAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Execution, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcnv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateExecutionAsync(operationName);
+            Operation<gcnv::Execution, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateExecutionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcnv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -3630,28 +3630,28 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: CreateExecution(string, Execution, string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/location/[LOCATION]/executions/[EXECUTION]";
-            Execution execution = new Execution();
+            gcnv::Execution execution = new gcnv::Execution();
             string executionId = "";
             // Make the request
-            Operation<Execution, OperationMetadata> response = notebookServiceClient.CreateExecution(parent, execution, executionId);
+            Operation<gcnv::Execution, gcnv::OperationMetadata> response = notebookServiceClient.CreateExecution(parent, execution, executionId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Execution, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcnv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateExecution(operationName);
+            Operation<gcnv::Execution, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateExecution(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcnv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -3662,28 +3662,28 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: CreateExecutionAsync(string, Execution, string, CallSettings)
             // Additional: CreateExecutionAsync(string, Execution, string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/location/[LOCATION]/executions/[EXECUTION]";
-            Execution execution = new Execution();
+            gcnv::Execution execution = new gcnv::Execution();
             string executionId = "";
             // Make the request
-            Operation<Execution, OperationMetadata> response = await notebookServiceClient.CreateExecutionAsync(parent, execution, executionId);
+            Operation<gcnv::Execution, gcnv::OperationMetadata> response = await notebookServiceClient.CreateExecutionAsync(parent, execution, executionId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Execution, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcnv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateExecutionAsync(operationName);
+            Operation<gcnv::Execution, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateExecutionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcnv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -3693,28 +3693,28 @@ namespace Google.Cloud.Notebooks.V1.Snippets
         {
             // Snippet: CreateExecution(ExecutionName, Execution, string, CallSettings)
             // Create client
-            NotebookServiceClient notebookServiceClient = NotebookServiceClient.Create();
+            gcnv::NotebookServiceClient notebookServiceClient = gcnv::NotebookServiceClient.Create();
             // Initialize request argument(s)
-            ExecutionName parent = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
-            Execution execution = new Execution();
+            gcnv::ExecutionName parent = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
+            gcnv::Execution execution = new gcnv::Execution();
             string executionId = "";
             // Make the request
-            Operation<Execution, OperationMetadata> response = notebookServiceClient.CreateExecution(parent, execution, executionId);
+            Operation<gcnv::Execution, gcnv::OperationMetadata> response = notebookServiceClient.CreateExecution(parent, execution, executionId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcnv::Execution, gcnv::OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcnv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateExecution(operationName);
+            Operation<gcnv::Execution, gcnv::OperationMetadata> retrievedResponse = notebookServiceClient.PollOnceCreateExecution(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcnv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -3725,28 +3725,28 @@ namespace Google.Cloud.Notebooks.V1.Snippets
             // Snippet: CreateExecutionAsync(ExecutionName, Execution, string, CallSettings)
             // Additional: CreateExecutionAsync(ExecutionName, Execution, string, CancellationToken)
             // Create client
-            NotebookServiceClient notebookServiceClient = await NotebookServiceClient.CreateAsync();
+            gcnv::NotebookServiceClient notebookServiceClient = await gcnv::NotebookServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ExecutionName parent = ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
-            Execution execution = new Execution();
+            gcnv::ExecutionName parent = gcnv::ExecutionName.FromProjectLocationExecution("[PROJECT]", "[LOCATION]", "[EXECUTION]");
+            gcnv::Execution execution = new gcnv::Execution();
             string executionId = "";
             // Make the request
-            Operation<Execution, OperationMetadata> response = await notebookServiceClient.CreateExecutionAsync(parent, execution, executionId);
+            Operation<gcnv::Execution, gcnv::OperationMetadata> response = await notebookServiceClient.CreateExecutionAsync(parent, execution, executionId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Execution, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcnv::Execution, gcnv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Execution result = completedResponse.Result;
+            gcnv::Execution result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Execution, OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateExecutionAsync(operationName);
+            Operation<gcnv::Execution, gcnv::OperationMetadata> retrievedResponse = await notebookServiceClient.PollOnceCreateExecutionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Execution retrievedResult = retrievedResponse.Result;
+                gcnv::Execution retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

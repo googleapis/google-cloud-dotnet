@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Tasks_ListTasks_async_flattened]
     using Google.Api.Gax;
@@ -38,11 +38,11 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task ListTasksAsync()
         {
             // Create client
-            TasksClient tasksClient = await TasksClient.CreateAsync();
+            gcrv::TasksClient tasksClient = await gcrv::TasksClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/executions/[EXECUTION]";
             // Make the request
-            PagedAsyncEnumerable<ListTasksResponse, gcrv::Task> response = tasksClient.ListTasksAsync(parent);
+            PagedAsyncEnumerable<gcrv::ListTasksResponse, gcrv::Task> response = tasksClient.ListTasksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcrv::Task item) =>
@@ -52,7 +52,7 @@ namespace Google.Cloud.Run.V2.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListTasksResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcrv::ListTasksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

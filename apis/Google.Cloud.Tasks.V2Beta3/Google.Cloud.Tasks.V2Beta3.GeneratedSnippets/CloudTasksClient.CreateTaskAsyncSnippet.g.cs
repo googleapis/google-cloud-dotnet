@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2beta3_generated_CloudTasks_CreateTask_async_flattened]
     using System.Threading.Tasks;
@@ -35,7 +35,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
         public async Task CreateTaskAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
             gctv::Task task = new gctv::Task();

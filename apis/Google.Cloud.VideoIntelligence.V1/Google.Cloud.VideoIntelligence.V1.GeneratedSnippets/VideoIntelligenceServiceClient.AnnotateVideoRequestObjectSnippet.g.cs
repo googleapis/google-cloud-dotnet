@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.VideoIntelligence.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START videointelligence_v1_generated_VideoIntelligenceService_AnnotateVideo_sync]
     using Google.Cloud.VideoIntelligence.V1;

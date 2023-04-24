@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Compute.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START compute_v1_generated_TargetPools_RemoveHealthCheck_async]
     using Google.Cloud.Compute.V1;

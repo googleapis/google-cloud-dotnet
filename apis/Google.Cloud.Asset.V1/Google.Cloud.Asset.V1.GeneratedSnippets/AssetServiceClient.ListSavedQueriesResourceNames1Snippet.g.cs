@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Asset.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudasset_v1_generated_AssetService_ListSavedQueries_sync_flattened_resourceNames1]
     using Google.Api.Gax;

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_ContentService_GetIamPolicy_async_flattened_resourceNames]
     using Google.Api.Gax;
@@ -37,7 +37,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task GetIamPolicyResourceNamesAsync()
         {
             // Create client
-            ContentServiceClient contentServiceClient = await ContentServiceClient.CreateAsync();
+            gcdv::ContentServiceClient contentServiceClient = await gcdv::ContentServiceClient.CreateAsync();
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request

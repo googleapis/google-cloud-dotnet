@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_GetEnvironment_async_flattened_resourceNames]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task GetEnvironmentResourceNamesAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            EnvironmentName name = EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
+            gcdv::EnvironmentName name = gcdv::EnvironmentName.FromProjectLocationLakeEnvironment("[PROJECT]", "[LOCATION]", "[LAKE]", "[ENVIRONMENT]");
             // Make the request
-            Environment response = await dataplexServiceClient.GetEnvironmentAsync(name);
+            gcdv::Environment response = await dataplexServiceClient.GetEnvironmentAsync(name);
         }
     }
     // [END dataplex_v1_generated_DataplexService_GetEnvironment_async_flattened_resourceNames]

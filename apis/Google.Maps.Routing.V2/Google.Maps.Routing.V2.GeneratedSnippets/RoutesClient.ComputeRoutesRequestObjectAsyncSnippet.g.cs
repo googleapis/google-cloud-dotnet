@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Maps.Routing.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START routes_v2_generated_Routes_ComputeRoutes_async]
     using Google.Maps.Routing.V2;

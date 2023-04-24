@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Logging.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START logging_v2_generated_ConfigServiceV2_ListExclusions_async_flattened_resourceNames4]
     using Google.Api.Gax;

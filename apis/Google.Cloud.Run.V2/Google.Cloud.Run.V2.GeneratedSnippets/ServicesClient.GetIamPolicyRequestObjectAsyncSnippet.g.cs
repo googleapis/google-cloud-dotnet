@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Services_GetIamPolicy_async]
     using Google.Api.Gax;
@@ -37,7 +37,7 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task GetIamPolicyRequestObjectAsync()
         {
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {

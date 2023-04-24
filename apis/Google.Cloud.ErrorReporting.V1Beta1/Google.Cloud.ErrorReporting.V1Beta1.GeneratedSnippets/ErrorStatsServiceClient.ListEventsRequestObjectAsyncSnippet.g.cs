@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START clouderrorreporting_v1beta1_generated_ErrorStatsService_ListEvents_async]
     using Google.Api.Gax;

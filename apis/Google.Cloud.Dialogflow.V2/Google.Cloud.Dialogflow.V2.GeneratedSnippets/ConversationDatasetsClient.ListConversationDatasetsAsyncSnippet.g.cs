@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v2_generated_ConversationDatasets_ListConversationDatasets_async_flattened]
     using Google.Api.Gax;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace GrafeasV1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START containeranalysis_v1_generated_Grafeas_UpdateOccurrence_async_flattened_resourceNames]
     using Google.Protobuf.WellKnownTypes;

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Datastore.Admin.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datastore_v1_generated_DatastoreAdmin_ListIndexes_async]
     using Google.Api.Gax;
@@ -38,15 +38,15 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
         public async Task ListIndexesRequestObjectAsync()
         {
             // Create client
-            DatastoreAdminClient datastoreAdminClient = await DatastoreAdminClient.CreateAsync();
+            gcdav::DatastoreAdminClient datastoreAdminClient = await gcdav::DatastoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ListIndexesRequest request = new ListIndexesRequest
+            gcdav::ListIndexesRequest request = new gcdav::ListIndexesRequest
             {
                 ProjectId = "",
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListIndexesResponse, gcdav::Index> response = datastoreAdminClient.ListIndexesAsync(request);
+            PagedAsyncEnumerable<gcdav::ListIndexesResponse, gcdav::Index> response = datastoreAdminClient.ListIndexesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdav::Index item) =>
@@ -56,7 +56,7 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListIndexesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdav::ListIndexesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

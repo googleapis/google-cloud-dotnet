@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_MetadataService_CreateEntity_async]
     using System.Threading.Tasks;
@@ -35,16 +35,16 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task CreateEntityRequestObjectAsync()
         {
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateEntityRequest request = new CreateEntityRequest
+            gcdv::CreateEntityRequest request = new gcdv::CreateEntityRequest
             {
-                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
-                Entity = new Entity(),
+                ParentAsZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                Entity = new gcdv::Entity(),
                 ValidateOnly = false,
             };
             // Make the request
-            Entity response = await metadataServiceClient.CreateEntityAsync(request);
+            gcdv::Entity response = await metadataServiceClient.CreateEntityAsync(request);
         }
     }
     // [END dataplex_v1_generated_MetadataService_CreateEntity_async]

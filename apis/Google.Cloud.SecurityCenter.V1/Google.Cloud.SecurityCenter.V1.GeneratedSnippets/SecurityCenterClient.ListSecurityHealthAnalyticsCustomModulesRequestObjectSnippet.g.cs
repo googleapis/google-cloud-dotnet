@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.SecurityCenter.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START securitycenter_v1_generated_SecurityCenter_ListSecurityHealthAnalyticsCustomModules_sync]
     using Google.Api.Gax;

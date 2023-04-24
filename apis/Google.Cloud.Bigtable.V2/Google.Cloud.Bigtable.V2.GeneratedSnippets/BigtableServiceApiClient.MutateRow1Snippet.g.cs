@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START bigtable_v2_generated_Bigtable_MutateRow_sync_flattened1]
     using Google.Cloud.Bigtable.V2;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Recommender.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START recommender_v1_generated_Recommender_MarkRecommendationClaimed_async_flattened_resourceNames]
     using Google.Cloud.Recommender.V1;

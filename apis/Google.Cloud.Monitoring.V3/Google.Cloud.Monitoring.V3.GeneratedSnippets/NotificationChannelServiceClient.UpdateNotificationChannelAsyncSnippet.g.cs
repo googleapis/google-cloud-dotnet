@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Monitoring.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START monitoring_v3_generated_NotificationChannelService_UpdateNotificationChannel_async_flattened]
     using Google.Cloud.Monitoring.V3;

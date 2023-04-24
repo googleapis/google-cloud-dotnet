@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Retail.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api;
+    using Google.Cloud.Retail.V2;
     using Google.LongRunning;
     using System.Threading.Tasks;
 

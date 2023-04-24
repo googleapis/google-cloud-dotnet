@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DataQnA.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataqna_v1alpha_generated_QuestionService_CreateQuestion_async_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.GkeBackup.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START gkebackup_v1_generated_BackupForGKE_CreateRestore_sync]
     using Google.Cloud.GkeBackup.V1;

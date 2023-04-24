@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.GkeMultiCloud.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START gkemulticloud_v1_generated_AwsClusters_ListAwsNodePools_sync_flattened]
     using Google.Api.Gax;

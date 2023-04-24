@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.DiscoveryEngine.V1Beta;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>

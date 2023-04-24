@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Talent.V4.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START jobs_v4_generated_CompanyService_CreateCompany_async_flattened_resourceNames]
     using Google.Cloud.Talent.V4;

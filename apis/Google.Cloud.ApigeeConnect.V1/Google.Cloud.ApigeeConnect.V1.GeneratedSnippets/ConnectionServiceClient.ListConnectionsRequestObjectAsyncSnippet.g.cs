@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ApigeeConnect.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START apigeeconnect_v1_generated_ConnectionService_ListConnections_async]
     using Google.Api.Gax;

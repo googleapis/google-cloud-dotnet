@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ResourceManager.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.ResourceManager.V3;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;

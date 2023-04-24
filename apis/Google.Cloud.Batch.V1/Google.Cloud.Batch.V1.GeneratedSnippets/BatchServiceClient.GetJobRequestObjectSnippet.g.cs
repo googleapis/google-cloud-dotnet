@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Batch.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START batch_v1_generated_BatchService_GetJob_sync]
     using Google.Cloud.Batch.V1;

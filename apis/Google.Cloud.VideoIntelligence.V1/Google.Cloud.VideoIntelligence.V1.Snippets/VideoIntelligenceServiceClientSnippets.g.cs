@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.VideoIntelligence.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.VideoIntelligence.V1;
     using Google.LongRunning;
     using Google.Protobuf;
     using System.Collections.Generic;

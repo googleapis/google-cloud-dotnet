@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.VMMigration.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START vmmigration_v1_generated_VmMigration_GetUtilizationReport_async]
     using Google.Cloud.VMMigration.V1;

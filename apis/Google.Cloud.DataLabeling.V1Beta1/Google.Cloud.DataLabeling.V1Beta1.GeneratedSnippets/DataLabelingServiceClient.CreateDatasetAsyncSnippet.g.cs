@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DataLabeling.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datalabeling_v1beta1_generated_DataLabelingService_CreateDataset_async_flattened]
     using Google.Cloud.DataLabeling.V1Beta1;

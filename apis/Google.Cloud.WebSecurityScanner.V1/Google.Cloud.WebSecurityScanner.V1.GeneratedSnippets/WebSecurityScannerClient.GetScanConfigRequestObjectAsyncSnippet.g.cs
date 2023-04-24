@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.WebSecurityScanner.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START websecurityscanner_v1_generated_WebSecurityScanner_GetScanConfig_async]
     using Google.Cloud.WebSecurityScanner.V1;

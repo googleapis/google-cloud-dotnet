@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Spanner.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START spanner_v1_generated_Spanner_Commit_sync_flattened1_resourceNames]
     using Google.Cloud.Spanner.V1;

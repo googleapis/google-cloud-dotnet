@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataScanService_CreateDataScan_async]
     using Google.Api.Gax.ResourceNames;
@@ -37,31 +37,31 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task CreateDataScanRequestObjectAsync()
         {
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateDataScanRequest request = new CreateDataScanRequest
+            gcdv::CreateDataScanRequest request = new gcdv::CreateDataScanRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                DataScan = new DataScan(),
+                DataScan = new gcdv::DataScan(),
                 DataScanId = "",
             };
             // Make the request
-            Operation<DataScan, OperationMetadata> response = await dataScanServiceClient.CreateDataScanAsync(request);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> response = await dataScanServiceClient.CreateDataScanAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<DataScan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            DataScan result = completedResponse.Result;
+            gcdv::DataScan result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<DataScan, OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceCreateDataScanAsync(operationName);
+            Operation<gcdv::DataScan, gcdv::OperationMetadata> retrievedResponse = await dataScanServiceClient.PollOnceCreateDataScanAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                DataScan retrievedResult = retrievedResponse.Result;
+                gcdv::DataScan retrievedResult = retrievedResponse.Result;
             }
         }
     }

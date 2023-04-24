@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Video.Transcoder.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START transcoder_v1_generated_TranscoderService_DeleteJob_sync_flattened_resourceNames]
     using Google.Cloud.Video.Transcoder.V1;

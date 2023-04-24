@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BinaryAuthorization.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.BinaryAuthorization.V1;
     using Grafeas.V1;
     using System.Threading.Tasks;
 

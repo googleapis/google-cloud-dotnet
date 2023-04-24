@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.AppEngine.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.LongRunning;
@@ -34,15 +34,15 @@ namespace Google.Cloud.AppEngine.V1.Snippets
         {
             // Snippet: ListVersions(ListVersionsRequest, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcav::VersionsClient versionsClient = gcav::VersionsClient.Create();
             // Initialize request argument(s)
-            ListVersionsRequest request = new ListVersionsRequest
+            gcav::ListVersionsRequest request = new gcav::ListVersionsRequest
             {
                 Parent = "",
-                View = VersionView.Basic,
+                View = gcav::VersionView.Basic,
             };
             // Make the request
-            PagedEnumerable<ListVersionsResponse, gcav::Version> response = versionsClient.ListVersions(request);
+            PagedEnumerable<gcav::ListVersionsResponse, gcav::Version> response = versionsClient.ListVersions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcav::Version item in response)
@@ -52,7 +52,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListVersionsResponse page in response.AsRawResponses())
+            foreach (gcav::ListVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -83,15 +83,15 @@ namespace Google.Cloud.AppEngine.V1.Snippets
         {
             // Snippet: ListVersionsAsync(ListVersionsRequest, CallSettings)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcav::VersionsClient versionsClient = await gcav::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            ListVersionsRequest request = new ListVersionsRequest
+            gcav::ListVersionsRequest request = new gcav::ListVersionsRequest
             {
                 Parent = "",
-                View = VersionView.Basic,
+                View = gcav::VersionView.Basic,
             };
             // Make the request
-            PagedAsyncEnumerable<ListVersionsResponse, gcav::Version> response = versionsClient.ListVersionsAsync(request);
+            PagedAsyncEnumerable<gcav::ListVersionsResponse, gcav::Version> response = versionsClient.ListVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcav::Version item) =>
@@ -101,7 +101,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcav::ListVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -132,12 +132,12 @@ namespace Google.Cloud.AppEngine.V1.Snippets
         {
             // Snippet: GetVersion(GetVersionRequest, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcav::VersionsClient versionsClient = gcav::VersionsClient.Create();
             // Initialize request argument(s)
-            GetVersionRequest request = new GetVersionRequest
+            gcav::GetVersionRequest request = new gcav::GetVersionRequest
             {
                 Name = "",
-                View = VersionView.Basic,
+                View = gcav::VersionView.Basic,
             };
             // Make the request
             gcav::Version response = versionsClient.GetVersion(request);
@@ -150,12 +150,12 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             // Snippet: GetVersionAsync(GetVersionRequest, CallSettings)
             // Additional: GetVersionAsync(GetVersionRequest, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcav::VersionsClient versionsClient = await gcav::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            GetVersionRequest request = new GetVersionRequest
+            gcav::GetVersionRequest request = new gcav::GetVersionRequest
             {
                 Name = "",
-                View = VersionView.Basic,
+                View = gcav::VersionView.Basic,
             };
             // Make the request
             gcav::Version response = await versionsClient.GetVersionAsync(request);
@@ -167,25 +167,25 @@ namespace Google.Cloud.AppEngine.V1.Snippets
         {
             // Snippet: CreateVersion(CreateVersionRequest, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcav::VersionsClient versionsClient = gcav::VersionsClient.Create();
             // Initialize request argument(s)
-            CreateVersionRequest request = new CreateVersionRequest
+            gcav::CreateVersionRequest request = new gcav::CreateVersionRequest
             {
                 Parent = "",
                 Version = new gcav::Version(),
             };
             // Make the request
-            Operation<gcav::Version, CreateVersionMetadataV1> response = versionsClient.CreateVersion(request);
+            Operation<gcav::Version, gcav::CreateVersionMetadataV1> response = versionsClient.CreateVersion(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Version, CreateVersionMetadataV1> completedResponse = response.PollUntilCompleted();
+            Operation<gcav::Version, gcav::CreateVersionMetadataV1> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcav::Version result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Version, CreateVersionMetadataV1> retrievedResponse = versionsClient.PollOnceCreateVersion(operationName);
+            Operation<gcav::Version, gcav::CreateVersionMetadataV1> retrievedResponse = versionsClient.PollOnceCreateVersion(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -201,25 +201,25 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             // Snippet: CreateVersionAsync(CreateVersionRequest, CallSettings)
             // Additional: CreateVersionAsync(CreateVersionRequest, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcav::VersionsClient versionsClient = await gcav::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            CreateVersionRequest request = new CreateVersionRequest
+            gcav::CreateVersionRequest request = new gcav::CreateVersionRequest
             {
                 Parent = "",
                 Version = new gcav::Version(),
             };
             // Make the request
-            Operation<gcav::Version, CreateVersionMetadataV1> response = await versionsClient.CreateVersionAsync(request);
+            Operation<gcav::Version, gcav::CreateVersionMetadataV1> response = await versionsClient.CreateVersionAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Version, CreateVersionMetadataV1> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcav::Version, gcav::CreateVersionMetadataV1> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcav::Version result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Version, CreateVersionMetadataV1> retrievedResponse = await versionsClient.PollOnceCreateVersionAsync(operationName);
+            Operation<gcav::Version, gcav::CreateVersionMetadataV1> retrievedResponse = await versionsClient.PollOnceCreateVersionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -234,26 +234,26 @@ namespace Google.Cloud.AppEngine.V1.Snippets
         {
             // Snippet: UpdateVersion(UpdateVersionRequest, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcav::VersionsClient versionsClient = gcav::VersionsClient.Create();
             // Initialize request argument(s)
-            UpdateVersionRequest request = new UpdateVersionRequest
+            gcav::UpdateVersionRequest request = new gcav::UpdateVersionRequest
             {
                 Name = "",
                 Version = new gcav::Version(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<gcav::Version, OperationMetadataV1> response = versionsClient.UpdateVersion(request);
+            Operation<gcav::Version, gcav::OperationMetadataV1> response = versionsClient.UpdateVersion(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Version, OperationMetadataV1> completedResponse = response.PollUntilCompleted();
+            Operation<gcav::Version, gcav::OperationMetadataV1> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             gcav::Version result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Version, OperationMetadataV1> retrievedResponse = versionsClient.PollOnceUpdateVersion(operationName);
+            Operation<gcav::Version, gcav::OperationMetadataV1> retrievedResponse = versionsClient.PollOnceUpdateVersion(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -269,26 +269,26 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             // Snippet: UpdateVersionAsync(UpdateVersionRequest, CallSettings)
             // Additional: UpdateVersionAsync(UpdateVersionRequest, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcav::VersionsClient versionsClient = await gcav::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateVersionRequest request = new UpdateVersionRequest
+            gcav::UpdateVersionRequest request = new gcav::UpdateVersionRequest
             {
                 Name = "",
                 Version = new gcav::Version(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<gcav::Version, OperationMetadataV1> response = await versionsClient.UpdateVersionAsync(request);
+            Operation<gcav::Version, gcav::OperationMetadataV1> response = await versionsClient.UpdateVersionAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcav::Version, OperationMetadataV1> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcav::Version, gcav::OperationMetadataV1> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcav::Version result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcav::Version, OperationMetadataV1> retrievedResponse = await versionsClient.PollOnceUpdateVersionAsync(operationName);
+            Operation<gcav::Version, gcav::OperationMetadataV1> retrievedResponse = await versionsClient.PollOnceUpdateVersionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -303,21 +303,21 @@ namespace Google.Cloud.AppEngine.V1.Snippets
         {
             // Snippet: DeleteVersion(DeleteVersionRequest, CallSettings)
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcav::VersionsClient versionsClient = gcav::VersionsClient.Create();
             // Initialize request argument(s)
-            DeleteVersionRequest request = new DeleteVersionRequest { Name = "", };
+            gcav::DeleteVersionRequest request = new gcav::DeleteVersionRequest { Name = "", };
             // Make the request
-            Operation<Empty, OperationMetadataV1> response = versionsClient.DeleteVersion(request);
+            Operation<Empty, gcav::OperationMetadataV1> response = versionsClient.DeleteVersion(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadataV1> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcav::OperationMetadataV1> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadataV1> retrievedResponse = versionsClient.PollOnceDeleteVersion(operationName);
+            Operation<Empty, gcav::OperationMetadataV1> retrievedResponse = versionsClient.PollOnceDeleteVersion(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -333,21 +333,21 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             // Snippet: DeleteVersionAsync(DeleteVersionRequest, CallSettings)
             // Additional: DeleteVersionAsync(DeleteVersionRequest, CancellationToken)
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcav::VersionsClient versionsClient = await gcav::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteVersionRequest request = new DeleteVersionRequest { Name = "", };
+            gcav::DeleteVersionRequest request = new gcav::DeleteVersionRequest { Name = "", };
             // Make the request
-            Operation<Empty, OperationMetadataV1> response = await versionsClient.DeleteVersionAsync(request);
+            Operation<Empty, gcav::OperationMetadataV1> response = await versionsClient.DeleteVersionAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadataV1> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcav::OperationMetadataV1> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadataV1> retrievedResponse = await versionsClient.PollOnceDeleteVersionAsync(operationName);
+            Operation<Empty, gcav::OperationMetadataV1> retrievedResponse = await versionsClient.PollOnceDeleteVersionAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

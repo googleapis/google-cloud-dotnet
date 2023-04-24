@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DataCatalog.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datacatalog_v1_generated_DataCatalog_UpdateTagTemplateField_async_flattened2_resourceNames]
     using Google.Cloud.DataCatalog.V1;

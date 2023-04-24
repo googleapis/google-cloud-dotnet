@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ContactCenterInsights.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START contactcenterinsights_v1_generated_ContactCenterInsights_CalculateStats_sync_flattened]
     using Google.Cloud.ContactCenterInsights.V1;

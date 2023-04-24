@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.Connection.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START bigqueryconnection_v1_generated_ConnectionService_GetConnection_async]
     using Google.Cloud.BigQuery.Connection.V1;

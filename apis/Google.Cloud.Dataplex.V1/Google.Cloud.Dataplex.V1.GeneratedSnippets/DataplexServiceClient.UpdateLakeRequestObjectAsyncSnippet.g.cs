@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_UpdateLake_async]
     using Google.LongRunning;
@@ -37,31 +37,31 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task UpdateLakeRequestObjectAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateLakeRequest request = new UpdateLakeRequest
+            gcdv::UpdateLakeRequest request = new gcdv::UpdateLakeRequest
             {
                 UpdateMask = new FieldMask(),
-                Lake = new Lake(),
+                Lake = new gcdv::Lake(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<Lake, OperationMetadata> response = await dataplexServiceClient.UpdateLakeAsync(request);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateLakeAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Lake, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Lake, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Lake result = completedResponse.Result;
+            gcdv::Lake result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Lake, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateLakeAsync(operationName);
+            Operation<gcdv::Lake, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateLakeAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Lake retrievedResult = retrievedResponse.Result;
+                gcdv::Lake retrievedResult = retrievedResponse.Result;
             }
         }
     }

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Services_GetService_async_flattened_resourceNames]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task GetServiceResourceNamesAsync()
         {
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
-            ServiceName name = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
+            gcrv::ServiceName name = gcrv::ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]");
             // Make the request
-            Service response = await servicesClient.GetServiceAsync(name);
+            gcrv::Service response = await servicesClient.GetServiceAsync(name);
         }
     }
     // [END run_v2_generated_Services_GetService_async_flattened_resourceNames]

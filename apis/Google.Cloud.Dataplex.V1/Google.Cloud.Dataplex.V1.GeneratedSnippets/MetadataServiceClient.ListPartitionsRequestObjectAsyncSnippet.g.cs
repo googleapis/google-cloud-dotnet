@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_MetadataService_ListPartitions_async]
     using Google.Api.Gax;
@@ -38,29 +38,29 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task ListPartitionsRequestObjectAsync()
         {
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListPartitionsRequest request = new ListPartitionsRequest
+            gcdv::ListPartitionsRequest request = new gcdv::ListPartitionsRequest
             {
-                ParentAsEntityName = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
+                ParentAsEntityName = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]"),
                 Filter = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListPartitionsResponse, Partition> response = metadataServiceClient.ListPartitionsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListPartitionsResponse, gcdv::Partition> response = metadataServiceClient.ListPartitionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Partition item) =>
+            await response.ForEachAsync((gcdv::Partition item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListPartitionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListPartitionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Partition item in page)
+                foreach (gcdv::Partition item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -69,10 +69,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Partition> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Partition> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Partition item in singlePage)
+            foreach (gcdv::Partition item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

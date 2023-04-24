@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Grafeas.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Protobuf.WellKnownTypes;
+    using Grafeas.V1;
     using System;
     using System.Collections.Generic;
     using System.Linq;

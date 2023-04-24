@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.GSuiteAddOns.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START gsuiteaddons_v1_generated_GSuiteAddOns_UninstallDeployment_sync_flattened_resourceNames]
     using Google.Cloud.GSuiteAddOns.V1;

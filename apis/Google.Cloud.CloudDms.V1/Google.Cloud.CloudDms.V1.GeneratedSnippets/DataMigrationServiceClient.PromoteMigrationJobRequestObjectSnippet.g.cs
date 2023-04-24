@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.CloudDms.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datamigration_v1_generated_DataMigrationService_PromoteMigrationJob_sync]
     using Google.Cloud.CloudDms.V1;

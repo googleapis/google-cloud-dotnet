@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Kms.Inventory.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START kmsinventory_v1_generated_KeyDashboardService_ListCryptoKeys_sync_flattened]
     using Google.Api.Gax;

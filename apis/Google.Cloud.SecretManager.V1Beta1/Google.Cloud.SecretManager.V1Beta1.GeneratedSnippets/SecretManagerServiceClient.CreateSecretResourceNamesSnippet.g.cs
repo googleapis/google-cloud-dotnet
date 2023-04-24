@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.SecretManager.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START secretmanager_v1beta1_generated_SecretManagerService_CreateSecret_sync_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;

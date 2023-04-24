@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Redis.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START redis_v1_generated_CloudRedis_UpgradeInstance_async_flattened_resourceNames]
     using Google.Cloud.Redis.V1;

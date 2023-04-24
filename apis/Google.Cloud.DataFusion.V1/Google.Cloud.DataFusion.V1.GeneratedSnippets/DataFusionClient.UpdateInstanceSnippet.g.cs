@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DataFusion.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datafusion_v1_generated_DataFusion_UpdateInstance_sync_flattened]
     using Google.Cloud.DataFusion.V1;

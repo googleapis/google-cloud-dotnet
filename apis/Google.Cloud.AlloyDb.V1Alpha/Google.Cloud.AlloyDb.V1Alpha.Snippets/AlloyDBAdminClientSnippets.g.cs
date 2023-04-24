@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AlloyDb.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.AlloyDb.V1Alpha;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;

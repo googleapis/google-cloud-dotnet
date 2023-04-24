@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Metastore.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START metastore_v1alpha_generated_DataprocMetastore_GetService_sync_flattened]
     using Google.Cloud.Metastore.V1Alpha;
