@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/devtools/clouddebugger/v2/.*-csharp/Google.Cloud.Debugger.V2
       dest: /owl-bot-staging/Google.Cloud.Debugger.V2/Google.Cloud.Debugger.V2
-    - source: /google/devtools/clouddebugger/v2/.*-csharp/Google.Cloud.Debugger.V2.Tests
-      dest: /owl-bot-staging/Google.Cloud.Debugger.V2/Google.Cloud.Debugger.V2.Tests
     - source: /google/devtools/clouddebugger/v2/.*-csharp/Google.Cloud.Debugger.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Debugger.V2/Google.Cloud.Debugger.V2.Snippets
     - source: /google/devtools/clouddebugger/v2/.*-csharp/Google.Cloud.Debugger.V2.GeneratedSnippets

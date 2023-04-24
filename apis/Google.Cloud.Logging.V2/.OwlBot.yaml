@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/logging/v2/.*-csharp/Google.Cloud.Logging.V2
       dest: /owl-bot-staging/Google.Cloud.Logging.V2/Google.Cloud.Logging.V2
-    - source: /google/logging/v2/.*-csharp/Google.Cloud.Logging.V2.Tests
-      dest: /owl-bot-staging/Google.Cloud.Logging.V2/Google.Cloud.Logging.V2.Tests
     - source: /google/logging/v2/.*-csharp/Google.Cloud.Logging.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Logging.V2/Google.Cloud.Logging.V2.Snippets
     - source: /google/logging/v2/.*-csharp/Google.Cloud.Logging.V2.GeneratedSnippets

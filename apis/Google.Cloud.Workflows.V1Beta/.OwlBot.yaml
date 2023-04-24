@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/workflows/v1beta/.*-csharp/Google.Cloud.Workflows.V1Beta
       dest: /owl-bot-staging/Google.Cloud.Workflows.V1Beta/Google.Cloud.Workflows.V1Beta
-    - source: /google/cloud/workflows/v1beta/.*-csharp/Google.Cloud.Workflows.V1Beta.Tests
-      dest: /owl-bot-staging/Google.Cloud.Workflows.V1Beta/Google.Cloud.Workflows.V1Beta.Tests
     - source: /google/cloud/workflows/v1beta/.*-csharp/Google.Cloud.Workflows.V1Beta.Snippets
       dest: /owl-bot-staging/Google.Cloud.Workflows.V1Beta/Google.Cloud.Workflows.V1Beta.Snippets
     - source: /google/cloud/workflows/v1beta/.*-csharp/Google.Cloud.Workflows.V1Beta.GeneratedSnippets

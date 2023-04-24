@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/resourcemanager/v3/.*-csharp/Google.Cloud.ResourceManager.V3
       dest: /owl-bot-staging/Google.Cloud.ResourceManager.V3/Google.Cloud.ResourceManager.V3
-    - source: /google/cloud/resourcemanager/v3/.*-csharp/Google.Cloud.ResourceManager.V3.Tests
-      dest: /owl-bot-staging/Google.Cloud.ResourceManager.V3/Google.Cloud.ResourceManager.V3.Tests
     - source: /google/cloud/resourcemanager/v3/.*-csharp/Google.Cloud.ResourceManager.V3.Snippets
       dest: /owl-bot-staging/Google.Cloud.ResourceManager.V3/Google.Cloud.ResourceManager.V3.Snippets
     - source: /google/cloud/resourcemanager/v3/.*-csharp/Google.Cloud.ResourceManager.V3.GeneratedSnippets

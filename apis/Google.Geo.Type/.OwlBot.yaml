@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/geo/type/.*-csharp/Google.Geo.Type
       dest: /owl-bot-staging/Google.Geo.Type/Google.Geo.Type
-    - source: /google/geo/type/.*-csharp/Google.Geo.Type.Tests
-      dest: /owl-bot-staging/Google.Geo.Type/Google.Geo.Type.Tests
     - source: /google/geo/type/.*-csharp/Google.Geo.Type.Snippets
       dest: /owl-bot-staging/Google.Geo.Type/Google.Geo.Type.Snippets
     - source: /google/geo/type/.*-csharp/Google.Geo.Type.GeneratedSnippets

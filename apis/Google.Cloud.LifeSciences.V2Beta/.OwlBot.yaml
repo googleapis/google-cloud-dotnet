@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/lifesciences/v2beta/.*-csharp/Google.Cloud.LifeSciences.V2Beta
       dest: /owl-bot-staging/Google.Cloud.LifeSciences.V2Beta/Google.Cloud.LifeSciences.V2Beta
-    - source: /google/cloud/lifesciences/v2beta/.*-csharp/Google.Cloud.LifeSciences.V2Beta.Tests
-      dest: /owl-bot-staging/Google.Cloud.LifeSciences.V2Beta/Google.Cloud.LifeSciences.V2Beta.Tests
     - source: /google/cloud/lifesciences/v2beta/.*-csharp/Google.Cloud.LifeSciences.V2Beta.Snippets
       dest: /owl-bot-staging/Google.Cloud.LifeSciences.V2Beta/Google.Cloud.LifeSciences.V2Beta.Snippets
     - source: /google/cloud/lifesciences/v2beta/.*-csharp/Google.Cloud.LifeSciences.V2Beta.GeneratedSnippets

@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/longrunning/.*-csharp/Google.LongRunning
       dest: /owl-bot-staging/Google.LongRunning/Google.LongRunning
-    - source: /google/longrunning/.*-csharp/Google.LongRunning.Tests
-      dest: /owl-bot-staging/Google.LongRunning/Google.LongRunning.Tests
     - source: /google/longrunning/.*-csharp/Google.LongRunning.Snippets
       dest: /owl-bot-staging/Google.LongRunning/Google.LongRunning.Snippets
     - source: /google/longrunning/.*-csharp/Google.LongRunning.GeneratedSnippets

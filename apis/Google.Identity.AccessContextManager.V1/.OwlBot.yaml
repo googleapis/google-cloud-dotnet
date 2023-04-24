@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/identity/accesscontextmanager/v1/.*-csharp/Google.Identity.AccessContextManager.V1
       dest: /owl-bot-staging/Google.Identity.AccessContextManager.V1/Google.Identity.AccessContextManager.V1
-    - source: /google/identity/accesscontextmanager/v1/.*-csharp/Google.Identity.AccessContextManager.V1.Tests
-      dest: /owl-bot-staging/Google.Identity.AccessContextManager.V1/Google.Identity.AccessContextManager.V1.Tests
     - source: /google/identity/accesscontextmanager/v1/.*-csharp/Google.Identity.AccessContextManager.V1.Snippets
       dest: /owl-bot-staging/Google.Identity.AccessContextManager.V1/Google.Identity.AccessContextManager.V1.Snippets
     - source: /google/identity/accesscontextmanager/v1/.*-csharp/Google.Identity.AccessContextManager.V1.GeneratedSnippets

@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/api/serviceusage/v1/.*-csharp/Google.Cloud.ServiceUsage.V1
       dest: /owl-bot-staging/Google.Cloud.ServiceUsage.V1/Google.Cloud.ServiceUsage.V1
-    - source: /google/api/serviceusage/v1/.*-csharp/Google.Cloud.ServiceUsage.V1.Tests
-      dest: /owl-bot-staging/Google.Cloud.ServiceUsage.V1/Google.Cloud.ServiceUsage.V1.Tests
     - source: /google/api/serviceusage/v1/.*-csharp/Google.Cloud.ServiceUsage.V1.Snippets
       dest: /owl-bot-staging/Google.Cloud.ServiceUsage.V1/Google.Cloud.ServiceUsage.V1.Snippets
     - source: /google/api/serviceusage/v1/.*-csharp/Google.Cloud.ServiceUsage.V1.GeneratedSnippets

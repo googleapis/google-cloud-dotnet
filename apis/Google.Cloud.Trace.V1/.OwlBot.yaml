@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/devtools/cloudtrace/v1/.*-csharp/Google.Cloud.Trace.V1
       dest: /owl-bot-staging/Google.Cloud.Trace.V1/Google.Cloud.Trace.V1
-    - source: /google/devtools/cloudtrace/v1/.*-csharp/Google.Cloud.Trace.V1.Tests
-      dest: /owl-bot-staging/Google.Cloud.Trace.V1/Google.Cloud.Trace.V1.Tests
     - source: /google/devtools/cloudtrace/v1/.*-csharp/Google.Cloud.Trace.V1.Snippets
       dest: /owl-bot-staging/Google.Cloud.Trace.V1/Google.Cloud.Trace.V1.Snippets
     - source: /google/devtools/cloudtrace/v1/.*-csharp/Google.Cloud.Trace.V1.GeneratedSnippets

@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/maps/routing/v2/.*-csharp/Google.Maps.Routing.V2
       dest: /owl-bot-staging/Google.Maps.Routing.V2/Google.Maps.Routing.V2
-    - source: /google/maps/routing/v2/.*-csharp/Google.Maps.Routing.V2.Tests
-      dest: /owl-bot-staging/Google.Maps.Routing.V2/Google.Maps.Routing.V2.Tests
     - source: /google/maps/routing/v2/.*-csharp/Google.Maps.Routing.V2.Snippets
       dest: /owl-bot-staging/Google.Maps.Routing.V2/Google.Maps.Routing.V2.Snippets
     - source: /google/maps/routing/v2/.*-csharp/Google.Maps.Routing.V2.GeneratedSnippets

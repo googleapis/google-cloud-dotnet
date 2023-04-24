@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/run/v2/.*-csharp/Google.Cloud.Run.V2
       dest: /owl-bot-staging/Google.Cloud.Run.V2/Google.Cloud.Run.V2
-    - source: /google/cloud/run/v2/.*-csharp/Google.Cloud.Run.V2.Tests
-      dest: /owl-bot-staging/Google.Cloud.Run.V2/Google.Cloud.Run.V2.Tests
     - source: /google/cloud/run/v2/.*-csharp/Google.Cloud.Run.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Run.V2/Google.Cloud.Run.V2.Snippets
     - source: /google/cloud/run/v2/.*-csharp/Google.Cloud.Run.V2.GeneratedSnippets

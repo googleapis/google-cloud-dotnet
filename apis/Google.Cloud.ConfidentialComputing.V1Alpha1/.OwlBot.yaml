@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/confidentialcomputing/v1alpha1/.*-csharp/Google.Cloud.ConfidentialComputing.V1Alpha1
       dest: /owl-bot-staging/Google.Cloud.ConfidentialComputing.V1Alpha1/Google.Cloud.ConfidentialComputing.V1Alpha1
-    - source: /google/cloud/confidentialcomputing/v1alpha1/.*-csharp/Google.Cloud.ConfidentialComputing.V1Alpha1.Tests
-      dest: /owl-bot-staging/Google.Cloud.ConfidentialComputing.V1Alpha1/Google.Cloud.ConfidentialComputing.V1Alpha1.Tests
     - source: /google/cloud/confidentialcomputing/v1alpha1/.*-csharp/Google.Cloud.ConfidentialComputing.V1Alpha1.Snippets
       dest: /owl-bot-staging/Google.Cloud.ConfidentialComputing.V1Alpha1/Google.Cloud.ConfidentialComputing.V1Alpha1.Snippets
     - source: /google/cloud/confidentialcomputing/v1alpha1/.*-csharp/Google.Cloud.ConfidentialComputing.V1Alpha1.GeneratedSnippets

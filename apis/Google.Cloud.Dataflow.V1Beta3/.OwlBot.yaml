@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/dataflow/v1beta3/.*-csharp/Google.Cloud.Dataflow.V1Beta3
       dest: /owl-bot-staging/Google.Cloud.Dataflow.V1Beta3/Google.Cloud.Dataflow.V1Beta3
-    - source: /google/dataflow/v1beta3/.*-csharp/Google.Cloud.Dataflow.V1Beta3.Tests
-      dest: /owl-bot-staging/Google.Cloud.Dataflow.V1Beta3/Google.Cloud.Dataflow.V1Beta3.Tests
     - source: /google/dataflow/v1beta3/.*-csharp/Google.Cloud.Dataflow.V1Beta3.Snippets
       dest: /owl-bot-staging/Google.Cloud.Dataflow.V1Beta3/Google.Cloud.Dataflow.V1Beta3.Snippets
     - source: /google/dataflow/v1beta3/.*-csharp/Google.Cloud.Dataflow.V1Beta3.GeneratedSnippets

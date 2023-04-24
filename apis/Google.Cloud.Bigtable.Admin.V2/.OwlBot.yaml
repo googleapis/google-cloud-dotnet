@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/bigtable/admin/v2/.*-csharp/Google.Cloud.Bigtable.Admin.V2
       dest: /owl-bot-staging/Google.Cloud.Bigtable.Admin.V2/Google.Cloud.Bigtable.Admin.V2
-    - source: /google/bigtable/admin/v2/.*-csharp/Google.Cloud.Bigtable.Admin.V2.Tests
-      dest: /owl-bot-staging/Google.Cloud.Bigtable.Admin.V2/Google.Cloud.Bigtable.Admin.V2.Tests
     - source: /google/bigtable/admin/v2/.*-csharp/Google.Cloud.Bigtable.Admin.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Bigtable.Admin.V2/Google.Cloud.Bigtable.Admin.V2.Snippets
     - source: /google/bigtable/admin/v2/.*-csharp/Google.Cloud.Bigtable.Admin.V2.GeneratedSnippets

@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/metastore/v1beta/.*-csharp/Google.Cloud.Metastore.V1Beta
       dest: /owl-bot-staging/Google.Cloud.Metastore.V1Beta/Google.Cloud.Metastore.V1Beta
-    - source: /google/cloud/metastore/v1beta/.*-csharp/Google.Cloud.Metastore.V1Beta.Tests
-      dest: /owl-bot-staging/Google.Cloud.Metastore.V1Beta/Google.Cloud.Metastore.V1Beta.Tests
     - source: /google/cloud/metastore/v1beta/.*-csharp/Google.Cloud.Metastore.V1Beta.Snippets
       dest: /owl-bot-staging/Google.Cloud.Metastore.V1Beta/Google.Cloud.Metastore.V1Beta.Snippets
     - source: /google/cloud/metastore/v1beta/.*-csharp/Google.Cloud.Metastore.V1Beta.GeneratedSnippets

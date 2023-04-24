@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/talent/v4beta1/.*-csharp/Google.Cloud.Talent.V4Beta1
       dest: /owl-bot-staging/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1
-    - source: /google/cloud/talent/v4beta1/.*-csharp/Google.Cloud.Talent.V4Beta1.Tests
-      dest: /owl-bot-staging/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Tests
     - source: /google/cloud/talent/v4beta1/.*-csharp/Google.Cloud.Talent.V4Beta1.Snippets
       dest: /owl-bot-staging/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets
     - source: /google/cloud/talent/v4beta1/.*-csharp/Google.Cloud.Talent.V4Beta1.GeneratedSnippets
