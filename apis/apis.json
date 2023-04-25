@@ -4302,7 +4302,6 @@
       },
       "generator": "micro",
       "protoPath": "google/cloud/talent/v4",
-      "forceOwlBotRegeneration": "Google.Cloud.Common proto is generated and copied when it shouldn't be.",
       "shortName": "jobs",
       "serviceConfigFile": "jobs_v4.yaml",
       "restNumericEnums": true,
