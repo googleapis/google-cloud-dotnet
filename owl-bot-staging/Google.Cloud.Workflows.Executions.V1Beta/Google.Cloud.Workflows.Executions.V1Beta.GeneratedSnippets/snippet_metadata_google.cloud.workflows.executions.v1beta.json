@@ -1,0 +1,1210 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Workflows.Executions.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.workflows.executions.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_ListExecutions_sync",
+      "title": "ListExecutionsRequestObject",
+      "description": "Snippet for ListExecutions",
+      "file": "ExecutionsClient.ListExecutionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutions",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.ListExecutions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse, Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.ListExecutions",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_ListExecutions_async",
+      "title": "ListExecutionsRequestObjectAsync",
+      "description": "Snippet for ListExecutionsAsync",
+      "file": "ExecutionsClient.ListExecutionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutionsAsync",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.ListExecutionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse, Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.ListExecutions",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_ListExecutions_sync_flattened",
+      "title": "ListExecutions",
+      "description": "Snippet for ListExecutions",
+      "file": "ExecutionsClient.ListExecutionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutions",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.ListExecutions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse, Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.ListExecutions",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_ListExecutions_async_flattened",
+      "title": "ListExecutionsAsync",
+      "description": "Snippet for ListExecutionsAsync",
+      "file": "ExecutionsClient.ListExecutionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutionsAsync",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.ListExecutionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse, Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.ListExecutions",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_ListExecutions_sync_flattened_resourceNames",
+      "title": "ListExecutionsResourceNames",
+      "description": "Snippet for ListExecutions",
+      "file": "ExecutionsClient.ListExecutionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutions",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.ListExecutions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.WorkflowName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse, Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.ListExecutions",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_ListExecutions_async_flattened_resourceNames",
+      "title": "ListExecutionsResourceNamesAsync",
+      "description": "Snippet for ListExecutionsAsync",
+      "file": "ExecutionsClient.ListExecutionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExecutionsAsync",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.ListExecutionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.WorkflowName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse, Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "ListExecutions",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.ListExecutions",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_CreateExecution_sync",
+      "title": "CreateExecutionRequestObject",
+      "description": "Snippet for CreateExecution",
+      "file": "ExecutionsClient.CreateExecutionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExecution",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CreateExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CreateExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.CreateExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_CreateExecution_async",
+      "title": "CreateExecutionRequestObjectAsync",
+      "description": "Snippet for CreateExecutionAsync",
+      "file": "ExecutionsClient.CreateExecutionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExecutionAsync",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CreateExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CreateExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.CreateExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_CreateExecution_sync_flattened",
+      "title": "CreateExecution",
+      "description": "Snippet for CreateExecution",
+      "file": "ExecutionsClient.CreateExecutionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExecution",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CreateExecution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CreateExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.CreateExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_CreateExecution_async_flattened",
+      "title": "CreateExecutionAsync",
+      "description": "Snippet for CreateExecutionAsync",
+      "file": "ExecutionsClient.CreateExecutionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExecutionAsync",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CreateExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CreateExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.CreateExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_CreateExecution_sync_flattened_resourceNames",
+      "title": "CreateExecutionResourceNames",
+      "description": "Snippet for CreateExecution",
+      "file": "ExecutionsClient.CreateExecutionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExecution",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CreateExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.WorkflowName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CreateExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.CreateExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_CreateExecution_async_flattened_resourceNames",
+      "title": "CreateExecutionResourceNamesAsync",
+      "description": "Snippet for CreateExecutionAsync",
+      "file": "ExecutionsClient.CreateExecutionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExecutionAsync",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CreateExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.WorkflowName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+            "name": "execution"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CreateExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.CreateExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_GetExecution_sync",
+      "title": "GetExecutionRequestObject",
+      "description": "Snippet for GetExecution",
+      "file": "ExecutionsClient.GetExecutionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecution",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.GetExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.GetExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_GetExecution_async",
+      "title": "GetExecutionRequestObjectAsync",
+      "description": "Snippet for GetExecutionAsync",
+      "file": "ExecutionsClient.GetExecutionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecutionAsync",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.GetExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.GetExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_GetExecution_sync_flattened",
+      "title": "GetExecution",
+      "description": "Snippet for GetExecution",
+      "file": "ExecutionsClient.GetExecutionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecution",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.GetExecution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.GetExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_GetExecution_async_flattened",
+      "title": "GetExecutionAsync",
+      "description": "Snippet for GetExecutionAsync",
+      "file": "ExecutionsClient.GetExecutionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecutionAsync",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.GetExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.GetExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_GetExecution_sync_flattened_resourceNames",
+      "title": "GetExecutionResourceNames",
+      "description": "Snippet for GetExecution",
+      "file": "ExecutionsClient.GetExecutionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecution",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.GetExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.GetExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_GetExecution_async_flattened_resourceNames",
+      "title": "GetExecutionResourceNamesAsync",
+      "description": "Snippet for GetExecutionAsync",
+      "file": "ExecutionsClient.GetExecutionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExecutionAsync",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.GetExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "GetExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.GetExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_CancelExecution_sync",
+      "title": "CancelExecutionRequestObject",
+      "description": "Snippet for CancelExecution",
+      "file": "ExecutionsClient.CancelExecutionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelExecution",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CancelExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CancelExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.CancelExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_CancelExecution_async",
+      "title": "CancelExecutionRequestObjectAsync",
+      "description": "Snippet for CancelExecutionAsync",
+      "file": "ExecutionsClient.CancelExecutionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelExecutionAsync",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CancelExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CancelExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.CancelExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_CancelExecution_sync_flattened",
+      "title": "CancelExecution",
+      "description": "Snippet for CancelExecution",
+      "file": "ExecutionsClient.CancelExecutionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelExecution",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CancelExecution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CancelExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.CancelExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_CancelExecution_async_flattened",
+      "title": "CancelExecutionAsync",
+      "description": "Snippet for CancelExecutionAsync",
+      "file": "ExecutionsClient.CancelExecutionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelExecutionAsync",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CancelExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CancelExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.CancelExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_CancelExecution_sync_flattened_resourceNames",
+      "title": "CancelExecutionResourceNames",
+      "description": "Snippet for CancelExecution",
+      "file": "ExecutionsClient.CancelExecutionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelExecution",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CancelExecution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Workflows.Executions.V1Beta.Execution",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CancelExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.CancelExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflowexecutions_v1beta_generated_Executions_CancelExecution_async_flattened_resourceNames",
+      "title": "CancelExecutionResourceNamesAsync",
+      "description": "Snippet for CancelExecutionAsync",
+      "file": "ExecutionsClient.CancelExecutionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelExecutionAsync",
+        "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient.CancelExecutionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.Executions.V1Beta.Execution>",
+        "client": {
+          "shortName": "ExecutionsClient",
+          "fullName": "Google.Cloud.Workflows.Executions.V1Beta.ExecutionsClient"
+        },
+        "method": {
+          "shortName": "CancelExecution",
+          "fullName": "google.cloud.workflows.executions.v1beta.Executions.CancelExecution",
+          "service": {
+            "shortName": "Executions",
+            "fullName": "google.cloud.workflows.executions.v1beta.Executions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
