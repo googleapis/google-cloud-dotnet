@@ -1,0 +1,3308 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.DiscoveryEngine.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.discoveryengine.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "discoveryengine_v1beta_generated_CompletionService_CompleteQuery_sync",
+      "title": "CompleteQueryRequestObject",
+      "description": "Snippet for CompleteQuery",
+      "file": "CompletionServiceClient.CompleteQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CompleteQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.CompletionServiceClient.CompleteQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CompleteQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.CompleteQueryResponse",
+        "client": {
+          "shortName": "CompletionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.CompletionServiceClient"
+        },
+        "method": {
+          "shortName": "CompleteQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.CompletionService.CompleteQuery",
+          "service": {
+            "shortName": "CompletionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.CompletionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_CompletionService_CompleteQuery_async",
+      "title": "CompleteQueryRequestObjectAsync",
+      "description": "Snippet for CompleteQueryAsync",
+      "file": "CompletionServiceClient.CompleteQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CompleteQueryAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.CompletionServiceClient.CompleteQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CompleteQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.CompleteQueryResponse>",
+        "client": {
+          "shortName": "CompletionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.CompletionServiceClient"
+        },
+        "method": {
+          "shortName": "CompleteQuery",
+          "fullName": "google.cloud.discoveryengine.v1beta.CompletionService.CompleteQuery",
+          "service": {
+            "shortName": "CompletionService",
+            "fullName": "google.cloud.discoveryengine.v1beta.CompletionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_GetDocument_sync",
+      "title": "GetDocumentRequestObject",
+      "description": "Snippet for GetDocument",
+      "file": "DocumentServiceClient.GetDocumentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocument",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.GetDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Document",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.GetDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_GetDocument_async",
+      "title": "GetDocumentRequestObjectAsync",
+      "description": "Snippet for GetDocumentAsync",
+      "file": "DocumentServiceClient.GetDocumentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocumentAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.GetDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Document>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.GetDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_GetDocument_sync_flattened",
+      "title": "GetDocument",
+      "description": "Snippet for GetDocument",
+      "file": "DocumentServiceClient.GetDocumentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocument",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.GetDocument",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Document",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.GetDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_GetDocument_async_flattened",
+      "title": "GetDocumentAsync",
+      "description": "Snippet for GetDocumentAsync",
+      "file": "DocumentServiceClient.GetDocumentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocumentAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.GetDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Document>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.GetDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_GetDocument_sync_flattened_resourceNames",
+      "title": "GetDocumentResourceNames",
+      "description": "Snippet for GetDocument",
+      "file": "DocumentServiceClient.GetDocumentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocument",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.GetDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Document",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.GetDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_GetDocument_async_flattened_resourceNames",
+      "title": "GetDocumentResourceNamesAsync",
+      "description": "Snippet for GetDocumentAsync",
+      "file": "DocumentServiceClient.GetDocumentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocumentAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.GetDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Document>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.GetDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_ListDocuments_sync",
+      "title": "ListDocumentsRequestObject",
+      "description": "Snippet for ListDocuments",
+      "file": "DocumentServiceClient.ListDocumentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocuments",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.ListDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListDocumentsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Document>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.ListDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_ListDocuments_async",
+      "title": "ListDocumentsRequestObjectAsync",
+      "description": "Snippet for ListDocumentsAsync",
+      "file": "DocumentServiceClient.ListDocumentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocumentsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.ListDocumentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListDocumentsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Document>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.ListDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_ListDocuments_sync_flattened",
+      "title": "ListDocuments",
+      "description": "Snippet for ListDocuments",
+      "file": "DocumentServiceClient.ListDocumentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocuments",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.ListDocuments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListDocumentsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Document>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.ListDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_ListDocuments_async_flattened",
+      "title": "ListDocumentsAsync",
+      "description": "Snippet for ListDocumentsAsync",
+      "file": "DocumentServiceClient.ListDocumentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocumentsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.ListDocumentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListDocumentsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Document>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.ListDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_ListDocuments_sync_flattened_resourceNames",
+      "title": "ListDocumentsResourceNames",
+      "description": "Snippet for ListDocuments",
+      "file": "DocumentServiceClient.ListDocumentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocuments",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.ListDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.BranchName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListDocumentsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Document>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.ListDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_ListDocuments_async_flattened_resourceNames",
+      "title": "ListDocumentsResourceNamesAsync",
+      "description": "Snippet for ListDocumentsAsync",
+      "file": "DocumentServiceClient.ListDocumentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocumentsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.ListDocumentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.BranchName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListDocumentsResponse, Google.Cloud.DiscoveryEngine.V1Beta.Document>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.ListDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_CreateDocument_sync",
+      "title": "CreateDocumentRequestObject",
+      "description": "Snippet for CreateDocument",
+      "file": "DocumentServiceClient.CreateDocumentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDocument",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.CreateDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Document",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.CreateDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_CreateDocument_async",
+      "title": "CreateDocumentRequestObjectAsync",
+      "description": "Snippet for CreateDocumentAsync",
+      "file": "DocumentServiceClient.CreateDocumentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDocumentAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.CreateDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Document>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.CreateDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_CreateDocument_sync_flattened",
+      "title": "CreateDocument",
+      "description": "Snippet for CreateDocument",
+      "file": "DocumentServiceClient.CreateDocumentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDocument",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.CreateDocument",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Document",
+            "name": "document"
+          },
+          {
+            "type": "System.String",
+            "name": "documentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Document",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.CreateDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_CreateDocument_async_flattened",
+      "title": "CreateDocumentAsync",
+      "description": "Snippet for CreateDocumentAsync",
+      "file": "DocumentServiceClient.CreateDocumentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDocumentAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.CreateDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Document",
+            "name": "document"
+          },
+          {
+            "type": "System.String",
+            "name": "documentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Document>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.CreateDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_CreateDocument_sync_flattened_resourceNames",
+      "title": "CreateDocumentResourceNames",
+      "description": "Snippet for CreateDocument",
+      "file": "DocumentServiceClient.CreateDocumentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDocument",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.CreateDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.BranchName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Document",
+            "name": "document"
+          },
+          {
+            "type": "System.String",
+            "name": "documentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Document",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.CreateDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_CreateDocument_async_flattened_resourceNames",
+      "title": "CreateDocumentResourceNamesAsync",
+      "description": "Snippet for CreateDocumentAsync",
+      "file": "DocumentServiceClient.CreateDocumentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDocumentAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.CreateDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.BranchName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Document",
+            "name": "document"
+          },
+          {
+            "type": "System.String",
+            "name": "documentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Document>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.CreateDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_UpdateDocument_sync",
+      "title": "UpdateDocumentRequestObject",
+      "description": "Snippet for UpdateDocument",
+      "file": "DocumentServiceClient.UpdateDocumentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDocument",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.UpdateDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.UpdateDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Document",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.UpdateDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_UpdateDocument_async",
+      "title": "UpdateDocumentRequestObjectAsync",
+      "description": "Snippet for UpdateDocumentAsync",
+      "file": "DocumentServiceClient.UpdateDocumentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDocumentAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.UpdateDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.UpdateDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Document>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.UpdateDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_DeleteDocument_sync",
+      "title": "DeleteDocumentRequestObject",
+      "description": "Snippet for DeleteDocument",
+      "file": "DocumentServiceClient.DeleteDocumentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDocument",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.DeleteDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DeleteDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.DeleteDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_DeleteDocument_async",
+      "title": "DeleteDocumentRequestObjectAsync",
+      "description": "Snippet for DeleteDocumentAsync",
+      "file": "DocumentServiceClient.DeleteDocumentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDocumentAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.DeleteDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DeleteDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.DeleteDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_DeleteDocument_sync_flattened",
+      "title": "DeleteDocument",
+      "description": "Snippet for DeleteDocument",
+      "file": "DocumentServiceClient.DeleteDocumentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDocument",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.DeleteDocument",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.DeleteDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_DeleteDocument_async_flattened",
+      "title": "DeleteDocumentAsync",
+      "description": "Snippet for DeleteDocumentAsync",
+      "file": "DocumentServiceClient.DeleteDocumentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDocumentAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.DeleteDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.DeleteDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_DeleteDocument_sync_flattened_resourceNames",
+      "title": "DeleteDocumentResourceNames",
+      "description": "Snippet for DeleteDocument",
+      "file": "DocumentServiceClient.DeleteDocumentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDocument",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.DeleteDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.DeleteDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_DeleteDocument_async_flattened_resourceNames",
+      "title": "DeleteDocumentResourceNamesAsync",
+      "description": "Snippet for DeleteDocumentAsync",
+      "file": "DocumentServiceClient.DeleteDocumentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDocumentAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.DeleteDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDocument",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.DeleteDocument",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_ImportDocuments_sync",
+      "title": "ImportDocumentsRequestObject",
+      "description": "Snippet for ImportDocuments",
+      "file": "DocumentServiceClient.ImportDocumentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportDocuments",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.ImportDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsResponse, Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsMetadata>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ImportDocuments",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.ImportDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_ImportDocuments_async",
+      "title": "ImportDocumentsRequestObjectAsync",
+      "description": "Snippet for ImportDocumentsAsync",
+      "file": "DocumentServiceClient.ImportDocumentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportDocumentsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.ImportDocumentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsResponse, Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsMetadata>>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "ImportDocuments",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.ImportDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_RecommendationService_Recommend_sync",
+      "title": "RecommendRequestObject",
+      "description": "Snippet for Recommend",
+      "file": "RecommendationServiceClient.RecommendRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Recommend",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.RecommendationServiceClient.Recommend",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.RecommendRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.RecommendResponse",
+        "client": {
+          "shortName": "RecommendationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.RecommendationServiceClient"
+        },
+        "method": {
+          "shortName": "Recommend",
+          "fullName": "google.cloud.discoveryengine.v1beta.RecommendationService.Recommend",
+          "service": {
+            "shortName": "RecommendationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.RecommendationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_RecommendationService_Recommend_async",
+      "title": "RecommendRequestObjectAsync",
+      "description": "Snippet for RecommendAsync",
+      "file": "RecommendationServiceClient.RecommendRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RecommendAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.RecommendationServiceClient.RecommendAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.RecommendRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.RecommendResponse>",
+        "client": {
+          "shortName": "RecommendationServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.RecommendationServiceClient"
+        },
+        "method": {
+          "shortName": "Recommend",
+          "fullName": "google.cloud.discoveryengine.v1beta.RecommendationService.Recommend",
+          "service": {
+            "shortName": "RecommendationService",
+            "fullName": "google.cloud.discoveryengine.v1beta.RecommendationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_GetSchema_sync",
+      "title": "GetSchemaRequestObject",
+      "description": "Snippet for GetSchema",
+      "file": "SchemaServiceClient.GetSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchema",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.GetSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_GetSchema_async",
+      "title": "GetSchemaRequestObjectAsync",
+      "description": "Snippet for GetSchemaAsync",
+      "file": "SchemaServiceClient.GetSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.GetSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.GetSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_GetSchema_sync_flattened",
+      "title": "GetSchema",
+      "description": "Snippet for GetSchema",
+      "file": "SchemaServiceClient.GetSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchema",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.GetSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_GetSchema_async_flattened",
+      "title": "GetSchemaAsync",
+      "description": "Snippet for GetSchemaAsync",
+      "file": "SchemaServiceClient.GetSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.GetSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_GetSchema_sync_flattened_resourceNames",
+      "title": "GetSchemaResourceNames",
+      "description": "Snippet for GetSchema",
+      "file": "SchemaServiceClient.GetSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchema",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.GetSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.Schema",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_GetSchema_async_flattened_resourceNames",
+      "title": "GetSchemaResourceNamesAsync",
+      "description": "Snippet for GetSchemaAsync",
+      "file": "SchemaServiceClient.GetSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.GetSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.GetSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_ListSchemas_sync",
+      "title": "ListSchemasRequestObject",
+      "description": "Snippet for ListSchemas",
+      "file": "SchemaServiceClient.ListSchemasRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemas",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.ListSchemas",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSchemasResponse, Google.Cloud.DiscoveryEngine.V1Beta.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_ListSchemas_async",
+      "title": "ListSchemasRequestObjectAsync",
+      "description": "Snippet for ListSchemasAsync",
+      "file": "SchemaServiceClient.ListSchemasRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemasAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.ListSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ListSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSchemasResponse, Google.Cloud.DiscoveryEngine.V1Beta.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_ListSchemas_sync_flattened",
+      "title": "ListSchemas",
+      "description": "Snippet for ListSchemas",
+      "file": "SchemaServiceClient.ListSchemasSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemas",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.ListSchemas",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSchemasResponse, Google.Cloud.DiscoveryEngine.V1Beta.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_ListSchemas_async_flattened",
+      "title": "ListSchemasAsync",
+      "description": "Snippet for ListSchemasAsync",
+      "file": "SchemaServiceClient.ListSchemasAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemasAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.ListSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSchemasResponse, Google.Cloud.DiscoveryEngine.V1Beta.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_ListSchemas_sync_flattened_resourceNames",
+      "title": "ListSchemasResourceNames",
+      "description": "Snippet for ListSchemas",
+      "file": "SchemaServiceClient.ListSchemasResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemas",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.ListSchemas",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSchemasResponse, Google.Cloud.DiscoveryEngine.V1Beta.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_ListSchemas_async_flattened_resourceNames",
+      "title": "ListSchemasResourceNamesAsync",
+      "description": "Snippet for ListSchemasAsync",
+      "file": "SchemaServiceClient.ListSchemasResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchemasAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.ListSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.ListSchemasResponse, Google.Cloud.DiscoveryEngine.V1Beta.Schema>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchemas",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.ListSchemas",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_CreateSchema_sync",
+      "title": "CreateSchemaRequestObject",
+      "description": "Snippet for CreateSchema",
+      "file": "SchemaServiceClient.CreateSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchema",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.CreateSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Schema, Google.Cloud.DiscoveryEngine.V1Beta.CreateSchemaMetadata>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_CreateSchema_async",
+      "title": "CreateSchemaRequestObjectAsync",
+      "description": "Snippet for CreateSchemaAsync",
+      "file": "SchemaServiceClient.CreateSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.CreateSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CreateSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Schema, Google.Cloud.DiscoveryEngine.V1Beta.CreateSchemaMetadata>>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_CreateSchema_sync_flattened",
+      "title": "CreateSchema",
+      "description": "Snippet for CreateSchema",
+      "file": "SchemaServiceClient.CreateSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchema",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.CreateSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "System.String",
+            "name": "schemaId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Schema, Google.Cloud.DiscoveryEngine.V1Beta.CreateSchemaMetadata>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_CreateSchema_async_flattened",
+      "title": "CreateSchemaAsync",
+      "description": "Snippet for CreateSchemaAsync",
+      "file": "SchemaServiceClient.CreateSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.CreateSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "System.String",
+            "name": "schemaId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Schema, Google.Cloud.DiscoveryEngine.V1Beta.CreateSchemaMetadata>>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_CreateSchema_sync_flattened_resourceNames",
+      "title": "CreateSchemaResourceNames",
+      "description": "Snippet for CreateSchema",
+      "file": "SchemaServiceClient.CreateSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchema",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.CreateSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "System.String",
+            "name": "schemaId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Schema, Google.Cloud.DiscoveryEngine.V1Beta.CreateSchemaMetadata>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_CreateSchema_async_flattened_resourceNames",
+      "title": "CreateSchemaResourceNamesAsync",
+      "description": "Snippet for CreateSchemaAsync",
+      "file": "SchemaServiceClient.CreateSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchemaAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.CreateSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DataStoreName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.Schema",
+            "name": "schema"
+          },
+          {
+            "type": "System.String",
+            "name": "schemaId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Schema, Google.Cloud.DiscoveryEngine.V1Beta.CreateSchemaMetadata>>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.CreateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_UpdateSchema_sync",
+      "title": "UpdateSchemaRequestObject",
+      "description": "Snippet for UpdateSchema",
+      "file": "SchemaServiceClient.UpdateSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSchema",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.UpdateSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.UpdateSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Schema, Google.Cloud.DiscoveryEngine.V1Beta.UpdateSchemaMetadata>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.UpdateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_UpdateSchema_async",
+      "title": "UpdateSchemaRequestObjectAsync",
+      "description": "Snippet for UpdateSchemaAsync",
+      "file": "SchemaServiceClient.UpdateSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSchemaAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.UpdateSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.UpdateSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.Schema, Google.Cloud.DiscoveryEngine.V1Beta.UpdateSchemaMetadata>>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.UpdateSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_DeleteSchema_sync",
+      "title": "DeleteSchemaRequestObject",
+      "description": "Snippet for DeleteSchema",
+      "file": "SchemaServiceClient.DeleteSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchema",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.DeleteSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DeleteSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1Beta.DeleteSchemaMetadata>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_DeleteSchema_async",
+      "title": "DeleteSchemaRequestObjectAsync",
+      "description": "Snippet for DeleteSchemaAsync",
+      "file": "SchemaServiceClient.DeleteSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.DeleteSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.DeleteSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1Beta.DeleteSchemaMetadata>>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_DeleteSchema_sync_flattened",
+      "title": "DeleteSchema",
+      "description": "Snippet for DeleteSchema",
+      "file": "SchemaServiceClient.DeleteSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchema",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.DeleteSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1Beta.DeleteSchemaMetadata>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_DeleteSchema_async_flattened",
+      "title": "DeleteSchemaAsync",
+      "description": "Snippet for DeleteSchemaAsync",
+      "file": "SchemaServiceClient.DeleteSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.DeleteSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1Beta.DeleteSchemaMetadata>>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_DeleteSchema_sync_flattened_resourceNames",
+      "title": "DeleteSchemaResourceNames",
+      "description": "Snippet for DeleteSchema",
+      "file": "SchemaServiceClient.DeleteSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchema",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.DeleteSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1Beta.DeleteSchemaMetadata>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SchemaService_DeleteSchema_async_flattened_resourceNames",
+      "title": "DeleteSchemaResourceNamesAsync",
+      "description": "Snippet for DeleteSchemaAsync",
+      "file": "SchemaServiceClient.DeleteSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchemaAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient.DeleteSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1Beta.DeleteSchemaMetadata>>",
+        "client": {
+          "shortName": "SchemaServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SchemaServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchema",
+          "fullName": "google.cloud.discoveryengine.v1beta.SchemaService.DeleteSchema",
+          "service": {
+            "shortName": "SchemaService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SchemaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SearchService_Search_sync",
+      "title": "SearchRequestObject",
+      "description": "Snippet for Search",
+      "file": "SearchServiceClient.SearchRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Search",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SearchServiceClient.Search",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse, Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse+Types+SearchResult>",
+        "client": {
+          "shortName": "SearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SearchServiceClient"
+        },
+        "method": {
+          "shortName": "Search",
+          "fullName": "google.cloud.discoveryengine.v1beta.SearchService.Search",
+          "service": {
+            "shortName": "SearchService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 94,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 92,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_SearchService_Search_async",
+      "title": "SearchRequestObjectAsync",
+      "description": "Snippet for SearchAsync",
+      "file": "SearchServiceClient.SearchRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SearchServiceClient.SearchAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse, Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse+Types+SearchResult>",
+        "client": {
+          "shortName": "SearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.SearchServiceClient"
+        },
+        "method": {
+          "shortName": "Search",
+          "fullName": "google.cloud.discoveryengine.v1beta.SearchService.Search",
+          "service": {
+            "shortName": "SearchService",
+            "fullName": "google.cloud.discoveryengine.v1beta.SearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 96,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 94,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_UserEventService_WriteUserEvent_sync",
+      "title": "WriteUserEventRequestObject",
+      "description": "Snippet for WriteUserEvent",
+      "file": "UserEventServiceClient.WriteUserEventRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "WriteUserEvent",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient.WriteUserEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.WriteUserEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1Beta.UserEvent",
+        "client": {
+          "shortName": "UserEventServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient"
+        },
+        "method": {
+          "shortName": "WriteUserEvent",
+          "fullName": "google.cloud.discoveryengine.v1beta.UserEventService.WriteUserEvent",
+          "service": {
+            "shortName": "UserEventService",
+            "fullName": "google.cloud.discoveryengine.v1beta.UserEventService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_UserEventService_WriteUserEvent_async",
+      "title": "WriteUserEventRequestObjectAsync",
+      "description": "Snippet for WriteUserEventAsync",
+      "file": "UserEventServiceClient.WriteUserEventRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "WriteUserEventAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient.WriteUserEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.WriteUserEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1Beta.UserEvent>",
+        "client": {
+          "shortName": "UserEventServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient"
+        },
+        "method": {
+          "shortName": "WriteUserEvent",
+          "fullName": "google.cloud.discoveryengine.v1beta.UserEventService.WriteUserEvent",
+          "service": {
+            "shortName": "UserEventService",
+            "fullName": "google.cloud.discoveryengine.v1beta.UserEventService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_UserEventService_CollectUserEvent_sync",
+      "title": "CollectUserEventRequestObject",
+      "description": "Snippet for CollectUserEvent",
+      "file": "UserEventServiceClient.CollectUserEventRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CollectUserEvent",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient.CollectUserEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CollectUserEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.HttpBody",
+        "client": {
+          "shortName": "UserEventServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient"
+        },
+        "method": {
+          "shortName": "CollectUserEvent",
+          "fullName": "google.cloud.discoveryengine.v1beta.UserEventService.CollectUserEvent",
+          "service": {
+            "shortName": "UserEventService",
+            "fullName": "google.cloud.discoveryengine.v1beta.UserEventService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_UserEventService_CollectUserEvent_async",
+      "title": "CollectUserEventRequestObjectAsync",
+      "description": "Snippet for CollectUserEventAsync",
+      "file": "UserEventServiceClient.CollectUserEventRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CollectUserEventAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient.CollectUserEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.CollectUserEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
+        "client": {
+          "shortName": "UserEventServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient"
+        },
+        "method": {
+          "shortName": "CollectUserEvent",
+          "fullName": "google.cloud.discoveryengine.v1beta.UserEventService.CollectUserEvent",
+          "service": {
+            "shortName": "UserEventService",
+            "fullName": "google.cloud.discoveryengine.v1beta.UserEventService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_UserEventService_ImportUserEvents_sync",
+      "title": "ImportUserEventsRequestObject",
+      "description": "Snippet for ImportUserEvents",
+      "file": "UserEventServiceClient.ImportUserEventsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportUserEvents",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient.ImportUserEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ImportUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.ImportUserEventsResponse, Google.Cloud.DiscoveryEngine.V1Beta.ImportUserEventsMetadata>",
+        "client": {
+          "shortName": "UserEventServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient"
+        },
+        "method": {
+          "shortName": "ImportUserEvents",
+          "fullName": "google.cloud.discoveryengine.v1beta.UserEventService.ImportUserEvents",
+          "service": {
+            "shortName": "UserEventService",
+            "fullName": "google.cloud.discoveryengine.v1beta.UserEventService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_UserEventService_ImportUserEvents_async",
+      "title": "ImportUserEventsRequestObjectAsync",
+      "description": "Snippet for ImportUserEventsAsync",
+      "file": "UserEventServiceClient.ImportUserEventsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportUserEventsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient.ImportUserEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.ImportUserEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.ImportUserEventsResponse, Google.Cloud.DiscoveryEngine.V1Beta.ImportUserEventsMetadata>>",
+        "client": {
+          "shortName": "UserEventServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.UserEventServiceClient"
+        },
+        "method": {
+          "shortName": "ImportUserEvents",
+          "fullName": "google.cloud.discoveryengine.v1beta.UserEventService.ImportUserEvents",
+          "service": {
+            "shortName": "UserEventService",
+            "fullName": "google.cloud.discoveryengine.v1beta.UserEventService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
