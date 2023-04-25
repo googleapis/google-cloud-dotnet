@@ -112,6 +112,12 @@
                 "CreateAudienceAsync"
               ]
             },
+            "CreateChannelGroup": {
+              "methods": [
+                "CreateChannelGroup",
+                "CreateChannelGroupAsync"
+              ]
+            },
             "CreateConnectedSiteTag": {
               "methods": [
                 "CreateConnectedSiteTag",
@@ -208,6 +214,12 @@
                 "DeleteAccountAsync"
               ]
             },
+            "DeleteChannelGroup": {
+              "methods": [
+                "DeleteChannelGroup",
+                "DeleteChannelGroupAsync"
+              ]
+            },
             "DeleteConnectedSiteTag": {
               "methods": [
                 "DeleteConnectedSiteTag",
@@ -286,6 +298,12 @@
                 "FetchAutomatedGa4ConfigurationOptOutAsync"
               ]
             },
+            "FetchConnectedGa4Property": {
+              "methods": [
+                "FetchConnectedGa4Property",
+                "FetchConnectedGa4PropertyAsync"
+              ]
+            },
             "GetAccessBinding": {
               "methods": [
                 "GetAccessBinding",
@@ -314,6 +332,12 @@
               "methods": [
                 "GetBigQueryLink",
                 "GetBigQueryLinkAsync"
+              ]
+            },
+            "GetChannelGroup": {
+              "methods": [
+                "GetChannelGroup",
+                "GetChannelGroupAsync"
               ]
             },
             "GetConversionEvent": {
@@ -440,6 +464,12 @@
               "methods": [
                 "ListBigQueryLinks",
                 "ListBigQueryLinksAsync"
+              ]
+            },
+            "ListChannelGroups": {
+              "methods": [
+                "ListChannelGroups",
+                "ListChannelGroupsAsync"
               ]
             },
             "ListConnectedSiteTags": {
@@ -572,6 +602,12 @@
               "methods": [
                 "UpdateAudience",
                 "UpdateAudienceAsync"
+              ]
+            },
+            "UpdateChannelGroup": {
+              "methods": [
+                "UpdateChannelGroup",
+                "UpdateChannelGroupAsync"
               ]
             },
             "UpdateCustomDimension": {

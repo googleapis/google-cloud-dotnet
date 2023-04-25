@@ -10530,6 +10530,613 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetChannelGroup</summary>
+        public void GetChannelGroupRequestObject()
+        {
+            // Snippet: GetChannelGroup(GetChannelGroupRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetChannelGroupRequest request = new GetChannelGroupRequest
+            {
+                ChannelGroupName = ChannelGroupName.FromPropertyChannelGroup("[PROPERTY]", "[CHANNEL_GROUP]"),
+            };
+            // Make the request
+            ChannelGroup response = analyticsAdminServiceClient.GetChannelGroup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelGroupAsync</summary>
+        public async Task GetChannelGroupRequestObjectAsync()
+        {
+            // Snippet: GetChannelGroupAsync(GetChannelGroupRequest, CallSettings)
+            // Additional: GetChannelGroupAsync(GetChannelGroupRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetChannelGroupRequest request = new GetChannelGroupRequest
+            {
+                ChannelGroupName = ChannelGroupName.FromPropertyChannelGroup("[PROPERTY]", "[CHANNEL_GROUP]"),
+            };
+            // Make the request
+            ChannelGroup response = await analyticsAdminServiceClient.GetChannelGroupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelGroup</summary>
+        public void GetChannelGroup()
+        {
+            // Snippet: GetChannelGroup(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/channelGroups/[CHANNEL_GROUP]";
+            // Make the request
+            ChannelGroup response = analyticsAdminServiceClient.GetChannelGroup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelGroupAsync</summary>
+        public async Task GetChannelGroupAsync()
+        {
+            // Snippet: GetChannelGroupAsync(string, CallSettings)
+            // Additional: GetChannelGroupAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/channelGroups/[CHANNEL_GROUP]";
+            // Make the request
+            ChannelGroup response = await analyticsAdminServiceClient.GetChannelGroupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelGroup</summary>
+        public void GetChannelGroupResourceNames()
+        {
+            // Snippet: GetChannelGroup(ChannelGroupName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelGroupName name = ChannelGroupName.FromPropertyChannelGroup("[PROPERTY]", "[CHANNEL_GROUP]");
+            // Make the request
+            ChannelGroup response = analyticsAdminServiceClient.GetChannelGroup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelGroupAsync</summary>
+        public async Task GetChannelGroupResourceNamesAsync()
+        {
+            // Snippet: GetChannelGroupAsync(ChannelGroupName, CallSettings)
+            // Additional: GetChannelGroupAsync(ChannelGroupName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelGroupName name = ChannelGroupName.FromPropertyChannelGroup("[PROPERTY]", "[CHANNEL_GROUP]");
+            // Make the request
+            ChannelGroup response = await analyticsAdminServiceClient.GetChannelGroupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelGroups</summary>
+        public void ListChannelGroupsRequestObject()
+        {
+            // Snippet: ListChannelGroups(ListChannelGroupsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListChannelGroupsRequest request = new ListChannelGroupsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListChannelGroupsResponse, ChannelGroup> response = analyticsAdminServiceClient.ListChannelGroups(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ChannelGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListChannelGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelGroupsAsync</summary>
+        public async Task ListChannelGroupsRequestObjectAsync()
+        {
+            // Snippet: ListChannelGroupsAsync(ListChannelGroupsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListChannelGroupsRequest request = new ListChannelGroupsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListChannelGroupsResponse, ChannelGroup> response = analyticsAdminServiceClient.ListChannelGroupsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ChannelGroup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListChannelGroupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelGroups</summary>
+        public void ListChannelGroups()
+        {
+            // Snippet: ListChannelGroups(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListChannelGroupsResponse, ChannelGroup> response = analyticsAdminServiceClient.ListChannelGroups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ChannelGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListChannelGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelGroupsAsync</summary>
+        public async Task ListChannelGroupsAsync()
+        {
+            // Snippet: ListChannelGroupsAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListChannelGroupsResponse, ChannelGroup> response = analyticsAdminServiceClient.ListChannelGroupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ChannelGroup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListChannelGroupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelGroups</summary>
+        public void ListChannelGroupsResourceNames()
+        {
+            // Snippet: ListChannelGroups(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListChannelGroupsResponse, ChannelGroup> response = analyticsAdminServiceClient.ListChannelGroups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ChannelGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListChannelGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelGroupsAsync</summary>
+        public async Task ListChannelGroupsResourceNamesAsync()
+        {
+            // Snippet: ListChannelGroupsAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListChannelGroupsResponse, ChannelGroup> response = analyticsAdminServiceClient.ListChannelGroupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ChannelGroup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListChannelGroupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelGroup</summary>
+        public void CreateChannelGroupRequestObject()
+        {
+            // Snippet: CreateChannelGroup(CreateChannelGroupRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            CreateChannelGroupRequest request = new CreateChannelGroupRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                ChannelGroup = new ChannelGroup(),
+            };
+            // Make the request
+            ChannelGroup response = analyticsAdminServiceClient.CreateChannelGroup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelGroupAsync</summary>
+        public async Task CreateChannelGroupRequestObjectAsync()
+        {
+            // Snippet: CreateChannelGroupAsync(CreateChannelGroupRequest, CallSettings)
+            // Additional: CreateChannelGroupAsync(CreateChannelGroupRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateChannelGroupRequest request = new CreateChannelGroupRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                ChannelGroup = new ChannelGroup(),
+            };
+            // Make the request
+            ChannelGroup response = await analyticsAdminServiceClient.CreateChannelGroupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelGroup</summary>
+        public void CreateChannelGroup()
+        {
+            // Snippet: CreateChannelGroup(string, ChannelGroup, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            ChannelGroup channelGroup = new ChannelGroup();
+            // Make the request
+            ChannelGroup response = analyticsAdminServiceClient.CreateChannelGroup(parent, channelGroup);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelGroupAsync</summary>
+        public async Task CreateChannelGroupAsync()
+        {
+            // Snippet: CreateChannelGroupAsync(string, ChannelGroup, CallSettings)
+            // Additional: CreateChannelGroupAsync(string, ChannelGroup, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            ChannelGroup channelGroup = new ChannelGroup();
+            // Make the request
+            ChannelGroup response = await analyticsAdminServiceClient.CreateChannelGroupAsync(parent, channelGroup);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelGroup</summary>
+        public void CreateChannelGroupResourceNames()
+        {
+            // Snippet: CreateChannelGroup(PropertyName, ChannelGroup, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            ChannelGroup channelGroup = new ChannelGroup();
+            // Make the request
+            ChannelGroup response = analyticsAdminServiceClient.CreateChannelGroup(parent, channelGroup);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelGroupAsync</summary>
+        public async Task CreateChannelGroupResourceNamesAsync()
+        {
+            // Snippet: CreateChannelGroupAsync(PropertyName, ChannelGroup, CallSettings)
+            // Additional: CreateChannelGroupAsync(PropertyName, ChannelGroup, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            ChannelGroup channelGroup = new ChannelGroup();
+            // Make the request
+            ChannelGroup response = await analyticsAdminServiceClient.CreateChannelGroupAsync(parent, channelGroup);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChannelGroup</summary>
+        public void UpdateChannelGroupRequestObject()
+        {
+            // Snippet: UpdateChannelGroup(UpdateChannelGroupRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateChannelGroupRequest request = new UpdateChannelGroupRequest
+            {
+                ChannelGroup = new ChannelGroup(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ChannelGroup response = analyticsAdminServiceClient.UpdateChannelGroup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChannelGroupAsync</summary>
+        public async Task UpdateChannelGroupRequestObjectAsync()
+        {
+            // Snippet: UpdateChannelGroupAsync(UpdateChannelGroupRequest, CallSettings)
+            // Additional: UpdateChannelGroupAsync(UpdateChannelGroupRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateChannelGroupRequest request = new UpdateChannelGroupRequest
+            {
+                ChannelGroup = new ChannelGroup(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ChannelGroup response = await analyticsAdminServiceClient.UpdateChannelGroupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChannelGroup</summary>
+        public void UpdateChannelGroup()
+        {
+            // Snippet: UpdateChannelGroup(ChannelGroup, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelGroup channelGroup = new ChannelGroup();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ChannelGroup response = analyticsAdminServiceClient.UpdateChannelGroup(channelGroup, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChannelGroupAsync</summary>
+        public async Task UpdateChannelGroupAsync()
+        {
+            // Snippet: UpdateChannelGroupAsync(ChannelGroup, FieldMask, CallSettings)
+            // Additional: UpdateChannelGroupAsync(ChannelGroup, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelGroup channelGroup = new ChannelGroup();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ChannelGroup response = await analyticsAdminServiceClient.UpdateChannelGroupAsync(channelGroup, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelGroup</summary>
+        public void DeleteChannelGroupRequestObject()
+        {
+            // Snippet: DeleteChannelGroup(DeleteChannelGroupRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteChannelGroupRequest request = new DeleteChannelGroupRequest
+            {
+                ChannelGroupName = ChannelGroupName.FromPropertyChannelGroup("[PROPERTY]", "[CHANNEL_GROUP]"),
+            };
+            // Make the request
+            analyticsAdminServiceClient.DeleteChannelGroup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelGroupAsync</summary>
+        public async Task DeleteChannelGroupRequestObjectAsync()
+        {
+            // Snippet: DeleteChannelGroupAsync(DeleteChannelGroupRequest, CallSettings)
+            // Additional: DeleteChannelGroupAsync(DeleteChannelGroupRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteChannelGroupRequest request = new DeleteChannelGroupRequest
+            {
+                ChannelGroupName = ChannelGroupName.FromPropertyChannelGroup("[PROPERTY]", "[CHANNEL_GROUP]"),
+            };
+            // Make the request
+            await analyticsAdminServiceClient.DeleteChannelGroupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelGroup</summary>
+        public void DeleteChannelGroup()
+        {
+            // Snippet: DeleteChannelGroup(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/channelGroups/[CHANNEL_GROUP]";
+            // Make the request
+            analyticsAdminServiceClient.DeleteChannelGroup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelGroupAsync</summary>
+        public async Task DeleteChannelGroupAsync()
+        {
+            // Snippet: DeleteChannelGroupAsync(string, CallSettings)
+            // Additional: DeleteChannelGroupAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/channelGroups/[CHANNEL_GROUP]";
+            // Make the request
+            await analyticsAdminServiceClient.DeleteChannelGroupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelGroup</summary>
+        public void DeleteChannelGroupResourceNames()
+        {
+            // Snippet: DeleteChannelGroup(ChannelGroupName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelGroupName name = ChannelGroupName.FromPropertyChannelGroup("[PROPERTY]", "[CHANNEL_GROUP]");
+            // Make the request
+            analyticsAdminServiceClient.DeleteChannelGroup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelGroupAsync</summary>
+        public async Task DeleteChannelGroupResourceNamesAsync()
+        {
+            // Snippet: DeleteChannelGroupAsync(ChannelGroupName, CallSettings)
+            // Additional: DeleteChannelGroupAsync(ChannelGroupName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelGroupName name = ChannelGroupName.FromPropertyChannelGroup("[PROPERTY]", "[CHANNEL_GROUP]");
+            // Make the request
+            await analyticsAdminServiceClient.DeleteChannelGroupAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for SetAutomatedGa4ConfigurationOptOut</summary>
         public void SetAutomatedGa4ConfigurationOptOutRequestObject()
         {
@@ -11200,6 +11807,39 @@ namespace GoogleCSharpSnippets
             ListConnectedSiteTagsRequest request = new ListConnectedSiteTagsRequest { Property = "", };
             // Make the request
             ListConnectedSiteTagsResponse response = await analyticsAdminServiceClient.ListConnectedSiteTagsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchConnectedGa4Property</summary>
+        public void FetchConnectedGa4PropertyRequestObject()
+        {
+            // Snippet: FetchConnectedGa4Property(FetchConnectedGa4PropertyRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            FetchConnectedGa4PropertyRequest request = new FetchConnectedGa4PropertyRequest
+            {
+                PropertyAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            FetchConnectedGa4PropertyResponse response = analyticsAdminServiceClient.FetchConnectedGa4Property(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchConnectedGa4PropertyAsync</summary>
+        public async Task FetchConnectedGa4PropertyRequestObjectAsync()
+        {
+            // Snippet: FetchConnectedGa4PropertyAsync(FetchConnectedGa4PropertyRequest, CallSettings)
+            // Additional: FetchConnectedGa4PropertyAsync(FetchConnectedGa4PropertyRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchConnectedGa4PropertyRequest request = new FetchConnectedGa4PropertyRequest
+            {
+                PropertyAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            FetchConnectedGa4PropertyResponse response = await analyticsAdminServiceClient.FetchConnectedGa4PropertyAsync(request);
             // End snippet
         }
     }

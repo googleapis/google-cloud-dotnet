@@ -146,6 +146,11 @@ namespace Google.Analytics.Admin.V1Alpha
             CreateExpandedDataSetSettings = existing.CreateExpandedDataSetSettings;
             UpdateExpandedDataSetSettings = existing.UpdateExpandedDataSetSettings;
             DeleteExpandedDataSetSettings = existing.DeleteExpandedDataSetSettings;
+            GetChannelGroupSettings = existing.GetChannelGroupSettings;
+            ListChannelGroupsSettings = existing.ListChannelGroupsSettings;
+            CreateChannelGroupSettings = existing.CreateChannelGroupSettings;
+            UpdateChannelGroupSettings = existing.UpdateChannelGroupSettings;
+            DeleteChannelGroupSettings = existing.DeleteChannelGroupSettings;
             SetAutomatedGa4ConfigurationOptOutSettings = existing.SetAutomatedGa4ConfigurationOptOutSettings;
             FetchAutomatedGa4ConfigurationOptOutSettings = existing.FetchAutomatedGa4ConfigurationOptOutSettings;
             GetBigQueryLinkSettings = existing.GetBigQueryLinkSettings;
@@ -155,6 +160,7 @@ namespace Google.Analytics.Admin.V1Alpha
             CreateConnectedSiteTagSettings = existing.CreateConnectedSiteTagSettings;
             DeleteConnectedSiteTagSettings = existing.DeleteConnectedSiteTagSettings;
             ListConnectedSiteTagsSettings = existing.ListConnectedSiteTagsSettings;
+            FetchConnectedGa4PropertySettings = existing.FetchConnectedGa4PropertySettings;
             OnCopy(existing);
         }
 
@@ -2056,6 +2062,116 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.GetChannelGroup</c> and <c>AnalyticsAdminServiceClient.GetChannelGroupAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetChannelGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListChannelGroups</c> and
+        /// <c>AnalyticsAdminServiceClient.ListChannelGroupsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListChannelGroupsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.CreateChannelGroup</c> and
+        /// <c>AnalyticsAdminServiceClient.CreateChannelGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateChannelGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateChannelGroup</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateChannelGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateChannelGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.DeleteChannelGroup</c> and
+        /// <c>AnalyticsAdminServiceClient.DeleteChannelGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteChannelGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOut</c> and
         /// <c>AnalyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutAsync</c>.
         /// </summary>
@@ -2233,6 +2349,28 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListConnectedSiteTagsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.FetchConnectedGa4Property</c> and
+        /// <c>AnalyticsAdminServiceClient.FetchConnectedGa4PropertyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchConnectedGa4PropertySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsAdminServiceSettings"/> object.</returns>
@@ -11723,7 +11861,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Lookup for a single ExpandedDataSet.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Audience to get.
+        /// Required. The name of the ExpandedDataSet to get.
         /// Example format: properties/1234/expandedDataSets/5678
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -11738,7 +11876,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Lookup for a single ExpandedDataSet.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Audience to get.
+        /// Required. The name of the ExpandedDataSet to get.
         /// Example format: properties/1234/expandedDataSets/5678
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -11753,7 +11891,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Lookup for a single ExpandedDataSet.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Audience to get.
+        /// Required. The name of the ExpandedDataSet to get.
         /// Example format: properties/1234/expandedDataSets/5678
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -11765,7 +11903,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Lookup for a single ExpandedDataSet.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Audience to get.
+        /// Required. The name of the ExpandedDataSet to get.
         /// Example format: properties/1234/expandedDataSets/5678
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -11780,7 +11918,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Lookup for a single ExpandedDataSet.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Audience to get.
+        /// Required. The name of the ExpandedDataSet to get.
         /// Example format: properties/1234/expandedDataSets/5678
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -11795,7 +11933,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Lookup for a single ExpandedDataSet.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Audience to get.
+        /// Required. The name of the ExpandedDataSet to get.
         /// Example format: properties/1234/expandedDataSets/5678
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -12240,6 +12378,571 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteExpandedDataSetAsync(ExpandedDataSetName name, st::CancellationToken cancellationToken) =>
             DeleteExpandedDataSetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelGroup GetChannelGroup(GetChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> GetChannelGroupAsync(GetChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lookup for a single ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> GetChannelGroupAsync(GetChannelGroupRequest request, st::CancellationToken cancellationToken) =>
+            GetChannelGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single ChannelGroup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ChannelGroup to get.
+        /// Example format: properties/1234/channelGroups/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelGroup GetChannelGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelGroup(new GetChannelGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single ChannelGroup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ChannelGroup to get.
+        /// Example format: properties/1234/channelGroups/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> GetChannelGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelGroupAsync(new GetChannelGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single ChannelGroup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ChannelGroup to get.
+        /// Example format: properties/1234/channelGroups/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> GetChannelGroupAsync(string name, st::CancellationToken cancellationToken) =>
+            GetChannelGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lookup for a single ChannelGroup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ChannelGroup to get.
+        /// Example format: properties/1234/channelGroups/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelGroup GetChannelGroup(ChannelGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelGroup(new GetChannelGroupRequest
+            {
+                ChannelGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single ChannelGroup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ChannelGroup to get.
+        /// Example format: properties/1234/channelGroups/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> GetChannelGroupAsync(ChannelGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelGroupAsync(new GetChannelGroupRequest
+            {
+                ChannelGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lookup for a single ChannelGroup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ChannelGroup to get.
+        /// Example format: properties/1234/channelGroups/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> GetChannelGroupAsync(ChannelGroupName name, st::CancellationToken cancellationToken) =>
+            GetChannelGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists ChannelGroups on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChannelGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroups(ListChannelGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ChannelGroups on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ChannelGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroupsAsync(ListChannelGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ChannelGroups on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to list ChannelGroups.
+        /// Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChannelGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelGroups(new ListChannelGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists ChannelGroups on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to list ChannelGroups.
+        /// Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ChannelGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelGroupsAsync(new ListChannelGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists ChannelGroups on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to list ChannelGroups.
+        /// Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChannelGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroups(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelGroups(new ListChannelGroupsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists ChannelGroups on a property.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to list ChannelGroups.
+        /// Example format: properties/1234
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ChannelGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroupsAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelGroupsAsync(new ListChannelGroupsRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelGroup CreateChannelGroup(CreateChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> CreateChannelGroupAsync(CreateChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> CreateChannelGroupAsync(CreateChannelGroupRequest request, st::CancellationToken cancellationToken) =>
+            CreateChannelGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ChannelGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to create a ChannelGroup.
+        /// Example format: properties/1234
+        /// </param>
+        /// <param name="channelGroup">
+        /// Required. The ChannelGroup to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelGroup CreateChannelGroup(string parent, ChannelGroup channelGroup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelGroup(new CreateChannelGroupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ChannelGroup = gax::GaxPreconditions.CheckNotNull(channelGroup, nameof(channelGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ChannelGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to create a ChannelGroup.
+        /// Example format: properties/1234
+        /// </param>
+        /// <param name="channelGroup">
+        /// Required. The ChannelGroup to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> CreateChannelGroupAsync(string parent, ChannelGroup channelGroup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelGroupAsync(new CreateChannelGroupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ChannelGroup = gax::GaxPreconditions.CheckNotNull(channelGroup, nameof(channelGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ChannelGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to create a ChannelGroup.
+        /// Example format: properties/1234
+        /// </param>
+        /// <param name="channelGroup">
+        /// Required. The ChannelGroup to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> CreateChannelGroupAsync(string parent, ChannelGroup channelGroup, st::CancellationToken cancellationToken) =>
+            CreateChannelGroupAsync(parent, channelGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ChannelGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to create a ChannelGroup.
+        /// Example format: properties/1234
+        /// </param>
+        /// <param name="channelGroup">
+        /// Required. The ChannelGroup to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelGroup CreateChannelGroup(PropertyName parent, ChannelGroup channelGroup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelGroup(new CreateChannelGroupRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChannelGroup = gax::GaxPreconditions.CheckNotNull(channelGroup, nameof(channelGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ChannelGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to create a ChannelGroup.
+        /// Example format: properties/1234
+        /// </param>
+        /// <param name="channelGroup">
+        /// Required. The ChannelGroup to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> CreateChannelGroupAsync(PropertyName parent, ChannelGroup channelGroup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelGroupAsync(new CreateChannelGroupRequest
+            {
+                ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChannelGroup = gax::GaxPreconditions.CheckNotNull(channelGroup, nameof(channelGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ChannelGroup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The property for which to create a ChannelGroup.
+        /// Example format: properties/1234
+        /// </param>
+        /// <param name="channelGroup">
+        /// Required. The ChannelGroup to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> CreateChannelGroupAsync(PropertyName parent, ChannelGroup channelGroup, st::CancellationToken cancellationToken) =>
+            CreateChannelGroupAsync(parent, channelGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelGroup UpdateChannelGroup(UpdateChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> UpdateChannelGroupAsync(UpdateChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> UpdateChannelGroupAsync(UpdateChannelGroupRequest request, st::CancellationToken cancellationToken) =>
+            UpdateChannelGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a ChannelGroup.
+        /// </summary>
+        /// <param name="channelGroup">
+        /// Required. The ChannelGroup to update.
+        /// The resource's `name` field is used to identify the ChannelGroup to be
+        /// updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelGroup UpdateChannelGroup(ChannelGroup channelGroup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateChannelGroup(new UpdateChannelGroupRequest
+            {
+                ChannelGroup = gax::GaxPreconditions.CheckNotNull(channelGroup, nameof(channelGroup)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a ChannelGroup.
+        /// </summary>
+        /// <param name="channelGroup">
+        /// Required. The ChannelGroup to update.
+        /// The resource's `name` field is used to identify the ChannelGroup to be
+        /// updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> UpdateChannelGroupAsync(ChannelGroup channelGroup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateChannelGroupAsync(new UpdateChannelGroupRequest
+            {
+                ChannelGroup = gax::GaxPreconditions.CheckNotNull(channelGroup, nameof(channelGroup)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a ChannelGroup.
+        /// </summary>
+        /// <param name="channelGroup">
+        /// Required. The ChannelGroup to update.
+        /// The resource's `name` field is used to identify the ChannelGroup to be
+        /// updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. Field names must be in snake
+        /// case (e.g., "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelGroup> UpdateChannelGroupAsync(ChannelGroup channelGroup, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateChannelGroupAsync(channelGroup, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ChannelGroup on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteChannelGroup(DeleteChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a ChannelGroup on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteChannelGroupAsync(DeleteChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a ChannelGroup on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteChannelGroupAsync(DeleteChannelGroupRequest request, st::CancellationToken cancellationToken) =>
+            DeleteChannelGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ChannelGroup on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ChannelGroup to delete.
+        /// Example format: properties/1234/channelGroups/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteChannelGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelGroup(new DeleteChannelGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ChannelGroup on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ChannelGroup to delete.
+        /// Example format: properties/1234/channelGroups/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteChannelGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelGroupAsync(new DeleteChannelGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ChannelGroup on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ChannelGroup to delete.
+        /// Example format: properties/1234/channelGroups/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteChannelGroupAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteChannelGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ChannelGroup on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ChannelGroup to delete.
+        /// Example format: properties/1234/channelGroups/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteChannelGroup(ChannelGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelGroup(new DeleteChannelGroupRequest
+            {
+                ChannelGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ChannelGroup on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ChannelGroup to delete.
+        /// Example format: properties/1234/channelGroups/5678
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteChannelGroupAsync(ChannelGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelGroupAsync(new DeleteChannelGroupRequest
+            {
+                ChannelGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ChannelGroup on a property.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ChannelGroup to delete.
+        /// Example format: properties/1234/channelGroups/5678
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteChannelGroupAsync(ChannelGroupName name, st::CancellationToken cancellationToken) =>
+            DeleteChannelGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the opt out status for the automated GA4 setup process for a UA
@@ -12883,6 +13586,36 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ListConnectedSiteTagsResponse> ListConnectedSiteTagsAsync(ListConnectedSiteTagsRequest request, st::CancellationToken cancellationToken) =>
             ListConnectedSiteTagsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Given a specified UA property, looks up the GA4 property connected to it.
+        /// Note: this cannot be used with GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchConnectedGa4PropertyResponse FetchConnectedGa4Property(FetchConnectedGa4PropertyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Given a specified UA property, looks up the GA4 property connected to it.
+        /// Note: this cannot be used with GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchConnectedGa4PropertyResponse> FetchConnectedGa4PropertyAsync(FetchConnectedGa4PropertyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Given a specified UA property, looks up the GA4 property connected to it.
+        /// Note: this cannot be used with GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchConnectedGa4PropertyResponse> FetchConnectedGa4PropertyAsync(FetchConnectedGa4PropertyRequest request, st::CancellationToken cancellationToken) =>
+            FetchConnectedGa4PropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AnalyticsAdminService client wrapper implementation, for convenient use.</summary>
@@ -13087,6 +13820,16 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<DeleteExpandedDataSetRequest, wkt::Empty> _callDeleteExpandedDataSet;
 
+        private readonly gaxgrpc::ApiCall<GetChannelGroupRequest, ChannelGroup> _callGetChannelGroup;
+
+        private readonly gaxgrpc::ApiCall<ListChannelGroupsRequest, ListChannelGroupsResponse> _callListChannelGroups;
+
+        private readonly gaxgrpc::ApiCall<CreateChannelGroupRequest, ChannelGroup> _callCreateChannelGroup;
+
+        private readonly gaxgrpc::ApiCall<UpdateChannelGroupRequest, ChannelGroup> _callUpdateChannelGroup;
+
+        private readonly gaxgrpc::ApiCall<DeleteChannelGroupRequest, wkt::Empty> _callDeleteChannelGroup;
+
         private readonly gaxgrpc::ApiCall<SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse> _callSetAutomatedGa4ConfigurationOptOut;
 
         private readonly gaxgrpc::ApiCall<FetchAutomatedGa4ConfigurationOptOutRequest, FetchAutomatedGa4ConfigurationOptOutResponse> _callFetchAutomatedGa4ConfigurationOptOut;
@@ -13104,6 +13847,8 @@ namespace Google.Analytics.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<DeleteConnectedSiteTagRequest, wkt::Empty> _callDeleteConnectedSiteTag;
 
         private readonly gaxgrpc::ApiCall<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse> _callListConnectedSiteTags;
+
+        private readonly gaxgrpc::ApiCall<FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse> _callFetchConnectedGa4Property;
 
         /// <summary>
         /// Constructs a client wrapper for the AnalyticsAdminService service, with the specified gRPC client and
@@ -13411,6 +14156,21 @@ namespace Google.Analytics.Admin.V1Alpha
             _callDeleteExpandedDataSet = clientHelper.BuildApiCall<DeleteExpandedDataSetRequest, wkt::Empty>("DeleteExpandedDataSet", grpcClient.DeleteExpandedDataSetAsync, grpcClient.DeleteExpandedDataSet, effectiveSettings.DeleteExpandedDataSetSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteExpandedDataSet);
             Modify_DeleteExpandedDataSetApiCall(ref _callDeleteExpandedDataSet);
+            _callGetChannelGroup = clientHelper.BuildApiCall<GetChannelGroupRequest, ChannelGroup>("GetChannelGroup", grpcClient.GetChannelGroupAsync, grpcClient.GetChannelGroup, effectiveSettings.GetChannelGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetChannelGroup);
+            Modify_GetChannelGroupApiCall(ref _callGetChannelGroup);
+            _callListChannelGroups = clientHelper.BuildApiCall<ListChannelGroupsRequest, ListChannelGroupsResponse>("ListChannelGroups", grpcClient.ListChannelGroupsAsync, grpcClient.ListChannelGroups, effectiveSettings.ListChannelGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListChannelGroups);
+            Modify_ListChannelGroupsApiCall(ref _callListChannelGroups);
+            _callCreateChannelGroup = clientHelper.BuildApiCall<CreateChannelGroupRequest, ChannelGroup>("CreateChannelGroup", grpcClient.CreateChannelGroupAsync, grpcClient.CreateChannelGroup, effectiveSettings.CreateChannelGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateChannelGroup);
+            Modify_CreateChannelGroupApiCall(ref _callCreateChannelGroup);
+            _callUpdateChannelGroup = clientHelper.BuildApiCall<UpdateChannelGroupRequest, ChannelGroup>("UpdateChannelGroup", grpcClient.UpdateChannelGroupAsync, grpcClient.UpdateChannelGroup, effectiveSettings.UpdateChannelGroupSettings).WithGoogleRequestParam("channel_group.name", request => request.ChannelGroup?.Name);
+            Modify_ApiCall(ref _callUpdateChannelGroup);
+            Modify_UpdateChannelGroupApiCall(ref _callUpdateChannelGroup);
+            _callDeleteChannelGroup = clientHelper.BuildApiCall<DeleteChannelGroupRequest, wkt::Empty>("DeleteChannelGroup", grpcClient.DeleteChannelGroupAsync, grpcClient.DeleteChannelGroup, effectiveSettings.DeleteChannelGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteChannelGroup);
+            Modify_DeleteChannelGroupApiCall(ref _callDeleteChannelGroup);
             _callSetAutomatedGa4ConfigurationOptOut = clientHelper.BuildApiCall<SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse>("SetAutomatedGa4ConfigurationOptOut", grpcClient.SetAutomatedGa4ConfigurationOptOutAsync, grpcClient.SetAutomatedGa4ConfigurationOptOut, effectiveSettings.SetAutomatedGa4ConfigurationOptOutSettings);
             Modify_ApiCall(ref _callSetAutomatedGa4ConfigurationOptOut);
             Modify_SetAutomatedGa4ConfigurationOptOutApiCall(ref _callSetAutomatedGa4ConfigurationOptOut);
@@ -13438,6 +14198,9 @@ namespace Google.Analytics.Admin.V1Alpha
             _callListConnectedSiteTags = clientHelper.BuildApiCall<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse>("ListConnectedSiteTags", grpcClient.ListConnectedSiteTagsAsync, grpcClient.ListConnectedSiteTags, effectiveSettings.ListConnectedSiteTagsSettings);
             Modify_ApiCall(ref _callListConnectedSiteTags);
             Modify_ListConnectedSiteTagsApiCall(ref _callListConnectedSiteTags);
+            _callFetchConnectedGa4Property = clientHelper.BuildApiCall<FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse>("FetchConnectedGa4Property", grpcClient.FetchConnectedGa4PropertyAsync, grpcClient.FetchConnectedGa4Property, effectiveSettings.FetchConnectedGa4PropertySettings);
+            Modify_ApiCall(ref _callFetchConnectedGa4Property);
+            Modify_FetchConnectedGa4PropertyApiCall(ref _callFetchConnectedGa4Property);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -13639,6 +14402,16 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_DeleteExpandedDataSetApiCall(ref gaxgrpc::ApiCall<DeleteExpandedDataSetRequest, wkt::Empty> call);
 
+        partial void Modify_GetChannelGroupApiCall(ref gaxgrpc::ApiCall<GetChannelGroupRequest, ChannelGroup> call);
+
+        partial void Modify_ListChannelGroupsApiCall(ref gaxgrpc::ApiCall<ListChannelGroupsRequest, ListChannelGroupsResponse> call);
+
+        partial void Modify_CreateChannelGroupApiCall(ref gaxgrpc::ApiCall<CreateChannelGroupRequest, ChannelGroup> call);
+
+        partial void Modify_UpdateChannelGroupApiCall(ref gaxgrpc::ApiCall<UpdateChannelGroupRequest, ChannelGroup> call);
+
+        partial void Modify_DeleteChannelGroupApiCall(ref gaxgrpc::ApiCall<DeleteChannelGroupRequest, wkt::Empty> call);
+
         partial void Modify_SetAutomatedGa4ConfigurationOptOutApiCall(ref gaxgrpc::ApiCall<SetAutomatedGa4ConfigurationOptOutRequest, SetAutomatedGa4ConfigurationOptOutResponse> call);
 
         partial void Modify_FetchAutomatedGa4ConfigurationOptOutApiCall(ref gaxgrpc::ApiCall<FetchAutomatedGa4ConfigurationOptOutRequest, FetchAutomatedGa4ConfigurationOptOutResponse> call);
@@ -13656,6 +14429,8 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_DeleteConnectedSiteTagApiCall(ref gaxgrpc::ApiCall<DeleteConnectedSiteTagRequest, wkt::Empty> call);
 
         partial void Modify_ListConnectedSiteTagsApiCall(ref gaxgrpc::ApiCall<ListConnectedSiteTagsRequest, ListConnectedSiteTagsResponse> call);
+
+        partial void Modify_FetchConnectedGa4PropertyApiCall(ref gaxgrpc::ApiCall<FetchConnectedGa4PropertyRequest, FetchConnectedGa4PropertyResponse> call);
 
         partial void OnConstruction(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -13858,6 +14633,16 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_DeleteExpandedDataSetRequest(ref DeleteExpandedDataSetRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetChannelGroupRequest(ref GetChannelGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListChannelGroupsRequest(ref ListChannelGroupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateChannelGroupRequest(ref CreateChannelGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateChannelGroupRequest(ref UpdateChannelGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteChannelGroupRequest(ref DeleteChannelGroupRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_SetAutomatedGa4ConfigurationOptOutRequest(ref SetAutomatedGa4ConfigurationOptOutRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FetchAutomatedGa4ConfigurationOptOutRequest(ref FetchAutomatedGa4ConfigurationOptOutRequest request, ref gaxgrpc::CallSettings settings);
@@ -13875,6 +14660,8 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_DeleteConnectedSiteTagRequest(ref DeleteConnectedSiteTagRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListConnectedSiteTagsRequest(ref ListConnectedSiteTagsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchConnectedGa4PropertyRequest(ref FetchConnectedGa4PropertyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lookup for a single Account.
@@ -16411,6 +17198,126 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
+        /// Lookup for a single ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ChannelGroup GetChannelGroup(GetChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetChannelGroupRequest(ref request, ref callSettings);
+            return _callGetChannelGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lookup for a single ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ChannelGroup> GetChannelGroupAsync(GetChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetChannelGroupRequest(ref request, ref callSettings);
+            return _callGetChannelGroup.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ChannelGroups on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChannelGroup"/> resources.</returns>
+        public override gax::PagedEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroups(ListChannelGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListChannelGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListChannelGroupsRequest, ListChannelGroupsResponse, ChannelGroup>(_callListChannelGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ChannelGroups on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ChannelGroup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListChannelGroupsResponse, ChannelGroup> ListChannelGroupsAsync(ListChannelGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListChannelGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListChannelGroupsRequest, ListChannelGroupsResponse, ChannelGroup>(_callListChannelGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ChannelGroup CreateChannelGroup(CreateChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateChannelGroupRequest(ref request, ref callSettings);
+            return _callCreateChannelGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ChannelGroup> CreateChannelGroupAsync(CreateChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateChannelGroupRequest(ref request, ref callSettings);
+            return _callCreateChannelGroup.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ChannelGroup UpdateChannelGroup(UpdateChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateChannelGroupRequest(ref request, ref callSettings);
+            return _callUpdateChannelGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a ChannelGroup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ChannelGroup> UpdateChannelGroupAsync(UpdateChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateChannelGroupRequest(ref request, ref callSettings);
+            return _callUpdateChannelGroup.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a ChannelGroup on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteChannelGroup(DeleteChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteChannelGroupRequest(ref request, ref callSettings);
+            _callDeleteChannelGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a ChannelGroup on a property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteChannelGroupAsync(DeleteChannelGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteChannelGroupRequest(ref request, ref callSettings);
+            return _callDeleteChannelGroup.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Sets the opt out status for the automated GA4 setup process for a UA
         /// property.
         /// Note: this has no effect on GA4 property.
@@ -16651,6 +17558,32 @@ namespace Google.Analytics.Admin.V1Alpha
             Modify_ListConnectedSiteTagsRequest(ref request, ref callSettings);
             return _callListConnectedSiteTags.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Given a specified UA property, looks up the GA4 property connected to it.
+        /// Note: this cannot be used with GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FetchConnectedGa4PropertyResponse FetchConnectedGa4Property(FetchConnectedGa4PropertyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchConnectedGa4PropertyRequest(ref request, ref callSettings);
+            return _callFetchConnectedGa4Property.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Given a specified UA property, looks up the GA4 property connected to it.
+        /// Note: this cannot be used with GA4 properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FetchConnectedGa4PropertyResponse> FetchConnectedGa4PropertyAsync(FetchConnectedGa4PropertyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchConnectedGa4PropertyRequest(ref request, ref callSettings);
+            return _callFetchConnectedGa4Property.Async(request, callSettings);
+        }
     }
 
     public partial class ListAccountsRequest : gaxgrpc::IPageRequest
@@ -16726,6 +17659,10 @@ namespace Google.Analytics.Admin.V1Alpha
     }
 
     public partial class ListExpandedDataSetsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListChannelGroupsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -16883,6 +17820,14 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ExpandedDataSet> GetEnumerator() => ExpandedDataSets.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListChannelGroupsResponse : gaxgrpc::IPageResponse<ChannelGroup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ChannelGroup> GetEnumerator() => ChannelGroups.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

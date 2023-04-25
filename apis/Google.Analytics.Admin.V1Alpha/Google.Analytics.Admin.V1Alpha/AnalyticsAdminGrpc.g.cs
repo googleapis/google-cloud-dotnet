@@ -362,6 +362,20 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteExpandedDataSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest> __Marshaller_google_analytics_admin_v1alpha_GetChannelGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> __Marshaller_google_analytics_admin_v1alpha_ChannelGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ChannelGroup.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest> __Marshaller_google_analytics_admin_v1alpha_ListChannelGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse> __Marshaller_google_analytics_admin_v1alpha_ListChannelGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest> __Marshaller_google_analytics_admin_v1alpha_CreateChannelGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateChannelGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteChannelGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest> __Marshaller_google_analytics_admin_v1alpha_SetAutomatedGa4ConfigurationOptOutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse> __Marshaller_google_analytics_admin_v1alpha_SetAutomatedGa4ConfigurationOptOutResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse.Parser));
@@ -393,6 +407,10 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest> __Marshaller_google_analytics_admin_v1alpha_ListConnectedSiteTagsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse> __Marshaller_google_analytics_admin_v1alpha_ListConnectedSiteTagsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest> __Marshaller_google_analytics_admin_v1alpha_FetchConnectedGa4PropertyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse> __Marshaller_google_analytics_admin_v1alpha_FetchConnectedGa4PropertyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account> __Method_GetAccount = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(
@@ -1179,6 +1197,46 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup> __Method_GetChannelGroup = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetChannelGroup",
+        __Marshaller_google_analytics_admin_v1alpha_GetChannelGroupRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ChannelGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest, global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse> __Method_ListChannelGroups = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest, global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListChannelGroups",
+        __Marshaller_google_analytics_admin_v1alpha_ListChannelGroupsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListChannelGroupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup> __Method_CreateChannelGroup = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateChannelGroup",
+        __Marshaller_google_analytics_admin_v1alpha_CreateChannelGroupRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ChannelGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup> __Method_UpdateChannelGroup = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateChannelGroup",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateChannelGroupRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ChannelGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteChannelGroup = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteChannelGroup",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteChannelGroupRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse> __Method_SetAutomatedGa4ConfigurationOptOut = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -1249,6 +1307,14 @@ namespace Google.Analytics.Admin.V1Alpha {
         "ListConnectedSiteTags",
         __Marshaller_google_analytics_admin_v1alpha_ListConnectedSiteTagsRequest,
         __Marshaller_google_analytics_admin_v1alpha_ListConnectedSiteTagsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest, global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse> __Method_FetchConnectedGa4Property = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest, global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchConnectedGa4Property",
+        __Marshaller_google_analytics_admin_v1alpha_FetchConnectedGa4PropertyRequest,
+        __Marshaller_google_analytics_admin_v1alpha_FetchConnectedGa4PropertyResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -2526,6 +2592,66 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
+      /// Lookup for a single ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> GetChannelGroup(global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists ChannelGroups on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse> ListChannelGroups(global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> CreateChannelGroup(global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> UpdateChannelGroup(global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a ChannelGroup on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteChannelGroup(global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Sets the opt out status for the automated GA4 setup process for a UA
       /// property.
       /// Note: this has no effect on GA4 property.
@@ -2642,6 +2768,19 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse> ListConnectedSiteTags(global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Given a specified UA property, looks up the GA4 property connected to it.
+      /// Note: this cannot be used with GA4 properties.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse> FetchConnectedGa4Property(global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -7736,6 +7875,246 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteExpandedDataSet, null, options, request);
       }
       /// <summary>
+      /// Lookup for a single ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ChannelGroup GetChannelGroup(global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetChannelGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ChannelGroup GetChannelGroup(global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> GetChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetChannelGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> GetChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Lists ChannelGroups on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse ListChannelGroups(global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListChannelGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ChannelGroups on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse ListChannelGroups(global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListChannelGroups, null, options, request);
+      }
+      /// <summary>
+      /// Lists ChannelGroups on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse> ListChannelGroupsAsync(global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListChannelGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ChannelGroups on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse> ListChannelGroupsAsync(global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListChannelGroups, null, options, request);
+      }
+      /// <summary>
+      /// Creates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ChannelGroup CreateChannelGroup(global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateChannelGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ChannelGroup CreateChannelGroup(global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> CreateChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateChannelGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> CreateChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Updates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ChannelGroup UpdateChannelGroup(global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateChannelGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ChannelGroup UpdateChannelGroup(global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Updates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> UpdateChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateChannelGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> UpdateChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a ChannelGroup on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteChannelGroup(global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteChannelGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a ChannelGroup on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteChannelGroup(global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a ChannelGroup on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteChannelGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a ChannelGroup on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteChannelGroup, null, options, request);
+      }
+      /// <summary>
       /// Sets the opt out status for the automated GA4 setup process for a UA
       /// property.
       /// Note: this has no effect on GA4 property.
@@ -8219,6 +8598,58 @@ namespace Google.Analytics.Admin.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListConnectedSiteTags, null, options, request);
       }
+      /// <summary>
+      /// Given a specified UA property, looks up the GA4 property connected to it.
+      /// Note: this cannot be used with GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse FetchConnectedGa4Property(global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchConnectedGa4Property(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Given a specified UA property, looks up the GA4 property connected to it.
+      /// Note: this cannot be used with GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse FetchConnectedGa4Property(global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchConnectedGa4Property, null, options, request);
+      }
+      /// <summary>
+      /// Given a specified UA property, looks up the GA4 property connected to it.
+      /// Note: this cannot be used with GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse> FetchConnectedGa4PropertyAsync(global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchConnectedGa4PropertyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Given a specified UA property, looks up the GA4 property connected to it.
+      /// Note: this cannot be used with GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse> FetchConnectedGa4PropertyAsync(global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchConnectedGa4Property, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AnalyticsAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -8331,6 +8762,11 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_CreateExpandedDataSet, serviceImpl.CreateExpandedDataSet)
           .AddMethod(__Method_UpdateExpandedDataSet, serviceImpl.UpdateExpandedDataSet)
           .AddMethod(__Method_DeleteExpandedDataSet, serviceImpl.DeleteExpandedDataSet)
+          .AddMethod(__Method_GetChannelGroup, serviceImpl.GetChannelGroup)
+          .AddMethod(__Method_ListChannelGroups, serviceImpl.ListChannelGroups)
+          .AddMethod(__Method_CreateChannelGroup, serviceImpl.CreateChannelGroup)
+          .AddMethod(__Method_UpdateChannelGroup, serviceImpl.UpdateChannelGroup)
+          .AddMethod(__Method_DeleteChannelGroup, serviceImpl.DeleteChannelGroup)
           .AddMethod(__Method_SetAutomatedGa4ConfigurationOptOut, serviceImpl.SetAutomatedGa4ConfigurationOptOut)
           .AddMethod(__Method_FetchAutomatedGa4ConfigurationOptOut, serviceImpl.FetchAutomatedGa4ConfigurationOptOut)
           .AddMethod(__Method_GetBigQueryLink, serviceImpl.GetBigQueryLink)
@@ -8339,7 +8775,8 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_UpdateEnhancedMeasurementSettings, serviceImpl.UpdateEnhancedMeasurementSettings)
           .AddMethod(__Method_CreateConnectedSiteTag, serviceImpl.CreateConnectedSiteTag)
           .AddMethod(__Method_DeleteConnectedSiteTag, serviceImpl.DeleteConnectedSiteTag)
-          .AddMethod(__Method_ListConnectedSiteTags, serviceImpl.ListConnectedSiteTags).Build();
+          .AddMethod(__Method_ListConnectedSiteTags, serviceImpl.ListConnectedSiteTags)
+          .AddMethod(__Method_FetchConnectedGa4Property, serviceImpl.FetchConnectedGa4Property).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -8447,6 +8884,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_CreateExpandedDataSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateExpandedDataSetRequest, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet>(serviceImpl.CreateExpandedDataSet));
       serviceBinder.AddMethod(__Method_UpdateExpandedDataSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateExpandedDataSetRequest, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet>(serviceImpl.UpdateExpandedDataSet));
       serviceBinder.AddMethod(__Method_DeleteExpandedDataSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteExpandedDataSet));
+      serviceBinder.AddMethod(__Method_GetChannelGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup>(serviceImpl.GetChannelGroup));
+      serviceBinder.AddMethod(__Method_ListChannelGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest, global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse>(serviceImpl.ListChannelGroups));
+      serviceBinder.AddMethod(__Method_CreateChannelGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup>(serviceImpl.CreateChannelGroup));
+      serviceBinder.AddMethod(__Method_UpdateChannelGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup>(serviceImpl.UpdateChannelGroup));
+      serviceBinder.AddMethod(__Method_DeleteChannelGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteChannelGroup));
       serviceBinder.AddMethod(__Method_SetAutomatedGa4ConfigurationOptOut, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse>(serviceImpl.SetAutomatedGa4ConfigurationOptOut));
       serviceBinder.AddMethod(__Method_FetchAutomatedGa4ConfigurationOptOut, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse>(serviceImpl.FetchAutomatedGa4ConfigurationOptOut));
       serviceBinder.AddMethod(__Method_GetBigQueryLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink>(serviceImpl.GetBigQueryLink));
@@ -8456,6 +8898,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_CreateConnectedSiteTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest, global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse>(serviceImpl.CreateConnectedSiteTag));
       serviceBinder.AddMethod(__Method_DeleteConnectedSiteTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteConnectedSiteTag));
       serviceBinder.AddMethod(__Method_ListConnectedSiteTags, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest, global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse>(serviceImpl.ListConnectedSiteTags));
+      serviceBinder.AddMethod(__Method_FetchConnectedGa4Property, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest, global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse>(serviceImpl.FetchConnectedGa4Property));
     }
 
   }

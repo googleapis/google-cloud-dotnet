@@ -24079,6 +24079,1399 @@
       ]
     },
     {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetChannelGroup_sync",
+      "title": "GetChannelGroupRequestObject",
+      "description": "Snippet for GetChannelGroup",
+      "file": "AnalyticsAdminServiceClient.GetChannelGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChannelGroup",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetChannelGroup",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetChannelGroup_async",
+      "title": "GetChannelGroupRequestObjectAsync",
+      "description": "Snippet for GetChannelGroupAsync",
+      "file": "AnalyticsAdminServiceClient.GetChannelGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChannelGroupAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetChannelGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetChannelGroup_sync_flattened",
+      "title": "GetChannelGroup",
+      "description": "Snippet for GetChannelGroup",
+      "file": "AnalyticsAdminServiceClient.GetChannelGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChannelGroup",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetChannelGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetChannelGroup_async_flattened",
+      "title": "GetChannelGroupAsync",
+      "description": "Snippet for GetChannelGroupAsync",
+      "file": "AnalyticsAdminServiceClient.GetChannelGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChannelGroupAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetChannelGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetChannelGroup_sync_flattened_resourceNames",
+      "title": "GetChannelGroupResourceNames",
+      "description": "Snippet for GetChannelGroup",
+      "file": "AnalyticsAdminServiceClient.GetChannelGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChannelGroup",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetChannelGroup",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ChannelGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetChannelGroup_async_flattened_resourceNames",
+      "title": "GetChannelGroupResourceNamesAsync",
+      "description": "Snippet for GetChannelGroupAsync",
+      "file": "AnalyticsAdminServiceClient.GetChannelGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetChannelGroupAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetChannelGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ChannelGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListChannelGroups_sync",
+      "title": "ListChannelGroupsRequestObject",
+      "description": "Snippet for ListChannelGroups",
+      "file": "AnalyticsAdminServiceClient.ListChannelGroupsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChannelGroups",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListChannelGroups",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse, Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListChannelGroups",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListChannelGroups",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListChannelGroups_async",
+      "title": "ListChannelGroupsRequestObjectAsync",
+      "description": "Snippet for ListChannelGroupsAsync",
+      "file": "AnalyticsAdminServiceClient.ListChannelGroupsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChannelGroupsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListChannelGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse, Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListChannelGroups",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListChannelGroups",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListChannelGroups_sync_flattened",
+      "title": "ListChannelGroups",
+      "description": "Snippet for ListChannelGroups",
+      "file": "AnalyticsAdminServiceClient.ListChannelGroupsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChannelGroups",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListChannelGroups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse, Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListChannelGroups",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListChannelGroups",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListChannelGroups_async_flattened",
+      "title": "ListChannelGroupsAsync",
+      "description": "Snippet for ListChannelGroupsAsync",
+      "file": "AnalyticsAdminServiceClient.ListChannelGroupsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChannelGroupsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListChannelGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse, Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListChannelGroups",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListChannelGroups",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListChannelGroups_sync_flattened_resourceNames",
+      "title": "ListChannelGroupsResourceNames",
+      "description": "Snippet for ListChannelGroups",
+      "file": "AnalyticsAdminServiceClient.ListChannelGroupsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChannelGroups",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListChannelGroups",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse, Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListChannelGroups",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListChannelGroups",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListChannelGroups_async_flattened_resourceNames",
+      "title": "ListChannelGroupsResourceNamesAsync",
+      "description": "Snippet for ListChannelGroupsAsync",
+      "file": "AnalyticsAdminServiceClient.ListChannelGroupsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListChannelGroupsAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListChannelGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse, Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListChannelGroups",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListChannelGroups",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateChannelGroup_sync",
+      "title": "CreateChannelGroupRequestObject",
+      "description": "Snippet for CreateChannelGroup",
+      "file": "AnalyticsAdminServiceClient.CreateChannelGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateChannelGroup",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateChannelGroup",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateChannelGroup_async",
+      "title": "CreateChannelGroupRequestObjectAsync",
+      "description": "Snippet for CreateChannelGroupAsync",
+      "file": "AnalyticsAdminServiceClient.CreateChannelGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateChannelGroupAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateChannelGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateChannelGroup_sync_flattened",
+      "title": "CreateChannelGroup",
+      "description": "Snippet for CreateChannelGroup",
+      "file": "AnalyticsAdminServiceClient.CreateChannelGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateChannelGroup",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateChannelGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+            "name": "channelGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateChannelGroup_async_flattened",
+      "title": "CreateChannelGroupAsync",
+      "description": "Snippet for CreateChannelGroupAsync",
+      "file": "AnalyticsAdminServiceClient.CreateChannelGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateChannelGroupAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateChannelGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+            "name": "channelGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateChannelGroup_sync_flattened_resourceNames",
+      "title": "CreateChannelGroupResourceNames",
+      "description": "Snippet for CreateChannelGroup",
+      "file": "AnalyticsAdminServiceClient.CreateChannelGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateChannelGroup",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateChannelGroup",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+            "name": "channelGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateChannelGroup_async_flattened_resourceNames",
+      "title": "CreateChannelGroupResourceNamesAsync",
+      "description": "Snippet for CreateChannelGroupAsync",
+      "file": "AnalyticsAdminServiceClient.CreateChannelGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateChannelGroupAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateChannelGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+            "name": "channelGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateChannelGroup_sync",
+      "title": "UpdateChannelGroupRequestObject",
+      "description": "Snippet for UpdateChannelGroup",
+      "file": "AnalyticsAdminServiceClient.UpdateChannelGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateChannelGroup",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateChannelGroup",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateChannelGroup_async",
+      "title": "UpdateChannelGroupRequestObjectAsync",
+      "description": "Snippet for UpdateChannelGroupAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateChannelGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateChannelGroupAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateChannelGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateChannelGroup_sync_flattened",
+      "title": "UpdateChannelGroup",
+      "description": "Snippet for UpdateChannelGroup",
+      "file": "AnalyticsAdminServiceClient.UpdateChannelGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateChannelGroup",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateChannelGroup",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+            "name": "channelGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateChannelGroup_async_flattened",
+      "title": "UpdateChannelGroupAsync",
+      "description": "Snippet for UpdateChannelGroupAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateChannelGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateChannelGroupAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateChannelGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ChannelGroup",
+            "name": "channelGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ChannelGroup>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteChannelGroup_sync",
+      "title": "DeleteChannelGroupRequestObject",
+      "description": "Snippet for DeleteChannelGroup",
+      "file": "AnalyticsAdminServiceClient.DeleteChannelGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteChannelGroup",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteChannelGroup",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteChannelGroup_async",
+      "title": "DeleteChannelGroupRequestObjectAsync",
+      "description": "Snippet for DeleteChannelGroupAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteChannelGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteChannelGroupAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteChannelGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteChannelGroup_sync_flattened",
+      "title": "DeleteChannelGroup",
+      "description": "Snippet for DeleteChannelGroup",
+      "file": "AnalyticsAdminServiceClient.DeleteChannelGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteChannelGroup",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteChannelGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteChannelGroup_async_flattened",
+      "title": "DeleteChannelGroupAsync",
+      "description": "Snippet for DeleteChannelGroupAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteChannelGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteChannelGroupAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteChannelGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteChannelGroup_sync_flattened_resourceNames",
+      "title": "DeleteChannelGroupResourceNames",
+      "description": "Snippet for DeleteChannelGroup",
+      "file": "AnalyticsAdminServiceClient.DeleteChannelGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteChannelGroup",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteChannelGroup",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ChannelGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteChannelGroup_async_flattened_resourceNames",
+      "title": "DeleteChannelGroupResourceNamesAsync",
+      "description": "Snippet for DeleteChannelGroupAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteChannelGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteChannelGroupAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteChannelGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ChannelGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteChannelGroup",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteChannelGroup",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_SetAutomatedGa4ConfigurationOptOut_sync",
       "title": "SetAutomatedGa4ConfigurationOptOutRequestObject",
       "description": "Snippet for SetAutomatedGa4ConfigurationOptOut",
@@ -25651,6 +27044,103 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_FetchConnectedGa4Property_sync",
+      "title": "FetchConnectedGa4PropertyRequestObject",
+      "description": "Snippet for FetchConnectedGa4Property",
+      "file": "AnalyticsAdminServiceClient.FetchConnectedGa4PropertyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchConnectedGa4Property",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.FetchConnectedGa4Property",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "FetchConnectedGa4Property",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.FetchConnectedGa4Property",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_FetchConnectedGa4Property_async",
+      "title": "FetchConnectedGa4PropertyRequestObjectAsync",
+      "description": "Snippet for FetchConnectedGa4PropertyAsync",
+      "file": "AnalyticsAdminServiceClient.FetchConnectedGa4PropertyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchConnectedGa4PropertyAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.FetchConnectedGa4PropertyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "FetchConnectedGa4Property",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.FetchConnectedGa4Property",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
           "type": "SHORT"
         }
       ]
