@@ -1,0 +1,60 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.storageinsights.v1",
+  "libraryPackage": "Google.Cloud.StorageInsights.V1",
+  "services": {
+    "StorageInsights": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "StorageInsightsClient",
+          "rpcs": {
+            "CreateReportConfig": {
+              "methods": [
+                "CreateReportConfig",
+                "CreateReportConfigAsync"
+              ]
+            },
+            "DeleteReportConfig": {
+              "methods": [
+                "DeleteReportConfig",
+                "DeleteReportConfigAsync"
+              ]
+            },
+            "GetReportConfig": {
+              "methods": [
+                "GetReportConfig",
+                "GetReportConfigAsync"
+              ]
+            },
+            "GetReportDetail": {
+              "methods": [
+                "GetReportDetail",
+                "GetReportDetailAsync"
+              ]
+            },
+            "ListReportConfigs": {
+              "methods": [
+                "ListReportConfigs",
+                "ListReportConfigsAsync"
+              ]
+            },
+            "ListReportDetails": {
+              "methods": [
+                "ListReportDetails",
+                "ListReportDetailsAsync"
+              ]
+            },
+            "UpdateReportConfig": {
+              "methods": [
+                "UpdateReportConfig",
+                "UpdateReportConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
