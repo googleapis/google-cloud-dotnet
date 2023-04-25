@@ -1,0 +1,90 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.area120.tables.v1alpha1",
+  "libraryPackage": "Google.Area120.Tables.V1Alpha1",
+  "services": {
+    "TablesService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TablesServiceClient",
+          "rpcs": {
+            "BatchCreateRows": {
+              "methods": [
+                "BatchCreateRows",
+                "BatchCreateRowsAsync"
+              ]
+            },
+            "BatchDeleteRows": {
+              "methods": [
+                "BatchDeleteRows",
+                "BatchDeleteRowsAsync"
+              ]
+            },
+            "BatchUpdateRows": {
+              "methods": [
+                "BatchUpdateRows",
+                "BatchUpdateRowsAsync"
+              ]
+            },
+            "CreateRow": {
+              "methods": [
+                "CreateRow",
+                "CreateRowAsync"
+              ]
+            },
+            "DeleteRow": {
+              "methods": [
+                "DeleteRow",
+                "DeleteRowAsync"
+              ]
+            },
+            "GetRow": {
+              "methods": [
+                "GetRow",
+                "GetRowAsync"
+              ]
+            },
+            "GetTable": {
+              "methods": [
+                "GetTable",
+                "GetTableAsync"
+              ]
+            },
+            "GetWorkspace": {
+              "methods": [
+                "GetWorkspace",
+                "GetWorkspaceAsync"
+              ]
+            },
+            "ListRows": {
+              "methods": [
+                "ListRows",
+                "ListRowsAsync"
+              ]
+            },
+            "ListTables": {
+              "methods": [
+                "ListTables",
+                "ListTablesAsync"
+              ]
+            },
+            "ListWorkspaces": {
+              "methods": [
+                "ListWorkspaces",
+                "ListWorkspacesAsync"
+              ]
+            },
+            "UpdateRow": {
+              "methods": [
+                "UpdateRow",
+                "UpdateRowAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
