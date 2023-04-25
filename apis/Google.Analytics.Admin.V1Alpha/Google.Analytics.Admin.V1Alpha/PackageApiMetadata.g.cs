@@ -33,6 +33,7 @@ namespace Google.Analytics.Admin.V1Alpha
             yield return AccessReportReflection.Descriptor;
             yield return AnalyticsAdminReflection.Descriptor;
             yield return AudienceReflection.Descriptor;
+            yield return ChannelGroupReflection.Descriptor;
             yield return ExpandedDataSetReflection.Descriptor;
             yield return ResourcesReflection.Descriptor;
         }
