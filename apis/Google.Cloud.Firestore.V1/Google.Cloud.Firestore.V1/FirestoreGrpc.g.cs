@@ -3,7 +3,7 @@
 //     source: google/firestore/v1/firestore.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -421,7 +421,7 @@ namespace Google.Cloud.Firestore.V1 {
 
       /// <summary>
       /// Streams batches of document updates and deletes, in order. This method is
-      /// only available via the gRPC API (not REST).
+      /// only available via gRPC or WebChannel (not REST).
       /// </summary>
       /// <param name="requestStream">Used for reading requests from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -434,8 +434,8 @@ namespace Google.Cloud.Firestore.V1 {
       }
 
       /// <summary>
-      /// Listens to changes. This method is only available via the gRPC API (not
-      /// REST).
+      /// Listens to changes. This method is only available via gRPC or WebChannel
+      /// (not REST).
       /// </summary>
       /// <param name="requestStream">Used for reading requests from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -1017,7 +1017,7 @@ namespace Google.Cloud.Firestore.V1 {
       }
       /// <summary>
       /// Streams batches of document updates and deletes, in order. This method is
-      /// only available via the gRPC API (not REST).
+      /// only available via gRPC or WebChannel (not REST).
       /// </summary>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
@@ -1030,7 +1030,7 @@ namespace Google.Cloud.Firestore.V1 {
       }
       /// <summary>
       /// Streams batches of document updates and deletes, in order. This method is
-      /// only available via the gRPC API (not REST).
+      /// only available via gRPC or WebChannel (not REST).
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
@@ -1040,8 +1040,8 @@ namespace Google.Cloud.Firestore.V1 {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_Write, null, options);
       }
       /// <summary>
-      /// Listens to changes. This method is only available via the gRPC API (not
-      /// REST).
+      /// Listens to changes. This method is only available via gRPC or WebChannel
+      /// (not REST).
       /// </summary>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
@@ -1053,8 +1053,8 @@ namespace Google.Cloud.Firestore.V1 {
         return Listen(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Listens to changes. This method is only available via the gRPC API (not
-      /// REST).
+      /// Listens to changes. This method is only available via gRPC or WebChannel
+      /// (not REST).
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>

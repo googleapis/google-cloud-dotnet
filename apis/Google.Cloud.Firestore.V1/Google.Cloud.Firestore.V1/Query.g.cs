@@ -164,7 +164,11 @@ namespace Google.Cloud.Firestore.V1 {
     public const int SelectFieldNumber = 1;
     private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection select_;
     /// <summary>
-    /// The projection to return.
+    /// Optional sub-set of the fields to return.
+    ///
+    /// This acts as a [DocumentMask][google.firestore.v1.DocumentMask] over the
+    /// documents returned from a query. When not set, assumes that the caller
+    /// wants all fields returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1894,8 +1898,9 @@ namespace Google.Cloud.Firestore.V1 {
             ///
             /// Requires:
             ///
-            /// * That `value` is a non-empty `ArrayValue` with at most 10 values.
-            /// * No other `IN` or `ARRAY_CONTAINS_ANY` or `NOT_IN`.
+            /// * That `value` is a non-empty `ArrayValue`, subject to disjunction
+            ///   limits.
+            /// * No `NOT_IN` filters in the same query.
             /// </summary>
             [pbr::OriginalName("IN")] In = 8,
             /// <summary>
@@ -1904,8 +1909,10 @@ namespace Google.Cloud.Firestore.V1 {
             ///
             /// Requires:
             ///
-            /// * That `value` is a non-empty `ArrayValue` with at most 10 values.
-            /// * No other `IN` or `ARRAY_CONTAINS_ANY` or `NOT_IN`.
+            /// * That `value` is a non-empty `ArrayValue`, subject to disjunction
+            ///   limits.
+            /// * No other `ARRAY_CONTAINS_ANY` filters within the same disjunction.
+            /// * No `NOT_IN` filters in the same query.
             /// </summary>
             [pbr::OriginalName("ARRAY_CONTAINS_ANY")] ArrayContainsAny = 9,
             /// <summary>
@@ -1914,7 +1921,7 @@ namespace Google.Cloud.Firestore.V1 {
             /// Requires:
             ///
             /// * That `value` is a non-empty `ArrayValue` with at most 10 values.
-            /// * No other `IN`, `ARRAY_CONTAINS_ANY`, `NOT_IN`, `NOT_EQUAL`,
+            /// * No other `OR`, `IN`, `ARRAY_CONTAINS_ANY`, `NOT_IN`, `NOT_EQUAL`,
             ///   `IS_NOT_NULL`, or `IS_NOT_NAN`.
             /// * That `field` comes first in the `order_by`.
             /// </summary>
@@ -3161,7 +3168,7 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Defines a aggregation that produces a single result.
+      /// Defines an aggregation that produces a single result.
       /// </summary>
       public sealed partial class Aggregation : pb::IMessage<Aggregation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3243,7 +3250,7 @@ namespace Google.Cloud.Firestore.V1 {
         ///   COUNT_UP_TO(1) AS count_up_to_1,
         ///   COUNT_UP_TO(2),
         ///   COUNT_UP_TO(3) AS count_up_to_3,
-        ///   COUNT_UP_TO(4)
+        ///   COUNT(*)
         /// OVER (
         ///   ...
         /// );
@@ -3256,7 +3263,7 @@ namespace Google.Cloud.Firestore.V1 {
         ///   COUNT_UP_TO(1) AS count_up_to_1,
         ///   COUNT_UP_TO(2) AS field_1,
         ///   COUNT_UP_TO(3) AS count_up_to_3,
-        ///   COUNT_UP_TO(4) AS field_2
+        ///   COUNT(*) AS field_2
         /// OVER (
         ///   ...
         /// );
@@ -3534,7 +3541,7 @@ namespace Google.Cloud.Firestore.V1 {
             /// count.
             ///
             /// This provides a way to set an upper bound on the number of documents
-            /// to scan, limiting latency and cost.
+            /// to scan, limiting latency, and cost.
             ///
             /// Unspecified is interpreted as no bound.
             ///
