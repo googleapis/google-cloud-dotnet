@@ -1072,7 +1072,7 @@ namespace Google.Cloud.Firestore.V1
 
         /// <summary>
         /// Streams batches of document updates and deletes, in order. This method is
-        /// only available via the gRPC API (not REST).
+        /// only available via gRPC or WebChannel (not REST).
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
@@ -1089,8 +1089,8 @@ namespace Google.Cloud.Firestore.V1
         }
 
         /// <summary>
-        /// Listens to changes. This method is only available via the gRPC API (not
-        /// REST).
+        /// Listens to changes. This method is only available via gRPC or WebChannel
+        /// (not REST).
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
@@ -1762,7 +1762,7 @@ namespace Google.Cloud.Firestore.V1
 
         /// <summary>
         /// Streams batches of document updates and deletes, in order. This method is
-        /// only available via the gRPC API (not REST).
+        /// only available via gRPC or WebChannel (not REST).
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
@@ -1821,8 +1821,8 @@ namespace Google.Cloud.Firestore.V1
         }
 
         /// <summary>
-        /// Listens to changes. This method is only available via the gRPC API (not
-        /// REST).
+        /// Listens to changes. This method is only available via gRPC or WebChannel
+        /// (not REST).
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
