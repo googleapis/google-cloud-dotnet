@@ -1,4 +1,4 @@
-﻿// Copyright 2019, Google Inc. All rights reserved.
+// Copyright 2019, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -81,6 +81,9 @@ namespace Google.Cloud.Firestore.V1
             ApplyResourcePrefixHeader(ref settings, request.Database);
 
         partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
+
+        partial void Modify_RunAggregationQueryRequest(ref RunAggregationQueryRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Parent);
 
         partial void Modify_UpdateDocumentRequest(ref UpdateDocumentRequest request, ref CallSettings settings) =>

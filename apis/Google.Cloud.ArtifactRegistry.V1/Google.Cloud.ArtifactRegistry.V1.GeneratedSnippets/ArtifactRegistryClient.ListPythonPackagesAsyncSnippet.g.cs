@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ArtifactRegistry.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START artifactregistry_v1_generated_ArtifactRegistry_ListPythonPackages_async_flattened]
     using Google.Api.Gax;

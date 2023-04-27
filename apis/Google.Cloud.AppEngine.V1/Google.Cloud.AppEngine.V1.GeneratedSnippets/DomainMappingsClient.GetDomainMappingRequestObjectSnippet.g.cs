@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AppEngine.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START appengine_v1_generated_DomainMappings_GetDomainMapping_sync]
     using Google.Cloud.AppEngine.V1;

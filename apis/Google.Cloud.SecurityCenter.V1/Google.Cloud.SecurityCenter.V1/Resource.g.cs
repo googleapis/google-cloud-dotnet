@@ -214,9 +214,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = pb::FieldCodec.ForMessage(58, global::Google.Cloud.SecurityCenter.V1.Folder.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Folder> folders_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Folder>();
     /// <summary>
-    /// Output only. Contains a Folder message for each folder in the assets ancestry.
-    /// The first folder is the deepest nested folder, and the last folder is the
-    /// folder directly under the Organization.
+    /// Output only. Contains a Folder message for each folder in the assets
+    /// ancestry. The first folder is the deepest nested folder, and the last
+    /// folder is the folder directly under the Organization.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

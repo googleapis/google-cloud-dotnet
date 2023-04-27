@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -86,7 +86,8 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             var request = Service.Projects.ServiceAccount.Get(projectId);
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
 
@@ -96,6 +97,7 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(notification, nameof(notification));
             var request = Service.Notifications.Insert(notification, bucket);
             options?.ModifyRequest(request);
+            MarkAsRetriable(request, options?.RetryOptions ?? RetryOptions.Never);
             return request;
         }
 
@@ -105,7 +107,8 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(notificationId, nameof(notificationId));
             var request = Service.Notifications.Get(bucket, notificationId);
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
 
@@ -115,7 +118,8 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(notificationId, nameof(notificationId));
             var request = Service.Notifications.Delete(bucket, notificationId);
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
 
@@ -123,7 +127,8 @@ namespace Google.Cloud.Storage.V1
         {
             var request = Service.Notifications.List(bucket);
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }

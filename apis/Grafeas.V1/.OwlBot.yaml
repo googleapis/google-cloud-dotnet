@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /grafeas/v1/.*-csharp/Grafeas.V1
       dest: /owl-bot-staging/Grafeas.V1/Grafeas.V1
-    - source: /grafeas/v1/.*-csharp/Grafeas.V1.Tests
-      dest: /owl-bot-staging/Grafeas.V1/Grafeas.V1.Tests
     - source: /grafeas/v1/.*-csharp/Grafeas.V1.Snippets
       dest: /owl-bot-staging/Grafeas.V1/Grafeas.V1.Snippets
     - source: /grafeas/v1/.*-csharp/Grafeas.V1.GeneratedSnippets

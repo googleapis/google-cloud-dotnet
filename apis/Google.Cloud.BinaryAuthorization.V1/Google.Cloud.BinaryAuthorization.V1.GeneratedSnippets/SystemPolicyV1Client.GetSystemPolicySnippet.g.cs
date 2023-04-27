@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BinaryAuthorization.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START binaryauthorization_v1_generated_SystemPolicyV1_GetSystemPolicy_sync_flattened]
     using Google.Cloud.BinaryAuthorization.V1;

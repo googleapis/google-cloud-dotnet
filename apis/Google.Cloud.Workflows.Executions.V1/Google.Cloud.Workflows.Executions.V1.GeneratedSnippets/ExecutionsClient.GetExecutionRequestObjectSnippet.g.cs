@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Workflows.Executions.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START workflowexecutions_v1_generated_Executions_GetExecution_sync]
     using Google.Cloud.Workflows.Executions.V1;

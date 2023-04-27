@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AccessApproval.V1.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START accessapproval_v1_generated_AccessApprovalService_DeleteAccessApprovalSettings_sync_flattened]
+    // [START accessapproval_v1_generated_AccessApproval_DeleteAccessApprovalSettings_sync_flattened]
     using Google.Cloud.AccessApproval.V1;
 
     public sealed partial class GeneratedAccessApprovalServiceClientSnippets
@@ -39,5 +39,5 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             accessApprovalServiceClient.DeleteAccessApprovalSettings(name);
         }
     }
-    // [END accessapproval_v1_generated_AccessApprovalService_DeleteAccessApprovalSettings_sync_flattened]
+    // [END accessapproval_v1_generated_AccessApproval_DeleteAccessApprovalSettings_sync_flattened]
 }

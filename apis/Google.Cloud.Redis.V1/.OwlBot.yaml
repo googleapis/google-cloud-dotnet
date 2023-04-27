@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/redis/v1/.*-csharp/Google.Cloud.Redis.V1
       dest: /owl-bot-staging/Google.Cloud.Redis.V1/Google.Cloud.Redis.V1
-    - source: /google/cloud/redis/v1/.*-csharp/Google.Cloud.Redis.V1.Tests
-      dest: /owl-bot-staging/Google.Cloud.Redis.V1/Google.Cloud.Redis.V1.Tests
     - source: /google/cloud/redis/v1/.*-csharp/Google.Cloud.Redis.V1.Snippets
       dest: /owl-bot-staging/Google.Cloud.Redis.V1/Google.Cloud.Redis.V1.Snippets
     - source: /google/cloud/redis/v1/.*-csharp/Google.Cloud.Redis.V1.GeneratedSnippets

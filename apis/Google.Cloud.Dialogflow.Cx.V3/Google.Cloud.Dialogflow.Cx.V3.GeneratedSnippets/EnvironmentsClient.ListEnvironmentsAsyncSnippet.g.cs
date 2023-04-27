@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v3_generated_Environments_ListEnvironments_async_flattened]
     using Google.Api.Gax;
@@ -38,11 +38,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
         public async Task ListEnvironmentsAsync()
         {
             // Create client
-            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            gcdcv::EnvironmentsClient environmentsClient = await gcdcv::EnvironmentsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]";
             // Make the request
-            PagedAsyncEnumerable<ListEnvironmentsResponse, gcdcv::Environment> response = environmentsClient.ListEnvironmentsAsync(parent);
+            PagedAsyncEnumerable<gcdcv::ListEnvironmentsResponse, gcdcv::Environment> response = environmentsClient.ListEnvironmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdcv::Environment item) =>
@@ -52,7 +52,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListEnvironmentsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdcv::ListEnvironmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Domains.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START domains_v1_generated_Domains_DeleteRegistration_sync]
     using Google.Cloud.Domains.V1;

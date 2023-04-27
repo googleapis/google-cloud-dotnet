@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_MetadataService_CreatePartition_async_flattened_resourceNames]
     using System.Threading.Tasks;
@@ -35,12 +35,12 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task CreatePartitionResourceNamesAsync()
         {
             // Create client
-            MetadataServiceClient metadataServiceClient = await MetadataServiceClient.CreateAsync();
+            gcdv::MetadataServiceClient metadataServiceClient = await gcdv::MetadataServiceClient.CreateAsync();
             // Initialize request argument(s)
-            EntityName parent = EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
-            Partition partition = new Partition();
+            gcdv::EntityName parent = gcdv::EntityName.FromProjectLocationLakeZoneEntity("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]", "[ENTITY]");
+            gcdv::Partition partition = new gcdv::Partition();
             // Make the request
-            Partition response = await metadataServiceClient.CreatePartitionAsync(parent, partition);
+            gcdv::Partition response = await metadataServiceClient.CreatePartitionAsync(parent, partition);
         }
     }
     // [END dataplex_v1_generated_MetadataService_CreatePartition_async_flattened_resourceNames]

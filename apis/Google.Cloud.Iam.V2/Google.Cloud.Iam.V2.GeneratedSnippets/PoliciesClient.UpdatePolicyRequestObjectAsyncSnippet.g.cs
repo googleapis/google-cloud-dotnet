@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Iam.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START iam_v2_generated_Policies_UpdatePolicy_async]
     using Google.Cloud.Iam.V2;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Kms.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudkms_v1_generated_EkmService_UpdateEkmConnection_sync_flattened]
     using Google.Cloud.Kms.V1;

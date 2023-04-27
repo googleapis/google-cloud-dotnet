@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START recommendationengine_v1beta1_generated_UserEventService_PurgeUserEvents_sync]
     using Google.Cloud.RecommendationEngine.V1Beta1;

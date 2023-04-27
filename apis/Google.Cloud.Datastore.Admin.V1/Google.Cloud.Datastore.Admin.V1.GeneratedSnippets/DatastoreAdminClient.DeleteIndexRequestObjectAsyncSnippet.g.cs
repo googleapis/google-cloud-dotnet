@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Datastore.Admin.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datastore_v1_generated_DatastoreAdmin_DeleteIndex_async]
     using Google.Cloud.Datastore.Admin.V1;

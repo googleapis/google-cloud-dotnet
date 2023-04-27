@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/devtools/cloudbuild/v2/.*-csharp/Google.Cloud.CloudBuild.V2
       dest: /owl-bot-staging/Google.Cloud.CloudBuild.V2/Google.Cloud.CloudBuild.V2
-    - source: /google/devtools/cloudbuild/v2/.*-csharp/Google.Cloud.CloudBuild.V2.Tests
-      dest: /owl-bot-staging/Google.Cloud.CloudBuild.V2/Google.Cloud.CloudBuild.V2.Tests
     - source: /google/devtools/cloudbuild/v2/.*-csharp/Google.Cloud.CloudBuild.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.CloudBuild.V2/Google.Cloud.CloudBuild.V2.Snippets
     - source: /google/devtools/cloudbuild/v2/.*-csharp/Google.Cloud.CloudBuild.V2.GeneratedSnippets

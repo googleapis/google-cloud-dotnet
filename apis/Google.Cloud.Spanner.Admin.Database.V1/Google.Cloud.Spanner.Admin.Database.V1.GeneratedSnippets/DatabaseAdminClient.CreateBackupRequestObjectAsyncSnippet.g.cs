@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START spanner_v1_generated_DatabaseAdmin_CreateBackup_async]
     using Google.Cloud.Spanner.Admin.Database.V1;

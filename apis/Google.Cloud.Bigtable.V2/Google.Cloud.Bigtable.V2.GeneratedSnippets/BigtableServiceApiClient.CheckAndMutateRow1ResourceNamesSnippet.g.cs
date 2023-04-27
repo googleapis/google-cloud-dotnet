@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.V2.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_sync_flattened1_resourceNames]
+    // [START bigtable_v2_generated_Bigtable_CheckAndMutateRow_sync_flattened1_resourceNames]
     using Google.Cloud.Bigtable.Common.V2;
     using Google.Cloud.Bigtable.V2;
     using Google.Protobuf;
@@ -46,5 +46,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(tableName, rowKey, predicateFilter, trueMutations, falseMutations);
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_sync_flattened1_resourceNames]
+    // [END bigtable_v2_generated_Bigtable_CheckAndMutateRow_sync_flattened1_resourceNames]
 }

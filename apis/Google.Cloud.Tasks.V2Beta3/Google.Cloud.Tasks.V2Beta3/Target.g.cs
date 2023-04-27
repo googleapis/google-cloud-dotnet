@@ -51,9 +51,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "dmljZV9hY2NvdW50X2VtYWlsGAEgASgJEhAKCGF1ZGllbmNlGAIgASgJKnMK",
             "Ckh0dHBNZXRob2QSGwoXSFRUUF9NRVRIT0RfVU5TUEVDSUZJRUQQABIICgRQ",
             "T1NUEAESBwoDR0VUEAISCAoESEVBRBADEgcKA1BVVBAEEgoKBkRFTEVURRAF",
-            "EgkKBVBBVENIEAYSCwoHT1BUSU9OUxAHQmUKHmNvbS5nb29nbGUuY2xvdWQu",
-            "dGFza3MudjJiZXRhM0ILVGFyZ2V0UHJvdG9QAVo0Y2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby90YXNrcy9hcGl2MmJldGEzL3Rhc2tzcGI7dGFza3NwYmIGcHJvdG8z"));
+            "EgkKBVBBVENIEAYSCwoHT1BUSU9OUxAHQnQKHmNvbS5nb29nbGUuY2xvdWQu",
+            "dGFza3MudjJiZXRhM0ILVGFyZ2V0UHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9jbG91ZHRhc2tzL2FwaXYyYmV0YTMvY2xvdWR0YXNrc3BiO2Nsb3Vk",
+            "dGFza3NwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Tasks.V2Beta3.HttpMethod), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -115,8 +116,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// Pull Message.
   ///
   /// This proto can only be used for tasks in a queue which has
-  /// [PULL][google.cloud.tasks.v2beta3.Queue.type] type. It currently exists for backwards compatibility with
-  /// the App Engine Task Queue SDK. This message type maybe returned with methods
+  /// [PULL][google.cloud.tasks.v2beta3.Queue.type] type. It currently exists for
+  /// backwards compatibility with the App Engine Task Queue SDK. This message type
+  /// maybe returned with methods
   /// [list][google.cloud.tasks.v2beta3.CloudTask.ListTasks] and
   /// [get][google.cloud.tasks.v2beta3.CloudTask.ListTasks], when the response view
   /// is [FULL][google.cloud.tasks.v2beta3.Task.View.Full].
@@ -370,8 +372,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// any other HTTP response code is returned or no response is received, the
   /// task will be retried according to the following:
   ///
-  /// * User-specified throttling: [retry configuration][google.cloud.tasks.v2beta3.Queue.retry_config],
-  ///   [rate limits][google.cloud.tasks.v2beta3.Queue.rate_limits], and the [queue's state][google.cloud.tasks.v2beta3.Queue.state].
+  /// * User-specified throttling: [retry
+  /// configuration][google.cloud.tasks.v2beta3.Queue.retry_config],
+  ///   [rate limits][google.cloud.tasks.v2beta3.Queue.rate_limits], and the
+  ///   [queue's state][google.cloud.tasks.v2beta3.Queue.state].
   ///
   /// * System throttling: To prevent the worker from overloading, Cloud Tasks may
   ///   temporarily reduce the queue's effective rate. User-specified settings
@@ -380,10 +384,11 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   ///  System throttling happens because:
   ///
   ///   * Cloud Tasks backs off on all errors. Normally the backoff specified in
-  ///     [rate limits][google.cloud.tasks.v2beta3.Queue.rate_limits] will be used. But if the worker returns
-  ///     `429` (Too Many Requests), `503` (Service Unavailable), or the rate of
-  ///     errors is high, Cloud Tasks will use a higher backoff rate. The retry
-  ///     specified in the `Retry-After` HTTP response header is considered.
+  ///     [rate limits][google.cloud.tasks.v2beta3.Queue.rate_limits] will be used.
+  ///     But if the worker returns `429` (Too Many Requests), `503` (Service
+  ///     Unavailable), or the rate of errors is high, Cloud Tasks will use a
+  ///     higher backoff rate. The retry specified in the `Retry-After` HTTP
+  ///     response header is considered.
   ///
   ///   * To prevent traffic spikes and to smooth sudden increases in traffic,
   ///     dispatches ramp up slowly when the queue is newly created or idle and
@@ -533,8 +538,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// HTTP request body.
     ///
     /// A request body is allowed only if the
-    /// [HTTP method][google.cloud.tasks.v2beta3.HttpRequest.http_method] is POST, PUT, or PATCH. It is an
-    /// error to set body on a task with an incompatible [HttpMethod][google.cloud.tasks.v2beta3.HttpMethod].
+    /// [HTTP method][google.cloud.tasks.v2beta3.HttpRequest.http_method] is POST,
+    /// PUT, or PATCH. It is an error to set body on a task with an incompatible
+    /// [HttpMethod][google.cloud.tasks.v2beta3.HttpMethod].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -887,11 +893,15 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// App Engine HTTP queue.
   ///
   /// The task will be delivered to the App Engine application hostname
-  /// specified by its [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue] and [AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest].
-  /// The documentation for [AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest] explains how the
-  /// task's host URL is constructed.
+  /// specified by its
+  /// [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue] and
+  /// [AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest]. The
+  /// documentation for
+  /// [AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest]
+  /// explains how the task's host URL is constructed.
   ///
-  /// Using [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue] requires
+  /// Using [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue]
+  /// requires
   /// [`appengine.applications.get`](https://cloud.google.com/appengine/docs/admin-api/access-control)
   /// Google IAM permission for the project
   /// and the following scope:
@@ -947,11 +957,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     private global::Google.Cloud.Tasks.V2Beta3.AppEngineRouting appEngineRoutingOverride_;
     /// <summary>
     /// Overrides for the
-    /// [task-level app_engine_routing][google.cloud.tasks.v2beta3.AppEngineHttpRequest.app_engine_routing].
+    /// [task-level
+    /// app_engine_routing][google.cloud.tasks.v2beta3.AppEngineHttpRequest.app_engine_routing].
     ///
     /// If set, `app_engine_routing_override` is used for all tasks in
     /// the queue, no matter what the setting is for the
-    /// [task-level app_engine_routing][google.cloud.tasks.v2beta3.AppEngineHttpRequest.app_engine_routing].
+    /// [task-level
+    /// app_engine_routing][google.cloud.tasks.v2beta3.AppEngineHttpRequest.app_engine_routing].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1110,7 +1122,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// The message defines the HTTP request that is sent to an App Engine app when
   /// the task is dispatched.
   ///
-  /// Using [AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest] requires
+  /// Using [AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest]
+  /// requires
   /// [`appengine.applications.get`](https://cloud.google.com/appengine/docs/admin-api/access-control)
   /// Google IAM permission for the project
   /// and the following scope:
@@ -1130,14 +1143,16 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// The request to the handler, however, will appear to have used the HTTP
   /// protocol.
   ///
-  /// The [AppEngineRouting][google.cloud.tasks.v2beta3.AppEngineRouting] used to construct the URL that the task is
-  /// delivered to can be set at the queue-level or task-level:
+  /// The [AppEngineRouting][google.cloud.tasks.v2beta3.AppEngineRouting] used to
+  /// construct the URL that the task is delivered to can be set at the queue-level
+  /// or task-level:
   ///
   /// * If set,
   ///   [app_engine_routing_override][google.cloud.tasks.v2beta3.AppEngineHttpQueue.app_engine_routing_override]
   ///   is used for all tasks in the queue, no matter what the setting
   ///   is for the
-  ///   [task-level app_engine_routing][google.cloud.tasks.v2beta3.AppEngineHttpRequest.app_engine_routing].
+  ///   [task-level
+  ///   app_engine_routing][google.cloud.tasks.v2beta3.AppEngineHttpRequest.app_engine_routing].
   ///
   /// The `url` that the task will be sent to is:
   ///
@@ -1157,14 +1172,15 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// The task attempt has succeeded if the app's request handler returns an HTTP
   /// response code in the range [`200` - `299`]. The task attempt has failed if
   /// the app's handler returns a non-2xx response code or Cloud Tasks does
-  /// not receive response before the [deadline][google.cloud.tasks.v2beta3.Task.dispatch_deadline]. Failed
-  /// tasks will be retried according to the
-  /// [retry configuration][google.cloud.tasks.v2beta3.Queue.retry_config]. `503` (Service Unavailable) is
-  /// considered an App Engine system error instead of an application error and
-  /// will cause Cloud Tasks' traffic congestion control to temporarily throttle
-  /// the queue's dispatches. Unlike other types of task targets, a `429` (Too Many
-  /// Requests) response from an app handler does not cause traffic congestion
-  /// control to throttle the queue.
+  /// not receive response before the
+  /// [deadline][google.cloud.tasks.v2beta3.Task.dispatch_deadline]. Failed tasks
+  /// will be retried according to the [retry
+  /// configuration][google.cloud.tasks.v2beta3.Queue.retry_config]. `503` (Service
+  /// Unavailable) is considered an App Engine system error instead of an
+  /// application error and will cause Cloud Tasks' traffic congestion control to
+  /// temporarily throttle the queue's dispatches. Unlike other types of task
+  /// targets, a `429` (Too Many Requests) response from an app handler does not
+  /// cause traffic congestion control to throttle the queue.
   /// </summary>
   public sealed partial class AppEngineHttpRequest : pb::IMessage<AppEngineHttpRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1245,7 +1261,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// If set,
     /// [app_engine_routing_override][google.cloud.tasks.v2beta3.AppEngineHttpQueue.app_engine_routing_override]
     /// is used for all tasks in the queue, no matter what the setting is for the
-    /// [task-level app_engine_routing][google.cloud.tasks.v2beta3.AppEngineHttpRequest.app_engine_routing].
+    /// [task-level
+    /// app_engine_routing][google.cloud.tasks.v2beta3.AppEngineHttpRequest.app_engine_routing].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1297,8 +1314,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     ///   `"AppEngine-Google; (+http://code.google.com/appengine)"` to the
     ///   modified `User-Agent`.
     ///
-    /// If the task has a [body][google.cloud.tasks.v2beta3.AppEngineHttpRequest.body], Cloud
-    /// Tasks sets the following headers:
+    /// If the task has a
+    /// [body][google.cloud.tasks.v2beta3.AppEngineHttpRequest.body], Cloud Tasks
+    /// sets the following headers:
     ///
     /// * `Content-Type`: By default, the `Content-Type` header is set to
     ///   `"application/octet-stream"`. The default can be overridden by explicitly
@@ -1322,8 +1340,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// visible when the task is returned in a Cloud Tasks response.
     ///
     /// Although there is no specific limit for the maximum number of headers or
-    /// the size, there is a limit on the maximum size of the [Task][google.cloud.tasks.v2beta3.Task]. For more
-    /// information, see the [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask] documentation.
+    /// the size, there is a limit on the maximum size of the
+    /// [Task][google.cloud.tasks.v2beta3.Task]. For more information, see the
+    /// [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask]
+    /// documentation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1338,7 +1358,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// HTTP request body.
     ///
     /// A request body is allowed only if the HTTP method is POST or PUT. It is
-    /// an error to set a body on a task with an incompatible [HttpMethod][google.cloud.tasks.v2beta3.HttpMethod].
+    /// an error to set a body on a task with an incompatible
+    /// [HttpMethod][google.cloud.tasks.v2beta3.HttpMethod].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1650,16 +1671,18 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// service when the task is attempted.
     ///
     /// For some queues or tasks which were created using the App Engine
-    /// Task Queue API, [host][google.cloud.tasks.v2beta3.AppEngineRouting.host] is not parsable
-    /// into [service][google.cloud.tasks.v2beta3.AppEngineRouting.service],
-    /// [version][google.cloud.tasks.v2beta3.AppEngineRouting.version], and
-    /// [instance][google.cloud.tasks.v2beta3.AppEngineRouting.instance]. For example, some tasks
-    /// which were created using the App Engine SDK use a custom domain
-    /// name; custom domains are not parsed by Cloud Tasks. If
-    /// [host][google.cloud.tasks.v2beta3.AppEngineRouting.host] is not parsable, then
+    /// Task Queue API, [host][google.cloud.tasks.v2beta3.AppEngineRouting.host] is
+    /// not parsable into
     /// [service][google.cloud.tasks.v2beta3.AppEngineRouting.service],
     /// [version][google.cloud.tasks.v2beta3.AppEngineRouting.version], and
-    /// [instance][google.cloud.tasks.v2beta3.AppEngineRouting.instance] are the empty string.
+    /// [instance][google.cloud.tasks.v2beta3.AppEngineRouting.instance]. For
+    /// example, some tasks which were created using the App Engine SDK use a
+    /// custom domain name; custom domains are not parsed by Cloud Tasks. If
+    /// [host][google.cloud.tasks.v2beta3.AppEngineRouting.host] is not parsable,
+    /// then [service][google.cloud.tasks.v2beta3.AppEngineRouting.service],
+    /// [version][google.cloud.tasks.v2beta3.AppEngineRouting.version], and
+    /// [instance][google.cloud.tasks.v2beta3.AppEngineRouting.instance] are the
+    /// empty string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1680,16 +1703,18 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// version when the task is attempted.
     ///
     /// For some queues or tasks which were created using the App Engine
-    /// Task Queue API, [host][google.cloud.tasks.v2beta3.AppEngineRouting.host] is not parsable
-    /// into [service][google.cloud.tasks.v2beta3.AppEngineRouting.service],
-    /// [version][google.cloud.tasks.v2beta3.AppEngineRouting.version], and
-    /// [instance][google.cloud.tasks.v2beta3.AppEngineRouting.instance]. For example, some tasks
-    /// which were created using the App Engine SDK use a custom domain
-    /// name; custom domains are not parsed by Cloud Tasks. If
-    /// [host][google.cloud.tasks.v2beta3.AppEngineRouting.host] is not parsable, then
+    /// Task Queue API, [host][google.cloud.tasks.v2beta3.AppEngineRouting.host] is
+    /// not parsable into
     /// [service][google.cloud.tasks.v2beta3.AppEngineRouting.service],
     /// [version][google.cloud.tasks.v2beta3.AppEngineRouting.version], and
-    /// [instance][google.cloud.tasks.v2beta3.AppEngineRouting.instance] are the empty string.
+    /// [instance][google.cloud.tasks.v2beta3.AppEngineRouting.instance]. For
+    /// example, some tasks which were created using the App Engine SDK use a
+    /// custom domain name; custom domains are not parsed by Cloud Tasks. If
+    /// [host][google.cloud.tasks.v2beta3.AppEngineRouting.host] is not parsable,
+    /// then [service][google.cloud.tasks.v2beta3.AppEngineRouting.service],
+    /// [version][google.cloud.tasks.v2beta3.AppEngineRouting.version], and
+    /// [instance][google.cloud.tasks.v2beta3.AppEngineRouting.instance] are the
+    /// empty string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1735,9 +1760,11 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     ///
     /// The host is constructed from the domain name of the app associated with
     /// the queue's project ID (for example &lt;app-id>.appspot.com), and the
-    /// [service][google.cloud.tasks.v2beta3.AppEngineRouting.service], [version][google.cloud.tasks.v2beta3.AppEngineRouting.version],
-    /// and [instance][google.cloud.tasks.v2beta3.AppEngineRouting.instance]. Tasks which were created using
-    /// the App Engine SDK might have a custom domain name.
+    /// [service][google.cloud.tasks.v2beta3.AppEngineRouting.service],
+    /// [version][google.cloud.tasks.v2beta3.AppEngineRouting.version], and
+    /// [instance][google.cloud.tasks.v2beta3.AppEngineRouting.instance]. Tasks
+    /// which were created using the App Engine SDK might have a custom domain
+    /// name.
     ///
     /// For more information, see
     /// [How Requests are

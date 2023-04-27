@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AlloyDb.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START alloydb_v1alpha_generated_AlloyDBAdmin_ListSupportedDatabaseFlags_sync_flattened]
     using Google.Api.Gax;

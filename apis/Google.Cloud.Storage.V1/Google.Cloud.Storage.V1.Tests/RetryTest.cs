@@ -12,13 +12,16 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
-using Google.Apis.Requests;
+using Google.Api.Gax;
+using Google.Api.Gax.Testing;
 using Google.Apis.Storage.v1.Data;
 using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
 using System.Net;
 using Xunit;
+
+using static System.Net.HttpStatusCode;
 
 namespace Google.Cloud.Storage.V1.Tests;
 
@@ -27,103 +30,98 @@ namespace Google.Cloud.Storage.V1.Tests;
 /// </summary>
 public class RetryTest
 {
-    [Theory]
-    [InlineData(502, true, 502, 504)]
-    [InlineData(504, true, 502, 504)]
-    [InlineData(429, false, 502, 504)]
-    [InlineData(502, false)]
-    public void CustomRetryPredicateTest(int statusCode, bool success, params int[] errorCodes)
+    /// <summary>
+    /// A set of retry options using default timing, but a predicate that retries on 404 (NotFound) only.
+    /// </summary>
+    private static readonly RetryOptions s_customPredicateOptions = new RetryOptions(RetryTiming.Default, RetryPredicate.FromErrorCodes(404));
+
+    public static TheoryData<TestCase> TestCases { get; } = new TheoryData<TestCase>
     {
-        RetryOptions retryOptions = new RetryOptions(
-            retryTiming: new RetryTiming(initialBackoff: TimeSpan.FromSeconds(1),
-            maxBackoff: TimeSpan.FromSeconds(6), backoffMultiplier: 2),
-            retryPredicate: RetryPredicate.FromErrorCodes(errorCodes));
+        new TestCase("SimpleSuccess", RetryOptions.Never, new[] { OK }, new[] { 0 }, true),
+        new TestCase("ImmediateFailure", RetryOptions.IdempotentRetryOptions, new[] { BadRequest }, new[] { 0 }, false),
+        new TestCase("SingleRetry", RetryOptions.IdempotentRetryOptions, new[] { InternalServerError, OK }, new[] { 0, 1 }, true),
+        new TestCase("DoubleRetry", RetryOptions.IdempotentRetryOptions, new[] { InternalServerError, BadGateway, OK }, new[] { 0, 1, 3 }, true),
+        // We default to a maximum of 3 requests
+        new TestCase("RetryUntilMaxRequests", RetryOptions.IdempotentRetryOptions, new[] { BadGateway, BadGateway, BadGateway }, new[] { 0, 1, 3 }, false),
+        new TestCase("CustomPredicate_Success", s_customPredicateOptions, new[] { OK }, new[] { 0 }, true),
+        // We'd normally retry on this, but the custom predicate doesn't match.
+        new TestCase("CustomPredicate_ImmediateFailure", s_customPredicateOptions, new[] { InternalServerError }, new[] { 0 }, false),
+        new TestCase("CustomPredicate_SingleRetry", s_customPredicateOptions, new[] { NotFound, OK }, new[] { 0, 1 }, true)
+    };
 
-        AssertAttempts(
-            retryOptions: retryOptions,
-            statusCode: statusCode,
-            numOfFailures: 2,
-            maximumRetries: 3,
-            success: success,
-            expectedBackOffs: new int[] { 0, 1, 3 });
-    }
-
-    [Theory]
-    [InlineData(0, 1, 2, 0, 0)]
-    [InlineData(1, 2, 2, 2, 0, 1, 3)]
-    [InlineData(1, 4, 1, 3, 0, 1, 2, 3)]
-    public void CustomRetryTimingTest(int initialBackoff, int maxBackoff, double backoffMultiplier, int numOfFailures, params int[] expectedBackOffs)
+    [Theory, MemberData(nameof(TestCases))]
+    public void RunTest(TestCase testCase)
     {
-        RetryOptions retryOptions = new RetryOptions(
-            retryTiming: new RetryTiming(initialBackoff: TimeSpan.FromSeconds(initialBackoff),
-            maxBackoff: TimeSpan.FromSeconds(maxBackoff), backoffMultiplier: backoffMultiplier),
-            retryPredicate: RetryPredicate.FromErrorCodes(502, 504));
-
-        AssertAttempts(
-            retryOptions: retryOptions,
-            statusCode: 502,
-            numOfFailures: numOfFailures,
-            maximumRetries: numOfFailures + 1,
-            success: true,
-            expectedBackOffs: expectedBackOffs);
-    }
-
-    [Fact]
-    public void ExceptionAfterRetryExhaustedTest()
-    {
-        RetryOptions retryOptions = new RetryOptions(
-            retryTiming: new RetryTiming(initialBackoff: TimeSpan.FromSeconds(1),
-            maxBackoff: TimeSpan.FromSeconds(3), backoffMultiplier: 2),
-            retryPredicate: RetryPredicate.FromErrorCodes(502, 504));
-
-        var expectedBackOffs = new[] { 0, 1, 3 };
-
-        AssertAttempts(
-           retryOptions: retryOptions,
-           statusCode: 502,
-           numOfFailures: 4,
-           maximumRetries: 3,
-           success: false,
-           expectedBackOffs: expectedBackOffs);
-    }
-
-    private static void AssertAttempts(RetryOptions retryOptions, int statusCode, int numOfFailures, int maximumRetries, bool success, params int[] expectedBackOffs)
-    {
-        var messageHandler = new ReplayingMessageHandler(VersionHeaderBuilder.HeaderName);
+        var scheduler = new FakeScheduler();
+        var clock = scheduler.Clock;
+        var messageHandler = new ReplayingMessageHandler(header: null, clock);
         var service = new FakeStorageService(messageHandler);
-        service.HttpClient.MessageHandler.GoogleApiClientHeader = "test/fake";
-        service.HttpClient.MessageHandler.NumTries = maximumRetries;
 
-        var request = service.Buckets.Get("bucket");
-        var client = new StorageClientImpl(service);
+        var client = new StorageClientImpl(service, encryptionKey: null, scheduler);
+        service.ExpectRequests(service.Buckets.Get("bucket"), new Bucket(), testCase.ReturnedStatusCodes);
 
-        // Retries for the the failures. Assumed that error code 504 is always included in the predicate for these tests.
-        service.ExpectRequests(request, (HttpStatusCode) 504, numOfFailures - 1);
-        if (numOfFailures > 0)
+        scheduler.Run(() =>
         {
-            service.ExpectRequest(request, (HttpStatusCode) statusCode);
+            if (testCase.EventualSuccess)
+            {
+                MakeClientCall();
+            }
+            else
+            {
+                Assert.Throws<GoogleApiException>(MakeClientCall);
+            }
+        });
+
+        Assert.Equal(testCase.ExpectedRequestTimes.Select(time => TimeSpan.FromSeconds(time)), messageHandler.RequestTimes);
+        service.Verify();
+
+        void MakeClientCall() => client.GetBucket("bucket", new GetBucketOptions { RetryOptions = testCase.RetryOptions });
+    }
+
+    /// <summary>
+    /// A single test case to execute.
+    /// </summary>
+    public class TestCase
+    {
+        /// <summary>
+        /// The ID of the test case, which should be reasonably descriptive.
+        /// </summary>
+        public string Id { get; }
+
+        /// <summary>
+        /// The retry options to test.
+        /// </summary>
+        public RetryOptions RetryOptions { get; }
+
+        /// <summary>
+        /// The status codes that the fake service should return.
+        /// </summary>
+        public HttpStatusCode[] ReturnedStatusCodes { get; }
+
+        /// <summary>
+        /// The expected time (in seconds since the start of the test, for simplicity)
+        /// for each request. This must be the same length as <see cref="ReturnedStatusCodes"/>.
+        /// </summary>
+        public int[] ExpectedRequestTimes { get; }
+
+        /// <summary>
+        /// Whether we expect the overall client operation to succeed or not.
+        /// </summary>
+        public bool EventualSuccess { get; }
+
+        public TestCase(string id, RetryOptions retryOptions, HttpStatusCode[] returnedStatusCodes, int[] expectedRequestTimes, bool eventualSuccess)
+        {
+            GaxPreconditions.CheckArgument(
+                returnedStatusCodes.Length == expectedRequestTimes.Length,
+                nameof(expectedRequestTimes),
+                $"Expected {nameof(returnedStatusCodes)} and {nameof(expectedRequestTimes)} to have the same number of elements");
+            Id = id;
+            RetryOptions = retryOptions;
+            ReturnedStatusCodes = returnedStatusCodes;
+            ExpectedRequestTimes = expectedRequestTimes;
+            EventualSuccess = eventualSuccess;
         }
 
-        DateTime startTime = DateTime.UtcNow;
-        if (success)
-        {
-            // Last call is a success.
-            service.ExpectRequest(request, new Bucket());
-
-            client.GetBucket("bucket", new GetBucketOptions { RetryOptions = retryOptions });
-
-            Assert.Equal(expectedBackOffs.Count(), messageHandler.AttemptTimestamps.Count());
-            service.Verify();
-        }
-        else
-        {
-            // The call throws an exception
-            Assert.Throws<GoogleApiException>(() => client.GetBucket("bucket", new GetBucketOptions { RetryOptions = retryOptions }));
-        }
-
-        for (int i = 0; i < messageHandler.AttemptTimestamps.Count; i++)
-        {
-            Assert.Equal(expectedBackOffs[i], (messageHandler.AttemptTimestamps[i] - startTime).TotalSeconds, 0.25);
-        }
+        public override string ToString() => Id;
     }
 }

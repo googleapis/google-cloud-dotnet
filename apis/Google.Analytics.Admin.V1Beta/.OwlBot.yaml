@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/analytics/admin/v1beta/.*-csharp/Google.Analytics.Admin.V1Beta
       dest: /owl-bot-staging/Google.Analytics.Admin.V1Beta/Google.Analytics.Admin.V1Beta
-    - source: /google/analytics/admin/v1beta/.*-csharp/Google.Analytics.Admin.V1Beta.Tests
-      dest: /owl-bot-staging/Google.Analytics.Admin.V1Beta/Google.Analytics.Admin.V1Beta.Tests
     - source: /google/analytics/admin/v1beta/.*-csharp/Google.Analytics.Admin.V1Beta.Snippets
       dest: /owl-bot-staging/Google.Analytics.Admin.V1Beta/Google.Analytics.Admin.V1Beta.Snippets
     - source: /google/analytics/admin/v1beta/.*-csharp/Google.Analytics.Admin.V1Beta.GeneratedSnippets

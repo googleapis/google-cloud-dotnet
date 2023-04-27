@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/oslogin/v1beta/.*-csharp/Google.Cloud.OsLogin.V1Beta
       dest: /owl-bot-staging/Google.Cloud.OsLogin.V1Beta/Google.Cloud.OsLogin.V1Beta
-    - source: /google/cloud/oslogin/v1beta/.*-csharp/Google.Cloud.OsLogin.V1Beta.Tests
-      dest: /owl-bot-staging/Google.Cloud.OsLogin.V1Beta/Google.Cloud.OsLogin.V1Beta.Tests
     - source: /google/cloud/oslogin/v1beta/.*-csharp/Google.Cloud.OsLogin.V1Beta.Snippets
       dest: /owl-bot-staging/Google.Cloud.OsLogin.V1Beta/Google.Cloud.OsLogin.V1Beta.Snippets
     - source: /google/cloud/oslogin/v1beta/.*-csharp/Google.Cloud.OsLogin.V1Beta.GeneratedSnippets

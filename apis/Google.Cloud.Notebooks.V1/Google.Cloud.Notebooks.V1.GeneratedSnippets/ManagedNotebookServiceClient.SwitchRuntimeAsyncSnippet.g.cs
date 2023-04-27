@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Notebooks.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START notebooks_v1_generated_ManagedNotebookService_SwitchRuntime_async_flattened]
     using Google.Cloud.Notebooks.V1;

@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/alloydb/v1alpha/.*-csharp/Google.Cloud.AlloyDb.V1Alpha
       dest: /owl-bot-staging/Google.Cloud.AlloyDb.V1Alpha/Google.Cloud.AlloyDb.V1Alpha
-    - source: /google/cloud/alloydb/v1alpha/.*-csharp/Google.Cloud.AlloyDb.V1Alpha.Tests
-      dest: /owl-bot-staging/Google.Cloud.AlloyDb.V1Alpha/Google.Cloud.AlloyDb.V1Alpha.Tests
     - source: /google/cloud/alloydb/v1alpha/.*-csharp/Google.Cloud.AlloyDb.V1Alpha.Snippets
       dest: /owl-bot-staging/Google.Cloud.AlloyDb.V1Alpha/Google.Cloud.AlloyDb.V1Alpha.Snippets
     - source: /google/cloud/alloydb/v1alpha/.*-csharp/Google.Cloud.AlloyDb.V1Alpha.GeneratedSnippets

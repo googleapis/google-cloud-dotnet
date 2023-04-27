@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ApiGateway.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START apigateway_v1_generated_ApiGatewayService_ListGateways_async_flattened]
     using Google.Api.Gax;

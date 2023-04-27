@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Speech.V1P1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START speech_v1p1beta1_generated_Speech_Recognize_async_flattened]
     using Google.Cloud.Speech.V1P1Beta1;

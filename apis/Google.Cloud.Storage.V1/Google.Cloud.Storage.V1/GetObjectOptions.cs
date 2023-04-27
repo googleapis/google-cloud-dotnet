@@ -71,6 +71,11 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public string UserProject { get; set; }
 
+        /// <summary>
+        /// Options to pass custom retry configuration for each API request.
+        /// </summary>
+        public RetryOptions RetryOptions { get; set; }
+
         internal void ModifyRequest(GetRequest request)
         {
             // Note the use of ArgumentException here, as this will basically be the result of invalid

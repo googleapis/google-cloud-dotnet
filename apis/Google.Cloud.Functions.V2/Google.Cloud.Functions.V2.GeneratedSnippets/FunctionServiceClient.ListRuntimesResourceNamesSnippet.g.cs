@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Functions.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudfunctions_v2_generated_FunctionService_ListRuntimes_sync_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;

@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Bigtable.Common.V2;
+    using Google.Cloud.Bigtable.V2;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System.Collections.Generic;

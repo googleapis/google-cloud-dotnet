@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.CloudBuild.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudbuild_v2_generated_RepositoryManager_FetchReadToken_async_flattened]
     using Google.Cloud.CloudBuild.V2;

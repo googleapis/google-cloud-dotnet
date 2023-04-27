@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.13.0, released 2023-04-19
+
+### New features
+
+- Add is_default to Tensorboard in aiplatform v1 tensorboard.proto and v1beta1 tensorboard.proto ([commit 0fe126a](https://github.com/googleapis/google-cloud-dotnet/commit/0fe126af822d5691488387da74cccb9650040d5e))
+
+## Version 2.12.0, released 2023-04-12
+
+### New features
+
+- Add public_endpoint_enabled and publid_endpoint_domain_name to IndexEndpoint ([commit 6456df3](https://github.com/googleapis/google-cloud-dotnet/commit/6456df3710bf03715fd60988726c5fc75e76747d))
+- Add ModelSourceType.MODEL_GARDEN enum to ModelSourceInfo ([commit 6456df3](https://github.com/googleapis/google-cloud-dotnet/commit/6456df3710bf03715fd60988726c5fc75e76747d))
+- Add copy to ModelSourceInfo ([commit 6456df3](https://github.com/googleapis/google-cloud-dotnet/commit/6456df3710bf03715fd60988726c5fc75e76747d))
+
 ## Version 2.11.0, released 2023-03-06
 
 ### New features

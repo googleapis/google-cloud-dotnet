@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Asset.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudasset_v1_generated_AssetService_DeleteSavedQuery_sync_flattened]
     using Google.Cloud.Asset.V1;

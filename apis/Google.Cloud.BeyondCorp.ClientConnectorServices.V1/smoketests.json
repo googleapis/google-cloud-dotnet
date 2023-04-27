@@ -2,6 +2,7 @@
   {
     "method": "ListClientConnectorServices",
     "client": "ClientConnectorServicesServiceClient",
+    "skip": "b/278007126",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/us-east1"
     }

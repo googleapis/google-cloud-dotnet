@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/discoveryengine/v1beta/.*-csharp/Google.Cloud.DiscoveryEngine.V1Beta
       dest: /owl-bot-staging/Google.Cloud.DiscoveryEngine.V1Beta/Google.Cloud.DiscoveryEngine.V1Beta
-    - source: /google/cloud/discoveryengine/v1beta/.*-csharp/Google.Cloud.DiscoveryEngine.V1Beta.Tests
-      dest: /owl-bot-staging/Google.Cloud.DiscoveryEngine.V1Beta/Google.Cloud.DiscoveryEngine.V1Beta.Tests
     - source: /google/cloud/discoveryengine/v1beta/.*-csharp/Google.Cloud.DiscoveryEngine.V1Beta.Snippets
       dest: /owl-bot-staging/Google.Cloud.DiscoveryEngine.V1Beta/Google.Cloud.DiscoveryEngine.V1Beta.Snippets
     - source: /google/cloud/discoveryengine/v1beta/.*-csharp/Google.Cloud.DiscoveryEngine.V1Beta.GeneratedSnippets

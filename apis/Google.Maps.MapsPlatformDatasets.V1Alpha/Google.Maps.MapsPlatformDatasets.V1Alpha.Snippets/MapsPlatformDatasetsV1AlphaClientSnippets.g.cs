@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Maps.MapsPlatformDatasets.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Maps.MapsPlatformDatasets.V1Alpha;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.ArtifactRegistry.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START artifactregistry_v1_generated_ArtifactRegistry_ListVersions_sync]
     using Google.Api.Gax;
@@ -36,16 +36,16 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
         public void ListVersionsRequestObject()
         {
             // Create client
-            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ListVersionsRequest request = new ListVersionsRequest
+            gcav::ListVersionsRequest request = new gcav::ListVersionsRequest
             {
                 Parent = "",
-                View = VersionView.Unspecified,
+                View = gcav::VersionView.Unspecified,
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersions(request);
+            PagedEnumerable<gcav::ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcav::Version item in response)
@@ -55,7 +55,7 @@ namespace Google.Cloud.ArtifactRegistry.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListVersionsResponse page in response.AsRawResponses())
+            foreach (gcav::ListVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

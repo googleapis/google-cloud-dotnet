@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.EnterpriseKnowledgeGraph.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START enterpriseknowledgegraph_v1_generated_EnterpriseKnowledgeGraphService_Lookup_sync_flattened]
     using Google.Cloud.EnterpriseKnowledgeGraph.V1;

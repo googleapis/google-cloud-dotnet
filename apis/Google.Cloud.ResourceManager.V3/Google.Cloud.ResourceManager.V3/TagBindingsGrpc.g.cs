@@ -3,7 +3,7 @@
 //     source: google/cloud/resourcemanager/v3/tag_bindings.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// Allow users to create and manage TagBindings between TagValues and
-  /// different cloud resources throughout the GCP resource hierarchy.
+  /// different Google Cloud resources throughout the GCP resource hierarchy.
   /// </summary>
   public static partial class TagBindings
   {
@@ -74,6 +74,10 @@ namespace Google.Cloud.ResourceManager.V3 {
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.DeleteTagBindingRequest> __Marshaller_google_cloud_resourcemanager_v3_DeleteTagBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.DeleteTagBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsRequest> __Marshaller_google_cloud_resourcemanager_v3_ListEffectiveTagsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsResponse> __Marshaller_google_cloud_resourcemanager_v3_ListEffectiveTagsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ResourceManager.V3.ListTagBindingsRequest, global::Google.Cloud.ResourceManager.V3.ListTagBindingsResponse> __Method_ListTagBindings = new grpc::Method<global::Google.Cloud.ResourceManager.V3.ListTagBindingsRequest, global::Google.Cloud.ResourceManager.V3.ListTagBindingsResponse>(
@@ -99,6 +103,14 @@ namespace Google.Cloud.ResourceManager.V3 {
         __Marshaller_google_cloud_resourcemanager_v3_DeleteTagBindingRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsRequest, global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsResponse> __Method_ListEffectiveTags = new grpc::Method<global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsRequest, global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListEffectiveTags",
+        __Marshaller_google_cloud_resourcemanager_v3_ListEffectiveTagsRequest,
+        __Marshaller_google_cloud_resourcemanager_v3_ListEffectiveTagsResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -110,8 +122,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public abstract partial class TagBindingsBase
     {
       /// <summary>
-      /// Lists the TagBindings for the given cloud resource, as specified with
-      /// `parent`.
+      /// Lists the TagBindings for the given Google Cloud resource, as specified
+      /// with `parent`.
       ///
       /// NOTE: The `parent` field is expected to be a full resource name:
       /// https://cloud.google.com/apis/design/resource_names#full_resource_name
@@ -126,8 +138,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       }
 
       /// <summary>
-      /// Creates a TagBinding between a TagValue and a cloud resource
-      /// (currently project, folder, or organization).
+      /// Creates a TagBinding between a TagValue and a Google Cloud resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -146,6 +157,19 @@ namespace Google.Cloud.ResourceManager.V3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteTagBinding(global::Google.Cloud.ResourceManager.V3.DeleteTagBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Return a list of effective tags for the given Google Cloud resource, as
+      /// specified in `parent`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsResponse> ListEffectiveTags(global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -180,8 +204,8 @@ namespace Google.Cloud.ResourceManager.V3 {
       }
 
       /// <summary>
-      /// Lists the TagBindings for the given cloud resource, as specified with
-      /// `parent`.
+      /// Lists the TagBindings for the given Google Cloud resource, as specified
+      /// with `parent`.
       ///
       /// NOTE: The `parent` field is expected to be a full resource name:
       /// https://cloud.google.com/apis/design/resource_names#full_resource_name
@@ -197,8 +221,8 @@ namespace Google.Cloud.ResourceManager.V3 {
         return ListTagBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the TagBindings for the given cloud resource, as specified with
-      /// `parent`.
+      /// Lists the TagBindings for the given Google Cloud resource, as specified
+      /// with `parent`.
       ///
       /// NOTE: The `parent` field is expected to be a full resource name:
       /// https://cloud.google.com/apis/design/resource_names#full_resource_name
@@ -212,8 +236,8 @@ namespace Google.Cloud.ResourceManager.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_ListTagBindings, null, options, request);
       }
       /// <summary>
-      /// Lists the TagBindings for the given cloud resource, as specified with
-      /// `parent`.
+      /// Lists the TagBindings for the given Google Cloud resource, as specified
+      /// with `parent`.
       ///
       /// NOTE: The `parent` field is expected to be a full resource name:
       /// https://cloud.google.com/apis/design/resource_names#full_resource_name
@@ -229,8 +253,8 @@ namespace Google.Cloud.ResourceManager.V3 {
         return ListTagBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the TagBindings for the given cloud resource, as specified with
-      /// `parent`.
+      /// Lists the TagBindings for the given Google Cloud resource, as specified
+      /// with `parent`.
       ///
       /// NOTE: The `parent` field is expected to be a full resource name:
       /// https://cloud.google.com/apis/design/resource_names#full_resource_name
@@ -244,8 +268,7 @@ namespace Google.Cloud.ResourceManager.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_ListTagBindings, null, options, request);
       }
       /// <summary>
-      /// Creates a TagBinding between a TagValue and a cloud resource
-      /// (currently project, folder, or organization).
+      /// Creates a TagBinding between a TagValue and a Google Cloud resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -258,8 +281,7 @@ namespace Google.Cloud.ResourceManager.V3 {
         return CreateTagBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a TagBinding between a TagValue and a cloud resource
-      /// (currently project, folder, or organization).
+      /// Creates a TagBinding between a TagValue and a Google Cloud resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -270,8 +292,7 @@ namespace Google.Cloud.ResourceManager.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTagBinding, null, options, request);
       }
       /// <summary>
-      /// Creates a TagBinding between a TagValue and a cloud resource
-      /// (currently project, folder, or organization).
+      /// Creates a TagBinding between a TagValue and a Google Cloud resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -284,8 +305,7 @@ namespace Google.Cloud.ResourceManager.V3 {
         return CreateTagBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a TagBinding between a TagValue and a cloud resource
-      /// (currently project, folder, or organization).
+      /// Creates a TagBinding between a TagValue and a Google Cloud resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -343,6 +363,58 @@ namespace Google.Cloud.ResourceManager.V3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTagBinding, null, options, request);
       }
+      /// <summary>
+      /// Return a list of effective tags for the given Google Cloud resource, as
+      /// specified in `parent`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsResponse ListEffectiveTags(global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEffectiveTags(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Return a list of effective tags for the given Google Cloud resource, as
+      /// specified in `parent`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsResponse ListEffectiveTags(global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListEffectiveTags, null, options, request);
+      }
+      /// <summary>
+      /// Return a list of effective tags for the given Google Cloud resource, as
+      /// specified in `parent`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsResponse> ListEffectiveTagsAsync(global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEffectiveTagsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Return a list of effective tags for the given Google Cloud resource, as
+      /// specified in `parent`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsResponse> ListEffectiveTagsAsync(global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListEffectiveTags, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override TagBindingsClient NewInstance(ClientBaseConfiguration configuration)
@@ -359,7 +431,8 @@ namespace Google.Cloud.ResourceManager.V3 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListTagBindings, serviceImpl.ListTagBindings)
           .AddMethod(__Method_CreateTagBinding, serviceImpl.CreateTagBinding)
-          .AddMethod(__Method_DeleteTagBinding, serviceImpl.DeleteTagBinding).Build();
+          .AddMethod(__Method_DeleteTagBinding, serviceImpl.DeleteTagBinding)
+          .AddMethod(__Method_ListEffectiveTags, serviceImpl.ListEffectiveTags).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -372,6 +445,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       serviceBinder.AddMethod(__Method_ListTagBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ResourceManager.V3.ListTagBindingsRequest, global::Google.Cloud.ResourceManager.V3.ListTagBindingsResponse>(serviceImpl.ListTagBindings));
       serviceBinder.AddMethod(__Method_CreateTagBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ResourceManager.V3.CreateTagBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateTagBinding));
       serviceBinder.AddMethod(__Method_DeleteTagBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ResourceManager.V3.DeleteTagBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteTagBinding));
+      serviceBinder.AddMethod(__Method_ListEffectiveTags, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsRequest, global::Google.Cloud.ResourceManager.V3.ListEffectiveTagsResponse>(serviceImpl.ListEffectiveTags));
     }
 
   }

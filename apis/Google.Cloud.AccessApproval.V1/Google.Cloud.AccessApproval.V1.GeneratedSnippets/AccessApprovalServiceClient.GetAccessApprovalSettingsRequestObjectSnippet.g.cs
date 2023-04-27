@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AccessApproval.V1.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalSettings_sync]
+    // [START accessapproval_v1_generated_AccessApproval_GetAccessApprovalSettings_sync]
     using Google.Cloud.AccessApproval.V1;
 
     public sealed partial class GeneratedAccessApprovalServiceClientSnippets
@@ -42,5 +42,5 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             AccessApprovalSettings response = accessApprovalServiceClient.GetAccessApprovalSettings(request);
         }
     }
-    // [END accessapproval_v1_generated_AccessApprovalService_GetAccessApprovalSettings_sync]
+    // [END accessapproval_v1_generated_AccessApproval_GetAccessApprovalSettings_sync]
 }

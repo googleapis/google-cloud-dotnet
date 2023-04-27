@@ -27,7 +27,7 @@ namespace Google.Cloud.GkeHub.V1 {
             "Cidnb29nbGUvY2xvdWQvZ2tlaHViL3YxL21lbWJlcnNoaXAucHJvdG8SFmdv",
             "b2dsZS5jbG91ZC5na2VodWIudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZp",
             "b3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8i7gUKCk1lbWJlcnNoaXASQwoIZW5k",
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8iuAYKCk1lbWJlcnNoaXASQwoIZW5k",
             "cG9pbnQYBCABKAsyKi5nb29nbGUuY2xvdWQuZ2tlaHViLnYxLk1lbWJlcnNo",
             "aXBFbmRwb2ludEID4EEBSAASEQoEbmFtZRgBIAEoCUID4EEDEkMKBmxhYmVs",
             "cxgCIAMoCzIuLmdvb2dsZS5jbG91ZC5na2VodWIudjEuTWVtYmVyc2hpcC5M",
@@ -40,53 +40,61 @@ namespace Google.Cloud.GkeHub.V1 {
             "dGVybmFsX2lkGAkgASgJQgPgQQESPQoUbGFzdF9jb25uZWN0aW9uX3RpbWUY",
             "CiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFgoJdW5p",
             "cXVlX2lkGAsgASgJQgPgQQMSOQoJYXV0aG9yaXR5GAwgASgLMiEuZ29vZ2xl",
-            "LmNsb3VkLmdrZWh1Yi52MS5BdXRob3JpdHlCA+BBARotCgtMYWJlbHNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOmfqQWQKIGdrZWh1",
-            "Yi5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEkBwcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbWVtYmVyc2hpcHMve21lbWJlcnNo",
-            "aXB9QgYKBHR5cGUi7gEKEk1lbWJlcnNoaXBFbmRwb2ludBI8Cgtna2VfY2x1",
-            "c3RlchgBIAEoCzIiLmdvb2dsZS5jbG91ZC5na2VodWIudjEuR2tlQ2x1c3Rl",
-            "ckID4EEBEkwKE2t1YmVybmV0ZXNfbWV0YWRhdGEYAiABKAsyKi5nb29nbGUu",
-            "Y2xvdWQuZ2tlaHViLnYxLkt1YmVybmV0ZXNNZXRhZGF0YUID4EEDEkwKE2t1",
-            "YmVybmV0ZXNfcmVzb3VyY2UYAyABKAsyKi5nb29nbGUuY2xvdWQuZ2tlaHVi",
-            "LnYxLkt1YmVybmV0ZXNSZXNvdXJjZUID4EEBIpgCChJLdWJlcm5ldGVzUmVz",
-            "b3VyY2USIwoWbWVtYmVyc2hpcF9jcl9tYW5pZmVzdBgBIAEoCUID4EEEEksK",
-            "FG1lbWJlcnNoaXBfcmVzb3VyY2VzGAIgAygLMiguZ29vZ2xlLmNsb3VkLmdr",
-            "ZWh1Yi52MS5SZXNvdXJjZU1hbmlmZXN0QgPgQQMSSAoRY29ubmVjdF9yZXNv",
-            "dXJjZXMYAyADKAsyKC5nb29nbGUuY2xvdWQuZ2tlaHViLnYxLlJlc291cmNl",
-            "TWFuaWZlc3RCA+BBAxJGChByZXNvdXJjZV9vcHRpb25zGAQgASgLMicuZ29v",
-            "Z2xlLmNsb3VkLmdrZWh1Yi52MS5SZXNvdXJjZU9wdGlvbnNCA+BBASJjCg9S",
-            "ZXNvdXJjZU9wdGlvbnMSHAoPY29ubmVjdF92ZXJzaW9uGAEgASgJQgPgQQES",
-            "GAoLdjFiZXRhMV9jcmQYAiABKAhCA+BBARIYCgtrOHNfdmVyc2lvbhgDIAEo",
-            "CUID4EEBIjwKEFJlc291cmNlTWFuaWZlc3QSEAoIbWFuaWZlc3QYASABKAkS",
-            "FgoOY2x1c3Rlcl9zY29wZWQYAiABKAgiKAoKR2tlQ2x1c3RlchIaCg1yZXNv",
-            "dXJjZV9saW5rGAEgASgJQgPgQQUi3wEKEkt1YmVybmV0ZXNNZXRhZGF0YRIq",
-            "Ch1rdWJlcm5ldGVzX2FwaV9zZXJ2ZXJfdmVyc2lvbhgBIAEoCUID4EEDEh0K",
-            "EG5vZGVfcHJvdmlkZXJfaWQYAiABKAlCA+BBAxIXCgpub2RlX2NvdW50GAMg",
-            "ASgFQgPgQQMSFwoKdmNwdV9jb3VudBgEIAEoBUID4EEDEhYKCW1lbW9yeV9t",
-            "YhgFIAEoBUID4EEDEjQKC3VwZGF0ZV90aW1lGGQgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDIrsBCg9NZW1iZXJzaGlwU3RhdGUSPwoE",
-            "Y29kZRgBIAEoDjIsLmdvb2dsZS5jbG91ZC5na2VodWIudjEuTWVtYmVyc2hp",
-            "cFN0YXRlLkNvZGVCA+BBAyJnCgRDb2RlEhQKEENPREVfVU5TUEVDSUZJRUQQ",
-            "ABIMCghDUkVBVElORxABEgkKBVJFQURZEAISDAoIREVMRVRJTkcQAxIMCghV",
-            "UERBVElORxAEEhQKEFNFUlZJQ0VfVVBEQVRJTkcQBSJ9CglBdXRob3JpdHkS",
-            "EwoGaXNzdWVyGAEgASgJQgPgQQESIwoWd29ya2xvYWRfaWRlbnRpdHlfcG9v",
-            "bBgCIAEoCUID4EEDEh4KEWlkZW50aXR5X3Byb3ZpZGVyGAMgASgJQgPgQQMS",
-            "FgoJb2lkY19qd2tzGAQgASgMQgPgQQFCsQEKGmNvbS5nb29nbGUuY2xvdWQu",
-            "Z2tlaHViLnYxQg9NZW1iZXJzaGlwUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9na2VodWIvYXBpdjEvZ2tlaHVicGI7Z2tlaHVicGKqAhZHb29nbGUu",
-            "Q2xvdWQuR2tlSHViLlYxygIWR29vZ2xlXENsb3VkXEdrZUh1YlxWMeoCGUdv",
-            "b2dsZTo6Q2xvdWQ6OkdrZUh1Yjo6VjFiBnByb3RvMw=="));
+            "LmNsb3VkLmdrZWh1Yi52MS5BdXRob3JpdHlCA+BBARJIChFtb25pdG9yaW5n",
+            "X2NvbmZpZxgOIAEoCzIoLmdvb2dsZS5jbG91ZC5na2VodWIudjEuTW9uaXRv",
+            "cmluZ0NvbmZpZ0ID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAE6Z+pBZAogZ2tlaHViLmdvb2dsZWFwaXMuY29t",
+            "L01lbWJlcnNoaXASQHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9tZW1iZXJzaGlwcy97bWVtYmVyc2hpcH1CBgoEdHlwZSKLAgoS",
+            "TWVtYmVyc2hpcEVuZHBvaW50EjwKC2drZV9jbHVzdGVyGAEgASgLMiIuZ29v",
+            "Z2xlLmNsb3VkLmdrZWh1Yi52MS5Ha2VDbHVzdGVyQgPgQQESTAoTa3ViZXJu",
+            "ZXRlc19tZXRhZGF0YRgCIAEoCzIqLmdvb2dsZS5jbG91ZC5na2VodWIudjEu",
+            "S3ViZXJuZXRlc01ldGFkYXRhQgPgQQMSTAoTa3ViZXJuZXRlc19yZXNvdXJj",
+            "ZRgDIAEoCzIqLmdvb2dsZS5jbG91ZC5na2VodWIudjEuS3ViZXJuZXRlc1Jl",
+            "c291cmNlQgPgQQESGwoOZ29vZ2xlX21hbmFnZWQYCCABKAhCA+BBAyKYAgoS",
+            "S3ViZXJuZXRlc1Jlc291cmNlEiMKFm1lbWJlcnNoaXBfY3JfbWFuaWZlc3QY",
+            "ASABKAlCA+BBBBJLChRtZW1iZXJzaGlwX3Jlc291cmNlcxgCIAMoCzIoLmdv",
+            "b2dsZS5jbG91ZC5na2VodWIudjEuUmVzb3VyY2VNYW5pZmVzdEID4EEDEkgK",
+            "EWNvbm5lY3RfcmVzb3VyY2VzGAMgAygLMiguZ29vZ2xlLmNsb3VkLmdrZWh1",
+            "Yi52MS5SZXNvdXJjZU1hbmlmZXN0QgPgQQMSRgoQcmVzb3VyY2Vfb3B0aW9u",
+            "cxgEIAEoCzInLmdvb2dsZS5jbG91ZC5na2VodWIudjEuUmVzb3VyY2VPcHRp",
+            "b25zQgPgQQEiYwoPUmVzb3VyY2VPcHRpb25zEhwKD2Nvbm5lY3RfdmVyc2lv",
+            "bhgBIAEoCUID4EEBEhgKC3YxYmV0YTFfY3JkGAIgASgIQgPgQQESGAoLazhz",
+            "X3ZlcnNpb24YAyABKAlCA+BBASI8ChBSZXNvdXJjZU1hbmlmZXN0EhAKCG1h",
+            "bmlmZXN0GAEgASgJEhYKDmNsdXN0ZXJfc2NvcGVkGAIgASgIIkYKCkdrZUNs",
+            "dXN0ZXISGgoNcmVzb3VyY2VfbGluaxgBIAEoCUID4EEFEhwKD2NsdXN0ZXJf",
+            "bWlzc2luZxgCIAEoCEID4EEDIt8BChJLdWJlcm5ldGVzTWV0YWRhdGESKgod",
+            "a3ViZXJuZXRlc19hcGlfc2VydmVyX3ZlcnNpb24YASABKAlCA+BBAxIdChBu",
+            "b2RlX3Byb3ZpZGVyX2lkGAIgASgJQgPgQQMSFwoKbm9kZV9jb3VudBgDIAEo",
+            "BUID4EEDEhcKCnZjcHVfY291bnQYBCABKAVCA+BBAxIWCgltZW1vcnlfbWIY",
+            "BSABKAVCA+BBAxI0Cgt1cGRhdGVfdGltZRhkIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAyKWAQoQTW9uaXRvcmluZ0NvbmZpZxIXCgpw",
+            "cm9qZWN0X2lkGAEgASgJQgPgQQUSFQoIbG9jYXRpb24YAiABKAlCA+BBBRIU",
+            "CgdjbHVzdGVyGAMgASgJQgPgQQUSIQoZa3ViZXJuZXRlc19tZXRyaWNzX3By",
+            "ZWZpeBgEIAEoCRIZCgxjbHVzdGVyX2hhc2gYBSABKAlCA+BBBSK7AQoPTWVt",
+            "YmVyc2hpcFN0YXRlEj8KBGNvZGUYASABKA4yLC5nb29nbGUuY2xvdWQuZ2tl",
+            "aHViLnYxLk1lbWJlcnNoaXBTdGF0ZS5Db2RlQgPgQQMiZwoEQ29kZRIUChBD",
+            "T0RFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEgwK",
+            "CERFTEVUSU5HEAMSDAoIVVBEQVRJTkcQBBIUChBTRVJWSUNFX1VQREFUSU5H",
+            "EAUifQoJQXV0aG9yaXR5EhMKBmlzc3VlchgBIAEoCUID4EEBEiMKFndvcmts",
+            "b2FkX2lkZW50aXR5X3Bvb2wYAiABKAlCA+BBAxIeChFpZGVudGl0eV9wcm92",
+            "aWRlchgDIAEoCUID4EEDEhYKCW9pZGNfandrcxgEIAEoDEID4EEBQrEBChpj",
+            "b20uZ29vZ2xlLmNsb3VkLmdrZWh1Yi52MUIPTWVtYmVyc2hpcFByb3RvUAFa",
+            "MmNsb3VkLmdvb2dsZS5jb20vZ28vZ2tlaHViL2FwaXYxL2drZWh1YnBiO2dr",
+            "ZWh1YnBiqgIWR29vZ2xlLkNsb3VkLkdrZUh1Yi5WMcoCFkdvb2dsZVxDbG91",
+            "ZFxHa2VIdWJcVjHqAhlHb29nbGU6OkNsb3VkOjpHa2VIdWI6OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.Membership), global::Google.Cloud.GkeHub.V1.Membership.Parser, new[]{ "Endpoint", "Name", "Labels", "Description", "State", "CreateTime", "UpdateTime", "DeleteTime", "ExternalId", "LastConnectionTime", "UniqueId", "Authority" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.MembershipEndpoint), global::Google.Cloud.GkeHub.V1.MembershipEndpoint.Parser, new[]{ "GkeCluster", "KubernetesMetadata", "KubernetesResource" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.Membership), global::Google.Cloud.GkeHub.V1.Membership.Parser, new[]{ "Endpoint", "Name", "Labels", "Description", "State", "CreateTime", "UpdateTime", "DeleteTime", "ExternalId", "LastConnectionTime", "UniqueId", "Authority", "MonitoringConfig" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.MembershipEndpoint), global::Google.Cloud.GkeHub.V1.MembershipEndpoint.Parser, new[]{ "GkeCluster", "KubernetesMetadata", "KubernetesResource", "GoogleManaged" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.KubernetesResource), global::Google.Cloud.GkeHub.V1.KubernetesResource.Parser, new[]{ "MembershipCrManifest", "MembershipResources", "ConnectResources", "ResourceOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ResourceOptions), global::Google.Cloud.GkeHub.V1.ResourceOptions.Parser, new[]{ "ConnectVersion", "V1Beta1Crd", "K8SVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ResourceManifest), global::Google.Cloud.GkeHub.V1.ResourceManifest.Parser, new[]{ "Manifest", "ClusterScoped" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.GkeCluster), global::Google.Cloud.GkeHub.V1.GkeCluster.Parser, new[]{ "ResourceLink" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.GkeCluster), global::Google.Cloud.GkeHub.V1.GkeCluster.Parser, new[]{ "ResourceLink", "ClusterMissing" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.KubernetesMetadata), global::Google.Cloud.GkeHub.V1.KubernetesMetadata.Parser, new[]{ "KubernetesApiServerVersion", "NodeProviderId", "NodeCount", "VcpuCount", "MemoryMb", "UpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.MonitoringConfig), global::Google.Cloud.GkeHub.V1.MonitoringConfig.Parser, new[]{ "ProjectId", "Location", "Cluster", "KubernetesMetricsPrefix", "ClusterHash" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.MembershipState), global::Google.Cloud.GkeHub.V1.MembershipState.Parser, new[]{ "Code" }, null, new[]{ typeof(global::Google.Cloud.GkeHub.V1.MembershipState.Types.Code) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.Authority), global::Google.Cloud.GkeHub.V1.Authority.Parser, new[]{ "Issuer", "WorkloadIdentityPool", "IdentityProvider", "OidcJwks" }, null, null, null, null)
           }));
@@ -143,6 +151,7 @@ namespace Google.Cloud.GkeHub.V1 {
       lastConnectionTime_ = other.lastConnectionTime_ != null ? other.lastConnectionTime_.Clone() : null;
       uniqueId_ = other.uniqueId_;
       authority_ = other.authority_ != null ? other.authority_.Clone() : null;
+      monitoringConfig_ = other.monitoringConfig_ != null ? other.monitoringConfig_.Clone() : null;
       switch (other.TypeCase) {
         case TypeOneofCase.Endpoint:
           Endpoint = other.Endpoint.Clone();
@@ -177,8 +186,9 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The full, unique name of this Membership resource in the format
-    /// `projects/*/locations/*/memberships/{membership_id}`, set during creation.
+    /// Output only. The full, unique name of this Membership resource in the
+    /// format `projects/*/locations/*/memberships/{membership_id}`, set during
+    /// creation.
     ///
     /// `membership_id` must be a valid RFC 1123 compliant DNS label:
     ///
@@ -204,7 +214,7 @@ namespace Google.Cloud.GkeHub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. GCP labels for this membership.
+    /// Optional. Labels for this membership.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -294,8 +304,8 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int ExternalIdFieldNumber = 9;
     private string externalId_ = "";
     /// <summary>
-    /// Optional. An externally-generated and managed ID for this Membership. This ID may
-    /// be modified after creation, but this is not recommended.
+    /// Optional. An externally-generated and managed ID for this Membership. This
+    /// ID may be modified after creation, but this is not recommended.
     ///
     /// The ID must match the regex: `[a-zA-Z0-9][a-zA-Z0-9_\-\.]*`
     ///
@@ -315,10 +325,11 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int LastConnectionTimeFieldNumber = 10;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastConnectionTime_;
     /// <summary>
-    /// Output only. For clusters using Connect, the timestamp of the most recent connection
-    /// established with Google Cloud. This time is updated every several minutes,
-    /// not continuously. For clusters that do not use GKE Connect, or that have
-    /// never connected successfully, this field will be unset.
+    /// Output only. For clusters using Connect, the timestamp of the most recent
+    /// connection established with Google Cloud. This time is updated every
+    /// several minutes, not continuously. For clusters that do not use GKE
+    /// Connect, or that have never connected successfully, this field will be
+    /// unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -333,8 +344,8 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int UniqueIdFieldNumber = 11;
     private string uniqueId_ = "";
     /// <summary>
-    /// Output only. Google-generated UUID for this resource. This is unique across all
-    /// Membership resources. If a Membership resource is deleted and another
+    /// Output only. Google-generated UUID for this resource. This is unique across
+    /// all Membership resources. If a Membership resource is deleted and another
     /// resource with the same name is created, it gets a different unique_id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -360,6 +371,21 @@ namespace Google.Cloud.GkeHub.V1 {
       get { return authority_; }
       set {
         authority_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "monitoring_config" field.</summary>
+    public const int MonitoringConfigFieldNumber = 14;
+    private global::Google.Cloud.GkeHub.V1.MonitoringConfig monitoringConfig_;
+    /// <summary>
+    /// Optional. The monitoring config information for this membership.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeHub.V1.MonitoringConfig MonitoringConfig {
+      get { return monitoringConfig_; }
+      set {
+        monitoringConfig_ = value;
       }
     }
 
@@ -410,6 +436,7 @@ namespace Google.Cloud.GkeHub.V1 {
       if (!object.Equals(LastConnectionTime, other.LastConnectionTime)) return false;
       if (UniqueId != other.UniqueId) return false;
       if (!object.Equals(Authority, other.Authority)) return false;
+      if (!object.Equals(MonitoringConfig, other.MonitoringConfig)) return false;
       if (TypeCase != other.TypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -430,6 +457,7 @@ namespace Google.Cloud.GkeHub.V1 {
       if (lastConnectionTime_ != null) hash ^= LastConnectionTime.GetHashCode();
       if (UniqueId.Length != 0) hash ^= UniqueId.GetHashCode();
       if (authority_ != null) hash ^= Authority.GetHashCode();
+      if (monitoringConfig_ != null) hash ^= MonitoringConfig.GetHashCode();
       hash ^= (int) typeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -494,6 +522,10 @@ namespace Google.Cloud.GkeHub.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(Authority);
       }
+      if (monitoringConfig_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(MonitoringConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -549,6 +581,10 @@ namespace Google.Cloud.GkeHub.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(Authority);
       }
+      if (monitoringConfig_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(MonitoringConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -592,6 +628,9 @@ namespace Google.Cloud.GkeHub.V1 {
       }
       if (authority_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Authority);
+      }
+      if (monitoringConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MonitoringConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -653,6 +692,12 @@ namespace Google.Cloud.GkeHub.V1 {
           Authority = new global::Google.Cloud.GkeHub.V1.Authority();
         }
         Authority.MergeFrom(other.Authority);
+      }
+      if (other.monitoringConfig_ != null) {
+        if (monitoringConfig_ == null) {
+          MonitoringConfig = new global::Google.Cloud.GkeHub.V1.MonitoringConfig();
+        }
+        MonitoringConfig.MergeFrom(other.MonitoringConfig);
       }
       switch (other.TypeCase) {
         case TypeOneofCase.Endpoint:
@@ -749,6 +794,13 @@ namespace Google.Cloud.GkeHub.V1 {
             input.ReadMessage(Authority);
             break;
           }
+          case 114: {
+            if (monitoringConfig_ == null) {
+              MonitoringConfig = new global::Google.Cloud.GkeHub.V1.MonitoringConfig();
+            }
+            input.ReadMessage(MonitoringConfig);
+            break;
+          }
         }
       }
     #endif
@@ -835,6 +887,13 @@ namespace Google.Cloud.GkeHub.V1 {
             input.ReadMessage(Authority);
             break;
           }
+          case 114: {
+            if (monitoringConfig_ == null) {
+              MonitoringConfig = new global::Google.Cloud.GkeHub.V1.MonitoringConfig();
+            }
+            input.ReadMessage(MonitoringConfig);
+            break;
+          }
         }
       }
     }
@@ -883,6 +942,7 @@ namespace Google.Cloud.GkeHub.V1 {
       gkeCluster_ = other.gkeCluster_ != null ? other.gkeCluster_.Clone() : null;
       kubernetesMetadata_ = other.kubernetesMetadata_ != null ? other.kubernetesMetadata_.Clone() : null;
       kubernetesResource_ = other.kubernetesResource_ != null ? other.kubernetesResource_.Clone() : null;
+      googleManaged_ = other.googleManaged_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -926,8 +986,8 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int KubernetesResourceFieldNumber = 3;
     private global::Google.Cloud.GkeHub.V1.KubernetesResource kubernetesResource_;
     /// <summary>
-    /// Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
-    /// registered cluster, in the steady state. These resources:
+    /// Optional. The in-cluster Kubernetes Resources that should be applied for a
+    /// correctly registered cluster, in the steady state. These resources:
     ///
     ///   * Ensure that the cluster is exclusively registered to one and only one
     ///     Hub Membership.
@@ -941,6 +1001,22 @@ namespace Google.Cloud.GkeHub.V1 {
       get { return kubernetesResource_; }
       set {
         kubernetesResource_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "google_managed" field.</summary>
+    public const int GoogleManagedFieldNumber = 8;
+    private bool googleManaged_;
+    /// <summary>
+    /// Output only. Whether the lifecycle of this membership is managed by a
+    /// google cluster platform service.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool GoogleManaged {
+      get { return googleManaged_; }
+      set {
+        googleManaged_ = value;
       }
     }
 
@@ -962,6 +1038,7 @@ namespace Google.Cloud.GkeHub.V1 {
       if (!object.Equals(GkeCluster, other.GkeCluster)) return false;
       if (!object.Equals(KubernetesMetadata, other.KubernetesMetadata)) return false;
       if (!object.Equals(KubernetesResource, other.KubernetesResource)) return false;
+      if (GoogleManaged != other.GoogleManaged) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -972,6 +1049,7 @@ namespace Google.Cloud.GkeHub.V1 {
       if (gkeCluster_ != null) hash ^= GkeCluster.GetHashCode();
       if (kubernetesMetadata_ != null) hash ^= KubernetesMetadata.GetHashCode();
       if (kubernetesResource_ != null) hash ^= KubernetesResource.GetHashCode();
+      if (GoogleManaged != false) hash ^= GoogleManaged.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1002,6 +1080,10 @@ namespace Google.Cloud.GkeHub.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(KubernetesResource);
       }
+      if (GoogleManaged != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(GoogleManaged);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1024,6 +1106,10 @@ namespace Google.Cloud.GkeHub.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(KubernetesResource);
       }
+      if (GoogleManaged != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(GoogleManaged);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1042,6 +1128,9 @@ namespace Google.Cloud.GkeHub.V1 {
       }
       if (kubernetesResource_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(KubernetesResource);
+      }
+      if (GoogleManaged != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1072,6 +1161,9 @@ namespace Google.Cloud.GkeHub.V1 {
           KubernetesResource = new global::Google.Cloud.GkeHub.V1.KubernetesResource();
         }
         KubernetesResource.MergeFrom(other.KubernetesResource);
+      }
+      if (other.GoogleManaged != false) {
+        GoogleManaged = other.GoogleManaged;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1109,6 +1201,10 @@ namespace Google.Cloud.GkeHub.V1 {
             input.ReadMessage(KubernetesResource);
             break;
           }
+          case 64: {
+            GoogleManaged = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1143,6 +1239,10 @@ namespace Google.Cloud.GkeHub.V1 {
               KubernetesResource = new global::Google.Cloud.GkeHub.V1.KubernetesResource();
             }
             input.ReadMessage(KubernetesResource);
+            break;
+          }
+          case 64: {
+            GoogleManaged = input.ReadBool();
             break;
           }
         }
@@ -1208,8 +1308,8 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int MembershipCrManifestFieldNumber = 1;
     private string membershipCrManifest_ = "";
     /// <summary>
-    /// Input only. The YAML representation of the Membership CR. This field is ignored for GKE
-    /// clusters where Hub can read the CR directly.
+    /// Input only. The YAML representation of the Membership CR. This field is
+    /// ignored for GKE clusters where Hub can read the CR directly.
     ///
     /// Callers should provide the CR that is currently present in the cluster
     /// during CreateMembership or UpdateMembership, or leave this field empty if
@@ -1231,8 +1331,8 @@ namespace Google.Cloud.GkeHub.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.GkeHub.V1.ResourceManifest.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ResourceManifest> membershipResources_ = new pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ResourceManifest>();
     /// <summary>
-    /// Output only. Additional Kubernetes resources that need to be applied to the cluster
-    /// after Membership creation, and after every update.
+    /// Output only. Additional Kubernetes resources that need to be applied to the
+    /// cluster after Membership creation, and after every update.
     ///
     /// This field is only populated in the Membership returned from a successful
     /// long-running operation from CreateMembership or UpdateMembership. It is not
@@ -1528,9 +1628,9 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int ConnectVersionFieldNumber = 1;
     private string connectVersion_ = "";
     /// <summary>
-    /// Optional. The Connect agent version to use for connect_resources. Defaults to the
-    /// latest GKE Connect version. The version must be a currently supported
-    /// version, obsolete versions will be rejected.
+    /// Optional. The Connect agent version to use for connect_resources. Defaults
+    /// to the latest GKE Connect version. The version must be a currently
+    /// supported version, obsolete versions will be rejected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1563,8 +1663,8 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int K8SVersionFieldNumber = 3;
     private string k8SVersion_ = "";
     /// <summary>
-    /// Optional. Major version of the Kubernetes cluster. This is only used to determine
-    /// which version to use for the CustomResourceDefinition resources,
+    /// Optional. Major version of the Kubernetes cluster. This is only used to
+    /// determine which version to use for the CustomResourceDefinition resources,
     /// `apiextensions/v1beta1` or`apiextensions/v1`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2035,6 +2135,7 @@ namespace Google.Cloud.GkeHub.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GkeCluster(GkeCluster other) : this() {
       resourceLink_ = other.resourceLink_;
+      clusterMissing_ = other.clusterMissing_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2048,7 +2149,8 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int ResourceLinkFieldNumber = 1;
     private string resourceLink_ = "";
     /// <summary>
-    /// Immutable. Self-link of the GCP resource for the GKE cluster. For example:
+    /// Immutable. Self-link of the Google Cloud resource for the GKE cluster. For
+    /// example:
     ///
     /// //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
     ///
@@ -2060,6 +2162,22 @@ namespace Google.Cloud.GkeHub.V1 {
       get { return resourceLink_; }
       set {
         resourceLink_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cluster_missing" field.</summary>
+    public const int ClusterMissingFieldNumber = 2;
+    private bool clusterMissing_;
+    /// <summary>
+    /// Output only. If cluster_missing is set then it denotes that the GKE cluster
+    /// no longer exists in the GKE Control Plane.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ClusterMissing {
+      get { return clusterMissing_; }
+      set {
+        clusterMissing_ = value;
       }
     }
 
@@ -2079,6 +2197,7 @@ namespace Google.Cloud.GkeHub.V1 {
         return true;
       }
       if (ResourceLink != other.ResourceLink) return false;
+      if (ClusterMissing != other.ClusterMissing) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2087,6 +2206,7 @@ namespace Google.Cloud.GkeHub.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (ResourceLink.Length != 0) hash ^= ResourceLink.GetHashCode();
+      if (ClusterMissing != false) hash ^= ClusterMissing.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2109,6 +2229,10 @@ namespace Google.Cloud.GkeHub.V1 {
         output.WriteRawTag(10);
         output.WriteString(ResourceLink);
       }
+      if (ClusterMissing != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(ClusterMissing);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2123,6 +2247,10 @@ namespace Google.Cloud.GkeHub.V1 {
         output.WriteRawTag(10);
         output.WriteString(ResourceLink);
       }
+      if (ClusterMissing != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(ClusterMissing);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2135,6 +2263,9 @@ namespace Google.Cloud.GkeHub.V1 {
       int size = 0;
       if (ResourceLink.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ResourceLink);
+      }
+      if (ClusterMissing != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2150,6 +2281,9 @@ namespace Google.Cloud.GkeHub.V1 {
       }
       if (other.ResourceLink.Length != 0) {
         ResourceLink = other.ResourceLink;
+      }
+      if (other.ClusterMissing != false) {
+        ClusterMissing = other.ClusterMissing;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2170,6 +2304,10 @@ namespace Google.Cloud.GkeHub.V1 {
             ResourceLink = input.ReadString();
             break;
           }
+          case 16: {
+            ClusterMissing = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2187,6 +2325,10 @@ namespace Google.Cloud.GkeHub.V1 {
             break;
           case 10: {
             ResourceLink = input.ReadString();
+            break;
+          }
+          case 16: {
+            ClusterMissing = input.ReadBool();
             break;
           }
         }
@@ -2253,7 +2395,8 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int KubernetesApiServerVersionFieldNumber = 1;
     private string kubernetesApiServerVersion_ = "";
     /// <summary>
-    /// Output only. Kubernetes API server version string as reported by `/version`.
+    /// Output only. Kubernetes API server version string as reported by
+    /// `/version`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2268,9 +2411,9 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int NodeProviderIdFieldNumber = 2;
     private string nodeProviderId_ = "";
     /// <summary>
-    /// Output only. Node providerID as reported by the first node in the list of nodes on
-    /// the Kubernetes endpoint. On Kubernetes platforms that support zero-node
-    /// clusters (like GKE-on-GCP), the node_count will be zero and the
+    /// Output only. Node providerID as reported by the first node in the list of
+    /// nodes on the Kubernetes endpoint. On Kubernetes platforms that support
+    /// zero-node clusters (like GKE-on-GCP), the node_count will be zero and the
     /// node_provider_id will be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2316,8 +2459,8 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int MemoryMbFieldNumber = 5;
     private int memoryMb_;
     /// <summary>
-    /// Output only. The total memory capacity as reported by the sum of all Kubernetes nodes
-    /// resources, defined in MB.
+    /// Output only. The total memory capacity as reported by the sum of all
+    /// Kubernetes nodes resources, defined in MB.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2332,9 +2475,9 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int UpdateTimeFieldNumber = 100;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The time at which these details were last updated. This update_time is
-    /// different from the Membership-level update_time since EndpointDetails are
-    /// updated internally for API consumers.
+    /// Output only. The time at which these details were last updated. This
+    /// update_time is different from the Membership-level update_time since
+    /// EndpointDetails are updated internally for API consumers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2608,6 +2751,372 @@ namespace Google.Cloud.GkeHub.V1 {
   }
 
   /// <summary>
+  /// This field informs Fleet-based applications/services/UIs with the necessary
+  /// information for where each underlying Cluster reports its metrics.
+  /// </summary>
+  public sealed partial class MonitoringConfig : pb::IMessage<MonitoringConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MonitoringConfig> _parser = new pb::MessageParser<MonitoringConfig>(() => new MonitoringConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MonitoringConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MonitoringConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MonitoringConfig(MonitoringConfig other) : this() {
+      projectId_ = other.projectId_;
+      location_ = other.location_;
+      cluster_ = other.cluster_;
+      kubernetesMetricsPrefix_ = other.kubernetesMetricsPrefix_;
+      clusterHash_ = other.clusterHash_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MonitoringConfig Clone() {
+      return new MonitoringConfig(this);
+    }
+
+    /// <summary>Field number for the "project_id" field.</summary>
+    public const int ProjectIdFieldNumber = 1;
+    private string projectId_ = "";
+    /// <summary>
+    /// Immutable. Project used to report Metrics
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ProjectId {
+      get { return projectId_; }
+      set {
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "location" field.</summary>
+    public const int LocationFieldNumber = 2;
+    private string location_ = "";
+    /// <summary>
+    /// Immutable. Location used to report Metrics
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Location {
+      get { return location_; }
+      set {
+        location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cluster" field.</summary>
+    public const int ClusterFieldNumber = 3;
+    private string cluster_ = "";
+    /// <summary>
+    /// Immutable. Cluster name used to report metrics.
+    /// For Anthos on VMWare/Baremetal, it would be in format
+    /// `memberClusters/cluster_name`; And for Anthos on MultiCloud, it would be in
+    /// format
+    /// `{azureClusters, awsClusters}/cluster_name`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Cluster {
+      get { return cluster_; }
+      set {
+        cluster_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "kubernetes_metrics_prefix" field.</summary>
+    public const int KubernetesMetricsPrefixFieldNumber = 4;
+    private string kubernetesMetricsPrefix_ = "";
+    /// <summary>
+    /// Kubernetes system metrics, if available, are written to this prefix.
+    /// This defaults to kubernetes.io for GKE, and kubernetes.io/anthos for Anthos
+    /// eventually. Noted: Anthos MultiCloud will have kubernetes.io prefix today
+    /// but will migration to be under kubernetes.io/anthos
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KubernetesMetricsPrefix {
+      get { return kubernetesMetricsPrefix_; }
+      set {
+        kubernetesMetricsPrefix_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cluster_hash" field.</summary>
+    public const int ClusterHashFieldNumber = 5;
+    private string clusterHash_ = "";
+    /// <summary>
+    /// Immutable. Cluster hash, this is a unique string generated by google code,
+    /// which does not contain any PII, which we can use to reference the cluster.
+    /// This is expected to be created by the monitoring stack and persisted into
+    /// the Cluster object as well as to GKE-Hub.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClusterHash {
+      get { return clusterHash_; }
+      set {
+        clusterHash_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MonitoringConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MonitoringConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ProjectId != other.ProjectId) return false;
+      if (Location != other.Location) return false;
+      if (Cluster != other.Cluster) return false;
+      if (KubernetesMetricsPrefix != other.KubernetesMetricsPrefix) return false;
+      if (ClusterHash != other.ClusterHash) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
+      if (Location.Length != 0) hash ^= Location.GetHashCode();
+      if (Cluster.Length != 0) hash ^= Cluster.GetHashCode();
+      if (KubernetesMetricsPrefix.Length != 0) hash ^= KubernetesMetricsPrefix.GetHashCode();
+      if (ClusterHash.Length != 0) hash ^= ClusterHash.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (Location.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Location);
+      }
+      if (Cluster.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Cluster);
+      }
+      if (KubernetesMetricsPrefix.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(KubernetesMetricsPrefix);
+      }
+      if (ClusterHash.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ClusterHash);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (Location.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Location);
+      }
+      if (Cluster.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Cluster);
+      }
+      if (KubernetesMetricsPrefix.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(KubernetesMetricsPrefix);
+      }
+      if (ClusterHash.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ClusterHash);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ProjectId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
+      }
+      if (Location.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
+      }
+      if (Cluster.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Cluster);
+      }
+      if (KubernetesMetricsPrefix.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KubernetesMetricsPrefix);
+      }
+      if (ClusterHash.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterHash);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MonitoringConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ProjectId.Length != 0) {
+        ProjectId = other.ProjectId;
+      }
+      if (other.Location.Length != 0) {
+        Location = other.Location;
+      }
+      if (other.Cluster.Length != 0) {
+        Cluster = other.Cluster;
+      }
+      if (other.KubernetesMetricsPrefix.Length != 0) {
+        KubernetesMetricsPrefix = other.KubernetesMetricsPrefix;
+      }
+      if (other.ClusterHash.Length != 0) {
+        ClusterHash = other.ClusterHash;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            Location = input.ReadString();
+            break;
+          }
+          case 26: {
+            Cluster = input.ReadString();
+            break;
+          }
+          case 34: {
+            KubernetesMetricsPrefix = input.ReadString();
+            break;
+          }
+          case 42: {
+            ClusterHash = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            Location = input.ReadString();
+            break;
+          }
+          case 26: {
+            Cluster = input.ReadString();
+            break;
+          }
+          case 34: {
+            KubernetesMetricsPrefix = input.ReadString();
+            break;
+          }
+          case 42: {
+            ClusterHash = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// MembershipState describes the state of a Membership resource.
   /// </summary>
   public sealed partial class MembershipState : pb::IMessage<MembershipState>
@@ -2624,7 +3133,7 @@ namespace Google.Cloud.GkeHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2859,7 +3368,7 @@ namespace Google.Cloud.GkeHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2896,8 +3405,8 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int IssuerFieldNumber = 1;
     private string issuer_ = "";
     /// <summary>
-    /// Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and
-    /// be a valid URL with length &lt;2000 characters.
+    /// Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with
+    /// `https://` and be a valid URL with length &lt;2000 characters.
     ///
     /// If set, then Google will allow valid OIDC tokens from this issuer to
     /// authenticate within the workload_identity_pool. OIDC discovery will be
@@ -2920,8 +3429,8 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int WorkloadIdentityPoolFieldNumber = 2;
     private string workloadIdentityPool_ = "";
     /// <summary>
-    /// Output only. The name of the workload identity pool in which `issuer` will be
-    /// recognized.
+    /// Output only. The name of the workload identity pool in which `issuer` will
+    /// be recognized.
     ///
     /// There is a single Workload Identity Pool per Hub that is shared
     /// between all Memberships that belong to that Hub. For a Hub hosted in
@@ -2941,8 +3450,8 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int IdentityProviderFieldNumber = 3;
     private string identityProvider_ = "";
     /// <summary>
-    /// Output only. An identity provider that reflects the `issuer` in the workload identity
-    /// pool.
+    /// Output only. An identity provider that reflects the `issuer` in the
+    /// workload identity pool.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2957,7 +3466,8 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int OidcJwksFieldNumber = 4;
     private pb::ByteString oidcJwks_ = pb::ByteString.Empty;
     /// <summary>
-    /// Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517).
+    /// Optional. OIDC verification keys for this Membership in JWKS format (RFC
+    /// 7517).
     ///
     /// When this field is set, OIDC discovery will NOT be performed on `issuer`,
     /// and instead OIDC tokens will be validated using this field.

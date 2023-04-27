@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Maps.AddressValidation.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Maps.AddressValidation.V1;
     using Google.Type;
     using System.Threading.Tasks;
 

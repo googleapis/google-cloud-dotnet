@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.V2.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync]
+    // [START bigtable_v2_generated_Bigtable_PingAndWarm_sync]
     using Google.Cloud.Bigtable.Common.V2;
     using Google.Cloud.Bigtable.V2;
 
@@ -44,5 +44,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             PingAndWarmResponse response = bigtableServiceApiClient.PingAndWarm(request);
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_PingAndWarm_sync]
+    // [END bigtable_v2_generated_Bigtable_PingAndWarm_sync]
 }

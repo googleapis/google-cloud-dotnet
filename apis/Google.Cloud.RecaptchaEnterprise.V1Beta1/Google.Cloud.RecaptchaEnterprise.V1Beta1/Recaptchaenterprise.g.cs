@@ -162,14 +162,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
             "djFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2Fzc2Vzc21lbnRzLyp9OmFubm90",
             "YXRlOgEq2kEPbmFtZSxhbm5vdGF0aW9uGlbKQSJyZWNhcHRjaGFlbnRlcnBy",
             "aXNlLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKvAgomY29tLmdvb2dsZS5yZWNhcHRj",
+            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKyAgomY29tLmdvb2dsZS5yZWNhcHRj",
             "aGFlbnRlcnByaXNlLnYxYmV0YTFCGFJlY2FwdGNoYUVudGVycHJpc2VQcm90",
-            "b1ABWl5jbG91ZC5nb29nbGUuY29tL2dvL3JlY2FwdGNoYWVudGVycHJpc2Uv",
-            "YXBpdjFiZXRhMS9yZWNhcHRjaGFlbnRlcnByaXNlcGI7cmVjYXB0Y2hhZW50",
-            "ZXJwcmlzZXBiogIER0NSRaoCKEdvb2dsZS5DbG91ZC5SZWNhcHRjaGFFbnRl",
-            "cnByaXNlLlYxQmV0YTHKAihHb29nbGVcQ2xvdWRcUmVjYXB0Y2hhRW50ZXJw",
-            "cmlzZVxWMWJldGEx6gIrR29vZ2xlOjpDbG91ZDo6UmVjYXB0Y2hhRW50ZXJw",
-            "cmlzZTo6VjFiZXRhMWIGcHJvdG8z"));
+            "b1ABWmFjbG91ZC5nb29nbGUuY29tL2dvL3JlY2FwdGNoYWVudGVycHJpc2Uv",
+            "djIvYXBpdjFiZXRhMS9yZWNhcHRjaGFlbnRlcnByaXNlcGI7cmVjYXB0Y2hh",
+            "ZW50ZXJwcmlzZXBiogIER0NSRaoCKEdvb2dsZS5DbG91ZC5SZWNhcHRjaGFF",
+            "bnRlcnByaXNlLlYxQmV0YTHKAihHb29nbGVcQ2xvdWRcUmVjYXB0Y2hhRW50",
+            "ZXJwcmlzZVxWMWJldGEx6gIrR29vZ2xlOjpDbG91ZDo6UmVjYXB0Y2hhRW50",
+            "ZXJwcmlzZTo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

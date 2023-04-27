@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dataflow.V1Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataflow_v1beta3_generated_MetricsV1Beta3_GetStageExecutionDetails_async]
     using Google.Api.Gax;

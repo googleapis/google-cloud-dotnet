@@ -58,11 +58,14 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return AccessReflection.Descriptor;
             yield return AssetReflection.Descriptor;
             yield return BigqueryExportReflection.Descriptor;
+            yield return CloudDlpDataProfileReflection.Descriptor;
+            yield return CloudDlpInspectionReflection.Descriptor;
             yield return ComplianceReflection.Descriptor;
             yield return ConnectionReflection.Descriptor;
             yield return ContactDetailsReflection.Descriptor;
             yield return ContainerReflection.Descriptor;
             yield return DatabaseReflection.Descriptor;
+            yield return EffectiveSecurityHealthAnalyticsCustomModuleReflection.Descriptor;
             yield return ExfiltrationReflection.Descriptor;
             yield return ExternalSystemReflection.Descriptor;
             yield return FileReflection.Descriptor;
@@ -81,6 +84,8 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return ProcessReflection.Descriptor;
             yield return ResourceReflection.Descriptor;
             yield return RunAssetDiscoveryResponseReflection.Descriptor;
+            yield return SecurityHealthAnalyticsCustomConfigReflection.Descriptor;
+            yield return SecurityHealthAnalyticsCustomModuleReflection.Descriptor;
             yield return SecurityMarksReflection.Descriptor;
             yield return SecuritycenterServiceReflection.Descriptor;
             yield return SourceReflection.Descriptor;

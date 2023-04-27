@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_IndexService_ListIndexes_sync_flattened]
     using Google.Api.Gax;
@@ -36,11 +36,11 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         public void ListIndexes()
         {
             // Create client
-            IndexServiceClient indexServiceClient = IndexServiceClient.Create();
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexes(parent);
+            PagedEnumerable<gcav::ListIndexesResponse, gcav::Index> response = indexServiceClient.ListIndexes(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcav::Index item in response)
@@ -50,7 +50,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListIndexesResponse page in response.AsRawResponses())
+            foreach (gcav::ListIndexesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

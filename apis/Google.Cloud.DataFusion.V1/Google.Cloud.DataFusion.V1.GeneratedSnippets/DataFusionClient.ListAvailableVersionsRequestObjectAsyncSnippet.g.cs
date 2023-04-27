@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.DataFusion.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datafusion_v1_generated_DataFusion_ListAvailableVersions_async]
     using Google.Api.Gax;
@@ -39,15 +39,15 @@ namespace Google.Cloud.DataFusion.V1.Snippets
         public async Task ListAvailableVersionsRequestObjectAsync()
         {
             // Create client
-            DataFusionClient dataFusionClient = await DataFusionClient.CreateAsync();
+            gcdv::DataFusionClient dataFusionClient = await gcdv::DataFusionClient.CreateAsync();
             // Initialize request argument(s)
-            ListAvailableVersionsRequest request = new ListAvailableVersionsRequest
+            gcdv::ListAvailableVersionsRequest request = new gcdv::ListAvailableVersionsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 LatestPatchOnly = false,
             };
             // Make the request
-            PagedAsyncEnumerable<ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersionsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListAvailableVersionsResponse, gcdv::Version> response = dataFusionClient.ListAvailableVersionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Version item) =>
@@ -57,7 +57,7 @@ namespace Google.Cloud.DataFusion.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListAvailableVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListAvailableVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

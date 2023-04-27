@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.PubSub.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START pubsub_v1_generated_PublisherServiceApi_ListTopics_async_flattened_resourceNames]
     using Google.Api.Gax;

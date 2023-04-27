@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.StorageTransfer.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START storagetransfer_v1_generated_StorageTransferService_CreateAgentPool_sync]
     using Google.Cloud.StorageTransfer.V1;

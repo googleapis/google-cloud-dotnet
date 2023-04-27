@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Revisions_GetRevision_async_flattened]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task GetRevisionAsync()
         {
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/services/[SERVICE]/revisions/[REVISION]";
             // Make the request
-            Revision response = await revisionsClient.GetRevisionAsync(name);
+            gcrv::Revision response = await revisionsClient.GetRevisionAsync(name);
         }
     }
     // [END run_v2_generated_Revisions_GetRevision_async_flattened]

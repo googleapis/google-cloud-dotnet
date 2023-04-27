@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Debugger.V2.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.Debugger.V2;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>

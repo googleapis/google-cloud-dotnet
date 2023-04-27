@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/osconfig/v1alpha/.*-csharp/Google.Cloud.OsConfig.V1Alpha
       dest: /owl-bot-staging/Google.Cloud.OsConfig.V1Alpha/Google.Cloud.OsConfig.V1Alpha
-    - source: /google/cloud/osconfig/v1alpha/.*-csharp/Google.Cloud.OsConfig.V1Alpha.Tests
-      dest: /owl-bot-staging/Google.Cloud.OsConfig.V1Alpha/Google.Cloud.OsConfig.V1Alpha.Tests
     - source: /google/cloud/osconfig/v1alpha/.*-csharp/Google.Cloud.OsConfig.V1Alpha.Snippets
       dest: /owl-bot-staging/Google.Cloud.OsConfig.V1Alpha/Google.Cloud.OsConfig.V1Alpha.Snippets
     - source: /google/cloud/osconfig/v1alpha/.*-csharp/Google.Cloud.OsConfig.V1Alpha.GeneratedSnippets

@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/documentai/v1beta3/.*-csharp/Google.Cloud.DocumentAI.V1Beta3
       dest: /owl-bot-staging/Google.Cloud.DocumentAI.V1Beta3/Google.Cloud.DocumentAI.V1Beta3
-    - source: /google/cloud/documentai/v1beta3/.*-csharp/Google.Cloud.DocumentAI.V1Beta3.Tests
-      dest: /owl-bot-staging/Google.Cloud.DocumentAI.V1Beta3/Google.Cloud.DocumentAI.V1Beta3.Tests
     - source: /google/cloud/documentai/v1beta3/.*-csharp/Google.Cloud.DocumentAI.V1Beta3.Snippets
       dest: /owl-bot-staging/Google.Cloud.DocumentAI.V1Beta3/Google.Cloud.DocumentAI.V1Beta3.Snippets
     - source: /google/cloud/documentai/v1beta3/.*-csharp/Google.Cloud.DocumentAI.V1Beta3.GeneratedSnippets

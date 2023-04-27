@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.V2.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async]
+    // [START bigtable_v2_generated_Bigtable_CheckAndMutateRow_async]
     using Google.Cloud.Bigtable.Common.V2;
     using Google.Cloud.Bigtable.V2;
     using Google.Protobuf;
@@ -50,5 +50,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(request);
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_CheckAndMutateRow_async]
+    // [END bigtable_v2_generated_Bigtable_CheckAndMutateRow_async]
 }

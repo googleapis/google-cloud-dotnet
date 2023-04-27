@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Redis.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START redis_v1_generated_CloudRedis_CreateInstance_sync_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;

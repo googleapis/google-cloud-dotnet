@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Batch.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START batch_v1_generated_BatchService_CreateJob_async_flattened]
     using System.Threading.Tasks;
@@ -35,13 +35,13 @@ namespace Google.Cloud.Batch.V1.Snippets
         public async Task CreateJobAsync()
         {
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
-            Job job = new Job();
+            gcbv::Job job = new gcbv::Job();
             string jobId = "";
             // Make the request
-            Job response = await batchServiceClient.CreateJobAsync(parent, job, jobId);
+            gcbv::Job response = await batchServiceClient.CreateJobAsync(parent, job, jobId);
         }
     }
     // [END batch_v1_generated_BatchService_CreateJob_async_flattened]

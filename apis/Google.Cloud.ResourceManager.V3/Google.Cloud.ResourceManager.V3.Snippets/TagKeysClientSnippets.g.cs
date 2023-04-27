@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ResourceManager.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Cloud.Iam.V1;
+    using Google.Cloud.ResourceManager.V3;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -388,6 +389,93 @@ namespace Google.Cloud.ResourceManager.V3.Snippets
             TagKeyName name = TagKeyName.FromTagKey("[TAG_KEY]");
             // Make the request
             TagKey response = await tagKeysClient.GetTagKeyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamespacedTagKey</summary>
+        public void GetNamespacedTagKeyRequestObject()
+        {
+            // Snippet: GetNamespacedTagKey(GetNamespacedTagKeyRequest, CallSettings)
+            // Create client
+            TagKeysClient tagKeysClient = TagKeysClient.Create();
+            // Initialize request argument(s)
+            GetNamespacedTagKeyRequest request = new GetNamespacedTagKeyRequest
+            {
+                TagKeyName = TagKeyName.FromTagKey("[TAG_KEY]"),
+            };
+            // Make the request
+            TagKey response = tagKeysClient.GetNamespacedTagKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamespacedTagKeyAsync</summary>
+        public async Task GetNamespacedTagKeyRequestObjectAsync()
+        {
+            // Snippet: GetNamespacedTagKeyAsync(GetNamespacedTagKeyRequest, CallSettings)
+            // Additional: GetNamespacedTagKeyAsync(GetNamespacedTagKeyRequest, CancellationToken)
+            // Create client
+            TagKeysClient tagKeysClient = await TagKeysClient.CreateAsync();
+            // Initialize request argument(s)
+            GetNamespacedTagKeyRequest request = new GetNamespacedTagKeyRequest
+            {
+                TagKeyName = TagKeyName.FromTagKey("[TAG_KEY]"),
+            };
+            // Make the request
+            TagKey response = await tagKeysClient.GetNamespacedTagKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamespacedTagKey</summary>
+        public void GetNamespacedTagKey()
+        {
+            // Snippet: GetNamespacedTagKey(string, CallSettings)
+            // Create client
+            TagKeysClient tagKeysClient = TagKeysClient.Create();
+            // Initialize request argument(s)
+            string name = "tagKeys/[TAG_KEY]";
+            // Make the request
+            TagKey response = tagKeysClient.GetNamespacedTagKey(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamespacedTagKeyAsync</summary>
+        public async Task GetNamespacedTagKeyAsync()
+        {
+            // Snippet: GetNamespacedTagKeyAsync(string, CallSettings)
+            // Additional: GetNamespacedTagKeyAsync(string, CancellationToken)
+            // Create client
+            TagKeysClient tagKeysClient = await TagKeysClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "tagKeys/[TAG_KEY]";
+            // Make the request
+            TagKey response = await tagKeysClient.GetNamespacedTagKeyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamespacedTagKey</summary>
+        public void GetNamespacedTagKeyResourceNames()
+        {
+            // Snippet: GetNamespacedTagKey(TagKeyName, CallSettings)
+            // Create client
+            TagKeysClient tagKeysClient = TagKeysClient.Create();
+            // Initialize request argument(s)
+            TagKeyName name = TagKeyName.FromTagKey("[TAG_KEY]");
+            // Make the request
+            TagKey response = tagKeysClient.GetNamespacedTagKey(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamespacedTagKeyAsync</summary>
+        public async Task GetNamespacedTagKeyResourceNamesAsync()
+        {
+            // Snippet: GetNamespacedTagKeyAsync(TagKeyName, CallSettings)
+            // Additional: GetNamespacedTagKeyAsync(TagKeyName, CancellationToken)
+            // Create client
+            TagKeysClient tagKeysClient = await TagKeysClient.CreateAsync();
+            // Initialize request argument(s)
+            TagKeyName name = TagKeyName.FromTagKey("[TAG_KEY]");
+            // Make the request
+            TagKey response = await tagKeysClient.GetNamespacedTagKeyAsync(name);
             // End snippet
         }
 

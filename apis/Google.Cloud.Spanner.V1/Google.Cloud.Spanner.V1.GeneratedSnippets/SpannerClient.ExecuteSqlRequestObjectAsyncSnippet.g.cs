@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Spanner.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START spanner_v1_generated_Spanner_ExecuteSql_async]
     using Google.Protobuf;
@@ -37,12 +37,12 @@ namespace Google.Cloud.Spanner.V1.Snippets
         public async Task ExecuteSqlRequestObjectAsync()
         {
             // Create client
-            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            gcsv::SpannerClient spannerClient = await gcsv::SpannerClient.CreateAsync();
             // Initialize request argument(s)
-            ExecuteSqlRequest request = new ExecuteSqlRequest
+            gcsv::ExecuteSqlRequest request = new gcsv::ExecuteSqlRequest
             {
-                SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
-                Transaction = new TransactionSelector(),
+                SessionAsSessionName = gcsv::SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new gcsv::TransactionSelector(),
                 Sql = "",
                 Params = new Struct(),
                 ParamTypes =
@@ -53,15 +53,15 @@ namespace Google.Cloud.Spanner.V1.Snippets
                     },
                 },
                 ResumeToken = ByteString.Empty,
-                QueryMode = ExecuteSqlRequest.Types.QueryMode.Normal,
+                QueryMode = gcsv::ExecuteSqlRequest.Types.QueryMode.Normal,
                 PartitionToken = ByteString.Empty,
                 Seqno = 0L,
-                QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
-                RequestOptions = new RequestOptions(),
+                QueryOptions = new gcsv::ExecuteSqlRequest.Types.QueryOptions(),
+                RequestOptions = new gcsv::RequestOptions(),
                 DataBoostEnabled = false,
             };
             // Make the request
-            ResultSet response = await spannerClient.ExecuteSqlAsync(request);
+            gcsv::ResultSet response = await spannerClient.ExecuteSqlAsync(request);
         }
     }
     // [END spanner_v1_generated_Spanner_ExecuteSql_async]

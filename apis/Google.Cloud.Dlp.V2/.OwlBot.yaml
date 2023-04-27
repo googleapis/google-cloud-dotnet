@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/privacy/dlp/v2/.*-csharp/Google.Cloud.Dlp.V2
       dest: /owl-bot-staging/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2
-    - source: /google/privacy/dlp/v2/.*-csharp/Google.Cloud.Dlp.V2.Tests
-      dest: /owl-bot-staging/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2.Tests
     - source: /google/privacy/dlp/v2/.*-csharp/Google.Cloud.Dlp.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2.Snippets
     - source: /google/privacy/dlp/v2/.*-csharp/Google.Cloud.Dlp.V2.GeneratedSnippets

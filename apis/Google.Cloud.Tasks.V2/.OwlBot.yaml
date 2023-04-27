@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/tasks/v2/.*-csharp/Google.Cloud.Tasks.V2
       dest: /owl-bot-staging/Google.Cloud.Tasks.V2/Google.Cloud.Tasks.V2
-    - source: /google/cloud/tasks/v2/.*-csharp/Google.Cloud.Tasks.V2.Tests
-      dest: /owl-bot-staging/Google.Cloud.Tasks.V2/Google.Cloud.Tasks.V2.Tests
     - source: /google/cloud/tasks/v2/.*-csharp/Google.Cloud.Tasks.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Tasks.V2/Google.Cloud.Tasks.V2.Snippets
     - source: /google/cloud/tasks/v2/.*-csharp/Google.Cloud.Tasks.V2.GeneratedSnippets

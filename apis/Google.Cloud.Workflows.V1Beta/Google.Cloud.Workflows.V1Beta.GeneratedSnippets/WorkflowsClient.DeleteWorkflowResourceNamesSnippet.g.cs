@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Workflows.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START workflows_v1beta_generated_Workflows_DeleteWorkflow_sync_flattened_resourceNames]
     using Google.Cloud.Workflows.Common.V1Beta;

@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.V2.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_PingAndWarm_async_flattened2]
+    // [START bigtable_v2_generated_Bigtable_PingAndWarm_async_flattened2]
     using Google.Cloud.Bigtable.V2;
     using System.Threading.Tasks;
 
@@ -41,5 +41,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             PingAndWarmResponse response = await bigtableServiceApiClient.PingAndWarmAsync(name, appProfileId);
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_PingAndWarm_async_flattened2]
+    // [END bigtable_v2_generated_Bigtable_PingAndWarm_async_flattened2]
 }

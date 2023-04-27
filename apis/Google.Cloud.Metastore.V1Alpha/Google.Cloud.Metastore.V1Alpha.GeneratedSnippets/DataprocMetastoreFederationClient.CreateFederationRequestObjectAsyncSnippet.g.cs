@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Metastore.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START metastore_v1alpha_generated_DataprocMetastoreFederation_CreateFederation_async]
     using Google.Api.Gax.ResourceNames;

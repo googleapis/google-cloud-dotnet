@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/common/.*-csharp/Google.Cloud.Common
       dest: /owl-bot-staging/Google.Cloud.Common/Google.Cloud.Common
-    - source: /google/cloud/common/.*-csharp/Google.Cloud.Common.Tests
-      dest: /owl-bot-staging/Google.Cloud.Common/Google.Cloud.Common.Tests
     - source: /google/cloud/common/.*-csharp/Google.Cloud.Common.Snippets
       dest: /owl-bot-staging/Google.Cloud.Common/Google.Cloud.Common.Snippets
     - source: /google/cloud/common/.*-csharp/Google.Cloud.Common.GeneratedSnippets

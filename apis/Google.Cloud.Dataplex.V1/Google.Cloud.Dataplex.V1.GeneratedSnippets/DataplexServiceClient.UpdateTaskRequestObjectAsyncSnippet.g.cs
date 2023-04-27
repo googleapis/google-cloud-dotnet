@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_UpdateTask_async]
     using Google.LongRunning;
@@ -37,26 +37,26 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task UpdateTaskRequestObjectAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateTaskRequest request = new UpdateTaskRequest
+            gcdv::UpdateTaskRequest request = new gcdv::UpdateTaskRequest
             {
                 UpdateMask = new FieldMask(),
                 Task = new gcdv::Task(),
                 ValidateOnly = false,
             };
             // Make the request
-            Operation<gcdv::Task, OperationMetadata> response = await dataplexServiceClient.UpdateTaskAsync(request);
+            Operation<gcdv::Task, gcdv::OperationMetadata> response = await dataplexServiceClient.UpdateTaskAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcdv::Task, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Task, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcdv::Task result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcdv::Task, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateTaskAsync(operationName);
+            Operation<gcdv::Task, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceUpdateTaskAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

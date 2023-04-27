@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START bigquerydatapolicy_v1beta1_generated_DataPolicyService_DeleteDataPolicy_sync_flattened]
     using Google.Cloud.BigQuery.DataPolicies.V1Beta1;

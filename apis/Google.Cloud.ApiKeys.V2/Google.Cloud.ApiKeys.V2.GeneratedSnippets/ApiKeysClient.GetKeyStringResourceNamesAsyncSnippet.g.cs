@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ApiKeys.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START apikeys_v2_generated_ApiKeys_GetKeyString_async_flattened_resourceNames]
     using Google.Cloud.ApiKeys.V2;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Billing.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudbilling_v1_generated_CloudCatalog_ListServices_sync_flattened]
     using Google.Api.Gax;

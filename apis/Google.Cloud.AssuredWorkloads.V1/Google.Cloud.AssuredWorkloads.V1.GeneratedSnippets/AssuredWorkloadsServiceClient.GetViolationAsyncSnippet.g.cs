@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AssuredWorkloads.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START assuredworkloads_v1_generated_AssuredWorkloadsService_GetViolation_async_flattened]
     using Google.Cloud.AssuredWorkloads.V1;

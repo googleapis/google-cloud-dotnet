@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Jobs_DeleteJob_async]
     using Google.LongRunning;
@@ -36,31 +36,31 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task DeleteJobRequestObjectAsync()
         {
             // Create client
-            JobsClient jobsClient = await JobsClient.CreateAsync();
+            gcrv::JobsClient jobsClient = await gcrv::JobsClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteJobRequest request = new DeleteJobRequest
+            gcrv::DeleteJobRequest request = new gcrv::DeleteJobRequest
             {
-                JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                JobName = gcrv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 ValidateOnly = false,
                 Etag = "",
             };
             // Make the request
-            Operation<Job, Job> response = await jobsClient.DeleteJobAsync(request);
+            Operation<gcrv::Job, gcrv::Job> response = await jobsClient.DeleteJobAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Job, Job> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcrv::Job, gcrv::Job> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Job result = completedResponse.Result;
+            gcrv::Job result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Job, Job> retrievedResponse = await jobsClient.PollOnceDeleteJobAsync(operationName);
+            Operation<gcrv::Job, gcrv::Job> retrievedResponse = await jobsClient.PollOnceDeleteJobAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Job retrievedResult = retrievedResponse.Result;
+                gcrv::Job retrievedResult = retrievedResponse.Result;
             }
         }
     }

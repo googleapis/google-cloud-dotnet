@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Analytics.Admin.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START analyticsadmin_v1beta_generated_AnalyticsAdminService_CreateCustomDimension_sync]
     using Google.Analytics.Admin.V1Beta;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ManagedIdentities.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START managedidentities_v1_generated_ManagedIdentitiesService_ReconfigureTrust_async_flattened]
     using Google.Cloud.ManagedIdentities.V1;

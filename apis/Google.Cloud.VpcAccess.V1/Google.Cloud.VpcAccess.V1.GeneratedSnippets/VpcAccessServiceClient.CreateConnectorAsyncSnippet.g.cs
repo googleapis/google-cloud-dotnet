@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.VpcAccess.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START vpcaccess_v1_generated_VpcAccessService_CreateConnector_async_flattened]
     using Google.Cloud.VpcAccess.V1;

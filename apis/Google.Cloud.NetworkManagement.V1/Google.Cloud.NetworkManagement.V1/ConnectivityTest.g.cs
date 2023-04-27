@@ -913,8 +913,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     /// The Project ID can be derived from the URI if you provide a VM instance or
     /// network URI.
     /// The following are two cases where you must provide the project ID:
-    /// 1. Only the IP address is specified, and the IP address is within a GCP
-    /// project.
+    /// 1. Only the IP address is specified, and the IP address is within a Google
+    /// Cloud project.
     /// 2. When you are using Shared VPC and the IP address that you provide is
     /// from the service project. In this case, the network that the IP address
     /// resides in is defined in the host project.
@@ -1242,13 +1242,13 @@ namespace Google.Cloud.NetworkManagement.V1 {
         /// </summary>
         [pbr::OriginalName("NETWORK_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// A network hosted within Google Cloud Platform.
+        /// A network hosted within Google Cloud.
         /// To receive more detailed output, specify the URI for the source or
         /// destination network.
         /// </summary>
         [pbr::OriginalName("GCP_NETWORK")] GcpNetwork = 1,
         /// <summary>
-        /// A network hosted outside of Google Cloud Platform.
+        /// A network hosted outside of Google Cloud.
         /// This can be an on-premises network, or a network hosted by another cloud
         /// provider.
         /// </summary>

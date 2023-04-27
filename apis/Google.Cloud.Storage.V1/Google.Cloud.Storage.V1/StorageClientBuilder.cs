@@ -45,6 +45,11 @@ namespace Google.Cloud.Storage.V1
         internal bool GZipEnabled { get; set; } = true;
 
         /// <summary>
+        /// The scheduler to use for delays (e.g. in retry), for the sake of testability.
+        /// </summary>
+        internal IScheduler Scheduler { get; set; }
+
+        /// <summary>
         /// Creates a new builder with default settings.
         /// </summary>
         public StorageClientBuilder()
@@ -58,7 +63,7 @@ namespace Google.Cloud.Storage.V1
             Validate();
             var initializer = CreateServiceInitializer();
             var service = new StorageService(initializer);
-            return new StorageClientImpl(service, EncryptionKey);
+            return new StorageClientImpl(service, EncryptionKey, Scheduler);
         }
 
         /// <inheritdoc />
@@ -67,7 +72,7 @@ namespace Google.Cloud.Storage.V1
             Validate();
             var initializer = await CreateServiceInitializerAsync(cancellationToken).ConfigureAwait(false);
             var service = new StorageService(initializer);
-            return new StorageClientImpl(service, EncryptionKey);
+            return new StorageClientImpl(service, EncryptionKey, Scheduler);
         }
 
         /// <inheritdoc />

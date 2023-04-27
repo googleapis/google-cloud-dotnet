@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Firestore.Admin.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START firestore_v1_generated_FirestoreAdmin_UpdateField_async]
     using Google.LongRunning;
@@ -37,25 +37,25 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         public async Task UpdateFieldRequestObjectAsync()
         {
             // Create client
-            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateFieldRequest request = new UpdateFieldRequest
+            gcfav::UpdateFieldRequest request = new gcfav::UpdateFieldRequest
             {
                 Field = new gcfav::Field(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<gcfav::Field, FieldOperationMetadata> response = await firestoreAdminClient.UpdateFieldAsync(request);
+            Operation<gcfav::Field, gcfav::FieldOperationMetadata> response = await firestoreAdminClient.UpdateFieldAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<gcfav::Field, FieldOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcfav::Field, gcfav::FieldOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             gcfav::Field result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<gcfav::Field, FieldOperationMetadata> retrievedResponse = await firestoreAdminClient.PollOnceUpdateFieldAsync(operationName);
+            Operation<gcfav::Field, gcfav::FieldOperationMetadata> retrievedResponse = await firestoreAdminClient.PollOnceUpdateFieldAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

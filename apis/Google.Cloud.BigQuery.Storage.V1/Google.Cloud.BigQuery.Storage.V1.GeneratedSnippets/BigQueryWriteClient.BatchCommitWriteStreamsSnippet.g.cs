@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.Storage.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START bigquerystorage_v1_generated_BigQueryWrite_BatchCommitWriteStreams_sync_flattened]
     using Google.Cloud.BigQuery.Storage.V1;

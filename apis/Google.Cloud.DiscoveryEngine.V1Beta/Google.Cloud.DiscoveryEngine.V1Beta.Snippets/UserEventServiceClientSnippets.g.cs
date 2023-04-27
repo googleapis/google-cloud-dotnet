@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api;
+    using Google.Cloud.DiscoveryEngine.V1Beta;
     using Google.LongRunning;
     using System.Threading.Tasks;
 

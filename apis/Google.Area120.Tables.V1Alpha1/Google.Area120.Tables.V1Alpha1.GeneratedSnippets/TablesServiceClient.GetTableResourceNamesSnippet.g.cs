@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Area120.Tables.V1Alpha1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START area120tables_v1alpha1_generated_TablesService_GetTable_sync_flattened_resourceNames]
     using Google.Area120.Tables.V1Alpha1;

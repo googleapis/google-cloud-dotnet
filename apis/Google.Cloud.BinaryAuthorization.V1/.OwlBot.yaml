@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/binaryauthorization/v1/.*-csharp/Google.Cloud.BinaryAuthorization.V1
       dest: /owl-bot-staging/Google.Cloud.BinaryAuthorization.V1/Google.Cloud.BinaryAuthorization.V1
-    - source: /google/cloud/binaryauthorization/v1/.*-csharp/Google.Cloud.BinaryAuthorization.V1.Tests
-      dest: /owl-bot-staging/Google.Cloud.BinaryAuthorization.V1/Google.Cloud.BinaryAuthorization.V1.Tests
     - source: /google/cloud/binaryauthorization/v1/.*-csharp/Google.Cloud.BinaryAuthorization.V1.Snippets
       dest: /owl-bot-staging/Google.Cloud.BinaryAuthorization.V1/Google.Cloud.BinaryAuthorization.V1.Snippets
     - source: /google/cloud/binaryauthorization/v1/.*-csharp/Google.Cloud.BinaryAuthorization.V1.GeneratedSnippets

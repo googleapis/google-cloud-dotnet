@@ -74,10 +74,9 @@ namespace Google.Cloud.Storage.V1
             Object obj = options?.ExtraMetadata ?? new Object();
             var request = Service.Objects.Rewrite(obj, sourceBucket, sourceObjectName, destinationBucket, destinationObjectName);
 
-            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.MaybeIdempotent(options?.IfGenerationMatch);
-            RetryHandler.MarkAsRetriable(request, retryOptions);
-
             options?.ModifyRequest(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.MaybeIdempotent(options?.IfGenerationMatch);
+            MarkAsRetriable(request, retryOptions);
             ApplyEncryptionKey(options?.EncryptionKey, options?.KmsKeyName, request);
             request.ModifyRequest += (options?.SourceEncryptionKey ?? EncryptionKey).ModifyRequestForRewriteSource;
             return request;

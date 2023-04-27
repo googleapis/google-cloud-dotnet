@@ -641,9 +641,13 @@ namespace Google.Cloud.ResourceManager.V3
         /// identified parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the organization or folder whose folders are
-        /// being listed.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The name of the parent resource whose folders are being listed.
+        /// Only children of this parent resource are listed; descendants are not
+        /// listed.
+        /// 
+        /// If the parent is a folder, use the value `folders/{folder_id}`. If the
+        /// parent is an organization, use the value `organizations/{org_id}`.
+        /// 
         /// Access to this method is controlled by checking the
         /// `resourcemanager.folders.list` permission on the `parent`.
         /// </param>
@@ -675,9 +679,13 @@ namespace Google.Cloud.ResourceManager.V3
         /// identified parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the organization or folder whose folders are
-        /// being listed.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The name of the parent resource whose folders are being listed.
+        /// Only children of this parent resource are listed; descendants are not
+        /// listed.
+        /// 
+        /// If the parent is a folder, use the value `folders/{folder_id}`. If the
+        /// parent is an organization, use the value `organizations/{org_id}`.
+        /// 
         /// Access to this method is controlled by checking the
         /// `resourcemanager.folders.list` permission on the `parent`.
         /// </param>
@@ -709,9 +717,13 @@ namespace Google.Cloud.ResourceManager.V3
         /// identified parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the organization or folder whose folders are
-        /// being listed.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The name of the parent resource whose folders are being listed.
+        /// Only children of this parent resource are listed; descendants are not
+        /// listed.
+        /// 
+        /// If the parent is a folder, use the value `folders/{folder_id}`. If the
+        /// parent is an organization, use the value `organizations/{org_id}`.
+        /// 
         /// Access to this method is controlled by checking the
         /// `resourcemanager.folders.list` permission on the `parent`.
         /// </param>
@@ -743,9 +755,13 @@ namespace Google.Cloud.ResourceManager.V3
         /// identified parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the organization or folder whose folders are
-        /// being listed.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The name of the parent resource whose folders are being listed.
+        /// Only children of this parent resource are listed; descendants are not
+        /// listed.
+        /// 
+        /// If the parent is a folder, use the value `folders/{folder_id}`. If the
+        /// parent is an organization, use the value `organizations/{org_id}`.
+        /// 
         /// Access to this method is controlled by checking the
         /// `resourcemanager.folders.list` permission on the `parent`.
         /// </param>
@@ -1074,8 +1090,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// identified parent.
         /// </summary>
         /// <param name="folder">
-        /// Required. The folder being created, only the display name and parent will be
-        /// consulted. All other fields will be ignored.
+        /// Required. The folder being created, only the display name and parent will
+        /// be consulted. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1115,8 +1131,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// identified parent.
         /// </summary>
         /// <param name="folder">
-        /// Required. The folder being created, only the display name and parent will be
-        /// consulted. All other fields will be ignored.
+        /// Required. The folder being created, only the display name and parent will
+        /// be consulted. All other fields will be ignored.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1156,8 +1172,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// identified parent.
         /// </summary>
         /// <param name="folder">
-        /// Required. The folder being created, only the display name and parent will be
-        /// consulted. All other fields will be ignored.
+        /// Required. The folder being created, only the display name and parent will
+        /// be consulted. All other fields will be ignored.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1168,7 +1184,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates a folder, changing its `display_name`.
         /// Changes to the folder `display_name` will be rejected if they violate
         /// either the `display_name` formatting rules or the naming constraints
-        /// described in the [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
+        /// described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation.
         /// 
         /// The folder's `display_name` must start and end with a letter or digit,
         /// may contain letters, digits, spaces, hyphens and underscores and can be
@@ -1191,7 +1209,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates a folder, changing its `display_name`.
         /// Changes to the folder `display_name` will be rejected if they violate
         /// either the `display_name` formatting rules or the naming constraints
-        /// described in the [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
+        /// described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation.
         /// 
         /// The folder's `display_name` must start and end with a letter or digit,
         /// may contain letters, digits, spaces, hyphens and underscores and can be
@@ -1214,7 +1234,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates a folder, changing its `display_name`.
         /// Changes to the folder `display_name` will be rejected if they violate
         /// either the `display_name` formatting rules or the naming constraints
-        /// described in the [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
+        /// described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation.
         /// 
         /// The folder's `display_name` must start and end with a letter or digit,
         /// may contain letters, digits, spaces, hyphens and underscores and can be
@@ -1263,7 +1285,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates a folder, changing its `display_name`.
         /// Changes to the folder `display_name` will be rejected if they violate
         /// either the `display_name` formatting rules or the naming constraints
-        /// described in the [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
+        /// described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation.
         /// 
         /// The folder's `display_name` must start and end with a letter or digit,
         /// may contain letters, digits, spaces, hyphens and underscores and can be
@@ -1277,8 +1301,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// in the Status.details field.
         /// </summary>
         /// <param name="folder">
-        /// Required. The new definition of the Folder. It must include the `name` field, which
-        /// cannot be changed.
+        /// Required. The new definition of the Folder. It must include the `name`
+        /// field, which cannot be changed.
         /// </param>
         /// <param name="updateMask">
         /// Required. Fields to be updated.
@@ -1297,7 +1321,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates a folder, changing its `display_name`.
         /// Changes to the folder `display_name` will be rejected if they violate
         /// either the `display_name` formatting rules or the naming constraints
-        /// described in the [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
+        /// described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation.
         /// 
         /// The folder's `display_name` must start and end with a letter or digit,
         /// may contain letters, digits, spaces, hyphens and underscores and can be
@@ -1311,8 +1337,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// in the Status.details field.
         /// </summary>
         /// <param name="folder">
-        /// Required. The new definition of the Folder. It must include the `name` field, which
-        /// cannot be changed.
+        /// Required. The new definition of the Folder. It must include the `name`
+        /// field, which cannot be changed.
         /// </param>
         /// <param name="updateMask">
         /// Required. Fields to be updated.
@@ -1331,7 +1357,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates a folder, changing its `display_name`.
         /// Changes to the folder `display_name` will be rejected if they violate
         /// either the `display_name` formatting rules or the naming constraints
-        /// described in the [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
+        /// described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation.
         /// 
         /// The folder's `display_name` must start and end with a letter or digit,
         /// may contain letters, digits, spaces, hyphens and underscores and can be
@@ -1345,8 +1373,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// in the Status.details field.
         /// </summary>
         /// <param name="folder">
-        /// Required. The new definition of the Folder. It must include the `name` field, which
-        /// cannot be changed.
+        /// Required. The new definition of the Folder. It must include the `name`
+        /// field, which cannot be changed.
         /// </param>
         /// <param name="updateMask">
         /// Required. Fields to be updated.
@@ -1372,9 +1400,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// `FolderOperation` message as an aid to stateless clients.
         /// Folder moves will be rejected if they violate either the naming, height,
         /// or fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.move` permission on the
-        /// folder's current and proposed new parent.
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.move`
+        /// permission on the folder's current and proposed new parent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1397,9 +1425,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// `FolderOperation` message as an aid to stateless clients.
         /// Folder moves will be rejected if they violate either the naming, height,
         /// or fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.move` permission on the
-        /// folder's current and proposed new parent.
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.move`
+        /// permission on the folder's current and proposed new parent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1422,9 +1450,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// `FolderOperation` message as an aid to stateless clients.
         /// Folder moves will be rejected if they violate either the naming, height,
         /// or fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.move` permission on the
-        /// folder's current and proposed new parent.
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.move`
+        /// permission on the folder's current and proposed new parent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1473,18 +1501,18 @@ namespace Google.Cloud.ResourceManager.V3
         /// `FolderOperation` message as an aid to stateless clients.
         /// Folder moves will be rejected if they violate either the naming, height,
         /// or fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.move` permission on the
-        /// folder's current and proposed new parent.
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.move`
+        /// permission on the folder's current and proposed new parent.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Folder to move.
         /// Must be of the form folders/{folder_id}
         /// </param>
         /// <param name="destinationParent">
-        /// Required. The resource name of the folder or organization which should be the
-        /// folder's new parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the folder or organization which should be
+        /// the folder's new parent. Must be of the form `folders/{folder_id}` or
+        /// `organizations/{org_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1510,18 +1538,18 @@ namespace Google.Cloud.ResourceManager.V3
         /// `FolderOperation` message as an aid to stateless clients.
         /// Folder moves will be rejected if they violate either the naming, height,
         /// or fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.move` permission on the
-        /// folder's current and proposed new parent.
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.move`
+        /// permission on the folder's current and proposed new parent.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Folder to move.
         /// Must be of the form folders/{folder_id}
         /// </param>
         /// <param name="destinationParent">
-        /// Required. The resource name of the folder or organization which should be the
-        /// folder's new parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the folder or organization which should be
+        /// the folder's new parent. Must be of the form `folders/{folder_id}` or
+        /// `organizations/{org_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1547,18 +1575,18 @@ namespace Google.Cloud.ResourceManager.V3
         /// `FolderOperation` message as an aid to stateless clients.
         /// Folder moves will be rejected if they violate either the naming, height,
         /// or fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.move` permission on the
-        /// folder's current and proposed new parent.
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.move`
+        /// permission on the folder's current and proposed new parent.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Folder to move.
         /// Must be of the form folders/{folder_id}
         /// </param>
         /// <param name="destinationParent">
-        /// Required. The resource name of the folder or organization which should be the
-        /// folder's new parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the folder or organization which should be
+        /// the folder's new parent. Must be of the form `folders/{folder_id}` or
+        /// `organizations/{org_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1580,18 +1608,18 @@ namespace Google.Cloud.ResourceManager.V3
         /// `FolderOperation` message as an aid to stateless clients.
         /// Folder moves will be rejected if they violate either the naming, height,
         /// or fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.move` permission on the
-        /// folder's current and proposed new parent.
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.move`
+        /// permission on the folder's current and proposed new parent.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Folder to move.
         /// Must be of the form folders/{folder_id}
         /// </param>
         /// <param name="destinationParent">
-        /// Required. The resource name of the folder or organization which should be the
-        /// folder's new parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the folder or organization which should be
+        /// the folder's new parent. Must be of the form `folders/{folder_id}` or
+        /// `organizations/{org_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1617,18 +1645,18 @@ namespace Google.Cloud.ResourceManager.V3
         /// `FolderOperation` message as an aid to stateless clients.
         /// Folder moves will be rejected if they violate either the naming, height,
         /// or fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.move` permission on the
-        /// folder's current and proposed new parent.
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.move`
+        /// permission on the folder's current and proposed new parent.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Folder to move.
         /// Must be of the form folders/{folder_id}
         /// </param>
         /// <param name="destinationParent">
-        /// Required. The resource name of the folder or organization which should be the
-        /// folder's new parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the folder or organization which should be
+        /// the folder's new parent. Must be of the form `folders/{folder_id}` or
+        /// `organizations/{org_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1654,18 +1682,18 @@ namespace Google.Cloud.ResourceManager.V3
         /// `FolderOperation` message as an aid to stateless clients.
         /// Folder moves will be rejected if they violate either the naming, height,
         /// or fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.move` permission on the
-        /// folder's current and proposed new parent.
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.move`
+        /// permission on the folder's current and proposed new parent.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Folder to move.
         /// Must be of the form folders/{folder_id}
         /// </param>
         /// <param name="destinationParent">
-        /// Required. The resource name of the folder or organization which should be the
-        /// folder's new parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the folder or organization which should be
+        /// the folder's new parent. Must be of the form `folders/{folder_id}` or
+        /// `organizations/{org_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1674,11 +1702,13 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Requests deletion of a folder. The folder is moved into the
-        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED] state
-        /// immediately, and is deleted approximately 30 days later. This method may
-        /// only be called on an empty folder, where a folder is empty if it doesn't
-        /// contain any folders or projects in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state.
-        /// If called on a folder in [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// state immediately, and is deleted approximately 30 days later. This method
+        /// may only be called on an empty folder, where a folder is empty if it
+        /// doesn't contain any folders or projects in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. If
+        /// called on a folder in
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
         /// state the operation will result in a no-op success.
         /// The caller must have `resourcemanager.folders.delete` permission on the
         /// identified folder.
@@ -1691,11 +1721,13 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Requests deletion of a folder. The folder is moved into the
-        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED] state
-        /// immediately, and is deleted approximately 30 days later. This method may
-        /// only be called on an empty folder, where a folder is empty if it doesn't
-        /// contain any folders or projects in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state.
-        /// If called on a folder in [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// state immediately, and is deleted approximately 30 days later. This method
+        /// may only be called on an empty folder, where a folder is empty if it
+        /// doesn't contain any folders or projects in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. If
+        /// called on a folder in
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
         /// state the operation will result in a no-op success.
         /// The caller must have `resourcemanager.folders.delete` permission on the
         /// identified folder.
@@ -1708,11 +1740,13 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Requests deletion of a folder. The folder is moved into the
-        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED] state
-        /// immediately, and is deleted approximately 30 days later. This method may
-        /// only be called on an empty folder, where a folder is empty if it doesn't
-        /// contain any folders or projects in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state.
-        /// If called on a folder in [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// state immediately, and is deleted approximately 30 days later. This method
+        /// may only be called on an empty folder, where a folder is empty if it
+        /// doesn't contain any folders or projects in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. If
+        /// called on a folder in
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
         /// state the operation will result in a no-op success.
         /// The caller must have `resourcemanager.folders.delete` permission on the
         /// identified folder.
@@ -1751,11 +1785,13 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Requests deletion of a folder. The folder is moved into the
-        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED] state
-        /// immediately, and is deleted approximately 30 days later. This method may
-        /// only be called on an empty folder, where a folder is empty if it doesn't
-        /// contain any folders or projects in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state.
-        /// If called on a folder in [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// state immediately, and is deleted approximately 30 days later. This method
+        /// may only be called on an empty folder, where a folder is empty if it
+        /// doesn't contain any folders or projects in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. If
+        /// called on a folder in
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
         /// state the operation will result in a no-op success.
         /// The caller must have `resourcemanager.folders.delete` permission on the
         /// identified folder.
@@ -1774,11 +1810,13 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Requests deletion of a folder. The folder is moved into the
-        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED] state
-        /// immediately, and is deleted approximately 30 days later. This method may
-        /// only be called on an empty folder, where a folder is empty if it doesn't
-        /// contain any folders or projects in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state.
-        /// If called on a folder in [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// state immediately, and is deleted approximately 30 days later. This method
+        /// may only be called on an empty folder, where a folder is empty if it
+        /// doesn't contain any folders or projects in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. If
+        /// called on a folder in
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
         /// state the operation will result in a no-op success.
         /// The caller must have `resourcemanager.folders.delete` permission on the
         /// identified folder.
@@ -1797,11 +1835,13 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Requests deletion of a folder. The folder is moved into the
-        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED] state
-        /// immediately, and is deleted approximately 30 days later. This method may
-        /// only be called on an empty folder, where a folder is empty if it doesn't
-        /// contain any folders or projects in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state.
-        /// If called on a folder in [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// state immediately, and is deleted approximately 30 days later. This method
+        /// may only be called on an empty folder, where a folder is empty if it
+        /// doesn't contain any folders or projects in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. If
+        /// called on a folder in
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
         /// state the operation will result in a no-op success.
         /// The caller must have `resourcemanager.folders.delete` permission on the
         /// identified folder.
@@ -1817,11 +1857,13 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Requests deletion of a folder. The folder is moved into the
-        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED] state
-        /// immediately, and is deleted approximately 30 days later. This method may
-        /// only be called on an empty folder, where a folder is empty if it doesn't
-        /// contain any folders or projects in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state.
-        /// If called on a folder in [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// state immediately, and is deleted approximately 30 days later. This method
+        /// may only be called on an empty folder, where a folder is empty if it
+        /// doesn't contain any folders or projects in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. If
+        /// called on a folder in
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
         /// state the operation will result in a no-op success.
         /// The caller must have `resourcemanager.folders.delete` permission on the
         /// identified folder.
@@ -1840,11 +1882,13 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Requests deletion of a folder. The folder is moved into the
-        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED] state
-        /// immediately, and is deleted approximately 30 days later. This method may
-        /// only be called on an empty folder, where a folder is empty if it doesn't
-        /// contain any folders or projects in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state.
-        /// If called on a folder in [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// state immediately, and is deleted approximately 30 days later. This method
+        /// may only be called on an empty folder, where a folder is empty if it
+        /// doesn't contain any folders or projects in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. If
+        /// called on a folder in
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
         /// state the operation will result in a no-op success.
         /// The caller must have `resourcemanager.folders.delete` permission on the
         /// identified folder.
@@ -1863,11 +1907,13 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Requests deletion of a folder. The folder is moved into the
-        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED] state
-        /// immediately, and is deleted approximately 30 days later. This method may
-        /// only be called on an empty folder, where a folder is empty if it doesn't
-        /// contain any folders or projects in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state.
-        /// If called on a folder in [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// state immediately, and is deleted approximately 30 days later. This method
+        /// may only be called on an empty folder, where a folder is empty if it
+        /// doesn't contain any folders or projects in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. If
+        /// called on a folder in
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
         /// state the operation will result in a no-op success.
         /// The caller must have `resourcemanager.folders.delete` permission on the
         /// identified folder.
@@ -1883,14 +1929,16 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Cancels the deletion request for a folder. This method may be called on a
-        /// folder in any state. If the folder is in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE]
-        /// state the result will be a no-op success. In order to succeed, the folder's
-        /// parent must be in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In addition,
-        /// reintroducing the folder into the tree must not violate folder naming,
-        /// height, and fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.undelete` permission on the
-        /// identified folder.
+        /// folder in any state. If the folder is in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state the
+        /// result will be a no-op success. In order to succeed, the folder's parent
+        /// must be in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In
+        /// addition, reintroducing the folder into the tree must not violate folder
+        /// naming, height, and fanout constraints described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.undelete`
+        /// permission on the identified folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1900,14 +1948,16 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Cancels the deletion request for a folder. This method may be called on a
-        /// folder in any state. If the folder is in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE]
-        /// state the result will be a no-op success. In order to succeed, the folder's
-        /// parent must be in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In addition,
-        /// reintroducing the folder into the tree must not violate folder naming,
-        /// height, and fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.undelete` permission on the
-        /// identified folder.
+        /// folder in any state. If the folder is in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state the
+        /// result will be a no-op success. In order to succeed, the folder's parent
+        /// must be in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In
+        /// addition, reintroducing the folder into the tree must not violate folder
+        /// naming, height, and fanout constraints described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.undelete`
+        /// permission on the identified folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1917,14 +1967,16 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Cancels the deletion request for a folder. This method may be called on a
-        /// folder in any state. If the folder is in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE]
-        /// state the result will be a no-op success. In order to succeed, the folder's
-        /// parent must be in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In addition,
-        /// reintroducing the folder into the tree must not violate folder naming,
-        /// height, and fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.undelete` permission on the
-        /// identified folder.
+        /// folder in any state. If the folder is in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state the
+        /// result will be a no-op success. In order to succeed, the folder's parent
+        /// must be in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In
+        /// addition, reintroducing the folder into the tree must not violate folder
+        /// naming, height, and fanout constraints described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.undelete`
+        /// permission on the identified folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1960,14 +2012,16 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Cancels the deletion request for a folder. This method may be called on a
-        /// folder in any state. If the folder is in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE]
-        /// state the result will be a no-op success. In order to succeed, the folder's
-        /// parent must be in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In addition,
-        /// reintroducing the folder into the tree must not violate folder naming,
-        /// height, and fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.undelete` permission on the
-        /// identified folder.
+        /// folder in any state. If the folder is in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state the
+        /// result will be a no-op success. In order to succeed, the folder's parent
+        /// must be in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In
+        /// addition, reintroducing the folder into the tree must not violate folder
+        /// naming, height, and fanout constraints described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.undelete`
+        /// permission on the identified folder.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the folder to undelete.
@@ -1983,14 +2037,16 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Cancels the deletion request for a folder. This method may be called on a
-        /// folder in any state. If the folder is in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE]
-        /// state the result will be a no-op success. In order to succeed, the folder's
-        /// parent must be in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In addition,
-        /// reintroducing the folder into the tree must not violate folder naming,
-        /// height, and fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.undelete` permission on the
-        /// identified folder.
+        /// folder in any state. If the folder is in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state the
+        /// result will be a no-op success. In order to succeed, the folder's parent
+        /// must be in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In
+        /// addition, reintroducing the folder into the tree must not violate folder
+        /// naming, height, and fanout constraints described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.undelete`
+        /// permission on the identified folder.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the folder to undelete.
@@ -2006,14 +2062,16 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Cancels the deletion request for a folder. This method may be called on a
-        /// folder in any state. If the folder is in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE]
-        /// state the result will be a no-op success. In order to succeed, the folder's
-        /// parent must be in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In addition,
-        /// reintroducing the folder into the tree must not violate folder naming,
-        /// height, and fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.undelete` permission on the
-        /// identified folder.
+        /// folder in any state. If the folder is in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state the
+        /// result will be a no-op success. In order to succeed, the folder's parent
+        /// must be in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In
+        /// addition, reintroducing the folder into the tree must not violate folder
+        /// naming, height, and fanout constraints described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.undelete`
+        /// permission on the identified folder.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the folder to undelete.
@@ -2026,14 +2084,16 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Cancels the deletion request for a folder. This method may be called on a
-        /// folder in any state. If the folder is in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE]
-        /// state the result will be a no-op success. In order to succeed, the folder's
-        /// parent must be in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In addition,
-        /// reintroducing the folder into the tree must not violate folder naming,
-        /// height, and fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.undelete` permission on the
-        /// identified folder.
+        /// folder in any state. If the folder is in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state the
+        /// result will be a no-op success. In order to succeed, the folder's parent
+        /// must be in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In
+        /// addition, reintroducing the folder into the tree must not violate folder
+        /// naming, height, and fanout constraints described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.undelete`
+        /// permission on the identified folder.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the folder to undelete.
@@ -2049,14 +2109,16 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Cancels the deletion request for a folder. This method may be called on a
-        /// folder in any state. If the folder is in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE]
-        /// state the result will be a no-op success. In order to succeed, the folder's
-        /// parent must be in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In addition,
-        /// reintroducing the folder into the tree must not violate folder naming,
-        /// height, and fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.undelete` permission on the
-        /// identified folder.
+        /// folder in any state. If the folder is in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state the
+        /// result will be a no-op success. In order to succeed, the folder's parent
+        /// must be in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In
+        /// addition, reintroducing the folder into the tree must not violate folder
+        /// naming, height, and fanout constraints described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.undelete`
+        /// permission on the identified folder.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the folder to undelete.
@@ -2072,14 +2134,16 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Cancels the deletion request for a folder. This method may be called on a
-        /// folder in any state. If the folder is in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE]
-        /// state the result will be a no-op success. In order to succeed, the folder's
-        /// parent must be in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In addition,
-        /// reintroducing the folder into the tree must not violate folder naming,
-        /// height, and fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.undelete` permission on the
-        /// identified folder.
+        /// folder in any state. If the folder is in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state the
+        /// result will be a no-op success. In order to succeed, the folder's parent
+        /// must be in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In
+        /// addition, reintroducing the folder into the tree must not violate folder
+        /// naming, height, and fanout constraints described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.undelete`
+        /// permission on the identified folder.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the folder to undelete.
@@ -2945,7 +3009,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates a folder, changing its `display_name`.
         /// Changes to the folder `display_name` will be rejected if they violate
         /// either the `display_name` formatting rules or the naming constraints
-        /// described in the [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
+        /// described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation.
         /// 
         /// The folder's `display_name` must start and end with a letter or digit,
         /// may contain letters, digits, spaces, hyphens and underscores and can be
@@ -2971,7 +3037,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates a folder, changing its `display_name`.
         /// Changes to the folder `display_name` will be rejected if they violate
         /// either the `display_name` formatting rules or the naming constraints
-        /// described in the [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
+        /// described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation.
         /// 
         /// The folder's `display_name` must start and end with a letter or digit,
         /// may contain letters, digits, spaces, hyphens and underscores and can be
@@ -3011,9 +3079,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// `FolderOperation` message as an aid to stateless clients.
         /// Folder moves will be rejected if they violate either the naming, height,
         /// or fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.move` permission on the
-        /// folder's current and proposed new parent.
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.move`
+        /// permission on the folder's current and proposed new parent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3039,9 +3107,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// `FolderOperation` message as an aid to stateless clients.
         /// Folder moves will be rejected if they violate either the naming, height,
         /// or fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.move` permission on the
-        /// folder's current and proposed new parent.
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.move`
+        /// permission on the folder's current and proposed new parent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3057,11 +3125,13 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Requests deletion of a folder. The folder is moved into the
-        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED] state
-        /// immediately, and is deleted approximately 30 days later. This method may
-        /// only be called on an empty folder, where a folder is empty if it doesn't
-        /// contain any folders or projects in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state.
-        /// If called on a folder in [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// state immediately, and is deleted approximately 30 days later. This method
+        /// may only be called on an empty folder, where a folder is empty if it
+        /// doesn't contain any folders or projects in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. If
+        /// called on a folder in
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
         /// state the operation will result in a no-op success.
         /// The caller must have `resourcemanager.folders.delete` permission on the
         /// identified folder.
@@ -3077,11 +3147,13 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Requests deletion of a folder. The folder is moved into the
-        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED] state
-        /// immediately, and is deleted approximately 30 days later. This method may
-        /// only be called on an empty folder, where a folder is empty if it doesn't
-        /// contain any folders or projects in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state.
-        /// If called on a folder in [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+        /// state immediately, and is deleted approximately 30 days later. This method
+        /// may only be called on an empty folder, where a folder is empty if it
+        /// doesn't contain any folders or projects in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. If
+        /// called on a folder in
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
         /// state the operation will result in a no-op success.
         /// The caller must have `resourcemanager.folders.delete` permission on the
         /// identified folder.
@@ -3100,14 +3172,16 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Cancels the deletion request for a folder. This method may be called on a
-        /// folder in any state. If the folder is in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE]
-        /// state the result will be a no-op success. In order to succeed, the folder's
-        /// parent must be in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In addition,
-        /// reintroducing the folder into the tree must not violate folder naming,
-        /// height, and fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.undelete` permission on the
-        /// identified folder.
+        /// folder in any state. If the folder is in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state the
+        /// result will be a no-op success. In order to succeed, the folder's parent
+        /// must be in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In
+        /// addition, reintroducing the folder into the tree must not violate folder
+        /// naming, height, and fanout constraints described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.undelete`
+        /// permission on the identified folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3120,14 +3194,16 @@ namespace Google.Cloud.ResourceManager.V3
 
         /// <summary>
         /// Cancels the deletion request for a folder. This method may be called on a
-        /// folder in any state. If the folder is in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE]
-        /// state the result will be a no-op success. In order to succeed, the folder's
-        /// parent must be in the [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In addition,
-        /// reintroducing the folder into the tree must not violate folder naming,
-        /// height, and fanout constraints described in the
-        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder] documentation.
-        /// The caller must have `resourcemanager.folders.undelete` permission on the
-        /// identified folder.
+        /// folder in any state. If the folder is in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state the
+        /// result will be a no-op success. In order to succeed, the folder's parent
+        /// must be in the
+        /// [ACTIVE][google.cloud.resourcemanager.v3.Folder.State.ACTIVE] state. In
+        /// addition, reintroducing the folder into the tree must not violate folder
+        /// naming, height, and fanout constraints described in the
+        /// [CreateFolder][google.cloud.resourcemanager.v3.Folders.CreateFolder]
+        /// documentation. The caller must have `resourcemanager.folders.undelete`
+        /// permission on the identified folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

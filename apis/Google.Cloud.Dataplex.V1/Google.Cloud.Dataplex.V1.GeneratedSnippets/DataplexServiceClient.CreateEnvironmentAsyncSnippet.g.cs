@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_CreateEnvironment_async_flattened]
     using Google.LongRunning;
@@ -36,28 +36,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task CreateEnvironmentAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
-            Environment environment = new Environment();
+            gcdv::Environment environment = new gcdv::Environment();
             string environmentId = "";
             // Make the request
-            Operation<Environment, OperationMetadata> response = await dataplexServiceClient.CreateEnvironmentAsync(parent, environment, environmentId);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> response = await dataplexServiceClient.CreateEnvironmentAsync(parent, environment, environmentId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Environment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcdv::Environment, gcdv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Environment result = completedResponse.Result;
+            gcdv::Environment result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Environment, OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateEnvironmentAsync(operationName);
+            Operation<gcdv::Environment, gcdv::OperationMetadata> retrievedResponse = await dataplexServiceClient.PollOnceCreateEnvironmentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Environment retrievedResult = retrievedResponse.Result;
+                gcdv::Environment retrievedResult = retrievedResponse.Result;
             }
         }
     }

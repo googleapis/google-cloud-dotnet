@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START securitycenter_v1beta1_generated_SecurityCenterSettingsService_GetServiceAccount_sync]
     using Google.Cloud.SecurityCenter.Settings.V1Beta1;

@@ -19,7 +19,13 @@ using Google.Cloud.Logging.Console;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add the GoogleCloudConsoleFormatter
-builder.Logging.AddGoogleCloudConsole(options => options.IncludeScopes = true);
+builder.Logging.AddGoogleCloudConsole(options =>
+{
+    options.IncludeScopes = true;
+
+    // Set TraceGoogleCloudProjectId for the log trace correlation.
+    options.TraceGoogleCloudProjectId = builder.Configuration["TraceGoogleCloudProjectId"];
+});
 
 var app = builder.Build();
 

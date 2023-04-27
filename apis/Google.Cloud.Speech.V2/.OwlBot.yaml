@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/speech/v2/.*-csharp/Google.Cloud.Speech.V2
       dest: /owl-bot-staging/Google.Cloud.Speech.V2/Google.Cloud.Speech.V2
-    - source: /google/cloud/speech/v2/.*-csharp/Google.Cloud.Speech.V2.Tests
-      dest: /owl-bot-staging/Google.Cloud.Speech.V2/Google.Cloud.Speech.V2.Tests
     - source: /google/cloud/speech/v2/.*-csharp/Google.Cloud.Speech.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Speech.V2/Google.Cloud.Speech.V2.Snippets
     - source: /google/cloud/speech/v2/.*-csharp/Google.Cloud.Speech.V2.GeneratedSnippets

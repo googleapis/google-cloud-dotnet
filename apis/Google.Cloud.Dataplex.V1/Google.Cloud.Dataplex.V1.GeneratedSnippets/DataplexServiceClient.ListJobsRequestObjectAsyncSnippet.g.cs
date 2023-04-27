@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_ListJobs_async]
     using Google.Api.Gax;
@@ -38,28 +38,28 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task ListJobsRequestObjectAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListJobsRequest request = new ListJobsRequest
+            gcdv::ListJobsRequest request = new gcdv::ListJobsRequest
             {
-                ParentAsTaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
+                ParentAsTaskName = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListJobsResponse, Job> response = dataplexServiceClient.ListJobsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListJobsResponse, gcdv::Job> response = dataplexServiceClient.ListJobsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Job item) =>
+            await response.ForEachAsync((gcdv::Job item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListJobsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListJobsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Job item in page)
+                foreach (gcdv::Job item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -68,10 +68,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Job> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Job> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Job item in singlePage)
+            foreach (gcdv::Job item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

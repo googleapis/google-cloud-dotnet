@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Identity.AccessContextManager.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START accesscontextmanager_v1_generated_AccessContextManager_CreateServicePerimeter_async]
     using Google.Identity.AccessContextManager.V1;

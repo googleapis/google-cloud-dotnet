@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dataproc.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataproc_v1_generated_WorkflowTemplateService_InstantiateWorkflowTemplate_sync_flattened1]
     using Google.Cloud.Dataproc.V1;

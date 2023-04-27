@@ -110,7 +110,7 @@
     },
     {
       "id": "Google.Cloud.AdvisoryNotifications.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Advisory Notifications",
       "productUrl": "https://cloud.google.com/advisory-notifications/docs/overview",
@@ -222,7 +222,7 @@
     },
     {
       "id": "Google.Cloud.AIPlatform.V1",
-      "version": "2.11.0",
+      "version": "2.13.0",
       "type": "grpc",
       "productName": "Cloud AI Platform",
       "productUrl": "https://cloud.google.com/ai-platform/docs/",
@@ -411,16 +411,15 @@
       "protoPath": "google/cloud/asset/v1",
       "productName": "Google Cloud Asset Inventory",
       "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
-      "version": "3.4.0",
+      "version": "3.5.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Asset Inventory API (v1).",
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.OrgPolicy.V1": "3.0.0",
-        "Google.Cloud.OsConfig.V1": "2.0.0",
-        "Google.Identity.AccessContextManager.Type": "2.0.0",
-        "Google.Identity.AccessContextManager.V1": "2.1.0",
+        "Google.Cloud.OsConfig.V1": "2.1.0",
+        "Google.Identity.AccessContextManager.V1": "2.2.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.5"
       },
@@ -569,7 +568,7 @@
     },
     {
       "id": "Google.Cloud.Batch.V1Alpha",
-      "version": "1.0.0-alpha09",
+      "version": "1.0.0-alpha10",
       "type": "grpc",
       "productName": "Batch",
       "productUrl": "https://cloud.google.com/batch/docs/",
@@ -897,11 +896,11 @@
       "id": "Google.Cloud.BigQuery.V2",
       "productName": "Google BigQuery",
       "productUrl": "https://cloud.google.com/bigquery/",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "type": "rest",
       "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
       "dependencies": {
-        "Google.Api.Gax.Rest": "4.2.0",
+        "Google.Api.Gax.Rest": "4.3.1",
         "Google.Apis.Bigquery.v2": "1.60.0.2949"
       },
       "testDependencies": {
@@ -1162,7 +1161,7 @@
     },
     {
       "id": "Google.Cloud.CloudBuild.V1",
-      "version": "2.3.0",
+      "version": "2.4.0",
       "type": "grpc",
       "productName": "Cloud Build",
       "productUrl": "https://cloud.google.com/cloud-build",
@@ -1260,8 +1259,52 @@
       "transport": "rest"
     },
     {
+      "id": "Google.Cloud.ConfidentialComputing.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Confidential Computing",
+      "productUrl": "https://cloud.google.com/confidential-computing",
+      "description": "Recommended Google client library to access the Google Cloud Confidential Computing API (v1)",
+      "tags": [
+        "security",
+        "confidentiality",
+        "encryption",
+        "privacy"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/confidentialcomputing/v1",
+      "shortName": "confidentialcomputing",
+      "serviceConfigFile": "confidentialcomputing_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
+      "id": "Google.Cloud.ConfidentialComputing.V1Alpha1",
+      "version": "1.0.0-alpha01",
+      "type": "grpc",
+      "productName": "Confidential Computing",
+      "productUrl": "https://cloud.google.com/confidential-computing",
+      "description": "Recommended Google client library to access the Google Cloud Confidential Computing API (v1alpha1)",
+      "tags": [
+        "security",
+        "confidentiality",
+        "encryption",
+        "privacy"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/confidentialcomputing/v1alpha1",
+      "shortName": "confidentialcomputing",
+      "serviceConfigFile": "confidentialcomputing_v1alpha1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.ContactCenterInsights.V1",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "type": "grpc",
       "productName": "Contact Center AI Insights",
       "productUrl": "https://cloud.google.com/contact-center/insights/docs",
@@ -1289,11 +1332,11 @@
       "protoPath": "google/container/v1",
       "productName": "Google Kubernetes Engine",
       "productUrl": "https://cloud.google.com/kubernetes-engine/docs/reference/rest/",
-      "version": "3.8.0",
+      "version": "3.10.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Kubernetes Engine API, used for building and managing container based applications, powered by the open source Kubernetes technology.",
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Grpc.Core": "2.46.5"
       },
       "tags": [
@@ -2892,7 +2935,7 @@
     },
     {
       "id": "Google.Cloud.Metastore.V1",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "grpc",
       "productName": "Dataproc Metastore",
       "productUrl": "https://cloud.google.com/dataproc-metastore/docs",
@@ -2902,7 +2945,7 @@
         "metastore"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
@@ -2917,7 +2960,7 @@
     },
     {
       "id": "Google.Cloud.Metastore.V1Alpha",
-      "version": "2.0.0-alpha04",
+      "version": "2.0.0-alpha05",
       "type": "grpc",
       "productName": "Dataproc Metastore",
       "productUrl": "https://cloud.google.com/dataproc-metastore/docs",
@@ -2940,7 +2983,7 @@
     },
     {
       "id": "Google.Cloud.Metastore.V1Beta",
-      "version": "2.0.0-beta04",
+      "version": "2.0.0-beta05",
       "type": "grpc",
       "productName": "Dataproc Metastore",
       "productUrl": "https://cloud.google.com/dataproc-metastore/docs",
@@ -3421,7 +3464,7 @@
       "protoPath": "google/pubsub/v1",
       "productName": "Cloud Pub/Sub",
       "productUrl": "https://cloud.google.com/pubsub/",
-      "version": "3.4.0",
+      "version": "3.5.0",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
@@ -3572,7 +3615,7 @@
     },
     {
       "id": "Google.Cloud.ResourceManager.V3",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "grpc",
       "productName": "Cloud Resource Manager",
       "productUrl": "https://cloud.google.com/resource-manager/docs",
@@ -3581,7 +3624,7 @@
         "resources"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.5"
@@ -3617,7 +3660,7 @@
     },
     {
       "id": "Google.Cloud.Retail.V2",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "type": "grpc",
       "productName": "Retail",
       "productUrl": "https://cloud.google.com/retail/docs",
@@ -3626,7 +3669,7 @@
         "retail"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Google.Cloud.Location": "2.0.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.5"
@@ -3735,7 +3778,7 @@
     },
     {
       "id": "Google.Cloud.Security.PrivateCA.V1",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "type": "grpc",
       "productName": "Certificate Authority",
       "productUrl": "https://cloud.google.com/certificate-authority-service/",
@@ -3808,11 +3851,11 @@
       "protoPath": "google/cloud/securitycenter/v1",
       "productName": "Google Cloud Security Command Center",
       "productUrl": "https://cloud.google.com/security-command-center/",
-      "version": "3.8.0",
+      "version": "3.9.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Security Command Center API, which helps security teams gather data, identify threats, and act on them before they result in business damage or loss.",
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.5"
@@ -4176,7 +4219,7 @@
       "id": "Google.Cloud.Storage.V1",
       "productName": "Google Cloud Storage",
       "productUrl": "https://cloud.google.com/storage/",
-      "version": "4.4.0",
+      "version": "4.5.0",
       "type": "rest",
       "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
       "dependencies": {
@@ -4192,6 +4235,29 @@
         "Storage"
       ],
       "shortName": "storage"
+    },
+    {
+      "id": "Google.Cloud.StorageInsights.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Google Cloud Storage Insights",
+      "productUrl": "https://cloud.google.com/storage/docs/insights/inventory-reports",
+      "description": "Recommended Google client library to access the Google Cloud Storage Insights API, which helps you manage your object storage at scale.",
+      "tags": [
+        "storage",
+        "inventory",
+        "reporting"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/storageinsights/v1",
+      "shortName": "storageinsights",
+      "serviceConfigFile": "storageinsights_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.StorageTransfer.V1",
@@ -4236,7 +4302,6 @@
       },
       "generator": "micro",
       "protoPath": "google/cloud/talent/v4",
-      "forceOwlBotRegeneration": "Google.Cloud.Common proto is generated and copied when it shouldn't be.",
       "shortName": "jobs",
       "serviceConfigFile": "jobs_v4.yaml",
       "restNumericEnums": true,
@@ -4510,7 +4575,7 @@
     },
     {
       "id": "Google.Cloud.Video.Stitcher.V1",
-      "version": "2.0.0",
+      "version": "3.0.0-beta01",
       "type": "grpc",
       "productName": "Video Stitcher",
       "productUrl": "https://cloud.google.com/video-stitcher/docs",
@@ -4533,7 +4598,7 @@
     },
     {
       "id": "Google.Cloud.Video.Transcoder.V1",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "type": "grpc",
       "productName": "Transcoder",
       "productUrl": "https://cloud.google.com/transcoder/docs",

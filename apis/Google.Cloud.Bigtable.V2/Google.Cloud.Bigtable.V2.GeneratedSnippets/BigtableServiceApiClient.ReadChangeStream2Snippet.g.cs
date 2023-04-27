@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.V2.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_ReadChangeStream_sync_flattened2]
+    // [START bigtable_v2_generated_Bigtable_ReadChangeStream_sync_flattened2]
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Bigtable.V2;
     using System.Threading.Tasks;
@@ -52,5 +52,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // The response stream has completed
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_ReadChangeStream_sync_flattened2]
+    // [END bigtable_v2_generated_Bigtable_ReadChangeStream_sync_flattened2]
 }

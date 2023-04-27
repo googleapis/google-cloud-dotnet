@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.GkeHub.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START gkehub_v1beta1_generated_GkeHubMembershipService_ValidateExclusivity_sync]
     using Google.Api.Gax.ResourceNames;

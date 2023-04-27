@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.0.0-beta05, released 2023-04-19
+
+### New features
+
+- Added ScalingConfig (v1) ([commit ca0d304](https://github.com/googleapis/google-cloud-dotnet/commit/ca0d3042ca823b64105b27b3cbd72b4f095825e0))
+- Added Auxiliary Versions Config (v1) ([commit ca0d304](https://github.com/googleapis/google-cloud-dotnet/commit/ca0d3042ca823b64105b27b3cbd72b4f095825e0))
+- Added Dataplex and BQ metastore types for federation (v1alpa, v1beta) ([commit ca0d304](https://github.com/googleapis/google-cloud-dotnet/commit/ca0d3042ca823b64105b27b3cbd72b4f095825e0))
+
 ## Version 2.0.0-beta04, released 2023-01-19
 
 ### New features

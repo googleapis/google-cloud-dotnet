@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Channel.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudchannel_v1_generated_CloudChannelReportsService_RunReportJob_sync]
     using Google.Cloud.Channel.V1;

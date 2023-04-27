@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Iam.Credentials.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.Iam.Credentials.V1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System.Collections.Generic;

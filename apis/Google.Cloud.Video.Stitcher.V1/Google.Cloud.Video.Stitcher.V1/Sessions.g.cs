@@ -31,77 +31,71 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "bnMucHJvdG8aK2dvb2dsZS9jbG91ZC92aWRlby9zdGl0Y2hlci92MS9ldmVu",
             "dHMucHJvdG8aMWdvb2dsZS9jbG91ZC92aWRlby9zdGl0Y2hlci92MS9saXZl",
             "X2NvbmZpZ3MucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90",
-            "byJBCgxHYW1Wb2RDb25maWcSGQoMbmV0d29ya19jb2RlGAEgASgJQgPgQQIS",
-            "FgoJc3RyZWFtX2lkGAIgASgJQgPgQQIioQUKClZvZFNlc3Npb24SEQoEbmFt",
-            "ZRgBIAEoCUID4EEDEkkKDWludGVyc3RpdGlhbHMYAiABKAsyLS5nb29nbGUu",
-            "Y2xvdWQudmlkZW8uc3RpdGNoZXIudjEuSW50ZXJzdGl0aWFsc0ID4EEDEhUK",
-            "CHBsYXlfdXJpGAQgASgJQgPgQQMSFwoKc291cmNlX3VyaRgFIAEoCUID4EEC",
-            "EhcKCmFkX3RhZ191cmkYBiABKAlCA+BBAhJXChBhZF90YWdfbWFjcm9fbWFw",
-            "GAcgAygLMj0uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlZvZFNl",
-            "c3Npb24uQWRUYWdNYWNyb01hcEVudHJ5EkkKEG1hbmlmZXN0X29wdGlvbnMY",
-            "CSABKAsyLy5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuTWFuaWZl",
-            "c3RPcHRpb25zEhUKCGFzc2V0X2lkGAogASgJQgPgQQMSRAoLYWRfdHJhY2tp",
-            "bmcYCyABKA4yKi5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuQWRU",
-            "cmFja2luZ0ID4EECEkQKDmdhbV92b2RfY29uZmlnGAwgASgLMiwuZ29vZ2xl",
-            "LmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkdhbVZvZENvbmZpZxo0ChJBZFRh",
-            "Z01hY3JvTWFwRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "ATpv6kFsCid2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL1ZvZFNlc3Np",
-            "b24SQXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS92",
-            "b2RTZXNzaW9ucy97dm9kX3Nlc3Npb259IqEBCg1JbnRlcnN0aXRpYWxzEkQK",
-            "CWFkX2JyZWFrcxgBIAMoCzIxLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hl",
-            "ci52MS5Wb2RTZXNzaW9uQWRCcmVhaxJKCg9zZXNzaW9uX2NvbnRlbnQYAiAB",
-            "KAsyMS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuVm9kU2Vzc2lv",
-            "bkNvbnRlbnQiwAEKDFZvZFNlc3Npb25BZBIrCghkdXJhdGlvbhgBIAEoCzIZ",
-            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJDCg1jb21wYW5pb25fYWRzGAIg",
-            "ASgLMiwuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkNvbXBhbmlv",
-            "bkFkcxI+Cg9hY3Rpdml0eV9ldmVudHMYAyADKAsyJS5nb29nbGUuY2xvdWQu",
-            "dmlkZW8uc3RpdGNoZXIudjEuRXZlbnQiQAoRVm9kU2Vzc2lvbkNvbnRlbnQS",
-            "KwoIZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24i",
-            "gAIKEVZvZFNlc3Npb25BZEJyZWFrEkYKD3Byb2dyZXNzX2V2ZW50cxgBIAMo",
-            "CzItLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5Qcm9ncmVzc0V2",
-            "ZW50EjkKA2FkcxgCIAMoCzIsLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hl",
-            "ci52MS5Wb2RTZXNzaW9uQWQSMgoPZW5kX3RpbWVfb2Zmc2V0GAMgASgLMhku",
-            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjQKEXN0YXJ0X3RpbWVfb2Zmc2V0",
-            "GAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIq4GCgtMaXZlU2Vz",
-            "c2lvbhIRCgRuYW1lGAEgASgJQgPgQQMSFQoIcGxheV91cmkYAiABKAlCA+BB",
-            "AxJTCg1hZF90YWdfbWFjcm9zGAYgAygLMjwuZ29vZ2xlLmNsb3VkLnZpZGVv",
-            "LnN0aXRjaGVyLnYxLkxpdmVTZXNzaW9uLkFkVGFnTWFjcm9zRW50cnkSSQoQ",
-            "bWFuaWZlc3Rfb3B0aW9ucxgKIAEoCzIvLmdvb2dsZS5jbG91ZC52aWRlby5z",
-            "dGl0Y2hlci52MS5NYW5pZmVzdE9wdGlvbnMSTQoMZ2FtX3NldHRpbmdzGA8g",
-            "ASgLMjcuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkxpdmVTZXNz",
-            "aW9uLkdhbVNldHRpbmdzEkQKC2xpdmVfY29uZmlnGBAgASgJQi/gQQL6QSkK",
-            "J3ZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vTGl2ZUNvbmZpZxqXAgoL",
-            "R2FtU2V0dGluZ3MSUQoHZ2FtX2hscxgCIAEoCzI+Lmdvb2dsZS5jbG91ZC52",
-            "aWRlby5zdGl0Y2hlci52MS5MaXZlU2Vzc2lvbi5HYW1TZXR0aW5ncy5HYW1I",
-            "bHNIABJTCghnYW1fZGFzaBgDIAEoCzI/Lmdvb2dsZS5jbG91ZC52aWRlby5z",
-            "dGl0Y2hlci52MS5MaXZlU2Vzc2lvbi5HYW1TZXR0aW5ncy5HYW1EYXNoSAAS",
-            "FgoJc3RyZWFtX2lkGAEgASgJQgPgQQIaCAoGR2FtSGxzGisKB0dhbURhc2gS",
-            "IAoTcGVyaW9kX3RlbXBsYXRlX3VyaRgBIAEoCUID4EECQhEKD21hbmlmZXN0",
-            "X2ZpZWxkcxoyChBBZFRhZ01hY3Jvc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAE6cupBbwoodmlkZW9zdGl0Y2hlci5nb29nbGVhcGlz",
-            "LmNvbS9MaXZlU2Vzc2lvbhJDcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L2xpdmVTZXNzaW9ucy97bGl2ZV9zZXNzaW9ufSL+AQoP",
-            "TWFuaWZlc3RPcHRpb25zEksKEmluY2x1ZGVfcmVuZGl0aW9ucxgBIAMoCzIv",
-            "Lmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5SZW5kaXRpb25GaWx0",
-            "ZXISUgoNYml0cmF0ZV9vcmRlchgCIAEoDjI7Lmdvb2dsZS5jbG91ZC52aWRl",
-            "by5zdGl0Y2hlci52MS5NYW5pZmVzdE9wdGlvbnMuT3JkZXJQb2xpY3kiSgoL",
-            "T3JkZXJQb2xpY3kSHAoYT1JERVJfUE9MSUNZX1VOU1BFQ0lGSUVEEAASDQoJ",
-            "QVNDRU5ESU5HEAESDgoKREVTQ0VORElORxACIjYKD1JlbmRpdGlvbkZpbHRl",
-            "chITCgtiaXRyYXRlX2JwcxgBIAEoBRIOCgZjb2RlY3MYAiABKAlCdQoiY29t",
-            "Lmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MUINU2Vzc2lvbnNQcm90",
-            "b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL3ZpZGVvL3N0aXRjaGVyL2FwaXYx",
-            "L3N0aXRjaGVycGI7c3RpdGNoZXJwYmIGcHJvdG8z"));
+            "byLrBQoKVm9kU2Vzc2lvbhIRCgRuYW1lGAEgASgJQgPgQQMSSQoNaW50ZXJz",
+            "dGl0aWFscxgCIAEoCzItLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52",
+            "MS5JbnRlcnN0aXRpYWxzQgPgQQMSFQoIcGxheV91cmkYBCABKAlCA+BBAxIX",
+            "Cgpzb3VyY2VfdXJpGAUgASgJQgPgQQISFwoKYWRfdGFnX3VyaRgGIAEoCUID",
+            "4EECElcKEGFkX3RhZ19tYWNyb19tYXAYByADKAsyPS5nb29nbGUuY2xvdWQu",
+            "dmlkZW8uc3RpdGNoZXIudjEuVm9kU2Vzc2lvbi5BZFRhZ01hY3JvTWFwRW50",
+            "cnkSSQoQbWFuaWZlc3Rfb3B0aW9ucxgJIAEoCzIvLmdvb2dsZS5jbG91ZC52",
+            "aWRlby5zdGl0Y2hlci52MS5NYW5pZmVzdE9wdGlvbnMSFQoIYXNzZXRfaWQY",
+            "CiABKAlCA+BBAxJECgthZF90cmFja2luZxgLIAEoDjIqLmdvb2dsZS5jbG91",
+            "ZC52aWRlby5zdGl0Y2hlci52MS5BZFRyYWNraW5nQgPgQQISTAoMZ2FtX3Nl",
+            "dHRpbmdzGA0gASgLMjYuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYx",
+            "LlZvZFNlc3Npb24uR2FtU2V0dGluZ3MaQAoLR2FtU2V0dGluZ3MSGQoMbmV0",
+            "d29ya19jb2RlGAEgASgJQgPgQQISFgoJc3RyZWFtX2lkGAIgASgJQgPgQQIa",
+            "NAoSQWRUYWdNYWNyb01hcEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAE6b+pBbAondmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9W",
+            "b2RTZXNzaW9uEkFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vdm9kU2Vzc2lvbnMve3ZvZF9zZXNzaW9ufSKhAQoNSW50ZXJzdGl0",
+            "aWFscxJECglhZF9icmVha3MYASADKAsyMS5nb29nbGUuY2xvdWQudmlkZW8u",
+            "c3RpdGNoZXIudjEuVm9kU2Vzc2lvbkFkQnJlYWsSSgoPc2Vzc2lvbl9jb250",
+            "ZW50GAIgASgLMjEuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlZv",
+            "ZFNlc3Npb25Db250ZW50IsABCgxWb2RTZXNzaW9uQWQSKwoIZHVyYXRpb24Y",
+            "ASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SQwoNY29tcGFuaW9u",
+            "X2FkcxgCIAEoCzIsLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5D",
+            "b21wYW5pb25BZHMSPgoPYWN0aXZpdHlfZXZlbnRzGAMgAygLMiUuZ29vZ2xl",
+            "LmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkV2ZW50IkAKEVZvZFNlc3Npb25D",
+            "b250ZW50EisKCGR1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uIoACChFWb2RTZXNzaW9uQWRCcmVhaxJGCg9wcm9ncmVzc19ldmVu",
+            "dHMYASADKAsyLS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuUHJv",
+            "Z3Jlc3NFdmVudBI5CgNhZHMYAiADKAsyLC5nb29nbGUuY2xvdWQudmlkZW8u",
+            "c3RpdGNoZXIudjEuVm9kU2Vzc2lvbkFkEjIKD2VuZF90aW1lX29mZnNldBgD",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhI0ChFzdGFydF90aW1l",
+            "X29mZnNldBgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiK7BAoL",
+            "TGl2ZVNlc3Npb24SEQoEbmFtZRgBIAEoCUID4EEDEhUKCHBsYXlfdXJpGAIg",
+            "ASgJQgPgQQMSUwoNYWRfdGFnX21hY3JvcxgGIAMoCzI8Lmdvb2dsZS5jbG91",
+            "ZC52aWRlby5zdGl0Y2hlci52MS5MaXZlU2Vzc2lvbi5BZFRhZ01hY3Jvc0Vu",
+            "dHJ5EkkKEG1hbmlmZXN0X29wdGlvbnMYCiABKAsyLy5nb29nbGUuY2xvdWQu",
+            "dmlkZW8uc3RpdGNoZXIudjEuTWFuaWZlc3RPcHRpb25zEk0KDGdhbV9zZXR0",
+            "aW5ncxgPIAEoCzI3Lmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5M",
+            "aXZlU2Vzc2lvbi5HYW1TZXR0aW5ncxJECgtsaXZlX2NvbmZpZxgQIAEoCUIv",
+            "4EEC+kEpCid2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL0xpdmVDb25m",
+            "aWcaJQoLR2FtU2V0dGluZ3MSFgoJc3RyZWFtX2lkGAEgASgJQgPgQQIaMgoQ",
+            "QWRUYWdNYWNyb3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBOnLqQW8KKHZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vTGl2ZVNl",
+            "c3Npb24SQ3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9saXZlU2Vzc2lvbnMve2xpdmVfc2Vzc2lvbn0i/gEKD01hbmlmZXN0T3B0",
+            "aW9ucxJLChJpbmNsdWRlX3JlbmRpdGlvbnMYASADKAsyLy5nb29nbGUuY2xv",
+            "dWQudmlkZW8uc3RpdGNoZXIudjEuUmVuZGl0aW9uRmlsdGVyElIKDWJpdHJh",
+            "dGVfb3JkZXIYAiABKA4yOy5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIu",
+            "djEuTWFuaWZlc3RPcHRpb25zLk9yZGVyUG9saWN5IkoKC09yZGVyUG9saWN5",
+            "EhwKGE9SREVSX1BPTElDWV9VTlNQRUNJRklFRBAAEg0KCUFTQ0VORElORxAB",
+            "Eg4KCkRFU0NFTkRJTkcQAiI2Cg9SZW5kaXRpb25GaWx0ZXISEwoLYml0cmF0",
+            "ZV9icHMYASABKAUSDgoGY29kZWNzGAIgASgJQnUKImNvbS5nb29nbGUuY2xv",
+            "dWQudmlkZW8uc3RpdGNoZXIudjFCDVNlc3Npb25zUHJvdG9QAVo+Y2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby92aWRlby9zdGl0Y2hlci9hcGl2MS9zdGl0Y2hlcnBi",
+            "O3N0aXRjaGVycGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.CompanionsReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.EventsReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.LiveConfigsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.GamVodConfig), global::Google.Cloud.Video.Stitcher.V1.GamVodConfig.Parser, new[]{ "NetworkCode", "StreamId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.VodSession), global::Google.Cloud.Video.Stitcher.V1.VodSession.Parser, new[]{ "Name", "Interstitials", "PlayUri", "SourceUri", "AdTagUri", "AdTagMacroMap", "ManifestOptions", "AssetId", "AdTracking", "GamVodConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.VodSession), global::Google.Cloud.Video.Stitcher.V1.VodSession.Parser, new[]{ "Name", "Interstitials", "PlayUri", "SourceUri", "AdTagUri", "AdTagMacroMap", "ManifestOptions", "AssetId", "AdTracking", "GamSettings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.VodSession.Types.GamSettings), global::Google.Cloud.Video.Stitcher.V1.VodSession.Types.GamSettings.Parser, new[]{ "NetworkCode", "StreamId" }, null, null, null, null),
+            null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.Interstitials), global::Google.Cloud.Video.Stitcher.V1.Interstitials.Parser, new[]{ "AdBreaks", "SessionContent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.VodSessionAd), global::Google.Cloud.Video.Stitcher.V1.VodSessionAd.Parser, new[]{ "Duration", "CompanionAds", "ActivityEvents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.VodSessionContent), global::Google.Cloud.Video.Stitcher.V1.VodSessionContent.Parser, new[]{ "Duration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.VodSessionAdBreak), global::Google.Cloud.Video.Stitcher.V1.VodSessionAdBreak.Parser, new[]{ "ProgressEvents", "Ads", "EndTimeOffset", "StartTimeOffset" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.LiveSession), global::Google.Cloud.Video.Stitcher.V1.LiveSession.Parser, new[]{ "Name", "PlayUri", "AdTagMacros", "ManifestOptions", "GamSettings", "LiveConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings), global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Parser, new[]{ "GamHls", "GamDash", "StreamId" }, new[]{ "ManifestFields" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamHls), global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamHls.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamDash), global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamDash.Parser, new[]{ "PeriodTemplateUri" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.LiveSession), global::Google.Cloud.Video.Stitcher.V1.LiveSession.Parser, new[]{ "Name", "PlayUri", "AdTagMacros", "ManifestOptions", "GamSettings", "LiveConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings), global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Parser, new[]{ "StreamId" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.ManifestOptions), global::Google.Cloud.Video.Stitcher.V1.ManifestOptions.Parser, new[]{ "IncludeRenditions", "BitrateOrder" }, null, new[]{ typeof(global::Google.Cloud.Video.Stitcher.V1.ManifestOptions.Types.OrderPolicy) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Stitcher.V1.RenditionFilter), global::Google.Cloud.Video.Stitcher.V1.RenditionFilter.Parser, new[]{ "BitrateBps", "Codecs" }, null, null, null, null)
@@ -111,241 +105,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
 
   }
   #region Messages
-  /// <summary>
-  /// Metadata for registering a VOD Session with Google Ad Manager (GAM).
-  /// </summary>
-  public sealed partial class GamVodConfig : pb::IMessage<GamVodConfig>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<GamVodConfig> _parser = new pb::MessageParser<GamVodConfig>(() => new GamVodConfig());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GamVodConfig> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GamVodConfig() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GamVodConfig(GamVodConfig other) : this() {
-      networkCode_ = other.networkCode_;
-      streamId_ = other.streamId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GamVodConfig Clone() {
-      return new GamVodConfig(this);
-    }
-
-    /// <summary>Field number for the "network_code" field.</summary>
-    public const int NetworkCodeFieldNumber = 1;
-    private string networkCode_ = "";
-    /// <summary>
-    /// Required. Ad Manager network code.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string NetworkCode {
-      get { return networkCode_; }
-      set {
-        networkCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "stream_id" field.</summary>
-    public const int StreamIdFieldNumber = 2;
-    private string streamId_ = "";
-    /// <summary>
-    /// Required. The stream ID generated by Ad Manager.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string StreamId {
-      get { return streamId_; }
-      set {
-        streamId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as GamVodConfig);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GamVodConfig other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (NetworkCode != other.NetworkCode) return false;
-      if (StreamId != other.StreamId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (NetworkCode.Length != 0) hash ^= NetworkCode.GetHashCode();
-      if (StreamId.Length != 0) hash ^= StreamId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (NetworkCode.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(NetworkCode);
-      }
-      if (StreamId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(StreamId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NetworkCode.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(NetworkCode);
-      }
-      if (StreamId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(StreamId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (NetworkCode.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(NetworkCode);
-      }
-      if (StreamId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(StreamId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GamVodConfig other) {
-      if (other == null) {
-        return;
-      }
-      if (other.NetworkCode.Length != 0) {
-        NetworkCode = other.NetworkCode;
-      }
-      if (other.StreamId.Length != 0) {
-        StreamId = other.StreamId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            NetworkCode = input.ReadString();
-            break;
-          }
-          case 18: {
-            StreamId = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            NetworkCode = input.ReadString();
-            break;
-          }
-          case 18: {
-            StreamId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   /// <summary>
   /// Metadata for a VOD session. The session expires 4 hours after its creation.
   /// </summary>
@@ -363,7 +122,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -392,7 +151,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       manifestOptions_ = other.manifestOptions_ != null ? other.manifestOptions_.Clone() : null;
       assetId_ = other.assetId_;
       adTracking_ = other.adTracking_;
-      gamVodConfig_ = other.gamVodConfig_ != null ? other.gamVodConfig_.Clone() : null;
+      gamSettings_ = other.gamSettings_ != null ? other.gamSettings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -550,19 +309,19 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       }
     }
 
-    /// <summary>Field number for the "gam_vod_config" field.</summary>
-    public const int GamVodConfigFieldNumber = 12;
-    private global::Google.Cloud.Video.Stitcher.V1.GamVodConfig gamVodConfig_;
+    /// <summary>Field number for the "gam_settings" field.</summary>
+    public const int GamSettingsFieldNumber = 13;
+    private global::Google.Cloud.Video.Stitcher.V1.VodSession.Types.GamSettings gamSettings_;
     /// <summary>
-    /// This has the Google Ad Manager (GAM) related metadata in the case where GAM
-    /// is used for the ads.
+    /// This field should be set with appropriate values if GAM is being used for
+    /// ads.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.Video.Stitcher.V1.GamVodConfig GamVodConfig {
-      get { return gamVodConfig_; }
+    public global::Google.Cloud.Video.Stitcher.V1.VodSession.Types.GamSettings GamSettings {
+      get { return gamSettings_; }
       set {
-        gamVodConfig_ = value;
+        gamSettings_ = value;
       }
     }
 
@@ -590,7 +349,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (!object.Equals(ManifestOptions, other.ManifestOptions)) return false;
       if (AssetId != other.AssetId) return false;
       if (AdTracking != other.AdTracking) return false;
-      if (!object.Equals(GamVodConfig, other.GamVodConfig)) return false;
+      if (!object.Equals(GamSettings, other.GamSettings)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -607,7 +366,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (manifestOptions_ != null) hash ^= ManifestOptions.GetHashCode();
       if (AssetId.Length != 0) hash ^= AssetId.GetHashCode();
       if (AdTracking != global::Google.Cloud.Video.Stitcher.V1.AdTracking.Unspecified) hash ^= AdTracking.GetHashCode();
-      if (gamVodConfig_ != null) hash ^= GamVodConfig.GetHashCode();
+      if (gamSettings_ != null) hash ^= GamSettings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -659,9 +418,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(88);
         output.WriteEnum((int) AdTracking);
       }
-      if (gamVodConfig_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(GamVodConfig);
+      if (gamSettings_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(GamSettings);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -706,9 +465,9 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         output.WriteRawTag(88);
         output.WriteEnum((int) AdTracking);
       }
-      if (gamVodConfig_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(GamVodConfig);
+      if (gamSettings_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(GamSettings);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -745,8 +504,8 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (AdTracking != global::Google.Cloud.Video.Stitcher.V1.AdTracking.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AdTracking);
       }
-      if (gamVodConfig_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GamVodConfig);
+      if (gamSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GamSettings);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -791,11 +550,11 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (other.AdTracking != global::Google.Cloud.Video.Stitcher.V1.AdTracking.Unspecified) {
         AdTracking = other.AdTracking;
       }
-      if (other.gamVodConfig_ != null) {
-        if (gamVodConfig_ == null) {
-          GamVodConfig = new global::Google.Cloud.Video.Stitcher.V1.GamVodConfig();
+      if (other.gamSettings_ != null) {
+        if (gamSettings_ == null) {
+          GamSettings = new global::Google.Cloud.Video.Stitcher.V1.VodSession.Types.GamSettings();
         }
-        GamVodConfig.MergeFrom(other.GamVodConfig);
+        GamSettings.MergeFrom(other.GamSettings);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -854,11 +613,11 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             AdTracking = (global::Google.Cloud.Video.Stitcher.V1.AdTracking) input.ReadEnum();
             break;
           }
-          case 98: {
-            if (gamVodConfig_ == null) {
-              GamVodConfig = new global::Google.Cloud.Video.Stitcher.V1.GamVodConfig();
+          case 106: {
+            if (gamSettings_ == null) {
+              GamSettings = new global::Google.Cloud.Video.Stitcher.V1.VodSession.Types.GamSettings();
             }
-            input.ReadMessage(GamVodConfig);
+            input.ReadMessage(GamSettings);
             break;
           }
         }
@@ -918,17 +677,261 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             AdTracking = (global::Google.Cloud.Video.Stitcher.V1.AdTracking) input.ReadEnum();
             break;
           }
-          case 98: {
-            if (gamVodConfig_ == null) {
-              GamVodConfig = new global::Google.Cloud.Video.Stitcher.V1.GamVodConfig();
+          case 106: {
+            if (gamSettings_ == null) {
+              GamSettings = new global::Google.Cloud.Video.Stitcher.V1.VodSession.Types.GamSettings();
             }
-            input.ReadMessage(GamVodConfig);
+            input.ReadMessage(GamSettings);
             break;
           }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the VodSession message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Defines fields related to Google Ad Manager (GAM). This should be set if
+      /// GAM is being used for ads.
+      /// </summary>
+      public sealed partial class GamSettings : pb::IMessage<GamSettings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GamSettings> _parser = new pb::MessageParser<GamSettings>(() => new GamSettings());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GamSettings> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.Stitcher.V1.VodSession.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GamSettings() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GamSettings(GamSettings other) : this() {
+          networkCode_ = other.networkCode_;
+          streamId_ = other.streamId_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GamSettings Clone() {
+          return new GamSettings(this);
+        }
+
+        /// <summary>Field number for the "network_code" field.</summary>
+        public const int NetworkCodeFieldNumber = 1;
+        private string networkCode_ = "";
+        /// <summary>
+        /// Required. Ad Manager network code.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string NetworkCode {
+          get { return networkCode_; }
+          set {
+            networkCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "stream_id" field.</summary>
+        public const int StreamIdFieldNumber = 2;
+        private string streamId_ = "";
+        /// <summary>
+        /// Required. The stream ID generated by Ad Manager.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string StreamId {
+          get { return streamId_; }
+          set {
+            streamId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GamSettings);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GamSettings other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (NetworkCode != other.NetworkCode) return false;
+          if (StreamId != other.StreamId) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (NetworkCode.Length != 0) hash ^= NetworkCode.GetHashCode();
+          if (StreamId.Length != 0) hash ^= StreamId.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (NetworkCode.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(NetworkCode);
+          }
+          if (StreamId.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(StreamId);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (NetworkCode.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(NetworkCode);
+          }
+          if (StreamId.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(StreamId);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (NetworkCode.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(NetworkCode);
+          }
+          if (StreamId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(StreamId);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GamSettings other) {
+          if (other == null) {
+            return;
+          }
+          if (other.NetworkCode.Length != 0) {
+            NetworkCode = other.NetworkCode;
+          }
+          if (other.StreamId.Length != 0) {
+            StreamId = other.StreamId;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                NetworkCode = input.ReadString();
+                break;
+              }
+              case 18: {
+                StreamId = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                NetworkCode = input.ReadString();
+                break;
+              }
+              case 18: {
+                StreamId = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -949,7 +952,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1182,7 +1185,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1468,7 +1471,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1673,7 +1676,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1985,7 +1988,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2428,15 +2431,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public GamSettings(GamSettings other) : this() {
           streamId_ = other.streamId_;
-          switch (other.ManifestFieldsCase) {
-            case ManifestFieldsOneofCase.GamHls:
-              GamHls = other.GamHls.Clone();
-              break;
-            case ManifestFieldsOneofCase.GamDash:
-              GamDash = other.GamDash.Clone();
-              break;
-          }
-
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2444,36 +2438,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public GamSettings Clone() {
           return new GamSettings(this);
-        }
-
-        /// <summary>Field number for the "gam_hls" field.</summary>
-        public const int GamHlsFieldNumber = 2;
-        /// <summary>
-        /// Fields that are specific to HLS manifests.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamHls GamHls {
-          get { return manifestFieldsCase_ == ManifestFieldsOneofCase.GamHls ? (global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamHls) manifestFields_ : null; }
-          set {
-            manifestFields_ = value;
-            manifestFieldsCase_ = value == null ? ManifestFieldsOneofCase.None : ManifestFieldsOneofCase.GamHls;
-          }
-        }
-
-        /// <summary>Field number for the "gam_dash" field.</summary>
-        public const int GamDashFieldNumber = 3;
-        /// <summary>
-        /// Fields that are specific to DASH manifests.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamDash GamDash {
-          get { return manifestFieldsCase_ == ManifestFieldsOneofCase.GamDash ? (global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamDash) manifestFields_ : null; }
-          set {
-            manifestFields_ = value;
-            manifestFieldsCase_ = value == null ? ManifestFieldsOneofCase.None : ManifestFieldsOneofCase.GamDash;
-          }
         }
 
         /// <summary>Field number for the "stream_id" field.</summary>
@@ -2491,27 +2455,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
           }
         }
 
-        private object manifestFields_;
-        /// <summary>Enum of possible cases for the "manifest_fields" oneof.</summary>
-        public enum ManifestFieldsOneofCase {
-          None = 0,
-          GamHls = 2,
-          GamDash = 3,
-        }
-        private ManifestFieldsOneofCase manifestFieldsCase_ = ManifestFieldsOneofCase.None;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public ManifestFieldsOneofCase ManifestFieldsCase {
-          get { return manifestFieldsCase_; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void ClearManifestFields() {
-          manifestFieldsCase_ = ManifestFieldsOneofCase.None;
-          manifestFields_ = null;
-        }
-
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -2527,10 +2470,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
-          if (!object.Equals(GamHls, other.GamHls)) return false;
-          if (!object.Equals(GamDash, other.GamDash)) return false;
           if (StreamId != other.StreamId) return false;
-          if (ManifestFieldsCase != other.ManifestFieldsCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2538,10 +2478,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (manifestFieldsCase_ == ManifestFieldsOneofCase.GamHls) hash ^= GamHls.GetHashCode();
-          if (manifestFieldsCase_ == ManifestFieldsOneofCase.GamDash) hash ^= GamDash.GetHashCode();
           if (StreamId.Length != 0) hash ^= StreamId.GetHashCode();
-          hash ^= (int) manifestFieldsCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2564,14 +2501,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             output.WriteRawTag(10);
             output.WriteString(StreamId);
           }
-          if (manifestFieldsCase_ == ManifestFieldsOneofCase.GamHls) {
-            output.WriteRawTag(18);
-            output.WriteMessage(GamHls);
-          }
-          if (manifestFieldsCase_ == ManifestFieldsOneofCase.GamDash) {
-            output.WriteRawTag(26);
-            output.WriteMessage(GamDash);
-          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2586,14 +2515,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             output.WriteRawTag(10);
             output.WriteString(StreamId);
           }
-          if (manifestFieldsCase_ == ManifestFieldsOneofCase.GamHls) {
-            output.WriteRawTag(18);
-            output.WriteMessage(GamHls);
-          }
-          if (manifestFieldsCase_ == ManifestFieldsOneofCase.GamDash) {
-            output.WriteRawTag(26);
-            output.WriteMessage(GamDash);
-          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2604,12 +2525,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (manifestFieldsCase_ == ManifestFieldsOneofCase.GamHls) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GamHls);
-          }
-          if (manifestFieldsCase_ == ManifestFieldsOneofCase.GamDash) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GamDash);
-          }
           if (StreamId.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(StreamId);
           }
@@ -2628,21 +2543,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
           if (other.StreamId.Length != 0) {
             StreamId = other.StreamId;
           }
-          switch (other.ManifestFieldsCase) {
-            case ManifestFieldsOneofCase.GamHls:
-              if (GamHls == null) {
-                GamHls = new global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamHls();
-              }
-              GamHls.MergeFrom(other.GamHls);
-              break;
-            case ManifestFieldsOneofCase.GamDash:
-              if (GamDash == null) {
-                GamDash = new global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamDash();
-              }
-              GamDash.MergeFrom(other.GamDash);
-              break;
-          }
-
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -2660,24 +2560,6 @@ namespace Google.Cloud.Video.Stitcher.V1 {
                 break;
               case 10: {
                 StreamId = input.ReadString();
-                break;
-              }
-              case 18: {
-                global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamHls subBuilder = new global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamHls();
-                if (manifestFieldsCase_ == ManifestFieldsOneofCase.GamHls) {
-                  subBuilder.MergeFrom(GamHls);
-                }
-                input.ReadMessage(subBuilder);
-                GamHls = subBuilder;
-                break;
-              }
-              case 26: {
-                global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamDash subBuilder = new global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamDash();
-                if (manifestFieldsCase_ == ManifestFieldsOneofCase.GamDash) {
-                  subBuilder.MergeFrom(GamDash);
-                }
-                input.ReadMessage(subBuilder);
-                GamDash = subBuilder;
                 break;
               }
             }
@@ -2699,388 +2581,10 @@ namespace Google.Cloud.Video.Stitcher.V1 {
                 StreamId = input.ReadString();
                 break;
               }
-              case 18: {
-                global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamHls subBuilder = new global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamHls();
-                if (manifestFieldsCase_ == ManifestFieldsOneofCase.GamHls) {
-                  subBuilder.MergeFrom(GamHls);
-                }
-                input.ReadMessage(subBuilder);
-                GamHls = subBuilder;
-                break;
-              }
-              case 26: {
-                global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamDash subBuilder = new global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Types.GamDash();
-                if (manifestFieldsCase_ == ManifestFieldsOneofCase.GamDash) {
-                  subBuilder.MergeFrom(GamDash);
-                }
-                input.ReadMessage(subBuilder);
-                GamDash = subBuilder;
-                break;
-              }
             }
           }
         }
         #endif
-
-        #region Nested types
-        /// <summary>Container for nested types declared in the GamSettings message type.</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static partial class Types {
-          /// <summary>
-          /// GamHls is a container for any HLS specific input fields for GAM
-          /// Live Stitching.
-          /// </summary>
-          public sealed partial class GamHls : pb::IMessage<GamHls>
-          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-              , pb::IBufferMessage
-          #endif
-          {
-            private static readonly pb::MessageParser<GamHls> _parser = new pb::MessageParser<GamHls>(() => new GamHls());
-            private pb::UnknownFieldSet _unknownFields;
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public static pb::MessageParser<GamHls> Parser { get { return _parser; } }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Descriptor.NestedTypes[0]; }
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            pbr::MessageDescriptor pb::IMessage.Descriptor {
-              get { return Descriptor; }
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public GamHls() {
-              OnConstruction();
-            }
-
-            partial void OnConstruction();
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public GamHls(GamHls other) : this() {
-              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public GamHls Clone() {
-              return new GamHls(this);
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public override bool Equals(object other) {
-              return Equals(other as GamHls);
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public bool Equals(GamHls other) {
-              if (ReferenceEquals(other, null)) {
-                return false;
-              }
-              if (ReferenceEquals(other, this)) {
-                return true;
-              }
-              return Equals(_unknownFields, other._unknownFields);
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public override int GetHashCode() {
-              int hash = 1;
-              if (_unknownFields != null) {
-                hash ^= _unknownFields.GetHashCode();
-              }
-              return hash;
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public override string ToString() {
-              return pb::JsonFormatter.ToDiagnosticString(this);
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public void WriteTo(pb::CodedOutputStream output) {
-            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-              output.WriteRawMessage(this);
-            #else
-              if (_unknownFields != null) {
-                _unknownFields.WriteTo(output);
-              }
-            #endif
-            }
-
-            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (_unknownFields != null) {
-                _unknownFields.WriteTo(ref output);
-              }
-            }
-            #endif
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public int CalculateSize() {
-              int size = 0;
-              if (_unknownFields != null) {
-                size += _unknownFields.CalculateSize();
-              }
-              return size;
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public void MergeFrom(GamHls other) {
-              if (other == null) {
-                return;
-              }
-              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public void MergeFrom(pb::CodedInputStream input) {
-            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-              input.ReadRawMessage(this);
-            #else
-              uint tag;
-              while ((tag = input.ReadTag()) != 0) {
-                switch(tag) {
-                  default:
-                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                    break;
-                }
-              }
-            #endif
-            }
-
-            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-              uint tag;
-              while ((tag = input.ReadTag()) != 0) {
-                switch(tag) {
-                  default:
-                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                    break;
-                }
-              }
-            }
-            #endif
-
-          }
-
-          /// <summary>
-          /// GamDash is a container for any DASH specific input fields for GAM
-          /// Live Stitching.
-          /// </summary>
-          public sealed partial class GamDash : pb::IMessage<GamDash>
-          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-              , pb::IBufferMessage
-          #endif
-          {
-            private static readonly pb::MessageParser<GamDash> _parser = new pb::MessageParser<GamDash>(() => new GamDash());
-            private pb::UnknownFieldSet _unknownFields;
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public static pb::MessageParser<GamDash> Parser { get { return _parser; } }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.Video.Stitcher.V1.LiveSession.Types.GamSettings.Descriptor.NestedTypes[1]; }
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            pbr::MessageDescriptor pb::IMessage.Descriptor {
-              get { return Descriptor; }
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public GamDash() {
-              OnConstruction();
-            }
-
-            partial void OnConstruction();
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public GamDash(GamDash other) : this() {
-              periodTemplateUri_ = other.periodTemplateUri_;
-              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public GamDash Clone() {
-              return new GamDash(this);
-            }
-
-            /// <summary>Field number for the "period_template_uri" field.</summary>
-            public const int PeriodTemplateUriFieldNumber = 1;
-            private string periodTemplateUri_ = "";
-            /// <summary>
-            /// Required. The session template url by Ad Manager for DASH periods.
-            /// </summary>
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public string PeriodTemplateUri {
-              get { return periodTemplateUri_; }
-              set {
-                periodTemplateUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-              }
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public override bool Equals(object other) {
-              return Equals(other as GamDash);
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public bool Equals(GamDash other) {
-              if (ReferenceEquals(other, null)) {
-                return false;
-              }
-              if (ReferenceEquals(other, this)) {
-                return true;
-              }
-              if (PeriodTemplateUri != other.PeriodTemplateUri) return false;
-              return Equals(_unknownFields, other._unknownFields);
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public override int GetHashCode() {
-              int hash = 1;
-              if (PeriodTemplateUri.Length != 0) hash ^= PeriodTemplateUri.GetHashCode();
-              if (_unknownFields != null) {
-                hash ^= _unknownFields.GetHashCode();
-              }
-              return hash;
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public override string ToString() {
-              return pb::JsonFormatter.ToDiagnosticString(this);
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public void WriteTo(pb::CodedOutputStream output) {
-            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-              output.WriteRawMessage(this);
-            #else
-              if (PeriodTemplateUri.Length != 0) {
-                output.WriteRawTag(10);
-                output.WriteString(PeriodTemplateUri);
-              }
-              if (_unknownFields != null) {
-                _unknownFields.WriteTo(output);
-              }
-            #endif
-            }
-
-            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (PeriodTemplateUri.Length != 0) {
-                output.WriteRawTag(10);
-                output.WriteString(PeriodTemplateUri);
-              }
-              if (_unknownFields != null) {
-                _unknownFields.WriteTo(ref output);
-              }
-            }
-            #endif
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public int CalculateSize() {
-              int size = 0;
-              if (PeriodTemplateUri.Length != 0) {
-                size += 1 + pb::CodedOutputStream.ComputeStringSize(PeriodTemplateUri);
-              }
-              if (_unknownFields != null) {
-                size += _unknownFields.CalculateSize();
-              }
-              return size;
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public void MergeFrom(GamDash other) {
-              if (other == null) {
-                return;
-              }
-              if (other.PeriodTemplateUri.Length != 0) {
-                PeriodTemplateUri = other.PeriodTemplateUri;
-              }
-              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-            }
-
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public void MergeFrom(pb::CodedInputStream input) {
-            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-              input.ReadRawMessage(this);
-            #else
-              uint tag;
-              while ((tag = input.ReadTag()) != 0) {
-                switch(tag) {
-                  default:
-                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                    break;
-                  case 10: {
-                    PeriodTemplateUri = input.ReadString();
-                    break;
-                  }
-                }
-              }
-            #endif
-            }
-
-            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-              uint tag;
-              while ((tag = input.ReadTag()) != 0) {
-                switch(tag) {
-                  default:
-                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                    break;
-                  case 10: {
-                    PeriodTemplateUri = input.ReadString();
-                    break;
-                  }
-                }
-              }
-            }
-            #endif
-
-          }
-
-        }
-        #endregion
 
       }
 
@@ -3106,7 +2610,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3358,7 +2862,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Video.Stitcher.V1.SessionsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -14,11 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.SecurityCenter.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
+    using Google.Cloud.SecurityCenter.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -211,6 +212,99 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
                 // If it has completed, then access the result
                 BulkMuteFindingsResponse retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSecurityHealthAnalyticsCustomModule</summary>
+        public void CreateSecurityHealthAnalyticsCustomModuleRequestObject()
+        {
+            // Snippet: CreateSecurityHealthAnalyticsCustomModule(CreateSecurityHealthAnalyticsCustomModuleRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            CreateSecurityHealthAnalyticsCustomModuleRequest request = new CreateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]"),
+                SecurityHealthAnalyticsCustomModule = new SecurityHealthAnalyticsCustomModule(),
+            };
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = securityCenterClient.CreateSecurityHealthAnalyticsCustomModule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task CreateSecurityHealthAnalyticsCustomModuleRequestObjectAsync()
+        {
+            // Snippet: CreateSecurityHealthAnalyticsCustomModuleAsync(CreateSecurityHealthAnalyticsCustomModuleRequest, CallSettings)
+            // Additional: CreateSecurityHealthAnalyticsCustomModuleAsync(CreateSecurityHealthAnalyticsCustomModuleRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSecurityHealthAnalyticsCustomModuleRequest request = new CreateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]"),
+                SecurityHealthAnalyticsCustomModule = new SecurityHealthAnalyticsCustomModule(),
+            };
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = await securityCenterClient.CreateSecurityHealthAnalyticsCustomModuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSecurityHealthAnalyticsCustomModule</summary>
+        public void CreateSecurityHealthAnalyticsCustomModule()
+        {
+            // Snippet: CreateSecurityHealthAnalyticsCustomModule(string, SecurityHealthAnalyticsCustomModule, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings";
+            SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule = new SecurityHealthAnalyticsCustomModule();
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = securityCenterClient.CreateSecurityHealthAnalyticsCustomModule(parent, securityHealthAnalyticsCustomModule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task CreateSecurityHealthAnalyticsCustomModuleAsync()
+        {
+            // Snippet: CreateSecurityHealthAnalyticsCustomModuleAsync(string, SecurityHealthAnalyticsCustomModule, CallSettings)
+            // Additional: CreateSecurityHealthAnalyticsCustomModuleAsync(string, SecurityHealthAnalyticsCustomModule, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings";
+            SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule = new SecurityHealthAnalyticsCustomModule();
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = await securityCenterClient.CreateSecurityHealthAnalyticsCustomModuleAsync(parent, securityHealthAnalyticsCustomModule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSecurityHealthAnalyticsCustomModule</summary>
+        public void CreateSecurityHealthAnalyticsCustomModuleResourceNames()
+        {
+            // Snippet: CreateSecurityHealthAnalyticsCustomModule(SecurityHealthAnalyticsSettingsName, SecurityHealthAnalyticsCustomModule, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsSettingsName parent = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]");
+            SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule = new SecurityHealthAnalyticsCustomModule();
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = securityCenterClient.CreateSecurityHealthAnalyticsCustomModule(parent, securityHealthAnalyticsCustomModule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task CreateSecurityHealthAnalyticsCustomModuleResourceNamesAsync()
+        {
+            // Snippet: CreateSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsSettingsName, SecurityHealthAnalyticsCustomModule, CallSettings)
+            // Additional: CreateSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsSettingsName, SecurityHealthAnalyticsCustomModule, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsSettingsName parent = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]");
+            SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule = new SecurityHealthAnalyticsCustomModule();
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = await securityCenterClient.CreateSecurityHealthAnalyticsCustomModuleAsync(parent, securityHealthAnalyticsCustomModule);
             // End snippet
         }
 
@@ -1134,6 +1228,93 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSecurityHealthAnalyticsCustomModule</summary>
+        public void DeleteSecurityHealthAnalyticsCustomModuleRequestObject()
+        {
+            // Snippet: DeleteSecurityHealthAnalyticsCustomModule(DeleteSecurityHealthAnalyticsCustomModuleRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            DeleteSecurityHealthAnalyticsCustomModuleRequest request = new DeleteSecurityHealthAnalyticsCustomModuleRequest
+            {
+                SecurityHealthAnalyticsCustomModuleName = SecurityHealthAnalyticsCustomModuleName.FromOrganizationCustomModule("[ORGANIZATION]", "[CUSTOM_MODULE]"),
+            };
+            // Make the request
+            securityCenterClient.DeleteSecurityHealthAnalyticsCustomModule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task DeleteSecurityHealthAnalyticsCustomModuleRequestObjectAsync()
+        {
+            // Snippet: DeleteSecurityHealthAnalyticsCustomModuleAsync(DeleteSecurityHealthAnalyticsCustomModuleRequest, CallSettings)
+            // Additional: DeleteSecurityHealthAnalyticsCustomModuleAsync(DeleteSecurityHealthAnalyticsCustomModuleRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSecurityHealthAnalyticsCustomModuleRequest request = new DeleteSecurityHealthAnalyticsCustomModuleRequest
+            {
+                SecurityHealthAnalyticsCustomModuleName = SecurityHealthAnalyticsCustomModuleName.FromOrganizationCustomModule("[ORGANIZATION]", "[CUSTOM_MODULE]"),
+            };
+            // Make the request
+            await securityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSecurityHealthAnalyticsCustomModule</summary>
+        public void DeleteSecurityHealthAnalyticsCustomModule()
+        {
+            // Snippet: DeleteSecurityHealthAnalyticsCustomModule(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings/customModules/[CUSTOM_MODULE]";
+            // Make the request
+            securityCenterClient.DeleteSecurityHealthAnalyticsCustomModule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task DeleteSecurityHealthAnalyticsCustomModuleAsync()
+        {
+            // Snippet: DeleteSecurityHealthAnalyticsCustomModuleAsync(string, CallSettings)
+            // Additional: DeleteSecurityHealthAnalyticsCustomModuleAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings/customModules/[CUSTOM_MODULE]";
+            // Make the request
+            await securityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSecurityHealthAnalyticsCustomModule</summary>
+        public void DeleteSecurityHealthAnalyticsCustomModuleResourceNames()
+        {
+            // Snippet: DeleteSecurityHealthAnalyticsCustomModule(SecurityHealthAnalyticsCustomModuleName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsCustomModuleName name = SecurityHealthAnalyticsCustomModuleName.FromOrganizationCustomModule("[ORGANIZATION]", "[CUSTOM_MODULE]");
+            // Make the request
+            securityCenterClient.DeleteSecurityHealthAnalyticsCustomModule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task DeleteSecurityHealthAnalyticsCustomModuleResourceNamesAsync()
+        {
+            // Snippet: DeleteSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsCustomModuleName, CallSettings)
+            // Additional: DeleteSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsCustomModuleName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsCustomModuleName name = SecurityHealthAnalyticsCustomModuleName.FromOrganizationCustomModule("[ORGANIZATION]", "[CUSTOM_MODULE]");
+            // Make the request
+            await securityCenterClient.DeleteSecurityHealthAnalyticsCustomModuleAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetBigQueryExport</summary>
         public void GetBigQueryExportRequestObject()
         {
@@ -1568,6 +1749,180 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             OrganizationSettingsName name = OrganizationSettingsName.FromOrganization("[ORGANIZATION]");
             // Make the request
             OrganizationSettings response = await securityCenterClient.GetOrganizationSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveSecurityHealthAnalyticsCustomModule</summary>
+        public void GetEffectiveSecurityHealthAnalyticsCustomModuleRequestObject()
+        {
+            // Snippet: GetEffectiveSecurityHealthAnalyticsCustomModule(GetEffectiveSecurityHealthAnalyticsCustomModuleRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            GetEffectiveSecurityHealthAnalyticsCustomModuleRequest request = new GetEffectiveSecurityHealthAnalyticsCustomModuleRequest
+            {
+                EffectiveSecurityHealthAnalyticsCustomModuleName = EffectiveSecurityHealthAnalyticsCustomModuleName.FromOrganizationEffectiveCustomModule("[ORGANIZATION]", "[EFFECTIVE_CUSTOM_MODULE]"),
+            };
+            // Make the request
+            EffectiveSecurityHealthAnalyticsCustomModule response = securityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task GetEffectiveSecurityHealthAnalyticsCustomModuleRequestObjectAsync()
+        {
+            // Snippet: GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(GetEffectiveSecurityHealthAnalyticsCustomModuleRequest, CallSettings)
+            // Additional: GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(GetEffectiveSecurityHealthAnalyticsCustomModuleRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            GetEffectiveSecurityHealthAnalyticsCustomModuleRequest request = new GetEffectiveSecurityHealthAnalyticsCustomModuleRequest
+            {
+                EffectiveSecurityHealthAnalyticsCustomModuleName = EffectiveSecurityHealthAnalyticsCustomModuleName.FromOrganizationEffectiveCustomModule("[ORGANIZATION]", "[EFFECTIVE_CUSTOM_MODULE]"),
+            };
+            // Make the request
+            EffectiveSecurityHealthAnalyticsCustomModule response = await securityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveSecurityHealthAnalyticsCustomModule</summary>
+        public void GetEffectiveSecurityHealthAnalyticsCustomModule()
+        {
+            // Snippet: GetEffectiveSecurityHealthAnalyticsCustomModule(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings/effectiveCustomModules/[EFFECTIVE_CUSTOM_MODULE]";
+            // Make the request
+            EffectiveSecurityHealthAnalyticsCustomModule response = securityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task GetEffectiveSecurityHealthAnalyticsCustomModuleAsync()
+        {
+            // Snippet: GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(string, CallSettings)
+            // Additional: GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings/effectiveCustomModules/[EFFECTIVE_CUSTOM_MODULE]";
+            // Make the request
+            EffectiveSecurityHealthAnalyticsCustomModule response = await securityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveSecurityHealthAnalyticsCustomModule</summary>
+        public void GetEffectiveSecurityHealthAnalyticsCustomModuleResourceNames()
+        {
+            // Snippet: GetEffectiveSecurityHealthAnalyticsCustomModule(EffectiveSecurityHealthAnalyticsCustomModuleName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            EffectiveSecurityHealthAnalyticsCustomModuleName name = EffectiveSecurityHealthAnalyticsCustomModuleName.FromOrganizationEffectiveCustomModule("[ORGANIZATION]", "[EFFECTIVE_CUSTOM_MODULE]");
+            // Make the request
+            EffectiveSecurityHealthAnalyticsCustomModule response = securityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task GetEffectiveSecurityHealthAnalyticsCustomModuleResourceNamesAsync()
+        {
+            // Snippet: GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(EffectiveSecurityHealthAnalyticsCustomModuleName, CallSettings)
+            // Additional: GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(EffectiveSecurityHealthAnalyticsCustomModuleName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            EffectiveSecurityHealthAnalyticsCustomModuleName name = EffectiveSecurityHealthAnalyticsCustomModuleName.FromOrganizationEffectiveCustomModule("[ORGANIZATION]", "[EFFECTIVE_CUSTOM_MODULE]");
+            // Make the request
+            EffectiveSecurityHealthAnalyticsCustomModule response = await securityCenterClient.GetEffectiveSecurityHealthAnalyticsCustomModuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecurityHealthAnalyticsCustomModule</summary>
+        public void GetSecurityHealthAnalyticsCustomModuleRequestObject()
+        {
+            // Snippet: GetSecurityHealthAnalyticsCustomModule(GetSecurityHealthAnalyticsCustomModuleRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            GetSecurityHealthAnalyticsCustomModuleRequest request = new GetSecurityHealthAnalyticsCustomModuleRequest
+            {
+                SecurityHealthAnalyticsCustomModuleName = SecurityHealthAnalyticsCustomModuleName.FromOrganizationCustomModule("[ORGANIZATION]", "[CUSTOM_MODULE]"),
+            };
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = securityCenterClient.GetSecurityHealthAnalyticsCustomModule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task GetSecurityHealthAnalyticsCustomModuleRequestObjectAsync()
+        {
+            // Snippet: GetSecurityHealthAnalyticsCustomModuleAsync(GetSecurityHealthAnalyticsCustomModuleRequest, CallSettings)
+            // Additional: GetSecurityHealthAnalyticsCustomModuleAsync(GetSecurityHealthAnalyticsCustomModuleRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSecurityHealthAnalyticsCustomModuleRequest request = new GetSecurityHealthAnalyticsCustomModuleRequest
+            {
+                SecurityHealthAnalyticsCustomModuleName = SecurityHealthAnalyticsCustomModuleName.FromOrganizationCustomModule("[ORGANIZATION]", "[CUSTOM_MODULE]"),
+            };
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = await securityCenterClient.GetSecurityHealthAnalyticsCustomModuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecurityHealthAnalyticsCustomModule</summary>
+        public void GetSecurityHealthAnalyticsCustomModule()
+        {
+            // Snippet: GetSecurityHealthAnalyticsCustomModule(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings/customModules/[CUSTOM_MODULE]";
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = securityCenterClient.GetSecurityHealthAnalyticsCustomModule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task GetSecurityHealthAnalyticsCustomModuleAsync()
+        {
+            // Snippet: GetSecurityHealthAnalyticsCustomModuleAsync(string, CallSettings)
+            // Additional: GetSecurityHealthAnalyticsCustomModuleAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings/customModules/[CUSTOM_MODULE]";
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = await securityCenterClient.GetSecurityHealthAnalyticsCustomModuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecurityHealthAnalyticsCustomModule</summary>
+        public void GetSecurityHealthAnalyticsCustomModuleResourceNames()
+        {
+            // Snippet: GetSecurityHealthAnalyticsCustomModule(SecurityHealthAnalyticsCustomModuleName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsCustomModuleName name = SecurityHealthAnalyticsCustomModuleName.FromOrganizationCustomModule("[ORGANIZATION]", "[CUSTOM_MODULE]");
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = securityCenterClient.GetSecurityHealthAnalyticsCustomModule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task GetSecurityHealthAnalyticsCustomModuleResourceNamesAsync()
+        {
+            // Snippet: GetSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsCustomModuleName, CallSettings)
+            // Additional: GetSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsCustomModuleName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsCustomModuleName name = SecurityHealthAnalyticsCustomModuleName.FromOrganizationCustomModule("[ORGANIZATION]", "[CUSTOM_MODULE]");
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = await securityCenterClient.GetSecurityHealthAnalyticsCustomModuleAsync(name);
             // End snippet
         }
 
@@ -2147,6 +2502,282 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (ListAssetsResponse.Types.ListAssetsResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDescendantSecurityHealthAnalyticsCustomModules</summary>
+        public void ListDescendantSecurityHealthAnalyticsCustomModulesRequestObject()
+        {
+            // Snippet: ListDescendantSecurityHealthAnalyticsCustomModules(ListDescendantSecurityHealthAnalyticsCustomModulesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ListDescendantSecurityHealthAnalyticsCustomModulesRequest request = new ListDescendantSecurityHealthAnalyticsCustomModulesRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModules(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SecurityHealthAnalyticsCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDescendantSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityHealthAnalyticsCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDescendantSecurityHealthAnalyticsCustomModulesAsync</summary>
+        public async Task ListDescendantSecurityHealthAnalyticsCustomModulesRequestObjectAsync()
+        {
+            // Snippet: ListDescendantSecurityHealthAnalyticsCustomModulesAsync(ListDescendantSecurityHealthAnalyticsCustomModulesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDescendantSecurityHealthAnalyticsCustomModulesRequest request = new ListDescendantSecurityHealthAnalyticsCustomModulesRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDescendantSecurityHealthAnalyticsCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityHealthAnalyticsCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDescendantSecurityHealthAnalyticsCustomModules</summary>
+        public void ListDescendantSecurityHealthAnalyticsCustomModules()
+        {
+            // Snippet: ListDescendantSecurityHealthAnalyticsCustomModules(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings";
+            // Make the request
+            PagedEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SecurityHealthAnalyticsCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDescendantSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityHealthAnalyticsCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDescendantSecurityHealthAnalyticsCustomModulesAsync</summary>
+        public async Task ListDescendantSecurityHealthAnalyticsCustomModulesAsync()
+        {
+            // Snippet: ListDescendantSecurityHealthAnalyticsCustomModulesAsync(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings";
+            // Make the request
+            PagedAsyncEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDescendantSecurityHealthAnalyticsCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityHealthAnalyticsCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDescendantSecurityHealthAnalyticsCustomModules</summary>
+        public void ListDescendantSecurityHealthAnalyticsCustomModulesResourceNames()
+        {
+            // Snippet: ListDescendantSecurityHealthAnalyticsCustomModules(SecurityHealthAnalyticsSettingsName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsSettingsName parent = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SecurityHealthAnalyticsCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDescendantSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityHealthAnalyticsCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDescendantSecurityHealthAnalyticsCustomModulesAsync</summary>
+        public async Task ListDescendantSecurityHealthAnalyticsCustomModulesResourceNamesAsync()
+        {
+            // Snippet: ListDescendantSecurityHealthAnalyticsCustomModulesAsync(SecurityHealthAnalyticsSettingsName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsSettingsName parent = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDescendantSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDescendantSecurityHealthAnalyticsCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityHealthAnalyticsCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityHealthAnalyticsCustomModule item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -3165,6 +3796,558 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (NotificationConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveSecurityHealthAnalyticsCustomModules</summary>
+        public void ListEffectiveSecurityHealthAnalyticsCustomModulesRequestObject()
+        {
+            // Snippet: ListEffectiveSecurityHealthAnalyticsCustomModules(ListEffectiveSecurityHealthAnalyticsCustomModulesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ListEffectiveSecurityHealthAnalyticsCustomModulesRequest request = new ListEffectiveSecurityHealthAnalyticsCustomModulesRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModules(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EffectiveSecurityHealthAnalyticsCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveSecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveSecurityHealthAnalyticsCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveSecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveSecurityHealthAnalyticsCustomModulesAsync</summary>
+        public async Task ListEffectiveSecurityHealthAnalyticsCustomModulesRequestObjectAsync()
+        {
+            // Snippet: ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(ListEffectiveSecurityHealthAnalyticsCustomModulesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListEffectiveSecurityHealthAnalyticsCustomModulesRequest request = new ListEffectiveSecurityHealthAnalyticsCustomModulesRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EffectiveSecurityHealthAnalyticsCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveSecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveSecurityHealthAnalyticsCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveSecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveSecurityHealthAnalyticsCustomModules</summary>
+        public void ListEffectiveSecurityHealthAnalyticsCustomModules()
+        {
+            // Snippet: ListEffectiveSecurityHealthAnalyticsCustomModules(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings";
+            // Make the request
+            PagedEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EffectiveSecurityHealthAnalyticsCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveSecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveSecurityHealthAnalyticsCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveSecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveSecurityHealthAnalyticsCustomModulesAsync</summary>
+        public async Task ListEffectiveSecurityHealthAnalyticsCustomModulesAsync()
+        {
+            // Snippet: ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings";
+            // Make the request
+            PagedAsyncEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EffectiveSecurityHealthAnalyticsCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveSecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveSecurityHealthAnalyticsCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveSecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveSecurityHealthAnalyticsCustomModules</summary>
+        public void ListEffectiveSecurityHealthAnalyticsCustomModulesResourceNames()
+        {
+            // Snippet: ListEffectiveSecurityHealthAnalyticsCustomModules(SecurityHealthAnalyticsSettingsName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsSettingsName parent = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EffectiveSecurityHealthAnalyticsCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveSecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveSecurityHealthAnalyticsCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveSecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListEffectiveSecurityHealthAnalyticsCustomModulesAsync</summary>
+        public async Task ListEffectiveSecurityHealthAnalyticsCustomModulesResourceNamesAsync()
+        {
+            // Snippet: ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(SecurityHealthAnalyticsSettingsName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsSettingsName parent = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListEffectiveSecurityHealthAnalyticsCustomModulesResponse, EffectiveSecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EffectiveSecurityHealthAnalyticsCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEffectiveSecurityHealthAnalyticsCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveSecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveSecurityHealthAnalyticsCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveSecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityHealthAnalyticsCustomModules</summary>
+        public void ListSecurityHealthAnalyticsCustomModulesRequestObject()
+        {
+            // Snippet: ListSecurityHealthAnalyticsCustomModules(ListSecurityHealthAnalyticsCustomModulesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ListSecurityHealthAnalyticsCustomModulesRequest request = new ListSecurityHealthAnalyticsCustomModulesRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListSecurityHealthAnalyticsCustomModules(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SecurityHealthAnalyticsCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityHealthAnalyticsCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityHealthAnalyticsCustomModulesAsync</summary>
+        public async Task ListSecurityHealthAnalyticsCustomModulesRequestObjectAsync()
+        {
+            // Snippet: ListSecurityHealthAnalyticsCustomModulesAsync(ListSecurityHealthAnalyticsCustomModulesRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSecurityHealthAnalyticsCustomModulesRequest request = new ListSecurityHealthAnalyticsCustomModulesRequest
+            {
+                ParentAsSecurityHealthAnalyticsSettingsName = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListSecurityHealthAnalyticsCustomModulesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSecurityHealthAnalyticsCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityHealthAnalyticsCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityHealthAnalyticsCustomModules</summary>
+        public void ListSecurityHealthAnalyticsCustomModules()
+        {
+            // Snippet: ListSecurityHealthAnalyticsCustomModules(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings";
+            // Make the request
+            PagedEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListSecurityHealthAnalyticsCustomModules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SecurityHealthAnalyticsCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityHealthAnalyticsCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityHealthAnalyticsCustomModulesAsync</summary>
+        public async Task ListSecurityHealthAnalyticsCustomModulesAsync()
+        {
+            // Snippet: ListSecurityHealthAnalyticsCustomModulesAsync(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/securityHealthAnalyticsSettings";
+            // Make the request
+            PagedAsyncEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListSecurityHealthAnalyticsCustomModulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSecurityHealthAnalyticsCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityHealthAnalyticsCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityHealthAnalyticsCustomModules</summary>
+        public void ListSecurityHealthAnalyticsCustomModulesResourceNames()
+        {
+            // Snippet: ListSecurityHealthAnalyticsCustomModules(SecurityHealthAnalyticsSettingsName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsSettingsName parent = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListSecurityHealthAnalyticsCustomModules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SecurityHealthAnalyticsCustomModule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSecurityHealthAnalyticsCustomModulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityHealthAnalyticsCustomModule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityHealthAnalyticsCustomModule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecurityHealthAnalyticsCustomModulesAsync</summary>
+        public async Task ListSecurityHealthAnalyticsCustomModulesResourceNamesAsync()
+        {
+            // Snippet: ListSecurityHealthAnalyticsCustomModulesAsync(SecurityHealthAnalyticsSettingsName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsSettingsName parent = SecurityHealthAnalyticsSettingsName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListSecurityHealthAnalyticsCustomModulesResponse, SecurityHealthAnalyticsCustomModule> response = securityCenterClient.ListSecurityHealthAnalyticsCustomModulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SecurityHealthAnalyticsCustomModule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSecurityHealthAnalyticsCustomModulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SecurityHealthAnalyticsCustomModule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SecurityHealthAnalyticsCustomModule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SecurityHealthAnalyticsCustomModule item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -4533,6 +5716,70 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             OrganizationSettings organizationSettings = new OrganizationSettings();
             // Make the request
             OrganizationSettings response = await securityCenterClient.UpdateOrganizationSettingsAsync(organizationSettings);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSecurityHealthAnalyticsCustomModule</summary>
+        public void UpdateSecurityHealthAnalyticsCustomModuleRequestObject()
+        {
+            // Snippet: UpdateSecurityHealthAnalyticsCustomModule(UpdateSecurityHealthAnalyticsCustomModuleRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            UpdateSecurityHealthAnalyticsCustomModuleRequest request = new UpdateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                SecurityHealthAnalyticsCustomModule = new SecurityHealthAnalyticsCustomModule(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = securityCenterClient.UpdateSecurityHealthAnalyticsCustomModule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task UpdateSecurityHealthAnalyticsCustomModuleRequestObjectAsync()
+        {
+            // Snippet: UpdateSecurityHealthAnalyticsCustomModuleAsync(UpdateSecurityHealthAnalyticsCustomModuleRequest, CallSettings)
+            // Additional: UpdateSecurityHealthAnalyticsCustomModuleAsync(UpdateSecurityHealthAnalyticsCustomModuleRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSecurityHealthAnalyticsCustomModuleRequest request = new UpdateSecurityHealthAnalyticsCustomModuleRequest
+            {
+                SecurityHealthAnalyticsCustomModule = new SecurityHealthAnalyticsCustomModule(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = await securityCenterClient.UpdateSecurityHealthAnalyticsCustomModuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSecurityHealthAnalyticsCustomModule</summary>
+        public void UpdateSecurityHealthAnalyticsCustomModule()
+        {
+            // Snippet: UpdateSecurityHealthAnalyticsCustomModule(SecurityHealthAnalyticsCustomModule, FieldMask, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule = new SecurityHealthAnalyticsCustomModule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = securityCenterClient.UpdateSecurityHealthAnalyticsCustomModule(securityHealthAnalyticsCustomModule, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSecurityHealthAnalyticsCustomModuleAsync</summary>
+        public async Task UpdateSecurityHealthAnalyticsCustomModuleAsync()
+        {
+            // Snippet: UpdateSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsCustomModule, FieldMask, CallSettings)
+            // Additional: UpdateSecurityHealthAnalyticsCustomModuleAsync(SecurityHealthAnalyticsCustomModule, FieldMask, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            SecurityHealthAnalyticsCustomModule securityHealthAnalyticsCustomModule = new SecurityHealthAnalyticsCustomModule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SecurityHealthAnalyticsCustomModule response = await securityCenterClient.UpdateSecurityHealthAnalyticsCustomModuleAsync(securityHealthAnalyticsCustomModule, updateMask);
             // End snippet
         }
 

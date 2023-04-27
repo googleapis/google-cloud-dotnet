@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START securitycenter_v1p1beta1_generated_SecurityCenter_GetIamPolicy_async_flattened]
     using Google.Cloud.Iam.V1;

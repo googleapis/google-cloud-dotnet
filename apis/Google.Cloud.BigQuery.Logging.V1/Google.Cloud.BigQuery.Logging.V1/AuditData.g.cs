@@ -185,31 +185,32 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
             "b24iNAoPVGFibGVEZWZpbml0aW9uEgwKBG5hbWUYASABKAkSEwoLc291cmNl",
             "X3VyaXMYAiADKAkibAoJSm9iU3RhdHVzEg0KBXN0YXRlGAEgASgJEiEKBWVy",
             "cm9yGAIgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSLQoRYWRkaXRpb25hbF9l",
-            "cnJvcnMYAyADKAsyEi5nb29nbGUucnBjLlN0YXR1cyK1BQoNSm9iU3RhdGlz",
+            "cnJvcnMYAyADKAsyEi5nb29nbGUucnBjLlN0YXR1cyK5BQoNSm9iU3RhdGlz",
             "dGljcxIvCgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
             "aW1lc3RhbXASLgoKc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
             "Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
             "dWYuVGltZXN0YW1wEh0KFXRvdGFsX3Byb2Nlc3NlZF9ieXRlcxgEIAEoAxIa",
             "ChJ0b3RhbF9iaWxsZWRfYnl0ZXMYBSABKAMSFAoMYmlsbGluZ190aWVyGAcg",
-            "ASgFEhUKDXRvdGFsX3Nsb3RfbXMYCCABKAMSYwoRcmVzZXJ2YXRpb25fdXNh",
+            "ASgFEhUKDXRvdGFsX3Nsb3RfbXMYCCABKAMSZwoRcmVzZXJ2YXRpb25fdXNh",
             "Z2UYDiADKAsySC5nb29nbGUuY2xvdWQuYmlncXVlcnkubG9nZ2luZy52MS5K",
-            "b2JTdGF0aXN0aWNzLlJlc2VydmF0aW9uUmVzb3VyY2VVc2FnZRJGChFyZWZl",
-            "cmVuY2VkX3RhYmxlcxgJIAMoCzIrLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5s",
-            "b2dnaW5nLnYxLlRhYmxlTmFtZRIeChZ0b3RhbF90YWJsZXNfcHJvY2Vzc2Vk",
-            "GAogASgFEkUKEHJlZmVyZW5jZWRfdmlld3MYCyADKAsyKy5nb29nbGUuY2xv",
-            "dWQuYmlncXVlcnkubG9nZ2luZy52MS5UYWJsZU5hbWUSHQoVdG90YWxfdmll",
-            "d3NfcHJvY2Vzc2VkGAwgASgFEh4KFnF1ZXJ5X291dHB1dF9yb3dfY291bnQY",
-            "DyABKAMSHwoXdG90YWxfbG9hZF9vdXRwdXRfYnl0ZXMYDSABKAMaOQoYUmVz",
-            "ZXJ2YXRpb25SZXNvdXJjZVVzYWdlEgwKBG5hbWUYASABKAkSDwoHc2xvdF9t",
-            "cxgCIAEoAyI1CgtEYXRhc2V0TmFtZRISCgpwcm9qZWN0X2lkGAEgASgJEhIK",
-            "CmRhdGFzZXRfaWQYAiABKAkiRQoJVGFibGVOYW1lEhIKCnByb2plY3RfaWQY",
-            "ASABKAkSEgoKZGF0YXNldF9pZBgCIAEoCRIQCgh0YWJsZV9pZBgDIAEoCSI/",
-            "CgdKb2JOYW1lEhIKCnByb2plY3RfaWQYASABKAkSDgoGam9iX2lkGAIgASgJ",
-            "EhAKCGxvY2F0aW9uGAMgASgJIiYKDkVuY3J5cHRpb25JbmZvEhQKDGttc19r",
-            "ZXlfbmFtZRgBIAEoCUKbAQokY29tLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5s",
-            "b2dnaW5nLnYxQg5BdWRpdERhdGFQcm90b1ABWj5jbG91ZC5nb29nbGUuY29t",
-            "L2dvL2JpZ3F1ZXJ5L2xvZ2dpbmcvYXBpdjEvbG9nZ2luZ3BiO2xvZ2dpbmdw",
-            "YqoCIEdvb2dsZS5DbG91ZC5CaWdRdWVyeS5Mb2dnaW5nLlYxYgZwcm90bzM="));
+            "b2JTdGF0aXN0aWNzLlJlc2VydmF0aW9uUmVzb3VyY2VVc2FnZUICGAESRgoR",
+            "cmVmZXJlbmNlZF90YWJsZXMYCSADKAsyKy5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkubG9nZ2luZy52MS5UYWJsZU5hbWUSHgoWdG90YWxfdGFibGVzX3Byb2Nl",
+            "c3NlZBgKIAEoBRJFChByZWZlcmVuY2VkX3ZpZXdzGAsgAygLMisuZ29vZ2xl",
+            "LmNsb3VkLmJpZ3F1ZXJ5LmxvZ2dpbmcudjEuVGFibGVOYW1lEh0KFXRvdGFs",
+            "X3ZpZXdzX3Byb2Nlc3NlZBgMIAEoBRIeChZxdWVyeV9vdXRwdXRfcm93X2Nv",
+            "dW50GA8gASgDEh8KF3RvdGFsX2xvYWRfb3V0cHV0X2J5dGVzGA0gASgDGjkK",
+            "GFJlc2VydmF0aW9uUmVzb3VyY2VVc2FnZRIMCgRuYW1lGAEgASgJEg8KB3Ns",
+            "b3RfbXMYAiABKAMiNQoLRGF0YXNldE5hbWUSEgoKcHJvamVjdF9pZBgBIAEo",
+            "CRISCgpkYXRhc2V0X2lkGAIgASgJIkUKCVRhYmxlTmFtZRISCgpwcm9qZWN0",
+            "X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEAoIdGFibGVfaWQYAyAB",
+            "KAkiPwoHSm9iTmFtZRISCgpwcm9qZWN0X2lkGAEgASgJEg4KBmpvYl9pZBgC",
+            "IAEoCRIQCghsb2NhdGlvbhgDIAEoCSImCg5FbmNyeXB0aW9uSW5mbxIUCgxr",
+            "bXNfa2V5X25hbWUYASABKAlCmwEKJGNvbS5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkubG9nZ2luZy52MUIOQXVkaXREYXRhUHJvdG9QAVo+Y2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9iaWdxdWVyeS9sb2dnaW5nL2FwaXYxL2xvZ2dpbmdwYjtsb2dn",
+            "aW5ncGKqAiBHb29nbGUuQ2xvdWQuQmlnUXVlcnkuTG9nZ2luZy5WMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -11275,8 +11276,12 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
         = pb::FieldCodec.ForMessage(114, global::Google.Cloud.BigQuery.Logging.V1.JobStatistics.Types.ReservationResourceUsage.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Logging.V1.JobStatistics.Types.ReservationResourceUsage> reservationUsage_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Logging.V1.JobStatistics.Types.ReservationResourceUsage>();
     /// <summary>
-    /// Reservation usage.
+    /// Reservation usage. This field reported misleading information and will
+    /// no longer be populated. Aggregate usage of all jobs submitted to a
+    /// reservation should provide a more reliable indicator of reservation
+    /// imbalance.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.BigQuery.Logging.V1.JobStatistics.Types.ReservationResourceUsage> ReservationUsage {

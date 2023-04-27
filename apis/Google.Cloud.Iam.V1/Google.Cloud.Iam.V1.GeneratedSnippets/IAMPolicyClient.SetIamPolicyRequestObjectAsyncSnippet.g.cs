@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Iam.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START iam_v1_generated_IAMPolicy_SetIamPolicy_async]
     using Google.Api.Gax;

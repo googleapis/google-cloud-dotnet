@@ -37,33 +37,25 @@ namespace Google.Cloud.Storage.V1
         internal const string AttemptCountHeaderPart = "gccl-attempt-count";
 
         private readonly RetryOptions _retryOptions;
+        private readonly IScheduler _scheduler;
 
-        private RetryHandler(RetryOptions retryOptions) => _retryOptions = retryOptions;
-
-        // TODO: Will remove it once the implementation across all APIs is complete
-        internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request)
-        {
-            RetryHandler retryHandler = new RetryHandler(RetryOptions.IdempotentRetryOptions);
-
-            // Note: we can't use ModifyRequest, as the x-goog-api-client header is added later by ConfigurableMessageHandler.
-            // Additionally, that's only called once, and we may want to record the attempt number as well.
-            request.AddExecuteInterceptor(InvocationIdInterceptor.Instance);
-            request.AddUnsuccessfulResponseHandler(retryHandler);
-        }
+        private RetryHandler(RetryOptions retryOptions, IScheduler scheduler) =>
+            (_retryOptions, _scheduler) = (retryOptions, scheduler);
 
         /// <summary>
         /// It marks the request as retriable with the retry options as provided.
         /// In case null retry options or Never is passed, retry will not happen in case of failure.
         /// </summary>
-        internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request, RetryOptions options)
+        internal static void MarkAsRetriable<TResponse>(StorageBaseServiceRequest<TResponse> request, RetryOptions options, IScheduler scheduler)
         {
             GaxPreconditions.CheckNotNull(options, nameof(options));
+            GaxPreconditions.CheckNotNull(scheduler, nameof(scheduler));
 
             if (options.Predicate == RetryPredicate.Never || options == RetryOptions.Never)
             {
                 return;
             }
-            RetryHandler retryHandler = new RetryHandler(options);
+            RetryHandler retryHandler = new RetryHandler(options, scheduler);
 
             // Note: we can't use ModifyRequest, as the x-goog-api-client header is added later by ConfigurableMessageHandler.
             // Additionally, that's only called once, and we may want to record the attempt number as well.
@@ -80,7 +72,7 @@ namespace Google.Cloud.Storage.V1
             }
 
             TimeSpan delay = _retryOptions.Timing.GetDelay(args.CurrentFailedTry);
-            await Task.Delay(delay, args.CancellationToken).ConfigureAwait(false);
+            await _scheduler.Delay(delay, args.CancellationToken).ConfigureAwait(false);
 
             return true;
         }

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AutoML.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START automl_v1_generated_AutoMl_CreateModel_sync_flattened]
     using Google.Cloud.AutoML.V1;

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v3_generated_Versions_ListVersions_sync]
     using Google.Api.Gax;
@@ -36,14 +36,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
         public void ListVersionsRequestObject()
         {
             // Create client
-            VersionsClient versionsClient = VersionsClient.Create();
+            gcdcv::VersionsClient versionsClient = gcdcv::VersionsClient.Create();
             // Initialize request argument(s)
-            ListVersionsRequest request = new ListVersionsRequest
+            gcdcv::ListVersionsRequest request = new gcdcv::ListVersionsRequest
             {
-                ParentAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                ParentAsFlowName = gcdcv::FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
             };
             // Make the request
-            PagedEnumerable<ListVersionsResponse, gcdcv::Version> response = versionsClient.ListVersions(request);
+            PagedEnumerable<gcdcv::ListVersionsResponse, gcdcv::Version> response = versionsClient.ListVersions(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (gcdcv::Version item in response)
@@ -53,7 +53,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListVersionsResponse page in response.AsRawResponses())
+            foreach (gcdcv::ListVersionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

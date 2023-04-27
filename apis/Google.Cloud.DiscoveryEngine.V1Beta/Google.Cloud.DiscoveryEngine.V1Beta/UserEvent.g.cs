@@ -338,7 +338,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// * [PredictResponse.attribution_token][] for events that are the result of
     /// [PredictionService.Predict][].
     /// * [SearchResponse.attribution_token][google.cloud.discoveryengine.v1beta.SearchResponse.attribution_token] for events that are the result of
-    /// [SearchService.Search][].
+    /// [SearchService.Search][google.cloud.discoveryengine.v1beta.SearchService.Search].
     /// * [CompleteQueryResponse.attribution_token][] for events that are the
     /// result of [SearchService.CompleteQuery][].
     ///
@@ -530,8 +530,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// those custom attributes when training models and serving predictions, which
     /// helps improve recommendation quality.
     ///
-    /// This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
-    /// error is returned:
+    /// This field needs to pass all below criteria, otherwise an
+    /// `INVALID_ARGUMENT` error is returned:
     ///
     /// * The key must be a UTF-8 encoded string with a length limit of 5,000
     ///   characters.
@@ -541,7 +541,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// * For number attributes, at most 400 values are allowed.
     ///
     /// For product recommendations, an example of extra user information is
-    /// traffic_channel, which is how a user arrives at the site. Users can arrive
+    /// ` traffic_channel`, which is how a user arrives at the site. Users can
+    /// arrive
     /// at the site by coming to the site directly, coming through Google
     /// search, or in other ways.
     /// </summary>
@@ -2598,7 +2599,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int NameFieldNumber = 2;
     /// <summary>
     /// Required. The Document resource full name, of the form:
-    /// projects/{project\_id}/locations/{location}/collections/{collection\_id}/dataStores/{data\_store\_id}/branches/{branch\_id}/documents/{document\_id}
+    /// `projects/{project_id}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3306,7 +3307,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// Media progress should be computed using only the media_progress_duration
     /// relative to the media total length.
     ///
-    /// This value must be between [0, 1.0] inclusive.
+    /// This value must be between `[0, 1.0]` inclusive.
     ///
     /// If this is not a playback or the progress cannot be computed (e.g. ongoing
     /// livestream), this field should be unset.

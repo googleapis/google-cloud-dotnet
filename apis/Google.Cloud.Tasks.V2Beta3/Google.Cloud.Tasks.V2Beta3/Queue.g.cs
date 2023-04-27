@@ -61,10 +61,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "dGVkX2Fycml2YWxfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
             "c3RhbXBCA+BBAxInChpleGVjdXRlZF9sYXN0X21pbnV0ZV9jb3VudBgDIAEo",
             "A0ID4EEDEigKG2NvbmN1cnJlbnRfZGlzcGF0Y2hlc19jb3VudBgEIAEoA0ID",
-            "4EEDEiUKGGVmZmVjdGl2ZV9leGVjdXRpb25fcmF0ZRgFIAEoAUID4EEDQmQK",
+            "4EEDEiUKGGVmZmVjdGl2ZV9leGVjdXRpb25fcmF0ZRgFIAEoAUID4EEDQnMK",
             "HmNvbS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhM0IKUXVldWVQcm90b1AB",
-            "WjRjbG91ZC5nb29nbGUuY29tL2dvL3Rhc2tzL2FwaXYyYmV0YTMvdGFza3Nw",
-            "Yjt0YXNrc3BiYgZwcm90bzM="));
+            "WkNjbG91ZC5nb29nbGUuY29tL2dvL2Nsb3VkdGFza3MvYXBpdjJiZXRhMy9j",
+            "bG91ZHRhc2tzcGI7Y2xvdWR0YXNrc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -147,8 +147,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Caller-specified and required in [CreateQueue][google.cloud.tasks.v2beta3.CloudTasks.CreateQueue],
-    /// after which it becomes output only.
+    /// Caller-specified and required in
+    /// [CreateQueue][google.cloud.tasks.v2beta3.CloudTasks.CreateQueue], after
+    /// which it becomes output only.
     ///
     /// The queue name.
     ///
@@ -179,9 +180,11 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>Field number for the "app_engine_http_queue" field.</summary>
     public const int AppEngineHttpQueueFieldNumber = 3;
     /// <summary>
-    /// [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue] settings apply only to
-    /// [App Engine tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest] in this queue.
-    /// [Http tasks][google.cloud.tasks.v2beta3.HttpRequest] are not affected by this proto.
+    /// [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue]
+    /// settings apply only to [App Engine
+    /// tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest] in this queue.
+    /// [Http tasks][google.cloud.tasks.v2beta3.HttpRequest] are not affected by
+    /// this proto.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -199,23 +202,27 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>
     /// Rate limits for task dispatches.
     ///
-    /// [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] and [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] are
-    /// related because they both control task attempts. However they control task
-    /// attempts in different ways:
+    /// [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] and
+    /// [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] are related
+    /// because they both control task attempts. However they control task attempts
+    /// in different ways:
     ///
-    /// * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] controls the total rate of
+    /// * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] controls the
+    /// total rate of
     ///   dispatches from a queue (i.e. all traffic dispatched from the
     ///   queue, regardless of whether the dispatch is from a first
     ///   attempt or a retry).
-    /// * [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls what happens to
+    /// * [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls
+    /// what happens to
     ///   particular a task after its first attempt fails. That is,
-    ///   [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls task retries (the
-    ///   second attempt, third attempt, etc).
+    ///   [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls
+    ///   task retries (the second attempt, third attempt, etc).
     ///
     /// The queue's actual dispatch rate is the result of:
     ///
     /// * Number of tasks in the queue
-    /// * User-specified throttling: [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits],
+    /// * User-specified throttling:
+    /// [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits],
     ///   [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config], and the
     ///   [queue's state][google.cloud.tasks.v2beta3.Queue.state].
     /// * System throttling due to `429` (Too Many Requests) or `503` (Service
@@ -263,9 +270,11 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     ///
     /// `state` can only be changed by calling
     /// [PauseQueue][google.cloud.tasks.v2beta3.CloudTasks.PauseQueue],
-    /// [ResumeQueue][google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue], or uploading
+    /// [ResumeQueue][google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue], or
+    /// uploading
     /// [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref).
-    /// [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] cannot be used to change `state`.
+    /// [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] cannot be
+    /// used to change `state`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -282,11 +291,12 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>
     /// Output only. The last time this queue was purged.
     ///
-    /// All tasks that were [created][google.cloud.tasks.v2beta3.Task.create_time] before this time
-    /// were purged.
+    /// All tasks that were [created][google.cloud.tasks.v2beta3.Task.create_time]
+    /// before this time were purged.
     ///
-    /// A queue can be purged using [PurgeQueue][google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue], the
-    /// [App Engine Task Queue SDK, or the Cloud
+    /// A queue can be purged using
+    /// [PurgeQueue][google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue], the [App
+    /// Engine Task Queue SDK, or the Cloud
     /// Console](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/deleting-tasks-and-queues#purging_all_tasks_from_a_queue).
     ///
     /// Purge time will be truncated to the nearest microsecond. Purge
@@ -954,8 +964,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// This message determines the maximum rate that tasks can be dispatched by a
   /// queue, regardless of whether the dispatch is a first task attempt or a retry.
   ///
-  /// Note: The debugging command, [RunTask][google.cloud.tasks.v2beta3.CloudTasks.RunTask], will run a task
-  /// even if the queue has reached its [RateLimits][google.cloud.tasks.v2beta3.RateLimits].
+  /// Note: The debugging command,
+  /// [RunTask][google.cloud.tasks.v2beta3.CloudTasks.RunTask], will run a task
+  /// even if the queue has reached its
+  /// [RateLimits][google.cloud.tasks.v2beta3.RateLimits].
   /// </summary>
   public sealed partial class RateLimits : pb::IMessage<RateLimits>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1012,7 +1024,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// If unspecified when the queue is created, Cloud Tasks will pick the
     /// default.
     ///
-    /// * For [App Engine queues][google.cloud.tasks.v2beta3.AppEngineHttpQueue], the maximum allowed value
+    /// * For [App Engine queues][google.cloud.tasks.v2beta3.AppEngineHttpQueue],
+    /// the maximum allowed value
     ///   is 500.
     ///
     /// This field has the same meaning as
@@ -1059,10 +1072,11 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// `queue.yaml/xml`, `max_burst_size` is equal to
     /// [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size).
     /// If
-    /// [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] is called on a queue without
-    /// explicitly setting a value for `max_burst_size`,
+    /// [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] is called
+    /// on a queue without explicitly setting a value for `max_burst_size`,
     /// `max_burst_size` value will get updated if
-    /// [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] is updating
+    /// [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] is
+    /// updating
     /// [max_dispatches_per_second][google.cloud.tasks.v2beta3.RateLimits.max_dispatches_per_second].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1370,9 +1384,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// If positive, `max_retry_duration` specifies the time limit for
     /// retrying a failed task, measured from when the task was first
     /// attempted. Once `max_retry_duration` time has passed *and* the
-    /// task has been attempted [max_attempts][google.cloud.tasks.v2beta3.RetryConfig.max_attempts]
-    /// times, no further attempts will be made and the task will be
-    /// deleted.
+    /// task has been attempted
+    /// [max_attempts][google.cloud.tasks.v2beta3.RetryConfig.max_attempts] times,
+    /// no further attempts will be made and the task will be deleted.
     ///
     /// If zero, then the task age is unlimited.
     ///
@@ -1398,11 +1412,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int MinBackoffFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Duration minBackoff_;
     /// <summary>
-    /// A task will be [scheduled][google.cloud.tasks.v2beta3.Task.schedule_time] for retry between
+    /// A task will be [scheduled][google.cloud.tasks.v2beta3.Task.schedule_time]
+    /// for retry between
     /// [min_backoff][google.cloud.tasks.v2beta3.RetryConfig.min_backoff] and
-    /// [max_backoff][google.cloud.tasks.v2beta3.RetryConfig.max_backoff] duration after it fails,
-    /// if the queue's [RetryConfig][google.cloud.tasks.v2beta3.RetryConfig] specifies that the task should be
-    /// retried.
+    /// [max_backoff][google.cloud.tasks.v2beta3.RetryConfig.max_backoff] duration
+    /// after it fails, if the queue's
+    /// [RetryConfig][google.cloud.tasks.v2beta3.RetryConfig] specifies that the
+    /// task should be retried.
     ///
     /// If unspecified when the queue is created, Cloud Tasks will pick the
     /// default.
@@ -1426,11 +1442,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int MaxBackoffFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Duration maxBackoff_;
     /// <summary>
-    /// A task will be [scheduled][google.cloud.tasks.v2beta3.Task.schedule_time] for retry between
+    /// A task will be [scheduled][google.cloud.tasks.v2beta3.Task.schedule_time]
+    /// for retry between
     /// [min_backoff][google.cloud.tasks.v2beta3.RetryConfig.min_backoff] and
-    /// [max_backoff][google.cloud.tasks.v2beta3.RetryConfig.max_backoff] duration after it fails,
-    /// if the queue's [RetryConfig][google.cloud.tasks.v2beta3.RetryConfig] specifies that the task should be
-    /// retried.
+    /// [max_backoff][google.cloud.tasks.v2beta3.RetryConfig.max_backoff] duration
+    /// after it fails, if the queue's
+    /// [RetryConfig][google.cloud.tasks.v2beta3.RetryConfig] specifies that the
+    /// task should be retried.
     ///
     /// If unspecified when the queue is created, Cloud Tasks will pick the
     /// default.
@@ -1457,21 +1475,23 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// The time between retries will double `max_doublings` times.
     ///
     /// A task's retry interval starts at
-    /// [min_backoff][google.cloud.tasks.v2beta3.RetryConfig.min_backoff], then doubles
-    /// `max_doublings` times, then increases linearly, and finally
-    /// retries at intervals of
+    /// [min_backoff][google.cloud.tasks.v2beta3.RetryConfig.min_backoff], then
+    /// doubles `max_doublings` times, then increases linearly, and finally retries
+    /// at intervals of
     /// [max_backoff][google.cloud.tasks.v2beta3.RetryConfig.max_backoff] up to
     /// [max_attempts][google.cloud.tasks.v2beta3.RetryConfig.max_attempts] times.
     ///
-    /// For example, if [min_backoff][google.cloud.tasks.v2beta3.RetryConfig.min_backoff] is 10s,
-    /// [max_backoff][google.cloud.tasks.v2beta3.RetryConfig.max_backoff] is 300s, and
-    /// `max_doublings` is 3, then the a task will first be retried in
-    /// 10s. The retry interval will double three times, and then
-    /// increase linearly by 2^3 * 10s.  Finally, the task will retry at
-    /// intervals of [max_backoff][google.cloud.tasks.v2beta3.RetryConfig.max_backoff] until the
-    /// task has been attempted [max_attempts][google.cloud.tasks.v2beta3.RetryConfig.max_attempts]
-    /// times. Thus, the requests will retry at 10s, 20s, 40s, 80s, 160s,
-    /// 240s, 300s, 300s, ....
+    /// For example, if
+    /// [min_backoff][google.cloud.tasks.v2beta3.RetryConfig.min_backoff] is 10s,
+    /// [max_backoff][google.cloud.tasks.v2beta3.RetryConfig.max_backoff] is 300s,
+    /// and `max_doublings` is 3, then the a task will first be retried in 10s. The
+    /// retry interval will double three times, and then increase linearly by 2^3 *
+    /// 10s.  Finally, the task will retry at intervals of
+    /// [max_backoff][google.cloud.tasks.v2beta3.RetryConfig.max_backoff] until the
+    /// task has been attempted
+    /// [max_attempts][google.cloud.tasks.v2beta3.RetryConfig.max_attempts] times.
+    /// Thus, the requests will retry at 10s, 20s, 40s, 80s, 160s, 240s, 300s,
+    /// 300s, ....
     ///
     /// If unspecified when the queue is created, Cloud Tasks will pick the
     /// default.
@@ -1999,10 +2019,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int TasksCountFieldNumber = 1;
     private long tasksCount_;
     /// <summary>
-    /// Output only. An estimation of the number of tasks in the queue, that is, the tasks in
-    /// the queue that haven't been executed, the tasks in the queue which the
-    /// queue has dispatched but has not yet received a reply for, and the failed
-    /// tasks that the queue is retrying.
+    /// Output only. An estimation of the number of tasks in the queue, that is,
+    /// the tasks in the queue that haven't been executed, the tasks in the queue
+    /// which the queue has dispatched but has not yet received a reply for, and
+    /// the failed tasks that the queue is retrying.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2017,8 +2037,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int OldestEstimatedArrivalTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp oldestEstimatedArrivalTime_;
     /// <summary>
-    /// Output only. An estimation of the nearest time in the future where a task in the queue
-    /// is scheduled to be executed.
+    /// Output only. An estimation of the nearest time in the future where a task
+    /// in the queue is scheduled to be executed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2033,9 +2053,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int ExecutedLastMinuteCountFieldNumber = 3;
     private long executedLastMinuteCount_;
     /// <summary>
-    /// Output only. The number of tasks that the queue has dispatched and received a reply for
-    /// during the last minute. This variable counts both successful and
-    /// non-successful executions.
+    /// Output only. The number of tasks that the queue has dispatched and received
+    /// a reply for during the last minute. This variable counts both successful
+    /// and non-successful executions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2050,8 +2070,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int ConcurrentDispatchesCountFieldNumber = 4;
     private long concurrentDispatchesCount_;
     /// <summary>
-    /// Output only. The number of requests that the queue has dispatched but has not received
-    /// a reply for yet.
+    /// Output only. The number of requests that the queue has dispatched but has
+    /// not received a reply for yet.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2066,10 +2086,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int EffectiveExecutionRateFieldNumber = 5;
     private double effectiveExecutionRate_;
     /// <summary>
-    /// Output only. The current maximum number of tasks per second executed by the queue.
-    /// The maximum value of this variable is controlled by the RateLimits of the
-    /// Queue. However, this value could be less to avoid overloading the endpoints
-    /// tasks in the queue are targeting.
+    /// Output only. The current maximum number of tasks per second executed by the
+    /// queue. The maximum value of this variable is controlled by the RateLimits
+    /// of the Queue. However, this value could be less to avoid overloading the
+    /// endpoints tasks in the queue are targeting.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.V2.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_async_flattened2]
+    // [START bigtable_v2_generated_Bigtable_ReadModifyWriteRow_async_flattened2]
     using Google.Cloud.Bigtable.V2;
     using Google.Protobuf;
     using System.Collections.Generic;
@@ -48,5 +48,5 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(tableName, rowKey, rules, appProfileId);
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_async_flattened2]
+    // [END bigtable_v2_generated_Bigtable_ReadModifyWriteRow_async_flattened2]
 }

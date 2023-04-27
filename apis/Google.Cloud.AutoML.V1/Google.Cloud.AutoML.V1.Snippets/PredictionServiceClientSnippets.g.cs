@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AutoML.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.AutoML.V1;
     using Google.LongRunning;
     using System.Collections.Generic;
     using System.Threading.Tasks;

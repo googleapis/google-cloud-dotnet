@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AccessApproval.V1.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_sync_flattened]
+    // [START accessapproval_v1_generated_AccessApproval_ListApprovalRequests_sync_flattened]
     using Google.Api.Gax;
     using Google.Cloud.AccessApproval.V1;
     using System;
@@ -73,5 +73,5 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END accessapproval_v1_generated_AccessApprovalService_ListApprovalRequests_sync_flattened]
+    // [END accessapproval_v1_generated_AccessApproval_ListApprovalRequests_sync_flattened]
 }

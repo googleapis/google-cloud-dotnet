@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START containeranalysis_v1_generated_ContainerAnalysis_TestIamPermissions_async_flattened_resourceNames]
     using Google.Api.Gax;

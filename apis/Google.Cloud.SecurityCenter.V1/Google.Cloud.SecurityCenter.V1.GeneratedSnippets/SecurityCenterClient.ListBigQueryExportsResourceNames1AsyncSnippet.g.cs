@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.SecurityCenter.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START securitycenter_v1_generated_SecurityCenter_ListBigQueryExports_async_flattened_resourceNames1]
     using Google.Api.Gax;

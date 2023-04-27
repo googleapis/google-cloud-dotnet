@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.3.0, released 2023-04-19
+
+### New features
+
+- Add support for snapshot clones ([commit 09aadf7](https://github.com/googleapis/google-cloud-dotnet/commit/09aadf792d8d20346f0c2e1e4bb45abda2775897))
+
 ## Version 3.2.0, released 2022-11-16
 
 ### New features

@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_ContentService_ListContent_async_flattened]
     using Google.Api.Gax;
@@ -38,25 +38,25 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task ListContentAsync()
         {
             // Create client
-            ContentServiceClient contentServiceClient = await ContentServiceClient.CreateAsync();
+            gcdv::ContentServiceClient contentServiceClient = await gcdv::ContentServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]";
             // Make the request
-            PagedAsyncEnumerable<ListContentResponse, Content> response = contentServiceClient.ListContentAsync(parent);
+            PagedAsyncEnumerable<gcdv::ListContentResponse, gcdv::Content> response = contentServiceClient.ListContentAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Content item) =>
+            await response.ForEachAsync((gcdv::Content item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListContentResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListContentResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Content item in page)
+                foreach (gcdv::Content item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -65,10 +65,10 @@ namespace Google.Cloud.Dataplex.V1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Content> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcdv::Content> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Content item in singlePage)
+            foreach (gcdv::Content item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

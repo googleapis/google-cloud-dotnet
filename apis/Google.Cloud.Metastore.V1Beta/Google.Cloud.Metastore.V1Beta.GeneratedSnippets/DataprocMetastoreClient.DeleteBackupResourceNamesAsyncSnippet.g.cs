@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Metastore.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START metastore_v1beta_generated_DataprocMetastore_DeleteBackup_async_flattened_resourceNames]
     using Google.Cloud.Metastore.V1Beta;

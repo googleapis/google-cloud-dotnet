@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.PubSub.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START pubsub_v1_generated_SubscriberServiceApi_Pull_async_flattened2]
     using Google.Cloud.PubSub.V1;

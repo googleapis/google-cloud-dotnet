@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.ApigeeRegistry.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START apigeeregistry_v1_generated_Registry_UpdateApi_sync]
     using Google.Protobuf.WellKnownTypes;
@@ -35,9 +35,9 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
         public void UpdateApiRequestObject()
         {
             // Create client
-            RegistryClient registryClient = RegistryClient.Create();
+            gcav::RegistryClient registryClient = gcav::RegistryClient.Create();
             // Initialize request argument(s)
-            UpdateApiRequest request = new UpdateApiRequest
+            gcav::UpdateApiRequest request = new gcav::UpdateApiRequest
             {
                 Api = new gcav::Api(),
                 UpdateMask = new FieldMask(),

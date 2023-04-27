@@ -40,9 +40,15 @@ namespace Google.Cloud.Tools.PostProcessDevSite
     /// - docs/output/{package}/devsite/api (including guides and tweaked TOC)
     /// - docs/output/{package}/devsite/examples
     /// - docs/output/{package}/devsite/docs-metadata.json (includes xrefs and xrefservices)
+    ///
+    /// If the package ID of "utility" is specified, most processing is bypassed.
+    /// We expect docs/output/devsite/api to already exist, and only metadata
+    /// processing is performed.
     /// </summary>
     internal class Program
     {
+        private const string UtilityApi = "utility";
+
         /// <summary>
         /// The package/API ID
         /// </summary>
@@ -84,6 +90,13 @@ namespace Google.Cloud.Tools.PostProcessDevSite
 
         private void Execute()
         {
+            // The utility pseudo-package only needs a few tweaks.
+            if (_apiId == UtilityApi)
+            {
+                FixExternalReferencesAndNamespaceSpecs();
+                return;
+            }
+
             if (Directory.Exists(_devSiteRoot))
             {
                 Directory.Delete(_devSiteRoot, recursive: true);
@@ -97,7 +110,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
             Directory.CreateDirectory(_devSiteRoot);
 
             CopyApiDirectory();
-            FixExternalReferences();
+            FixExternalReferencesAndNamespaceSpecs();
             AddFriendlyNames();
             RegenerateToc();
             CopyGuides();
@@ -122,13 +135,13 @@ namespace Google.Cloud.Tools.PostProcessDevSite
         /// the references within the docfx aren't labeled as "isExternal", so they aren't resolved against
         /// xrefmaps. This method fixes that, rewriting the YAML files.
         /// </summary>
-        private void FixExternalReferences()
+        private void FixExternalReferencesAndNamespaceSpecs()
         {
             var dir = Path.Combine(_devSiteRoot, "api");
-            var manifest = File.ReadAllText(Path.Combine(dir, ".manifest"));
-            var packageUids = new HashSet<string>(JsonConvert.DeserializeObject<Dictionary<string, string>>(manifest).Keys);
 
-            Console.WriteLine($"Loaded {packageUids.Count} manifest entries");
+            var packageUids = LoadPackageUids();
+            Console.WriteLine($"Loaded {packageUids.Count} package UIDs");
+
             foreach (var yamlFile in Directory.GetFiles(dir, "*.yml"))
             {
                 if (Path.GetFileName(yamlFile) == "toc.yml")
@@ -146,6 +159,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                 if (references is object)
                 {
                     FixExternalReferences(references);
+                    RemoveNamespaceSpecs(references);
                 }
 
                 // Note: this rewriting adds a "..." at the end of each file.
@@ -171,10 +185,9 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                         var uidNode = GetChildByName(mappingNode, "uid");
                         var isExternalNode = GetChildByName(mappingNode, "isExternal");
                         var definitionNode = GetChildByName(mappingNode, "definition");
-                        if (uidNode is YamlScalarNode { Value: string uid } &&
-                            !packageUids.Contains(uid.TrimEnd('*')) &&
-                            isExternalNode is null &&
-                            definitionNode is null)
+                        if (isExternalNode is null &&
+                            definitionNode is null &&
+                            uidNode is YamlScalarNode { Value: string uid } && packageUids.Contains(uid))
                         {
                             mappingNode.Add("isExternal", "true");
                         }
@@ -191,6 +204,96 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                             FixExternalReferences(child);
                         }
                         break;
+                }
+            }
+
+            void RemoveNamespaceSpecs(YamlNode node)
+            {
+                switch (node)
+                {
+                    case YamlMappingNode mappingNode:
+                        // Main part... find any uid node with a commentId starting with "N:",
+                        // and remove any spec.vb and spec.csharp children.
+                        var commentIdNode = GetChildByName(mappingNode, "commentId");
+                        if (commentIdNode is YamlScalarNode { Value: string commentId } &&
+                            commentId.StartsWith("N:"))
+                        {
+                            RemoveByName(mappingNode, "spec.vb");
+                            RemoveByName(mappingNode, "spec.csharp");                            
+                        }
+                        break;
+                    case YamlSequenceNode sequenceNode:
+                        // Recurse
+                        foreach (var child in sequenceNode.Children)
+                        {
+                            RemoveNamespaceSpecs(child);
+                        }
+                        break;
+                }
+            }
+
+            HashSet<string> LoadPackageUids()
+            {
+                var ret = new HashSet<string>();
+
+                // First load all the metadata files to find out which UIDs are created by this package.
+                foreach (var yamlFile in Directory.GetFiles(dir, "*.yml"))
+                {
+                    if (Path.GetFileName(yamlFile) == "toc.yml")
+                    {
+                        continue;
+                    }
+                    var yaml = new YamlStream();
+                    using (var reader = File.OpenText(yamlFile))
+                    {
+                        yaml.Load(reader);
+                    }
+                    var doc = (YamlMappingNode) yaml.Documents[0].RootNode;
+                    var items = GetChildByName(doc, "items");
+                    if (items is YamlSequenceNode node)
+                    {
+                        foreach (var item in node.Children.OfType<YamlMappingNode>())
+                        {
+                            if (GetChildByName(item, "uid") is not YamlScalarNode { Value: string uid })
+                            {
+                                continue;
+                            }
+                            ret.Add(uid);
+
+                            // Some nodes have an "overload" value ending in *, which are referenced elsewhere.
+                            // We can treat these as effectively internal UIDs.
+                            if (GetChildByName(item, "overload") is YamlScalarNode { Value: string overload })
+                            {
+                                ret.Add(overload);
+                            }
+
+                            // For namespaces, add all parents as well. (So if we're declaring "Google.Cloud.Xyz.V1", add "Google", "Google.Cloud", "Google.Cloud.Xyz" as well.)
+                            if (GetChildByName(item, "type") is YamlScalarNode { Value: "Namespace" })
+                            {
+                                string ns = uid;
+                                while (true)
+                                {
+                                    int lastDot = ns.LastIndexOf('.');
+                                    if (lastDot == -1)
+                                    {
+                                        break;
+                                    }
+                                    ns = ns.Substring(0, lastDot);
+                                    ret.Add(ns);
+                                }
+                            }
+                        }
+                    }
+                }
+                return ret;
+            }
+
+            void RemoveByName(YamlMappingNode parent, string name)
+            {
+                var key = parent.Children.Keys.FirstOrDefault(key => key is YamlScalarNode scalarKey && scalarKey.Value == name);
+                if (key is not null)
+                {
+                    parent.Children.Remove(key);
                 }
             }
 

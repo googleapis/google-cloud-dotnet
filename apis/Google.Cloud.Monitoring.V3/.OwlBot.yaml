@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/monitoring/v3/.*-csharp/Google.Cloud.Monitoring.V3
       dest: /owl-bot-staging/Google.Cloud.Monitoring.V3/Google.Cloud.Monitoring.V3
-    - source: /google/monitoring/v3/.*-csharp/Google.Cloud.Monitoring.V3.Tests
-      dest: /owl-bot-staging/Google.Cloud.Monitoring.V3/Google.Cloud.Monitoring.V3.Tests
     - source: /google/monitoring/v3/.*-csharp/Google.Cloud.Monitoring.V3.Snippets
       dest: /owl-bot-staging/Google.Cloud.Monitoring.V3/Google.Cloud.Monitoring.V3.Snippets
     - source: /google/monitoring/v3/.*-csharp/Google.Cloud.Monitoring.V3.GeneratedSnippets

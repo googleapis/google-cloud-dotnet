@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Workflows.Executions.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Cloud.Workflows.Common.V1;
+    using Google.Cloud.Workflows.Executions.V1;
     using System;
     using System.Linq;
     using System.Threading.Tasks;

@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Eventarc.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START eventarc_v1_generated_Eventarc_CreateTrigger_sync]
     using Google.Api.Gax.ResourceNames;

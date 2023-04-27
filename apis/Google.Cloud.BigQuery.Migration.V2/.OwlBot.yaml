@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/bigquery/migration/v2/.*-csharp/Google.Cloud.BigQuery.Migration.V2
       dest: /owl-bot-staging/Google.Cloud.BigQuery.Migration.V2/Google.Cloud.BigQuery.Migration.V2
-    - source: /google/cloud/bigquery/migration/v2/.*-csharp/Google.Cloud.BigQuery.Migration.V2.Tests
-      dest: /owl-bot-staging/Google.Cloud.BigQuery.Migration.V2/Google.Cloud.BigQuery.Migration.V2.Tests
     - source: /google/cloud/bigquery/migration/v2/.*-csharp/Google.Cloud.BigQuery.Migration.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.BigQuery.Migration.V2/Google.Cloud.BigQuery.Migration.V2.Snippets
     - source: /google/cloud/bigquery/migration/v2/.*-csharp/Google.Cloud.BigQuery.Migration.V2.GeneratedSnippets

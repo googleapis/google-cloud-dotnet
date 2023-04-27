@@ -46,7 +46,8 @@ namespace Google.Cloud.Storage.V1
             var bucketEntity = new Bucket { Name = bucket };
             var request = Service.Buckets.Insert(bucketEntity, projectId);
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
 
@@ -56,7 +57,8 @@ namespace Google.Cloud.Storage.V1
             ValidateBucket(bucket, nameof(bucket));
             var request = Service.Buckets.Insert(bucket, projectId);
             options?.ModifyRequest(request);
-            RetryHandler.MarkAsRetriable(request);
+            RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
+            MarkAsRetriable(request, retryOptions);
             return request;
         }
     }

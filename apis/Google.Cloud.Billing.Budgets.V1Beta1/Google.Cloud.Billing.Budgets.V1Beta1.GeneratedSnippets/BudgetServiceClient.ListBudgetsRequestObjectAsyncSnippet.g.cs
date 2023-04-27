@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Billing.Budgets.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START billingbudgets_v1beta1_generated_BudgetService_ListBudgets_async]
     using Google.Api.Gax;

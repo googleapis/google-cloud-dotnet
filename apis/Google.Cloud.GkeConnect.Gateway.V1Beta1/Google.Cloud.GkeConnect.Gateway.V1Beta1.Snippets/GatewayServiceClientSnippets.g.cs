@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.GkeConnect.Gateway.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api;
+    using Google.Cloud.GkeConnect.Gateway.V1Beta1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;

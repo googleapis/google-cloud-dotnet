@@ -1030,7 +1030,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// <summary>Field number for the "not_expression" field.</summary>
     public const int NotExpressionFieldNumber = 2;
     /// <summary>
-    /// A filter expression to be NOT'ed (i.e., inverted, complemented). It
+    /// A filter expression to be NOT'ed (that is, inverted, complemented). It
     /// must include a dimension_filter. This cannot be set on the
     /// top level ExpandedDataSetFilterExpression.
     /// </summary>
@@ -1632,7 +1632,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// <summary>
     /// Immutable. A logical expression of ExpandedDataSet filters applied to
     /// dimension included in the ExpandedDataSet. This filter is used to reduce
-    /// the number of rows and thus the change of encountering `other row`.
+    /// the number of rows and thus the chance of encountering `other` row.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -31,6 +31,36 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Logging.AddGoogleCloudConsole(options => options.IncludeScopes = true);
 ```
 
+## Log trace correlation
+
+The console formatter supports Google Cloud Trace and log correlation. This means that
+if the application using the console formatter is running in Google Cloud and exports traces
+to Google Cloud Trace, the trace context information, if available, can be included in the log entry.
+
+It is important to note that the console formatter does not start, modify or persist the trace information in any way.
+It only includes the available trace context information in the log entry for correlation.
+
+To enable log trace correlation, set the `TraceGoogleCloudProjectId` property of the formatter options
+to the ID of the Google Cloud Project where trace data is being written to Google Cloud Trace.
+This property is optional, and if not set, the trace context information will not be
+included in the log entry. It has no effect on where log entries are written to or
+whether trace information is exported to Google Cloud Trace or to which Google Cloud Project traces are exported to.
+
+Note that when application runs in Google Cloud, for instance in Google Cloud Run,
+trace information is automatically collected and exported by the runtime.
+
+If the application is responsible for initiating the traces, it is application's responsibility to ensure
+that the traces are exported to Google Cloud Trace, in the same Google Cloud Project as specified in the console formatter options.
+
+The code to enable log trace correlation is shown below:
+
+```csharp
+using Google.Cloud.Logging.Console;
+...
+var builder = WebApplication.CreateBuilder(args);
+builder.Logging.AddGoogleCloudConsole(options => options.TraceGoogleCloudProjectId = "google-project-id");
+```
+
 ## Formatter output
 
 The formatter writes JSON entries in the format expected by Cloud

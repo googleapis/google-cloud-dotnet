@@ -101,6 +101,7 @@ namespace Google.Cloud.Datastore.V1
 
         /// <summary>
         /// Creates a filter to check that the specified property is in a given array of values.
+        /// <remarks> The name of the parameter <paramref name="value"/> is unfortunate and it will be addressed in the next major version release.</remarks>
         /// </summary>
         /// <param name="value">The name of the property. Must not be null.</param>
         /// <param name="collection">The array of values to compare against. Must not be null. </param>
@@ -113,6 +114,7 @@ namespace Google.Cloud.Datastore.V1
 
         /// <summary>
         /// Creates a filter to check that the specified property is not in a given array of values.
+        /// <remarks> The name of the parameter <paramref name="value"/> is unfortunate and it will be addressed in the next major version release.</remarks>
         /// </summary>
         /// <param name="value">The name of the property. Must not be null.</param>
         /// <param name="collection">The array of values to compare against. Must not be null.</param>

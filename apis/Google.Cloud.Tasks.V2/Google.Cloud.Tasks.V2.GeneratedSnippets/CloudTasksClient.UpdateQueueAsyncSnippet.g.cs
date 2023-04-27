@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2_generated_CloudTasks_UpdateQueue_async_flattened]
     using Google.Protobuf.WellKnownTypes;
@@ -36,12 +36,12 @@ namespace Google.Cloud.Tasks.V2.Snippets
         public async Task UpdateQueueAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            Queue queue = new Queue();
+            gctv::Queue queue = new gctv::Queue();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Queue response = await cloudTasksClient.UpdateQueueAsync(queue, updateMask);
+            gctv::Queue response = await cloudTasksClient.UpdateQueueAsync(queue, updateMask);
         }
     }
     // [END cloudtasks_v2_generated_CloudTasks_UpdateQueue_async_flattened]

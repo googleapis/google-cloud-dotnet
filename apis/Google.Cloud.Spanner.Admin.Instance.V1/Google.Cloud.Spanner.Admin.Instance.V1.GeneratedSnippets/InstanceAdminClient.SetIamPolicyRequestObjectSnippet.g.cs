@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START spanner_v1_generated_InstanceAdmin_SetIamPolicy_sync]
     using Google.Api.Gax;

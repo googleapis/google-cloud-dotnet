@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v3_generated_Versions_ListVersions_async_flattened_resourceNames]
     using Google.Api.Gax;
@@ -38,11 +38,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
         public async Task ListVersionsResourceNamesAsync()
         {
             // Create client
-            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            gcdcv::VersionsClient versionsClient = await gcdcv::VersionsClient.CreateAsync();
             // Initialize request argument(s)
-            FlowName parent = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]");
+            gcdcv::FlowName parent = gcdcv::FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]");
             // Make the request
-            PagedAsyncEnumerable<ListVersionsResponse, gcdcv::Version> response = versionsClient.ListVersionsAsync(parent);
+            PagedAsyncEnumerable<gcdcv::ListVersionsResponse, gcdcv::Version> response = versionsClient.ListVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdcv::Version item) =>
@@ -52,7 +52,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListVersionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdcv::ListVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

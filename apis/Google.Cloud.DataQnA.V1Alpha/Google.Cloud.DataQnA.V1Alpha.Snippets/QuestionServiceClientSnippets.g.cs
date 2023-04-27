@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DataQnA.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.DataQnA.V1Alpha;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 

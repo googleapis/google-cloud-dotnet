@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START servicedirectory_v1beta1_generated_RegistrationService_GetNamespace_sync]
     using Google.Cloud.ServiceDirectory.V1Beta1;

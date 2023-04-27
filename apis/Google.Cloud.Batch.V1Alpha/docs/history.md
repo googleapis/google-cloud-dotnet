@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.0.0-alpha10, released 2023-04-19
+
+### New features
+
+- Add TaskStatus's new terminated state UNEXECUTED ([commit c721955](https://github.com/googleapis/google-cloud-dotnet/commit/c72195511d02ef07dbc8452d94c85dd4c5153e23))
+- Add scheduling_policy IN_ORDER enum to support sequential task executions ([commit c721955](https://github.com/googleapis/google-cloud-dotnet/commit/c72195511d02ef07dbc8452d94c85dd4c5153e23))
+- Add support for placement policies ([commit c721955](https://github.com/googleapis/google-cloud-dotnet/commit/c72195511d02ef07dbc8452d94c85dd4c5153e23))
+
+### Documentation improvements
+
+- Update comments on boot disk fields for clearer usage scope ([commit c721955](https://github.com/googleapis/google-cloud-dotnet/commit/c72195511d02ef07dbc8452d94c85dd4c5153e23))
+- Update block_external_network field comment to reduce confusion ([commit c721955](https://github.com/googleapis/google-cloud-dotnet/commit/c72195511d02ef07dbc8452d94c85dd4c5153e23))
+- Update disk and network field comment for better readability ([commit c721955](https://github.com/googleapis/google-cloud-dotnet/commit/c72195511d02ef07dbc8452d94c85dd4c5153e23))
+- Fix `book disk` typo ([commit c721955](https://github.com/googleapis/google-cloud-dotnet/commit/c72195511d02ef07dbc8452d94c85dd4c5153e23))
+- Update reservation field API doc ([commit c721955](https://github.com/googleapis/google-cloud-dotnet/commit/c72195511d02ef07dbc8452d94c85dd4c5153e23))
+
 ## Version 1.0.0-alpha09, released 2023-03-09
 
 ### BREAKING CHANGE

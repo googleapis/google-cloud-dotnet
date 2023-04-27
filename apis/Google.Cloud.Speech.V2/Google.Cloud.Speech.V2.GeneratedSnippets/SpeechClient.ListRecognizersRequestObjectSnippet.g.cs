@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Speech.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START speech_v2_generated_Speech_ListRecognizers_sync]
     using Google.Api.Gax;

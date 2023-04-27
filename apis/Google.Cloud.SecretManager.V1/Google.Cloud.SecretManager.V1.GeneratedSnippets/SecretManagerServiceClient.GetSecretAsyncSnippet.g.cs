@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.SecretManager.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START secretmanager_v1_generated_SecretManagerService_GetSecret_async_flattened]
     using Google.Cloud.SecretManager.V1;

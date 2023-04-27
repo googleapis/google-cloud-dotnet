@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_ListZoneActions_async]
     using Google.Api.Gax;
@@ -38,14 +38,14 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task ListZoneActionsRequestObjectAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListZoneActionsRequest request = new ListZoneActionsRequest
+            gcdv::ListZoneActionsRequest request = new gcdv::ListZoneActionsRequest
             {
-                ParentAsZoneName = ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
+                ParentAsZoneName = gcdv::ZoneName.FromProjectLocationLakeZone("[PROJECT]", "[LOCATION]", "[LAKE]", "[ZONE]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActionsAsync(request);
+            PagedAsyncEnumerable<gcdv::ListActionsResponse, gcdv::Action> response = dataplexServiceClient.ListZoneActionsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((gcdv::Action item) =>
@@ -55,7 +55,7 @@ namespace Google.Cloud.Dataplex.V1.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListActionsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((gcdv::ListActionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

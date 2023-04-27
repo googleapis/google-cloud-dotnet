@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Firestore.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START firestore_v1_generated_Firestore_CreateDocument_sync]
     using Google.Cloud.Firestore.V1;

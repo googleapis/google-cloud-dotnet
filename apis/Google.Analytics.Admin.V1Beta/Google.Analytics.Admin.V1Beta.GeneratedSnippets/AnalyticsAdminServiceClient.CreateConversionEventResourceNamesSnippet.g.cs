@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Analytics.Admin.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START analyticsadmin_v1beta_generated_AnalyticsAdminService_CreateConversionEvent_sync_flattened_resourceNames]
     using Google.Analytics.Admin.V1Beta;
