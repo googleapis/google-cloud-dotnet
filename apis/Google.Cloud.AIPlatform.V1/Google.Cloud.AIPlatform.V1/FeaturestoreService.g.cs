@@ -1644,7 +1644,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///   * `labels`
     ///   * `online_serving_config.fixed_node_count`
     ///   * `online_serving_config.scaling`
-    ///   * `online_storage_ttl_days` (available in Preview)
+    ///   * `online_storage_ttl_days`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7503,7 +7503,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
     ///   * `monitoring_config.numerical_threshold_config.value`
     ///   * `monitoring_config.categorical_threshold_config.value`
-    ///   * `offline_storage_ttl_days` (available in Preview)
+    ///   * `offline_storage_ttl_days`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -2043,8 +2043,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// The standard list page token.
     /// Typically obtained via
-    /// [ListModelVersionsResponse.next_page_token][google.cloud.aiplatform.v1.ListModelVersionsResponse.next_page_token]
-    /// of the previous [ModelService.ListModelversions][] call.
+    /// [next_page_token][google.cloud.aiplatform.v1.ListModelVersionsResponse.next_page_token]
+    /// of the previous
+    /// [ListModelVersions][google.cloud.aiplatform.v1.ModelService.ListModelVersions]
+    /// call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

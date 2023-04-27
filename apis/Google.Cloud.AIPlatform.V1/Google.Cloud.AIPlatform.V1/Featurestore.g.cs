@@ -28,7 +28,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBpL2Zp",
             "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
             "GjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbmNyeXB0aW9uX3NwZWMu",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipQcKDEZl",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iywcKDEZl",
             "YXR1cmVzdG9yZRIRCgRuYW1lGAEgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUY",
             "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBk",
             "YXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
@@ -37,28 +37,29 @@ namespace Google.Cloud.AIPlatform.V1 {
             "eUID4EEBEmAKFW9ubGluZV9zZXJ2aW5nX2NvbmZpZxgHIAEoCzI8Lmdvb2ds",
             "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVzdG9yZS5PbmxpbmVTZXJ2",
             "aW5nQ29uZmlnQgPgQQESQgoFc3RhdGUYCCABKA4yLi5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5GZWF0dXJlc3RvcmUuU3RhdGVCA+BBAxJICg9lbmNy",
-            "eXB0aW9uX3NwZWMYCiABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5FbmNyeXB0aW9uU3BlY0ID4EEBGusBChNPbmxpbmVTZXJ2aW5nQ29uZmln",
-            "EhgKEGZpeGVkX25vZGVfY291bnQYAiABKAUSVQoHc2NhbGluZxgEIAEoCzJE",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVzdG9yZS5Pbmxp",
-            "bmVTZXJ2aW5nQ29uZmlnLlNjYWxpbmcaYwoHU2NhbGluZxIbCg5taW5fbm9k",
-            "ZV9jb3VudBgBIAEoBUID4EECEhYKDm1heF9ub2RlX2NvdW50GAIgASgFEiMK",
-            "FmNwdV91dGlsaXphdGlvbl90YXJnZXQYAyABKAVCA+BBARotCgtMYWJlbHNF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIjgKBVN0YXRl",
-            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGU1RBQkxFEAESDAoIVVBEQVRJ",
-            "TkcQAjpx6kFuCiZhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0ZlYXR1cmVz",
-            "dG9yZRJEcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L2ZlYXR1cmVzdG9yZXMve2ZlYXR1cmVzdG9yZX1CzwEKHmNvbS5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MUIRRmVhdHVyZXN0b3JlUHJvdG9QAVo+Y2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1w",
-            "YjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoC",
-            "Gkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6",
-            "QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "YWlwbGF0Zm9ybS52MS5GZWF0dXJlc3RvcmUuU3RhdGVCA+BBAxIkChdvbmxp",
+            "bmVfc3RvcmFnZV90dGxfZGF5cxgNIAEoBUID4EEBEkgKD2VuY3J5cHRpb25f",
+            "c3BlYxgKIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVuY3J5",
+            "cHRpb25TcGVjQgPgQQEa6wEKE09ubGluZVNlcnZpbmdDb25maWcSGAoQZml4",
+            "ZWRfbm9kZV9jb3VudBgCIAEoBRJVCgdzY2FsaW5nGAQgASgLMkQuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZXN0b3JlLk9ubGluZVNlcnZp",
+            "bmdDb25maWcuU2NhbGluZxpjCgdTY2FsaW5nEhsKDm1pbl9ub2RlX2NvdW50",
+            "GAEgASgFQgPgQQISFgoObWF4X25vZGVfY291bnQYAiABKAUSIwoWY3B1X3V0",
+            "aWxpemF0aW9uX3RhcmdldBgDIAEoBUID4EEBGi0KC0xhYmVsc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiOAoFU3RhdGUSFQoRU1RB",
+            "VEVfVU5TUEVDSUZJRUQQABIKCgZTVEFCTEUQARIMCghVUERBVElORxACOnHq",
+            "QW4KJmFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRmVhdHVyZXN0b3JlEkRw",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZmVhdHVy",
+            "ZXN0b3Jlcy97ZmVhdHVyZXN0b3JlfULPAQoeY29tLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxQhFGZWF0dXJlc3RvcmVQcm90b1ABWj5jbG91ZC5nb29n",
+            "bGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxh",
+            "dGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xl",
+            "XENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRm",
+            "b3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore), global::Google.Cloud.AIPlatform.V1.Featurestore.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "OnlineServingConfig", "State", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig), global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Parser, new[]{ "FixedNodeCount", "Scaling" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling), global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling.Parser, new[]{ "MinNodeCount", "MaxNodeCount", "CpuUtilizationTarget" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore), global::Google.Cloud.AIPlatform.V1.Featurestore.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "OnlineServingConfig", "State", "OnlineStorageTtlDays", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig), global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Parser, new[]{ "FixedNodeCount", "Scaling" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling), global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Types.Scaling.Parser, new[]{ "MinNodeCount", "MaxNodeCount", "CpuUtilizationTarget" }, null, null, null, null)}),
             null, })
           }));
     }
@@ -112,6 +113,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       labels_ = other.labels_.Clone();
       onlineServingConfig_ = other.onlineServingConfig_ != null ? other.onlineServingConfig_.Clone() : null;
       state_ = other.state_;
+      onlineStorageTtlDays_ = other.onlineStorageTtlDays_;
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -242,6 +244,26 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "online_storage_ttl_days" field.</summary>
+    public const int OnlineStorageTtlDaysFieldNumber = 13;
+    private int onlineStorageTtlDays_;
+    /// <summary>
+    /// Optional. TTL in days for feature values that will be stored in online
+    /// serving storage. The Feature Store online storage periodically removes
+    /// obsolete feature values older than `online_storage_ttl_days` since the
+    /// feature generation time. Note that `online_storage_ttl_days` should be less
+    /// than or equal to `offline_storage_ttl_days` for each EntityType under a
+    /// featurestore. If not set, default to 4000 days
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int OnlineStorageTtlDays {
+      get { return onlineStorageTtlDays_; }
+      set {
+        onlineStorageTtlDays_ = value;
+      }
+    }
+
     /// <summary>Field number for the "encryption_spec" field.</summary>
     public const int EncryptionSpecFieldNumber = 10;
     private global::Google.Cloud.AIPlatform.V1.EncryptionSpec encryptionSpec_;
@@ -280,6 +302,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(OnlineServingConfig, other.OnlineServingConfig)) return false;
       if (State != other.State) return false;
+      if (OnlineStorageTtlDays != other.OnlineStorageTtlDays) return false;
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -295,6 +318,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       hash ^= Labels.GetHashCode();
       if (onlineServingConfig_ != null) hash ^= OnlineServingConfig.GetHashCode();
       if (State != global::Google.Cloud.AIPlatform.V1.Featurestore.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (OnlineStorageTtlDays != 0) hash ^= OnlineStorageTtlDays.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -343,6 +367,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(EncryptionSpec);
       }
+      if (OnlineStorageTtlDays != 0) {
+        output.WriteRawTag(104);
+        output.WriteInt32(OnlineStorageTtlDays);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -382,6 +410,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(EncryptionSpec);
       }
+      if (OnlineStorageTtlDays != 0) {
+        output.WriteRawTag(104);
+        output.WriteInt32(OnlineStorageTtlDays);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -410,6 +442,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (State != global::Google.Cloud.AIPlatform.V1.Featurestore.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (OnlineStorageTtlDays != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(OnlineStorageTtlDays);
       }
       if (encryptionSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
@@ -453,6 +488,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.State != global::Google.Cloud.AIPlatform.V1.Featurestore.Types.State.Unspecified) {
         State = other.State;
+      }
+      if (other.OnlineStorageTtlDays != 0) {
+        OnlineStorageTtlDays = other.OnlineStorageTtlDays;
       }
       if (other.encryptionSpec_ != null) {
         if (encryptionSpec_ == null) {
@@ -519,6 +557,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(EncryptionSpec);
             break;
           }
+          case 104: {
+            OnlineStorageTtlDays = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -576,6 +618,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
             }
             input.ReadMessage(EncryptionSpec);
+            break;
+          }
+          case 104: {
+            OnlineStorageTtlDays = input.ReadInt32();
             break;
           }
         }

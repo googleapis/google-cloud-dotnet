@@ -31,7 +31,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bxosZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZXhwbGFuYXRpb24ucHJv",
             "dG8aI2dvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2lvLnByb3RvGjJnb29n",
             "bGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5lX3Jlc291cmNlcy5wcm90",
-            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLxBwoIRW5kcG9p",
+            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLCCAoIRW5kcG9p",
             "bnQSEQoEbmFtZRgBIAEoCUID4EEDEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID",
             "4EECEhMKC2Rlc2NyaXB0aW9uGAMgASgJEkcKD2RlcGxveWVkX21vZGVscxgE",
             "IAMoCzIpLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlcGxveWVkTW9k",
@@ -51,35 +51,37 @@ namespace Google.Cloud.AIPlatform.V1 {
             "X2NvbmZpZxgSIAEoCzI/Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlBy",
             "ZWRpY3RSZXF1ZXN0UmVzcG9uc2VMb2dnaW5nQ29uZmlnGjMKEVRyYWZmaWNT",
             "cGxpdEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEaLQoL",
-            "TGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpl",
-            "6kFiCiJhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0VuZHBvaW50Ejxwcm9q",
-            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZW5kcG9pbnRz",
-            "L3tlbmRwb2ludH0i6QQKDURlcGxveWVkTW9kZWwSTQoTZGVkaWNhdGVkX3Jl",
-            "c291cmNlcxgHIAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRl",
-            "ZGljYXRlZFJlc291cmNlc0gAEk0KE2F1dG9tYXRpY19yZXNvdXJjZXMYCCAB",
-            "KAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BdXRvbWF0aWNSZXNv",
-            "dXJjZXNIABIPCgJpZBgBIAEoCUID4EEFEjYKBW1vZGVsGAIgASgJQifgQQL6",
-            "QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSHQoQbW9kZWxf",
-            "dmVyc2lvbl9pZBgSIAEoCUID4EEDEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRI0",
-            "CgtjcmVhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxJFChBleHBsYW5hdGlvbl9zcGVjGAkgASgLMisuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuRXhwbGFuYXRpb25TcGVjEhcKD3NlcnZpY2Vf",
-            "YWNjb3VudBgLIAEoCRIhChlkaXNhYmxlX2NvbnRhaW5lcl9sb2dnaW5nGA8g",
-            "ASgIEh0KFWVuYWJsZV9hY2Nlc3NfbG9nZ2luZxgNIAEoCBJMChFwcml2YXRl",
-            "X2VuZHBvaW50cxgOIAEoCzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LlByaXZhdGVFbmRwb2ludHNCA+BBA0IWChRwcmVkaWN0aW9uX3Jlc291cmNl",
-            "cyKPAQoQUHJpdmF0ZUVuZHBvaW50cxIdChBwcmVkaWN0X2h0dHBfdXJpGAEg",
-            "ASgJQgPgQQMSHQoQZXhwbGFpbl9odHRwX3VyaRgCIAEoCUID4EEDEhwKD2hl",
-            "YWx0aF9odHRwX3VyaRgDIAEoCUID4EEDEh8KEnNlcnZpY2VfYXR0YWNobWVu",
-            "dBgEIAEoCUID4EEDIpwBCiNQcmVkaWN0UmVxdWVzdFJlc3BvbnNlTG9nZ2lu",
-            "Z0NvbmZpZxIPCgdlbmFibGVkGAEgASgIEhUKDXNhbXBsaW5nX3JhdGUYAiAB",
-            "KAESTQoUYmlncXVlcnlfZGVzdGluYXRpb24YAyABKAsyLy5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5CaWdRdWVyeURlc3RpbmF0aW9uQssBCh5jb20u",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDUVuZHBvaW50UHJvdG9QAVo+",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZv",
-            "cm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5W",
-            "McoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91",
-            "ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "TGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATq1",
+            "AepBsQEKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnQSPHBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9lbmRwb2lu",
+            "dHMve2VuZHBvaW50fRJNcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L3B1Ymxpc2hlcnMve3B1Ymxpc2hlcn0vbW9kZWxzL3ttb2Rl",
+            "bH0i6QQKDURlcGxveWVkTW9kZWwSTQoTZGVkaWNhdGVkX3Jlc291cmNlcxgH",
+            "IAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlZGljYXRlZFJl",
+            "c291cmNlc0gAEk0KE2F1dG9tYXRpY19yZXNvdXJjZXMYCCABKAsyLi5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BdXRvbWF0aWNSZXNvdXJjZXNIABIP",
+            "CgJpZBgBIAEoCUID4EEFEjYKBW1vZGVsGAIgASgJQifgQQL6QSEKH2FpcGxh",
+            "dGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSHQoQbW9kZWxfdmVyc2lvbl9p",
+            "ZBgSIAEoCUID4EEDEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRI0CgtjcmVhdGVf",
+            "dGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJF",
+            "ChBleHBsYW5hdGlvbl9zcGVjGAkgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuRXhwbGFuYXRpb25TcGVjEhcKD3NlcnZpY2VfYWNjb3VudBgL",
+            "IAEoCRIhChlkaXNhYmxlX2NvbnRhaW5lcl9sb2dnaW5nGA8gASgIEh0KFWVu",
+            "YWJsZV9hY2Nlc3NfbG9nZ2luZxgNIAEoCBJMChFwcml2YXRlX2VuZHBvaW50",
+            "cxgOIAEoCzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlByaXZhdGVF",
+            "bmRwb2ludHNCA+BBA0IWChRwcmVkaWN0aW9uX3Jlc291cmNlcyKPAQoQUHJp",
+            "dmF0ZUVuZHBvaW50cxIdChBwcmVkaWN0X2h0dHBfdXJpGAEgASgJQgPgQQMS",
+            "HQoQZXhwbGFpbl9odHRwX3VyaRgCIAEoCUID4EEDEhwKD2hlYWx0aF9odHRw",
+            "X3VyaRgDIAEoCUID4EEDEh8KEnNlcnZpY2VfYXR0YWNobWVudBgEIAEoCUID",
+            "4EEDIpwBCiNQcmVkaWN0UmVxdWVzdFJlc3BvbnNlTG9nZ2luZ0NvbmZpZxIP",
+            "CgdlbmFibGVkGAEgASgIEhUKDXNhbXBsaW5nX3JhdGUYAiABKAESTQoUYmln",
+            "cXVlcnlfZGVzdGluYXRpb24YAyABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5CaWdRdWVyeURlc3RpbmF0aW9uQssBCh5jb20uZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFCDUVuZHBvaW50UHJvdG9QAVo+Y2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBs",
+            "YXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2ds",
+            "ZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0",
+            "Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -381,7 +383,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Output only. Resource name of the Model Monitoring job associated with this
     /// Endpoint if monitoring is enabled by
-    /// [CreateModelDeploymentMonitoringJob][]. Format:
+    /// [JobService.CreateModelDeploymentMonitoringJob][google.cloud.aiplatform.v1.JobService.CreateModelDeploymentMonitoringJob].
+    /// Format:
     /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1102,9 +1105,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// For custom-trained Models and AutoML Tabular Models, the container of the
     /// DeployedModel instances will send `stderr` and `stdout` streams to
-    /// Stackdriver Logging by default. Please note that the logs incur cost,
+    /// Cloud Logging by default. Please note that the logs incur cost,
     /// which are subject to [Cloud Logging
-    /// pricing](https://cloud.google.com/stackdriver/pricing).
+    /// pricing](https://cloud.google.com/logging/pricing).
     ///
     /// User can disable container logging by setting this flag to true.
     /// </summary>
@@ -1121,12 +1124,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EnableAccessLoggingFieldNumber = 13;
     private bool enableAccessLogging_;
     /// <summary>
-    /// If true, online prediction access logs are sent to StackDriver
+    /// If true, online prediction access logs are sent to Cloud
     /// Logging.
     /// These logs are like standard server access logs, containing
     /// information like timestamp and latency for each prediction request.
     ///
-    /// Note that Stackdriver logs may incur a cost, especially if your project
+    /// Note that logs may incur a cost, especially if your project
     /// receives prediction requests at a high queries per second rate (QPS).
     /// Estimate your costs before enabling this option.
     /// </summary>

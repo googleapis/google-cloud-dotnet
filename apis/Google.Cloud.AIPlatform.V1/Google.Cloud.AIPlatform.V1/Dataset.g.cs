@@ -301,7 +301,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.SavedQuery> savedQueries_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.SavedQuery>();
     /// <summary>
     /// All SavedQueries belong to the Dataset will be returned in List/Get
-    /// Dataset response. The [annotation_specs][SavedQuery.annotation_specs] field
+    /// Dataset response. The annotation_specs field
     /// will not be populated except for UI cases which will only use
     /// [annotation_spec_count][google.cloud.aiplatform.v1.SavedQuery.annotation_spec_count].
     /// In CreateDataset request, a SavedQuery is created together if
@@ -1224,9 +1224,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int AnnotationsFilterFieldNumber = 2;
     private string annotationsFilter_ = "";
     /// <summary>
-    /// A filter on Annotations of the Dataset. Only Annotations on to-be-exported
-    /// DataItems(specified by [data_items_filter][]) that match this filter will
-    /// be exported. The filter syntax is the same as in
+    /// An expression for filtering what part of the Dataset is to be exported.
+    /// Only Annotations that match this filter will be exported. The filter syntax
+    /// is the same as in
     /// [ListAnnotations][google.cloud.aiplatform.v1.DatasetService.ListAnnotations].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

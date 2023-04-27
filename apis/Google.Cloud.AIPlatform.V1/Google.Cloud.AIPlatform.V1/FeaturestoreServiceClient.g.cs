@@ -1369,7 +1369,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `labels`
         /// * `online_serving_config.fixed_node_count`
         /// * `online_serving_config.scaling`
-        /// * `online_storage_ttl_days` (available in Preview)
+        /// * `online_storage_ttl_days`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1402,7 +1402,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `labels`
         /// * `online_serving_config.fixed_node_count`
         /// * `online_serving_config.scaling`
-        /// * `online_storage_ttl_days` (available in Preview)
+        /// * `online_storage_ttl_days`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1435,7 +1435,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `labels`
         /// * `online_serving_config.fixed_node_count`
         /// * `online_serving_config.scaling`
-        /// * `online_storage_ttl_days` (available in Preview)
+        /// * `online_storage_ttl_days`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2354,7 +2354,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
         /// * `monitoring_config.numerical_threshold_config.value`
         /// * `monitoring_config.categorical_threshold_config.value`
-        /// * `offline_storage_ttl_days` (available in Preview)
+        /// * `offline_storage_ttl_days`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2393,7 +2393,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
         /// * `monitoring_config.numerical_threshold_config.value`
         /// * `monitoring_config.categorical_threshold_config.value`
-        /// * `offline_storage_ttl_days` (available in Preview)
+        /// * `offline_storage_ttl_days`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2432,7 +2432,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
         /// * `monitoring_config.numerical_threshold_config.value`
         /// * `monitoring_config.categorical_threshold_config.value`
-        /// * `offline_storage_ttl_days` (available in Preview)
+        /// * `offline_storage_ttl_days`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

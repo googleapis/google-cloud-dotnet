@@ -87,17 +87,17 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b3VkLmFpcGxhdGZvcm0udjEuRW52VmFyQgPgQQUSNAoFcG9ydHMYBSADKAsy",
             "IC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Qb3J0QgPgQQUSGgoNcHJl",
             "ZGljdF9yb3V0ZRgGIAEoCUID4EEFEhkKDGhlYWx0aF9yb3V0ZRgHIAEoCUID",
-            "4EEFIh4KBFBvcnQSFgoOY29udGFpbmVyX3BvcnQYAyABKAUi2wEKD01vZGVs",
+            "4EEFIh4KBFBvcnQSFgoOY29udGFpbmVyX3BvcnQYAyABKAUi5gEKD01vZGVs",
             "U291cmNlSW5mbxJQCgtzb3VyY2VfdHlwZRgBIAEoDjI7Lmdvb2dsZS5jbG91",
             "ZC5haXBsYXRmb3JtLnYxLk1vZGVsU291cmNlSW5mby5Nb2RlbFNvdXJjZVR5",
-            "cGUSDAoEY29weRgCIAEoCCJoCg9Nb2RlbFNvdXJjZVR5cGUSIQodTU9ERUxf",
+            "cGUSDAoEY29weRgCIAEoCCJzCg9Nb2RlbFNvdXJjZVR5cGUSIQodTU9ERUxf",
             "U09VUkNFX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZBVVRPTUwQARIKCgZDVVNU",
-            "T00QAhIICgRCUU1MEAMSEAoMTU9ERUxfR0FSREVOEARCyAEKHmNvbS5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIKTW9kZWxQcm90b1ABWj5jbG91ZC5n",
-            "b29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2Fp",
-            "cGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29v",
-            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBs",
-            "YXRmb3JtOjpWMWIGcHJvdG8z"));
+            "T00QAhIICgRCUU1MEAMSEAoMTU9ERUxfR0FSREVOEAQSCQoFR0VOSUUQBULI",
+            "AQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQgpNb2RlbFByb3Rv",
+            "UAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBs",
+            "YXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZv",
+            "cm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6",
+            "Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedModelRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -3457,6 +3457,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// The Model is saved or tuned from Model Garden.
         /// </summary>
         [pbr::OriginalName("MODEL_GARDEN")] ModelGarden = 4,
+        /// <summary>
+        /// The Model is saved or tuned from Genie.
+        /// </summary>
+        [pbr::OriginalName("GENIE")] Genie = 5,
       }
 
     }

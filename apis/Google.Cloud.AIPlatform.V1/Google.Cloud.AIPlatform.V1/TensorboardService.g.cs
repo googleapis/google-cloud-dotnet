@@ -10580,12 +10580,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// A page token, received from a previous
-    /// [TensorboardService.ExportTensorboardTimeSeries][] call.
-    /// Provide this to retrieve the subsequent page.
+    /// [ExportTensorboardTimeSeriesData][google.cloud.aiplatform.v1.TensorboardService.ExportTensorboardTimeSeriesData]
+    /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided to
-    /// [TensorboardService.ExportTensorboardTimeSeries][] must
-    /// match the call that provided the page token.
+    /// [ExportTensorboardTimeSeriesData][google.cloud.aiplatform.v1.TensorboardService.ExportTensorboardTimeSeriesData]
+    /// must match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10910,8 +10910,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token, which can be sent as
-    /// [ExportTensorboardTimeSeriesRequest.page_token][] to retrieve the next
-    /// page. If this field is omitted, there are no subsequent pages.
+    /// [page_token][google.cloud.aiplatform.v1.ExportTensorboardTimeSeriesDataRequest.page_token]
+    /// to retrieve the next page. If this field is omitted, there are no
+    /// subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
