@@ -2276,7 +2276,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string taskName_ = "";
     /// <summary>
     /// Output only. The user specified name of the task that is defined in
-    /// [PipelineJob.spec][].
+    /// [pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

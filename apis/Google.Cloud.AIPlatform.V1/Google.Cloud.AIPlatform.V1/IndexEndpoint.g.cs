@@ -1034,13 +1034,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EnableAccessLoggingFieldNumber = 8;
     private bool enableAccessLogging_;
     /// <summary>
-    /// Optional. If true, private endpoint's access logs are sent to StackDriver
+    /// Optional. If true, private endpoint's access logs are sent to Cloud
     /// Logging.
     ///
     /// These logs are like standard server access logs, containing
     /// information like timestamp and latency for each MatchRequest.
     ///
-    /// Note that Stackdriver logs may incur a cost, especially if the deployed
+    /// Note that logs may incur a cost, especially if the deployed
     /// index receives a high queries per second rate (QPS).
     /// Estimate your costs before enabling this option.
     /// </summary>

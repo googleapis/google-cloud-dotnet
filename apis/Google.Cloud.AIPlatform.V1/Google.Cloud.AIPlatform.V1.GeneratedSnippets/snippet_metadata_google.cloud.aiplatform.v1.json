@@ -5610,6 +5610,325 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_EndpointService_MutateDeployedModel_sync",
+      "title": "MutateDeployedModelRequestObject",
+      "description": "Snippet for MutateDeployedModel",
+      "file": "EndpointServiceClient.MutateDeployedModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateDeployedModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient.MutateDeployedModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MutateDeployedModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MutateDeployedModelResponse, Google.Cloud.AIPlatform.V1.MutateDeployedModelOperationMetadata>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "MutateDeployedModel",
+          "fullName": "google.cloud.aiplatform.v1.EndpointService.MutateDeployedModel",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1.EndpointService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_EndpointService_MutateDeployedModel_async",
+      "title": "MutateDeployedModelRequestObjectAsync",
+      "description": "Snippet for MutateDeployedModelAsync",
+      "file": "EndpointServiceClient.MutateDeployedModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateDeployedModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient.MutateDeployedModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.MutateDeployedModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MutateDeployedModelResponse, Google.Cloud.AIPlatform.V1.MutateDeployedModelOperationMetadata>>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "MutateDeployedModel",
+          "fullName": "google.cloud.aiplatform.v1.EndpointService.MutateDeployedModel",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1.EndpointService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_EndpointService_MutateDeployedModel_sync_flattened",
+      "title": "MutateDeployedModel",
+      "description": "Snippet for MutateDeployedModel",
+      "file": "EndpointServiceClient.MutateDeployedModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateDeployedModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient.MutateDeployedModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "endpoint"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeployedModel",
+            "name": "deployedModel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MutateDeployedModelResponse, Google.Cloud.AIPlatform.V1.MutateDeployedModelOperationMetadata>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "MutateDeployedModel",
+          "fullName": "google.cloud.aiplatform.v1.EndpointService.MutateDeployedModel",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_EndpointService_MutateDeployedModel_async_flattened",
+      "title": "MutateDeployedModelAsync",
+      "description": "Snippet for MutateDeployedModelAsync",
+      "file": "EndpointServiceClient.MutateDeployedModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateDeployedModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient.MutateDeployedModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "endpoint"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeployedModel",
+            "name": "deployedModel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MutateDeployedModelResponse, Google.Cloud.AIPlatform.V1.MutateDeployedModelOperationMetadata>>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "MutateDeployedModel",
+          "fullName": "google.cloud.aiplatform.v1.EndpointService.MutateDeployedModel",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_EndpointService_MutateDeployedModel_sync_flattened_resourceNames",
+      "title": "MutateDeployedModelResourceNames",
+      "description": "Snippet for MutateDeployedModel",
+      "file": "EndpointServiceClient.MutateDeployedModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateDeployedModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient.MutateDeployedModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.EndpointName",
+            "name": "endpoint"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeployedModel",
+            "name": "deployedModel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MutateDeployedModelResponse, Google.Cloud.AIPlatform.V1.MutateDeployedModelOperationMetadata>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "MutateDeployedModel",
+          "fullName": "google.cloud.aiplatform.v1.EndpointService.MutateDeployedModel",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_EndpointService_MutateDeployedModel_async_flattened_resourceNames",
+      "title": "MutateDeployedModelResourceNamesAsync",
+      "description": "Snippet for MutateDeployedModelAsync",
+      "file": "EndpointServiceClient.MutateDeployedModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MutateDeployedModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient.MutateDeployedModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.EndpointName",
+            "name": "endpoint"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeployedModel",
+            "name": "deployedModel"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.MutateDeployedModelResponse, Google.Cloud.AIPlatform.V1.MutateDeployedModelOperationMetadata>>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "MutateDeployedModel",
+          "fullName": "google.cloud.aiplatform.v1.EndpointService.MutateDeployedModel",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_FeaturestoreOnlineServingService_ReadFeatureValues_sync",
       "title": "ReadFeatureValuesRequestObject",
       "description": "Snippet for ReadFeatureValues",

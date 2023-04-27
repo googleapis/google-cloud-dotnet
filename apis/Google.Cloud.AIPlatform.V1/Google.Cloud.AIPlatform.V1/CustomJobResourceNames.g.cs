@@ -290,5 +290,23 @@ namespace Google.Cloud.AIPlatform.V1
             get => string.IsNullOrEmpty(Tensorboard) ? null : TensorboardName.Parse(Tensorboard, allowUnparsed: true);
             set => Tensorboard = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="ContextName"/>-typed view over the <see cref="Experiment"/> resource name property.
+        /// </summary>
+        public ContextName ExperimentAsContextName
+        {
+            get => string.IsNullOrEmpty(Experiment) ? null : ContextName.Parse(Experiment, allowUnparsed: true);
+            set => Experiment = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ContextName"/>-typed view over the <see cref="ExperimentRun"/> resource name property.
+        /// </summary>
+        public ContextName ExperimentRunAsContextName
+        {
+            get => string.IsNullOrEmpty(ExperimentRun) ? null : ContextName.Parse(ExperimentRun, allowUnparsed: true);
+            set => ExperimentRun = value?.ToString() ?? "";
+        }
     }
 }

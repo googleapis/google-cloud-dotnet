@@ -83,6 +83,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeployModelRequest> __Marshaller_google_cloud_aiplatform_v1_DeployModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeployModelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UndeployModelRequest> __Marshaller_google_cloud_aiplatform_v1_UndeployModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UndeployModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.MutateDeployedModelRequest> __Marshaller_google_cloud_aiplatform_v1_MutateDeployedModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.MutateDeployedModelRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateEndpointRequest, global::Google.LongRunning.Operation> __Method_CreateEndpoint = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateEndpointRequest, global::Google.LongRunning.Operation>(
@@ -138,6 +140,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         __ServiceName,
         "UndeployModel",
         __Marshaller_google_cloud_aiplatform_v1_UndeployModelRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.MutateDeployedModelRequest, global::Google.LongRunning.Operation> __Method_MutateDeployedModel = new grpc::Method<global::Google.Cloud.AIPlatform.V1.MutateDeployedModelRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MutateDeployedModel",
+        __Marshaller_google_cloud_aiplatform_v1_MutateDeployedModelRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -231,6 +241,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UndeployModel(global::Google.Cloud.AIPlatform.V1.UndeployModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an existing deployed model. Updatable fields include
+      /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+      /// `disable_container_logging` (v1 only), and `enable_container_logging`
+      /// (v1beta1 only).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> MutateDeployedModel(global::Google.Cloud.AIPlatform.V1.MutateDeployedModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -604,6 +629,66 @@ namespace Google.Cloud.AIPlatform.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UndeployModel, null, options, request);
       }
+      /// <summary>
+      /// Updates an existing deployed model. Updatable fields include
+      /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+      /// `disable_container_logging` (v1 only), and `enable_container_logging`
+      /// (v1beta1 only).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation MutateDeployedModel(global::Google.Cloud.AIPlatform.V1.MutateDeployedModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MutateDeployedModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing deployed model. Updatable fields include
+      /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+      /// `disable_container_logging` (v1 only), and `enable_container_logging`
+      /// (v1beta1 only).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation MutateDeployedModel(global::Google.Cloud.AIPlatform.V1.MutateDeployedModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MutateDeployedModel, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing deployed model. Updatable fields include
+      /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+      /// `disable_container_logging` (v1 only), and `enable_container_logging`
+      /// (v1beta1 only).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> MutateDeployedModelAsync(global::Google.Cloud.AIPlatform.V1.MutateDeployedModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MutateDeployedModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing deployed model. Updatable fields include
+      /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+      /// `disable_container_logging` (v1 only), and `enable_container_logging`
+      /// (v1beta1 only).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> MutateDeployedModelAsync(global::Google.Cloud.AIPlatform.V1.MutateDeployedModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MutateDeployedModel, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EndpointServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -624,7 +709,8 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_UpdateEndpoint, serviceImpl.UpdateEndpoint)
           .AddMethod(__Method_DeleteEndpoint, serviceImpl.DeleteEndpoint)
           .AddMethod(__Method_DeployModel, serviceImpl.DeployModel)
-          .AddMethod(__Method_UndeployModel, serviceImpl.UndeployModel).Build();
+          .AddMethod(__Method_UndeployModel, serviceImpl.UndeployModel)
+          .AddMethod(__Method_MutateDeployedModel, serviceImpl.MutateDeployedModel).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -641,6 +727,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_DeleteEndpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteEndpointRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteEndpoint));
       serviceBinder.AddMethod(__Method_DeployModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeployModelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeployModel));
       serviceBinder.AddMethod(__Method_UndeployModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UndeployModelRequest, global::Google.LongRunning.Operation>(serviceImpl.UndeployModel));
+      serviceBinder.AddMethod(__Method_MutateDeployedModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.MutateDeployedModelRequest, global::Google.LongRunning.Operation>(serviceImpl.MutateDeployedModel));
     }
 
   }

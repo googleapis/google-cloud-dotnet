@@ -34,9 +34,17 @@ namespace Google.Cloud.AIPlatform.V1
             /// A resource name with pattern <c>projects/{project}/locations/{location}/endpoints/{endpoint}</c>.
             /// </summary>
             ProjectLocationEndpoint = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/publishers/{publisher}/models/{model}</c>.
+            /// </summary>
+            ProjectLocationPublisherModel = 2,
         }
 
         private static gax::PathTemplate s_projectLocationEndpoint = new gax::PathTemplate("projects/{project}/locations/{location}/endpoints/{endpoint}");
+
+        private static gax::PathTemplate s_projectLocationPublisherModel = new gax::PathTemplate("projects/{project}/locations/{location}/publishers/{publisher}/models/{model}");
 
         /// <summary>Creates a <see cref="EndpointName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -57,6 +65,18 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A new instance of <see cref="EndpointName"/> constructed from the provided ids.</returns>
         public static EndpointName FromProjectLocationEndpoint(string projectId, string locationId, string endpointId) =>
             new EndpointName(ResourceNameType.ProjectLocationEndpoint, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), endpointId: gax::GaxPreconditions.CheckNotNullOrEmpty(endpointId, nameof(endpointId)));
+
+        /// <summary>
+        /// Creates a <see cref="EndpointName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/publishers/{publisher}/models/{model}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="publisherId">The <c>Publisher</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="modelId">The <c>Model</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="EndpointName"/> constructed from the provided ids.</returns>
+        public static EndpointName FromProjectLocationPublisherModel(string projectId, string locationId, string publisherId, string modelId) =>
+            new EndpointName(ResourceNameType.ProjectLocationPublisherModel, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), publisherId: gax::GaxPreconditions.CheckNotNullOrEmpty(publisherId, nameof(publisherId)), modelId: gax::GaxPreconditions.CheckNotNullOrEmpty(modelId, nameof(modelId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="EndpointName"/> with pattern
@@ -86,11 +106,31 @@ namespace Google.Cloud.AIPlatform.V1
         public static string FormatProjectLocationEndpoint(string projectId, string locationId, string endpointId) =>
             s_projectLocationEndpoint.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(endpointId, nameof(endpointId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="EndpointName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/publishers/{publisher}/models/{model}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="publisherId">The <c>Publisher</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="modelId">The <c>Model</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="EndpointName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/publishers/{publisher}/models/{model}</c>.
+        /// </returns>
+        public static string FormatProjectLocationPublisherModel(string projectId, string locationId, string publisherId, string modelId) =>
+            s_projectLocationPublisherModel.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(publisherId, nameof(publisherId)), gax::GaxPreconditions.CheckNotNullOrEmpty(modelId, nameof(modelId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="EndpointName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/locations/{location}/endpoints/{endpoint}</c></description></item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/publishers/{publisher}/models/{model}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="endpointName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -105,6 +145,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/locations/{location}/endpoints/{endpoint}</c></description></item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/publishers/{publisher}/models/{model}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -125,6 +170,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/locations/{location}/endpoints/{endpoint}</c></description></item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/publishers/{publisher}/models/{model}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="endpointName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -142,6 +192,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/locations/{location}/endpoints/{endpoint}</c></description></item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/publishers/{publisher}/models/{model}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -164,6 +219,11 @@ namespace Google.Cloud.AIPlatform.V1
                 result = FromProjectLocationEndpoint(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
+            if (s_projectLocationPublisherModel.TryParseName(endpointName, out resourceName))
+            {
+                result = FromProjectLocationPublisherModel(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(endpointName, out gax::UnparsedResourceName unparsedResourceName))
@@ -176,13 +236,15 @@ namespace Google.Cloud.AIPlatform.V1
             return false;
         }
 
-        private EndpointName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string endpointId = null, string locationId = null, string projectId = null)
+        private EndpointName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string endpointId = null, string locationId = null, string modelId = null, string projectId = null, string publisherId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             EndpointId = endpointId;
             LocationId = locationId;
+            ModelId = modelId;
             ProjectId = projectId;
+            PublisherId = publisherId;
         }
 
         /// <summary>
@@ -206,19 +268,29 @@ namespace Google.Cloud.AIPlatform.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Endpoint</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Endpoint</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string EndpointId { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Model</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ModelId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Publisher</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string PublisherId { get; }
 
         /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
         public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
@@ -231,6 +303,7 @@ namespace Google.Cloud.AIPlatform.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationEndpoint: return s_projectLocationEndpoint.Expand(ProjectId, LocationId, EndpointId);
+                case ResourceNameType.ProjectLocationPublisherModel: return s_projectLocationPublisherModel.Expand(ProjectId, LocationId, PublisherId, ModelId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

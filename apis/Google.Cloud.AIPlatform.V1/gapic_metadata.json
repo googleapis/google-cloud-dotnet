@@ -121,6 +121,12 @@
                 "ListEndpointsAsync"
               ]
             },
+            "MutateDeployedModel": {
+              "methods": [
+                "MutateDeployedModel",
+                "MutateDeployedModelAsync"
+              ]
+            },
             "UndeployModel": {
               "methods": [
                 "UndeployModel",
