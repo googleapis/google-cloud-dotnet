@@ -109,14 +109,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             "ZXNwb25zZSJAgtPkkwIrKikvdjFiZXRhMS97cHJvamVjdF9uYW1lPXByb2pl",
             "Y3RzLyp9L2V2ZW50c9pBDHByb2plY3RfbmFtZRpWykEiY2xvdWRlcnJvcnJl",
             "cG9ydGluZy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CowIKL2NvbS5nb29nbGUuZGV2",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ClAIKL2NvbS5nb29nbGUuZGV2",
             "dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExQhZFcnJvclN0YXRz",
-            "U2VydmljZVByb3RvUAFaXmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvZGV2dG9vbHMvY2xvdWRlcnJvcnJlcG9ydGluZy92MWJldGEx",
-            "O2Nsb3VkZXJyb3JyZXBvcnRpbmf4AQGqAiNHb29nbGUuQ2xvdWQuRXJyb3JS",
-            "ZXBvcnRpbmcuVjFCZXRhMcoCI0dvb2dsZVxDbG91ZFxFcnJvclJlcG9ydGlu",
-            "Z1xWMWJldGEx6gImR29vZ2xlOjpDbG91ZDo6RXJyb3JSZXBvcnRpbmc6OlYx",
-            "YmV0YTFiBnByb3RvMw=="));
+            "U2VydmljZVByb3RvUAFaT2Nsb3VkLmdvb2dsZS5jb20vZ28vZXJyb3JyZXBv",
+            "cnRpbmcvYXBpdjFiZXRhMS9lcnJvcnJlcG9ydGluZ3BiO2Vycm9ycmVwb3J0",
+            "aW5ncGL4AQGqAiNHb29nbGUuQ2xvdWQuRXJyb3JSZXBvcnRpbmcuVjFCZXRh",
+            "McoCI0dvb2dsZVxDbG91ZFxFcnJvclJlcG9ydGluZ1xWMWJldGEx6gImR29v",
+            "Z2xlOjpDbG91ZDo6RXJyb3JSZXBvcnRpbmc6OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment), typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder), }, null, new pbr::GeneratedClrTypeInfo[] {
