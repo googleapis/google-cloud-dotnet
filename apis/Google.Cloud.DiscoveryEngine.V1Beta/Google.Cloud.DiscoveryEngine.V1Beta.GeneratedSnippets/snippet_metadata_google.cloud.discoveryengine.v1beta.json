@@ -1511,6 +1511,103 @@
       ]
     },
     {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_PurgeDocuments_sync",
+      "title": "PurgeDocumentsRequestObject",
+      "description": "Snippet for PurgeDocuments",
+      "file": "DocumentServiceClient.PurgeDocumentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeDocuments",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.PurgeDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.PurgeDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.PurgeDocumentsResponse, Google.Cloud.DiscoveryEngine.V1Beta.PurgeDocumentsMetadata>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeDocuments",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.PurgeDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1beta_generated_DocumentService_PurgeDocuments_async",
+      "title": "PurgeDocumentsRequestObjectAsync",
+      "description": "Snippet for PurgeDocumentsAsync",
+      "file": "DocumentServiceClient.PurgeDocumentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeDocumentsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient.PurgeDocumentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1Beta.PurgeDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1Beta.PurgeDocumentsResponse, Google.Cloud.DiscoveryEngine.V1Beta.PurgeDocumentsMetadata>>",
+        "client": {
+          "shortName": "DocumentServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1Beta.DocumentServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeDocuments",
+          "fullName": "google.cloud.discoveryengine.v1beta.DocumentService.PurgeDocuments",
+          "service": {
+            "shortName": "DocumentService",
+            "fullName": "google.cloud.discoveryengine.v1beta.DocumentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "discoveryengine_v1beta_generated_RecommendationService_Recommend_sync",
       "title": "RecommendRequestObject",
       "description": "Snippet for Recommend",

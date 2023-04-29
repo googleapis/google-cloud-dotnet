@@ -680,5 +680,74 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for PurgeDocuments</summary>
+        public void PurgeDocumentsRequestObject()
+        {
+            // Snippet: PurgeDocuments(PurgeDocumentsRequest, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            PurgeDocumentsRequest request = new PurgeDocumentsRequest
+            {
+                ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
+                Filter = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> response = documentServiceClient.PurgeDocuments(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PurgeDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> retrievedResponse = documentServiceClient.PollOncePurgeDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PurgeDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeDocumentsAsync</summary>
+        public async Task PurgeDocumentsRequestObjectAsync()
+        {
+            // Snippet: PurgeDocumentsAsync(PurgeDocumentsRequest, CallSettings)
+            // Additional: PurgeDocumentsAsync(PurgeDocumentsRequest, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PurgeDocumentsRequest request = new PurgeDocumentsRequest
+            {
+                ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
+                Filter = "",
+                Force = false,
+            };
+            // Make the request
+            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> response = await documentServiceClient.PurgeDocumentsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PurgeDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> retrievedResponse = await documentServiceClient.PollOncePurgeDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PurgeDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
