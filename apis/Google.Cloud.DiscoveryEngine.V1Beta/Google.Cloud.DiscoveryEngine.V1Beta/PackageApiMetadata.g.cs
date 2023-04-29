@@ -50,6 +50,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             yield return DocumentReflection.Descriptor;
             yield return DocumentServiceReflection.Descriptor;
             yield return ImportConfigReflection.Descriptor;
+            yield return PurgeConfigReflection.Descriptor;
             yield return RecommendationServiceReflection.Descriptor;
             yield return SchemaReflection.Descriptor;
             yield return SchemaServiceReflection.Descriptor;

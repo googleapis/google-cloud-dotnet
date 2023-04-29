@@ -54,6 +54,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             DeleteDocumentSettings = existing.DeleteDocumentSettings;
             ImportDocumentsSettings = existing.ImportDocumentsSettings;
             ImportDocumentsOperationsSettings = existing.ImportDocumentsOperationsSettings.Clone();
+            PurgeDocumentsSettings = existing.PurgeDocumentsSettings;
+            PurgeDocumentsOperationsSettings = existing.PurgeDocumentsOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -181,6 +183,42 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </list>
         /// </remarks>
         public lro::OperationsSettings ImportDocumentsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DocumentServiceClient.PurgeDocuments</c> and <c>DocumentServiceClient.PurgeDocumentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PurgeDocumentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DocumentServiceClient.PurgeDocuments</c> and
+        /// <c>DocumentServiceClient.PurgeDocumentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PurgeDocumentsOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1142,6 +1180,107 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>> PollOnceImportDocumentsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportDocumentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Permanently deletes all selected
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s in a branch.
+        /// 
+        /// This process is asynchronous. Depending on the number of
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be deleted,
+        /// this operation can take hours to complete. Before the delete operation
+        /// completes, some [Document][google.cloud.discoveryengine.v1beta.Document]s
+        /// might still be returned by
+        /// [DocumentService.GetDocument][google.cloud.discoveryengine.v1beta.DocumentService.GetDocument]
+        /// or
+        /// [DocumentService.ListDocuments][google.cloud.discoveryengine.v1beta.DocumentService.ListDocuments].
+        /// 
+        /// To get a list of the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be deleted,
+        /// set
+        /// [PurgeDocumentsRequest.force][google.cloud.discoveryengine.v1beta.PurgeDocumentsRequest.force]
+        /// to false.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> PurgeDocuments(PurgeDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes all selected
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s in a branch.
+        /// 
+        /// This process is asynchronous. Depending on the number of
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be deleted,
+        /// this operation can take hours to complete. Before the delete operation
+        /// completes, some [Document][google.cloud.discoveryengine.v1beta.Document]s
+        /// might still be returned by
+        /// [DocumentService.GetDocument][google.cloud.discoveryengine.v1beta.DocumentService.GetDocument]
+        /// or
+        /// [DocumentService.ListDocuments][google.cloud.discoveryengine.v1beta.DocumentService.ListDocuments].
+        /// 
+        /// To get a list of the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be deleted,
+        /// set
+        /// [PurgeDocumentsRequest.force][google.cloud.discoveryengine.v1beta.PurgeDocumentsRequest.force]
+        /// to false.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata>> PurgeDocumentsAsync(PurgeDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes all selected
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s in a branch.
+        /// 
+        /// This process is asynchronous. Depending on the number of
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be deleted,
+        /// this operation can take hours to complete. Before the delete operation
+        /// completes, some [Document][google.cloud.discoveryengine.v1beta.Document]s
+        /// might still be returned by
+        /// [DocumentService.GetDocument][google.cloud.discoveryengine.v1beta.DocumentService.GetDocument]
+        /// or
+        /// [DocumentService.ListDocuments][google.cloud.discoveryengine.v1beta.DocumentService.ListDocuments].
+        /// 
+        /// To get a list of the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be deleted,
+        /// set
+        /// [PurgeDocumentsRequest.force][google.cloud.discoveryengine.v1beta.PurgeDocumentsRequest.force]
+        /// to false.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata>> PurgeDocumentsAsync(PurgeDocumentsRequest request, st::CancellationToken cancellationToken) =>
+            PurgeDocumentsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PurgeDocuments</c>.</summary>
+        public virtual lro::OperationsClient PurgeDocumentsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PurgeDocuments</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> PollOncePurgeDocuments(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PurgeDocumentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PurgeDocuments</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata>> PollOncePurgeDocumentsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PurgeDocumentsOperationsClient, callSettings);
     }
 
     /// <summary>DocumentService client wrapper implementation, for convenient use.</summary>
@@ -1164,6 +1303,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
 
         private readonly gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> _callImportDocuments;
 
+        private readonly gaxgrpc::ApiCall<PurgeDocumentsRequest, lro::Operation> _callPurgeDocuments;
+
         /// <summary>
         /// Constructs a client wrapper for the DocumentService service, with the specified gRPC client and settings.
         /// </summary>
@@ -1176,6 +1317,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             DocumentServiceSettings effectiveSettings = settings ?? DocumentServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             ImportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDocumentsOperationsSettings, logger);
+            PurgeDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeDocumentsOperationsSettings, logger);
             _callGetDocument = clientHelper.BuildApiCall<GetDocumentRequest, Document>("GetDocument", grpcClient.GetDocumentAsync, grpcClient.GetDocument, effectiveSettings.GetDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDocument);
             Modify_GetDocumentApiCall(ref _callGetDocument);
@@ -1194,6 +1336,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             _callImportDocuments = clientHelper.BuildApiCall<ImportDocumentsRequest, lro::Operation>("ImportDocuments", grpcClient.ImportDocumentsAsync, grpcClient.ImportDocuments, effectiveSettings.ImportDocumentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportDocuments);
             Modify_ImportDocumentsApiCall(ref _callImportDocuments);
+            _callPurgeDocuments = clientHelper.BuildApiCall<PurgeDocumentsRequest, lro::Operation>("PurgeDocuments", grpcClient.PurgeDocumentsAsync, grpcClient.PurgeDocuments, effectiveSettings.PurgeDocumentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callPurgeDocuments);
+            Modify_PurgeDocumentsApiCall(ref _callPurgeDocuments);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1211,6 +1356,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
 
         partial void Modify_ImportDocumentsApiCall(ref gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> call);
 
+        partial void Modify_PurgeDocumentsApiCall(ref gaxgrpc::ApiCall<PurgeDocumentsRequest, lro::Operation> call);
+
         partial void OnConstruction(DocumentService.DocumentServiceClient grpcClient, DocumentServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DocumentService client</summary>
@@ -1227,6 +1374,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         partial void Modify_DeleteDocumentRequest(ref DeleteDocumentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ImportDocumentsRequest(ref ImportDocumentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PurgeDocumentsRequest(ref PurgeDocumentsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets a [Document][google.cloud.discoveryengine.v1beta.Document].
@@ -1385,6 +1534,65 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             Modify_ImportDocumentsRequest(ref request, ref callSettings);
             return new lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>(await _callImportDocuments.Async(request, callSettings).ConfigureAwait(false), ImportDocumentsOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>PurgeDocuments</c>.</summary>
+        public override lro::OperationsClient PurgeDocumentsOperationsClient { get; }
+
+        /// <summary>
+        /// Permanently deletes all selected
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s in a branch.
+        /// 
+        /// This process is asynchronous. Depending on the number of
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be deleted,
+        /// this operation can take hours to complete. Before the delete operation
+        /// completes, some [Document][google.cloud.discoveryengine.v1beta.Document]s
+        /// might still be returned by
+        /// [DocumentService.GetDocument][google.cloud.discoveryengine.v1beta.DocumentService.GetDocument]
+        /// or
+        /// [DocumentService.ListDocuments][google.cloud.discoveryengine.v1beta.DocumentService.ListDocuments].
+        /// 
+        /// To get a list of the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be deleted,
+        /// set
+        /// [PurgeDocumentsRequest.force][google.cloud.discoveryengine.v1beta.PurgeDocumentsRequest.force]
+        /// to false.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> PurgeDocuments(PurgeDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PurgeDocumentsRequest(ref request, ref callSettings);
+            return new lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata>(_callPurgeDocuments.Sync(request, callSettings), PurgeDocumentsOperationsClient);
+        }
+
+        /// <summary>
+        /// Permanently deletes all selected
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s in a branch.
+        /// 
+        /// This process is asynchronous. Depending on the number of
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be deleted,
+        /// this operation can take hours to complete. Before the delete operation
+        /// completes, some [Document][google.cloud.discoveryengine.v1beta.Document]s
+        /// might still be returned by
+        /// [DocumentService.GetDocument][google.cloud.discoveryengine.v1beta.DocumentService.GetDocument]
+        /// or
+        /// [DocumentService.ListDocuments][google.cloud.discoveryengine.v1beta.DocumentService.ListDocuments].
+        /// 
+        /// To get a list of the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document]s to be deleted,
+        /// set
+        /// [PurgeDocumentsRequest.force][google.cloud.discoveryengine.v1beta.PurgeDocumentsRequest.force]
+        /// to false.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata>> PurgeDocumentsAsync(PurgeDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PurgeDocumentsRequest(ref request, ref callSettings);
+            return new lro::Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata>(await _callPurgeDocuments.Async(request, callSettings).ConfigureAwait(false), PurgeDocumentsOperationsClient);
         }
     }
 

@@ -55,6 +55,12 @@
                 "ListDocumentsAsync"
               ]
             },
+            "PurgeDocuments": {
+              "methods": [
+                "PurgeDocuments",
+                "PurgeDocumentsAsync"
+              ]
+            },
             "UpdateDocument": {
               "methods": [
                 "UpdateDocument",
