@@ -143,6 +143,7 @@ namespace Google.Cloud.Run.V2 {
     public const int MaxRetriesFieldNumber = 3;
     /// <summary>
     /// Number of retries allowed per Task, before marking this Task failed.
+    /// Defaults to 3.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -161,6 +162,7 @@ namespace Google.Cloud.Run.V2 {
     /// Max allowed time duration the Task may be active before the system will
     /// actively try to mark it failed and kill associated containers. This applies
     /// per attempt of a task, meaning each retry can run for the full timeout.
+    /// Defaults to 600 seconds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
