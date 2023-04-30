@@ -26,7 +26,7 @@ namespace Google.Cloud.Run.V2 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvcnVuL3YyL2NvbmRpdGlvbi5wcm90bxITZ29vZ2xl",
             "LmNsb3VkLnJ1bi52MhofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "byL/CwoJQ29uZGl0aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4y",
+            "byKQDAoJQ29uZGl0aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4y",
             "JC5nb29nbGUuY2xvdWQucnVuLnYyLkNvbmRpdGlvbi5TdGF0ZRIPCgdtZXNz",
             "YWdlGAMgASgJEjgKFGxhc3RfdHJhbnNpdGlvbl90aW1lGAQgASgLMhouZ29v",
             "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBI5CghzZXZlcml0eRgFIAEoDjInLmdv",
@@ -57,12 +57,12 @@ namespace Google.Cloud.Run.V2 {
             "Ch1NSU5fSU5TVEFOQ0VTX05PVF9QUk9WSVNJT05FRBAIEiEKHUFDVElWRV9S",
             "RVZJU0lPTl9MSU1JVF9SRUFDSEVEEAkSEQoNTk9fREVQTE9ZTUVOVBAKEhgK",
             "FEhFQUxUSF9DSEVDS19TS0lQUEVEEAsSGQoVTUlOX0lOU1RBTkNFU19XQVJN",
-            "SU5HEAwifgoPRXhlY3V0aW9uUmVhc29uEh4KGkVYRUNVVElPTl9SRUFTT05f",
-            "VU5ERUZJTkVEEAASJAogSk9CX1NUQVRVU19TRVJWSUNFX1BPTExJTkdfRVJS",
-            "T1IQARIWChJOT05fWkVST19FWElUX0NPREUQAhINCglDQU5DRUxMRUQQA0IJ",
-            "CgdyZWFzb25zQlYKF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQg5Db25kaXRp",
-            "b25Qcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5w",
-            "YjtydW5wYmIGcHJvdG8z"));
+            "SU5HEAwijgEKD0V4ZWN1dGlvblJlYXNvbhIeChpFWEVDVVRJT05fUkVBU09O",
+            "X1VOREVGSU5FRBAAEiQKIEpPQl9TVEFUVVNfU0VSVklDRV9QT0xMSU5HX0VS",
+            "Uk9SEAESFgoSTk9OX1pFUk9fRVhJVF9DT0RFEAISDQoJQ0FOQ0VMTEVEEAMS",
+            "DgoKQ0FOQ0VMTElORxAEQgkKB3JlYXNvbnNCVgoXY29tLmdvb2dsZS5jbG91",
+            "ZC5ydW4udjJCDkNvbmRpdGlvblByb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vcnVuL2FwaXYyL3J1bnBiO3J1bnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -806,6 +806,10 @@ namespace Google.Cloud.Run.V2 {
         /// The execution was cancelled by users.
         /// </summary>
         [pbr::OriginalName("CANCELLED")] Cancelled = 3,
+        /// <summary>
+        /// The execution is in the process of being cancelled.
+        /// </summary>
+        [pbr::OriginalName("CANCELLING")] Cancelling = 4,
       }
 
     }

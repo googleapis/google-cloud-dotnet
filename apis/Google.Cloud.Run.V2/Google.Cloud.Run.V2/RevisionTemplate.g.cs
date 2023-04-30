@@ -28,7 +28,7 @@ namespace Google.Cloud.Run.V2 {
             "EhNnb29nbGUuY2xvdWQucnVuLnYyGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
             "b3RvGiFnb29nbGUvY2xvdWQvcnVuL3YyL2s4cy5taW4ucHJvdG8aKWdvb2ds",
             "ZS9jbG91ZC9ydW4vdjIvdmVuZG9yX3NldHRpbmdzLnByb3RvGh5nb29nbGUv",
-            "cHJvdG9idWYvZHVyYXRpb24ucHJvdG8i/wUKEFJldmlzaW9uVGVtcGxhdGUS",
+            "cHJvdG9idWYvZHVyYXRpb24ucHJvdG8imQYKEFJldmlzaW9uVGVtcGxhdGUS",
             "MgoIcmV2aXNpb24YASABKAlCIPpBHQobcnVuLmdvb2dsZWFwaXMuY29tL1Jl",
             "dmlzaW9uEkEKBmxhYmVscxgCIAMoCzIxLmdvb2dsZS5jbG91ZC5ydW4udjIu",
             "UmV2aXNpb25UZW1wbGF0ZS5MYWJlbHNFbnRyeRJLCgthbm5vdGF0aW9ucxgD",
@@ -43,15 +43,16 @@ namespace Google.Cloud.Run.V2 {
             "DSABKA4yKS5nb29nbGUuY2xvdWQucnVuLnYyLkV4ZWN1dGlvbkVudmlyb25t",
             "ZW50Ej4KDmVuY3J5cHRpb25fa2V5GA4gASgJQib6QSMKIWNsb3Vka21zLmdv",
             "b2dsZWFwaXMuY29tL0NyeXB0b0tleRIoCiBtYXhfaW5zdGFuY2VfcmVxdWVz",
-            "dF9jb25jdXJyZW5jeRgPIAEoBRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUJdChdjb20uZ29vZ2xlLmNs",
-            "b3VkLnJ1bi52MkIVUmV2aXNpb25UZW1wbGF0ZVByb3RvUAFaKWNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vcnVuL2FwaXYyL3J1bnBiO3J1bnBiYgZwcm90bzM="));
+            "dF9jb25jdXJyZW5jeRgPIAEoBRIYChBzZXNzaW9uX2FmZmluaXR5GBMgASgI",
+            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBQl0KF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQhVSZXZpc2lv",
+            "blRlbXBsYXRlUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBp",
+            "djIvcnVucGI7cnVucGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionTemplate), global::Google.Cloud.Run.V2.RevisionTemplate.Parser, new[]{ "Revision", "Labels", "Annotations", "Scaling", "VpcAccess", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "MaxInstanceRequestConcurrency" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionTemplate), global::Google.Cloud.Run.V2.RevisionTemplate.Parser, new[]{ "Revision", "Labels", "Annotations", "Scaling", "VpcAccess", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "MaxInstanceRequestConcurrency", "SessionAffinity" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -108,6 +109,7 @@ namespace Google.Cloud.Run.V2 {
       executionEnvironment_ = other.executionEnvironment_;
       encryptionKey_ = other.encryptionKey_;
       maxInstanceRequestConcurrency_ = other.maxInstanceRequestConcurrency_;
+      sessionAffinity_ = other.sessionAffinity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -139,7 +141,13 @@ namespace Google.Cloud.Run.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// KRM-style labels for the resource.
+    /// Unstructured key value map that can be used to organize and categorize
+    /// objects.
+    /// User-provided labels are shared with Google's billing system, so they can
+    /// be used to filter, or break down billing charges by team, component,
+    /// environment, state, etc. For more information, visit
+    /// https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+    /// https://cloud.google.com/run/docs/configuring/labels.
     ///
     /// &lt;p>Cloud Run API v2 does not support labels with `run.googleapis.com`,
     /// `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
@@ -158,12 +166,17 @@ namespace Google.Cloud.Run.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// KRM-style annotations for the resource.
+    /// Unstructured key value map that may be set by external tools to store and
+    /// arbitrary metadata. They are not queryable and should be preserved
+    /// when modifying objects.
     ///
     /// &lt;p>Cloud Run API v2 does not support annotations with `run.googleapis.com`,
     /// `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev`
     /// namespaces, and they will be rejected. All system annotations in v1 now
     /// have a corresponding field in v2 RevisionTemplate.
+    ///
+    /// &lt;p>This field follows Kubernetes annotations' namespacing, limits, and
+    /// rules.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -311,6 +324,21 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "session_affinity" field.</summary>
+    public const int SessionAffinityFieldNumber = 19;
+    private bool sessionAffinity_;
+    /// <summary>
+    /// Enable session affinity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SessionAffinity {
+      get { return sessionAffinity_; }
+      set {
+        sessionAffinity_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -338,6 +366,7 @@ namespace Google.Cloud.Run.V2 {
       if (ExecutionEnvironment != other.ExecutionEnvironment) return false;
       if (EncryptionKey != other.EncryptionKey) return false;
       if (MaxInstanceRequestConcurrency != other.MaxInstanceRequestConcurrency) return false;
+      if (SessionAffinity != other.SessionAffinity) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -357,6 +386,7 @@ namespace Google.Cloud.Run.V2 {
       if (ExecutionEnvironment != global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified) hash ^= ExecutionEnvironment.GetHashCode();
       if (EncryptionKey.Length != 0) hash ^= EncryptionKey.GetHashCode();
       if (MaxInstanceRequestConcurrency != 0) hash ^= MaxInstanceRequestConcurrency.GetHashCode();
+      if (SessionAffinity != false) hash ^= SessionAffinity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -411,6 +441,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(120);
         output.WriteInt32(MaxInstanceRequestConcurrency);
       }
+      if (SessionAffinity != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(SessionAffinity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -457,6 +491,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(120);
         output.WriteInt32(MaxInstanceRequestConcurrency);
       }
+      if (SessionAffinity != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(SessionAffinity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -494,6 +532,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (MaxInstanceRequestConcurrency != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxInstanceRequestConcurrency);
+      }
+      if (SessionAffinity != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -543,6 +584,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (other.MaxInstanceRequestConcurrency != 0) {
         MaxInstanceRequestConcurrency = other.MaxInstanceRequestConcurrency;
+      }
+      if (other.SessionAffinity != false) {
+        SessionAffinity = other.SessionAffinity;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -616,6 +660,10 @@ namespace Google.Cloud.Run.V2 {
             MaxInstanceRequestConcurrency = input.ReadInt32();
             break;
           }
+          case 152: {
+            SessionAffinity = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -686,6 +734,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 120: {
             MaxInstanceRequestConcurrency = input.ReadInt32();
+            break;
+          }
+          case 152: {
+            SessionAffinity = input.ReadBool();
             break;
           }
         }

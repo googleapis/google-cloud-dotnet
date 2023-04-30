@@ -35,57 +35,58 @@ namespace Google.Cloud.Run.V2 {
             "X21vdW50cxgIIAMoCzIgLmdvb2dsZS5jbG91ZC5ydW4udjIuVm9sdW1lTW91",
             "bnQSEwoLd29ya2luZ19kaXIYCSABKAkSMgoObGl2ZW5lc3NfcHJvYmUYCiAB",
             "KAsyGi5nb29nbGUuY2xvdWQucnVuLnYyLlByb2JlEjEKDXN0YXJ0dXBfcHJv",
-            "YmUYCyABKAsyGi5nb29nbGUuY2xvdWQucnVuLnYyLlByb2JlIp4BChRSZXNv",
+            "YmUYCyABKAsyGi5nb29nbGUuY2xvdWQucnVuLnYyLlByb2JlIrkBChRSZXNv",
             "dXJjZVJlcXVpcmVtZW50cxJFCgZsaW1pdHMYASADKAsyNS5nb29nbGUuY2xv",
             "dWQucnVuLnYyLlJlc291cmNlUmVxdWlyZW1lbnRzLkxpbWl0c0VudHJ5EhAK",
-            "CGNwdV9pZGxlGAIgASgIGi0KC0xpbWl0c0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEicQoGRW52VmFyEhEKBG5hbWUYASABKAlCA+BB",
-            "AhIPCgV2YWx1ZRgCIAEoCUgAEjkKDHZhbHVlX3NvdXJjZRgDIAEoCzIhLmdv",
-            "b2dsZS5jbG91ZC5ydW4udjIuRW52VmFyU291cmNlSABCCAoGdmFsdWVzIk4K",
-            "DEVudlZhclNvdXJjZRI+Cg5zZWNyZXRfa2V5X3JlZhgBIAEoCzImLmdvb2ds",
-            "ZS5jbG91ZC5ydW4udjIuU2VjcmV0S2V5U2VsZWN0b3IikgEKEVNlY3JldEtl",
-            "eVNlbGVjdG9yEjsKBnNlY3JldBgBIAEoCUIr4EEC+kElCiNzZWNyZXRtYW5h",
-            "Z2VyLmdvb2dsZWFwaXMuY29tL1NlY3JldBJACgd2ZXJzaW9uGAIgASgJQi/6",
-            "QSwKKnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lv",
-            "biI1Cg1Db250YWluZXJQb3J0EgwKBG5hbWUYASABKAkSFgoOY29udGFpbmVy",
-            "X3BvcnQYAyABKAUiOQoLVm9sdW1lTW91bnQSEQoEbmFtZRgBIAEoCUID4EEC",
-            "EhcKCm1vdW50X3BhdGgYAyABKAlCA+BBAiKqAQoGVm9sdW1lEhEKBG5hbWUY",
-            "ASABKAlCA+BBAhI5CgZzZWNyZXQYAiABKAsyJy5nb29nbGUuY2xvdWQucnVu",
-            "LnYyLlNlY3JldFZvbHVtZVNvdXJjZUgAEkMKEmNsb3VkX3NxbF9pbnN0YW5j",
-            "ZRgDIAEoCzIlLmdvb2dsZS5jbG91ZC5ydW4udjIuQ2xvdWRTcWxJbnN0YW5j",
-            "ZUgAQg0KC3ZvbHVtZV90eXBlInIKElNlY3JldFZvbHVtZVNvdXJjZRITCgZz",
-            "ZWNyZXQYASABKAlCA+BBAhIxCgVpdGVtcxgCIAMoCzIiLmdvb2dsZS5jbG91",
-            "ZC5ydW4udjIuVmVyc2lvblRvUGF0aBIUCgxkZWZhdWx0X21vZGUYAyABKAUi",
-            "QQoNVmVyc2lvblRvUGF0aBIRCgRwYXRoGAEgASgJQgPgQQISDwoHdmVyc2lv",
-            "bhgCIAEoCRIMCgRtb2RlGAMgASgFIiUKEENsb3VkU3FsSW5zdGFuY2USEQoJ",
-            "aW5zdGFuY2VzGAEgAygJIqUCCgVQcm9iZRIdChVpbml0aWFsX2RlbGF5X3Nl",
-            "Y29uZHMYASABKAUSFwoPdGltZW91dF9zZWNvbmRzGAIgASgFEhYKDnBlcmlv",
-            "ZF9zZWNvbmRzGAMgASgFEhkKEWZhaWx1cmVfdGhyZXNob2xkGAQgASgFEjYK",
-            "CGh0dHBfZ2V0GAUgASgLMiIuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5IVFRQR2V0",
-            "QWN0aW9uSAASOgoKdGNwX3NvY2tldBgGIAEoCzIkLmdvb2dsZS5jbG91ZC5y",
-            "dW4udjIuVENQU29ja2V0QWN0aW9uSAASLwoEZ3JwYxgHIAEoCzIfLmdvb2ds",
-            "ZS5jbG91ZC5ydW4udjIuR1JQQ0FjdGlvbkgAQgwKCnByb2JlX3R5cGUiVAoN",
-            "SFRUUEdldEFjdGlvbhIMCgRwYXRoGAEgASgJEjUKDGh0dHBfaGVhZGVycxgE",
-            "IAMoCzIfLmdvb2dsZS5jbG91ZC5ydW4udjIuSFRUUEhlYWRlciIuCgpIVFRQ",
-            "SGVhZGVyEhEKBG5hbWUYASABKAlCA+BBAhINCgV2YWx1ZRgCIAEoCSIfCg9U",
-            "Q1BTb2NrZXRBY3Rpb24SDAoEcG9ydBgBIAEoBSIrCgpHUlBDQWN0aW9uEgwK",
-            "BHBvcnQYASABKAUSDwoHc2VydmljZRgCIAEoCULpAwoXY29tLmdvb2dsZS5j",
-            "bG91ZC5ydW4udjJCC0s4c01pblByb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vcnVuL2FwaXYyL3J1bnBiO3J1bnBi6kF4CiFjbG91ZGttcy5nb29nbGVh",
-            "cGlzLmNvbS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMv",
-            "e2NyeXB0b19rZXl96kFKCiNzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "L1NlY3JldBIjcHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMve3NlY3JldH3q",
-            "QWQKKnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lv",
-            "bhI2cHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMve3NlY3JldH0vdmVyc2lv",
-            "bnMve3ZlcnNpb2596kFkCiJ2cGNhY2Nlc3MuZ29vZ2xlYXBpcy5jb20vQ29u",
-            "bmVjdG9yEj5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vY29ubmVjdG9ycy97Y29ubmVjdG9yfWIGcHJvdG8z"));
+            "CGNwdV9pZGxlGAIgASgIEhkKEXN0YXJ0dXBfY3B1X2Jvb3N0GAMgASgIGi0K",
+            "C0xpbWl0c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
+            "cQoGRW52VmFyEhEKBG5hbWUYASABKAlCA+BBAhIPCgV2YWx1ZRgCIAEoCUgA",
+            "EjkKDHZhbHVlX3NvdXJjZRgDIAEoCzIhLmdvb2dsZS5jbG91ZC5ydW4udjIu",
+            "RW52VmFyU291cmNlSABCCAoGdmFsdWVzIk4KDEVudlZhclNvdXJjZRI+Cg5z",
+            "ZWNyZXRfa2V5X3JlZhgBIAEoCzImLmdvb2dsZS5jbG91ZC5ydW4udjIuU2Vj",
+            "cmV0S2V5U2VsZWN0b3IikgEKEVNlY3JldEtleVNlbGVjdG9yEjsKBnNlY3Jl",
+            "dBgBIAEoCUIr4EEC+kElCiNzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "L1NlY3JldBJACgd2ZXJzaW9uGAIgASgJQi/6QSwKKnNlY3JldG1hbmFnZXIu",
+            "Z29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lvbiI1Cg1Db250YWluZXJQb3J0",
+            "EgwKBG5hbWUYASABKAkSFgoOY29udGFpbmVyX3BvcnQYAyABKAUiOQoLVm9s",
+            "dW1lTW91bnQSEQoEbmFtZRgBIAEoCUID4EECEhcKCm1vdW50X3BhdGgYAyAB",
+            "KAlCA+BBAiKqAQoGVm9sdW1lEhEKBG5hbWUYASABKAlCA+BBAhI5CgZzZWNy",
+            "ZXQYAiABKAsyJy5nb29nbGUuY2xvdWQucnVuLnYyLlNlY3JldFZvbHVtZVNv",
+            "dXJjZUgAEkMKEmNsb3VkX3NxbF9pbnN0YW5jZRgDIAEoCzIlLmdvb2dsZS5j",
+            "bG91ZC5ydW4udjIuQ2xvdWRTcWxJbnN0YW5jZUgAQg0KC3ZvbHVtZV90eXBl",
+            "InIKElNlY3JldFZvbHVtZVNvdXJjZRITCgZzZWNyZXQYASABKAlCA+BBAhIx",
+            "CgVpdGVtcxgCIAMoCzIiLmdvb2dsZS5jbG91ZC5ydW4udjIuVmVyc2lvblRv",
+            "UGF0aBIUCgxkZWZhdWx0X21vZGUYAyABKAUiQQoNVmVyc2lvblRvUGF0aBIR",
+            "CgRwYXRoGAEgASgJQgPgQQISDwoHdmVyc2lvbhgCIAEoCRIMCgRtb2RlGAMg",
+            "ASgFIiUKEENsb3VkU3FsSW5zdGFuY2USEQoJaW5zdGFuY2VzGAEgAygJIqUC",
+            "CgVQcm9iZRIdChVpbml0aWFsX2RlbGF5X3NlY29uZHMYASABKAUSFwoPdGlt",
+            "ZW91dF9zZWNvbmRzGAIgASgFEhYKDnBlcmlvZF9zZWNvbmRzGAMgASgFEhkK",
+            "EWZhaWx1cmVfdGhyZXNob2xkGAQgASgFEjYKCGh0dHBfZ2V0GAUgASgLMiIu",
+            "Z29vZ2xlLmNsb3VkLnJ1bi52Mi5IVFRQR2V0QWN0aW9uSAASOgoKdGNwX3Nv",
+            "Y2tldBgGIAEoCzIkLmdvb2dsZS5jbG91ZC5ydW4udjIuVENQU29ja2V0QWN0",
+            "aW9uSAASLwoEZ3JwYxgHIAEoCzIfLmdvb2dsZS5jbG91ZC5ydW4udjIuR1JQ",
+            "Q0FjdGlvbkgAQgwKCnByb2JlX3R5cGUiYgoNSFRUUEdldEFjdGlvbhIMCgRw",
+            "YXRoGAEgASgJEjUKDGh0dHBfaGVhZGVycxgEIAMoCzIfLmdvb2dsZS5jbG91",
+            "ZC5ydW4udjIuSFRUUEhlYWRlchIMCgRwb3J0GAUgASgFIi4KCkhUVFBIZWFk",
+            "ZXISEQoEbmFtZRgBIAEoCUID4EECEg0KBXZhbHVlGAIgASgJIh8KD1RDUFNv",
+            "Y2tldEFjdGlvbhIMCgRwb3J0GAEgASgFIisKCkdSUENBY3Rpb24SDAoEcG9y",
+            "dBgBIAEoBRIPCgdzZXJ2aWNlGAIgASgJQukDChdjb20uZ29vZ2xlLmNsb3Vk",
+            "LnJ1bi52MkILSzhzTWluUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9y",
+            "dW4vYXBpdjIvcnVucGI7cnVucGLqQXgKIWNsb3Vka21zLmdvb2dsZWFwaXMu",
+            "Y29tL0NyeXB0b0tleRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5",
+            "cHRvX2tleX3qQUoKI3NlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2Vj",
+            "cmV0EiNwcm9qZWN0cy97cHJvamVjdH0vc2VjcmV0cy97c2VjcmV0fepBZAoq",
+            "c2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9uEjZw",
+            "cm9qZWN0cy97cHJvamVjdH0vc2VjcmV0cy97c2VjcmV0fS92ZXJzaW9ucy97",
+            "dmVyc2lvbn3qQWQKInZwY2FjY2Vzcy5nb29nbGVhcGlzLmNvbS9Db25uZWN0",
+            "b3ISPnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9j",
+            "b25uZWN0b3JzL3tjb25uZWN0b3J9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Container), global::Google.Cloud.Run.V2.Container.Parser, new[]{ "Name", "Image", "Command", "Args", "Env", "Resources", "Ports", "VolumeMounts", "WorkingDir", "LivenessProbe", "StartupProbe" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ResourceRequirements), global::Google.Cloud.Run.V2.ResourceRequirements.Parser, new[]{ "Limits", "CpuIdle" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ResourceRequirements), global::Google.Cloud.Run.V2.ResourceRequirements.Parser, new[]{ "Limits", "CpuIdle", "StartupCpuBoost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.EnvVar), global::Google.Cloud.Run.V2.EnvVar.Parser, new[]{ "Name", "Value", "ValueSource" }, new[]{ "Values" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.EnvVarSource), global::Google.Cloud.Run.V2.EnvVarSource.Parser, new[]{ "SecretKeyRef" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SecretKeySelector), global::Google.Cloud.Run.V2.SecretKeySelector.Parser, new[]{ "Secret", "Version" }, null, null, null, null),
@@ -96,7 +97,7 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VersionToPath), global::Google.Cloud.Run.V2.VersionToPath.Parser, new[]{ "Path", "Version", "Mode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.CloudSqlInstance), global::Google.Cloud.Run.V2.CloudSqlInstance.Parser, new[]{ "Instances" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Probe), global::Google.Cloud.Run.V2.Probe.Parser, new[]{ "InitialDelaySeconds", "TimeoutSeconds", "PeriodSeconds", "FailureThreshold", "HttpGet", "TcpSocket", "Grpc" }, new[]{ "ProbeType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.HTTPGetAction), global::Google.Cloud.Run.V2.HTTPGetAction.Parser, new[]{ "Path", "HttpHeaders" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.HTTPGetAction), global::Google.Cloud.Run.V2.HTTPGetAction.Parser, new[]{ "Path", "HttpHeaders", "Port" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.HTTPHeader), global::Google.Cloud.Run.V2.HTTPHeader.Parser, new[]{ "Name", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.TCPSocketAction), global::Google.Cloud.Run.V2.TCPSocketAction.Parser, new[]{ "Port" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GRPCAction), global::Google.Cloud.Run.V2.GRPCAction.Parser, new[]{ "Port", "Service" }, null, null, null, null)
@@ -188,8 +189,7 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>
     /// Required. Name of the container image in Dockerhub, Google Artifact
     /// Registry, or Google Container Registry. If the host is not provided,
-    /// Dockerhub is assumed. More info:
-    /// https://kubernetes.io/docs/concepts/containers/images
+    /// Dockerhub is assumed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -208,13 +208,6 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>
     /// Entrypoint array. Not executed within a shell.
     /// The docker image's ENTRYPOINT is used if this is not provided.
-    /// Variable references $(VAR_NAME) are expanded using the container's
-    /// environment. If a variable cannot be resolved, the reference in the input
-    /// string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-    /// double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-    /// regardless of whether the variable exists or not.
-    /// More info:
-    /// https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -230,13 +223,6 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>
     /// Arguments to the entrypoint.
     /// The docker image's CMD is used if this is not provided.
-    /// Variable references $(VAR_NAME) are expanded using the container's
-    /// environment. If a variable cannot be resolved, the reference in the input
-    /// string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-    /// double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-    /// regardless of whether the variable exists or not.
-    /// More info:
-    /// https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -263,8 +249,6 @@ namespace Google.Cloud.Run.V2 {
     private global::Google.Cloud.Run.V2.ResourceRequirements resources_;
     /// <summary>
     /// Compute Resource requirements by this container.
-    /// More info:
-    /// https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -331,8 +315,6 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>
     /// Periodic probe of container liveness.
     /// Container will be restarted if the probe fails.
-    /// More info:
-    /// https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -351,8 +333,6 @@ namespace Google.Cloud.Run.V2 {
     /// All other probes are disabled if a startup probe is provided, until it
     /// succeeds. Container will not be added to service endpoints if the probe
     /// fails.
-    /// More info:
-    /// https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -752,6 +732,7 @@ namespace Google.Cloud.Run.V2 {
     public ResourceRequirements(ResourceRequirements other) : this() {
       limits_ = other.limits_.Clone();
       cpuIdle_ = other.cpuIdle_;
+      startupCpuBoost_ = other.startupCpuBoost_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -767,11 +748,14 @@ namespace Google.Cloud.Run.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 10);
     private readonly pbc::MapField<string, string> limits_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Only memory and CPU are supported. Note: The only
-    /// supported values for CPU are '1', '2',  '4', and '8'. Setting 4 CPU
-    /// requires at least 2Gi of memory. The values of the map is string form of
-    /// the 'quantity' k8s type:
-    /// https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+    /// Only ´memory´ and 'cpu' are supported.
+    ///
+    /// &lt;p>Notes:
+    ///  * The only supported values for CPU are '1', '2', '4', and '8'. Setting 4
+    /// CPU requires at least 2Gi of memory. For more information, go to
+    /// https://cloud.google.com/run/docs/configuring/cpu.
+    ///   * For supported 'memory' values and syntax, go to
+    ///  https://cloud.google.com/run/docs/configuring/memory-limits
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -794,6 +778,23 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "startup_cpu_boost" field.</summary>
+    public const int StartupCpuBoostFieldNumber = 3;
+    private bool startupCpuBoost_;
+    /// <summary>
+    /// Determines whether CPU should be boosted on startup of a new container
+    /// instance above the requested CPU threshold, this can help reduce cold-start
+    /// latency.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool StartupCpuBoost {
+      get { return startupCpuBoost_; }
+      set {
+        startupCpuBoost_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -811,6 +812,7 @@ namespace Google.Cloud.Run.V2 {
       }
       if (!Limits.Equals(other.Limits)) return false;
       if (CpuIdle != other.CpuIdle) return false;
+      if (StartupCpuBoost != other.StartupCpuBoost) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -820,6 +822,7 @@ namespace Google.Cloud.Run.V2 {
       int hash = 1;
       hash ^= Limits.GetHashCode();
       if (CpuIdle != false) hash ^= CpuIdle.GetHashCode();
+      if (StartupCpuBoost != false) hash ^= StartupCpuBoost.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -843,6 +846,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(16);
         output.WriteBool(CpuIdle);
       }
+      if (StartupCpuBoost != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(StartupCpuBoost);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -858,6 +865,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(16);
         output.WriteBool(CpuIdle);
       }
+      if (StartupCpuBoost != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(StartupCpuBoost);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -870,6 +881,9 @@ namespace Google.Cloud.Run.V2 {
       int size = 0;
       size += limits_.CalculateSize(_map_limits_codec);
       if (CpuIdle != false) {
+        size += 1 + 1;
+      }
+      if (StartupCpuBoost != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -887,6 +901,9 @@ namespace Google.Cloud.Run.V2 {
       limits_.Add(other.limits_);
       if (other.CpuIdle != false) {
         CpuIdle = other.CpuIdle;
+      }
+      if (other.StartupCpuBoost != false) {
+        StartupCpuBoost = other.StartupCpuBoost;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -911,6 +928,10 @@ namespace Google.Cloud.Run.V2 {
             CpuIdle = input.ReadBool();
             break;
           }
+          case 24: {
+            StartupCpuBoost = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -932,6 +953,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 16: {
             CpuIdle = input.ReadBool();
+            break;
+          }
+          case 24: {
+            StartupCpuBoost = input.ReadBool();
             break;
           }
         }
@@ -2265,7 +2290,6 @@ namespace Google.Cloud.Run.V2 {
     public const int SecretFieldNumber = 2;
     /// <summary>
     /// Secret represents a secret that should populate this volume.
-    /// More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3371,8 +3395,6 @@ namespace Google.Cloud.Run.V2 {
     /// initiated.
     /// Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe
     /// is 3600. Maximum value for startup probe is 240.
-    /// More info:
-    /// https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3390,8 +3412,6 @@ namespace Google.Cloud.Run.V2 {
     /// Number of seconds after which the probe times out.
     /// Defaults to 1 second. Minimum value is 1. Maximum value is 3600.
     /// Must be smaller than period_seconds.
-    /// More info:
-    /// https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3866,6 +3886,7 @@ namespace Google.Cloud.Run.V2 {
     public HTTPGetAction(HTTPGetAction other) : this() {
       path_ = other.path_;
       httpHeaders_ = other.httpHeaders_.Clone();
+      port_ = other.port_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3904,6 +3925,23 @@ namespace Google.Cloud.Run.V2 {
       get { return httpHeaders_; }
     }
 
+    /// <summary>Field number for the "port" field.</summary>
+    public const int PortFieldNumber = 5;
+    private int port_;
+    /// <summary>
+    /// Port number to access on the container. Must be in the range 1 to 65535.
+    /// If not specified, defaults to the exposed port of the container, which is
+    /// the value of container.ports[0].containerPort.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Port {
+      get { return port_; }
+      set {
+        port_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3921,6 +3959,7 @@ namespace Google.Cloud.Run.V2 {
       }
       if (Path != other.Path) return false;
       if(!httpHeaders_.Equals(other.httpHeaders_)) return false;
+      if (Port != other.Port) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3930,6 +3969,7 @@ namespace Google.Cloud.Run.V2 {
       int hash = 1;
       if (Path.Length != 0) hash ^= Path.GetHashCode();
       hash ^= httpHeaders_.GetHashCode();
+      if (Port != 0) hash ^= Port.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3953,6 +3993,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteString(Path);
       }
       httpHeaders_.WriteTo(output, _repeated_httpHeaders_codec);
+      if (Port != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Port);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3968,6 +4012,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteString(Path);
       }
       httpHeaders_.WriteTo(ref output, _repeated_httpHeaders_codec);
+      if (Port != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Port);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3982,6 +4030,9 @@ namespace Google.Cloud.Run.V2 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
       }
       size += httpHeaders_.CalculateSize(_repeated_httpHeaders_codec);
+      if (Port != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Port);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3998,6 +4049,9 @@ namespace Google.Cloud.Run.V2 {
         Path = other.Path;
       }
       httpHeaders_.Add(other.httpHeaders_);
+      if (other.Port != 0) {
+        Port = other.Port;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4021,6 +4075,10 @@ namespace Google.Cloud.Run.V2 {
             httpHeaders_.AddEntriesFrom(input, _repeated_httpHeaders_codec);
             break;
           }
+          case 40: {
+            Port = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -4042,6 +4100,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 34: {
             httpHeaders_.AddEntriesFrom(ref input, _repeated_httpHeaders_codec);
+            break;
+          }
+          case 40: {
+            Port = input.ReadInt32();
             break;
           }
         }
@@ -4338,7 +4400,8 @@ namespace Google.Cloud.Run.V2 {
     private int port_;
     /// <summary>
     /// Port number to access on the container. Must be in the range 1 to 65535.
-    /// If not specified, defaults to 8080.
+    /// If not specified, defaults to the exposed port of the container, which is
+    /// the value of container.ports[0].containerPort.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4535,7 +4598,8 @@ namespace Google.Cloud.Run.V2 {
     private int port_;
     /// <summary>
     /// Port number of the gRPC service. Number must be in the range 1 to 65535.
-    /// If not specified, defaults to 8080.
+    /// If not specified, defaults to the exposed port of the container, which is
+    /// the value of container.ports[0].containerPort.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
