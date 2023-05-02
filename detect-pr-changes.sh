@@ -2,6 +2,12 @@
 
 set -e
 
+if [[ -d "owl-bot-staging" ]]
+then
+  echo "OwlBot post-processor has not run: failing diff."
+  exit 1
+fi
+
 ALLOW_BREAKING_CHANGES=
 if [[ $1 == "--allow-breaking-changes" ]]
 then
