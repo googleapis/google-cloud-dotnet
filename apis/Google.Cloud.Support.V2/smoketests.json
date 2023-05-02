@@ -1,0 +1,10 @@
+[
+  {
+    "method": "ListCases",
+    "skip": "See b/280092057",
+    "client": "CaseServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]
