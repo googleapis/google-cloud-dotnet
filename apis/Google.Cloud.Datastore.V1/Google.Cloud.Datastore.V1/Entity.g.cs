@@ -1962,9 +1962,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// A Datastore data object.
   ///
-  /// An entity is limited to 1 megabyte when stored. That _roughly_
-  /// corresponds to a limit of 1 megabyte for the serialized form of this
-  /// message.
+  /// Must not exceed 1 MiB - 4 bytes.
   /// </summary>
   public sealed partial class Entity : pb::IMessage<Entity>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
