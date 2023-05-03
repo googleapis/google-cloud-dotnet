@@ -1304,7 +1304,7 @@
     },
     {
       "id": "Google.Cloud.ContactCenterInsights.V1",
-      "version": "2.6.0",
+      "version": "2.7.0",
       "type": "grpc",
       "productName": "Contact Center AI Insights",
       "productUrl": "https://cloud.google.com/contact-center/insights/docs",
