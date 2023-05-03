@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.0.0-alpha08, released 2023-05-03
+
+### New features
+
+- Add FetchConnectedGa4Property method to the Admin API v1alpha ([commit c8b636f](https://github.com/googleapis/google-cloud-dotnet/commit/c8b636f560e7144b101451be96564d247e0eb879))
+- Add `GetChannelGroup`, `ListChannelGroups`, `CreateChannelGroup`, `UpdateChannelGroup` methods to the Admin API v1alpha ([commit c8b636f](https://github.com/googleapis/google-cloud-dotnet/commit/c8b636f560e7144b101451be96564d247e0eb879))
+- Add `ChannelGroupFilter`, `ChannelGroupFilterExpression`, `ChannelGroupFilterExpressionList`, `GroupingRule`, `ChannelGroup` types to the Admin API v1alpha ([commit c8b636f](https://github.com/googleapis/google-cloud-dotnet/commit/c8b636f560e7144b101451be96564d247e0eb879))
+
 ## Version 2.0.0-alpha07, released 2023-03-27
 
 ### New features
