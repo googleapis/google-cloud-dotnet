@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.4.0, released 2023-05-03
+
+### New features
+
+- Add enum for grafeas v1 cvss to support both cvss v2 and v3 ([commit f493b96](https://github.com/googleapis/google-cloud-dotnet/commit/f493b96c8830c997d454e17e8e65ce305dd515e1))
+
 ## Version 3.3.0, released 2023-03-20
 
 ### New features
