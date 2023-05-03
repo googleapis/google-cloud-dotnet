@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.0.0-beta04, released 2023-05-03
+
+### New features
+
+- Add `monitoring_config` field ([commit 2177d00](https://github.com/googleapis/google-cloud-dotnet/commit/2177d0090b863648fd7add7a5eb7167e65a02972))
+- Add `force` on `DeleteMembershipRequest` ([commit 2177d00](https://github.com/googleapis/google-cloud-dotnet/commit/2177d0090b863648fd7add7a5eb7167e65a02972))
+
+### Documentation improvements
+
+- Update API annotation ([commit 2177d00](https://github.com/googleapis/google-cloud-dotnet/commit/2177d0090b863648fd7add7a5eb7167e65a02972))
+
 ## Version 2.0.0-beta03, released 2023-01-19
 
 ### New features
