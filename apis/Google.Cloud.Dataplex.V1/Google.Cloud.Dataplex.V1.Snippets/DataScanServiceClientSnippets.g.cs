@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 DataScan = new gcdv::DataScan(),
                 DataScanId = "",
+                ValidateOnly = false,
             };
             // Make the request
             Operation<gcdv::DataScan, gcdv::OperationMetadata> response = dataScanServiceClient.CreateDataScan(request);
@@ -77,6 +78,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 DataScan = new gcdv::DataScan(),
                 DataScanId = "",
+                ValidateOnly = false,
             };
             // Make the request
             Operation<gcdv::DataScan, gcdv::OperationMetadata> response = await dataScanServiceClient.CreateDataScanAsync(request);
@@ -236,6 +238,7 @@ namespace GoogleCSharpSnippets
             {
                 DataScan = new gcdv::DataScan(),
                 UpdateMask = new FieldMask(),
+                ValidateOnly = false,
             };
             // Make the request
             Operation<gcdv::DataScan, gcdv::OperationMetadata> response = dataScanServiceClient.UpdateDataScan(request);
@@ -270,6 +273,7 @@ namespace GoogleCSharpSnippets
             {
                 DataScan = new gcdv::DataScan(),
                 UpdateMask = new FieldMask(),
+                ValidateOnly = false,
             };
             // Make the request
             Operation<gcdv::DataScan, gcdv::OperationMetadata> response = await dataScanServiceClient.UpdateDataScanAsync(request);

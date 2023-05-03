@@ -138,6 +138,10 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.ListJobsResponse> __Marshaller_google_cloud_dataplex_v1_ListJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.ListJobsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.RunTaskRequest> __Marshaller_google_cloud_dataplex_v1_RunTaskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.RunTaskRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.RunTaskResponse> __Marshaller_google_cloud_dataplex_v1_RunTaskResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.RunTaskResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.GetJobRequest> __Marshaller_google_cloud_dataplex_v1_GetJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.GetJobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.Job> __Marshaller_google_cloud_dataplex_v1_Job = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.Job.Parser));
@@ -355,6 +359,14 @@ namespace Google.Cloud.Dataplex.V1 {
         "ListJobs",
         __Marshaller_google_cloud_dataplex_v1_ListJobsRequest,
         __Marshaller_google_cloud_dataplex_v1_ListJobsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataplex.V1.RunTaskRequest, global::Google.Cloud.Dataplex.V1.RunTaskResponse> __Method_RunTask = new grpc::Method<global::Google.Cloud.Dataplex.V1.RunTaskRequest, global::Google.Cloud.Dataplex.V1.RunTaskResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RunTask",
+        __Marshaller_google_cloud_dataplex_v1_RunTaskRequest,
+        __Marshaller_google_cloud_dataplex_v1_RunTaskResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataplex.V1.GetJobRequest, global::Google.Cloud.Dataplex.V1.Job> __Method_GetJob = new grpc::Method<global::Google.Cloud.Dataplex.V1.GetJobRequest, global::Google.Cloud.Dataplex.V1.Job>(
@@ -717,6 +729,18 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.ListJobsResponse> ListJobs(global::Google.Cloud.Dataplex.V1.ListJobsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Run an on demand execution of a Task.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.RunTaskResponse> RunTask(global::Google.Cloud.Dataplex.V1.RunTaskRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2012,6 +2036,54 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListJobs, null, options, request);
       }
       /// <summary>
+      /// Run an on demand execution of a Task.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataplex.V1.RunTaskResponse RunTask(global::Google.Cloud.Dataplex.V1.RunTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunTask(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Run an on demand execution of a Task.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataplex.V1.RunTaskResponse RunTask(global::Google.Cloud.Dataplex.V1.RunTaskRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RunTask, null, options, request);
+      }
+      /// <summary>
+      /// Run an on demand execution of a Task.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.RunTaskResponse> RunTaskAsync(global::Google.Cloud.Dataplex.V1.RunTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunTaskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Run an on demand execution of a Task.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.RunTaskResponse> RunTaskAsync(global::Google.Cloud.Dataplex.V1.RunTaskRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RunTask, null, options, request);
+      }
+      /// <summary>
       /// Get job resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2437,6 +2509,7 @@ namespace Google.Cloud.Dataplex.V1 {
           .AddMethod(__Method_ListTasks, serviceImpl.ListTasks)
           .AddMethod(__Method_GetTask, serviceImpl.GetTask)
           .AddMethod(__Method_ListJobs, serviceImpl.ListJobs)
+          .AddMethod(__Method_RunTask, serviceImpl.RunTask)
           .AddMethod(__Method_GetJob, serviceImpl.GetJob)
           .AddMethod(__Method_CancelJob, serviceImpl.CancelJob)
           .AddMethod(__Method_CreateEnvironment, serviceImpl.CreateEnvironment)
@@ -2478,6 +2551,7 @@ namespace Google.Cloud.Dataplex.V1 {
       serviceBinder.AddMethod(__Method_ListTasks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.ListTasksRequest, global::Google.Cloud.Dataplex.V1.ListTasksResponse>(serviceImpl.ListTasks));
       serviceBinder.AddMethod(__Method_GetTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.GetTaskRequest, global::Google.Cloud.Dataplex.V1.Task>(serviceImpl.GetTask));
       serviceBinder.AddMethod(__Method_ListJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.ListJobsRequest, global::Google.Cloud.Dataplex.V1.ListJobsResponse>(serviceImpl.ListJobs));
+      serviceBinder.AddMethod(__Method_RunTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.RunTaskRequest, global::Google.Cloud.Dataplex.V1.RunTaskResponse>(serviceImpl.RunTask));
       serviceBinder.AddMethod(__Method_GetJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.GetJobRequest, global::Google.Cloud.Dataplex.V1.Job>(serviceImpl.GetJob));
       serviceBinder.AddMethod(__Method_CancelJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.CancelJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CancelJob));
       serviceBinder.AddMethod(__Method_CreateEnvironment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.CreateEnvironmentRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateEnvironment));

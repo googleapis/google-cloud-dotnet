@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 DataScan = new gcdv::DataScan(),
                 DataScanId = "",
+                ValidateOnly = false,
             };
             // Make the request
             Operation<gcdv::DataScan, gcdv::OperationMetadata> response = await dataScanServiceClient.CreateDataScanAsync(request);

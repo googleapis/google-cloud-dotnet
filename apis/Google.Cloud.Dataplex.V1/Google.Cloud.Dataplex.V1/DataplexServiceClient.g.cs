@@ -86,6 +86,7 @@ namespace Google.Cloud.Dataplex.V1
             ListTasksSettings = existing.ListTasksSettings;
             GetTaskSettings = existing.GetTaskSettings;
             ListJobsSettings = existing.ListJobsSettings;
+            RunTaskSettings = existing.RunTaskSettings;
             GetJobSettings = existing.GetJobSettings;
             CancelJobSettings = existing.CancelJobSettings;
             CreateEnvironmentSettings = existing.CreateEnvironmentSettings;
@@ -679,6 +680,18 @@ namespace Google.Cloud.Dataplex.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListJobsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataplexServiceClient.RunTask</c> and <c>DataplexServiceClient.RunTaskAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RunTaskSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -4263,6 +4276,117 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
+        /// Run an on demand execution of a Task.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RunTaskResponse RunTask(RunTaskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Run an on demand execution of a Task.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunTaskResponse> RunTaskAsync(RunTaskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Run an on demand execution of a Task.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunTaskResponse> RunTaskAsync(RunTaskRequest request, st::CancellationToken cancellationToken) =>
+            RunTaskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Run an on demand execution of a Task.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the task:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RunTaskResponse RunTask(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RunTask(new RunTaskRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Run an on demand execution of a Task.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the task:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunTaskResponse> RunTaskAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RunTaskAsync(new RunTaskRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Run an on demand execution of a Task.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the task:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunTaskResponse> RunTaskAsync(string name, st::CancellationToken cancellationToken) =>
+            RunTaskAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Run an on demand execution of a Task.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the task:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RunTaskResponse RunTask(TaskName name, gaxgrpc::CallSettings callSettings = null) =>
+            RunTask(new RunTaskRequest
+            {
+                TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Run an on demand execution of a Task.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the task:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunTaskResponse> RunTaskAsync(TaskName name, gaxgrpc::CallSettings callSettings = null) =>
+            RunTaskAsync(new RunTaskRequest
+            {
+                TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Run an on demand execution of a Task.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the task:
+        /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/tasks/{task_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunTaskResponse> RunTaskAsync(TaskName name, st::CancellationToken cancellationToken) =>
+            RunTaskAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Get job resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5356,6 +5480,8 @@ namespace Google.Cloud.Dataplex.V1
 
         private readonly gaxgrpc::ApiCall<ListJobsRequest, ListJobsResponse> _callListJobs;
 
+        private readonly gaxgrpc::ApiCall<RunTaskRequest, RunTaskResponse> _callRunTask;
+
         private readonly gaxgrpc::ApiCall<GetJobRequest, Job> _callGetJob;
 
         private readonly gaxgrpc::ApiCall<CancelJobRequest, wkt::Empty> _callCancelJob;
@@ -5472,6 +5598,9 @@ namespace Google.Cloud.Dataplex.V1
             _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>("ListJobs", grpcClient.ListJobsAsync, grpcClient.ListJobs, effectiveSettings.ListJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListJobs);
             Modify_ListJobsApiCall(ref _callListJobs);
+            _callRunTask = clientHelper.BuildApiCall<RunTaskRequest, RunTaskResponse>("RunTask", grpcClient.RunTaskAsync, grpcClient.RunTask, effectiveSettings.RunTaskSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRunTask);
+            Modify_RunTaskApiCall(ref _callRunTask);
             _callGetJob = clientHelper.BuildApiCall<GetJobRequest, Job>("GetJob", grpcClient.GetJobAsync, grpcClient.GetJob, effectiveSettings.GetJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetJob);
             Modify_GetJobApiCall(ref _callGetJob);
@@ -5549,6 +5678,8 @@ namespace Google.Cloud.Dataplex.V1
 
         partial void Modify_ListJobsApiCall(ref gaxgrpc::ApiCall<ListJobsRequest, ListJobsResponse> call);
 
+        partial void Modify_RunTaskApiCall(ref gaxgrpc::ApiCall<RunTaskRequest, RunTaskResponse> call);
+
         partial void Modify_GetJobApiCall(ref gaxgrpc::ApiCall<GetJobRequest, Job> call);
 
         partial void Modify_CancelJobApiCall(ref gaxgrpc::ApiCall<CancelJobRequest, wkt::Empty> call);
@@ -5623,6 +5754,8 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_GetTaskRequest(ref GetTaskRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListJobsRequest(ref ListJobsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RunTaskRequest(ref RunTaskRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetJobRequest(ref GetJobRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6256,6 +6389,30 @@ namespace Google.Cloud.Dataplex.V1
         {
             Modify_ListJobsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListJobsRequest, ListJobsResponse, Job>(_callListJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Run an on demand execution of a Task.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RunTaskResponse RunTask(RunTaskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunTaskRequest(ref request, ref callSettings);
+            return _callRunTask.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Run an on demand execution of a Task.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RunTaskResponse> RunTaskAsync(RunTaskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunTaskRequest(ref request, ref callSettings);
+            return _callRunTask.Async(request, callSettings);
         }
 
         /// <summary>

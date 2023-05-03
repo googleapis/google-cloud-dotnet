@@ -25,41 +25,42 @@ namespace Google.Cloud.Dataplex.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEvZGF0YV9wcm9maWxlLnByb3Rv",
-            "Ehhnb29nbGUuY2xvdWQuZGF0YXBsZXgudjEaKWdvb2dsZS9jbG91ZC9kYXRh",
-            "cGxleC92MS9wcm9jZXNzaW5nLnByb3RvIhEKD0RhdGFQcm9maWxlU3BlYyLr",
-            "CQoRRGF0YVByb2ZpbGVSZXN1bHQSEQoJcm93X2NvdW50GAMgASgDEkQKB3By",
-            "b2ZpbGUYBCABKAsyMy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVBy",
-            "b2ZpbGVSZXN1bHQuUHJvZmlsZRI7CgxzY2FubmVkX2RhdGEYBSABKAsyJS5n",
-            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuU2Nhbm5lZERhdGEavwgKB1Byb2Zp",
-            "bGUSSQoGZmllbGRzGAIgAygLMjkuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
-            "LkRhdGFQcm9maWxlUmVzdWx0LlByb2ZpbGUuRmllbGQa6AcKBUZpZWxkEgwK",
-            "BG5hbWUYASABKAkSDAoEdHlwZRgCIAEoCRIMCgRtb2RlGAMgASgJElYKB3By",
-            "b2ZpbGUYBCABKAsyRS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVBy",
-            "b2ZpbGVSZXN1bHQuUHJvZmlsZS5GaWVsZC5Qcm9maWxlSW5mbxrcBgoLUHJv",
-            "ZmlsZUluZm8SEgoKbnVsbF9yYXRpbxgCIAEoARIWCg5kaXN0aW5jdF9yYXRp",
-            "bxgDIAEoARJlCgx0b3Bfbl92YWx1ZXMYBCADKAsyTy5nb29nbGUuY2xvdWQu",
-            "ZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQuUHJvZmlsZS5GaWVsZC5Q",
-            "cm9maWxlSW5mby5Ub3BOVmFsdWUSbwoOc3RyaW5nX3Byb2ZpbGUYZSABKAsy",
-            "VS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQu",
-            "UHJvZmlsZS5GaWVsZC5Qcm9maWxlSW5mby5TdHJpbmdGaWVsZEluZm9IABJx",
-            "Cg9pbnRlZ2VyX3Byb2ZpbGUYZiABKAsyVi5nb29nbGUuY2xvdWQuZGF0YXBs",
-            "ZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQuUHJvZmlsZS5GaWVsZC5Qcm9maWxl",
-            "SW5mby5JbnRlZ2VyRmllbGRJbmZvSAASbwoOZG91YmxlX3Byb2ZpbGUYZyAB",
-            "KAsyVS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1",
-            "bHQuUHJvZmlsZS5GaWVsZC5Qcm9maWxlSW5mby5Eb3VibGVGaWVsZEluZm9I",
-            "ABpRCg9TdHJpbmdGaWVsZEluZm8SEgoKbWluX2xlbmd0aBgBIAEoAxISCgpt",
-            "YXhfbGVuZ3RoGAIgASgDEhYKDmF2ZXJhZ2VfbGVuZ3RoGAMgASgBGmwKEElu",
-            "dGVnZXJGaWVsZEluZm8SDwoHYXZlcmFnZRgBIAEoARIaChJzdGFuZGFyZF9k",
-            "ZXZpYXRpb24YAyABKAESCwoDbWluGAQgASgDEhEKCXF1YXJ0aWxlcxgGIAMo",
-            "AxILCgNtYXgYBSABKAMaawoPRG91YmxlRmllbGRJbmZvEg8KB2F2ZXJhZ2UY",
-            "ASABKAESGgoSc3RhbmRhcmRfZGV2aWF0aW9uGAMgASgBEgsKA21pbhgEIAEo",
-            "ARIRCglxdWFydGlsZXMYBiADKAESCwoDbWF4GAUgASgBGikKCVRvcE5WYWx1",
-            "ZRINCgV2YWx1ZRgBIAEoCRINCgVjb3VudBgCIAEoA0IMCgpmaWVsZF9pbmZv",
-            "QmwKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjFCEERhdGFQcm9maWxl",
-            "UHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhcGxleC9hcGl2MS9k",
-            "YXRhcGxleHBiO2RhdGFwbGV4cGJiBnByb3RvMw=="));
+            "Ehhnb29nbGUuY2xvdWQuZGF0YXBsZXgudjEaH2dvb2dsZS9hcGkvZmllbGRf",
+            "YmVoYXZpb3IucHJvdG8aKWdvb2dsZS9jbG91ZC9kYXRhcGxleC92MS9wcm9j",
+            "ZXNzaW5nLnByb3RvIhEKD0RhdGFQcm9maWxlU3BlYyLrCQoRRGF0YVByb2Zp",
+            "bGVSZXN1bHQSEQoJcm93X2NvdW50GAMgASgDEkQKB3Byb2ZpbGUYBCABKAsy",
+            "My5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQu",
+            "UHJvZmlsZRI7CgxzY2FubmVkX2RhdGEYBSABKAsyJS5nb29nbGUuY2xvdWQu",
+            "ZGF0YXBsZXgudjEuU2Nhbm5lZERhdGEavwgKB1Byb2ZpbGUSSQoGZmllbGRz",
+            "GAIgAygLMjkuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxl",
+            "UmVzdWx0LlByb2ZpbGUuRmllbGQa6AcKBUZpZWxkEgwKBG5hbWUYASABKAkS",
+            "DAoEdHlwZRgCIAEoCRIMCgRtb2RlGAMgASgJElYKB3Byb2ZpbGUYBCABKAsy",
+            "RS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQu",
+            "UHJvZmlsZS5GaWVsZC5Qcm9maWxlSW5mbxrcBgoLUHJvZmlsZUluZm8SEgoK",
+            "bnVsbF9yYXRpbxgCIAEoARIWCg5kaXN0aW5jdF9yYXRpbxgDIAEoARJlCgx0",
+            "b3Bfbl92YWx1ZXMYBCADKAsyTy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "RGF0YVByb2ZpbGVSZXN1bHQuUHJvZmlsZS5GaWVsZC5Qcm9maWxlSW5mby5U",
+            "b3BOVmFsdWUSbwoOc3RyaW5nX3Byb2ZpbGUYZSABKAsyVS5nb29nbGUuY2xv",
+            "dWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQuUHJvZmlsZS5GaWVs",
+            "ZC5Qcm9maWxlSW5mby5TdHJpbmdGaWVsZEluZm9IABJxCg9pbnRlZ2VyX3By",
+            "b2ZpbGUYZiABKAsyVi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVBy",
+            "b2ZpbGVSZXN1bHQuUHJvZmlsZS5GaWVsZC5Qcm9maWxlSW5mby5JbnRlZ2Vy",
+            "RmllbGRJbmZvSAASbwoOZG91YmxlX3Byb2ZpbGUYZyABKAsyVS5nb29nbGUu",
+            "Y2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQuUHJvZmlsZS5G",
+            "aWVsZC5Qcm9maWxlSW5mby5Eb3VibGVGaWVsZEluZm9IABpRCg9TdHJpbmdG",
+            "aWVsZEluZm8SEgoKbWluX2xlbmd0aBgBIAEoAxISCgptYXhfbGVuZ3RoGAIg",
+            "ASgDEhYKDmF2ZXJhZ2VfbGVuZ3RoGAMgASgBGmwKEEludGVnZXJGaWVsZElu",
+            "Zm8SDwoHYXZlcmFnZRgBIAEoARIaChJzdGFuZGFyZF9kZXZpYXRpb24YAyAB",
+            "KAESCwoDbWluGAQgASgDEhEKCXF1YXJ0aWxlcxgGIAMoAxILCgNtYXgYBSAB",
+            "KAMaawoPRG91YmxlRmllbGRJbmZvEg8KB2F2ZXJhZ2UYASABKAESGgoSc3Rh",
+            "bmRhcmRfZGV2aWF0aW9uGAMgASgBEgsKA21pbhgEIAEoARIRCglxdWFydGls",
+            "ZXMYBiADKAESCwoDbWF4GAUgASgBGikKCVRvcE5WYWx1ZRINCgV2YWx1ZRgB",
+            "IAEoCRINCgVjb3VudBgCIAEoA0IMCgpmaWVsZF9pbmZvQmwKHGNvbS5nb29n",
+            "bGUuY2xvdWQuZGF0YXBsZXgudjFCEERhdGFQcm9maWxlUHJvdG9QAVo4Y2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9kYXRhcGxleC9hcGl2MS9kYXRhcGxleHBiO2Rh",
+            "dGFwbGV4cGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Dataplex.V1.ProcessingReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ProcessingReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult), global::Google.Cloud.Dataplex.V1.DataProfileResult.Parser, new[]{ "RowCount", "Profile", "ScannedData" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Parser, new[]{ "Name", "Type", "Mode", "Profile" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Parser, new[]{ "NullRatio", "DistinctRatio", "TopNValues", "StringProfile", "IntegerProfile", "DoubleProfile" }, new[]{ "FieldInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.StringFieldInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.StringFieldInfo.Parser, new[]{ "MinLength", "MaxLength", "AverageLength" }, null, null, null, null),
@@ -228,8 +229,8 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// DataProfileResult defines the output of DataProfileScan.
-  /// Each field of the table will have field type specific profile result.
+  /// DataProfileResult defines the output of DataProfileScan. Each field of the
+  /// table will have field type specific profile result.
   /// </summary>
   public sealed partial class DataProfileResult : pb::IMessage<DataProfileResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -281,8 +282,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int RowCountFieldNumber = 3;
     private long rowCount_;
     /// <summary>
-    /// The count of all rows in the sampled data.
-    /// Return 0, if zero rows.
+    /// The count of rows scanned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -297,7 +297,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ProfileFieldNumber = 4;
     private global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile profile_;
     /// <summary>
-    /// This represents the profile information per field.
+    /// The profile information per field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -312,7 +312,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ScannedDataFieldNumber = 5;
     private global::Google.Cloud.Dataplex.V1.ScannedData scannedData_;
     /// <summary>
-    /// The data scanned for this profile.
+    /// The data scanned for this result.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -526,8 +526,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Profile information describing the structure and layout of the data
-      /// and contains the profile info.
+      /// Contains name, type, mode and field type specific profile information.
       /// </summary>
       public sealed partial class Profile : pb::IMessage<Profile>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -579,7 +578,7 @@ namespace Google.Cloud.Dataplex.V1 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field> fields_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field>();
         /// <summary>
-        /// The sequence of fields describing data in table entities.
+        /// List of fields with structural and profile information for each field.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -714,7 +713,7 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Represents a column field within a table schema.
+          /// A field within a table.
           /// </summary>
           public sealed partial class Field : pb::IMessage<Field>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -782,23 +781,11 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int TypeFieldNumber = 2;
             private string type_ = "";
             /// <summary>
-            /// The field data type. Possible values include:
-            ///
-            /// * STRING
-            /// * BYTE
-            /// * INT64
-            /// * INT32
-            /// * INT16
-            /// * DOUBLE
-            /// * FLOAT
-            /// * DECIMAL
-            /// * BOOLEAN
-            /// * BINARY
-            /// * TIMESTAMP
-            /// * DATE
-            /// * TIME
-            /// * NULL
-            /// * RECORD
+            /// The data type retrieved from the schema of the data source. For
+            /// instance, for a BigQuery native table, it is the [BigQuery Table
+            /// Schema](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#tablefieldschema).
+            /// For a Dataplex Entity, it is the [Entity
+            /// Schema](https://cloud.google.com/dataplex/docs/reference/rpc/google.cloud.dataplex.v1#type_3).
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -813,10 +800,11 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int ModeFieldNumber = 3;
             private string mode_ = "";
             /// <summary>
-            /// The mode of the field. Its value will be:
-            /// REQUIRED, if it is a required field.
-            /// NULLABLE, if it is an optional field.
-            /// REPEATED, if it is a repeated field.
+            /// The mode of the field. Possible values include:
+            ///
+            /// * REQUIRED, if it is a required field.
+            /// * NULLABLE, if it is an optional field.
+            /// * REPEATED, if it is a repeated field.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -831,7 +819,7 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int ProfileFieldNumber = 4;
             private global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo profile_;
             /// <summary>
-            /// The profile information for the corresponding field.
+            /// Profile information for the corresponding field.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1060,7 +1048,7 @@ namespace Google.Cloud.Dataplex.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
-              /// ProfileInfo defines the profile information for each schema field type.
+              /// The profile information for each field type.
               /// </summary>
               public sealed partial class ProfileInfo : pb::IMessage<ProfileInfo>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1124,7 +1112,7 @@ namespace Google.Cloud.Dataplex.V1 {
                 public const int NullRatioFieldNumber = 2;
                 private double nullRatio_;
                 /// <summary>
-                /// The ratio of null rows against the rows in the sampled data.
+                /// Ratio of rows with null value against total scanned rows.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1139,8 +1127,9 @@ namespace Google.Cloud.Dataplex.V1 {
                 public const int DistinctRatioFieldNumber = 3;
                 private double distinctRatio_;
                 /// <summary>
-                /// The ratio of rows that are distinct against the rows in the sampled
-                /// data.
+                /// Ratio of rows with distinct values against total scanned rows.
+                /// Not available for complex non-groupable field type RECORD and fields
+                /// with REPEATABLE mode.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1157,10 +1146,10 @@ namespace Google.Cloud.Dataplex.V1 {
                     = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.TopNValue.Parser);
                 private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.TopNValue> topNValues_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.TopNValue>();
                 /// <summary>
-                /// The array of top N values of the field in the sampled data.
-                /// Currently N is set as 10 or equal to distinct values in the field,
-                /// whichever is smaller. This will be optional for complex non-groupable
-                /// data-types such as JSON, ARRAY, JSON, STRUCT.
+                /// The list of top N non-null values and number of times they occur in
+                /// the scanned data. N is 10 or equal to the number of distinct values
+                /// in the field, whichever is smaller. Not available for complex
+                /// non-groupable field type RECORD and fields with REPEATABLE mode.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1171,7 +1160,7 @@ namespace Google.Cloud.Dataplex.V1 {
                 /// <summary>Field number for the "string_profile" field.</summary>
                 public const int StringProfileFieldNumber = 101;
                 /// <summary>
-                /// The corresponding string field profile.
+                /// String type field information.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1186,7 +1175,7 @@ namespace Google.Cloud.Dataplex.V1 {
                 /// <summary>Field number for the "integer_profile" field.</summary>
                 public const int IntegerProfileFieldNumber = 102;
                 /// <summary>
-                /// The corresponding integer field profile.
+                /// Integer type field information.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1201,7 +1190,7 @@ namespace Google.Cloud.Dataplex.V1 {
                 /// <summary>Field number for the "double_profile" field.</summary>
                 public const int DoubleProfileFieldNumber = 103;
                 /// <summary>
-                /// The corresponding double field profile.
+                /// Double type field information.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1526,7 +1515,7 @@ namespace Google.Cloud.Dataplex.V1 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static partial class Types {
                   /// <summary>
-                  /// StringFieldInfo defines output info for any string type field.
+                  /// The profile information for a string type field.
                   /// </summary>
                   public sealed partial class StringFieldInfo : pb::IMessage<StringFieldInfo>
                   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1578,8 +1567,7 @@ namespace Google.Cloud.Dataplex.V1 {
                     public const int MinLengthFieldNumber = 1;
                     private long minLength_;
                     /// <summary>
-                    /// The minimum length of the string field in the sampled data.
-                    /// Optional if zero non-null rows.
+                    /// Minimum length of non-null values in the scanned data.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1594,8 +1582,7 @@ namespace Google.Cloud.Dataplex.V1 {
                     public const int MaxLengthFieldNumber = 2;
                     private long maxLength_;
                     /// <summary>
-                    /// The maximum length of a string field in the sampled data.
-                    /// Optional if zero non-null rows.
+                    /// Maximum length of non-null values in the scanned data.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1610,8 +1597,7 @@ namespace Google.Cloud.Dataplex.V1 {
                     public const int AverageLengthFieldNumber = 3;
                     private double averageLength_;
                     /// <summary>
-                    /// The average length of a string field in the sampled data.
-                    /// Optional if zero non-null rows.
+                    /// Average length of non-null values in the scanned data.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1804,7 +1790,7 @@ namespace Google.Cloud.Dataplex.V1 {
                   }
 
                   /// <summary>
-                  /// IntegerFieldInfo defines output for any integer type field.
+                  /// The profile information for an integer type field.
                   /// </summary>
                   public sealed partial class IntegerFieldInfo : pb::IMessage<IntegerFieldInfo>
                   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1858,9 +1844,8 @@ namespace Google.Cloud.Dataplex.V1 {
                     public const int AverageFieldNumber = 1;
                     private double average_;
                     /// <summary>
-                    /// The average of non-null values of integer field in the sampled
-                    /// data. Return NaN, if the field has a NaN. Optional if zero non-null
-                    /// rows.
+                    /// Average of non-null values in the scanned data. NaN, if the field
+                    /// has a NaN.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1875,9 +1860,8 @@ namespace Google.Cloud.Dataplex.V1 {
                     public const int StandardDeviationFieldNumber = 3;
                     private double standardDeviation_;
                     /// <summary>
-                    /// The standard deviation of non-null of integer field in the sampled
-                    /// data. Return NaN, if the field has a NaN. Optional if zero non-null
-                    /// rows.
+                    /// Standard deviation of non-null values in the scanned data. NaN, if
+                    /// the field has a NaN.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1892,9 +1876,8 @@ namespace Google.Cloud.Dataplex.V1 {
                     public const int MinFieldNumber = 4;
                     private long min_;
                     /// <summary>
-                    /// The minimum value of an integer field in the sampled data.
-                    /// Return NaN, if the field has a NaN. Optional if zero non-null
-                    /// rows.
+                    /// Minimum of non-null values in the scanned data. NaN, if the field
+                    /// has a NaN.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1911,7 +1894,7 @@ namespace Google.Cloud.Dataplex.V1 {
                         = pb::FieldCodec.ForInt64(50);
                     private readonly pbc::RepeatedField<long> quartiles_ = new pbc::RepeatedField<long>();
                     /// <summary>
-                    /// A quartile divide the number of data points into four parts, or
+                    /// A quartile divides the number of data points into four parts, or
                     /// quarters, of more-or-less equal size. Three main quartiles used
                     /// are: The first quartile (Q1) splits off the lowest 25% of data from
                     /// the highest 75%. It is also known as the lower or 25th empirical
@@ -1919,9 +1902,9 @@ namespace Google.Cloud.Dataplex.V1 {
                     /// quartile (Q2) is the median of a data set. So, 50% of the data lies
                     /// below this point. The third quartile (Q3) splits off the highest
                     /// 25% of data from the lowest 75%. It is known as the upper or 75th
-                    /// empirical quartile, as 75% of the data lies below this point. So,
-                    /// here the quartiles is provided as an ordered list of quartile
-                    /// values, occurring in order Q1, median, Q3.
+                    /// empirical quartile, as 75% of the data lies below this point.
+                    /// Here, the quartiles is provided as an ordered list of quartile
+                    /// values for the scanned data, occurring in order Q1, median, Q3.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1933,9 +1916,8 @@ namespace Google.Cloud.Dataplex.V1 {
                     public const int MaxFieldNumber = 5;
                     private long max_;
                     /// <summary>
-                    /// The maximum value of an integer field in the sampled data.
-                    /// Return NaN, if the field has a NaN. Optional if zero non-null
-                    /// rows.
+                    /// Maximum of non-null values in the scanned data. NaN, if the field
+                    /// has a NaN.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2168,7 +2150,7 @@ namespace Google.Cloud.Dataplex.V1 {
                   }
 
                   /// <summary>
-                  /// DoubleFieldInfo defines output for any double type field.
+                  /// The profile information for a double type field.
                   /// </summary>
                   public sealed partial class DoubleFieldInfo : pb::IMessage<DoubleFieldInfo>
                   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2222,8 +2204,8 @@ namespace Google.Cloud.Dataplex.V1 {
                     public const int AverageFieldNumber = 1;
                     private double average_;
                     /// <summary>
-                    /// The average of non-null values of double field in the sampled data.
-                    /// Return NaN, if the field has a NaN. Optional if zero non-null rows.
+                    /// Average of non-null values in the scanned data. NaN, if the field
+                    /// has a NaN.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2238,9 +2220,8 @@ namespace Google.Cloud.Dataplex.V1 {
                     public const int StandardDeviationFieldNumber = 3;
                     private double standardDeviation_;
                     /// <summary>
-                    /// The standard deviation of non-null of double field in the sampled
-                    /// data. Return NaN, if the field has a NaN. Optional if zero non-null
-                    /// rows.
+                    /// Standard deviation of non-null values in the scanned data. NaN, if
+                    /// the field has a NaN.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2255,9 +2236,8 @@ namespace Google.Cloud.Dataplex.V1 {
                     public const int MinFieldNumber = 4;
                     private double min_;
                     /// <summary>
-                    /// The minimum value of a double field in the sampled data.
-                    /// Return NaN, if the field has a NaN. Optional if zero non-null
-                    /// rows.
+                    /// Minimum of non-null values in the scanned data. NaN, if the field
+                    /// has a NaN.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2274,7 +2254,7 @@ namespace Google.Cloud.Dataplex.V1 {
                         = pb::FieldCodec.ForDouble(50);
                     private readonly pbc::RepeatedField<double> quartiles_ = new pbc::RepeatedField<double>();
                     /// <summary>
-                    /// A quartile divide the numebr of data points into four parts, or
+                    /// A quartile divides the number of data points into four parts, or
                     /// quarters, of more-or-less equal size. Three main quartiles used
                     /// are: The first quartile (Q1) splits off the lowest 25% of data from
                     /// the highest 75%. It is also known as the lower or 25th empirical
@@ -2282,9 +2262,9 @@ namespace Google.Cloud.Dataplex.V1 {
                     /// quartile (Q2) is the median of a data set. So, 50% of the data lies
                     /// below this point. The third quartile (Q3) splits off the highest
                     /// 25% of data from the lowest 75%. It is known as the upper or 75th
-                    /// empirical quartile, as 75% of the data lies below this point. So,
-                    /// here the quartiles is provided as an ordered list of quartile
-                    /// values, occurring in order Q1, median, Q3.
+                    /// empirical quartile, as 75% of the data lies below this point.
+                    /// Here, the quartiles is provided as an ordered list of quartile
+                    /// values for the scanned data, occurring in order Q1, median, Q3.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2296,9 +2276,8 @@ namespace Google.Cloud.Dataplex.V1 {
                     public const int MaxFieldNumber = 5;
                     private double max_;
                     /// <summary>
-                    /// The maximum value of a double field in the sampled data.
-                    /// Return NaN, if the field has a NaN. Optional if zero non-null
-                    /// rows.
+                    /// Maximum of non-null values in the scanned data. NaN, if the field
+                    /// has a NaN.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2531,8 +2510,7 @@ namespace Google.Cloud.Dataplex.V1 {
                   }
 
                   /// <summary>
-                  /// The TopNValue defines the structure of output of top N values of a
-                  /// field.
+                  /// Top N non-null values in the scanned data.
                   /// </summary>
                   public sealed partial class TopNValue : pb::IMessage<TopNValue>
                   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2583,7 +2561,7 @@ namespace Google.Cloud.Dataplex.V1 {
                     public const int ValueFieldNumber = 1;
                     private string value_ = "";
                     /// <summary>
-                    /// The value is the string value of the actual value from the field.
+                    /// String value of a top N non-null value.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2598,7 +2576,7 @@ namespace Google.Cloud.Dataplex.V1 {
                     public const int CountFieldNumber = 2;
                     private long count_;
                     /// <summary>
-                    /// The frequency count of the corresponding value in the field.
+                    /// Count of the corresponding value in the scanned data.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
