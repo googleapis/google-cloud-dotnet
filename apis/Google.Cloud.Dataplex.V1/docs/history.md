@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.4.0, released 2023-05-03
+
+### New features
+
+- Added new Dataplex APIs and new features for existing APIs (e.g. DataScans) ([commit 5da3cc6](https://github.com/googleapis/google-cloud-dotnet/commit/5da3cc6e696341f295a3518a64b1fb6fceb7d7a9))
+
+### Documentation improvements
+
+- Updated comments for multiple Dataplex APIs ([commit 5da3cc6](https://github.com/googleapis/google-cloud-dotnet/commit/5da3cc6e696341f295a3518a64b1fb6fceb7d7a9))
+
 ## Version 2.3.0, released 2023-02-08
 
 ### New features
