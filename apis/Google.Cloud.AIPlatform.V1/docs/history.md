@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.14.0, released 2023-05-03
+
+### New features
+
+- Add NVIDIA_L4 to AcceleratorType ([commit 1a69433](https://github.com/googleapis/google-cloud-dotnet/commit/1a694333f553a44b96d342049495250b75c15ff8))
+- Add experiment and experiment_run to CustomJobSpec ([commit 1a69433](https://github.com/googleapis/google-cloud-dotnet/commit/1a694333f553a44b96d342049495250b75c15ff8))
+- Add MutateDeployedModel RPC to endpoint_service ([commit 1a69433](https://github.com/googleapis/google-cloud-dotnet/commit/1a694333f553a44b96d342049495250b75c15ff8))
+- Add offline_storage_ttl_days to EntityType ([commit 1a69433](https://github.com/googleapis/google-cloud-dotnet/commit/1a694333f553a44b96d342049495250b75c15ff8))
+- Add online_storage_ttl_days to FeatureStore ([commit 1a69433](https://github.com/googleapis/google-cloud-dotnet/commit/1a694333f553a44b96d342049495250b75c15ff8))
+- Add GENIE to ModelSourceType ([commit 1a69433](https://github.com/googleapis/google-cloud-dotnet/commit/1a694333f553a44b96d342049495250b75c15ff8))
+
 ## Version 2.13.0, released 2023-04-19
 
 ### New features
