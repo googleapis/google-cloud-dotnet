@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2023-05-03
+
+### New features
+
+- Add document purge API ([commit d30c851](https://github.com/googleapis/google-cloud-dotnet/commit/d30c851e39b9de0064f50b8d85420fe6d6aa524b))
+- Add search, autocomplete and schema services ([commit a3e2c26](https://github.com/googleapis/google-cloud-dotnet/commit/a3e2c260d2eb3550f38bd30071539f4b4a6d3f6f))
+- Add unstructured document support (PDF/HTML) ([commit a3e2c26](https://github.com/googleapis/google-cloud-dotnet/commit/a3e2c260d2eb3550f38bd30071539f4b4a6d3f6f))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit d30c851](https://github.com/googleapis/google-cloud-dotnet/commit/d30c851e39b9de0064f50b8d85420fe6d6aa524b))
+- Keep the API doc up-to-date with recent changes ([commit a3e2c26](https://github.com/googleapis/google-cloud-dotnet/commit/a3e2c260d2eb3550f38bd30071539f4b4a6d3f6f))
+
 ## Version 1.0.0-beta03, released 2023-03-27
 
 ### New features
