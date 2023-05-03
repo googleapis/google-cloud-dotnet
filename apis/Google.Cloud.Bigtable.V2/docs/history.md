@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.5.0, released 2023-05-03
+
+### New features
+
+- Publish RateLimitInfo and FeatureFlag protos ([commit b1efbfe](https://github.com/googleapis/google-cloud-dotnet/commit/b1efbfeabdbe21c90b7a5028828d935b75fa1b15))
+
 ## Version 3.4.0, released 2023-03-01
 
 ### Bug fixes
