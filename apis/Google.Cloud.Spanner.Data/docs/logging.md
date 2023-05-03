@@ -53,7 +53,6 @@ If you need the log output in some different form, you can create
 your own class deriving from `Logger`. You need to implement two
 methods:
 
-```csharp
 - `LogPerformanceEntries` to log performance information. If you
   aren't performing performance tests, you can use an empty
   implementation.
