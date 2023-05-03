@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.3.0, released 2023-05-03
+
+### New features
+
+- Add airflow_byoid_uri field to Cloud Composer API ([commit 19e546e](https://github.com/googleapis/google-cloud-dotnet/commit/19e546e093540a297e017b1f9bf1d9e6e4f1e8ec))
+
 ## Version 2.2.0, released 2023-01-19
 
 ### New features
