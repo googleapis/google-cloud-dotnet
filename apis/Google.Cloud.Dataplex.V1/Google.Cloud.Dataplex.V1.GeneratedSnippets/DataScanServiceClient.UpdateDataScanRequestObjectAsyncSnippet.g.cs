@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
             {
                 DataScan = new gcdv::DataScan(),
                 UpdateMask = new FieldMask(),
+                ValidateOnly = false,
             };
             // Make the request
             Operation<gcdv::DataScan, gcdv::OperationMetadata> response = await dataScanServiceClient.UpdateDataScanAsync(request);

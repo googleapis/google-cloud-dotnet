@@ -356,7 +356,7 @@ namespace Google.Cloud.Dataplex.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dataplex.V1.DataQualityDimensionResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataQualityDimensionResult> dimensions_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataQualityDimensionResult>();
     /// <summary>
-    /// A list of results at the dimension-level.
+    /// A list of results at the dimension level.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -627,8 +627,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// DataQualityRuleResult provides a more detailed, per-rule level view of the
-  /// results.
+  /// DataQualityRuleResult provides a more detailed, per-rule view of the results.
   /// </summary>
   public sealed partial class DataQualityRuleResult : pb::IMessage<DataQualityRuleResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -714,12 +713,15 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int EvaluatedCountFieldNumber = 9;
     private long evaluatedCount_;
     /// <summary>
-    /// The number of rows a rule was evaluated against.
-    /// This field is only valid for ColumnMap type rules.
+    /// The number of rows a rule was evaluated against. This field is only valid
+    /// for ColumnMap type rules.
+    ///
     /// Evaluated count can be configured to either
-    /// (1) include all rows (default) - with null rows automatically failing rule
-    /// evaluation  OR (2) exclude null rows from the evaluated_count, by setting
-    /// ignore_nulls = true
+    ///
+    /// * include all rows (default) - with `null` rows automatically failing rule
+    /// evaluation, or
+    /// * exclude `null` rows from the `evaluated_count`, by setting
+    /// `ignore_nulls = true`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -765,7 +767,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int PassRatioFieldNumber = 6;
     private double passRatio_;
     /// <summary>
-    /// The ratio of passed_count / evaluated_count.
+    /// The ratio of **passed_count / evaluated_count**.
     /// This field is only valid for ColumnMap type rules.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1080,8 +1082,8 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// DataQualityDimensionResult provides a more detailed, per-dimension level view
-  /// of the results.
+  /// DataQualityDimensionResult provides a more detailed, per-dimension view of
+  /// the results.
   /// </summary>
   public sealed partial class DataQualityDimensionResult : pb::IMessage<DataQualityDimensionResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1496,9 +1498,11 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int IgnoreNullFieldNumber = 501;
     private bool ignoreNull_;
     /// <summary>
-    /// Optional. Rows with null values will automatically fail a rule, unless
-    /// ignore_null is true. In that case, such null rows are trivially considered
-    /// passing. Only applicable to ColumnMap rules.
+    /// Optional. Rows with `null` values will automatically fail a rule, unless
+    /// `ignore_null` is `true`. In that case, such `null` rows are trivially
+    /// considered passing.
+    ///
+    /// Only applicable to ColumnMap rules.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1514,8 +1518,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private string dimension_ = "";
     /// <summary>
     /// Required. The dimension a rule belongs to. Results are also aggregated at
-    /// the dimension-level. Supported dimensions are ["COMPLETENESS", "ACCURACY",
-    /// "CONSISTENCY", "VALIDITY", "UNIQUENESS", "INTEGRITY"]
+    /// the dimension level. Supported dimensions are **["COMPLETENESS",
+    /// "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS", "INTEGRITY"]**
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1530,10 +1534,10 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ThresholdFieldNumber = 503;
     private double threshold_;
     /// <summary>
-    /// Optional. The minimum ratio of passing_rows / total_rows required to pass
-    /// this rule, with a range of [0.0, 1.0]
+    /// Optional. The minimum ratio of **passing_rows / total_rows** required to
+    /// pass this rule, with a range of [0.0, 1.0].
     ///
-    /// 0 indicates default value (i.e. 1.0)
+    /// 0 indicates default value (i.e. 1.0).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2135,7 +2139,8 @@ namespace Google.Cloud.Dataplex.V1 {
         private string minValue_ = "";
         /// <summary>
         /// Optional. The minimum column value allowed for a row to pass this
-        /// validation. At least one of min_value and max_value need to be provided.
+        /// validation. At least one of `min_value` and `max_value` need to be
+        /// provided.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2151,7 +2156,8 @@ namespace Google.Cloud.Dataplex.V1 {
         private string maxValue_ = "";
         /// <summary>
         /// Optional. The maximum column value allowed for a row to pass this
-        /// validation. At least one of min_value and max_value need to be provided.
+        /// validation. At least one of `min_value` and `max_value` need to be
+        /// provided.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2167,8 +2173,9 @@ namespace Google.Cloud.Dataplex.V1 {
         private bool strictMinEnabled_;
         /// <summary>
         /// Optional. Whether each value needs to be strictly greater than ('>') the
-        /// minimum, or if equality is allowed. Only relevant if a min_value has been
-        /// defined. Default = false.
+        /// minimum, or if equality is allowed.
+        ///
+        /// Only relevant if a `min_value` has been defined. Default = false.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2184,8 +2191,9 @@ namespace Google.Cloud.Dataplex.V1 {
         private bool strictMaxEnabled_;
         /// <summary>
         /// Optional. Whether each value needs to be strictly lesser than ('&lt;') the
-        /// maximum, or if equality is allowed. Only relevant if a max_value has been
-        /// defined. Default = false.
+        /// maximum, or if equality is allowed.
+        ///
+        /// Only relevant if a `max_value` has been defined. Default = false.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2608,6 +2616,9 @@ namespace Google.Cloud.Dataplex.V1 {
         private static readonly pb::FieldCodec<string> _repeated_values_codec
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> values_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Expected values for the column value.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> Values {
@@ -2787,6 +2798,9 @@ namespace Google.Cloud.Dataplex.V1 {
         /// <summary>Field number for the "regex" field.</summary>
         public const int RegexFieldNumber = 1;
         private string regex_ = "";
+        /// <summary>
+        /// A regular expression the column value is expected to match.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Regex {
@@ -3139,6 +3153,9 @@ namespace Google.Cloud.Dataplex.V1 {
         /// <summary>Field number for the "statistic" field.</summary>
         public const int StatisticFieldNumber = 1;
         private global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.StatisticRangeExpectation.Types.ColumnStatistic statistic_ = global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.StatisticRangeExpectation.Types.ColumnStatistic.StatisticUndefined;
+        /// <summary>
+        /// The aggregate metric to evaluate.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.StatisticRangeExpectation.Types.ColumnStatistic Statistic {
@@ -3154,7 +3171,8 @@ namespace Google.Cloud.Dataplex.V1 {
         /// <summary>
         /// The minimum column statistic value allowed for a row to pass this
         /// validation.
-        /// At least one of min_value and max_value need to be provided.
+        ///
+        /// At least one of `min_value` and `max_value` need to be provided.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3171,7 +3189,8 @@ namespace Google.Cloud.Dataplex.V1 {
         /// <summary>
         /// The maximum column statistic value allowed for a row to pass this
         /// validation.
-        /// At least one of min_value and max_value need to be provided.
+        ///
+        /// At least one of `min_value` and `max_value` need to be provided.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3187,8 +3206,9 @@ namespace Google.Cloud.Dataplex.V1 {
         private bool strictMinEnabled_;
         /// <summary>
         /// Whether column statistic needs to be strictly greater than ('>')
-        /// the minimum, or if equality is allowed. Only relevant if a min_value has
-        /// been defined. Default = false.
+        /// the minimum, or if equality is allowed.
+        ///
+        /// Only relevant if a `min_value` has been defined. Default = false.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3204,8 +3224,9 @@ namespace Google.Cloud.Dataplex.V1 {
         private bool strictMaxEnabled_;
         /// <summary>
         /// Whether column statistic needs to be strictly lesser than ('&lt;') the
-        /// maximum, or if equality is allowed. Only relevant if a max_value has been
-        /// defined. Default = false.
+        /// maximum, or if equality is allowed.
+        ///
+        /// Only relevant if a `max_value` has been defined. Default = false.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3448,6 +3469,9 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
+          /// <summary>
+          /// The list of aggregate metrics a rule can be evaluated against.
+          /// </summary>
           public enum ColumnStatistic {
             /// <summary>
             /// Unspecified statistic type
@@ -3474,8 +3498,10 @@ namespace Google.Cloud.Dataplex.V1 {
 
       /// <summary>
       /// Evaluates whether each row passes the specified condition.
+      ///
       /// The SQL expression needs to use BigQuery standard SQL syntax and should
-      /// produce a boolean per row as the result.
+      /// produce a boolean value per row as the result.
+      ///
       /// Example: col1 >= 0 AND col2 &lt; 10
       /// </summary>
       public sealed partial class RowConditionExpectation : pb::IMessage<RowConditionExpectation>
@@ -3525,6 +3551,9 @@ namespace Google.Cloud.Dataplex.V1 {
         /// <summary>Field number for the "sql_expression" field.</summary>
         public const int SqlExpressionFieldNumber = 1;
         private string sqlExpression_ = "";
+        /// <summary>
+        /// The SQL expression.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string SqlExpression {
@@ -3669,8 +3698,10 @@ namespace Google.Cloud.Dataplex.V1 {
 
       /// <summary>
       /// Evaluates whether the provided expression is true.
+      ///
       /// The SQL expression needs to use BigQuery standard SQL syntax and should
       /// produce a scalar boolean result.
+      ///
       /// Example: MIN(col1) >= 0
       /// </summary>
       public sealed partial class TableConditionExpectation : pb::IMessage<TableConditionExpectation>
@@ -3720,6 +3751,9 @@ namespace Google.Cloud.Dataplex.V1 {
         /// <summary>Field number for the "sql_expression" field.</summary>
         public const int SqlExpressionFieldNumber = 1;
         private string sqlExpression_ = "";
+        /// <summary>
+        /// The SQL expression.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string SqlExpression {

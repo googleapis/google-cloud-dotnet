@@ -286,6 +286,12 @@
                 "ListZonesAsync"
               ]
             },
+            "RunTask": {
+              "methods": [
+                "RunTask",
+                "RunTaskAsync"
+              ]
+            },
             "UpdateAsset": {
               "methods": [
                 "UpdateAsset",

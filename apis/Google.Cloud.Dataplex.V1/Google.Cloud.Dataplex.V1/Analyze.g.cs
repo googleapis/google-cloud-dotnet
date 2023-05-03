@@ -1699,6 +1699,9 @@ namespace Google.Cloud.Dataplex.V1 {
 
       }
 
+      /// <summary>
+      /// Configuration for sessions created for this environment.
+      /// </summary>
       public sealed partial class SessionSpec : pb::IMessage<SessionSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1945,6 +1948,9 @@ namespace Google.Cloud.Dataplex.V1 {
 
       }
 
+      /// <summary>
+      /// Status of sessions created for this environment.
+      /// </summary>
       public sealed partial class SessionStatus : pb::IMessage<SessionStatus>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2138,6 +2144,9 @@ namespace Google.Cloud.Dataplex.V1 {
 
       }
 
+      /// <summary>
+      /// URI Endpoints to access sessions associated with the Environment.
+      /// </summary>
       public sealed partial class Endpoints : pb::IMessage<Endpoints>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3572,6 +3581,9 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 4;
     private global::Google.Cloud.Dataplex.V1.State state_ = global::Google.Cloud.Dataplex.V1.State.Unspecified;
+    /// <summary>
+    /// Output only. State of Session
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataplex.V1.State State {

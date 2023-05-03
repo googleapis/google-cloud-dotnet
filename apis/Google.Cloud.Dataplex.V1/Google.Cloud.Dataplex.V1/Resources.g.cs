@@ -137,7 +137,7 @@ namespace Google.Cloud.Dataplex.V1 {
             "fS96b25lcy97em9uZX0vYWN0aW9ucy97YWN0aW9ufRJhcHJvamVjdHMve3By",
             "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2xha2VzL3tsYWtlfS96b25l",
             "cy97em9uZX0vYXNzZXRzL3thc3NldH0vYWN0aW9ucy97YWN0aW9ufUIJCgdk",
-            "ZXRhaWxzIuITCgVBc3NldBIzCgRuYW1lGAEgASgJQiXgQQP6QR8KHWRhdGFw",
+            "ZXRhaWxzIqQVCgVBc3NldBIzCgRuYW1lGAEgASgJQiXgQQP6QR8KHWRhdGFw",
             "bGV4Lmdvb2dsZWFwaXMuY29tL0Fzc2V0EhkKDGRpc3BsYXlfbmFtZRgCIAEo",
             "CUID4EEBEhAKA3VpZBgDIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAQgASgL",
             "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90",
@@ -169,36 +169,40 @@ namespace Google.Cloud.Dataplex.V1 {
             "KAVCA+BBARIWCglkZWxpbWl0ZXIYAiABKAlCA+BBARIVCghlbmNvZGluZxgD",
             "IAEoCUID4EEBEiMKFmRpc2FibGVfdHlwZV9pbmZlcmVuY2UYBCABKAhCA+BB",
             "ARpJCgtKc29uT3B0aW9ucxIVCghlbmNvZGluZxgBIAEoCUID4EEBEiMKFmRp",
-            "c2FibGVfdHlwZV9pbmZlcmVuY2UYAiABKAhCA+BBAUIJCgd0cmlnZ2VyGrIB",
+            "c2FibGVfdHlwZV9pbmZlcmVuY2UYAiABKAhCA+BBAUIJCgd0cmlnZ2VyGs4C",
             "CgxSZXNvdXJjZVNwZWMSEQoEbmFtZRgBIAEoCUID4EEFEkcKBHR5cGUYAiAB",
             "KA4yMS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQXNzZXQuUmVzb3VyY2VT",
-            "cGVjLlR5cGVCBuBBAuBBBSJGCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQ",
-            "ABISCg5TVE9SQUdFX0JVQ0tFVBABEhQKEEJJR1FVRVJZX0RBVEFTRVQQAhrN",
-            "AQoOUmVzb3VyY2VTdGF0dXMSQwoFc3RhdGUYASABKA4yNC5nb29nbGUuY2xv",
-            "dWQuZGF0YXBsZXgudjEuQXNzZXQuUmVzb3VyY2VTdGF0dXMuU3RhdGUSDwoH",
-            "bWVzc2FnZRgCIAEoCRIvCgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXAiNAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJ",
-            "RUQQABIJCgVSRUFEWRABEgkKBUVSUk9SEAIa9AMKD0Rpc2NvdmVyeVN0YXR1",
-            "cxJECgVzdGF0ZRgBIAEoDjI1Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5B",
-            "c3NldC5EaXNjb3ZlcnlTdGF0dXMuU3RhdGUSDwoHbWVzc2FnZRgCIAEoCRIv",
-            "Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASMQoNbGFzdF9ydW5fdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASRAoFc3RhdHMYBiABKAsyNS5nb29nbGUuY2xvdWQuZGF0YXBs",
-            "ZXgudjEuQXNzZXQuRGlzY292ZXJ5U3RhdHVzLlN0YXRzEjQKEWxhc3RfcnVu",
-            "X2R1cmF0aW9uGAcgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGlAK",
-            "BVN0YXRzEhIKCmRhdGFfaXRlbXMYASABKAMSEQoJZGF0YV9zaXplGAIgASgD",
-            "Eg4KBnRhYmxlcxgDIAEoAxIQCghmaWxlc2V0cxgEIAEoAyJYCgVTdGF0ZRIV",
-            "ChFTVEFURV9VTlNQRUNJRklFRBAAEg0KCVNDSEVEVUxFRBABEg8KC0lOX1BS",
-            "T0dSRVNTEAISCgoGUEFVU0VEEAMSDAoIRElTQUJMRUQQBRotCgtMYWJlbHNF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOnTqQXEKHWRh",
-            "dGFwbGV4Lmdvb2dsZWFwaXMuY29tL0Fzc2V0ElBwcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbGFrZXMve2xha2V9L3pvbmVzL3t6",
-            "b25lfS9hc3NldHMve2Fzc2V0fSpbCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
-            "RklFRBAAEgoKBkFDVElWRRABEgwKCENSRUFUSU5HEAISDAoIREVMRVRJTkcQ",
-            "AxITCg9BQ1RJT05fUkVRVUlSRUQQBEJqChxjb20uZ29vZ2xlLmNsb3VkLmRh",
-            "dGFwbGV4LnYxQg5SZXNvdXJjZXNQcm90b1ABWjhjbG91ZC5nb29nbGUuY29t",
-            "L2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7ZGF0YXBsZXhwYmIGcHJv",
-            "dG8z"));
+            "cGVjLlR5cGVCBuBBAuBBBRJWChByZWFkX2FjY2Vzc19tb2RlGAUgASgOMjcu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkFzc2V0LlJlc291cmNlU3BlYy5B",
+            "Y2Nlc3NNb2RlQgPgQQEiRgoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAAS",
+            "EgoOU1RPUkFHRV9CVUNLRVQQARIUChBCSUdRVUVSWV9EQVRBU0VUEAIiQgoK",
+            "QWNjZXNzTW9kZRIbChdBQ0NFU1NfTU9ERV9VTlNQRUNJRklFRBAAEgoKBkRJ",
+            "UkVDVBABEgsKB01BTkFHRUQQAhrzAQoOUmVzb3VyY2VTdGF0dXMSQwoFc3Rh",
+            "dGUYASABKA4yNC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQXNzZXQuUmVz",
+            "b3VyY2VTdGF0dXMuU3RhdGUSDwoHbWVzc2FnZRgCIAEoCRIvCgt1cGRhdGVf",
+            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASJAoXbWFu",
+            "YWdlZF9hY2Nlc3NfaWRlbnRpdHkYBCABKAlCA+BBAyI0CgVTdGF0ZRIVChFT",
+            "VEFURV9VTlNQRUNJRklFRBAAEgkKBVJFQURZEAESCQoFRVJST1IQAhr0AwoP",
+            "RGlzY292ZXJ5U3RhdHVzEkQKBXN0YXRlGAEgASgOMjUuZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwbGV4LnYxLkFzc2V0LkRpc2NvdmVyeVN0YXR1cy5TdGF0ZRIPCgdt",
+            "ZXNzYWdlGAIgASgJEi8KC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBIxCg1sYXN0X3J1bl90aW1lGAQgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBJECgVzdGF0cxgGIAEoCzI1Lmdvb2ds",
+            "ZS5jbG91ZC5kYXRhcGxleC52MS5Bc3NldC5EaXNjb3ZlcnlTdGF0dXMuU3Rh",
+            "dHMSNAoRbGFzdF9ydW5fZHVyYXRpb24YByABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb24aUAoFU3RhdHMSEgoKZGF0YV9pdGVtcxgBIAEoAxIRCglk",
+            "YXRhX3NpemUYAiABKAMSDgoGdGFibGVzGAMgASgDEhAKCGZpbGVzZXRzGAQg",
+            "ASgDIlgKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDQoJU0NIRURV",
+            "TEVEEAESDwoLSU5fUFJPR1JFU1MQAhIKCgZQQVVTRUQQAxIMCghESVNBQkxF",
+            "RBAFGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAE6dOpBcQodZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vQXNzZXQSUHBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9sYWtlcy97",
+            "bGFrZX0vem9uZXMve3pvbmV9L2Fzc2V0cy97YXNzZXR9KlsKBVN0YXRlEhUK",
+            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDAoIQ1JFQVRJTkcQ",
+            "AhIMCghERUxFVElORxADEhMKD0FDVElPTl9SRVFVSVJFRBAEQmoKHGNvbS5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjFCDlJlc291cmNlc1Byb3RvUAFaOGNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vZGF0YXBsZXgvYXBpdjEvZGF0YXBsZXhwYjtk",
+            "YXRhcGxleHBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataplex.V1.State), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -221,8 +225,8 @@ namespace Google.Cloud.Dataplex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Asset), global::Google.Cloud.Dataplex.V1.Asset.Parser, new[]{ "Name", "DisplayName", "Uid", "CreateTime", "UpdateTime", "Labels", "Description", "State", "ResourceSpec", "ResourceStatus", "SecurityStatus", "DiscoverySpec", "DiscoveryStatus" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.SecurityStatus), global::Google.Cloud.Dataplex.V1.Asset.Types.SecurityStatus.Parser, new[]{ "State", "Message", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.SecurityStatus.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.DiscoverySpec), global::Google.Cloud.Dataplex.V1.Asset.Types.DiscoverySpec.Parser, new[]{ "Enabled", "IncludePatterns", "ExcludePatterns", "CsvOptions", "JsonOptions", "Schedule" }, new[]{ "Trigger" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.DiscoverySpec.Types.CsvOptions), global::Google.Cloud.Dataplex.V1.Asset.Types.DiscoverySpec.Types.CsvOptions.Parser, new[]{ "HeaderRows", "Delimiter", "Encoding", "DisableTypeInference" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.DiscoverySpec.Types.JsonOptions), global::Google.Cloud.Dataplex.V1.Asset.Types.DiscoverySpec.Types.JsonOptions.Parser, new[]{ "Encoding", "DisableTypeInference" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec), global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Parser, new[]{ "Name", "Type" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.Type) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceStatus), global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceStatus.Parser, new[]{ "State", "Message", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceStatus.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec), global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Parser, new[]{ "Name", "Type", "ReadAccessMode" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.Type), typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.AccessMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceStatus), global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceStatus.Parser, new[]{ "State", "Message", "UpdateTime", "ManagedAccessIdentity" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceStatus.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.DiscoveryStatus), global::Google.Cloud.Dataplex.V1.Asset.Types.DiscoveryStatus.Parser, new[]{ "State", "Message", "UpdateTime", "LastRunTime", "Stats", "LastRunDuration" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.DiscoveryStatus.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Asset.Types.DiscoveryStatus.Types.Stats), global::Google.Cloud.Dataplex.V1.Asset.Types.DiscoveryStatus.Types.Stats.Parser, new[]{ "DataItems", "DataSize", "Tables", "Filesets" }, null, null, null, null)}),
             null, })
           }));
@@ -2859,9 +2863,8 @@ namespace Google.Cloud.Dataplex.V1 {
         /// discovery every 60 minutes. To explicitly set a timezone to the cron
         /// tab, apply a prefix in the cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or
         /// TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a valid string
-        /// from IANA time zone database. For example,
-        /// `CRON_TZ=America/New_York 1 * * * *`,
-        /// or `TZ=America/New_York 1 * * * *`.
+        /// from IANA time zone database. For example, `CRON_TZ=America/New_York 1
+        /// * * * *`, or `TZ=America/New_York 1 * * * *`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7590,9 +7593,8 @@ namespace Google.Cloud.Dataplex.V1 {
         /// discovery every 60 minutes. To explicitly set a timezone to the cron
         /// tab, apply a prefix in the cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or
         /// TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a valid string
-        /// from IANA time zone database. For example,
-        /// `CRON_TZ=America/New_York 1 * * * *`,
-        /// or `TZ=America/New_York 1 * * * *`.
+        /// from IANA time zone database. For example, `CRON_TZ=America/New_York 1
+        /// * * * *`, or `TZ=America/New_York 1 * * * *`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8482,6 +8484,7 @@ namespace Google.Cloud.Dataplex.V1 {
         public ResourceSpec(ResourceSpec other) : this() {
           name_ = other.name_;
           type_ = other.type_;
+          readAccessMode_ = other.readAccessMode_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -8524,6 +8527,22 @@ namespace Google.Cloud.Dataplex.V1 {
           }
         }
 
+        /// <summary>Field number for the "read_access_mode" field.</summary>
+        public const int ReadAccessModeFieldNumber = 5;
+        private global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.AccessMode readAccessMode_ = global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.AccessMode.Unspecified;
+        /// <summary>
+        /// Optional. Determines how read permissions are handled for each asset and
+        /// their associated tables. Only available to storage buckets assets.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.AccessMode ReadAccessMode {
+          get { return readAccessMode_; }
+          set {
+            readAccessMode_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -8541,6 +8560,7 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           if (Name != other.Name) return false;
           if (Type != other.Type) return false;
+          if (ReadAccessMode != other.ReadAccessMode) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -8550,6 +8570,7 @@ namespace Google.Cloud.Dataplex.V1 {
           int hash = 1;
           if (Name.Length != 0) hash ^= Name.GetHashCode();
           if (Type != global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+          if (ReadAccessMode != global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.AccessMode.Unspecified) hash ^= ReadAccessMode.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -8576,6 +8597,10 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(16);
             output.WriteEnum((int) Type);
           }
+          if (ReadAccessMode != global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.AccessMode.Unspecified) {
+            output.WriteRawTag(40);
+            output.WriteEnum((int) ReadAccessMode);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -8594,6 +8619,10 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(16);
             output.WriteEnum((int) Type);
           }
+          if (ReadAccessMode != global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.AccessMode.Unspecified) {
+            output.WriteRawTag(40);
+            output.WriteEnum((int) ReadAccessMode);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -8609,6 +8638,9 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           if (Type != global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.Type.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (ReadAccessMode != global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.AccessMode.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReadAccessMode);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -8627,6 +8659,9 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           if (other.Type != global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.Type.Unspecified) {
             Type = other.Type;
+          }
+          if (other.ReadAccessMode != global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.AccessMode.Unspecified) {
+            ReadAccessMode = other.ReadAccessMode;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -8651,6 +8686,10 @@ namespace Google.Cloud.Dataplex.V1 {
                 Type = (global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.Type) input.ReadEnum();
                 break;
               }
+              case 40: {
+                ReadAccessMode = (global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.AccessMode) input.ReadEnum();
+                break;
+              }
             }
           }
         #endif
@@ -8672,6 +8711,10 @@ namespace Google.Cloud.Dataplex.V1 {
               }
               case 16: {
                 Type = (global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.Type) input.ReadEnum();
+                break;
+              }
+              case 40: {
+                ReadAccessMode = (global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceSpec.Types.AccessMode) input.ReadEnum();
                 break;
               }
             }
@@ -8700,6 +8743,25 @@ namespace Google.Cloud.Dataplex.V1 {
             /// BigQuery dataset.
             /// </summary>
             [pbr::OriginalName("BIGQUERY_DATASET")] BigqueryDataset = 2,
+          }
+
+          /// <summary>
+          /// Access Mode determines how data stored within the resource is read. This
+          /// is only applicable to storage bucket assets.
+          /// </summary>
+          public enum AccessMode {
+            /// <summary>
+            /// Access mode unspecified.
+            /// </summary>
+            [pbr::OriginalName("ACCESS_MODE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Default. Data is accessed directly using storage APIs.
+            /// </summary>
+            [pbr::OriginalName("DIRECT")] Direct = 1,
+            /// <summary>
+            /// Data is accessed through a managed interface using BigQuery APIs.
+            /// </summary>
+            [pbr::OriginalName("MANAGED")] Managed = 2,
           }
 
         }
@@ -8747,6 +8809,7 @@ namespace Google.Cloud.Dataplex.V1 {
           state_ = other.state_;
           message_ = other.message_;
           updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+          managedAccessIdentity_ = other.managedAccessIdentity_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -8801,6 +8864,21 @@ namespace Google.Cloud.Dataplex.V1 {
           }
         }
 
+        /// <summary>Field number for the "managed_access_identity" field.</summary>
+        public const int ManagedAccessIdentityFieldNumber = 4;
+        private string managedAccessIdentity_ = "";
+        /// <summary>
+        /// Output only. Service account associated with the BigQuery Connection.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ManagedAccessIdentity {
+          get { return managedAccessIdentity_; }
+          set {
+            managedAccessIdentity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -8819,6 +8897,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (State != other.State) return false;
           if (Message != other.Message) return false;
           if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+          if (ManagedAccessIdentity != other.ManagedAccessIdentity) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -8829,6 +8908,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (State != global::Google.Cloud.Dataplex.V1.Asset.Types.ResourceStatus.Types.State.Unspecified) hash ^= State.GetHashCode();
           if (Message.Length != 0) hash ^= Message.GetHashCode();
           if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+          if (ManagedAccessIdentity.Length != 0) hash ^= ManagedAccessIdentity.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -8859,6 +8939,10 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(UpdateTime);
           }
+          if (ManagedAccessIdentity.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(ManagedAccessIdentity);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -8881,6 +8965,10 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(UpdateTime);
           }
+          if (ManagedAccessIdentity.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(ManagedAccessIdentity);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -8899,6 +8987,9 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           if (updateTime_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+          }
+          if (ManagedAccessIdentity.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ManagedAccessIdentity);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -8923,6 +9014,9 @@ namespace Google.Cloud.Dataplex.V1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             UpdateTime.MergeFrom(other.UpdateTime);
+          }
+          if (other.ManagedAccessIdentity.Length != 0) {
+            ManagedAccessIdentity = other.ManagedAccessIdentity;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -8954,6 +9048,10 @@ namespace Google.Cloud.Dataplex.V1 {
                 input.ReadMessage(UpdateTime);
                 break;
               }
+              case 34: {
+                ManagedAccessIdentity = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -8982,6 +9080,10 @@ namespace Google.Cloud.Dataplex.V1 {
                   UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
                 input.ReadMessage(UpdateTime);
+                break;
+              }
+              case 34: {
+                ManagedAccessIdentity = input.ReadString();
                 break;
               }
             }
