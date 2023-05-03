@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.3.0, released 2023-05-03
+
+### Bug fixes
+
+- Change timeout settings for SearchJobsForAlert ([commit 91e9f13](https://github.com/googleapis/google-cloud-dotnet/commit/91e9f1381ab8f9bdf5eab593b8df73c1d1021b94))
+
 ## Version 2.2.0, released 2023-01-20
 
 ### New features
