@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.1.0, released 2023-05-03
+
+### New features
+
+- Adds support for Startup CPU Boost (GA) ([commit 32b5017](https://github.com/googleapis/google-cloud-dotnet/commit/32b5017e4f86393961797f15d84b0d5206e58daf))
+- Adds support for Session affinity in Service (GA) ([commit 32b5017](https://github.com/googleapis/google-cloud-dotnet/commit/32b5017e4f86393961797f15d84b0d5206e58daf))
+- New 'port' field for HttpGetAction probe type ([commit 32b5017](https://github.com/googleapis/google-cloud-dotnet/commit/32b5017e4f86393961797f15d84b0d5206e58daf))
+- New fields/enum values ([commit 32b5017](https://github.com/googleapis/google-cloud-dotnet/commit/32b5017e4f86393961797f15d84b0d5206e58daf))
+
+### Documentation improvements
+
+- General documentation fixes. ([commit 32b5017](https://github.com/googleapis/google-cloud-dotnet/commit/32b5017e4f86393961797f15d84b0d5206e58daf))
+
 ## Version 2.0.0, released 2023-03-27
 
 No API surface changes; just dependency updates and initial GA release.
