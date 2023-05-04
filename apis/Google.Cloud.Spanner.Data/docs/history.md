@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.5.0, released 2023-05-04
+
+### New features
+
+- Introduce data_boost_enabled; this is currently not exposed via Google.Cloud.Spanner.Data ([commit 983fbe6](https://github.com/googleapis/google-cloud-dotnet/commit/983fbe610e7ef79eb447d970aa28e1944feee833))
+
+### Documentation improvements
+
+- Formatting fix for the logging documentation
+
 ## Version 4.4.0, released 2023-03-09
 
 ### New features
