@@ -25,48 +25,51 @@ namespace Google.Cloud.Firestore.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9nb29nbGUvZmlyZXN0b3JlL3YxL3dyaXRlLnByb3RvEhNnb29nbGUuZmly",
-            "ZXN0b3JlLnYxGiBnb29nbGUvZmlyZXN0b3JlL3YxL2NvbW1vbi5wcm90bxoi",
-            "Z29vZ2xlL2ZpcmVzdG9yZS92MS9kb2N1bWVudC5wcm90bxofZ29vZ2xlL3By",
-            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byLbAgoFV3JpdGUSLwoGdXBkYXRlGAEg",
-            "ASgLMh0uZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudEgAEhAKBmRlbGV0",
-            "ZRgCIAEoCUgAEjsKCXRyYW5zZm9ybRgGIAEoCzImLmdvb2dsZS5maXJlc3Rv",
-            "cmUudjEuRG9jdW1lbnRUcmFuc2Zvcm1IABI2Cgt1cGRhdGVfbWFzaxgDIAEo",
-            "CzIhLmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnRNYXNrElAKEXVwZGF0",
-            "ZV90cmFuc2Zvcm1zGAcgAygLMjUuZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1",
-            "bWVudFRyYW5zZm9ybS5GaWVsZFRyYW5zZm9ybRI7ChBjdXJyZW50X2RvY3Vt",
-            "ZW50GAQgASgLMiEuZ29vZ2xlLmZpcmVzdG9yZS52MS5QcmVjb25kaXRpb25C",
-            "CwoJb3BlcmF0aW9uIuUEChFEb2N1bWVudFRyYW5zZm9ybRIQCghkb2N1bWVu",
-            "dBgBIAEoCRJPChBmaWVsZF90cmFuc2Zvcm1zGAIgAygLMjUuZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5Eb2N1bWVudFRyYW5zZm9ybS5GaWVsZFRyYW5zZm9ybRrs",
-            "AwoORmllbGRUcmFuc2Zvcm0SEgoKZmllbGRfcGF0aBgBIAEoCRJgChNzZXRf",
-            "dG9fc2VydmVyX3ZhbHVlGAIgASgOMkEuZ29vZ2xlLmZpcmVzdG9yZS52MS5E",
-            "b2N1bWVudFRyYW5zZm9ybS5GaWVsZFRyYW5zZm9ybS5TZXJ2ZXJWYWx1ZUgA",
-            "Ei8KCWluY3JlbWVudBgDIAEoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFs",
-            "dWVIABItCgdtYXhpbXVtGAQgASgLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5W",
-            "YWx1ZUgAEi0KB21pbmltdW0YBSABKAsyGi5nb29nbGUuZmlyZXN0b3JlLnYx",
-            "LlZhbHVlSAASQgoXYXBwZW5kX21pc3NpbmdfZWxlbWVudHMYBiABKAsyHy5n",
-            "b29nbGUuZmlyZXN0b3JlLnYxLkFycmF5VmFsdWVIABJAChVyZW1vdmVfYWxs",
-            "X2Zyb21fYXJyYXkYByABKAsyHy5nb29nbGUuZmlyZXN0b3JlLnYxLkFycmF5",
-            "VmFsdWVIACI9CgtTZXJ2ZXJWYWx1ZRIcChhTRVJWRVJfVkFMVUVfVU5TUEVD",
-            "SUZJRUQQABIQCgxSRVFVRVNUX1RJTUUQAUIQCg50cmFuc2Zvcm1fdHlwZSJ1",
-            "CgtXcml0ZVJlc3VsdBIvCgt1cGRhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASNQoRdHJhbnNmb3JtX3Jlc3VsdHMYAiADKAsy",
-            "Gi5nb29nbGUuZmlyZXN0b3JlLnYxLlZhbHVlInEKDkRvY3VtZW50Q2hhbmdl",
-            "Ei8KCGRvY3VtZW50GAEgASgLMh0uZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1",
-            "bWVudBISCgp0YXJnZXRfaWRzGAUgAygFEhoKEnJlbW92ZWRfdGFyZ2V0X2lk",
-            "cxgGIAMoBSJtCg5Eb2N1bWVudERlbGV0ZRIQCghkb2N1bWVudBgBIAEoCRIa",
-            "ChJyZW1vdmVkX3RhcmdldF9pZHMYBiADKAUSLQoJcmVhZF90aW1lGAQgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJtCg5Eb2N1bWVudFJlbW92",
-            "ZRIQCghkb2N1bWVudBgBIAEoCRIaChJyZW1vdmVkX3RhcmdldF9pZHMYAiAD",
-            "KAUSLQoJcmVhZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcCIzCg9FeGlzdGVuY2VGaWx0ZXISEQoJdGFyZ2V0X2lkGAEgASgFEg0K",
-            "BWNvdW50GAIgASgFQsIBChdjb20uZ29vZ2xlLmZpcmVzdG9yZS52MUIKV3Jp",
-            "dGVQcm90b1ABWjtjbG91ZC5nb29nbGUuY29tL2dvL2ZpcmVzdG9yZS9hcGl2",
-            "MS9maXJlc3RvcmVwYjtmaXJlc3RvcmVwYqICBEdDRlOqAhlHb29nbGUuQ2xv",
-            "dWQuRmlyZXN0b3JlLlYxygIZR29vZ2xlXENsb3VkXEZpcmVzdG9yZVxWMeoC",
-            "HEdvb2dsZTo6Q2xvdWQ6OkZpcmVzdG9yZTo6VjFiBnByb3RvMw=="));
+            "ZXN0b3JlLnYxGiZnb29nbGUvZmlyZXN0b3JlL3YxL2Jsb29tX2ZpbHRlci5w",
+            "cm90bxogZ29vZ2xlL2ZpcmVzdG9yZS92MS9jb21tb24ucHJvdG8aImdvb2ds",
+            "ZS9maXJlc3RvcmUvdjEvZG9jdW1lbnQucHJvdG8aH2dvb2dsZS9wcm90b2J1",
+            "Zi90aW1lc3RhbXAucHJvdG8i2wIKBVdyaXRlEi8KBnVwZGF0ZRgBIAEoCzId",
+            "Lmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnRIABIQCgZkZWxldGUYAiAB",
+            "KAlIABI7Cgl0cmFuc2Zvcm0YBiABKAsyJi5nb29nbGUuZmlyZXN0b3JlLnYx",
+            "LkRvY3VtZW50VHJhbnNmb3JtSAASNgoLdXBkYXRlX21hc2sYAyABKAsyIS5n",
+            "b29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50TWFzaxJQChF1cGRhdGVfdHJh",
+            "bnNmb3JtcxgHIAMoCzI1Lmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnRU",
+            "cmFuc2Zvcm0uRmllbGRUcmFuc2Zvcm0SOwoQY3VycmVudF9kb2N1bWVudBgE",
+            "IAEoCzIhLmdvb2dsZS5maXJlc3RvcmUudjEuUHJlY29uZGl0aW9uQgsKCW9w",
+            "ZXJhdGlvbiLlBAoRRG9jdW1lbnRUcmFuc2Zvcm0SEAoIZG9jdW1lbnQYASAB",
+            "KAkSTwoQZmllbGRfdHJhbnNmb3JtcxgCIAMoCzI1Lmdvb2dsZS5maXJlc3Rv",
+            "cmUudjEuRG9jdW1lbnRUcmFuc2Zvcm0uRmllbGRUcmFuc2Zvcm0a7AMKDkZp",
+            "ZWxkVHJhbnNmb3JtEhIKCmZpZWxkX3BhdGgYASABKAkSYAoTc2V0X3RvX3Nl",
+            "cnZlcl92YWx1ZRgCIAEoDjJBLmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1l",
+            "bnRUcmFuc2Zvcm0uRmllbGRUcmFuc2Zvcm0uU2VydmVyVmFsdWVIABIvCglp",
+            "bmNyZW1lbnQYAyABKAsyGi5nb29nbGUuZmlyZXN0b3JlLnYxLlZhbHVlSAAS",
+            "LQoHbWF4aW11bRgEIAEoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWVI",
+            "ABItCgdtaW5pbXVtGAUgASgLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5WYWx1",
+            "ZUgAEkIKF2FwcGVuZF9taXNzaW5nX2VsZW1lbnRzGAYgASgLMh8uZ29vZ2xl",
+            "LmZpcmVzdG9yZS52MS5BcnJheVZhbHVlSAASQAoVcmVtb3ZlX2FsbF9mcm9t",
+            "X2FycmF5GAcgASgLMh8uZ29vZ2xlLmZpcmVzdG9yZS52MS5BcnJheVZhbHVl",
+            "SAAiPQoLU2VydmVyVmFsdWUSHAoYU0VSVkVSX1ZBTFVFX1VOU1BFQ0lGSUVE",
+            "EAASEAoMUkVRVUVTVF9USU1FEAFCEAoOdHJhbnNmb3JtX3R5cGUidQoLV3Jp",
+            "dGVSZXN1bHQSLwoLdXBkYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEjUKEXRyYW5zZm9ybV9yZXN1bHRzGAIgAygLMhouZ29v",
+            "Z2xlLmZpcmVzdG9yZS52MS5WYWx1ZSJxCg5Eb2N1bWVudENoYW5nZRIvCghk",
+            "b2N1bWVudBgBIAEoCzIdLmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnQS",
+            "EgoKdGFyZ2V0X2lkcxgFIAMoBRIaChJyZW1vdmVkX3RhcmdldF9pZHMYBiAD",
+            "KAUibQoORG9jdW1lbnREZWxldGUSEAoIZG9jdW1lbnQYASABKAkSGgoScmVt",
+            "b3ZlZF90YXJnZXRfaWRzGAYgAygFEi0KCXJlYWRfdGltZRgEIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAibQoORG9jdW1lbnRSZW1vdmUSEAoI",
+            "ZG9jdW1lbnQYASABKAkSGgoScmVtb3ZlZF90YXJnZXRfaWRzGAIgAygFEi0K",
+            "CXJlYWRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi",
+            "bgoPRXhpc3RlbmNlRmlsdGVyEhEKCXRhcmdldF9pZBgBIAEoBRINCgVjb3Vu",
+            "dBgCIAEoBRI5Cg91bmNoYW5nZWRfbmFtZXMYAyABKAsyIC5nb29nbGUuZmly",
+            "ZXN0b3JlLnYxLkJsb29tRmlsdGVyQsIBChdjb20uZ29vZ2xlLmZpcmVzdG9y",
+            "ZS52MUIKV3JpdGVQcm90b1ABWjtjbG91ZC5nb29nbGUuY29tL2dvL2ZpcmVz",
+            "dG9yZS9hcGl2MS9maXJlc3RvcmVwYjtmaXJlc3RvcmVwYqICBEdDRlOqAhlH",
+            "b29nbGUuQ2xvdWQuRmlyZXN0b3JlLlYxygIZR29vZ2xlXENsb3VkXEZpcmVz",
+            "dG9yZVxWMeoCHEdvb2dsZTo6Q2xvdWQ6OkZpcmVzdG9yZTo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1.BloomFilterReflection.Descriptor, global::Google.Cloud.Firestore.V1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Write), global::Google.Cloud.Firestore.V1.Write.Parser, new[]{ "Update", "Delete", "Transform", "UpdateMask", "UpdateTransforms", "CurrentDocument" }, new[]{ "Operation" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentTransform), global::Google.Cloud.Firestore.V1.DocumentTransform.Parser, new[]{ "Document", "FieldTransforms" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform), global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Parser, new[]{ "FieldPath", "SetToServerValue", "Increment", "Maximum", "Minimum", "AppendMissingElements", "RemoveAllFromArray" }, new[]{ "TransformType" }, new[]{ typeof(global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue) }, null, null)}),
@@ -74,7 +77,7 @@ namespace Google.Cloud.Firestore.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentChange), global::Google.Cloud.Firestore.V1.DocumentChange.Parser, new[]{ "Document", "TargetIds", "RemovedTargetIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentDelete), global::Google.Cloud.Firestore.V1.DocumentDelete.Parser, new[]{ "Document", "RemovedTargetIds", "ReadTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentRemove), global::Google.Cloud.Firestore.V1.DocumentRemove.Parser, new[]{ "Document", "RemovedTargetIds", "ReadTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ExistenceFilter), global::Google.Cloud.Firestore.V1.ExistenceFilter.Parser, new[]{ "TargetId", "Count" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ExistenceFilter), global::Google.Cloud.Firestore.V1.ExistenceFilter.Parser, new[]{ "TargetId", "Count", "UnchangedNames" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2544,6 +2547,7 @@ namespace Google.Cloud.Firestore.V1 {
     public ExistenceFilter(ExistenceFilter other) : this() {
       targetId_ = other.targetId_;
       count_ = other.count_;
+      unchangedNames_ = other.unchangedNames_ != null ? other.unchangedNames_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2587,6 +2591,33 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "unchanged_names" field.</summary>
+    public const int UnchangedNamesFieldNumber = 3;
+    private global::Google.Cloud.Firestore.V1.BloomFilter unchangedNames_;
+    /// <summary>
+    /// A bloom filter that contains the UTF-8 byte encodings of the resource names
+    /// of the documents that match
+    /// [target_id][google.firestore.v1.ExistenceFilter.target_id], in the form
+    /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`
+    /// that have NOT changed since the query results indicated by the resume token
+    /// or timestamp given in `Target.resume_type`.
+    ///
+    /// This bloom filter may be omitted at the server's discretion, such as if it
+    /// is deemed that the client will not make use of it or if it is too
+    /// computationally expensive to calculate or transmit. Clients must gracefully
+    /// handle this field being absent by falling back to the logic used before
+    /// this field existed; that is, re-add the target without a resume token to
+    /// figure out which documents in the client's cache are out of sync.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.BloomFilter UnchangedNames {
+      get { return unchangedNames_; }
+      set {
+        unchangedNames_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2604,6 +2635,7 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (TargetId != other.TargetId) return false;
       if (Count != other.Count) return false;
+      if (!object.Equals(UnchangedNames, other.UnchangedNames)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2613,6 +2645,7 @@ namespace Google.Cloud.Firestore.V1 {
       int hash = 1;
       if (TargetId != 0) hash ^= TargetId.GetHashCode();
       if (Count != 0) hash ^= Count.GetHashCode();
+      if (unchangedNames_ != null) hash ^= UnchangedNames.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2639,6 +2672,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(Count);
       }
+      if (unchangedNames_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UnchangedNames);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2657,6 +2694,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(Count);
       }
+      if (unchangedNames_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UnchangedNames);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2672,6 +2713,9 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (Count != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Count);
+      }
+      if (unchangedNames_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UnchangedNames);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2690,6 +2734,12 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (other.Count != 0) {
         Count = other.Count;
+      }
+      if (other.unchangedNames_ != null) {
+        if (unchangedNames_ == null) {
+          UnchangedNames = new global::Google.Cloud.Firestore.V1.BloomFilter();
+        }
+        UnchangedNames.MergeFrom(other.UnchangedNames);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2714,6 +2764,13 @@ namespace Google.Cloud.Firestore.V1 {
             Count = input.ReadInt32();
             break;
           }
+          case 26: {
+            if (unchangedNames_ == null) {
+              UnchangedNames = new global::Google.Cloud.Firestore.V1.BloomFilter();
+            }
+            input.ReadMessage(UnchangedNames);
+            break;
+          }
         }
       }
     #endif
@@ -2735,6 +2792,13 @@ namespace Google.Cloud.Firestore.V1 {
           }
           case 16: {
             Count = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            if (unchangedNames_ == null) {
+              UnchangedNames = new global::Google.Cloud.Firestore.V1.BloomFilter();
+            }
+            input.ReadMessage(UnchangedNames);
             break;
           }
         }

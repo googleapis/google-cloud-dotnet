@@ -32,6 +32,7 @@ namespace Google.Cloud.Firestore.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AggregationResultReflection.Descriptor;
+            yield return BloomFilterReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return DocumentReflection.Descriptor;
             yield return FirestoreReflection.Descriptor;
