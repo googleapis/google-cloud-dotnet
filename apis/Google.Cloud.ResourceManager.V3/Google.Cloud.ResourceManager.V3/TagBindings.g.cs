@@ -2283,9 +2283,10 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int NamespacedTagValueFieldNumber = 2;
     private string namespacedTagValue_ = "";
     /// <summary>
-    /// Namespaced name of the TagValue. Now only supported in the format
-    /// `{organization_id}/{tag_key_short_name}/{tag_value_short_name}`.
-    /// Other formats will be supported when we add non-org parented tags.
+    /// The namespaced name of the TagValue. Can be in the form
+    /// `{organization_id}/{tag_key_short_name}/{tag_value_short_name}` or
+    /// `{project_id}/{tag_key_short_name}/{tag_value_short_name}` or
+    /// `{project_number}/{tag_key_short_name}/{tag_value_short_name}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2316,9 +2317,10 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int NamespacedTagKeyFieldNumber = 4;
     private string namespacedTagKey_ = "";
     /// <summary>
-    /// The namespaced_name of the TagKey. Now only supported in the format of
-    /// `{organization_id}/{tag_key_short_name}`. Other formats will be
-    /// supported when we add non-org parented tags.
+    /// The namespaced name of the TagKey. Can be in the form
+    /// `{organization_id}/{tag_key_short_name}` or
+    /// `{project_id}/{tag_key_short_name}` or
+    /// `{project_number}/{tag_key_short_name}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2334,7 +2336,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     private string tagKeyParentName_ = "";
     /// <summary>
     /// The parent name of the tag key.
-    /// Must be in the format `organizations/{organization_id}`.
+    /// Must be in the format `organizations/{organization_id}` or
+    /// `projects/{project_number}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
