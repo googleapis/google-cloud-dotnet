@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
             ListUptimeCheckConfigsRequest request = new ListUptimeCheckConfigsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListUptimeCheckConfigsResponse, UptimeCheckConfig> response = uptimeCheckServiceClient.ListUptimeCheckConfigsAsync(request);

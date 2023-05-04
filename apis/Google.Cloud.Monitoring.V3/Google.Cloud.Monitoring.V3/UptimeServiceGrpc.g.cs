@@ -3,7 +3,7 @@
 //     source: google/monitoring/v3/uptime_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,13 +25,13 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The UptimeCheckService API is used to manage (list, create, delete, edit)
-  /// Uptime check configurations in the Stackdriver Monitoring product. An Uptime
+  /// Uptime check configurations in the Cloud Monitoring product. An Uptime
   /// check is a piece of configuration that determines which resources and
   /// services to monitor for availability. These configurations can also be
-  /// configured interactively by navigating to the [Cloud Console]
-  /// (http://console.cloud.google.com), selecting the appropriate project,
-  /// clicking on "Monitoring" on the left-hand side to navigate to Stackdriver,
-  /// and then clicking on "Uptime".
+  /// configured interactively by navigating to the [Cloud console]
+  /// (https://console.cloud.google.com), selecting the appropriate project,
+  /// clicking on "Monitoring" on the left-hand side to navigate to Cloud
+  /// Monitoring, and then clicking on "Uptime".
   /// </summary>
   public static partial class UptimeCheckService
   {
