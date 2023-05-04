@@ -786,6 +786,17 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(DateTime.MinValue, (DateTime) row["x"]);
         }
 
+        [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/10132")]
+        public void TimestampPrecision()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var results = client.ExecuteQuery("SELECT TIMESTAMP '8000-01-01 00:00:00.123456Z' AS x", null);
+            var rows = results.ToList();
+            var row = Assert.Single(rows);
+            var expected = new DateTime(8000, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddTicks(123456 * 10); // 10 ticks per microsecond.
+            Assert.Equal(expected, (DateTime) row["x"]);
+        }
+
         private class TitleComparer : IEqualityComparer<BigQueryRow>
         {
             public bool Equals(BigQueryRow x, BigQueryRow y) => (string)x["title"] == (string)y["title"];
