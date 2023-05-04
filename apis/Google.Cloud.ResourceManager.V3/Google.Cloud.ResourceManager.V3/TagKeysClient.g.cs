@@ -409,8 +409,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Lists all TagKeys for a parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the new TagKey's parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the TagKey's parent.
+        /// Must be of the form `organizations/{org_id}` or `projects/{project_id}` or
+        /// `projects/{project_number}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -434,8 +435,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Lists all TagKeys for a parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the new TagKey's parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the TagKey's parent.
+        /// Must be of the form `organizations/{org_id}` or `projects/{project_id}` or
+        /// `projects/{project_number}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -459,8 +461,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Lists all TagKeys for a parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the new TagKey's parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the TagKey's parent.
+        /// Must be of the form `organizations/{org_id}` or `projects/{project_id}` or
+        /// `projects/{project_number}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -484,8 +487,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Lists all TagKeys for a parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the new TagKey's parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the TagKey's parent.
+        /// Must be of the form `organizations/{org_id}` or `projects/{project_id}` or
+        /// `projects/{project_number}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
