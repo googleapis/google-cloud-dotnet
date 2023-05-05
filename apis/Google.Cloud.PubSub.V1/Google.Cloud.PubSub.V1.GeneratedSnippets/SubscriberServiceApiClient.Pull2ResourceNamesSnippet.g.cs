@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_Pull_sync_flattened2_resourceNames]
+    // [START pubsub_v1_generated_Subscriber_Pull_sync_flattened2_resourceNames]
     using Google.Cloud.PubSub.V1;
 
     public sealed partial class GeneratedSubscriberServiceApiClientSnippets
@@ -40,5 +40,5 @@ namespace GoogleCSharpSnippets
             PullResponse response = subscriberServiceApiClient.Pull(subscription, maxMessages);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_Pull_sync_flattened2_resourceNames]
+    // [END pubsub_v1_generated_Subscriber_Pull_sync_flattened2_resourceNames]
 }

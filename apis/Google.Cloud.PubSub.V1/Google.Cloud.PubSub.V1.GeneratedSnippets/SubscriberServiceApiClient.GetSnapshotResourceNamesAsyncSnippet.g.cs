@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_GetSnapshot_async_flattened_resourceNames]
+    // [START pubsub_v1_generated_Subscriber_GetSnapshot_async_flattened_resourceNames]
     using Google.Cloud.PubSub.V1;
     using System.Threading.Tasks;
 
@@ -40,5 +40,5 @@ namespace GoogleCSharpSnippets
             Snapshot response = await subscriberServiceApiClient.GetSnapshotAsync(snapshot);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_GetSnapshot_async_flattened_resourceNames]
+    // [END pubsub_v1_generated_Subscriber_GetSnapshot_async_flattened_resourceNames]
 }

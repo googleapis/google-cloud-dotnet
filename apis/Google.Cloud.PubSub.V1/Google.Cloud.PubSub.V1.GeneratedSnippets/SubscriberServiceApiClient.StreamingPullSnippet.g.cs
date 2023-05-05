@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_StreamingPull_sync]
+    // [START pubsub_v1_generated_Subscriber_StreamingPull_sync]
     using Google.Api.Gax.Grpc;
     using Google.Cloud.PubSub.V1;
     using System.Threading.Tasks;
@@ -82,5 +82,5 @@ namespace GoogleCSharpSnippets
             await responseHandlerTask;
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_StreamingPull_sync]
+    // [END pubsub_v1_generated_Subscriber_StreamingPull_sync]
 }

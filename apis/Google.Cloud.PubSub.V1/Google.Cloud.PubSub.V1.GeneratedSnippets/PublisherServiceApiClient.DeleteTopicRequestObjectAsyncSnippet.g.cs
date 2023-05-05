@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_PublisherServiceApi_DeleteTopic_async]
+    // [START pubsub_v1_generated_Publisher_DeleteTopic_async]
     using Google.Cloud.PubSub.V1;
     using System.Threading.Tasks;
 
@@ -43,5 +43,5 @@ namespace GoogleCSharpSnippets
             await publisherServiceApiClient.DeleteTopicAsync(request);
         }
     }
-    // [END pubsub_v1_generated_PublisherServiceApi_DeleteTopic_async]
+    // [END pubsub_v1_generated_Publisher_DeleteTopic_async]
 }

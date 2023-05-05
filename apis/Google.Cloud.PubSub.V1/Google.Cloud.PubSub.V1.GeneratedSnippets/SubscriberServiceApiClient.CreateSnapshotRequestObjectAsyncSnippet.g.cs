@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_CreateSnapshot_async]
+    // [START pubsub_v1_generated_Subscriber_CreateSnapshot_async]
     using Google.Cloud.PubSub.V1;
     using System.Threading.Tasks;
 
@@ -45,5 +45,5 @@ namespace GoogleCSharpSnippets
             Snapshot response = await subscriberServiceApiClient.CreateSnapshotAsync(request);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_CreateSnapshot_async]
+    // [END pubsub_v1_generated_Subscriber_CreateSnapshot_async]
 }

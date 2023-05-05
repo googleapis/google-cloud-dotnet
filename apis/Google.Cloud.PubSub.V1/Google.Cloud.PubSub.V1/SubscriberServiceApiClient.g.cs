@@ -4178,7 +4178,7 @@ namespace Google.Cloud.PubSub.V1
 
     public static partial class Subscriber
     {
-       public partial class SubscriberClient
+        public partial class SubscriberClient
         {
             /// <summary>
             /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as

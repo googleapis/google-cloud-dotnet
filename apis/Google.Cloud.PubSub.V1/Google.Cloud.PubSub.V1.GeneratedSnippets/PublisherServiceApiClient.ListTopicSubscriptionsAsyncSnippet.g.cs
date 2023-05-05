@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_PublisherServiceApi_ListTopicSubscriptions_async_flattened]
+    // [START pubsub_v1_generated_Publisher_ListTopicSubscriptions_async_flattened]
     using Google.Api.Gax;
     using Google.Cloud.PubSub.V1;
     using System;
@@ -75,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END pubsub_v1_generated_PublisherServiceApi_ListTopicSubscriptions_async_flattened]
+    // [END pubsub_v1_generated_Publisher_ListTopicSubscriptions_async_flattened]
 }

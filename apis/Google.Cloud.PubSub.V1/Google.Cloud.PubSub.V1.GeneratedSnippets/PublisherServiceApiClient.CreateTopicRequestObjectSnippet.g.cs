@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_PublisherServiceApi_CreateTopic_sync]
+    // [START pubsub_v1_generated_Publisher_CreateTopic_sync]
     using Google.Cloud.PubSub.V1;
     using Google.Protobuf.WellKnownTypes;
 
@@ -49,5 +49,5 @@ namespace GoogleCSharpSnippets
             Topic response = publisherServiceApiClient.CreateTopic(request);
         }
     }
-    // [END pubsub_v1_generated_PublisherServiceApi_CreateTopic_sync]
+    // [END pubsub_v1_generated_Publisher_CreateTopic_sync]
 }
