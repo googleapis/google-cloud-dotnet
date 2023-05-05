@@ -3,7 +3,7 @@
 //     source: google/cloud/channel/v1/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -1445,7 +1445,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * customer ID
+      ///
+      /// * Customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
@@ -1632,7 +1633,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * channel partner ID
+      ///
+      /// * Channel Partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
       ///
@@ -5335,7 +5337,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * customer ID
+      ///
+      /// * Customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
@@ -5371,7 +5374,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * customer ID
+      ///
+      /// * Customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
@@ -5405,7 +5409,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * customer ID
+      ///
+      /// * Customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
@@ -5441,7 +5446,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * customer ID
+      ///
+      /// * Customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
@@ -6083,7 +6089,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * channel partner ID
+      ///
+      /// * Channel Partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
       ///
@@ -6118,7 +6125,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * channel partner ID
+      ///
+      /// * Channel Partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
       ///
@@ -6151,7 +6159,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * channel partner ID
+      ///
+      /// * Channel Partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
       ///
@@ -6186,7 +6195,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * channel partner ID
+      ///
+      /// * Channel Partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
       ///
