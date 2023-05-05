@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_CreateSubscription_async_flattened]
+    // [START pubsub_v1_generated_Subscriber_CreateSubscription_async_flattened]
     using Google.Cloud.PubSub.V1;
     using System.Threading.Tasks;
 
@@ -43,5 +43,5 @@ namespace GoogleCSharpSnippets
             Subscription response = await subscriberServiceApiClient.CreateSubscriptionAsync(name, topic, pushConfig, ackDeadlineSeconds);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_CreateSubscription_async_flattened]
+    // [END pubsub_v1_generated_Subscriber_CreateSubscription_async_flattened]
 }

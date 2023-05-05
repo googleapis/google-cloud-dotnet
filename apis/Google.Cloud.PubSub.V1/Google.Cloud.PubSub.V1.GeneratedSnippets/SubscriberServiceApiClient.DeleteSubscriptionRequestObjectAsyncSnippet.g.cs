@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_DeleteSubscription_async]
+    // [START pubsub_v1_generated_Subscriber_DeleteSubscription_async]
     using Google.Cloud.PubSub.V1;
     using System.Threading.Tasks;
 
@@ -43,5 +43,5 @@ namespace GoogleCSharpSnippets
             await subscriberServiceApiClient.DeleteSubscriptionAsync(request);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_DeleteSubscription_async]
+    // [END pubsub_v1_generated_Subscriber_DeleteSubscription_async]
 }

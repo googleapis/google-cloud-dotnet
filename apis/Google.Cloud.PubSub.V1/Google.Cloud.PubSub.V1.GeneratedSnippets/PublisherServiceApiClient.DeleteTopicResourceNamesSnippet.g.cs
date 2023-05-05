@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_PublisherServiceApi_DeleteTopic_sync_flattened_resourceNames]
+    // [START pubsub_v1_generated_Publisher_DeleteTopic_sync_flattened_resourceNames]
     using Google.Cloud.PubSub.V1;
 
     public sealed partial class GeneratedPublisherServiceApiClientSnippets
@@ -39,5 +39,5 @@ namespace GoogleCSharpSnippets
             publisherServiceApiClient.DeleteTopic(topic);
         }
     }
-    // [END pubsub_v1_generated_PublisherServiceApi_DeleteTopic_sync_flattened_resourceNames]
+    // [END pubsub_v1_generated_Publisher_DeleteTopic_sync_flattened_resourceNames]
 }

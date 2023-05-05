@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_ModifyPushConfig_sync_flattened]
+    // [START pubsub_v1_generated_Subscriber_ModifyPushConfig_sync_flattened]
     using Google.Cloud.PubSub.V1;
 
     public sealed partial class GeneratedSubscriberServiceApiClientSnippets
@@ -40,5 +40,5 @@ namespace GoogleCSharpSnippets
             subscriberServiceApiClient.ModifyPushConfig(subscription, pushConfig);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_ModifyPushConfig_sync_flattened]
+    // [END pubsub_v1_generated_Subscriber_ModifyPushConfig_sync_flattened]
 }

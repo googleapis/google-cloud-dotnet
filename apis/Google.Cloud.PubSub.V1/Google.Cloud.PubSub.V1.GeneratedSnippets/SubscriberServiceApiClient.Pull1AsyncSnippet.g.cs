@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_Pull_async_flattened1]
+    // [START pubsub_v1_generated_Subscriber_Pull_async_flattened1]
     using Google.Cloud.PubSub.V1;
     using System.Threading.Tasks;
 
@@ -44,5 +44,5 @@ namespace GoogleCSharpSnippets
 #pragma warning restore CS0612
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_Pull_async_flattened1]
+    // [END pubsub_v1_generated_Subscriber_Pull_async_flattened1]
 }

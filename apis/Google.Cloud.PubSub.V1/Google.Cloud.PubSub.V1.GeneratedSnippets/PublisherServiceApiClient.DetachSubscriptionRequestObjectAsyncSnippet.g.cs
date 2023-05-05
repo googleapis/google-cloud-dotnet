@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_PublisherServiceApi_DetachSubscription_async]
+    // [START pubsub_v1_generated_Publisher_DetachSubscription_async]
     using Google.Cloud.PubSub.V1;
     using System.Threading.Tasks;
 
@@ -43,5 +43,5 @@ namespace GoogleCSharpSnippets
             DetachSubscriptionResponse response = await publisherServiceApiClient.DetachSubscriptionAsync(request);
         }
     }
-    // [END pubsub_v1_generated_PublisherServiceApi_DetachSubscription_async]
+    // [END pubsub_v1_generated_Publisher_DetachSubscription_async]
 }

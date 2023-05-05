@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_ModifyAckDeadline_sync_flattened]
+    // [START pubsub_v1_generated_Subscriber_ModifyAckDeadline_sync_flattened]
     using Google.Cloud.PubSub.V1;
     using System.Collections.Generic;
 
@@ -42,5 +42,5 @@ namespace GoogleCSharpSnippets
             subscriberServiceApiClient.ModifyAckDeadline(subscription, ackIds, ackDeadlineSeconds);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_ModifyAckDeadline_sync_flattened]
+    // [END pubsub_v1_generated_Subscriber_ModifyAckDeadline_sync_flattened]
 }

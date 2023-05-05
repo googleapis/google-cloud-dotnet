@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_UpdateSnapshot_async]
+    // [START pubsub_v1_generated_Subscriber_UpdateSnapshot_async]
     using Google.Cloud.PubSub.V1;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
@@ -45,5 +45,5 @@ namespace GoogleCSharpSnippets
             Snapshot response = await subscriberServiceApiClient.UpdateSnapshotAsync(request);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_UpdateSnapshot_async]
+    // [END pubsub_v1_generated_Subscriber_UpdateSnapshot_async]
 }

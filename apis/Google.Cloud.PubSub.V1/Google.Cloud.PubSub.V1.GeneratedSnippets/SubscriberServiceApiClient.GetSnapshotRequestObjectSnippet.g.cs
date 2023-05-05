@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_GetSnapshot_sync]
+    // [START pubsub_v1_generated_Subscriber_GetSnapshot_sync]
     using Google.Cloud.PubSub.V1;
 
     public sealed partial class GeneratedSubscriberServiceApiClientSnippets
@@ -42,5 +42,5 @@ namespace GoogleCSharpSnippets
             Snapshot response = subscriberServiceApiClient.GetSnapshot(request);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_GetSnapshot_sync]
+    // [END pubsub_v1_generated_Subscriber_GetSnapshot_sync]
 }

@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_PublisherServiceApi_ListTopicSnapshots_sync]
+    // [START pubsub_v1_generated_Publisher_ListTopicSnapshots_sync]
     using Google.Api.Gax;
     using Google.Cloud.PubSub.V1;
     using System;
@@ -76,5 +76,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END pubsub_v1_generated_PublisherServiceApi_ListTopicSnapshots_sync]
+    // [END pubsub_v1_generated_Publisher_ListTopicSnapshots_sync]
 }

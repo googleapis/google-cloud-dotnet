@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_Seek_async]
+    // [START pubsub_v1_generated_Subscriber_Seek_async]
     using Google.Cloud.PubSub.V1;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
@@ -45,5 +45,5 @@ namespace GoogleCSharpSnippets
             SeekResponse response = await subscriberServiceApiClient.SeekAsync(request);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_Seek_async]
+    // [END pubsub_v1_generated_Subscriber_Seek_async]
 }
