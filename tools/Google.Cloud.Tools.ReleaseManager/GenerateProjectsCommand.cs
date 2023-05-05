@@ -538,10 +538,9 @@ api-name: {api.Id}
             File.WriteAllText(owlBotConfigFile, content);
 
             var forceRegenerationReasons = new List<string>();
-            if (File.Exists(Path.Combine(apiRoot, "pregeneration.sh")) ||
-                File.Exists(Path.Combine(apiRoot, "midmicrogeneration.sh")))
+            if (File.Exists(Path.Combine(apiRoot, "pregeneration.sh")))
             {
-                forceRegenerationReasons.Add("API requires pre/mid-generation tweaks.");
+                forceRegenerationReasons.Add("API requires pre-generation tweaks.");
             }
             if (api.CommonResourcesConfig is object)
             {
