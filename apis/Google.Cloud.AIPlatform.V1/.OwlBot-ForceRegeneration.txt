@@ -1,1 +1,1 @@
-API requires pre/mid-generation tweaks.
+API requires pre-generation tweaks.
