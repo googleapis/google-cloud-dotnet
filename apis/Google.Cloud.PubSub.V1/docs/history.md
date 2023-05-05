@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.5.1, released 2023-05-05
+
+### Bug fixes
+
+- Dispose channel on PublisherClient/SubscriberClient shutdown. Fixes [#10304](https://github.com/googleapis/google-cloud-dotnet/issues/10304) ([commit d38ab04](https://github.com/googleapis/google-cloud-dotnet/commit/d38ab04a077662748b5d7725d80ab132899c2996))
+
 ## Version 3.5.0, released 2023-04-19
 
 ### New features
