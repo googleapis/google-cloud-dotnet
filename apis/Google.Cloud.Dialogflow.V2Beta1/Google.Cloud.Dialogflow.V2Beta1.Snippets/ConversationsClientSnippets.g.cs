@@ -1157,5 +1157,44 @@ namespace GoogleCSharpSnippets
             SuggestConversationSummaryResponse response = await conversationsClient.SuggestConversationSummaryAsync(conversation);
             // End snippet
         }
+
+        /// <summary>Snippet for GenerateStatelessSummary</summary>
+        public void GenerateStatelessSummaryRequestObject()
+        {
+            // Snippet: GenerateStatelessSummary(GenerateStatelessSummaryRequest, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            GenerateStatelessSummaryRequest request = new GenerateStatelessSummaryRequest
+            {
+                StatelessConversation = new GenerateStatelessSummaryRequest.Types.MinimalConversation(),
+                ConversationProfile = new ConversationProfile(),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                MaxContextSize = 0,
+            };
+            // Make the request
+            GenerateStatelessSummaryResponse response = conversationsClient.GenerateStatelessSummary(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateStatelessSummaryAsync</summary>
+        public async Task GenerateStatelessSummaryRequestObjectAsync()
+        {
+            // Snippet: GenerateStatelessSummaryAsync(GenerateStatelessSummaryRequest, CallSettings)
+            // Additional: GenerateStatelessSummaryAsync(GenerateStatelessSummaryRequest, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateStatelessSummaryRequest request = new GenerateStatelessSummaryRequest
+            {
+                StatelessConversation = new GenerateStatelessSummaryRequest.Types.MinimalConversation(),
+                ConversationProfile = new ConversationProfile(),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                MaxContextSize = 0,
+            };
+            // Make the request
+            GenerateStatelessSummaryResponse response = await conversationsClient.GenerateStatelessSummaryAsync(request);
+            // End snippet
+        }
     }
 }

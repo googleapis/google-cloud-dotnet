@@ -3,7 +3,7 @@
 //     source: google/cloud/dialogflow/v2beta1/conversation.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -88,6 +88,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryRequest> __Marshaller_google_cloud_dialogflow_v2beta1_SuggestConversationSummaryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryResponse> __Marshaller_google_cloud_dialogflow_v2beta1_SuggestConversationSummaryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest> __Marshaller_google_cloud_dialogflow_v2beta1_GenerateStatelessSummaryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse> __Marshaller_google_cloud_dialogflow_v2beta1_GenerateStatelessSummaryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2Beta1.CreateConversationRequest, global::Google.Cloud.Dialogflow.V2Beta1.Conversation> __Method_CreateConversation = new grpc::Method<global::Google.Cloud.Dialogflow.V2Beta1.CreateConversationRequest, global::Google.Cloud.Dialogflow.V2Beta1.Conversation>(
@@ -144,6 +148,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         "SuggestConversationSummary",
         __Marshaller_google_cloud_dialogflow_v2beta1_SuggestConversationSummaryRequest,
         __Marshaller_google_cloud_dialogflow_v2beta1_SuggestConversationSummaryResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest, global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse> __Method_GenerateStatelessSummary = new grpc::Method<global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest, global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateStatelessSummary",
+        __Marshaller_google_cloud_dialogflow_v2beta1_GenerateStatelessSummaryRequest,
+        __Marshaller_google_cloud_dialogflow_v2beta1_GenerateStatelessSummaryResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -263,6 +275,19 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryResponse> SuggestConversationSummary(global::Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Generates and returns a summary for a conversation that does not have a
+      /// resource created for it.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse> GenerateStatelessSummary(global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -744,6 +769,58 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SuggestConversationSummary, null, options, request);
       }
+      /// <summary>
+      /// Generates and returns a summary for a conversation that does not have a
+      /// resource created for it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse GenerateStatelessSummary(global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateStatelessSummary(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates and returns a summary for a conversation that does not have a
+      /// resource created for it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse GenerateStatelessSummary(global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateStatelessSummary, null, options, request);
+      }
+      /// <summary>
+      /// Generates and returns a summary for a conversation that does not have a
+      /// resource created for it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse> GenerateStatelessSummaryAsync(global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateStatelessSummaryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates and returns a summary for a conversation that does not have a
+      /// resource created for it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse> GenerateStatelessSummaryAsync(global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateStatelessSummary, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ConversationsClient NewInstance(ClientBaseConfiguration configuration)
@@ -764,7 +841,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           .AddMethod(__Method_CompleteConversation, serviceImpl.CompleteConversation)
           .AddMethod(__Method_BatchCreateMessages, serviceImpl.BatchCreateMessages)
           .AddMethod(__Method_ListMessages, serviceImpl.ListMessages)
-          .AddMethod(__Method_SuggestConversationSummary, serviceImpl.SuggestConversationSummary).Build();
+          .AddMethod(__Method_SuggestConversationSummary, serviceImpl.SuggestConversationSummary)
+          .AddMethod(__Method_GenerateStatelessSummary, serviceImpl.GenerateStatelessSummary).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -781,6 +859,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       serviceBinder.AddMethod(__Method_BatchCreateMessages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.BatchCreateMessagesRequest, global::Google.Cloud.Dialogflow.V2Beta1.BatchCreateMessagesResponse>(serviceImpl.BatchCreateMessages));
       serviceBinder.AddMethod(__Method_ListMessages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.ListMessagesRequest, global::Google.Cloud.Dialogflow.V2Beta1.ListMessagesResponse>(serviceImpl.ListMessages));
       serviceBinder.AddMethod(__Method_SuggestConversationSummary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryRequest, global::Google.Cloud.Dialogflow.V2Beta1.SuggestConversationSummaryResponse>(serviceImpl.SuggestConversationSummary));
+      serviceBinder.AddMethod(__Method_GenerateStatelessSummary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest, global::Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse>(serviceImpl.GenerateStatelessSummary));
     }
 
   }
