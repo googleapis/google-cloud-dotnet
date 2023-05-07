@@ -304,6 +304,12 @@
                 "CreateConversationAsync"
               ]
             },
+            "GenerateStatelessSummary": {
+              "methods": [
+                "GenerateStatelessSummary",
+                "GenerateStatelessSummaryAsync"
+              ]
+            },
             "GetConversation": {
               "methods": [
                 "GetConversation",
