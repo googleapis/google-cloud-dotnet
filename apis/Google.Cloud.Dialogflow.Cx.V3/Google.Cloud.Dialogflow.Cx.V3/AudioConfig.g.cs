@@ -749,6 +749,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// [Cloud Speech API
     /// documentation](https://cloud.google.com/speech-to-text/docs/basics#select-model)
     /// for more details.
+    /// If you specify a model, the following models typically have the best
+    /// performance:
+    ///
+    /// - phone_call (best for Agent Assist and telephony)
+    /// - latest_short (best for Dialogflow non-telephony)
+    /// - command_and_search (best for very short utterances and commands)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1965,7 +1971,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   }
 
   /// <summary>
-  /// Settings related to speech generating.
+  /// Settings related to speech synthesizing.
   /// </summary>
   public sealed partial class TextToSpeechSettings : pb::IMessage<TextToSpeechSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2017,9 +2023,19 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         = new pbc::MapField<string, global::Google.Cloud.Dialogflow.Cx.V3.SynthesizeSpeechConfig>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dialogflow.Cx.V3.SynthesizeSpeechConfig.Parser), 10);
     private readonly pbc::MapField<string, global::Google.Cloud.Dialogflow.Cx.V3.SynthesizeSpeechConfig> synthesizeSpeechConfigs_ = new pbc::MapField<string, global::Google.Cloud.Dialogflow.Cx.V3.SynthesizeSpeechConfig>();
     /// <summary>
-    /// Configuration of how speech should be synthesized, mapping from
-    /// language (https://dialogflow.com/docs/reference/language) to
+    /// Configuration of how speech should be synthesized, mapping from language
+    /// (https://cloud.google.com/dialogflow/cx/docs/reference/language) to
     /// SynthesizeSpeechConfig.
+    ///
+    /// These settings affect:
+    ///
+    ///  - The synthesize configuration used in [phone
+    ///    gateway](https://cloud.google.com/dialogflow/cx/docs/concept/integration/phone-gateway).
+    ///
+    ///  - You no longer need to specify
+    ///    [OutputAudioConfig.synthesize_speech_config][google.cloud.dialogflow.cx.v3.OutputAudioConfig.synthesize_speech_config]
+    ///    when invoking API calls. Your agent will use the pre-configured options
+    ///    for speech synthesizing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
