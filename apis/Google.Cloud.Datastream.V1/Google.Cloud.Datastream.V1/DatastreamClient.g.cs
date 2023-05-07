@@ -2421,7 +2421,8 @@ namespace Google.Cloud.Datastream.V1
         /// Use this method to start a backfill job for the specified stream object.
         /// </summary>
         /// <param name="object">
-        /// Required. The name of the stream object resource to start a backfill job for.
+        /// Required. The name of the stream object resource to start a backfill job
+        /// for.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2435,7 +2436,8 @@ namespace Google.Cloud.Datastream.V1
         /// Use this method to start a backfill job for the specified stream object.
         /// </summary>
         /// <param name="object">
-        /// Required. The name of the stream object resource to start a backfill job for.
+        /// Required. The name of the stream object resource to start a backfill job
+        /// for.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2449,7 +2451,8 @@ namespace Google.Cloud.Datastream.V1
         /// Use this method to start a backfill job for the specified stream object.
         /// </summary>
         /// <param name="object">
-        /// Required. The name of the stream object resource to start a backfill job for.
+        /// Required. The name of the stream object resource to start a backfill job
+        /// for.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2460,7 +2463,8 @@ namespace Google.Cloud.Datastream.V1
         /// Use this method to start a backfill job for the specified stream object.
         /// </summary>
         /// <param name="object">
-        /// Required. The name of the stream object resource to start a backfill job for.
+        /// Required. The name of the stream object resource to start a backfill job
+        /// for.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2474,7 +2478,8 @@ namespace Google.Cloud.Datastream.V1
         /// Use this method to start a backfill job for the specified stream object.
         /// </summary>
         /// <param name="object">
-        /// Required. The name of the stream object resource to start a backfill job for.
+        /// Required. The name of the stream object resource to start a backfill job
+        /// for.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2488,7 +2493,8 @@ namespace Google.Cloud.Datastream.V1
         /// Use this method to start a backfill job for the specified stream object.
         /// </summary>
         /// <param name="object">
-        /// Required. The name of the stream object resource to start a backfill job for.
+        /// Required. The name of the stream object resource to start a backfill job
+        /// for.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2526,7 +2532,8 @@ namespace Google.Cloud.Datastream.V1
         /// Use this method to stop a backfill job for the specified stream object.
         /// </summary>
         /// <param name="object">
-        /// Required. The name of the stream object resource to stop the backfill job for.
+        /// Required. The name of the stream object resource to stop the backfill job
+        /// for.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2540,7 +2547,8 @@ namespace Google.Cloud.Datastream.V1
         /// Use this method to stop a backfill job for the specified stream object.
         /// </summary>
         /// <param name="object">
-        /// Required. The name of the stream object resource to stop the backfill job for.
+        /// Required. The name of the stream object resource to stop the backfill job
+        /// for.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2554,7 +2562,8 @@ namespace Google.Cloud.Datastream.V1
         /// Use this method to stop a backfill job for the specified stream object.
         /// </summary>
         /// <param name="object">
-        /// Required. The name of the stream object resource to stop the backfill job for.
+        /// Required. The name of the stream object resource to stop the backfill job
+        /// for.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2565,7 +2574,8 @@ namespace Google.Cloud.Datastream.V1
         /// Use this method to stop a backfill job for the specified stream object.
         /// </summary>
         /// <param name="object">
-        /// Required. The name of the stream object resource to stop the backfill job for.
+        /// Required. The name of the stream object resource to stop the backfill job
+        /// for.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2579,7 +2589,8 @@ namespace Google.Cloud.Datastream.V1
         /// Use this method to stop a backfill job for the specified stream object.
         /// </summary>
         /// <param name="object">
-        /// Required. The name of the stream object resource to stop the backfill job for.
+        /// Required. The name of the stream object resource to stop the backfill job
+        /// for.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2593,7 +2604,8 @@ namespace Google.Cloud.Datastream.V1
         /// Use this method to stop a backfill job for the specified stream object.
         /// </summary>
         /// <param name="object">
-        /// Required. The name of the stream object resource to stop the backfill job for.
+        /// Required. The name of the stream object resource to stop the backfill job
+        /// for.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2625,8 +2637,8 @@ namespace Google.Cloud.Datastream.V1
         /// Datastream.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for the location for which static IPs should be returned.
-        /// Must be in the format `projects/*/locations/*`.
+        /// Required. The resource name for the location for which static IPs should be
+        /// returned. Must be in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2651,8 +2663,8 @@ namespace Google.Cloud.Datastream.V1
         /// Datastream.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for the location for which static IPs should be returned.
-        /// Must be in the format `projects/*/locations/*`.
+        /// Required. The resource name for the location for which static IPs should be
+        /// returned. Must be in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2677,8 +2689,8 @@ namespace Google.Cloud.Datastream.V1
         /// Datastream.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for the location for which static IPs should be returned.
-        /// Must be in the format `projects/*/locations/*`.
+        /// Required. The resource name for the location for which static IPs should be
+        /// returned. Must be in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2703,8 +2715,8 @@ namespace Google.Cloud.Datastream.V1
         /// Datastream.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name for the location for which static IPs should be returned.
-        /// Must be in the format `projects/*/locations/*`.
+        /// Required. The resource name for the location for which static IPs should be
+        /// returned. Must be in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3030,7 +3042,8 @@ namespace Google.Cloud.Datastream.V1
         /// and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent that owns the collection of private connectivity configurations.
+        /// Required. The parent that owns the collection of private connectivity
+        /// configurations.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3055,7 +3068,8 @@ namespace Google.Cloud.Datastream.V1
         /// and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent that owns the collection of private connectivity configurations.
+        /// Required. The parent that owns the collection of private connectivity
+        /// configurations.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3080,7 +3094,8 @@ namespace Google.Cloud.Datastream.V1
         /// and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent that owns the collection of private connectivity configurations.
+        /// Required. The parent that owns the collection of private connectivity
+        /// configurations.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3105,7 +3120,8 @@ namespace Google.Cloud.Datastream.V1
         /// and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent that owns the collection of private connectivity configurations.
+        /// Required. The parent that owns the collection of private connectivity
+        /// configurations.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
