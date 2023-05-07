@@ -2986,7 +2986,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int AgentUriFieldNumber = 1;
     /// <summary>
     /// The URI to a file containing the exported agent. This field is populated
-    /// only if `agent_uri` is specified in
+    /// if `agent_uri` is specified in
     /// [ExportAgentRequest][google.cloud.dialogflow.cx.v3.ExportAgentRequest].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

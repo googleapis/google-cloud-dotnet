@@ -95,10 +95,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string uri_ = "";
     /// <summary>
     /// Required. The Google Cloud Storage URI for the exported objects. A URI is
-    /// of the form:
-    ///   gs://bucket/object-name-or-prefix
-    /// Whether a full object name, or just a prefix, its usage depends on the
-    /// Dialogflow operation.
+    /// of the form: `gs://bucket/object-name-or-prefix` Whether a full object
+    /// name, or just a prefix, its usage depends on the Dialogflow operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

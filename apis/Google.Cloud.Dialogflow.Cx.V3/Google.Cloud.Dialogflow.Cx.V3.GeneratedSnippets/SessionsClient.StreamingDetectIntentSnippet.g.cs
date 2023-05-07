@@ -66,6 +66,7 @@ namespace GoogleCSharpSnippets
                     QueryInput = new QueryInput(),
                     OutputAudioConfig = new OutputAudioConfig(),
                     EnablePartialResponse = false,
+                    EnableDebuggingInfo = false,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);
