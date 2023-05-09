@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
@@ -32,6 +34,11 @@ namespace Google.Cloud.Functions.V1
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
                 {
+                    "google.cloud.location.Locations.ListLocations",
+                    // { "get": "/v1/{name=projects/*}/locations" }
+                    proto::ByteString.FromBase64("Eh8vdjEve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
+                },
+                {
                     "google.longrunning.Operations.GetOperation",
                     // { "get": "/v1/{name=operations/*}" }
                     proto::ByteString.FromBase64("EhcvdjEve25hbWU9b3BlcmF0aW9ucy8qfQ==")
@@ -47,6 +54,10 @@ namespace Google.Cloud.Functions.V1
         {
             yield return FunctionsReflection.Descriptor;
             yield return OperationsReflection.Descriptor;
+            yield return gciv::IamPolicyReflection.Descriptor;
+            yield return gciv::OptionsReflection.Descriptor;
+            yield return gciv::PolicyReflection.Descriptor;
+            yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }
