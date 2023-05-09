@@ -9463,6 +9463,103 @@
       ]
     },
     {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_GenerateStatelessSummary_sync",
+      "title": "GenerateStatelessSummaryRequestObject",
+      "description": "Snippet for GenerateStatelessSummary",
+      "file": "ConversationsClient.GenerateStatelessSummaryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateStatelessSummary",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.GenerateStatelessSummary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "GenerateStatelessSummary",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.GenerateStatelessSummary",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_GenerateStatelessSummary_async",
+      "title": "GenerateStatelessSummaryRequestObjectAsync",
+      "description": "Snippet for GenerateStatelessSummaryAsync",
+      "file": "ConversationsClient.GenerateStatelessSummaryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateStatelessSummaryAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.GenerateStatelessSummaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse>",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "GenerateStatelessSummary",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.GenerateStatelessSummary",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dialogflow_v2beta1_generated_Documents_ListDocuments_sync",
       "title": "ListDocumentsRequestObject",
       "description": "Snippet for ListDocuments",
@@ -23627,12 +23724,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 87,
+          "end": 88,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 85,
+          "end": 86,
           "type": "SHORT"
         }
       ]
@@ -26521,12 +26618,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 85,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 82,
+          "end": 83,
           "type": "SHORT"
         }
       ]

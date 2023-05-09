@@ -812,6 +812,7 @@ namespace GoogleCSharpSnippets
                     EnablePartialAutomatedAgentReply = false,
                     CxParameters = new Struct(),
                     CxCurrentPage = "",
+                    EnableDebuggingInfo = false,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

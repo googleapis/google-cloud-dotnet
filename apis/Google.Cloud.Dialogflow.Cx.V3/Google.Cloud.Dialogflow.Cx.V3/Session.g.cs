@@ -51,7 +51,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "eXBlGAYgASgOMkAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRGV0",
             "ZWN0SW50ZW50UmVzcG9uc2UuUmVzcG9uc2VUeXBlEhoKEmFsbG93X2NhbmNl",
             "bGxhdGlvbhgHIAEoCCJFCgxSZXNwb25zZVR5cGUSHQoZUkVTUE9OU0VfVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEgsKB1BBUlRJQUwQARIJCgVGSU5BTBACItICChxT",
+            "RV9VTlNQRUNJRklFRBAAEgsKB1BBUlRJQUwQARIJCgVGSU5BTBACIvECChxT",
             "dHJlYW1pbmdEZXRlY3RJbnRlbnRSZXF1ZXN0EjcKB3Nlc3Npb24YASABKAlC",
             "JvpBIwohZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9TZXNzaW9uEkQKDHF1",
             "ZXJ5X3BhcmFtcxgCIAEoCzIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4",
@@ -59,142 +59,165 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlF1ZXJ5SW5wdXRCA+BBAhJN",
             "ChNvdXRwdXRfYXVkaW9fY29uZmlnGAQgASgLMjAuZ29vZ2xlLmNsb3VkLmRp",
             "YWxvZ2Zsb3cuY3gudjMuT3V0cHV0QXVkaW9Db25maWcSHwoXZW5hYmxlX3Bh",
-            "cnRpYWxfcmVzcG9uc2UYBSABKAgi2wEKHVN0cmVhbWluZ0RldGVjdEludGVu",
-            "dFJlc3BvbnNlElcKEnJlY29nbml0aW9uX3Jlc3VsdBgBIAEoCzI5Lmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlN0cmVhbWluZ1JlY29nbml0aW9u",
-            "UmVzdWx0SAASVQoWZGV0ZWN0X2ludGVudF9yZXNwb25zZRgCIAEoCzIzLmdv",
-            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkRldGVjdEludGVudFJlc3Bv",
-            "bnNlSABCCgoIcmVzcG9uc2UitgMKGlN0cmVhbWluZ1JlY29nbml0aW9uUmVz",
-            "dWx0ElsKDG1lc3NhZ2VfdHlwZRgBIAEoDjJFLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LmN4LnYzLlN0cmVhbWluZ1JlY29nbml0aW9uUmVzdWx0Lk1lc3Nh",
-            "Z2VUeXBlEhIKCnRyYW5zY3JpcHQYAiABKAkSEAoIaXNfZmluYWwYAyABKAgS",
-            "EgoKY29uZmlkZW5jZRgEIAEoAhIRCglzdGFiaWxpdHkYBiABKAISRwoQc3Bl",
-            "ZWNoX3dvcmRfaW5mbxgHIAMoCzItLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LmN4LnYzLlNwZWVjaFdvcmRJbmZvEjQKEXNwZWVjaF9lbmRfb2Zmc2V0GAgg",
-            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhUKDWxhbmd1YWdlX2Nv",
-            "ZGUYCiABKAkiWAoLTWVzc2FnZVR5cGUSHAoYTUVTU0FHRV9UWVBFX1VOU1BF",
-            "Q0lGSUVEEAASDgoKVFJBTlNDUklQVBABEhsKF0VORF9PRl9TSU5HTEVfVVRU",
-            "RVJBTkNFEAIi1AQKD1F1ZXJ5UGFyYW1ldGVycxIRCgl0aW1lX3pvbmUYASAB",
-            "KAkSKQoMZ2VvX2xvY2F0aW9uGAIgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5n",
-            "Ek4KFHNlc3Npb25fZW50aXR5X3R5cGVzGAMgAygLMjAuZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cuY3gudjMuU2Vzc2lvbkVudGl0eVR5cGUSKAoHcGF5bG9h",
-            "ZBgEIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSKwoKcGFyYW1ldGVy",
-            "cxgFIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSOQoMY3VycmVudF9w",
-            "YWdlGAYgASgJQiP6QSAKHmRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vUGFn",
-            "ZRIXCg9kaXNhYmxlX3dlYmhvb2sYByABKAgSJAocYW5hbHl6ZV9xdWVyeV90",
-            "ZXh0X3NlbnRpbWVudBgIIAEoCBJbCg93ZWJob29rX2hlYWRlcnMYCiADKAsy",
-            "Qi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5RdWVyeVBhcmFtZXRl",
-            "cnMuV2ViaG9va0hlYWRlcnNFbnRyeRI9Cg1mbG93X3ZlcnNpb25zGA4gAygJ",
-            "Qib6QSMKIWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vVmVyc2lvbhIPCgdj",
-            "aGFubmVsGA8gASgJGjUKE1dlYmhvb2tIZWFkZXJzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASLbAgoKUXVlcnlJbnB1dBI4CgR0ZXh0",
-            "GAIgASgLMiguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVGV4dElu",
-            "cHV0SAASPAoGaW50ZW50GAMgASgLMiouZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cuY3gudjMuSW50ZW50SW5wdXRIABI6CgVhdWRpbxgFIAEoCzIpLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkF1ZGlvSW5wdXRIABI6CgVldmVu",
-            "dBgGIAEoCzIpLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkV2ZW50",
-            "SW5wdXRIABI4CgRkdG1mGAcgASgLMiguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cuY3gudjMuRHRtZklucHV0SAASGgoNbGFuZ3VhZ2VfY29kZRgEIAEoCUID",
-            "4EECQgcKBWlucHV0IqEGCgtRdWVyeVJlc3VsdBIOCgR0ZXh0GAEgASgJSAAS",
-            "PwoOdHJpZ2dlcl9pbnRlbnQYCyABKAlCJfpBIgogZGlhbG9nZmxvdy5nb29n",
-            "bGVhcGlzLmNvbS9JbnRlbnRIABIUCgp0cmFuc2NyaXB0GAwgASgJSAASFwoN",
-            "dHJpZ2dlcl9ldmVudBgOIAEoCUgAEjgKBGR0bWYYFyABKAsyKC5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5EdG1mSW5wdXRIABIVCg1sYW5ndWFn",
-            "ZV9jb2RlGAIgASgJEisKCnBhcmFtZXRlcnMYAyABKAsyFy5nb29nbGUucHJv",
-            "dG9idWYuU3RydWN0EkkKEXJlc3BvbnNlX21lc3NhZ2VzGAQgAygLMi4uZ29v",
-            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVzcG9uc2VNZXNzYWdlEiwK",
-            "EHdlYmhvb2tfc3RhdHVzZXMYDSADKAsyEi5nb29nbGUucnBjLlN0YXR1cxIx",
-            "ChB3ZWJob29rX3BheWxvYWRzGAYgAygLMhcuZ29vZ2xlLnByb3RvYnVmLlN0",
-            "cnVjdBI5CgxjdXJyZW50X3BhZ2UYByABKAsyIy5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy5jeC52My5QYWdlEjkKBmludGVudBgIIAEoCzIlLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLkludGVudEICGAESJwobaW50ZW50X2Rl",
-            "dGVjdGlvbl9jb25maWRlbmNlGAkgASgCQgIYARIzCgVtYXRjaBgPIAEoCzIk",
-            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLk1hdGNoEjAKD2RpYWdu",
-            "b3N0aWNfaW5mbxgKIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSWQoZ",
-            "c2VudGltZW50X2FuYWx5c2lzX3Jlc3VsdBgRIAEoCzI2Lmdvb2dsZS5jbG91",
-            "ZC5kaWFsb2dmbG93LmN4LnYzLlNlbnRpbWVudEFuYWx5c2lzUmVzdWx0QgcK",
-            "BXF1ZXJ5Ih4KCVRleHRJbnB1dBIRCgR0ZXh0GAEgASgJQgPgQQIiRwoLSW50",
-            "ZW50SW5wdXQSOAoGaW50ZW50GAEgASgJQijgQQL6QSIKIGRpYWxvZ2Zsb3cu",
-            "Z29vZ2xlYXBpcy5jb20vSW50ZW50ImEKCkF1ZGlvSW5wdXQSRAoGY29uZmln",
-            "GAEgASgLMi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuSW5wdXRB",
-            "dWRpb0NvbmZpZ0ID4EECEg0KBWF1ZGlvGAIgASgMIhsKCkV2ZW50SW5wdXQS",
-            "DQoFZXZlbnQYASABKAkiMQoJRHRtZklucHV0Eg4KBmRpZ2l0cxgBIAEoCRIU",
-            "CgxmaW5pc2hfZGlnaXQYAiABKAki8QIKBU1hdGNoEjUKBmludGVudBgBIAEo",
-            "CzIlLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkludGVudBINCgVl",
-            "dmVudBgGIAEoCRIrCgpwYXJhbWV0ZXJzGAIgASgLMhcuZ29vZ2xlLnByb3Rv",
-            "YnVmLlN0cnVjdBIWCg5yZXNvbHZlZF9pbnB1dBgDIAEoCRJCCgptYXRjaF90",
-            "eXBlGAQgASgOMi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuTWF0",
-            "Y2guTWF0Y2hUeXBlEhIKCmNvbmZpZGVuY2UYBSABKAIihAEKCU1hdGNoVHlw",
-            "ZRIaChZNQVRDSF9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGSU5URU5UEAESEQoN",
-            "RElSRUNUX0lOVEVOVBACEhUKEVBBUkFNRVRFUl9GSUxMSU5HEAMSDAoITk9f",
-            "TUFUQ0gQBBIMCghOT19JTlBVVBAFEgkKBUVWRU5UEAYi/gEKEk1hdGNoSW50",
-            "ZW50UmVxdWVzdBI6CgdzZXNzaW9uGAEgASgJQingQQL6QSMKIWRpYWxvZ2Zs",
-            "b3cuZ29vZ2xlYXBpcy5jb20vU2Vzc2lvbhJECgxxdWVyeV9wYXJhbXMYAiAB",
-            "KAsyLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5RdWVyeVBhcmFt",
-            "ZXRlcnMSQwoLcXVlcnlfaW5wdXQYAyABKAsyKS5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy5jeC52My5RdWVyeUlucHV0QgPgQQISIQoZcGVyc2lzdF9wYXJh",
-            "bWV0ZXJfY2hhbmdlcxgFIAEoCCKQAgoTTWF0Y2hJbnRlbnRSZXNwb25zZRIO",
-            "CgR0ZXh0GAEgASgJSAASPwoOdHJpZ2dlcl9pbnRlbnQYAiABKAlCJfpBIgog",
-            "ZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9JbnRlbnRIABIUCgp0cmFuc2Ny",
-            "aXB0GAMgASgJSAASFwoNdHJpZ2dlcl9ldmVudBgGIAEoCUgAEjUKB21hdGNo",
-            "ZXMYBCADKAsyJC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5NYXRj",
-            "aBI5CgxjdXJyZW50X3BhZ2UYBSABKAsyIy5nb29nbGUuY2xvdWQuZGlhbG9n",
-            "Zmxvdy5jeC52My5QYWdlQgcKBXF1ZXJ5IusBChRGdWxmaWxsSW50ZW50UmVx",
-            "dWVzdBJPChRtYXRjaF9pbnRlbnRfcmVxdWVzdBgBIAEoCzIxLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLk1hdGNoSW50ZW50UmVxdWVzdBIzCgVt",
-            "YXRjaBgCIAEoCzIkLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLk1h",
-            "dGNoEk0KE291dHB1dF9hdWRpb19jb25maWcYAyABKAsyMC5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy5jeC52My5PdXRwdXRBdWRpb0NvbmZpZyLTAQoVRnVs",
-            "ZmlsbEludGVudFJlc3BvbnNlEhMKC3Jlc3BvbnNlX2lkGAEgASgJEkAKDHF1",
-            "ZXJ5X3Jlc3VsdBgCIAEoCzIqLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4",
-            "LnYzLlF1ZXJ5UmVzdWx0EhQKDG91dHB1dF9hdWRpbxgDIAEoDBJNChNvdXRw",
-            "dXRfYXVkaW9fY29uZmlnGAQgASgLMjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cuY3gudjMuT3V0cHV0QXVkaW9Db25maWciOwoXU2VudGltZW50QW5hbHlz",
-            "aXNSZXN1bHQSDQoFc2NvcmUYASABKAISEQoJbWFnbml0dWRlGAIgASgCMsQJ",
-            "CghTZXNzaW9ucxKmAgoMRGV0ZWN0SW50ZW50EjIuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cuY3gudjMuRGV0ZWN0SW50ZW50UmVxdWVzdBozLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLkRldGVjdEludGVudFJlc3BvbnNlIqwB",
-            "gtPkkwKlASJFL3YzL3tzZXNzaW9uPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "YWdlbnRzLyovc2Vzc2lvbnMvKn06ZGV0ZWN0SW50ZW50OgEqWlkiVC92My97",
-            "c2Vzc2lvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL2Vudmly",
-            "b25tZW50cy8qL3Nlc3Npb25zLyp9OmRldGVjdEludGVudDoBKhKYAQoVU3Ry",
-            "ZWFtaW5nRGV0ZWN0SW50ZW50EjsuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "Y3gudjMuU3RyZWFtaW5nRGV0ZWN0SW50ZW50UmVxdWVzdBo8Lmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLlN0cmVhbWluZ0RldGVjdEludGVudFJl",
-            "c3BvbnNlIgAoATABEqECCgtNYXRjaEludGVudBIxLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LmN4LnYzLk1hdGNoSW50ZW50UmVxdWVzdBoyLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLk1hdGNoSW50ZW50UmVzcG9uc2UiqgGC",
-            "0+STAqMBIkQvdjMve3Nlc3Npb249cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9h",
-            "Z2VudHMvKi9zZXNzaW9ucy8qfTptYXRjaEludGVudDoBKlpYIlMvdjMve3Nl",
-            "c3Npb249cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9lbnZpcm9u",
-            "bWVudHMvKi9zZXNzaW9ucy8qfTptYXRjaEludGVudDoBKhLVAgoNRnVsZmls",
-            "bEludGVudBIzLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkZ1bGZp",
-            "bGxJbnRlbnRSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gu",
-            "djMuRnVsZmlsbEludGVudFJlc3BvbnNlItgBgtPkkwLRASJbL3YzL3ttYXRj",
-            "aF9pbnRlbnRfcmVxdWVzdC5zZXNzaW9uPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovYWdlbnRzLyovc2Vzc2lvbnMvKn06ZnVsZmlsbEludGVudDoBKlpvImov",
-            "djMve21hdGNoX2ludGVudF9yZXF1ZXN0LnNlc3Npb249cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9hZ2VudHMvKi9lbnZpcm9ubWVudHMvKi9zZXNzaW9ucy8q",
-            "fTpmdWxmaWxsSW50ZW50OgEqGnjKQRlkaWFsb2dmbG93Lmdvb2dsZWFwaXMu",
-            "Y29t0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
-            "bGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RpYWxv",
-            "Z2Zsb3dCigMKIWNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52M0IM",
-            "U2Vzc2lvblByb3RvUAFaMWNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxv",
-            "dy9jeC9hcGl2My9jeHBiO2N4cGL4AQGiAgJERqoCHUdvb2dsZS5DbG91ZC5E",
-            "aWFsb2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6",
-            "Q1g6OlYz6kHUAQohZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9TZXNzaW9u",
-            "Eklwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYWdl",
-            "bnRzL3thZ2VudH0vc2Vzc2lvbnMve3Nlc3Npb259EmRwcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYWdlbnRzL3thZ2VudH0vZW52",
-            "aXJvbm1lbnRzL3tlbnZpcm9ubWVudH0vc2Vzc2lvbnMve3Nlc3Npb259YgZw",
-            "cm90bzM="));
+            "cnRpYWxfcmVzcG9uc2UYBSABKAgSHQoVZW5hYmxlX2RlYnVnZ2luZ19pbmZv",
+            "GAggASgIIvgGCh5DbG91ZENvbnZlcnNhdGlvbkRlYnVnZ2luZ0luZm8SGQoR",
+            "YXVkaW9fZGF0YV9jaHVua3MYASABKAUSOQoWcmVzdWx0X2VuZF90aW1lX29m",
+            "ZnNldBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhI3ChRmaXJz",
+            "dF9hdWRpb19kdXJhdGlvbhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbhIYChBzaW5nbGVfdXR0ZXJhbmNlGAUgASgIEkMKIHNwZWVjaF9wYXJ0",
+            "aWFsX3Jlc3VsdHNfZW5kX3RpbWVzGAYgAygLMhkuZ29vZ2xlLnByb3RvYnVm",
+            "LkR1cmF0aW9uEkEKHnNwZWVjaF9maW5hbF9yZXN1bHRzX2VuZF90aW1lcxgH",
+            "IAMoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIZChFwYXJ0aWFsX3Jl",
+            "c3BvbnNlcxgIIAEoBRIsCiRzcGVha2VyX2lkX3Bhc3NpdmVfbGF0ZW5jeV9t",
+            "c19vZmZzZXQYCSABKAUSHwoXYmFyZ2Vpbl9ldmVudF90cmlnZ2VyZWQYCiAB",
+            "KAgSHwoXc3BlZWNoX3NpbmdsZV91dHRlcmFuY2UYCyABKAgSPQoaZHRtZl9w",
+            "YXJ0aWFsX3Jlc3VsdHNfdGltZXMYDCADKAsyGS5nb29nbGUucHJvdG9idWYu",
+            "RHVyYXRpb24SOwoYZHRtZl9maW5hbF9yZXN1bHRzX3RpbWVzGA0gAygLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEkMKIHNpbmdsZV91dHRlcmFuY2Vf",
+            "ZW5kX3RpbWVfb2Zmc2V0GA4gASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
+            "aW9uEjQKEW5vX3NwZWVjaF90aW1lb3V0GA8gASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uEhUKDWlzX2lucHV0X3RleHQYECABKAgSQAodY2xpZW50",
+            "X2hhbGZfY2xvc2VfdGltZV9vZmZzZXQYESABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb24SSgonY2xpZW50X2hhbGZfY2xvc2Vfc3RyZWFtaW5nX3Rp",
+            "bWVfb2Zmc2V0GBIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIrIC",
+            "Ch1TdHJlYW1pbmdEZXRlY3RJbnRlbnRSZXNwb25zZRJXChJyZWNvZ25pdGlv",
+            "bl9yZXN1bHQYASABKAsyOS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52",
+            "My5TdHJlYW1pbmdSZWNvZ25pdGlvblJlc3VsdEgAElUKFmRldGVjdF9pbnRl",
+            "bnRfcmVzcG9uc2UYAiABKAsyMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
+            "eC52My5EZXRlY3RJbnRlbnRSZXNwb25zZUgAElUKDmRlYnVnZ2luZ19pbmZv",
+            "GAQgASgLMj0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuQ2xvdWRD",
+            "b252ZXJzYXRpb25EZWJ1Z2dpbmdJbmZvQgoKCHJlc3BvbnNlIrYDChpTdHJl",
+            "YW1pbmdSZWNvZ25pdGlvblJlc3VsdBJbCgxtZXNzYWdlX3R5cGUYASABKA4y",
+            "RS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5TdHJlYW1pbmdSZWNv",
+            "Z25pdGlvblJlc3VsdC5NZXNzYWdlVHlwZRISCgp0cmFuc2NyaXB0GAIgASgJ",
+            "EhAKCGlzX2ZpbmFsGAMgASgIEhIKCmNvbmZpZGVuY2UYBCABKAISEQoJc3Rh",
+            "YmlsaXR5GAYgASgCEkcKEHNwZWVjaF93b3JkX2luZm8YByADKAsyLS5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5TcGVlY2hXb3JkSW5mbxI0ChFz",
+            "cGVlY2hfZW5kX29mZnNldBgIIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbhIVCg1sYW5ndWFnZV9jb2RlGAogASgJIlgKC01lc3NhZ2VUeXBlEhwK",
+            "GE1FU1NBR0VfVFlQRV9VTlNQRUNJRklFRBAAEg4KClRSQU5TQ1JJUFQQARIb",
+            "ChdFTkRfT0ZfU0lOR0xFX1VUVEVSQU5DRRACItQECg9RdWVyeVBhcmFtZXRl",
+            "cnMSEQoJdGltZV96b25lGAEgASgJEikKDGdlb19sb2NhdGlvbhgCIAEoCzIT",
+            "Lmdvb2dsZS50eXBlLkxhdExuZxJOChRzZXNzaW9uX2VudGl0eV90eXBlcxgD",
+            "IAMoCzIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlNlc3Npb25F",
+            "bnRpdHlUeXBlEigKB3BheWxvYWQYBCABKAsyFy5nb29nbGUucHJvdG9idWYu",
+            "U3RydWN0EisKCnBhcmFtZXRlcnMYBSABKAsyFy5nb29nbGUucHJvdG9idWYu",
+            "U3RydWN0EjkKDGN1cnJlbnRfcGFnZRgGIAEoCUIj+kEgCh5kaWFsb2dmbG93",
+            "Lmdvb2dsZWFwaXMuY29tL1BhZ2USFwoPZGlzYWJsZV93ZWJob29rGAcgASgI",
+            "EiQKHGFuYWx5emVfcXVlcnlfdGV4dF9zZW50aW1lbnQYCCABKAgSWwoPd2Vi",
+            "aG9va19oZWFkZXJzGAogAygLMkIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "Y3gudjMuUXVlcnlQYXJhbWV0ZXJzLldlYmhvb2tIZWFkZXJzRW50cnkSPQoN",
+            "Zmxvd192ZXJzaW9ucxgOIAMoCUIm+kEjCiFkaWFsb2dmbG93Lmdvb2dsZWFw",
+            "aXMuY29tL1ZlcnNpb24SDwoHY2hhbm5lbBgPIAEoCRo1ChNXZWJob29rSGVh",
+            "ZGVyc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi2wIK",
+            "ClF1ZXJ5SW5wdXQSOAoEdGV4dBgCIAEoCzIoLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LmN4LnYzLlRleHRJbnB1dEgAEjwKBmludGVudBgDIAEoCzIqLmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkludGVudElucHV0SAASOgoF",
+            "YXVkaW8YBSABKAsyKS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5B",
+            "dWRpb0lucHV0SAASOgoFZXZlbnQYBiABKAsyKS5nb29nbGUuY2xvdWQuZGlh",
+            "bG9nZmxvdy5jeC52My5FdmVudElucHV0SAASOAoEZHRtZhgHIAEoCzIoLmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkR0bWZJbnB1dEgAEhoKDWxh",
+            "bmd1YWdlX2NvZGUYBCABKAlCA+BBAkIHCgVpbnB1dCKhBgoLUXVlcnlSZXN1",
+            "bHQSDgoEdGV4dBgBIAEoCUgAEj8KDnRyaWdnZXJfaW50ZW50GAsgASgJQiX6",
+            "QSIKIGRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vSW50ZW50SAASFAoKdHJh",
+            "bnNjcmlwdBgMIAEoCUgAEhcKDXRyaWdnZXJfZXZlbnQYDiABKAlIABI4CgRk",
+            "dG1mGBcgASgLMiguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRHRt",
+            "ZklucHV0SAASFQoNbGFuZ3VhZ2VfY29kZRgCIAEoCRIrCgpwYXJhbWV0ZXJz",
+            "GAMgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBJJChFyZXNwb25zZV9t",
+            "ZXNzYWdlcxgEIAMoCzIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
+            "LlJlc3BvbnNlTWVzc2FnZRIsChB3ZWJob29rX3N0YXR1c2VzGA0gAygLMhIu",
+            "Z29vZ2xlLnJwYy5TdGF0dXMSMQoQd2ViaG9va19wYXlsb2FkcxgGIAMoCzIX",
+            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSOQoMY3VycmVudF9wYWdlGAcgASgL",
+            "MiMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUGFnZRI5CgZpbnRl",
+            "bnQYCCABKAsyJS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5JbnRl",
+            "bnRCAhgBEicKG2ludGVudF9kZXRlY3Rpb25fY29uZmlkZW5jZRgJIAEoAkIC",
+            "GAESMwoFbWF0Y2gYDyABKAsyJC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
+            "eC52My5NYXRjaBIwCg9kaWFnbm9zdGljX2luZm8YCiABKAsyFy5nb29nbGUu",
+            "cHJvdG9idWYuU3RydWN0ElkKGXNlbnRpbWVudF9hbmFseXNpc19yZXN1bHQY",
+            "ESABKAsyNi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5TZW50aW1l",
+            "bnRBbmFseXNpc1Jlc3VsdEIHCgVxdWVyeSIeCglUZXh0SW5wdXQSEQoEdGV4",
+            "dBgBIAEoCUID4EECIkcKC0ludGVudElucHV0EjgKBmludGVudBgBIAEoCUIo",
+            "4EEC+kEiCiBkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0ludGVudCJhCgpB",
+            "dWRpb0lucHV0EkQKBmNvbmZpZxgBIAEoCzIvLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LmN4LnYzLklucHV0QXVkaW9Db25maWdCA+BBAhINCgVhdWRpbxgC",
+            "IAEoDCIbCgpFdmVudElucHV0Eg0KBWV2ZW50GAEgASgJIjEKCUR0bWZJbnB1",
+            "dBIOCgZkaWdpdHMYASABKAkSFAoMZmluaXNoX2RpZ2l0GAIgASgJIvECCgVN",
+            "YXRjaBI1CgZpbnRlbnQYASABKAsyJS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy5jeC52My5JbnRlbnQSDQoFZXZlbnQYBiABKAkSKwoKcGFyYW1ldGVycxgC",
+            "IAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSFgoOcmVzb2x2ZWRfaW5w",
+            "dXQYAyABKAkSQgoKbWF0Y2hfdHlwZRgEIAEoDjIuLmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LmN4LnYzLk1hdGNoLk1hdGNoVHlwZRISCgpjb25maWRlbmNl",
+            "GAUgASgCIoQBCglNYXRjaFR5cGUSGgoWTUFUQ0hfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEgoKBklOVEVOVBABEhEKDURJUkVDVF9JTlRFTlQQAhIVChFQQVJBTUVU",
+            "RVJfRklMTElORxADEgwKCE5PX01BVENIEAQSDAoITk9fSU5QVVQQBRIJCgVF",
+            "VkVOVBAGIv4BChJNYXRjaEludGVudFJlcXVlc3QSOgoHc2Vzc2lvbhgBIAEo",
+            "CUIp4EEC+kEjCiFkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL1Nlc3Npb24S",
+            "RAoMcXVlcnlfcGFyYW1zGAIgASgLMi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cuY3gudjMuUXVlcnlQYXJhbWV0ZXJzEkMKC3F1ZXJ5X2lucHV0GAMgASgL",
+            "MikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUXVlcnlJbnB1dEID",
+            "4EECEiEKGXBlcnNpc3RfcGFyYW1ldGVyX2NoYW5nZXMYBSABKAgikAIKE01h",
+            "dGNoSW50ZW50UmVzcG9uc2USDgoEdGV4dBgBIAEoCUgAEj8KDnRyaWdnZXJf",
+            "aW50ZW50GAIgASgJQiX6QSIKIGRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20v",
+            "SW50ZW50SAASFAoKdHJhbnNjcmlwdBgDIAEoCUgAEhcKDXRyaWdnZXJfZXZl",
+            "bnQYBiABKAlIABI1CgdtYXRjaGVzGAQgAygLMiQuZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cuY3gudjMuTWF0Y2gSOQoMY3VycmVudF9wYWdlGAUgASgLMiMu",
+            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUGFnZUIHCgVxdWVyeSLr",
+            "AQoURnVsZmlsbEludGVudFJlcXVlc3QSTwoUbWF0Y2hfaW50ZW50X3JlcXVl",
+            "c3QYASABKAsyMS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5NYXRj",
+            "aEludGVudFJlcXVlc3QSMwoFbWF0Y2gYAiABKAsyJC5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy5jeC52My5NYXRjaBJNChNvdXRwdXRfYXVkaW9fY29uZmln",
+            "GAMgASgLMjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuT3V0cHV0",
+            "QXVkaW9Db25maWci0wEKFUZ1bGZpbGxJbnRlbnRSZXNwb25zZRITCgtyZXNw",
+            "b25zZV9pZBgBIAEoCRJACgxxdWVyeV9yZXN1bHQYAiABKAsyKi5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5RdWVyeVJlc3VsdBIUCgxvdXRwdXRf",
+            "YXVkaW8YAyABKAwSTQoTb3V0cHV0X2F1ZGlvX2NvbmZpZxgEIAEoCzIwLmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLk91dHB1dEF1ZGlvQ29uZmln",
+            "IjsKF1NlbnRpbWVudEFuYWx5c2lzUmVzdWx0Eg0KBXNjb3JlGAEgASgCEhEK",
+            "CW1hZ25pdHVkZRgCIAEoAjLECQoIU2Vzc2lvbnMSpgIKDERldGVjdEludGVu",
+            "dBIyLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkRldGVjdEludGVu",
+            "dFJlcXVlc3QaMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5EZXRl",
+            "Y3RJbnRlbnRSZXNwb25zZSKsAYLT5JMCpQEiRS92My97c2Vzc2lvbj1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL3Nlc3Npb25zLyp9OmRldGVj",
+            "dEludGVudDoBKlpZIlQvdjMve3Nlc3Npb249cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9hZ2VudHMvKi9lbnZpcm9ubWVudHMvKi9zZXNzaW9ucy8qfTpkZXRl",
+            "Y3RJbnRlbnQ6ASoSmAEKFVN0cmVhbWluZ0RldGVjdEludGVudBI7Lmdvb2ds",
+            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlN0cmVhbWluZ0RldGVjdEludGVu",
+            "dFJlcXVlc3QaPC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5TdHJl",
+            "YW1pbmdEZXRlY3RJbnRlbnRSZXNwb25zZSIAKAEwARKhAgoLTWF0Y2hJbnRl",
+            "bnQSMS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5NYXRjaEludGVu",
+            "dFJlcXVlc3QaMi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5NYXRj",
+            "aEludGVudFJlc3BvbnNlIqoBgtPkkwKjASJEL3YzL3tzZXNzaW9uPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovc2Vzc2lvbnMvKn06bWF0Y2hJ",
+            "bnRlbnQ6ASpaWCJTL3YzL3tzZXNzaW9uPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovYWdlbnRzLyovZW52aXJvbm1lbnRzLyovc2Vzc2lvbnMvKn06bWF0Y2hJ",
+            "bnRlbnQ6ASoS1QIKDUZ1bGZpbGxJbnRlbnQSMy5nb29nbGUuY2xvdWQuZGlh",
+            "bG9nZmxvdy5jeC52My5GdWxmaWxsSW50ZW50UmVxdWVzdBo0Lmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLkZ1bGZpbGxJbnRlbnRSZXNwb25zZSLY",
+            "AYLT5JMC0QEiWy92My97bWF0Y2hfaW50ZW50X3JlcXVlc3Quc2Vzc2lvbj1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qL3Nlc3Npb25zLyp9OmZ1",
+            "bGZpbGxJbnRlbnQ6ASpabyJqL3YzL3ttYXRjaF9pbnRlbnRfcmVxdWVzdC5z",
+            "ZXNzaW9uPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyovZW52aXJv",
+            "bm1lbnRzLyovc2Vzc2lvbnMvKn06ZnVsZmlsbEludGVudDoBKhp4ykEZZGlh",
+            "bG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QooDCiFjb20uZ29vZ2xlLmNsb3Vk",
+            "LmRpYWxvZ2Zsb3cuY3gudjNCDFNlc3Npb25Qcm90b1ABWjFjbG91ZC5nb29n",
+            "bGUuY29tL2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBi+AEBogIC",
+            "REaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6",
+            "Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM+pB1AEKIWRpYWxvZ2Zsb3cuZ29v",
+            "Z2xlYXBpcy5jb20vU2Vzc2lvbhJJcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2FnZW50cy97YWdlbnR9L3Nlc3Npb25zL3tzZXNz",
+            "aW9ufRJkcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L2FnZW50cy97YWdlbnR9L2Vudmlyb25tZW50cy97ZW52aXJvbm1lbnR9L3Nl",
+            "c3Npb25zL3tzZXNzaW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.PageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest), global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest.Parser, new[]{ "Session", "QueryParams", "QueryInput", "OutputAudioConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse), global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse.Parser, new[]{ "ResponseId", "QueryResult", "OutputAudio", "OutputAudioConfig", "ResponseType", "AllowCancellation" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse.Types.ResponseType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest), global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest.Parser, new[]{ "Session", "QueryParams", "QueryInput", "OutputAudioConfig", "EnablePartialResponse" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse), global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse.Parser, new[]{ "RecognitionResult", "DetectIntentResponse" }, new[]{ "Response" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest), global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest.Parser, new[]{ "Session", "QueryParams", "QueryInput", "OutputAudioConfig", "EnablePartialResponse", "EnableDebuggingInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.CloudConversationDebuggingInfo), global::Google.Cloud.Dialogflow.Cx.V3.CloudConversationDebuggingInfo.Parser, new[]{ "AudioDataChunks", "ResultEndTimeOffset", "FirstAudioDuration", "SingleUtterance", "SpeechPartialResultsEndTimes", "SpeechFinalResultsEndTimes", "PartialResponses", "SpeakerIdPassiveLatencyMsOffset", "BargeinEventTriggered", "SpeechSingleUtterance", "DtmfPartialResultsTimes", "DtmfFinalResultsTimes", "SingleUtteranceEndTimeOffset", "NoSpeechTimeout", "IsInputText", "ClientHalfCloseTimeOffset", "ClientHalfCloseStreamingTimeOffset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse), global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse.Parser, new[]{ "RecognitionResult", "DetectIntentResponse", "DebuggingInfo" }, new[]{ "Response" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.StreamingRecognitionResult), global::Google.Cloud.Dialogflow.Cx.V3.StreamingRecognitionResult.Parser, new[]{ "MessageType", "Transcript", "IsFinal", "Confidence", "Stability", "SpeechWordInfo", "SpeechEndOffset", "LanguageCode" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.StreamingRecognitionResult.Types.MessageType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.QueryParameters), global::Google.Cloud.Dialogflow.Cx.V3.QueryParameters.Parser, new[]{ "TimeZone", "GeoLocation", "SessionEntityTypes", "Payload", "Parameters", "CurrentPage", "DisableWebhook", "AnalyzeQueryTextSentiment", "WebhookHeaders", "FlowVersions", "Channel" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.QueryInput), global::Google.Cloud.Dialogflow.Cx.V3.QueryInput.Parser, new[]{ "Text", "Intent", "Audio", "Event", "Dtmf", "LanguageCode" }, new[]{ "Input" }, null, null, null),
@@ -1101,6 +1124,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       queryInput_ = other.queryInput_ != null ? other.queryInput_.Clone() : null;
       outputAudioConfig_ = other.outputAudioConfig_ != null ? other.outputAudioConfig_.Clone() : null;
       enablePartialResponse_ = other.enablePartialResponse_;
+      enableDebuggingInfo_ = other.enableDebuggingInfo_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1204,6 +1228,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
 
+    /// <summary>Field number for the "enable_debugging_info" field.</summary>
+    public const int EnableDebuggingInfoFieldNumber = 8;
+    private bool enableDebuggingInfo_;
+    /// <summary>
+    /// If true, `StreamingDetectIntentResponse.debugging_info` will get populated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableDebuggingInfo {
+      get { return enableDebuggingInfo_; }
+      set {
+        enableDebuggingInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1224,6 +1263,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (!object.Equals(QueryInput, other.QueryInput)) return false;
       if (!object.Equals(OutputAudioConfig, other.OutputAudioConfig)) return false;
       if (EnablePartialResponse != other.EnablePartialResponse) return false;
+      if (EnableDebuggingInfo != other.EnableDebuggingInfo) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1236,6 +1276,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (queryInput_ != null) hash ^= QueryInput.GetHashCode();
       if (outputAudioConfig_ != null) hash ^= OutputAudioConfig.GetHashCode();
       if (EnablePartialResponse != false) hash ^= EnablePartialResponse.GetHashCode();
+      if (EnableDebuggingInfo != false) hash ^= EnableDebuggingInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1274,6 +1315,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(40);
         output.WriteBool(EnablePartialResponse);
       }
+      if (EnableDebuggingInfo != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(EnableDebuggingInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1304,6 +1349,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(40);
         output.WriteBool(EnablePartialResponse);
       }
+      if (EnableDebuggingInfo != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(EnableDebuggingInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1327,6 +1376,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputAudioConfig);
       }
       if (EnablePartialResponse != false) {
+        size += 1 + 1;
+      }
+      if (EnableDebuggingInfo != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -1364,6 +1416,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (other.EnablePartialResponse != false) {
         EnablePartialResponse = other.EnablePartialResponse;
+      }
+      if (other.EnableDebuggingInfo != false) {
+        EnableDebuggingInfo = other.EnableDebuggingInfo;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1409,6 +1464,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             EnablePartialResponse = input.ReadBool();
             break;
           }
+          case 64: {
+            EnableDebuggingInfo = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1451,6 +1510,866 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           case 40: {
             EnablePartialResponse = input.ReadBool();
+            break;
+          }
+          case 64: {
+            EnableDebuggingInfo = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Cloud conversation info for easier debugging.
+  /// It will get populated in `StreamingDetectIntentResponse` or
+  /// `StreamingAnalyzeContentResponse` when the flag `enable_debugging_info` is
+  /// set to true in corresponding requests.
+  /// </summary>
+  public sealed partial class CloudConversationDebuggingInfo : pb::IMessage<CloudConversationDebuggingInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CloudConversationDebuggingInfo> _parser = new pb::MessageParser<CloudConversationDebuggingInfo>(() => new CloudConversationDebuggingInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CloudConversationDebuggingInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloudConversationDebuggingInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloudConversationDebuggingInfo(CloudConversationDebuggingInfo other) : this() {
+      audioDataChunks_ = other.audioDataChunks_;
+      resultEndTimeOffset_ = other.resultEndTimeOffset_ != null ? other.resultEndTimeOffset_.Clone() : null;
+      firstAudioDuration_ = other.firstAudioDuration_ != null ? other.firstAudioDuration_.Clone() : null;
+      singleUtterance_ = other.singleUtterance_;
+      speechPartialResultsEndTimes_ = other.speechPartialResultsEndTimes_.Clone();
+      speechFinalResultsEndTimes_ = other.speechFinalResultsEndTimes_.Clone();
+      partialResponses_ = other.partialResponses_;
+      speakerIdPassiveLatencyMsOffset_ = other.speakerIdPassiveLatencyMsOffset_;
+      bargeinEventTriggered_ = other.bargeinEventTriggered_;
+      speechSingleUtterance_ = other.speechSingleUtterance_;
+      dtmfPartialResultsTimes_ = other.dtmfPartialResultsTimes_.Clone();
+      dtmfFinalResultsTimes_ = other.dtmfFinalResultsTimes_.Clone();
+      singleUtteranceEndTimeOffset_ = other.singleUtteranceEndTimeOffset_ != null ? other.singleUtteranceEndTimeOffset_.Clone() : null;
+      noSpeechTimeout_ = other.noSpeechTimeout_ != null ? other.noSpeechTimeout_.Clone() : null;
+      isInputText_ = other.isInputText_;
+      clientHalfCloseTimeOffset_ = other.clientHalfCloseTimeOffset_ != null ? other.clientHalfCloseTimeOffset_.Clone() : null;
+      clientHalfCloseStreamingTimeOffset_ = other.clientHalfCloseStreamingTimeOffset_ != null ? other.clientHalfCloseStreamingTimeOffset_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloudConversationDebuggingInfo Clone() {
+      return new CloudConversationDebuggingInfo(this);
+    }
+
+    /// <summary>Field number for the "audio_data_chunks" field.</summary>
+    public const int AudioDataChunksFieldNumber = 1;
+    private int audioDataChunks_;
+    /// <summary>
+    /// Number of input audio data chunks in streaming requests.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int AudioDataChunks {
+      get { return audioDataChunks_; }
+      set {
+        audioDataChunks_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "result_end_time_offset" field.</summary>
+    public const int ResultEndTimeOffsetFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Duration resultEndTimeOffset_;
+    /// <summary>
+    /// Time offset of the end of speech utterance relative to the
+    /// beginning of the first audio chunk.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration ResultEndTimeOffset {
+      get { return resultEndTimeOffset_; }
+      set {
+        resultEndTimeOffset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "first_audio_duration" field.</summary>
+    public const int FirstAudioDurationFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Duration firstAudioDuration_;
+    /// <summary>
+    /// Duration of first audio chunk.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration FirstAudioDuration {
+      get { return firstAudioDuration_; }
+      set {
+        firstAudioDuration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "single_utterance" field.</summary>
+    public const int SingleUtteranceFieldNumber = 5;
+    private bool singleUtterance_;
+    /// <summary>
+    /// Whether client used single utterance mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SingleUtterance {
+      get { return singleUtterance_; }
+      set {
+        singleUtterance_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "speech_partial_results_end_times" field.</summary>
+    public const int SpeechPartialResultsEndTimesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Protobuf.WellKnownTypes.Duration> _repeated_speechPartialResultsEndTimes_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Protobuf.WellKnownTypes.Duration.Parser);
+    private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration> speechPartialResultsEndTimes_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration>();
+    /// <summary>
+    /// Time offsets of the speech partial results relative to the beginning of
+    /// the stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration> SpeechPartialResultsEndTimes {
+      get { return speechPartialResultsEndTimes_; }
+    }
+
+    /// <summary>Field number for the "speech_final_results_end_times" field.</summary>
+    public const int SpeechFinalResultsEndTimesFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Google.Protobuf.WellKnownTypes.Duration> _repeated_speechFinalResultsEndTimes_codec
+        = pb::FieldCodec.ForMessage(58, global::Google.Protobuf.WellKnownTypes.Duration.Parser);
+    private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration> speechFinalResultsEndTimes_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration>();
+    /// <summary>
+    /// Time offsets of the speech final results (is_final=true) relative to the
+    /// beginning of the stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration> SpeechFinalResultsEndTimes {
+      get { return speechFinalResultsEndTimes_; }
+    }
+
+    /// <summary>Field number for the "partial_responses" field.</summary>
+    public const int PartialResponsesFieldNumber = 8;
+    private int partialResponses_;
+    /// <summary>
+    /// Total number of partial responses.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PartialResponses {
+      get { return partialResponses_; }
+      set {
+        partialResponses_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "speaker_id_passive_latency_ms_offset" field.</summary>
+    public const int SpeakerIdPassiveLatencyMsOffsetFieldNumber = 9;
+    private int speakerIdPassiveLatencyMsOffset_;
+    /// <summary>
+    /// Time offset of Speaker ID stream close time relative to the Speech stream
+    /// close time in milliseconds. Only meaningful for conversations involving
+    /// passive verification.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int SpeakerIdPassiveLatencyMsOffset {
+      get { return speakerIdPassiveLatencyMsOffset_; }
+      set {
+        speakerIdPassiveLatencyMsOffset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "bargein_event_triggered" field.</summary>
+    public const int BargeinEventTriggeredFieldNumber = 10;
+    private bool bargeinEventTriggered_;
+    /// <summary>
+    /// Whether a barge-in event is triggered in this request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BargeinEventTriggered {
+      get { return bargeinEventTriggered_; }
+      set {
+        bargeinEventTriggered_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "speech_single_utterance" field.</summary>
+    public const int SpeechSingleUtteranceFieldNumber = 11;
+    private bool speechSingleUtterance_;
+    /// <summary>
+    /// Whether speech uses single utterance mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SpeechSingleUtterance {
+      get { return speechSingleUtterance_; }
+      set {
+        speechSingleUtterance_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dtmf_partial_results_times" field.</summary>
+    public const int DtmfPartialResultsTimesFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::Google.Protobuf.WellKnownTypes.Duration> _repeated_dtmfPartialResultsTimes_codec
+        = pb::FieldCodec.ForMessage(98, global::Google.Protobuf.WellKnownTypes.Duration.Parser);
+    private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration> dtmfPartialResultsTimes_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration>();
+    /// <summary>
+    /// Time offsets of the DTMF partial results relative to the beginning of
+    /// the stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration> DtmfPartialResultsTimes {
+      get { return dtmfPartialResultsTimes_; }
+    }
+
+    /// <summary>Field number for the "dtmf_final_results_times" field.</summary>
+    public const int DtmfFinalResultsTimesFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::Google.Protobuf.WellKnownTypes.Duration> _repeated_dtmfFinalResultsTimes_codec
+        = pb::FieldCodec.ForMessage(106, global::Google.Protobuf.WellKnownTypes.Duration.Parser);
+    private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration> dtmfFinalResultsTimes_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration>();
+    /// <summary>
+    /// Time offsets of the DTMF final results relative to the beginning of
+    /// the stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration> DtmfFinalResultsTimes {
+      get { return dtmfFinalResultsTimes_; }
+    }
+
+    /// <summary>Field number for the "single_utterance_end_time_offset" field.</summary>
+    public const int SingleUtteranceEndTimeOffsetFieldNumber = 14;
+    private global::Google.Protobuf.WellKnownTypes.Duration singleUtteranceEndTimeOffset_;
+    /// <summary>
+    /// Time offset of the end-of-single-utterance signal relative to the
+    /// beginning of the stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration SingleUtteranceEndTimeOffset {
+      get { return singleUtteranceEndTimeOffset_; }
+      set {
+        singleUtteranceEndTimeOffset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "no_speech_timeout" field.</summary>
+    public const int NoSpeechTimeoutFieldNumber = 15;
+    private global::Google.Protobuf.WellKnownTypes.Duration noSpeechTimeout_;
+    /// <summary>
+    /// No speech timeout settings observed at runtime.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration NoSpeechTimeout {
+      get { return noSpeechTimeout_; }
+      set {
+        noSpeechTimeout_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_input_text" field.</summary>
+    public const int IsInputTextFieldNumber = 16;
+    private bool isInputText_;
+    /// <summary>
+    /// Whether the streaming terminates with an injected text query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsInputText {
+      get { return isInputText_; }
+      set {
+        isInputText_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "client_half_close_time_offset" field.</summary>
+    public const int ClientHalfCloseTimeOffsetFieldNumber = 17;
+    private global::Google.Protobuf.WellKnownTypes.Duration clientHalfCloseTimeOffset_;
+    /// <summary>
+    /// Client half close time in terms of input audio duration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration ClientHalfCloseTimeOffset {
+      get { return clientHalfCloseTimeOffset_; }
+      set {
+        clientHalfCloseTimeOffset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "client_half_close_streaming_time_offset" field.</summary>
+    public const int ClientHalfCloseStreamingTimeOffsetFieldNumber = 18;
+    private global::Google.Protobuf.WellKnownTypes.Duration clientHalfCloseStreamingTimeOffset_;
+    /// <summary>
+    /// Client half close time in terms of API streaming duration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration ClientHalfCloseStreamingTimeOffset {
+      get { return clientHalfCloseStreamingTimeOffset_; }
+      set {
+        clientHalfCloseStreamingTimeOffset_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CloudConversationDebuggingInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CloudConversationDebuggingInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AudioDataChunks != other.AudioDataChunks) return false;
+      if (!object.Equals(ResultEndTimeOffset, other.ResultEndTimeOffset)) return false;
+      if (!object.Equals(FirstAudioDuration, other.FirstAudioDuration)) return false;
+      if (SingleUtterance != other.SingleUtterance) return false;
+      if(!speechPartialResultsEndTimes_.Equals(other.speechPartialResultsEndTimes_)) return false;
+      if(!speechFinalResultsEndTimes_.Equals(other.speechFinalResultsEndTimes_)) return false;
+      if (PartialResponses != other.PartialResponses) return false;
+      if (SpeakerIdPassiveLatencyMsOffset != other.SpeakerIdPassiveLatencyMsOffset) return false;
+      if (BargeinEventTriggered != other.BargeinEventTriggered) return false;
+      if (SpeechSingleUtterance != other.SpeechSingleUtterance) return false;
+      if(!dtmfPartialResultsTimes_.Equals(other.dtmfPartialResultsTimes_)) return false;
+      if(!dtmfFinalResultsTimes_.Equals(other.dtmfFinalResultsTimes_)) return false;
+      if (!object.Equals(SingleUtteranceEndTimeOffset, other.SingleUtteranceEndTimeOffset)) return false;
+      if (!object.Equals(NoSpeechTimeout, other.NoSpeechTimeout)) return false;
+      if (IsInputText != other.IsInputText) return false;
+      if (!object.Equals(ClientHalfCloseTimeOffset, other.ClientHalfCloseTimeOffset)) return false;
+      if (!object.Equals(ClientHalfCloseStreamingTimeOffset, other.ClientHalfCloseStreamingTimeOffset)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AudioDataChunks != 0) hash ^= AudioDataChunks.GetHashCode();
+      if (resultEndTimeOffset_ != null) hash ^= ResultEndTimeOffset.GetHashCode();
+      if (firstAudioDuration_ != null) hash ^= FirstAudioDuration.GetHashCode();
+      if (SingleUtterance != false) hash ^= SingleUtterance.GetHashCode();
+      hash ^= speechPartialResultsEndTimes_.GetHashCode();
+      hash ^= speechFinalResultsEndTimes_.GetHashCode();
+      if (PartialResponses != 0) hash ^= PartialResponses.GetHashCode();
+      if (SpeakerIdPassiveLatencyMsOffset != 0) hash ^= SpeakerIdPassiveLatencyMsOffset.GetHashCode();
+      if (BargeinEventTriggered != false) hash ^= BargeinEventTriggered.GetHashCode();
+      if (SpeechSingleUtterance != false) hash ^= SpeechSingleUtterance.GetHashCode();
+      hash ^= dtmfPartialResultsTimes_.GetHashCode();
+      hash ^= dtmfFinalResultsTimes_.GetHashCode();
+      if (singleUtteranceEndTimeOffset_ != null) hash ^= SingleUtteranceEndTimeOffset.GetHashCode();
+      if (noSpeechTimeout_ != null) hash ^= NoSpeechTimeout.GetHashCode();
+      if (IsInputText != false) hash ^= IsInputText.GetHashCode();
+      if (clientHalfCloseTimeOffset_ != null) hash ^= ClientHalfCloseTimeOffset.GetHashCode();
+      if (clientHalfCloseStreamingTimeOffset_ != null) hash ^= ClientHalfCloseStreamingTimeOffset.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AudioDataChunks != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(AudioDataChunks);
+      }
+      if (resultEndTimeOffset_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ResultEndTimeOffset);
+      }
+      if (firstAudioDuration_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FirstAudioDuration);
+      }
+      if (SingleUtterance != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(SingleUtterance);
+      }
+      speechPartialResultsEndTimes_.WriteTo(output, _repeated_speechPartialResultsEndTimes_codec);
+      speechFinalResultsEndTimes_.WriteTo(output, _repeated_speechFinalResultsEndTimes_codec);
+      if (PartialResponses != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(PartialResponses);
+      }
+      if (SpeakerIdPassiveLatencyMsOffset != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(SpeakerIdPassiveLatencyMsOffset);
+      }
+      if (BargeinEventTriggered != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(BargeinEventTriggered);
+      }
+      if (SpeechSingleUtterance != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(SpeechSingleUtterance);
+      }
+      dtmfPartialResultsTimes_.WriteTo(output, _repeated_dtmfPartialResultsTimes_codec);
+      dtmfFinalResultsTimes_.WriteTo(output, _repeated_dtmfFinalResultsTimes_codec);
+      if (singleUtteranceEndTimeOffset_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(SingleUtteranceEndTimeOffset);
+      }
+      if (noSpeechTimeout_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(NoSpeechTimeout);
+      }
+      if (IsInputText != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(IsInputText);
+      }
+      if (clientHalfCloseTimeOffset_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(ClientHalfCloseTimeOffset);
+      }
+      if (clientHalfCloseStreamingTimeOffset_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(ClientHalfCloseStreamingTimeOffset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AudioDataChunks != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(AudioDataChunks);
+      }
+      if (resultEndTimeOffset_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ResultEndTimeOffset);
+      }
+      if (firstAudioDuration_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FirstAudioDuration);
+      }
+      if (SingleUtterance != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(SingleUtterance);
+      }
+      speechPartialResultsEndTimes_.WriteTo(ref output, _repeated_speechPartialResultsEndTimes_codec);
+      speechFinalResultsEndTimes_.WriteTo(ref output, _repeated_speechFinalResultsEndTimes_codec);
+      if (PartialResponses != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(PartialResponses);
+      }
+      if (SpeakerIdPassiveLatencyMsOffset != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(SpeakerIdPassiveLatencyMsOffset);
+      }
+      if (BargeinEventTriggered != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(BargeinEventTriggered);
+      }
+      if (SpeechSingleUtterance != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(SpeechSingleUtterance);
+      }
+      dtmfPartialResultsTimes_.WriteTo(ref output, _repeated_dtmfPartialResultsTimes_codec);
+      dtmfFinalResultsTimes_.WriteTo(ref output, _repeated_dtmfFinalResultsTimes_codec);
+      if (singleUtteranceEndTimeOffset_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(SingleUtteranceEndTimeOffset);
+      }
+      if (noSpeechTimeout_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(NoSpeechTimeout);
+      }
+      if (IsInputText != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(IsInputText);
+      }
+      if (clientHalfCloseTimeOffset_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(ClientHalfCloseTimeOffset);
+      }
+      if (clientHalfCloseStreamingTimeOffset_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(ClientHalfCloseStreamingTimeOffset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AudioDataChunks != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AudioDataChunks);
+      }
+      if (resultEndTimeOffset_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResultEndTimeOffset);
+      }
+      if (firstAudioDuration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FirstAudioDuration);
+      }
+      if (SingleUtterance != false) {
+        size += 1 + 1;
+      }
+      size += speechPartialResultsEndTimes_.CalculateSize(_repeated_speechPartialResultsEndTimes_codec);
+      size += speechFinalResultsEndTimes_.CalculateSize(_repeated_speechFinalResultsEndTimes_codec);
+      if (PartialResponses != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PartialResponses);
+      }
+      if (SpeakerIdPassiveLatencyMsOffset != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SpeakerIdPassiveLatencyMsOffset);
+      }
+      if (BargeinEventTriggered != false) {
+        size += 1 + 1;
+      }
+      if (SpeechSingleUtterance != false) {
+        size += 1 + 1;
+      }
+      size += dtmfPartialResultsTimes_.CalculateSize(_repeated_dtmfPartialResultsTimes_codec);
+      size += dtmfFinalResultsTimes_.CalculateSize(_repeated_dtmfFinalResultsTimes_codec);
+      if (singleUtteranceEndTimeOffset_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SingleUtteranceEndTimeOffset);
+      }
+      if (noSpeechTimeout_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NoSpeechTimeout);
+      }
+      if (IsInputText != false) {
+        size += 2 + 1;
+      }
+      if (clientHalfCloseTimeOffset_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ClientHalfCloseTimeOffset);
+      }
+      if (clientHalfCloseStreamingTimeOffset_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ClientHalfCloseStreamingTimeOffset);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CloudConversationDebuggingInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AudioDataChunks != 0) {
+        AudioDataChunks = other.AudioDataChunks;
+      }
+      if (other.resultEndTimeOffset_ != null) {
+        if (resultEndTimeOffset_ == null) {
+          ResultEndTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        ResultEndTimeOffset.MergeFrom(other.ResultEndTimeOffset);
+      }
+      if (other.firstAudioDuration_ != null) {
+        if (firstAudioDuration_ == null) {
+          FirstAudioDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        FirstAudioDuration.MergeFrom(other.FirstAudioDuration);
+      }
+      if (other.SingleUtterance != false) {
+        SingleUtterance = other.SingleUtterance;
+      }
+      speechPartialResultsEndTimes_.Add(other.speechPartialResultsEndTimes_);
+      speechFinalResultsEndTimes_.Add(other.speechFinalResultsEndTimes_);
+      if (other.PartialResponses != 0) {
+        PartialResponses = other.PartialResponses;
+      }
+      if (other.SpeakerIdPassiveLatencyMsOffset != 0) {
+        SpeakerIdPassiveLatencyMsOffset = other.SpeakerIdPassiveLatencyMsOffset;
+      }
+      if (other.BargeinEventTriggered != false) {
+        BargeinEventTriggered = other.BargeinEventTriggered;
+      }
+      if (other.SpeechSingleUtterance != false) {
+        SpeechSingleUtterance = other.SpeechSingleUtterance;
+      }
+      dtmfPartialResultsTimes_.Add(other.dtmfPartialResultsTimes_);
+      dtmfFinalResultsTimes_.Add(other.dtmfFinalResultsTimes_);
+      if (other.singleUtteranceEndTimeOffset_ != null) {
+        if (singleUtteranceEndTimeOffset_ == null) {
+          SingleUtteranceEndTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        SingleUtteranceEndTimeOffset.MergeFrom(other.SingleUtteranceEndTimeOffset);
+      }
+      if (other.noSpeechTimeout_ != null) {
+        if (noSpeechTimeout_ == null) {
+          NoSpeechTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        NoSpeechTimeout.MergeFrom(other.NoSpeechTimeout);
+      }
+      if (other.IsInputText != false) {
+        IsInputText = other.IsInputText;
+      }
+      if (other.clientHalfCloseTimeOffset_ != null) {
+        if (clientHalfCloseTimeOffset_ == null) {
+          ClientHalfCloseTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        ClientHalfCloseTimeOffset.MergeFrom(other.ClientHalfCloseTimeOffset);
+      }
+      if (other.clientHalfCloseStreamingTimeOffset_ != null) {
+        if (clientHalfCloseStreamingTimeOffset_ == null) {
+          ClientHalfCloseStreamingTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        ClientHalfCloseStreamingTimeOffset.MergeFrom(other.ClientHalfCloseStreamingTimeOffset);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            AudioDataChunks = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (resultEndTimeOffset_ == null) {
+              ResultEndTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(ResultEndTimeOffset);
+            break;
+          }
+          case 26: {
+            if (firstAudioDuration_ == null) {
+              FirstAudioDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(FirstAudioDuration);
+            break;
+          }
+          case 40: {
+            SingleUtterance = input.ReadBool();
+            break;
+          }
+          case 50: {
+            speechPartialResultsEndTimes_.AddEntriesFrom(input, _repeated_speechPartialResultsEndTimes_codec);
+            break;
+          }
+          case 58: {
+            speechFinalResultsEndTimes_.AddEntriesFrom(input, _repeated_speechFinalResultsEndTimes_codec);
+            break;
+          }
+          case 64: {
+            PartialResponses = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            SpeakerIdPassiveLatencyMsOffset = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            BargeinEventTriggered = input.ReadBool();
+            break;
+          }
+          case 88: {
+            SpeechSingleUtterance = input.ReadBool();
+            break;
+          }
+          case 98: {
+            dtmfPartialResultsTimes_.AddEntriesFrom(input, _repeated_dtmfPartialResultsTimes_codec);
+            break;
+          }
+          case 106: {
+            dtmfFinalResultsTimes_.AddEntriesFrom(input, _repeated_dtmfFinalResultsTimes_codec);
+            break;
+          }
+          case 114: {
+            if (singleUtteranceEndTimeOffset_ == null) {
+              SingleUtteranceEndTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(SingleUtteranceEndTimeOffset);
+            break;
+          }
+          case 122: {
+            if (noSpeechTimeout_ == null) {
+              NoSpeechTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(NoSpeechTimeout);
+            break;
+          }
+          case 128: {
+            IsInputText = input.ReadBool();
+            break;
+          }
+          case 138: {
+            if (clientHalfCloseTimeOffset_ == null) {
+              ClientHalfCloseTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(ClientHalfCloseTimeOffset);
+            break;
+          }
+          case 146: {
+            if (clientHalfCloseStreamingTimeOffset_ == null) {
+              ClientHalfCloseStreamingTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(ClientHalfCloseStreamingTimeOffset);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            AudioDataChunks = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (resultEndTimeOffset_ == null) {
+              ResultEndTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(ResultEndTimeOffset);
+            break;
+          }
+          case 26: {
+            if (firstAudioDuration_ == null) {
+              FirstAudioDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(FirstAudioDuration);
+            break;
+          }
+          case 40: {
+            SingleUtterance = input.ReadBool();
+            break;
+          }
+          case 50: {
+            speechPartialResultsEndTimes_.AddEntriesFrom(ref input, _repeated_speechPartialResultsEndTimes_codec);
+            break;
+          }
+          case 58: {
+            speechFinalResultsEndTimes_.AddEntriesFrom(ref input, _repeated_speechFinalResultsEndTimes_codec);
+            break;
+          }
+          case 64: {
+            PartialResponses = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            SpeakerIdPassiveLatencyMsOffset = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            BargeinEventTriggered = input.ReadBool();
+            break;
+          }
+          case 88: {
+            SpeechSingleUtterance = input.ReadBool();
+            break;
+          }
+          case 98: {
+            dtmfPartialResultsTimes_.AddEntriesFrom(ref input, _repeated_dtmfPartialResultsTimes_codec);
+            break;
+          }
+          case 106: {
+            dtmfFinalResultsTimes_.AddEntriesFrom(ref input, _repeated_dtmfFinalResultsTimes_codec);
+            break;
+          }
+          case 114: {
+            if (singleUtteranceEndTimeOffset_ == null) {
+              SingleUtteranceEndTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(SingleUtteranceEndTimeOffset);
+            break;
+          }
+          case 122: {
+            if (noSpeechTimeout_ == null) {
+              NoSpeechTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(NoSpeechTimeout);
+            break;
+          }
+          case 128: {
+            IsInputText = input.ReadBool();
+            break;
+          }
+          case 138: {
+            if (clientHalfCloseTimeOffset_ == null) {
+              ClientHalfCloseTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(ClientHalfCloseTimeOffset);
+            break;
+          }
+          case 146: {
+            if (clientHalfCloseStreamingTimeOffset_ == null) {
+              ClientHalfCloseStreamingTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(ClientHalfCloseStreamingTimeOffset);
             break;
           }
         }
@@ -1504,7 +2423,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1524,6 +2443,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingDetectIntentResponse(StreamingDetectIntentResponse other) : this() {
+      debuggingInfo_ = other.debuggingInfo_ != null ? other.debuggingInfo_.Clone() : null;
       switch (other.ResponseCase) {
         case ResponseOneofCase.RecognitionResult:
           RecognitionResult = other.RecognitionResult.Clone();
@@ -1572,6 +2492,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
 
+    /// <summary>Field number for the "debugging_info" field.</summary>
+    public const int DebuggingInfoFieldNumber = 4;
+    private global::Google.Cloud.Dialogflow.Cx.V3.CloudConversationDebuggingInfo debuggingInfo_;
+    /// <summary>
+    /// Debugging info that would get populated when
+    /// `StreamingDetectIntentRequest.enable_debugging_info` is set to true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.CloudConversationDebuggingInfo DebuggingInfo {
+      get { return debuggingInfo_; }
+      set {
+        debuggingInfo_ = value;
+      }
+    }
+
     private object response_;
     /// <summary>Enum of possible cases for the "response" oneof.</summary>
     public enum ResponseOneofCase {
@@ -1610,6 +2546,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (!object.Equals(RecognitionResult, other.RecognitionResult)) return false;
       if (!object.Equals(DetectIntentResponse, other.DetectIntentResponse)) return false;
+      if (!object.Equals(DebuggingInfo, other.DebuggingInfo)) return false;
       if (ResponseCase != other.ResponseCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1620,6 +2557,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       int hash = 1;
       if (responseCase_ == ResponseOneofCase.RecognitionResult) hash ^= RecognitionResult.GetHashCode();
       if (responseCase_ == ResponseOneofCase.DetectIntentResponse) hash ^= DetectIntentResponse.GetHashCode();
+      if (debuggingInfo_ != null) hash ^= DebuggingInfo.GetHashCode();
       hash ^= (int) responseCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1647,6 +2585,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(18);
         output.WriteMessage(DetectIntentResponse);
       }
+      if (debuggingInfo_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DebuggingInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1665,6 +2607,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(18);
         output.WriteMessage(DetectIntentResponse);
       }
+      if (debuggingInfo_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DebuggingInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1681,6 +2627,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (responseCase_ == ResponseOneofCase.DetectIntentResponse) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DetectIntentResponse);
       }
+      if (debuggingInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DebuggingInfo);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1692,6 +2641,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public void MergeFrom(StreamingDetectIntentResponse other) {
       if (other == null) {
         return;
+      }
+      if (other.debuggingInfo_ != null) {
+        if (debuggingInfo_ == null) {
+          DebuggingInfo = new global::Google.Cloud.Dialogflow.Cx.V3.CloudConversationDebuggingInfo();
+        }
+        DebuggingInfo.MergeFrom(other.DebuggingInfo);
       }
       switch (other.ResponseCase) {
         case ResponseOneofCase.RecognitionResult:
@@ -1741,6 +2696,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             DetectIntentResponse = subBuilder;
             break;
           }
+          case 34: {
+            if (debuggingInfo_ == null) {
+              DebuggingInfo = new global::Google.Cloud.Dialogflow.Cx.V3.CloudConversationDebuggingInfo();
+            }
+            input.ReadMessage(DebuggingInfo);
+            break;
+          }
         }
       }
     #endif
@@ -1772,6 +2734,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             }
             input.ReadMessage(subBuilder);
             DetectIntentResponse = subBuilder;
+            break;
+          }
+          case 34: {
+            if (debuggingInfo_ == null) {
+              DebuggingInfo = new global::Google.Cloud.Dialogflow.Cx.V3.CloudConversationDebuggingInfo();
+            }
+            input.ReadMessage(DebuggingInfo);
             break;
           }
         }
@@ -1834,7 +2803,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2361,7 +3330,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3018,6 +3987,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// 3.  Natural language speech audio to be processed.
   ///
   /// 4.  An event to be triggered.
+  ///
+  /// 5.  DTMF digits to invoke an intent and fill in parameter value.
   /// </summary>
   public sealed partial class QueryInput : pb::IMessage<QueryInput>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3033,7 +4004,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3538,7 +4509,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3666,8 +4637,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "dtmf" field.</summary>
     public const int DtmfFieldNumber = 23;
     /// <summary>
-    /// If a [DTMF][DTMFInput] was provided as input, this field will contain
-    /// a copy of the [DTMFInput][].
+    /// If a [DTMF][google.cloud.dialogflow.cx.v3.DtmfInput] was provided as
+    /// input, this field will contain a copy of the
+    /// [DtmfInput][google.cloud.dialogflow.cx.v3.DtmfInput].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4475,7 +5447,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4672,7 +5644,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4869,7 +5841,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5122,7 +6094,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5317,7 +6289,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5552,7 +6524,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6033,7 +7005,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6377,7 +7349,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6819,7 +7791,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7122,7 +8094,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7468,7 +8440,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.SessionReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

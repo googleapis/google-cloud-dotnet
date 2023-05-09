@@ -30,31 +30,31 @@ namespace Google.Cloud.TextToSpeech.V1 {
             "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGixnb29nbGUvY2xv",
             "dWQvdGV4dHRvc3BlZWNoL3YxL2Nsb3VkX3R0cy5wcm90bxojZ29vZ2xlL2xv",
             "bmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8ijwIKGlN5bnRoZXNpemVMb25nQXVkaW9SZXF1ZXN0",
+            "aW1lc3RhbXAucHJvdG8imQIKGlN5bnRoZXNpemVMb25nQXVkaW9SZXF1ZXN0",
             "Eg4KBnBhcmVudBgBIAEoCRJACgVpbnB1dBgCIAEoCzIsLmdvb2dsZS5jbG91",
             "ZC50ZXh0dG9zcGVlY2gudjEuU3ludGhlc2lzSW5wdXRCA+BBAhJECgxhdWRp",
             "b19jb25maWcYAyABKAsyKS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYx",
-            "LkF1ZGlvQ29uZmlnQgPgQQISFgoOb3V0cHV0X2djc191cmkYBCABKAkSQQoF",
-            "dm9pY2UYBSABKAsyMi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlZv",
-            "aWNlU2VsZWN0aW9uUGFyYW1zIh0KG1N5bnRoZXNpemVMb25nQXVkaW9SZXNw",
-            "b25zZSKgAQobU3ludGhlc2l6ZUxvbmdBdWRpb01ldGFkYXRhEi4KCnN0YXJ0",
-            "X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjQKEGxh",
-            "c3RfdXBkYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wEhsKE3Byb2dyZXNzX3BlcmNlbnRhZ2UYAyABKAEy7gIKH1RleHRUb1Nw",
-            "ZWVjaExvbmdBdWRpb1N5bnRoZXNpemUS+QEKE1N5bnRoZXNpemVMb25nQXVk",
-            "aW8SOC5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlN5bnRoZXNpemVM",
-            "b25nQXVkaW9SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biKIAYLT5JMCRSJAL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki92b2ljZXMvKn06U3ludGhlc2l6ZUxvbmdBdWRpbzoBKspBOgobU3ludGhl",
-            "c2l6ZUxvbmdBdWRpb1Jlc3BvbnNlEhtTeW50aGVzaXplTG9uZ0F1ZGlvTWV0",
-            "YWRhdGEaT8pBG3RleHR0b3NwZWVjaC5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C8gEK",
-            "IGNvbS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxQiNUZXh0VG9TcGVl",
-            "Y2hMb25nQXVkaW9TeW50aGVzaXNQcm90b1ABWkRjbG91ZC5nb29nbGUuY29t",
-            "L2dvL3RleHR0b3NwZWVjaC9hcGl2MS90ZXh0dG9zcGVlY2hwYjt0ZXh0dG9z",
-            "cGVlY2hwYvgBAaoCHEdvb2dsZS5DbG91ZC5UZXh0VG9TcGVlY2guVjHKAhxH",
-            "b29nbGVcQ2xvdWRcVGV4dFRvU3BlZWNoXFYx6gIfR29vZ2xlOjpDbG91ZDo6",
-            "VGV4dFRvU3BlZWNoOjpWMWIGcHJvdG8z"));
+            "LkF1ZGlvQ29uZmlnQgPgQQISGwoOb3V0cHV0X2djc191cmkYBCABKAlCA+BB",
+            "AhJGCgV2b2ljZRgFIAEoCzIyLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gu",
+            "djEuVm9pY2VTZWxlY3Rpb25QYXJhbXNCA+BBAiIdChtTeW50aGVzaXplTG9u",
+            "Z0F1ZGlvUmVzcG9uc2UioAEKG1N5bnRoZXNpemVMb25nQXVkaW9NZXRhZGF0",
+            "YRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBI0ChBsYXN0X3VwZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBIbChNwcm9ncmVzc19wZXJjZW50YWdlGAMgASgBMu4C",
+            "Ch9UZXh0VG9TcGVlY2hMb25nQXVkaW9TeW50aGVzaXplEvkBChNTeW50aGVz",
+            "aXplTG9uZ0F1ZGlvEjguZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5T",
+            "eW50aGVzaXplTG9uZ0F1ZGlvUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
+            "Zy5PcGVyYXRpb24iiAGC0+STAkUiQC92MS97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovdm9pY2VzLyp9OlN5bnRoZXNpemVMb25nQXVkaW86ASrK",
+            "QToKG1N5bnRoZXNpemVMb25nQXVkaW9SZXNwb25zZRIbU3ludGhlc2l6ZUxv",
+            "bmdBdWRpb01ldGFkYXRhGk/KQRt0ZXh0dG9zcGVlY2guZ29vZ2xlYXBpcy5j",
+            "b23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
+            "YXRmb3JtQvIBCiBjb20uZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MUIj",
+            "VGV4dFRvU3BlZWNoTG9uZ0F1ZGlvU3ludGhlc2lzUHJvdG9QAVpEY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby90ZXh0dG9zcGVlY2gvYXBpdjEvdGV4dHRvc3BlZWNo",
+            "cGI7dGV4dHRvc3BlZWNocGL4AQGqAhxHb29nbGUuQ2xvdWQuVGV4dFRvU3Bl",
+            "ZWNoLlYxygIcR29vZ2xlXENsb3VkXFRleHRUb1NwZWVjaFxWMeoCH0dvb2ds",
+            "ZTo6Q2xvdWQ6OlRleHRUb1NwZWVjaDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -124,7 +124,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private string parent_ = "";
     /// <summary>
     /// The resource states of the request in the form of
-    /// `projects/*/locations/*/voices/*`.
+    /// `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -140,6 +140,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private global::Google.Cloud.TextToSpeech.V1.SynthesisInput input_;
     /// <summary>
     /// Required. The Synthesizer requires either plain text or SSML as input.
+    /// While Long Audio is in preview, SSML is temporarily unsupported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,7 +170,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int OutputGcsUriFieldNumber = 4;
     private string outputGcsUri_ = "";
     /// <summary>
-    /// Specifies a Cloud Storage URI for the synthesis results. Must be
+    /// Required. Specifies a Cloud Storage URI for the synthesis results. Must be
     /// specified in the format: `gs://bucket_name/object_name`, and the bucket
     /// must already exist.
     /// </summary>
@@ -186,7 +187,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int VoiceFieldNumber = 5;
     private global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams voice_;
     /// <summary>
-    /// The desired voice of the synthesized audio.
+    /// Required. The desired voice of the synthesized audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

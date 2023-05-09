@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 PrivateConnectionId = "",
                 PrivateConnection = new PrivateConnection(),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             Operation<PrivateConnection, OperationMetadata> response = await datastreamClient.CreatePrivateConnectionAsync(request);
