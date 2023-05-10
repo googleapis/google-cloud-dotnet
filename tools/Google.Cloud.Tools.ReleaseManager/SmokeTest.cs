@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using Mono.Cecil;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
@@ -69,6 +70,12 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// test for a subset of transports while problematic ones are being fixed.
         /// </summary>
         public string[] Transports { get; set; }
+
+        /// <summary>
+        /// When populated, the call is made with a FieldMask header in the CallSettings,
+        /// as per https://googleapis.dev/dotnet/Google.Maps.Routing.V2/latest/.
+        /// </summary>
+        public string FieldMask { get; set; }
 
         /// <summary>
         /// Executes a smoke test.
@@ -253,11 +260,15 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             object GetCorrespondingArgument(ParameterInfo parameter)
             {
+                var parameterType = parameter.ParameterType;
+                if (parameterType.FullName == "Google.Api.Gax.Grpc.CallSettings")
+                {
+                    return CreateCallSettings(parameterType);
+                }
                 if (!Arguments.TryGetValue(parameter.Name, out var argValue))
                 {
                     return parameter.DefaultValue;
                 }
-                var parameterType = parameter.ParameterType;
                 dynamic protoParser = MaybeGetMessageParser(parameterType);
                 return protoParser is object
                     ? protoParser.ParseJson(argValue.ToString())
@@ -277,6 +288,18 @@ namespace Google.Cloud.Tools.ReleaseManager
                 return propertyType.IsGenericType && propertyType.GetGenericTypeDefinition().FullName == "Google.Protobuf.MessageParser`1"
                     ? parserProperty.GetValue(null)
                     : null;
+            }
+
+            // Create a CallSettings object for the call, as determined by properties within the smoke test.
+            // Currently, only FieldMask is supported.
+            object CreateCallSettings(System.Type callSettingsType)
+            {
+                if (FieldMask is null)
+                {
+                    return null;
+                }
+                var fromHeaderMethod = callSettingsType.GetMethod("FromHeader", BindingFlags.Public | BindingFlags.Static, new[] { typeof(string), typeof(string) });
+                return fromHeaderMethod.Invoke(null, new[] { "X-Goog-FieldMask", FieldMask });
             }
         }
 
