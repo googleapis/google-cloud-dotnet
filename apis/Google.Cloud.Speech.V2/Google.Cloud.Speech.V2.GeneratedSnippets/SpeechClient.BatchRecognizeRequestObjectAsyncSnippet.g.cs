@@ -47,6 +47,7 @@ namespace GoogleCSharpSnippets
                 Config = new RecognitionConfig(),
                 ConfigMask = new FieldMask(),
                 RecognitionOutputConfig = new RecognitionOutputConfig(),
+                ProcessingStrategy = BatchRecognizeRequest.Types.ProcessingStrategy.Unspecified,
             };
             // Make the request
             Operation<BatchRecognizeResponse, OperationMetadata> response = await speechClient.BatchRecognizeAsync(request);
