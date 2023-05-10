@@ -5036,6 +5036,25 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Maps.Places.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Places API",
+      "productUrl": "https://developers.google.com/maps/documentation/places/web-service/",
+      "description": "Recommended Google client library to access the Google Maps Places API, which allows developers to access a variety of search and retrieval endpoints for a Place.",
+      "tags": [
+        "maps"
+      ],
+      "dependencies": {
+        "Google.Geo.Type": "1.0.0-beta01"
+      },
+      "generator": "micro",
+      "protoPath": "google/maps/places/v1",
+      "shortName": "places",
+      "serviceConfigFile": "places_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Maps.Routing.V2",
       "version": "1.0.0-beta09",
       "type": "grpc",
