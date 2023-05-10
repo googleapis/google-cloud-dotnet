@@ -1,0 +1,12 @@
+[
+  {
+    "method": "SearchText",
+    "client": "PlacesClient",
+    "fieldMask": "places.formattedAddress",
+    "arguments": {
+      "request": {
+        "textQuery": "Google, 1600 Amphitheatre Parkway, CA"
+      }
+    }
+  }
+]
