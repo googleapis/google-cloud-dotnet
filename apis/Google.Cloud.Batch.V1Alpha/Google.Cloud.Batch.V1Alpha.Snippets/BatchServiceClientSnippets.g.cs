@@ -357,6 +357,7 @@ namespace GoogleCSharpSnippets
             {
                 Parent = "",
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<gcbv::ListJobsResponse, gcbv::Job> response = batchServiceClient.ListJobs(request);
@@ -406,6 +407,7 @@ namespace GoogleCSharpSnippets
             {
                 Parent = "",
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<gcbv::ListJobsResponse, gcbv::Job> response = batchServiceClient.ListJobsAsync(request);
@@ -632,6 +634,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsTaskGroupName = gcbv::TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<gcbv::ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasks(request);
@@ -681,6 +684,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsTaskGroupName = gcbv::TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<gcbv::ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasksAsync(request);

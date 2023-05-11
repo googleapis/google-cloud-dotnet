@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsTaskGroupName = TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListTasksResponse, Task> response = batchServiceClient.ListTasks(request);
