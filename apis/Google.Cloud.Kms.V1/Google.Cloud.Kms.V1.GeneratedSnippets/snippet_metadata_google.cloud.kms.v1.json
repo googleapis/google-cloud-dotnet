@@ -1623,6 +1623,293 @@
       ]
     },
     {
+      "regionTag": "cloudkms_v1_generated_EkmService_VerifyConnectivity_sync",
+      "title": "VerifyConnectivityRequestObject",
+      "description": "Snippet for VerifyConnectivity",
+      "file": "EkmServiceClient.VerifyConnectivityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "VerifyConnectivity",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.VerifyConnectivity",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.VerifyConnectivityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.VerifyConnectivityResponse",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "VerifyConnectivity",
+          "fullName": "google.cloud.kms.v1.EkmService.VerifyConnectivity",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_VerifyConnectivity_async",
+      "title": "VerifyConnectivityRequestObjectAsync",
+      "description": "Snippet for VerifyConnectivityAsync",
+      "file": "EkmServiceClient.VerifyConnectivityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "VerifyConnectivityAsync",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.VerifyConnectivityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.VerifyConnectivityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.VerifyConnectivityResponse>",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "VerifyConnectivity",
+          "fullName": "google.cloud.kms.v1.EkmService.VerifyConnectivity",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_VerifyConnectivity_sync_flattened",
+      "title": "VerifyConnectivity",
+      "description": "Snippet for VerifyConnectivity",
+      "file": "EkmServiceClient.VerifyConnectivitySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "VerifyConnectivity",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.VerifyConnectivity",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.VerifyConnectivityResponse",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "VerifyConnectivity",
+          "fullName": "google.cloud.kms.v1.EkmService.VerifyConnectivity",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_VerifyConnectivity_async_flattened",
+      "title": "VerifyConnectivityAsync",
+      "description": "Snippet for VerifyConnectivityAsync",
+      "file": "EkmServiceClient.VerifyConnectivityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "VerifyConnectivityAsync",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.VerifyConnectivityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.VerifyConnectivityResponse>",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "VerifyConnectivity",
+          "fullName": "google.cloud.kms.v1.EkmService.VerifyConnectivity",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_VerifyConnectivity_sync_flattened_resourceNames",
+      "title": "VerifyConnectivityResourceNames",
+      "description": "Snippet for VerifyConnectivity",
+      "file": "EkmServiceClient.VerifyConnectivityResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "VerifyConnectivity",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.VerifyConnectivity",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.VerifyConnectivityResponse",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "VerifyConnectivity",
+          "fullName": "google.cloud.kms.v1.EkmService.VerifyConnectivity",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_EkmService_VerifyConnectivity_async_flattened_resourceNames",
+      "title": "VerifyConnectivityResourceNamesAsync",
+      "description": "Snippet for VerifyConnectivityAsync",
+      "file": "EkmServiceClient.VerifyConnectivityResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "VerifyConnectivityAsync",
+        "fullName": "Google.Cloud.Kms.V1.EkmServiceClient.VerifyConnectivityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.EkmConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.VerifyConnectivityResponse>",
+        "client": {
+          "shortName": "EkmServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.EkmServiceClient"
+        },
+        "method": {
+          "shortName": "VerifyConnectivity",
+          "fullName": "google.cloud.kms.v1.EkmService.VerifyConnectivity",
+          "service": {
+            "shortName": "EkmService",
+            "fullName": "google.cloud.kms.v1.EkmService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudkms_v1_generated_KeyManagementService_ListKeyRings_sync",
       "title": "ListKeyRingsRequestObject",
       "description": "Snippet for ListKeyRings",
