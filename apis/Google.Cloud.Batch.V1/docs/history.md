@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.1.0, released 2023-05-11
+
+### New features
+
+- Support order_by in ListJobs and ListTasks requests ([commit dd462ce](https://github.com/googleapis/google-cloud-dotnet/commit/dd462ceb1d2016e5ad339a675050ab00bd7fb1bf))
+- Add support for placement policies ([commit dd462ce](https://github.com/googleapis/google-cloud-dotnet/commit/dd462ceb1d2016e5ad339a675050ab00bd7fb1bf))
+- Per-Runnable labels ([commit dd462ce](https://github.com/googleapis/google-cloud-dotnet/commit/dd462ceb1d2016e5ad339a675050ab00bd7fb1bf))
+
 ## Version 2.0.0, released 2023-03-09
 
 ### BREAKING CHANGE
