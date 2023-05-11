@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2023-05-11
+
+### New features
+
+- Add processing strategy to batch recognition requests ([commit bbd6a85](https://github.com/googleapis/google-cloud-dotnet/commit/bbd6a857b74004230caecc548bff7ab4ba386b85))
+
 ## Version 1.0.0-beta04, released 2023-03-27
 
 ### New features
