@@ -1,5 +1,14 @@
 # Version history
 
+## Version 3.2.0, released 2023-05-11
+
+### New features
+
+- [Cloud Memorystore for Redis] Add CMEK key field ([commit 5856c34](https://github.com/googleapis/google-cloud-dotnet/commit/5856c345a5b226fe041eebdfabeb70e53d2ec9b4))
+- [Cloud Memorystore for Redis] Add suspension_reasons field ([commit 5856c34](https://github.com/googleapis/google-cloud-dotnet/commit/5856c345a5b226fe041eebdfabeb70e53d2ec9b4))
+- [Cloud Memorystore for Redis] Add persistence support ([commit 5856c34](https://github.com/googleapis/google-cloud-dotnet/commit/5856c345a5b226fe041eebdfabeb70e53d2ec9b4))
+- [Cloud Memorystore for Redis] Add self service update maintenance version support ([commit 5856c34](https://github.com/googleapis/google-cloud-dotnet/commit/5856c345a5b226fe041eebdfabeb70e53d2ec9b4))
+
 ## Version 3.1.0, released 2023-01-19
 
 ### New features
