@@ -707,5 +707,92 @@ namespace GoogleCSharpSnippets
             EkmConfig response = await ekmServiceClient.UpdateEkmConfigAsync(ekmConfig, updateMask);
             // End snippet
         }
+
+        /// <summary>Snippet for VerifyConnectivity</summary>
+        public void VerifyConnectivityRequestObject()
+        {
+            // Snippet: VerifyConnectivity(VerifyConnectivityRequest, CallSettings)
+            // Create client
+            EkmServiceClient ekmServiceClient = EkmServiceClient.Create();
+            // Initialize request argument(s)
+            VerifyConnectivityRequest request = new VerifyConnectivityRequest
+            {
+                EkmConnectionName = EkmConnectionName.FromProjectLocationEkmConnection("[PROJECT]", "[LOCATION]", "[EKM_CONNECTION]"),
+            };
+            // Make the request
+            VerifyConnectivityResponse response = ekmServiceClient.VerifyConnectivity(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyConnectivityAsync</summary>
+        public async Task VerifyConnectivityRequestObjectAsync()
+        {
+            // Snippet: VerifyConnectivityAsync(VerifyConnectivityRequest, CallSettings)
+            // Additional: VerifyConnectivityAsync(VerifyConnectivityRequest, CancellationToken)
+            // Create client
+            EkmServiceClient ekmServiceClient = await EkmServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            VerifyConnectivityRequest request = new VerifyConnectivityRequest
+            {
+                EkmConnectionName = EkmConnectionName.FromProjectLocationEkmConnection("[PROJECT]", "[LOCATION]", "[EKM_CONNECTION]"),
+            };
+            // Make the request
+            VerifyConnectivityResponse response = await ekmServiceClient.VerifyConnectivityAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyConnectivity</summary>
+        public void VerifyConnectivity()
+        {
+            // Snippet: VerifyConnectivity(string, CallSettings)
+            // Create client
+            EkmServiceClient ekmServiceClient = EkmServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/ekmConnections/[EKM_CONNECTION]";
+            // Make the request
+            VerifyConnectivityResponse response = ekmServiceClient.VerifyConnectivity(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyConnectivityAsync</summary>
+        public async Task VerifyConnectivityAsync()
+        {
+            // Snippet: VerifyConnectivityAsync(string, CallSettings)
+            // Additional: VerifyConnectivityAsync(string, CancellationToken)
+            // Create client
+            EkmServiceClient ekmServiceClient = await EkmServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/ekmConnections/[EKM_CONNECTION]";
+            // Make the request
+            VerifyConnectivityResponse response = await ekmServiceClient.VerifyConnectivityAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyConnectivity</summary>
+        public void VerifyConnectivityResourceNames()
+        {
+            // Snippet: VerifyConnectivity(EkmConnectionName, CallSettings)
+            // Create client
+            EkmServiceClient ekmServiceClient = EkmServiceClient.Create();
+            // Initialize request argument(s)
+            EkmConnectionName name = EkmConnectionName.FromProjectLocationEkmConnection("[PROJECT]", "[LOCATION]", "[EKM_CONNECTION]");
+            // Make the request
+            VerifyConnectivityResponse response = ekmServiceClient.VerifyConnectivity(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyConnectivityAsync</summary>
+        public async Task VerifyConnectivityResourceNamesAsync()
+        {
+            // Snippet: VerifyConnectivityAsync(EkmConnectionName, CallSettings)
+            // Additional: VerifyConnectivityAsync(EkmConnectionName, CancellationToken)
+            // Create client
+            EkmServiceClient ekmServiceClient = await EkmServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EkmConnectionName name = EkmConnectionName.FromProjectLocationEkmConnection("[PROJECT]", "[LOCATION]", "[EKM_CONNECTION]");
+            // Make the request
+            VerifyConnectivityResponse response = await ekmServiceClient.VerifyConnectivityAsync(name);
+            // End snippet
+        }
     }
 }

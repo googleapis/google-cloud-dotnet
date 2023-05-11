@@ -85,6 +85,10 @@ namespace Google.Cloud.Kms.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.EkmConfig> __Marshaller_google_cloud_kms_v1_EkmConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.EkmConfig.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest> __Marshaller_google_cloud_kms_v1_UpdateEkmConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.VerifyConnectivityRequest> __Marshaller_google_cloud_kms_v1_VerifyConnectivityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.VerifyConnectivityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.VerifyConnectivityResponse> __Marshaller_google_cloud_kms_v1_VerifyConnectivityResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.VerifyConnectivityResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.ListEkmConnectionsRequest, global::Google.Cloud.Kms.V1.ListEkmConnectionsResponse> __Method_ListEkmConnections = new grpc::Method<global::Google.Cloud.Kms.V1.ListEkmConnectionsRequest, global::Google.Cloud.Kms.V1.ListEkmConnectionsResponse>(
@@ -133,6 +137,14 @@ namespace Google.Cloud.Kms.V1 {
         "UpdateEkmConfig",
         __Marshaller_google_cloud_kms_v1_UpdateEkmConfigRequest,
         __Marshaller_google_cloud_kms_v1_EkmConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.VerifyConnectivityRequest, global::Google.Cloud.Kms.V1.VerifyConnectivityResponse> __Method_VerifyConnectivity = new grpc::Method<global::Google.Cloud.Kms.V1.VerifyConnectivityRequest, global::Google.Cloud.Kms.V1.VerifyConnectivityResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "VerifyConnectivity",
+        __Marshaller_google_cloud_kms_v1_VerifyConnectivityRequest,
+        __Marshaller_google_cloud_kms_v1_VerifyConnectivityResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -216,6 +228,22 @@ namespace Google.Cloud.Kms.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.EkmConfig> UpdateEkmConfig(global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Verifies that Cloud KMS can successfully connect to the external key
+      /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+      /// If there is an error connecting to the EKM, this method returns a
+      /// FAILED_PRECONDITION status containing structured information as described
+      /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.VerifyConnectivityResponse> VerifyConnectivity(global::Google.Cloud.Kms.V1.VerifyConnectivityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -553,6 +581,70 @@ namespace Google.Cloud.Kms.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateEkmConfig, null, options, request);
       }
+      /// <summary>
+      /// Verifies that Cloud KMS can successfully connect to the external key
+      /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+      /// If there is an error connecting to the EKM, this method returns a
+      /// FAILED_PRECONDITION status containing structured information as described
+      /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.VerifyConnectivityResponse VerifyConnectivity(global::Google.Cloud.Kms.V1.VerifyConnectivityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifyConnectivity(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Verifies that Cloud KMS can successfully connect to the external key
+      /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+      /// If there is an error connecting to the EKM, this method returns a
+      /// FAILED_PRECONDITION status containing structured information as described
+      /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.VerifyConnectivityResponse VerifyConnectivity(global::Google.Cloud.Kms.V1.VerifyConnectivityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_VerifyConnectivity, null, options, request);
+      }
+      /// <summary>
+      /// Verifies that Cloud KMS can successfully connect to the external key
+      /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+      /// If there is an error connecting to the EKM, this method returns a
+      /// FAILED_PRECONDITION status containing structured information as described
+      /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.VerifyConnectivityResponse> VerifyConnectivityAsync(global::Google.Cloud.Kms.V1.VerifyConnectivityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifyConnectivityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Verifies that Cloud KMS can successfully connect to the external key
+      /// manager specified by an [EkmConnection][google.cloud.kms.v1.EkmConnection].
+      /// If there is an error connecting to the EKM, this method returns a
+      /// FAILED_PRECONDITION status containing structured information as described
+      /// at https://cloud.google.com/kms/docs/reference/ekm_errors.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.VerifyConnectivityResponse> VerifyConnectivityAsync(global::Google.Cloud.Kms.V1.VerifyConnectivityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_VerifyConnectivity, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EkmServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -572,7 +664,8 @@ namespace Google.Cloud.Kms.V1 {
           .AddMethod(__Method_CreateEkmConnection, serviceImpl.CreateEkmConnection)
           .AddMethod(__Method_UpdateEkmConnection, serviceImpl.UpdateEkmConnection)
           .AddMethod(__Method_GetEkmConfig, serviceImpl.GetEkmConfig)
-          .AddMethod(__Method_UpdateEkmConfig, serviceImpl.UpdateEkmConfig).Build();
+          .AddMethod(__Method_UpdateEkmConfig, serviceImpl.UpdateEkmConfig)
+          .AddMethod(__Method_VerifyConnectivity, serviceImpl.VerifyConnectivity).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -588,6 +681,7 @@ namespace Google.Cloud.Kms.V1 {
       serviceBinder.AddMethod(__Method_UpdateEkmConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.UpdateEkmConnectionRequest, global::Google.Cloud.Kms.V1.EkmConnection>(serviceImpl.UpdateEkmConnection));
       serviceBinder.AddMethod(__Method_GetEkmConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GetEkmConfigRequest, global::Google.Cloud.Kms.V1.EkmConfig>(serviceImpl.GetEkmConfig));
       serviceBinder.AddMethod(__Method_UpdateEkmConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest, global::Google.Cloud.Kms.V1.EkmConfig>(serviceImpl.UpdateEkmConfig));
+      serviceBinder.AddMethod(__Method_VerifyConnectivity, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.VerifyConnectivityRequest, global::Google.Cloud.Kms.V1.VerifyConnectivityResponse>(serviceImpl.VerifyConnectivity));
     }
 
   }

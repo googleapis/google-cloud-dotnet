@@ -821,4 +821,16 @@ namespace Google.Cloud.Kms.V1
             set => DefaultEkmConnection = value?.ToString() ?? "";
         }
     }
+
+    public partial class VerifyConnectivityRequest
+    {
+        /// <summary>
+        /// <see cref="gckv::EkmConnectionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gckv::EkmConnectionName EkmConnectionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gckv::EkmConnectionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }
