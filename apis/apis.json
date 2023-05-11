@@ -3011,7 +3011,7 @@
       "protoPath": "google/monitoring/v3",
       "productName": "Google Cloud Monitoring",
       "productUrl": "https://cloud.google.com/monitoring/api/v3/",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Monitoring API, which manages your Google Cloud Monitoring data and configurations.",
       "tags": [
@@ -3019,7 +3019,7 @@
         "Stackdriver"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.3.0",
+        "Google.Api.Gax.Grpc": "4.3.1",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.5"
       },

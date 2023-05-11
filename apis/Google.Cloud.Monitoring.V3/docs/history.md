@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.3.0, released 2023-05-11
+
+### New features
+
+- Add ICMP pings ([commit d4e696b](https://github.com/googleapis/google-cloud-dotnet/commit/d4e696b126046a162870fabb092118fa58ed3b86))
+- Add basic http authentication ([commit d4e696b](https://github.com/googleapis/google-cloud-dotnet/commit/d4e696b126046a162870fabb092118fa58ed3b86))
+- Add json path matching capabilities ([commit d4e696b](https://github.com/googleapis/google-cloud-dotnet/commit/d4e696b126046a162870fabb092118fa58ed3b86))
+- Add httpStatusCode ([commit d4e696b](https://github.com/googleapis/google-cloud-dotnet/commit/d4e696b126046a162870fabb092118fa58ed3b86))
+- Add individual USA regions ([commit d4e696b](https://github.com/googleapis/google-cloud-dotnet/commit/d4e696b126046a162870fabb092118fa58ed3b86))
+
 ## Version 3.2.0, released 2023-01-16
 
 ### New features
