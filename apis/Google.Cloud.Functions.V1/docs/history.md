@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.2.0, released 2023-05-11
+
+### New features
+
+- Added mix-ins for long running operations, IAM, and locations ([commit 598f5cd](https://github.com/googleapis/google-cloud-dotnet/commit/598f5cdfce9da1355657232d9ed878093b469b3b))
+
+### Documentation improvements
+
+- Clarified that vpcConnector shortname is only returned if the connector is in the same project as the function ([commit 598f5cd](https://github.com/googleapis/google-cloud-dotnet/commit/598f5cdfce9da1355657232d9ed878093b469b3b))
+- Applied general style guide updates to descriptions ([commit 598f5cd](https://github.com/googleapis/google-cloud-dotnet/commit/598f5cdfce9da1355657232d9ed878093b469b3b))
+
 ## Version 2.1.0, released 2023-01-19
 
 ### New features
