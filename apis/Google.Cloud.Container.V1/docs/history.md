@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.12.0, released 2023-05-11
+
+### New features
+
+- Support fleet registration via cluster update ([commit 05ac8bc](https://github.com/googleapis/google-cloud-dotnet/commit/05ac8bccb4f3cf68327f7e2c84d83321f71edd76))
+
 ## Version 3.11.0, released 2023-05-03
 
 ### New features
