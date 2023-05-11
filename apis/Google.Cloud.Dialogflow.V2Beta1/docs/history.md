@@ -1,5 +1,14 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2023-05-11
+
+### New features
+
+- Add baseline model configuration for conversation summarization ([commit e2bfd58](https://github.com/googleapis/google-cloud-dotnet/commit/e2bfd583a2afbd2873ceadeb7fb4abf8ff87fb1a))
+- Extended StreamingListCallCompanionEvents timeout to 600 seconds ([commit 395fbd9](https://github.com/googleapis/google-cloud-dotnet/commit/395fbd912b89199e247ea905047f17aaf904bdae))
+- Added debug info for StreamingDetectIntent ([commit 395fbd9](https://github.com/googleapis/google-cloud-dotnet/commit/395fbd912b89199e247ea905047f17aaf904bdae))
+- Added GenerateStatelessSummary method ([commit 395fbd9](https://github.com/googleapis/google-cloud-dotnet/commit/395fbd912b89199e247ea905047f17aaf904bdae))
+
 ## Version 1.0.0-beta06, released 2023-03-06
 
 ### New features
