@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.3.0, released 2023-05-11
+
+### New features
+
+- Max concurrent backfill tasks ([commit 00b27cd](https://github.com/googleapis/google-cloud-dotnet/commit/00b27cd014e844024d19572ab585bd3cc705ffad))
+
 ## Version 2.2.0, released 2023-01-18
 
 ### New features
