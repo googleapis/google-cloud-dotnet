@@ -38,64 +38,65 @@ namespace Google.Cloud.Batch.V1Alpha {
             "QQISFwoKcmVxdWVzdF9pZBgEIAEoCUID4EEBIj8KDUdldEpvYlJlcXVlc3QS",
             "LgoEbmFtZRgBIAEoCUIg4EEC+kEaChhiYXRjaC5nb29nbGVhcGlzLmNvbS9K",
             "b2IiTgoQRGVsZXRlSm9iUmVxdWVzdBIMCgRuYW1lGAEgASgJEhMKBnJlYXNv",
-            "bhgCIAEoCUID4EEBEhcKCnJlcXVlc3RfaWQYBCABKAlCA+BBASJYCg9MaXN0",
-            "Sm9ic1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEg4KBmZpbHRlchgEIAEoCRIR",
-            "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJvChBMaXN0",
-            "Sm9ic1Jlc3BvbnNlEi0KBGpvYnMYASADKAsyHy5nb29nbGUuY2xvdWQuYmF0",
-            "Y2gudjFhbHBoYS5Kb2ISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3Vu",
-            "cmVhY2hhYmxlGAMgAygJIoEBChBMaXN0VGFza3NSZXF1ZXN0EjYKBnBhcmVu",
-            "dBgBIAEoCUIm4EEC+kEgCh5iYXRjaC5nb29nbGVhcGlzLmNvbS9UYXNrR3Jv",
-            "dXASDgoGZmlsdGVyGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdl",
-            "X3Rva2VuGAQgASgJInIKEUxpc3RUYXNrc1Jlc3BvbnNlEi8KBXRhc2tzGAEg",
-            "AygLMiAuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFzaxIXCg9uZXh0",
-            "X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiQQoOR2V0",
-            "VGFza1JlcXVlc3QSLwoEbmFtZRgBIAEoCUIh4EEC+kEbChliYXRjaC5nb29n",
-            "bGVhcGlzLmNvbS9UYXNrIoACChFPcGVyYXRpb25NZXRhZGF0YRI0CgtjcmVh",
-            "dGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxIxCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxITCgZ0YXJnZXQYAyABKAlCA+BBAxIRCgR2ZXJiGAQgASgJQgPg",
-            "QQMSGwoOc3RhdHVzX21lc3NhZ2UYBSABKAlCA+BBAxIjChZyZXF1ZXN0ZWRf",
-            "Y2FuY2VsbGF0aW9uGAYgASgIQgPgQQMSGAoLYXBpX3ZlcnNpb24YByABKAlC",
-            "A+BBAzKRCQoMQmF0Y2hTZXJ2aWNlEqoBCglDcmVhdGVKb2ISLC5nb29nbGUu",
-            "Y2xvdWQuYmF0Y2gudjFhbHBoYS5DcmVhdGVKb2JSZXF1ZXN0Gh8uZ29vZ2xl",
-            "LmNsb3VkLmJhdGNoLnYxYWxwaGEuSm9iIk6C0+STAjQiLS92MWFscGhhL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vam9iczoDam9i2kERcGFy",
-            "ZW50LGpvYixqb2JfaWQSkgEKBkdldEpvYhIpLmdvb2dsZS5jbG91ZC5iYXRj",
-            "aC52MWFscGhhLkdldEpvYlJlcXVlc3QaHy5nb29nbGUuY2xvdWQuYmF0Y2gu",
-            "djFhbHBoYS5Kb2IiPILT5JMCLxItL3YxYWxwaGEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9qb2JzLyp92kEEbmFtZRLfAQoJRGVsZXRlSm9iEiwu",
-            "Z29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuRGVsZXRlSm9iUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ihAGC0+STAi8qLS92MWFs",
-            "cGhhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfdpBBG5h",
-            "bWXKQUUKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIsZ29vZ2xlLmNsb3VkLmJh",
-            "dGNoLnYxYWxwaGEuT3BlcmF0aW9uTWV0YWRhdGESpQEKCExpc3RKb2JzEisu",
-            "Z29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuTGlzdEpvYnNSZXF1ZXN0Giwu",
-            "Z29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuTGlzdEpvYnNSZXNwb25zZSI+",
-            "gtPkkwIvEi0vdjFhbHBoYS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyp9L2pvYnPaQQZwYXJlbnQSqgEKB0dldFRhc2sSKi5nb29nbGUuY2xvdWQu",
-            "YmF0Y2gudjFhbHBoYS5HZXRUYXNrUmVxdWVzdBogLmdvb2dsZS5jbG91ZC5i",
-            "YXRjaC52MWFscGhhLlRhc2siUYLT5JMCRBJCL3YxYWxwaGEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyovdGFza0dyb3Vwcy8qL3Rhc2tz",
-            "Lyp92kEEbmFtZRK9AQoJTGlzdFRhc2tzEiwuZ29vZ2xlLmNsb3VkLmJhdGNo",
-            "LnYxYWxwaGEuTGlzdFRhc2tzUmVxdWVzdBotLmdvb2dsZS5jbG91ZC5iYXRj",
-            "aC52MWFscGhhLkxpc3RUYXNrc1Jlc3BvbnNlIlOC0+STAkQSQi92MWFscGhh",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyovdGFza0dy",
-            "b3Vwcy8qfS90YXNrc9pBBnBhcmVudBpIykEUYmF0Y2guZ29vZ2xlYXBpcy5j",
-            "b23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
-            "YXRmb3JtQsQBCh5jb20uZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGFCCkJh",
-            "dGNoUHJvdG9QAVo0Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYXRjaC9hcGl2MWFs",
-            "cGhhL2JhdGNocGI7YmF0Y2hwYqICA0dDQqoCGkdvb2dsZS5DbG91ZC5CYXRj",
-            "aC5WMUFscGhhygIaR29vZ2xlXENsb3VkXEJhdGNoXFYxYWxwaGHqAh1Hb29n",
-            "bGU6OkNsb3VkOjpCYXRjaDo6VjFhbHBoYWIGcHJvdG8z"));
+            "bhgCIAEoCUID4EEBEhcKCnJlcXVlc3RfaWQYBCABKAlCA+BBASJqCg9MaXN0",
+            "Sm9ic1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEg4KBmZpbHRlchgEIAEoCRIQ",
+            "CghvcmRlcl9ieRgFIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90",
+            "b2tlbhgDIAEoCSJvChBMaXN0Sm9ic1Jlc3BvbnNlEi0KBGpvYnMYASADKAsy",
+            "Hy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5Kb2ISFwoPbmV4dF9wYWdl",
+            "X3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIpMBChBMaXN0VGFz",
+            "a3NSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEC+kEgCh5iYXRjaC5nb29n",
+            "bGVhcGlzLmNvbS9UYXNrR3JvdXASDgoGZmlsdGVyGAIgASgJEhAKCG9yZGVy",
+            "X2J5GAUgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQg",
+            "ASgJInIKEUxpc3RUYXNrc1Jlc3BvbnNlEi8KBXRhc2tzGAEgAygLMiAuZ29v",
+            "Z2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFzaxIXCg9uZXh0X3BhZ2VfdG9r",
+            "ZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiQQoOR2V0VGFza1JlcXVl",
+            "c3QSLwoEbmFtZRgBIAEoCUIh4EEC+kEbChliYXRjaC5nb29nbGVhcGlzLmNv",
+            "bS9UYXNrIoACChFPcGVyYXRpb25NZXRhZGF0YRI0CgtjcmVhdGVfdGltZRgB",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRf",
+            "dGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIT",
+            "CgZ0YXJnZXQYAyABKAlCA+BBAxIRCgR2ZXJiGAQgASgJQgPgQQMSGwoOc3Rh",
+            "dHVzX21lc3NhZ2UYBSABKAlCA+BBAxIjChZyZXF1ZXN0ZWRfY2FuY2VsbGF0",
+            "aW9uGAYgASgIQgPgQQMSGAoLYXBpX3ZlcnNpb24YByABKAlCA+BBAzKRCQoM",
+            "QmF0Y2hTZXJ2aWNlEqoBCglDcmVhdGVKb2ISLC5nb29nbGUuY2xvdWQuYmF0",
+            "Y2gudjFhbHBoYS5DcmVhdGVKb2JSZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLmJh",
+            "dGNoLnYxYWxwaGEuSm9iIk6C0+STAjQiLS92MWFscGhhL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKn0vam9iczoDam9i2kERcGFyZW50LGpvYixq",
+            "b2JfaWQSkgEKBkdldEpvYhIpLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhh",
+            "LkdldEpvYlJlcXVlc3QaHy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5K",
+            "b2IiPILT5JMCLxItL3YxYWxwaGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9qb2JzLyp92kEEbmFtZRLfAQoJRGVsZXRlSm9iEiwuZ29vZ2xlLmNs",
+            "b3VkLmJhdGNoLnYxYWxwaGEuRGVsZXRlSm9iUmVxdWVzdBodLmdvb2dsZS5s",
+            "b25ncnVubmluZy5PcGVyYXRpb24ihAGC0+STAi8qLS92MWFscGhhL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfdpBBG5hbWXKQUUKFWdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eRIsZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxw",
+            "aGEuT3BlcmF0aW9uTWV0YWRhdGESpQEKCExpc3RKb2JzEisuZ29vZ2xlLmNs",
+            "b3VkLmJhdGNoLnYxYWxwaGEuTGlzdEpvYnNSZXF1ZXN0GiwuZ29vZ2xlLmNs",
+            "b3VkLmJhdGNoLnYxYWxwaGEuTGlzdEpvYnNSZXNwb25zZSI+gtPkkwIvEi0v",
+            "djFhbHBoYS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2pvYnPa",
+            "QQZwYXJlbnQSqgEKB0dldFRhc2sSKi5nb29nbGUuY2xvdWQuYmF0Y2gudjFh",
+            "bHBoYS5HZXRUYXNrUmVxdWVzdBogLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFs",
+            "cGhhLlRhc2siUYLT5JMCRBJCL3YxYWxwaGEve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9qb2JzLyovdGFza0dyb3Vwcy8qL3Rhc2tzLyp92kEEbmFt",
+            "ZRK9AQoJTGlzdFRhc2tzEiwuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEu",
+            "TGlzdFRhc2tzUmVxdWVzdBotLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhh",
+            "Lkxpc3RUYXNrc1Jlc3BvbnNlIlOC0+STAkQSQi92MWFscGhhL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyovdGFza0dyb3Vwcy8qfS90",
+            "YXNrc9pBBnBhcmVudBpIykEUYmF0Y2guZ29vZ2xlYXBpcy5jb23SQS5odHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQsQB",
+            "Ch5jb20uZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGFCCkJhdGNoUHJvdG9Q",
+            "AVo0Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYXRjaC9hcGl2MWFscGhhL2JhdGNo",
+            "cGI7YmF0Y2hwYqICA0dDQqoCGkdvb2dsZS5DbG91ZC5CYXRjaC5WMUFscGhh",
+            "ygIaR29vZ2xlXENsb3VkXEJhdGNoXFYxYWxwaGHqAh1Hb29nbGU6OkNsb3Vk",
+            "OjpCYXRjaDo6VjFhbHBoYWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.JobReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.CreateJobRequest), global::Google.Cloud.Batch.V1Alpha.CreateJobRequest.Parser, new[]{ "Parent", "JobId", "Job", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.GetJobRequest), global::Google.Cloud.Batch.V1Alpha.GetJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.DeleteJobRequest), global::Google.Cloud.Batch.V1Alpha.DeleteJobRequest.Parser, new[]{ "Name", "Reason", "RequestId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.ListJobsRequest), global::Google.Cloud.Batch.V1Alpha.ListJobsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.ListJobsRequest), global::Google.Cloud.Batch.V1Alpha.ListJobsRequest.Parser, new[]{ "Parent", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.ListJobsResponse), global::Google.Cloud.Batch.V1Alpha.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken", "Unreachable" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.ListTasksRequest), global::Google.Cloud.Batch.V1Alpha.ListTasksRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.ListTasksRequest), global::Google.Cloud.Batch.V1Alpha.ListTasksRequest.Parser, new[]{ "Parent", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.ListTasksResponse), global::Google.Cloud.Batch.V1Alpha.ListTasksResponse.Parser, new[]{ "Tasks", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.GetTaskRequest), global::Google.Cloud.Batch.V1Alpha.GetTaskRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.OperationMetadata), global::Google.Cloud.Batch.V1Alpha.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusMessage", "RequestedCancellation", "ApiVersion" }, null, null, null, null)
@@ -971,6 +972,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     public ListJobsRequest(ListJobsRequest other) : this() {
       parent_ = other.parent_;
       filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1009,6 +1011,22 @@ namespace Google.Cloud.Batch.V1Alpha {
       get { return filter_; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 5;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Sort results. Supported are "name", "name desc", "create_time",
+    /// "create_time desc", and "".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1059,6 +1077,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
       if (Parent != other.Parent) return false;
       if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1070,6 +1089,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (_unknownFields != null) {
@@ -1106,6 +1126,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteRawTag(34);
         output.WriteString(Filter);
       }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1132,6 +1156,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteRawTag(34);
         output.WriteString(Filter);
       }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1147,6 +1175,9 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
       }
       if (PageSize != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
@@ -1171,6 +1202,9 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
       if (other.Filter.Length != 0) {
         Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
       }
       if (other.PageSize != 0) {
         PageSize = other.PageSize;
@@ -1209,6 +1243,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             Filter = input.ReadString();
             break;
           }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1238,6 +1276,10 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           case 34: {
             Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
             break;
           }
         }
@@ -1539,6 +1581,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     public ListTasksRequest(ListTasksRequest other) : this() {
       parent_ = other.parent_;
       filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1581,6 +1624,22 @@ namespace Google.Cloud.Batch.V1Alpha {
       get { return filter_; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 5;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Sort results. Supported are "name", "name desc", "create_time",
+    /// "create_time desc", and "".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1631,6 +1690,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
       if (Parent != other.Parent) return false;
       if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1642,6 +1702,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (_unknownFields != null) {
@@ -1678,6 +1739,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteRawTag(34);
         output.WriteString(PageToken);
       }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1704,6 +1769,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteRawTag(34);
         output.WriteString(PageToken);
       }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1719,6 +1788,9 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
       }
       if (PageSize != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
@@ -1743,6 +1815,9 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
       if (other.Filter.Length != 0) {
         Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
       }
       if (other.PageSize != 0) {
         PageSize = other.PageSize;
@@ -1781,6 +1856,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             PageToken = input.ReadString();
             break;
           }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1810,6 +1889,10 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           case 34: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
             break;
           }
         }
