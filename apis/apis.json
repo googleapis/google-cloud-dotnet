@@ -2841,7 +2841,8 @@
       },
       "shortName": "logging",
       "serviceConfigFile": "logging_v2.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "blockRelease": "Waiting to determine best replacement names for Async methods"
     },
     {
       "id": "Google.Cloud.ManagedIdentities.V1",
