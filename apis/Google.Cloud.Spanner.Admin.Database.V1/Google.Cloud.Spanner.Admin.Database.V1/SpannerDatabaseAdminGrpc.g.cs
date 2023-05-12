@@ -3,7 +3,7 @@
 //     source: google/spanner/admin/database/v1/spanner_database_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -82,6 +82,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.Database> __Marshaller_google_spanner_admin_database_v1_Database = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.Database.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest> __Marshaller_google_spanner_admin_database_v1_UpdateDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest> __Marshaller_google_spanner_admin_database_v1_UpdateDatabaseDdlRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest> __Marshaller_google_spanner_admin_database_v1_DropDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest.Parser));
@@ -155,6 +157,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         "GetDatabase",
         __Marshaller_google_spanner_admin_database_v1_GetDatabaseRequest,
         __Marshaller_google_spanner_admin_database_v1_Database);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest, global::Google.LongRunning.Operation> __Method_UpdateDatabase = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDatabase",
+        __Marshaller_google_spanner_admin_database_v1_UpdateDatabaseRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest, global::Google.LongRunning.Operation> __Method_UpdateDatabaseDdl = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest, global::Google.LongRunning.Operation>(
@@ -333,6 +343,53 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.Database> GetDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a Cloud Spanner database. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the database. If the named database does not
+      /// exist, returns `NOT_FOUND`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field is set to true.
+      ///   * Cancelling the operation is best-effort. If the cancellation succeeds,
+      ///     the operation metadata's
+      ///     [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+      ///     is set, the updates are reverted, and the operation terminates with a
+      ///     `CANCELLED` status.
+      ///   * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+      ///     until the pending operation is done (returns successfully or with
+      ///     error).
+      ///   * Reading the database via the API continues to give the pre-request
+      ///     values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * The new values are in effect and readable via the API.
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`
+      /// and can be used to track the database modification. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -819,6 +876,194 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.Database> GetDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Cloud Spanner database. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the database. If the named database does not
+      /// exist, returns `NOT_FOUND`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field is set to true.
+      ///   * Cancelling the operation is best-effort. If the cancellation succeeds,
+      ///     the operation metadata's
+      ///     [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+      ///     is set, the updates are reverted, and the operation terminates with a
+      ///     `CANCELLED` status.
+      ///   * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+      ///     until the pending operation is done (returns successfully or with
+      ///     error).
+      ///   * Reading the database via the API continues to give the pre-request
+      ///     values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * The new values are in effect and readable via the API.
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`
+      /// and can be used to track the database modification. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Cloud Spanner database. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the database. If the named database does not
+      /// exist, returns `NOT_FOUND`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field is set to true.
+      ///   * Cancelling the operation is best-effort. If the cancellation succeeds,
+      ///     the operation metadata's
+      ///     [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+      ///     is set, the updates are reverted, and the operation terminates with a
+      ///     `CANCELLED` status.
+      ///   * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+      ///     until the pending operation is done (returns successfully or with
+      ///     error).
+      ///   * Reading the database via the API continues to give the pre-request
+      ///     values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * The new values are in effect and readable via the API.
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`
+      /// and can be used to track the database modification. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Cloud Spanner database. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the database. If the named database does not
+      /// exist, returns `NOT_FOUND`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field is set to true.
+      ///   * Cancelling the operation is best-effort. If the cancellation succeeds,
+      ///     the operation metadata's
+      ///     [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+      ///     is set, the updates are reverted, and the operation terminates with a
+      ///     `CANCELLED` status.
+      ///   * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+      ///     until the pending operation is done (returns successfully or with
+      ///     error).
+      ///   * Reading the database via the API continues to give the pre-request
+      ///     values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * The new values are in effect and readable via the API.
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`
+      /// and can be used to track the database modification. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Cloud Spanner database. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the database. If the named database does not
+      /// exist, returns `NOT_FOUND`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field is set to true.
+      ///   * Cancelling the operation is best-effort. If the cancellation succeeds,
+      ///     the operation metadata's
+      ///     [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+      ///     is set, the updates are reverted, and the operation terminates with a
+      ///     `CANCELLED` status.
+      ///   * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+      ///     until the pending operation is done (returns successfully or with
+      ///     error).
+      ///   * Reading the database via the API continues to give the pre-request
+      ///     values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * The new values are in effect and readable via the API.
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`
+      /// and can be used to track the database modification. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDatabase, null, options, request);
       }
       /// <summary>
       /// Updates the schema of a Cloud Spanner database by
@@ -1965,6 +2210,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           .AddMethod(__Method_ListDatabases, serviceImpl.ListDatabases)
           .AddMethod(__Method_CreateDatabase, serviceImpl.CreateDatabase)
           .AddMethod(__Method_GetDatabase, serviceImpl.GetDatabase)
+          .AddMethod(__Method_UpdateDatabase, serviceImpl.UpdateDatabase)
           .AddMethod(__Method_UpdateDatabaseDdl, serviceImpl.UpdateDatabaseDdl)
           .AddMethod(__Method_DropDatabase, serviceImpl.DropDatabase)
           .AddMethod(__Method_GetDatabaseDdl, serviceImpl.GetDatabaseDdl)
@@ -1993,6 +2239,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       serviceBinder.AddMethod(__Method_ListDatabases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse>(serviceImpl.ListDatabases));
       serviceBinder.AddMethod(__Method_CreateDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDatabase));
       serviceBinder.AddMethod(__Method_GetDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Database>(serviceImpl.GetDatabase));
+      serviceBinder.AddMethod(__Method_UpdateDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDatabase));
       serviceBinder.AddMethod(__Method_UpdateDatabaseDdl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDatabaseDdl));
       serviceBinder.AddMethod(__Method_DropDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DropDatabase));
       serviceBinder.AddMethod(__Method_GetDatabaseDdl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest, global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse>(serviceImpl.GetDatabaseDdl));

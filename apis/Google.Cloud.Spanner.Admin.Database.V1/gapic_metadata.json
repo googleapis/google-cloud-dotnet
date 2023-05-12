@@ -118,6 +118,12 @@
                 "UpdateBackupAsync"
               ]
             },
+            "UpdateDatabase": {
+              "methods": [
+                "UpdateDatabase",
+                "UpdateDatabaseAsync"
+              ]
+            },
             "UpdateDatabaseDdl": {
               "methods": [
                 "UpdateDatabaseDdl",
