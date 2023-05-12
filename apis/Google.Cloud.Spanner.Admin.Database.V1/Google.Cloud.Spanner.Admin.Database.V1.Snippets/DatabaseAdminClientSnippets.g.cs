@@ -588,6 +588,134 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateDatabase</summary>
+        public void UpdateDatabaseRequestObject()
+        {
+            // Snippet: UpdateDatabase(UpdateDatabaseRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateDatabaseRequest request = new UpdateDatabaseRequest
+            {
+                Database = new Database(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<Database, UpdateDatabaseMetadata> response = databaseAdminClient.UpdateDatabase(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Database, UpdateDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Database, UpdateDatabaseMetadata> retrievedResponse = databaseAdminClient.PollOnceUpdateDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabaseAsync</summary>
+        public async Task UpdateDatabaseRequestObjectAsync()
+        {
+            // Snippet: UpdateDatabaseAsync(UpdateDatabaseRequest, CallSettings)
+            // Additional: UpdateDatabaseAsync(UpdateDatabaseRequest, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDatabaseRequest request = new UpdateDatabaseRequest
+            {
+                Database = new Database(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<Database, UpdateDatabaseMetadata> response = await databaseAdminClient.UpdateDatabaseAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Database, UpdateDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Database, UpdateDatabaseMetadata> retrievedResponse = await databaseAdminClient.PollOnceUpdateDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabase</summary>
+        public void UpdateDatabase()
+        {
+            // Snippet: UpdateDatabase(Database, FieldMask, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            Database database = new Database();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Database, UpdateDatabaseMetadata> response = databaseAdminClient.UpdateDatabase(database, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Database, UpdateDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Database, UpdateDatabaseMetadata> retrievedResponse = databaseAdminClient.PollOnceUpdateDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabaseAsync</summary>
+        public async Task UpdateDatabaseAsync()
+        {
+            // Snippet: UpdateDatabaseAsync(Database, FieldMask, CallSettings)
+            // Additional: UpdateDatabaseAsync(Database, FieldMask, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            Database database = new Database();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Database, UpdateDatabaseMetadata> response = await databaseAdminClient.UpdateDatabaseAsync(database, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Database, UpdateDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Database, UpdateDatabaseMetadata> retrievedResponse = await databaseAdminClient.PollOnceUpdateDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateDatabaseDdl</summary>
         public void UpdateDatabaseDdlRequestObject()
         {

@@ -53,6 +53,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CreateDatabaseSettings = existing.CreateDatabaseSettings;
             CreateDatabaseOperationsSettings = existing.CreateDatabaseOperationsSettings.Clone();
             GetDatabaseSettings = existing.GetDatabaseSettings;
+            UpdateDatabaseSettings = existing.UpdateDatabaseSettings;
+            UpdateDatabaseOperationsSettings = existing.UpdateDatabaseOperationsSettings.Clone();
             UpdateDatabaseDdlSettings = existing.UpdateDatabaseDdlSettings;
             UpdateDatabaseDdlOperationsSettings = existing.UpdateDatabaseDdlOperationsSettings.Clone();
             DropDatabaseSettings = existing.DropDatabaseSettings;
@@ -149,6 +151,45 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetDatabaseSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.UpdateDatabase</c> and <c>DatabaseAdminClient.UpdateDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDatabaseSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DatabaseAdminClient.UpdateDatabase</c> and
+        /// <c>DatabaseAdminClient.UpdateDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1137,6 +1178,328 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Database> GetDatabaseAsync(gcscv::DatabaseName name, st::CancellationToken cancellationToken) =>
             GetDatabaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, UpdateDatabaseMetadata> UpdateDatabase(UpdateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> UpdateDatabaseAsync(UpdateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> UpdateDatabaseAsync(UpdateDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateDatabase</c>.</summary>
+        public virtual lro::OperationsClient UpdateDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Database, UpdateDatabaseMetadata> PollOnceUpdateDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, UpdateDatabaseMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> PollOnceUpdateDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, UpdateDatabaseMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database to update.
+        /// The `name` field of the database is of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Currently, only
+        /// `enable_drop_protection` field can be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, UpdateDatabaseMetadata> UpdateDatabase(Database database, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDatabase(new UpdateDatabaseRequest
+            {
+                Database = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database to update.
+        /// The `name` field of the database is of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Currently, only
+        /// `enable_drop_protection` field can be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> UpdateDatabaseAsync(Database database, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDatabaseAsync(new UpdateDatabaseRequest
+            {
+                Database = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database to update.
+        /// The `name` field of the database is of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Currently, only
+        /// `enable_drop_protection` field can be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> UpdateDatabaseAsync(Database database, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDatabaseAsync(database, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the schema of a Cloud Spanner database by
@@ -4243,6 +4606,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
 
         private readonly gaxgrpc::ApiCall<GetDatabaseRequest, Database> _callGetDatabase;
 
+        private readonly gaxgrpc::ApiCall<UpdateDatabaseRequest, lro::Operation> _callUpdateDatabase;
+
         private readonly gaxgrpc::ApiCall<UpdateDatabaseDdlRequest, lro::Operation> _callUpdateDatabaseDdl;
 
         private readonly gaxgrpc::ApiCall<DropDatabaseRequest, wkt::Empty> _callDropDatabase;
@@ -4287,6 +4652,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             DatabaseAdminSettings effectiveSettings = settings ?? DatabaseAdminSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             CreateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatabaseOperationsSettings, logger);
+            UpdateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseOperationsSettings, logger);
             UpdateDatabaseDdlOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseDdlOperationsSettings, logger);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             CopyBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CopyBackupOperationsSettings, logger);
@@ -4300,6 +4666,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             _callGetDatabase = clientHelper.BuildApiCall<GetDatabaseRequest, Database>("GetDatabase", grpcClient.GetDatabaseAsync, grpcClient.GetDatabase, effectiveSettings.GetDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDatabase);
             Modify_GetDatabaseApiCall(ref _callGetDatabase);
+            _callUpdateDatabase = clientHelper.BuildApiCall<UpdateDatabaseRequest, lro::Operation>("UpdateDatabase", grpcClient.UpdateDatabaseAsync, grpcClient.UpdateDatabase, effectiveSettings.UpdateDatabaseSettings).WithGoogleRequestParam("database.name", request => request.Database?.Name);
+            Modify_ApiCall(ref _callUpdateDatabase);
+            Modify_UpdateDatabaseApiCall(ref _callUpdateDatabase);
             _callUpdateDatabaseDdl = clientHelper.BuildApiCall<UpdateDatabaseDdlRequest, lro::Operation>("UpdateDatabaseDdl", grpcClient.UpdateDatabaseDdlAsync, grpcClient.UpdateDatabaseDdl, effectiveSettings.UpdateDatabaseDdlSettings).WithGoogleRequestParam("database", request => request.Database);
             Modify_ApiCall(ref _callUpdateDatabaseDdl);
             Modify_UpdateDatabaseDdlApiCall(ref _callUpdateDatabaseDdl);
@@ -4359,6 +4728,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
 
         partial void Modify_GetDatabaseApiCall(ref gaxgrpc::ApiCall<GetDatabaseRequest, Database> call);
 
+        partial void Modify_UpdateDatabaseApiCall(ref gaxgrpc::ApiCall<UpdateDatabaseRequest, lro::Operation> call);
+
         partial void Modify_UpdateDatabaseDdlApiCall(ref gaxgrpc::ApiCall<UpdateDatabaseDdlRequest, lro::Operation> call);
 
         partial void Modify_DropDatabaseApiCall(ref gaxgrpc::ApiCall<DropDatabaseRequest, wkt::Empty> call);
@@ -4401,6 +4772,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         partial void Modify_CreateDatabaseRequest(ref CreateDatabaseRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDatabaseRequest(ref GetDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateDatabaseRequest(ref UpdateDatabaseRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateDatabaseDdlRequest(ref UpdateDatabaseDdlRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4521,6 +4894,103 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             Modify_GetDatabaseRequest(ref request, ref callSettings);
             return _callGetDatabase.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateDatabase</c>.</summary>
+        public override lro::OperationsClient UpdateDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Database, UpdateDatabaseMetadata> UpdateDatabase(UpdateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, UpdateDatabaseMetadata>(_callUpdateDatabase.Sync(request, callSettings), UpdateDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> UpdateDatabaseAsync(UpdateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, UpdateDatabaseMetadata>(await _callUpdateDatabase.Async(request, callSettings).ConfigureAwait(false), UpdateDatabaseOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>UpdateDatabaseDdl</c>.</summary>
