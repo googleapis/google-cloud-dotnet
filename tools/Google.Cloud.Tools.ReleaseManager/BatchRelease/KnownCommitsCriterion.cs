@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -49,6 +49,12 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 {
                     continue;
                 }
+                if (api.BlockRelease is string blockRelease)
+                {
+                    Console.WriteLine($"Release of {api.Id} is blocked: {blockRelease}");
+                    continue;
+                }
+
                 var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
                 var proposal = ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion, defaultMessage);
 

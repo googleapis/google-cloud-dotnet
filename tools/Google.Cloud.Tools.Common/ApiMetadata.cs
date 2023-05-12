@@ -53,6 +53,11 @@ namespace Google.Cloud.Tools.Common
         public string TestTargetFrameworks { get; set; }
 
         /// <summary>
+        /// If non-null, this gives the reason to not release until the property has been removed.
+        /// </summary>
+        public string BlockRelease { get; set; }
+
+        /// <summary>
         /// The type to include as library_type in the .repo-metadata.json file, when the defaulting
         /// in <see cref="EffectiveMetadataType"/> is inappropriate.
         /// </summary>

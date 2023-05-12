@@ -62,6 +62,12 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                     continue;
                 }
 
+                if (api.BlockRelease is string blockRelease)
+                {
+                    Console.WriteLine($"Release of {api.Id} is blocked: {blockRelease}");
+                    continue;
+                }
+
                 if (SkipIfNoReleaseNotes)
                 {
                     if (!commits.Any(c => c.GetReleaseNoteElements().Any(note => note.PublishInReleaseNotes)))
