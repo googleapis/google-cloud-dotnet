@@ -1479,6 +1479,54 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
+    public partial class CreateAdSenseLinkRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAdSenseLinkRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::AdSenseLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::AdSenseLinkName AdSenseLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::AdSenseLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteAdSenseLinkRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::AdSenseLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::AdSenseLinkName AdSenseLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::AdSenseLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAdSenseLinksRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class FetchConnectedGa4PropertyRequest
     {
         /// <summary>
@@ -1500,6 +1548,54 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             get => string.IsNullOrEmpty(Property) ? null : PropertyName.Parse(Property, allowUnparsed: true);
             set => Property = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateEventCreateRuleRequest
+    {
+        /// <summary>
+        /// <see cref="DataStreamName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStreamName ParentAsDataStreamName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStreamName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteEventCreateRuleRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::EventCreateRuleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::EventCreateRuleName EventCreateRuleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::EventCreateRuleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetEventCreateRuleRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::EventCreateRuleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::EventCreateRuleName EventCreateRuleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::EventCreateRuleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListEventCreateRulesRequest
+    {
+        /// <summary>
+        /// <see cref="DataStreamName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStreamName ParentAsDataStreamName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStreamName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 }

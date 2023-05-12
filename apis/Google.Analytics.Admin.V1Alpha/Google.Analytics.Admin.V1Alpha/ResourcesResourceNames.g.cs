@@ -5108,6 +5108,227 @@ namespace Google.Analytics.Admin.V1Alpha
         public static bool operator !=(EnhancedMeasurementSettingsName a, EnhancedMeasurementSettingsName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>AdSenseLink</c> resource.</summary>
+    public sealed partial class AdSenseLinkName : gax::IResourceName, sys::IEquatable<AdSenseLinkName>
+    {
+        /// <summary>The possible contents of <see cref="AdSenseLinkName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>properties/{property}/adSenseLinks/{adsense_link}</c>.
+            /// </summary>
+            PropertyAdsenseLink = 1,
+        }
+
+        private static gax::PathTemplate s_propertyAdsenseLink = new gax::PathTemplate("properties/{property}/adSenseLinks/{adsense_link}");
+
+        /// <summary>Creates a <see cref="AdSenseLinkName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AdSenseLinkName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AdSenseLinkName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AdSenseLinkName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="AdSenseLinkName"/> with the pattern
+        /// <c>properties/{property}/adSenseLinks/{adsense_link}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="adsenseLinkId">The <c>AdsenseLink</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AdSenseLinkName"/> constructed from the provided ids.</returns>
+        public static AdSenseLinkName FromPropertyAdsenseLink(string propertyId, string adsenseLinkId) =>
+            new AdSenseLinkName(ResourceNameType.PropertyAdsenseLink, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), adsenseLinkId: gax::GaxPreconditions.CheckNotNullOrEmpty(adsenseLinkId, nameof(adsenseLinkId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AdSenseLinkName"/> with pattern
+        /// <c>properties/{property}/adSenseLinks/{adsense_link}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="adsenseLinkId">The <c>AdsenseLink</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AdSenseLinkName"/> with pattern
+        /// <c>properties/{property}/adSenseLinks/{adsense_link}</c>.
+        /// </returns>
+        public static string Format(string propertyId, string adsenseLinkId) =>
+            FormatPropertyAdsenseLink(propertyId, adsenseLinkId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AdSenseLinkName"/> with pattern
+        /// <c>properties/{property}/adSenseLinks/{adsense_link}</c>.
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="adsenseLinkId">The <c>AdsenseLink</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AdSenseLinkName"/> with pattern
+        /// <c>properties/{property}/adSenseLinks/{adsense_link}</c>.
+        /// </returns>
+        public static string FormatPropertyAdsenseLink(string propertyId, string adsenseLinkId) =>
+            s_propertyAdsenseLink.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), gax::GaxPreconditions.CheckNotNullOrEmpty(adsenseLinkId, nameof(adsenseLinkId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="AdSenseLinkName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/adSenseLinks/{adsense_link}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="adSenseLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AdSenseLinkName"/> if successful.</returns>
+        public static AdSenseLinkName Parse(string adSenseLinkName) => Parse(adSenseLinkName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AdSenseLinkName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/adSenseLinks/{adsense_link}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="adSenseLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="AdSenseLinkName"/> if successful.</returns>
+        public static AdSenseLinkName Parse(string adSenseLinkName, bool allowUnparsed) =>
+            TryParse(adSenseLinkName, allowUnparsed, out AdSenseLinkName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AdSenseLinkName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/adSenseLinks/{adsense_link}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="adSenseLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AdSenseLinkName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string adSenseLinkName, out AdSenseLinkName result) =>
+            TryParse(adSenseLinkName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AdSenseLinkName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>properties/{property}/adSenseLinks/{adsense_link}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="adSenseLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AdSenseLinkName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string adSenseLinkName, bool allowUnparsed, out AdSenseLinkName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(adSenseLinkName, nameof(adSenseLinkName));
+            gax::TemplatedResourceName resourceName;
+            if (s_propertyAdsenseLink.TryParseName(adSenseLinkName, out resourceName))
+            {
+                result = FromPropertyAdsenseLink(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(adSenseLinkName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private AdSenseLinkName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string adsenseLinkId = null, string propertyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            AdsenseLinkId = adsenseLinkId;
+            PropertyId = propertyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AdSenseLinkName"/> class from the component parts of pattern
+        /// <c>properties/{property}/adSenseLinks/{adsense_link}</c>
+        /// </summary>
+        /// <param name="propertyId">The <c>Property</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="adsenseLinkId">The <c>AdsenseLink</c> ID. Must not be <c>null</c> or empty.</param>
+        public AdSenseLinkName(string propertyId, string adsenseLinkId) : this(ResourceNameType.PropertyAdsenseLink, propertyId: gax::GaxPreconditions.CheckNotNullOrEmpty(propertyId, nameof(propertyId)), adsenseLinkId: gax::GaxPreconditions.CheckNotNullOrEmpty(adsenseLinkId, nameof(adsenseLinkId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>AdsenseLink</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string AdsenseLinkId { get; }
+
+        /// <summary>
+        /// The <c>Property</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string PropertyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.PropertyAdsenseLink: return s_propertyAdsenseLink.Expand(PropertyId, AdsenseLinkId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as AdSenseLinkName);
+
+        /// <inheritdoc/>
+        public bool Equals(AdSenseLinkName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(AdSenseLinkName a, AdSenseLinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(AdSenseLinkName a, AdSenseLinkName b) => !(a == b);
+    }
+
     public partial class Account
     {
         /// <summary>
@@ -5402,6 +5623,18 @@ namespace Google.Analytics.Admin.V1Alpha
         public gaav::EnhancedMeasurementSettingsName EnhancedMeasurementSettingsName
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::EnhancedMeasurementSettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AdSenseLink
+    {
+        /// <summary>
+        /// <see cref="gaav::AdSenseLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::AdSenseLinkName AdSenseLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::AdSenseLinkName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
