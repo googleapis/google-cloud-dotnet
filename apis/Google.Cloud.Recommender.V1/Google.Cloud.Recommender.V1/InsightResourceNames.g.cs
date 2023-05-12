@@ -515,6 +515,9 @@ namespace Google.Cloud.Recommender.V1
             /// <c>organizations/{organization}/locations/{location}/insightTypes/{insight_type}</c>.
             /// </summary>
             OrganizationLocationInsightType = 4,
+
+            /// <summary>A resource name with pattern <c>insightTypes/{insight_type}</c>.</summary>
+            InsightType = 5,
         }
 
         private static gax::PathTemplate s_projectLocationInsightType = new gax::PathTemplate("projects/{project}/locations/{location}/insightTypes/{insight_type}");
@@ -524,6 +527,8 @@ namespace Google.Cloud.Recommender.V1
         private static gax::PathTemplate s_folderLocationInsightType = new gax::PathTemplate("folders/{folder}/locations/{location}/insightTypes/{insight_type}");
 
         private static gax::PathTemplate s_organizationLocationInsightType = new gax::PathTemplate("organizations/{organization}/locations/{location}/insightTypes/{insight_type}");
+
+        private static gax::PathTemplate s_insightType = new gax::PathTemplate("insightTypes/{insight_type}");
 
         /// <summary>Creates a <see cref="InsightTypeName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -577,6 +582,14 @@ namespace Google.Cloud.Recommender.V1
         /// <returns>A new instance of <see cref="InsightTypeName"/> constructed from the provided ids.</returns>
         public static InsightTypeName FromOrganizationLocationInsightType(string organizationId, string locationId, string insightTypeId) =>
             new InsightTypeName(ResourceNameType.OrganizationLocationInsightType, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), insightTypeId: gax::GaxPreconditions.CheckNotNullOrEmpty(insightTypeId, nameof(insightTypeId)));
+
+        /// <summary>
+        /// Creates a <see cref="InsightTypeName"/> with the pattern <c>insightTypes/{insight_type}</c>.
+        /// </summary>
+        /// <param name="insightTypeId">The <c>InsightType</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="InsightTypeName"/> constructed from the provided ids.</returns>
+        public static InsightTypeName FromInsightType(string insightTypeId) =>
+            new InsightTypeName(ResourceNameType.InsightType, insightTypeId: gax::GaxPreconditions.CheckNotNullOrEmpty(insightTypeId, nameof(insightTypeId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="InsightTypeName"/> with pattern
@@ -648,6 +661,18 @@ namespace Google.Cloud.Recommender.V1
         public static string FormatOrganizationLocationInsightType(string organizationId, string locationId, string insightTypeId) =>
             s_organizationLocationInsightType.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(insightTypeId, nameof(insightTypeId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="InsightTypeName"/> with pattern
+        /// <c>insightTypes/{insight_type}</c>.
+        /// </summary>
+        /// <param name="insightTypeId">The <c>InsightType</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="InsightTypeName"/> with pattern <c>insightTypes/{insight_type}</c>
+        /// .
+        /// </returns>
+        public static string FormatInsightType(string insightTypeId) =>
+            s_insightType.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(insightTypeId, nameof(insightTypeId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="InsightTypeName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -668,6 +693,7 @@ namespace Google.Cloud.Recommender.V1
         /// <c>organizations/{organization}/locations/{location}/insightTypes/{insight_type}</c>
         /// </description>
         /// </item>
+        /// <item><description><c>insightTypes/{insight_type}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="insightTypeName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -697,6 +723,7 @@ namespace Google.Cloud.Recommender.V1
         /// <c>organizations/{organization}/locations/{location}/insightTypes/{insight_type}</c>
         /// </description>
         /// </item>
+        /// <item><description><c>insightTypes/{insight_type}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -732,6 +759,7 @@ namespace Google.Cloud.Recommender.V1
         /// <c>organizations/{organization}/locations/{location}/insightTypes/{insight_type}</c>
         /// </description>
         /// </item>
+        /// <item><description><c>insightTypes/{insight_type}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="insightTypeName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -765,6 +793,7 @@ namespace Google.Cloud.Recommender.V1
         /// <c>organizations/{organization}/locations/{location}/insightTypes/{insight_type}</c>
         /// </description>
         /// </item>
+        /// <item><description><c>insightTypes/{insight_type}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -800,6 +829,11 @@ namespace Google.Cloud.Recommender.V1
             if (s_organizationLocationInsightType.TryParseName(insightTypeName, out resourceName))
             {
                 result = FromOrganizationLocationInsightType(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (s_insightType.TryParseName(insightTypeName, out resourceName))
+            {
+                result = FromInsightType(resourceName[0]);
                 return true;
             }
             if (allowUnparsed)
@@ -893,6 +927,7 @@ namespace Google.Cloud.Recommender.V1
                 case ResourceNameType.BillingAccountLocationInsightType: return s_billingAccountLocationInsightType.Expand(BillingAccountId, LocationId, InsightTypeId);
                 case ResourceNameType.FolderLocationInsightType: return s_folderLocationInsightType.Expand(FolderId, LocationId, InsightTypeId);
                 case ResourceNameType.OrganizationLocationInsightType: return s_organizationLocationInsightType.Expand(OrganizationId, LocationId, InsightTypeId);
+                case ResourceNameType.InsightType: return s_insightType.Expand(InsightTypeId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -921,6 +956,18 @@ namespace Google.Cloud.Recommender.V1
         public gcrv::InsightName InsightName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcrv::InsightName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class InsightType
+    {
+        /// <summary>
+        /// <see cref="gcrv::InsightTypeName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::InsightTypeName InsightTypeName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InsightTypeName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

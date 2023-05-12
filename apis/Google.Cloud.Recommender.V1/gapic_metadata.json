@@ -34,6 +34,12 @@
                 "GetRecommenderConfigAsync"
               ]
             },
+            "ListInsightTypes": {
+              "methods": [
+                "ListInsightTypes",
+                "ListInsightTypesAsync"
+              ]
+            },
             "ListInsights": {
               "methods": [
                 "ListInsights",
@@ -44,6 +50,12 @@
               "methods": [
                 "ListRecommendations",
                 "ListRecommendationsAsync"
+              ]
+            },
+            "ListRecommenders": {
+              "methods": [
+                "ListRecommenders",
+                "ListRecommendersAsync"
               ]
             },
             "MarkInsightAccepted": {

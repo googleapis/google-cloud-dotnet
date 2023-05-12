@@ -542,6 +542,9 @@ namespace Google.Cloud.Recommender.V1
             /// <c>organizations/{organization}/locations/{location}/recommenders/{recommender}</c>.
             /// </summary>
             OrganizationLocationRecommender = 4,
+
+            /// <summary>A resource name with pattern <c>recommenders/{recommender}</c>.</summary>
+            Recommender = 5,
         }
 
         private static gax::PathTemplate s_projectLocationRecommender = new gax::PathTemplate("projects/{project}/locations/{location}/recommenders/{recommender}");
@@ -551,6 +554,8 @@ namespace Google.Cloud.Recommender.V1
         private static gax::PathTemplate s_folderLocationRecommender = new gax::PathTemplate("folders/{folder}/locations/{location}/recommenders/{recommender}");
 
         private static gax::PathTemplate s_organizationLocationRecommender = new gax::PathTemplate("organizations/{organization}/locations/{location}/recommenders/{recommender}");
+
+        private static gax::PathTemplate s_recommender = new gax::PathTemplate("recommenders/{recommender}");
 
         /// <summary>Creates a <see cref="RecommenderName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -604,6 +609,14 @@ namespace Google.Cloud.Recommender.V1
         /// <returns>A new instance of <see cref="RecommenderName"/> constructed from the provided ids.</returns>
         public static RecommenderName FromOrganizationLocationRecommender(string organizationId, string locationId, string recommenderId) =>
             new RecommenderName(ResourceNameType.OrganizationLocationRecommender, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), recommenderId: gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)));
+
+        /// <summary>
+        /// Creates a <see cref="RecommenderName"/> with the pattern <c>recommenders/{recommender}</c>.
+        /// </summary>
+        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="RecommenderName"/> constructed from the provided ids.</returns>
+        public static RecommenderName FromRecommender(string recommenderId) =>
+            new RecommenderName(ResourceNameType.Recommender, recommenderId: gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="RecommenderName"/> with pattern
@@ -675,6 +688,18 @@ namespace Google.Cloud.Recommender.V1
         public static string FormatOrganizationLocationRecommender(string organizationId, string locationId, string recommenderId) =>
             s_organizationLocationRecommender.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RecommenderName"/> with pattern
+        /// <c>recommenders/{recommender}</c>.
+        /// </summary>
+        /// <param name="recommenderId">The <c>Recommender</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RecommenderName"/> with pattern <c>recommenders/{recommender}</c>
+        /// .
+        /// </returns>
+        public static string FormatRecommender(string recommenderId) =>
+            s_recommender.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(recommenderId, nameof(recommenderId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="RecommenderName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -695,6 +720,7 @@ namespace Google.Cloud.Recommender.V1
         /// <c>organizations/{organization}/locations/{location}/recommenders/{recommender}</c>
         /// </description>
         /// </item>
+        /// <item><description><c>recommenders/{recommender}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="recommenderName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -724,6 +750,7 @@ namespace Google.Cloud.Recommender.V1
         /// <c>organizations/{organization}/locations/{location}/recommenders/{recommender}</c>
         /// </description>
         /// </item>
+        /// <item><description><c>recommenders/{recommender}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -759,6 +786,7 @@ namespace Google.Cloud.Recommender.V1
         /// <c>organizations/{organization}/locations/{location}/recommenders/{recommender}</c>
         /// </description>
         /// </item>
+        /// <item><description><c>recommenders/{recommender}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="recommenderName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -792,6 +820,7 @@ namespace Google.Cloud.Recommender.V1
         /// <c>organizations/{organization}/locations/{location}/recommenders/{recommender}</c>
         /// </description>
         /// </item>
+        /// <item><description><c>recommenders/{recommender}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -827,6 +856,11 @@ namespace Google.Cloud.Recommender.V1
             if (s_organizationLocationRecommender.TryParseName(recommenderName, out resourceName))
             {
                 result = FromOrganizationLocationRecommender(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (s_recommender.TryParseName(recommenderName, out resourceName))
+            {
+                result = FromRecommender(resourceName[0]);
                 return true;
             }
             if (allowUnparsed)
@@ -920,6 +954,7 @@ namespace Google.Cloud.Recommender.V1
                 case ResourceNameType.BillingAccountLocationRecommender: return s_billingAccountLocationRecommender.Expand(BillingAccountId, LocationId, RecommenderId);
                 case ResourceNameType.FolderLocationRecommender: return s_folderLocationRecommender.Expand(FolderId, LocationId, RecommenderId);
                 case ResourceNameType.OrganizationLocationRecommender: return s_organizationLocationRecommender.Expand(OrganizationId, LocationId, RecommenderId);
+                case ResourceNameType.Recommender: return s_recommender.Expand(RecommenderId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -948,6 +983,18 @@ namespace Google.Cloud.Recommender.V1
         public gcrv::RecommendationName RecommendationName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommendationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RecommenderType
+    {
+        /// <summary>
+        /// <see cref="gcrv::RecommenderName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::RecommenderName RecommenderName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::RecommenderName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

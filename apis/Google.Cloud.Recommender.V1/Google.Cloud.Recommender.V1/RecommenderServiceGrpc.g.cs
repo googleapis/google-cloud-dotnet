@@ -102,6 +102,14 @@ namespace Google.Cloud.Recommender.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.InsightTypeConfig> __Marshaller_google_cloud_recommender_v1_InsightTypeConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.InsightTypeConfig.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest> __Marshaller_google_cloud_recommender_v1_UpdateInsightTypeConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListRecommendersRequest> __Marshaller_google_cloud_recommender_v1_ListRecommendersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.ListRecommendersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListRecommendersResponse> __Marshaller_google_cloud_recommender_v1_ListRecommendersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.ListRecommendersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListInsightTypesRequest> __Marshaller_google_cloud_recommender_v1_ListInsightTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.ListInsightTypesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListInsightTypesResponse> __Marshaller_google_cloud_recommender_v1_ListInsightTypesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Recommender.V1.ListInsightTypesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Recommender.V1.ListInsightsRequest, global::Google.Cloud.Recommender.V1.ListInsightsResponse> __Method_ListInsights = new grpc::Method<global::Google.Cloud.Recommender.V1.ListInsightsRequest, global::Google.Cloud.Recommender.V1.ListInsightsResponse>(
@@ -198,6 +206,22 @@ namespace Google.Cloud.Recommender.V1 {
         "UpdateInsightTypeConfig",
         __Marshaller_google_cloud_recommender_v1_UpdateInsightTypeConfigRequest,
         __Marshaller_google_cloud_recommender_v1_InsightTypeConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Recommender.V1.ListRecommendersRequest, global::Google.Cloud.Recommender.V1.ListRecommendersResponse> __Method_ListRecommenders = new grpc::Method<global::Google.Cloud.Recommender.V1.ListRecommendersRequest, global::Google.Cloud.Recommender.V1.ListRecommendersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRecommenders",
+        __Marshaller_google_cloud_recommender_v1_ListRecommendersRequest,
+        __Marshaller_google_cloud_recommender_v1_ListRecommendersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Recommender.V1.ListInsightTypesRequest, global::Google.Cloud.Recommender.V1.ListInsightTypesResponse> __Method_ListInsightTypes = new grpc::Method<global::Google.Cloud.Recommender.V1.ListInsightTypesRequest, global::Google.Cloud.Recommender.V1.ListInsightTypesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListInsightTypes",
+        __Marshaller_google_cloud_recommender_v1_ListInsightTypesRequest,
+        __Marshaller_google_cloud_recommender_v1_ListInsightTypesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -391,6 +415,32 @@ namespace Google.Cloud.Recommender.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Recommender.V1.InsightTypeConfig> UpdateInsightTypeConfig(global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all available Recommenders.
+      /// No IAM permissions are required.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Recommender.V1.ListRecommendersResponse> ListRecommenders(global::Google.Cloud.Recommender.V1.ListRecommendersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists available InsightTypes.
+      /// No IAM permissions are required.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Recommender.V1.ListInsightTypesResponse> ListInsightTypes(global::Google.Cloud.Recommender.V1.ListInsightTypesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1168,6 +1218,110 @@ namespace Google.Cloud.Recommender.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInsightTypeConfig, null, options, request);
       }
+      /// <summary>
+      /// Lists all available Recommenders.
+      /// No IAM permissions are required.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.ListRecommendersResponse ListRecommenders(global::Google.Cloud.Recommender.V1.ListRecommendersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRecommenders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all available Recommenders.
+      /// No IAM permissions are required.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.ListRecommendersResponse ListRecommenders(global::Google.Cloud.Recommender.V1.ListRecommendersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRecommenders, null, options, request);
+      }
+      /// <summary>
+      /// Lists all available Recommenders.
+      /// No IAM permissions are required.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.ListRecommendersResponse> ListRecommendersAsync(global::Google.Cloud.Recommender.V1.ListRecommendersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRecommendersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all available Recommenders.
+      /// No IAM permissions are required.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.ListRecommendersResponse> ListRecommendersAsync(global::Google.Cloud.Recommender.V1.ListRecommendersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRecommenders, null, options, request);
+      }
+      /// <summary>
+      /// Lists available InsightTypes.
+      /// No IAM permissions are required.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.ListInsightTypesResponse ListInsightTypes(global::Google.Cloud.Recommender.V1.ListInsightTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListInsightTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists available InsightTypes.
+      /// No IAM permissions are required.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Recommender.V1.ListInsightTypesResponse ListInsightTypes(global::Google.Cloud.Recommender.V1.ListInsightTypesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListInsightTypes, null, options, request);
+      }
+      /// <summary>
+      /// Lists available InsightTypes.
+      /// No IAM permissions are required.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.ListInsightTypesResponse> ListInsightTypesAsync(global::Google.Cloud.Recommender.V1.ListInsightTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListInsightTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists available InsightTypes.
+      /// No IAM permissions are required.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.ListInsightTypesResponse> ListInsightTypesAsync(global::Google.Cloud.Recommender.V1.ListInsightTypesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListInsightTypes, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override RecommenderClient NewInstance(ClientBaseConfiguration configuration)
@@ -1193,7 +1347,9 @@ namespace Google.Cloud.Recommender.V1 {
           .AddMethod(__Method_GetRecommenderConfig, serviceImpl.GetRecommenderConfig)
           .AddMethod(__Method_UpdateRecommenderConfig, serviceImpl.UpdateRecommenderConfig)
           .AddMethod(__Method_GetInsightTypeConfig, serviceImpl.GetInsightTypeConfig)
-          .AddMethod(__Method_UpdateInsightTypeConfig, serviceImpl.UpdateInsightTypeConfig).Build();
+          .AddMethod(__Method_UpdateInsightTypeConfig, serviceImpl.UpdateInsightTypeConfig)
+          .AddMethod(__Method_ListRecommenders, serviceImpl.ListRecommenders)
+          .AddMethod(__Method_ListInsightTypes, serviceImpl.ListInsightTypes).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1215,6 +1371,8 @@ namespace Google.Cloud.Recommender.V1 {
       serviceBinder.AddMethod(__Method_UpdateRecommenderConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.UpdateRecommenderConfigRequest, global::Google.Cloud.Recommender.V1.RecommenderConfig>(serviceImpl.UpdateRecommenderConfig));
       serviceBinder.AddMethod(__Method_GetInsightTypeConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.GetInsightTypeConfigRequest, global::Google.Cloud.Recommender.V1.InsightTypeConfig>(serviceImpl.GetInsightTypeConfig));
       serviceBinder.AddMethod(__Method_UpdateInsightTypeConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.UpdateInsightTypeConfigRequest, global::Google.Cloud.Recommender.V1.InsightTypeConfig>(serviceImpl.UpdateInsightTypeConfig));
+      serviceBinder.AddMethod(__Method_ListRecommenders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.ListRecommendersRequest, global::Google.Cloud.Recommender.V1.ListRecommendersResponse>(serviceImpl.ListRecommenders));
+      serviceBinder.AddMethod(__Method_ListInsightTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.ListInsightTypesRequest, global::Google.Cloud.Recommender.V1.ListInsightTypesResponse>(serviceImpl.ListInsightTypes));
     }
 
   }

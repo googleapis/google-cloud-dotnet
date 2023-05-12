@@ -1642,5 +1642,185 @@ namespace GoogleCSharpSnippets
             InsightTypeConfig response = await recommenderClient.UpdateInsightTypeConfigAsync(insightTypeConfig, updateMask);
             // End snippet
         }
+
+        /// <summary>Snippet for ListRecommenders</summary>
+        public void ListRecommendersRequestObject()
+        {
+            // Snippet: ListRecommenders(ListRecommendersRequest, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            ListRecommendersRequest request = new ListRecommendersRequest { };
+            // Make the request
+            PagedEnumerable<ListRecommendersResponse, RecommenderType> response = recommenderClient.ListRecommenders(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RecommenderType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRecommendersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RecommenderType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RecommenderType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RecommenderType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRecommendersAsync</summary>
+        public async Task ListRecommendersRequestObjectAsync()
+        {
+            // Snippet: ListRecommendersAsync(ListRecommendersRequest, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            ListRecommendersRequest request = new ListRecommendersRequest { };
+            // Make the request
+            PagedAsyncEnumerable<ListRecommendersResponse, RecommenderType> response = recommenderClient.ListRecommendersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((RecommenderType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListRecommendersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RecommenderType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RecommenderType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RecommenderType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInsightTypes</summary>
+        public void ListInsightTypesRequestObject()
+        {
+            // Snippet: ListInsightTypes(ListInsightTypesRequest, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            ListInsightTypesRequest request = new ListInsightTypesRequest { };
+            // Make the request
+            PagedEnumerable<ListInsightTypesResponse, InsightType> response = recommenderClient.ListInsightTypes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (InsightType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInsightTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InsightType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InsightType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InsightType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInsightTypesAsync</summary>
+        public async Task ListInsightTypesRequestObjectAsync()
+        {
+            // Snippet: ListInsightTypesAsync(ListInsightTypesRequest, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            ListInsightTypesRequest request = new ListInsightTypesRequest { };
+            // Make the request
+            PagedAsyncEnumerable<ListInsightTypesResponse, InsightType> response = recommenderClient.ListInsightTypesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((InsightType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInsightTypesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InsightType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InsightType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InsightType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }

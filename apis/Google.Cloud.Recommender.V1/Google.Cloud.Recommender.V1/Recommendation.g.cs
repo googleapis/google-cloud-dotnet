@@ -93,18 +93,20 @@ namespace Google.Cloud.Recommender.V1 {
             "dGVJbmZvLlN0YXRlTWV0YWRhdGFFbnRyeRo0ChJTdGF0ZU1ldGFkYXRhRW50",
             "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJhCgVTdGF0ZRIV",
             "ChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEgsKB0NMQUlNRUQQ",
-            "BhINCglTVUNDRUVERUQQAxIKCgZGQUlMRUQQBBINCglESVNNSVNTRUQQBULe",
-            "AwofY29tLmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MVABWkFjbG91ZC5n",
-            "b29nbGUuY29tL2dvL3JlY29tbWVuZGVyL2FwaXYxL3JlY29tbWVuZGVycGI7",
-            "cmVjb21tZW5kZXJwYqICBENSRUOqAhtHb29nbGUuQ2xvdWQuUmVjb21tZW5k",
-            "ZXIuVjHqQc8CCiZyZWNvbW1lbmRlci5nb29nbGVhcGlzLmNvbS9SZWNvbW1l",
-            "bmRlchJCcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L3JlY29tbWVuZGVycy97cmVjb21tZW5kZXJ9ElFiaWxsaW5nQWNjb3VudHMv",
-            "e2JpbGxpbmdfYWNjb3VudH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVjb21t",
-            "ZW5kZXJzL3tyZWNvbW1lbmRlcn0SQGZvbGRlcnMve2ZvbGRlcn0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vcmVjb21tZW5kZXJzL3tyZWNvbW1lbmRlcn0STG9y",
-            "Z2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vcmVjb21tZW5kZXJzL3tyZWNvbW1lbmRlcn1iBnByb3RvMw=="));
+            "BhINCglTVUNDRUVERUQQAxIKCgZGQUlMRUQQBBINCglESVNNSVNTRUQQBSKR",
+            "AwoPUmVjb21tZW5kZXJUeXBlEgwKBG5hbWUYASABKAk67wLqQesCCiZyZWNv",
+            "bW1lbmRlci5nb29nbGVhcGlzLmNvbS9SZWNvbW1lbmRlchJCcHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3JlY29tbWVuZGVycy97",
+            "cmVjb21tZW5kZXJ9ElFiaWxsaW5nQWNjb3VudHMve2JpbGxpbmdfYWNjb3Vu",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVjb21tZW5kZXJzL3tyZWNvbW1l",
+            "bmRlcn0SQGZvbGRlcnMve2ZvbGRlcn0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "cmVjb21tZW5kZXJzL3tyZWNvbW1lbmRlcn0STG9yZ2FuaXphdGlvbnMve29y",
+            "Z2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVjb21tZW5kZXJz",
+            "L3tyZWNvbW1lbmRlcn0SGnJlY29tbWVuZGVycy97cmVjb21tZW5kZXJ9QosB",
+            "Ch9jb20uZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxUAFaQWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vcmVjb21tZW5kZXIvYXBpdjEvcmVjb21tZW5kZXJwYjty",
+            "ZWNvbW1lbmRlcnBiogIEQ1JFQ6oCG0dvb2dsZS5DbG91ZC5SZWNvbW1lbmRl",
+            "ci5WMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -116,7 +118,8 @@ namespace Google.Cloud.Recommender.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.CostProjection), global::Google.Cloud.Recommender.V1.CostProjection.Parser, new[]{ "Cost", "Duration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.SecurityProjection), global::Google.Cloud.Recommender.V1.SecurityProjection.Parser, new[]{ "Details" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Impact), global::Google.Cloud.Recommender.V1.Impact.Parser, new[]{ "Category", "CostProjection", "SecurityProjection" }, new[]{ "Projection" }, new[]{ typeof(global::Google.Cloud.Recommender.V1.Impact.Types.Category) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.RecommendationStateInfo), global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Parser, new[]{ "State", "StateMetadata" }, null, new[]{ typeof(global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.RecommendationStateInfo), global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Parser, new[]{ "State", "StateMetadata" }, null, new[]{ typeof(global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.RecommenderType), global::Google.Cloud.Recommender.V1.RecommenderType.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -3417,6 +3420,202 @@ namespace Google.Cloud.Recommender.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// The type of a recommender.
+  /// </summary>
+  public sealed partial class RecommenderType : pb::IMessage<RecommenderType>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RecommenderType> _parser = new pb::MessageParser<RecommenderType>(() => new RecommenderType());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RecommenderType> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Recommender.V1.RecommendationReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RecommenderType() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RecommenderType(RecommenderType other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RecommenderType Clone() {
+      return new RecommenderType(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The recommender's name in format RecommenderTypes/{recommender_type}
+    /// eg:  recommenderTypes/google.iam.policy.Recommender
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RecommenderType);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RecommenderType other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RecommenderType other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

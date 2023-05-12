@@ -58,6 +58,8 @@ namespace Google.Cloud.Recommender.V1
             UpdateRecommenderConfigSettings = existing.UpdateRecommenderConfigSettings;
             GetInsightTypeConfigSettings = existing.GetInsightTypeConfigSettings;
             UpdateInsightTypeConfigSettings = existing.UpdateInsightTypeConfigSettings;
+            ListRecommendersSettings = existing.ListRecommendersSettings;
+            ListInsightTypesSettings = existing.ListInsightTypesSettings;
             OnCopy(existing);
         }
 
@@ -245,6 +247,30 @@ namespace Google.Cloud.Recommender.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateInsightTypeConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecommenderClient.ListRecommenders</c> and <c>RecommenderClient.ListRecommendersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRecommendersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecommenderClient.ListInsightTypes</c> and <c>RecommenderClient.ListInsightTypesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListInsightTypesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="RecommenderSettings"/> object.</returns>
@@ -2744,6 +2770,46 @@ namespace Google.Cloud.Recommender.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<InsightTypeConfig> UpdateInsightTypeConfigAsync(InsightTypeConfig insightTypeConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateInsightTypeConfigAsync(insightTypeConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all available Recommenders.
+        /// No IAM permissions are required.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RecommenderType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRecommendersResponse, RecommenderType> ListRecommenders(ListRecommendersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all available Recommenders.
+        /// No IAM permissions are required.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RecommenderType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRecommendersResponse, RecommenderType> ListRecommendersAsync(ListRecommendersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists available InsightTypes.
+        /// No IAM permissions are required.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="InsightType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInsightTypesResponse, InsightType> ListInsightTypes(ListInsightTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists available InsightTypes.
+        /// No IAM permissions are required.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="InsightType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInsightTypesResponse, InsightType> ListInsightTypesAsync(ListInsightTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>Recommender client wrapper implementation, for convenient use.</summary>
@@ -2778,6 +2844,10 @@ namespace Google.Cloud.Recommender.V1
         private readonly gaxgrpc::ApiCall<GetInsightTypeConfigRequest, InsightTypeConfig> _callGetInsightTypeConfig;
 
         private readonly gaxgrpc::ApiCall<UpdateInsightTypeConfigRequest, InsightTypeConfig> _callUpdateInsightTypeConfig;
+
+        private readonly gaxgrpc::ApiCall<ListRecommendersRequest, ListRecommendersResponse> _callListRecommenders;
+
+        private readonly gaxgrpc::ApiCall<ListInsightTypesRequest, ListInsightTypesResponse> _callListInsightTypes;
 
         /// <summary>
         /// Constructs a client wrapper for the Recommender service, with the specified gRPC client and settings.
@@ -2826,6 +2896,12 @@ namespace Google.Cloud.Recommender.V1
             _callUpdateInsightTypeConfig = clientHelper.BuildApiCall<UpdateInsightTypeConfigRequest, InsightTypeConfig>("UpdateInsightTypeConfig", grpcClient.UpdateInsightTypeConfigAsync, grpcClient.UpdateInsightTypeConfig, effectiveSettings.UpdateInsightTypeConfigSettings).WithGoogleRequestParam("insight_type_config.name", request => request.InsightTypeConfig?.Name);
             Modify_ApiCall(ref _callUpdateInsightTypeConfig);
             Modify_UpdateInsightTypeConfigApiCall(ref _callUpdateInsightTypeConfig);
+            _callListRecommenders = clientHelper.BuildApiCall<ListRecommendersRequest, ListRecommendersResponse>("ListRecommenders", grpcClient.ListRecommendersAsync, grpcClient.ListRecommenders, effectiveSettings.ListRecommendersSettings);
+            Modify_ApiCall(ref _callListRecommenders);
+            Modify_ListRecommendersApiCall(ref _callListRecommenders);
+            _callListInsightTypes = clientHelper.BuildApiCall<ListInsightTypesRequest, ListInsightTypesResponse>("ListInsightTypes", grpcClient.ListInsightTypesAsync, grpcClient.ListInsightTypes, effectiveSettings.ListInsightTypesSettings);
+            Modify_ApiCall(ref _callListInsightTypes);
+            Modify_ListInsightTypesApiCall(ref _callListInsightTypes);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2855,6 +2931,10 @@ namespace Google.Cloud.Recommender.V1
 
         partial void Modify_UpdateInsightTypeConfigApiCall(ref gaxgrpc::ApiCall<UpdateInsightTypeConfigRequest, InsightTypeConfig> call);
 
+        partial void Modify_ListRecommendersApiCall(ref gaxgrpc::ApiCall<ListRecommendersRequest, ListRecommendersResponse> call);
+
+        partial void Modify_ListInsightTypesApiCall(ref gaxgrpc::ApiCall<ListInsightTypesRequest, ListInsightTypesResponse> call);
+
         partial void OnConstruction(Recommender.RecommenderClient grpcClient, RecommenderSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Recommender client</summary>
@@ -2883,6 +2963,10 @@ namespace Google.Cloud.Recommender.V1
         partial void Modify_GetInsightTypeConfigRequest(ref GetInsightTypeConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateInsightTypeConfigRequest(ref UpdateInsightTypeConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRecommendersRequest(ref ListRecommendersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListInsightTypesRequest(ref ListInsightTypesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists insights for the specified Cloud Resource. Requires the
@@ -3255,6 +3339,58 @@ namespace Google.Cloud.Recommender.V1
             Modify_UpdateInsightTypeConfigRequest(ref request, ref callSettings);
             return _callUpdateInsightTypeConfig.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists all available Recommenders.
+        /// No IAM permissions are required.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RecommenderType"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRecommendersResponse, RecommenderType> ListRecommenders(ListRecommendersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRecommendersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRecommendersRequest, ListRecommendersResponse, RecommenderType>(_callListRecommenders, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all available Recommenders.
+        /// No IAM permissions are required.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RecommenderType"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListRecommendersResponse, RecommenderType> ListRecommendersAsync(ListRecommendersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRecommendersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRecommendersRequest, ListRecommendersResponse, RecommenderType>(_callListRecommenders, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists available InsightTypes.
+        /// No IAM permissions are required.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="InsightType"/> resources.</returns>
+        public override gax::PagedEnumerable<ListInsightTypesResponse, InsightType> ListInsightTypes(ListInsightTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInsightTypesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListInsightTypesRequest, ListInsightTypesResponse, InsightType>(_callListInsightTypes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists available InsightTypes.
+        /// No IAM permissions are required.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="InsightType"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListInsightTypesResponse, InsightType> ListInsightTypesAsync(ListInsightTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInsightTypesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInsightTypesRequest, ListInsightTypesResponse, InsightType>(_callListInsightTypes, request, callSettings);
+        }
     }
 
     public partial class ListInsightsRequest : gaxgrpc::IPageRequest
@@ -3262,6 +3398,14 @@ namespace Google.Cloud.Recommender.V1
     }
 
     public partial class ListRecommendationsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListRecommendersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListInsightTypesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -3277,6 +3421,22 @@ namespace Google.Cloud.Recommender.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Recommendation> GetEnumerator() => Recommendations.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRecommendersResponse : gaxgrpc::IPageResponse<RecommenderType>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RecommenderType> GetEnumerator() => Recommenders.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListInsightTypesResponse : gaxgrpc::IPageResponse<InsightType>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<InsightType> GetEnumerator() => InsightTypes.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

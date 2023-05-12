@@ -3709,6 +3709,200 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_ListRecommenders_sync",
+      "title": "ListRecommendersRequestObject",
+      "description": "Snippet for ListRecommenders",
+      "file": "RecommenderClient.ListRecommendersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRecommenders",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListRecommenders",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.ListRecommendersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Recommender.V1.ListRecommendersResponse, Google.Cloud.Recommender.V1.RecommenderType>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "ListRecommenders",
+          "fullName": "google.cloud.recommender.v1.Recommender.ListRecommenders",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_ListRecommenders_async",
+      "title": "ListRecommendersRequestObjectAsync",
+      "description": "Snippet for ListRecommendersAsync",
+      "file": "RecommenderClient.ListRecommendersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRecommendersAsync",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListRecommendersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.ListRecommendersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Recommender.V1.ListRecommendersResponse, Google.Cloud.Recommender.V1.RecommenderType>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "ListRecommenders",
+          "fullName": "google.cloud.recommender.v1.Recommender.ListRecommenders",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_ListInsightTypes_sync",
+      "title": "ListInsightTypesRequestObject",
+      "description": "Snippet for ListInsightTypes",
+      "file": "RecommenderClient.ListInsightTypesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInsightTypes",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListInsightTypes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.ListInsightTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Recommender.V1.ListInsightTypesResponse, Google.Cloud.Recommender.V1.InsightType>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "ListInsightTypes",
+          "fullName": "google.cloud.recommender.v1.Recommender.ListInsightTypes",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recommender_v1_generated_Recommender_ListInsightTypes_async",
+      "title": "ListInsightTypesRequestObjectAsync",
+      "description": "Snippet for ListInsightTypesAsync",
+      "file": "RecommenderClient.ListInsightTypesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInsightTypesAsync",
+        "fullName": "Google.Cloud.Recommender.V1.RecommenderClient.ListInsightTypesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Recommender.V1.ListInsightTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Recommender.V1.ListInsightTypesResponse, Google.Cloud.Recommender.V1.InsightType>",
+        "client": {
+          "shortName": "RecommenderClient",
+          "fullName": "Google.Cloud.Recommender.V1.RecommenderClient"
+        },
+        "method": {
+          "shortName": "ListInsightTypes",
+          "fullName": "google.cloud.recommender.v1.Recommender.ListInsightTypes",
+          "service": {
+            "shortName": "Recommender",
+            "fullName": "google.cloud.recommender.v1.Recommender"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
