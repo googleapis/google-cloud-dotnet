@@ -55,6 +55,7 @@ namespace GoogleCSharpSnippets
                 TopicMessageRetentionDuration = new Duration(),
                 BigqueryConfig = new BigQueryConfig(),
                 State = Subscription.Types.State.Unspecified,
+                CloudStorageConfig = new CloudStorageConfig(),
             };
             // Make the request
             Subscription response = await subscriberServiceApiClient.CreateSubscriptionAsync(request);
