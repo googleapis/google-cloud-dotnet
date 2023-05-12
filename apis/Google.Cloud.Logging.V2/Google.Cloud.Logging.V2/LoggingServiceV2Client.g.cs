@@ -1123,15 +1123,14 @@ namespace Google.Cloud.Logging.V2
         /// * `folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
+        /// A maximum of 100 resources may be specified in a single request.
         /// </param>
         /// <param name="filter">
-        /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
-        /// Only log entries that match the filter are returned.  An empty filter
-        /// matches all log entries in the resources listed in `resource_names`.
+        /// Optional. Only log entries that match the filter are returned.  An empty
+        /// filter matches all log entries in the resources listed in `resource_names`.
         /// Referencing a parent resource that is not listed in `resource_names` will
-        /// cause the filter to return no results. The maximum length of the filter is
-        /// 20000 characters.
+        /// cause the filter to return no results. The maximum length of a filter is
+        /// 20,000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1187,15 +1186,14 @@ namespace Google.Cloud.Logging.V2
         /// * `folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
+        /// A maximum of 100 resources may be specified in a single request.
         /// </param>
         /// <param name="filter">
-        /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
-        /// Only log entries that match the filter are returned.  An empty filter
-        /// matches all log entries in the resources listed in `resource_names`.
+        /// Optional. Only log entries that match the filter are returned.  An empty
+        /// filter matches all log entries in the resources listed in `resource_names`.
         /// Referencing a parent resource that is not listed in `resource_names` will
-        /// cause the filter to return no results. The maximum length of the filter is
-        /// 20000 characters.
+        /// cause the filter to return no results. The maximum length of a filter is
+        /// 20,000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1251,15 +1249,14 @@ namespace Google.Cloud.Logging.V2
         /// * `folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
+        /// A maximum of 100 resources may be specified in a single request.
         /// </param>
         /// <param name="filter">
-        /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
-        /// Only log entries that match the filter are returned.  An empty filter
-        /// matches all log entries in the resources listed in `resource_names`.
+        /// Optional. Only log entries that match the filter are returned.  An empty
+        /// filter matches all log entries in the resources listed in `resource_names`.
         /// Referencing a parent resource that is not listed in `resource_names` will
-        /// cause the filter to return no results. The maximum length of the filter is
-        /// 20000 characters.
+        /// cause the filter to return no results. The maximum length of a filter is
+        /// 20,000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1315,15 +1312,14 @@ namespace Google.Cloud.Logging.V2
         /// * `folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
+        /// A maximum of 100 resources may be specified in a single request.
         /// </param>
         /// <param name="filter">
-        /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
-        /// Only log entries that match the filter are returned.  An empty filter
-        /// matches all log entries in the resources listed in `resource_names`.
+        /// Optional. Only log entries that match the filter are returned.  An empty
+        /// filter matches all log entries in the resources listed in `resource_names`.
         /// Referencing a parent resource that is not listed in `resource_names` will
-        /// cause the filter to return no results. The maximum length of the filter is
-        /// 20000 characters.
+        /// cause the filter to return no results. The maximum length of a filter is
+        /// 20,000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1379,15 +1375,14 @@ namespace Google.Cloud.Logging.V2
         /// * `folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
+        /// A maximum of 100 resources may be specified in a single request.
         /// </param>
         /// <param name="filter">
-        /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
-        /// Only log entries that match the filter are returned.  An empty filter
-        /// matches all log entries in the resources listed in `resource_names`.
+        /// Optional. Only log entries that match the filter are returned.  An empty
+        /// filter matches all log entries in the resources listed in `resource_names`.
         /// Referencing a parent resource that is not listed in `resource_names` will
-        /// cause the filter to return no results. The maximum length of the filter is
-        /// 20000 characters.
+        /// cause the filter to return no results. The maximum length of a filter is
+        /// 20,000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1443,15 +1438,14 @@ namespace Google.Cloud.Logging.V2
         /// * `folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
+        /// A maximum of 100 resources may be specified in a single request.
         /// </param>
         /// <param name="filter">
-        /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
-        /// Only log entries that match the filter are returned.  An empty filter
-        /// matches all log entries in the resources listed in `resource_names`.
+        /// Optional. Only log entries that match the filter are returned.  An empty
+        /// filter matches all log entries in the resources listed in `resource_names`.
         /// Referencing a parent resource that is not listed in `resource_names` will
-        /// cause the filter to return no results. The maximum length of the filter is
-        /// 20000 characters.
+        /// cause the filter to return no results. The maximum length of a filter is
+        /// 20,000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1507,15 +1501,14 @@ namespace Google.Cloud.Logging.V2
         /// * `folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
+        /// A maximum of 100 resources may be specified in a single request.
         /// </param>
         /// <param name="filter">
-        /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
-        /// Only log entries that match the filter are returned.  An empty filter
-        /// matches all log entries in the resources listed in `resource_names`.
+        /// Optional. Only log entries that match the filter are returned.  An empty
+        /// filter matches all log entries in the resources listed in `resource_names`.
         /// Referencing a parent resource that is not listed in `resource_names` will
-        /// cause the filter to return no results. The maximum length of the filter is
-        /// 20000 characters.
+        /// cause the filter to return no results. The maximum length of a filter is
+        /// 20,000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1571,15 +1564,14 @@ namespace Google.Cloud.Logging.V2
         /// * `folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
+        /// A maximum of 100 resources may be specified in a single request.
         /// </param>
         /// <param name="filter">
-        /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
-        /// Only log entries that match the filter are returned.  An empty filter
-        /// matches all log entries in the resources listed in `resource_names`.
+        /// Optional. Only log entries that match the filter are returned.  An empty
+        /// filter matches all log entries in the resources listed in `resource_names`.
         /// Referencing a parent resource that is not listed in `resource_names` will
-        /// cause the filter to return no results. The maximum length of the filter is
-        /// 20000 characters.
+        /// cause the filter to return no results. The maximum length of a filter is
+        /// 20,000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1635,15 +1627,14 @@ namespace Google.Cloud.Logging.V2
         /// * `folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
+        /// A maximum of 100 resources may be specified in a single request.
         /// </param>
         /// <param name="filter">
-        /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
-        /// Only log entries that match the filter are returned.  An empty filter
-        /// matches all log entries in the resources listed in `resource_names`.
+        /// Optional. Only log entries that match the filter are returned.  An empty
+        /// filter matches all log entries in the resources listed in `resource_names`.
         /// Referencing a parent resource that is not listed in `resource_names` will
-        /// cause the filter to return no results. The maximum length of the filter is
-        /// 20000 characters.
+        /// cause the filter to return no results. The maximum length of a filter is
+        /// 20,000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1699,15 +1690,14 @@ namespace Google.Cloud.Logging.V2
         /// * `folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]`
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
+        /// A maximum of 100 resources may be specified in a single request.
         /// </param>
         /// <param name="filter">
-        /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
-        /// Only log entries that match the filter are returned.  An empty filter
-        /// matches all log entries in the resources listed in `resource_names`.
+        /// Optional. Only log entries that match the filter are returned.  An empty
+        /// filter matches all log entries in the resources listed in `resource_names`.
         /// Referencing a parent resource that is not listed in `resource_names` will
-        /// cause the filter to return no results. The maximum length of the filter is
-        /// 20000 characters.
+        /// cause the filter to return no results. The maximum length of a filter is
+        /// 20,000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1785,7 +1775,7 @@ namespace Google.Cloud.Logging.V2
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name that owns the logs:
+        /// Required. The resource name to list logs for:
         /// 
         /// *  `projects/[PROJECT_ID]`
         /// *  `organizations/[ORGANIZATION_ID]`
@@ -1815,7 +1805,7 @@ namespace Google.Cloud.Logging.V2
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name that owns the logs:
+        /// Required. The resource name to list logs for:
         /// 
         /// *  `projects/[PROJECT_ID]`
         /// *  `organizations/[ORGANIZATION_ID]`
@@ -1845,7 +1835,7 @@ namespace Google.Cloud.Logging.V2
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name that owns the logs:
+        /// Required. The resource name to list logs for:
         /// 
         /// *  `projects/[PROJECT_ID]`
         /// *  `organizations/[ORGANIZATION_ID]`
@@ -1875,7 +1865,7 @@ namespace Google.Cloud.Logging.V2
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name that owns the logs:
+        /// Required. The resource name to list logs for:
         /// 
         /// *  `projects/[PROJECT_ID]`
         /// *  `organizations/[ORGANIZATION_ID]`
@@ -1905,7 +1895,7 @@ namespace Google.Cloud.Logging.V2
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name that owns the logs:
+        /// Required. The resource name to list logs for:
         /// 
         /// *  `projects/[PROJECT_ID]`
         /// *  `organizations/[ORGANIZATION_ID]`
@@ -1935,7 +1925,7 @@ namespace Google.Cloud.Logging.V2
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name that owns the logs:
+        /// Required. The resource name to list logs for:
         /// 
         /// *  `projects/[PROJECT_ID]`
         /// *  `organizations/[ORGANIZATION_ID]`
@@ -1965,7 +1955,7 @@ namespace Google.Cloud.Logging.V2
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name that owns the logs:
+        /// Required. The resource name to list logs for:
         /// 
         /// *  `projects/[PROJECT_ID]`
         /// *  `organizations/[ORGANIZATION_ID]`
@@ -1995,7 +1985,7 @@ namespace Google.Cloud.Logging.V2
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name that owns the logs:
+        /// Required. The resource name to list logs for:
         /// 
         /// *  `projects/[PROJECT_ID]`
         /// *  `organizations/[ORGANIZATION_ID]`
@@ -2025,7 +2015,7 @@ namespace Google.Cloud.Logging.V2
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name that owns the logs:
+        /// Required. The resource name to list logs for:
         /// 
         /// *  `projects/[PROJECT_ID]`
         /// *  `organizations/[ORGANIZATION_ID]`
@@ -2055,7 +2045,7 @@ namespace Google.Cloud.Logging.V2
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name that owns the logs:
+        /// Required. The resource name to list logs for:
         /// 
         /// *  `projects/[PROJECT_ID]`
         /// *  `organizations/[ORGANIZATION_ID]`

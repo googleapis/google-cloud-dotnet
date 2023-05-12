@@ -760,6 +760,200 @@
       ]
     },
     {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_BeginCreateBucket_sync",
+      "title": "BeginCreateBucketRequestObject",
+      "description": "Snippet for BeginCreateBucket",
+      "file": "ConfigServiceV2Client.BeginCreateBucketRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BeginCreateBucket",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.BeginCreateBucket",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Logging.V2.LogBucket, Google.Cloud.Logging.V2.BucketMetadata>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "BeginCreateBucket",
+          "fullName": "google.logging.v2.ConfigServiceV2.BeginCreateBucket",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_BeginCreateBucket_async",
+      "title": "BeginCreateBucketRequestObjectAsync",
+      "description": "Snippet for BeginCreateBucketAsync",
+      "file": "ConfigServiceV2Client.BeginCreateBucketRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BeginCreateBucketAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.BeginCreateBucketAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Logging.V2.LogBucket, Google.Cloud.Logging.V2.BucketMetadata>>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "BeginCreateBucket",
+          "fullName": "google.logging.v2.ConfigServiceV2.BeginCreateBucket",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_BeginUpdateBucket_sync",
+      "title": "BeginUpdateBucketRequestObject",
+      "description": "Snippet for BeginUpdateBucket",
+      "file": "ConfigServiceV2Client.BeginUpdateBucketRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BeginUpdateBucket",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.BeginUpdateBucket",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Logging.V2.LogBucket, Google.Cloud.Logging.V2.BucketMetadata>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "BeginUpdateBucket",
+          "fullName": "google.logging.v2.ConfigServiceV2.BeginUpdateBucket",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_BeginUpdateBucket_async",
+      "title": "BeginUpdateBucketRequestObjectAsync",
+      "description": "Snippet for BeginUpdateBucketAsync",
+      "file": "ConfigServiceV2Client.BeginUpdateBucketRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BeginUpdateBucketAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.BeginUpdateBucketAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.UpdateBucketRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Logging.V2.LogBucket, Google.Cloud.Logging.V2.BucketMetadata>>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "BeginUpdateBucket",
+          "fullName": "google.logging.v2.ConfigServiceV2.BeginUpdateBucket",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "logging_v2_generated_ConfigServiceV2_CreateBucket_sync",
       "title": "CreateBucketRequestObject",
       "description": "Snippet for CreateBucket",
@@ -4080,6 +4274,1218 @@
         "method": {
           "shortName": "DeleteSink",
           "fullName": "google.logging.v2.ConfigServiceV2.DeleteSink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_CreateLink_sync",
+      "title": "CreateLinkRequestObject",
+      "description": "Snippet for CreateLink",
+      "file": "ConfigServiceV2Client.CreateLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLink",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Logging.V2.Link, Google.Cloud.Logging.V2.LinkMetadata>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "CreateLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.CreateLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_CreateLink_async",
+      "title": "CreateLinkRequestObjectAsync",
+      "description": "Snippet for CreateLinkAsync",
+      "file": "ConfigServiceV2Client.CreateLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLinkAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.CreateLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Logging.V2.Link, Google.Cloud.Logging.V2.LinkMetadata>>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "CreateLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.CreateLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_CreateLink_sync_flattened",
+      "title": "CreateLink",
+      "description": "Snippet for CreateLink",
+      "file": "ConfigServiceV2Client.CreateLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLink",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.Link",
+            "name": "link"
+          },
+          {
+            "type": "System.String",
+            "name": "linkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Logging.V2.Link, Google.Cloud.Logging.V2.LinkMetadata>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "CreateLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.CreateLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_CreateLink_async_flattened",
+      "title": "CreateLinkAsync",
+      "description": "Snippet for CreateLinkAsync",
+      "file": "ConfigServiceV2Client.CreateLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLinkAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.Link",
+            "name": "link"
+          },
+          {
+            "type": "System.String",
+            "name": "linkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Logging.V2.Link, Google.Cloud.Logging.V2.LinkMetadata>>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "CreateLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.CreateLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_CreateLink_sync_flattened_resourceNames",
+      "title": "CreateLinkResourceNames",
+      "description": "Snippet for CreateLink",
+      "file": "ConfigServiceV2Client.CreateLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLink",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogBucketName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.Link",
+            "name": "link"
+          },
+          {
+            "type": "System.String",
+            "name": "linkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Logging.V2.Link, Google.Cloud.Logging.V2.LinkMetadata>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "CreateLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.CreateLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_CreateLink_async_flattened_resourceNames",
+      "title": "CreateLinkResourceNamesAsync",
+      "description": "Snippet for CreateLinkAsync",
+      "file": "ConfigServiceV2Client.CreateLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLinkAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogBucketName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Logging.V2.Link",
+            "name": "link"
+          },
+          {
+            "type": "System.String",
+            "name": "linkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Logging.V2.Link, Google.Cloud.Logging.V2.LinkMetadata>>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "CreateLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.CreateLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_DeleteLink_sync",
+      "title": "DeleteLinkRequestObject",
+      "description": "Snippet for DeleteLink",
+      "file": "ConfigServiceV2Client.DeleteLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLink",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Logging.V2.LinkMetadata>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "DeleteLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.DeleteLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_DeleteLink_async",
+      "title": "DeleteLinkRequestObjectAsync",
+      "description": "Snippet for DeleteLinkAsync",
+      "file": "ConfigServiceV2Client.DeleteLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLinkAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.DeleteLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Logging.V2.LinkMetadata>>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "DeleteLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.DeleteLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_DeleteLink_sync_flattened",
+      "title": "DeleteLink",
+      "description": "Snippet for DeleteLink",
+      "file": "ConfigServiceV2Client.DeleteLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLink",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Logging.V2.LinkMetadata>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "DeleteLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.DeleteLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_DeleteLink_async_flattened",
+      "title": "DeleteLinkAsync",
+      "description": "Snippet for DeleteLinkAsync",
+      "file": "ConfigServiceV2Client.DeleteLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLinkAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Logging.V2.LinkMetadata>>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "DeleteLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.DeleteLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_DeleteLink_sync_flattened_resourceNames",
+      "title": "DeleteLinkResourceNames",
+      "description": "Snippet for DeleteLink",
+      "file": "ConfigServiceV2Client.DeleteLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLink",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Logging.V2.LinkMetadata>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "DeleteLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.DeleteLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_DeleteLink_async_flattened_resourceNames",
+      "title": "DeleteLinkResourceNamesAsync",
+      "description": "Snippet for DeleteLinkAsync",
+      "file": "ConfigServiceV2Client.DeleteLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLinkAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Logging.V2.LinkMetadata>>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "DeleteLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.DeleteLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_ListLinks_sync",
+      "title": "ListLinksRequestObject",
+      "description": "Snippet for ListLinks",
+      "file": "ConfigServiceV2Client.ListLinksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLinks",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListLinks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLinksResponse, Google.Cloud.Logging.V2.Link>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLinks",
+          "fullName": "google.logging.v2.ConfigServiceV2.ListLinks",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_ListLinks_async",
+      "title": "ListLinksRequestObjectAsync",
+      "description": "Snippet for ListLinksAsync",
+      "file": "ConfigServiceV2Client.ListLinksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLinksAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.ListLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLinksResponse, Google.Cloud.Logging.V2.Link>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLinks",
+          "fullName": "google.logging.v2.ConfigServiceV2.ListLinks",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_ListLinks_sync_flattened",
+      "title": "ListLinks",
+      "description": "Snippet for ListLinks",
+      "file": "ConfigServiceV2Client.ListLinksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLinks",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListLinks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLinksResponse, Google.Cloud.Logging.V2.Link>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLinks",
+          "fullName": "google.logging.v2.ConfigServiceV2.ListLinks",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_ListLinks_async_flattened",
+      "title": "ListLinksAsync",
+      "description": "Snippet for ListLinksAsync",
+      "file": "ConfigServiceV2Client.ListLinksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLinksAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLinksResponse, Google.Cloud.Logging.V2.Link>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLinks",
+          "fullName": "google.logging.v2.ConfigServiceV2.ListLinks",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_ListLinks_sync_flattened_resourceNames",
+      "title": "ListLinksResourceNames",
+      "description": "Snippet for ListLinks",
+      "file": "ConfigServiceV2Client.ListLinksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLinks",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListLinks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogBucketName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Logging.V2.ListLinksResponse, Google.Cloud.Logging.V2.Link>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLinks",
+          "fullName": "google.logging.v2.ConfigServiceV2.ListLinks",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_ListLinks_async_flattened_resourceNames",
+      "title": "ListLinksResourceNamesAsync",
+      "description": "Snippet for ListLinksAsync",
+      "file": "ConfigServiceV2Client.ListLinksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLinksAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.ListLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LogBucketName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Logging.V2.ListLinksResponse, Google.Cloud.Logging.V2.Link>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "ListLinks",
+          "fullName": "google.logging.v2.ConfigServiceV2.ListLinks",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_GetLink_sync",
+      "title": "GetLinkRequestObject",
+      "description": "Snippet for GetLink",
+      "file": "ConfigServiceV2Client.GetLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLink",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Logging.V2.Link",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "GetLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.GetLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_GetLink_async",
+      "title": "GetLinkRequestObjectAsync",
+      "description": "Snippet for GetLinkAsync",
+      "file": "ConfigServiceV2Client.GetLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLinkAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.GetLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.Link>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "GetLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.GetLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_GetLink_sync_flattened",
+      "title": "GetLink",
+      "description": "Snippet for GetLink",
+      "file": "ConfigServiceV2Client.GetLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLink",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Logging.V2.Link",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "GetLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.GetLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_GetLink_async_flattened",
+      "title": "GetLinkAsync",
+      "description": "Snippet for GetLinkAsync",
+      "file": "ConfigServiceV2Client.GetLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLinkAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.Link>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "GetLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.GetLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_GetLink_sync_flattened_resourceNames",
+      "title": "GetLinkResourceNames",
+      "description": "Snippet for GetLink",
+      "file": "ConfigServiceV2Client.GetLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLink",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Logging.V2.Link",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "GetLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.GetLink",
+          "service": {
+            "shortName": "ConfigServiceV2",
+            "fullName": "google.logging.v2.ConfigServiceV2"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "logging_v2_generated_ConfigServiceV2_GetLink_async_flattened_resourceNames",
+      "title": "GetLinkResourceNamesAsync",
+      "description": "Snippet for GetLinkAsync",
+      "file": "ConfigServiceV2Client.GetLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLinkAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.GetLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Logging.V2.LinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Logging.V2.Link>",
+        "client": {
+          "shortName": "ConfigServiceV2Client",
+          "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
+        },
+        "method": {
+          "shortName": "GetLink",
+          "fullName": "google.logging.v2.ConfigServiceV2.GetLink",
           "service": {
             "shortName": "ConfigServiceV2",
             "fullName": "google.logging.v2.ConfigServiceV2"

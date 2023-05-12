@@ -10,6 +10,18 @@
         "grpc": {
           "libraryClient": "ConfigServiceV2Client",
           "rpcs": {
+            "BeginCreateBucket": {
+              "methods": [
+                "BeginCreateBucket",
+                "BeginCreateBucketAsync"
+              ]
+            },
+            "BeginUpdateBucket": {
+              "methods": [
+                "BeginUpdateBucket",
+                "BeginUpdateBucketAsync"
+              ]
+            },
             "CopyLogEntries": {
               "methods": [
                 "CopyLogEntries",
@@ -26,6 +38,12 @@
               "methods": [
                 "CreateExclusion",
                 "CreateExclusionAsync"
+              ]
+            },
+            "CreateLink": {
+              "methods": [
+                "CreateLink",
+                "CreateLinkAsync"
               ]
             },
             "CreateSink": {
@@ -50,6 +68,12 @@
               "methods": [
                 "DeleteExclusion",
                 "DeleteExclusionAsync"
+              ]
+            },
+            "DeleteLink": {
+              "methods": [
+                "DeleteLink",
+                "DeleteLinkAsync"
               ]
             },
             "DeleteSink": {
@@ -82,6 +106,12 @@
                 "GetExclusionAsync"
               ]
             },
+            "GetLink": {
+              "methods": [
+                "GetLink",
+                "GetLinkAsync"
+              ]
+            },
             "GetSettings": {
               "methods": [
                 "GetSettings",
@@ -110,6 +140,12 @@
               "methods": [
                 "ListExclusions",
                 "ListExclusionsAsync"
+              ]
+            },
+            "ListLinks": {
+              "methods": [
+                "ListLinks",
+                "ListLinksAsync"
               ]
             },
             "ListSinks": {
