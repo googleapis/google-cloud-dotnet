@@ -14,11 +14,13 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Firestore.IntegrationTests.Models;
+using Google.Cloud.Firestore.V1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Firestore.AggregateField;
 
 namespace Google.Cloud.Firestore.IntegrationTests
 {
@@ -380,7 +382,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             batch.Set(collection.Document("d"), new { X = 4 });
             await batch.CommitAsync();
 
-            var query = collection.WhereIn(FieldPath.DocumentId, new[] { "a","c" });
+            var query = collection.WhereIn(FieldPath.DocumentId, new[] { "a", "c" });
             var snapshot = await query.GetSnapshotAsync();
             Assert.Equal(2, snapshot.Count);
         }
@@ -468,6 +470,69 @@ namespace Google.Cloud.Firestore.IntegrationTests
             Assert.Equal(2, snapshotWithLimit.Count);
         }
 
+        [Fact]
+        public async Task SumTest()
+        {
+            CollectionReference collection = _fixture.StudentsCollection;
+            var snapshot = await collection.Aggregate(Sum("Level", "Sum_Of_Levels"), Sum("MathScore"), Sum("EnglishScore"), Sum("Name")).GetSnapshotAsync();
+            Assert.Equal(Students.Data.Sum(c => c.Level), snapshot.GetValue<long>("Sum_Of_Levels")); // Long value, Alias check 
+            Assert.Equal(Students.Data.Sum(c => c.MathScore), snapshot.GetValue<double>("Sum_MathScore")); // Double value check
+            Assert.Equal(Double.NaN, snapshot.GetValue<double>("Sum_EnglishScore"));  //NaN value check
+        }
+
+        [Fact]
+        public async Task AvgTest()
+        {
+            CollectionReference collection = _fixture.StudentsCollection;
+            var snapshot = await collection.Aggregate(Average("MathScore"), Average("Level", "Avg_Of_Level"), Average("EnglishScore"), Average("Name")).GetSnapshotAsync();            
+            Assert.Equal(Students.Data.Average(c => c.MathScore), snapshot.GetValue<double>("Avg_MathScore")); // Double value check
+            Assert.Equal(Students.Data.Average(c => c.Level), snapshot.GetValue<double>("Avg_Of_Level")); // Alias check
+            Assert.Equal(Double.NaN, snapshot.GetValue<double>("Avg_EnglishScore")); //NaN value check
+        }
+
+        [Fact]
+        public async Task SumWithLimit()
+        {
+            CollectionReference collection = _fixture.HighScoreCollection;
+            var snapshot = await collection.Limit(2).Aggregate(Sum("Score")).GetSnapshotAsync();
+            Assert.Equal(HighScore.Data.OrderBy(c => c.Score).Take(2).Sum(c => c.Score), snapshot.GetValue<long>("Sum_Score"));
+        }
+
+        [Fact]
+        public async Task AvgWithLimit()
+        {
+            CollectionReference collection = _fixture.HighScoreCollection;
+            var snapshot = await collection.Limit(2).Aggregate(Average("Level")).GetSnapshotAsync();
+            Assert.Equal(HighScore.Data.OrderBy(c => c.Level).Take(2).Average(c => c.Level), snapshot.GetValue<double>("Avg_Level"));
+        }
+
+        [Fact]
+        public async Task SumWithFilter()
+        {
+            CollectionReference collection = _fixture.HighScoreCollection;
+            var snapshot = await collection.WhereGreaterThan("Score", 100).Aggregate(Sum("Score")).GetSnapshotAsync();
+            Assert.Equal(HighScore.Data.Where(x => x.Score > 100).Sum(c => c.Score), snapshot.GetValue<long>("Sum_Score"));
+        }
+
+        [Fact]
+        public async Task AvgWithFilter()
+        {
+            CollectionReference collection = _fixture.HighScoreCollection;
+            var snapshot = await collection.WhereGreaterThan("Level", 20).Aggregate(Average("Level")).GetSnapshotAsync();
+            Assert.Equal(HighScore.Data.Where(x => x.Level > 20).Average(c => c.Level), snapshot.GetValue<double>("Avg_Level"));
+        }
+
+        [Fact]
+        public async Task MultipleAggregations()
+        {
+            CollectionReference collection = _fixture.StudentsCollection;
+            var snapshot = await collection.Aggregate(Sum("MathScore"), Average("MathScore", "avg_score"), Count()).GetSnapshotAsync();
+            Assert.Equal(Students.Data.Length, snapshot.GetValue<Value>("Count").IntegerValue);
+            Assert.Equal(Students.Data.Length, snapshot.Count.Value);
+            Assert.Equal(Students.Data.Sum(c => c.MathScore), snapshot.GetValue<double>("Sum_MathScore"));
+            Assert.Equal(Students.Data.Average(c => c.MathScore), snapshot.GetValue<double>("avg_score"));
+        }
+
         public static TheoryData<string, object, string[]> ArrayContainsTheoryData = new TheoryData<string, object, string[]>
         {
             { "StringArray", "x", new[] { "string-x,y", "mixed" } },
@@ -498,12 +563,12 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
         [Fact]
         public async Task OrQueriesAsync()
-        { 
+        {
             CollectionReference collection = _fixture.HighScoreCollection;
             var query = collection.Where(Filter.Or(
                                                     Filter.EqualTo("Score", 90),
                                                     Filter.EqualTo("Score", 110)
-                                                   )); 
+                                                   ));
             var snapshot = await query.GetSnapshotAsync();
             Assert.Equal(2, snapshot.Count);
         }

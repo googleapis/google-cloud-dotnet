@@ -21,7 +21,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
@@ -424,7 +423,21 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <returns>An instance of <see cref="AggregateQuery"/> with count(*) aggregation applied.</returns>
         public AggregateQuery Count() =>
-            new AggregateQuery(this).WithAggregation(Aggregates.CreateCountAggregate());
+            new AggregateQuery(this).WithAggregateField(AggregateField.Count());
+
+        /// <summary>
+        /// Calculates the specified aggregations to return the aggregate query. Users can also include multiple aggregate functions in a single query.
+        /// </summary>
+        /// <param name="aggregateField">Specify the <see cref="AggregateField"/> to be calculated. This is a mandotory parameter.</param>
+        /// <param name="aggregateFields">User can specify additional <see cref="AggregateField"/> to be calculated through param in same query.</param>
+        /// <returns>Returns an <see cref="AggregateQuery" /> that performs aggregations on the documents in the result set of this query.</returns>
+        public AggregateQuery Aggregate(AggregateField aggregateField, params AggregateField[] aggregateFields)
+        {
+            GaxPreconditions.CheckNotNull(aggregateField, nameof(aggregateField));
+            var result = new HashSet<AggregateField> { aggregateField };
+            result.UnionWith(aggregateFields);
+            return new AggregateQuery(this, result.ToList());
+        }
 
         /// <summary>
         /// Add the given filter to this query.

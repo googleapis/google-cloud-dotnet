@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -45,6 +45,11 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public CollectionReference HighScoreCollection { get; }
 
         /// <summary>
+        /// A collection with <see cref="Students"/> data in. Don't modify in tests!
+        /// </summary>
+        public CollectionReference StudentsCollection { get; }
+
+        /// <summary>
         /// A collection with <see cref="ArrayDocument"/> data in. Don't modify in tests!
         /// </summary>
         public CollectionReference ArrayQueryCollection { get; }
@@ -77,6 +82,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             FirestoreDb = new FirestoreDbBuilder { ProjectId = ProjectId, EmulatorDetection = EmulatorDetection.EmulatorOrProduction }.Build();
             NonQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-non-query");
             HighScoreCollection = FirestoreDb.Collection(CollectionPrefix + "-high-scores");
+            StudentsCollection = FirestoreDb.Collection(CollectionPrefix + "-students");
             ArrayQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-array-query");
             CollectionGroupQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-collection-groups");
             Task.Run(PopulateCollections).Wait();
@@ -86,6 +92,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             await PopulateCollection(HighScoreCollection, HighScore.Data);
             await PopulateCollection(ArrayQueryCollection, ArrayDocument.Data);
+            await PopulateCollection(StudentsCollection, Students.Data);
         }
 
         private async Task PopulateCollection(CollectionReference collection, IEnumerable<object> documents)

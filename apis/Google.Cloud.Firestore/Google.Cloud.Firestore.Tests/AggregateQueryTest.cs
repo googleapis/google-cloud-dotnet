@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@ using Google.Cloud.Firestore.V1;
 using Moq;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Firestore.AggregateField;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 using static Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types;
 using static Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types;
@@ -37,6 +38,28 @@ public class AggregateQueryTest
             Aggregations = { new Aggregation { Alias = "Count", Count = new Count() } }
         };
         Assert.Equal(expectedStructuredAggregationQuery, s_query.Count().ToStructuredAggregationQuery());
+    }
+
+    [Fact]
+    public void TestToStructuredggregationQuery_Sum()
+    {
+        var expectedStructuredAggregationQuery = new StructuredAggregationQuery
+        {
+            StructuredQuery = s_query.ToStructuredQuery(),
+            Aggregations = { new Aggregation { Alias = "Sum_foo", Sum = new Sum() { Field = FieldPath.FromDotSeparatedString("foo").ToFieldReference() } } }
+        };
+        Assert.Equal(expectedStructuredAggregationQuery, s_query.Aggregate(Sum("foo")).ToStructuredAggregationQuery());
+    }
+
+    [Fact]
+    public void TestToStructuredAggregationQuery_Avg()
+    {
+        var expectedStructuredAggregationQuery = new StructuredAggregationQuery
+        {
+            StructuredQuery = s_query.ToStructuredQuery(),
+            Aggregations = { new Aggregation { Alias = "Avg_foo", Avg = new Avg() { Field = FieldPath.FromDotSeparatedString("foo").ToFieldReference() } } }
+        };
+        Assert.Equal(expectedStructuredAggregationQuery, s_query.Aggregate(Average("foo")).ToStructuredAggregationQuery());
     }
 
     [Fact]
@@ -67,15 +90,109 @@ public class AggregateQueryTest
     }
 
     [Fact]
-    public void Equality()
+    public async Task GetSnapshotAsync_VerifySnapshotMembers_Sum()
+    {
+        Mock<FirestoreClient> mock = new() { CallBase = true };
+        var db = FirestoreDb.Create("proj", "db", mock.Object);
+        var sampleReadTime = CreateProtoTimestamp(1, 3);
+        var query = db.Collection("HighScoreCollection").Select("Score");
+        var request = new RunAggregationQueryRequest
+        {
+            Parent = query.ParentPath,
+            StructuredAggregationQuery = new StructuredAggregationQuery
+            {
+                StructuredQuery = query.ToStructuredQuery(),
+                Aggregations = { new Aggregation { Alias = "Sum_Score", Sum = new Sum() { Field = FieldPath.FromDotSeparatedString("Score").ToFieldReference() } } }
+            }
+        };
+        var response = new FakeAggregationQueryStream(new[]
+        {
+            new RunAggregationQueryResponse { ReadTime = sampleReadTime, Result = new AggregationResult() }
+        });
+        mock.Setup(c => c.RunAggregationQuery(request, It.IsAny<CallSettings>())).Returns(response);
+        var aggregateQuery = query.Aggregate(Sum("Score"));
+        var snapshot = await aggregateQuery.GetSnapshotAsync();
+        Assert.Equal(aggregateQuery, snapshot.Query);
+        Assert.Equal(Timestamp.FromProto(sampleReadTime), snapshot.ReadTime);
+    }
+
+    [Fact]
+    public async Task GetSnapshotAsync_VerifySnapshotMembers_Avg()
+    {
+        Mock<FirestoreClient> mock = new() { CallBase = true };
+        var db = FirestoreDb.Create("proj", "db", mock.Object);
+        var sampleReadTime = CreateProtoTimestamp(1, 3);
+        var query = db.Collection("HighScoreCollection").Select("Score");
+        var request = new RunAggregationQueryRequest
+        {
+            Parent = query.ParentPath,
+            StructuredAggregationQuery = new StructuredAggregationQuery
+            {
+                StructuredQuery = query.ToStructuredQuery(),
+                Aggregations = { new Aggregation { Alias = "Avg_Score", Avg = new Avg() { Field = FieldPath.FromDotSeparatedString("Score").ToFieldReference() } } }
+            }
+        };
+        var response = new FakeAggregationQueryStream(new[]
+        {
+            new RunAggregationQueryResponse { ReadTime = sampleReadTime, Result = new AggregationResult() }
+        });
+        mock.Setup(c => c.RunAggregationQuery(request, It.IsAny<CallSettings>())).Returns(response);
+        var aggregateQuery = query.Aggregate(Average("Score"));
+        var snapshot = await aggregateQuery.GetSnapshotAsync();
+        Assert.Equal(aggregateQuery, snapshot.Query);
+        Assert.Equal(Timestamp.FromProto(sampleReadTime), snapshot.ReadTime);
+    }
+
+    [Fact]
+    public void Equality_Count()
     {
         var control = s_query.Count();
         EqualityTester.AssertEqual(control,
             equal: new[]
             {
-                new AggregateQuery(s_db.Collection("col")).WithAggregation(Aggregates.CreateCountAggregate()),
+                new AggregateQuery(s_db.Collection("col")).WithAggregateField(Count()),
                 // Aggregate query returned by count.
                 s_db.Collection("col").Count()
+            },
+            unequal: new[]
+            {
+                // same query but without any aggregation.
+                new AggregateQuery(s_db.Collection("col")),
+                // un-equal query.
+                new AggregateQuery(s_db.Collection("col1"))
+            });
+    }
+
+    [Fact]
+    public void Equality_Sum()
+    {
+        var control = s_query.Aggregate(Sum("foo"));
+        EqualityTester.AssertEqual(control,
+            equal: new[]
+            {
+                new AggregateQuery(s_db.Collection("col")).WithAggregateField(Sum("foo")),
+                // Aggregate query returned by count.
+                s_db.Collection("col").Aggregate(Sum("foo"))
+            },
+            unequal: new[]
+            {
+                // same query but without any aggregation.
+                new AggregateQuery(s_db.Collection("col")),
+                // un-equal query.
+                new AggregateQuery(s_db.Collection("col1"))
+            });
+    }
+
+    [Fact]
+    public void Equality_Avg()
+    {
+        var control = s_query.Aggregate(Average("foo"));
+        EqualityTester.AssertEqual(control,
+            equal: new[]
+            {
+                new AggregateQuery(s_db.Collection("col")).WithAggregateField(Average("foo")),
+                // Aggregate query returned by count.
+                s_db.Collection("col").Aggregate(Average("foo"))
             },
             unequal: new[]
             {
