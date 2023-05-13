@@ -14,10 +14,11 @@
 
 using Google.Cloud.Firestore.Converters;
 using Google.Cloud.Firestore.V1;
+using Google.Protobuf.Collections;
 using System;
 using System.Collections.Generic;
 using Xunit;
-
+using Xunit.Sdk;
 using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 
@@ -94,7 +95,8 @@ namespace Google.Cloud.Firestore.Tests.Converters
             var readTime = Timestamp.FromProto(CreateProtoTimestamp(1, 2));
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
             AggregateQuery query = db.Collection("col").Count();
-            IDeserializationContext context = new AggregateQuerySnapshot(query, readTime, count: 1);
+            var data = new MapField<string, Value> { { "Count", CreateValue(1) } };
+            IDeserializationContext context = new AggregateQuerySnapshot(query, readTime, data);
 
             var converter = CustomConverter.ForConverterType(typeof(DictionaryHolderConverter), typeof(DictionaryHolder));
             var map = CreateMap("key", CreateValue("value"));
@@ -108,12 +110,13 @@ namespace Google.Cloud.Firestore.Tests.Converters
             var readTime = Timestamp.FromProto(CreateProtoTimestamp(1, 2));
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
             AggregateQuery query = db.Collection("col").Count();
-            IDeserializationContext context = new AggregateQuerySnapshot(query, readTime, count: 1);
+            var data = new MapField<string, Value> { { "Count", CreateValue(1) } };
+            var snapshot = new AggregateQuerySnapshot(query, readTime, data);
 
             var converter = CustomConverter.ForConverterType(typeof(DictionaryHolderConverterForAggregateSnapshot), typeof(DictionaryHolder));
             var map = CreateMap("key", CreateValue("value"));
 
-            var holder = (DictionaryHolder) converter.DeserializeValue(context, map);
+            var holder = (DictionaryHolder) converter.DeserializeValue(snapshot, map);
             var dictionary = holder.Dictionary;
             // The regular field deserialized from the map
             Assert.Equal("value", dictionary["key"]);

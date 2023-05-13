@@ -26,7 +26,6 @@ using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
-using static Google.Rpc.Context.AttributeContext.Types;
 using ProtoCompositeFilter = Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter;
 using ProtoFilter = Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter;
 
@@ -1278,6 +1277,34 @@ namespace Google.Cloud.Firestore.Tests
         {
             var query = s_db.Collection("col").LimitToLast(42);
             Assert.Throws<InvalidOperationException>(() => query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Aggregate_NullSingle()
+        {
+            var query = s_db.Collection("col");
+            Assert.Throws<ArgumentNullException>(() => query.Aggregate((AggregateField) null));
+        }
+
+        [Fact]
+        public void Aggregate_NullParams()
+        {
+            var query = s_db.Collection("col");
+            Assert.Throws<ArgumentNullException>(() => query.Aggregate(AggregateField.Count(), null));
+        }
+
+        [Fact]
+        public void Aggregate_NullSequence()
+        {
+            var query = s_db.Collection("col");
+            Assert.Throws<ArgumentNullException>(() => query.Aggregate((IEnumerable<AggregateField>) null));
+        }
+
+        [Fact]
+        public void Aggregate_EmptySequence()
+        {
+            var query = s_db.Collection("col");
+            Assert.Throws<ArgumentException>(() => query.Aggregate(new AggregateField[0]));
         }
 
         // Result reversal and StreamAsync being rejected are handled in integration tests.

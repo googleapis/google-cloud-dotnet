@@ -16,43 +16,38 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
+using Google.Protobuf.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types;
 
 namespace Google.Cloud.Firestore;
 
 /// <summary>
-/// A query for running an aggregation over a [StructuredQuery][google.firestore.v1.StructuredQuery]. Currently only "count(*)" aggregation is supported.
+/// A query for running server-side aggregations. Instances of this can be created using
+/// <see cref="Query.Count"/> and <see cref="Query.Aggregate(Google.Cloud.Firestore.AggregateField, Google.Cloud.Firestore.AggregateField[])"/>.
 /// </summary>
 public sealed class AggregateQuery : IEquatable<AggregateQuery>
 {
     private readonly Query _query;
-    private readonly IReadOnlyList<Aggregation> _aggregations;
+    private readonly IReadOnlyList<AggregateField> _aggregateFields;
 
     internal FirestoreDb Database => _query.Database;
 
-    internal AggregateQuery(Query query)
+    internal AggregateQuery(Query query, IReadOnlyList<AggregateField> aggregateFields)
     {
         _query = GaxPreconditions.CheckNotNull(query, nameof(query));
-        _aggregations = new List<Aggregation>();
-    }
+        _aggregateFields = GaxPreconditions.CheckNotNull(aggregateFields, nameof(aggregateFields));
 
-    private AggregateQuery(Query query, IReadOnlyList<Aggregation> aggregations)
-    {
-        _query = GaxPreconditions.CheckNotNull(query, nameof(query));
-        _aggregations = aggregations;
-    }
-
-    internal AggregateQuery WithAggregation(Aggregation aggregation)
-    {
-        var newAggregations = new List<Aggregation>(_aggregations);
-        newAggregations.Add(aggregation);
-        return new AggregateQuery(_query, newAggregations);
+        var aliasSet = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var field in aggregateFields)
+        {
+            GaxPreconditions.CheckArgument(field is not null, nameof(aggregateFields), "All aggregate fields must be non-null.");
+            GaxPreconditions.CheckArgument(aliasSet.Add(field.Alias), nameof(aggregateFields), "All aliases in an aggregate query must be unique.");
+        }
     }
 
     /// <summary>
@@ -65,19 +60,38 @@ public sealed class AggregateQuery : IEquatable<AggregateQuery>
 
     internal async Task<AggregateQuerySnapshot> GetSnapshotAsync(ByteString transactionId, CancellationToken cancellationToken)
     {
+        var query = ToStructuredAggregationQuery();
         IAsyncEnumerable<RunAggregationQueryResponse> responseStream = GetAggregationQueryResponseStreamAsync(transactionId, cancellationToken);
         Timestamp? readTime = null;
-        long? count = null;
-        await responseStream.ForEachAsync(response => ProcessResponse(response), cancellationToken).ConfigureAwait(false);
+
+        // This is a map from the user-specified alias to the resulting value.
+        // Doing all the translation here means AggregateQuerySnapshot doesn't need to know anything about
+        // the internal mappings.
+        MapField<string, Value> data = new();
+
+        // It would be nice to use ToDictionary, but that doesn't provide the index.
+        Dictionary<string, string> queryAliasToUserAlias = new(StringComparer.Ordinal);
+        for (int i = 0; i < _aggregateFields.Count; i++)
+        {
+            var aggregate = _aggregateFields[i];
+            queryAliasToUserAlias[aggregate.GetAliasForIndex(i)] = aggregate.Alias;
+        }
+
+        await responseStream.ForEachAsync(ProcessResponse, cancellationToken).ConfigureAwait(false);
         GaxPreconditions.CheckState(readTime != null, "The stream returned from RunAggregationQuery did not provide a read timestamp.");
-        return new AggregateQuerySnapshot(this, readTime.Value, count);
+        return new AggregateQuerySnapshot(this, readTime.Value, data);
 
         void ProcessResponse(RunAggregationQueryResponse response)
         {
-            if (count is null && response.Result.AggregateFields?.TryGetValue(Aggregates.CountAlias, out var countValue) == true)
+            if (response.Result.AggregateFields is { } aggregateFields)
             {
-                GaxPreconditions.CheckState(countValue.ValueTypeCase == Value.ValueTypeOneofCase.IntegerValue, "The count was not an integer.");
-                count = countValue.IntegerValue;
+                foreach (var pair in aggregateFields)
+                {
+                    if (queryAliasToUserAlias.TryGetValue(pair.Key, out string userAlias))
+                    {
+                        data[userAlias] = pair.Value;
+                    }
+                }
             }
             readTime ??= Timestamp.FromProtoOrNull(response.ReadTime);
         }
@@ -107,23 +121,27 @@ public sealed class AggregateQuery : IEquatable<AggregateQuery>
         }
     }
 
+    // Visible for testing
     internal StructuredAggregationQuery ToStructuredAggregationQuery() =>
-        new StructuredAggregationQuery
+        new()
         {
             StructuredQuery = _query.ToStructuredQuery(),
-            Aggregations = { _aggregations }
+            Aggregations = { _aggregateFields.Select((aggregateField, index) => aggregateField.GetAggregationForIndex(index)) }
         };
 
     /// <inheritdoc />
     public override int GetHashCode() =>
-        GaxEqualityHelpers.CombineHashCodes(_query.GetHashCode(), GaxEqualityHelpers.GetListHashCode(_aggregations));
+        GaxEqualityHelpers.CombineHashCodes(_query.GetHashCode(), GaxEqualityHelpers.GetListHashCode(_aggregateFields));
 
     /// <summary>
     /// Determines whether <paramref name="other"/> is equal to this instance.
     /// </summary>
-    /// <returns><c>true</c> if the specified object is equal to this instance; otherwise <c>false</c>.</returns>
+    /// <returns><c>true</c> if the specified object is equal to this instance; otherwise <c>false</c>.
+    /// The order of aggregate fields is considered relevant for equality and hashing purposes, even though it is
+    /// expected to return the same results.
+    /// </returns>
     public bool Equals(AggregateQuery other) =>
-        other != null && _query.Equals(other._query) && GaxEqualityHelpers.ListsEqual(_aggregations, other._aggregations);
+        other != null && _query.Equals(other._query) && GaxEqualityHelpers.ListsEqual(_aggregateFields, other._aggregateFields);
 
     /// <inheritdoc/>
     public override bool Equals(object obj) => Equals(obj as AggregateQuery);
