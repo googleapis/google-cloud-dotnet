@@ -380,7 +380,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             batch.Set(collection.Document("d"), new { X = 4 });
             await batch.CommitAsync();
 
-            var query = collection.WhereIn(FieldPath.DocumentId, new[] { "a","c" });
+            var query = collection.WhereIn(FieldPath.DocumentId, new[] { "a", "c" });
             var snapshot = await query.GetSnapshotAsync();
             Assert.Equal(2, snapshot.Count);
         }
@@ -448,24 +448,6 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var querySnapshot = await collection.WhereArrayContainsAny("array", new[] { 42, 43 }).GetSnapshotAsync();
             var ids = querySnapshot.Select(d => d.Id).ToList();
             Assert.Equal(new[] { "a", "b", "d", "e" }, ids);
-        }
-
-        [Fact]
-        public async Task Count_WithoutLimit()
-        {
-            CollectionReference collection = _fixture.HighScoreCollection;
-            var snapshot = await collection.Count().GetSnapshotAsync();
-            Assert.Equal(HighScore.Data.Length, snapshot.Count);
-        }
-
-        [Fact]
-        public async Task Count_WithLimit()
-        {
-            CollectionReference collection = _fixture.HighScoreCollection;
-            var snapshotWithoutLimit = await collection.Count().GetSnapshotAsync();
-            var snapshotWithLimit = await collection.Limit(2).Count().GetSnapshotAsync();
-            Assert.Equal(HighScore.Data.Length, snapshotWithoutLimit.Count);
-            Assert.Equal(2, snapshotWithLimit.Count);
         }
 
         public static TheoryData<string, object, string[]> ArrayContainsTheoryData = new TheoryData<string, object, string[]>

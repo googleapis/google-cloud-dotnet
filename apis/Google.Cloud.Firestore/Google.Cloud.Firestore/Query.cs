@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Apis.Auth.OAuth2.Requests;
 using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using System;
@@ -21,7 +22,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
@@ -424,7 +424,35 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <returns>An instance of <see cref="AggregateQuery"/> with count(*) aggregation applied.</returns>
         public AggregateQuery Count() =>
-            new AggregateQuery(this).WithAggregation(Aggregates.CreateCountAggregate());
+            new AggregateQuery(this, new[] { AggregateField.Count() });
+
+        /// <summary>
+        /// Calculates the specified aggregations to return the aggregate query. Multiple aggregations can be performed in a single query.
+        /// </summary>
+        /// <param name="aggregateField">Specifies the <see cref="AggregateField"/> to be calculated. Must not be null.</param>
+        /// <param name="aggregateFields">Additional aggregations to be included in the query, if any. Must not be null, but may be empty.</param>
+        /// <returns>Returns an <see cref="AggregateQuery" /> that performs aggregations on the documents in the result set of this query.</returns>
+        public AggregateQuery Aggregate(AggregateField aggregateField, params AggregateField[] aggregateFields)
+        {
+            GaxPreconditions.CheckNotNull(aggregateField, nameof(aggregateField));
+            GaxPreconditions.CheckNotNull(aggregateFields, nameof(aggregateFields));
+            var combined = new List<AggregateField> { aggregateField };
+            combined.AddRange(aggregateFields);
+            return new AggregateQuery(this, combined);
+        }
+
+        /// <summary>
+        /// Calculates the specified aggregations to return the aggregate query. Multiple aggregations can be performed in a single query.
+        /// </summary>
+        /// <param name="aggregateFields">Aggregations to be included in the query. Must not be null, or empty.</param>
+        /// <returns>Returns an <see cref="AggregateQuery" /> that performs aggregations on the documents in the result set of this query.</returns>
+        public AggregateQuery Aggregate(IEnumerable<AggregateField> aggregateFields)
+        {
+            GaxPreconditions.CheckNotNull(aggregateFields, nameof(aggregateFields));
+            var list = aggregateFields.ToList();
+            GaxPreconditions.CheckArgument(list.Count > 0, nameof(aggregateFields), "At least one aggregatation must be provided");
+            return new AggregateQuery(this, list);
+        }
 
         /// <summary>
         /// Add the given filter to this query.
