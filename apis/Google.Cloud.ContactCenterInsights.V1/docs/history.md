@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.7.0, released 2023-05-03
+
+### New features
+
+- Support for generating summaries during conversation analysis ([commit c70b046](https://github.com/googleapis/google-cloud-dotnet/commit/c70b046ffae1b852cbad6a3a8dc495172770afa8))
+
 ## Version 2.6.0, released 2023-04-12
 
 ### New features

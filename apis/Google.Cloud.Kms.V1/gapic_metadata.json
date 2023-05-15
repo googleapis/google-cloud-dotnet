@@ -45,6 +45,12 @@
                 "UpdateEkmConnection",
                 "UpdateEkmConnectionAsync"
               ]
+            },
+            "VerifyConnectivity": {
+              "methods": [
+                "VerifyConnectivity",
+                "VerifyConnectivityAsync"
+              ]
             }
           }
         }

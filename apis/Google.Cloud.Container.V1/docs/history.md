@@ -1,5 +1,23 @@
 # Version history
 
+## Version 3.12.0, released 2023-05-11
+
+### New features
+
+- Support fleet registration via cluster update ([commit 05ac8bc](https://github.com/googleapis/google-cloud-dotnet/commit/05ac8bccb4f3cf68327f7e2c84d83321f71edd76))
+
+## Version 3.11.0, released 2023-05-03
+
+### New features
+
+- Cluster resizes will now have their own operation type (RESIZE_CLUSTER) instead of reusing REPAIR_CLUSTER; they will start using this in the near future ([commit 297d5b8](https://github.com/googleapis/google-cloud-dotnet/commit/297d5b8c898aa4d65c1d5272a9f798aae2521d24))
+
+### Documentation improvements
+
+- Minor formatting in docstring ([commit 3439142](https://github.com/googleapis/google-cloud-dotnet/commit/34391423be1d7efaf6f1e03fe1c5788b953131a2))
+- Operation.Type is now documented in detail ([commit 297d5b8](https://github.com/googleapis/google-cloud-dotnet/commit/297d5b8c898aa4d65c1d5272a9f798aae2521d24))
+- Operation.self_link and Operation.target_link given examples ([commit 297d5b8](https://github.com/googleapis/google-cloud-dotnet/commit/297d5b8c898aa4d65c1d5272a9f798aae2521d24))
+
 ## Version 3.10.0, released 2023-04-19
 
 ### New features

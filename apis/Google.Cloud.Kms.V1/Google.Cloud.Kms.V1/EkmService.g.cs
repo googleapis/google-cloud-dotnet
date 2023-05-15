@@ -78,42 +78,49 @@ namespace Google.Cloud.Kms.V1 {
             "Ek0KFmRlZmF1bHRfZWttX2Nvbm5lY3Rpb24YAiABKAlCLeBBAfpBJwolY2xv",
             "dWRrbXMuZ29vZ2xlYXBpcy5jb20vRWttQ29ubmVjdGlvbjpZ6kFWCiFjbG91",
             "ZGttcy5nb29nbGVhcGlzLmNvbS9Fa21Db25maWcSMXByb2plY3RzL3twcm9q",
-            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9la21Db25maWcyjgoKCkVrbVNl",
-            "cnZpY2USugEKEkxpc3RFa21Db25uZWN0aW9ucxIuLmdvb2dsZS5jbG91ZC5r",
-            "bXMudjEuTGlzdEVrbUNvbm5lY3Rpb25zUmVxdWVzdBovLmdvb2dsZS5jbG91",
-            "ZC5rbXMudjEuTGlzdEVrbUNvbm5lY3Rpb25zUmVzcG9uc2UiQ4LT5JMCNBIy",
-            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZWttQ29ubmVj",
-            "dGlvbnPaQQZwYXJlbnQSpwEKEEdldEVrbUNvbm5lY3Rpb24SLC5nb29nbGUu",
-            "Y2xvdWQua21zLnYxLkdldEVrbUNvbm5lY3Rpb25SZXF1ZXN0GiIuZ29vZ2xl",
-            "LmNsb3VkLmttcy52MS5Fa21Db25uZWN0aW9uIkGC0+STAjQSMi92MS97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VrbUNvbm5lY3Rpb25zLyp92kEE",
-            "bmFtZRLgAQoTQ3JlYXRlRWttQ29ubmVjdGlvbhIvLmdvb2dsZS5jbG91ZC5r",
-            "bXMudjEuQ3JlYXRlRWttQ29ubmVjdGlvblJlcXVlc3QaIi5nb29nbGUuY2xv",
-            "dWQua21zLnYxLkVrbUNvbm5lY3Rpb24idILT5JMCRCIyL3YxL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZWttQ29ubmVjdGlvbnM6DmVrbV9j",
-            "b25uZWN0aW9u2kEncGFyZW50LGVrbV9jb25uZWN0aW9uX2lkLGVrbV9jb25u",
-            "ZWN0aW9uEuIBChNVcGRhdGVFa21Db25uZWN0aW9uEi8uZ29vZ2xlLmNsb3Vk",
-            "Lmttcy52MS5VcGRhdGVFa21Db25uZWN0aW9uUmVxdWVzdBoiLmdvb2dsZS5j",
-            "bG91ZC5rbXMudjEuRWttQ29ubmVjdGlvbiJ2gtPkkwJTMkEvdjEve2VrbV9j",
-            "b25uZWN0aW9uLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9la21Db25u",
-            "ZWN0aW9ucy8qfToOZWttX2Nvbm5lY3Rpb27aQRpla21fY29ubmVjdGlvbix1",
-            "cGRhdGVfbWFzaxKUAQoMR2V0RWttQ29uZmlnEiguZ29vZ2xlLmNsb3VkLmtt",
-            "cy52MS5HZXRFa21Db25maWdSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLmttcy52",
-            "MS5Fa21Db25maWciOoLT5JMCLRIrL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovZWttQ29uZmlnfdpBBG5hbWUSwwEKD1VwZGF0ZUVrbUNvbmZp",
-            "ZxIrLmdvb2dsZS5jbG91ZC5rbXMudjEuVXBkYXRlRWttQ29uZmlnUmVxdWVz",
-            "dBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuRWttQ29uZmlnImOC0+STAkQyNi92",
-            "MS97ZWttX2NvbmZpZy5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZWtt",
-            "Q29uZmlnfToKZWttX2NvbmZpZ9pBFmVrbV9jb25maWcsdXBkYXRlX21hc2sa",
-            "dMpBF2Nsb3Vka21zLmdvb2dsZWFwaXMuY29t0kFXaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vka21zQoUCChdjb20uZ29vZ2xlLmNs",
-            "b3VkLmttcy52MUIPRWttU2VydmljZVByb3RvUAFaKWNsb3VkLmdvb2dsZS5j",
-            "b20vZ28va21zL2FwaXYxL2ttc3BiO2ttc3Bi+AEBqgITR29vZ2xlLkNsb3Vk",
-            "Lkttcy5WMcoCE0dvb2dsZVxDbG91ZFxLbXNcVjHqQXwKJ3NlcnZpY2VkaXJl",
-            "Y3RvcnkuZ29vZ2xlYXBpcy5jb20vU2VydmljZRJRcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L25hbWVzcGFjZXMve25hbWVzcGFj",
-            "ZX0vc2VydmljZXMve3NlcnZpY2V9YgZwcm90bzM="));
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9la21Db25maWciWAoZVmVyaWZ5",
+            "Q29ubmVjdGl2aXR5UmVxdWVzdBI7CgRuYW1lGAEgASgJQi3gQQL6QScKJWNs",
+            "b3Vka21zLmdvb2dsZWFwaXMuY29tL0VrbUNvbm5lY3Rpb24iHAoaVmVyaWZ5",
+            "Q29ubmVjdGl2aXR5UmVzcG9uc2Uy3AsKCkVrbVNlcnZpY2USugEKEkxpc3RF",
+            "a21Db25uZWN0aW9ucxIuLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdEVrbUNv",
+            "bm5lY3Rpb25zUmVxdWVzdBovLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdEVr",
+            "bUNvbm5lY3Rpb25zUmVzcG9uc2UiQ4LT5JMCNBIyL3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKn0vZWttQ29ubmVjdGlvbnPaQQZwYXJlbnQS",
+            "pwEKEEdldEVrbUNvbm5lY3Rpb24SLC5nb29nbGUuY2xvdWQua21zLnYxLkdl",
+            "dEVrbUNvbm5lY3Rpb25SZXF1ZXN0GiIuZ29vZ2xlLmNsb3VkLmttcy52MS5F",
+            "a21Db25uZWN0aW9uIkGC0+STAjQSMi92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2VrbUNvbm5lY3Rpb25zLyp92kEEbmFtZRLgAQoTQ3JlYXRl",
+            "RWttQ29ubmVjdGlvbhIvLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3JlYXRlRWtt",
+            "Q29ubmVjdGlvblJlcXVlc3QaIi5nb29nbGUuY2xvdWQua21zLnYxLkVrbUNv",
+            "bm5lY3Rpb24idILT5JMCRCIyL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKn0vZWttQ29ubmVjdGlvbnM6DmVrbV9jb25uZWN0aW9u2kEncGFy",
+            "ZW50LGVrbV9jb25uZWN0aW9uX2lkLGVrbV9jb25uZWN0aW9uEuIBChNVcGRh",
+            "dGVFa21Db25uZWN0aW9uEi8uZ29vZ2xlLmNsb3VkLmttcy52MS5VcGRhdGVF",
+            "a21Db25uZWN0aW9uUmVxdWVzdBoiLmdvb2dsZS5jbG91ZC5rbXMudjEuRWtt",
+            "Q29ubmVjdGlvbiJ2gtPkkwJTMkEvdjEve2VrbV9jb25uZWN0aW9uLm5hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9la21Db25uZWN0aW9ucy8qfToOZWtt",
+            "X2Nvbm5lY3Rpb27aQRpla21fY29ubmVjdGlvbix1cGRhdGVfbWFzaxKUAQoM",
+            "R2V0RWttQ29uZmlnEiguZ29vZ2xlLmNsb3VkLmttcy52MS5HZXRFa21Db25m",
+            "aWdSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLmttcy52MS5Fa21Db25maWciOoLT",
+            "5JMCLRIrL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZWttQ29u",
+            "ZmlnfdpBBG5hbWUSwwEKD1VwZGF0ZUVrbUNvbmZpZxIrLmdvb2dsZS5jbG91",
+            "ZC5rbXMudjEuVXBkYXRlRWttQ29uZmlnUmVxdWVzdBoeLmdvb2dsZS5jbG91",
+            "ZC5rbXMudjEuRWttQ29uZmlnImOC0+STAkQyNi92MS97ZWttX2NvbmZpZy5u",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZWttQ29uZmlnfToKZWttX2Nv",
+            "bmZpZ9pBFmVrbV9jb25maWcsdXBkYXRlX21hc2sSywEKElZlcmlmeUNvbm5l",
+            "Y3Rpdml0eRIuLmdvb2dsZS5jbG91ZC5rbXMudjEuVmVyaWZ5Q29ubmVjdGl2",
+            "aXR5UmVxdWVzdBovLmdvb2dsZS5jbG91ZC5rbXMudjEuVmVyaWZ5Q29ubmVj",
+            "dGl2aXR5UmVzcG9uc2UiVILT5JMCRxJFL3YxL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovZWttQ29ubmVjdGlvbnMvKn06dmVyaWZ5Q29ubmVjdGl2",
+            "aXR52kEEbmFtZRp0ykEXY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb23SQVdodHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWRrbXNChQIKF2Nv",
+            "bS5nb29nbGUuY2xvdWQua21zLnYxQg9Fa21TZXJ2aWNlUHJvdG9QAVopY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9rbXMvYXBpdjEva21zcGI7a21zcGL4AQGqAhNH",
+            "b29nbGUuQ2xvdWQuS21zLlYxygITR29vZ2xlXENsb3VkXEttc1xWMepBfAon",
+            "c2VydmljZWRpcmVjdG9yeS5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlElFwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbmFtZXNwYWNl",
+            "cy97bmFtZXNwYWNlfS9zZXJ2aWNlcy97c2VydmljZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -126,7 +133,9 @@ namespace Google.Cloud.Kms.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest), global::Google.Cloud.Kms.V1.UpdateEkmConfigRequest.Parser, new[]{ "EkmConfig", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.Certificate), global::Google.Cloud.Kms.V1.Certificate.Parser, new[]{ "RawDer", "Parsed", "Issuer", "Subject", "SubjectAlternativeDnsNames", "NotBeforeTime", "NotAfterTime", "SerialNumber", "Sha256Fingerprint" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EkmConnection), global::Google.Cloud.Kms.V1.EkmConnection.Parser, new[]{ "Name", "CreateTime", "ServiceResolvers", "Etag", "KeyManagementMode", "CryptoSpacePath" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.EkmConnection.Types.KeyManagementMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EkmConnection.Types.ServiceResolver), global::Google.Cloud.Kms.V1.EkmConnection.Types.ServiceResolver.Parser, new[]{ "ServiceDirectoryService", "EndpointFilter", "Hostname", "ServerCertificates" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EkmConfig), global::Google.Cloud.Kms.V1.EkmConfig.Parser, new[]{ "Name", "DefaultEkmConnection" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EkmConfig), global::Google.Cloud.Kms.V1.EkmConfig.Parser, new[]{ "Name", "DefaultEkmConnection" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.VerifyConnectivityRequest), global::Google.Cloud.Kms.V1.VerifyConnectivityRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.VerifyConnectivityResponse), global::Google.Cloud.Kms.V1.VerifyConnectivityResponse.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -3514,6 +3523,359 @@ namespace Google.Cloud.Kms.V1 {
             DefaultEkmConnection = input.ReadString();
             break;
           }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [EkmService.VerifyConnectivity][google.cloud.kms.v1.EkmService.VerifyConnectivity].
+  /// </summary>
+  public sealed partial class VerifyConnectivityRequest : pb::IMessage<VerifyConnectivityRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VerifyConnectivityRequest> _parser = new pb::MessageParser<VerifyConnectivityRequest>(() => new VerifyConnectivityRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VerifyConnectivityRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.EkmServiceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConnectivityRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConnectivityRequest(VerifyConnectivityRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConnectivityRequest Clone() {
+      return new VerifyConnectivityRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The [name][google.cloud.kms.v1.EkmConnection.name] of the
+    /// [EkmConnection][google.cloud.kms.v1.EkmConnection] to verify.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VerifyConnectivityRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VerifyConnectivityRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VerifyConnectivityRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for
+  /// [EkmService.VerifyConnectivity][google.cloud.kms.v1.EkmService.VerifyConnectivity].
+  /// </summary>
+  public sealed partial class VerifyConnectivityResponse : pb::IMessage<VerifyConnectivityResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VerifyConnectivityResponse> _parser = new pb::MessageParser<VerifyConnectivityResponse>(() => new VerifyConnectivityResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VerifyConnectivityResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.EkmServiceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConnectivityResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConnectivityResponse(VerifyConnectivityResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConnectivityResponse Clone() {
+      return new VerifyConnectivityResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VerifyConnectivityResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VerifyConnectivityResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VerifyConnectivityResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
         }
       }
     }

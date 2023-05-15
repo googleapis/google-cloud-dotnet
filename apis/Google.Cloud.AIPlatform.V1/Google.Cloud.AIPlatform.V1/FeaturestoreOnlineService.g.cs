@@ -1559,7 +1559,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse.Types.FeatureDescriptor> featureDescriptors_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.ReadFeatureValuesResponse.Types.FeatureDescriptor>();
         /// <summary>
         /// List of Feature metadata corresponding to each piece of
-        /// [ReadFeatureValuesResponse.data][].
+        /// [ReadFeatureValuesResponse.EntityView.data][google.cloud.aiplatform.v1.ReadFeatureValuesResponse.EntityView.data].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.2.0, released 2023-05-03
+
+### New features
+
+- Add `monitoring_config` field ([commit 5275f91](https://github.com/googleapis/google-cloud-dotnet/commit/5275f910d8883e94a433e696e1c667c6faa3582b))
+- Add `cluster_missing` on `GkeResource` ([commit 5275f91](https://github.com/googleapis/google-cloud-dotnet/commit/5275f910d8883e94a433e696e1c667c6faa3582b))
+- Add `google_managed` on `MembershipEndpoint` ([commit 5275f91](https://github.com/googleapis/google-cloud-dotnet/commit/5275f910d8883e94a433e696e1c667c6faa3582b))
+- Add `force` on `DeleteMembershipRequest` ([commit 5275f91](https://github.com/googleapis/google-cloud-dotnet/commit/5275f910d8883e94a433e696e1c667c6faa3582b))
+
+### Documentation improvements
+
+- Update API annotation ([commit 5275f91](https://github.com/googleapis/google-cloud-dotnet/commit/5275f910d8883e94a433e696e1c667c6faa3582b))
+
 ## Version 2.1.0, released 2023-01-20
 
 ### New features

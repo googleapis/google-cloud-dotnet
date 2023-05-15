@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_PublisherServiceApi_Publish_sync]
+    // [START pubsub_v1_generated_Publisher_Publish_sync]
     using Google.Cloud.PubSub.V1;
 
     public sealed partial class GeneratedPublisherServiceApiClientSnippets
@@ -46,5 +46,5 @@ namespace GoogleCSharpSnippets
             PublishResponse response = publisherServiceApiClient.Publish(request);
         }
     }
-    // [END pubsub_v1_generated_PublisherServiceApi_Publish_sync]
+    // [END pubsub_v1_generated_Publisher_Publish_sync]
 }

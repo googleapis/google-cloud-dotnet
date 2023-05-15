@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_ModifyPushConfig_async]
+    // [START pubsub_v1_generated_Subscriber_ModifyPushConfig_async]
     using Google.Cloud.PubSub.V1;
     using System.Threading.Tasks;
 
@@ -44,5 +44,5 @@ namespace GoogleCSharpSnippets
             await subscriberServiceApiClient.ModifyPushConfigAsync(request);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_ModifyPushConfig_async]
+    // [END pubsub_v1_generated_Subscriber_ModifyPushConfig_async]
 }

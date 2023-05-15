@@ -126,10 +126,25 @@ public sealed class PublisherClientBuilder : ClientBuilderBase<PublisherClient>
                 ? await builder.BuildAsync(cancellationToken).ConfigureAwait(false)
                 : builder.Build();
             var channel = builder.LastCreatedChannel;
-            shutdowns[i] = channel is null ? () => Task.CompletedTask : channel.ShutdownAsync;
+            shutdowns[i] = () => DisposeChannelAsync(channel);
         }
         Func<Task> shutdown = () => Task.WhenAll(shutdowns.Select(x => x()));
         return new PublisherClientImpl(TopicName, clients, settings, shutdown);
+
+        // TODO: Move this local method to a common place. We have it here and in SubscriberClientBuilder.
+        static Task DisposeChannelAsync(Grpc.Core.ChannelBase channel)
+        {
+            if (channel is null)
+            {
+                return Task.CompletedTask;
+            }
+            if (channel is IDisposable disposable)
+            {
+                disposable.Dispose();
+            }
+
+            return channel.ShutdownAsync();
+        }
     }
 
     /// <inheritdoc />

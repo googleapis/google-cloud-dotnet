@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.7.0, released 2023-05-11
+
+### New features
+
+- Extended CreateAgent timeout to 180 seconds ([commit f12f32b](https://github.com/googleapis/google-cloud-dotnet/commit/f12f32b063816b420d3e7d38b2cf0f77a83f4942))
+- Added debug info to StreamingDetectIntent ([commit f12f32b](https://github.com/googleapis/google-cloud-dotnet/commit/f12f32b063816b420d3e7d38b2cf0f77a83f4942))
+- Added dtmf digits to WebhookRequest ([commit f12f32b](https://github.com/googleapis/google-cloud-dotnet/commit/f12f32b063816b420d3e7d38b2cf0f77a83f4942))
+- Added FLOW as a new DiffType in TestRunDifference ([commit f12f32b](https://github.com/googleapis/google-cloud-dotnet/commit/f12f32b063816b420d3e7d38b2cf0f77a83f4942))
+
+### Documentation improvements
+
+- Clarified wording around quota usage ([commit 9439fbb](https://github.com/googleapis/google-cloud-dotnet/commit/9439fbb6268ef09a480e37d4e521512629546332))
+
 ## Version 2.6.0, released 2023-03-06
 
 ### New features

@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsTaskGroupName = gcbv::TaskGroupName.FromProjectLocationJobTaskGroup("[PROJECT]", "[LOCATION]", "[JOB]", "[TASK_GROUP]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<gcbv::ListTasksResponse, gcbv::Task> response = batchServiceClient.ListTasksAsync(request);

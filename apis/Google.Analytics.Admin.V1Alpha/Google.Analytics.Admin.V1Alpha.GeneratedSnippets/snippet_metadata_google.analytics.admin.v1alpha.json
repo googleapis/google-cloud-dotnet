@@ -27144,6 +27144,2592 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAdSenseLink_sync",
+      "title": "GetAdSenseLinkRequestObject",
+      "description": "Snippet for GetAdSenseLink",
+      "file": "AnalyticsAdminServiceClient.GetAdSenseLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAdSenseLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAdSenseLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetAdSenseLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.AdSenseLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAdSenseLink_async",
+      "title": "GetAdSenseLinkRequestObjectAsync",
+      "description": "Snippet for GetAdSenseLinkAsync",
+      "file": "AnalyticsAdminServiceClient.GetAdSenseLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAdSenseLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAdSenseLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetAdSenseLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AdSenseLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAdSenseLink_sync_flattened",
+      "title": "GetAdSenseLink",
+      "description": "Snippet for GetAdSenseLink",
+      "file": "AnalyticsAdminServiceClient.GetAdSenseLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAdSenseLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAdSenseLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.AdSenseLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAdSenseLink_async_flattened",
+      "title": "GetAdSenseLinkAsync",
+      "description": "Snippet for GetAdSenseLinkAsync",
+      "file": "AnalyticsAdminServiceClient.GetAdSenseLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAdSenseLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAdSenseLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AdSenseLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAdSenseLink_sync_flattened_resourceNames",
+      "title": "GetAdSenseLinkResourceNames",
+      "description": "Snippet for GetAdSenseLink",
+      "file": "AnalyticsAdminServiceClient.GetAdSenseLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAdSenseLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAdSenseLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.AdSenseLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.AdSenseLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetAdSenseLink_async_flattened_resourceNames",
+      "title": "GetAdSenseLinkResourceNamesAsync",
+      "description": "Snippet for GetAdSenseLinkAsync",
+      "file": "AnalyticsAdminServiceClient.GetAdSenseLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAdSenseLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetAdSenseLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.AdSenseLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AdSenseLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAdSenseLink_sync",
+      "title": "CreateAdSenseLinkRequestObject",
+      "description": "Snippet for CreateAdSenseLink",
+      "file": "AnalyticsAdminServiceClient.CreateAdSenseLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdSenseLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAdSenseLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateAdSenseLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.AdSenseLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAdSenseLink_async",
+      "title": "CreateAdSenseLinkRequestObjectAsync",
+      "description": "Snippet for CreateAdSenseLinkAsync",
+      "file": "AnalyticsAdminServiceClient.CreateAdSenseLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdSenseLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAdSenseLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateAdSenseLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AdSenseLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAdSenseLink_sync_flattened",
+      "title": "CreateAdSenseLink",
+      "description": "Snippet for CreateAdSenseLink",
+      "file": "AnalyticsAdminServiceClient.CreateAdSenseLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdSenseLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAdSenseLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.AdSenseLink",
+            "name": "adsenseLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.AdSenseLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAdSenseLink_async_flattened",
+      "title": "CreateAdSenseLinkAsync",
+      "description": "Snippet for CreateAdSenseLinkAsync",
+      "file": "AnalyticsAdminServiceClient.CreateAdSenseLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdSenseLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAdSenseLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.AdSenseLink",
+            "name": "adsenseLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AdSenseLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAdSenseLink_sync_flattened_resourceNames",
+      "title": "CreateAdSenseLinkResourceNames",
+      "description": "Snippet for CreateAdSenseLink",
+      "file": "AnalyticsAdminServiceClient.CreateAdSenseLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdSenseLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAdSenseLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.AdSenseLink",
+            "name": "adsenseLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.AdSenseLink",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateAdSenseLink_async_flattened_resourceNames",
+      "title": "CreateAdSenseLinkResourceNamesAsync",
+      "description": "Snippet for CreateAdSenseLinkAsync",
+      "file": "AnalyticsAdminServiceClient.CreateAdSenseLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdSenseLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateAdSenseLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.AdSenseLink",
+            "name": "adsenseLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.AdSenseLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteAdSenseLink_sync",
+      "title": "DeleteAdSenseLinkRequestObject",
+      "description": "Snippet for DeleteAdSenseLink",
+      "file": "AnalyticsAdminServiceClient.DeleteAdSenseLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAdSenseLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteAdSenseLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteAdSenseLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteAdSenseLink_async",
+      "title": "DeleteAdSenseLinkRequestObjectAsync",
+      "description": "Snippet for DeleteAdSenseLinkAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteAdSenseLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAdSenseLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteAdSenseLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteAdSenseLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteAdSenseLink_sync_flattened",
+      "title": "DeleteAdSenseLink",
+      "description": "Snippet for DeleteAdSenseLink",
+      "file": "AnalyticsAdminServiceClient.DeleteAdSenseLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAdSenseLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteAdSenseLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteAdSenseLink_async_flattened",
+      "title": "DeleteAdSenseLinkAsync",
+      "description": "Snippet for DeleteAdSenseLinkAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteAdSenseLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAdSenseLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteAdSenseLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteAdSenseLink_sync_flattened_resourceNames",
+      "title": "DeleteAdSenseLinkResourceNames",
+      "description": "Snippet for DeleteAdSenseLink",
+      "file": "AnalyticsAdminServiceClient.DeleteAdSenseLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAdSenseLink",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteAdSenseLink",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.AdSenseLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteAdSenseLink_async_flattened_resourceNames",
+      "title": "DeleteAdSenseLinkResourceNamesAsync",
+      "description": "Snippet for DeleteAdSenseLinkAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteAdSenseLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAdSenseLinkAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteAdSenseLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.AdSenseLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAdSenseLink",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteAdSenseLink",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAdSenseLinks_sync",
+      "title": "ListAdSenseLinksRequestObject",
+      "description": "Snippet for ListAdSenseLinks",
+      "file": "AnalyticsAdminServiceClient.ListAdSenseLinksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAdSenseLinks",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAdSenseLinks",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ListAdSenseLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse, Google.Analytics.Admin.V1Alpha.AdSenseLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAdSenseLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAdSenseLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAdSenseLinks_async",
+      "title": "ListAdSenseLinksRequestObjectAsync",
+      "description": "Snippet for ListAdSenseLinksAsync",
+      "file": "AnalyticsAdminServiceClient.ListAdSenseLinksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAdSenseLinksAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAdSenseLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ListAdSenseLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse, Google.Analytics.Admin.V1Alpha.AdSenseLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAdSenseLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAdSenseLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAdSenseLinks_sync_flattened",
+      "title": "ListAdSenseLinks",
+      "description": "Snippet for ListAdSenseLinks",
+      "file": "AnalyticsAdminServiceClient.ListAdSenseLinksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAdSenseLinks",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAdSenseLinks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse, Google.Analytics.Admin.V1Alpha.AdSenseLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAdSenseLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAdSenseLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAdSenseLinks_async_flattened",
+      "title": "ListAdSenseLinksAsync",
+      "description": "Snippet for ListAdSenseLinksAsync",
+      "file": "AnalyticsAdminServiceClient.ListAdSenseLinksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAdSenseLinksAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAdSenseLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse, Google.Analytics.Admin.V1Alpha.AdSenseLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAdSenseLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAdSenseLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAdSenseLinks_sync_flattened_resourceNames",
+      "title": "ListAdSenseLinksResourceNames",
+      "description": "Snippet for ListAdSenseLinks",
+      "file": "AnalyticsAdminServiceClient.ListAdSenseLinksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAdSenseLinks",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAdSenseLinks",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse, Google.Analytics.Admin.V1Alpha.AdSenseLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAdSenseLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAdSenseLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListAdSenseLinks_async_flattened_resourceNames",
+      "title": "ListAdSenseLinksResourceNamesAsync",
+      "description": "Snippet for ListAdSenseLinksAsync",
+      "file": "AnalyticsAdminServiceClient.ListAdSenseLinksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAdSenseLinksAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListAdSenseLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse, Google.Analytics.Admin.V1Alpha.AdSenseLink>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAdSenseLinks",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListAdSenseLinks",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetEventCreateRule_sync",
+      "title": "GetEventCreateRuleRequestObject",
+      "description": "Snippet for GetEventCreateRule",
+      "file": "AnalyticsAdminServiceClient.GetEventCreateRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEventCreateRule",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetEventCreateRule",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetEventCreateRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetEventCreateRule_async",
+      "title": "GetEventCreateRuleRequestObjectAsync",
+      "description": "Snippet for GetEventCreateRuleAsync",
+      "file": "AnalyticsAdminServiceClient.GetEventCreateRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEventCreateRuleAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetEventCreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.GetEventCreateRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetEventCreateRule_sync_flattened",
+      "title": "GetEventCreateRule",
+      "description": "Snippet for GetEventCreateRule",
+      "file": "AnalyticsAdminServiceClient.GetEventCreateRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEventCreateRule",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetEventCreateRule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetEventCreateRule_async_flattened",
+      "title": "GetEventCreateRuleAsync",
+      "description": "Snippet for GetEventCreateRuleAsync",
+      "file": "AnalyticsAdminServiceClient.GetEventCreateRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEventCreateRuleAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetEventCreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetEventCreateRule_sync_flattened_resourceNames",
+      "title": "GetEventCreateRuleResourceNames",
+      "description": "Snippet for GetEventCreateRule",
+      "file": "AnalyticsAdminServiceClient.GetEventCreateRuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEventCreateRule",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetEventCreateRule",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.EventCreateRuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetEventCreateRule_async_flattened_resourceNames",
+      "title": "GetEventCreateRuleResourceNamesAsync",
+      "description": "Snippet for GetEventCreateRuleAsync",
+      "file": "AnalyticsAdminServiceClient.GetEventCreateRuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEventCreateRuleAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.GetEventCreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.EventCreateRuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.GetEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListEventCreateRules_sync",
+      "title": "ListEventCreateRulesRequestObject",
+      "description": "Snippet for ListEventCreateRules",
+      "file": "AnalyticsAdminServiceClient.ListEventCreateRulesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEventCreateRules",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListEventCreateRules",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ListEventCreateRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse, Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListEventCreateRules",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListEventCreateRules",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListEventCreateRules_async",
+      "title": "ListEventCreateRulesRequestObjectAsync",
+      "description": "Snippet for ListEventCreateRulesAsync",
+      "file": "AnalyticsAdminServiceClient.ListEventCreateRulesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEventCreateRulesAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListEventCreateRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ListEventCreateRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse, Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListEventCreateRules",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListEventCreateRules",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListEventCreateRules_sync_flattened",
+      "title": "ListEventCreateRules",
+      "description": "Snippet for ListEventCreateRules",
+      "file": "AnalyticsAdminServiceClient.ListEventCreateRulesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEventCreateRules",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListEventCreateRules",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse, Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListEventCreateRules",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListEventCreateRules",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListEventCreateRules_async_flattened",
+      "title": "ListEventCreateRulesAsync",
+      "description": "Snippet for ListEventCreateRulesAsync",
+      "file": "AnalyticsAdminServiceClient.ListEventCreateRulesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEventCreateRulesAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListEventCreateRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse, Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListEventCreateRules",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListEventCreateRules",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListEventCreateRules_sync_flattened_resourceNames",
+      "title": "ListEventCreateRulesResourceNames",
+      "description": "Snippet for ListEventCreateRules",
+      "file": "AnalyticsAdminServiceClient.ListEventCreateRulesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEventCreateRules",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListEventCreateRules",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DataStreamName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse, Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListEventCreateRules",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListEventCreateRules",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_ListEventCreateRules_async_flattened_resourceNames",
+      "title": "ListEventCreateRulesResourceNamesAsync",
+      "description": "Snippet for ListEventCreateRulesAsync",
+      "file": "AnalyticsAdminServiceClient.ListEventCreateRulesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEventCreateRulesAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.ListEventCreateRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DataStreamName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse, Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListEventCreateRules",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.ListEventCreateRules",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateEventCreateRule_sync",
+      "title": "CreateEventCreateRuleRequestObject",
+      "description": "Snippet for CreateEventCreateRule",
+      "file": "AnalyticsAdminServiceClient.CreateEventCreateRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEventCreateRule",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateEventCreateRule",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateEventCreateRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateEventCreateRule_async",
+      "title": "CreateEventCreateRuleRequestObjectAsync",
+      "description": "Snippet for CreateEventCreateRuleAsync",
+      "file": "AnalyticsAdminServiceClient.CreateEventCreateRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEventCreateRuleAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateEventCreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.CreateEventCreateRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateEventCreateRule_sync_flattened",
+      "title": "CreateEventCreateRule",
+      "description": "Snippet for CreateEventCreateRule",
+      "file": "AnalyticsAdminServiceClient.CreateEventCreateRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEventCreateRule",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateEventCreateRule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+            "name": "eventCreateRule"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateEventCreateRule_async_flattened",
+      "title": "CreateEventCreateRuleAsync",
+      "description": "Snippet for CreateEventCreateRuleAsync",
+      "file": "AnalyticsAdminServiceClient.CreateEventCreateRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEventCreateRuleAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateEventCreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+            "name": "eventCreateRule"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateEventCreateRule_sync_flattened_resourceNames",
+      "title": "CreateEventCreateRuleResourceNames",
+      "description": "Snippet for CreateEventCreateRule",
+      "file": "AnalyticsAdminServiceClient.CreateEventCreateRuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEventCreateRule",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateEventCreateRule",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DataStreamName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+            "name": "eventCreateRule"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_CreateEventCreateRule_async_flattened_resourceNames",
+      "title": "CreateEventCreateRuleResourceNamesAsync",
+      "description": "Snippet for CreateEventCreateRuleAsync",
+      "file": "AnalyticsAdminServiceClient.CreateEventCreateRuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEventCreateRuleAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.CreateEventCreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DataStreamName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+            "name": "eventCreateRule"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.CreateEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateEventCreateRule_sync",
+      "title": "UpdateEventCreateRuleRequestObject",
+      "description": "Snippet for UpdateEventCreateRule",
+      "file": "AnalyticsAdminServiceClient.UpdateEventCreateRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEventCreateRule",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateEventCreateRule",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.UpdateEventCreateRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateEventCreateRule_async",
+      "title": "UpdateEventCreateRuleRequestObjectAsync",
+      "description": "Snippet for UpdateEventCreateRuleAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateEventCreateRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEventCreateRuleAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateEventCreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.UpdateEventCreateRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateEventCreateRule_sync_flattened",
+      "title": "UpdateEventCreateRule",
+      "description": "Snippet for UpdateEventCreateRule",
+      "file": "AnalyticsAdminServiceClient.UpdateEventCreateRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEventCreateRule",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateEventCreateRule",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+            "name": "eventCreateRule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateEventCreateRule_async_flattened",
+      "title": "UpdateEventCreateRuleAsync",
+      "description": "Snippet for UpdateEventCreateRuleAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateEventCreateRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEventCreateRuleAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateEventCreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.EventCreateRule",
+            "name": "eventCreateRule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.EventCreateRule>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteEventCreateRule_sync",
+      "title": "DeleteEventCreateRuleRequestObject",
+      "description": "Snippet for DeleteEventCreateRule",
+      "file": "AnalyticsAdminServiceClient.DeleteEventCreateRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEventCreateRule",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteEventCreateRule",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteEventCreateRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteEventCreateRule_async",
+      "title": "DeleteEventCreateRuleRequestObjectAsync",
+      "description": "Snippet for DeleteEventCreateRuleAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteEventCreateRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEventCreateRuleAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteEventCreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.DeleteEventCreateRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteEventCreateRule_sync_flattened",
+      "title": "DeleteEventCreateRule",
+      "description": "Snippet for DeleteEventCreateRule",
+      "file": "AnalyticsAdminServiceClient.DeleteEventCreateRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEventCreateRule",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteEventCreateRule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteEventCreateRule_async_flattened",
+      "title": "DeleteEventCreateRuleAsync",
+      "description": "Snippet for DeleteEventCreateRuleAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteEventCreateRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEventCreateRuleAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteEventCreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteEventCreateRule_sync_flattened_resourceNames",
+      "title": "DeleteEventCreateRuleResourceNames",
+      "description": "Snippet for DeleteEventCreateRule",
+      "file": "AnalyticsAdminServiceClient.DeleteEventCreateRuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEventCreateRule",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteEventCreateRule",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.EventCreateRuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_DeleteEventCreateRule_async_flattened_resourceNames",
+      "title": "DeleteEventCreateRuleResourceNamesAsync",
+      "description": "Snippet for DeleteEventCreateRuleAsync",
+      "file": "AnalyticsAdminServiceClient.DeleteEventCreateRuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEventCreateRuleAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.DeleteEventCreateRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.EventCreateRuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEventCreateRule",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.DeleteEventCreateRule",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

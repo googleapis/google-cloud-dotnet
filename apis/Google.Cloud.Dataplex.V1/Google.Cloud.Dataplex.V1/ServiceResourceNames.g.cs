@@ -242,6 +242,18 @@ namespace Google.Cloud.Dataplex.V1
         }
     }
 
+    public partial class RunTaskRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::TaskName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::TaskName TaskName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::TaskName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListJobsRequest
     {
         /// <summary><see cref="TaskName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>

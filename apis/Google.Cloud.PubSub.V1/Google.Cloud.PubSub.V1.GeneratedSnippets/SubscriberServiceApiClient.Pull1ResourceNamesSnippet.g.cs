@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_Pull_sync_flattened1_resourceNames]
+    // [START pubsub_v1_generated_Subscriber_Pull_sync_flattened1_resourceNames]
     using Google.Cloud.PubSub.V1;
 
     public sealed partial class GeneratedSubscriberServiceApiClientSnippets
@@ -43,5 +43,5 @@ namespace GoogleCSharpSnippets
 #pragma warning restore CS0612
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_Pull_sync_flattened1_resourceNames]
+    // [END pubsub_v1_generated_Subscriber_Pull_sync_flattened1_resourceNames]
 }

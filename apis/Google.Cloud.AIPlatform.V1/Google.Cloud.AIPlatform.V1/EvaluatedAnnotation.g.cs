@@ -227,10 +227,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// ModelEvaluation. The EvaluatedDataItemView consists of all ground truths
     /// and predictions on
     /// [data_item_payload][google.cloud.aiplatform.v1.EvaluatedAnnotation.data_item_payload].
-    ///
-    /// Can be passed in
-    /// [GetEvaluatedDataItemView's][ModelService.GetEvaluatedDataItemView][]
-    /// [id][GetEvaluatedDataItemViewRequest.id].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -3903,8 +3903,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.ExplanationParameters parameters_;
     /// <summary>
     /// The parameters to be overridden. Note that the
-    /// [method][google.cloud.aiplatform.v1.ExplanationParameters.method] cannot be
-    /// changed. If not specified, no parameter is overridden.
+    /// attribution method cannot be changed. If not specified,
+    /// no parameter is overridden.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

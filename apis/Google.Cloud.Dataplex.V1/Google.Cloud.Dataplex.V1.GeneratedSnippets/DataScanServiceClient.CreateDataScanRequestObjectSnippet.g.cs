@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 DataScan = new DataScan(),
                 DataScanId = "",
+                ValidateOnly = false,
             };
             // Make the request
             Operation<DataScan, OperationMetadata> response = dataScanServiceClient.CreateDataScan(request);

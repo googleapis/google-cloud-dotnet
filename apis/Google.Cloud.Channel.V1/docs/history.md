@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.6.0, released 2023-05-11
+
+### New features
+
+- Add billing account to entitlement definitions for Cloud Channel API ([commit 820fde9](https://github.com/googleapis/google-cloud-dotnet/commit/820fde95134e188a06c76d80ae928d989c9a2856))
+
 ## Version 2.5.0, released 2023-03-20
 
 ### New features

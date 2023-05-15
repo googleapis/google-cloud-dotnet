@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 Parent = "",
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListJobsResponse, Job> response = batchServiceClient.ListJobs(request);

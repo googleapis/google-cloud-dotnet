@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.4.0, released 2023-05-03
+
+### New features
+
+- Added support for DeployArtifacts ([commit d5c8fa7](https://github.com/googleapis/google-cloud-dotnet/commit/d5c8fa778b717a5567859c8013f03cfcdb438f17))
+- Added support for in cluster verification ([commit d5c8fa7](https://github.com/googleapis/google-cloud-dotnet/commit/d5c8fa778b717a5567859c8013f03cfcdb438f17))
+
 ## Version 2.3.0, released 2023-03-27
 
 ### New features

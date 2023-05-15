@@ -128,7 +128,6 @@ namespace Google.Cloud.ResourceManager.V3 {
   }
   #region Enums
   /// <summary>
-  ///
   /// A purpose for each policy engine requiring such an integration. A single
   /// policy engine may have multiple purposes defined, however a TagKey may only
   /// specify a single purpose.
@@ -140,15 +139,19 @@ namespace Google.Cloud.ResourceManager.V3 {
     [pbr::OriginalName("PURPOSE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
     /// Purpose for Compute Engine firewalls.
-    /// A corresponding purpose_data should be set for the network the tag is
-    /// intended for. The key should be 'network' and the value should be in
+    /// A corresponding `purpose_data` should be set for the network the tag is
+    /// intended for. The key should be `network` and the value should be in
     /// either of these two formats:
-    /// -https://www.googleapis.com/compute/{compute_version}/projects/{project_id}/global/networks/{network_id}
-    /// -{project_id}/{network_name}
+    ///
+    /// -
+    /// `https://www.googleapis.com/compute/{compute_version}/projects/{project_id}/global/networks/{network_id}`
+    /// - `{project_id}/{network_name}`
     ///
     /// Examples:
-    /// -https://www.googleapis.com/compute/staging_v1/projects/fail-closed-load-testing/global/networks/6992953698831725600
-    /// -fail-closed-load-testing/load-testing-network
+    ///
+    /// -
+    /// `https://www.googleapis.com/compute/staging_v1/projects/fail-closed-load-testing/global/networks/6992953698831725600`
+    /// - `fail-closed-load-testing/load-testing-network`
     /// </summary>
     [pbr::OriginalName("GCE_FIREWALL")] GceFirewall = 1,
   }
@@ -233,8 +236,11 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ParentFieldNumber = 2;
     private string parent_ = "";
     /// <summary>
-    /// Immutable. The resource name of the new TagKey's parent.
-    /// Must be of the form `organizations/{org_id}`.
+    /// Immutable. The resource name of the TagKey's parent. A TagKey can be
+    /// parented by an Organization or a Project. For a TagKey parented by an
+    /// Organization, its parent must be in the form `organizations/{org_id}`. For
+    /// a TagKey parented by a Project, its parent can be in the form
+    /// `projects/{project_id}` or `projects/{project_number}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -793,8 +799,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the new TagKey's parent.
-    /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+    /// Required. The resource name of the TagKey's parent.
+    /// Must be of the form `organizations/{org_id}` or `projects/{project_id}` or
+    /// `projects/{project_number}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

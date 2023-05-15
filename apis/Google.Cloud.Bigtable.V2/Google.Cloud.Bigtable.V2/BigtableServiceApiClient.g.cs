@@ -407,8 +407,8 @@ namespace Google.Cloud.Bigtable.V2
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="appProfileId">
-        /// This value specifies routing for replication. This API only accepts the
-        /// empty value of app_profile_id.
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
@@ -432,8 +432,8 @@ namespace Google.Cloud.Bigtable.V2
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="appProfileId">
-        /// This value specifies routing for replication. This API only accepts the
-        /// empty value of app_profile_id.
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>

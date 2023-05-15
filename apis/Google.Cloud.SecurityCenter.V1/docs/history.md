@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.10.0, released 2023-05-03
+
+### New features
+
+- Add cloud_dlp_inspection and cloud_dlp_data_profile fields to finding's list of attributes ([commit f4c7a0e](https://github.com/googleapis/google-cloud-dotnet/commit/f4c7a0e6d98452c60f5308448ee703901e7ef670))
+
+### Documentation improvements
+
+- Miscellaneous style improvements ([commit f4c7a0e](https://github.com/googleapis/google-cloud-dotnet/commit/f4c7a0e6d98452c60f5308448ee703901e7ef670))
+
 ## Version 3.9.0, released 2023-04-12
 
 ### New features

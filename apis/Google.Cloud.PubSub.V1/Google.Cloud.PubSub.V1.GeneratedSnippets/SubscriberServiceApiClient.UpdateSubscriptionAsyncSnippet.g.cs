@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_UpdateSubscription_async_flattened]
+    // [START pubsub_v1_generated_Subscriber_UpdateSubscription_async_flattened]
     using Google.Cloud.PubSub.V1;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
@@ -42,5 +42,5 @@ namespace GoogleCSharpSnippets
             Subscription response = await subscriberServiceApiClient.UpdateSubscriptionAsync(subscription, updateMask);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_UpdateSubscription_async_flattened]
+    // [END pubsub_v1_generated_Subscriber_UpdateSubscription_async_flattened]
 }

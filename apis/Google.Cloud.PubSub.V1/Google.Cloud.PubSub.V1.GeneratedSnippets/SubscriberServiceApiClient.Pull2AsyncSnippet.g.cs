@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_Pull_async_flattened2]
+    // [START pubsub_v1_generated_Subscriber_Pull_async_flattened2]
     using Google.Cloud.PubSub.V1;
     using System.Threading.Tasks;
 
@@ -41,5 +41,5 @@ namespace GoogleCSharpSnippets
             PullResponse response = await subscriberServiceApiClient.PullAsync(subscription, maxMessages);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_Pull_async_flattened2]
+    // [END pubsub_v1_generated_Subscriber_Pull_async_flattened2]
 }

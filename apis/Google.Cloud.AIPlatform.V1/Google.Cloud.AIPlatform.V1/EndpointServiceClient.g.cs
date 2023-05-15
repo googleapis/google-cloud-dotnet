@@ -61,6 +61,8 @@ namespace Google.Cloud.AIPlatform.V1
             DeployModelOperationsSettings = existing.DeployModelOperationsSettings.Clone();
             UndeployModelSettings = existing.UndeployModelSettings;
             UndeployModelOperationsSettings = existing.UndeployModelOperationsSettings.Clone();
+            MutateDeployedModelSettings = existing.MutateDeployedModelSettings;
+            MutateDeployedModelOperationsSettings = existing.MutateDeployedModelOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -220,6 +222,36 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UndeployModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EndpointServiceClient.MutateDeployedModel</c> and <c>EndpointServiceClient.MutateDeployedModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MutateDeployedModelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EndpointServiceClient.MutateDeployedModel</c> and
+        /// <c>EndpointServiceClient.MutateDeployedModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings MutateDeployedModelOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1742,6 +1774,293 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<UndeployModelResponse, UndeployModelOperationMetadata>> UndeployModelAsync(EndpointName endpoint, string deployedModelId, scg::IDictionary<string, int> trafficSplit, st::CancellationToken cancellationToken) =>
             UndeployModelAsync(endpoint, deployedModelId, trafficSplit, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing deployed model. Updatable fields include
+        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+        /// `disable_container_logging` (v1 only), and `enable_container_logging`
+        /// (v1beta1 only).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> MutateDeployedModel(MutateDeployedModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing deployed model. Updatable fields include
+        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+        /// `disable_container_logging` (v1 only), and `enable_container_logging`
+        /// (v1beta1 only).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>> MutateDeployedModelAsync(MutateDeployedModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing deployed model. Updatable fields include
+        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+        /// `disable_container_logging` (v1 only), and `enable_container_logging`
+        /// (v1beta1 only).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>> MutateDeployedModelAsync(MutateDeployedModelRequest request, st::CancellationToken cancellationToken) =>
+            MutateDeployedModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>MutateDeployedModel</c>.</summary>
+        public virtual lro::OperationsClient MutateDeployedModelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>MutateDeployedModel</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> PollOnceMutateDeployedModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MutateDeployedModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>MutateDeployedModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>> PollOnceMutateDeployedModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MutateDeployedModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates an existing deployed model. Updatable fields include
+        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+        /// `disable_container_logging` (v1 only), and `enable_container_logging`
+        /// (v1beta1 only).
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint resource into which to mutate a
+        /// DeployedModel. Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="deployedModel">
+        /// Required. The DeployedModel to be mutated within the Endpoint. Only the
+        /// following fields can be mutated:
+        /// 
+        /// * `min_replica_count` in either
+        /// [DedicatedResources][google.cloud.aiplatform.v1.DedicatedResources] or
+        /// [AutomaticResources][google.cloud.aiplatform.v1.AutomaticResources]
+        /// * `max_replica_count` in either
+        /// [DedicatedResources][google.cloud.aiplatform.v1.DedicatedResources] or
+        /// [AutomaticResources][google.cloud.aiplatform.v1.AutomaticResources]
+        /// * [autoscaling_metric_specs][google.cloud.aiplatform.v1.DedicatedResources.autoscaling_metric_specs]
+        /// * `disable_container_logging` (v1 only)
+        /// * `enable_container_logging` (v1beta1 only)
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> MutateDeployedModel(string endpoint, DeployedModel deployedModel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            MutateDeployedModel(new MutateDeployedModelRequest
+            {
+                Endpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(endpoint, nameof(endpoint)),
+                DeployedModel = gax::GaxPreconditions.CheckNotNull(deployedModel, nameof(deployedModel)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing deployed model. Updatable fields include
+        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+        /// `disable_container_logging` (v1 only), and `enable_container_logging`
+        /// (v1beta1 only).
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint resource into which to mutate a
+        /// DeployedModel. Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="deployedModel">
+        /// Required. The DeployedModel to be mutated within the Endpoint. Only the
+        /// following fields can be mutated:
+        /// 
+        /// * `min_replica_count` in either
+        /// [DedicatedResources][google.cloud.aiplatform.v1.DedicatedResources] or
+        /// [AutomaticResources][google.cloud.aiplatform.v1.AutomaticResources]
+        /// * `max_replica_count` in either
+        /// [DedicatedResources][google.cloud.aiplatform.v1.DedicatedResources] or
+        /// [AutomaticResources][google.cloud.aiplatform.v1.AutomaticResources]
+        /// * [autoscaling_metric_specs][google.cloud.aiplatform.v1.DedicatedResources.autoscaling_metric_specs]
+        /// * `disable_container_logging` (v1 only)
+        /// * `enable_container_logging` (v1beta1 only)
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>> MutateDeployedModelAsync(string endpoint, DeployedModel deployedModel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            MutateDeployedModelAsync(new MutateDeployedModelRequest
+            {
+                Endpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(endpoint, nameof(endpoint)),
+                DeployedModel = gax::GaxPreconditions.CheckNotNull(deployedModel, nameof(deployedModel)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing deployed model. Updatable fields include
+        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+        /// `disable_container_logging` (v1 only), and `enable_container_logging`
+        /// (v1beta1 only).
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint resource into which to mutate a
+        /// DeployedModel. Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="deployedModel">
+        /// Required. The DeployedModel to be mutated within the Endpoint. Only the
+        /// following fields can be mutated:
+        /// 
+        /// * `min_replica_count` in either
+        /// [DedicatedResources][google.cloud.aiplatform.v1.DedicatedResources] or
+        /// [AutomaticResources][google.cloud.aiplatform.v1.AutomaticResources]
+        /// * `max_replica_count` in either
+        /// [DedicatedResources][google.cloud.aiplatform.v1.DedicatedResources] or
+        /// [AutomaticResources][google.cloud.aiplatform.v1.AutomaticResources]
+        /// * [autoscaling_metric_specs][google.cloud.aiplatform.v1.DedicatedResources.autoscaling_metric_specs]
+        /// * `disable_container_logging` (v1 only)
+        /// * `enable_container_logging` (v1beta1 only)
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>> MutateDeployedModelAsync(string endpoint, DeployedModel deployedModel, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            MutateDeployedModelAsync(endpoint, deployedModel, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing deployed model. Updatable fields include
+        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+        /// `disable_container_logging` (v1 only), and `enable_container_logging`
+        /// (v1beta1 only).
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint resource into which to mutate a
+        /// DeployedModel. Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="deployedModel">
+        /// Required. The DeployedModel to be mutated within the Endpoint. Only the
+        /// following fields can be mutated:
+        /// 
+        /// * `min_replica_count` in either
+        /// [DedicatedResources][google.cloud.aiplatform.v1.DedicatedResources] or
+        /// [AutomaticResources][google.cloud.aiplatform.v1.AutomaticResources]
+        /// * `max_replica_count` in either
+        /// [DedicatedResources][google.cloud.aiplatform.v1.DedicatedResources] or
+        /// [AutomaticResources][google.cloud.aiplatform.v1.AutomaticResources]
+        /// * [autoscaling_metric_specs][google.cloud.aiplatform.v1.DedicatedResources.autoscaling_metric_specs]
+        /// * `disable_container_logging` (v1 only)
+        /// * `enable_container_logging` (v1beta1 only)
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> MutateDeployedModel(EndpointName endpoint, DeployedModel deployedModel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            MutateDeployedModel(new MutateDeployedModelRequest
+            {
+                EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
+                DeployedModel = gax::GaxPreconditions.CheckNotNull(deployedModel, nameof(deployedModel)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing deployed model. Updatable fields include
+        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+        /// `disable_container_logging` (v1 only), and `enable_container_logging`
+        /// (v1beta1 only).
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint resource into which to mutate a
+        /// DeployedModel. Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="deployedModel">
+        /// Required. The DeployedModel to be mutated within the Endpoint. Only the
+        /// following fields can be mutated:
+        /// 
+        /// * `min_replica_count` in either
+        /// [DedicatedResources][google.cloud.aiplatform.v1.DedicatedResources] or
+        /// [AutomaticResources][google.cloud.aiplatform.v1.AutomaticResources]
+        /// * `max_replica_count` in either
+        /// [DedicatedResources][google.cloud.aiplatform.v1.DedicatedResources] or
+        /// [AutomaticResources][google.cloud.aiplatform.v1.AutomaticResources]
+        /// * [autoscaling_metric_specs][google.cloud.aiplatform.v1.DedicatedResources.autoscaling_metric_specs]
+        /// * `disable_container_logging` (v1 only)
+        /// * `enable_container_logging` (v1beta1 only)
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>> MutateDeployedModelAsync(EndpointName endpoint, DeployedModel deployedModel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            MutateDeployedModelAsync(new MutateDeployedModelRequest
+            {
+                EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
+                DeployedModel = gax::GaxPreconditions.CheckNotNull(deployedModel, nameof(deployedModel)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing deployed model. Updatable fields include
+        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+        /// `disable_container_logging` (v1 only), and `enable_container_logging`
+        /// (v1beta1 only).
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint resource into which to mutate a
+        /// DeployedModel. Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="deployedModel">
+        /// Required. The DeployedModel to be mutated within the Endpoint. Only the
+        /// following fields can be mutated:
+        /// 
+        /// * `min_replica_count` in either
+        /// [DedicatedResources][google.cloud.aiplatform.v1.DedicatedResources] or
+        /// [AutomaticResources][google.cloud.aiplatform.v1.AutomaticResources]
+        /// * `max_replica_count` in either
+        /// [DedicatedResources][google.cloud.aiplatform.v1.DedicatedResources] or
+        /// [AutomaticResources][google.cloud.aiplatform.v1.AutomaticResources]
+        /// * [autoscaling_metric_specs][google.cloud.aiplatform.v1.DedicatedResources.autoscaling_metric_specs]
+        /// * `disable_container_logging` (v1 only)
+        /// * `enable_container_logging` (v1beta1 only)
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. See
+        /// [google.protobuf.FieldMask][google.protobuf.FieldMask].
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>> MutateDeployedModelAsync(EndpointName endpoint, DeployedModel deployedModel, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            MutateDeployedModelAsync(endpoint, deployedModel, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>EndpointService client wrapper implementation, for convenient use.</summary>
@@ -1764,6 +2083,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<UndeployModelRequest, lro::Operation> _callUndeployModel;
 
+        private readonly gaxgrpc::ApiCall<MutateDeployedModelRequest, lro::Operation> _callMutateDeployedModel;
+
         /// <summary>
         /// Constructs a client wrapper for the EndpointService service, with the specified gRPC client and settings.
         /// </summary>
@@ -1779,6 +2100,7 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteEndpointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEndpointOperationsSettings, logger);
             DeployModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployModelOperationsSettings, logger);
             UndeployModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployModelOperationsSettings, logger);
+            MutateDeployedModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MutateDeployedModelOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateEndpoint = clientHelper.BuildApiCall<CreateEndpointRequest, lro::Operation>("CreateEndpoint", grpcClient.CreateEndpointAsync, grpcClient.CreateEndpoint, effectiveSettings.CreateEndpointSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -1802,6 +2124,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callUndeployModel = clientHelper.BuildApiCall<UndeployModelRequest, lro::Operation>("UndeployModel", grpcClient.UndeployModelAsync, grpcClient.UndeployModel, effectiveSettings.UndeployModelSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callUndeployModel);
             Modify_UndeployModelApiCall(ref _callUndeployModel);
+            _callMutateDeployedModel = clientHelper.BuildApiCall<MutateDeployedModelRequest, lro::Operation>("MutateDeployedModel", grpcClient.MutateDeployedModelAsync, grpcClient.MutateDeployedModel, effectiveSettings.MutateDeployedModelSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
+            Modify_ApiCall(ref _callMutateDeployedModel);
+            Modify_MutateDeployedModelApiCall(ref _callMutateDeployedModel);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1820,6 +2145,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_DeployModelApiCall(ref gaxgrpc::ApiCall<DeployModelRequest, lro::Operation> call);
 
         partial void Modify_UndeployModelApiCall(ref gaxgrpc::ApiCall<UndeployModelRequest, lro::Operation> call);
+
+        partial void Modify_MutateDeployedModelApiCall(ref gaxgrpc::ApiCall<MutateDeployedModelRequest, lro::Operation> call);
 
         partial void OnConstruction(EndpointService.EndpointServiceClient grpcClient, EndpointServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1845,6 +2172,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_DeployModelRequest(ref DeployModelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UndeployModelRequest(ref UndeployModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MutateDeployedModelRequest(ref MutateDeployedModelRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateEndpoint</c>.</summary>
         public override lro::OperationsClient CreateEndpointOperationsClient { get; }
@@ -2026,6 +2355,39 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_UndeployModelRequest(ref request, ref callSettings);
             return new lro::Operation<UndeployModelResponse, UndeployModelOperationMetadata>(await _callUndeployModel.Async(request, callSettings).ConfigureAwait(false), UndeployModelOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>MutateDeployedModel</c>.</summary>
+        public override lro::OperationsClient MutateDeployedModelOperationsClient { get; }
+
+        /// <summary>
+        /// Updates an existing deployed model. Updatable fields include
+        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+        /// `disable_container_logging` (v1 only), and `enable_container_logging`
+        /// (v1beta1 only).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> MutateDeployedModel(MutateDeployedModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MutateDeployedModelRequest(ref request, ref callSettings);
+            return new lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>(_callMutateDeployedModel.Sync(request, callSettings), MutateDeployedModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates an existing deployed model. Updatable fields include
+        /// `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
+        /// `disable_container_logging` (v1 only), and `enable_container_logging`
+        /// (v1beta1 only).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>> MutateDeployedModelAsync(MutateDeployedModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MutateDeployedModelRequest(ref request, ref callSettings);
+            return new lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>(await _callMutateDeployedModel.Async(request, callSettings).ConfigureAwait(false), MutateDeployedModelOperationsClient);
         }
     }
 

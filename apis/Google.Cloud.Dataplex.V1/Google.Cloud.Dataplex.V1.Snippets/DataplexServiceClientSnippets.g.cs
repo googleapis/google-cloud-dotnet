@@ -4642,6 +4642,93 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for RunTask</summary>
+        public void RunTaskRequestObject()
+        {
+            // Snippet: RunTask(RunTaskRequest, CallSettings)
+            // Create client
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::RunTaskRequest request = new gcdv::RunTaskRequest
+            {
+                TaskName = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
+            };
+            // Make the request
+            gcdv::RunTaskResponse response = dataplexServiceClient.RunTask(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunTaskAsync</summary>
+        public async Task RunTaskRequestObjectAsync()
+        {
+            // Snippet: RunTaskAsync(RunTaskRequest, CallSettings)
+            // Additional: RunTaskAsync(RunTaskRequest, CancellationToken)
+            // Create client
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::RunTaskRequest request = new gcdv::RunTaskRequest
+            {
+                TaskName = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
+            };
+            // Make the request
+            gcdv::RunTaskResponse response = await dataplexServiceClient.RunTaskAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunTask</summary>
+        public void RunTask()
+        {
+            // Snippet: RunTask(string, CallSettings)
+            // Create client
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/tasks/[TASK]";
+            // Make the request
+            gcdv::RunTaskResponse response = dataplexServiceClient.RunTask(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunTaskAsync</summary>
+        public async Task RunTaskAsync()
+        {
+            // Snippet: RunTaskAsync(string, CallSettings)
+            // Additional: RunTaskAsync(string, CancellationToken)
+            // Create client
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lakes/[LAKE]/tasks/[TASK]";
+            // Make the request
+            gcdv::RunTaskResponse response = await dataplexServiceClient.RunTaskAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunTask</summary>
+        public void RunTaskResourceNames()
+        {
+            // Snippet: RunTask(TaskName, CallSettings)
+            // Create client
+            gcdv::DataplexServiceClient dataplexServiceClient = gcdv::DataplexServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::TaskName name = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
+            // Make the request
+            gcdv::RunTaskResponse response = dataplexServiceClient.RunTask(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunTaskAsync</summary>
+        public async Task RunTaskResourceNamesAsync()
+        {
+            // Snippet: RunTaskAsync(TaskName, CallSettings)
+            // Additional: RunTaskAsync(TaskName, CancellationToken)
+            // Create client
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::TaskName name = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]");
+            // Make the request
+            gcdv::RunTaskResponse response = await dataplexServiceClient.RunTaskAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetJob</summary>
         public void GetJobRequestObject()
         {

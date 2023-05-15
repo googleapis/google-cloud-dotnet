@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_PublisherServiceApi_UpdateTopic_async_flattened]
+    // [START pubsub_v1_generated_Publisher_UpdateTopic_async_flattened]
     using Google.Cloud.PubSub.V1;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
@@ -42,5 +42,5 @@ namespace GoogleCSharpSnippets
             Topic response = await publisherServiceApiClient.UpdateTopicAsync(topic, updateMask);
         }
     }
-    // [END pubsub_v1_generated_PublisherServiceApi_UpdateTopic_async_flattened]
+    // [END pubsub_v1_generated_Publisher_UpdateTopic_async_flattened]
 }

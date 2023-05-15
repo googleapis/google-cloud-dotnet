@@ -115,14 +115,6 @@ generate_microgenerator() {
     $(find $API_SRC_DIR -name '*.proto') \
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
   
-  # Allow protos to be changed after proto/gRPC generation but before the
-  # GAPIC microgenerator. This is pretty extreme, but is used for service renaming.
-  if [[ -f $API_OUT_DIR/$1/midmicrogeneration.sh ]]
-  then
-    echo "Running mid-micro-generation script for $1"
-    (cd $API_OUT_DIR/$1; ./midmicrogeneration.sh)
-  fi
-
   # Client generation. This needs the common resources proto as a reference,
   # but it won't generate anything for it.
   # The Cloud Common protos are likewise included so that operation result/metadata

@@ -749,6 +749,7 @@ namespace GoogleCSharpSnippets
                     AssistQueryParams = new AssistQueryParameters(),
                     EnablePartialAutomatedAgentReply = false,
                     CxParameters = new Struct(),
+                    EnableDebuggingInfo = false,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_CreateSubscription_sync]
+    // [START pubsub_v1_generated_Subscriber_CreateSubscription_sync]
     using Google.Cloud.PubSub.V1;
     using Google.Protobuf.WellKnownTypes;
 
@@ -54,10 +54,11 @@ namespace GoogleCSharpSnippets
                 TopicMessageRetentionDuration = new Duration(),
                 BigqueryConfig = new BigQueryConfig(),
                 State = Subscription.Types.State.Unspecified,
+                CloudStorageConfig = new CloudStorageConfig(),
             };
             // Make the request
             Subscription response = subscriberServiceApiClient.CreateSubscription(request);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_CreateSubscription_sync]
+    // [END pubsub_v1_generated_Subscriber_CreateSubscription_sync]
 }

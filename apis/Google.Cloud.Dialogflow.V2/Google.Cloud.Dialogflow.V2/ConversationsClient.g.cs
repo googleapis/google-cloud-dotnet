@@ -53,6 +53,7 @@ namespace Google.Cloud.Dialogflow.V2
             CompleteConversationSettings = existing.CompleteConversationSettings;
             ListMessagesSettings = existing.ListMessagesSettings;
             SuggestConversationSummarySettings = existing.SuggestConversationSummarySettings;
+            GenerateStatelessSummarySettings = existing.GenerateStatelessSummarySettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -167,6 +168,25 @@ namespace Google.Cloud.Dialogflow.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SuggestConversationSummarySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConversationsClient.GenerateStatelessSummary</c> and <c>ConversationsClient.GenerateStatelessSummaryAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateStatelessSummarySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1437,6 +1457,36 @@ namespace Google.Cloud.Dialogflow.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SuggestConversationSummaryResponse> SuggestConversationSummaryAsync(ConversationName conversation, st::CancellationToken cancellationToken) =>
             SuggestConversationSummaryAsync(conversation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generates and returns a summary for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateStatelessSummaryResponse GenerateStatelessSummary(GenerateStatelessSummaryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates and returns a summary for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateStatelessSummaryResponse> GenerateStatelessSummaryAsync(GenerateStatelessSummaryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates and returns a summary for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateStatelessSummaryResponse> GenerateStatelessSummaryAsync(GenerateStatelessSummaryRequest request, st::CancellationToken cancellationToken) =>
+            GenerateStatelessSummaryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Conversations client wrapper implementation, for convenient use.</summary>
@@ -1457,6 +1507,8 @@ namespace Google.Cloud.Dialogflow.V2
         private readonly gaxgrpc::ApiCall<ListMessagesRequest, ListMessagesResponse> _callListMessages;
 
         private readonly gaxgrpc::ApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse> _callSuggestConversationSummary;
+
+        private readonly gaxgrpc::ApiCall<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse> _callGenerateStatelessSummary;
 
         /// <summary>
         /// Constructs a client wrapper for the Conversations service, with the specified gRPC client and settings.
@@ -1488,6 +1540,9 @@ namespace Google.Cloud.Dialogflow.V2
             _callSuggestConversationSummary = clientHelper.BuildApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse>("SuggestConversationSummary", grpcClient.SuggestConversationSummaryAsync, grpcClient.SuggestConversationSummary, effectiveSettings.SuggestConversationSummarySettings).WithGoogleRequestParam("conversation", request => request.Conversation);
             Modify_ApiCall(ref _callSuggestConversationSummary);
             Modify_SuggestConversationSummaryApiCall(ref _callSuggestConversationSummary);
+            _callGenerateStatelessSummary = clientHelper.BuildApiCall<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse>("GenerateStatelessSummary", grpcClient.GenerateStatelessSummaryAsync, grpcClient.GenerateStatelessSummary, effectiveSettings.GenerateStatelessSummarySettings).WithGoogleRequestParam("stateless_conversation.parent", request => request.StatelessConversation?.Parent);
+            Modify_ApiCall(ref _callGenerateStatelessSummary);
+            Modify_GenerateStatelessSummaryApiCall(ref _callGenerateStatelessSummary);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1504,6 +1559,8 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_ListMessagesApiCall(ref gaxgrpc::ApiCall<ListMessagesRequest, ListMessagesResponse> call);
 
         partial void Modify_SuggestConversationSummaryApiCall(ref gaxgrpc::ApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse> call);
+
+        partial void Modify_GenerateStatelessSummaryApiCall(ref gaxgrpc::ApiCall<GenerateStatelessSummaryRequest, GenerateStatelessSummaryResponse> call);
 
         partial void OnConstruction(Conversations.ConversationsClient grpcClient, ConversationsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1524,6 +1581,8 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_ListMessagesRequest(ref ListMessagesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SuggestConversationSummaryRequest(ref SuggestConversationSummaryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateStatelessSummaryRequest(ref GenerateStatelessSummaryRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new conversation. Conversations are auto-completed after 24
@@ -1721,6 +1780,32 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Modify_SuggestConversationSummaryRequest(ref request, ref callSettings);
             return _callSuggestConversationSummary.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates and returns a summary for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateStatelessSummaryResponse GenerateStatelessSummary(GenerateStatelessSummaryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateStatelessSummaryRequest(ref request, ref callSettings);
+            return _callGenerateStatelessSummary.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates and returns a summary for a conversation that does not have a
+        /// resource created for it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateStatelessSummaryResponse> GenerateStatelessSummaryAsync(GenerateStatelessSummaryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateStatelessSummaryRequest(ref request, ref callSettings);
+            return _callGenerateStatelessSummary.Async(request, callSettings);
         }
     }
 

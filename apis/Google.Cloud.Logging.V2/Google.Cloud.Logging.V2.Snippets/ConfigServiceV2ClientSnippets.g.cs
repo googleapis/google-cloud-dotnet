@@ -607,6 +607,144 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for BeginCreateBucket</summary>
+        public void BeginCreateBucketRequestObject()
+        {
+            // Snippet: BeginCreateBucket(CreateBucketRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            CreateBucketRequest request = new CreateBucketRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BucketId = "",
+                Bucket = new LogBucket(),
+            };
+            // Make the request
+            Operation<LogBucket, BucketMetadata> response = configServiceV2Client.BeginCreateBucket(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogBucket, BucketMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LogBucket result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogBucket, BucketMetadata> retrievedResponse = configServiceV2Client.PollOnceBeginCreateBucket(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogBucket retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BeginCreateBucketAsync</summary>
+        public async Task BeginCreateBucketRequestObjectAsync()
+        {
+            // Snippet: BeginCreateBucketAsync(CreateBucketRequest, CallSettings)
+            // Additional: BeginCreateBucketAsync(CreateBucketRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            CreateBucketRequest request = new CreateBucketRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BucketId = "",
+                Bucket = new LogBucket(),
+            };
+            // Make the request
+            Operation<LogBucket, BucketMetadata> response = await configServiceV2Client.BeginCreateBucketAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogBucket, BucketMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LogBucket result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogBucket, BucketMetadata> retrievedResponse = await configServiceV2Client.PollOnceBeginCreateBucketAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogBucket retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BeginUpdateBucket</summary>
+        public void BeginUpdateBucketRequestObject()
+        {
+            // Snippet: BeginUpdateBucket(UpdateBucketRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            UpdateBucketRequest request = new UpdateBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Bucket = new LogBucket(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<LogBucket, BucketMetadata> response = configServiceV2Client.BeginUpdateBucket(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogBucket, BucketMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LogBucket result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogBucket, BucketMetadata> retrievedResponse = configServiceV2Client.PollOnceBeginUpdateBucket(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogBucket retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BeginUpdateBucketAsync</summary>
+        public async Task BeginUpdateBucketRequestObjectAsync()
+        {
+            // Snippet: BeginUpdateBucketAsync(UpdateBucketRequest, CallSettings)
+            // Additional: BeginUpdateBucketAsync(UpdateBucketRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBucketRequest request = new UpdateBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Bucket = new LogBucket(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<LogBucket, BucketMetadata> response = await configServiceV2Client.BeginUpdateBucketAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogBucket, BucketMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LogBucket result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogBucket, BucketMetadata> retrievedResponse = await configServiceV2Client.PollOnceBeginUpdateBucketAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogBucket retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateBucket</summary>
         public void CreateBucketRequestObject()
         {
@@ -2125,6 +2263,747 @@ namespace GoogleCSharpSnippets
             LogSinkName sinkName = LogSinkName.FromProjectSink("[PROJECT]", "[SINK]");
             // Make the request
             await configServiceV2Client.DeleteSinkAsync(sinkName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLink</summary>
+        public void CreateLinkRequestObject()
+        {
+            // Snippet: CreateLink(CreateLinkRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            CreateLinkRequest request = new CreateLinkRequest
+            {
+                ParentAsLogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Link = new Link(),
+                LinkId = "",
+            };
+            // Make the request
+            Operation<Link, LinkMetadata> response = configServiceV2Client.CreateLink(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Link, LinkMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Link result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Link, LinkMetadata> retrievedResponse = configServiceV2Client.PollOnceCreateLink(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Link retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLinkAsync</summary>
+        public async Task CreateLinkRequestObjectAsync()
+        {
+            // Snippet: CreateLinkAsync(CreateLinkRequest, CallSettings)
+            // Additional: CreateLinkAsync(CreateLinkRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            CreateLinkRequest request = new CreateLinkRequest
+            {
+                ParentAsLogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Link = new Link(),
+                LinkId = "",
+            };
+            // Make the request
+            Operation<Link, LinkMetadata> response = await configServiceV2Client.CreateLinkAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Link, LinkMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Link result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Link, LinkMetadata> retrievedResponse = await configServiceV2Client.PollOnceCreateLinkAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Link retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLink</summary>
+        public void CreateLink()
+        {
+            // Snippet: CreateLink(string, Link, string, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/buckets/[BUCKET]";
+            Link link = new Link();
+            string linkId = "";
+            // Make the request
+            Operation<Link, LinkMetadata> response = configServiceV2Client.CreateLink(parent, link, linkId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Link, LinkMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Link result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Link, LinkMetadata> retrievedResponse = configServiceV2Client.PollOnceCreateLink(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Link retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLinkAsync</summary>
+        public async Task CreateLinkAsync()
+        {
+            // Snippet: CreateLinkAsync(string, Link, string, CallSettings)
+            // Additional: CreateLinkAsync(string, Link, string, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/buckets/[BUCKET]";
+            Link link = new Link();
+            string linkId = "";
+            // Make the request
+            Operation<Link, LinkMetadata> response = await configServiceV2Client.CreateLinkAsync(parent, link, linkId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Link, LinkMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Link result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Link, LinkMetadata> retrievedResponse = await configServiceV2Client.PollOnceCreateLinkAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Link retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLink</summary>
+        public void CreateLinkResourceNames()
+        {
+            // Snippet: CreateLink(LogBucketName, Link, string, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            LogBucketName parent = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]");
+            Link link = new Link();
+            string linkId = "";
+            // Make the request
+            Operation<Link, LinkMetadata> response = configServiceV2Client.CreateLink(parent, link, linkId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Link, LinkMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Link result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Link, LinkMetadata> retrievedResponse = configServiceV2Client.PollOnceCreateLink(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Link retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLinkAsync</summary>
+        public async Task CreateLinkResourceNamesAsync()
+        {
+            // Snippet: CreateLinkAsync(LogBucketName, Link, string, CallSettings)
+            // Additional: CreateLinkAsync(LogBucketName, Link, string, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            LogBucketName parent = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]");
+            Link link = new Link();
+            string linkId = "";
+            // Make the request
+            Operation<Link, LinkMetadata> response = await configServiceV2Client.CreateLinkAsync(parent, link, linkId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Link, LinkMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Link result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Link, LinkMetadata> retrievedResponse = await configServiceV2Client.PollOnceCreateLinkAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Link retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLink</summary>
+        public void DeleteLinkRequestObject()
+        {
+            // Snippet: DeleteLink(DeleteLinkRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            DeleteLinkRequest request = new DeleteLinkRequest
+            {
+                LinkName = LinkName.FromProjectLocationBucketLink("[PROJECT]", "[LOCATION]", "[BUCKET]", "[LINK]"),
+            };
+            // Make the request
+            Operation<Empty, LinkMetadata> response = configServiceV2Client.DeleteLink(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, LinkMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, LinkMetadata> retrievedResponse = configServiceV2Client.PollOnceDeleteLink(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLinkAsync</summary>
+        public async Task DeleteLinkRequestObjectAsync()
+        {
+            // Snippet: DeleteLinkAsync(DeleteLinkRequest, CallSettings)
+            // Additional: DeleteLinkAsync(DeleteLinkRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            DeleteLinkRequest request = new DeleteLinkRequest
+            {
+                LinkName = LinkName.FromProjectLocationBucketLink("[PROJECT]", "[LOCATION]", "[BUCKET]", "[LINK]"),
+            };
+            // Make the request
+            Operation<Empty, LinkMetadata> response = await configServiceV2Client.DeleteLinkAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, LinkMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, LinkMetadata> retrievedResponse = await configServiceV2Client.PollOnceDeleteLinkAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLink</summary>
+        public void DeleteLink()
+        {
+            // Snippet: DeleteLink(string, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/buckets/[BUCKET]/links/[LINK]";
+            // Make the request
+            Operation<Empty, LinkMetadata> response = configServiceV2Client.DeleteLink(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, LinkMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, LinkMetadata> retrievedResponse = configServiceV2Client.PollOnceDeleteLink(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLinkAsync</summary>
+        public async Task DeleteLinkAsync()
+        {
+            // Snippet: DeleteLinkAsync(string, CallSettings)
+            // Additional: DeleteLinkAsync(string, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/buckets/[BUCKET]/links/[LINK]";
+            // Make the request
+            Operation<Empty, LinkMetadata> response = await configServiceV2Client.DeleteLinkAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, LinkMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, LinkMetadata> retrievedResponse = await configServiceV2Client.PollOnceDeleteLinkAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLink</summary>
+        public void DeleteLinkResourceNames()
+        {
+            // Snippet: DeleteLink(LinkName, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            LinkName name = LinkName.FromProjectLocationBucketLink("[PROJECT]", "[LOCATION]", "[BUCKET]", "[LINK]");
+            // Make the request
+            Operation<Empty, LinkMetadata> response = configServiceV2Client.DeleteLink(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, LinkMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, LinkMetadata> retrievedResponse = configServiceV2Client.PollOnceDeleteLink(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLinkAsync</summary>
+        public async Task DeleteLinkResourceNamesAsync()
+        {
+            // Snippet: DeleteLinkAsync(LinkName, CallSettings)
+            // Additional: DeleteLinkAsync(LinkName, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            LinkName name = LinkName.FromProjectLocationBucketLink("[PROJECT]", "[LOCATION]", "[BUCKET]", "[LINK]");
+            // Make the request
+            Operation<Empty, LinkMetadata> response = await configServiceV2Client.DeleteLinkAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, LinkMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, LinkMetadata> retrievedResponse = await configServiceV2Client.PollOnceDeleteLinkAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLinks</summary>
+        public void ListLinksRequestObject()
+        {
+            // Snippet: ListLinks(ListLinksRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            ListLinksRequest request = new ListLinksRequest
+            {
+                ParentAsLogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            // Make the request
+            PagedEnumerable<ListLinksResponse, Link> response = configServiceV2Client.ListLinks(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Link item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Link item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Link> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Link item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLinksAsync</summary>
+        public async Task ListLinksRequestObjectAsync()
+        {
+            // Snippet: ListLinksAsync(ListLinksRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            ListLinksRequest request = new ListLinksRequest
+            {
+                ParentAsLogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListLinksResponse, Link> response = configServiceV2Client.ListLinksAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Link item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Link item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Link> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Link item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLinks</summary>
+        public void ListLinks()
+        {
+            // Snippet: ListLinks(string, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/buckets/[BUCKET]";
+            // Make the request
+            PagedEnumerable<ListLinksResponse, Link> response = configServiceV2Client.ListLinks(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Link item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Link item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Link> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Link item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLinksAsync</summary>
+        public async Task ListLinksAsync()
+        {
+            // Snippet: ListLinksAsync(string, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/buckets/[BUCKET]";
+            // Make the request
+            PagedAsyncEnumerable<ListLinksResponse, Link> response = configServiceV2Client.ListLinksAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Link item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Link item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Link> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Link item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLinks</summary>
+        public void ListLinksResourceNames()
+        {
+            // Snippet: ListLinks(LogBucketName, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            LogBucketName parent = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]");
+            // Make the request
+            PagedEnumerable<ListLinksResponse, Link> response = configServiceV2Client.ListLinks(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Link item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Link item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Link> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Link item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLinksAsync</summary>
+        public async Task ListLinksResourceNamesAsync()
+        {
+            // Snippet: ListLinksAsync(LogBucketName, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            LogBucketName parent = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]");
+            // Make the request
+            PagedAsyncEnumerable<ListLinksResponse, Link> response = configServiceV2Client.ListLinksAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Link item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Link item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Link> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Link item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLink</summary>
+        public void GetLinkRequestObject()
+        {
+            // Snippet: GetLink(GetLinkRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            GetLinkRequest request = new GetLinkRequest
+            {
+                LinkName = LinkName.FromProjectLocationBucketLink("[PROJECT]", "[LOCATION]", "[BUCKET]", "[LINK]"),
+            };
+            // Make the request
+            Link response = configServiceV2Client.GetLink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLinkAsync</summary>
+        public async Task GetLinkRequestObjectAsync()
+        {
+            // Snippet: GetLinkAsync(GetLinkRequest, CallSettings)
+            // Additional: GetLinkAsync(GetLinkRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            GetLinkRequest request = new GetLinkRequest
+            {
+                LinkName = LinkName.FromProjectLocationBucketLink("[PROJECT]", "[LOCATION]", "[BUCKET]", "[LINK]"),
+            };
+            // Make the request
+            Link response = await configServiceV2Client.GetLinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLink</summary>
+        public void GetLink()
+        {
+            // Snippet: GetLink(string, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/buckets/[BUCKET]/links/[LINK]";
+            // Make the request
+            Link response = configServiceV2Client.GetLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLinkAsync</summary>
+        public async Task GetLinkAsync()
+        {
+            // Snippet: GetLinkAsync(string, CallSettings)
+            // Additional: GetLinkAsync(string, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/buckets/[BUCKET]/links/[LINK]";
+            // Make the request
+            Link response = await configServiceV2Client.GetLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLink</summary>
+        public void GetLinkResourceNames()
+        {
+            // Snippet: GetLink(LinkName, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            LinkName name = LinkName.FromProjectLocationBucketLink("[PROJECT]", "[LOCATION]", "[BUCKET]", "[LINK]");
+            // Make the request
+            Link response = configServiceV2Client.GetLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLinkAsync</summary>
+        public async Task GetLinkResourceNamesAsync()
+        {
+            // Snippet: GetLinkAsync(LinkName, CallSettings)
+            // Additional: GetLinkAsync(LinkName, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            LinkName name = LinkName.FromProjectLocationBucketLink("[PROJECT]", "[LOCATION]", "[BUCKET]", "[LINK]");
+            // Make the request
+            Link response = await configServiceV2Client.GetLinkAsync(name);
             // End snippet
         }
 

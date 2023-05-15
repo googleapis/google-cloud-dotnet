@@ -69,6 +69,7 @@ namespace GoogleCSharpSnippets
                     OutputAudioConfig = new OutputAudioConfig(),
                     InputAudio = ByteString.Empty,
                     OutputAudioConfigMask = new FieldMask(),
+                    EnableDebuggingInfo = false,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

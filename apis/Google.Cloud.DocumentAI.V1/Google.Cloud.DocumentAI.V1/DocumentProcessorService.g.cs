@@ -319,15 +319,16 @@ namespace Google.Cloud.DocumentAI.V1 {
             "YXRpb25zLyovcHJvY2Vzc29ycy8qL3Byb2Nlc3NvclZlcnNpb25zLyp9L2V2",
             "YWx1YXRpb25z2kEGcGFyZW50Gk3KQRlkb2N1bWVudGFpLmdvb2dsZWFwaXMu",
             "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
-            "bGF0Zm9ybULaAgoeY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxQhpE",
+            "bGF0Zm9ybUKqAwoeY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxQhpE",
             "b2N1bWVudEFpUHJvY2Vzc29yU2VydmljZVABWj5jbG91ZC5nb29nbGUuY29t",
             "L2dvL2RvY3VtZW50YWkvYXBpdjEvZG9jdW1lbnRhaXBiO2RvY3VtZW50YWlw",
             "YqoCGkdvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxygIaR29vZ2xlXENsb3Vk",
             "XERvY3VtZW50QUlcVjHqAh1Hb29nbGU6OkNsb3VkOjpEb2N1bWVudEFJOjpW",
             "MepBfworZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9IdW1hblJldmlld0Nv",
             "bmZpZxJQcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L3Byb2Nlc3NvcnMve3Byb2Nlc3Nvcn0vaHVtYW5SZXZpZXdDb25maWdiBnBy",
-            "b3RvMw=="));
+            "L3Byb2Nlc3NvcnMve3Byb2Nlc3Nvcn0vaHVtYW5SZXZpZXdDb25maWfqQU0K",
+            "ImRvY3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SJ3Byb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.DocumentReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.DocumentIoReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.DocumentSchemaReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.EvaluationReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.OperationMetadataReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.ProcessorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.ProcessorTypeReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

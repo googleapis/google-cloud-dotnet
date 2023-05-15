@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -67,6 +68,7 @@ namespace Google.Cloud.Redis.V1
             DeleteInstanceOperationsSettings = existing.DeleteInstanceOperationsSettings.Clone();
             RescheduleMaintenanceSettings = existing.RescheduleMaintenanceSettings;
             RescheduleMaintenanceOperationsSettings = existing.RescheduleMaintenanceOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -348,6 +350,11 @@ namespace Google.Cloud.Redis.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CloudRedisSettings"/> object.</returns>
         public CloudRedisSettings Clone() => new CloudRedisSettings(this);
@@ -501,6 +508,9 @@ namespace Google.Cloud.Redis.V1
 
         /// <summary>The underlying gRPC CloudRedis client</summary>
         public virtual CloudRedis.CloudRedisClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists all Redis instances owned by a project in either the specified
@@ -2269,7 +2279,8 @@ namespace Google.Cloud.Redis.V1
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="rescheduleType">
-        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as
+        /// well.
         /// </param>
         /// <param name="scheduleTime">
         /// Optional. Timestamp when the maintenance shall be rescheduled to if
@@ -2296,7 +2307,8 @@ namespace Google.Cloud.Redis.V1
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="rescheduleType">
-        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as
+        /// well.
         /// </param>
         /// <param name="scheduleTime">
         /// Optional. Timestamp when the maintenance shall be rescheduled to if
@@ -2323,7 +2335,8 @@ namespace Google.Cloud.Redis.V1
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="rescheduleType">
-        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as
+        /// well.
         /// </param>
         /// <param name="scheduleTime">
         /// Optional. Timestamp when the maintenance shall be rescheduled to if
@@ -2345,7 +2358,8 @@ namespace Google.Cloud.Redis.V1
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="rescheduleType">
-        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as
+        /// well.
         /// </param>
         /// <param name="scheduleTime">
         /// Optional. Timestamp when the maintenance shall be rescheduled to if
@@ -2372,7 +2386,8 @@ namespace Google.Cloud.Redis.V1
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="rescheduleType">
-        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as
+        /// well.
         /// </param>
         /// <param name="scheduleTime">
         /// Optional. Timestamp when the maintenance shall be rescheduled to if
@@ -2399,7 +2414,8 @@ namespace Google.Cloud.Redis.V1
         /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="rescheduleType">
-        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as
+        /// well.
         /// </param>
         /// <param name="scheduleTime">
         /// Optional. Timestamp when the maintenance shall be rescheduled to if
@@ -2473,6 +2489,7 @@ namespace Google.Cloud.Redis.V1
             FailoverInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.FailoverInstanceOperationsSettings, logger);
             DeleteInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings, logger);
             RescheduleMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RescheduleMaintenanceOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
@@ -2537,6 +2554,9 @@ namespace Google.Cloud.Redis.V1
 
         /// <summary>The underlying gRPC CloudRedis client</summary>
         public override CloudRedis.CloudRedisClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2954,6 +2974,22 @@ namespace Google.Cloud.Redis.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class CloudRedis
+    {
+        public partial class CloudRedisClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

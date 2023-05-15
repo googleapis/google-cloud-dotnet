@@ -920,6 +920,206 @@
       ]
     },
     {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_UpdateDatabase_sync",
+      "title": "UpdateDatabaseRequestObject",
+      "description": "Snippet for UpdateDatabase",
+      "file": "DatabaseAdminClient.UpdateDatabaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatabase",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Database.V1.Database, Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseMetadata>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateDatabase",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabase",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_UpdateDatabase_async",
+      "title": "UpdateDatabaseRequestObjectAsync",
+      "description": "Snippet for UpdateDatabaseAsync",
+      "file": "DatabaseAdminClient.UpdateDatabaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatabaseAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Database.V1.Database, Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseMetadata>>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateDatabase",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabase",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_UpdateDatabase_sync_flattened",
+      "title": "UpdateDatabase",
+      "description": "Snippet for UpdateDatabase",
+      "file": "DatabaseAdminClient.UpdateDatabaseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatabase",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Database.V1.Database",
+            "name": "database"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Database.V1.Database, Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseMetadata>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateDatabase",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabase",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_UpdateDatabase_async_flattened",
+      "title": "UpdateDatabaseAsync",
+      "description": "Snippet for UpdateDatabaseAsync",
+      "file": "DatabaseAdminClient.UpdateDatabaseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatabaseAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.UpdateDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Database.V1.Database",
+            "name": "database"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Database.V1.Database, Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseMetadata>>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateDatabase",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabase",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "spanner_v1_generated_DatabaseAdmin_UpdateDatabaseDdl_sync",
       "title": "UpdateDatabaseDdlRequestObject",
       "description": "Snippet for UpdateDatabaseDdl",

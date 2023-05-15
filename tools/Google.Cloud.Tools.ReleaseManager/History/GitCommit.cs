@@ -12,10 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Tools.Common;
 using LibGit2Sharp;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text.RegularExpressions;
@@ -158,6 +160,38 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 return cachedResult;
             }
 
+            // If there's a local googleapis directory, try getting the commit from there.
+            // Otherwise, fetch from github. (The latter will fail eventually if there are a lot
+            // of commits to fetch, but it means if the local googleapis repo is just a little
+            // out of date, we can fetch the most recent commits from GitHub.)
+            var result = GetLocalGoogleApisCommitLines(hash) ?? GetGitHubGoogleApisCommitLines(hash);
+
+            if (result != null)
+            {
+                s_googleApisCommitMessageCache[hash] = result;
+            }
+            return result;
+        }
+
+        private List<string> GetLocalGoogleApisCommitLines(string hash)
+        {
+            var root = DirectoryLayout.DetermineRootDirectory();
+            var googleapis = Path.Combine(root, "googleapis");
+            if (!Directory.Exists(googleapis))
+            {
+                return null;
+            }
+            using Repository googleApisLocalRepo = new Repository(googleapis);
+            var obj = googleApisLocalRepo.Lookup(new ObjectId(hash));
+            if (obj is not Commit commit)
+            {
+                return null;
+            }
+            return SplitCommitMessage(commit.Message);
+        }
+
+        private List<string> GetGitHubGoogleApisCommitLines(string hash)
+        {
             // We could use Octokit etc, but we don't really need to, and it's simpler not to plumb it through.
             var client = new HttpClient();
             client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36");
@@ -167,9 +201,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 // Note: waiting in a console app should be fine.
                 string json = client.GetStringAsync(url).GetAwaiter().GetResult();
                 string message = (string) JObject.Parse(json)["message"];
-                var result = SplitCommitMessage(message);
-                s_googleApisCommitMessageCache[hash] = result;
-                return result;
+                return SplitCommitMessage(message);
             }
             catch (HttpRequestException e)
             {

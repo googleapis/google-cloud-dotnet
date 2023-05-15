@@ -4,6 +4,12 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 3.3.0, released 2023-05-03
+
+### Bug fixes
+
+- Add resource prefix header in aggregation query. This is required to use aggregation queries in the emulator. [Commit 100689b](https://github.com/googleapis/google-cloud-dotnet/commit/100689b2dae0855af5e57f6ebbaadf6f686c3e03)
+
 ## Version 3.2.0, released 2023-03-22
 
 ### New features

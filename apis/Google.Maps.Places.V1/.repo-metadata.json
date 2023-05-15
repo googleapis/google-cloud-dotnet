@@ -1,0 +1,7 @@
+{
+  "distribution_name": "Google.Maps.Places.V1",
+  "release_level": "unreleased",
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Maps.Places.V1/latest",
+  "library_type": "GAPIC_AUTO",
+  "api_shortname": "places"
+}

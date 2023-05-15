@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 DataScan = new DataScan(),
                 UpdateMask = new FieldMask(),
+                ValidateOnly = false,
             };
             // Make the request
             Operation<DataScan, OperationMetadata> response = dataScanServiceClient.UpdateDataScan(request);

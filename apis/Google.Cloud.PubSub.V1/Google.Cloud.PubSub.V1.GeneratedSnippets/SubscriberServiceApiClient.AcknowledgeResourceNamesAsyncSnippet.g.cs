@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_Acknowledge_async_flattened_resourceNames]
+    // [START pubsub_v1_generated_Subscriber_Acknowledge_async_flattened_resourceNames]
     using Google.Cloud.PubSub.V1;
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -42,5 +42,5 @@ namespace GoogleCSharpSnippets
             await subscriberServiceApiClient.AcknowledgeAsync(subscription, ackIds);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_Acknowledge_async_flattened_resourceNames]
+    // [END pubsub_v1_generated_Subscriber_Acknowledge_async_flattened_resourceNames]
 }
