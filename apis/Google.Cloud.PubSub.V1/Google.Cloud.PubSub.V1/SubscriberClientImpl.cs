@@ -157,6 +157,10 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         // Call shutdown function
         if (_shutdown != null)
         {
+            // TODO: Remove this 2 second delay.
+            // This is a temporary patch to avoid race condition between gRPC call cancellation and channel dispose.
+            // Please see https://github.com/grpc/grpc-dotnet/issues/2119 for the deadlock issue in Grpc.Net.Client.
+            await _scheduler.Delay(TimeSpan.FromSeconds(2), CancellationToken.None);
             await _taskHelper.ConfigureAwaitHideErrors(_shutdown);
         }
         // Return final result
