@@ -51,6 +51,21 @@ public abstract partial class PublisherClient
         public TimeSpan? DisposeTimeout { get; set; }
 
         /// <summary>
+        /// Enables publish message compression. If set to <c>true</c>, messages will be compressed before being sent to the server
+        /// by the <see cref="PublisherClient"/>.
+        /// </summary>
+        public bool EnableCompression { get; set; }
+
+        /// <summary>
+        /// Specifies the threshold for the number of bytes in a message batch before compression is applied.
+        /// This property comes into play only when <see cref="EnableCompression"/> is set to <c>true</c>.
+        /// If the number of bytes in a batch is less than this value, compression will not be applied even
+        /// if <see cref="EnableCompression"/> is <c>true</c>.
+        /// If <c>null</c>, defaults to <see cref="DefaultCompressionBytesThreshold"/>.
+        /// </summary>
+        public long? CompressionBytesThreshold { get; set; }
+
+        /// <summary>
         /// Create a new instance.
         /// </summary>
         public Settings() { }
@@ -61,6 +76,8 @@ public abstract partial class PublisherClient
             Scheduler = other.Scheduler;
             EnableMessageOrdering = other.EnableMessageOrdering;
             DisposeTimeout = other.DisposeTimeout;
+            EnableCompression = other.EnableCompression;
+            CompressionBytesThreshold = other.CompressionBytesThreshold;
         }
 
         internal void Validate()
