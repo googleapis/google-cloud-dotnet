@@ -547,7 +547,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     Assert.Empty(fake.Subscribers[0].Nacks);
                     Assert.Empty(fake.Subscribers[0].Extends);
                     Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.Subscribers[0].WriteCompletes);
-                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.ClientShutdowns);
+                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(3) }, fake.ClientShutdowns);
                 });
             }
         }
@@ -581,7 +581,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     Assert.Empty(fake.Subscribers[0].Nacks);
                     Assert.Empty(fake.Subscribers[0].Extends);
                     Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.Subscribers[0].WriteCompletes);
-                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(1) }, fake.ClientShutdowns);
+                    Assert.Equal(new[] { fake.Time0 + TimeSpan.FromSeconds(3) }, fake.ClientShutdowns);
                 });
             }
         }
@@ -903,7 +903,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     var doneTask = fake.Subscriber.StartAsync(async (msg, ct) =>
                     {
                         // Emulate a hanging message-processing task.
-                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromHours(24), ct));
+                        await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromHours(23), ct));
                         return SubscriberClient.Reply.Ack;
                     });
                     await fake.TaskHelper.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromHours(12), CancellationToken.None));
