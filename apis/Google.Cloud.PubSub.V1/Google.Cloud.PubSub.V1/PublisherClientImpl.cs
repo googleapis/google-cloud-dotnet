@@ -35,6 +35,11 @@ namespace Google.Cloud.PubSub.V1;
 /// </summary>
 public sealed class PublisherClientImpl : PublisherClient
 {
+    private const string CompressionHeaderKey = "grpc-internal-encoding-request";
+    private const string CompressionHeaderValue = "gzip";
+
+    private static readonly CallSettings s_compressionCallSettings = CallSettings.FromHeader(CompressionHeaderKey, CompressionHeaderValue);
+
     /// <summary>
     /// A batch of messages that all have the same ordering-key (or no ordering-key), and will be
     /// sent to the server in a single network call.
@@ -133,6 +138,8 @@ public sealed class PublisherClientImpl : PublisherClient
         _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
         _enableMessageOrdering = settings.EnableMessageOrdering;
         _disposeTimeout = settings.DisposeTimeout ?? DefaultDisposeTimeout;
+        _enableCompression = settings.EnableCompression;
+        _compressionBytesThreshold = settings.CompressionBytesThreshold ?? DefaultCompressionBytesThreshold;
 
         // Initialise batching settings. Use ApiMax settings for components not given.
         var batchingSettings = settings.BatchingSettings ?? DefaultBatchingSettings;
@@ -156,6 +163,8 @@ public sealed class PublisherClientImpl : PublisherClient
     private readonly Func<Task> _shutdown;
     private readonly bool _enableMessageOrdering;
     private readonly TimeSpan _disposeTimeout;
+    private readonly bool _enableCompression;
+    private readonly long _compressionBytesThreshold;
 
     // Batching settings
     private readonly long _batchElementCountThreshold;
@@ -446,8 +455,16 @@ public sealed class PublisherClientImpl : PublisherClient
 
         async Task Send()
         {
+            var callSettings = CallSettings.FromCancellationToken(_hardStopCts.Token);
+
+            // If compression is enabled, and the batch size is greater than or equal to the threshold, set the compression header.
+            if (_enableCompression && batch.ByteCount >= _compressionBytesThreshold)
+            {
+                callSettings = callSettings.MergedWith(s_compressionCallSettings);
+            }
+
             // Perform the RPC to server, catching exceptions.
-            var publishTask = client.PublishAsync(TopicName, batch.Messages, CallSettings.FromCancellationToken(_hardStopCts.Token));
+            var publishTask = client.PublishAsync(TopicName, batch.Messages, callSettings);
             var response = await _taskHelper.ConfigureAwaitHideErrors(() => publishTask, null);
             Action postLockAction;
             lock (_lock)
