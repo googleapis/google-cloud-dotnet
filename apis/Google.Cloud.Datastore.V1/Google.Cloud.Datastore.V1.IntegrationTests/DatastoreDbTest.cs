@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Datastore.V1.Aggregations;
 using static Google.Cloud.Datastore.V1.QueryResultBatch.Types;
 
 namespace Google.Cloud.Datastore.V1.IntegrationTests
@@ -441,11 +442,56 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             var query = new Query("CountTestStQuery");
             AggregationQuery aggQuery = new AggregationQuery(query)
             {
-                Aggregations = { Aggregations.Count("count")}
+                Aggregations = { Count("count") }
             };
             AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
             long count = results["count"].IntegerValue;
             Assert.Equal(2, count);
+        }
+
+        [Fact]
+        public void Aggregation_WithGqlQuery()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("Students");
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("11"), ["age"] = 12, ["height"] = 5  },
+                new Entity { Key = keyFactory.CreateKey("21"), ["age"] = 12, ["height"] = 4.6  },
+                new Entity { Key = keyFactory.CreateKey("31"), ["age"] = 14, ["height"] = 4  },
+                new Entity { Key = keyFactory.CreateKey("41"), ["age"] = 11, ["height"] = 5.2  }
+            };
+            db.Insert(entities);
+
+            var gql = new GqlQuery { QueryString = "SELECT sum(height), avg(height) as `avg_height` FROM Students" };
+            AggregationQueryResults results = db.RunAggregationQuery(gql);
+            Assert.Equal(18.8, results["property_1"].DoubleValue);
+            Assert.Equal(4.7, results["avg_height"].DoubleValue);
+        }
+
+        [Fact]
+        public void Aggregations_StructuredQuery()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("Student");
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("6"), ["age"] = 12, ["height"] = 5  },
+                new Entity { Key = keyFactory.CreateKey("7"), ["age"] = 12, ["height"] = 4.6  },
+                new Entity { Key = keyFactory.CreateKey("8"), ["age"] = 14, ["height"] = 4  },
+                new Entity { Key = keyFactory.CreateKey("9"), ["age"] = 11, ["height"] = 5.2  }
+            };
+            db.Insert(entities);
+
+            var query = new Query("Student");
+            AggregationQuery aggQuery = new AggregationQuery(query)
+            {
+                Aggregations = { Sum("age", "sum_age"), Average("age"), Count("count") }
+            };
+            AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
+            Assert.Equal(49, results["sum_age"].IntegerValue);
+            Assert.Equal(12.25, results["property_1"].DoubleValue);
+            Assert.Equal(4, results["count"].IntegerValue);
         }
 
         [Fact]
