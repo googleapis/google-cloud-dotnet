@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.6.0-beta01, released 2023-05-16
+
+Note that this is a beta release as the deadlock workaround for
+[issue](https://github.com/googleapis/google-cloud-dotnet/issues/10318) is far
+from ideal. We'll create a new GA release when Grpc.Net.Client has been fixed.
+
+### Bug fixes
+
+- Add missing field when creating a SubscriberClient.Settings from another. ([commit 204866c](https://github.com/googleapis/google-cloud-dotnet/commit/204866c229146f888644b30b08b3de150428e9e7))
+- Temporary patch for PubSub Subscriber deadlock issue. ([commit d965b93](https://github.com/googleapis/google-cloud-dotnet/commit/d965b9333d819ba3b764b5f62b2ea790504f6e4e))
+
+### New features
+
+- Add cloud storage subscription fields ([commit b3b6104](https://github.com/googleapis/google-cloud-dotnet/commit/b3b6104c8aa408c2df1e1dfe0ecbb06bd4761705))
+
 ## Version 3.5.1, released 2023-05-05
 
 ### Bug fixes
