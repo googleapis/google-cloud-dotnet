@@ -29,6 +29,20 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.PubSub.V1;
 
+// The class follows following conventions for the field names:
+// - An "ackDeadline" is the amount of time before which the message must be acknowledged or have its lease extended.
+// - A suffix of "Window" indicates the duration of time before the ackDeadline during which the lease is extended.
+// - A suffix of "Delay" indicates the delay between sending one auto-lease extension request and the next;
+// This is derived from the ackDeadline and the window. The delay should always be less than the ackDeadline.
+// - A suffix of "Interval" indicates the difference between the ackDeadline and the delay.
+// The rules for manipulating the field values are:
+// - The "ackDeadline" should be within a minimum and maximum value. This is either a user specified value or a default value. It is not calculated.
+// - The "Window" should be greater than or equal to the minimum value. This is either a user specified value or a default value. It is not calculated.
+// - The "Delay" is calculated as the "ackDeadline" minus the "Window".
+// - The "Interval" is calculated as the "ackDeadline" minus the "Delay".
+// - The delay should be within a minimum and maximum value.
+// - Any other computation is forbidden.
+
 /// <summary>
 /// Implementation of <see cref="SubscriberClient"/>. 
 /// </summary>
@@ -59,14 +73,14 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         GaxPreconditions.CheckNotNull(settings, nameof(settings));
         settings.Validate();
         // These values are validated in Settings.Validate() above, so no need to re-validate here.
-        _modifyDeadlineSeconds = (int)((settings.AckDeadline ?? DefaultAckDeadline).TotalSeconds);
-        var autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
-        var autoExtendIntervalForExactlyOnceDelivery = settings.AckExtensionWindow ?? MinimumAckExtensionWindowForExactlyOnceDelivery;
-        // For exactly once delivery subscription, minimum ack extension window value should be the default value of 60 seconds or the user provided value.
+        _ackExtensionWindow = settings.AckExtensionWindow ?? DefaultAckExtensionWindow;
+        _ackDeadlineSeconds = (int) ((settings.AckDeadline ?? DefaultAckDeadline).TotalSeconds);
+        // For exactly-once delivery subscriptions, AckDeadline value should be the default value of 60 seconds or the user provided value.
+        _ackDeadlineSecondsForExactlyOnceDelivery = (int) ((settings.AckDeadline ?? DefaultAckDeadlineForExactlyOnceDelivery).TotalSeconds);
         // Ensure the duration between lease extensions is at least MinimumLeaseExtensionDelay (5 seconds).
         // The minimum allowable lease duration is 10 seconds, so this will always be reasonable.
-        _autoExtendInterval = TimeSpan.FromTicks(Math.Max(autoExtendInterval.Ticks, MinimumLeaseExtensionDelay.Ticks));
-        _autoExtendIntervalForExactlyOnceDelivery = TimeSpan.FromTicks(Math.Max(autoExtendIntervalForExactlyOnceDelivery.Ticks, MinimumLeaseExtensionDelay.Ticks));
+        _autoExtendDelay = GetAutoExtendDelay(_ackDeadlineSeconds);
+        _autoExtendDelayForExactlyOnceDelivery = GetAutoExtendDelay(_ackDeadlineSecondsForExactlyOnceDelivery);
         _maxExtensionDuration = settings.MaxTotalAckExtension ?? DefaultMaxTotalAckExtension;
         _shutdown = shutdown;
         _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
@@ -76,15 +90,24 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         _useLegacyFlowControl = settings.UseLegacyFlowControl;
         _maxAckExtendQueue = (int)Math.Min(_flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, 20_000);
         _disposeTimeout = settings.DisposeTimeout ?? DefaultDisposeTimeout;
+
+        TimeSpan GetAutoExtendDelay(int ackDeadlineSeconds)
+        {
+            // The delay is calculated as AckDeadline - AckWindow.
+            var delay = TimeSpan.FromSeconds(ackDeadlineSeconds) - _ackExtensionWindow;
+            // Clamp the delay to the MinimumLeaseExtensionDelay value if delay is less than that.
+            return TimeSpan.FromTicks(Math.Max(delay.Ticks, MinimumLeaseExtensionDelay.Ticks));
+        }
     }
 
     private readonly object _lock = new object();
     private readonly SubscriberServiceApiClient[] _clients;
     private readonly Func<Task> _shutdown;
-    private readonly TimeSpan _autoExtendInterval; // Interval between message lease auto-extends for non-exactly once delivery subscriptions.
-    private readonly TimeSpan _autoExtendIntervalForExactlyOnceDelivery; // Interval between message lease auto-extends for exactly once delivery subscriptions.
+    private readonly TimeSpan _autoExtendDelay; // Delay between message lease auto-extends for non-exactly once delivery subscriptions.
+    private readonly TimeSpan _autoExtendDelayForExactlyOnceDelivery; // Delay between message lease auto-extends for exactly once delivery subscriptions.
     private readonly TimeSpan _maxExtensionDuration; // Maximum duration for which a message lease will be extended.
-    private readonly int _modifyDeadlineSeconds; // Value to use as new deadline when lease auto-extends
+    private readonly int _ackDeadlineSeconds; // Value to use as new deadline when lease auto-extends.
+    private readonly int _ackDeadlineSecondsForExactlyOnceDelivery; // Value to use as new deadline when lease auto-extends for exactly-once delivery subscriptions.
     private readonly int _maxAckExtendQueue; // Maximum count of acks/extends to push to server in a single messages
     private readonly IScheduler _scheduler;
     private readonly IClock _clock;
@@ -92,16 +115,23 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
     private readonly FlowControlSettings _flowControlSettings;
     private readonly bool _useLegacyFlowControl;
     private readonly TimeSpan _disposeTimeout;
+    private readonly TimeSpan _ackExtensionWindow; // The window of time before the ack deadline during which the lease will be extended.
 
     private TaskCompletionSource<int> _mainTcs;
     private CancellationTokenSource _globalSoftStopCts; // soft-stop is guarenteed to occur before hard-stop.
     private CancellationTokenSource _globalHardStopCts;
 
     // This property only exists for testing.
-    // This is the interval between obtaining a lease on a message and then further extending the lease on that message
+    // This is the delay between obtaining a lease on a message and then further extending the lease on that message
     // (assuming it hasn't been handled).
     // This is calculated from the AckDeadline, AckExtensionWindow, and MinimumLeaseExtensionDelay
-    internal TimeSpan AutoExtendInterval => _autoExtendInterval;
+    internal TimeSpan AutoExtendDelay => _autoExtendDelay;
+
+    // This property only exists for testing.
+    // This is the delay between obtaining a lease on a message and then further extending the lease on that message
+    // for exactly-once delivery (assuming it hasn't been handled).
+    // This is calculated from AckDeadline, AckExtensionWindow, MinimumAckExtensionWindowForExactlyOnce and MinimumLeaseExtensionDelay.
+    internal TimeSpan AutoExtendDelayForExactlyOnceDelivery => _autoExtendDelayForExactlyOnceDelivery;
 
     /// <inheritdoc />
     public override SubscriptionName SubscriptionName { get; }

@@ -149,11 +149,13 @@ public sealed partial class SubscriberClientImpl
         private readonly CancellationTokenSource _pushStopCts;
         private readonly CancellationTokenSource _softStopCts;
         private readonly SubscriptionName _subscriptionName;
-        private readonly int _modifyDeadlineSeconds; // Seconds to add to deadling on lease extension.
-        private readonly TimeSpan _autoExtendInterval; // Delay between auto-extends for non-exactly once delivery subscriptions.
-        private readonly TimeSpan _autoExtendIntervalForExactlyOnceDelivery; // Delay between auto-extends for exactly once delivery subscriptions.
+        private readonly int _ackDeadlineSeconds; // Seconds to add to the deadline on lease extension for regular subscriptions.
+        private readonly int _ackDeadlineSecondsForExactlyOnceDelivery; // Seconds to add to the deadline on lease extension for exactly-once delivery subscriptions.
+        private readonly TimeSpan _autoExtendDelay; // Delay between auto-extends for non-exactly once delivery subscriptions.
+        private readonly TimeSpan _autoExtendDelayForExactlyOnceDelivery; // Delay between auto-extends for exactly once delivery subscriptions.
         private readonly TimeSpan _maxExtensionDuration; // Maximum duration for which a message lease will be extended.
         private readonly TimeSpan _extendQueueThrottleInterval; // Throttle pull if items in the extend queue are older than this.
+        private readonly TimeSpan _extendQueueThrottleIntervalForExactlyOnceDelivery; // Throttle pull if items in the extend queue are older than this for exactly-once delivery subscriptions.
         private readonly int _maxAckExtendQueueSize; // Soft limit on push queue sizes. Used to throttle pulls.
         private readonly int _maxAckExtendSendCount; // Maximum number of ids to include in an ack/nack/extend push RPC.
         private readonly int _maxConcurrentPush; // Mamimum number (slightly soft) of concurrent ack/nack/extend push RPCs.
@@ -193,12 +195,14 @@ public sealed partial class SubscriberClientImpl
             _pushStopCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
             _softStopCts = subscriber._globalSoftStopCts;
             _subscriptionName = subscriber.SubscriptionName;
-            _modifyDeadlineSeconds = subscriber._modifyDeadlineSeconds;
+            _ackDeadlineSeconds = subscriber._ackDeadlineSeconds;
+            _ackDeadlineSecondsForExactlyOnceDelivery = subscriber._ackDeadlineSecondsForExactlyOnceDelivery;
             _maxAckExtendQueueSize = subscriber._maxAckExtendQueue;
-            _autoExtendInterval = subscriber._autoExtendInterval;
-            _autoExtendIntervalForExactlyOnceDelivery = subscriber._autoExtendIntervalForExactlyOnceDelivery;
+            _autoExtendDelay = subscriber._autoExtendDelay;
+            _autoExtendDelayForExactlyOnceDelivery = subscriber._autoExtendDelayForExactlyOnceDelivery;
             _maxExtensionDuration = subscriber._maxExtensionDuration;
-            _extendQueueThrottleInterval = TimeSpan.FromTicks((long)((TimeSpan.FromSeconds(_modifyDeadlineSeconds) - _autoExtendInterval).Ticks * 0.5));
+            _extendQueueThrottleInterval = TimeSpan.FromTicks((long)((TimeSpan.FromSeconds(_ackDeadlineSeconds) - _autoExtendDelay).Ticks * 0.5));
+            _extendQueueThrottleIntervalForExactlyOnceDelivery = TimeSpan.FromTicks((long) ((TimeSpan.FromSeconds(_ackDeadlineSecondsForExactlyOnceDelivery) - _autoExtendDelayForExactlyOnceDelivery).Ticks * 0.5));
             _maxAckExtendSendCount = Math.Max(10, subscriber._maxAckExtendQueue / 4);
             _maxConcurrentPush = 3; // Fairly arbitrary.
             _flow = flow;
@@ -318,7 +322,7 @@ public sealed partial class SubscriberClientImpl
             Task initTask = _pull.WriteAsync(new StreamingPullRequest
             {
                 SubscriptionAsSubscriptionName = _subscriptionName,
-                StreamAckDeadlineSeconds = _modifyDeadlineSeconds,
+                StreamAckDeadlineSeconds = _exactlyOnceDeliveryEnabled ? _ackDeadlineSecondsForExactlyOnceDelivery : _ackDeadlineSeconds,
                 MaxOutstandingMessages = _useLegacyFlowControl ? 0 : _flow.MaxOutstandingElementCount,
                 MaxOutstandingBytes = _useLegacyFlowControl ? 0 : _flow.MaxOutstandingByteCount
             });
@@ -612,10 +616,10 @@ public sealed partial class SubscriberClientImpl
                     _eventPush.Set();
                     // Some ids still exist, schedule another extension.
                     // The overall `_maxExtensionDuration` is maintained by passing through the existing `cancellation`.
-                    Add(_scheduler.Delay(_exactlyOnceDeliveryEnabled ? _autoExtendIntervalForExactlyOnceDelivery : _autoExtendInterval, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds, cancellation)));
+                    Add(_scheduler.Delay(_exactlyOnceDeliveryEnabled ? _autoExtendDelayForExactlyOnceDelivery : _autoExtendDelay, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds, cancellation)));
                     // Increment _extendThrottles.
                     _extendThrottleHigh += 1;
-                    Add(_scheduler.Delay(_extendQueueThrottleInterval, _softStopCts.Token), Next(false, () => _extendThrottleLow += 1));
+                    Add(_scheduler.Delay(_exactlyOnceDeliveryEnabled ? _extendQueueThrottleIntervalForExactlyOnceDelivery : _extendQueueThrottleInterval, _softStopCts.Token), Next(false, () => _extendThrottleLow += 1));
                 }
                 else
                 {
@@ -668,7 +672,7 @@ public sealed partial class SubscriberClientImpl
             {
                 _pushInFlight += extends.Count;
                 _concurrentPushCount += 1;
-                Task extendTask = _client.ModifyAckDeadlineAsync(_subscriptionName, extends.Select(x => x.Id), _modifyDeadlineSeconds, _hardStopCts.Token);
+                Task extendTask = _client.ModifyAckDeadlineAsync(_subscriptionName, extends.Select(x => x.Id), _exactlyOnceDeliveryEnabled ? _ackDeadlineSecondsForExactlyOnceDelivery : _ackDeadlineSeconds, _hardStopCts.Token);
                 Add(extendTask, Next(false, () => HandleAckResponse(extendTask, null, null, extends)));
             }
             if (nacks.Count > 0)
