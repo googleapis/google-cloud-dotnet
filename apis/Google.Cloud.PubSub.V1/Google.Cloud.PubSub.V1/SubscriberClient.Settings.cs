@@ -90,6 +90,7 @@ public abstract partial class SubscriberClient
         internal Settings(Settings other)
         {
             FlowControlSettings = other.FlowControlSettings;
+            UseLegacyFlowControl = other.UseLegacyFlowControl;
             AckDeadline = other.AckDeadline;
             AckExtensionWindow = other.AckExtensionWindow;
             Scheduler = other.Scheduler;
