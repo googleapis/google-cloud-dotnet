@@ -145,7 +145,7 @@ and are also sent to the Cloud Pub/Sub server but not enforced on
 the server side yet. Server side flow control is on track to be
 enabled by the 2nd week of December 2020. Users that face issues
 with server side flow control can disable it by setting
-`SubscriberClient.Settings.UseLegacyFlowControl`# to `true` which
+`SubscriberClient.Settings.UseLegacyFlowControl` to `true` which
 will result in the enforcement of client side flow control only.
 
 ## Version 2.1.0, released 2020-08-03
