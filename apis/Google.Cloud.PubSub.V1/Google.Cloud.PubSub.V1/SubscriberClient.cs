@@ -62,32 +62,41 @@ public abstract partial class SubscriberClient : IAsyncDisposable
     public static FlowControlSettings DefaultFlowControlSettings { get; } = new FlowControlSettings(1_000, 100_000_000);
 
     /// <summary>
-    /// The service-defined minimum message ACKnowledgement deadline of 10 seconds.
+    /// The service-defined minimum message acknowledgement deadline of 10 seconds.
     /// </summary>
     public static TimeSpan MinimumAckDeadline { get; } = TimeSpan.FromSeconds(10);
 
     /// <summary>
-    /// The service-defined maximum message ACKnowledgement deadline of 10 minutes.
+    /// The service-defined maximum message acknowledgement deadline of 10 minutes.
     /// </summary>
     public static TimeSpan MaximumAckDeadline { get; } = TimeSpan.FromMinutes(10);
 
     /// <summary>
-    /// The default message ACKnowledgement deadline of 60 seconds.
+    /// The default message acknowledgement deadline of 60 seconds.
     /// </summary>
     public static TimeSpan DefaultAckDeadline { get; } = TimeSpan.FromSeconds(60);
 
     /// <summary>
-    /// The minimum message ACKnowledgement extension window of 50 milliseconds.
+    /// The default message acknowledgement deadline of 60 seconds for exactly-once delivery subscriptions.
+    /// </summary>
+    public static TimeSpan DefaultAckDeadlineForExactlyOnceDelivery { get; } = TimeSpan.FromSeconds(60);
+
+    /// <summary>
+    /// The minimum message acknowledgement extension window of 50 milliseconds.
     /// </summary>
     public static TimeSpan MinimumAckExtensionWindow { get; } = TimeSpan.FromMilliseconds(50);
 
     /// <summary>
     /// The minimum message acknowledgement extension window of 60 seconds for exactly once delivery subscriptions.
     /// </summary>
+    /// <remarks>
+    /// This property is deprecated. Use <see cref="DefaultAckDeadlineForExactlyOnceDelivery"/> instead.
+    /// </remarks>
+    [Obsolete("Use DefaultAckDeadlineForExactlyOnceDelivery instead.")]
     public static TimeSpan MinimumAckExtensionWindowForExactlyOnceDelivery { get; } = TimeSpan.FromSeconds(60);
 
     /// <summary>
-    /// The default message ACKnowledgement extension window of 15 seconds.
+    /// The default message acknowledgement extension window of 15 seconds.
     /// </summary>
     public static TimeSpan DefaultAckExtensionWindow { get; } = TimeSpan.FromSeconds(15);
 
@@ -97,7 +106,7 @@ public abstract partial class SubscriberClient : IAsyncDisposable
     public static TimeSpan MinimumLeaseExtensionDelay { get; } = TimeSpan.FromSeconds(5);
 
     /// <summary>
-    /// The default maximum total ACKnowledgement extension of 60 minutes.
+    /// The default maximum total acknowledgement extension of 60 minutes.
     /// </summary>
     public static TimeSpan DefaultMaxTotalAckExtension { get; } = TimeSpan.FromMinutes(60);
 
@@ -182,8 +191,8 @@ public abstract partial class SubscriberClient : IAsyncDisposable
     /// </summary>
     /// <param name="handlerAsync">The handler function that is passed all received messages.
     /// This function may be called on multiple threads concurrently. Return <see cref="Reply.Ack"/> from this function
-    /// to ACKnowledge this message (implying it won't be received again); or return <see cref="Reply.Nack"/> to Not
-    /// ACKnowledge this message (implying it will be received again). If this function throws any Exception, then
+    /// to acknowledge this message (implying it won't be received again); or return <see cref="Reply.Nack"/> to Not
+    /// acknowledge this message (implying it will be received again). If this function throws any Exception, then
     /// it behaves as if it returned <see cref="Reply.Nack"/>.</param>
     /// <returns>A <see cref="Task"/> that completes when the subscriber is stopped, or if an unrecoverable error occurs.</returns>
     public virtual Task StartAsync(Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync) =>
@@ -200,25 +209,25 @@ public abstract partial class SubscriberClient : IAsyncDisposable
 
     /// <summary>
     /// Stop this <see cref="SubscriberClient"/>. Cancelling <paramref name="hardStopToken"/> aborts the
-    /// clean stop process, and may leave some handled messages un-ACKnowledged.
-    /// The returned <see cref="Task"/> completes when all handled messages have been ACKnowledged.
+    /// clean stop process, and may leave some handled messages un-acknowledged.
+    /// The returned <see cref="Task"/> completes when all handled messages have been acknowledged.
     /// The returned <see cref="Task"/> faults if there is an unrecoverable error with the underlying service.
     /// The returned <see cref="Task"/> cancels if <paramref name="hardStopToken"/> is cancelled.
     /// </summary>
-    /// <param name="hardStopToken">Cancel this <see cref="CancellationToken"/> to abort handlers and ACKnowledgement.</param>
-    /// <returns>A <see cref="Task"/> that completes when all handled messages have been ACKnowledged;
+    /// <param name="hardStopToken">Cancel this <see cref="CancellationToken"/> to abort handlers and acknowledgement.</param>
+    /// <returns>A <see cref="Task"/> that completes when all handled messages have been acknowledged;
     /// faults on unrecoverable service errors; or cancels if <paramref name="hardStopToken"/> is cancelled.</returns>
     public virtual Task StopAsync(CancellationToken hardStopToken) => throw new NotImplementedException();
 
     /// <summary>
     /// Stop this <see cref="SubscriberClient"/>. If <paramref name="timeout"/> expires, the
-    /// clean stop process will be aborted, and may leave some handled messages un-ACKnowledged.
-    /// The returned <see cref="Task"/> completes when all handled messages have been ACKnowledged.
+    /// clean stop process will be aborted, and may leave some handled messages un-acknowledged.
+    /// The returned <see cref="Task"/> completes when all handled messages have been acknowledged.
     /// The returned <see cref="Task"/> faults if there is an unrecoverable error with the underlying service.
     /// The returned <see cref="Task"/> cancels if <paramref name="timeout"/> expires.
     /// </summary>
-    /// <param name="timeout">After this period, abort handling and ACKnowledging messages.</param>
-    /// <returns>A <see cref="Task"/> that completes when all handled messages have been ACKnowledged;
+    /// <param name="timeout">After this period, abort handling and acknowledging messages.</param>
+    /// <returns>A <see cref="Task"/> that completes when all handled messages have been acknowledged;
     /// faults on unrecoverable service errors; or cancels if <paramref name="timeout"/> expires.</returns>
     public virtual Task StopAsync(TimeSpan timeout) => StopAsync(new CancellationTokenSource(timeout).Token);
 

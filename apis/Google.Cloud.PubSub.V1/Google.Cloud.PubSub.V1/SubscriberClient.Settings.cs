@@ -59,21 +59,21 @@ public abstract partial class SubscriberClient
         public bool UseLegacyFlowControl { get; set; } = false;
 
         /// <summary>
-        /// The lease time before which a message must either be ACKed
+        /// The lease time before which a message must either be acknowledged
         /// or have its lease extended. This is truncated to the nearest second.
         /// If <c>null</c>, uses the default of <see cref="DefaultAckDeadline"/>.
         /// </summary>
         public TimeSpan? AckDeadline { get; set; }
 
         /// <summary>
-        /// Duration before <see cref="AckDeadline"/> at which the message ACK deadline
+        /// Duration before <see cref="AckDeadline"/> at which the message acknowledgement deadline
         /// is automatically extended.
         /// If <c>null</c>, uses the default of <see cref="DefaultAckExtensionWindow"/>.
         /// </summary>
         public TimeSpan? AckExtensionWindow { get; set; }
 
         /// <summary>
-        /// Maximum duration for which a message ACK deadline will be extended.
+        /// Maximum duration for which a message acknowledgement deadline will be extended.
         /// If <c>null</c>, uses the default of <see cref="DefaultMaxTotalAckExtension"/>.
         /// </summary>
         public TimeSpan? MaxTotalAckExtension { get; set; }
