@@ -16,6 +16,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Datastore.V1.Aggregations;
 using static Google.Cloud.Datastore.V1.Key.Types;
 
 namespace Google.Cloud.Datastore.V1.IntegrationTests
@@ -152,27 +153,52 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         }
 
         [Fact]
-        public void Transaction_WithCount()
+        public void Transaction_WithAggregation_StructuredQuery()
         {
             var db = _fixture.CreateDatastoreDb();
-            var keyFactory = db.CreateKeyFactory("CountTestTransaction");
+            var keyFactory = db.CreateKeyFactory("AggTestTransaction");
             var entities = new[]
             {
-                new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "description for x" },
-                new Entity { Key = keyFactory.CreateKey("y"), ["description"] = "description for y" }
+                new Entity { Key = keyFactory.CreateKey("11"), ["age"] = 12, ["height"] = 5  },
+                new Entity { Key = keyFactory.CreateKey("21"), ["age"] = 12, ["height"] = 4.6  },
+                new Entity { Key = keyFactory.CreateKey("31"), ["age"] = 14, ["height"] = 4  },
+                new Entity { Key = keyFactory.CreateKey("41"), ["age"] = 11, ["height"] = 5.2  }
             };
             db.Insert(entities);
             using var transaction = db.BeginTransaction();
-            var gqlQuery = new GqlQuery { QueryString = "SELECT count(*)  as `count` FROM CountTestTransaction " };
-            var query = new Query("CountTestTransaction");
+            var query = new Query("AggTestTransaction");
             AggregationQuery aggQuery = new AggregationQuery(query)
             {
-                Aggregations = { Aggregations.Count("count") }
+                Aggregations = { Count("count"), Sum("age", "sum_age"), Average("age", "avg_age") }
             };
-            AggregationQueryResults resultsForStructuredQuery = transaction.RunAggregationQuery(aggQuery);
-            AggregationQueryResults resultsForGqlQuery = transaction.RunAggregationQuery(gqlQuery);
-            Assert.Equal(2, resultsForStructuredQuery["count"].IntegerValue);
-            Assert.Equal(2, resultsForGqlQuery["count"].IntegerValue);
+            AggregationQueryResults results = transaction.RunAggregationQuery(aggQuery);
+            Assert.Equal(4, results["count"].IntegerValue);
+            Assert.Equal(49, results["sum_age"].IntegerValue);
+            Assert.Equal(12.25, results["avg_age"].DoubleValue);
+        }
+
+        [Fact]
+        public void Transaction_WithAggregation_GQL()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("GQLAggTestTransaction");
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("11"), ["age"] = 12, ["height"] = 5  },
+                new Entity { Key = keyFactory.CreateKey("21"), ["age"] = 12, ["height"] = 4.6  },
+                new Entity { Key = keyFactory.CreateKey("31"), ["age"] = 14, ["height"] = 4  },
+                new Entity { Key = keyFactory.CreateKey("41"), ["age"] = 11, ["height"] = 5.2  }
+            };
+            db.Insert(entities);
+            using var transaction = db.BeginTransaction();
+
+            var gqlQuery = new GqlQuery { QueryString = "SELECT count(*)  as `count`,sum(height) as `sum_height`, avg(height) as `avg_height` FROM GQLAggTestTransaction " };
+            var query = new Query("GQLAggTestTransaction");            
+            AggregationQueryResults results = transaction.RunAggregationQuery(gqlQuery);
+
+            Assert.Equal(4, results["count"].IntegerValue);
+            Assert.Equal(18.8, results["sum_height"].DoubleValue);
+            Assert.Equal(4.7, results["avg_height"].DoubleValue);
         }
     }
 }
