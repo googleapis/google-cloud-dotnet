@@ -56,7 +56,7 @@ namespace GoogleCSharpSnippets
                 UserPseudoId = "",
                 SafeSearch = false,
                 UserInfo = new UserInfo(),
-                UserLabel = { { "", "" }, },
+                UserLabels = { { "", "" }, },
                 ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
             };
             // Make the request
