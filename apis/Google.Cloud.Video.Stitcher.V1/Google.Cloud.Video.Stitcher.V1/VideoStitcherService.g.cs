@@ -103,7 +103,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "RmllbGRNYXNrQgPgQQIiTgoSRGVsZXRlU2xhdGVSZXF1ZXN0EjgKBG5hbWUY",
             "ASABKAlCKuBBAvpBJAoidmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9T",
             "bGF0ZSKkAQoYQ3JlYXRlTGl2ZVNlc3Npb25SZXF1ZXN0EkAKBnBhcmVudBgB",
-            "IAEoCUIw4EEC+kEqCih2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL0xp",
+            "IAEoCUIw4EEC+kEqEih2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL0xp",
             "dmVTZXNzaW9uEkYKDGxpdmVfc2Vzc2lvbhgCIAEoCzIrLmdvb2dsZS5jbG91",
             "ZC52aWRlby5zdGl0Y2hlci52MS5MaXZlU2Vzc2lvbkID4EECIlcKFUdldExp",
             "dmVTZXNzaW9uUmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKHZpZGVv",

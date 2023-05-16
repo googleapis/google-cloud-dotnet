@@ -3119,10 +3119,10 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual LiveSession CreateLiveSession(LiveSessionName parent, LiveSession liveSession, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual LiveSession CreateLiveSession(gagr::LocationName parent, LiveSession liveSession, gaxgrpc::CallSettings callSettings = null) =>
             CreateLiveSession(new CreateLiveSessionRequest
             {
-                ParentAsLiveSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 LiveSession = gax::GaxPreconditions.CheckNotNull(liveSession, nameof(liveSession)),
             }, callSettings);
 
@@ -3138,10 +3138,10 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<LiveSession> CreateLiveSessionAsync(LiveSessionName parent, LiveSession liveSession, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<LiveSession> CreateLiveSessionAsync(gagr::LocationName parent, LiveSession liveSession, gaxgrpc::CallSettings callSettings = null) =>
             CreateLiveSessionAsync(new CreateLiveSessionRequest
             {
-                ParentAsLiveSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 LiveSession = gax::GaxPreconditions.CheckNotNull(liveSession, nameof(liveSession)),
             }, callSettings);
 
@@ -3157,7 +3157,7 @@ namespace Google.Cloud.Video.Stitcher.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<LiveSession> CreateLiveSessionAsync(LiveSessionName parent, LiveSession liveSession, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<LiveSession> CreateLiveSessionAsync(gagr::LocationName parent, LiveSession liveSession, st::CancellationToken cancellationToken) =>
             CreateLiveSessionAsync(parent, liveSession, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>

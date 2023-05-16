@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             // Create client
             VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/liveSessions/[LIVE_SESSION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             LiveSession liveSession = new LiveSession();
             // Make the request
             LiveSession response = await videoStitcherServiceClient.CreateLiveSessionAsync(parent, liveSession);
