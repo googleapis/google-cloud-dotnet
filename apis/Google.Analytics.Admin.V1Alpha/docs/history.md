@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.0.0-alpha09, released 2023-05-16
+
+### New features
+
+- Add `GetAdSenseLink`, `CreateAdSenseLink`, `DeleteAdSenseLink`, `ListAdSenseLinks` methods to the Admin API v1alpha ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+- Add `FetchConnectedGa4Property` method to the Admin API v1alpha ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+- Add `CreateEventCreateRule`, `UpdateEventCreateRule`,`DeleteEventCreateRule`, `ListEventCreateRules` methods to the Admin API v1alpha ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+- Add `EventCreateRule`, `MatchingCondition` types to the Admin API v1alpha ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+- Add `AdSenseLink` type to the Admin API v1alpha ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+- Add `AUDIENCE`, `EVENT_CREATE_RULE` options to the `ChangeHistoryResourceType` enum ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+- Add `audience`, `event_create_rule` fields to the `ChangeHistoryResource.resource` oneof field ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+
 ## Version 2.0.0-alpha08, released 2023-05-03
 
 ### New features
