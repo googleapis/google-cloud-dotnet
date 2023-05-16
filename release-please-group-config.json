@@ -1,0 +1,90 @@
+{
+  "release-type": "dotnet-yoshi",
+  "separate-pull-requests": true,
+  "packages": {
+    "apis/Google.Cloud.Diagnostics.AspNetCore3": {},
+    "apis/Google.Cloud.Diagnostics.Common": {},
+    "apis/Google.Cloud.DevTools.ContainerAnalysis.V1": {},
+    "apis/Google.Cloud.Firestore": {},
+    "apis/Google.Cloud.Firestore.V1": {},
+    "apis/Google.Cloud.OsLogin.Common": {},
+    "apis/Google.Cloud.OsLogin.V1": {},
+    "apis/Google.Cloud.OsLogin.V1Beta": {},
+    "apis/Google.Cloud.Spanner.Admin.Database.V1": {},
+    "apis/Google.Cloud.Spanner.Admin.Instance.V1": {},
+    "apis/Google.Cloud.Spanner.Data": {},
+    "apis/Google.Cloud.Spanner.Common.V1": {},
+    "apis/Google.Cloud.Spanner.V1": {},
+    "apis/Google.Cloud.Workflows.Common.V1": {},
+    "apis/Google.Cloud.Workflows.Common.V1Beta": {},
+    "apis/Google.Cloud.Workflows.Executions.V1": {},
+    "apis/Google.Cloud.Workflows.Executions.V1Beta": {},
+    "apis/Google.Cloud.Workflows.V1": {},
+    "apis/Google.Cloud.Workflows.V1Beta": {},
+    "apis/Grafeas.V1": {}
+  },
+  "plugins": [
+    {
+      "type": "linked-versions",
+      "groupName": "Spanner",
+      "components": [
+        "apis/Google.Cloud.Spanner.Admin.Database.V1",
+        "apis/Google.Cloud.Spanner.Admin.Instance.V1",
+        "apis/Google.Cloud.Spanner.Data",
+        "apis/Google.Cloud.Spanner.Common.V1",
+        "apis/Google.Cloud.Spanner.V1"
+      ]
+    },
+    {
+      "type": "linked-versions",
+      "groupName": "Diagnostics",
+      "components": [
+        "Google.Cloud.Diagnostics.AspNetCore3",
+        "Google.Cloud.Diagnostics.Common"
+      ]
+    },
+    {
+      "type": "linked-versions",
+      "groupName": "Container Analysis",
+      "components": [
+        "Google.Cloud.DevTools.ContainerAnalysis.V1",
+        "Grafeas.V1"
+      ]
+    },
+    {
+      "type": "linked-versions",
+      "groupName": "Firestore",
+      "components": [
+        "Google.Cloud.Firestore",
+        "Google.Cloud.Firestore.V1"
+      ]
+    },
+    {
+      "type": "linked-versions",
+      "groupName": "OS Login",
+      "components": [
+        "Google.Cloud.OsLogin.Common",
+        "Google.Cloud.OsLogin.V1",
+        "Google.Cloud.OsLogin.V1Beta"
+      ]
+    },
+    {
+      "type": "linked-versions",
+      "groupName": "Cloud Workflows V1",
+      "components": [
+        "Google.Cloud.Workflows.Common.V1",
+        "Google.Cloud.Workflows.Executions.V1",
+        "Google.Cloud.Workflows.V1"
+      ]
+    },
+    {
+      "type": "linked-versions",
+      "groupName": "Cloud Workflows V1Beta",
+      "components": [
+        "Google.Cloud.Workflows.Common.V1Beta",
+        "Google.Cloud.Workflows.Executions.V1Beta",
+        "Google.Cloud.Workflows.V1Beta"
+      ]
+    }
+  ]
+}
