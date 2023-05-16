@@ -175,8 +175,7 @@ namespace Google.Cloud.Channel.V1
     /// <remarks>
     /// CloudChannelReportsService lets Google Cloud resellers and
     /// distributors retrieve and combine a variety of data in Cloud Channel for
-    /// multiple products (Google Cloud Platform (GCP), Google Voice, and
-    /// Google Workspace.)
+    /// multiple products (Google Cloud, Google Voice, and Google Workspace.)
     /// </remarks>
     public abstract partial class CloudChannelReportsServiceClient
     {
@@ -595,8 +594,7 @@ namespace Google.Cloud.Channel.V1
     /// <remarks>
     /// CloudChannelReportsService lets Google Cloud resellers and
     /// distributors retrieve and combine a variety of data in Cloud Channel for
-    /// multiple products (Google Cloud Platform (GCP), Google Voice, and
-    /// Google Workspace.)
+    /// multiple products (Google Cloud, Google Voice, and Google Workspace.)
     /// </remarks>
     public sealed partial class CloudChannelReportsServiceClientImpl : CloudChannelReportsServiceClient
     {
