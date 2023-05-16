@@ -356,8 +356,8 @@ namespace Google.Cloud.Channel.V1 {
     ///
     /// - assigned_units: The number of licenses assigned to users.
     ///
-    /// For GCP billing subaccounts, the following Parameter may be accepted as
-    /// input:
+    /// For Google Cloud billing subaccounts, the following Parameter may be
+    /// accepted as input:
     ///
     /// - display_name: The display name of the billing subaccount.
     /// </summary>
@@ -1434,8 +1434,8 @@ namespace Google.Cloud.Channel.V1 {
     private string provisioningId_ = "";
     /// <summary>
     /// Output only. Provisioning ID of the entitlement. For Google Workspace, this
-    /// is the underlying Subscription ID. For Google Cloud Platform, this is the
-    /// Billing Account ID of the billing subaccount."
+    /// is the underlying Subscription ID. For Google Cloud, this is the Billing
+    /// Account ID of the billing subaccount."
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
