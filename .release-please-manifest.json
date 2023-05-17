@@ -178,7 +178,7 @@
   "apis/Google.Cloud.ServiceManagement.V1": "2.1.0",
   "apis/Google.Cloud.ServiceUsage.V1": "2.1.0",
   "apis/Google.Cloud.Shell.V1": "2.2.0",
-  "apis/Google.Cloud.Spanner.Admin.Database.V1": "4.5.0",
+  "apis/Google.Cloud.Spanner.Admin.Database.V1": "4.6.0",
   "apis/Google.Cloud.Spanner.Admin.Instance.V1": "4.5.0",
   "apis/Google.Cloud.Spanner.Data": "4.5.0",
   "apis/Google.Cloud.Spanner.Common.V1": "4.5.0",
