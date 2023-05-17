@@ -14050,7 +14050,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ReleaseChannelFieldNumber = 41;
     private global::Google.Cloud.Container.V1.ReleaseChannel releaseChannel_;
     /// <summary>
-    /// Release channel configuration.
+    /// Release channel configuration. If left unspecified on cluster creation and
+    /// a version is specified, the cluster is enrolled in the most mature release
+    /// channel where the version is available (first checking STABLE, then
+    /// REGULAR, and finally RAPID). Otherwise, if no release channel
+    /// configuration and no version is specified, the cluster is enrolled in the
+    /// REGULAR channel with its default version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19770,12 +19775,14 @@ namespace Google.Cloud.Container.V1 {
     ///
     /// Examples:
     ///
-    ///   -
-    ///   `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster`
-    ///   -
-    ///   `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np`
-    ///   -
-    ///   `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
+    /// -
+    /// ##
+    /// `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster`
+    ///
+    /// ##
+    /// `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np`
+    ///
+    /// `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
