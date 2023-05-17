@@ -148,7 +148,7 @@
   "apis/Google.Cloud.OsConfig.V1Alpha": "2.0.0-alpha02",
   "apis/Google.Cloud.OsLogin.Common": "3.1.0",
   "apis/Google.Cloud.OsLogin.V1": "3.1.0",
-  "apis/Google.Cloud.OsLogin.V1Beta": "3.0.0-beta02",
+  "apis/Google.Cloud.OsLogin.V1Beta": "3.2.0",
   "apis/Google.Cloud.PhishingProtection.V1Beta1": "2.0.0-beta02",
   "apis/Google.Cloud.PolicyTroubleshooter.V1": "2.1.0",
   "apis/Google.Cloud.PrivateCatalog.V1Beta1": "2.0.0-beta02",
