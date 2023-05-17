@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.2.0, released 2023-05-17
+
+
+### Miscellaneous chores
+
+* **Google.Cloud.OsLogin.V1:** Synchronize OS Login versions
+
 ## Version 3.1.0, released 2023-02-08
 
 ### New features
