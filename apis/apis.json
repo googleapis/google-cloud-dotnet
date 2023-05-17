@@ -2157,7 +2157,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com/docs/firestore/",
       "listingDescription": "Firestore high-level library",
-      "version": "3.3.0",
+      "version": "3.4.0",
       "type": "other",
       "metadataType": "GAPIC_MANUAL",
       "targetFrameworks": "netstandard2.1;net462",

@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.4.0, released 2023-05-17
+
+
+### Miscellaneous chores
+
+* **Google.Cloud.Firestore:** Synchronize Firestore versions
+
 ## Version 3.3.0, released 2023-05-03
 
 No API surface changes; just dependency updates.

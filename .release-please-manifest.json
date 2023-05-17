@@ -96,7 +96,7 @@
   "apis/Google.Cloud.Eventarc.V1": "2.2.0",
   "apis/Google.Cloud.Filestore.V1": "2.2.0",
   "apis/Google.Cloud.Firestore.Admin.V1": "3.1.0",
-  "apis/Google.Cloud.Firestore": "3.3.0",
+  "apis/Google.Cloud.Firestore": "3.4.0",
   "apis/Google.Cloud.Firestore.V1": "3.3.0",
   "apis/Google.Cloud.Functions.V1": "2.2.0",
   "apis/Google.Cloud.Functions.V2": "1.2.0",
