@@ -11,12 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="xunit.assert" Version="2.4.1" />
-    <PackageReference Include="xunit.core" Version="2.4.1" />
+    <PackageReference Include="xunit.assert" Version="2.4.2" />
+    <PackageReference Include="xunit.core" Version="2.4.2" />
     <PackageReference Include="Xunit.SkippableFact" Version="1.4.13" />
-    <PackageReference Include="Google.Apis" Version="1.57.0" />
-    <PackageReference Include="Grpc.Core.Api" Version="2.41.0" />
-    <PackageReference Include="Google.Api.Gax" Version="[4.3.1, 5.0.0)" />
-    <PackageReference Include="Google.Protobuf" Version="3.19.0" />
+    <PackageReference Include="Google.Apis" Version="1.60.0" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.53.0" />
+    <PackageReference Include="Google.Api.Gax" Version="[4.4.0, 5.0.0)" />
+    <PackageReference Include="Google.Protobuf" Version="3.23.0" />
   </ItemGroup>
 </Project>
