@@ -2189,7 +2189,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com",
       "listingDescription": "Firestore low-level API access",
-      "version": "3.3.0",
+      "version": "3.4.0",
       "type": "grpc",
       "targetFrameworks": "netstandard2.1;net462",
       "testTargetFrameworks": "net6.0;net462",

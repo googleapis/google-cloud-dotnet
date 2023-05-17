@@ -4,6 +4,13 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 3.4.0, released 2023-05-17
+
+
+### New features
+
+* Add bloom filter related proto fields ([c9dbc16](https://github.com/googleapis/google-cloud-dotnet/commit/c9dbc16b36d6fdfb0e6697585f6aa6fe26c01740))
+
 ## Version 3.3.0, released 2023-05-03
 
 ### Bug fixes
