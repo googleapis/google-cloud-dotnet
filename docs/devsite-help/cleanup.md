@@ -37,6 +37,11 @@ it has handled all requests appropriately before exiting.
 
 For more information, see the [client lifecycle documentation](client-lifecycle.md)
 
+### Streaming calls
+
+Streaming RPCs should be disposed, and ideally all responses read before
+disposal. See the [streaming RPCs documentation](grpc-streaming.md) for more details.
+
 ## REST-based APIs
 
 Summary: Use a single client if you can. Clients are threads-safe,
