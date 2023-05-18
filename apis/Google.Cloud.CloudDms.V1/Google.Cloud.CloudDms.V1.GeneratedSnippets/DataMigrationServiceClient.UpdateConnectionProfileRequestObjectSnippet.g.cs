@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
                 ConnectionProfile = new ConnectionProfile(),
                 RequestId = "",
+                ValidateOnly = false,
+                SkipValidation = false,
             };
             // Make the request
             Operation<ConnectionProfile, OperationMetadata> response = dataMigrationServiceClient.UpdateConnectionProfile(request);

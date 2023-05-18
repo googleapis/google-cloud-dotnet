@@ -1718,6 +1718,8 @@ namespace GoogleCSharpSnippets
                 ConnectionProfileId = "",
                 ConnectionProfile = new ConnectionProfile(),
                 RequestId = "",
+                ValidateOnly = false,
+                SkipValidation = false,
             };
             // Make the request
             Operation<ConnectionProfile, OperationMetadata> response = dataMigrationServiceClient.CreateConnectionProfile(request);
@@ -1754,6 +1756,8 @@ namespace GoogleCSharpSnippets
                 ConnectionProfileId = "",
                 ConnectionProfile = new ConnectionProfile(),
                 RequestId = "",
+                ValidateOnly = false,
+                SkipValidation = false,
             };
             // Make the request
             Operation<ConnectionProfile, OperationMetadata> response = await dataMigrationServiceClient.CreateConnectionProfileAsync(request);
@@ -1914,6 +1918,8 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
                 ConnectionProfile = new ConnectionProfile(),
                 RequestId = "",
+                ValidateOnly = false,
+                SkipValidation = false,
             };
             // Make the request
             Operation<ConnectionProfile, OperationMetadata> response = dataMigrationServiceClient.UpdateConnectionProfile(request);
@@ -1949,6 +1955,8 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
                 ConnectionProfile = new ConnectionProfile(),
                 RequestId = "",
+                ValidateOnly = false,
+                SkipValidation = false,
             };
             // Make the request
             Operation<ConnectionProfile, OperationMetadata> response = await dataMigrationServiceClient.UpdateConnectionProfileAsync(request);
@@ -2216,6 +2224,2504 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePrivateConnection</summary>
+        public void CreatePrivateConnectionRequestObject()
+        {
+            // Snippet: CreatePrivateConnection(CreatePrivateConnectionRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            CreatePrivateConnectionRequest request = new CreatePrivateConnectionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PrivateConnectionId = "",
+                PrivateConnection = new PrivateConnection(),
+                RequestId = "",
+                SkipValidation = false,
+            };
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = dataMigrationServiceClient.CreatePrivateConnection(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceCreatePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePrivateConnectionAsync</summary>
+        public async Task CreatePrivateConnectionRequestObjectAsync()
+        {
+            // Snippet: CreatePrivateConnectionAsync(CreatePrivateConnectionRequest, CallSettings)
+            // Additional: CreatePrivateConnectionAsync(CreatePrivateConnectionRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreatePrivateConnectionRequest request = new CreatePrivateConnectionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PrivateConnectionId = "",
+                PrivateConnection = new PrivateConnection(),
+                RequestId = "",
+                SkipValidation = false,
+            };
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = await dataMigrationServiceClient.CreatePrivateConnectionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceCreatePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePrivateConnection</summary>
+        public void CreatePrivateConnection()
+        {
+            // Snippet: CreatePrivateConnection(string, PrivateConnection, string, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            PrivateConnection privateConnection = new PrivateConnection();
+            string privateConnectionId = "";
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = dataMigrationServiceClient.CreatePrivateConnection(parent, privateConnection, privateConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceCreatePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePrivateConnectionAsync</summary>
+        public async Task CreatePrivateConnectionAsync()
+        {
+            // Snippet: CreatePrivateConnectionAsync(string, PrivateConnection, string, CallSettings)
+            // Additional: CreatePrivateConnectionAsync(string, PrivateConnection, string, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            PrivateConnection privateConnection = new PrivateConnection();
+            string privateConnectionId = "";
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = await dataMigrationServiceClient.CreatePrivateConnectionAsync(parent, privateConnection, privateConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceCreatePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePrivateConnection</summary>
+        public void CreatePrivateConnectionResourceNames()
+        {
+            // Snippet: CreatePrivateConnection(LocationName, PrivateConnection, string, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            PrivateConnection privateConnection = new PrivateConnection();
+            string privateConnectionId = "";
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = dataMigrationServiceClient.CreatePrivateConnection(parent, privateConnection, privateConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceCreatePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePrivateConnectionAsync</summary>
+        public async Task CreatePrivateConnectionResourceNamesAsync()
+        {
+            // Snippet: CreatePrivateConnectionAsync(LocationName, PrivateConnection, string, CallSettings)
+            // Additional: CreatePrivateConnectionAsync(LocationName, PrivateConnection, string, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            PrivateConnection privateConnection = new PrivateConnection();
+            string privateConnectionId = "";
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = await dataMigrationServiceClient.CreatePrivateConnectionAsync(parent, privateConnection, privateConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceCreatePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPrivateConnection</summary>
+        public void GetPrivateConnectionRequestObject()
+        {
+            // Snippet: GetPrivateConnection(GetPrivateConnectionRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
+            {
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
+            };
+            // Make the request
+            PrivateConnection response = dataMigrationServiceClient.GetPrivateConnection(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPrivateConnectionAsync</summary>
+        public async Task GetPrivateConnectionRequestObjectAsync()
+        {
+            // Snippet: GetPrivateConnectionAsync(GetPrivateConnectionRequest, CallSettings)
+            // Additional: GetPrivateConnectionAsync(GetPrivateConnectionRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
+            {
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
+            };
+            // Make the request
+            PrivateConnection response = await dataMigrationServiceClient.GetPrivateConnectionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPrivateConnection</summary>
+        public void GetPrivateConnection()
+        {
+            // Snippet: GetPrivateConnection(string, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATE_CONNECTION]";
+            // Make the request
+            PrivateConnection response = dataMigrationServiceClient.GetPrivateConnection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPrivateConnectionAsync</summary>
+        public async Task GetPrivateConnectionAsync()
+        {
+            // Snippet: GetPrivateConnectionAsync(string, CallSettings)
+            // Additional: GetPrivateConnectionAsync(string, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATE_CONNECTION]";
+            // Make the request
+            PrivateConnection response = await dataMigrationServiceClient.GetPrivateConnectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPrivateConnection</summary>
+        public void GetPrivateConnectionResourceNames()
+        {
+            // Snippet: GetPrivateConnection(PrivateConnectionName, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]");
+            // Make the request
+            PrivateConnection response = dataMigrationServiceClient.GetPrivateConnection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPrivateConnectionAsync</summary>
+        public async Task GetPrivateConnectionResourceNamesAsync()
+        {
+            // Snippet: GetPrivateConnectionAsync(PrivateConnectionName, CallSettings)
+            // Additional: GetPrivateConnectionAsync(PrivateConnectionName, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]");
+            // Make the request
+            PrivateConnection response = await dataMigrationServiceClient.GetPrivateConnectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnections</summary>
+        public void ListPrivateConnectionsRequestObject()
+        {
+            // Snippet: ListPrivateConnections(ListPrivateConnectionsRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = dataMigrationServiceClient.ListPrivateConnections(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PrivateConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPrivateConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PrivateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PrivateConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PrivateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnectionsAsync</summary>
+        public async Task ListPrivateConnectionsRequestObjectAsync()
+        {
+            // Snippet: ListPrivateConnectionsAsync(ListPrivateConnectionsRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = dataMigrationServiceClient.ListPrivateConnectionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PrivateConnection item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PrivateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PrivateConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PrivateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnections</summary>
+        public void ListPrivateConnections()
+        {
+            // Snippet: ListPrivateConnections(string, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = dataMigrationServiceClient.ListPrivateConnections(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PrivateConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPrivateConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PrivateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PrivateConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PrivateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnectionsAsync</summary>
+        public async Task ListPrivateConnectionsAsync()
+        {
+            // Snippet: ListPrivateConnectionsAsync(string, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = dataMigrationServiceClient.ListPrivateConnectionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PrivateConnection item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PrivateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PrivateConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PrivateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnections</summary>
+        public void ListPrivateConnectionsResourceNames()
+        {
+            // Snippet: ListPrivateConnections(LocationName, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = dataMigrationServiceClient.ListPrivateConnections(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PrivateConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPrivateConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PrivateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PrivateConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PrivateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnectionsAsync</summary>
+        public async Task ListPrivateConnectionsResourceNamesAsync()
+        {
+            // Snippet: ListPrivateConnectionsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = dataMigrationServiceClient.ListPrivateConnectionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PrivateConnection item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PrivateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PrivateConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PrivateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePrivateConnection</summary>
+        public void DeletePrivateConnectionRequestObject()
+        {
+            // Snippet: DeletePrivateConnection(DeletePrivateConnectionRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            DeletePrivateConnectionRequest request = new DeletePrivateConnectionRequest
+            {
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = dataMigrationServiceClient.DeletePrivateConnection(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceDeletePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePrivateConnectionAsync</summary>
+        public async Task DeletePrivateConnectionRequestObjectAsync()
+        {
+            // Snippet: DeletePrivateConnectionAsync(DeletePrivateConnectionRequest, CallSettings)
+            // Additional: DeletePrivateConnectionAsync(DeletePrivateConnectionRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeletePrivateConnectionRequest request = new DeletePrivateConnectionRequest
+            {
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await dataMigrationServiceClient.DeletePrivateConnectionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceDeletePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePrivateConnection</summary>
+        public void DeletePrivateConnection()
+        {
+            // Snippet: DeletePrivateConnection(string, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATE_CONNECTION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = dataMigrationServiceClient.DeletePrivateConnection(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceDeletePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePrivateConnectionAsync</summary>
+        public async Task DeletePrivateConnectionAsync()
+        {
+            // Snippet: DeletePrivateConnectionAsync(string, CallSettings)
+            // Additional: DeletePrivateConnectionAsync(string, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATE_CONNECTION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await dataMigrationServiceClient.DeletePrivateConnectionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceDeletePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePrivateConnection</summary>
+        public void DeletePrivateConnectionResourceNames()
+        {
+            // Snippet: DeletePrivateConnection(PrivateConnectionName, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = dataMigrationServiceClient.DeletePrivateConnection(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceDeletePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePrivateConnectionAsync</summary>
+        public async Task DeletePrivateConnectionResourceNamesAsync()
+        {
+            // Snippet: DeletePrivateConnectionAsync(PrivateConnectionName, CallSettings)
+            // Additional: DeletePrivateConnectionAsync(PrivateConnectionName, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await dataMigrationServiceClient.DeletePrivateConnectionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceDeletePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConversionWorkspace</summary>
+        public void GetConversionWorkspaceRequestObject()
+        {
+            // Snippet: GetConversionWorkspace(GetConversionWorkspaceRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            GetConversionWorkspaceRequest request = new GetConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+            };
+            // Make the request
+            ConversionWorkspace response = dataMigrationServiceClient.GetConversionWorkspace(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConversionWorkspaceAsync</summary>
+        public async Task GetConversionWorkspaceRequestObjectAsync()
+        {
+            // Snippet: GetConversionWorkspaceAsync(GetConversionWorkspaceRequest, CallSettings)
+            // Additional: GetConversionWorkspaceAsync(GetConversionWorkspaceRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetConversionWorkspaceRequest request = new GetConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+            };
+            // Make the request
+            ConversionWorkspace response = await dataMigrationServiceClient.GetConversionWorkspaceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConversionWorkspace</summary>
+        public void GetConversionWorkspace()
+        {
+            // Snippet: GetConversionWorkspace(string, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/conversionWorkspaces/[CONVERSION_WORKSPACE]";
+            // Make the request
+            ConversionWorkspace response = dataMigrationServiceClient.GetConversionWorkspace(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConversionWorkspaceAsync</summary>
+        public async Task GetConversionWorkspaceAsync()
+        {
+            // Snippet: GetConversionWorkspaceAsync(string, CallSettings)
+            // Additional: GetConversionWorkspaceAsync(string, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/conversionWorkspaces/[CONVERSION_WORKSPACE]";
+            // Make the request
+            ConversionWorkspace response = await dataMigrationServiceClient.GetConversionWorkspaceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConversionWorkspace</summary>
+        public void GetConversionWorkspaceResourceNames()
+        {
+            // Snippet: GetConversionWorkspace(ConversionWorkspaceName, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            ConversionWorkspaceName name = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]");
+            // Make the request
+            ConversionWorkspace response = dataMigrationServiceClient.GetConversionWorkspace(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConversionWorkspaceAsync</summary>
+        public async Task GetConversionWorkspaceResourceNamesAsync()
+        {
+            // Snippet: GetConversionWorkspaceAsync(ConversionWorkspaceName, CallSettings)
+            // Additional: GetConversionWorkspaceAsync(ConversionWorkspaceName, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ConversionWorkspaceName name = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]");
+            // Make the request
+            ConversionWorkspace response = await dataMigrationServiceClient.GetConversionWorkspaceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListConversionWorkspaces</summary>
+        public void ListConversionWorkspacesRequestObject()
+        {
+            // Snippet: ListConversionWorkspaces(ListConversionWorkspacesRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            ListConversionWorkspacesRequest request = new ListConversionWorkspacesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> response = dataMigrationServiceClient.ListConversionWorkspaces(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ConversionWorkspace item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListConversionWorkspacesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ConversionWorkspace item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ConversionWorkspace> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ConversionWorkspace item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListConversionWorkspacesAsync</summary>
+        public async Task ListConversionWorkspacesRequestObjectAsync()
+        {
+            // Snippet: ListConversionWorkspacesAsync(ListConversionWorkspacesRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListConversionWorkspacesRequest request = new ListConversionWorkspacesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> response = dataMigrationServiceClient.ListConversionWorkspacesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ConversionWorkspace item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListConversionWorkspacesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ConversionWorkspace item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ConversionWorkspace> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ConversionWorkspace item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListConversionWorkspaces</summary>
+        public void ListConversionWorkspaces()
+        {
+            // Snippet: ListConversionWorkspaces(string, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> response = dataMigrationServiceClient.ListConversionWorkspaces(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ConversionWorkspace item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListConversionWorkspacesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ConversionWorkspace item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ConversionWorkspace> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ConversionWorkspace item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListConversionWorkspacesAsync</summary>
+        public async Task ListConversionWorkspacesAsync()
+        {
+            // Snippet: ListConversionWorkspacesAsync(string, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> response = dataMigrationServiceClient.ListConversionWorkspacesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ConversionWorkspace item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListConversionWorkspacesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ConversionWorkspace item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ConversionWorkspace> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ConversionWorkspace item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListConversionWorkspaces</summary>
+        public void ListConversionWorkspacesResourceNames()
+        {
+            // Snippet: ListConversionWorkspaces(LocationName, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> response = dataMigrationServiceClient.ListConversionWorkspaces(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ConversionWorkspace item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListConversionWorkspacesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ConversionWorkspace item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ConversionWorkspace> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ConversionWorkspace item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListConversionWorkspacesAsync</summary>
+        public async Task ListConversionWorkspacesResourceNamesAsync()
+        {
+            // Snippet: ListConversionWorkspacesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListConversionWorkspacesResponse, ConversionWorkspace> response = dataMigrationServiceClient.ListConversionWorkspacesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ConversionWorkspace item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListConversionWorkspacesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ConversionWorkspace item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ConversionWorkspace> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ConversionWorkspace item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateConversionWorkspace</summary>
+        public void CreateConversionWorkspaceRequestObject()
+        {
+            // Snippet: CreateConversionWorkspace(CreateConversionWorkspaceRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            CreateConversionWorkspaceRequest request = new CreateConversionWorkspaceRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ConversionWorkspaceId = "",
+                ConversionWorkspace = new ConversionWorkspace(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = dataMigrationServiceClient.CreateConversionWorkspace(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceCreateConversionWorkspace(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateConversionWorkspaceAsync</summary>
+        public async Task CreateConversionWorkspaceRequestObjectAsync()
+        {
+            // Snippet: CreateConversionWorkspaceAsync(CreateConversionWorkspaceRequest, CallSettings)
+            // Additional: CreateConversionWorkspaceAsync(CreateConversionWorkspaceRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateConversionWorkspaceRequest request = new CreateConversionWorkspaceRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ConversionWorkspaceId = "",
+                ConversionWorkspace = new ConversionWorkspace(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = await dataMigrationServiceClient.CreateConversionWorkspaceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceCreateConversionWorkspaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateConversionWorkspace</summary>
+        public void CreateConversionWorkspace()
+        {
+            // Snippet: CreateConversionWorkspace(string, ConversionWorkspace, string, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ConversionWorkspace conversionWorkspace = new ConversionWorkspace();
+            string conversionWorkspaceId = "";
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = dataMigrationServiceClient.CreateConversionWorkspace(parent, conversionWorkspace, conversionWorkspaceId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceCreateConversionWorkspace(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateConversionWorkspaceAsync</summary>
+        public async Task CreateConversionWorkspaceAsync()
+        {
+            // Snippet: CreateConversionWorkspaceAsync(string, ConversionWorkspace, string, CallSettings)
+            // Additional: CreateConversionWorkspaceAsync(string, ConversionWorkspace, string, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ConversionWorkspace conversionWorkspace = new ConversionWorkspace();
+            string conversionWorkspaceId = "";
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = await dataMigrationServiceClient.CreateConversionWorkspaceAsync(parent, conversionWorkspace, conversionWorkspaceId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceCreateConversionWorkspaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateConversionWorkspace</summary>
+        public void CreateConversionWorkspaceResourceNames()
+        {
+            // Snippet: CreateConversionWorkspace(LocationName, ConversionWorkspace, string, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ConversionWorkspace conversionWorkspace = new ConversionWorkspace();
+            string conversionWorkspaceId = "";
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = dataMigrationServiceClient.CreateConversionWorkspace(parent, conversionWorkspace, conversionWorkspaceId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceCreateConversionWorkspace(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateConversionWorkspaceAsync</summary>
+        public async Task CreateConversionWorkspaceResourceNamesAsync()
+        {
+            // Snippet: CreateConversionWorkspaceAsync(LocationName, ConversionWorkspace, string, CallSettings)
+            // Additional: CreateConversionWorkspaceAsync(LocationName, ConversionWorkspace, string, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ConversionWorkspace conversionWorkspace = new ConversionWorkspace();
+            string conversionWorkspaceId = "";
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = await dataMigrationServiceClient.CreateConversionWorkspaceAsync(parent, conversionWorkspace, conversionWorkspaceId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceCreateConversionWorkspaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConversionWorkspace</summary>
+        public void UpdateConversionWorkspaceRequestObject()
+        {
+            // Snippet: UpdateConversionWorkspace(UpdateConversionWorkspaceRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateConversionWorkspaceRequest request = new UpdateConversionWorkspaceRequest
+            {
+                UpdateMask = new FieldMask(),
+                ConversionWorkspace = new ConversionWorkspace(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = dataMigrationServiceClient.UpdateConversionWorkspace(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceUpdateConversionWorkspace(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConversionWorkspaceAsync</summary>
+        public async Task UpdateConversionWorkspaceRequestObjectAsync()
+        {
+            // Snippet: UpdateConversionWorkspaceAsync(UpdateConversionWorkspaceRequest, CallSettings)
+            // Additional: UpdateConversionWorkspaceAsync(UpdateConversionWorkspaceRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateConversionWorkspaceRequest request = new UpdateConversionWorkspaceRequest
+            {
+                UpdateMask = new FieldMask(),
+                ConversionWorkspace = new ConversionWorkspace(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = await dataMigrationServiceClient.UpdateConversionWorkspaceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceUpdateConversionWorkspaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConversionWorkspace</summary>
+        public void UpdateConversionWorkspace()
+        {
+            // Snippet: UpdateConversionWorkspace(ConversionWorkspace, FieldMask, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            ConversionWorkspace conversionWorkspace = new ConversionWorkspace();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = dataMigrationServiceClient.UpdateConversionWorkspace(conversionWorkspace, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceUpdateConversionWorkspace(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConversionWorkspaceAsync</summary>
+        public async Task UpdateConversionWorkspaceAsync()
+        {
+            // Snippet: UpdateConversionWorkspaceAsync(ConversionWorkspace, FieldMask, CallSettings)
+            // Additional: UpdateConversionWorkspaceAsync(ConversionWorkspace, FieldMask, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ConversionWorkspace conversionWorkspace = new ConversionWorkspace();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = await dataMigrationServiceClient.UpdateConversionWorkspaceAsync(conversionWorkspace, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceUpdateConversionWorkspaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteConversionWorkspace</summary>
+        public void DeleteConversionWorkspaceRequestObject()
+        {
+            // Snippet: DeleteConversionWorkspace(DeleteConversionWorkspaceRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteConversionWorkspaceRequest request = new DeleteConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = dataMigrationServiceClient.DeleteConversionWorkspace(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceDeleteConversionWorkspace(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteConversionWorkspaceAsync</summary>
+        public async Task DeleteConversionWorkspaceRequestObjectAsync()
+        {
+            // Snippet: DeleteConversionWorkspaceAsync(DeleteConversionWorkspaceRequest, CallSettings)
+            // Additional: DeleteConversionWorkspaceAsync(DeleteConversionWorkspaceRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteConversionWorkspaceRequest request = new DeleteConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await dataMigrationServiceClient.DeleteConversionWorkspaceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceDeleteConversionWorkspaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteConversionWorkspace</summary>
+        public void DeleteConversionWorkspace()
+        {
+            // Snippet: DeleteConversionWorkspace(string, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/conversionWorkspaces/[CONVERSION_WORKSPACE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = dataMigrationServiceClient.DeleteConversionWorkspace(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceDeleteConversionWorkspace(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteConversionWorkspaceAsync</summary>
+        public async Task DeleteConversionWorkspaceAsync()
+        {
+            // Snippet: DeleteConversionWorkspaceAsync(string, CallSettings)
+            // Additional: DeleteConversionWorkspaceAsync(string, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/conversionWorkspaces/[CONVERSION_WORKSPACE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await dataMigrationServiceClient.DeleteConversionWorkspaceAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceDeleteConversionWorkspaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteConversionWorkspace</summary>
+        public void DeleteConversionWorkspaceResourceNames()
+        {
+            // Snippet: DeleteConversionWorkspace(ConversionWorkspaceName, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            ConversionWorkspaceName name = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = dataMigrationServiceClient.DeleteConversionWorkspace(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceDeleteConversionWorkspace(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteConversionWorkspaceAsync</summary>
+        public async Task DeleteConversionWorkspaceResourceNamesAsync()
+        {
+            // Snippet: DeleteConversionWorkspaceAsync(ConversionWorkspaceName, CallSettings)
+            // Additional: DeleteConversionWorkspaceAsync(ConversionWorkspaceName, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ConversionWorkspaceName name = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await dataMigrationServiceClient.DeleteConversionWorkspaceAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceDeleteConversionWorkspaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SeedConversionWorkspace</summary>
+        public void SeedConversionWorkspaceRequestObject()
+        {
+            // Snippet: SeedConversionWorkspace(SeedConversionWorkspaceRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            SeedConversionWorkspaceRequest request = new SeedConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                AutoCommit = false,
+                SourceConnectionProfile = "",
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = dataMigrationServiceClient.SeedConversionWorkspace(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceSeedConversionWorkspace(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SeedConversionWorkspaceAsync</summary>
+        public async Task SeedConversionWorkspaceRequestObjectAsync()
+        {
+            // Snippet: SeedConversionWorkspaceAsync(SeedConversionWorkspaceRequest, CallSettings)
+            // Additional: SeedConversionWorkspaceAsync(SeedConversionWorkspaceRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SeedConversionWorkspaceRequest request = new SeedConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                AutoCommit = false,
+                SourceConnectionProfile = "",
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = await dataMigrationServiceClient.SeedConversionWorkspaceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceSeedConversionWorkspaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportMappingRules</summary>
+        public void ImportMappingRulesRequestObject()
+        {
+            // Snippet: ImportMappingRules(ImportMappingRulesRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            ImportMappingRulesRequest request = new ImportMappingRulesRequest
+            {
+                ParentAsConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                RulesFormat = ImportRulesFileFormat.Unspecified,
+                RulesFiles =
+                {
+                    new ImportMappingRulesRequest.Types.RulesFile(),
+                },
+                AutoCommit = false,
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = dataMigrationServiceClient.ImportMappingRules(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceImportMappingRules(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportMappingRulesAsync</summary>
+        public async Task ImportMappingRulesRequestObjectAsync()
+        {
+            // Snippet: ImportMappingRulesAsync(ImportMappingRulesRequest, CallSettings)
+            // Additional: ImportMappingRulesAsync(ImportMappingRulesRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportMappingRulesRequest request = new ImportMappingRulesRequest
+            {
+                ParentAsConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                RulesFormat = ImportRulesFileFormat.Unspecified,
+                RulesFiles =
+                {
+                    new ImportMappingRulesRequest.Types.RulesFile(),
+                },
+                AutoCommit = false,
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = await dataMigrationServiceClient.ImportMappingRulesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceImportMappingRulesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConvertConversionWorkspace</summary>
+        public void ConvertConversionWorkspaceRequestObject()
+        {
+            // Snippet: ConvertConversionWorkspace(ConvertConversionWorkspaceRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            ConvertConversionWorkspaceRequest request = new ConvertConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                AutoCommit = false,
+                Filter = "",
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = dataMigrationServiceClient.ConvertConversionWorkspace(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceConvertConversionWorkspace(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConvertConversionWorkspaceAsync</summary>
+        public async Task ConvertConversionWorkspaceRequestObjectAsync()
+        {
+            // Snippet: ConvertConversionWorkspaceAsync(ConvertConversionWorkspaceRequest, CallSettings)
+            // Additional: ConvertConversionWorkspaceAsync(ConvertConversionWorkspaceRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ConvertConversionWorkspaceRequest request = new ConvertConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                AutoCommit = false,
+                Filter = "",
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = await dataMigrationServiceClient.ConvertConversionWorkspaceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceConvertConversionWorkspaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CommitConversionWorkspace</summary>
+        public void CommitConversionWorkspaceRequestObject()
+        {
+            // Snippet: CommitConversionWorkspace(CommitConversionWorkspaceRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            CommitConversionWorkspaceRequest request = new CommitConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                CommitName = "",
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = dataMigrationServiceClient.CommitConversionWorkspace(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceCommitConversionWorkspace(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CommitConversionWorkspaceAsync</summary>
+        public async Task CommitConversionWorkspaceRequestObjectAsync()
+        {
+            // Snippet: CommitConversionWorkspaceAsync(CommitConversionWorkspaceRequest, CallSettings)
+            // Additional: CommitConversionWorkspaceAsync(CommitConversionWorkspaceRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CommitConversionWorkspaceRequest request = new CommitConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                CommitName = "",
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = await dataMigrationServiceClient.CommitConversionWorkspaceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceCommitConversionWorkspaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackConversionWorkspace</summary>
+        public void RollbackConversionWorkspaceRequestObject()
+        {
+            // Snippet: RollbackConversionWorkspace(RollbackConversionWorkspaceRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            RollbackConversionWorkspaceRequest request = new RollbackConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = dataMigrationServiceClient.RollbackConversionWorkspace(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceRollbackConversionWorkspace(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackConversionWorkspaceAsync</summary>
+        public async Task RollbackConversionWorkspaceRequestObjectAsync()
+        {
+            // Snippet: RollbackConversionWorkspaceAsync(RollbackConversionWorkspaceRequest, CallSettings)
+            // Additional: RollbackConversionWorkspaceAsync(RollbackConversionWorkspaceRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RollbackConversionWorkspaceRequest request = new RollbackConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = await dataMigrationServiceClient.RollbackConversionWorkspaceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceRollbackConversionWorkspaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApplyConversionWorkspace</summary>
+        public void ApplyConversionWorkspaceRequestObject()
+        {
+            // Snippet: ApplyConversionWorkspace(ApplyConversionWorkspaceRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            ApplyConversionWorkspaceRequest request = new ApplyConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                Filter = "",
+                ConnectionProfile = "",
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = dataMigrationServiceClient.ApplyConversionWorkspace(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = dataMigrationServiceClient.PollOnceApplyConversionWorkspace(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApplyConversionWorkspaceAsync</summary>
+        public async Task ApplyConversionWorkspaceRequestObjectAsync()
+        {
+            // Snippet: ApplyConversionWorkspaceAsync(ApplyConversionWorkspaceRequest, CallSettings)
+            // Additional: ApplyConversionWorkspaceAsync(ApplyConversionWorkspaceRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ApplyConversionWorkspaceRequest request = new ApplyConversionWorkspaceRequest
+            {
+                ConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                Filter = "",
+                ConnectionProfile = "",
+            };
+            // Make the request
+            Operation<ConversionWorkspace, OperationMetadata> response = await dataMigrationServiceClient.ApplyConversionWorkspaceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ConversionWorkspace, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ConversionWorkspace result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ConversionWorkspace, OperationMetadata> retrievedResponse = await dataMigrationServiceClient.PollOnceApplyConversionWorkspaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ConversionWorkspace retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DescribeDatabaseEntities</summary>
+        public void DescribeDatabaseEntitiesRequestObject()
+        {
+            // Snippet: DescribeDatabaseEntities(DescribeDatabaseEntitiesRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            DescribeDatabaseEntitiesRequest request = new DescribeDatabaseEntitiesRequest
+            {
+                ConversionWorkspaceAsConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                Tree = DescribeDatabaseEntitiesRequest.Types.DBTreeType.Unspecified,
+                Uncommitted = false,
+                CommitId = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<DescribeDatabaseEntitiesResponse, DatabaseEntity> response = dataMigrationServiceClient.DescribeDatabaseEntities(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatabaseEntity item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (DescribeDatabaseEntitiesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseEntity item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseEntity> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseEntity item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DescribeDatabaseEntitiesAsync</summary>
+        public async Task DescribeDatabaseEntitiesRequestObjectAsync()
+        {
+            // Snippet: DescribeDatabaseEntitiesAsync(DescribeDatabaseEntitiesRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DescribeDatabaseEntitiesRequest request = new DescribeDatabaseEntitiesRequest
+            {
+                ConversionWorkspaceAsConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                Tree = DescribeDatabaseEntitiesRequest.Types.DBTreeType.Unspecified,
+                Uncommitted = false,
+                CommitId = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<DescribeDatabaseEntitiesResponse, DatabaseEntity> response = dataMigrationServiceClient.DescribeDatabaseEntitiesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DatabaseEntity item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((DescribeDatabaseEntitiesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatabaseEntity item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatabaseEntity> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatabaseEntity item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchBackgroundJobs</summary>
+        public void SearchBackgroundJobsRequestObject()
+        {
+            // Snippet: SearchBackgroundJobs(SearchBackgroundJobsRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            SearchBackgroundJobsRequest request = new SearchBackgroundJobsRequest
+            {
+                ConversionWorkspaceAsConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                ReturnMostRecentPerJobType = false,
+                MaxSize = 0,
+                CompletedUntilTime = new Timestamp(),
+            };
+            // Make the request
+            SearchBackgroundJobsResponse response = dataMigrationServiceClient.SearchBackgroundJobs(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchBackgroundJobsAsync</summary>
+        public async Task SearchBackgroundJobsRequestObjectAsync()
+        {
+            // Snippet: SearchBackgroundJobsAsync(SearchBackgroundJobsRequest, CallSettings)
+            // Additional: SearchBackgroundJobsAsync(SearchBackgroundJobsRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchBackgroundJobsRequest request = new SearchBackgroundJobsRequest
+            {
+                ConversionWorkspaceAsConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                ReturnMostRecentPerJobType = false,
+                MaxSize = 0,
+                CompletedUntilTime = new Timestamp(),
+            };
+            // Make the request
+            SearchBackgroundJobsResponse response = await dataMigrationServiceClient.SearchBackgroundJobsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DescribeConversionWorkspaceRevisions</summary>
+        public void DescribeConversionWorkspaceRevisionsRequestObject()
+        {
+            // Snippet: DescribeConversionWorkspaceRevisions(DescribeConversionWorkspaceRevisionsRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            DescribeConversionWorkspaceRevisionsRequest request = new DescribeConversionWorkspaceRevisionsRequest
+            {
+                ConversionWorkspaceAsConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                CommitId = "",
+            };
+            // Make the request
+            DescribeConversionWorkspaceRevisionsResponse response = dataMigrationServiceClient.DescribeConversionWorkspaceRevisions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DescribeConversionWorkspaceRevisionsAsync</summary>
+        public async Task DescribeConversionWorkspaceRevisionsRequestObjectAsync()
+        {
+            // Snippet: DescribeConversionWorkspaceRevisionsAsync(DescribeConversionWorkspaceRevisionsRequest, CallSettings)
+            // Additional: DescribeConversionWorkspaceRevisionsAsync(DescribeConversionWorkspaceRevisionsRequest, CancellationToken)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DescribeConversionWorkspaceRevisionsRequest request = new DescribeConversionWorkspaceRevisionsRequest
+            {
+                ConversionWorkspaceAsConversionWorkspaceName = ConversionWorkspaceName.FromProjectLocationConversionWorkspace("[PROJECT]", "[LOCATION]", "[CONVERSION_WORKSPACE]"),
+                CommitId = "",
+            };
+            // Make the request
+            DescribeConversionWorkspaceRevisionsResponse response = await dataMigrationServiceClient.DescribeConversionWorkspaceRevisionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchStaticIps</summary>
+        public void FetchStaticIpsRequestObject()
+        {
+            // Snippet: FetchStaticIps(FetchStaticIpsRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            FetchStaticIpsRequest request = new FetchStaticIpsRequest
+            {
+                LocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<FetchStaticIpsResponse, string> response = dataMigrationServiceClient.FetchStaticIps(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (string item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchStaticIpsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchStaticIpsAsync</summary>
+        public async Task FetchStaticIpsRequestObjectAsync()
+        {
+            // Snippet: FetchStaticIpsAsync(FetchStaticIpsRequest, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchStaticIpsRequest request = new FetchStaticIpsRequest
+            {
+                LocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<FetchStaticIpsResponse, string> response = dataMigrationServiceClient.FetchStaticIpsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((string item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchStaticIpsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchStaticIps</summary>
+        public void FetchStaticIps()
+        {
+            // Snippet: FetchStaticIps(string, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<FetchStaticIpsResponse, string> response = dataMigrationServiceClient.FetchStaticIps(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (string item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchStaticIpsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchStaticIpsAsync</summary>
+        public async Task FetchStaticIpsAsync()
+        {
+            // Snippet: FetchStaticIpsAsync(string, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<FetchStaticIpsResponse, string> response = dataMigrationServiceClient.FetchStaticIpsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((string item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchStaticIpsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchStaticIps</summary>
+        public void FetchStaticIpsResourceNames()
+        {
+            // Snippet: FetchStaticIps(LocationName, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = DataMigrationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName name = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<FetchStaticIpsResponse, string> response = dataMigrationServiceClient.FetchStaticIps(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (string item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchStaticIpsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchStaticIpsAsync</summary>
+        public async Task FetchStaticIpsResourceNamesAsync()
+        {
+            // Snippet: FetchStaticIpsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DataMigrationServiceClient dataMigrationServiceClient = await DataMigrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName name = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<FetchStaticIpsResponse, string> response = dataMigrationServiceClient.FetchStaticIpsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((string item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchStaticIpsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

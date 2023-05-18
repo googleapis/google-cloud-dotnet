@@ -3,7 +3,7 @@
 //     source: google/cloud/clouddms/v1/clouddms.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -109,6 +109,60 @@ namespace Google.Cloud.CloudDms.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.UpdateConnectionProfileRequest> __Marshaller_google_cloud_clouddms_v1_UpdateConnectionProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.UpdateConnectionProfileRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.DeleteConnectionProfileRequest> __Marshaller_google_cloud_clouddms_v1_DeleteConnectionProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.DeleteConnectionProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.CreatePrivateConnectionRequest> __Marshaller_google_cloud_clouddms_v1_CreatePrivateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.CreatePrivateConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.GetPrivateConnectionRequest> __Marshaller_google_cloud_clouddms_v1_GetPrivateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.GetPrivateConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.PrivateConnection> __Marshaller_google_cloud_clouddms_v1_PrivateConnection = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.PrivateConnection.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsRequest> __Marshaller_google_cloud_clouddms_v1_ListPrivateConnectionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse> __Marshaller_google_cloud_clouddms_v1_ListPrivateConnectionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.DeletePrivateConnectionRequest> __Marshaller_google_cloud_clouddms_v1_DeletePrivateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.DeletePrivateConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.GetConversionWorkspaceRequest> __Marshaller_google_cloud_clouddms_v1_GetConversionWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.GetConversionWorkspaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ConversionWorkspace> __Marshaller_google_cloud_clouddms_v1_ConversionWorkspace = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ConversionWorkspace.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesRequest> __Marshaller_google_cloud_clouddms_v1_ListConversionWorkspacesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse> __Marshaller_google_cloud_clouddms_v1_ListConversionWorkspacesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.CreateConversionWorkspaceRequest> __Marshaller_google_cloud_clouddms_v1_CreateConversionWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.CreateConversionWorkspaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest> __Marshaller_google_cloud_clouddms_v1_UpdateConversionWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest> __Marshaller_google_cloud_clouddms_v1_DeleteConversionWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest> __Marshaller_google_cloud_clouddms_v1_SeedConversionWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ImportMappingRulesRequest> __Marshaller_google_cloud_clouddms_v1_ImportMappingRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ImportMappingRulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ConvertConversionWorkspaceRequest> __Marshaller_google_cloud_clouddms_v1_ConvertConversionWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ConvertConversionWorkspaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.CommitConversionWorkspaceRequest> __Marshaller_google_cloud_clouddms_v1_CommitConversionWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.CommitConversionWorkspaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.RollbackConversionWorkspaceRequest> __Marshaller_google_cloud_clouddms_v1_RollbackConversionWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.RollbackConversionWorkspaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ApplyConversionWorkspaceRequest> __Marshaller_google_cloud_clouddms_v1_ApplyConversionWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ApplyConversionWorkspaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesRequest> __Marshaller_google_cloud_clouddms_v1_DescribeDatabaseEntitiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesResponse> __Marshaller_google_cloud_clouddms_v1_DescribeDatabaseEntitiesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsRequest> __Marshaller_google_cloud_clouddms_v1_SearchBackgroundJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsResponse> __Marshaller_google_cloud_clouddms_v1_SearchBackgroundJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsRequest> __Marshaller_google_cloud_clouddms_v1_DescribeConversionWorkspaceRevisionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsResponse> __Marshaller_google_cloud_clouddms_v1_DescribeConversionWorkspaceRevisionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.FetchStaticIpsRequest> __Marshaller_google_cloud_clouddms_v1_FetchStaticIpsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.FetchStaticIpsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.FetchStaticIpsResponse> __Marshaller_google_cloud_clouddms_v1_FetchStaticIpsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.FetchStaticIpsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.ListMigrationJobsRequest, global::Google.Cloud.CloudDms.V1.ListMigrationJobsResponse> __Method_ListMigrationJobs = new grpc::Method<global::Google.Cloud.CloudDms.V1.ListMigrationJobsRequest, global::Google.Cloud.CloudDms.V1.ListMigrationJobsResponse>(
@@ -245,6 +299,158 @@ namespace Google.Cloud.CloudDms.V1 {
         "DeleteConnectionProfile",
         __Marshaller_google_cloud_clouddms_v1_DeleteConnectionProfileRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.CreatePrivateConnectionRequest, global::Google.LongRunning.Operation> __Method_CreatePrivateConnection = new grpc::Method<global::Google.Cloud.CloudDms.V1.CreatePrivateConnectionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreatePrivateConnection",
+        __Marshaller_google_cloud_clouddms_v1_CreatePrivateConnectionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.GetPrivateConnectionRequest, global::Google.Cloud.CloudDms.V1.PrivateConnection> __Method_GetPrivateConnection = new grpc::Method<global::Google.Cloud.CloudDms.V1.GetPrivateConnectionRequest, global::Google.Cloud.CloudDms.V1.PrivateConnection>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPrivateConnection",
+        __Marshaller_google_cloud_clouddms_v1_GetPrivateConnectionRequest,
+        __Marshaller_google_cloud_clouddms_v1_PrivateConnection);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsRequest, global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse> __Method_ListPrivateConnections = new grpc::Method<global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsRequest, global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPrivateConnections",
+        __Marshaller_google_cloud_clouddms_v1_ListPrivateConnectionsRequest,
+        __Marshaller_google_cloud_clouddms_v1_ListPrivateConnectionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.DeletePrivateConnectionRequest, global::Google.LongRunning.Operation> __Method_DeletePrivateConnection = new grpc::Method<global::Google.Cloud.CloudDms.V1.DeletePrivateConnectionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeletePrivateConnection",
+        __Marshaller_google_cloud_clouddms_v1_DeletePrivateConnectionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.GetConversionWorkspaceRequest, global::Google.Cloud.CloudDms.V1.ConversionWorkspace> __Method_GetConversionWorkspace = new grpc::Method<global::Google.Cloud.CloudDms.V1.GetConversionWorkspaceRequest, global::Google.Cloud.CloudDms.V1.ConversionWorkspace>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetConversionWorkspace",
+        __Marshaller_google_cloud_clouddms_v1_GetConversionWorkspaceRequest,
+        __Marshaller_google_cloud_clouddms_v1_ConversionWorkspace);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesRequest, global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse> __Method_ListConversionWorkspaces = new grpc::Method<global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesRequest, global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListConversionWorkspaces",
+        __Marshaller_google_cloud_clouddms_v1_ListConversionWorkspacesRequest,
+        __Marshaller_google_cloud_clouddms_v1_ListConversionWorkspacesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.CreateConversionWorkspaceRequest, global::Google.LongRunning.Operation> __Method_CreateConversionWorkspace = new grpc::Method<global::Google.Cloud.CloudDms.V1.CreateConversionWorkspaceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateConversionWorkspace",
+        __Marshaller_google_cloud_clouddms_v1_CreateConversionWorkspaceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest, global::Google.LongRunning.Operation> __Method_UpdateConversionWorkspace = new grpc::Method<global::Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateConversionWorkspace",
+        __Marshaller_google_cloud_clouddms_v1_UpdateConversionWorkspaceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest, global::Google.LongRunning.Operation> __Method_DeleteConversionWorkspace = new grpc::Method<global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteConversionWorkspace",
+        __Marshaller_google_cloud_clouddms_v1_DeleteConversionWorkspaceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest, global::Google.LongRunning.Operation> __Method_SeedConversionWorkspace = new grpc::Method<global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SeedConversionWorkspace",
+        __Marshaller_google_cloud_clouddms_v1_SeedConversionWorkspaceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.ImportMappingRulesRequest, global::Google.LongRunning.Operation> __Method_ImportMappingRules = new grpc::Method<global::Google.Cloud.CloudDms.V1.ImportMappingRulesRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportMappingRules",
+        __Marshaller_google_cloud_clouddms_v1_ImportMappingRulesRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.ConvertConversionWorkspaceRequest, global::Google.LongRunning.Operation> __Method_ConvertConversionWorkspace = new grpc::Method<global::Google.Cloud.CloudDms.V1.ConvertConversionWorkspaceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ConvertConversionWorkspace",
+        __Marshaller_google_cloud_clouddms_v1_ConvertConversionWorkspaceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.CommitConversionWorkspaceRequest, global::Google.LongRunning.Operation> __Method_CommitConversionWorkspace = new grpc::Method<global::Google.Cloud.CloudDms.V1.CommitConversionWorkspaceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CommitConversionWorkspace",
+        __Marshaller_google_cloud_clouddms_v1_CommitConversionWorkspaceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.RollbackConversionWorkspaceRequest, global::Google.LongRunning.Operation> __Method_RollbackConversionWorkspace = new grpc::Method<global::Google.Cloud.CloudDms.V1.RollbackConversionWorkspaceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RollbackConversionWorkspace",
+        __Marshaller_google_cloud_clouddms_v1_RollbackConversionWorkspaceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.ApplyConversionWorkspaceRequest, global::Google.LongRunning.Operation> __Method_ApplyConversionWorkspace = new grpc::Method<global::Google.Cloud.CloudDms.V1.ApplyConversionWorkspaceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ApplyConversionWorkspace",
+        __Marshaller_google_cloud_clouddms_v1_ApplyConversionWorkspaceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesRequest, global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesResponse> __Method_DescribeDatabaseEntities = new grpc::Method<global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesRequest, global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DescribeDatabaseEntities",
+        __Marshaller_google_cloud_clouddms_v1_DescribeDatabaseEntitiesRequest,
+        __Marshaller_google_cloud_clouddms_v1_DescribeDatabaseEntitiesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsRequest, global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsResponse> __Method_SearchBackgroundJobs = new grpc::Method<global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsRequest, global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchBackgroundJobs",
+        __Marshaller_google_cloud_clouddms_v1_SearchBackgroundJobsRequest,
+        __Marshaller_google_cloud_clouddms_v1_SearchBackgroundJobsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsRequest, global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsResponse> __Method_DescribeConversionWorkspaceRevisions = new grpc::Method<global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsRequest, global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DescribeConversionWorkspaceRevisions",
+        __Marshaller_google_cloud_clouddms_v1_DescribeConversionWorkspaceRevisionsRequest,
+        __Marshaller_google_cloud_clouddms_v1_DescribeConversionWorkspaceRevisionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.FetchStaticIpsRequest, global::Google.Cloud.CloudDms.V1.FetchStaticIpsResponse> __Method_FetchStaticIps = new grpc::Method<global::Google.Cloud.CloudDms.V1.FetchStaticIpsRequest, global::Google.Cloud.CloudDms.V1.FetchStaticIpsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchStaticIps",
+        __Marshaller_google_cloud_clouddms_v1_FetchStaticIpsRequest,
+        __Marshaller_google_cloud_clouddms_v1_FetchStaticIpsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -407,7 +613,8 @@ namespace Google.Cloud.CloudDms.V1 {
       }
 
       /// <summary>
-      /// Retrieve a list of all connection profiles in a given project and location.
+      /// Retrieves a list of all connection profiles in a given project and
+      /// location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -464,6 +671,248 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteConnectionProfile(global::Google.Cloud.CloudDms.V1.DeleteConnectionProfileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new private connection in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreatePrivateConnection(global::Google.Cloud.CloudDms.V1.CreatePrivateConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single private connection.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.PrivateConnection> GetPrivateConnection(global::Google.Cloud.CloudDms.V1.GetPrivateConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves a list of private connections in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse> ListPrivateConnections(global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single Database Migration Service private connection.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeletePrivateConnection(global::Google.Cloud.CloudDms.V1.DeletePrivateConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.ConversionWorkspace> GetConversionWorkspace(global::Google.Cloud.CloudDms.V1.GetConversionWorkspaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists conversion workspaces in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse> ListConversionWorkspaces(global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new conversion workspace in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateConversionWorkspace(global::Google.Cloud.CloudDms.V1.CreateConversionWorkspaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateConversionWorkspace(global::Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteConversionWorkspace(global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports a snapshot of the source database into the
+      /// conversion workspace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SeedConversionWorkspace(global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports the mapping rules for a given conversion workspace.
+      /// Supports various formats of external rules files.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportMappingRules(global::Google.Cloud.CloudDms.V1.ImportMappingRulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a draft tree schema for the destination database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ConvertConversionWorkspace(global::Google.Cloud.CloudDms.V1.ConvertConversionWorkspaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Marks all the data in the conversion workspace as committed.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CommitConversionWorkspace(global::Google.Cloud.CloudDms.V1.CommitConversionWorkspaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Rolls back a conversion workspace to the last committed snapshot.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RollbackConversionWorkspace(global::Google.Cloud.CloudDms.V1.RollbackConversionWorkspaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Applies draft tree onto a specific destination database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ApplyConversionWorkspace(global::Google.Cloud.CloudDms.V1.ApplyConversionWorkspaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Describes the database entities tree for a specific conversion workspace
+      /// and a specific tree type.
+      ///
+      /// Database entities are not resources like conversion workspaces or mapping
+      /// rules, and they can't be created, updated or deleted. Instead, they are
+      /// simple data objects describing the structure of the client database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesResponse> DescribeDatabaseEntities(global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Searches/lists the background jobs for a specific
+      /// conversion workspace.
+      ///
+      /// The background jobs are not resources like conversion workspaces or
+      /// mapping rules, and they can't be created, updated or deleted.
+      /// Instead, they are a way to expose the data plane jobs log.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsResponse> SearchBackgroundJobs(global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves a list of committed revisions of a specific conversion
+      /// workspace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsResponse> DescribeConversionWorkspaceRevisions(global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches a set of static IP addresses that need to be allowlisted by the
+      /// customer when using the static-IP connectivity method.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.FetchStaticIpsResponse> FetchStaticIps(global::Google.Cloud.CloudDms.V1.FetchStaticIpsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1098,7 +1547,8 @@ namespace Google.Cloud.CloudDms.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateSshScript, null, options, request);
       }
       /// <summary>
-      /// Retrieve a list of all connection profiles in a given project and location.
+      /// Retrieves a list of all connection profiles in a given project and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1111,7 +1561,8 @@ namespace Google.Cloud.CloudDms.V1 {
         return ListConnectionProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieve a list of all connection profiles in a given project and location.
+      /// Retrieves a list of all connection profiles in a given project and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1122,7 +1573,8 @@ namespace Google.Cloud.CloudDms.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListConnectionProfiles, null, options, request);
       }
       /// <summary>
-      /// Retrieve a list of all connection profiles in a given project and location.
+      /// Retrieves a list of all connection profiles in a given project and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1135,7 +1587,8 @@ namespace Google.Cloud.CloudDms.V1 {
         return ListConnectionProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieve a list of all connection profiles in a given project and location.
+      /// Retrieves a list of all connection profiles in a given project and
+      /// location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1345,6 +1798,974 @@ namespace Google.Cloud.CloudDms.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteConnectionProfile, null, options, request);
       }
+      /// <summary>
+      /// Creates a new private connection in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreatePrivateConnection(global::Google.Cloud.CloudDms.V1.CreatePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePrivateConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new private connection in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreatePrivateConnection(global::Google.Cloud.CloudDms.V1.CreatePrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreatePrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new private connection in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePrivateConnectionAsync(global::Google.Cloud.CloudDms.V1.CreatePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePrivateConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new private connection in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePrivateConnectionAsync(global::Google.Cloud.CloudDms.V1.CreatePrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreatePrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single private connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.PrivateConnection GetPrivateConnection(global::Google.Cloud.CloudDms.V1.GetPrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPrivateConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single private connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.PrivateConnection GetPrivateConnection(global::Google.Cloud.CloudDms.V1.GetPrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single private connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.PrivateConnection> GetPrivateConnectionAsync(global::Google.Cloud.CloudDms.V1.GetPrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPrivateConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single private connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.PrivateConnection> GetPrivateConnectionAsync(global::Google.Cloud.CloudDms.V1.GetPrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a list of private connections in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse ListPrivateConnections(global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPrivateConnections(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a list of private connections in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse ListPrivateConnections(global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPrivateConnections, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a list of private connections in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse> ListPrivateConnectionsAsync(global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPrivateConnectionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a list of private connections in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse> ListPrivateConnectionsAsync(global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPrivateConnections, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single Database Migration Service private connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeletePrivateConnection(global::Google.Cloud.CloudDms.V1.DeletePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePrivateConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single Database Migration Service private connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeletePrivateConnection(global::Google.Cloud.CloudDms.V1.DeletePrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeletePrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single Database Migration Service private connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePrivateConnectionAsync(global::Google.Cloud.CloudDms.V1.DeletePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePrivateConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single Database Migration Service private connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePrivateConnectionAsync(global::Google.Cloud.CloudDms.V1.DeletePrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeletePrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.ConversionWorkspace GetConversionWorkspace(global::Google.Cloud.CloudDms.V1.GetConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetConversionWorkspace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.ConversionWorkspace GetConversionWorkspace(global::Google.Cloud.CloudDms.V1.GetConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ConversionWorkspace> GetConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.GetConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetConversionWorkspaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ConversionWorkspace> GetConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.GetConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Lists conversion workspaces in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse ListConversionWorkspaces(global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListConversionWorkspaces(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists conversion workspaces in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse ListConversionWorkspaces(global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListConversionWorkspaces, null, options, request);
+      }
+      /// <summary>
+      /// Lists conversion workspaces in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse> ListConversionWorkspacesAsync(global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListConversionWorkspacesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists conversion workspaces in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse> ListConversionWorkspacesAsync(global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListConversionWorkspaces, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new conversion workspace in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateConversionWorkspace(global::Google.Cloud.CloudDms.V1.CreateConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateConversionWorkspace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new conversion workspace in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateConversionWorkspace(global::Google.Cloud.CloudDms.V1.CreateConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new conversion workspace in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.CreateConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateConversionWorkspaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new conversion workspace in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.CreateConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateConversionWorkspace(global::Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConversionWorkspace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateConversionWorkspace(global::Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConversionWorkspaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteConversionWorkspace(global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteConversionWorkspace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteConversionWorkspace(global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteConversionWorkspaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Imports a snapshot of the source database into the
+      /// conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SeedConversionWorkspace(global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SeedConversionWorkspace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports a snapshot of the source database into the
+      /// conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SeedConversionWorkspace(global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SeedConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Imports a snapshot of the source database into the
+      /// conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SeedConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SeedConversionWorkspaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports a snapshot of the source database into the
+      /// conversion workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SeedConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SeedConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Imports the mapping rules for a given conversion workspace.
+      /// Supports various formats of external rules files.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportMappingRules(global::Google.Cloud.CloudDms.V1.ImportMappingRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportMappingRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports the mapping rules for a given conversion workspace.
+      /// Supports various formats of external rules files.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportMappingRules(global::Google.Cloud.CloudDms.V1.ImportMappingRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportMappingRules, null, options, request);
+      }
+      /// <summary>
+      /// Imports the mapping rules for a given conversion workspace.
+      /// Supports various formats of external rules files.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportMappingRulesAsync(global::Google.Cloud.CloudDms.V1.ImportMappingRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportMappingRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports the mapping rules for a given conversion workspace.
+      /// Supports various formats of external rules files.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportMappingRulesAsync(global::Google.Cloud.CloudDms.V1.ImportMappingRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportMappingRules, null, options, request);
+      }
+      /// <summary>
+      /// Creates a draft tree schema for the destination database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ConvertConversionWorkspace(global::Google.Cloud.CloudDms.V1.ConvertConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ConvertConversionWorkspace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a draft tree schema for the destination database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ConvertConversionWorkspace(global::Google.Cloud.CloudDms.V1.ConvertConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ConvertConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Creates a draft tree schema for the destination database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ConvertConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.ConvertConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ConvertConversionWorkspaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a draft tree schema for the destination database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ConvertConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.ConvertConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ConvertConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Marks all the data in the conversion workspace as committed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CommitConversionWorkspace(global::Google.Cloud.CloudDms.V1.CommitConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CommitConversionWorkspace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks all the data in the conversion workspace as committed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CommitConversionWorkspace(global::Google.Cloud.CloudDms.V1.CommitConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CommitConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Marks all the data in the conversion workspace as committed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CommitConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.CommitConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CommitConversionWorkspaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks all the data in the conversion workspace as committed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CommitConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.CommitConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CommitConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Rolls back a conversion workspace to the last committed snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RollbackConversionWorkspace(global::Google.Cloud.CloudDms.V1.RollbackConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RollbackConversionWorkspace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Rolls back a conversion workspace to the last committed snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RollbackConversionWorkspace(global::Google.Cloud.CloudDms.V1.RollbackConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RollbackConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Rolls back a conversion workspace to the last committed snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RollbackConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.RollbackConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RollbackConversionWorkspaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Rolls back a conversion workspace to the last committed snapshot.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RollbackConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.RollbackConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RollbackConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Applies draft tree onto a specific destination database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ApplyConversionWorkspace(global::Google.Cloud.CloudDms.V1.ApplyConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ApplyConversionWorkspace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Applies draft tree onto a specific destination database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ApplyConversionWorkspace(global::Google.Cloud.CloudDms.V1.ApplyConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ApplyConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Applies draft tree onto a specific destination database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ApplyConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.ApplyConversionWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ApplyConversionWorkspaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Applies draft tree onto a specific destination database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ApplyConversionWorkspaceAsync(global::Google.Cloud.CloudDms.V1.ApplyConversionWorkspaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ApplyConversionWorkspace, null, options, request);
+      }
+      /// <summary>
+      /// Describes the database entities tree for a specific conversion workspace
+      /// and a specific tree type.
+      ///
+      /// Database entities are not resources like conversion workspaces or mapping
+      /// rules, and they can't be created, updated or deleted. Instead, they are
+      /// simple data objects describing the structure of the client database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesResponse DescribeDatabaseEntities(global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DescribeDatabaseEntities(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Describes the database entities tree for a specific conversion workspace
+      /// and a specific tree type.
+      ///
+      /// Database entities are not resources like conversion workspaces or mapping
+      /// rules, and they can't be created, updated or deleted. Instead, they are
+      /// simple data objects describing the structure of the client database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesResponse DescribeDatabaseEntities(global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DescribeDatabaseEntities, null, options, request);
+      }
+      /// <summary>
+      /// Describes the database entities tree for a specific conversion workspace
+      /// and a specific tree type.
+      ///
+      /// Database entities are not resources like conversion workspaces or mapping
+      /// rules, and they can't be created, updated or deleted. Instead, they are
+      /// simple data objects describing the structure of the client database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesResponse> DescribeDatabaseEntitiesAsync(global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DescribeDatabaseEntitiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Describes the database entities tree for a specific conversion workspace
+      /// and a specific tree type.
+      ///
+      /// Database entities are not resources like conversion workspaces or mapping
+      /// rules, and they can't be created, updated or deleted. Instead, they are
+      /// simple data objects describing the structure of the client database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesResponse> DescribeDatabaseEntitiesAsync(global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DescribeDatabaseEntities, null, options, request);
+      }
+      /// <summary>
+      /// Searches/lists the background jobs for a specific
+      /// conversion workspace.
+      ///
+      /// The background jobs are not resources like conversion workspaces or
+      /// mapping rules, and they can't be created, updated or deleted.
+      /// Instead, they are a way to expose the data plane jobs log.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsResponse SearchBackgroundJobs(global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchBackgroundJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches/lists the background jobs for a specific
+      /// conversion workspace.
+      ///
+      /// The background jobs are not resources like conversion workspaces or
+      /// mapping rules, and they can't be created, updated or deleted.
+      /// Instead, they are a way to expose the data plane jobs log.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsResponse SearchBackgroundJobs(global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchBackgroundJobs, null, options, request);
+      }
+      /// <summary>
+      /// Searches/lists the background jobs for a specific
+      /// conversion workspace.
+      ///
+      /// The background jobs are not resources like conversion workspaces or
+      /// mapping rules, and they can't be created, updated or deleted.
+      /// Instead, they are a way to expose the data plane jobs log.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsResponse> SearchBackgroundJobsAsync(global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchBackgroundJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches/lists the background jobs for a specific
+      /// conversion workspace.
+      ///
+      /// The background jobs are not resources like conversion workspaces or
+      /// mapping rules, and they can't be created, updated or deleted.
+      /// Instead, they are a way to expose the data plane jobs log.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsResponse> SearchBackgroundJobsAsync(global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchBackgroundJobs, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a list of committed revisions of a specific conversion
+      /// workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsResponse DescribeConversionWorkspaceRevisions(global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DescribeConversionWorkspaceRevisions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a list of committed revisions of a specific conversion
+      /// workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsResponse DescribeConversionWorkspaceRevisions(global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DescribeConversionWorkspaceRevisions, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a list of committed revisions of a specific conversion
+      /// workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsResponse> DescribeConversionWorkspaceRevisionsAsync(global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DescribeConversionWorkspaceRevisionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a list of committed revisions of a specific conversion
+      /// workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsResponse> DescribeConversionWorkspaceRevisionsAsync(global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DescribeConversionWorkspaceRevisions, null, options, request);
+      }
+      /// <summary>
+      /// Fetches a set of static IP addresses that need to be allowlisted by the
+      /// customer when using the static-IP connectivity method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.FetchStaticIpsResponse FetchStaticIps(global::Google.Cloud.CloudDms.V1.FetchStaticIpsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchStaticIps(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches a set of static IP addresses that need to be allowlisted by the
+      /// customer when using the static-IP connectivity method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudDms.V1.FetchStaticIpsResponse FetchStaticIps(global::Google.Cloud.CloudDms.V1.FetchStaticIpsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchStaticIps, null, options, request);
+      }
+      /// <summary>
+      /// Fetches a set of static IP addresses that need to be allowlisted by the
+      /// customer when using the static-IP connectivity method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.FetchStaticIpsResponse> FetchStaticIpsAsync(global::Google.Cloud.CloudDms.V1.FetchStaticIpsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchStaticIpsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches a set of static IP addresses that need to be allowlisted by the
+      /// customer when using the static-IP connectivity method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.FetchStaticIpsResponse> FetchStaticIpsAsync(global::Google.Cloud.CloudDms.V1.FetchStaticIpsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchStaticIps, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataMigrationServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1375,7 +2796,26 @@ namespace Google.Cloud.CloudDms.V1 {
           .AddMethod(__Method_GetConnectionProfile, serviceImpl.GetConnectionProfile)
           .AddMethod(__Method_CreateConnectionProfile, serviceImpl.CreateConnectionProfile)
           .AddMethod(__Method_UpdateConnectionProfile, serviceImpl.UpdateConnectionProfile)
-          .AddMethod(__Method_DeleteConnectionProfile, serviceImpl.DeleteConnectionProfile).Build();
+          .AddMethod(__Method_DeleteConnectionProfile, serviceImpl.DeleteConnectionProfile)
+          .AddMethod(__Method_CreatePrivateConnection, serviceImpl.CreatePrivateConnection)
+          .AddMethod(__Method_GetPrivateConnection, serviceImpl.GetPrivateConnection)
+          .AddMethod(__Method_ListPrivateConnections, serviceImpl.ListPrivateConnections)
+          .AddMethod(__Method_DeletePrivateConnection, serviceImpl.DeletePrivateConnection)
+          .AddMethod(__Method_GetConversionWorkspace, serviceImpl.GetConversionWorkspace)
+          .AddMethod(__Method_ListConversionWorkspaces, serviceImpl.ListConversionWorkspaces)
+          .AddMethod(__Method_CreateConversionWorkspace, serviceImpl.CreateConversionWorkspace)
+          .AddMethod(__Method_UpdateConversionWorkspace, serviceImpl.UpdateConversionWorkspace)
+          .AddMethod(__Method_DeleteConversionWorkspace, serviceImpl.DeleteConversionWorkspace)
+          .AddMethod(__Method_SeedConversionWorkspace, serviceImpl.SeedConversionWorkspace)
+          .AddMethod(__Method_ImportMappingRules, serviceImpl.ImportMappingRules)
+          .AddMethod(__Method_ConvertConversionWorkspace, serviceImpl.ConvertConversionWorkspace)
+          .AddMethod(__Method_CommitConversionWorkspace, serviceImpl.CommitConversionWorkspace)
+          .AddMethod(__Method_RollbackConversionWorkspace, serviceImpl.RollbackConversionWorkspace)
+          .AddMethod(__Method_ApplyConversionWorkspace, serviceImpl.ApplyConversionWorkspace)
+          .AddMethod(__Method_DescribeDatabaseEntities, serviceImpl.DescribeDatabaseEntities)
+          .AddMethod(__Method_SearchBackgroundJobs, serviceImpl.SearchBackgroundJobs)
+          .AddMethod(__Method_DescribeConversionWorkspaceRevisions, serviceImpl.DescribeConversionWorkspaceRevisions)
+          .AddMethod(__Method_FetchStaticIps, serviceImpl.FetchStaticIps).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1402,6 +2842,25 @@ namespace Google.Cloud.CloudDms.V1 {
       serviceBinder.AddMethod(__Method_CreateConnectionProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.CreateConnectionProfileRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateConnectionProfile));
       serviceBinder.AddMethod(__Method_UpdateConnectionProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.UpdateConnectionProfileRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateConnectionProfile));
       serviceBinder.AddMethod(__Method_DeleteConnectionProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.DeleteConnectionProfileRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteConnectionProfile));
+      serviceBinder.AddMethod(__Method_CreatePrivateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.CreatePrivateConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreatePrivateConnection));
+      serviceBinder.AddMethod(__Method_GetPrivateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.GetPrivateConnectionRequest, global::Google.Cloud.CloudDms.V1.PrivateConnection>(serviceImpl.GetPrivateConnection));
+      serviceBinder.AddMethod(__Method_ListPrivateConnections, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsRequest, global::Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse>(serviceImpl.ListPrivateConnections));
+      serviceBinder.AddMethod(__Method_DeletePrivateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.DeletePrivateConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeletePrivateConnection));
+      serviceBinder.AddMethod(__Method_GetConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.GetConversionWorkspaceRequest, global::Google.Cloud.CloudDms.V1.ConversionWorkspace>(serviceImpl.GetConversionWorkspace));
+      serviceBinder.AddMethod(__Method_ListConversionWorkspaces, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesRequest, global::Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse>(serviceImpl.ListConversionWorkspaces));
+      serviceBinder.AddMethod(__Method_CreateConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.CreateConversionWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateConversionWorkspace));
+      serviceBinder.AddMethod(__Method_UpdateConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateConversionWorkspace));
+      serviceBinder.AddMethod(__Method_DeleteConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteConversionWorkspace));
+      serviceBinder.AddMethod(__Method_SeedConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.SeedConversionWorkspace));
+      serviceBinder.AddMethod(__Method_ImportMappingRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.ImportMappingRulesRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportMappingRules));
+      serviceBinder.AddMethod(__Method_ConvertConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.ConvertConversionWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.ConvertConversionWorkspace));
+      serviceBinder.AddMethod(__Method_CommitConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.CommitConversionWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.CommitConversionWorkspace));
+      serviceBinder.AddMethod(__Method_RollbackConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.RollbackConversionWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.RollbackConversionWorkspace));
+      serviceBinder.AddMethod(__Method_ApplyConversionWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.ApplyConversionWorkspaceRequest, global::Google.LongRunning.Operation>(serviceImpl.ApplyConversionWorkspace));
+      serviceBinder.AddMethod(__Method_DescribeDatabaseEntities, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesRequest, global::Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesResponse>(serviceImpl.DescribeDatabaseEntities));
+      serviceBinder.AddMethod(__Method_SearchBackgroundJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsRequest, global::Google.Cloud.CloudDms.V1.SearchBackgroundJobsResponse>(serviceImpl.SearchBackgroundJobs));
+      serviceBinder.AddMethod(__Method_DescribeConversionWorkspaceRevisions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsRequest, global::Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsResponse>(serviceImpl.DescribeConversionWorkspaceRevisions));
+      serviceBinder.AddMethod(__Method_FetchStaticIps, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.FetchStaticIpsRequest, global::Google.Cloud.CloudDms.V1.FetchStaticIpsResponse>(serviceImpl.FetchStaticIps));
     }
 
   }

@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
@@ -31,6 +33,31 @@ namespace Google.Cloud.CloudDms.V1
             .WithRequestNumericEnumJsonEncoding(true)
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
+                {
+                    "google.cloud.location.Locations.GetLocation",
+                    // { "get": "/v1/{name=projects/*/locations/*}" }
+                    proto::ByteString.FromBase64("EiEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0=")
+                },
+                {
+                    "google.cloud.location.Locations.ListLocations",
+                    // { "get": "/v1/{name=projects/*}/locations" }
+                    proto::ByteString.FromBase64("Eh8vdjEve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
+                },
+                {
+                    "google.iam.v1.IAMPolicy.GetIamPolicy",
+                    // { "get": "/v1/{resource=projects/*/locations/*/connectionProfiles/*}:getIamPolicy", "additionalBindings": [ { "get": "/v1/{resource=projects/*/locations/*/migrationJobs/*}:getIamPolicy" }, { "get": "/v1/{resource=projects/*/locations/*/conversionWorkspaces/*}:getIamPolicy" }, { "get": "/v1/{resource=projects/*/locations/*/privateConnections/*}:getIamPolicy" } ] }
+                    proto::ByteString.FromBase64("EkcvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovY29ubmVjdGlvblByb2ZpbGVzLyp9OmdldElhbVBvbGljeVpEEkIvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovbWlncmF0aW9uSm9icy8qfTpnZXRJYW1Qb2xpY3laSxJJL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbnZlcnNpb25Xb3Jrc3BhY2VzLyp9OmdldElhbVBvbGljeVpJEkcvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovcHJpdmF0ZUNvbm5lY3Rpb25zLyp9OmdldElhbVBvbGljeQ==")
+                },
+                {
+                    "google.iam.v1.IAMPolicy.SetIamPolicy",
+                    // { "post": "/v1/{resource=projects/*/locations/*/connectionProfiles/*}:setIamPolicy", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/migrationJobs/*}:setIamPolicy", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/conversionWorkspaces/*}:setIamPolicy", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/privateConnections/*}:setIamPolicy", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IkcvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovY29ubmVjdGlvblByb2ZpbGVzLyp9OnNldElhbVBvbGljeToBKlpHIkIvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovbWlncmF0aW9uSm9icy8qfTpzZXRJYW1Qb2xpY3k6ASpaTiJJL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbnZlcnNpb25Xb3Jrc3BhY2VzLyp9OnNldElhbVBvbGljeToBKlpMIkcvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovcHJpdmF0ZUNvbm5lY3Rpb25zLyp9OnNldElhbVBvbGljeToBKg==")
+                },
+                {
+                    "google.iam.v1.IAMPolicy.TestIamPermissions",
+                    // { "post": "/v1/{resource=projects/*/locations/*/migrationJobs/*}:testIamPermissions", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/connectionProfiles/*}:testIamPermissions", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/conversionWorkspaces/*}:testIamPermissions", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/privateConnections/*}:testIamPermissions", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IkgvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovbWlncmF0aW9uSm9icy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpaUiJNL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25Qcm9maWxlcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpaVCJPL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbnZlcnNpb25Xb3Jrc3BhY2VzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlpSIk0vdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovcHJpdmF0ZUNvbm5lY3Rpb25zLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKg==")
+                },
                 {
                     "google.longrunning.Operations.CancelOperation",
                     // { "post": "/v1/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
@@ -57,6 +84,11 @@ namespace Google.Cloud.CloudDms.V1
         {
             yield return ClouddmsReflection.Descriptor;
             yield return ClouddmsResourcesReflection.Descriptor;
+            yield return ConversionworkspaceResourcesReflection.Descriptor;
+            yield return gciv::IamPolicyReflection.Descriptor;
+            yield return gciv::OptionsReflection.Descriptor;
+            yield return gciv::PolicyReflection.Descriptor;
+            yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }
