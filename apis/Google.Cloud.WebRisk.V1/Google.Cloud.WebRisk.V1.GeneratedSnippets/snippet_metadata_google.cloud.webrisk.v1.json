@@ -920,6 +920,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_SubmitUri_sync",
+      "title": "SubmitUriRequestObject",
+      "description": "Snippet for SubmitUri",
+      "file": "WebRiskServiceClient.SubmitUriRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitUri",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.SubmitUri",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.SubmitUriRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.WebRisk.V1.Submission, Google.Cloud.WebRisk.V1.SubmitUriMetadata>",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "SubmitUri",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.SubmitUri",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_SubmitUri_async",
+      "title": "SubmitUriRequestObjectAsync",
+      "description": "Snippet for SubmitUriAsync",
+      "file": "WebRiskServiceClient.SubmitUriRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitUriAsync",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.SubmitUriAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.SubmitUriRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.WebRisk.V1.Submission, Google.Cloud.WebRisk.V1.SubmitUriMetadata>>",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "SubmitUri",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.SubmitUri",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

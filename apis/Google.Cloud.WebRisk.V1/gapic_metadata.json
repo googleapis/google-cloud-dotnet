@@ -33,6 +33,12 @@
                 "SearchUris",
                 "SearchUrisAsync"
               ]
+            },
+            "SubmitUri": {
+              "methods": [
+                "SubmitUri",
+                "SubmitUriAsync"
+              ]
             }
           }
         }

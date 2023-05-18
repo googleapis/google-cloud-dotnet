@@ -80,6 +80,10 @@ namespace Google.Cloud.WebRisk.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1.CreateSubmissionRequest> __Marshaller_google_cloud_webrisk_v1_CreateSubmissionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebRisk.V1.CreateSubmissionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1.Submission> __Marshaller_google_cloud_webrisk_v1_Submission = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebRisk.V1.Submission.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1.SubmitUriRequest> __Marshaller_google_cloud_webrisk_v1_SubmitUriRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebRisk.V1.SubmitUriRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebRisk.V1.ComputeThreatListDiffRequest, global::Google.Cloud.WebRisk.V1.ComputeThreatListDiffResponse> __Method_ComputeThreatListDiff = new grpc::Method<global::Google.Cloud.WebRisk.V1.ComputeThreatListDiffRequest, global::Google.Cloud.WebRisk.V1.ComputeThreatListDiffResponse>(
@@ -112,6 +116,14 @@ namespace Google.Cloud.WebRisk.V1 {
         "CreateSubmission",
         __Marshaller_google_cloud_webrisk_v1_CreateSubmissionRequest,
         __Marshaller_google_cloud_webrisk_v1_Submission);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.WebRisk.V1.SubmitUriRequest, global::Google.LongRunning.Operation> __Method_SubmitUri = new grpc::Method<global::Google.Cloud.WebRisk.V1.SubmitUriRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SubmitUri",
+        __Marshaller_google_cloud_webrisk_v1_SubmitUriRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -186,6 +198,27 @@ namespace Google.Cloud.WebRisk.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebRisk.V1.Submission> CreateSubmission(global::Google.Cloud.WebRisk.V1.CreateSubmissionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Submits a URI suspected of containing malicious content to be reviewed.
+      /// Returns a google.longrunning.Operation which, once the review is complete,
+      /// is updated with its result. You can use the [Pub/Sub API]
+      /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+      /// Operation. If the result verifies the existence of malicious content, the
+      /// site will be added to the [Google's Social Engineering lists]
+      /// (https://support.google.com/webmasters/answer/6350487/) in order to
+      /// protect users that could get exposed to this threat in the future. Only
+      /// allowlisted projects can use this method during Early Access. Please reach
+      /// out to Sales or your customer engineer to obtain access.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SubmitUri(global::Google.Cloud.WebRisk.V1.SubmitUriRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -487,6 +520,90 @@ namespace Google.Cloud.WebRisk.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSubmission, null, options, request);
       }
+      /// <summary>
+      /// Submits a URI suspected of containing malicious content to be reviewed.
+      /// Returns a google.longrunning.Operation which, once the review is complete,
+      /// is updated with its result. You can use the [Pub/Sub API]
+      /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+      /// Operation. If the result verifies the existence of malicious content, the
+      /// site will be added to the [Google's Social Engineering lists]
+      /// (https://support.google.com/webmasters/answer/6350487/) in order to
+      /// protect users that could get exposed to this threat in the future. Only
+      /// allowlisted projects can use this method during Early Access. Please reach
+      /// out to Sales or your customer engineer to obtain access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SubmitUri(global::Google.Cloud.WebRisk.V1.SubmitUriRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SubmitUri(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submits a URI suspected of containing malicious content to be reviewed.
+      /// Returns a google.longrunning.Operation which, once the review is complete,
+      /// is updated with its result. You can use the [Pub/Sub API]
+      /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+      /// Operation. If the result verifies the existence of malicious content, the
+      /// site will be added to the [Google's Social Engineering lists]
+      /// (https://support.google.com/webmasters/answer/6350487/) in order to
+      /// protect users that could get exposed to this threat in the future. Only
+      /// allowlisted projects can use this method during Early Access. Please reach
+      /// out to Sales or your customer engineer to obtain access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SubmitUri(global::Google.Cloud.WebRisk.V1.SubmitUriRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SubmitUri, null, options, request);
+      }
+      /// <summary>
+      /// Submits a URI suspected of containing malicious content to be reviewed.
+      /// Returns a google.longrunning.Operation which, once the review is complete,
+      /// is updated with its result. You can use the [Pub/Sub API]
+      /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+      /// Operation. If the result verifies the existence of malicious content, the
+      /// site will be added to the [Google's Social Engineering lists]
+      /// (https://support.google.com/webmasters/answer/6350487/) in order to
+      /// protect users that could get exposed to this threat in the future. Only
+      /// allowlisted projects can use this method during Early Access. Please reach
+      /// out to Sales or your customer engineer to obtain access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SubmitUriAsync(global::Google.Cloud.WebRisk.V1.SubmitUriRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SubmitUriAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submits a URI suspected of containing malicious content to be reviewed.
+      /// Returns a google.longrunning.Operation which, once the review is complete,
+      /// is updated with its result. You can use the [Pub/Sub API]
+      /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+      /// Operation. If the result verifies the existence of malicious content, the
+      /// site will be added to the [Google's Social Engineering lists]
+      /// (https://support.google.com/webmasters/answer/6350487/) in order to
+      /// protect users that could get exposed to this threat in the future. Only
+      /// allowlisted projects can use this method during Early Access. Please reach
+      /// out to Sales or your customer engineer to obtain access.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SubmitUriAsync(global::Google.Cloud.WebRisk.V1.SubmitUriRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SubmitUri, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override WebRiskServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -504,7 +621,8 @@ namespace Google.Cloud.WebRisk.V1 {
           .AddMethod(__Method_ComputeThreatListDiff, serviceImpl.ComputeThreatListDiff)
           .AddMethod(__Method_SearchUris, serviceImpl.SearchUris)
           .AddMethod(__Method_SearchHashes, serviceImpl.SearchHashes)
-          .AddMethod(__Method_CreateSubmission, serviceImpl.CreateSubmission).Build();
+          .AddMethod(__Method_CreateSubmission, serviceImpl.CreateSubmission)
+          .AddMethod(__Method_SubmitUri, serviceImpl.SubmitUri).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -518,6 +636,7 @@ namespace Google.Cloud.WebRisk.V1 {
       serviceBinder.AddMethod(__Method_SearchUris, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.WebRisk.V1.SearchUrisRequest, global::Google.Cloud.WebRisk.V1.SearchUrisResponse>(serviceImpl.SearchUris));
       serviceBinder.AddMethod(__Method_SearchHashes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.WebRisk.V1.SearchHashesRequest, global::Google.Cloud.WebRisk.V1.SearchHashesResponse>(serviceImpl.SearchHashes));
       serviceBinder.AddMethod(__Method_CreateSubmission, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.WebRisk.V1.CreateSubmissionRequest, global::Google.Cloud.WebRisk.V1.Submission>(serviceImpl.CreateSubmission));
+      serviceBinder.AddMethod(__Method_SubmitUri, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.WebRisk.V1.SubmitUriRequest, global::Google.LongRunning.Operation>(serviceImpl.SubmitUri));
     }
 
   }
