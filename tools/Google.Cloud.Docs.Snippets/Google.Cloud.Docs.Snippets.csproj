@@ -11,6 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\apis\Google.Cloud.BigQuery.Storage.V1\Google.Cloud.BigQuery.Storage.V1\Google.Cloud.BigQuery.Storage.V1.csproj" />
+    <ProjectReference Include="..\..\apis\Google.Cloud.BigQuery.V2\Google.Cloud.BigQuery.V2\Google.Cloud.BigQuery.V2.csproj" />
     <ProjectReference Include="..\..\apis\Google.Cloud.Language.V1\Google.Cloud.Language.V1\Google.Cloud.Language.V1.csproj" />
     <ProjectReference Include="..\..\apis\Google.Cloud.Scheduler.V1\Google.Cloud.Scheduler.V1\Google.Cloud.Scheduler.V1.csproj" />
     <ProjectReference Include="..\..\apis\Google.Cloud.Vision.V1\Google.Cloud.Vision.V1\Google.Cloud.Vision.V1.csproj" />
@@ -20,6 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Apache.Avro" Version="1.11.1" />
+    <!-- Temporary update until Google.Cloud.BigQuery.Storage.V1 depends on GAX 4.4.0 or later -->
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="4.4.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" />
     <PackageReference Include="xunit" Version="2.4.2" />

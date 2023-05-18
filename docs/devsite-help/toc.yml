@@ -32,6 +32,8 @@
     href: api-layers.md
   - name: Call settings
     href: call-settings.md
+  - name: Streaming RPCs
+    href: grpc-streaming.md
   - name: Resource clean-up
     href: cleanup.md
   - name: Versioning
