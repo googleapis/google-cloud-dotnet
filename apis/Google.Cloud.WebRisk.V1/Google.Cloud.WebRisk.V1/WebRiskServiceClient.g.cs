@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -49,6 +50,8 @@ namespace Google.Cloud.WebRisk.V1
             SearchUrisSettings = existing.SearchUrisSettings;
             SearchHashesSettings = existing.SearchHashesSettings;
             CreateSubmissionSettings = existing.CreateSubmissionSettings;
+            SubmitUriSettings = existing.SubmitUriSettings;
+            SubmitUriOperationsSettings = existing.SubmitUriOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -129,6 +132,36 @@ namespace Google.Cloud.WebRisk.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CreateSubmissionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>WebRiskServiceClient.SubmitUri</c> and <c>WebRiskServiceClient.SubmitUriAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SubmitUriSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>WebRiskServiceClient.SubmitUri</c> and
+        /// <c>WebRiskServiceClient.SubmitUriAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SubmitUriOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="WebRiskServiceSettings"/> object.</returns>
@@ -323,9 +356,9 @@ namespace Google.Cloud.WebRisk.V1
         /// for each list.
         /// </summary>
         /// <param name="threatType">
-        /// Required. The threat list to update. Only a single ThreatType should be specified
-        /// per request. If you want to handle multiple ThreatTypes, you must make one
-        /// request per ThreatType.
+        /// Required. The threat list to update. Only a single ThreatType should be
+        /// specified per request. If you want to handle multiple ThreatTypes, you must
+        /// make one request per ThreatType.
         /// </param>
         /// <param name="versionToken">
         /// The current version token of the client for the requested list (the
@@ -356,9 +389,9 @@ namespace Google.Cloud.WebRisk.V1
         /// for each list.
         /// </summary>
         /// <param name="threatType">
-        /// Required. The threat list to update. Only a single ThreatType should be specified
-        /// per request. If you want to handle multiple ThreatTypes, you must make one
-        /// request per ThreatType.
+        /// Required. The threat list to update. Only a single ThreatType should be
+        /// specified per request. If you want to handle multiple ThreatTypes, you must
+        /// make one request per ThreatType.
         /// </param>
         /// <param name="versionToken">
         /// The current version token of the client for the requested list (the
@@ -389,9 +422,9 @@ namespace Google.Cloud.WebRisk.V1
         /// for each list.
         /// </summary>
         /// <param name="threatType">
-        /// Required. The threat list to update. Only a single ThreatType should be specified
-        /// per request. If you want to handle multiple ThreatTypes, you must make one
-        /// request per ThreatType.
+        /// Required. The threat list to update. Only a single ThreatType should be
+        /// specified per request. If you want to handle multiple ThreatTypes, you must
+        /// make one request per ThreatType.
         /// </param>
         /// <param name="versionToken">
         /// The current version token of the client for the requested list (the
@@ -458,7 +491,8 @@ namespace Google.Cloud.WebRisk.V1
         /// Required. The URI to be checked for matches.
         /// </param>
         /// <param name="threatTypes">
-        /// Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+        /// Required. The ThreatLists to search in. Multiple ThreatLists may be
+        /// specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -483,7 +517,8 @@ namespace Google.Cloud.WebRisk.V1
         /// Required. The URI to be checked for matches.
         /// </param>
         /// <param name="threatTypes">
-        /// Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+        /// Required. The ThreatLists to search in. Multiple ThreatLists may be
+        /// specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -508,7 +543,8 @@ namespace Google.Cloud.WebRisk.V1
         /// Required. The URI to be checked for matches.
         /// </param>
         /// <param name="threatTypes">
-        /// Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+        /// Required. The ThreatLists to search in. Multiple ThreatLists may be
+        /// specified.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -568,7 +604,8 @@ namespace Google.Cloud.WebRisk.V1
         /// the web safe base64 variant (RFC 4648).
         /// </param>
         /// <param name="threatTypes">
-        /// Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+        /// Required. The ThreatLists to search in. Multiple ThreatLists may be
+        /// specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -596,7 +633,8 @@ namespace Google.Cloud.WebRisk.V1
         /// the web safe base64 variant (RFC 4648).
         /// </param>
         /// <param name="threatTypes">
-        /// Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+        /// Required. The ThreatLists to search in. Multiple ThreatLists may be
+        /// specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -624,7 +662,8 @@ namespace Google.Cloud.WebRisk.V1
         /// the web safe base64 variant (RFC 4648).
         /// </param>
         /// <param name="threatTypes">
-        /// Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+        /// Required. The ThreatLists to search in. Multiple ThreatLists may be
+        /// specified.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -686,8 +725,8 @@ namespace Google.Cloud.WebRisk.V1
         /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that is making the submission. This string is in
-        /// the format "projects/{project_number}".
+        /// Required. The name of the project that is making the submission. This
+        /// string is in the format "projects/{project_number}".
         /// </param>
         /// <param name="submission">
         /// Required. The submission that contains the content of the phishing report.
@@ -711,8 +750,8 @@ namespace Google.Cloud.WebRisk.V1
         /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that is making the submission. This string is in
-        /// the format "projects/{project_number}".
+        /// Required. The name of the project that is making the submission. This
+        /// string is in the format "projects/{project_number}".
         /// </param>
         /// <param name="submission">
         /// Required. The submission that contains the content of the phishing report.
@@ -736,8 +775,8 @@ namespace Google.Cloud.WebRisk.V1
         /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that is making the submission. This string is in
-        /// the format "projects/{project_number}".
+        /// Required. The name of the project that is making the submission. This
+        /// string is in the format "projects/{project_number}".
         /// </param>
         /// <param name="submission">
         /// Required. The submission that contains the content of the phishing report.
@@ -757,8 +796,8 @@ namespace Google.Cloud.WebRisk.V1
         /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that is making the submission. This string is in
-        /// the format "projects/{project_number}".
+        /// Required. The name of the project that is making the submission. This
+        /// string is in the format "projects/{project_number}".
         /// </param>
         /// <param name="submission">
         /// Required. The submission that contains the content of the phishing report.
@@ -782,8 +821,8 @@ namespace Google.Cloud.WebRisk.V1
         /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that is making the submission. This string is in
-        /// the format "projects/{project_number}".
+        /// Required. The name of the project that is making the submission. This
+        /// string is in the format "projects/{project_number}".
         /// </param>
         /// <param name="submission">
         /// Required. The submission that contains the content of the phishing report.
@@ -807,8 +846,8 @@ namespace Google.Cloud.WebRisk.V1
         /// out to Sales or your customer engineer to obtain access.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project that is making the submission. This string is in
-        /// the format "projects/{project_number}".
+        /// Required. The name of the project that is making the submission. This
+        /// string is in the format "projects/{project_number}".
         /// </param>
         /// <param name="submission">
         /// Required. The submission that contains the content of the phishing report.
@@ -817,6 +856,86 @@ namespace Google.Cloud.WebRisk.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Submission> CreateSubmissionAsync(gagr::ProjectName parent, Submission submission, st::CancellationToken cancellationToken) =>
             CreateSubmissionAsync(parent, submission, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Submits a URI suspected of containing malicious content to be reviewed.
+        /// Returns a google.longrunning.Operation which, once the review is complete,
+        /// is updated with its result. You can use the [Pub/Sub API]
+        /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+        /// Operation. If the result verifies the existence of malicious content, the
+        /// site will be added to the [Google's Social Engineering lists]
+        /// (https://support.google.com/webmasters/answer/6350487/) in order to
+        /// protect users that could get exposed to this threat in the future. Only
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Submission, SubmitUriMetadata> SubmitUri(SubmitUriRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Submits a URI suspected of containing malicious content to be reviewed.
+        /// Returns a google.longrunning.Operation which, once the review is complete,
+        /// is updated with its result. You can use the [Pub/Sub API]
+        /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+        /// Operation. If the result verifies the existence of malicious content, the
+        /// site will be added to the [Google's Social Engineering lists]
+        /// (https://support.google.com/webmasters/answer/6350487/) in order to
+        /// protect users that could get exposed to this threat in the future. Only
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Submission, SubmitUriMetadata>> SubmitUriAsync(SubmitUriRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Submits a URI suspected of containing malicious content to be reviewed.
+        /// Returns a google.longrunning.Operation which, once the review is complete,
+        /// is updated with its result. You can use the [Pub/Sub API]
+        /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+        /// Operation. If the result verifies the existence of malicious content, the
+        /// site will be added to the [Google's Social Engineering lists]
+        /// (https://support.google.com/webmasters/answer/6350487/) in order to
+        /// protect users that could get exposed to this threat in the future. Only
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Submission, SubmitUriMetadata>> SubmitUriAsync(SubmitUriRequest request, st::CancellationToken cancellationToken) =>
+            SubmitUriAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SubmitUri</c>.</summary>
+        public virtual lro::OperationsClient SubmitUriOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SubmitUri</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Submission, SubmitUriMetadata> PollOnceSubmitUri(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Submission, SubmitUriMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SubmitUriOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SubmitUri</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Submission, SubmitUriMetadata>> PollOnceSubmitUriAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Submission, SubmitUriMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SubmitUriOperationsClient, callSettings);
     }
 
     /// <summary>WebRiskService client wrapper implementation, for convenient use.</summary>
@@ -834,6 +953,8 @@ namespace Google.Cloud.WebRisk.V1
 
         private readonly gaxgrpc::ApiCall<CreateSubmissionRequest, Submission> _callCreateSubmission;
 
+        private readonly gaxgrpc::ApiCall<SubmitUriRequest, lro::Operation> _callSubmitUri;
+
         /// <summary>
         /// Constructs a client wrapper for the WebRiskService service, with the specified gRPC client and settings.
         /// </summary>
@@ -845,6 +966,7 @@ namespace Google.Cloud.WebRisk.V1
             GrpcClient = grpcClient;
             WebRiskServiceSettings effectiveSettings = settings ?? WebRiskServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            SubmitUriOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SubmitUriOperationsSettings, logger);
             _callComputeThreatListDiff = clientHelper.BuildApiCall<ComputeThreatListDiffRequest, ComputeThreatListDiffResponse>("ComputeThreatListDiff", grpcClient.ComputeThreatListDiffAsync, grpcClient.ComputeThreatListDiff, effectiveSettings.ComputeThreatListDiffSettings);
             Modify_ApiCall(ref _callComputeThreatListDiff);
             Modify_ComputeThreatListDiffApiCall(ref _callComputeThreatListDiff);
@@ -857,6 +979,9 @@ namespace Google.Cloud.WebRisk.V1
             _callCreateSubmission = clientHelper.BuildApiCall<CreateSubmissionRequest, Submission>("CreateSubmission", grpcClient.CreateSubmissionAsync, grpcClient.CreateSubmission, effectiveSettings.CreateSubmissionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSubmission);
             Modify_CreateSubmissionApiCall(ref _callCreateSubmission);
+            _callSubmitUri = clientHelper.BuildApiCall<SubmitUriRequest, lro::Operation>("SubmitUri", grpcClient.SubmitUriAsync, grpcClient.SubmitUri, effectiveSettings.SubmitUriSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSubmitUri);
+            Modify_SubmitUriApiCall(ref _callSubmitUri);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -870,6 +995,8 @@ namespace Google.Cloud.WebRisk.V1
 
         partial void Modify_CreateSubmissionApiCall(ref gaxgrpc::ApiCall<CreateSubmissionRequest, Submission> call);
 
+        partial void Modify_SubmitUriApiCall(ref gaxgrpc::ApiCall<SubmitUriRequest, lro::Operation> call);
+
         partial void OnConstruction(WebRiskService.WebRiskServiceClient grpcClient, WebRiskServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC WebRiskService client</summary>
@@ -882,6 +1009,8 @@ namespace Google.Cloud.WebRisk.V1
         partial void Modify_SearchHashesRequest(ref SearchHashesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateSubmissionRequest(ref CreateSubmissionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SubmitUriRequest(ref SubmitUriRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets the most recent threat list diffs. These diffs should be applied to
@@ -1015,6 +1144,65 @@ namespace Google.Cloud.WebRisk.V1
         {
             Modify_CreateSubmissionRequest(ref request, ref callSettings);
             return _callCreateSubmission.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>SubmitUri</c>.</summary>
+        public override lro::OperationsClient SubmitUriOperationsClient { get; }
+
+        /// <summary>
+        /// Submits a URI suspected of containing malicious content to be reviewed.
+        /// Returns a google.longrunning.Operation which, once the review is complete,
+        /// is updated with its result. You can use the [Pub/Sub API]
+        /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+        /// Operation. If the result verifies the existence of malicious content, the
+        /// site will be added to the [Google's Social Engineering lists]
+        /// (https://support.google.com/webmasters/answer/6350487/) in order to
+        /// protect users that could get exposed to this threat in the future. Only
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Submission, SubmitUriMetadata> SubmitUri(SubmitUriRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SubmitUriRequest(ref request, ref callSettings);
+            return new lro::Operation<Submission, SubmitUriMetadata>(_callSubmitUri.Sync(request, callSettings), SubmitUriOperationsClient);
+        }
+
+        /// <summary>
+        /// Submits a URI suspected of containing malicious content to be reviewed.
+        /// Returns a google.longrunning.Operation which, once the review is complete,
+        /// is updated with its result. You can use the [Pub/Sub API]
+        /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+        /// Operation. If the result verifies the existence of malicious content, the
+        /// site will be added to the [Google's Social Engineering lists]
+        /// (https://support.google.com/webmasters/answer/6350487/) in order to
+        /// protect users that could get exposed to this threat in the future. Only
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Submission, SubmitUriMetadata>> SubmitUriAsync(SubmitUriRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SubmitUriRequest(ref request, ref callSettings);
+            return new lro::Operation<Submission, SubmitUriMetadata>(await _callSubmitUri.Async(request, callSettings).ConfigureAwait(false), SubmitUriOperationsClient);
+        }
+    }
+
+    public static partial class WebRiskService
+    {
+        public partial class WebRiskServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
         }
     }
 }

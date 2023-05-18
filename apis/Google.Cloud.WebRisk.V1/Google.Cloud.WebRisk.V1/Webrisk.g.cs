@@ -28,87 +28,128 @@ namespace Google.Cloud.WebRisk.V1 {
             "bGUuY2xvdWQud2Vicmlzay52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
             "cm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmll",
             "bGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i4wIKHENvbXB1dGVU",
-            "aHJlYXRMaXN0RGlmZlJlcXVlc3QSPQoLdGhyZWF0X3R5cGUYASABKA4yIy5n",
-            "b29nbGUuY2xvdWQud2Vicmlzay52MS5UaHJlYXRUeXBlQgPgQQISFQoNdmVy",
-            "c2lvbl90b2tlbhgCIAEoDBJbCgtjb25zdHJhaW50cxgDIAEoCzJBLmdvb2ds",
-            "ZS5jbG91ZC53ZWJyaXNrLnYxLkNvbXB1dGVUaHJlYXRMaXN0RGlmZlJlcXVl",
-            "c3QuQ29uc3RyYWludHNCA+BBAhqPAQoLQ29uc3RyYWludHMSGAoQbWF4X2Rp",
-            "ZmZfZW50cmllcxgBIAEoBRIcChRtYXhfZGF0YWJhc2VfZW50cmllcxgCIAEo",
-            "BRJIChZzdXBwb3J0ZWRfY29tcHJlc3Npb25zGAMgAygOMiguZ29vZ2xlLmNs",
-            "b3VkLndlYnJpc2sudjEuQ29tcHJlc3Npb25UeXBlIoYECh1Db21wdXRlVGhy",
-            "ZWF0TGlzdERpZmZSZXNwb25zZRJaCg1yZXNwb25zZV90eXBlGAQgASgOMkMu",
-            "Z29vZ2xlLmNsb3VkLndlYnJpc2sudjEuQ29tcHV0ZVRocmVhdExpc3REaWZm",
-            "UmVzcG9uc2UuUmVzcG9uc2VUeXBlEkAKCWFkZGl0aW9ucxgFIAEoCzItLmdv",
-            "b2dsZS5jbG91ZC53ZWJyaXNrLnYxLlRocmVhdEVudHJ5QWRkaXRpb25zEj4K",
-            "CHJlbW92YWxzGAYgASgLMiwuZ29vZ2xlLmNsb3VkLndlYnJpc2sudjEuVGhy",
-            "ZWF0RW50cnlSZW1vdmFscxIZChFuZXdfdmVyc2lvbl90b2tlbhgHIAEoDBJR",
-            "CghjaGVja3N1bRgIIAEoCzI/Lmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYxLkNv",
-            "bXB1dGVUaHJlYXRMaXN0RGlmZlJlc3BvbnNlLkNoZWNrc3VtEjkKFXJlY29t",
-            "bWVuZGVkX25leHRfZGlmZhgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXAaGgoIQ2hlY2tzdW0SDgoGc2hhMjU2GAEgASgMIkIKDFJlc3BvbnNl",
-            "VHlwZRIdChlSRVNQT05TRV9UWVBFX1VOU1BFQ0lGSUVEEAASCAoERElGRhAB",
-            "EgkKBVJFU0VUEAIiZQoRU2VhcmNoVXJpc1JlcXVlc3QSEAoDdXJpGAEgASgJ",
-            "QgPgQQISPgoMdGhyZWF0X3R5cGVzGAIgAygOMiMuZ29vZ2xlLmNsb3VkLndl",
-            "YnJpc2sudjEuVGhyZWF0VHlwZUID4EECItQBChJTZWFyY2hVcmlzUmVzcG9u",
-            "c2USRQoGdGhyZWF0GAEgASgLMjUuZ29vZ2xlLmNsb3VkLndlYnJpc2sudjEu",
-            "U2VhcmNoVXJpc1Jlc3BvbnNlLlRocmVhdFVyaRp3CglUaHJlYXRVcmkSOQoM",
-            "dGhyZWF0X3R5cGVzGAEgAygOMiMuZ29vZ2xlLmNsb3VkLndlYnJpc2sudjEu",
-            "VGhyZWF0VHlwZRIvCgtleHBpcmVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXAiagoTU2VhcmNoSGFzaGVzUmVxdWVzdBITCgtoYXNo",
-            "X3ByZWZpeBgBIAEoDBI+Cgx0aHJlYXRfdHlwZXMYAiADKA4yIy5nb29nbGUu",
-            "Y2xvdWQud2Vicmlzay52MS5UaHJlYXRUeXBlQgPgQQIipAIKFFNlYXJjaEhh",
-            "c2hlc1Jlc3BvbnNlEkkKB3RocmVhdHMYASADKAsyOC5nb29nbGUuY2xvdWQu",
-            "d2Vicmlzay52MS5TZWFyY2hIYXNoZXNSZXNwb25zZS5UaHJlYXRIYXNoEjgK",
-            "FG5lZ2F0aXZlX2V4cGlyZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBqGAQoKVGhyZWF0SGFzaBI5Cgx0aHJlYXRfdHlwZXMYASAD",
-            "KA4yIy5nb29nbGUuY2xvdWQud2Vicmlzay52MS5UaHJlYXRUeXBlEgwKBGhh",
-            "c2gYAiABKAwSLwoLZXhwaXJlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wIo8BChRUaHJlYXRFbnRyeUFkZGl0aW9ucxI2CgpyYXdf",
-            "aGFzaGVzGAEgAygLMiIuZ29vZ2xlLmNsb3VkLndlYnJpc2sudjEuUmF3SGFz",
-            "aGVzEj8KC3JpY2VfaGFzaGVzGAIgASgLMiouZ29vZ2xlLmNsb3VkLndlYnJp",
-            "c2sudjEuUmljZURlbHRhRW5jb2RpbmcikQEKE1RocmVhdEVudHJ5UmVtb3Zh",
-            "bHMSOAoLcmF3X2luZGljZXMYASABKAsyIy5nb29nbGUuY2xvdWQud2Vicmlz",
-            "ay52MS5SYXdJbmRpY2VzEkAKDHJpY2VfaW5kaWNlcxgCIAEoCzIqLmdvb2ds",
-            "ZS5jbG91ZC53ZWJyaXNrLnYxLlJpY2VEZWx0YUVuY29kaW5nIh0KClJhd0lu",
-            "ZGljZXMSDwoHaW5kaWNlcxgBIAMoBSI0CglSYXdIYXNoZXMSEwoLcHJlZml4",
-            "X3NpemUYASABKAUSEgoKcmF3X2hhc2hlcxgCIAEoDCJrChFSaWNlRGVsdGFF",
-            "bmNvZGluZxITCgtmaXJzdF92YWx1ZRgBIAEoAxIWCg5yaWNlX3BhcmFtZXRl",
-            "chgCIAEoBRITCgtlbnRyeV9jb3VudBgDIAEoBRIUCgxlbmNvZGVkX2RhdGEY",
-            "BCABKAwiHgoKU3VibWlzc2lvbhIQCgN1cmkYASABKAlCA+BBAiKcAQoXQ3Jl",
-            "YXRlU3VibWlzc2lvblJlcXVlc3QSQwoGcGFyZW50GAEgASgJQjPgQQL6QS0K",
-            "K2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3QS",
-            "PAoKc3VibWlzc2lvbhgCIAEoCzIjLmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYx",
-            "LlN1Ym1pc3Npb25CA+BBAiqPAQoKVGhyZWF0VHlwZRIbChdUSFJFQVRfVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEgsKB01BTFdBUkUQARIWChJTT0NJQUxfRU5HSU5F",
-            "RVJJTkcQAhIVChFVTldBTlRFRF9TT0ZUV0FSRRADEigKJFNPQ0lBTF9FTkdJ",
-            "TkVFUklOR19FWFRFTkRFRF9DT1ZFUkFHRRAEKkYKD0NvbXByZXNzaW9uVHlw",
-            "ZRIgChxDT01QUkVTU0lPTl9UWVBFX1VOU1BFQ0lGSUVEEAASBwoDUkFXEAES",
-            "CAoEUklDRRACMqMGCg5XZWJSaXNrU2VydmljZRLTAQoVQ29tcHV0ZVRocmVh",
-            "dExpc3REaWZmEjUuZ29vZ2xlLmNsb3VkLndlYnJpc2sudjEuQ29tcHV0ZVRo",
-            "cmVhdExpc3REaWZmUmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYx",
-            "LkNvbXB1dGVUaHJlYXRMaXN0RGlmZlJlc3BvbnNlIkuC0+STAh0SGy92MS90",
-            "aHJlYXRMaXN0czpjb21wdXRlRGlmZtpBJXRocmVhdF90eXBlLHZlcnNpb25f",
-            "dG9rZW4sY29uc3RyYWludHMSkQEKClNlYXJjaFVyaXMSKi5nb29nbGUuY2xv",
-            "dWQud2Vicmlzay52MS5TZWFyY2hVcmlzUmVxdWVzdBorLmdvb2dsZS5jbG91",
-            "ZC53ZWJyaXNrLnYxLlNlYXJjaFVyaXNSZXNwb25zZSIqgtPkkwIREg8vdjEv",
-            "dXJpczpzZWFyY2jaQRB1cmksdGhyZWF0X3R5cGVzEqEBCgxTZWFyY2hIYXNo",
-            "ZXMSLC5nb29nbGUuY2xvdWQud2Vicmlzay52MS5TZWFyY2hIYXNoZXNSZXF1",
-            "ZXN0Gi0uZ29vZ2xlLmNsb3VkLndlYnJpc2sudjEuU2VhcmNoSGFzaGVzUmVz",
-            "cG9uc2UiNILT5JMCExIRL3YxL2hhc2hlczpzZWFyY2jaQRhoYXNoX3ByZWZp",
-            "eCx0aHJlYXRfdHlwZXMStgEKEENyZWF0ZVN1Ym1pc3Npb24SMC5nb29nbGUu",
-            "Y2xvdWQud2Vicmlzay52MS5DcmVhdGVTdWJtaXNzaW9uUmVxdWVzdBojLmdv",
-            "b2dsZS5jbG91ZC53ZWJyaXNrLnYxLlN1Ym1pc3Npb24iS4LT5JMCMSIjL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKn0vc3VibWlzc2lvbnM6CnN1Ym1pc3Npb27a",
-            "QRFwYXJlbnQsc3VibWlzc2lvbhpKykEWd2Vicmlzay5nb29nbGVhcGlzLmNv",
-            "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
-            "dGZvcm1CtgEKFWNvbS5nb29nbGUud2Vicmlzay52MUIMV2ViUmlza1Byb3Rv",
-            "UAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vd2Vicmlzay9hcGl2MS93ZWJyaXNr",
-            "cGI7d2Vicmlza3BiogIER0NXUqoCF0dvb2dsZS5DbG91ZC5XZWJSaXNrLlYx",
-            "ygIXR29vZ2xlXENsb3VkXFdlYlJpc2tcVjHqAhpHb29nbGU6OkNsb3VkOjpX",
-            "ZWJSaXNrOjpWMWIGcHJvdG8z"));
+            "I2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGh9nb29nbGUv",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIuMCChxDb21wdXRlVGhyZWF0TGlz",
+            "dERpZmZSZXF1ZXN0Ej0KC3RocmVhdF90eXBlGAEgASgOMiMuZ29vZ2xlLmNs",
+            "b3VkLndlYnJpc2sudjEuVGhyZWF0VHlwZUID4EECEhUKDXZlcnNpb25fdG9r",
+            "ZW4YAiABKAwSWwoLY29uc3RyYWludHMYAyABKAsyQS5nb29nbGUuY2xvdWQu",
+            "d2Vicmlzay52MS5Db21wdXRlVGhyZWF0TGlzdERpZmZSZXF1ZXN0LkNvbnN0",
+            "cmFpbnRzQgPgQQIajwEKC0NvbnN0cmFpbnRzEhgKEG1heF9kaWZmX2VudHJp",
+            "ZXMYASABKAUSHAoUbWF4X2RhdGFiYXNlX2VudHJpZXMYAiABKAUSSAoWc3Vw",
+            "cG9ydGVkX2NvbXByZXNzaW9ucxgDIAMoDjIoLmdvb2dsZS5jbG91ZC53ZWJy",
+            "aXNrLnYxLkNvbXByZXNzaW9uVHlwZSKGBAodQ29tcHV0ZVRocmVhdExpc3RE",
+            "aWZmUmVzcG9uc2USWgoNcmVzcG9uc2VfdHlwZRgEIAEoDjJDLmdvb2dsZS5j",
+            "bG91ZC53ZWJyaXNrLnYxLkNvbXB1dGVUaHJlYXRMaXN0RGlmZlJlc3BvbnNl",
+            "LlJlc3BvbnNlVHlwZRJACglhZGRpdGlvbnMYBSABKAsyLS5nb29nbGUuY2xv",
+            "dWQud2Vicmlzay52MS5UaHJlYXRFbnRyeUFkZGl0aW9ucxI+CghyZW1vdmFs",
+            "cxgGIAEoCzIsLmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYxLlRocmVhdEVudHJ5",
+            "UmVtb3ZhbHMSGQoRbmV3X3ZlcnNpb25fdG9rZW4YByABKAwSUQoIY2hlY2tz",
+            "dW0YCCABKAsyPy5nb29nbGUuY2xvdWQud2Vicmlzay52MS5Db21wdXRlVGhy",
+            "ZWF0TGlzdERpZmZSZXNwb25zZS5DaGVja3N1bRI5ChVyZWNvbW1lbmRlZF9u",
+            "ZXh0X2RpZmYYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wGhoK",
+            "CENoZWNrc3VtEg4KBnNoYTI1NhgBIAEoDCJCCgxSZXNwb25zZVR5cGUSHQoZ",
+            "UkVTUE9OU0VfVFlQRV9VTlNQRUNJRklFRBAAEggKBERJRkYQARIJCgVSRVNF",
+            "VBACImUKEVNlYXJjaFVyaXNSZXF1ZXN0EhAKA3VyaRgBIAEoCUID4EECEj4K",
+            "DHRocmVhdF90eXBlcxgCIAMoDjIjLmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYx",
+            "LlRocmVhdFR5cGVCA+BBAiLUAQoSU2VhcmNoVXJpc1Jlc3BvbnNlEkUKBnRo",
+            "cmVhdBgBIAEoCzI1Lmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYxLlNlYXJjaFVy",
+            "aXNSZXNwb25zZS5UaHJlYXRVcmkadwoJVGhyZWF0VXJpEjkKDHRocmVhdF90",
+            "eXBlcxgBIAMoDjIjLmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYxLlRocmVhdFR5",
+            "cGUSLwoLZXhwaXJlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wImoKE1NlYXJjaEhhc2hlc1JlcXVlc3QSEwoLaGFzaF9wcmVmaXgY",
+            "ASABKAwSPgoMdGhyZWF0X3R5cGVzGAIgAygOMiMuZ29vZ2xlLmNsb3VkLndl",
+            "YnJpc2sudjEuVGhyZWF0VHlwZUID4EECIqQCChRTZWFyY2hIYXNoZXNSZXNw",
+            "b25zZRJJCgd0aHJlYXRzGAEgAygLMjguZ29vZ2xlLmNsb3VkLndlYnJpc2su",
+            "djEuU2VhcmNoSGFzaGVzUmVzcG9uc2UuVGhyZWF0SGFzaBI4ChRuZWdhdGl2",
+            "ZV9leHBpcmVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXAahgEKClRocmVhdEhhc2gSOQoMdGhyZWF0X3R5cGVzGAEgAygOMiMuZ29v",
+            "Z2xlLmNsb3VkLndlYnJpc2sudjEuVGhyZWF0VHlwZRIMCgRoYXNoGAIgASgM",
+            "Ei8KC2V4cGlyZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcCKPAQoUVGhyZWF0RW50cnlBZGRpdGlvbnMSNgoKcmF3X2hhc2hlcxgB",
+            "IAMoCzIiLmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYxLlJhd0hhc2hlcxI/Cgty",
+            "aWNlX2hhc2hlcxgCIAEoCzIqLmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYxLlJp",
+            "Y2VEZWx0YUVuY29kaW5nIpEBChNUaHJlYXRFbnRyeVJlbW92YWxzEjgKC3Jh",
+            "d19pbmRpY2VzGAEgASgLMiMuZ29vZ2xlLmNsb3VkLndlYnJpc2sudjEuUmF3",
+            "SW5kaWNlcxJACgxyaWNlX2luZGljZXMYAiABKAsyKi5nb29nbGUuY2xvdWQu",
+            "d2Vicmlzay52MS5SaWNlRGVsdGFFbmNvZGluZyIdCgpSYXdJbmRpY2VzEg8K",
+            "B2luZGljZXMYASADKAUiNAoJUmF3SGFzaGVzEhMKC3ByZWZpeF9zaXplGAEg",
+            "ASgFEhIKCnJhd19oYXNoZXMYAiABKAwiawoRUmljZURlbHRhRW5jb2RpbmcS",
+            "EwoLZmlyc3RfdmFsdWUYASABKAMSFgoOcmljZV9wYXJhbWV0ZXIYAiABKAUS",
+            "EwoLZW50cnlfY291bnQYAyABKAUSFAoMZW5jb2RlZF9kYXRhGAQgASgMIl4K",
+            "ClN1Ym1pc3Npb24SEAoDdXJpGAEgASgJQgPgQQISPgoMdGhyZWF0X3R5cGVz",
+            "GAIgAygOMiMuZ29vZ2xlLmNsb3VkLndlYnJpc2sudjEuVGhyZWF0VHlwZUID",
+            "4EEDIqUGCgpUaHJlYXRJbmZvEkEKCmFidXNlX3R5cGUYASABKA4yLS5nb29n",
+            "bGUuY2xvdWQud2Vicmlzay52MS5UaHJlYXRJbmZvLkFidXNlVHlwZRJJChF0",
+            "aHJlYXRfY29uZmlkZW5jZRgCIAEoCzIuLmdvb2dsZS5jbG91ZC53ZWJyaXNr",
+            "LnYxLlRocmVhdEluZm8uQ29uZmlkZW5jZRJVChR0aHJlYXRfanVzdGlmaWNh",
+            "dGlvbhgDIAEoCzI3Lmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYxLlRocmVhdElu",
+            "Zm8uVGhyZWF0SnVzdGlmaWNhdGlvbhrLAQoKQ29uZmlkZW5jZRIPCgVzY29y",
+            "ZRgBIAEoAkgAEk8KBWxldmVsGAIgASgOMj4uZ29vZ2xlLmNsb3VkLndlYnJp",
+            "c2sudjEuVGhyZWF0SW5mby5Db25maWRlbmNlLkNvbmZpZGVuY2VMZXZlbEgA",
+            "IlIKD0NvbmZpZGVuY2VMZXZlbBIgChxDT05GSURFTkNFX0xFVkVMX1VOU1BF",
+            "Q0lGSUVEEAASBwoDTE9XEAESCgoGTUVESVVNEAISCAoESElHSBADQgcKBXZh",
+            "bHVlGv4BChNUaHJlYXRKdXN0aWZpY2F0aW9uEloKBmxhYmVscxgBIAMoDjJK",
+            "Lmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYxLlRocmVhdEluZm8uVGhyZWF0SnVz",
+            "dGlmaWNhdGlvbi5KdXN0aWZpY2F0aW9uTGFiZWwSEAoIY29tbWVudHMYAiAD",
+            "KAkieQoSSnVzdGlmaWNhdGlvbkxhYmVsEiMKH0pVU1RJRklDQVRJT05fTEFC",
+            "RUxfVU5TUEVDSUZJRUQQABIXChNNQU5VQUxfVkVSSUZJQ0FUSU9OEAESDwoL",
+            "VVNFUl9SRVBPUlQQAhIUChBBVVRPTUFURURfUkVQT1JUEAMiYwoJQWJ1c2VU",
+            "eXBlEhoKFkFCVVNFX1RZUEVfVU5TUEVDSUZJRUQQABILCgdNQUxXQVJFEAES",
+            "FgoSU09DSUFMX0VOR0lORUVSSU5HEAISFQoRVU5XQU5URURfU09GVFdBUkUQ",
+            "AyLAAQoPVGhyZWF0RGlzY292ZXJ5EkMKCHBsYXRmb3JtGAEgASgOMjEuZ29v",
+            "Z2xlLmNsb3VkLndlYnJpc2sudjEuVGhyZWF0RGlzY292ZXJ5LlBsYXRmb3Jt",
+            "EhQKDHJlZ2lvbl9jb2RlcxgCIAMoCSJSCghQbGF0Zm9ybRIYChRQTEFURk9S",
+            "TV9VTlNQRUNJRklFRBAAEgsKB0FORFJPSUQQARIHCgNJT1MQAhIJCgVNQUNP",
+            "UxADEgsKB1dJTkRPV1MQBCKcAQoXQ3JlYXRlU3VibWlzc2lvblJlcXVlc3QS",
+            "QwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2Vy",
+            "Lmdvb2dsZWFwaXMuY29tL1Byb2plY3QSPAoKc3VibWlzc2lvbhgCIAEoCzIj",
+            "Lmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYxLlN1Ym1pc3Npb25CA+BBAiKTAgoQ",
+            "U3VibWl0VXJpUmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xv",
+            "dWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBI8Cgpz",
+            "dWJtaXNzaW9uGAIgASgLMiMuZ29vZ2xlLmNsb3VkLndlYnJpc2sudjEuU3Vi",
+            "bWlzc2lvbkID4EECEjgKC3RocmVhdF9pbmZvGAMgASgLMiMuZ29vZ2xlLmNs",
+            "b3VkLndlYnJpc2sudjEuVGhyZWF0SW5mbxJCChB0aHJlYXRfZGlzY292ZXJ5",
+            "GAQgASgLMiguZ29vZ2xlLmNsb3VkLndlYnJpc2sudjEuVGhyZWF0RGlzY292",
+            "ZXJ5IpkCChFTdWJtaXRVcmlNZXRhZGF0YRI/CgVzdGF0ZRgBIAEoDjIwLmdv",
+            "b2dsZS5jbG91ZC53ZWJyaXNrLnYxLlN1Ym1pdFVyaU1ldGFkYXRhLlN0YXRl",
+            "Ei8KC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBIvCgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXAiYQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdS",
+            "VU5OSU5HEAESDQoJU1VDQ0VFREVEEAISDQoJQ0FOQ0VMTEVEEAMSCgoGRkFJ",
+            "TEVEEAQSCgoGQ0xPU0VEEAUqjwEKClRocmVhdFR5cGUSGwoXVEhSRUFUX1RZ",
+            "UEVfVU5TUEVDSUZJRUQQABILCgdNQUxXQVJFEAESFgoSU09DSUFMX0VOR0lO",
+            "RUVSSU5HEAISFQoRVU5XQU5URURfU09GVFdBUkUQAxIoCiRTT0NJQUxfRU5H",
+            "SU5FRVJJTkdfRVhURU5ERURfQ09WRVJBR0UQBCpGCg9Db21wcmVzc2lvblR5",
+            "cGUSIAocQ09NUFJFU1NJT05fVFlQRV9VTlNQRUNJRklFRBAAEgcKA1JBVxAB",
+            "EggKBFJJQ0UQAjLNBwoOV2ViUmlza1NlcnZpY2US0wEKFUNvbXB1dGVUaHJl",
+            "YXRMaXN0RGlmZhI1Lmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYxLkNvbXB1dGVU",
+            "aHJlYXRMaXN0RGlmZlJlcXVlc3QaNi5nb29nbGUuY2xvdWQud2Vicmlzay52",
+            "MS5Db21wdXRlVGhyZWF0TGlzdERpZmZSZXNwb25zZSJLgtPkkwIdEhsvdjEv",
+            "dGhyZWF0TGlzdHM6Y29tcHV0ZURpZmbaQSV0aHJlYXRfdHlwZSx2ZXJzaW9u",
+            "X3Rva2VuLGNvbnN0cmFpbnRzEpEBCgpTZWFyY2hVcmlzEiouZ29vZ2xlLmNs",
+            "b3VkLndlYnJpc2sudjEuU2VhcmNoVXJpc1JlcXVlc3QaKy5nb29nbGUuY2xv",
+            "dWQud2Vicmlzay52MS5TZWFyY2hVcmlzUmVzcG9uc2UiKoLT5JMCERIPL3Yx",
+            "L3VyaXM6c2VhcmNo2kEQdXJpLHRocmVhdF90eXBlcxKhAQoMU2VhcmNoSGFz",
+            "aGVzEiwuZ29vZ2xlLmNsb3VkLndlYnJpc2sudjEuU2VhcmNoSGFzaGVzUmVx",
+            "dWVzdBotLmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYxLlNlYXJjaEhhc2hlc1Jl",
+            "c3BvbnNlIjSC0+STAhMSES92MS9oYXNoZXM6c2VhcmNo2kEYaGFzaF9wcmVm",
+            "aXgsdGhyZWF0X3R5cGVzErYBChBDcmVhdGVTdWJtaXNzaW9uEjAuZ29vZ2xl",
+            "LmNsb3VkLndlYnJpc2sudjEuQ3JlYXRlU3VibWlzc2lvblJlcXVlc3QaIy5n",
+            "b29nbGUuY2xvdWQud2Vicmlzay52MS5TdWJtaXNzaW9uIkuC0+STAjEiIy92",
+            "MS97cGFyZW50PXByb2plY3RzLyp9L3N1Ym1pc3Npb25zOgpzdWJtaXNzaW9u",
+            "2kERcGFyZW50LHN1Ym1pc3Npb24SpwEKCVN1Ym1pdFVyaRIpLmdvb2dsZS5j",
+            "bG91ZC53ZWJyaXNrLnYxLlN1Ym1pdFVyaVJlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uIlCC0+STAigiIy92MS97cGFyZW50PXByb2pl",
+            "Y3RzLyp9L3VyaXM6c3VibWl0OgEqykEfCgpTdWJtaXNzaW9uEhFTdWJtaXRV",
+            "cmlNZXRhZGF0YRpKykEWd2Vicmlzay5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CtgEK",
+            "FWNvbS5nb29nbGUud2Vicmlzay52MUIMV2ViUmlza1Byb3RvUAFaNWNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vd2Vicmlzay9hcGl2MS93ZWJyaXNrcGI7d2Vicmlz",
+            "a3BiogIER0NXUqoCF0dvb2dsZS5DbG91ZC5XZWJSaXNrLlYxygIXR29vZ2xl",
+            "XENsb3VkXFdlYlJpc2tcVjHqAhpHb29nbGU6OkNsb3VkOjpXZWJSaXNrOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.WebRisk.V1.ThreatType), typeof(global::Google.Cloud.WebRisk.V1.CompressionType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.ComputeThreatListDiffRequest), global::Google.Cloud.WebRisk.V1.ComputeThreatListDiffRequest.Parser, new[]{ "ThreatType", "VersionToken", "Constraints" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.ComputeThreatListDiffRequest.Types.Constraints), global::Google.Cloud.WebRisk.V1.ComputeThreatListDiffRequest.Types.Constraints.Parser, new[]{ "MaxDiffEntries", "MaxDatabaseEntries", "SupportedCompressions" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.ComputeThreatListDiffResponse), global::Google.Cloud.WebRisk.V1.ComputeThreatListDiffResponse.Parser, new[]{ "ResponseType", "Additions", "Removals", "NewVersionToken", "Checksum", "RecommendedNextDiff" }, null, new[]{ typeof(global::Google.Cloud.WebRisk.V1.ComputeThreatListDiffResponse.Types.ResponseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.ComputeThreatListDiffResponse.Types.Checksum), global::Google.Cloud.WebRisk.V1.ComputeThreatListDiffResponse.Types.Checksum.Parser, new[]{ "Sha256" }, null, null, null, null)}),
@@ -121,8 +162,13 @@ namespace Google.Cloud.WebRisk.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.RawIndices), global::Google.Cloud.WebRisk.V1.RawIndices.Parser, new[]{ "Indices" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.RawHashes), global::Google.Cloud.WebRisk.V1.RawHashes.Parser, new[]{ "PrefixSize", "RawHashes_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.RiceDeltaEncoding), global::Google.Cloud.WebRisk.V1.RiceDeltaEncoding.Parser, new[]{ "FirstValue", "RiceParameter", "EntryCount", "EncodedData" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.Submission), global::Google.Cloud.WebRisk.V1.Submission.Parser, new[]{ "Uri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.CreateSubmissionRequest), global::Google.Cloud.WebRisk.V1.CreateSubmissionRequest.Parser, new[]{ "Parent", "Submission" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.Submission), global::Google.Cloud.WebRisk.V1.Submission.Parser, new[]{ "Uri", "ThreatTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.ThreatInfo), global::Google.Cloud.WebRisk.V1.ThreatInfo.Parser, new[]{ "AbuseType", "ThreatConfidence", "ThreatJustification" }, null, new[]{ typeof(global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.AbuseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence), global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence.Parser, new[]{ "Score", "Level" }, new[]{ "Value" }, new[]{ typeof(global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence.Types.ConfidenceLevel) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.ThreatJustification), global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.ThreatJustification.Parser, new[]{ "Labels", "Comments" }, null, new[]{ typeof(global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.ThreatJustification.Types.JustificationLabel) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.ThreatDiscovery), global::Google.Cloud.WebRisk.V1.ThreatDiscovery.Parser, new[]{ "Platform", "RegionCodes" }, null, new[]{ typeof(global::Google.Cloud.WebRisk.V1.ThreatDiscovery.Types.Platform) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.CreateSubmissionRequest), global::Google.Cloud.WebRisk.V1.CreateSubmissionRequest.Parser, new[]{ "Parent", "Submission" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.SubmitUriRequest), global::Google.Cloud.WebRisk.V1.SubmitUriRequest.Parser, new[]{ "Parent", "Submission", "ThreatInfo", "ThreatDiscovery" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.WebRisk.V1.SubmitUriMetadata), global::Google.Cloud.WebRisk.V1.SubmitUriMetadata.Parser, new[]{ "State", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.WebRisk.V1.SubmitUriMetadata.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -231,9 +277,9 @@ namespace Google.Cloud.WebRisk.V1 {
     public const int ThreatTypeFieldNumber = 1;
     private global::Google.Cloud.WebRisk.V1.ThreatType threatType_ = global::Google.Cloud.WebRisk.V1.ThreatType.Unspecified;
     /// <summary>
-    /// Required. The threat list to update. Only a single ThreatType should be specified
-    /// per request. If you want to handle multiple ThreatTypes, you must make one
-    /// request per ThreatType.
+    /// Required. The threat list to update. Only a single ThreatType should be
+    /// specified per request. If you want to handle multiple ThreatTypes, you must
+    /// make one request per ThreatType.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1477,7 +1523,8 @@ namespace Google.Cloud.WebRisk.V1 {
         = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Cloud.WebRisk.V1.ThreatType) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.WebRisk.V1.ThreatType> threatTypes_ = new pbc::RepeatedField<global::Google.Cloud.WebRisk.V1.ThreatType>();
     /// <summary>
-    /// Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+    /// Required. The ThreatLists to search in. Multiple ThreatLists may be
+    /// specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2151,7 +2198,8 @@ namespace Google.Cloud.WebRisk.V1 {
         = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Cloud.WebRisk.V1.ThreatType) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.WebRisk.V1.ThreatType> threatTypes_ = new pbc::RepeatedField<global::Google.Cloud.WebRisk.V1.ThreatType>();
     /// <summary>
-    /// Required. The ThreatLists to search in. Multiple ThreatLists may be specified.
+    /// Required. The ThreatLists to search in. Multiple ThreatLists may be
+    /// specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4110,6 +4158,7 @@ namespace Google.Cloud.WebRisk.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Submission(Submission other) : this() {
       uri_ = other.uri_;
+      threatTypes_ = other.threatTypes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4123,7 +4172,8 @@ namespace Google.Cloud.WebRisk.V1 {
     public const int UriFieldNumber = 1;
     private string uri_ = "";
     /// <summary>
-    /// Required. The URI that is being reported for malicious content to be analyzed.
+    /// Required. The URI that is being reported for malicious content to be
+    /// analyzed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4132,6 +4182,22 @@ namespace Google.Cloud.WebRisk.V1 {
       set {
         uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "threat_types" field.</summary>
+    public const int ThreatTypesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.WebRisk.V1.ThreatType> _repeated_threatTypes_codec
+        = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Cloud.WebRisk.V1.ThreatType) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.WebRisk.V1.ThreatType> threatTypes_ = new pbc::RepeatedField<global::Google.Cloud.WebRisk.V1.ThreatType>();
+    /// <summary>
+    /// Output only. ThreatTypes found to be associated with the submitted URI
+    /// after reviewing it. This might be empty if the URI was not added to any
+    /// list.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.WebRisk.V1.ThreatType> ThreatTypes {
+      get { return threatTypes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4150,6 +4216,7 @@ namespace Google.Cloud.WebRisk.V1 {
         return true;
       }
       if (Uri != other.Uri) return false;
+      if(!threatTypes_.Equals(other.threatTypes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4158,6 +4225,7 @@ namespace Google.Cloud.WebRisk.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+      hash ^= threatTypes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4180,6 +4248,7 @@ namespace Google.Cloud.WebRisk.V1 {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
+      threatTypes_.WriteTo(output, _repeated_threatTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4194,6 +4263,7 @@ namespace Google.Cloud.WebRisk.V1 {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
+      threatTypes_.WriteTo(ref output, _repeated_threatTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4207,6 +4277,7 @@ namespace Google.Cloud.WebRisk.V1 {
       if (Uri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
+      size += threatTypes_.CalculateSize(_repeated_threatTypes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4222,6 +4293,7 @@ namespace Google.Cloud.WebRisk.V1 {
       if (other.Uri.Length != 0) {
         Uri = other.Uri;
       }
+      threatTypes_.Add(other.threatTypes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4239,6 +4311,11 @@ namespace Google.Cloud.WebRisk.V1 {
             break;
           case 10: {
             Uri = input.ReadString();
+            break;
+          }
+          case 18:
+          case 16: {
+            threatTypes_.AddEntriesFrom(input, _repeated_threatTypes_codec);
             break;
           }
         }
@@ -4260,10 +4337,1146 @@ namespace Google.Cloud.WebRisk.V1 {
             Uri = input.ReadString();
             break;
           }
+          case 18:
+          case 16: {
+            threatTypes_.AddEntriesFrom(ref input, _repeated_threatTypes_codec);
+            break;
+          }
         }
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Context about the submission including the type of abuse found on the URI and
+  /// supporting details.
+  /// option (google.api.message_visibility).restriction = "TRUSTED_TESTER";
+  /// </summary>
+  public sealed partial class ThreatInfo : pb::IMessage<ThreatInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ThreatInfo> _parser = new pb::MessageParser<ThreatInfo>(() => new ThreatInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ThreatInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.WebRisk.V1.WebriskReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ThreatInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ThreatInfo(ThreatInfo other) : this() {
+      abuseType_ = other.abuseType_;
+      threatConfidence_ = other.threatConfidence_ != null ? other.threatConfidence_.Clone() : null;
+      threatJustification_ = other.threatJustification_ != null ? other.threatJustification_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ThreatInfo Clone() {
+      return new ThreatInfo(this);
+    }
+
+    /// <summary>Field number for the "abuse_type" field.</summary>
+    public const int AbuseTypeFieldNumber = 1;
+    private global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.AbuseType abuseType_ = global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.AbuseType.Unspecified;
+    /// <summary>
+    /// The type of abuse.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.AbuseType AbuseType {
+      get { return abuseType_; }
+      set {
+        abuseType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "threat_confidence" field.</summary>
+    public const int ThreatConfidenceFieldNumber = 2;
+    private global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence threatConfidence_;
+    /// <summary>
+    /// Confidence that the URI is unsafe.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence ThreatConfidence {
+      get { return threatConfidence_; }
+      set {
+        threatConfidence_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "threat_justification" field.</summary>
+    public const int ThreatJustificationFieldNumber = 3;
+    private global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.ThreatJustification threatJustification_;
+    /// <summary>
+    /// Context about why the URI is unsafe.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.ThreatJustification ThreatJustification {
+      get { return threatJustification_; }
+      set {
+        threatJustification_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ThreatInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ThreatInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AbuseType != other.AbuseType) return false;
+      if (!object.Equals(ThreatConfidence, other.ThreatConfidence)) return false;
+      if (!object.Equals(ThreatJustification, other.ThreatJustification)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AbuseType != global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.AbuseType.Unspecified) hash ^= AbuseType.GetHashCode();
+      if (threatConfidence_ != null) hash ^= ThreatConfidence.GetHashCode();
+      if (threatJustification_ != null) hash ^= ThreatJustification.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AbuseType != global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.AbuseType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) AbuseType);
+      }
+      if (threatConfidence_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ThreatConfidence);
+      }
+      if (threatJustification_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ThreatJustification);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AbuseType != global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.AbuseType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) AbuseType);
+      }
+      if (threatConfidence_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ThreatConfidence);
+      }
+      if (threatJustification_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ThreatJustification);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AbuseType != global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.AbuseType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AbuseType);
+      }
+      if (threatConfidence_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ThreatConfidence);
+      }
+      if (threatJustification_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ThreatJustification);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ThreatInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AbuseType != global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.AbuseType.Unspecified) {
+        AbuseType = other.AbuseType;
+      }
+      if (other.threatConfidence_ != null) {
+        if (threatConfidence_ == null) {
+          ThreatConfidence = new global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence();
+        }
+        ThreatConfidence.MergeFrom(other.ThreatConfidence);
+      }
+      if (other.threatJustification_ != null) {
+        if (threatJustification_ == null) {
+          ThreatJustification = new global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.ThreatJustification();
+        }
+        ThreatJustification.MergeFrom(other.ThreatJustification);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            AbuseType = (global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.AbuseType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (threatConfidence_ == null) {
+              ThreatConfidence = new global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence();
+            }
+            input.ReadMessage(ThreatConfidence);
+            break;
+          }
+          case 26: {
+            if (threatJustification_ == null) {
+              ThreatJustification = new global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.ThreatJustification();
+            }
+            input.ReadMessage(ThreatJustification);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            AbuseType = (global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.AbuseType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (threatConfidence_ == null) {
+              ThreatConfidence = new global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence();
+            }
+            input.ReadMessage(ThreatConfidence);
+            break;
+          }
+          case 26: {
+            if (threatJustification_ == null) {
+              ThreatJustification = new global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.ThreatJustification();
+            }
+            input.ReadMessage(ThreatJustification);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ThreatInfo message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The abuse type found on the URI.
+      /// </summary>
+      public enum AbuseType {
+        /// <summary>
+        /// Default.
+        /// </summary>
+        [pbr::OriginalName("ABUSE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The URI contains malware.
+        /// </summary>
+        [pbr::OriginalName("MALWARE")] Malware = 1,
+        /// <summary>
+        /// The URI contains social engineering.
+        /// </summary>
+        [pbr::OriginalName("SOCIAL_ENGINEERING")] SocialEngineering = 2,
+        /// <summary>
+        /// The URI contains unwanted software.
+        /// </summary>
+        [pbr::OriginalName("UNWANTED_SOFTWARE")] UnwantedSoftware = 3,
+      }
+
+      /// <summary>
+      /// Confidence that a URI is unsafe.
+      /// </summary>
+      public sealed partial class Confidence : pb::IMessage<Confidence>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Confidence> _parser = new pb::MessageParser<Confidence>(() => new Confidence());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Confidence> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.WebRisk.V1.ThreatInfo.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Confidence() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Confidence(Confidence other) : this() {
+          switch (other.ValueCase) {
+            case ValueOneofCase.Score:
+              Score = other.Score;
+              break;
+            case ValueOneofCase.Level:
+              Level = other.Level;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Confidence Clone() {
+          return new Confidence(this);
+        }
+
+        /// <summary>Field number for the "score" field.</summary>
+        public const int ScoreFieldNumber = 1;
+        /// <summary>
+        /// A decimal representation of confidence in the range of 0
+        /// to 1 where 0 indicates no confidence and 1 indicates
+        /// complete confidence.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public float Score {
+          get { return valueCase_ == ValueOneofCase.Score ? (float) value_ : 0F; }
+          set {
+            value_ = value;
+            valueCase_ = ValueOneofCase.Score;
+          }
+        }
+
+        /// <summary>Field number for the "level" field.</summary>
+        public const int LevelFieldNumber = 2;
+        /// <summary>
+        /// Enum representation of confidence.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence.Types.ConfidenceLevel Level {
+          get { return valueCase_ == ValueOneofCase.Level ? (global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence.Types.ConfidenceLevel) value_ : global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence.Types.ConfidenceLevel.Unspecified; }
+          set {
+            value_ = value;
+            valueCase_ = ValueOneofCase.Level;
+          }
+        }
+
+        private object value_;
+        /// <summary>Enum of possible cases for the "value" oneof.</summary>
+        public enum ValueOneofCase {
+          None = 0,
+          Score = 1,
+          Level = 2,
+        }
+        private ValueOneofCase valueCase_ = ValueOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ValueOneofCase ValueCase {
+          get { return valueCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValue() {
+          valueCase_ = ValueOneofCase.None;
+          value_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Confidence);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Confidence other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Score, other.Score)) return false;
+          if (Level != other.Level) return false;
+          if (ValueCase != other.ValueCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (valueCase_ == ValueOneofCase.Score) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Score);
+          if (valueCase_ == ValueOneofCase.Level) hash ^= Level.GetHashCode();
+          hash ^= (int) valueCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (valueCase_ == ValueOneofCase.Score) {
+            output.WriteRawTag(13);
+            output.WriteFloat(Score);
+          }
+          if (valueCase_ == ValueOneofCase.Level) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Level);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (valueCase_ == ValueOneofCase.Score) {
+            output.WriteRawTag(13);
+            output.WriteFloat(Score);
+          }
+          if (valueCase_ == ValueOneofCase.Level) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Level);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (valueCase_ == ValueOneofCase.Score) {
+            size += 1 + 4;
+          }
+          if (valueCase_ == ValueOneofCase.Level) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Confidence other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.ValueCase) {
+            case ValueOneofCase.Score:
+              Score = other.Score;
+              break;
+            case ValueOneofCase.Level:
+              Level = other.Level;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 13: {
+                Score = input.ReadFloat();
+                break;
+              }
+              case 16: {
+                value_ = input.ReadEnum();
+                valueCase_ = ValueOneofCase.Level;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 13: {
+                Score = input.ReadFloat();
+                break;
+              }
+              case 16: {
+                value_ = input.ReadEnum();
+                valueCase_ = ValueOneofCase.Level;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Confidence message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Enum representation of confidence.
+          /// </summary>
+          public enum ConfidenceLevel {
+            /// <summary>
+            /// Default.
+            /// </summary>
+            [pbr::OriginalName("CONFIDENCE_LEVEL_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Less than 60% confidence that the URI is unsafe.
+            /// </summary>
+            [pbr::OriginalName("LOW")] Low = 1,
+            /// <summary>
+            /// Between 60% and 80% confidence that the URI is unsafe.
+            /// </summary>
+            [pbr::OriginalName("MEDIUM")] Medium = 2,
+            /// <summary>
+            /// Greater than 80% confidence that the URI is unsafe.
+            /// </summary>
+            [pbr::OriginalName("HIGH")] High = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Context about why the URI is unsafe.
+      /// </summary>
+      public sealed partial class ThreatJustification : pb::IMessage<ThreatJustification>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ThreatJustification> _parser = new pb::MessageParser<ThreatJustification>(() => new ThreatJustification());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ThreatJustification> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.WebRisk.V1.ThreatInfo.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ThreatJustification() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ThreatJustification(ThreatJustification other) : this() {
+          labels_ = other.labels_.Clone();
+          comments_ = other.comments_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ThreatJustification Clone() {
+          return new ThreatJustification(this);
+        }
+
+        /// <summary>Field number for the "labels" field.</summary>
+        public const int LabelsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.ThreatJustification.Types.JustificationLabel> _repeated_labels_codec
+            = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.ThreatJustification.Types.JustificationLabel) x);
+        private readonly pbc::RepeatedField<global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.ThreatJustification.Types.JustificationLabel> labels_ = new pbc::RepeatedField<global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.ThreatJustification.Types.JustificationLabel>();
+        /// <summary>
+        /// Labels associated with this URI that explain how it was classified.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.ThreatJustification.Types.JustificationLabel> Labels {
+          get { return labels_; }
+        }
+
+        /// <summary>Field number for the "comments" field.</summary>
+        public const int CommentsFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_comments_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> comments_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Free-form context on why this URI is unsafe.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> Comments {
+          get { return comments_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ThreatJustification);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ThreatJustification other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!labels_.Equals(other.labels_)) return false;
+          if(!comments_.Equals(other.comments_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= labels_.GetHashCode();
+          hash ^= comments_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          labels_.WriteTo(output, _repeated_labels_codec);
+          comments_.WriteTo(output, _repeated_comments_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          labels_.WriteTo(ref output, _repeated_labels_codec);
+          comments_.WriteTo(ref output, _repeated_comments_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += labels_.CalculateSize(_repeated_labels_codec);
+          size += comments_.CalculateSize(_repeated_comments_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ThreatJustification other) {
+          if (other == null) {
+            return;
+          }
+          labels_.Add(other.labels_);
+          comments_.Add(other.comments_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10:
+              case 8: {
+                labels_.AddEntriesFrom(input, _repeated_labels_codec);
+                break;
+              }
+              case 18: {
+                comments_.AddEntriesFrom(input, _repeated_comments_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10:
+              case 8: {
+                labels_.AddEntriesFrom(ref input, _repeated_labels_codec);
+                break;
+              }
+              case 18: {
+                comments_.AddEntriesFrom(ref input, _repeated_comments_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ThreatJustification message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Labels that explain how the URI was classified.
+          /// </summary>
+          public enum JustificationLabel {
+            /// <summary>
+            /// Default.
+            /// </summary>
+            [pbr::OriginalName("JUSTIFICATION_LABEL_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The submitter manually verified that the submission is unsafe.
+            /// </summary>
+            [pbr::OriginalName("MANUAL_VERIFICATION")] ManualVerification = 1,
+            /// <summary>
+            /// The submitter received the submission from an end user.
+            /// </summary>
+            [pbr::OriginalName("USER_REPORT")] UserReport = 2,
+            /// <summary>
+            /// The submitter received the submission from an automated system.
+            /// </summary>
+            [pbr::OriginalName("AUTOMATED_REPORT")] AutomatedReport = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Details about how the threat was discovered.
+  /// </summary>
+  public sealed partial class ThreatDiscovery : pb::IMessage<ThreatDiscovery>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ThreatDiscovery> _parser = new pb::MessageParser<ThreatDiscovery>(() => new ThreatDiscovery());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ThreatDiscovery> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.WebRisk.V1.WebriskReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ThreatDiscovery() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ThreatDiscovery(ThreatDiscovery other) : this() {
+      platform_ = other.platform_;
+      regionCodes_ = other.regionCodes_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ThreatDiscovery Clone() {
+      return new ThreatDiscovery(this);
+    }
+
+    /// <summary>Field number for the "platform" field.</summary>
+    public const int PlatformFieldNumber = 1;
+    private global::Google.Cloud.WebRisk.V1.ThreatDiscovery.Types.Platform platform_ = global::Google.Cloud.WebRisk.V1.ThreatDiscovery.Types.Platform.Unspecified;
+    /// <summary>
+    /// Platform on which the threat was discovered.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.WebRisk.V1.ThreatDiscovery.Types.Platform Platform {
+      get { return platform_; }
+      set {
+        platform_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "region_codes" field.</summary>
+    public const int RegionCodesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_regionCodes_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> regionCodes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// CLDR region code of the countries/regions the URI poses a threat ordered
+    /// from most impact to least impact. Example: "US" for United States.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RegionCodes {
+      get { return regionCodes_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ThreatDiscovery);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ThreatDiscovery other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Platform != other.Platform) return false;
+      if(!regionCodes_.Equals(other.regionCodes_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Platform != global::Google.Cloud.WebRisk.V1.ThreatDiscovery.Types.Platform.Unspecified) hash ^= Platform.GetHashCode();
+      hash ^= regionCodes_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Platform != global::Google.Cloud.WebRisk.V1.ThreatDiscovery.Types.Platform.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Platform);
+      }
+      regionCodes_.WriteTo(output, _repeated_regionCodes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Platform != global::Google.Cloud.WebRisk.V1.ThreatDiscovery.Types.Platform.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Platform);
+      }
+      regionCodes_.WriteTo(ref output, _repeated_regionCodes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Platform != global::Google.Cloud.WebRisk.V1.ThreatDiscovery.Types.Platform.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Platform);
+      }
+      size += regionCodes_.CalculateSize(_repeated_regionCodes_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ThreatDiscovery other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Platform != global::Google.Cloud.WebRisk.V1.ThreatDiscovery.Types.Platform.Unspecified) {
+        Platform = other.Platform;
+      }
+      regionCodes_.Add(other.regionCodes_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Platform = (global::Google.Cloud.WebRisk.V1.ThreatDiscovery.Types.Platform) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            regionCodes_.AddEntriesFrom(input, _repeated_regionCodes_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Platform = (global::Google.Cloud.WebRisk.V1.ThreatDiscovery.Types.Platform) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            regionCodes_.AddEntriesFrom(ref input, _repeated_regionCodes_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ThreatDiscovery message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Platform types.
+      /// </summary>
+      public enum Platform {
+        /// <summary>
+        /// Default.
+        /// </summary>
+        [pbr::OriginalName("PLATFORM_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// General Android platform.
+        /// </summary>
+        [pbr::OriginalName("ANDROID")] Android = 1,
+        /// <summary>
+        /// General iOS platform.
+        /// </summary>
+        [pbr::OriginalName("IOS")] Ios = 2,
+        /// <summary>
+        /// General macOS platform.
+        /// </summary>
+        [pbr::OriginalName("MACOS")] Macos = 3,
+        /// <summary>
+        /// General Windows platform.
+        /// </summary>
+        [pbr::OriginalName("WINDOWS")] Windows = 4,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -4284,7 +5497,7 @@ namespace Google.Cloud.WebRisk.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.WebRisk.V1.WebriskReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.WebRisk.V1.WebriskReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4319,8 +5532,8 @@ namespace Google.Cloud.WebRisk.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the project that is making the submission. This string is in
-    /// the format "projects/{project_number}".
+    /// Required. The name of the project that is making the submission. This
+    /// string is in the format "projects/{project_number}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4509,6 +5722,681 @@ namespace Google.Cloud.WebRisk.V1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Request to send a potentially malicious URI to WebRisk.
+  /// </summary>
+  public sealed partial class SubmitUriRequest : pb::IMessage<SubmitUriRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SubmitUriRequest> _parser = new pb::MessageParser<SubmitUriRequest>(() => new SubmitUriRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SubmitUriRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.WebRisk.V1.WebriskReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SubmitUriRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SubmitUriRequest(SubmitUriRequest other) : this() {
+      parent_ = other.parent_;
+      submission_ = other.submission_ != null ? other.submission_.Clone() : null;
+      threatInfo_ = other.threatInfo_ != null ? other.threatInfo_.Clone() : null;
+      threatDiscovery_ = other.threatDiscovery_ != null ? other.threatDiscovery_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SubmitUriRequest Clone() {
+      return new SubmitUriRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The name of the project that is making the submission. This
+    /// string is in the format "projects/{project_number}".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "submission" field.</summary>
+    public const int SubmissionFieldNumber = 2;
+    private global::Google.Cloud.WebRisk.V1.Submission submission_;
+    /// <summary>
+    /// Required. The submission that contains the URI to be scanned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.WebRisk.V1.Submission Submission {
+      get { return submission_; }
+      set {
+        submission_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "threat_info" field.</summary>
+    public const int ThreatInfoFieldNumber = 3;
+    private global::Google.Cloud.WebRisk.V1.ThreatInfo threatInfo_;
+    /// <summary>
+    /// Provides additional information about the submission.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.WebRisk.V1.ThreatInfo ThreatInfo {
+      get { return threatInfo_; }
+      set {
+        threatInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "threat_discovery" field.</summary>
+    public const int ThreatDiscoveryFieldNumber = 4;
+    private global::Google.Cloud.WebRisk.V1.ThreatDiscovery threatDiscovery_;
+    /// <summary>
+    /// Provides additional information about how the submission was discovered.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.WebRisk.V1.ThreatDiscovery ThreatDiscovery {
+      get { return threatDiscovery_; }
+      set {
+        threatDiscovery_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SubmitUriRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SubmitUriRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(Submission, other.Submission)) return false;
+      if (!object.Equals(ThreatInfo, other.ThreatInfo)) return false;
+      if (!object.Equals(ThreatDiscovery, other.ThreatDiscovery)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (submission_ != null) hash ^= Submission.GetHashCode();
+      if (threatInfo_ != null) hash ^= ThreatInfo.GetHashCode();
+      if (threatDiscovery_ != null) hash ^= ThreatDiscovery.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (submission_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Submission);
+      }
+      if (threatInfo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ThreatInfo);
+      }
+      if (threatDiscovery_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ThreatDiscovery);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (submission_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Submission);
+      }
+      if (threatInfo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ThreatInfo);
+      }
+      if (threatDiscovery_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ThreatDiscovery);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (submission_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Submission);
+      }
+      if (threatInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ThreatInfo);
+      }
+      if (threatDiscovery_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ThreatDiscovery);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SubmitUriRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.submission_ != null) {
+        if (submission_ == null) {
+          Submission = new global::Google.Cloud.WebRisk.V1.Submission();
+        }
+        Submission.MergeFrom(other.Submission);
+      }
+      if (other.threatInfo_ != null) {
+        if (threatInfo_ == null) {
+          ThreatInfo = new global::Google.Cloud.WebRisk.V1.ThreatInfo();
+        }
+        ThreatInfo.MergeFrom(other.ThreatInfo);
+      }
+      if (other.threatDiscovery_ != null) {
+        if (threatDiscovery_ == null) {
+          ThreatDiscovery = new global::Google.Cloud.WebRisk.V1.ThreatDiscovery();
+        }
+        ThreatDiscovery.MergeFrom(other.ThreatDiscovery);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (submission_ == null) {
+              Submission = new global::Google.Cloud.WebRisk.V1.Submission();
+            }
+            input.ReadMessage(Submission);
+            break;
+          }
+          case 26: {
+            if (threatInfo_ == null) {
+              ThreatInfo = new global::Google.Cloud.WebRisk.V1.ThreatInfo();
+            }
+            input.ReadMessage(ThreatInfo);
+            break;
+          }
+          case 34: {
+            if (threatDiscovery_ == null) {
+              ThreatDiscovery = new global::Google.Cloud.WebRisk.V1.ThreatDiscovery();
+            }
+            input.ReadMessage(ThreatDiscovery);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (submission_ == null) {
+              Submission = new global::Google.Cloud.WebRisk.V1.Submission();
+            }
+            input.ReadMessage(Submission);
+            break;
+          }
+          case 26: {
+            if (threatInfo_ == null) {
+              ThreatInfo = new global::Google.Cloud.WebRisk.V1.ThreatInfo();
+            }
+            input.ReadMessage(ThreatInfo);
+            break;
+          }
+          case 34: {
+            if (threatDiscovery_ == null) {
+              ThreatDiscovery = new global::Google.Cloud.WebRisk.V1.ThreatDiscovery();
+            }
+            input.ReadMessage(ThreatDiscovery);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata for the Submit URI long-running operation.
+  /// option (google.api.message_visibility).restriction = "TRUSTED_TESTER";
+  /// </summary>
+  public sealed partial class SubmitUriMetadata : pb::IMessage<SubmitUriMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SubmitUriMetadata> _parser = new pb::MessageParser<SubmitUriMetadata>(() => new SubmitUriMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SubmitUriMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.WebRisk.V1.WebriskReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SubmitUriMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SubmitUriMetadata(SubmitUriMetadata other) : this() {
+      state_ = other.state_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SubmitUriMetadata Clone() {
+      return new SubmitUriMetadata(this);
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 1;
+    private global::Google.Cloud.WebRisk.V1.SubmitUriMetadata.Types.State state_ = global::Google.Cloud.WebRisk.V1.SubmitUriMetadata.Types.State.Unspecified;
+    /// <summary>
+    /// The state of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.WebRisk.V1.SubmitUriMetadata.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Creation time of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Latest update time of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SubmitUriMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SubmitUriMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (State != other.State) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (State != global::Google.Cloud.WebRisk.V1.SubmitUriMetadata.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (State != global::Google.Cloud.WebRisk.V1.SubmitUriMetadata.Types.State.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) State);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (State != global::Google.Cloud.WebRisk.V1.SubmitUriMetadata.Types.State.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) State);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (State != global::Google.Cloud.WebRisk.V1.SubmitUriMetadata.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SubmitUriMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.State != global::Google.Cloud.WebRisk.V1.SubmitUriMetadata.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            State = (global::Google.Cloud.WebRisk.V1.SubmitUriMetadata.Types.State) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            State = (global::Google.Cloud.WebRisk.V1.SubmitUriMetadata.Types.State) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SubmitUriMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Enum that represents the state of the long-running operation.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Default unspecified state.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The operation is currently running.
+        /// </summary>
+        [pbr::OriginalName("RUNNING")] Running = 1,
+        /// <summary>
+        /// The operation finished with a success status.
+        /// </summary>
+        [pbr::OriginalName("SUCCEEDED")] Succeeded = 2,
+        /// <summary>
+        /// The operation was cancelled.
+        /// </summary>
+        [pbr::OriginalName("CANCELLED")] Cancelled = 3,
+        /// <summary>
+        /// The operation finished with a failure status.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 4,
+        /// <summary>
+        /// The operation was closed with no action taken.
+        /// </summary>
+        [pbr::OriginalName("CLOSED")] Closed = 5,
+      }
+
+    }
+    #endregion
 
   }
 
