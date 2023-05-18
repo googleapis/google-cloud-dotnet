@@ -632,6 +632,27 @@
         }
       }
     },
+    "MatchService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MatchServiceClient",
+          "rpcs": {
+            "FindNeighbors": {
+              "methods": [
+                "FindNeighbors",
+                "FindNeighborsAsync"
+              ]
+            },
+            "ReadIndexDatapoints": {
+              "methods": [
+                "ReadIndexDatapoints",
+                "ReadIndexDatapointsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "MetadataService": {
       "clients": {
         "grpc": {
