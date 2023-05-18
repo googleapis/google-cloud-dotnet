@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             FetchReportResultsRequest request = new FetchReportResultsRequest
             {
                 ReportJobAsReportJobName = ReportJobName.FromAccountReportJob("[ACCOUNT]", "[REPORT_JOB]"),
+                PartitionKeys = { "", },
             };
             // Make the request
             PagedEnumerable<FetchReportResultsResponse, Row> response = cloudChannelReportsServiceClient.FetchReportResults(request);

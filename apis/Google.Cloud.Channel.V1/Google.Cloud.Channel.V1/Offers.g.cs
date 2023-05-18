@@ -214,15 +214,14 @@ namespace Google.Cloud.Channel.V1 {
     /// </summary>
     [pbr::OriginalName("MINUTES")] Minutes = 5,
     /// <summary>
-    /// For IaaS SKUs like Google Cloud Platform, monetization is based on usage
-    /// accrued on your billing account irrespective of the type of monetizable
-    /// resource. This enum represents an aggregated resource/container for all
-    /// usage SKUs on a billing account. Currently, only applicable to Google Cloud
-    /// Platform.
+    /// For IaaS SKUs like Google Cloud, monetization is based on usage accrued on
+    /// your billing account irrespective of the type of monetizable resource. This
+    /// enum represents an aggregated resource/container for all usage SKUs on a
+    /// billing account. Currently, only applicable to Google Cloud.
     /// </summary>
     [pbr::OriginalName("IAAS_USAGE")] IaasUsage = 6,
     /// <summary>
-    /// For Google Cloud Platform subscriptions like Anthos or SAP.
+    /// For Google Cloud subscriptions like Anthos or SAP.
     /// </summary>
     [pbr::OriginalName("SUBSCRIPTION")] Subscription = 7,
   }
@@ -1854,7 +1853,7 @@ namespace Google.Cloud.Channel.V1 {
     private string billingAccount_ = "";
     /// <summary>
     /// Reseller Billing account to charge after an offer transaction.
-    /// Only present for Google Cloud Platform offers.
+    /// Only present for Google Cloud offers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

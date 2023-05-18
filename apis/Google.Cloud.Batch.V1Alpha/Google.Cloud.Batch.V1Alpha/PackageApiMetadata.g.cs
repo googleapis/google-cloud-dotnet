@@ -43,6 +43,16 @@ namespace Google.Cloud.Batch.V1Alpha
                     proto::ByteString.FromBase64("EiQvdjFhbHBoYS97bmFtZT1wcm9qZWN0cy8qfS9sb2NhdGlvbnM=")
                 },
                 {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1alpha/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
+                    proto::ByteString.FromBase64("IjovdjFhbHBoYS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEq")
+                },
+                {
+                    "google.longrunning.Operations.DeleteOperation",
+                    // { "delete": "/v1alpha/{name=projects/*/locations/*/operations/*}" }
+                    proto::ByteString.FromBase64("KjMvdjFhbHBoYS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn0=")
+                },
+                {
                     "google.longrunning.Operations.GetOperation",
                     // { "get": "/v1alpha/{name=projects/*/locations/*/operations/*}" }
                     proto::ByteString.FromBase64("EjMvdjFhbHBoYS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29wZXJhdGlvbnMvKn0=")

@@ -28135,6 +28135,200 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_MatchService_FindNeighbors_sync",
+      "title": "FindNeighborsRequestObject",
+      "description": "Snippet for FindNeighbors",
+      "file": "MatchServiceClient.FindNeighborsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FindNeighbors",
+        "fullName": "Google.Cloud.AIPlatform.V1.MatchServiceClient.FindNeighbors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.FindNeighborsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.FindNeighborsResponse",
+        "client": {
+          "shortName": "MatchServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.MatchServiceClient"
+        },
+        "method": {
+          "shortName": "FindNeighbors",
+          "fullName": "google.cloud.aiplatform.v1.MatchService.FindNeighbors",
+          "service": {
+            "shortName": "MatchService",
+            "fullName": "google.cloud.aiplatform.v1.MatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_MatchService_FindNeighbors_async",
+      "title": "FindNeighborsRequestObjectAsync",
+      "description": "Snippet for FindNeighborsAsync",
+      "file": "MatchServiceClient.FindNeighborsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FindNeighborsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.MatchServiceClient.FindNeighborsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.FindNeighborsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.FindNeighborsResponse>",
+        "client": {
+          "shortName": "MatchServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.MatchServiceClient"
+        },
+        "method": {
+          "shortName": "FindNeighbors",
+          "fullName": "google.cloud.aiplatform.v1.MatchService.FindNeighbors",
+          "service": {
+            "shortName": "MatchService",
+            "fullName": "google.cloud.aiplatform.v1.MatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_MatchService_ReadIndexDatapoints_sync",
+      "title": "ReadIndexDatapointsRequestObject",
+      "description": "Snippet for ReadIndexDatapoints",
+      "file": "MatchServiceClient.ReadIndexDatapointsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadIndexDatapoints",
+        "fullName": "Google.Cloud.AIPlatform.V1.MatchServiceClient.ReadIndexDatapoints",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReadIndexDatapointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.ReadIndexDatapointsResponse",
+        "client": {
+          "shortName": "MatchServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.MatchServiceClient"
+        },
+        "method": {
+          "shortName": "ReadIndexDatapoints",
+          "fullName": "google.cloud.aiplatform.v1.MatchService.ReadIndexDatapoints",
+          "service": {
+            "shortName": "MatchService",
+            "fullName": "google.cloud.aiplatform.v1.MatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_MatchService_ReadIndexDatapoints_async",
+      "title": "ReadIndexDatapointsRequestObjectAsync",
+      "description": "Snippet for ReadIndexDatapointsAsync",
+      "file": "MatchServiceClient.ReadIndexDatapointsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadIndexDatapointsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.MatchServiceClient.ReadIndexDatapointsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReadIndexDatapointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadIndexDatapointsResponse>",
+        "client": {
+          "shortName": "MatchServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.MatchServiceClient"
+        },
+        "method": {
+          "shortName": "ReadIndexDatapoints",
+          "fullName": "google.cloud.aiplatform.v1.MatchService.ReadIndexDatapoints",
+          "service": {
+            "shortName": "MatchService",
+            "fullName": "google.cloud.aiplatform.v1.MatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_MetadataService_CreateMetadataStore_sync",
       "title": "CreateMetadataStoreRequestObject",
       "description": "Snippet for CreateMetadataStore",

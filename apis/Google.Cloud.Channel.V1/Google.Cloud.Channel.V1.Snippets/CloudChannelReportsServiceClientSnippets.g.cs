@@ -107,6 +107,7 @@ namespace GoogleCSharpSnippets
             FetchReportResultsRequest request = new FetchReportResultsRequest
             {
                 ReportJobAsReportJobName = ReportJobName.FromAccountReportJob("[ACCOUNT]", "[REPORT_JOB]"),
+                PartitionKeys = { "", },
             };
             // Make the request
             PagedEnumerable<FetchReportResultsResponse, Row> response = cloudChannelReportsServiceClient.FetchReportResults(request);
@@ -155,6 +156,7 @@ namespace GoogleCSharpSnippets
             FetchReportResultsRequest request = new FetchReportResultsRequest
             {
                 ReportJobAsReportJobName = ReportJobName.FromAccountReportJob("[ACCOUNT]", "[REPORT_JOB]"),
+                PartitionKeys = { "", },
             };
             // Make the request
             PagedAsyncEnumerable<FetchReportResultsResponse, Row> response = cloudChannelReportsServiceClient.FetchReportResultsAsync(request);
