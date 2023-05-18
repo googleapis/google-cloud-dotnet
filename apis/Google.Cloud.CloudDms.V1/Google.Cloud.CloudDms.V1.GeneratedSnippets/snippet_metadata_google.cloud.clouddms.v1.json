@@ -2745,12 +2745,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 62,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -2794,12 +2794,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 63,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -3064,12 +3064,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 62,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -3113,12 +3113,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 63,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -3509,6 +3509,3822 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CreatePrivateConnection_sync",
+      "title": "CreatePrivateConnectionRequestObject",
+      "description": "Snippet for CreatePrivateConnection",
+      "file": "DataMigrationServiceClient.CreatePrivateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrivateConnection",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CreatePrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.CreatePrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.PrivateConnection, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CreatePrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CreatePrivateConnection_async",
+      "title": "CreatePrivateConnectionRequestObjectAsync",
+      "description": "Snippet for CreatePrivateConnectionAsync",
+      "file": "DataMigrationServiceClient.CreatePrivateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrivateConnectionAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CreatePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.CreatePrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.PrivateConnection, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CreatePrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CreatePrivateConnection_sync_flattened",
+      "title": "CreatePrivateConnection",
+      "description": "Snippet for CreatePrivateConnection",
+      "file": "DataMigrationServiceClient.CreatePrivateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrivateConnection",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CreatePrivateConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudDms.V1.PrivateConnection",
+            "name": "privateConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "privateConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.PrivateConnection, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CreatePrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CreatePrivateConnection_async_flattened",
+      "title": "CreatePrivateConnectionAsync",
+      "description": "Snippet for CreatePrivateConnectionAsync",
+      "file": "DataMigrationServiceClient.CreatePrivateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrivateConnectionAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CreatePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudDms.V1.PrivateConnection",
+            "name": "privateConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "privateConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.PrivateConnection, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CreatePrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CreatePrivateConnection_sync_flattened_resourceNames",
+      "title": "CreatePrivateConnectionResourceNames",
+      "description": "Snippet for CreatePrivateConnection",
+      "file": "DataMigrationServiceClient.CreatePrivateConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrivateConnection",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CreatePrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudDms.V1.PrivateConnection",
+            "name": "privateConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "privateConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.PrivateConnection, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CreatePrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CreatePrivateConnection_async_flattened_resourceNames",
+      "title": "CreatePrivateConnectionResourceNamesAsync",
+      "description": "Snippet for CreatePrivateConnectionAsync",
+      "file": "DataMigrationServiceClient.CreatePrivateConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrivateConnectionAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CreatePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudDms.V1.PrivateConnection",
+            "name": "privateConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "privateConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.PrivateConnection, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CreatePrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_GetPrivateConnection_sync",
+      "title": "GetPrivateConnectionRequestObject",
+      "description": "Snippet for GetPrivateConnection",
+      "file": "DataMigrationServiceClient.GetPrivateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrivateConnection",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.GetPrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.GetPrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudDms.V1.PrivateConnection",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetPrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.GetPrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_GetPrivateConnection_async",
+      "title": "GetPrivateConnectionRequestObjectAsync",
+      "description": "Snippet for GetPrivateConnectionAsync",
+      "file": "DataMigrationServiceClient.GetPrivateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrivateConnectionAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.GetPrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.GetPrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudDms.V1.PrivateConnection>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetPrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.GetPrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_GetPrivateConnection_sync_flattened",
+      "title": "GetPrivateConnection",
+      "description": "Snippet for GetPrivateConnection",
+      "file": "DataMigrationServiceClient.GetPrivateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrivateConnection",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.GetPrivateConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudDms.V1.PrivateConnection",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetPrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.GetPrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_GetPrivateConnection_async_flattened",
+      "title": "GetPrivateConnectionAsync",
+      "description": "Snippet for GetPrivateConnectionAsync",
+      "file": "DataMigrationServiceClient.GetPrivateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrivateConnectionAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.GetPrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudDms.V1.PrivateConnection>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetPrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.GetPrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_GetPrivateConnection_sync_flattened_resourceNames",
+      "title": "GetPrivateConnectionResourceNames",
+      "description": "Snippet for GetPrivateConnection",
+      "file": "DataMigrationServiceClient.GetPrivateConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrivateConnection",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.GetPrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.PrivateConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudDms.V1.PrivateConnection",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetPrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.GetPrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_GetPrivateConnection_async_flattened_resourceNames",
+      "title": "GetPrivateConnectionResourceNamesAsync",
+      "description": "Snippet for GetPrivateConnectionAsync",
+      "file": "DataMigrationServiceClient.GetPrivateConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrivateConnectionAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.GetPrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.PrivateConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudDms.V1.PrivateConnection>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetPrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.GetPrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ListPrivateConnections_sync",
+      "title": "ListPrivateConnectionsRequestObject",
+      "description": "Snippet for ListPrivateConnections",
+      "file": "DataMigrationServiceClient.ListPrivateConnectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnections",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ListPrivateConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ListPrivateConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse, Google.Cloud.CloudDms.V1.PrivateConnection>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnections",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ListPrivateConnections",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ListPrivateConnections_async",
+      "title": "ListPrivateConnectionsRequestObjectAsync",
+      "description": "Snippet for ListPrivateConnectionsAsync",
+      "file": "DataMigrationServiceClient.ListPrivateConnectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnectionsAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ListPrivateConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ListPrivateConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse, Google.Cloud.CloudDms.V1.PrivateConnection>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnections",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ListPrivateConnections",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ListPrivateConnections_sync_flattened",
+      "title": "ListPrivateConnections",
+      "description": "Snippet for ListPrivateConnections",
+      "file": "DataMigrationServiceClient.ListPrivateConnectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnections",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ListPrivateConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse, Google.Cloud.CloudDms.V1.PrivateConnection>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnections",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ListPrivateConnections",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ListPrivateConnections_async_flattened",
+      "title": "ListPrivateConnectionsAsync",
+      "description": "Snippet for ListPrivateConnectionsAsync",
+      "file": "DataMigrationServiceClient.ListPrivateConnectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnectionsAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ListPrivateConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse, Google.Cloud.CloudDms.V1.PrivateConnection>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnections",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ListPrivateConnections",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ListPrivateConnections_sync_flattened_resourceNames",
+      "title": "ListPrivateConnectionsResourceNames",
+      "description": "Snippet for ListPrivateConnections",
+      "file": "DataMigrationServiceClient.ListPrivateConnectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnections",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ListPrivateConnections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse, Google.Cloud.CloudDms.V1.PrivateConnection>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnections",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ListPrivateConnections",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ListPrivateConnections_async_flattened_resourceNames",
+      "title": "ListPrivateConnectionsResourceNamesAsync",
+      "description": "Snippet for ListPrivateConnectionsAsync",
+      "file": "DataMigrationServiceClient.ListPrivateConnectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnectionsAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ListPrivateConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudDms.V1.ListPrivateConnectionsResponse, Google.Cloud.CloudDms.V1.PrivateConnection>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnections",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ListPrivateConnections",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DeletePrivateConnection_sync",
+      "title": "DeletePrivateConnectionRequestObject",
+      "description": "Snippet for DeletePrivateConnection",
+      "file": "DataMigrationServiceClient.DeletePrivateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrivateConnection",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DeletePrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.DeletePrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DeletePrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DeletePrivateConnection_async",
+      "title": "DeletePrivateConnectionRequestObjectAsync",
+      "description": "Snippet for DeletePrivateConnectionAsync",
+      "file": "DataMigrationServiceClient.DeletePrivateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrivateConnectionAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DeletePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.DeletePrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DeletePrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DeletePrivateConnection_sync_flattened",
+      "title": "DeletePrivateConnection",
+      "description": "Snippet for DeletePrivateConnection",
+      "file": "DataMigrationServiceClient.DeletePrivateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrivateConnection",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DeletePrivateConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DeletePrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DeletePrivateConnection_async_flattened",
+      "title": "DeletePrivateConnectionAsync",
+      "description": "Snippet for DeletePrivateConnectionAsync",
+      "file": "DataMigrationServiceClient.DeletePrivateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrivateConnectionAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DeletePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DeletePrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DeletePrivateConnection_sync_flattened_resourceNames",
+      "title": "DeletePrivateConnectionResourceNames",
+      "description": "Snippet for DeletePrivateConnection",
+      "file": "DataMigrationServiceClient.DeletePrivateConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrivateConnection",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DeletePrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.PrivateConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DeletePrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DeletePrivateConnection_async_flattened_resourceNames",
+      "title": "DeletePrivateConnectionResourceNamesAsync",
+      "description": "Snippet for DeletePrivateConnectionAsync",
+      "file": "DataMigrationServiceClient.DeletePrivateConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrivateConnectionAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DeletePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.PrivateConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePrivateConnection",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DeletePrivateConnection",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_GetConversionWorkspace_sync",
+      "title": "GetConversionWorkspaceRequestObject",
+      "description": "Snippet for GetConversionWorkspace",
+      "file": "DataMigrationServiceClient.GetConversionWorkspaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.GetConversionWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.GetConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudDms.V1.ConversionWorkspace",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.GetConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_GetConversionWorkspace_async",
+      "title": "GetConversionWorkspaceRequestObjectAsync",
+      "description": "Snippet for GetConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.GetConversionWorkspaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.GetConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.GetConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudDms.V1.ConversionWorkspace>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.GetConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_GetConversionWorkspace_sync_flattened",
+      "title": "GetConversionWorkspace",
+      "description": "Snippet for GetConversionWorkspace",
+      "file": "DataMigrationServiceClient.GetConversionWorkspaceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.GetConversionWorkspace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudDms.V1.ConversionWorkspace",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.GetConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_GetConversionWorkspace_async_flattened",
+      "title": "GetConversionWorkspaceAsync",
+      "description": "Snippet for GetConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.GetConversionWorkspaceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.GetConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudDms.V1.ConversionWorkspace>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.GetConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_GetConversionWorkspace_sync_flattened_resourceNames",
+      "title": "GetConversionWorkspaceResourceNames",
+      "description": "Snippet for GetConversionWorkspace",
+      "file": "DataMigrationServiceClient.GetConversionWorkspaceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.GetConversionWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ConversionWorkspaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudDms.V1.ConversionWorkspace",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.GetConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_GetConversionWorkspace_async_flattened_resourceNames",
+      "title": "GetConversionWorkspaceResourceNamesAsync",
+      "description": "Snippet for GetConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.GetConversionWorkspaceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.GetConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ConversionWorkspaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudDms.V1.ConversionWorkspace>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.GetConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ListConversionWorkspaces_sync",
+      "title": "ListConversionWorkspacesRequestObject",
+      "description": "Snippet for ListConversionWorkspaces",
+      "file": "DataMigrationServiceClient.ListConversionWorkspacesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConversionWorkspaces",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ListConversionWorkspaces",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ListConversionWorkspacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse, Google.Cloud.CloudDms.V1.ConversionWorkspace>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListConversionWorkspaces",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ListConversionWorkspaces",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ListConversionWorkspaces_async",
+      "title": "ListConversionWorkspacesRequestObjectAsync",
+      "description": "Snippet for ListConversionWorkspacesAsync",
+      "file": "DataMigrationServiceClient.ListConversionWorkspacesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConversionWorkspacesAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ListConversionWorkspacesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ListConversionWorkspacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse, Google.Cloud.CloudDms.V1.ConversionWorkspace>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListConversionWorkspaces",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ListConversionWorkspaces",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ListConversionWorkspaces_sync_flattened",
+      "title": "ListConversionWorkspaces",
+      "description": "Snippet for ListConversionWorkspaces",
+      "file": "DataMigrationServiceClient.ListConversionWorkspacesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConversionWorkspaces",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ListConversionWorkspaces",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse, Google.Cloud.CloudDms.V1.ConversionWorkspace>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListConversionWorkspaces",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ListConversionWorkspaces",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ListConversionWorkspaces_async_flattened",
+      "title": "ListConversionWorkspacesAsync",
+      "description": "Snippet for ListConversionWorkspacesAsync",
+      "file": "DataMigrationServiceClient.ListConversionWorkspacesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConversionWorkspacesAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ListConversionWorkspacesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse, Google.Cloud.CloudDms.V1.ConversionWorkspace>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListConversionWorkspaces",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ListConversionWorkspaces",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ListConversionWorkspaces_sync_flattened_resourceNames",
+      "title": "ListConversionWorkspacesResourceNames",
+      "description": "Snippet for ListConversionWorkspaces",
+      "file": "DataMigrationServiceClient.ListConversionWorkspacesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConversionWorkspaces",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ListConversionWorkspaces",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse, Google.Cloud.CloudDms.V1.ConversionWorkspace>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListConversionWorkspaces",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ListConversionWorkspaces",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ListConversionWorkspaces_async_flattened_resourceNames",
+      "title": "ListConversionWorkspacesResourceNamesAsync",
+      "description": "Snippet for ListConversionWorkspacesAsync",
+      "file": "DataMigrationServiceClient.ListConversionWorkspacesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConversionWorkspacesAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ListConversionWorkspacesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudDms.V1.ListConversionWorkspacesResponse, Google.Cloud.CloudDms.V1.ConversionWorkspace>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListConversionWorkspaces",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ListConversionWorkspaces",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CreateConversionWorkspace_sync",
+      "title": "CreateConversionWorkspaceRequestObject",
+      "description": "Snippet for CreateConversionWorkspace",
+      "file": "DataMigrationServiceClient.CreateConversionWorkspaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CreateConversionWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.CreateConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CreateConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CreateConversionWorkspace_async",
+      "title": "CreateConversionWorkspaceRequestObjectAsync",
+      "description": "Snippet for CreateConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.CreateConversionWorkspaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CreateConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.CreateConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CreateConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CreateConversionWorkspace_sync_flattened",
+      "title": "CreateConversionWorkspace",
+      "description": "Snippet for CreateConversionWorkspace",
+      "file": "DataMigrationServiceClient.CreateConversionWorkspaceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CreateConversionWorkspace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudDms.V1.ConversionWorkspace",
+            "name": "conversionWorkspace"
+          },
+          {
+            "type": "System.String",
+            "name": "conversionWorkspaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CreateConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CreateConversionWorkspace_async_flattened",
+      "title": "CreateConversionWorkspaceAsync",
+      "description": "Snippet for CreateConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.CreateConversionWorkspaceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CreateConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudDms.V1.ConversionWorkspace",
+            "name": "conversionWorkspace"
+          },
+          {
+            "type": "System.String",
+            "name": "conversionWorkspaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CreateConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CreateConversionWorkspace_sync_flattened_resourceNames",
+      "title": "CreateConversionWorkspaceResourceNames",
+      "description": "Snippet for CreateConversionWorkspace",
+      "file": "DataMigrationServiceClient.CreateConversionWorkspaceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CreateConversionWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudDms.V1.ConversionWorkspace",
+            "name": "conversionWorkspace"
+          },
+          {
+            "type": "System.String",
+            "name": "conversionWorkspaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CreateConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CreateConversionWorkspace_async_flattened_resourceNames",
+      "title": "CreateConversionWorkspaceResourceNamesAsync",
+      "description": "Snippet for CreateConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.CreateConversionWorkspaceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CreateConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudDms.V1.ConversionWorkspace",
+            "name": "conversionWorkspace"
+          },
+          {
+            "type": "System.String",
+            "name": "conversionWorkspaceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CreateConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_UpdateConversionWorkspace_sync",
+      "title": "UpdateConversionWorkspaceRequestObject",
+      "description": "Snippet for UpdateConversionWorkspace",
+      "file": "DataMigrationServiceClient.UpdateConversionWorkspaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.UpdateConversionWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.UpdateConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_UpdateConversionWorkspace_async",
+      "title": "UpdateConversionWorkspaceRequestObjectAsync",
+      "description": "Snippet for UpdateConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.UpdateConversionWorkspaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.UpdateConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.UpdateConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.UpdateConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_UpdateConversionWorkspace_sync_flattened",
+      "title": "UpdateConversionWorkspace",
+      "description": "Snippet for UpdateConversionWorkspace",
+      "file": "DataMigrationServiceClient.UpdateConversionWorkspaceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.UpdateConversionWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ConversionWorkspace",
+            "name": "conversionWorkspace"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.UpdateConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_UpdateConversionWorkspace_async_flattened",
+      "title": "UpdateConversionWorkspaceAsync",
+      "description": "Snippet for UpdateConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.UpdateConversionWorkspaceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.UpdateConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ConversionWorkspace",
+            "name": "conversionWorkspace"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.UpdateConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DeleteConversionWorkspace_sync",
+      "title": "DeleteConversionWorkspaceRequestObject",
+      "description": "Snippet for DeleteConversionWorkspace",
+      "file": "DataMigrationServiceClient.DeleteConversionWorkspaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DeleteConversionWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DeleteConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DeleteConversionWorkspace_async",
+      "title": "DeleteConversionWorkspaceRequestObjectAsync",
+      "description": "Snippet for DeleteConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.DeleteConversionWorkspaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DeleteConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.DeleteConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DeleteConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DeleteConversionWorkspace_sync_flattened",
+      "title": "DeleteConversionWorkspace",
+      "description": "Snippet for DeleteConversionWorkspace",
+      "file": "DataMigrationServiceClient.DeleteConversionWorkspaceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DeleteConversionWorkspace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DeleteConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DeleteConversionWorkspace_async_flattened",
+      "title": "DeleteConversionWorkspaceAsync",
+      "description": "Snippet for DeleteConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.DeleteConversionWorkspaceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DeleteConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DeleteConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DeleteConversionWorkspace_sync_flattened_resourceNames",
+      "title": "DeleteConversionWorkspaceResourceNames",
+      "description": "Snippet for DeleteConversionWorkspace",
+      "file": "DataMigrationServiceClient.DeleteConversionWorkspaceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DeleteConversionWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ConversionWorkspaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DeleteConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DeleteConversionWorkspace_async_flattened_resourceNames",
+      "title": "DeleteConversionWorkspaceResourceNamesAsync",
+      "description": "Snippet for DeleteConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.DeleteConversionWorkspaceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DeleteConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ConversionWorkspaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DeleteConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_SeedConversionWorkspace_sync",
+      "title": "SeedConversionWorkspaceRequestObject",
+      "description": "Snippet for SeedConversionWorkspace",
+      "file": "DataMigrationServiceClient.SeedConversionWorkspaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SeedConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.SeedConversionWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "SeedConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.SeedConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_SeedConversionWorkspace_async",
+      "title": "SeedConversionWorkspaceRequestObjectAsync",
+      "description": "Snippet for SeedConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.SeedConversionWorkspaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SeedConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.SeedConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.SeedConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "SeedConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.SeedConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ImportMappingRules_sync",
+      "title": "ImportMappingRulesRequestObject",
+      "description": "Snippet for ImportMappingRules",
+      "file": "DataMigrationServiceClient.ImportMappingRulesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportMappingRules",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ImportMappingRules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ImportMappingRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ImportMappingRules",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ImportMappingRules",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ImportMappingRules_async",
+      "title": "ImportMappingRulesRequestObjectAsync",
+      "description": "Snippet for ImportMappingRulesAsync",
+      "file": "DataMigrationServiceClient.ImportMappingRulesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportMappingRulesAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ImportMappingRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ImportMappingRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ImportMappingRules",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ImportMappingRules",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ConvertConversionWorkspace_sync",
+      "title": "ConvertConversionWorkspaceRequestObject",
+      "description": "Snippet for ConvertConversionWorkspace",
+      "file": "DataMigrationServiceClient.ConvertConversionWorkspaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConvertConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ConvertConversionWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ConvertConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ConvertConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ConvertConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ConvertConversionWorkspace_async",
+      "title": "ConvertConversionWorkspaceRequestObjectAsync",
+      "description": "Snippet for ConvertConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.ConvertConversionWorkspaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConvertConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ConvertConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ConvertConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ConvertConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ConvertConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CommitConversionWorkspace_sync",
+      "title": "CommitConversionWorkspaceRequestObject",
+      "description": "Snippet for CommitConversionWorkspace",
+      "file": "DataMigrationServiceClient.CommitConversionWorkspaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CommitConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CommitConversionWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.CommitConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CommitConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CommitConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_CommitConversionWorkspace_async",
+      "title": "CommitConversionWorkspaceRequestObjectAsync",
+      "description": "Snippet for CommitConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.CommitConversionWorkspaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CommitConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.CommitConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.CommitConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CommitConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.CommitConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_RollbackConversionWorkspace_sync",
+      "title": "RollbackConversionWorkspaceRequestObject",
+      "description": "Snippet for RollbackConversionWorkspace",
+      "file": "DataMigrationServiceClient.RollbackConversionWorkspaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.RollbackConversionWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.RollbackConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "RollbackConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.RollbackConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_RollbackConversionWorkspace_async",
+      "title": "RollbackConversionWorkspaceRequestObjectAsync",
+      "description": "Snippet for RollbackConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.RollbackConversionWorkspaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.RollbackConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.RollbackConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "RollbackConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.RollbackConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ApplyConversionWorkspace_sync",
+      "title": "ApplyConversionWorkspaceRequestObject",
+      "description": "Snippet for ApplyConversionWorkspace",
+      "file": "DataMigrationServiceClient.ApplyConversionWorkspaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplyConversionWorkspace",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ApplyConversionWorkspace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ApplyConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ApplyConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ApplyConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_ApplyConversionWorkspace_async",
+      "title": "ApplyConversionWorkspaceRequestObjectAsync",
+      "description": "Snippet for ApplyConversionWorkspaceAsync",
+      "file": "DataMigrationServiceClient.ApplyConversionWorkspaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplyConversionWorkspaceAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.ApplyConversionWorkspaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.ApplyConversionWorkspaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudDms.V1.ConversionWorkspace, Google.Cloud.CloudDms.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ApplyConversionWorkspace",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.ApplyConversionWorkspace",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DescribeDatabaseEntities_sync",
+      "title": "DescribeDatabaseEntitiesRequestObject",
+      "description": "Snippet for DescribeDatabaseEntities",
+      "file": "DataMigrationServiceClient.DescribeDatabaseEntitiesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DescribeDatabaseEntities",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DescribeDatabaseEntities",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesResponse, Google.Cloud.CloudDms.V1.DatabaseEntity>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DescribeDatabaseEntities",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DescribeDatabaseEntities",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DescribeDatabaseEntities_async",
+      "title": "DescribeDatabaseEntitiesRequestObjectAsync",
+      "description": "Snippet for DescribeDatabaseEntitiesAsync",
+      "file": "DataMigrationServiceClient.DescribeDatabaseEntitiesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DescribeDatabaseEntitiesAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DescribeDatabaseEntitiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudDms.V1.DescribeDatabaseEntitiesResponse, Google.Cloud.CloudDms.V1.DatabaseEntity>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DescribeDatabaseEntities",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DescribeDatabaseEntities",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_SearchBackgroundJobs_sync",
+      "title": "SearchBackgroundJobsRequestObject",
+      "description": "Snippet for SearchBackgroundJobs",
+      "file": "DataMigrationServiceClient.SearchBackgroundJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchBackgroundJobs",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.SearchBackgroundJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.SearchBackgroundJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudDms.V1.SearchBackgroundJobsResponse",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "SearchBackgroundJobs",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.SearchBackgroundJobs",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_SearchBackgroundJobs_async",
+      "title": "SearchBackgroundJobsRequestObjectAsync",
+      "description": "Snippet for SearchBackgroundJobsAsync",
+      "file": "DataMigrationServiceClient.SearchBackgroundJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchBackgroundJobsAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.SearchBackgroundJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.SearchBackgroundJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudDms.V1.SearchBackgroundJobsResponse>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "SearchBackgroundJobs",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.SearchBackgroundJobs",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DescribeConversionWorkspaceRevisions_sync",
+      "title": "DescribeConversionWorkspaceRevisionsRequestObject",
+      "description": "Snippet for DescribeConversionWorkspaceRevisions",
+      "file": "DataMigrationServiceClient.DescribeConversionWorkspaceRevisionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DescribeConversionWorkspaceRevisions",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DescribeConversionWorkspaceRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsResponse",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DescribeConversionWorkspaceRevisions",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DescribeConversionWorkspaceRevisions",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_DescribeConversionWorkspaceRevisions_async",
+      "title": "DescribeConversionWorkspaceRevisionsRequestObjectAsync",
+      "description": "Snippet for DescribeConversionWorkspaceRevisionsAsync",
+      "file": "DataMigrationServiceClient.DescribeConversionWorkspaceRevisionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DescribeConversionWorkspaceRevisionsAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.DescribeConversionWorkspaceRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudDms.V1.DescribeConversionWorkspaceRevisionsResponse>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DescribeConversionWorkspaceRevisions",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.DescribeConversionWorkspaceRevisions",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_FetchStaticIps_sync",
+      "title": "FetchStaticIpsRequestObject",
+      "description": "Snippet for FetchStaticIps",
+      "file": "DataMigrationServiceClient.FetchStaticIpsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchStaticIps",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.FetchStaticIps",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.FetchStaticIpsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudDms.V1.FetchStaticIpsResponse, System.String>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "FetchStaticIps",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.FetchStaticIps",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_FetchStaticIps_async",
+      "title": "FetchStaticIpsRequestObjectAsync",
+      "description": "Snippet for FetchStaticIpsAsync",
+      "file": "DataMigrationServiceClient.FetchStaticIpsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchStaticIpsAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.FetchStaticIpsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudDms.V1.FetchStaticIpsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudDms.V1.FetchStaticIpsResponse, System.String>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "FetchStaticIps",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.FetchStaticIps",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_FetchStaticIps_sync_flattened",
+      "title": "FetchStaticIps",
+      "description": "Snippet for FetchStaticIps",
+      "file": "DataMigrationServiceClient.FetchStaticIpsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchStaticIps",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.FetchStaticIps",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudDms.V1.FetchStaticIpsResponse, System.String>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "FetchStaticIps",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.FetchStaticIps",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_FetchStaticIps_async_flattened",
+      "title": "FetchStaticIpsAsync",
+      "description": "Snippet for FetchStaticIpsAsync",
+      "file": "DataMigrationServiceClient.FetchStaticIpsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchStaticIpsAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.FetchStaticIpsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudDms.V1.FetchStaticIpsResponse, System.String>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "FetchStaticIps",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.FetchStaticIps",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_FetchStaticIps_sync_flattened_resourceNames",
+      "title": "FetchStaticIpsResourceNames",
+      "description": "Snippet for FetchStaticIps",
+      "file": "DataMigrationServiceClient.FetchStaticIpsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchStaticIps",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.FetchStaticIps",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudDms.V1.FetchStaticIpsResponse, System.String>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "FetchStaticIps",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.FetchStaticIps",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamigration_v1_generated_DataMigrationService_FetchStaticIps_async_flattened_resourceNames",
+      "title": "FetchStaticIpsResourceNamesAsync",
+      "description": "Snippet for FetchStaticIpsAsync",
+      "file": "DataMigrationServiceClient.FetchStaticIpsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchStaticIpsAsync",
+        "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient.FetchStaticIpsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudDms.V1.FetchStaticIpsResponse, System.String>",
+        "client": {
+          "shortName": "DataMigrationServiceClient",
+          "fullName": "Google.Cloud.CloudDms.V1.DataMigrationServiceClient"
+        },
+        "method": {
+          "shortName": "FetchStaticIps",
+          "fullName": "google.cloud.clouddms.v1.DataMigrationService.FetchStaticIps",
+          "service": {
+            "shortName": "DataMigrationService",
+            "fullName": "google.cloud.clouddms.v1.DataMigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
           "type": "SHORT"
         }
       ]

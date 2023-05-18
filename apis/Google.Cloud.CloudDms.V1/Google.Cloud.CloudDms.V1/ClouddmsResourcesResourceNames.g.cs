@@ -513,6 +513,473 @@ namespace Google.Cloud.CloudDms.V1
         public static bool operator !=(ConnectionProfileName a, ConnectionProfileName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>PrivateConnection</c> resource.</summary>
+    public sealed partial class PrivateConnectionName : gax::IResourceName, sys::IEquatable<PrivateConnectionName>
+    {
+        /// <summary>The possible contents of <see cref="PrivateConnectionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>.
+            /// </summary>
+            ProjectLocationPrivateConnection = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationPrivateConnection = new gax::PathTemplate("projects/{project}/locations/{location}/privateConnections/{private_connection}");
+
+        /// <summary>Creates a <see cref="PrivateConnectionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="PrivateConnectionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static PrivateConnectionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new PrivateConnectionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="PrivateConnectionName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="privateConnectionId">The <c>PrivateConnection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="PrivateConnectionName"/> constructed from the provided ids.</returns>
+        public static PrivateConnectionName FromProjectLocationPrivateConnection(string projectId, string locationId, string privateConnectionId) =>
+            new PrivateConnectionName(ResourceNameType.ProjectLocationPrivateConnection, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), privateConnectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(privateConnectionId, nameof(privateConnectionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="PrivateConnectionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="privateConnectionId">The <c>PrivateConnection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="PrivateConnectionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string privateConnectionId) =>
+            FormatProjectLocationPrivateConnection(projectId, locationId, privateConnectionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="PrivateConnectionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="privateConnectionId">The <c>PrivateConnection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="PrivateConnectionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>.
+        /// </returns>
+        public static string FormatProjectLocationPrivateConnection(string projectId, string locationId, string privateConnectionId) =>
+            s_projectLocationPrivateConnection.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(privateConnectionId, nameof(privateConnectionId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="PrivateConnectionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="privateConnectionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="PrivateConnectionName"/> if successful.</returns>
+        public static PrivateConnectionName Parse(string privateConnectionName) => Parse(privateConnectionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="PrivateConnectionName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="privateConnectionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="PrivateConnectionName"/> if successful.</returns>
+        public static PrivateConnectionName Parse(string privateConnectionName, bool allowUnparsed) =>
+            TryParse(privateConnectionName, allowUnparsed, out PrivateConnectionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="PrivateConnectionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="privateConnectionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="PrivateConnectionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string privateConnectionName, out PrivateConnectionName result) =>
+            TryParse(privateConnectionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="PrivateConnectionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="privateConnectionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="PrivateConnectionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string privateConnectionName, bool allowUnparsed, out PrivateConnectionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(privateConnectionName, nameof(privateConnectionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationPrivateConnection.TryParseName(privateConnectionName, out resourceName))
+            {
+                result = FromProjectLocationPrivateConnection(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(privateConnectionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private PrivateConnectionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string privateConnectionId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            PrivateConnectionId = privateConnectionId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="PrivateConnectionName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="privateConnectionId">The <c>PrivateConnection</c> ID. Must not be <c>null</c> or empty.</param>
+        public PrivateConnectionName(string projectId, string locationId, string privateConnectionId) : this(ResourceNameType.ProjectLocationPrivateConnection, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), privateConnectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(privateConnectionId, nameof(privateConnectionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>PrivateConnection</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string PrivateConnectionId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationPrivateConnection: return s_projectLocationPrivateConnection.Expand(ProjectId, LocationId, PrivateConnectionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as PrivateConnectionName);
+
+        /// <inheritdoc/>
+        public bool Equals(PrivateConnectionName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(PrivateConnectionName a, PrivateConnectionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(PrivateConnectionName a, PrivateConnectionName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>Networks</c> resource.</summary>
+    public sealed partial class NetworksName : gax::IResourceName, sys::IEquatable<NetworksName>
+    {
+        /// <summary>The possible contents of <see cref="NetworksName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/global/networks/{network}</c>.</summary>
+            ProjectNetwork = 1,
+        }
+
+        private static gax::PathTemplate s_projectNetwork = new gax::PathTemplate("projects/{project}/global/networks/{network}");
+
+        /// <summary>Creates a <see cref="NetworksName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="NetworksName"/> containing the provided <paramref name="unparsedResourceName"/>
+        /// .
+        /// </returns>
+        public static NetworksName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new NetworksName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="NetworksName"/> with the pattern <c>projects/{project}/global/networks/{network}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="networkId">The <c>Network</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="NetworksName"/> constructed from the provided ids.</returns>
+        public static NetworksName FromProjectNetwork(string projectId, string networkId) =>
+            new NetworksName(ResourceNameType.ProjectNetwork, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), networkId: gax::GaxPreconditions.CheckNotNullOrEmpty(networkId, nameof(networkId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="NetworksName"/> with pattern
+        /// <c>projects/{project}/global/networks/{network}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="networkId">The <c>Network</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="NetworksName"/> with pattern
+        /// <c>projects/{project}/global/networks/{network}</c>.
+        /// </returns>
+        public static string Format(string projectId, string networkId) => FormatProjectNetwork(projectId, networkId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="NetworksName"/> with pattern
+        /// <c>projects/{project}/global/networks/{network}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="networkId">The <c>Network</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="NetworksName"/> with pattern
+        /// <c>projects/{project}/global/networks/{network}</c>.
+        /// </returns>
+        public static string FormatProjectNetwork(string projectId, string networkId) =>
+            s_projectNetwork.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(networkId, nameof(networkId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="NetworksName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/global/networks/{network}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="networksName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="NetworksName"/> if successful.</returns>
+        public static NetworksName Parse(string networksName) => Parse(networksName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="NetworksName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/global/networks/{network}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="networksName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="NetworksName"/> if successful.</returns>
+        public static NetworksName Parse(string networksName, bool allowUnparsed) =>
+            TryParse(networksName, allowUnparsed, out NetworksName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="NetworksName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/global/networks/{network}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="networksName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="NetworksName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string networksName, out NetworksName result) => TryParse(networksName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="NetworksName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/global/networks/{network}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="networksName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="NetworksName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string networksName, bool allowUnparsed, out NetworksName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(networksName, nameof(networksName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectNetwork.TryParseName(networksName, out resourceName))
+            {
+                result = FromProjectNetwork(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(networksName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private NetworksName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string networkId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            NetworkId = networkId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="NetworksName"/> class from the component parts of pattern
+        /// <c>projects/{project}/global/networks/{network}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="networkId">The <c>Network</c> ID. Must not be <c>null</c> or empty.</param>
+        public NetworksName(string projectId, string networkId) : this(ResourceNameType.ProjectNetwork, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), networkId: gax::GaxPreconditions.CheckNotNullOrEmpty(networkId, nameof(networkId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Network</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string NetworkId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectNetwork: return s_projectNetwork.Expand(ProjectId, NetworkId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as NetworksName);
+
+        /// <inheritdoc/>
+        public bool Equals(NetworksName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(NetworksName a, NetworksName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(NetworksName a, NetworksName b) => !(a == b);
+    }
+
     public partial class MigrationJob
     {
         /// <summary>
@@ -534,6 +1001,30 @@ namespace Google.Cloud.CloudDms.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gccv::ConnectionProfileName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class PrivateConnection
+    {
+        /// <summary>
+        /// <see cref="gccv::PrivateConnectionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::PrivateConnectionName PrivateConnectionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::PrivateConnectionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class VpcPeeringConfig
+    {
+        /// <summary>
+        /// <see cref="NetworksName"/>-typed view over the <see cref="VpcName"/> resource name property.
+        /// </summary>
+        public NetworksName VpcNameAsNetworksName
+        {
+            get => string.IsNullOrEmpty(VpcName) ? null : NetworksName.Parse(VpcName, allowUnparsed: true);
+            set => VpcName = value?.ToString() ?? "";
         }
     }
 }

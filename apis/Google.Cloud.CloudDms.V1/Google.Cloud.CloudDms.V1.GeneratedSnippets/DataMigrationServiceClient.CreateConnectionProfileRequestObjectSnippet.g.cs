@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
                 ConnectionProfileId = "",
                 ConnectionProfile = new ConnectionProfile(),
                 RequestId = "",
+                ValidateOnly = false,
+                SkipValidation = false,
             };
             // Make the request
             Operation<ConnectionProfile, OperationMetadata> response = dataMigrationServiceClient.CreateConnectionProfile(request);
