@@ -128,6 +128,7 @@ namespace Google.Cloud.AIPlatform.V1
             yield return LineageSubgraphReflection.Descriptor;
             yield return MachineResourcesReflection.Descriptor;
             yield return ManualBatchTuningParametersReflection.Descriptor;
+            yield return MatchServiceReflection.Descriptor;
             yield return MetadataSchemaReflection.Descriptor;
             yield return MetadataServiceReflection.Descriptor;
             yield return MetadataStoreReflection.Descriptor;
