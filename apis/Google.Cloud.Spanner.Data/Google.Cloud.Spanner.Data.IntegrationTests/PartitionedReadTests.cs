@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,9 +30,20 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public PartitionedReadTests(PartitionedReadTableFixture fixture) =>
             _fixture = fixture;
 
-        [CombinatorialData]
-        [Theory]
-        public async Task DistributedReadAsync(bool query)
+        [Theory, CombinatorialData]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
+        public async Task DistributedReadAsyncWithOptions(bool query, bool dataBoostEnabled)
+        {
+            await DistributedReadAsync(query, dataBoostEnabled);
+        }
+
+        [Theory, CombinatorialData]
+        public async Task DistributedReadAsyncWithoutOptions(bool query)
+        {
+            await DistributedReadAsync(query, null);
+        }
+
+        private async Task DistributedReadAsync(bool query, bool? dataBoostEnabled)
         {
             int numRows;
             using (var connection = _fixture.GetConnection())
@@ -53,7 +65,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     transaction.DisposeBehavior = DisposeBehavior.CloseResources;
                     cmd.Transaction = transaction;
-                    var partitions = await cmd.GetReaderPartitionsAsync(1000);
+                    var partitions = dataBoostEnabled == null ?
+                        await cmd.GetReaderPartitionsAsync(1000) :
+                        await cmd.GetReaderPartitionsAsync(new PartitionOptions(1000, null, dataBoostEnabled));
                     var transactionId = transaction.TransactionId;
 
                     //we simulate a serialization/deserialization step in the call to the subtask.

@@ -164,23 +164,24 @@ namespace Google.Cloud.Spanner.Data
                 return effectiveTransaction.ExecuteReadOrQueryAsync(request, cancellationToken, CommandTimeout);
             }
 
-            internal async Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(long? partitionSizeBytes, long? maxPartitions, CancellationToken cancellationToken)
+            internal async Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(PartitionOptions options)
             {
                 ValidateConnectionAndCommandTextBuilder();
 
                 GaxPreconditions.CheckState(Transaction?.Mode == TransactionMode.ReadOnly,
                     "GetReaderPartitions can only be executed within an explicitly created read-only transaction.");
 
-                await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
+                await Connection.EnsureIsOpenAsync(options.CancellationToken).ConfigureAwait(false);
                 var readOrQueryRequest = GetReadOrQueryRequest();
                 var tokens = await Transaction.GetPartitionTokensAsync(
-                        readOrQueryRequest, partitionSizeBytes, maxPartitions, cancellationToken, CommandTimeout)
+                        readOrQueryRequest, options.PartitionSizeBytes, options.MaxPartitions, options.CancellationToken, CommandTimeout)
                     .ConfigureAwait(false);
                 return tokens.Select(
                     x =>
                     {
                         var request = readOrQueryRequest.CloneRequest();
                         request.PartitionToken = x;
+                        request.DataBoostEnabled = options.DataBoostEnabled;
                         return new CommandPartition(request);
                     }).ToList();
             }

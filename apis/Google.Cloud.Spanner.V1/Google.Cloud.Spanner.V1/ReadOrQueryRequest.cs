@@ -56,6 +56,11 @@ namespace Google.Cloud.Spanner.V1
         ByteString ResumeToken { set; }
 
         /// <summary>
+        /// See <see cref="ReadRequest.DataBoostEnabled"/> and <see cref="ExecuteSqlRequest.DataBoostEnabled"/>
+        /// </summary>
+        bool DataBoostEnabled { set; }
+
+        /// <summary>
         /// See <see cref="ReadRequest.PartitionToken"/> and <see cref="ExecuteSqlRequest.PartitionToken"/>
         /// </summary>
         ByteString PartitionToken { get; set; }
@@ -238,6 +243,14 @@ namespace Google.Cloud.Spanner.V1
         public ByteString ResumeToken
         {
             set => Request.ResumeToken = value;
+        }
+
+        /// <summary>
+        /// See <see cref="V1.ReadRequest.DataBoostEnabled"/> and <see cref="V1.ExecuteSqlRequest.DataBoostEnabled"/>
+        /// </summary>
+        public bool DataBoostEnabled
+        {
+            set => Request.DataBoostEnabled = value;
         }
 
         /// <summary>

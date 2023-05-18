@@ -21,7 +21,7 @@ namespace Google.Cloud.Spanner.Data
     {
         /// <summary>
         /// Releases transactional resources back to the global pool when <see cref="SpannerTransaction.Dispose"/> is called.
-        /// This option is not valid for shared transactions (see <see cref="SpannerCommand.GetReaderPartitionsAsync"/>).
+        /// This option is not valid for shared transactions (see <see cref="SpannerCommand.GetReaderPartitionsAsync(PartitionOptions)"/>).
         /// </summary>
         ReleaseToPool = 0,
         /// <summary>

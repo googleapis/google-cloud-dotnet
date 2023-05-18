@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -400,7 +400,21 @@ namespace Google.Cloud.Spanner.Data
             long? partitionSizeBytes = null,
             long? maxPartitions = null,
             CancellationToken cancellationToken = default) =>
-            CreateExecutableCommand().GetReaderPartitionsAsync(partitionSizeBytes, maxPartitions, cancellationToken);
+            GetReaderPartitionsAsync(new PartitionOptions(partitionSizeBytes, maxPartitions, false, cancellationToken));
+
+        /// <summary>
+        /// Creates a set of <see cref="CommandPartition"/> objects that are used to execute a query or read
+        /// operation in parallel.  Each of the returned command partitions are used
+        /// by <see cref="SpannerConnection.CreateCommandWithPartition"/> to create a new <see cref="SpannerCommand"/>
+        /// that returns a subset of data.
+        /// </summary>
+        /// <param name="options"> An instance of <see cref="PartitionOptions"/> in which options can be specified for use when generating
+        /// and executing partitions.
+        /// </param>
+        /// <returns>The list of partitions that can be used to create <see cref="SpannerCommand"/>
+        /// objects.</returns>
+        public Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(PartitionOptions options) =>
+            CreateExecutableCommand().GetReaderPartitionsAsync(options);
 
         /// <summary>
         /// Sends the command to Cloud Spanner and builds a <see cref="SpannerDataReader"/>.

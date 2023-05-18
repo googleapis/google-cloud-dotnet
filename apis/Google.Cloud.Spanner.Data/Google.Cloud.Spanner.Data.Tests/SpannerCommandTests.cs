@@ -959,8 +959,9 @@ namespace Google.Cloud.Spanner.Data.Tests
                 It.IsAny<CallSettings>()));
         }
 
-        [Fact]
-        public async Task CanExecuteReadPartitionedReadCommand()
+        [CombinatorialData]
+        [Theory]
+        public async Task CanExecuteReadPartitionedReadCommand(bool? dataBoostEnabled)
         {
             var spannerClientMock = SpannerClientHelpers
                 .CreateMockClient(Logger.DefaultLogger);
@@ -974,7 +975,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             var transaction = await connection.BeginReadOnlyTransactionAsync();
             var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
             command.Transaction = transaction;
-            var partitions = await command.GetReaderPartitionsAsync(0, 10);
+            var partitions = dataBoostEnabled == null ?
+                await command.GetReaderPartitionsAsync(0, 10) :
+                await command.GetReaderPartitionsAsync(new PartitionOptions(0, 10, dataBoostEnabled));
             foreach (var partition in partitions)
             {
                 // Normally we would send this information to another client to read, but we are just simulating it here
@@ -985,8 +988,13 @@ namespace Google.Cloud.Spanner.Data.Tests
                 Assert.True(reader.HasRows);
             }
 
+            bool expectedDataBoostEnabledValue = dataBoostEnabled.HasValue && dataBoostEnabled.Value;
+
             spannerClientMock.Verify(client => client.StreamingRead(
-                It.Is<ReadRequest>(request => !request.PartitionToken.IsEmpty && object.Equals(request.Transaction.Id.ToBase64(), transaction.TransactionId.Id)),
+                It.Is<ReadRequest>(request =>
+                !request.PartitionToken.IsEmpty &&
+                request.DataBoostEnabled == expectedDataBoostEnabledValue &&
+                object.Equals(request.Transaction.Id.ToBase64(), transaction.TransactionId.Id)),
                 It.IsAny<CallSettings>()), Times.Exactly(10));
         }
 
