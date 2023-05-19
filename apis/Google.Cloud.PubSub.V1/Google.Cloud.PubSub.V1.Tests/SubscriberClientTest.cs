@@ -223,7 +223,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                     _scheduler = scheduler;
                     _writeAsyncPreDelay = writeAsyncPreDelay; // delay within the WriteAsync() method. Simulating network or server slowness.
                     var responseStream = new En(msgs, scheduler, taskHelper, clock, useMsgAsId, ct, isExactlyOnceDelivery);
-                    _call = new AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse>(null, responseStream, Task.FromResult(new Metadata()), null, null, null);
+                    // Set disposeAction parameter of AsyncDuplexStreamingCall to No-op as it is called internally while disposing stream.
+                    _call = new AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse>(null, responseStream, Task.FromResult(new Metadata()), null, null, () => { });
                     _clock = clock;
                     _writeCompletes = writeCompletes;
                     _streamPings = streamPings;
