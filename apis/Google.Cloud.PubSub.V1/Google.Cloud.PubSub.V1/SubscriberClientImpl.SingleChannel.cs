@@ -276,10 +276,19 @@ public sealed partial class SubscriberClientImpl
                 // Ignore all errors; the stream may be in any state.
                 try
                 {
-                    _registerTaskFn(_pull.WriteCompleteAsync());
+                    Add(_pull.WriteCompleteAsync(), Next(false, () =>
+                        {
+                            try
+                            {
+                                _pull.Dispose();
+                            }
+                            finally
+                            {
+                                _pull = null;
+                            }
+                        }));
                 }
                 catch { }
-                _pull = null;
             }
         }
 
