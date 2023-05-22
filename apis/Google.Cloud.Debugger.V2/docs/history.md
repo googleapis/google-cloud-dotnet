@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0, released 2023-05-22
+
+### Documentation changes
+
+- Update Debugger documentation to reflect deprecation
+
 ## Version 3.1.0, released 2023-01-19
 
 ### New features
