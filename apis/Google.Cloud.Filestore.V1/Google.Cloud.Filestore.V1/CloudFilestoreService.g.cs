@@ -775,10 +775,24 @@ namespace Google.Cloud.Filestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceBackup {
-      get { return sourceCase_ == SourceOneofCase.SourceBackup ? (string) source_ : ""; }
+      get { return HasSourceBackup ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.SourceBackup;
+      }
+    }
+    /// <summary>Gets whether the "source_backup" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSourceBackup {
+      get { return sourceCase_ == SourceOneofCase.SourceBackup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "source_backup" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSourceBackup() {
+      if (HasSourceBackup) {
+        ClearSource();
       }
     }
 
@@ -846,7 +860,7 @@ namespace Google.Cloud.Filestore.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (CapacityGb != 0L) hash ^= CapacityGb.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.SourceBackup) hash ^= SourceBackup.GetHashCode();
+      if (HasSourceBackup) hash ^= SourceBackup.GetHashCode();
       hash ^= nfsExportOptions_.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
@@ -876,7 +890,7 @@ namespace Google.Cloud.Filestore.V1 {
         output.WriteInt64(CapacityGb);
       }
       nfsExportOptions_.WriteTo(output, _repeated_nfsExportOptions_codec);
-      if (sourceCase_ == SourceOneofCase.SourceBackup) {
+      if (HasSourceBackup) {
         output.WriteRawTag(66);
         output.WriteString(SourceBackup);
       }
@@ -899,7 +913,7 @@ namespace Google.Cloud.Filestore.V1 {
         output.WriteInt64(CapacityGb);
       }
       nfsExportOptions_.WriteTo(ref output, _repeated_nfsExportOptions_codec);
-      if (sourceCase_ == SourceOneofCase.SourceBackup) {
+      if (HasSourceBackup) {
         output.WriteRawTag(66);
         output.WriteString(SourceBackup);
       }
@@ -919,7 +933,7 @@ namespace Google.Cloud.Filestore.V1 {
       if (CapacityGb != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CapacityGb);
       }
-      if (sourceCase_ == SourceOneofCase.SourceBackup) {
+      if (HasSourceBackup) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceBackup);
       }
       size += nfsExportOptions_.CalculateSize(_repeated_nfsExportOptions_codec);
@@ -1907,7 +1921,7 @@ namespace Google.Cloud.Filestore.V1 {
       if (other.Tier != global::Google.Cloud.Filestore.V1.Instance.Types.Tier.Unspecified) {
         Tier = other.Tier;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       fileShares_.Add(other.fileShares_);
       networks_.Add(other.networks_);
       if (other.Etag.Length != 0) {
@@ -3028,10 +3042,24 @@ namespace Google.Cloud.Filestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceBackup {
-      get { return sourceCase_ == SourceOneofCase.SourceBackup ? (string) source_ : ""; }
+      get { return HasSourceBackup ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.SourceBackup;
+      }
+    }
+    /// <summary>Gets whether the "source_backup" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSourceBackup {
+      get { return sourceCase_ == SourceOneofCase.SourceBackup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "source_backup" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSourceBackup() {
+      if (HasSourceBackup) {
+        ClearSource();
       }
     }
 
@@ -3083,7 +3111,7 @@ namespace Google.Cloud.Filestore.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (FileShare.Length != 0) hash ^= FileShare.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.SourceBackup) hash ^= SourceBackup.GetHashCode();
+      if (HasSourceBackup) hash ^= SourceBackup.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3111,7 +3139,7 @@ namespace Google.Cloud.Filestore.V1 {
         output.WriteRawTag(18);
         output.WriteString(FileShare);
       }
-      if (sourceCase_ == SourceOneofCase.SourceBackup) {
+      if (HasSourceBackup) {
         output.WriteRawTag(26);
         output.WriteString(SourceBackup);
       }
@@ -3133,7 +3161,7 @@ namespace Google.Cloud.Filestore.V1 {
         output.WriteRawTag(18);
         output.WriteString(FileShare);
       }
-      if (sourceCase_ == SourceOneofCase.SourceBackup) {
+      if (HasSourceBackup) {
         output.WriteRawTag(26);
         output.WriteString(SourceBackup);
       }
@@ -3153,7 +3181,7 @@ namespace Google.Cloud.Filestore.V1 {
       if (FileShare.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FileShare);
       }
-      if (sourceCase_ == SourceOneofCase.SourceBackup) {
+      if (HasSourceBackup) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceBackup);
       }
       if (_unknownFields != null) {
@@ -4399,7 +4427,7 @@ namespace Google.Cloud.Filestore.V1 {
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.FilesystemUsedBytes != 0L) {
         FilesystemUsedBytes = other.FilesystemUsedBytes;
       }
@@ -6552,7 +6580,7 @@ namespace Google.Cloud.Filestore.V1 {
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.CapacityGb != 0L) {
         CapacityGb = other.CapacityGb;
       }

@@ -2253,7 +2253,7 @@ namespace Google.Cloud.StorageInsights.V1 {
         }
         Status.MergeFrom(other.Status);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.targetDatetime_ != null) {
         if (targetDatetime_ == null) {
           TargetDatetime = new global::Google.Type.DateTime();
@@ -5844,7 +5844,7 @@ namespace Google.Cloud.StorageInsights.V1 {
         }
         FrequencyOptions.MergeFrom(other.FrequencyOptions);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }

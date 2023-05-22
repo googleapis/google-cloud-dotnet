@@ -578,9 +578,9 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       if (other.ProjectCount != 0) {
         ProjectCount = other.ProjectCount;
       }
-      resourceTypes_.Add(other.resourceTypes_);
-      cloudProducts_.Add(other.cloudProducts_);
-      locations_.Add(other.locations_);
+      resourceTypes_.MergeFrom(other.resourceTypes_);
+      cloudProducts_.MergeFrom(other.cloudProducts_);
+      locations_.MergeFrom(other.locations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1643,7 +1643,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       if (other.Location.Length != 0) {
         Location = other.Location;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.CryptoKeyVersion.Length != 0) {
         CryptoKeyVersion = other.CryptoKeyVersion;
       }

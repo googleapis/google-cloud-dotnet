@@ -841,7 +841,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.encryptionSpec_ != null) {
         if (encryptionSpec_ == null) {
           EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();

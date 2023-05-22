@@ -3044,10 +3044,24 @@ namespace Google.Cloud.Dlp.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.Dlp.V2.Likelihood FixedLikelihood {
-              get { return adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood ? (global::Google.Cloud.Dlp.V2.Likelihood) adjustment_ : global::Google.Cloud.Dlp.V2.Likelihood.Unspecified; }
+              get { return HasFixedLikelihood ? (global::Google.Cloud.Dlp.V2.Likelihood) adjustment_ : global::Google.Cloud.Dlp.V2.Likelihood.Unspecified; }
               set {
                 adjustment_ = value;
                 adjustmentCase_ = AdjustmentOneofCase.FixedLikelihood;
+              }
+            }
+            /// <summary>Gets whether the "fixed_likelihood" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasFixedLikelihood {
+              get { return adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "fixed_likelihood" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearFixedLikelihood() {
+              if (HasFixedLikelihood) {
+                ClearAdjustment();
               }
             }
 
@@ -3066,10 +3080,24 @@ namespace Google.Cloud.Dlp.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int RelativeLikelihood {
-              get { return adjustmentCase_ == AdjustmentOneofCase.RelativeLikelihood ? (int) adjustment_ : 0; }
+              get { return HasRelativeLikelihood ? (int) adjustment_ : 0; }
               set {
                 adjustment_ = value;
                 adjustmentCase_ = AdjustmentOneofCase.RelativeLikelihood;
+              }
+            }
+            /// <summary>Gets whether the "relative_likelihood" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasRelativeLikelihood {
+              get { return adjustmentCase_ == AdjustmentOneofCase.RelativeLikelihood; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "relative_likelihood" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearRelativeLikelihood() {
+              if (HasRelativeLikelihood) {
+                ClearAdjustment();
               }
             }
 
@@ -3119,8 +3147,8 @@ namespace Google.Cloud.Dlp.V2 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
-              if (adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood) hash ^= FixedLikelihood.GetHashCode();
-              if (adjustmentCase_ == AdjustmentOneofCase.RelativeLikelihood) hash ^= RelativeLikelihood.GetHashCode();
+              if (HasFixedLikelihood) hash ^= FixedLikelihood.GetHashCode();
+              if (HasRelativeLikelihood) hash ^= RelativeLikelihood.GetHashCode();
               hash ^= (int) adjustmentCase_;
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -3140,11 +3168,11 @@ namespace Google.Cloud.Dlp.V2 {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
-              if (adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood) {
+              if (HasFixedLikelihood) {
                 output.WriteRawTag(8);
                 output.WriteEnum((int) FixedLikelihood);
               }
-              if (adjustmentCase_ == AdjustmentOneofCase.RelativeLikelihood) {
+              if (HasRelativeLikelihood) {
                 output.WriteRawTag(16);
                 output.WriteInt32(RelativeLikelihood);
               }
@@ -3158,11 +3186,11 @@ namespace Google.Cloud.Dlp.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood) {
+              if (HasFixedLikelihood) {
                 output.WriteRawTag(8);
                 output.WriteEnum((int) FixedLikelihood);
               }
-              if (adjustmentCase_ == AdjustmentOneofCase.RelativeLikelihood) {
+              if (HasRelativeLikelihood) {
                 output.WriteRawTag(16);
                 output.WriteInt32(RelativeLikelihood);
               }
@@ -3176,10 +3204,10 @@ namespace Google.Cloud.Dlp.V2 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
-              if (adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood) {
+              if (HasFixedLikelihood) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FixedLikelihood);
               }
-              if (adjustmentCase_ == AdjustmentOneofCase.RelativeLikelihood) {
+              if (HasRelativeLikelihood) {
                 size += 1 + pb::CodedOutputStream.ComputeInt32Size(RelativeLikelihood);
               }
               if (_unknownFields != null) {
@@ -7376,7 +7404,7 @@ namespace Google.Cloud.Dlp.V2 {
         Description = other.Description;
       }
       requiredFindingLabelKeys_.Add(other.requiredFindingLabelKeys_);
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.tableOptions_ != null) {
         if (tableOptions_ == null) {
           TableOptions = new global::Google.Cloud.Dlp.V2.TableOptions();
@@ -8246,10 +8274,24 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long Id {
-          get { return idTypeCase_ == IdTypeOneofCase.Id ? (long) idType_ : 0L; }
+          get { return HasId ? (long) idType_ : 0L; }
           set {
             idType_ = value;
             idTypeCase_ = IdTypeOneofCase.Id;
+          }
+        }
+        /// <summary>Gets whether the "id" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasId {
+          get { return idTypeCase_ == IdTypeOneofCase.Id; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "id" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearId() {
+          if (HasId) {
+            ClearIdType();
           }
         }
 
@@ -8264,10 +8306,24 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Name {
-          get { return idTypeCase_ == IdTypeOneofCase.Name ? (string) idType_ : ""; }
+          get { return HasName ? (string) idType_ : ""; }
           set {
             idType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             idTypeCase_ = IdTypeOneofCase.Name;
+          }
+        }
+        /// <summary>Gets whether the "name" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasName {
+          get { return idTypeCase_ == IdTypeOneofCase.Name; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "name" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearName() {
+          if (HasName) {
+            ClearIdType();
           }
         }
 
@@ -8319,8 +8375,8 @@ namespace Google.Cloud.Dlp.V2 {
         public override int GetHashCode() {
           int hash = 1;
           if (Kind.Length != 0) hash ^= Kind.GetHashCode();
-          if (idTypeCase_ == IdTypeOneofCase.Id) hash ^= Id.GetHashCode();
-          if (idTypeCase_ == IdTypeOneofCase.Name) hash ^= Name.GetHashCode();
+          if (HasId) hash ^= Id.GetHashCode();
+          if (HasName) hash ^= Name.GetHashCode();
           hash ^= (int) idTypeCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -8344,11 +8400,11 @@ namespace Google.Cloud.Dlp.V2 {
             output.WriteRawTag(10);
             output.WriteString(Kind);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Id) {
+          if (HasId) {
             output.WriteRawTag(16);
             output.WriteInt64(Id);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Name) {
+          if (HasName) {
             output.WriteRawTag(26);
             output.WriteString(Name);
           }
@@ -8366,11 +8422,11 @@ namespace Google.Cloud.Dlp.V2 {
             output.WriteRawTag(10);
             output.WriteString(Kind);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Id) {
+          if (HasId) {
             output.WriteRawTag(16);
             output.WriteInt64(Id);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Name) {
+          if (HasName) {
             output.WriteRawTag(26);
             output.WriteString(Name);
           }
@@ -8387,10 +8443,10 @@ namespace Google.Cloud.Dlp.V2 {
           if (Kind.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Kind);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Id) {
+          if (HasId) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Name) {
+          if (HasName) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
           }
           if (_unknownFields != null) {

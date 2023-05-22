@@ -2947,10 +2947,24 @@ namespace Google.Analytics.Admin.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Int64Value {
-      get { return oneValueCase_ == OneValueOneofCase.Int64Value ? (long) oneValue_ : 0L; }
+      get { return HasInt64Value ? (long) oneValue_ : 0L; }
       set {
         oneValue_ = value;
         oneValueCase_ = OneValueOneofCase.Int64Value;
+      }
+    }
+    /// <summary>Gets whether the "int64_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInt64Value {
+      get { return oneValueCase_ == OneValueOneofCase.Int64Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "int64_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInt64Value() {
+      if (HasInt64Value) {
+        ClearOneValue();
       }
     }
 
@@ -2962,10 +2976,24 @@ namespace Google.Analytics.Admin.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double DoubleValue {
-      get { return oneValueCase_ == OneValueOneofCase.DoubleValue ? (double) oneValue_ : 0D; }
+      get { return HasDoubleValue ? (double) oneValue_ : 0D; }
       set {
         oneValue_ = value;
         oneValueCase_ = OneValueOneofCase.DoubleValue;
+      }
+    }
+    /// <summary>Gets whether the "double_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDoubleValue {
+      get { return oneValueCase_ == OneValueOneofCase.DoubleValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "double_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDoubleValue() {
+      if (HasDoubleValue) {
+        ClearOneValue();
       }
     }
 
@@ -3015,8 +3043,8 @@ namespace Google.Analytics.Admin.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (oneValueCase_ == OneValueOneofCase.Int64Value) hash ^= Int64Value.GetHashCode();
-      if (oneValueCase_ == OneValueOneofCase.DoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
+      if (HasInt64Value) hash ^= Int64Value.GetHashCode();
+      if (HasDoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
       hash ^= (int) oneValueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3036,11 +3064,11 @@ namespace Google.Analytics.Admin.V1Beta {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (oneValueCase_ == OneValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(8);
         output.WriteInt64(Int64Value);
       }
-      if (oneValueCase_ == OneValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(17);
         output.WriteDouble(DoubleValue);
       }
@@ -3054,11 +3082,11 @@ namespace Google.Analytics.Admin.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (oneValueCase_ == OneValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(8);
         output.WriteInt64(Int64Value);
       }
-      if (oneValueCase_ == OneValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(17);
         output.WriteDouble(DoubleValue);
       }
@@ -3072,10 +3100,10 @@ namespace Google.Analytics.Admin.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (oneValueCase_ == OneValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Int64Value);
       }
-      if (oneValueCase_ == OneValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {

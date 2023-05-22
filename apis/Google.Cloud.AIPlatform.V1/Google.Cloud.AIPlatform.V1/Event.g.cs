@@ -332,7 +332,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.Type != global::Google.Cloud.AIPlatform.V1.Event.Types.Type.Unspecified) {
         Type = other.Type;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

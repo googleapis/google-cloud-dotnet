@@ -762,7 +762,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         }
         RestoreConfig.MergeFrom(other.RestoreConfig);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.State != global::Google.Cloud.GkeBackup.V1.Restore.Types.State.Unspecified) {
         State = other.State;
       }
@@ -1169,10 +1169,24 @@ namespace Google.Cloud.GkeBackup.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool AllNamespaces {
-      get { return namespacedResourceRestoreScopeCase_ == NamespacedResourceRestoreScopeOneofCase.AllNamespaces ? (bool) namespacedResourceRestoreScope_ : false; }
+      get { return HasAllNamespaces ? (bool) namespacedResourceRestoreScope_ : false; }
       set {
         namespacedResourceRestoreScope_ = value;
         namespacedResourceRestoreScopeCase_ = NamespacedResourceRestoreScopeOneofCase.AllNamespaces;
+      }
+    }
+    /// <summary>Gets whether the "all_namespaces" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAllNamespaces {
+      get { return namespacedResourceRestoreScopeCase_ == NamespacedResourceRestoreScopeOneofCase.AllNamespaces; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "all_namespaces" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAllNamespaces() {
+      if (HasAllNamespaces) {
+        ClearNamespacedResourceRestoreScope();
       }
     }
 
@@ -1284,7 +1298,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (ClusterResourceConflictPolicy != global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.ClusterResourceConflictPolicy.Unspecified) hash ^= ClusterResourceConflictPolicy.GetHashCode();
       if (NamespacedResourceRestoreMode != global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.NamespacedResourceRestoreMode.Unspecified) hash ^= NamespacedResourceRestoreMode.GetHashCode();
       if (clusterResourceRestoreScope_ != null) hash ^= ClusterResourceRestoreScope.GetHashCode();
-      if (namespacedResourceRestoreScopeCase_ == NamespacedResourceRestoreScopeOneofCase.AllNamespaces) hash ^= AllNamespaces.GetHashCode();
+      if (HasAllNamespaces) hash ^= AllNamespaces.GetHashCode();
       if (namespacedResourceRestoreScopeCase_ == NamespacedResourceRestoreScopeOneofCase.SelectedNamespaces) hash ^= SelectedNamespaces.GetHashCode();
       if (namespacedResourceRestoreScopeCase_ == NamespacedResourceRestoreScopeOneofCase.SelectedApplications) hash ^= SelectedApplications.GetHashCode();
       hash ^= substitutionRules_.GetHashCode();
@@ -1323,7 +1337,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ClusterResourceRestoreScope);
       }
-      if (namespacedResourceRestoreScopeCase_ == NamespacedResourceRestoreScopeOneofCase.AllNamespaces) {
+      if (HasAllNamespaces) {
         output.WriteRawTag(40);
         output.WriteBool(AllNamespaces);
       }
@@ -1362,7 +1376,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ClusterResourceRestoreScope);
       }
-      if (namespacedResourceRestoreScopeCase_ == NamespacedResourceRestoreScopeOneofCase.AllNamespaces) {
+      if (HasAllNamespaces) {
         output.WriteRawTag(40);
         output.WriteBool(AllNamespaces);
       }
@@ -1397,7 +1411,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (clusterResourceRestoreScope_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClusterResourceRestoreScope);
       }
-      if (namespacedResourceRestoreScopeCase_ == NamespacedResourceRestoreScopeOneofCase.AllNamespaces) {
+      if (HasAllNamespaces) {
         size += 1 + 1;
       }
       if (namespacedResourceRestoreScopeCase_ == NamespacedResourceRestoreScopeOneofCase.SelectedNamespaces) {

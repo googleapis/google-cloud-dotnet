@@ -1219,10 +1219,24 @@ namespace Google.Cloud.OrgPolicy.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool AllowAll {
-          get { return kindCase_ == KindOneofCase.AllowAll ? (bool) kind_ : false; }
+          get { return HasAllowAll ? (bool) kind_ : false; }
           set {
             kind_ = value;
             kindCase_ = KindOneofCase.AllowAll;
+          }
+        }
+        /// <summary>Gets whether the "allow_all" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAllowAll {
+          get { return kindCase_ == KindOneofCase.AllowAll; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "allow_all" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAllowAll() {
+          if (HasAllowAll) {
+            ClearKind();
           }
         }
 
@@ -1235,10 +1249,24 @@ namespace Google.Cloud.OrgPolicy.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool DenyAll {
-          get { return kindCase_ == KindOneofCase.DenyAll ? (bool) kind_ : false; }
+          get { return HasDenyAll ? (bool) kind_ : false; }
           set {
             kind_ = value;
             kindCase_ = KindOneofCase.DenyAll;
+          }
+        }
+        /// <summary>Gets whether the "deny_all" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDenyAll {
+          get { return kindCase_ == KindOneofCase.DenyAll; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "deny_all" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDenyAll() {
+          if (HasDenyAll) {
+            ClearKind();
           }
         }
 
@@ -1252,10 +1280,24 @@ namespace Google.Cloud.OrgPolicy.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Enforce {
-          get { return kindCase_ == KindOneofCase.Enforce ? (bool) kind_ : false; }
+          get { return HasEnforce ? (bool) kind_ : false; }
           set {
             kind_ = value;
             kindCase_ = KindOneofCase.Enforce;
+          }
+        }
+        /// <summary>Gets whether the "enforce" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasEnforce {
+          get { return kindCase_ == KindOneofCase.Enforce; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "enforce" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearEnforce() {
+          if (HasEnforce) {
+            ClearKind();
           }
         }
 
@@ -1337,9 +1379,9 @@ namespace Google.Cloud.OrgPolicy.V2 {
         public override int GetHashCode() {
           int hash = 1;
           if (kindCase_ == KindOneofCase.Values) hash ^= Values.GetHashCode();
-          if (kindCase_ == KindOneofCase.AllowAll) hash ^= AllowAll.GetHashCode();
-          if (kindCase_ == KindOneofCase.DenyAll) hash ^= DenyAll.GetHashCode();
-          if (kindCase_ == KindOneofCase.Enforce) hash ^= Enforce.GetHashCode();
+          if (HasAllowAll) hash ^= AllowAll.GetHashCode();
+          if (HasDenyAll) hash ^= DenyAll.GetHashCode();
+          if (HasEnforce) hash ^= Enforce.GetHashCode();
           if (condition_ != null) hash ^= Condition.GetHashCode();
           hash ^= (int) kindCase_;
           if (_unknownFields != null) {
@@ -1364,15 +1406,15 @@ namespace Google.Cloud.OrgPolicy.V2 {
             output.WriteRawTag(10);
             output.WriteMessage(Values);
           }
-          if (kindCase_ == KindOneofCase.AllowAll) {
+          if (HasAllowAll) {
             output.WriteRawTag(16);
             output.WriteBool(AllowAll);
           }
-          if (kindCase_ == KindOneofCase.DenyAll) {
+          if (HasDenyAll) {
             output.WriteRawTag(24);
             output.WriteBool(DenyAll);
           }
-          if (kindCase_ == KindOneofCase.Enforce) {
+          if (HasEnforce) {
             output.WriteRawTag(32);
             output.WriteBool(Enforce);
           }
@@ -1394,15 +1436,15 @@ namespace Google.Cloud.OrgPolicy.V2 {
             output.WriteRawTag(10);
             output.WriteMessage(Values);
           }
-          if (kindCase_ == KindOneofCase.AllowAll) {
+          if (HasAllowAll) {
             output.WriteRawTag(16);
             output.WriteBool(AllowAll);
           }
-          if (kindCase_ == KindOneofCase.DenyAll) {
+          if (HasDenyAll) {
             output.WriteRawTag(24);
             output.WriteBool(DenyAll);
           }
-          if (kindCase_ == KindOneofCase.Enforce) {
+          if (HasEnforce) {
             output.WriteRawTag(32);
             output.WriteBool(Enforce);
           }
@@ -1423,13 +1465,13 @@ namespace Google.Cloud.OrgPolicy.V2 {
           if (kindCase_ == KindOneofCase.Values) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Values);
           }
-          if (kindCase_ == KindOneofCase.AllowAll) {
+          if (HasAllowAll) {
             size += 1 + 1;
           }
-          if (kindCase_ == KindOneofCase.DenyAll) {
+          if (HasDenyAll) {
             size += 1 + 1;
           }
-          if (kindCase_ == KindOneofCase.Enforce) {
+          if (HasEnforce) {
             size += 1 + 1;
           }
           if (condition_ != null) {

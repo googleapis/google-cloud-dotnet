@@ -194,10 +194,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ChildrenOfGroup {
-      get { return filterCase_ == FilterOneofCase.ChildrenOfGroup ? (string) filter_ : ""; }
+      get { return HasChildrenOfGroup ? (string) filter_ : ""; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         filterCase_ = FilterOneofCase.ChildrenOfGroup;
+      }
+    }
+    /// <summary>Gets whether the "children_of_group" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasChildrenOfGroup {
+      get { return filterCase_ == FilterOneofCase.ChildrenOfGroup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "children_of_group" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearChildrenOfGroup() {
+      if (HasChildrenOfGroup) {
+        ClearFilter();
       }
     }
 
@@ -216,10 +230,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AncestorsOfGroup {
-      get { return filterCase_ == FilterOneofCase.AncestorsOfGroup ? (string) filter_ : ""; }
+      get { return HasAncestorsOfGroup ? (string) filter_ : ""; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         filterCase_ = FilterOneofCase.AncestorsOfGroup;
+      }
+    }
+    /// <summary>Gets whether the "ancestors_of_group" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAncestorsOfGroup {
+      get { return filterCase_ == FilterOneofCase.AncestorsOfGroup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "ancestors_of_group" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAncestorsOfGroup() {
+      if (HasAncestorsOfGroup) {
+        ClearFilter();
       }
     }
 
@@ -237,10 +265,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DescendantsOfGroup {
-      get { return filterCase_ == FilterOneofCase.DescendantsOfGroup ? (string) filter_ : ""; }
+      get { return HasDescendantsOfGroup ? (string) filter_ : ""; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         filterCase_ = FilterOneofCase.DescendantsOfGroup;
+      }
+    }
+    /// <summary>Gets whether the "descendants_of_group" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDescendantsOfGroup {
+      get { return filterCase_ == FilterOneofCase.DescendantsOfGroup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "descendants_of_group" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDescendantsOfGroup() {
+      if (HasDescendantsOfGroup) {
+        ClearFilter();
       }
     }
 
@@ -328,9 +370,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (filterCase_ == FilterOneofCase.ChildrenOfGroup) hash ^= ChildrenOfGroup.GetHashCode();
-      if (filterCase_ == FilterOneofCase.AncestorsOfGroup) hash ^= AncestorsOfGroup.GetHashCode();
-      if (filterCase_ == FilterOneofCase.DescendantsOfGroup) hash ^= DescendantsOfGroup.GetHashCode();
+      if (HasChildrenOfGroup) hash ^= ChildrenOfGroup.GetHashCode();
+      if (HasAncestorsOfGroup) hash ^= AncestorsOfGroup.GetHashCode();
+      if (HasDescendantsOfGroup) hash ^= DescendantsOfGroup.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       hash ^= (int) filterCase_;
@@ -352,15 +394,15 @@ namespace Google.Cloud.Monitoring.V3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (filterCase_ == FilterOneofCase.ChildrenOfGroup) {
+      if (HasChildrenOfGroup) {
         output.WriteRawTag(18);
         output.WriteString(ChildrenOfGroup);
       }
-      if (filterCase_ == FilterOneofCase.AncestorsOfGroup) {
+      if (HasAncestorsOfGroup) {
         output.WriteRawTag(26);
         output.WriteString(AncestorsOfGroup);
       }
-      if (filterCase_ == FilterOneofCase.DescendantsOfGroup) {
+      if (HasDescendantsOfGroup) {
         output.WriteRawTag(34);
         output.WriteString(DescendantsOfGroup);
       }
@@ -386,15 +428,15 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (filterCase_ == FilterOneofCase.ChildrenOfGroup) {
+      if (HasChildrenOfGroup) {
         output.WriteRawTag(18);
         output.WriteString(ChildrenOfGroup);
       }
-      if (filterCase_ == FilterOneofCase.AncestorsOfGroup) {
+      if (HasAncestorsOfGroup) {
         output.WriteRawTag(26);
         output.WriteString(AncestorsOfGroup);
       }
-      if (filterCase_ == FilterOneofCase.DescendantsOfGroup) {
+      if (HasDescendantsOfGroup) {
         output.WriteRawTag(34);
         output.WriteString(DescendantsOfGroup);
       }
@@ -423,13 +465,13 @@ namespace Google.Cloud.Monitoring.V3 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (filterCase_ == FilterOneofCase.ChildrenOfGroup) {
+      if (HasChildrenOfGroup) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ChildrenOfGroup);
       }
-      if (filterCase_ == FilterOneofCase.AncestorsOfGroup) {
+      if (HasAncestorsOfGroup) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AncestorsOfGroup);
       }
-      if (filterCase_ == FilterOneofCase.DescendantsOfGroup) {
+      if (HasDescendantsOfGroup) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DescendantsOfGroup);
       }
       if (PageSize != 0) {

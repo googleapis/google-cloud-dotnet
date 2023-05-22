@@ -252,7 +252,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other.Type != global::Google.Cloud.Notebooks.V1.Event.Types.EventType.Unspecified) {
         Type = other.Type;
       }
-      details_.Add(other.details_);
+      details_.MergeFrom(other.details_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

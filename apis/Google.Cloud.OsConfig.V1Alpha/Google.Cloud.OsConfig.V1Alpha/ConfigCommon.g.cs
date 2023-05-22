@@ -67,6 +67,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// <summary>
   /// Supported OSPolicy compliance states.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public enum OSPolicyComplianceState {
     /// <summary>
     /// Default value. This value is unused.
@@ -378,6 +379,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <summary>
       /// Supported configuration step types
       /// </summary>
+      [global::System.ObsoleteAttribute]
       public enum Type {
         /// <summary>
         /// Default value. This value is unused.
@@ -410,6 +412,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <summary>
       /// Supported outcomes for a configuration step.
       /// </summary>
+      [global::System.ObsoleteAttribute]
       public enum Outcome {
         /// <summary>
         /// Default value. This value is unused.

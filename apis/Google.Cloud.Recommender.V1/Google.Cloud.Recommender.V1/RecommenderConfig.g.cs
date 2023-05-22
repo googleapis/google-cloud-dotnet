@@ -406,7 +406,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (other.RevisionId.Length != 0) {
         RevisionId = other.RevisionId;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }

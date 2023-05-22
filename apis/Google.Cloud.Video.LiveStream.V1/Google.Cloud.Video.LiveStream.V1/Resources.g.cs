@@ -627,7 +627,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Type != global::Google.Cloud.Video.LiveStream.V1.Input.Types.Type.Unspecified) {
         Type = other.Type;
       }
@@ -1620,7 +1620,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       inputAttachments_.Add(other.inputAttachments_);
       if (other.ActiveInput.Length != 0) {
         ActiveInput = other.ActiveInput;
@@ -4959,7 +4959,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.ExecuteNow != false) {
         ExecuteNow = other.ExecuteNow;
       }

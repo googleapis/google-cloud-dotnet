@@ -2824,10 +2824,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Dataset {
-      get { return migratedResourceCase_ == MigratedResourceOneofCase.Dataset ? (string) migratedResource_ : ""; }
+      get { return HasDataset ? (string) migratedResource_ : ""; }
       set {
         migratedResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         migratedResourceCase_ = MigratedResourceOneofCase.Dataset;
+      }
+    }
+    /// <summary>Gets whether the "dataset" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDataset {
+      get { return migratedResourceCase_ == MigratedResourceOneofCase.Dataset; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "dataset" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDataset() {
+      if (HasDataset) {
+        ClearMigratedResource();
       }
     }
 
@@ -2839,10 +2853,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Model {
-      get { return migratedResourceCase_ == MigratedResourceOneofCase.Model ? (string) migratedResource_ : ""; }
+      get { return HasModel ? (string) migratedResource_ : ""; }
       set {
         migratedResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         migratedResourceCase_ = MigratedResourceOneofCase.Model;
+      }
+    }
+    /// <summary>Gets whether the "model" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasModel {
+      get { return migratedResourceCase_ == MigratedResourceOneofCase.Model; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "model" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearModel() {
+      if (HasModel) {
+        ClearMigratedResource();
       }
     }
 
@@ -2909,8 +2937,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Dataset) hash ^= Dataset.GetHashCode();
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Model) hash ^= Model.GetHashCode();
+      if (HasDataset) hash ^= Dataset.GetHashCode();
+      if (HasModel) hash ^= Model.GetHashCode();
       if (migratableResource_ != null) hash ^= MigratableResource.GetHashCode();
       hash ^= (int) migratedResourceCase_;
       if (_unknownFields != null) {
@@ -2931,11 +2959,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Dataset) {
+      if (HasDataset) {
         output.WriteRawTag(10);
         output.WriteString(Dataset);
       }
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Model) {
+      if (HasModel) {
         output.WriteRawTag(18);
         output.WriteString(Model);
       }
@@ -2953,11 +2981,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Dataset) {
+      if (HasDataset) {
         output.WriteRawTag(10);
         output.WriteString(Dataset);
       }
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Model) {
+      if (HasModel) {
         output.WriteRawTag(18);
         output.WriteString(Model);
       }
@@ -2975,10 +3003,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Dataset) {
+      if (HasDataset) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
       }
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Model) {
+      if (HasModel) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
       }
       if (migratableResource_ != null) {
@@ -3398,10 +3426,24 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Model {
-          get { return resultCase_ == ResultOneofCase.Model ? (string) result_ : ""; }
+          get { return HasModel ? (string) result_ : ""; }
           set {
             result_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             resultCase_ = ResultOneofCase.Model;
+          }
+        }
+        /// <summary>Gets whether the "model" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasModel {
+          get { return resultCase_ == ResultOneofCase.Model; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "model" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearModel() {
+          if (HasModel) {
+            ClearResult();
           }
         }
 
@@ -3413,10 +3455,24 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Dataset {
-          get { return resultCase_ == ResultOneofCase.Dataset ? (string) result_ : ""; }
+          get { return HasDataset ? (string) result_ : ""; }
           set {
             result_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             resultCase_ = ResultOneofCase.Dataset;
+          }
+        }
+        /// <summary>Gets whether the "dataset" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDataset {
+          get { return resultCase_ == ResultOneofCase.Dataset; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "dataset" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDataset() {
+          if (HasDataset) {
+            ClearResult();
           }
         }
 
@@ -3486,8 +3542,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (resultCase_ == ResultOneofCase.Error) hash ^= Error.GetHashCode();
-          if (resultCase_ == ResultOneofCase.Model) hash ^= Model.GetHashCode();
-          if (resultCase_ == ResultOneofCase.Dataset) hash ^= Dataset.GetHashCode();
+          if (HasModel) hash ^= Model.GetHashCode();
+          if (HasDataset) hash ^= Dataset.GetHashCode();
           if (request_ != null) hash ^= Request.GetHashCode();
           hash ^= (int) resultCase_;
           if (_unknownFields != null) {
@@ -3516,11 +3572,11 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(18);
             output.WriteMessage(Error);
           }
-          if (resultCase_ == ResultOneofCase.Model) {
+          if (HasModel) {
             output.WriteRawTag(26);
             output.WriteString(Model);
           }
-          if (resultCase_ == ResultOneofCase.Dataset) {
+          if (HasDataset) {
             output.WriteRawTag(34);
             output.WriteString(Dataset);
           }
@@ -3542,11 +3598,11 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(18);
             output.WriteMessage(Error);
           }
-          if (resultCase_ == ResultOneofCase.Model) {
+          if (HasModel) {
             output.WriteRawTag(26);
             output.WriteString(Model);
           }
-          if (resultCase_ == ResultOneofCase.Dataset) {
+          if (HasDataset) {
             output.WriteRawTag(34);
             output.WriteString(Dataset);
           }
@@ -3563,10 +3619,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (resultCase_ == ResultOneofCase.Error) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
           }
-          if (resultCase_ == ResultOneofCase.Model) {
+          if (HasModel) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
           }
-          if (resultCase_ == ResultOneofCase.Dataset) {
+          if (HasDataset) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
           }
           if (request_ != null) {

@@ -1100,7 +1100,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.workloadIdentityConfig_ != null) {
         if (workloadIdentityConfig_ == null) {
           WorkloadIdentityConfig = new global::Google.Cloud.GkeMultiCloud.V1.WorkloadIdentityConfig();
@@ -2324,7 +2324,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         }
         ConfigEncryption.MergeFrom(other.ConfigEncryption);
       }
-      tags_.Add(other.tags_);
+      tags_.MergeFrom(other.tags_);
       replicaPlacements_.Add(other.replicaPlacements_);
       if (other.EndpointSubnetId.Length != 0) {
         EndpointSubnetId = other.EndpointSubnetId;
@@ -4036,7 +4036,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (other.Reconciling != false) {
         Reconciling = other.Reconciling;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.PemCertificate.Length != 0) {
         PemCertificate = other.PemCertificate;
       }
@@ -5399,7 +5399,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.maxPodsConstraint_ != null) {
         if (maxPodsConstraint_ == null) {
           MaxPodsConstraint = new global::Google.Cloud.GkeMultiCloud.V1.MaxPodsConstraint();
@@ -6023,7 +6023,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         }
         RootVolume.MergeFrom(other.RootVolume);
       }
-      tags_.Add(other.tags_);
+      tags_.MergeFrom(other.tags_);
       if (other.ImageType.Length != 0) {
         ImageType = other.ImageType;
       }
@@ -6046,7 +6046,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         ConfigEncryption.MergeFrom(other.ConfigEncryption);
       }
       taints_.Add(other.taints_);
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

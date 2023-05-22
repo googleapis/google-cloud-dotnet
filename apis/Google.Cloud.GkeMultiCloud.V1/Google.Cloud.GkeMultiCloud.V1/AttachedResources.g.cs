@@ -855,7 +855,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (other.KubernetesVersion.Length != 0) {
         KubernetesVersion = other.KubernetesVersion;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.workloadIdentityConfig_ != null) {
         if (workloadIdentityConfig_ == null) {
           WorkloadIdentityConfig = new global::Google.Cloud.GkeMultiCloud.V1.WorkloadIdentityConfig();

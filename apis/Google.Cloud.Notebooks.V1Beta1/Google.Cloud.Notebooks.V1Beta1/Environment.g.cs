@@ -647,10 +647,24 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImageName {
-      get { return imageCase_ == ImageOneofCase.ImageName ? (string) image_ : ""; }
+      get { return HasImageName ? (string) image_ : ""; }
       set {
         image_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         imageCase_ = ImageOneofCase.ImageName;
+      }
+    }
+    /// <summary>Gets whether the "image_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasImageName {
+      get { return imageCase_ == ImageOneofCase.ImageName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "image_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearImageName() {
+      if (HasImageName) {
+        ClearImage();
       }
     }
 
@@ -663,10 +677,24 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImageFamily {
-      get { return imageCase_ == ImageOneofCase.ImageFamily ? (string) image_ : ""; }
+      get { return HasImageFamily ? (string) image_ : ""; }
       set {
         image_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         imageCase_ = ImageOneofCase.ImageFamily;
+      }
+    }
+    /// <summary>Gets whether the "image_family" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasImageFamily {
+      get { return imageCase_ == ImageOneofCase.ImageFamily; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "image_family" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearImageFamily() {
+      if (HasImageFamily) {
+        ClearImage();
       }
     }
 
@@ -718,8 +746,8 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Project.Length != 0) hash ^= Project.GetHashCode();
-      if (imageCase_ == ImageOneofCase.ImageName) hash ^= ImageName.GetHashCode();
-      if (imageCase_ == ImageOneofCase.ImageFamily) hash ^= ImageFamily.GetHashCode();
+      if (HasImageName) hash ^= ImageName.GetHashCode();
+      if (HasImageFamily) hash ^= ImageFamily.GetHashCode();
       hash ^= (int) imageCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -743,11 +771,11 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Project);
       }
-      if (imageCase_ == ImageOneofCase.ImageName) {
+      if (HasImageName) {
         output.WriteRawTag(18);
         output.WriteString(ImageName);
       }
-      if (imageCase_ == ImageOneofCase.ImageFamily) {
+      if (HasImageFamily) {
         output.WriteRawTag(26);
         output.WriteString(ImageFamily);
       }
@@ -765,11 +793,11 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Project);
       }
-      if (imageCase_ == ImageOneofCase.ImageName) {
+      if (HasImageName) {
         output.WriteRawTag(18);
         output.WriteString(ImageName);
       }
-      if (imageCase_ == ImageOneofCase.ImageFamily) {
+      if (HasImageFamily) {
         output.WriteRawTag(26);
         output.WriteString(ImageFamily);
       }
@@ -786,10 +814,10 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       if (Project.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
       }
-      if (imageCase_ == ImageOneofCase.ImageName) {
+      if (HasImageName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageName);
       }
-      if (imageCase_ == ImageOneofCase.ImageFamily) {
+      if (HasImageFamily) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageFamily);
       }
       if (_unknownFields != null) {

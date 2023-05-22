@@ -768,7 +768,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           if (other.Password.Length != 0) {
             Password = other.Password;
           }
-          requestHeaders_.Add(other.requestHeaders_);
+          requestHeaders_.MergeFrom(other.requestHeaders_);
           if (other.IsCloudFunction != false) {
             IsCloudFunction = other.IsCloudFunction;
           }

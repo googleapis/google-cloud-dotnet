@@ -816,7 +816,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }

@@ -230,8 +230,8 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       if (other == null) {
         return;
       }
-      categoricalFeatures_.Add(other.categoricalFeatures_);
-      numericalFeatures_.Add(other.numericalFeatures_);
+      categoricalFeatures_.MergeFrom(other.categoricalFeatures_);
+      numericalFeatures_.MergeFrom(other.numericalFeatures_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

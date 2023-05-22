@@ -719,7 +719,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         }
         AllocationPolicy.MergeFrom(other.AllocationPolicy);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.status_ != null) {
         if (status_ == null) {
           Status = new global::Google.Cloud.Batch.V1Alpha.JobStatus();
@@ -1368,7 +1368,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       if (other == null) {
         return;
       }
-      items_.Add(other.items_);
+      items_.MergeFrom(other.items_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1694,7 +1694,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         State = other.State;
       }
       statusEvents_.Add(other.statusEvents_);
-      taskGroups_.Add(other.taskGroups_);
+      taskGroups_.MergeFrom(other.taskGroups_);
       if (other.runDuration_ != null) {
         if (runDuration_ == null) {
           RunDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
@@ -2317,7 +2317,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (other == null) {
             return;
           }
-          counts_.Add(other.counts_);
+          counts_.MergeFrom(other.counts_);
           instances_.Add(other.instances_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -3532,7 +3532,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         }
         ServiceAccount.MergeFrom(other.ServiceAccount);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.network_ != null) {
         if (network_ == null) {
           Network = new global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkPolicy();
@@ -4031,10 +4031,24 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Image {
-          get { return dataSourceCase_ == DataSourceOneofCase.Image ? (string) dataSource_ : ""; }
+          get { return HasImage ? (string) dataSource_ : ""; }
           set {
             dataSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             dataSourceCase_ = DataSourceOneofCase.Image;
+          }
+        }
+        /// <summary>Gets whether the "image" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasImage {
+          get { return dataSourceCase_ == DataSourceOneofCase.Image; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "image" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearImage() {
+          if (HasImage) {
+            ClearDataSource();
           }
         }
 
@@ -4047,10 +4061,24 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Snapshot {
-          get { return dataSourceCase_ == DataSourceOneofCase.Snapshot ? (string) dataSource_ : ""; }
+          get { return HasSnapshot ? (string) dataSource_ : ""; }
           set {
             dataSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             dataSourceCase_ = DataSourceOneofCase.Snapshot;
+          }
+        }
+        /// <summary>Gets whether the "snapshot" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSnapshot {
+          get { return dataSourceCase_ == DataSourceOneofCase.Snapshot; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "snapshot" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSnapshot() {
+          if (HasSnapshot) {
+            ClearDataSource();
           }
         }
 
@@ -4162,8 +4190,8 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (dataSourceCase_ == DataSourceOneofCase.Image) hash ^= Image.GetHashCode();
-          if (dataSourceCase_ == DataSourceOneofCase.Snapshot) hash ^= Snapshot.GetHashCode();
+          if (HasImage) hash ^= Image.GetHashCode();
+          if (HasSnapshot) hash ^= Snapshot.GetHashCode();
           if (Type.Length != 0) hash ^= Type.GetHashCode();
           if (SizeGb != 0L) hash ^= SizeGb.GetHashCode();
           if (DiskInterface.Length != 0) hash ^= DiskInterface.GetHashCode();
@@ -4194,11 +4222,11 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(16);
             output.WriteInt64(SizeGb);
           }
-          if (dataSourceCase_ == DataSourceOneofCase.Image) {
+          if (HasImage) {
             output.WriteRawTag(34);
             output.WriteString(Image);
           }
-          if (dataSourceCase_ == DataSourceOneofCase.Snapshot) {
+          if (HasSnapshot) {
             output.WriteRawTag(42);
             output.WriteString(Snapshot);
           }
@@ -4224,11 +4252,11 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(16);
             output.WriteInt64(SizeGb);
           }
-          if (dataSourceCase_ == DataSourceOneofCase.Image) {
+          if (HasImage) {
             output.WriteRawTag(34);
             output.WriteString(Image);
           }
-          if (dataSourceCase_ == DataSourceOneofCase.Snapshot) {
+          if (HasSnapshot) {
             output.WriteRawTag(42);
             output.WriteString(Snapshot);
           }
@@ -4246,10 +4274,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (dataSourceCase_ == DataSourceOneofCase.Image) {
+          if (HasImage) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Image);
           }
-          if (dataSourceCase_ == DataSourceOneofCase.Snapshot) {
+          if (HasSnapshot) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Snapshot);
           }
           if (Type.Length != 0) {
@@ -4445,10 +4473,24 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string ExistingDisk {
-          get { return attachedCase_ == AttachedOneofCase.ExistingDisk ? (string) attached_ : ""; }
+          get { return HasExistingDisk ? (string) attached_ : ""; }
           set {
             attached_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             attachedCase_ = AttachedOneofCase.ExistingDisk;
+          }
+        }
+        /// <summary>Gets whether the "existing_disk" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasExistingDisk {
+          get { return attachedCase_ == AttachedOneofCase.ExistingDisk; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "existing_disk" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearExistingDisk() {
+          if (HasExistingDisk) {
+            ClearAttached();
           }
         }
 
@@ -4518,7 +4560,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         public override int GetHashCode() {
           int hash = 1;
           if (attachedCase_ == AttachedOneofCase.NewDisk) hash ^= NewDisk.GetHashCode();
-          if (attachedCase_ == AttachedOneofCase.ExistingDisk) hash ^= ExistingDisk.GetHashCode();
+          if (HasExistingDisk) hash ^= ExistingDisk.GetHashCode();
           if (DeviceName.Length != 0) hash ^= DeviceName.GetHashCode();
           hash ^= (int) attachedCase_;
           if (_unknownFields != null) {
@@ -4543,7 +4585,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(10);
             output.WriteMessage(NewDisk);
           }
-          if (attachedCase_ == AttachedOneofCase.ExistingDisk) {
+          if (HasExistingDisk) {
             output.WriteRawTag(18);
             output.WriteString(ExistingDisk);
           }
@@ -4565,7 +4607,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(10);
             output.WriteMessage(NewDisk);
           }
-          if (attachedCase_ == AttachedOneofCase.ExistingDisk) {
+          if (HasExistingDisk) {
             output.WriteRawTag(18);
             output.WriteString(ExistingDisk);
           }
@@ -4586,7 +4628,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (attachedCase_ == AttachedOneofCase.NewDisk) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(NewDisk);
           }
-          if (attachedCase_ == AttachedOneofCase.ExistingDisk) {
+          if (HasExistingDisk) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(ExistingDisk);
           }
           if (DeviceName.Length != 0) {
@@ -5508,10 +5550,24 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string InstanceTemplate {
-          get { return policyTemplateCase_ == PolicyTemplateOneofCase.InstanceTemplate ? (string) policyTemplate_ : ""; }
+          get { return HasInstanceTemplate ? (string) policyTemplate_ : ""; }
           set {
             policyTemplate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             policyTemplateCase_ = PolicyTemplateOneofCase.InstanceTemplate;
+          }
+        }
+        /// <summary>Gets whether the "instance_template" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasInstanceTemplate {
+          get { return policyTemplateCase_ == PolicyTemplateOneofCase.InstanceTemplate; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "instance_template" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearInstanceTemplate() {
+          if (HasInstanceTemplate) {
+            ClearPolicyTemplate();
           }
         }
 
@@ -5581,7 +5637,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         public override int GetHashCode() {
           int hash = 1;
           if (policyTemplateCase_ == PolicyTemplateOneofCase.Policy) hash ^= Policy.GetHashCode();
-          if (policyTemplateCase_ == PolicyTemplateOneofCase.InstanceTemplate) hash ^= InstanceTemplate.GetHashCode();
+          if (HasInstanceTemplate) hash ^= InstanceTemplate.GetHashCode();
           if (InstallGpuDrivers != false) hash ^= InstallGpuDrivers.GetHashCode();
           hash ^= (int) policyTemplateCase_;
           if (_unknownFields != null) {
@@ -5606,7 +5662,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(10);
             output.WriteMessage(Policy);
           }
-          if (policyTemplateCase_ == PolicyTemplateOneofCase.InstanceTemplate) {
+          if (HasInstanceTemplate) {
             output.WriteRawTag(18);
             output.WriteString(InstanceTemplate);
           }
@@ -5628,7 +5684,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(10);
             output.WriteMessage(Policy);
           }
-          if (policyTemplateCase_ == PolicyTemplateOneofCase.InstanceTemplate) {
+          if (HasInstanceTemplate) {
             output.WriteRawTag(18);
             output.WriteString(InstanceTemplate);
           }
@@ -5649,7 +5705,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (policyTemplateCase_ == PolicyTemplateOneofCase.Policy) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Policy);
           }
-          if (policyTemplateCase_ == PolicyTemplateOneofCase.InstanceTemplate) {
+          if (HasInstanceTemplate) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(InstanceTemplate);
           }
           if (InstallGpuDrivers != false) {
@@ -6952,7 +7008,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         }
         AllocationPolicy.MergeFrom(other.AllocationPolicy);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       taskEnvironments_.Add(other.taskEnvironments_);
       if (other.TaskCountPerNode != 0L) {
         TaskCountPerNode = other.TaskCountPerNode;

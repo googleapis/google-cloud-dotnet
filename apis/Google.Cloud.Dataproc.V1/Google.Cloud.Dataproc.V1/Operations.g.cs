@@ -441,7 +441,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       warnings_.Add(other.warnings_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1294,7 +1294,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       warnings_.Add(other.warnings_);
       childOperationIds_.Add(other.childOperationIds_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1754,7 +1754,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       warnings_.Add(other.warnings_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }

@@ -324,8 +324,8 @@ namespace Google.Cloud.Run.V2 {
       if (other == null) {
         return;
       }
-      labels_.Add(other.labels_);
-      annotations_.Add(other.annotations_);
+      labels_.MergeFrom(other.labels_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.Parallelism != 0) {
         Parallelism = other.Parallelism;
       }

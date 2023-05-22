@@ -4423,7 +4423,7 @@ namespace Google.Cloud.CloudDms.V1 {
       if (other.DatabaseVersion != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDatabaseVersion.Unspecified) {
         DatabaseVersion = other.DatabaseVersion;
       }
-      userLabels_.Add(other.userLabels_);
+      userLabels_.MergeFrom(other.userLabels_);
       if (other.Tier.Length != 0) {
         Tier = other.Tier;
       }
@@ -4446,7 +4446,7 @@ namespace Google.Cloud.CloudDms.V1 {
           AutoStorageIncrease = other.AutoStorageIncrease;
         }
       }
-      databaseFlags_.Add(other.databaseFlags_);
+      databaseFlags_.MergeFrom(other.databaseFlags_);
       if (other.DataDiskType != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDataDiskType.Unspecified) {
         DataDiskType = other.DataDiskType;
       }
@@ -5062,7 +5062,7 @@ namespace Google.Cloud.CloudDms.V1 {
       if (other.VpcNetwork.Length != 0) {
         VpcNetwork = other.VpcNetwork;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.primaryInstanceSettings_ != null) {
         if (primaryInstanceSettings_ == null) {
           PrimaryInstanceSettings = new global::Google.Cloud.CloudDms.V1.AlloyDbSettings.Types.PrimaryInstanceSettings();
@@ -5709,8 +5709,8 @@ namespace Google.Cloud.CloudDms.V1 {
             }
             MachineConfig.MergeFrom(other.MachineConfig);
           }
-          databaseFlags_.Add(other.databaseFlags_);
-          labels_.Add(other.labels_);
+          databaseFlags_.MergeFrom(other.databaseFlags_);
+          labels_.MergeFrom(other.labels_);
           if (other.PrivateIp.Length != 0) {
             PrivateIp = other.PrivateIp;
           }
@@ -7190,10 +7190,24 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Password {
-      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.Password ? (string) authenticationMethod_ : ""; }
+      get { return HasPassword ? (string) authenticationMethod_ : ""; }
       set {
         authenticationMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         authenticationMethodCase_ = AuthenticationMethodOneofCase.Password;
+      }
+    }
+    /// <summary>Gets whether the "password" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPassword {
+      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.Password; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "password" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPassword() {
+      if (HasPassword) {
+        ClearAuthenticationMethod();
       }
     }
 
@@ -7205,10 +7219,24 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PrivateKey {
-      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey ? (string) authenticationMethod_ : ""; }
+      get { return HasPrivateKey ? (string) authenticationMethod_ : ""; }
       set {
         authenticationMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         authenticationMethodCase_ = AuthenticationMethodOneofCase.PrivateKey;
+      }
+    }
+    /// <summary>Gets whether the "private_key" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPrivateKey {
+      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "private_key" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPrivateKey() {
+      if (HasPrivateKey) {
+        ClearAuthenticationMethod();
       }
     }
 
@@ -7264,8 +7292,8 @@ namespace Google.Cloud.CloudDms.V1 {
       if (Hostname.Length != 0) hash ^= Hostname.GetHashCode();
       if (Username.Length != 0) hash ^= Username.GetHashCode();
       if (Port != 0) hash ^= Port.GetHashCode();
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.Password) hash ^= Password.GetHashCode();
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey) hash ^= PrivateKey.GetHashCode();
+      if (HasPassword) hash ^= Password.GetHashCode();
+      if (HasPrivateKey) hash ^= PrivateKey.GetHashCode();
       hash ^= (int) authenticationMethodCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -7297,11 +7325,11 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(24);
         output.WriteInt32(Port);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.Password) {
+      if (HasPassword) {
         output.WriteRawTag(162, 6);
         output.WriteString(Password);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey) {
+      if (HasPrivateKey) {
         output.WriteRawTag(170, 6);
         output.WriteString(PrivateKey);
       }
@@ -7327,11 +7355,11 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(24);
         output.WriteInt32(Port);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.Password) {
+      if (HasPassword) {
         output.WriteRawTag(162, 6);
         output.WriteString(Password);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey) {
+      if (HasPrivateKey) {
         output.WriteRawTag(170, 6);
         output.WriteString(PrivateKey);
       }
@@ -7354,10 +7382,10 @@ namespace Google.Cloud.CloudDms.V1 {
       if (Port != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Port);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.Password) {
+      if (HasPassword) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Password);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey) {
+      if (HasPrivateKey) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(PrivateKey);
       }
       if (_unknownFields != null) {
@@ -8906,7 +8934,7 @@ namespace Google.Cloud.CloudDms.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -10631,7 +10659,7 @@ namespace Google.Cloud.CloudDms.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.State != global::Google.Cloud.CloudDms.V1.ConnectionProfile.Types.State.Unspecified) {
         State = other.State;
       }
@@ -11718,7 +11746,7 @@ namespace Google.Cloud.CloudDms.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }

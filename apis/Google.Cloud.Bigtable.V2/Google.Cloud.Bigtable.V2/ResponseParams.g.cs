@@ -95,6 +95,8 @@ namespace Google.Cloud.Bigtable.V2 {
 
     /// <summary>Field number for the "zone_id" field.</summary>
     public const int ZoneIdFieldNumber = 1;
+    private readonly static string ZoneIdDefaultValue = "";
+
     private string zoneId_;
     /// <summary>
     /// The cloud bigtable zone associated with the cluster.
@@ -102,7 +104,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ZoneId {
-      get { return zoneId_ ?? ""; }
+      get { return zoneId_ ?? ZoneIdDefaultValue; }
       set {
         zoneId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -122,6 +124,8 @@ namespace Google.Cloud.Bigtable.V2 {
 
     /// <summary>Field number for the "cluster_id" field.</summary>
     public const int ClusterIdFieldNumber = 2;
+    private readonly static string ClusterIdDefaultValue = "";
+
     private string clusterId_;
     /// <summary>
     /// Identifier for a cluster that represents set of
@@ -130,7 +134,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClusterId {
-      get { return clusterId_ ?? ""; }
+      get { return clusterId_ ?? ClusterIdDefaultValue; }
       set {
         clusterId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }

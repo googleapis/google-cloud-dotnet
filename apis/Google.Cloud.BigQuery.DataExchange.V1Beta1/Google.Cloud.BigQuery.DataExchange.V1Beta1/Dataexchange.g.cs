@@ -1690,7 +1690,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1 {
           Description = other.Description;
         }
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Location.Length != 0) {
         Location = other.Location;
       }

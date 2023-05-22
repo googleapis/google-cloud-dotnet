@@ -7554,7 +7554,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       sanDnsnames_.Add(other.sanDnsnames_);
       if (other.PemCertificate.Length != 0) {
         PemCertificate = other.PemCertificate;
@@ -9368,7 +9368,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       gclbTargets_.Add(other.gclbTargets_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9536,10 +9536,24 @@ namespace Google.Cloud.CertificateManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string TargetHttpsProxy {
-          get { return targetProxyCase_ == TargetProxyOneofCase.TargetHttpsProxy ? (string) targetProxy_ : ""; }
+          get { return HasTargetHttpsProxy ? (string) targetProxy_ : ""; }
           set {
             targetProxy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             targetProxyCase_ = TargetProxyOneofCase.TargetHttpsProxy;
+          }
+        }
+        /// <summary>Gets whether the "target_https_proxy" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasTargetHttpsProxy {
+          get { return targetProxyCase_ == TargetProxyOneofCase.TargetHttpsProxy; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "target_https_proxy" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearTargetHttpsProxy() {
+          if (HasTargetHttpsProxy) {
+            ClearTargetProxy();
           }
         }
 
@@ -9553,10 +9567,24 @@ namespace Google.Cloud.CertificateManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string TargetSslProxy {
-          get { return targetProxyCase_ == TargetProxyOneofCase.TargetSslProxy ? (string) targetProxy_ : ""; }
+          get { return HasTargetSslProxy ? (string) targetProxy_ : ""; }
           set {
             targetProxy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             targetProxyCase_ = TargetProxyOneofCase.TargetSslProxy;
+          }
+        }
+        /// <summary>Gets whether the "target_ssl_proxy" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasTargetSslProxy {
+          get { return targetProxyCase_ == TargetProxyOneofCase.TargetSslProxy; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "target_ssl_proxy" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearTargetSslProxy() {
+          if (HasTargetSslProxy) {
+            ClearTargetProxy();
           }
         }
 
@@ -9622,8 +9650,8 @@ namespace Google.Cloud.CertificateManager.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (targetProxyCase_ == TargetProxyOneofCase.TargetHttpsProxy) hash ^= TargetHttpsProxy.GetHashCode();
-          if (targetProxyCase_ == TargetProxyOneofCase.TargetSslProxy) hash ^= TargetSslProxy.GetHashCode();
+          if (HasTargetHttpsProxy) hash ^= TargetHttpsProxy.GetHashCode();
+          if (HasTargetSslProxy) hash ^= TargetSslProxy.GetHashCode();
           hash ^= ipConfigs_.GetHashCode();
           hash ^= (int) targetProxyCase_;
           if (_unknownFields != null) {
@@ -9644,12 +9672,12 @@ namespace Google.Cloud.CertificateManager.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (targetProxyCase_ == TargetProxyOneofCase.TargetHttpsProxy) {
+          if (HasTargetHttpsProxy) {
             output.WriteRawTag(10);
             output.WriteString(TargetHttpsProxy);
           }
           ipConfigs_.WriteTo(output, _repeated_ipConfigs_codec);
-          if (targetProxyCase_ == TargetProxyOneofCase.TargetSslProxy) {
+          if (HasTargetSslProxy) {
             output.WriteRawTag(26);
             output.WriteString(TargetSslProxy);
           }
@@ -9663,12 +9691,12 @@ namespace Google.Cloud.CertificateManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (targetProxyCase_ == TargetProxyOneofCase.TargetHttpsProxy) {
+          if (HasTargetHttpsProxy) {
             output.WriteRawTag(10);
             output.WriteString(TargetHttpsProxy);
           }
           ipConfigs_.WriteTo(ref output, _repeated_ipConfigs_codec);
-          if (targetProxyCase_ == TargetProxyOneofCase.TargetSslProxy) {
+          if (HasTargetSslProxy) {
             output.WriteRawTag(26);
             output.WriteString(TargetSslProxy);
           }
@@ -9682,10 +9710,10 @@ namespace Google.Cloud.CertificateManager.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (targetProxyCase_ == TargetProxyOneofCase.TargetHttpsProxy) {
+          if (HasTargetHttpsProxy) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetHttpsProxy);
           }
-          if (targetProxyCase_ == TargetProxyOneofCase.TargetSslProxy) {
+          if (HasTargetSslProxy) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetSslProxy);
           }
           size += ipConfigs_.CalculateSize(_repeated_ipConfigs_codec);
@@ -10159,10 +10187,24 @@ namespace Google.Cloud.CertificateManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Hostname {
-      get { return matchCase_ == MatchOneofCase.Hostname ? (string) match_ : ""; }
+      get { return HasHostname ? (string) match_ : ""; }
       set {
         match_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         matchCase_ = MatchOneofCase.Hostname;
+      }
+    }
+    /// <summary>Gets whether the "hostname" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHostname {
+      get { return matchCase_ == MatchOneofCase.Hostname; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "hostname" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHostname() {
+      if (HasHostname) {
+        ClearMatch();
       }
     }
 
@@ -10174,10 +10216,24 @@ namespace Google.Cloud.CertificateManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CertificateManager.V1.CertificateMapEntry.Types.Matcher Matcher {
-      get { return matchCase_ == MatchOneofCase.Matcher ? (global::Google.Cloud.CertificateManager.V1.CertificateMapEntry.Types.Matcher) match_ : global::Google.Cloud.CertificateManager.V1.CertificateMapEntry.Types.Matcher.Unspecified; }
+      get { return HasMatcher ? (global::Google.Cloud.CertificateManager.V1.CertificateMapEntry.Types.Matcher) match_ : global::Google.Cloud.CertificateManager.V1.CertificateMapEntry.Types.Matcher.Unspecified; }
       set {
         match_ = value;
         matchCase_ = MatchOneofCase.Matcher;
+      }
+    }
+    /// <summary>Gets whether the "matcher" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMatcher {
+      get { return matchCase_ == MatchOneofCase.Matcher; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "matcher" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMatcher() {
+      if (HasMatcher) {
+        ClearMatch();
       }
     }
 
@@ -10270,8 +10326,8 @@ namespace Google.Cloud.CertificateManager.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       hash ^= Labels.GetHashCode();
-      if (matchCase_ == MatchOneofCase.Hostname) hash ^= Hostname.GetHashCode();
-      if (matchCase_ == MatchOneofCase.Matcher) hash ^= Matcher.GetHashCode();
+      if (HasHostname) hash ^= Hostname.GetHashCode();
+      if (HasMatcher) hash ^= Matcher.GetHashCode();
       hash ^= certificates_.GetHashCode();
       if (State != global::Google.Cloud.CertificateManager.V1.ServingState.Unspecified) hash ^= State.GetHashCode();
       hash ^= (int) matchCase_;
@@ -10306,7 +10362,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         output.WriteMessage(UpdateTime);
       }
       labels_.WriteTo(output, _map_labels_codec);
-      if (matchCase_ == MatchOneofCase.Hostname) {
+      if (HasHostname) {
         output.WriteRawTag(42);
         output.WriteString(Hostname);
       }
@@ -10319,7 +10375,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         output.WriteRawTag(74);
         output.WriteString(Description);
       }
-      if (matchCase_ == MatchOneofCase.Matcher) {
+      if (HasMatcher) {
         output.WriteRawTag(80);
         output.WriteEnum((int) Matcher);
       }
@@ -10346,7 +10402,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         output.WriteMessage(UpdateTime);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
-      if (matchCase_ == MatchOneofCase.Hostname) {
+      if (HasHostname) {
         output.WriteRawTag(42);
         output.WriteString(Hostname);
       }
@@ -10359,7 +10415,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         output.WriteRawTag(74);
         output.WriteString(Description);
       }
-      if (matchCase_ == MatchOneofCase.Matcher) {
+      if (HasMatcher) {
         output.WriteRawTag(80);
         output.WriteEnum((int) Matcher);
       }
@@ -10386,10 +10442,10 @@ namespace Google.Cloud.CertificateManager.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
       size += labels_.CalculateSize(_map_labels_codec);
-      if (matchCase_ == MatchOneofCase.Hostname) {
+      if (HasHostname) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Hostname);
       }
-      if (matchCase_ == MatchOneofCase.Matcher) {
+      if (HasMatcher) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Matcher);
       }
       size += certificates_.CalculateSize(_repeated_certificates_codec);
@@ -10426,7 +10482,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       certificates_.Add(other.certificates_);
       if (other.State != global::Google.Cloud.CertificateManager.V1.ServingState.Unspecified) {
         State = other.State;
@@ -10921,7 +10977,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }

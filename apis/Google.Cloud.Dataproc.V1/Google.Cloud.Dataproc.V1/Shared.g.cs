@@ -432,7 +432,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.ContainerImage.Length != 0) {
         ContainerImage = other.ContainerImage;
       }
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -830,10 +830,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NetworkUri {
-      get { return networkCase_ == NetworkOneofCase.NetworkUri ? (string) network_ : ""; }
+      get { return HasNetworkUri ? (string) network_ : ""; }
       set {
         network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         networkCase_ = NetworkOneofCase.NetworkUri;
+      }
+    }
+    /// <summary>Gets whether the "network_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNetworkUri {
+      get { return networkCase_ == NetworkOneofCase.NetworkUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "network_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNetworkUri() {
+      if (HasNetworkUri) {
+        ClearNetwork();
       }
     }
 
@@ -845,10 +859,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SubnetworkUri {
-      get { return networkCase_ == NetworkOneofCase.SubnetworkUri ? (string) network_ : ""; }
+      get { return HasSubnetworkUri ? (string) network_ : ""; }
       set {
         network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         networkCase_ = NetworkOneofCase.SubnetworkUri;
+      }
+    }
+    /// <summary>Gets whether the "subnetwork_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSubnetworkUri {
+      get { return networkCase_ == NetworkOneofCase.SubnetworkUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "subnetwork_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSubnetworkUri() {
+      if (HasSubnetworkUri) {
+        ClearNetwork();
       }
     }
 
@@ -979,8 +1007,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
-      if (networkCase_ == NetworkOneofCase.NetworkUri) hash ^= NetworkUri.GetHashCode();
-      if (networkCase_ == NetworkOneofCase.SubnetworkUri) hash ^= SubnetworkUri.GetHashCode();
+      if (HasNetworkUri) hash ^= NetworkUri.GetHashCode();
+      if (HasSubnetworkUri) hash ^= SubnetworkUri.GetHashCode();
       hash ^= networkTags_.GetHashCode();
       if (KmsKey.Length != 0) hash ^= KmsKey.GetHashCode();
       if (ttl_ != null) hash ^= Ttl.GetHashCode();
@@ -1008,11 +1036,11 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(18);
         output.WriteString(ServiceAccount);
       }
-      if (networkCase_ == NetworkOneofCase.NetworkUri) {
+      if (HasNetworkUri) {
         output.WriteRawTag(34);
         output.WriteString(NetworkUri);
       }
-      if (networkCase_ == NetworkOneofCase.SubnetworkUri) {
+      if (HasSubnetworkUri) {
         output.WriteRawTag(42);
         output.WriteString(SubnetworkUri);
       }
@@ -1043,11 +1071,11 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(18);
         output.WriteString(ServiceAccount);
       }
-      if (networkCase_ == NetworkOneofCase.NetworkUri) {
+      if (HasNetworkUri) {
         output.WriteRawTag(34);
         output.WriteString(NetworkUri);
       }
-      if (networkCase_ == NetworkOneofCase.SubnetworkUri) {
+      if (HasSubnetworkUri) {
         output.WriteRawTag(42);
         output.WriteString(SubnetworkUri);
       }
@@ -1077,10 +1105,10 @@ namespace Google.Cloud.Dataproc.V1 {
       if (ServiceAccount.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
       }
-      if (networkCase_ == NetworkOneofCase.NetworkUri) {
+      if (HasNetworkUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NetworkUri);
       }
-      if (networkCase_ == NetworkOneofCase.SubnetworkUri) {
+      if (HasSubnetworkUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SubnetworkUri);
       }
       size += networkTags_.CalculateSize(_repeated_networkTags_codec);
@@ -1935,7 +1963,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other == null) {
         return;
       }
-      endpoints_.Add(other.endpoints_);
+      endpoints_.MergeFrom(other.endpoints_);
       if (other.OutputUri.Length != 0) {
         OutputUri = other.OutputUri;
       }
@@ -3303,8 +3331,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other == null) {
         return;
       }
-      componentVersion_.Add(other.componentVersion_);
-      properties_.Add(other.properties_);
+      componentVersion_.MergeFrom(other.componentVersion_);
+      properties_.MergeFrom(other.properties_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

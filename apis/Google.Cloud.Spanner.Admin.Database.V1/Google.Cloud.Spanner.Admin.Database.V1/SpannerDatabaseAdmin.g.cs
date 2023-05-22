@@ -5039,10 +5039,24 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Backup {
-      get { return sourceCase_ == SourceOneofCase.Backup ? (string) source_ : ""; }
+      get { return HasBackup ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Backup;
+      }
+    }
+    /// <summary>Gets whether the "backup" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBackup {
+      get { return sourceCase_ == SourceOneofCase.Backup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "backup" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBackup() {
+      if (HasBackup) {
+        ClearSource();
       }
     }
 
@@ -5115,7 +5129,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (DatabaseId.Length != 0) hash ^= DatabaseId.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.Backup) hash ^= Backup.GetHashCode();
+      if (HasBackup) hash ^= Backup.GetHashCode();
       if (encryptionConfig_ != null) hash ^= EncryptionConfig.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
@@ -5144,7 +5158,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         output.WriteRawTag(18);
         output.WriteString(DatabaseId);
       }
-      if (sourceCase_ == SourceOneofCase.Backup) {
+      if (HasBackup) {
         output.WriteRawTag(26);
         output.WriteString(Backup);
       }
@@ -5170,7 +5184,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         output.WriteRawTag(18);
         output.WriteString(DatabaseId);
       }
-      if (sourceCase_ == SourceOneofCase.Backup) {
+      if (HasBackup) {
         output.WriteRawTag(26);
         output.WriteString(Backup);
       }
@@ -5194,7 +5208,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       if (DatabaseId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DatabaseId);
       }
-      if (sourceCase_ == SourceOneofCase.Backup) {
+      if (HasBackup) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Backup);
       }
       if (encryptionConfig_ != null) {

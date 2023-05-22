@@ -2518,7 +2518,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.TimeZone.Length != 0) {
         TimeZone = other.TimeZone;
       }

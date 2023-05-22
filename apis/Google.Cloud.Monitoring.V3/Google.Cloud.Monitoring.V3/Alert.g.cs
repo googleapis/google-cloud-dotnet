@@ -628,7 +628,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
         Documentation.MergeFrom(other.Documentation);
       }
-      userLabels_.Add(other.userLabels_);
+      userLabels_.MergeFrom(other.userLabels_);
       conditions_.Add(other.conditions_);
       if (other.Combiner != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType.CombineUnspecified) {
         Combiner = other.Combiner;
@@ -1717,10 +1717,24 @@ namespace Google.Cloud.Monitoring.V3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int Count {
-              get { return typeCase_ == TypeOneofCase.Count ? (int) type_ : 0; }
+              get { return HasCount ? (int) type_ : 0; }
               set {
                 type_ = value;
                 typeCase_ = TypeOneofCase.Count;
+              }
+            }
+            /// <summary>Gets whether the "count" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasCount {
+              get { return typeCase_ == TypeOneofCase.Count; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "count" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearCount() {
+              if (HasCount) {
+                ClearType();
               }
             }
 
@@ -1733,10 +1747,24 @@ namespace Google.Cloud.Monitoring.V3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public double Percent {
-              get { return typeCase_ == TypeOneofCase.Percent ? (double) type_ : 0D; }
+              get { return HasPercent ? (double) type_ : 0D; }
               set {
                 type_ = value;
                 typeCase_ = TypeOneofCase.Percent;
+              }
+            }
+            /// <summary>Gets whether the "percent" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasPercent {
+              get { return typeCase_ == TypeOneofCase.Percent; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "percent" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearPercent() {
+              if (HasPercent) {
+                ClearType();
               }
             }
 
@@ -1786,8 +1814,8 @@ namespace Google.Cloud.Monitoring.V3 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
-              if (typeCase_ == TypeOneofCase.Count) hash ^= Count.GetHashCode();
-              if (typeCase_ == TypeOneofCase.Percent) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Percent);
+              if (HasCount) hash ^= Count.GetHashCode();
+              if (HasPercent) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Percent);
               hash ^= (int) typeCase_;
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -1807,11 +1835,11 @@ namespace Google.Cloud.Monitoring.V3 {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
-              if (typeCase_ == TypeOneofCase.Count) {
+              if (HasCount) {
                 output.WriteRawTag(8);
                 output.WriteInt32(Count);
               }
-              if (typeCase_ == TypeOneofCase.Percent) {
+              if (HasPercent) {
                 output.WriteRawTag(17);
                 output.WriteDouble(Percent);
               }
@@ -1825,11 +1853,11 @@ namespace Google.Cloud.Monitoring.V3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (typeCase_ == TypeOneofCase.Count) {
+              if (HasCount) {
                 output.WriteRawTag(8);
                 output.WriteInt32(Count);
               }
-              if (typeCase_ == TypeOneofCase.Percent) {
+              if (HasPercent) {
                 output.WriteRawTag(17);
                 output.WriteDouble(Percent);
               }
@@ -1843,10 +1871,10 @@ namespace Google.Cloud.Monitoring.V3 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
-              if (typeCase_ == TypeOneofCase.Count) {
+              if (HasCount) {
                 size += 1 + pb::CodedOutputStream.ComputeInt32Size(Count);
               }
-              if (typeCase_ == TypeOneofCase.Percent) {
+              if (HasPercent) {
                 size += 1 + 8;
               }
               if (_unknownFields != null) {
@@ -3030,7 +3058,7 @@ namespace Google.Cloud.Monitoring.V3 {
               if (other.Filter.Length != 0) {
                 Filter = other.Filter;
               }
-              labelExtractors_.Add(other.labelExtractors_);
+              labelExtractors_.MergeFrom(other.labelExtractors_);
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
 

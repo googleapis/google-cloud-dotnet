@@ -1582,10 +1582,24 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string LocalPath {
-              get { return typeCase_ == TypeOneofCase.LocalPath ? (string) type_ : ""; }
+              get { return HasLocalPath ? (string) type_ : ""; }
               set {
                 type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 typeCase_ = TypeOneofCase.LocalPath;
+              }
+            }
+            /// <summary>Gets whether the "local_path" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasLocalPath {
+              get { return typeCase_ == TypeOneofCase.LocalPath; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "local_path" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearLocalPath() {
+              if (HasLocalPath) {
+                ClearType();
               }
             }
 
@@ -1659,7 +1673,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               int hash = 1;
               if (typeCase_ == TypeOneofCase.Remote) hash ^= Remote.GetHashCode();
               if (typeCase_ == TypeOneofCase.Gcs) hash ^= Gcs.GetHashCode();
-              if (typeCase_ == TypeOneofCase.LocalPath) hash ^= LocalPath.GetHashCode();
+              if (HasLocalPath) hash ^= LocalPath.GetHashCode();
               if (AllowInsecure != false) hash ^= AllowInsecure.GetHashCode();
               hash ^= (int) typeCase_;
               if (_unknownFields != null) {
@@ -1688,7 +1702,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 output.WriteRawTag(18);
                 output.WriteMessage(Gcs);
               }
-              if (typeCase_ == TypeOneofCase.LocalPath) {
+              if (HasLocalPath) {
                 output.WriteRawTag(26);
                 output.WriteString(LocalPath);
               }
@@ -1714,7 +1728,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 output.WriteRawTag(18);
                 output.WriteMessage(Gcs);
               }
-              if (typeCase_ == TypeOneofCase.LocalPath) {
+              if (HasLocalPath) {
                 output.WriteRawTag(26);
                 output.WriteString(LocalPath);
               }
@@ -1738,7 +1752,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               if (typeCase_ == TypeOneofCase.Gcs) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(Gcs);
               }
-              if (typeCase_ == TypeOneofCase.LocalPath) {
+              if (HasLocalPath) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(LocalPath);
               }
               if (AllowInsecure != false) {
@@ -6555,10 +6569,24 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Script {
-                  get { return sourceCase_ == SourceOneofCase.Script ? (string) source_ : ""; }
+                  get { return HasScript ? (string) source_ : ""; }
                   set {
                     source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                     sourceCase_ = SourceOneofCase.Script;
+                  }
+                }
+                /// <summary>Gets whether the "script" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasScript {
+                  get { return sourceCase_ == SourceOneofCase.Script; }
+                }
+                /// <summary> Clears the value of the oneof if it's currently set to "script" </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearScript() {
+                  if (HasScript) {
+                    ClearSource();
                   }
                 }
 
@@ -6661,7 +6689,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 public override int GetHashCode() {
                   int hash = 1;
                   if (sourceCase_ == SourceOneofCase.File) hash ^= File.GetHashCode();
-                  if (sourceCase_ == SourceOneofCase.Script) hash ^= Script.GetHashCode();
+                  if (HasScript) hash ^= Script.GetHashCode();
                   hash ^= args_.GetHashCode();
                   if (Interpreter != global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec.Types.Interpreter.Unspecified) hash ^= Interpreter.GetHashCode();
                   if (OutputFilePath.Length != 0) hash ^= OutputFilePath.GetHashCode();
@@ -6688,7 +6716,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                     output.WriteRawTag(10);
                     output.WriteMessage(File);
                   }
-                  if (sourceCase_ == SourceOneofCase.Script) {
+                  if (HasScript) {
                     output.WriteRawTag(18);
                     output.WriteString(Script);
                   }
@@ -6715,7 +6743,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                     output.WriteRawTag(10);
                     output.WriteMessage(File);
                   }
-                  if (sourceCase_ == SourceOneofCase.Script) {
+                  if (HasScript) {
                     output.WriteRawTag(18);
                     output.WriteString(Script);
                   }
@@ -6741,7 +6769,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                   if (sourceCase_ == SourceOneofCase.File) {
                     size += 1 + pb::CodedOutputStream.ComputeMessageSize(File);
                   }
-                  if (sourceCase_ == SourceOneofCase.Script) {
+                  if (HasScript) {
                     size += 1 + pb::CodedOutputStream.ComputeStringSize(Script);
                   }
                   size += args_.CalculateSize(_repeated_args_codec);
@@ -6991,10 +7019,24 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Content {
-              get { return sourceCase_ == SourceOneofCase.Content ? (string) source_ : ""; }
+              get { return HasContent ? (string) source_ : ""; }
               set {
                 source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 sourceCase_ = SourceOneofCase.Content;
+              }
+            }
+            /// <summary>Gets whether the "content" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasContent {
+              get { return sourceCase_ == SourceOneofCase.Content; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "content" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearContent() {
+              if (HasContent) {
+                ClearSource();
               }
             }
 
@@ -7105,7 +7147,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             public override int GetHashCode() {
               int hash = 1;
               if (sourceCase_ == SourceOneofCase.File) hash ^= File.GetHashCode();
-              if (sourceCase_ == SourceOneofCase.Content) hash ^= Content.GetHashCode();
+              if (HasContent) hash ^= Content.GetHashCode();
               if (Path.Length != 0) hash ^= Path.GetHashCode();
               if (State != global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.FileResource.Types.DesiredState.Unspecified) hash ^= State.GetHashCode();
               if (Permissions.Length != 0) hash ^= Permissions.GetHashCode();
@@ -7132,7 +7174,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 output.WriteRawTag(10);
                 output.WriteMessage(File);
               }
-              if (sourceCase_ == SourceOneofCase.Content) {
+              if (HasContent) {
                 output.WriteRawTag(18);
                 output.WriteString(Content);
               }
@@ -7162,7 +7204,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 output.WriteRawTag(10);
                 output.WriteMessage(File);
               }
-              if (sourceCase_ == SourceOneofCase.Content) {
+              if (HasContent) {
                 output.WriteRawTag(18);
                 output.WriteString(Content);
               }
@@ -7191,7 +7233,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               if (sourceCase_ == SourceOneofCase.File) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(File);
               }
-              if (sourceCase_ == SourceOneofCase.Content) {
+              if (HasContent) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
               }
               if (Path.Length != 0) {

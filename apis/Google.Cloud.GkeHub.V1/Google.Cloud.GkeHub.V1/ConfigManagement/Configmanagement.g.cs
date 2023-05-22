@@ -1772,6 +1772,8 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     /// <summary>Field number for the "template_library_installed" field.</summary>
     public const int TemplateLibraryInstalledFieldNumber = 2;
+    private readonly static bool TemplateLibraryInstalledDefaultValue = false;
+
     private bool templateLibraryInstalled_;
     /// <summary>
     /// Installs the default template library along with Policy Controller.
@@ -1779,7 +1781,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool TemplateLibraryInstalled {
-      get { if ((_hasBits0 & 1) != 0) { return templateLibraryInstalled_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return templateLibraryInstalled_; } else { return TemplateLibraryInstalledDefaultValue; } }
       set {
         _hasBits0 |= 1;
         templateLibraryInstalled_ = value;
@@ -1800,6 +1802,8 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     /// <summary>Field number for the "audit_interval_seconds" field.</summary>
     public const int AuditIntervalSecondsFieldNumber = 3;
+    private readonly static long AuditIntervalSecondsDefaultValue = 0L;
+
     private long auditIntervalSeconds_;
     /// <summary>
     /// Sets the interval for Policy Controller Audit Scans (in seconds).
@@ -1808,7 +1812,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long AuditIntervalSeconds {
-      get { if ((_hasBits0 & 2) != 0) { return auditIntervalSeconds_; } else { return 0L; } }
+      get { if ((_hasBits0 & 2) != 0) { return auditIntervalSeconds_; } else { return AuditIntervalSecondsDefaultValue; } }
       set {
         _hasBits0 |= 2;
         auditIntervalSeconds_ = value;

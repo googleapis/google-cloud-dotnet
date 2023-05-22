@@ -378,10 +378,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Transaction {
-      get { return consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction ? (pb::ByteString) consistencySelector_ : pb::ByteString.Empty; }
+      get { return HasTransaction ? (pb::ByteString) consistencySelector_ : pb::ByteString.Empty; }
       set {
         consistencySelector_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         consistencySelectorCase_ = ConsistencySelectorOneofCase.Transaction;
+      }
+    }
+    /// <summary>Gets whether the "transaction" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTransaction {
+      get { return consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "transaction" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTransaction() {
+      if (HasTransaction) {
+        ClearConsistencySelector();
       }
     }
 
@@ -451,7 +465,7 @@ namespace Google.Cloud.Firestore.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (mask_ != null) hash ^= Mask.GetHashCode();
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) hash ^= Transaction.GetHashCode();
+      if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
       hash ^= (int) consistencySelectorCase_;
       if (_unknownFields != null) {
@@ -480,7 +494,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Mask);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(26);
         output.WriteBytes(Transaction);
       }
@@ -506,7 +520,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Mask);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(26);
         output.WriteBytes(Transaction);
       }
@@ -530,7 +544,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (mask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Mask);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
       }
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) {
@@ -841,10 +855,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Transaction {
-      get { return consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction ? (pb::ByteString) consistencySelector_ : pb::ByteString.Empty; }
+      get { return HasTransaction ? (pb::ByteString) consistencySelector_ : pb::ByteString.Empty; }
       set {
         consistencySelector_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         consistencySelectorCase_ = ConsistencySelectorOneofCase.Transaction;
+      }
+    }
+    /// <summary>Gets whether the "transaction" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTransaction {
+      get { return consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "transaction" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTransaction() {
+      if (HasTransaction) {
+        ClearConsistencySelector();
       }
     }
 
@@ -947,7 +975,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (mask_ != null) hash ^= Mask.GetHashCode();
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) hash ^= Transaction.GetHashCode();
+      if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
       if (ShowMissing != false) hash ^= ShowMissing.GetHashCode();
       hash ^= (int) consistencySelectorCase_;
@@ -993,7 +1021,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(Mask);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(66);
         output.WriteBytes(Transaction);
       }
@@ -1039,7 +1067,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(Mask);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(66);
         output.WriteBytes(Transaction);
       }
@@ -1079,7 +1107,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (mask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Mask);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
       }
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) {
@@ -2601,10 +2629,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Transaction {
-      get { return consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction ? (pb::ByteString) consistencySelector_ : pb::ByteString.Empty; }
+      get { return HasTransaction ? (pb::ByteString) consistencySelector_ : pb::ByteString.Empty; }
       set {
         consistencySelector_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         consistencySelectorCase_ = ConsistencySelectorOneofCase.Transaction;
+      }
+    }
+    /// <summary>Gets whether the "transaction" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTransaction {
+      get { return consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "transaction" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTransaction() {
+      if (HasTransaction) {
+        ClearConsistencySelector();
       }
     }
 
@@ -2696,7 +2738,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (Database.Length != 0) hash ^= Database.GetHashCode();
       hash ^= documents_.GetHashCode();
       if (mask_ != null) hash ^= Mask.GetHashCode();
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) hash ^= Transaction.GetHashCode();
+      if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.NewTransaction) hash ^= NewTransaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
       hash ^= (int) consistencySelectorCase_;
@@ -2727,7 +2769,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Mask);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(34);
         output.WriteBytes(Transaction);
       }
@@ -2758,7 +2800,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Mask);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(34);
         output.WriteBytes(Transaction);
       }
@@ -2787,7 +2829,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (mask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Mask);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
       }
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.NewTransaction) {
@@ -3029,10 +3071,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Missing {
-      get { return resultCase_ == ResultOneofCase.Missing ? (string) result_ : ""; }
+      get { return HasMissing ? (string) result_ : ""; }
       set {
         result_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         resultCase_ = ResultOneofCase.Missing;
+      }
+    }
+    /// <summary>Gets whether the "missing" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMissing {
+      get { return resultCase_ == ResultOneofCase.Missing; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "missing" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMissing() {
+      if (HasMissing) {
+        ClearResult();
       }
     }
 
@@ -3121,7 +3177,7 @@ namespace Google.Cloud.Firestore.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (resultCase_ == ResultOneofCase.Found) hash ^= Found.GetHashCode();
-      if (resultCase_ == ResultOneofCase.Missing) hash ^= Missing.GetHashCode();
+      if (HasMissing) hash ^= Missing.GetHashCode();
       if (Transaction.Length != 0) hash ^= Transaction.GetHashCode();
       if (readTime_ != null) hash ^= ReadTime.GetHashCode();
       hash ^= (int) resultCase_;
@@ -3147,7 +3203,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Found);
       }
-      if (resultCase_ == ResultOneofCase.Missing) {
+      if (HasMissing) {
         output.WriteRawTag(18);
         output.WriteString(Missing);
       }
@@ -3173,7 +3229,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Found);
       }
-      if (resultCase_ == ResultOneofCase.Missing) {
+      if (HasMissing) {
         output.WriteRawTag(18);
         output.WriteString(Missing);
       }
@@ -3198,7 +3254,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (resultCase_ == ResultOneofCase.Found) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Found);
       }
-      if (resultCase_ == ResultOneofCase.Missing) {
+      if (HasMissing) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Missing);
       }
       if (Transaction.Length != 0) {
@@ -4618,10 +4674,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Transaction {
-      get { return consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction ? (pb::ByteString) consistencySelector_ : pb::ByteString.Empty; }
+      get { return HasTransaction ? (pb::ByteString) consistencySelector_ : pb::ByteString.Empty; }
       set {
         consistencySelector_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         consistencySelectorCase_ = ConsistencySelectorOneofCase.Transaction;
+      }
+    }
+    /// <summary>Gets whether the "transaction" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTransaction {
+      get { return consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "transaction" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTransaction() {
+      if (HasTransaction) {
+        ClearConsistencySelector();
       }
     }
 
@@ -4732,7 +4802,7 @@ namespace Google.Cloud.Firestore.V1 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (queryTypeCase_ == QueryTypeOneofCase.StructuredQuery) hash ^= StructuredQuery.GetHashCode();
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) hash ^= Transaction.GetHashCode();
+      if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.NewTransaction) hash ^= NewTransaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
       hash ^= (int) queryTypeCase_;
@@ -4763,7 +4833,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(StructuredQuery);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(42);
         output.WriteBytes(Transaction);
       }
@@ -4793,7 +4863,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(StructuredQuery);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(42);
         output.WriteBytes(Transaction);
       }
@@ -4821,7 +4891,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (queryTypeCase_ == QueryTypeOneofCase.StructuredQuery) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StructuredQuery);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
       }
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.NewTransaction) {
@@ -5116,10 +5186,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Done {
-      get { return continuationSelectorCase_ == ContinuationSelectorOneofCase.Done ? (bool) continuationSelector_ : false; }
+      get { return HasDone ? (bool) continuationSelector_ : false; }
       set {
         continuationSelector_ = value;
         continuationSelectorCase_ = ContinuationSelectorOneofCase.Done;
+      }
+    }
+    /// <summary>Gets whether the "done" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDone {
+      get { return continuationSelectorCase_ == ContinuationSelectorOneofCase.Done; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "done" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDone() {
+      if (HasDone) {
+        ClearContinuationSelector();
       }
     }
 
@@ -5175,7 +5259,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (document_ != null) hash ^= Document.GetHashCode();
       if (readTime_ != null) hash ^= ReadTime.GetHashCode();
       if (SkippedResults != 0) hash ^= SkippedResults.GetHashCode();
-      if (continuationSelectorCase_ == ContinuationSelectorOneofCase.Done) hash ^= Done.GetHashCode();
+      if (HasDone) hash ^= Done.GetHashCode();
       hash ^= (int) continuationSelectorCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5211,7 +5295,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(32);
         output.WriteInt32(SkippedResults);
       }
-      if (continuationSelectorCase_ == ContinuationSelectorOneofCase.Done) {
+      if (HasDone) {
         output.WriteRawTag(48);
         output.WriteBool(Done);
       }
@@ -5241,7 +5325,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(32);
         output.WriteInt32(SkippedResults);
       }
-      if (continuationSelectorCase_ == ContinuationSelectorOneofCase.Done) {
+      if (HasDone) {
         output.WriteRawTag(48);
         output.WriteBool(Done);
       }
@@ -5267,7 +5351,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (SkippedResults != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SkippedResults);
       }
-      if (continuationSelectorCase_ == ContinuationSelectorOneofCase.Done) {
+      if (HasDone) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -5506,10 +5590,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Transaction {
-      get { return consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction ? (pb::ByteString) consistencySelector_ : pb::ByteString.Empty; }
+      get { return HasTransaction ? (pb::ByteString) consistencySelector_ : pb::ByteString.Empty; }
       set {
         consistencySelector_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         consistencySelectorCase_ = ConsistencySelectorOneofCase.Transaction;
+      }
+    }
+    /// <summary>Gets whether the "transaction" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTransaction {
+      get { return consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "transaction" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTransaction() {
+      if (HasTransaction) {
+        ClearConsistencySelector();
       }
     }
 
@@ -5623,7 +5721,7 @@ namespace Google.Cloud.Firestore.V1 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (queryTypeCase_ == QueryTypeOneofCase.StructuredAggregationQuery) hash ^= StructuredAggregationQuery.GetHashCode();
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) hash ^= Transaction.GetHashCode();
+      if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.NewTransaction) hash ^= NewTransaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
       hash ^= (int) queryTypeCase_;
@@ -5654,7 +5752,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(StructuredAggregationQuery);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(34);
         output.WriteBytes(Transaction);
       }
@@ -5684,7 +5782,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(StructuredAggregationQuery);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(34);
         output.WriteBytes(Transaction);
       }
@@ -5712,7 +5810,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (queryTypeCase_ == QueryTypeOneofCase.StructuredAggregationQuery) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StructuredAggregationQuery);
       }
-      if (consistencySelectorCase_ == ConsistencySelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
       }
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.NewTransaction) {
@@ -7219,7 +7317,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (other.StreamToken.Length != 0) {
         StreamToken = other.StreamToken;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -7714,10 +7812,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int RemoveTarget {
-      get { return targetChangeCase_ == TargetChangeOneofCase.RemoveTarget ? (int) targetChange_ : 0; }
+      get { return HasRemoveTarget ? (int) targetChange_ : 0; }
       set {
         targetChange_ = value;
         targetChangeCase_ = TargetChangeOneofCase.RemoveTarget;
+      }
+    }
+    /// <summary>Gets whether the "remove_target" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRemoveTarget {
+      get { return targetChangeCase_ == TargetChangeOneofCase.RemoveTarget; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "remove_target" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRemoveTarget() {
+      if (HasRemoveTarget) {
+        ClearTargetChange();
       }
     }
 
@@ -7785,7 +7897,7 @@ namespace Google.Cloud.Firestore.V1 {
       int hash = 1;
       if (Database.Length != 0) hash ^= Database.GetHashCode();
       if (targetChangeCase_ == TargetChangeOneofCase.AddTarget) hash ^= AddTarget.GetHashCode();
-      if (targetChangeCase_ == TargetChangeOneofCase.RemoveTarget) hash ^= RemoveTarget.GetHashCode();
+      if (HasRemoveTarget) hash ^= RemoveTarget.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= (int) targetChangeCase_;
       if (_unknownFields != null) {
@@ -7814,7 +7926,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(AddTarget);
       }
-      if (targetChangeCase_ == TargetChangeOneofCase.RemoveTarget) {
+      if (HasRemoveTarget) {
         output.WriteRawTag(24);
         output.WriteInt32(RemoveTarget);
       }
@@ -7837,7 +7949,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(AddTarget);
       }
-      if (targetChangeCase_ == TargetChangeOneofCase.RemoveTarget) {
+      if (HasRemoveTarget) {
         output.WriteRawTag(24);
         output.WriteInt32(RemoveTarget);
       }
@@ -7858,7 +7970,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (targetChangeCase_ == TargetChangeOneofCase.AddTarget) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddTarget);
       }
-      if (targetChangeCase_ == TargetChangeOneofCase.RemoveTarget) {
+      if (HasRemoveTarget) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RemoveTarget);
       }
       size += labels_.CalculateSize(_map_labels_codec);
@@ -7877,7 +7989,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (other.Database.Length != 0) {
         Database = other.Database;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.TargetChangeCase) {
         case TargetChangeOneofCase.AddTarget:
           if (AddTarget == null) {
@@ -8544,10 +8656,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString ResumeToken {
-      get { return resumeTypeCase_ == ResumeTypeOneofCase.ResumeToken ? (pb::ByteString) resumeType_ : pb::ByteString.Empty; }
+      get { return HasResumeToken ? (pb::ByteString) resumeType_ : pb::ByteString.Empty; }
       set {
         resumeType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         resumeTypeCase_ = ResumeTypeOneofCase.ResumeToken;
+      }
+    }
+    /// <summary>Gets whether the "resume_token" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasResumeToken {
+      get { return resumeTypeCase_ == ResumeTypeOneofCase.ResumeToken; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "resume_token" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearResumeToken() {
+      if (HasResumeToken) {
+        ClearResumeType();
       }
     }
 
@@ -8696,7 +8822,7 @@ namespace Google.Cloud.Firestore.V1 {
       int hash = 1;
       if (targetTypeCase_ == TargetTypeOneofCase.Query) hash ^= Query.GetHashCode();
       if (targetTypeCase_ == TargetTypeOneofCase.Documents) hash ^= Documents.GetHashCode();
-      if (resumeTypeCase_ == ResumeTypeOneofCase.ResumeToken) hash ^= ResumeToken.GetHashCode();
+      if (HasResumeToken) hash ^= ResumeToken.GetHashCode();
       if (resumeTypeCase_ == ResumeTypeOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
       if (TargetId != 0) hash ^= TargetId.GetHashCode();
       if (Once != false) hash ^= Once.GetHashCode();
@@ -8729,7 +8855,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Documents);
       }
-      if (resumeTypeCase_ == ResumeTypeOneofCase.ResumeToken) {
+      if (HasResumeToken) {
         output.WriteRawTag(34);
         output.WriteBytes(ResumeToken);
       }
@@ -8766,7 +8892,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Documents);
       }
-      if (resumeTypeCase_ == ResumeTypeOneofCase.ResumeToken) {
+      if (HasResumeToken) {
         output.WriteRawTag(34);
         output.WriteBytes(ResumeToken);
       }
@@ -8801,7 +8927,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (targetTypeCase_ == TargetTypeOneofCase.Documents) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Documents);
       }
-      if (resumeTypeCase_ == ResumeTypeOneofCase.ResumeToken) {
+      if (HasResumeToken) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(ResumeToken);
       }
       if (resumeTypeCase_ == ResumeTypeOneofCase.ReadTime) {
@@ -10684,7 +10810,7 @@ namespace Google.Cloud.Firestore.V1 {
         Database = other.Database;
       }
       writes_.Add(other.writes_);
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

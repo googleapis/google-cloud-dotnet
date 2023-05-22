@@ -517,7 +517,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       if (other.origin_ != null) {
         if (origin_ == null) {
           Origin = new global::Google.Cloud.DataCatalog.Lineage.V1.Origin();
@@ -896,7 +896,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       if (other.startTime_ != null) {
         if (startTime_ == null) {
           StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();

@@ -593,7 +593,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       savedQueries_.Add(other.savedQueries_);
       if (other.encryptionSpec_ != null) {
         if (encryptionSpec_ == null) {
@@ -1029,8 +1029,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other == null) {
         return;
       }
-      dataItemLabels_.Add(other.dataItemLabels_);
-      annotationLabels_.Add(other.annotationLabels_);
+      dataItemLabels_.MergeFrom(other.dataItemLabels_);
+      annotationLabels_.MergeFrom(other.annotationLabels_);
       if (other.ImportSchemaUri.Length != 0) {
         ImportSchemaUri = other.ImportSchemaUri;
       }

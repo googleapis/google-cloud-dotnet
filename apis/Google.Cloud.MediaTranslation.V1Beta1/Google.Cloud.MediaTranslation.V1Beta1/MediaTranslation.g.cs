@@ -825,10 +825,24 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString AudioContent {
-      get { return streamingRequestCase_ == StreamingRequestOneofCase.AudioContent ? (pb::ByteString) streamingRequest_ : pb::ByteString.Empty; }
+      get { return HasAudioContent ? (pb::ByteString) streamingRequest_ : pb::ByteString.Empty; }
       set {
         streamingRequest_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         streamingRequestCase_ = StreamingRequestOneofCase.AudioContent;
+      }
+    }
+    /// <summary>Gets whether the "audio_content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAudioContent {
+      get { return streamingRequestCase_ == StreamingRequestOneofCase.AudioContent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "audio_content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAudioContent() {
+      if (HasAudioContent) {
+        ClearStreamingRequest();
       }
     }
 
@@ -879,7 +893,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) hash ^= StreamingConfig.GetHashCode();
-      if (streamingRequestCase_ == StreamingRequestOneofCase.AudioContent) hash ^= AudioContent.GetHashCode();
+      if (HasAudioContent) hash ^= AudioContent.GetHashCode();
       hash ^= (int) streamingRequestCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -903,7 +917,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteMessage(StreamingConfig);
       }
-      if (streamingRequestCase_ == StreamingRequestOneofCase.AudioContent) {
+      if (HasAudioContent) {
         output.WriteRawTag(18);
         output.WriteBytes(AudioContent);
       }
@@ -921,7 +935,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteMessage(StreamingConfig);
       }
-      if (streamingRequestCase_ == StreamingRequestOneofCase.AudioContent) {
+      if (HasAudioContent) {
         output.WriteRawTag(18);
         output.WriteBytes(AudioContent);
       }
@@ -938,7 +952,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StreamingConfig);
       }
-      if (streamingRequestCase_ == StreamingRequestOneofCase.AudioContent) {
+      if (HasAudioContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(AudioContent);
       }
       if (_unknownFields != null) {

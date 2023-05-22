@@ -5534,9 +5534,9 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       if (other.ImageVersion.Length != 0) {
         ImageVersion = other.ImageVersion;
       }
-      airflowConfigOverrides_.Add(other.airflowConfigOverrides_);
-      pypiPackages_.Add(other.pypiPackages_);
-      envVariables_.Add(other.envVariables_);
+      airflowConfigOverrides_.MergeFrom(other.airflowConfigOverrides_);
+      pypiPackages_.MergeFrom(other.pypiPackages_);
+      envVariables_.MergeFrom(other.envVariables_);
       if (other.PythonVersion.Length != 0) {
         PythonVersion = other.PythonVersion;
       }
@@ -5726,10 +5726,24 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClusterSecondaryRangeName {
-      get { return clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterSecondaryRangeName ? (string) clusterIpAllocation_ : ""; }
+      get { return HasClusterSecondaryRangeName ? (string) clusterIpAllocation_ : ""; }
       set {
         clusterIpAllocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         clusterIpAllocationCase_ = ClusterIpAllocationOneofCase.ClusterSecondaryRangeName;
+      }
+    }
+    /// <summary>Gets whether the "cluster_secondary_range_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasClusterSecondaryRangeName {
+      get { return clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterSecondaryRangeName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "cluster_secondary_range_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearClusterSecondaryRangeName() {
+      if (HasClusterSecondaryRangeName) {
+        ClearClusterIpAllocation();
       }
     }
 
@@ -5756,10 +5770,24 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClusterIpv4CidrBlock {
-      get { return clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterIpv4CidrBlock ? (string) clusterIpAllocation_ : ""; }
+      get { return HasClusterIpv4CidrBlock ? (string) clusterIpAllocation_ : ""; }
       set {
         clusterIpAllocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         clusterIpAllocationCase_ = ClusterIpAllocationOneofCase.ClusterIpv4CidrBlock;
+      }
+    }
+    /// <summary>Gets whether the "cluster_ipv4_cidr_block" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasClusterIpv4CidrBlock {
+      get { return clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterIpv4CidrBlock; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "cluster_ipv4_cidr_block" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearClusterIpv4CidrBlock() {
+      if (HasClusterIpv4CidrBlock) {
+        ClearClusterIpAllocation();
       }
     }
 
@@ -5775,10 +5803,24 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServicesSecondaryRangeName {
-      get { return servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesSecondaryRangeName ? (string) servicesIpAllocation_ : ""; }
+      get { return HasServicesSecondaryRangeName ? (string) servicesIpAllocation_ : ""; }
       set {
         servicesIpAllocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         servicesIpAllocationCase_ = ServicesIpAllocationOneofCase.ServicesSecondaryRangeName;
+      }
+    }
+    /// <summary>Gets whether the "services_secondary_range_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasServicesSecondaryRangeName {
+      get { return servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesSecondaryRangeName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "services_secondary_range_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearServicesSecondaryRangeName() {
+      if (HasServicesSecondaryRangeName) {
+        ClearServicesIpAllocation();
       }
     }
 
@@ -5805,10 +5847,24 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServicesIpv4CidrBlock {
-      get { return servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesIpv4CidrBlock ? (string) servicesIpAllocation_ : ""; }
+      get { return HasServicesIpv4CidrBlock ? (string) servicesIpAllocation_ : ""; }
       set {
         servicesIpAllocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         servicesIpAllocationCase_ = ServicesIpAllocationOneofCase.ServicesIpv4CidrBlock;
+      }
+    }
+    /// <summary>Gets whether the "services_ipv4_cidr_block" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasServicesIpv4CidrBlock {
+      get { return servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesIpv4CidrBlock; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "services_ipv4_cidr_block" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearServicesIpv4CidrBlock() {
+      if (HasServicesIpv4CidrBlock) {
+        ClearServicesIpAllocation();
       }
     }
 
@@ -5884,10 +5940,10 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (UseIpAliases != false) hash ^= UseIpAliases.GetHashCode();
-      if (clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterSecondaryRangeName) hash ^= ClusterSecondaryRangeName.GetHashCode();
-      if (clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterIpv4CidrBlock) hash ^= ClusterIpv4CidrBlock.GetHashCode();
-      if (servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesSecondaryRangeName) hash ^= ServicesSecondaryRangeName.GetHashCode();
-      if (servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesIpv4CidrBlock) hash ^= ServicesIpv4CidrBlock.GetHashCode();
+      if (HasClusterSecondaryRangeName) hash ^= ClusterSecondaryRangeName.GetHashCode();
+      if (HasClusterIpv4CidrBlock) hash ^= ClusterIpv4CidrBlock.GetHashCode();
+      if (HasServicesSecondaryRangeName) hash ^= ServicesSecondaryRangeName.GetHashCode();
+      if (HasServicesIpv4CidrBlock) hash ^= ServicesIpv4CidrBlock.GetHashCode();
       hash ^= (int) clusterIpAllocationCase_;
       hash ^= (int) servicesIpAllocationCase_;
       if (_unknownFields != null) {
@@ -5912,19 +5968,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         output.WriteRawTag(8);
         output.WriteBool(UseIpAliases);
       }
-      if (clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterSecondaryRangeName) {
+      if (HasClusterSecondaryRangeName) {
         output.WriteRawTag(18);
         output.WriteString(ClusterSecondaryRangeName);
       }
-      if (servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesSecondaryRangeName) {
+      if (HasServicesSecondaryRangeName) {
         output.WriteRawTag(26);
         output.WriteString(ServicesSecondaryRangeName);
       }
-      if (clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterIpv4CidrBlock) {
+      if (HasClusterIpv4CidrBlock) {
         output.WriteRawTag(34);
         output.WriteString(ClusterIpv4CidrBlock);
       }
-      if (servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesIpv4CidrBlock) {
+      if (HasServicesIpv4CidrBlock) {
         output.WriteRawTag(42);
         output.WriteString(ServicesIpv4CidrBlock);
       }
@@ -5942,19 +5998,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         output.WriteRawTag(8);
         output.WriteBool(UseIpAliases);
       }
-      if (clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterSecondaryRangeName) {
+      if (HasClusterSecondaryRangeName) {
         output.WriteRawTag(18);
         output.WriteString(ClusterSecondaryRangeName);
       }
-      if (servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesSecondaryRangeName) {
+      if (HasServicesSecondaryRangeName) {
         output.WriteRawTag(26);
         output.WriteString(ServicesSecondaryRangeName);
       }
-      if (clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterIpv4CidrBlock) {
+      if (HasClusterIpv4CidrBlock) {
         output.WriteRawTag(34);
         output.WriteString(ClusterIpv4CidrBlock);
       }
-      if (servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesIpv4CidrBlock) {
+      if (HasServicesIpv4CidrBlock) {
         output.WriteRawTag(42);
         output.WriteString(ServicesIpv4CidrBlock);
       }
@@ -5971,16 +6027,16 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       if (UseIpAliases != false) {
         size += 1 + 1;
       }
-      if (clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterSecondaryRangeName) {
+      if (HasClusterSecondaryRangeName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterSecondaryRangeName);
       }
-      if (clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterIpv4CidrBlock) {
+      if (HasClusterIpv4CidrBlock) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterIpv4CidrBlock);
       }
-      if (servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesSecondaryRangeName) {
+      if (HasServicesSecondaryRangeName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServicesSecondaryRangeName);
       }
-      if (servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesIpv4CidrBlock) {
+      if (HasServicesIpv4CidrBlock) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServicesIpv4CidrBlock);
       }
       if (_unknownFields != null) {
@@ -10435,7 +10491,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -10855,7 +10911,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       if (other.ImageVersion.Length != 0) {
         ImageVersion = other.ImageVersion;
       }
-      pypiDependencies_.Add(other.pypiDependencies_);
+      pypiDependencies_.MergeFrom(other.pypiDependencies_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

@@ -1228,7 +1228,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       if (other == null) {
         return;
       }
-      costs_.Add(other.costs_);
+      costs_.MergeFrom(other.costs_);
       if (other.CurrencyCode.Length != 0) {
         CurrencyCode = other.CurrencyCode;
       }

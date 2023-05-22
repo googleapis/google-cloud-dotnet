@@ -343,10 +343,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ContentUri {
-      get { return sourceCase_ == SourceOneofCase.ContentUri ? (string) source_ : ""; }
+      get { return HasContentUri ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.ContentUri;
+      }
+    }
+    /// <summary>Gets whether the "content_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContentUri {
+      get { return sourceCase_ == SourceOneofCase.ContentUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "content_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContentUri() {
+      if (HasContentUri) {
+        ClearSource();
       }
     }
 
@@ -362,10 +376,26 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Content {
-      get { return sourceCase_ == SourceOneofCase.Content ? (string) source_ : ""; }
+      get { return HasContent ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Content;
+      }
+    }
+    /// <summary>Gets whether the "content" field is set</summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContent {
+      get { return sourceCase_ == SourceOneofCase.Content; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "content" </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContent() {
+      if (HasContent) {
+        ClearSource();
       }
     }
 
@@ -378,10 +408,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString RawContent {
-      get { return sourceCase_ == SourceOneofCase.RawContent ? (pb::ByteString) source_ : pb::ByteString.Empty; }
+      get { return HasRawContent ? (pb::ByteString) source_ : pb::ByteString.Empty; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.RawContent;
+      }
+    }
+    /// <summary>Gets whether the "raw_content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRawContent {
+      get { return sourceCase_ == SourceOneofCase.RawContent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "raw_content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRawContent() {
+      if (HasRawContent) {
+        ClearSource();
       }
     }
 
@@ -524,9 +568,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
       hash ^= knowledgeTypes_.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.ContentUri) hash ^= ContentUri.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.Content) hash ^= Content.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.RawContent) hash ^= RawContent.GetHashCode();
+      if (HasContentUri) hash ^= ContentUri.GetHashCode();
+      if (HasContent) hash ^= Content.GetHashCode();
+      if (HasRawContent) hash ^= RawContent.GetHashCode();
       if (EnableAutoReload != false) hash ^= EnableAutoReload.GetHashCode();
       if (latestReloadStatus_ != null) hash ^= LatestReloadStatus.GetHashCode();
       hash ^= Metadata.GetHashCode();
@@ -563,16 +607,16 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteString(MimeType);
       }
       knowledgeTypes_.WriteTo(output, _repeated_knowledgeTypes_codec);
-      if (sourceCase_ == SourceOneofCase.ContentUri) {
+      if (HasContentUri) {
         output.WriteRawTag(42);
         output.WriteString(ContentUri);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(50);
         output.WriteString(Content);
       }
       metadata_.WriteTo(output, _map_metadata_codec);
-      if (sourceCase_ == SourceOneofCase.RawContent) {
+      if (HasRawContent) {
         output.WriteRawTag(74);
         output.WriteBytes(RawContent);
       }
@@ -611,16 +655,16 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteString(MimeType);
       }
       knowledgeTypes_.WriteTo(ref output, _repeated_knowledgeTypes_codec);
-      if (sourceCase_ == SourceOneofCase.ContentUri) {
+      if (HasContentUri) {
         output.WriteRawTag(42);
         output.WriteString(ContentUri);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(50);
         output.WriteString(Content);
       }
       metadata_.WriteTo(ref output, _map_metadata_codec);
-      if (sourceCase_ == SourceOneofCase.RawContent) {
+      if (HasRawContent) {
         output.WriteRawTag(74);
         output.WriteBytes(RawContent);
       }
@@ -656,13 +700,13 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MimeType);
       }
       size += knowledgeTypes_.CalculateSize(_repeated_knowledgeTypes_codec);
-      if (sourceCase_ == SourceOneofCase.ContentUri) {
+      if (HasContentUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ContentUri);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
       }
-      if (sourceCase_ == SourceOneofCase.RawContent) {
+      if (HasRawContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(RawContent);
       }
       if (EnableAutoReload != false) {
@@ -706,7 +750,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         }
         LatestReloadStatus.MergeFrom(other.LatestReloadStatus);
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.State != global::Google.Cloud.Dialogflow.V2Beta1.Document.Types.State.Unspecified) {
         State = other.State;
       }
@@ -2807,7 +2851,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         MimeType = other.MimeType;
       }
       knowledgeTypes_.Add(other.knowledgeTypes_);
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

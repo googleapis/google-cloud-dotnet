@@ -1416,7 +1416,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
         SentimentAnalysisRequestConfig.MergeFrom(other.SentimentAnalysisRequestConfig);
       }
-      webhookHeaders_.Add(other.webhookHeaders_);
+      webhookHeaders_.MergeFrom(other.webhookHeaders_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

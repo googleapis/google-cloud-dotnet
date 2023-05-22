@@ -715,7 +715,7 @@ namespace Google.Cloud.CloudBuild.V2 {
       if (other.Reconciling != false) {
         Reconciling = other.Reconciling;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -3021,7 +3021,7 @@ namespace Google.Cloud.CloudBuild.V2 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }

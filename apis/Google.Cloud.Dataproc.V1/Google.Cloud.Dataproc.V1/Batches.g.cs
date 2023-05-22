@@ -2132,7 +2132,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.Creator.Length != 0) {
         Creator = other.Creator;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.runtimeConfig_ != null) {
         if (runtimeConfig_ == null) {
           RuntimeConfig = new global::Google.Cloud.Dataproc.V1.RuntimeConfig();
@@ -3164,10 +3164,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MainJarFileUri {
-      get { return driverCase_ == DriverOneofCase.MainJarFileUri ? (string) driver_ : ""; }
+      get { return HasMainJarFileUri ? (string) driver_ : ""; }
       set {
         driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         driverCase_ = DriverOneofCase.MainJarFileUri;
+      }
+    }
+    /// <summary>Gets whether the "main_jar_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMainJarFileUri {
+      get { return driverCase_ == DriverOneofCase.MainJarFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "main_jar_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMainJarFileUri() {
+      if (HasMainJarFileUri) {
+        ClearDriver();
       }
     }
 
@@ -3180,10 +3194,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MainClass {
-      get { return driverCase_ == DriverOneofCase.MainClass ? (string) driver_ : ""; }
+      get { return HasMainClass ? (string) driver_ : ""; }
       set {
         driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         driverCase_ = DriverOneofCase.MainClass;
+      }
+    }
+    /// <summary>Gets whether the "main_class" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMainClass {
+      get { return driverCase_ == DriverOneofCase.MainClass; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "main_class" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMainClass() {
+      if (HasMainClass) {
+        ClearDriver();
       }
     }
 
@@ -3299,8 +3327,8 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) hash ^= MainJarFileUri.GetHashCode();
-      if (driverCase_ == DriverOneofCase.MainClass) hash ^= MainClass.GetHashCode();
+      if (HasMainJarFileUri) hash ^= MainJarFileUri.GetHashCode();
+      if (HasMainClass) hash ^= MainClass.GetHashCode();
       hash ^= args_.GetHashCode();
       hash ^= jarFileUris_.GetHashCode();
       hash ^= fileUris_.GetHashCode();
@@ -3324,11 +3352,11 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         output.WriteRawTag(10);
         output.WriteString(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         output.WriteRawTag(18);
         output.WriteString(MainClass);
       }
@@ -3346,11 +3374,11 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         output.WriteRawTag(10);
         output.WriteString(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         output.WriteRawTag(18);
         output.WriteString(MainClass);
       }
@@ -3368,10 +3396,10 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MainClass);
       }
       size += args_.CalculateSize(_repeated_args_codec);
@@ -3972,7 +4000,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.QueryFileUri.Length != 0) {
         QueryFileUri = other.QueryFileUri;
       }
-      queryVariables_.Add(other.queryVariables_);
+      queryVariables_.MergeFrom(other.queryVariables_);
       jarFileUris_.Add(other.jarFileUris_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }

@@ -158,10 +158,24 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EncodedPolyline {
-      get { return polylineTypeCase_ == PolylineTypeOneofCase.EncodedPolyline ? (string) polylineType_ : ""; }
+      get { return HasEncodedPolyline ? (string) polylineType_ : ""; }
       set {
         polylineType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         polylineTypeCase_ = PolylineTypeOneofCase.EncodedPolyline;
+      }
+    }
+    /// <summary>Gets whether the "encoded_polyline" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEncodedPolyline {
+      get { return polylineTypeCase_ == PolylineTypeOneofCase.EncodedPolyline; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "encoded_polyline" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEncodedPolyline() {
+      if (HasEncodedPolyline) {
+        ClearPolylineType();
       }
     }
 
@@ -227,7 +241,7 @@ namespace Google.Maps.Routing.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (polylineTypeCase_ == PolylineTypeOneofCase.EncodedPolyline) hash ^= EncodedPolyline.GetHashCode();
+      if (HasEncodedPolyline) hash ^= EncodedPolyline.GetHashCode();
       if (polylineTypeCase_ == PolylineTypeOneofCase.GeoJsonLinestring) hash ^= GeoJsonLinestring.GetHashCode();
       hash ^= (int) polylineTypeCase_;
       if (_unknownFields != null) {
@@ -248,7 +262,7 @@ namespace Google.Maps.Routing.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (polylineTypeCase_ == PolylineTypeOneofCase.EncodedPolyline) {
+      if (HasEncodedPolyline) {
         output.WriteRawTag(10);
         output.WriteString(EncodedPolyline);
       }
@@ -266,7 +280,7 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (polylineTypeCase_ == PolylineTypeOneofCase.EncodedPolyline) {
+      if (HasEncodedPolyline) {
         output.WriteRawTag(10);
         output.WriteString(EncodedPolyline);
       }
@@ -284,7 +298,7 @@ namespace Google.Maps.Routing.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (polylineTypeCase_ == PolylineTypeOneofCase.EncodedPolyline) {
+      if (HasEncodedPolyline) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EncodedPolyline);
       }
       if (polylineTypeCase_ == PolylineTypeOneofCase.GeoJsonLinestring) {

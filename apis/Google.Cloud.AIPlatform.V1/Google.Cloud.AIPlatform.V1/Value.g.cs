@@ -109,10 +109,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long IntValue {
-      get { return valueCase_ == ValueOneofCase.IntValue ? (long) value_ : 0L; }
+      get { return HasIntValue ? (long) value_ : 0L; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.IntValue;
+      }
+    }
+    /// <summary>Gets whether the "int_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIntValue {
+      get { return valueCase_ == ValueOneofCase.IntValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "int_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIntValue() {
+      if (HasIntValue) {
+        ClearValue();
       }
     }
 
@@ -124,10 +138,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double DoubleValue {
-      get { return valueCase_ == ValueOneofCase.DoubleValue ? (double) value_ : 0D; }
+      get { return HasDoubleValue ? (double) value_ : 0D; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.DoubleValue;
+      }
+    }
+    /// <summary>Gets whether the "double_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDoubleValue {
+      get { return valueCase_ == ValueOneofCase.DoubleValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "double_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDoubleValue() {
+      if (HasDoubleValue) {
+        ClearValue();
       }
     }
 
@@ -139,10 +167,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StringValue {
-      get { return valueCase_ == ValueOneofCase.StringValue ? (string) value_ : ""; }
+      get { return HasStringValue ? (string) value_ : ""; }
       set {
         value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueCase_ = ValueOneofCase.StringValue;
+      }
+    }
+    /// <summary>Gets whether the "string_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStringValue {
+      get { return valueCase_ == ValueOneofCase.StringValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "string_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStringValue() {
+      if (HasStringValue) {
+        ClearValue();
       }
     }
 
@@ -194,9 +236,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (valueCase_ == ValueOneofCase.IntValue) hash ^= IntValue.GetHashCode();
-      if (valueCase_ == ValueOneofCase.DoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
-      if (valueCase_ == ValueOneofCase.StringValue) hash ^= StringValue.GetHashCode();
+      if (HasIntValue) hash ^= IntValue.GetHashCode();
+      if (HasDoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
+      if (HasStringValue) hash ^= StringValue.GetHashCode();
       hash ^= (int) valueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -216,15 +258,15 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (valueCase_ == ValueOneofCase.IntValue) {
+      if (HasIntValue) {
         output.WriteRawTag(8);
         output.WriteInt64(IntValue);
       }
-      if (valueCase_ == ValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(17);
         output.WriteDouble(DoubleValue);
       }
-      if (valueCase_ == ValueOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(26);
         output.WriteString(StringValue);
       }
@@ -238,15 +280,15 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (valueCase_ == ValueOneofCase.IntValue) {
+      if (HasIntValue) {
         output.WriteRawTag(8);
         output.WriteInt64(IntValue);
       }
-      if (valueCase_ == ValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(17);
         output.WriteDouble(DoubleValue);
       }
-      if (valueCase_ == ValueOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(26);
         output.WriteString(StringValue);
       }
@@ -260,13 +302,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (valueCase_ == ValueOneofCase.IntValue) {
+      if (HasIntValue) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(IntValue);
       }
-      if (valueCase_ == ValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         size += 1 + 8;
       }
-      if (valueCase_ == ValueOneofCase.StringValue) {
+      if (HasStringValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StringValue);
       }
       if (_unknownFields != null) {

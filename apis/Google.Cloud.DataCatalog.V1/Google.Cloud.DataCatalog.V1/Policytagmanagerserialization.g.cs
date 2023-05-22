@@ -1948,10 +1948,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool SerializedTaxonomies {
-      get { return destinationCase_ == DestinationOneofCase.SerializedTaxonomies ? (bool) destination_ : false; }
+      get { return HasSerializedTaxonomies ? (bool) destination_ : false; }
       set {
         destination_ = value;
         destinationCase_ = DestinationOneofCase.SerializedTaxonomies;
+      }
+    }
+    /// <summary>Gets whether the "serialized_taxonomies" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSerializedTaxonomies {
+      get { return destinationCase_ == DestinationOneofCase.SerializedTaxonomies; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "serialized_taxonomies" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSerializedTaxonomies() {
+      if (HasSerializedTaxonomies) {
+        ClearDestination();
       }
     }
 
@@ -2003,7 +2017,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       hash ^= taxonomies_.GetHashCode();
-      if (destinationCase_ == DestinationOneofCase.SerializedTaxonomies) hash ^= SerializedTaxonomies.GetHashCode();
+      if (HasSerializedTaxonomies) hash ^= SerializedTaxonomies.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2028,7 +2042,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteString(Parent);
       }
       taxonomies_.WriteTo(output, _repeated_taxonomies_codec);
-      if (destinationCase_ == DestinationOneofCase.SerializedTaxonomies) {
+      if (HasSerializedTaxonomies) {
         output.WriteRawTag(24);
         output.WriteBool(SerializedTaxonomies);
       }
@@ -2047,7 +2061,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteString(Parent);
       }
       taxonomies_.WriteTo(ref output, _repeated_taxonomies_codec);
-      if (destinationCase_ == DestinationOneofCase.SerializedTaxonomies) {
+      if (HasSerializedTaxonomies) {
         output.WriteRawTag(24);
         output.WriteBool(SerializedTaxonomies);
       }
@@ -2065,7 +2079,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       size += taxonomies_.CalculateSize(_repeated_taxonomies_codec);
-      if (destinationCase_ == DestinationOneofCase.SerializedTaxonomies) {
+      if (HasSerializedTaxonomies) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {

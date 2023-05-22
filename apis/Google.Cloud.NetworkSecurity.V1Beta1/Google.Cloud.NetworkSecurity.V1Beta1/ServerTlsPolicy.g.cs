@@ -468,7 +468,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.AllowOpen != false) {
         AllowOpen = other.AllowOpen;
       }

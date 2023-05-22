@@ -1836,10 +1836,24 @@ namespace Google.Cloud.Billing.Budgets.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Billing.Budgets.V1.CalendarPeriod CalendarPeriod {
-      get { return usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod ? (global::Google.Cloud.Billing.Budgets.V1.CalendarPeriod) usagePeriod_ : global::Google.Cloud.Billing.Budgets.V1.CalendarPeriod.Unspecified; }
+      get { return HasCalendarPeriod ? (global::Google.Cloud.Billing.Budgets.V1.CalendarPeriod) usagePeriod_ : global::Google.Cloud.Billing.Budgets.V1.CalendarPeriod.Unspecified; }
       set {
         usagePeriod_ = value;
         usagePeriodCase_ = UsagePeriodOneofCase.CalendarPeriod;
+      }
+    }
+    /// <summary>Gets whether the "calendar_period" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCalendarPeriod {
+      get { return usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "calendar_period" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCalendarPeriod() {
+      if (HasCalendarPeriod) {
+        ClearUsagePeriod();
       }
     }
 
@@ -1917,7 +1931,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       hash ^= services_.GetHashCode();
       hash ^= subaccounts_.GetHashCode();
       hash ^= Labels.GetHashCode();
-      if (usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod) hash ^= CalendarPeriod.GetHashCode();
+      if (HasCalendarPeriod) hash ^= CalendarPeriod.GetHashCode();
       if (usagePeriodCase_ == UsagePeriodOneofCase.CustomPeriod) hash ^= CustomPeriod.GetHashCode();
       hash ^= (int) usagePeriodCase_;
       if (_unknownFields != null) {
@@ -1947,7 +1961,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       subaccounts_.WriteTo(output, _repeated_subaccounts_codec);
       labels_.WriteTo(output, _map_labels_codec);
       creditTypes_.WriteTo(output, _repeated_creditTypes_codec);
-      if (usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod) {
+      if (HasCalendarPeriod) {
         output.WriteRawTag(64);
         output.WriteEnum((int) CalendarPeriod);
       }
@@ -1974,7 +1988,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       subaccounts_.WriteTo(ref output, _repeated_subaccounts_codec);
       labels_.WriteTo(ref output, _map_labels_codec);
       creditTypes_.WriteTo(ref output, _repeated_creditTypes_codec);
-      if (usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod) {
+      if (HasCalendarPeriod) {
         output.WriteRawTag(64);
         output.WriteEnum((int) CalendarPeriod);
       }
@@ -2000,7 +2014,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       size += services_.CalculateSize(_repeated_services_codec);
       size += subaccounts_.CalculateSize(_repeated_subaccounts_codec);
       size += labels_.CalculateSize(_map_labels_codec);
-      if (usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod) {
+      if (HasCalendarPeriod) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CalendarPeriod);
       }
       if (usagePeriodCase_ == UsagePeriodOneofCase.CustomPeriod) {
@@ -2025,7 +2039,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       }
       services_.Add(other.services_);
       subaccounts_.Add(other.subaccounts_);
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.UsagePeriodCase) {
         case UsagePeriodOneofCase.CalendarPeriod:
           CalendarPeriod = other.CalendarPeriod;

@@ -1204,7 +1204,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other == null) {
         return;
       }
-      monthlyUsageData_.Add(other.monthlyUsageData_);
+      monthlyUsageData_.MergeFrom(other.monthlyUsageData_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

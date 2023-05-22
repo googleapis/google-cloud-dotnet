@@ -4812,10 +4812,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ModelId {
-      get { return destinationModelCase_ == DestinationModelOneofCase.ModelId ? (string) destinationModel_ : ""; }
+      get { return HasModelId ? (string) destinationModel_ : ""; }
       set {
         destinationModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         destinationModelCase_ = DestinationModelOneofCase.ModelId;
+      }
+    }
+    /// <summary>Gets whether the "model_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasModelId {
+      get { return destinationModelCase_ == DestinationModelOneofCase.ModelId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "model_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearModelId() {
+      if (HasModelId) {
+        ClearDestinationModel();
       }
     }
 
@@ -4829,10 +4843,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ParentModel {
-      get { return destinationModelCase_ == DestinationModelOneofCase.ParentModel ? (string) destinationModel_ : ""; }
+      get { return HasParentModel ? (string) destinationModel_ : ""; }
       set {
         destinationModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         destinationModelCase_ = DestinationModelOneofCase.ParentModel;
+      }
+    }
+    /// <summary>Gets whether the "parent_model" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasParentModel {
+      get { return destinationModelCase_ == DestinationModelOneofCase.ParentModel; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "parent_model" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearParentModel() {
+      if (HasParentModel) {
+        ClearDestinationModel();
       }
     }
 
@@ -4934,8 +4962,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (destinationModelCase_ == DestinationModelOneofCase.ModelId) hash ^= ModelId.GetHashCode();
-      if (destinationModelCase_ == DestinationModelOneofCase.ParentModel) hash ^= ParentModel.GetHashCode();
+      if (HasModelId) hash ^= ModelId.GetHashCode();
+      if (HasParentModel) hash ^= ParentModel.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (SourceModel.Length != 0) hash ^= SourceModel.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
@@ -4970,11 +4998,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(EncryptionSpec);
       }
-      if (destinationModelCase_ == DestinationModelOneofCase.ModelId) {
+      if (HasModelId) {
         output.WriteRawTag(34);
         output.WriteString(ModelId);
       }
-      if (destinationModelCase_ == DestinationModelOneofCase.ParentModel) {
+      if (HasParentModel) {
         output.WriteRawTag(42);
         output.WriteString(ParentModel);
       }
@@ -5000,11 +5028,11 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(EncryptionSpec);
       }
-      if (destinationModelCase_ == DestinationModelOneofCase.ModelId) {
+      if (HasModelId) {
         output.WriteRawTag(34);
         output.WriteString(ModelId);
       }
-      if (destinationModelCase_ == DestinationModelOneofCase.ParentModel) {
+      if (HasParentModel) {
         output.WriteRawTag(42);
         output.WriteString(ParentModel);
       }
@@ -5018,10 +5046,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (destinationModelCase_ == DestinationModelOneofCase.ModelId) {
+      if (HasModelId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelId);
       }
-      if (destinationModelCase_ == DestinationModelOneofCase.ParentModel) {
+      if (HasParentModel) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ParentModel);
       }
       if (Parent.Length != 0) {

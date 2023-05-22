@@ -5052,10 +5052,24 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString RsaAesWrappedKey {
-      get { return wrappedKeyMaterialCase_ == WrappedKeyMaterialOneofCase.RsaAesWrappedKey ? (pb::ByteString) wrappedKeyMaterial_ : pb::ByteString.Empty; }
+      get { return HasRsaAesWrappedKey ? (pb::ByteString) wrappedKeyMaterial_ : pb::ByteString.Empty; }
       set {
         wrappedKeyMaterial_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         wrappedKeyMaterialCase_ = WrappedKeyMaterialOneofCase.RsaAesWrappedKey;
+      }
+    }
+    /// <summary>Gets whether the "rsa_aes_wrapped_key" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRsaAesWrappedKey {
+      get { return wrappedKeyMaterialCase_ == WrappedKeyMaterialOneofCase.RsaAesWrappedKey; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "rsa_aes_wrapped_key" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRsaAesWrappedKey() {
+      if (HasRsaAesWrappedKey) {
+        ClearWrappedKeyMaterial();
       }
     }
 
@@ -5113,7 +5127,7 @@ namespace Google.Cloud.Kms.V1 {
       if (Algorithm != global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified) hash ^= Algorithm.GetHashCode();
       if (ImportJob.Length != 0) hash ^= ImportJob.GetHashCode();
       if (WrappedKey.Length != 0) hash ^= WrappedKey.GetHashCode();
-      if (wrappedKeyMaterialCase_ == WrappedKeyMaterialOneofCase.RsaAesWrappedKey) hash ^= RsaAesWrappedKey.GetHashCode();
+      if (HasRsaAesWrappedKey) hash ^= RsaAesWrappedKey.GetHashCode();
       hash ^= (int) wrappedKeyMaterialCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5145,7 +5159,7 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(34);
         output.WriteString(ImportJob);
       }
-      if (wrappedKeyMaterialCase_ == WrappedKeyMaterialOneofCase.RsaAesWrappedKey) {
+      if (HasRsaAesWrappedKey) {
         output.WriteRawTag(42);
         output.WriteBytes(RsaAesWrappedKey);
       }
@@ -5179,7 +5193,7 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(34);
         output.WriteString(ImportJob);
       }
-      if (wrappedKeyMaterialCase_ == WrappedKeyMaterialOneofCase.RsaAesWrappedKey) {
+      if (HasRsaAesWrappedKey) {
         output.WriteRawTag(42);
         output.WriteBytes(RsaAesWrappedKey);
       }
@@ -5216,7 +5230,7 @@ namespace Google.Cloud.Kms.V1 {
       if (WrappedKey.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(WrappedKey);
       }
-      if (wrappedKeyMaterialCase_ == WrappedKeyMaterialOneofCase.RsaAesWrappedKey) {
+      if (HasRsaAesWrappedKey) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(RsaAesWrappedKey);
       }
       if (_unknownFields != null) {
@@ -12074,10 +12088,24 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Sha256 {
-      get { return digestCase_ == DigestOneofCase.Sha256 ? (pb::ByteString) digest_ : pb::ByteString.Empty; }
+      get { return HasSha256 ? (pb::ByteString) digest_ : pb::ByteString.Empty; }
       set {
         digest_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         digestCase_ = DigestOneofCase.Sha256;
+      }
+    }
+    /// <summary>Gets whether the "sha256" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSha256 {
+      get { return digestCase_ == DigestOneofCase.Sha256; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "sha256" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSha256() {
+      if (HasSha256) {
+        ClearDigest();
       }
     }
 
@@ -12089,10 +12117,24 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Sha384 {
-      get { return digestCase_ == DigestOneofCase.Sha384 ? (pb::ByteString) digest_ : pb::ByteString.Empty; }
+      get { return HasSha384 ? (pb::ByteString) digest_ : pb::ByteString.Empty; }
       set {
         digest_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         digestCase_ = DigestOneofCase.Sha384;
+      }
+    }
+    /// <summary>Gets whether the "sha384" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSha384 {
+      get { return digestCase_ == DigestOneofCase.Sha384; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "sha384" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSha384() {
+      if (HasSha384) {
+        ClearDigest();
       }
     }
 
@@ -12104,10 +12146,24 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Sha512 {
-      get { return digestCase_ == DigestOneofCase.Sha512 ? (pb::ByteString) digest_ : pb::ByteString.Empty; }
+      get { return HasSha512 ? (pb::ByteString) digest_ : pb::ByteString.Empty; }
       set {
         digest_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         digestCase_ = DigestOneofCase.Sha512;
+      }
+    }
+    /// <summary>Gets whether the "sha512" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSha512 {
+      get { return digestCase_ == DigestOneofCase.Sha512; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "sha512" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSha512() {
+      if (HasSha512) {
+        ClearDigest();
       }
     }
 
@@ -12159,9 +12215,9 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (digestCase_ == DigestOneofCase.Sha256) hash ^= Sha256.GetHashCode();
-      if (digestCase_ == DigestOneofCase.Sha384) hash ^= Sha384.GetHashCode();
-      if (digestCase_ == DigestOneofCase.Sha512) hash ^= Sha512.GetHashCode();
+      if (HasSha256) hash ^= Sha256.GetHashCode();
+      if (HasSha384) hash ^= Sha384.GetHashCode();
+      if (HasSha512) hash ^= Sha512.GetHashCode();
       hash ^= (int) digestCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -12181,15 +12237,15 @@ namespace Google.Cloud.Kms.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (digestCase_ == DigestOneofCase.Sha256) {
+      if (HasSha256) {
         output.WriteRawTag(10);
         output.WriteBytes(Sha256);
       }
-      if (digestCase_ == DigestOneofCase.Sha384) {
+      if (HasSha384) {
         output.WriteRawTag(18);
         output.WriteBytes(Sha384);
       }
-      if (digestCase_ == DigestOneofCase.Sha512) {
+      if (HasSha512) {
         output.WriteRawTag(26);
         output.WriteBytes(Sha512);
       }
@@ -12203,15 +12259,15 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (digestCase_ == DigestOneofCase.Sha256) {
+      if (HasSha256) {
         output.WriteRawTag(10);
         output.WriteBytes(Sha256);
       }
-      if (digestCase_ == DigestOneofCase.Sha384) {
+      if (HasSha384) {
         output.WriteRawTag(18);
         output.WriteBytes(Sha384);
       }
-      if (digestCase_ == DigestOneofCase.Sha512) {
+      if (HasSha512) {
         output.WriteRawTag(26);
         output.WriteBytes(Sha512);
       }
@@ -12225,13 +12281,13 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (digestCase_ == DigestOneofCase.Sha256) {
+      if (HasSha256) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Sha256);
       }
-      if (digestCase_ == DigestOneofCase.Sha384) {
+      if (HasSha384) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Sha384);
       }
-      if (digestCase_ == DigestOneofCase.Sha512) {
+      if (HasSha512) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Sha512);
       }
       if (_unknownFields != null) {

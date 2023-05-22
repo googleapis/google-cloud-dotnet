@@ -438,6 +438,8 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     /// <summary>Field number for the "view_count" field.</summary>
     public const int ViewCountFieldNumber = 1;
+    private readonly static long ViewCountDefaultValue = 0L;
+
     private long viewCount_;
     /// <summary>
     /// View count in source system.
@@ -445,7 +447,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ViewCount {
-      get { if ((_hasBits0 & 1) != 0) { return viewCount_; } else { return 0L; } }
+      get { if ((_hasBits0 & 1) != 0) { return viewCount_; } else { return ViewCountDefaultValue; } }
       set {
         _hasBits0 |= 1;
         viewCount_ = value;
@@ -702,6 +704,8 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     /// <summary>Field number for the "favorite_count" field.</summary>
     public const int FavoriteCountFieldNumber = 4;
+    private readonly static long FavoriteCountDefaultValue = 0L;
+
     private long favoriteCount_;
     /// <summary>
     /// Favorite count in the source system.
@@ -709,7 +713,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long FavoriteCount {
-      get { if ((_hasBits0 & 1) != 0) { return favoriteCount_; } else { return 0L; } }
+      get { if ((_hasBits0 & 1) != 0) { return favoriteCount_; } else { return FavoriteCountDefaultValue; } }
       set {
         _hasBits0 |= 1;
         favoriteCount_ = value;
@@ -842,8 +846,8 @@ namespace Google.Cloud.DataCatalog.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      usageWithinTimeRange_.Add(other.usageWithinTimeRange_);
-      commonUsageWithinTimeRange_.Add(other.commonUsageWithinTimeRange_);
+      usageWithinTimeRange_.MergeFrom(other.usageWithinTimeRange_);
+      commonUsageWithinTimeRange_.MergeFrom(other.commonUsageWithinTimeRange_);
       if (other.HasFavoriteCount) {
         FavoriteCount = other.FavoriteCount;
       }

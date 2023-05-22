@@ -4409,7 +4409,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         OnHostMaintenance = other.OnHostMaintenance;
       }
       dataDisks_.Add(other.dataDisks_);
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.autoscalingSettings_ != null) {
         if (autoscalingSettings_ == null) {
           AutoscalingSettings = new global::Google.Cloud.Dataflow.V1Beta3.AutoscalingSettings();

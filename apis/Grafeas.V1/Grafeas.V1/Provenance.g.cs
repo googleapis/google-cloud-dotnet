@@ -607,7 +607,7 @@ namespace Grafeas.V1 {
       if (other.TriggerId.Length != 0) {
         TriggerId = other.TriggerId;
       }
-      buildOptions_.Add(other.buildOptions_);
+      buildOptions_.MergeFrom(other.buildOptions_);
       if (other.BuilderVersion.Length != 0) {
         BuilderVersion = other.BuilderVersion;
       }
@@ -1006,7 +1006,7 @@ namespace Grafeas.V1 {
       if (other.ArtifactStorageSourceUri.Length != 0) {
         ArtifactStorageSourceUri = other.ArtifactStorageSourceUri;
       }
-      fileHashes_.Add(other.fileHashes_);
+      fileHashes_.MergeFrom(other.fileHashes_);
       if (other.context_ != null) {
         if (context_ == null) {
           Context = new global::Grafeas.V1.SourceContext();
@@ -2403,7 +2403,7 @@ namespace Grafeas.V1 {
       if (other == null) {
         return;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.ContextCase) {
         case ContextOneofCase.CloudRepo:
           if (CloudRepo == null) {
@@ -2870,10 +2870,24 @@ namespace Grafeas.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RevisionId {
-      get { return revisionCase_ == RevisionOneofCase.RevisionId ? (string) revision_ : ""; }
+      get { return HasRevisionId ? (string) revision_ : ""; }
       set {
         revision_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         revisionCase_ = RevisionOneofCase.RevisionId;
+      }
+    }
+    /// <summary>Gets whether the "revision_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRevisionId {
+      get { return revisionCase_ == RevisionOneofCase.RevisionId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "revision_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRevisionId() {
+      if (HasRevisionId) {
+        ClearRevision();
       }
     }
 
@@ -2940,7 +2954,7 @@ namespace Grafeas.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (repoId_ != null) hash ^= RepoId.GetHashCode();
-      if (revisionCase_ == RevisionOneofCase.RevisionId) hash ^= RevisionId.GetHashCode();
+      if (HasRevisionId) hash ^= RevisionId.GetHashCode();
       if (revisionCase_ == RevisionOneofCase.AliasContext) hash ^= AliasContext.GetHashCode();
       hash ^= (int) revisionCase_;
       if (_unknownFields != null) {
@@ -2965,7 +2979,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(RepoId);
       }
-      if (revisionCase_ == RevisionOneofCase.RevisionId) {
+      if (HasRevisionId) {
         output.WriteRawTag(18);
         output.WriteString(RevisionId);
       }
@@ -2987,7 +3001,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(RepoId);
       }
-      if (revisionCase_ == RevisionOneofCase.RevisionId) {
+      if (HasRevisionId) {
         output.WriteRawTag(18);
         output.WriteString(RevisionId);
       }
@@ -3008,7 +3022,7 @@ namespace Grafeas.V1 {
       if (repoId_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RepoId);
       }
-      if (revisionCase_ == RevisionOneofCase.RevisionId) {
+      if (HasRevisionId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RevisionId);
       }
       if (revisionCase_ == RevisionOneofCase.AliasContext) {
@@ -3218,10 +3232,24 @@ namespace Grafeas.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RevisionId {
-      get { return revisionCase_ == RevisionOneofCase.RevisionId ? (string) revision_ : ""; }
+      get { return HasRevisionId ? (string) revision_ : ""; }
       set {
         revision_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         revisionCase_ = RevisionOneofCase.RevisionId;
+      }
+    }
+    /// <summary>Gets whether the "revision_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRevisionId {
+      get { return revisionCase_ == RevisionOneofCase.RevisionId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "revision_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRevisionId() {
+      if (HasRevisionId) {
+        ClearRevision();
       }
     }
 
@@ -3290,7 +3318,7 @@ namespace Grafeas.V1 {
       int hash = 1;
       if (HostUri.Length != 0) hash ^= HostUri.GetHashCode();
       if (GerritProject.Length != 0) hash ^= GerritProject.GetHashCode();
-      if (revisionCase_ == RevisionOneofCase.RevisionId) hash ^= RevisionId.GetHashCode();
+      if (HasRevisionId) hash ^= RevisionId.GetHashCode();
       if (revisionCase_ == RevisionOneofCase.AliasContext) hash ^= AliasContext.GetHashCode();
       hash ^= (int) revisionCase_;
       if (_unknownFields != null) {
@@ -3319,7 +3347,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteString(GerritProject);
       }
-      if (revisionCase_ == RevisionOneofCase.RevisionId) {
+      if (HasRevisionId) {
         output.WriteRawTag(26);
         output.WriteString(RevisionId);
       }
@@ -3345,7 +3373,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteString(GerritProject);
       }
-      if (revisionCase_ == RevisionOneofCase.RevisionId) {
+      if (HasRevisionId) {
         output.WriteRawTag(26);
         output.WriteString(RevisionId);
       }
@@ -3369,7 +3397,7 @@ namespace Grafeas.V1 {
       if (GerritProject.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GerritProject);
       }
-      if (revisionCase_ == RevisionOneofCase.RevisionId) {
+      if (HasRevisionId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RevisionId);
       }
       if (revisionCase_ == RevisionOneofCase.AliasContext) {
@@ -3798,10 +3826,24 @@ namespace Grafeas.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uid {
-      get { return idCase_ == IdOneofCase.Uid ? (string) id_ : ""; }
+      get { return HasUid ? (string) id_ : ""; }
       set {
         id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         idCase_ = IdOneofCase.Uid;
+      }
+    }
+    /// <summary>Gets whether the "uid" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUid {
+      get { return idCase_ == IdOneofCase.Uid; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uid" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUid() {
+      if (HasUid) {
+        ClearId();
       }
     }
 
@@ -3852,7 +3894,7 @@ namespace Grafeas.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (idCase_ == IdOneofCase.ProjectRepoId) hash ^= ProjectRepoId.GetHashCode();
-      if (idCase_ == IdOneofCase.Uid) hash ^= Uid.GetHashCode();
+      if (HasUid) hash ^= Uid.GetHashCode();
       hash ^= (int) idCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3876,7 +3918,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(ProjectRepoId);
       }
-      if (idCase_ == IdOneofCase.Uid) {
+      if (HasUid) {
         output.WriteRawTag(18);
         output.WriteString(Uid);
       }
@@ -3894,7 +3936,7 @@ namespace Grafeas.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(ProjectRepoId);
       }
-      if (idCase_ == IdOneofCase.Uid) {
+      if (HasUid) {
         output.WriteRawTag(18);
         output.WriteString(Uid);
       }
@@ -3911,7 +3953,7 @@ namespace Grafeas.V1 {
       if (idCase_ == IdOneofCase.ProjectRepoId) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProjectRepoId);
       }
-      if (idCase_ == IdOneofCase.Uid) {
+      if (HasUid) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
       }
       if (_unknownFields != null) {

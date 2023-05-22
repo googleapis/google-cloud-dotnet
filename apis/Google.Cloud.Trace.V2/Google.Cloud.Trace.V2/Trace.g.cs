@@ -1185,7 +1185,7 @@ namespace Google.Cloud.Trace.V2 {
           if (other == null) {
             return;
           }
-          attributeMap_.Add(other.attributeMap_);
+          attributeMap_.MergeFrom(other.attributeMap_);
           if (other.DroppedAttributesCount != 0) {
             DroppedAttributesCount = other.DroppedAttributesCount;
           }
@@ -3128,10 +3128,24 @@ namespace Google.Cloud.Trace.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long IntValue {
-      get { return valueCase_ == ValueOneofCase.IntValue ? (long) value_ : 0L; }
+      get { return HasIntValue ? (long) value_ : 0L; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.IntValue;
+      }
+    }
+    /// <summary>Gets whether the "int_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIntValue {
+      get { return valueCase_ == ValueOneofCase.IntValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "int_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIntValue() {
+      if (HasIntValue) {
+        ClearValue();
       }
     }
 
@@ -3143,10 +3157,24 @@ namespace Google.Cloud.Trace.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BoolValue {
-      get { return valueCase_ == ValueOneofCase.BoolValue ? (bool) value_ : false; }
+      get { return HasBoolValue ? (bool) value_ : false; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.BoolValue;
+      }
+    }
+    /// <summary>Gets whether the "bool_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBoolValue {
+      get { return valueCase_ == ValueOneofCase.BoolValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "bool_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBoolValue() {
+      if (HasBoolValue) {
+        ClearValue();
       }
     }
 
@@ -3199,8 +3227,8 @@ namespace Google.Cloud.Trace.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (valueCase_ == ValueOneofCase.StringValue) hash ^= StringValue.GetHashCode();
-      if (valueCase_ == ValueOneofCase.IntValue) hash ^= IntValue.GetHashCode();
-      if (valueCase_ == ValueOneofCase.BoolValue) hash ^= BoolValue.GetHashCode();
+      if (HasIntValue) hash ^= IntValue.GetHashCode();
+      if (HasBoolValue) hash ^= BoolValue.GetHashCode();
       hash ^= (int) valueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3224,11 +3252,11 @@ namespace Google.Cloud.Trace.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(StringValue);
       }
-      if (valueCase_ == ValueOneofCase.IntValue) {
+      if (HasIntValue) {
         output.WriteRawTag(16);
         output.WriteInt64(IntValue);
       }
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(24);
         output.WriteBool(BoolValue);
       }
@@ -3246,11 +3274,11 @@ namespace Google.Cloud.Trace.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(StringValue);
       }
-      if (valueCase_ == ValueOneofCase.IntValue) {
+      if (HasIntValue) {
         output.WriteRawTag(16);
         output.WriteInt64(IntValue);
       }
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(24);
         output.WriteBool(BoolValue);
       }
@@ -3267,10 +3295,10 @@ namespace Google.Cloud.Trace.V2 {
       if (valueCase_ == ValueOneofCase.StringValue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StringValue);
       }
-      if (valueCase_ == ValueOneofCase.IntValue) {
+      if (HasIntValue) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(IntValue);
       }
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {

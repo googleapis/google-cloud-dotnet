@@ -447,10 +447,24 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool UseDefault {
-      get { return binauthzMethodCase_ == BinauthzMethodOneofCase.UseDefault ? (bool) binauthzMethod_ : false; }
+      get { return HasUseDefault ? (bool) binauthzMethod_ : false; }
       set {
         binauthzMethod_ = value;
         binauthzMethodCase_ = BinauthzMethodOneofCase.UseDefault;
+      }
+    }
+    /// <summary>Gets whether the "use_default" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUseDefault {
+      get { return binauthzMethodCase_ == BinauthzMethodOneofCase.UseDefault; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "use_default" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUseDefault() {
+      if (HasUseDefault) {
+        ClearBinauthzMethod();
       }
     }
 
@@ -517,7 +531,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (binauthzMethodCase_ == BinauthzMethodOneofCase.UseDefault) hash ^= UseDefault.GetHashCode();
+      if (HasUseDefault) hash ^= UseDefault.GetHashCode();
       if (BreakglassJustification.Length != 0) hash ^= BreakglassJustification.GetHashCode();
       hash ^= (int) binauthzMethodCase_;
       if (_unknownFields != null) {
@@ -538,7 +552,7 @@ namespace Google.Cloud.Run.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (binauthzMethodCase_ == BinauthzMethodOneofCase.UseDefault) {
+      if (HasUseDefault) {
         output.WriteRawTag(8);
         output.WriteBool(UseDefault);
       }
@@ -556,7 +570,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (binauthzMethodCase_ == BinauthzMethodOneofCase.UseDefault) {
+      if (HasUseDefault) {
         output.WriteRawTag(8);
         output.WriteBool(UseDefault);
       }
@@ -574,7 +588,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (binauthzMethodCase_ == BinauthzMethodOneofCase.UseDefault) {
+      if (HasUseDefault) {
         size += 1 + 1;
       }
       if (BreakglassJustification.Length != 0) {

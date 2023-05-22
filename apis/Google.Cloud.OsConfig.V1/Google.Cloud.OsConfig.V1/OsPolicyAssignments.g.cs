@@ -1031,7 +1031,7 @@ namespace Google.Cloud.OsConfig.V1 {
           if (other == null) {
             return;
           }
-          labels_.Add(other.labels_);
+          labels_.MergeFrom(other.labels_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

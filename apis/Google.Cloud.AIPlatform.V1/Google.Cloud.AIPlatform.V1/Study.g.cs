@@ -1128,7 +1128,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.CustomJob.Length != 0) {
         CustomJob = other.CustomJob;
       }
-      webAccessUris_.Add(other.webAccessUris_);
+      webAccessUris_.MergeFrom(other.webAccessUris_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2554,6 +2554,8 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             /// <summary>Field number for the "desired_min_safe_trials_fraction" field.</summary>
             public const int DesiredMinSafeTrialsFractionFieldNumber = 2;
+            private readonly static double DesiredMinSafeTrialsFractionDefaultValue = 0D;
+
             private double desiredMinSafeTrialsFraction_;
             /// <summary>
             /// Desired minimum fraction of safe trials (over total number of trials)
@@ -2566,7 +2568,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public double DesiredMinSafeTrialsFraction {
-              get { if ((_hasBits0 & 1) != 0) { return desiredMinSafeTrialsFraction_; } else { return 0D; } }
+              get { if ((_hasBits0 & 1) != 0) { return desiredMinSafeTrialsFraction_; } else { return DesiredMinSafeTrialsFractionDefaultValue; } }
               set {
                 _hasBits0 |= 1;
                 desiredMinSafeTrialsFraction_ = value;
@@ -3380,6 +3382,8 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             /// <summary>Field number for the "default_value" field.</summary>
             public const int DefaultValueFieldNumber = 4;
+            private readonly static double DefaultValueDefaultValue = 0D;
+
             private double defaultValue_;
             /// <summary>
             /// A default value for a `DOUBLE` parameter that is assumed to be a
@@ -3392,7 +3396,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public double DefaultValue {
-              get { if ((_hasBits0 & 1) != 0) { return defaultValue_; } else { return 0D; } }
+              get { if ((_hasBits0 & 1) != 0) { return defaultValue_; } else { return DefaultValueDefaultValue; } }
               set {
                 _hasBits0 |= 1;
                 defaultValue_ = value;
@@ -3675,6 +3679,8 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             /// <summary>Field number for the "default_value" field.</summary>
             public const int DefaultValueFieldNumber = 4;
+            private readonly static long DefaultValueDefaultValue = 0L;
+
             private long defaultValue_;
             /// <summary>
             /// A default value for an `INTEGER` parameter that is assumed to be a
@@ -3687,7 +3693,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public long DefaultValue {
-              get { if ((_hasBits0 & 1) != 0) { return defaultValue_; } else { return 0L; } }
+              get { if ((_hasBits0 & 1) != 0) { return defaultValue_; } else { return DefaultValueDefaultValue; } }
               set {
                 _hasBits0 |= 1;
                 defaultValue_ = value;
@@ -3951,6 +3957,8 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             /// <summary>Field number for the "default_value" field.</summary>
             public const int DefaultValueFieldNumber = 3;
+            private readonly static string DefaultValueDefaultValue = "";
+
             private string defaultValue_;
             /// <summary>
             /// A default value for a `CATEGORICAL` parameter that is assumed to be a
@@ -3963,7 +3971,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string DefaultValue {
-              get { return defaultValue_ ?? ""; }
+              get { return defaultValue_ ?? DefaultValueDefaultValue; }
               set {
                 defaultValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
               }
@@ -4197,6 +4205,8 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             /// <summary>Field number for the "default_value" field.</summary>
             public const int DefaultValueFieldNumber = 3;
+            private readonly static double DefaultValueDefaultValue = 0D;
+
             private double defaultValue_;
             /// <summary>
             /// A default value for a `DISCRETE` parameter that is assumed to be a
@@ -4210,7 +4220,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public double DefaultValue {
-              get { if ((_hasBits0 & 1) != 0) { return defaultValue_; } else { return 0D; } }
+              get { if ((_hasBits0 & 1) != 0) { return defaultValue_; } else { return DefaultValueDefaultValue; } }
               set {
                 _hasBits0 |= 1;
                 defaultValue_ = value;
@@ -5922,6 +5932,8 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         /// <summary>Field number for the "update_all_stopped_trials" field.</summary>
         public const int UpdateAllStoppedTrialsFieldNumber = 6;
+        private readonly static bool UpdateAllStoppedTrialsDefaultValue = false;
+
         private bool updateAllStoppedTrials_;
         /// <summary>
         /// ConvexAutomatedStoppingSpec by default only updates the trials that needs
@@ -5935,7 +5947,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool UpdateAllStoppedTrials {
-          get { if ((_hasBits0 & 1) != 0) { return updateAllStoppedTrials_; } else { return false; } }
+          get { if ((_hasBits0 & 1) != 0) { return updateAllStoppedTrials_; } else { return UpdateAllStoppedTrialsDefaultValue; } }
           set {
             _hasBits0 |= 1;
             updateAllStoppedTrials_ = value;

@@ -913,10 +913,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ContainerSpecGcsPath {
-      get { return templateCase_ == TemplateOneofCase.ContainerSpecGcsPath ? (string) template_ : ""; }
+      get { return HasContainerSpecGcsPath ? (string) template_ : ""; }
       set {
         template_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         templateCase_ = TemplateOneofCase.ContainerSpecGcsPath;
+      }
+    }
+    /// <summary>Gets whether the "container_spec_gcs_path" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContainerSpecGcsPath {
+      get { return templateCase_ == TemplateOneofCase.ContainerSpecGcsPath; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "container_spec_gcs_path" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContainerSpecGcsPath() {
+      if (HasContainerSpecGcsPath) {
+        ClearTemplate();
       }
     }
 
@@ -1052,7 +1066,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       int hash = 1;
       if (JobName.Length != 0) hash ^= JobName.GetHashCode();
       if (templateCase_ == TemplateOneofCase.ContainerSpec) hash ^= ContainerSpec.GetHashCode();
-      if (templateCase_ == TemplateOneofCase.ContainerSpecGcsPath) hash ^= ContainerSpecGcsPath.GetHashCode();
+      if (HasContainerSpecGcsPath) hash ^= ContainerSpecGcsPath.GetHashCode();
       hash ^= Parameters.GetHashCode();
       hash ^= LaunchOptions.GetHashCode();
       if (environment_ != null) hash ^= Environment.GetHashCode();
@@ -1086,7 +1100,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(34);
         output.WriteMessage(ContainerSpec);
       }
-      if (templateCase_ == TemplateOneofCase.ContainerSpecGcsPath) {
+      if (HasContainerSpecGcsPath) {
         output.WriteRawTag(42);
         output.WriteString(ContainerSpecGcsPath);
       }
@@ -1119,7 +1133,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(34);
         output.WriteMessage(ContainerSpec);
       }
-      if (templateCase_ == TemplateOneofCase.ContainerSpecGcsPath) {
+      if (HasContainerSpecGcsPath) {
         output.WriteRawTag(42);
         output.WriteString(ContainerSpecGcsPath);
       }
@@ -1149,7 +1163,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (templateCase_ == TemplateOneofCase.ContainerSpec) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContainerSpec);
       }
-      if (templateCase_ == TemplateOneofCase.ContainerSpecGcsPath) {
+      if (HasContainerSpecGcsPath) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ContainerSpecGcsPath);
       }
       size += parameters_.CalculateSize(_map_parameters_codec);
@@ -1176,8 +1190,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (other.JobName.Length != 0) {
         JobName = other.JobName;
       }
-      parameters_.Add(other.parameters_);
-      launchOptions_.Add(other.launchOptions_);
+      parameters_.MergeFrom(other.parameters_);
+      launchOptions_.MergeFrom(other.launchOptions_);
       if (other.environment_ != null) {
         if (environment_ == null) {
           Environment = new global::Google.Cloud.Dataflow.V1Beta3.FlexTemplateRuntimeEnvironment();
@@ -1187,7 +1201,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (other.Update != false) {
         Update = other.Update;
       }
-      transformNameMappings_.Add(other.transformNameMappings_);
+      transformNameMappings_.MergeFrom(other.transformNameMappings_);
       switch (other.TemplateCase) {
         case TemplateOneofCase.ContainerSpec:
           if (ContainerSpec == null) {
@@ -2147,7 +2161,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (other.Subnetwork.Length != 0) {
         Subnetwork = other.Subnetwork;
       }
-      additionalUserLabels_.Add(other.additionalUserLabels_);
+      additionalUserLabels_.MergeFrom(other.additionalUserLabels_);
       if (other.KmsKeyName.Length != 0) {
         KmsKeyName = other.KmsKeyName;
       }
@@ -3357,7 +3371,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (other.Subnetwork.Length != 0) {
         Subnetwork = other.Subnetwork;
       }
-      additionalUserLabels_.Add(other.additionalUserLabels_);
+      additionalUserLabels_.MergeFrom(other.additionalUserLabels_);
       if (other.KmsKeyName.Length != 0) {
         KmsKeyName = other.KmsKeyName;
       }
@@ -3858,7 +3872,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (other.ParamType != global::Google.Cloud.Dataflow.V1Beta3.ParameterType.Default) {
         ParamType = other.ParamType;
       }
-      customMetadata_.Add(other.customMetadata_);
+      customMetadata_.MergeFrom(other.customMetadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4807,10 +4821,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsPath {
-      get { return templateCase_ == TemplateOneofCase.GcsPath ? (string) template_ : ""; }
+      get { return HasGcsPath ? (string) template_ : ""; }
       set {
         template_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         templateCase_ = TemplateOneofCase.GcsPath;
+      }
+    }
+    /// <summary>Gets whether the "gcs_path" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsPath {
+      get { return templateCase_ == TemplateOneofCase.GcsPath; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_path" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsPath() {
+      if (HasGcsPath) {
+        ClearTemplate();
       }
     }
 
@@ -4911,7 +4939,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (JobName.Length != 0) hash ^= JobName.GetHashCode();
-      if (templateCase_ == TemplateOneofCase.GcsPath) hash ^= GcsPath.GetHashCode();
+      if (HasGcsPath) hash ^= GcsPath.GetHashCode();
       hash ^= Parameters.GetHashCode();
       if (environment_ != null) hash ^= Environment.GetHashCode();
       if (Location.Length != 0) hash ^= Location.GetHashCode();
@@ -4938,7 +4966,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
       }
-      if (templateCase_ == TemplateOneofCase.GcsPath) {
+      if (HasGcsPath) {
         output.WriteRawTag(18);
         output.WriteString(GcsPath);
       }
@@ -4969,7 +4997,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
       }
-      if (templateCase_ == TemplateOneofCase.GcsPath) {
+      if (HasGcsPath) {
         output.WriteRawTag(18);
         output.WriteString(GcsPath);
       }
@@ -5002,7 +5030,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (JobName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(JobName);
       }
-      if (templateCase_ == TemplateOneofCase.GcsPath) {
+      if (HasGcsPath) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsPath);
       }
       size += parameters_.CalculateSize(_map_parameters_codec);
@@ -5030,7 +5058,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (other.JobName.Length != 0) {
         JobName = other.JobName;
       }
-      parameters_.Add(other.parameters_);
+      parameters_.MergeFrom(other.parameters_);
       if (other.environment_ != null) {
         if (environment_ == null) {
           Environment = new global::Google.Cloud.Dataflow.V1Beta3.RuntimeEnvironment();
@@ -5217,10 +5245,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsPath {
-      get { return templateCase_ == TemplateOneofCase.GcsPath ? (string) template_ : ""; }
+      get { return HasGcsPath ? (string) template_ : ""; }
       set {
         template_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         templateCase_ = TemplateOneofCase.GcsPath;
+      }
+    }
+    /// <summary>Gets whether the "gcs_path" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsPath {
+      get { return templateCase_ == TemplateOneofCase.GcsPath; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_path" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsPath() {
+      if (HasGcsPath) {
+        ClearTemplate();
       }
     }
 
@@ -5304,7 +5346,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public override int GetHashCode() {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
-      if (templateCase_ == TemplateOneofCase.GcsPath) hash ^= GcsPath.GetHashCode();
+      if (HasGcsPath) hash ^= GcsPath.GetHashCode();
       if (View != global::Google.Cloud.Dataflow.V1Beta3.GetTemplateRequest.Types.TemplateView.MetadataOnly) hash ^= View.GetHashCode();
       if (Location.Length != 0) hash ^= Location.GetHashCode();
       hash ^= (int) templateCase_;
@@ -5330,7 +5372,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
       }
-      if (templateCase_ == TemplateOneofCase.GcsPath) {
+      if (HasGcsPath) {
         output.WriteRawTag(18);
         output.WriteString(GcsPath);
       }
@@ -5356,7 +5398,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
       }
-      if (templateCase_ == TemplateOneofCase.GcsPath) {
+      if (HasGcsPath) {
         output.WriteRawTag(18);
         output.WriteString(GcsPath);
       }
@@ -5381,7 +5423,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (ProjectId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
       }
-      if (templateCase_ == TemplateOneofCase.GcsPath) {
+      if (HasGcsPath) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsPath);
       }
       if (View != global::Google.Cloud.Dataflow.V1Beta3.GetTemplateRequest.Types.TemplateView.MetadataOnly) {
@@ -6125,7 +6167,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (other.JobName.Length != 0) {
         JobName = other.JobName;
       }
-      parameters_.Add(other.parameters_);
+      parameters_.MergeFrom(other.parameters_);
       if (other.environment_ != null) {
         if (environment_ == null) {
           Environment = new global::Google.Cloud.Dataflow.V1Beta3.RuntimeEnvironment();
@@ -6135,7 +6177,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (other.Update != false) {
         Update = other.Update;
       }
-      transformNameMapping_.Add(other.transformNameMapping_);
+      transformNameMapping_.MergeFrom(other.transformNameMapping_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6319,10 +6361,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsPath {
-      get { return templateCase_ == TemplateOneofCase.GcsPath ? (string) template_ : ""; }
+      get { return HasGcsPath ? (string) template_ : ""; }
       set {
         template_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         templateCase_ = TemplateOneofCase.GcsPath;
+      }
+    }
+    /// <summary>Gets whether the "gcs_path" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsPath {
+      get { return templateCase_ == TemplateOneofCase.GcsPath; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_path" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsPath() {
+      if (HasGcsPath) {
+        ClearTemplate();
       }
     }
 
@@ -6426,7 +6482,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
-      if (templateCase_ == TemplateOneofCase.GcsPath) hash ^= GcsPath.GetHashCode();
+      if (HasGcsPath) hash ^= GcsPath.GetHashCode();
       if (templateCase_ == TemplateOneofCase.DynamicTemplate) hash ^= DynamicTemplate.GetHashCode();
       if (launchParameters_ != null) hash ^= LaunchParameters.GetHashCode();
       if (Location.Length != 0) hash ^= Location.GetHashCode();
@@ -6457,7 +6513,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(16);
         output.WriteBool(ValidateOnly);
       }
-      if (templateCase_ == TemplateOneofCase.GcsPath) {
+      if (HasGcsPath) {
         output.WriteRawTag(26);
         output.WriteString(GcsPath);
       }
@@ -6491,7 +6547,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(16);
         output.WriteBool(ValidateOnly);
       }
-      if (templateCase_ == TemplateOneofCase.GcsPath) {
+      if (HasGcsPath) {
         output.WriteRawTag(26);
         output.WriteString(GcsPath);
       }
@@ -6523,7 +6579,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (ValidateOnly != false) {
         size += 1 + 1;
       }
-      if (templateCase_ == TemplateOneofCase.GcsPath) {
+      if (HasGcsPath) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsPath);
       }
       if (templateCase_ == TemplateOneofCase.DynamicTemplate) {

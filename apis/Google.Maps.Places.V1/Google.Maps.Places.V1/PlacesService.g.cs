@@ -132,6 +132,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "min" field.</summary>
     public const int MinFieldNumber = 1;
+    private readonly static int MinDefaultValue = 0;
+
     private int min_;
     /// <summary>
     /// Lower bound. If unset, behavior is documented on the range field.
@@ -139,7 +141,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Min {
-      get { if ((_hasBits0 & 1) != 0) { return min_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return min_; } else { return MinDefaultValue; } }
       set {
         _hasBits0 |= 1;
         min_ = value;
@@ -160,6 +162,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "max" field.</summary>
     public const int MaxFieldNumber = 2;
+    private readonly static int MaxDefaultValue = 0;
+
     private int max_;
     /// <summary>
     /// Upper bound. If unset, behavior is documented on the range field.
@@ -167,7 +171,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Max {
-      get { if ((_hasBits0 & 2) != 0) { return max_; } else { return 0; } }
+      get { if ((_hasBits0 & 2) != 0) { return max_; } else { return MaxDefaultValue; } }
       set {
         _hasBits0 |= 2;
         max_ = value;

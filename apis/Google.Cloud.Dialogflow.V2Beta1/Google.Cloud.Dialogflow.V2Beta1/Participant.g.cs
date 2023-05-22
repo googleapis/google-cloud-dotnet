@@ -683,7 +683,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (other.ObfuscatedExternalUserId.Length != 0) {
         ObfuscatedExternalUserId = other.ObfuscatedExternalUserId;
       }
-      documentsMetadataFilters_.Add(other.documentsMetadataFilters_);
+      documentsMetadataFilters_.MergeFrom(other.documentsMetadataFilters_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3147,10 +3147,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Intent {
-      get { return matchCase_ == MatchOneofCase.Intent ? (string) match_ : ""; }
+      get { return HasIntent ? (string) match_ : ""; }
       set {
         match_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         matchCase_ = MatchOneofCase.Intent;
+      }
+    }
+    /// <summary>Gets whether the "intent" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIntent {
+      get { return matchCase_ == MatchOneofCase.Intent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "intent" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIntent() {
+      if (HasIntent) {
+        ClearMatch();
       }
     }
 
@@ -3162,10 +3176,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Event {
-      get { return matchCase_ == MatchOneofCase.Event ? (string) match_ : ""; }
+      get { return HasEvent ? (string) match_ : ""; }
       set {
         match_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         matchCase_ = MatchOneofCase.Event;
+      }
+    }
+    /// <summary>Gets whether the "event" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEvent {
+      get { return matchCase_ == MatchOneofCase.Event; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "event" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEvent() {
+      if (HasEvent) {
+        ClearMatch();
       }
     }
 
@@ -3348,8 +3376,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       int hash = 1;
       if (responseCase_ == ResponseOneofCase.DetectIntentResponse) hash ^= DetectIntentResponse.GetHashCode();
       hash ^= responseMessages_.GetHashCode();
-      if (matchCase_ == MatchOneofCase.Intent) hash ^= Intent.GetHashCode();
-      if (matchCase_ == MatchOneofCase.Event) hash ^= Event.GetHashCode();
+      if (HasIntent) hash ^= Intent.GetHashCode();
+      if (HasEvent) hash ^= Event.GetHashCode();
       if (MatchConfidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MatchConfidence);
       if (parameters_ != null) hash ^= Parameters.GetHashCode();
       if (cxSessionParameters_ != null) hash ^= CxSessionParameters.GetHashCode();
@@ -3381,11 +3409,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteMessage(DetectIntentResponse);
       }
       responseMessages_.WriteTo(output, _repeated_responseMessages_codec);
-      if (matchCase_ == MatchOneofCase.Intent) {
+      if (HasIntent) {
         output.WriteRawTag(34);
         output.WriteString(Intent);
       }
-      if (matchCase_ == MatchOneofCase.Event) {
+      if (HasEvent) {
         output.WriteRawTag(42);
         output.WriteString(Event);
       }
@@ -3428,11 +3456,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteMessage(DetectIntentResponse);
       }
       responseMessages_.WriteTo(ref output, _repeated_responseMessages_codec);
-      if (matchCase_ == MatchOneofCase.Intent) {
+      if (HasIntent) {
         output.WriteRawTag(34);
         output.WriteString(Intent);
       }
-      if (matchCase_ == MatchOneofCase.Event) {
+      if (HasEvent) {
         output.WriteRawTag(42);
         output.WriteString(Event);
       }
@@ -3474,10 +3502,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DetectIntentResponse);
       }
       size += responseMessages_.CalculateSize(_repeated_responseMessages_codec);
-      if (matchCase_ == MatchOneofCase.Intent) {
+      if (HasIntent) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Intent);
       }
-      if (matchCase_ == MatchOneofCase.Event) {
+      if (HasEvent) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Event);
       }
       if (MatchConfidence != 0F) {
@@ -4105,7 +4133,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (other == null) {
         return;
       }
-      documentsMetadataFilters_.Add(other.documentsMetadataFilters_);
+      documentsMetadataFilters_.MergeFrom(other.documentsMetadataFilters_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5975,10 +6003,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString InputAudio {
-      get { return inputCase_ == InputOneofCase.InputAudio ? (pb::ByteString) input_ : pb::ByteString.Empty; }
+      get { return HasInputAudio ? (pb::ByteString) input_ : pb::ByteString.Empty; }
       set {
         input_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         inputCase_ = InputOneofCase.InputAudio;
+      }
+    }
+    /// <summary>Gets whether the "input_audio" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInputAudio {
+      get { return inputCase_ == InputOneofCase.InputAudio; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "input_audio" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInputAudio() {
+      if (HasInputAudio) {
+        ClearInput();
       }
     }
 
@@ -5993,10 +6035,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string InputText {
-      get { return inputCase_ == InputOneofCase.InputText ? (string) input_ : ""; }
+      get { return HasInputText ? (string) input_ : ""; }
       set {
         input_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         inputCase_ = InputOneofCase.InputText;
+      }
+    }
+    /// <summary>Gets whether the "input_text" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInputText {
+      get { return inputCase_ == InputOneofCase.InputText; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "input_text" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInputText() {
+      if (HasInputText) {
+        ClearInput();
       }
     }
 
@@ -6214,8 +6270,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (configCase_ == ConfigOneofCase.AudioConfig) hash ^= AudioConfig.GetHashCode();
       if (configCase_ == ConfigOneofCase.TextConfig) hash ^= TextConfig.GetHashCode();
       if (replyAudioConfig_ != null) hash ^= ReplyAudioConfig.GetHashCode();
-      if (inputCase_ == InputOneofCase.InputAudio) hash ^= InputAudio.GetHashCode();
-      if (inputCase_ == InputOneofCase.InputText) hash ^= InputText.GetHashCode();
+      if (HasInputAudio) hash ^= InputAudio.GetHashCode();
+      if (HasInputText) hash ^= InputText.GetHashCode();
       if (inputCase_ == InputOneofCase.InputDtmf) hash ^= InputDtmf.GetHashCode();
       if (queryParams_ != null) hash ^= QueryParams.GetHashCode();
       if (assistQueryParams_ != null) hash ^= AssistQueryParams.GetHashCode();
@@ -6259,11 +6315,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(34);
         output.WriteMessage(ReplyAudioConfig);
       }
-      if (inputCase_ == InputOneofCase.InputAudio) {
+      if (HasInputAudio) {
         output.WriteRawTag(42);
         output.WriteBytes(InputAudio);
       }
-      if (inputCase_ == InputOneofCase.InputText) {
+      if (HasInputText) {
         output.WriteRawTag(50);
         output.WriteString(InputText);
       }
@@ -6321,11 +6377,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(34);
         output.WriteMessage(ReplyAudioConfig);
       }
-      if (inputCase_ == InputOneofCase.InputAudio) {
+      if (HasInputAudio) {
         output.WriteRawTag(42);
         output.WriteBytes(InputAudio);
       }
-      if (inputCase_ == InputOneofCase.InputText) {
+      if (HasInputText) {
         output.WriteRawTag(50);
         output.WriteString(InputText);
       }
@@ -6379,10 +6435,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (replyAudioConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReplyAudioConfig);
       }
-      if (inputCase_ == InputOneofCase.InputAudio) {
+      if (HasInputAudio) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(InputAudio);
       }
-      if (inputCase_ == InputOneofCase.InputText) {
+      if (HasInputText) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(InputText);
       }
       if (inputCase_ == InputOneofCase.InputDtmf) {
@@ -8049,7 +8105,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         Uri = other.Uri;
       }
       snippets_.Add(other.snippets_);
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.AnswerRecord.Length != 0) {
         AnswerRecord = other.AnswerRecord;
       }
@@ -8433,7 +8489,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (other.Source.Length != 0) {
         Source = other.Source;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.AnswerRecord.Length != 0) {
         AnswerRecord = other.AnswerRecord;
       }
@@ -11647,7 +11703,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             Uri = other.Uri;
           }
           snippets_.Add(other.snippets_);
-          metadata_.Add(other.metadata_);
+          metadata_.MergeFrom(other.metadata_);
           if (other.AnswerRecord.Length != 0) {
             AnswerRecord = other.AnswerRecord;
           }
@@ -12031,7 +12087,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           if (other.Source.Length != 0) {
             Source = other.Source;
           }
-          metadata_.Add(other.metadata_);
+          metadata_.MergeFrom(other.metadata_);
           if (other.AnswerRecord.Length != 0) {
             AnswerRecord = other.AnswerRecord;
           }
@@ -14595,10 +14651,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pb::ByteString Audio {
-              get { return contentCase_ == ContentOneofCase.Audio ? (pb::ByteString) content_ : pb::ByteString.Empty; }
+              get { return HasAudio ? (pb::ByteString) content_ : pb::ByteString.Empty; }
               set {
                 content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 contentCase_ = ContentOneofCase.Audio;
+              }
+            }
+            /// <summary>Gets whether the "audio" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasAudio {
+              get { return contentCase_ == ContentOneofCase.Audio; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "audio" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearAudio() {
+              if (HasAudio) {
+                ClearContent();
               }
             }
 
@@ -14611,10 +14681,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Uri {
-              get { return contentCase_ == ContentOneofCase.Uri ? (string) content_ : ""; }
+              get { return HasUri ? (string) content_ : ""; }
               set {
                 content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 contentCase_ = ContentOneofCase.Uri;
+              }
+            }
+            /// <summary>Gets whether the "uri" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasUri {
+              get { return contentCase_ == ContentOneofCase.Uri; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "uri" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearUri() {
+              if (HasUri) {
+                ClearContent();
               }
             }
 
@@ -14682,8 +14766,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
-              if (contentCase_ == ContentOneofCase.Audio) hash ^= Audio.GetHashCode();
-              if (contentCase_ == ContentOneofCase.Uri) hash ^= Uri.GetHashCode();
+              if (HasAudio) hash ^= Audio.GetHashCode();
+              if (HasUri) hash ^= Uri.GetHashCode();
               if (AllowPlaybackInterruption != false) hash ^= AllowPlaybackInterruption.GetHashCode();
               hash ^= (int) contentCase_;
               if (_unknownFields != null) {
@@ -14704,11 +14788,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
-              if (contentCase_ == ContentOneofCase.Audio) {
+              if (HasAudio) {
                 output.WriteRawTag(10);
                 output.WriteBytes(Audio);
               }
-              if (contentCase_ == ContentOneofCase.Uri) {
+              if (HasUri) {
                 output.WriteRawTag(18);
                 output.WriteString(Uri);
               }
@@ -14726,11 +14810,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (contentCase_ == ContentOneofCase.Audio) {
+              if (HasAudio) {
                 output.WriteRawTag(10);
                 output.WriteBytes(Audio);
               }
-              if (contentCase_ == ContentOneofCase.Uri) {
+              if (HasUri) {
                 output.WriteRawTag(18);
                 output.WriteString(Uri);
               }
@@ -14748,10 +14832,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
-              if (contentCase_ == ContentOneofCase.Audio) {
+              if (HasAudio) {
                 size += 1 + pb::CodedOutputStream.ComputeBytesSize(Audio);
               }
-              if (contentCase_ == ContentOneofCase.Uri) {
+              if (HasUri) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
               }
               if (AllowPlaybackInterruption != false) {
@@ -14912,10 +14996,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string PhoneNumber {
-          get { return endpointCase_ == EndpointOneofCase.PhoneNumber ? (string) endpoint_ : ""; }
+          get { return HasPhoneNumber ? (string) endpoint_ : ""; }
           set {
             endpoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             endpointCase_ = EndpointOneofCase.PhoneNumber;
+          }
+        }
+        /// <summary>Gets whether the "phone_number" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPhoneNumber {
+          get { return endpointCase_ == EndpointOneofCase.PhoneNumber; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "phone_number" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPhoneNumber() {
+          if (HasPhoneNumber) {
+            ClearEndpoint();
           }
         }
 
@@ -14927,10 +15025,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string SipUri {
-          get { return endpointCase_ == EndpointOneofCase.SipUri ? (string) endpoint_ : ""; }
+          get { return HasSipUri ? (string) endpoint_ : ""; }
           set {
             endpoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             endpointCase_ = EndpointOneofCase.SipUri;
+          }
+        }
+        /// <summary>Gets whether the "sip_uri" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSipUri {
+          get { return endpointCase_ == EndpointOneofCase.SipUri; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "sip_uri" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSipUri() {
+          if (HasSipUri) {
+            ClearEndpoint();
           }
         }
 
@@ -14980,8 +15092,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (endpointCase_ == EndpointOneofCase.PhoneNumber) hash ^= PhoneNumber.GetHashCode();
-          if (endpointCase_ == EndpointOneofCase.SipUri) hash ^= SipUri.GetHashCode();
+          if (HasPhoneNumber) hash ^= PhoneNumber.GetHashCode();
+          if (HasSipUri) hash ^= SipUri.GetHashCode();
           hash ^= (int) endpointCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -15001,11 +15113,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (endpointCase_ == EndpointOneofCase.PhoneNumber) {
+          if (HasPhoneNumber) {
             output.WriteRawTag(10);
             output.WriteString(PhoneNumber);
           }
-          if (endpointCase_ == EndpointOneofCase.SipUri) {
+          if (HasSipUri) {
             output.WriteRawTag(18);
             output.WriteString(SipUri);
           }
@@ -15019,11 +15131,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (endpointCase_ == EndpointOneofCase.PhoneNumber) {
+          if (HasPhoneNumber) {
             output.WriteRawTag(10);
             output.WriteString(PhoneNumber);
           }
-          if (endpointCase_ == EndpointOneofCase.SipUri) {
+          if (HasSipUri) {
             output.WriteRawTag(18);
             output.WriteString(SipUri);
           }
@@ -15037,10 +15149,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (endpointCase_ == EndpointOneofCase.PhoneNumber) {
+          if (HasPhoneNumber) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(PhoneNumber);
           }
-          if (endpointCase_ == EndpointOneofCase.SipUri) {
+          if (HasSipUri) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(SipUri);
           }
           if (_unknownFields != null) {

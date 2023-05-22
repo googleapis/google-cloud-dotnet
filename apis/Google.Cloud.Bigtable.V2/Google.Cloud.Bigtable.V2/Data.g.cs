@@ -1156,10 +1156,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString StartKeyClosed {
-      get { return startKeyCase_ == StartKeyOneofCase.StartKeyClosed ? (pb::ByteString) startKey_ : pb::ByteString.Empty; }
+      get { return HasStartKeyClosed ? (pb::ByteString) startKey_ : pb::ByteString.Empty; }
       set {
         startKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         startKeyCase_ = StartKeyOneofCase.StartKeyClosed;
+      }
+    }
+    /// <summary>Gets whether the "start_key_closed" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStartKeyClosed {
+      get { return startKeyCase_ == StartKeyOneofCase.StartKeyClosed; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "start_key_closed" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStartKeyClosed() {
+      if (HasStartKeyClosed) {
+        ClearStartKey();
       }
     }
 
@@ -1171,10 +1185,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString StartKeyOpen {
-      get { return startKeyCase_ == StartKeyOneofCase.StartKeyOpen ? (pb::ByteString) startKey_ : pb::ByteString.Empty; }
+      get { return HasStartKeyOpen ? (pb::ByteString) startKey_ : pb::ByteString.Empty; }
       set {
         startKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         startKeyCase_ = StartKeyOneofCase.StartKeyOpen;
+      }
+    }
+    /// <summary>Gets whether the "start_key_open" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStartKeyOpen {
+      get { return startKeyCase_ == StartKeyOneofCase.StartKeyOpen; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "start_key_open" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStartKeyOpen() {
+      if (HasStartKeyOpen) {
+        ClearStartKey();
       }
     }
 
@@ -1186,10 +1214,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EndKeyOpen {
-      get { return endKeyCase_ == EndKeyOneofCase.EndKeyOpen ? (pb::ByteString) endKey_ : pb::ByteString.Empty; }
+      get { return HasEndKeyOpen ? (pb::ByteString) endKey_ : pb::ByteString.Empty; }
       set {
         endKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         endKeyCase_ = EndKeyOneofCase.EndKeyOpen;
+      }
+    }
+    /// <summary>Gets whether the "end_key_open" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEndKeyOpen {
+      get { return endKeyCase_ == EndKeyOneofCase.EndKeyOpen; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "end_key_open" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEndKeyOpen() {
+      if (HasEndKeyOpen) {
+        ClearEndKey();
       }
     }
 
@@ -1201,10 +1243,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EndKeyClosed {
-      get { return endKeyCase_ == EndKeyOneofCase.EndKeyClosed ? (pb::ByteString) endKey_ : pb::ByteString.Empty; }
+      get { return HasEndKeyClosed ? (pb::ByteString) endKey_ : pb::ByteString.Empty; }
       set {
         endKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         endKeyCase_ = EndKeyOneofCase.EndKeyClosed;
+      }
+    }
+    /// <summary>Gets whether the "end_key_closed" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEndKeyClosed {
+      get { return endKeyCase_ == EndKeyOneofCase.EndKeyClosed; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "end_key_closed" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEndKeyClosed() {
+      if (HasEndKeyClosed) {
+        ClearEndKey();
       }
     }
 
@@ -1278,10 +1334,10 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (startKeyCase_ == StartKeyOneofCase.StartKeyClosed) hash ^= StartKeyClosed.GetHashCode();
-      if (startKeyCase_ == StartKeyOneofCase.StartKeyOpen) hash ^= StartKeyOpen.GetHashCode();
-      if (endKeyCase_ == EndKeyOneofCase.EndKeyOpen) hash ^= EndKeyOpen.GetHashCode();
-      if (endKeyCase_ == EndKeyOneofCase.EndKeyClosed) hash ^= EndKeyClosed.GetHashCode();
+      if (HasStartKeyClosed) hash ^= StartKeyClosed.GetHashCode();
+      if (HasStartKeyOpen) hash ^= StartKeyOpen.GetHashCode();
+      if (HasEndKeyOpen) hash ^= EndKeyOpen.GetHashCode();
+      if (HasEndKeyClosed) hash ^= EndKeyClosed.GetHashCode();
       hash ^= (int) startKeyCase_;
       hash ^= (int) endKeyCase_;
       if (_unknownFields != null) {
@@ -1302,19 +1358,19 @@ namespace Google.Cloud.Bigtable.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (startKeyCase_ == StartKeyOneofCase.StartKeyClosed) {
+      if (HasStartKeyClosed) {
         output.WriteRawTag(10);
         output.WriteBytes(StartKeyClosed);
       }
-      if (startKeyCase_ == StartKeyOneofCase.StartKeyOpen) {
+      if (HasStartKeyOpen) {
         output.WriteRawTag(18);
         output.WriteBytes(StartKeyOpen);
       }
-      if (endKeyCase_ == EndKeyOneofCase.EndKeyOpen) {
+      if (HasEndKeyOpen) {
         output.WriteRawTag(26);
         output.WriteBytes(EndKeyOpen);
       }
-      if (endKeyCase_ == EndKeyOneofCase.EndKeyClosed) {
+      if (HasEndKeyClosed) {
         output.WriteRawTag(34);
         output.WriteBytes(EndKeyClosed);
       }
@@ -1328,19 +1384,19 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (startKeyCase_ == StartKeyOneofCase.StartKeyClosed) {
+      if (HasStartKeyClosed) {
         output.WriteRawTag(10);
         output.WriteBytes(StartKeyClosed);
       }
-      if (startKeyCase_ == StartKeyOneofCase.StartKeyOpen) {
+      if (HasStartKeyOpen) {
         output.WriteRawTag(18);
         output.WriteBytes(StartKeyOpen);
       }
-      if (endKeyCase_ == EndKeyOneofCase.EndKeyOpen) {
+      if (HasEndKeyOpen) {
         output.WriteRawTag(26);
         output.WriteBytes(EndKeyOpen);
       }
-      if (endKeyCase_ == EndKeyOneofCase.EndKeyClosed) {
+      if (HasEndKeyClosed) {
         output.WriteRawTag(34);
         output.WriteBytes(EndKeyClosed);
       }
@@ -1354,16 +1410,16 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (startKeyCase_ == StartKeyOneofCase.StartKeyClosed) {
+      if (HasStartKeyClosed) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(StartKeyClosed);
       }
-      if (startKeyCase_ == StartKeyOneofCase.StartKeyOpen) {
+      if (HasStartKeyOpen) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(StartKeyOpen);
       }
-      if (endKeyCase_ == EndKeyOneofCase.EndKeyOpen) {
+      if (HasEndKeyOpen) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(EndKeyOpen);
       }
-      if (endKeyCase_ == EndKeyOneofCase.EndKeyClosed) {
+      if (HasEndKeyClosed) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(EndKeyClosed);
       }
       if (_unknownFields != null) {
@@ -1769,10 +1825,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString StartQualifierClosed {
-      get { return startQualifierCase_ == StartQualifierOneofCase.StartQualifierClosed ? (pb::ByteString) startQualifier_ : pb::ByteString.Empty; }
+      get { return HasStartQualifierClosed ? (pb::ByteString) startQualifier_ : pb::ByteString.Empty; }
       set {
         startQualifier_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         startQualifierCase_ = StartQualifierOneofCase.StartQualifierClosed;
+      }
+    }
+    /// <summary>Gets whether the "start_qualifier_closed" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStartQualifierClosed {
+      get { return startQualifierCase_ == StartQualifierOneofCase.StartQualifierClosed; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "start_qualifier_closed" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStartQualifierClosed() {
+      if (HasStartQualifierClosed) {
+        ClearStartQualifier();
       }
     }
 
@@ -1784,10 +1854,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString StartQualifierOpen {
-      get { return startQualifierCase_ == StartQualifierOneofCase.StartQualifierOpen ? (pb::ByteString) startQualifier_ : pb::ByteString.Empty; }
+      get { return HasStartQualifierOpen ? (pb::ByteString) startQualifier_ : pb::ByteString.Empty; }
       set {
         startQualifier_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         startQualifierCase_ = StartQualifierOneofCase.StartQualifierOpen;
+      }
+    }
+    /// <summary>Gets whether the "start_qualifier_open" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStartQualifierOpen {
+      get { return startQualifierCase_ == StartQualifierOneofCase.StartQualifierOpen; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "start_qualifier_open" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStartQualifierOpen() {
+      if (HasStartQualifierOpen) {
+        ClearStartQualifier();
       }
     }
 
@@ -1799,10 +1883,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EndQualifierClosed {
-      get { return endQualifierCase_ == EndQualifierOneofCase.EndQualifierClosed ? (pb::ByteString) endQualifier_ : pb::ByteString.Empty; }
+      get { return HasEndQualifierClosed ? (pb::ByteString) endQualifier_ : pb::ByteString.Empty; }
       set {
         endQualifier_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         endQualifierCase_ = EndQualifierOneofCase.EndQualifierClosed;
+      }
+    }
+    /// <summary>Gets whether the "end_qualifier_closed" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEndQualifierClosed {
+      get { return endQualifierCase_ == EndQualifierOneofCase.EndQualifierClosed; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "end_qualifier_closed" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEndQualifierClosed() {
+      if (HasEndQualifierClosed) {
+        ClearEndQualifier();
       }
     }
 
@@ -1814,10 +1912,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EndQualifierOpen {
-      get { return endQualifierCase_ == EndQualifierOneofCase.EndQualifierOpen ? (pb::ByteString) endQualifier_ : pb::ByteString.Empty; }
+      get { return HasEndQualifierOpen ? (pb::ByteString) endQualifier_ : pb::ByteString.Empty; }
       set {
         endQualifier_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         endQualifierCase_ = EndQualifierOneofCase.EndQualifierOpen;
+      }
+    }
+    /// <summary>Gets whether the "end_qualifier_open" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEndQualifierOpen {
+      get { return endQualifierCase_ == EndQualifierOneofCase.EndQualifierOpen; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "end_qualifier_open" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEndQualifierOpen() {
+      if (HasEndQualifierOpen) {
+        ClearEndQualifier();
       }
     }
 
@@ -1893,10 +2005,10 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (FamilyName.Length != 0) hash ^= FamilyName.GetHashCode();
-      if (startQualifierCase_ == StartQualifierOneofCase.StartQualifierClosed) hash ^= StartQualifierClosed.GetHashCode();
-      if (startQualifierCase_ == StartQualifierOneofCase.StartQualifierOpen) hash ^= StartQualifierOpen.GetHashCode();
-      if (endQualifierCase_ == EndQualifierOneofCase.EndQualifierClosed) hash ^= EndQualifierClosed.GetHashCode();
-      if (endQualifierCase_ == EndQualifierOneofCase.EndQualifierOpen) hash ^= EndQualifierOpen.GetHashCode();
+      if (HasStartQualifierClosed) hash ^= StartQualifierClosed.GetHashCode();
+      if (HasStartQualifierOpen) hash ^= StartQualifierOpen.GetHashCode();
+      if (HasEndQualifierClosed) hash ^= EndQualifierClosed.GetHashCode();
+      if (HasEndQualifierOpen) hash ^= EndQualifierOpen.GetHashCode();
       hash ^= (int) startQualifierCase_;
       hash ^= (int) endQualifierCase_;
       if (_unknownFields != null) {
@@ -1921,19 +2033,19 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(10);
         output.WriteString(FamilyName);
       }
-      if (startQualifierCase_ == StartQualifierOneofCase.StartQualifierClosed) {
+      if (HasStartQualifierClosed) {
         output.WriteRawTag(18);
         output.WriteBytes(StartQualifierClosed);
       }
-      if (startQualifierCase_ == StartQualifierOneofCase.StartQualifierOpen) {
+      if (HasStartQualifierOpen) {
         output.WriteRawTag(26);
         output.WriteBytes(StartQualifierOpen);
       }
-      if (endQualifierCase_ == EndQualifierOneofCase.EndQualifierClosed) {
+      if (HasEndQualifierClosed) {
         output.WriteRawTag(34);
         output.WriteBytes(EndQualifierClosed);
       }
-      if (endQualifierCase_ == EndQualifierOneofCase.EndQualifierOpen) {
+      if (HasEndQualifierOpen) {
         output.WriteRawTag(42);
         output.WriteBytes(EndQualifierOpen);
       }
@@ -1951,19 +2063,19 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(10);
         output.WriteString(FamilyName);
       }
-      if (startQualifierCase_ == StartQualifierOneofCase.StartQualifierClosed) {
+      if (HasStartQualifierClosed) {
         output.WriteRawTag(18);
         output.WriteBytes(StartQualifierClosed);
       }
-      if (startQualifierCase_ == StartQualifierOneofCase.StartQualifierOpen) {
+      if (HasStartQualifierOpen) {
         output.WriteRawTag(26);
         output.WriteBytes(StartQualifierOpen);
       }
-      if (endQualifierCase_ == EndQualifierOneofCase.EndQualifierClosed) {
+      if (HasEndQualifierClosed) {
         output.WriteRawTag(34);
         output.WriteBytes(EndQualifierClosed);
       }
-      if (endQualifierCase_ == EndQualifierOneofCase.EndQualifierOpen) {
+      if (HasEndQualifierOpen) {
         output.WriteRawTag(42);
         output.WriteBytes(EndQualifierOpen);
       }
@@ -1980,16 +2092,16 @@ namespace Google.Cloud.Bigtable.V2 {
       if (FamilyName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FamilyName);
       }
-      if (startQualifierCase_ == StartQualifierOneofCase.StartQualifierClosed) {
+      if (HasStartQualifierClosed) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(StartQualifierClosed);
       }
-      if (startQualifierCase_ == StartQualifierOneofCase.StartQualifierOpen) {
+      if (HasStartQualifierOpen) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(StartQualifierOpen);
       }
-      if (endQualifierCase_ == EndQualifierOneofCase.EndQualifierClosed) {
+      if (HasEndQualifierClosed) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(EndQualifierClosed);
       }
-      if (endQualifierCase_ == EndQualifierOneofCase.EndQualifierOpen) {
+      if (HasEndQualifierOpen) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(EndQualifierOpen);
       }
       if (_unknownFields != null) {
@@ -2409,10 +2521,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString StartValueClosed {
-      get { return startValueCase_ == StartValueOneofCase.StartValueClosed ? (pb::ByteString) startValue_ : pb::ByteString.Empty; }
+      get { return HasStartValueClosed ? (pb::ByteString) startValue_ : pb::ByteString.Empty; }
       set {
         startValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         startValueCase_ = StartValueOneofCase.StartValueClosed;
+      }
+    }
+    /// <summary>Gets whether the "start_value_closed" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStartValueClosed {
+      get { return startValueCase_ == StartValueOneofCase.StartValueClosed; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "start_value_closed" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStartValueClosed() {
+      if (HasStartValueClosed) {
+        ClearStartValue();
       }
     }
 
@@ -2424,10 +2550,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString StartValueOpen {
-      get { return startValueCase_ == StartValueOneofCase.StartValueOpen ? (pb::ByteString) startValue_ : pb::ByteString.Empty; }
+      get { return HasStartValueOpen ? (pb::ByteString) startValue_ : pb::ByteString.Empty; }
       set {
         startValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         startValueCase_ = StartValueOneofCase.StartValueOpen;
+      }
+    }
+    /// <summary>Gets whether the "start_value_open" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStartValueOpen {
+      get { return startValueCase_ == StartValueOneofCase.StartValueOpen; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "start_value_open" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStartValueOpen() {
+      if (HasStartValueOpen) {
+        ClearStartValue();
       }
     }
 
@@ -2439,10 +2579,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EndValueClosed {
-      get { return endValueCase_ == EndValueOneofCase.EndValueClosed ? (pb::ByteString) endValue_ : pb::ByteString.Empty; }
+      get { return HasEndValueClosed ? (pb::ByteString) endValue_ : pb::ByteString.Empty; }
       set {
         endValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         endValueCase_ = EndValueOneofCase.EndValueClosed;
+      }
+    }
+    /// <summary>Gets whether the "end_value_closed" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEndValueClosed {
+      get { return endValueCase_ == EndValueOneofCase.EndValueClosed; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "end_value_closed" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEndValueClosed() {
+      if (HasEndValueClosed) {
+        ClearEndValue();
       }
     }
 
@@ -2454,10 +2608,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EndValueOpen {
-      get { return endValueCase_ == EndValueOneofCase.EndValueOpen ? (pb::ByteString) endValue_ : pb::ByteString.Empty; }
+      get { return HasEndValueOpen ? (pb::ByteString) endValue_ : pb::ByteString.Empty; }
       set {
         endValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         endValueCase_ = EndValueOneofCase.EndValueOpen;
+      }
+    }
+    /// <summary>Gets whether the "end_value_open" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEndValueOpen {
+      get { return endValueCase_ == EndValueOneofCase.EndValueOpen; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "end_value_open" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEndValueOpen() {
+      if (HasEndValueOpen) {
+        ClearEndValue();
       }
     }
 
@@ -2531,10 +2699,10 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (startValueCase_ == StartValueOneofCase.StartValueClosed) hash ^= StartValueClosed.GetHashCode();
-      if (startValueCase_ == StartValueOneofCase.StartValueOpen) hash ^= StartValueOpen.GetHashCode();
-      if (endValueCase_ == EndValueOneofCase.EndValueClosed) hash ^= EndValueClosed.GetHashCode();
-      if (endValueCase_ == EndValueOneofCase.EndValueOpen) hash ^= EndValueOpen.GetHashCode();
+      if (HasStartValueClosed) hash ^= StartValueClosed.GetHashCode();
+      if (HasStartValueOpen) hash ^= StartValueOpen.GetHashCode();
+      if (HasEndValueClosed) hash ^= EndValueClosed.GetHashCode();
+      if (HasEndValueOpen) hash ^= EndValueOpen.GetHashCode();
       hash ^= (int) startValueCase_;
       hash ^= (int) endValueCase_;
       if (_unknownFields != null) {
@@ -2555,19 +2723,19 @@ namespace Google.Cloud.Bigtable.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (startValueCase_ == StartValueOneofCase.StartValueClosed) {
+      if (HasStartValueClosed) {
         output.WriteRawTag(10);
         output.WriteBytes(StartValueClosed);
       }
-      if (startValueCase_ == StartValueOneofCase.StartValueOpen) {
+      if (HasStartValueOpen) {
         output.WriteRawTag(18);
         output.WriteBytes(StartValueOpen);
       }
-      if (endValueCase_ == EndValueOneofCase.EndValueClosed) {
+      if (HasEndValueClosed) {
         output.WriteRawTag(26);
         output.WriteBytes(EndValueClosed);
       }
-      if (endValueCase_ == EndValueOneofCase.EndValueOpen) {
+      if (HasEndValueOpen) {
         output.WriteRawTag(34);
         output.WriteBytes(EndValueOpen);
       }
@@ -2581,19 +2749,19 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (startValueCase_ == StartValueOneofCase.StartValueClosed) {
+      if (HasStartValueClosed) {
         output.WriteRawTag(10);
         output.WriteBytes(StartValueClosed);
       }
-      if (startValueCase_ == StartValueOneofCase.StartValueOpen) {
+      if (HasStartValueOpen) {
         output.WriteRawTag(18);
         output.WriteBytes(StartValueOpen);
       }
-      if (endValueCase_ == EndValueOneofCase.EndValueClosed) {
+      if (HasEndValueClosed) {
         output.WriteRawTag(26);
         output.WriteBytes(EndValueClosed);
       }
-      if (endValueCase_ == EndValueOneofCase.EndValueOpen) {
+      if (HasEndValueOpen) {
         output.WriteRawTag(34);
         output.WriteBytes(EndValueOpen);
       }
@@ -2607,16 +2775,16 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (startValueCase_ == StartValueOneofCase.StartValueClosed) {
+      if (HasStartValueClosed) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(StartValueClosed);
       }
-      if (startValueCase_ == StartValueOneofCase.StartValueOpen) {
+      if (HasStartValueOpen) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(StartValueOpen);
       }
-      if (endValueCase_ == EndValueOneofCase.EndValueClosed) {
+      if (HasEndValueClosed) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(EndValueClosed);
       }
-      if (endValueCase_ == EndValueOneofCase.EndValueOpen) {
+      if (HasEndValueOpen) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(EndValueOpen);
       }
       if (_unknownFields != null) {
@@ -2970,10 +3138,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Sink {
-      get { return filterCase_ == FilterOneofCase.Sink ? (bool) filter_ : false; }
+      get { return HasSink ? (bool) filter_ : false; }
       set {
         filter_ = value;
         filterCase_ = FilterOneofCase.Sink;
+      }
+    }
+    /// <summary>Gets whether the "sink" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSink {
+      get { return filterCase_ == FilterOneofCase.Sink; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "sink" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSink() {
+      if (HasSink) {
+        ClearFilter();
       }
     }
 
@@ -2986,10 +3168,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool PassAllFilter {
-      get { return filterCase_ == FilterOneofCase.PassAllFilter ? (bool) filter_ : false; }
+      get { return HasPassAllFilter ? (bool) filter_ : false; }
       set {
         filter_ = value;
         filterCase_ = FilterOneofCase.PassAllFilter;
+      }
+    }
+    /// <summary>Gets whether the "pass_all_filter" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPassAllFilter {
+      get { return filterCase_ == FilterOneofCase.PassAllFilter; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "pass_all_filter" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPassAllFilter() {
+      if (HasPassAllFilter) {
+        ClearFilter();
       }
     }
 
@@ -3002,10 +3198,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BlockAllFilter {
-      get { return filterCase_ == FilterOneofCase.BlockAllFilter ? (bool) filter_ : false; }
+      get { return HasBlockAllFilter ? (bool) filter_ : false; }
       set {
         filter_ = value;
         filterCase_ = FilterOneofCase.BlockAllFilter;
+      }
+    }
+    /// <summary>Gets whether the "block_all_filter" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBlockAllFilter {
+      get { return filterCase_ == FilterOneofCase.BlockAllFilter; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "block_all_filter" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBlockAllFilter() {
+      if (HasBlockAllFilter) {
+        ClearFilter();
       }
     }
 
@@ -3023,10 +3233,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString RowKeyRegexFilter {
-      get { return filterCase_ == FilterOneofCase.RowKeyRegexFilter ? (pb::ByteString) filter_ : pb::ByteString.Empty; }
+      get { return HasRowKeyRegexFilter ? (pb::ByteString) filter_ : pb::ByteString.Empty; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         filterCase_ = FilterOneofCase.RowKeyRegexFilter;
+      }
+    }
+    /// <summary>Gets whether the "row_key_regex_filter" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRowKeyRegexFilter {
+      get { return filterCase_ == FilterOneofCase.RowKeyRegexFilter; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "row_key_regex_filter" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRowKeyRegexFilter() {
+      if (HasRowKeyRegexFilter) {
+        ClearFilter();
       }
     }
 
@@ -3039,10 +3263,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double RowSampleFilter {
-      get { return filterCase_ == FilterOneofCase.RowSampleFilter ? (double) filter_ : 0D; }
+      get { return HasRowSampleFilter ? (double) filter_ : 0D; }
       set {
         filter_ = value;
         filterCase_ = FilterOneofCase.RowSampleFilter;
+      }
+    }
+    /// <summary>Gets whether the "row_sample_filter" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRowSampleFilter {
+      get { return filterCase_ == FilterOneofCase.RowSampleFilter; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "row_sample_filter" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRowSampleFilter() {
+      if (HasRowSampleFilter) {
+        ClearFilter();
       }
     }
 
@@ -3059,10 +3297,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FamilyNameRegexFilter {
-      get { return filterCase_ == FilterOneofCase.FamilyNameRegexFilter ? (string) filter_ : ""; }
+      get { return HasFamilyNameRegexFilter ? (string) filter_ : ""; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         filterCase_ = FilterOneofCase.FamilyNameRegexFilter;
+      }
+    }
+    /// <summary>Gets whether the "family_name_regex_filter" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFamilyNameRegexFilter {
+      get { return filterCase_ == FilterOneofCase.FamilyNameRegexFilter; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "family_name_regex_filter" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFamilyNameRegexFilter() {
+      if (HasFamilyNameRegexFilter) {
+        ClearFilter();
       }
     }
 
@@ -3079,10 +3331,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString ColumnQualifierRegexFilter {
-      get { return filterCase_ == FilterOneofCase.ColumnQualifierRegexFilter ? (pb::ByteString) filter_ : pb::ByteString.Empty; }
+      get { return HasColumnQualifierRegexFilter ? (pb::ByteString) filter_ : pb::ByteString.Empty; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         filterCase_ = FilterOneofCase.ColumnQualifierRegexFilter;
+      }
+    }
+    /// <summary>Gets whether the "column_qualifier_regex_filter" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasColumnQualifierRegexFilter {
+      get { return filterCase_ == FilterOneofCase.ColumnQualifierRegexFilter; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "column_qualifier_regex_filter" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearColumnQualifierRegexFilter() {
+      if (HasColumnQualifierRegexFilter) {
+        ClearFilter();
       }
     }
 
@@ -3128,10 +3394,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString ValueRegexFilter {
-      get { return filterCase_ == FilterOneofCase.ValueRegexFilter ? (pb::ByteString) filter_ : pb::ByteString.Empty; }
+      get { return HasValueRegexFilter ? (pb::ByteString) filter_ : pb::ByteString.Empty; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         filterCase_ = FilterOneofCase.ValueRegexFilter;
+      }
+    }
+    /// <summary>Gets whether the "value_regex_filter" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasValueRegexFilter {
+      get { return filterCase_ == FilterOneofCase.ValueRegexFilter; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "value_regex_filter" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValueRegexFilter() {
+      if (HasValueRegexFilter) {
+        ClearFilter();
       }
     }
 
@@ -3160,10 +3440,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CellsPerRowOffsetFilter {
-      get { return filterCase_ == FilterOneofCase.CellsPerRowOffsetFilter ? (int) filter_ : 0; }
+      get { return HasCellsPerRowOffsetFilter ? (int) filter_ : 0; }
       set {
         filter_ = value;
         filterCase_ = FilterOneofCase.CellsPerRowOffsetFilter;
+      }
+    }
+    /// <summary>Gets whether the "cells_per_row_offset_filter" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCellsPerRowOffsetFilter {
+      get { return filterCase_ == FilterOneofCase.CellsPerRowOffsetFilter; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "cells_per_row_offset_filter" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCellsPerRowOffsetFilter() {
+      if (HasCellsPerRowOffsetFilter) {
+        ClearFilter();
       }
     }
 
@@ -3177,10 +3471,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CellsPerRowLimitFilter {
-      get { return filterCase_ == FilterOneofCase.CellsPerRowLimitFilter ? (int) filter_ : 0; }
+      get { return HasCellsPerRowLimitFilter ? (int) filter_ : 0; }
       set {
         filter_ = value;
         filterCase_ = FilterOneofCase.CellsPerRowLimitFilter;
+      }
+    }
+    /// <summary>Gets whether the "cells_per_row_limit_filter" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCellsPerRowLimitFilter {
+      get { return filterCase_ == FilterOneofCase.CellsPerRowLimitFilter; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "cells_per_row_limit_filter" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCellsPerRowLimitFilter() {
+      if (HasCellsPerRowLimitFilter) {
+        ClearFilter();
       }
     }
 
@@ -3197,10 +3505,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CellsPerColumnLimitFilter {
-      get { return filterCase_ == FilterOneofCase.CellsPerColumnLimitFilter ? (int) filter_ : 0; }
+      get { return HasCellsPerColumnLimitFilter ? (int) filter_ : 0; }
       set {
         filter_ = value;
         filterCase_ = FilterOneofCase.CellsPerColumnLimitFilter;
+      }
+    }
+    /// <summary>Gets whether the "cells_per_column_limit_filter" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCellsPerColumnLimitFilter {
+      get { return filterCase_ == FilterOneofCase.CellsPerColumnLimitFilter; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "cells_per_column_limit_filter" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCellsPerColumnLimitFilter() {
+      if (HasCellsPerColumnLimitFilter) {
+        ClearFilter();
       }
     }
 
@@ -3212,10 +3534,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool StripValueTransformer {
-      get { return filterCase_ == FilterOneofCase.StripValueTransformer ? (bool) filter_ : false; }
+      get { return HasStripValueTransformer ? (bool) filter_ : false; }
       set {
         filter_ = value;
         filterCase_ = FilterOneofCase.StripValueTransformer;
+      }
+    }
+    /// <summary>Gets whether the "strip_value_transformer" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStripValueTransformer {
+      get { return filterCase_ == FilterOneofCase.StripValueTransformer; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "strip_value_transformer" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStripValueTransformer() {
+      if (HasStripValueTransformer) {
+        ClearFilter();
       }
     }
 
@@ -3239,10 +3575,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ApplyLabelTransformer {
-      get { return filterCase_ == FilterOneofCase.ApplyLabelTransformer ? (string) filter_ : ""; }
+      get { return HasApplyLabelTransformer ? (string) filter_ : ""; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         filterCase_ = FilterOneofCase.ApplyLabelTransformer;
+      }
+    }
+    /// <summary>Gets whether the "apply_label_transformer" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasApplyLabelTransformer {
+      get { return filterCase_ == FilterOneofCase.ApplyLabelTransformer; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "apply_label_transformer" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearApplyLabelTransformer() {
+      if (HasApplyLabelTransformer) {
+        ClearFilter();
       }
     }
 
@@ -3329,22 +3679,22 @@ namespace Google.Cloud.Bigtable.V2 {
       if (filterCase_ == FilterOneofCase.Chain) hash ^= Chain.GetHashCode();
       if (filterCase_ == FilterOneofCase.Interleave) hash ^= Interleave.GetHashCode();
       if (filterCase_ == FilterOneofCase.Condition) hash ^= Condition.GetHashCode();
-      if (filterCase_ == FilterOneofCase.Sink) hash ^= Sink.GetHashCode();
-      if (filterCase_ == FilterOneofCase.PassAllFilter) hash ^= PassAllFilter.GetHashCode();
-      if (filterCase_ == FilterOneofCase.BlockAllFilter) hash ^= BlockAllFilter.GetHashCode();
-      if (filterCase_ == FilterOneofCase.RowKeyRegexFilter) hash ^= RowKeyRegexFilter.GetHashCode();
-      if (filterCase_ == FilterOneofCase.RowSampleFilter) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RowSampleFilter);
-      if (filterCase_ == FilterOneofCase.FamilyNameRegexFilter) hash ^= FamilyNameRegexFilter.GetHashCode();
-      if (filterCase_ == FilterOneofCase.ColumnQualifierRegexFilter) hash ^= ColumnQualifierRegexFilter.GetHashCode();
+      if (HasSink) hash ^= Sink.GetHashCode();
+      if (HasPassAllFilter) hash ^= PassAllFilter.GetHashCode();
+      if (HasBlockAllFilter) hash ^= BlockAllFilter.GetHashCode();
+      if (HasRowKeyRegexFilter) hash ^= RowKeyRegexFilter.GetHashCode();
+      if (HasRowSampleFilter) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RowSampleFilter);
+      if (HasFamilyNameRegexFilter) hash ^= FamilyNameRegexFilter.GetHashCode();
+      if (HasColumnQualifierRegexFilter) hash ^= ColumnQualifierRegexFilter.GetHashCode();
       if (filterCase_ == FilterOneofCase.ColumnRangeFilter) hash ^= ColumnRangeFilter.GetHashCode();
       if (filterCase_ == FilterOneofCase.TimestampRangeFilter) hash ^= TimestampRangeFilter.GetHashCode();
-      if (filterCase_ == FilterOneofCase.ValueRegexFilter) hash ^= ValueRegexFilter.GetHashCode();
+      if (HasValueRegexFilter) hash ^= ValueRegexFilter.GetHashCode();
       if (filterCase_ == FilterOneofCase.ValueRangeFilter) hash ^= ValueRangeFilter.GetHashCode();
-      if (filterCase_ == FilterOneofCase.CellsPerRowOffsetFilter) hash ^= CellsPerRowOffsetFilter.GetHashCode();
-      if (filterCase_ == FilterOneofCase.CellsPerRowLimitFilter) hash ^= CellsPerRowLimitFilter.GetHashCode();
-      if (filterCase_ == FilterOneofCase.CellsPerColumnLimitFilter) hash ^= CellsPerColumnLimitFilter.GetHashCode();
-      if (filterCase_ == FilterOneofCase.StripValueTransformer) hash ^= StripValueTransformer.GetHashCode();
-      if (filterCase_ == FilterOneofCase.ApplyLabelTransformer) hash ^= ApplyLabelTransformer.GetHashCode();
+      if (HasCellsPerRowOffsetFilter) hash ^= CellsPerRowOffsetFilter.GetHashCode();
+      if (HasCellsPerRowLimitFilter) hash ^= CellsPerRowLimitFilter.GetHashCode();
+      if (HasCellsPerColumnLimitFilter) hash ^= CellsPerColumnLimitFilter.GetHashCode();
+      if (HasStripValueTransformer) hash ^= StripValueTransformer.GetHashCode();
+      if (HasApplyLabelTransformer) hash ^= ApplyLabelTransformer.GetHashCode();
       hash ^= (int) filterCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3376,15 +3726,15 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(Condition);
       }
-      if (filterCase_ == FilterOneofCase.RowKeyRegexFilter) {
+      if (HasRowKeyRegexFilter) {
         output.WriteRawTag(34);
         output.WriteBytes(RowKeyRegexFilter);
       }
-      if (filterCase_ == FilterOneofCase.FamilyNameRegexFilter) {
+      if (HasFamilyNameRegexFilter) {
         output.WriteRawTag(42);
         output.WriteString(FamilyNameRegexFilter);
       }
-      if (filterCase_ == FilterOneofCase.ColumnQualifierRegexFilter) {
+      if (HasColumnQualifierRegexFilter) {
         output.WriteRawTag(50);
         output.WriteBytes(ColumnQualifierRegexFilter);
       }
@@ -3396,27 +3746,27 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(66);
         output.WriteMessage(TimestampRangeFilter);
       }
-      if (filterCase_ == FilterOneofCase.ValueRegexFilter) {
+      if (HasValueRegexFilter) {
         output.WriteRawTag(74);
         output.WriteBytes(ValueRegexFilter);
       }
-      if (filterCase_ == FilterOneofCase.CellsPerRowOffsetFilter) {
+      if (HasCellsPerRowOffsetFilter) {
         output.WriteRawTag(80);
         output.WriteInt32(CellsPerRowOffsetFilter);
       }
-      if (filterCase_ == FilterOneofCase.CellsPerRowLimitFilter) {
+      if (HasCellsPerRowLimitFilter) {
         output.WriteRawTag(88);
         output.WriteInt32(CellsPerRowLimitFilter);
       }
-      if (filterCase_ == FilterOneofCase.CellsPerColumnLimitFilter) {
+      if (HasCellsPerColumnLimitFilter) {
         output.WriteRawTag(96);
         output.WriteInt32(CellsPerColumnLimitFilter);
       }
-      if (filterCase_ == FilterOneofCase.StripValueTransformer) {
+      if (HasStripValueTransformer) {
         output.WriteRawTag(104);
         output.WriteBool(StripValueTransformer);
       }
-      if (filterCase_ == FilterOneofCase.RowSampleFilter) {
+      if (HasRowSampleFilter) {
         output.WriteRawTag(113);
         output.WriteDouble(RowSampleFilter);
       }
@@ -3424,19 +3774,19 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(122);
         output.WriteMessage(ValueRangeFilter);
       }
-      if (filterCase_ == FilterOneofCase.Sink) {
+      if (HasSink) {
         output.WriteRawTag(128, 1);
         output.WriteBool(Sink);
       }
-      if (filterCase_ == FilterOneofCase.PassAllFilter) {
+      if (HasPassAllFilter) {
         output.WriteRawTag(136, 1);
         output.WriteBool(PassAllFilter);
       }
-      if (filterCase_ == FilterOneofCase.BlockAllFilter) {
+      if (HasBlockAllFilter) {
         output.WriteRawTag(144, 1);
         output.WriteBool(BlockAllFilter);
       }
-      if (filterCase_ == FilterOneofCase.ApplyLabelTransformer) {
+      if (HasApplyLabelTransformer) {
         output.WriteRawTag(154, 1);
         output.WriteString(ApplyLabelTransformer);
       }
@@ -3462,15 +3812,15 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(Condition);
       }
-      if (filterCase_ == FilterOneofCase.RowKeyRegexFilter) {
+      if (HasRowKeyRegexFilter) {
         output.WriteRawTag(34);
         output.WriteBytes(RowKeyRegexFilter);
       }
-      if (filterCase_ == FilterOneofCase.FamilyNameRegexFilter) {
+      if (HasFamilyNameRegexFilter) {
         output.WriteRawTag(42);
         output.WriteString(FamilyNameRegexFilter);
       }
-      if (filterCase_ == FilterOneofCase.ColumnQualifierRegexFilter) {
+      if (HasColumnQualifierRegexFilter) {
         output.WriteRawTag(50);
         output.WriteBytes(ColumnQualifierRegexFilter);
       }
@@ -3482,27 +3832,27 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(66);
         output.WriteMessage(TimestampRangeFilter);
       }
-      if (filterCase_ == FilterOneofCase.ValueRegexFilter) {
+      if (HasValueRegexFilter) {
         output.WriteRawTag(74);
         output.WriteBytes(ValueRegexFilter);
       }
-      if (filterCase_ == FilterOneofCase.CellsPerRowOffsetFilter) {
+      if (HasCellsPerRowOffsetFilter) {
         output.WriteRawTag(80);
         output.WriteInt32(CellsPerRowOffsetFilter);
       }
-      if (filterCase_ == FilterOneofCase.CellsPerRowLimitFilter) {
+      if (HasCellsPerRowLimitFilter) {
         output.WriteRawTag(88);
         output.WriteInt32(CellsPerRowLimitFilter);
       }
-      if (filterCase_ == FilterOneofCase.CellsPerColumnLimitFilter) {
+      if (HasCellsPerColumnLimitFilter) {
         output.WriteRawTag(96);
         output.WriteInt32(CellsPerColumnLimitFilter);
       }
-      if (filterCase_ == FilterOneofCase.StripValueTransformer) {
+      if (HasStripValueTransformer) {
         output.WriteRawTag(104);
         output.WriteBool(StripValueTransformer);
       }
-      if (filterCase_ == FilterOneofCase.RowSampleFilter) {
+      if (HasRowSampleFilter) {
         output.WriteRawTag(113);
         output.WriteDouble(RowSampleFilter);
       }
@@ -3510,19 +3860,19 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(122);
         output.WriteMessage(ValueRangeFilter);
       }
-      if (filterCase_ == FilterOneofCase.Sink) {
+      if (HasSink) {
         output.WriteRawTag(128, 1);
         output.WriteBool(Sink);
       }
-      if (filterCase_ == FilterOneofCase.PassAllFilter) {
+      if (HasPassAllFilter) {
         output.WriteRawTag(136, 1);
         output.WriteBool(PassAllFilter);
       }
-      if (filterCase_ == FilterOneofCase.BlockAllFilter) {
+      if (HasBlockAllFilter) {
         output.WriteRawTag(144, 1);
         output.WriteBool(BlockAllFilter);
       }
-      if (filterCase_ == FilterOneofCase.ApplyLabelTransformer) {
+      if (HasApplyLabelTransformer) {
         output.WriteRawTag(154, 1);
         output.WriteString(ApplyLabelTransformer);
       }
@@ -3545,25 +3895,25 @@ namespace Google.Cloud.Bigtable.V2 {
       if (filterCase_ == FilterOneofCase.Condition) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Condition);
       }
-      if (filterCase_ == FilterOneofCase.Sink) {
+      if (HasSink) {
         size += 2 + 1;
       }
-      if (filterCase_ == FilterOneofCase.PassAllFilter) {
+      if (HasPassAllFilter) {
         size += 2 + 1;
       }
-      if (filterCase_ == FilterOneofCase.BlockAllFilter) {
+      if (HasBlockAllFilter) {
         size += 2 + 1;
       }
-      if (filterCase_ == FilterOneofCase.RowKeyRegexFilter) {
+      if (HasRowKeyRegexFilter) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(RowKeyRegexFilter);
       }
-      if (filterCase_ == FilterOneofCase.RowSampleFilter) {
+      if (HasRowSampleFilter) {
         size += 1 + 8;
       }
-      if (filterCase_ == FilterOneofCase.FamilyNameRegexFilter) {
+      if (HasFamilyNameRegexFilter) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FamilyNameRegexFilter);
       }
-      if (filterCase_ == FilterOneofCase.ColumnQualifierRegexFilter) {
+      if (HasColumnQualifierRegexFilter) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(ColumnQualifierRegexFilter);
       }
       if (filterCase_ == FilterOneofCase.ColumnRangeFilter) {
@@ -3572,25 +3922,25 @@ namespace Google.Cloud.Bigtable.V2 {
       if (filterCase_ == FilterOneofCase.TimestampRangeFilter) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimestampRangeFilter);
       }
-      if (filterCase_ == FilterOneofCase.ValueRegexFilter) {
+      if (HasValueRegexFilter) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(ValueRegexFilter);
       }
       if (filterCase_ == FilterOneofCase.ValueRangeFilter) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ValueRangeFilter);
       }
-      if (filterCase_ == FilterOneofCase.CellsPerRowOffsetFilter) {
+      if (HasCellsPerRowOffsetFilter) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(CellsPerRowOffsetFilter);
       }
-      if (filterCase_ == FilterOneofCase.CellsPerRowLimitFilter) {
+      if (HasCellsPerRowLimitFilter) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(CellsPerRowLimitFilter);
       }
-      if (filterCase_ == FilterOneofCase.CellsPerColumnLimitFilter) {
+      if (HasCellsPerColumnLimitFilter) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(CellsPerColumnLimitFilter);
       }
-      if (filterCase_ == FilterOneofCase.StripValueTransformer) {
+      if (HasStripValueTransformer) {
         size += 1 + 1;
       }
-      if (filterCase_ == FilterOneofCase.ApplyLabelTransformer) {
+      if (HasApplyLabelTransformer) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ApplyLabelTransformer);
       }
       if (_unknownFields != null) {
@@ -6121,10 +6471,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString AppendValue {
-      get { return ruleCase_ == RuleOneofCase.AppendValue ? (pb::ByteString) rule_ : pb::ByteString.Empty; }
+      get { return HasAppendValue ? (pb::ByteString) rule_ : pb::ByteString.Empty; }
       set {
         rule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         ruleCase_ = RuleOneofCase.AppendValue;
+      }
+    }
+    /// <summary>Gets whether the "append_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAppendValue {
+      get { return ruleCase_ == RuleOneofCase.AppendValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "append_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAppendValue() {
+      if (HasAppendValue) {
+        ClearRule();
       }
     }
 
@@ -6139,10 +6503,24 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long IncrementAmount {
-      get { return ruleCase_ == RuleOneofCase.IncrementAmount ? (long) rule_ : 0L; }
+      get { return HasIncrementAmount ? (long) rule_ : 0L; }
       set {
         rule_ = value;
         ruleCase_ = RuleOneofCase.IncrementAmount;
+      }
+    }
+    /// <summary>Gets whether the "increment_amount" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIncrementAmount {
+      get { return ruleCase_ == RuleOneofCase.IncrementAmount; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "increment_amount" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIncrementAmount() {
+      if (HasIncrementAmount) {
+        ClearRule();
       }
     }
 
@@ -6196,8 +6574,8 @@ namespace Google.Cloud.Bigtable.V2 {
       int hash = 1;
       if (FamilyName.Length != 0) hash ^= FamilyName.GetHashCode();
       if (ColumnQualifier.Length != 0) hash ^= ColumnQualifier.GetHashCode();
-      if (ruleCase_ == RuleOneofCase.AppendValue) hash ^= AppendValue.GetHashCode();
-      if (ruleCase_ == RuleOneofCase.IncrementAmount) hash ^= IncrementAmount.GetHashCode();
+      if (HasAppendValue) hash ^= AppendValue.GetHashCode();
+      if (HasIncrementAmount) hash ^= IncrementAmount.GetHashCode();
       hash ^= (int) ruleCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6225,11 +6603,11 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteBytes(ColumnQualifier);
       }
-      if (ruleCase_ == RuleOneofCase.AppendValue) {
+      if (HasAppendValue) {
         output.WriteRawTag(26);
         output.WriteBytes(AppendValue);
       }
-      if (ruleCase_ == RuleOneofCase.IncrementAmount) {
+      if (HasIncrementAmount) {
         output.WriteRawTag(32);
         output.WriteInt64(IncrementAmount);
       }
@@ -6251,11 +6629,11 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteBytes(ColumnQualifier);
       }
-      if (ruleCase_ == RuleOneofCase.AppendValue) {
+      if (HasAppendValue) {
         output.WriteRawTag(26);
         output.WriteBytes(AppendValue);
       }
-      if (ruleCase_ == RuleOneofCase.IncrementAmount) {
+      if (HasIncrementAmount) {
         output.WriteRawTag(32);
         output.WriteInt64(IncrementAmount);
       }
@@ -6275,10 +6653,10 @@ namespace Google.Cloud.Bigtable.V2 {
       if (ColumnQualifier.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(ColumnQualifier);
       }
-      if (ruleCase_ == RuleOneofCase.AppendValue) {
+      if (HasAppendValue) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(AppendValue);
       }
-      if (ruleCase_ == RuleOneofCase.IncrementAmount) {
+      if (HasIncrementAmount) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(IncrementAmount);
       }
       if (_unknownFields != null) {

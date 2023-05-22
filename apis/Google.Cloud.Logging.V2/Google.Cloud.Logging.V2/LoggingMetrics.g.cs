@@ -681,7 +681,7 @@ namespace Google.Cloud.Logging.V2 {
       if (other.ValueExtractor.Length != 0) {
         ValueExtractor = other.ValueExtractor;
       }
-      labelExtractors_.Add(other.labelExtractors_);
+      labelExtractors_.MergeFrom(other.labelExtractors_);
       if (other.bucketOptions_ != null) {
         if (bucketOptions_ == null) {
           BucketOptions = new global::Google.Api.Distribution.Types.BucketOptions();

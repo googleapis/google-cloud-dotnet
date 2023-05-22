@@ -3594,7 +3594,7 @@ namespace Google.Cloud.Audit {
       if (other.ResourceType.Length != 0) {
         ResourceType = other.ResourceType;
       }
-      resourceTags_.Add(other.resourceTags_);
+      resourceTags_.MergeFrom(other.resourceTags_);
       violationInfo_.Add(other.violationInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }

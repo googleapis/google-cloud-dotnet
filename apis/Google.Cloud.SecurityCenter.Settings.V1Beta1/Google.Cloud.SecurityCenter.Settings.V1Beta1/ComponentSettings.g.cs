@@ -587,7 +587,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       if (other.ProjectServiceAccount.Length != 0) {
         ProjectServiceAccount = other.ProjectServiceAccount;
       }
-      detectorSettings_.Add(other.detectorSettings_);
+      detectorSettings_.MergeFrom(other.detectorSettings_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }

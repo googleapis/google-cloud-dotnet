@@ -3829,7 +3829,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (other.AnalyzeQueryTextSentiment != false) {
         AnalyzeQueryTextSentiment = other.AnalyzeQueryTextSentiment;
       }
-      webhookHeaders_.Add(other.webhookHeaders_);
+      webhookHeaders_.MergeFrom(other.webhookHeaders_);
       flowVersions_.Add(other.flowVersions_);
       if (other.Channel.Length != 0) {
         Channel = other.Channel;
@@ -4576,10 +4576,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Text {
-      get { return queryCase_ == QueryOneofCase.Text ? (string) query_ : ""; }
+      get { return HasText ? (string) query_ : ""; }
       set {
         query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queryCase_ = QueryOneofCase.Text;
+      }
+    }
+    /// <summary>Gets whether the "text" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasText {
+      get { return queryCase_ == QueryOneofCase.Text; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "text" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearText() {
+      if (HasText) {
+        ClearQuery();
       }
     }
 
@@ -4594,10 +4608,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TriggerIntent {
-      get { return queryCase_ == QueryOneofCase.TriggerIntent ? (string) query_ : ""; }
+      get { return HasTriggerIntent ? (string) query_ : ""; }
       set {
         query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queryCase_ = QueryOneofCase.TriggerIntent;
+      }
+    }
+    /// <summary>Gets whether the "trigger_intent" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTriggerIntent {
+      get { return queryCase_ == QueryOneofCase.TriggerIntent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "trigger_intent" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTriggerIntent() {
+      if (HasTriggerIntent) {
+        ClearQuery();
       }
     }
 
@@ -4611,10 +4639,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Transcript {
-      get { return queryCase_ == QueryOneofCase.Transcript ? (string) query_ : ""; }
+      get { return HasTranscript ? (string) query_ : ""; }
       set {
         query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queryCase_ = QueryOneofCase.Transcript;
+      }
+    }
+    /// <summary>Gets whether the "transcript" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTranscript {
+      get { return queryCase_ == QueryOneofCase.Transcript; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "transcript" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTranscript() {
+      if (HasTranscript) {
+        ClearQuery();
       }
     }
 
@@ -4627,10 +4669,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TriggerEvent {
-      get { return queryCase_ == QueryOneofCase.TriggerEvent ? (string) query_ : ""; }
+      get { return HasTriggerEvent ? (string) query_ : ""; }
       set {
         query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queryCase_ = QueryOneofCase.TriggerEvent;
+      }
+    }
+    /// <summary>Gets whether the "trigger_event" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTriggerEvent {
+      get { return queryCase_ == QueryOneofCase.TriggerEvent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "trigger_event" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTriggerEvent() {
+      if (HasTriggerEvent) {
+        ClearQuery();
       }
     }
 
@@ -4934,10 +4990,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (queryCase_ == QueryOneofCase.Text) hash ^= Text.GetHashCode();
-      if (queryCase_ == QueryOneofCase.TriggerIntent) hash ^= TriggerIntent.GetHashCode();
-      if (queryCase_ == QueryOneofCase.Transcript) hash ^= Transcript.GetHashCode();
-      if (queryCase_ == QueryOneofCase.TriggerEvent) hash ^= TriggerEvent.GetHashCode();
+      if (HasText) hash ^= Text.GetHashCode();
+      if (HasTriggerIntent) hash ^= TriggerIntent.GetHashCode();
+      if (HasTranscript) hash ^= Transcript.GetHashCode();
+      if (HasTriggerEvent) hash ^= TriggerEvent.GetHashCode();
       if (queryCase_ == QueryOneofCase.Dtmf) hash ^= Dtmf.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (parameters_ != null) hash ^= Parameters.GetHashCode();
@@ -4969,7 +5025,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (queryCase_ == QueryOneofCase.Text) {
+      if (HasText) {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
@@ -4999,16 +5055,16 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(82);
         output.WriteMessage(DiagnosticInfo);
       }
-      if (queryCase_ == QueryOneofCase.TriggerIntent) {
+      if (HasTriggerIntent) {
         output.WriteRawTag(90);
         output.WriteString(TriggerIntent);
       }
-      if (queryCase_ == QueryOneofCase.Transcript) {
+      if (HasTranscript) {
         output.WriteRawTag(98);
         output.WriteString(Transcript);
       }
       webhookStatuses_.WriteTo(output, _repeated_webhookStatuses_codec);
-      if (queryCase_ == QueryOneofCase.TriggerEvent) {
+      if (HasTriggerEvent) {
         output.WriteRawTag(114);
         output.WriteString(TriggerEvent);
       }
@@ -5034,7 +5090,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (queryCase_ == QueryOneofCase.Text) {
+      if (HasText) {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
@@ -5064,16 +5120,16 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(82);
         output.WriteMessage(DiagnosticInfo);
       }
-      if (queryCase_ == QueryOneofCase.TriggerIntent) {
+      if (HasTriggerIntent) {
         output.WriteRawTag(90);
         output.WriteString(TriggerIntent);
       }
-      if (queryCase_ == QueryOneofCase.Transcript) {
+      if (HasTranscript) {
         output.WriteRawTag(98);
         output.WriteString(Transcript);
       }
       webhookStatuses_.WriteTo(ref output, _repeated_webhookStatuses_codec);
-      if (queryCase_ == QueryOneofCase.TriggerEvent) {
+      if (HasTriggerEvent) {
         output.WriteRawTag(114);
         output.WriteString(TriggerEvent);
       }
@@ -5099,16 +5155,16 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (queryCase_ == QueryOneofCase.Text) {
+      if (HasText) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
-      if (queryCase_ == QueryOneofCase.TriggerIntent) {
+      if (HasTriggerIntent) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TriggerIntent);
       }
-      if (queryCase_ == QueryOneofCase.Transcript) {
+      if (HasTranscript) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Transcript);
       }
-      if (queryCase_ == QueryOneofCase.TriggerEvent) {
+      if (HasTriggerEvent) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TriggerEvent);
       }
       if (queryCase_ == QueryOneofCase.Dtmf) {
@@ -7404,10 +7460,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Text {
-      get { return queryCase_ == QueryOneofCase.Text ? (string) query_ : ""; }
+      get { return HasText ? (string) query_ : ""; }
       set {
         query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queryCase_ = QueryOneofCase.Text;
+      }
+    }
+    /// <summary>Gets whether the "text" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasText {
+      get { return queryCase_ == QueryOneofCase.Text; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "text" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearText() {
+      if (HasText) {
+        ClearQuery();
       }
     }
 
@@ -7422,10 +7492,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TriggerIntent {
-      get { return queryCase_ == QueryOneofCase.TriggerIntent ? (string) query_ : ""; }
+      get { return HasTriggerIntent ? (string) query_ : ""; }
       set {
         query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queryCase_ = QueryOneofCase.TriggerIntent;
+      }
+    }
+    /// <summary>Gets whether the "trigger_intent" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTriggerIntent {
+      get { return queryCase_ == QueryOneofCase.TriggerIntent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "trigger_intent" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTriggerIntent() {
+      if (HasTriggerIntent) {
+        ClearQuery();
       }
     }
 
@@ -7439,10 +7523,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Transcript {
-      get { return queryCase_ == QueryOneofCase.Transcript ? (string) query_ : ""; }
+      get { return HasTranscript ? (string) query_ : ""; }
       set {
         query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queryCase_ = QueryOneofCase.Transcript;
+      }
+    }
+    /// <summary>Gets whether the "transcript" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTranscript {
+      get { return queryCase_ == QueryOneofCase.Transcript; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "transcript" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTranscript() {
+      if (HasTranscript) {
+        ClearQuery();
       }
     }
 
@@ -7455,10 +7553,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TriggerEvent {
-      get { return queryCase_ == QueryOneofCase.TriggerEvent ? (string) query_ : ""; }
+      get { return HasTriggerEvent ? (string) query_ : ""; }
       set {
         query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queryCase_ = QueryOneofCase.TriggerEvent;
+      }
+    }
+    /// <summary>Gets whether the "trigger_event" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTriggerEvent {
+      get { return queryCase_ == QueryOneofCase.TriggerEvent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "trigger_event" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTriggerEvent() {
+      if (HasTriggerEvent) {
+        ClearQuery();
       }
     }
 
@@ -7546,10 +7658,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (queryCase_ == QueryOneofCase.Text) hash ^= Text.GetHashCode();
-      if (queryCase_ == QueryOneofCase.TriggerIntent) hash ^= TriggerIntent.GetHashCode();
-      if (queryCase_ == QueryOneofCase.Transcript) hash ^= Transcript.GetHashCode();
-      if (queryCase_ == QueryOneofCase.TriggerEvent) hash ^= TriggerEvent.GetHashCode();
+      if (HasText) hash ^= Text.GetHashCode();
+      if (HasTriggerIntent) hash ^= TriggerIntent.GetHashCode();
+      if (HasTranscript) hash ^= Transcript.GetHashCode();
+      if (HasTriggerEvent) hash ^= TriggerEvent.GetHashCode();
       hash ^= matches_.GetHashCode();
       if (currentPage_ != null) hash ^= CurrentPage.GetHashCode();
       hash ^= (int) queryCase_;
@@ -7571,15 +7683,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (queryCase_ == QueryOneofCase.Text) {
+      if (HasText) {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
-      if (queryCase_ == QueryOneofCase.TriggerIntent) {
+      if (HasTriggerIntent) {
         output.WriteRawTag(18);
         output.WriteString(TriggerIntent);
       }
-      if (queryCase_ == QueryOneofCase.Transcript) {
+      if (HasTranscript) {
         output.WriteRawTag(26);
         output.WriteString(Transcript);
       }
@@ -7588,7 +7700,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(42);
         output.WriteMessage(CurrentPage);
       }
-      if (queryCase_ == QueryOneofCase.TriggerEvent) {
+      if (HasTriggerEvent) {
         output.WriteRawTag(50);
         output.WriteString(TriggerEvent);
       }
@@ -7602,15 +7714,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (queryCase_ == QueryOneofCase.Text) {
+      if (HasText) {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
-      if (queryCase_ == QueryOneofCase.TriggerIntent) {
+      if (HasTriggerIntent) {
         output.WriteRawTag(18);
         output.WriteString(TriggerIntent);
       }
-      if (queryCase_ == QueryOneofCase.Transcript) {
+      if (HasTranscript) {
         output.WriteRawTag(26);
         output.WriteString(Transcript);
       }
@@ -7619,7 +7731,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(42);
         output.WriteMessage(CurrentPage);
       }
-      if (queryCase_ == QueryOneofCase.TriggerEvent) {
+      if (HasTriggerEvent) {
         output.WriteRawTag(50);
         output.WriteString(TriggerEvent);
       }
@@ -7633,16 +7745,16 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (queryCase_ == QueryOneofCase.Text) {
+      if (HasText) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
-      if (queryCase_ == QueryOneofCase.TriggerIntent) {
+      if (HasTriggerIntent) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TriggerIntent);
       }
-      if (queryCase_ == QueryOneofCase.Transcript) {
+      if (HasTranscript) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Transcript);
       }
-      if (queryCase_ == QueryOneofCase.TriggerEvent) {
+      if (HasTriggerEvent) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TriggerEvent);
       }
       size += matches_.CalculateSize(_repeated_matches_codec);

@@ -479,7 +479,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.onlineServingConfig_ != null) {
         if (onlineServingConfig_ == null) {
           OnlineServingConfig = new global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig();

@@ -3615,7 +3615,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       if (other == null) {
         return;
       }
-      annotationColors_.Add(other.annotationColors_);
+      annotationColors_.MergeFrom(other.annotationColors_);
       if (other.MimeType.Length != 0) {
         MimeType = other.MimeType;
       }

@@ -112,10 +112,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Operation {
-      get { return referenceCase_ == ReferenceOneofCase.Operation ? (string) reference_ : ""; }
+      get { return HasOperation ? (string) reference_ : ""; }
       set {
         reference_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         referenceCase_ = ReferenceOneofCase.Operation;
+      }
+    }
+    /// <summary>Gets whether the "operation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOperation {
+      get { return referenceCase_ == ReferenceOneofCase.Operation; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "operation" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOperation() {
+      if (HasOperation) {
+        ClearReference();
       }
     }
 
@@ -130,10 +144,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DataLabelingJob {
-      get { return referenceCase_ == ReferenceOneofCase.DataLabelingJob ? (string) reference_ : ""; }
+      get { return HasDataLabelingJob ? (string) reference_ : ""; }
       set {
         reference_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         referenceCase_ = ReferenceOneofCase.DataLabelingJob;
+      }
+    }
+    /// <summary>Gets whether the "data_labeling_job" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDataLabelingJob {
+      get { return referenceCase_ == ReferenceOneofCase.DataLabelingJob; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "data_labeling_job" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDataLabelingJob() {
+      if (HasDataLabelingJob) {
+        ClearReference();
       }
     }
 
@@ -200,8 +228,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (referenceCase_ == ReferenceOneofCase.Operation) hash ^= Operation.GetHashCode();
-      if (referenceCase_ == ReferenceOneofCase.DataLabelingJob) hash ^= DataLabelingJob.GetHashCode();
+      if (HasOperation) hash ^= Operation.GetHashCode();
+      if (HasDataLabelingJob) hash ^= DataLabelingJob.GetHashCode();
       if (Method.Length != 0) hash ^= Method.GetHashCode();
       hash ^= (int) referenceCase_;
       if (_unknownFields != null) {
@@ -222,11 +250,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (referenceCase_ == ReferenceOneofCase.Operation) {
+      if (HasOperation) {
         output.WriteRawTag(10);
         output.WriteString(Operation);
       }
-      if (referenceCase_ == ReferenceOneofCase.DataLabelingJob) {
+      if (HasDataLabelingJob) {
         output.WriteRawTag(18);
         output.WriteString(DataLabelingJob);
       }
@@ -244,11 +272,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (referenceCase_ == ReferenceOneofCase.Operation) {
+      if (HasOperation) {
         output.WriteRawTag(10);
         output.WriteString(Operation);
       }
-      if (referenceCase_ == ReferenceOneofCase.DataLabelingJob) {
+      if (HasDataLabelingJob) {
         output.WriteRawTag(18);
         output.WriteString(DataLabelingJob);
       }
@@ -266,10 +294,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (referenceCase_ == ReferenceOneofCase.Operation) {
+      if (HasOperation) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Operation);
       }
-      if (referenceCase_ == ReferenceOneofCase.DataLabelingJob) {
+      if (HasDataLabelingJob) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DataLabelingJob);
       }
       if (Method.Length != 0) {

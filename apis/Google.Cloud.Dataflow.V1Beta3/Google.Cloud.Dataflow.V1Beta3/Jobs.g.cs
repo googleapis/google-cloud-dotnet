@@ -1330,7 +1330,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (other.ReplaceJobId.Length != 0) {
         ReplaceJobId = other.ReplaceJobId;
       }
-      transformNameMapping_.Add(other.transformNameMapping_);
+      transformNameMapping_.MergeFrom(other.transformNameMapping_);
       if (other.ClientRequestId.Length != 0) {
         ClientRequestId = other.ClientRequestId;
       }
@@ -1338,7 +1338,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         ReplacedByJobId = other.ReplacedByJobId;
       }
       tempFiles_.Add(other.tempFiles_);
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Location.Length != 0) {
         Location = other.Location;
       }
@@ -6172,10 +6172,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StrValue {
-      get { return valueCase_ == ValueOneofCase.StrValue ? (string) value_ : ""; }
+      get { return HasStrValue ? (string) value_ : ""; }
       set {
         value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueCase_ = ValueOneofCase.StrValue;
+      }
+    }
+    /// <summary>Gets whether the "str_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStrValue {
+      get { return valueCase_ == ValueOneofCase.StrValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "str_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStrValue() {
+      if (HasStrValue) {
+        ClearValue();
       }
     }
 
@@ -6187,10 +6201,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Int64Value {
-      get { return valueCase_ == ValueOneofCase.Int64Value ? (long) value_ : 0L; }
+      get { return HasInt64Value ? (long) value_ : 0L; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.Int64Value;
+      }
+    }
+    /// <summary>Gets whether the "int64_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInt64Value {
+      get { return valueCase_ == ValueOneofCase.Int64Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "int64_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInt64Value() {
+      if (HasInt64Value) {
+        ClearValue();
       }
     }
 
@@ -6202,10 +6230,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float FloatValue {
-      get { return valueCase_ == ValueOneofCase.FloatValue ? (float) value_ : 0F; }
+      get { return HasFloatValue ? (float) value_ : 0F; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.FloatValue;
+      }
+    }
+    /// <summary>Gets whether the "float_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFloatValue {
+      get { return valueCase_ == ValueOneofCase.FloatValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "float_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFloatValue() {
+      if (HasFloatValue) {
+        ClearValue();
       }
     }
 
@@ -6217,10 +6259,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string JavaClassValue {
-      get { return valueCase_ == ValueOneofCase.JavaClassValue ? (string) value_ : ""; }
+      get { return HasJavaClassValue ? (string) value_ : ""; }
       set {
         value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueCase_ = ValueOneofCase.JavaClassValue;
+      }
+    }
+    /// <summary>Gets whether the "java_class_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasJavaClassValue {
+      get { return valueCase_ == ValueOneofCase.JavaClassValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "java_class_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearJavaClassValue() {
+      if (HasJavaClassValue) {
+        ClearValue();
       }
     }
 
@@ -6262,10 +6318,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BoolValue {
-      get { return valueCase_ == ValueOneofCase.BoolValue ? (bool) value_ : false; }
+      get { return HasBoolValue ? (bool) value_ : false; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.BoolValue;
+      }
+    }
+    /// <summary>Gets whether the "bool_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBoolValue {
+      get { return valueCase_ == ValueOneofCase.BoolValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "bool_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBoolValue() {
+      if (HasBoolValue) {
+        ClearValue();
       }
     }
 
@@ -6382,13 +6452,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       int hash = 1;
       if (Key.Length != 0) hash ^= Key.GetHashCode();
       if (Namespace.Length != 0) hash ^= Namespace.GetHashCode();
-      if (valueCase_ == ValueOneofCase.StrValue) hash ^= StrValue.GetHashCode();
-      if (valueCase_ == ValueOneofCase.Int64Value) hash ^= Int64Value.GetHashCode();
-      if (valueCase_ == ValueOneofCase.FloatValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FloatValue);
-      if (valueCase_ == ValueOneofCase.JavaClassValue) hash ^= JavaClassValue.GetHashCode();
+      if (HasStrValue) hash ^= StrValue.GetHashCode();
+      if (HasInt64Value) hash ^= Int64Value.GetHashCode();
+      if (HasFloatValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FloatValue);
+      if (HasJavaClassValue) hash ^= JavaClassValue.GetHashCode();
       if (valueCase_ == ValueOneofCase.TimestampValue) hash ^= TimestampValue.GetHashCode();
       if (valueCase_ == ValueOneofCase.DurationValue) hash ^= DurationValue.GetHashCode();
-      if (valueCase_ == ValueOneofCase.BoolValue) hash ^= BoolValue.GetHashCode();
+      if (HasBoolValue) hash ^= BoolValue.GetHashCode();
       if (ShortStrValue.Length != 0) hash ^= ShortStrValue.GetHashCode();
       if (Url.Length != 0) hash ^= Url.GetHashCode();
       if (Label.Length != 0) hash ^= Label.GetHashCode();
@@ -6419,19 +6489,19 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(18);
         output.WriteString(Namespace);
       }
-      if (valueCase_ == ValueOneofCase.StrValue) {
+      if (HasStrValue) {
         output.WriteRawTag(34);
         output.WriteString(StrValue);
       }
-      if (valueCase_ == ValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(40);
         output.WriteInt64(Int64Value);
       }
-      if (valueCase_ == ValueOneofCase.FloatValue) {
+      if (HasFloatValue) {
         output.WriteRawTag(53);
         output.WriteFloat(FloatValue);
       }
-      if (valueCase_ == ValueOneofCase.JavaClassValue) {
+      if (HasJavaClassValue) {
         output.WriteRawTag(58);
         output.WriteString(JavaClassValue);
       }
@@ -6443,7 +6513,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(74);
         output.WriteMessage(DurationValue);
       }
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(80);
         output.WriteBool(BoolValue);
       }
@@ -6477,19 +6547,19 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(18);
         output.WriteString(Namespace);
       }
-      if (valueCase_ == ValueOneofCase.StrValue) {
+      if (HasStrValue) {
         output.WriteRawTag(34);
         output.WriteString(StrValue);
       }
-      if (valueCase_ == ValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(40);
         output.WriteInt64(Int64Value);
       }
-      if (valueCase_ == ValueOneofCase.FloatValue) {
+      if (HasFloatValue) {
         output.WriteRawTag(53);
         output.WriteFloat(FloatValue);
       }
-      if (valueCase_ == ValueOneofCase.JavaClassValue) {
+      if (HasJavaClassValue) {
         output.WriteRawTag(58);
         output.WriteString(JavaClassValue);
       }
@@ -6501,7 +6571,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(74);
         output.WriteMessage(DurationValue);
       }
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(80);
         output.WriteBool(BoolValue);
       }
@@ -6533,16 +6603,16 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (Namespace.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Namespace);
       }
-      if (valueCase_ == ValueOneofCase.StrValue) {
+      if (HasStrValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StrValue);
       }
-      if (valueCase_ == ValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Int64Value);
       }
-      if (valueCase_ == ValueOneofCase.FloatValue) {
+      if (HasFloatValue) {
         size += 1 + 4;
       }
-      if (valueCase_ == ValueOneofCase.JavaClassValue) {
+      if (HasJavaClassValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(JavaClassValue);
       }
       if (valueCase_ == ValueOneofCase.TimestampValue) {
@@ -6551,7 +6621,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (valueCase_ == ValueOneofCase.DurationValue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DurationValue);
       }
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         size += 1 + 1;
       }
       if (ShortStrValue.Length != 0) {
@@ -7223,7 +7293,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (other == null) {
         return;
       }
-      stages_.Add(other.stages_);
+      stages_.MergeFrom(other.stages_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

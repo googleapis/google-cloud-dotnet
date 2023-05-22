@@ -54,6 +54,7 @@ namespace Google.Cloud.Deploy.V1 {
     /// <summary>
     /// Deprecated: This field is never used. Use release_render log type instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [pbr::OriginalName("TYPE_RENDER_STATUES_CHANGE")] RenderStatuesChange = 2,
   }
 

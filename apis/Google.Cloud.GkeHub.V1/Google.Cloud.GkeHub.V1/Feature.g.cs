@@ -504,7 +504,7 @@ namespace Google.Cloud.GkeHub.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.resourceState_ != null) {
         if (resourceState_ == null) {
           ResourceState = new global::Google.Cloud.GkeHub.V1.FeatureResourceState();
@@ -517,14 +517,14 @@ namespace Google.Cloud.GkeHub.V1 {
         }
         Spec.MergeFrom(other.Spec);
       }
-      membershipSpecs_.Add(other.membershipSpecs_);
+      membershipSpecs_.MergeFrom(other.membershipSpecs_);
       if (other.state_ != null) {
         if (state_ == null) {
           State = new global::Google.Cloud.GkeHub.V1.CommonFeatureState();
         }
         State.MergeFrom(other.State);
       }
-      membershipStates_.Add(other.membershipStates_);
+      membershipStates_.MergeFrom(other.membershipStates_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();

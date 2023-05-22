@@ -625,14 +625,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         Error.MergeFrom(other.Error);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.encryptionSpec_ != null) {
         if (encryptionSpec_ == null) {
           EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
         }
         EncryptionSpec.MergeFrom(other.EncryptionSpec);
       }
-      webAccessUris_.Add(other.webAccessUris_);
+      webAccessUris_.MergeFrom(other.webAccessUris_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

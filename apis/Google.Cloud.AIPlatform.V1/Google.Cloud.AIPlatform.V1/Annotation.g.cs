@@ -462,7 +462,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         AnnotationSource.MergeFrom(other.AnnotationSource);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

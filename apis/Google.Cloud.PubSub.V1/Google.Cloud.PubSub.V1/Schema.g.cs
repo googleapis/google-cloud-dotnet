@@ -3599,10 +3599,24 @@ namespace Google.Cloud.PubSub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
-      get { return schemaSpecCase_ == SchemaSpecOneofCase.Name ? (string) schemaSpec_ : ""; }
+      get { return HasName ? (string) schemaSpec_ : ""; }
       set {
         schemaSpec_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         schemaSpecCase_ = SchemaSpecOneofCase.Name;
+      }
+    }
+    /// <summary>Gets whether the "name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasName {
+      get { return schemaSpecCase_ == SchemaSpecOneofCase.Name; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearName() {
+      if (HasName) {
+        ClearSchemaSpec();
       }
     }
 
@@ -3701,7 +3715,7 @@ namespace Google.Cloud.PubSub.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (schemaSpecCase_ == SchemaSpecOneofCase.Name) hash ^= Name.GetHashCode();
+      if (HasName) hash ^= Name.GetHashCode();
       if (schemaSpecCase_ == SchemaSpecOneofCase.Schema) hash ^= Schema.GetHashCode();
       if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (Encoding != global::Google.Cloud.PubSub.V1.Encoding.Unspecified) hash ^= Encoding.GetHashCode();
@@ -3728,7 +3742,7 @@ namespace Google.Cloud.PubSub.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (schemaSpecCase_ == SchemaSpecOneofCase.Name) {
+      if (HasName) {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
@@ -3758,7 +3772,7 @@ namespace Google.Cloud.PubSub.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (schemaSpecCase_ == SchemaSpecOneofCase.Name) {
+      if (HasName) {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
@@ -3787,7 +3801,7 @@ namespace Google.Cloud.PubSub.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (schemaSpecCase_ == SchemaSpecOneofCase.Name) {
+      if (HasName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (schemaSpecCase_ == SchemaSpecOneofCase.Schema) {

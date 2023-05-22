@@ -441,7 +441,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
         }
         Pipeline.MergeFrom(other.Pipeline);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.PubSubTopic.Length != 0) {
         PubSubTopic = other.PubSubTopic;
       }
@@ -941,7 +941,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
         }
         Resources.MergeFrom(other.Resources);
       }
-      environment_.Add(other.environment_);
+      environment_.MergeFrom(other.environment_);
       if (other.encryptedEnvironment_ != null) {
         if (encryptedEnvironment_ == null) {
           EncryptedEnvironment = new global::Google.Cloud.LifeSciences.V2Beta.Secret();
@@ -1813,7 +1813,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
       if (other.Entrypoint.Length != 0) {
         Entrypoint = other.Entrypoint;
       }
-      environment_.Add(other.environment_);
+      environment_.MergeFrom(other.environment_);
       if (other.encryptedEnvironment_ != null) {
         if (encryptedEnvironment_ == null) {
           EncryptedEnvironment = new global::Google.Cloud.LifeSciences.V2Beta.Secret();
@@ -1823,9 +1823,9 @@ namespace Google.Cloud.LifeSciences.V2Beta {
       if (other.PidNamespace.Length != 0) {
         PidNamespace = other.PidNamespace;
       }
-      portMappings_.Add(other.portMappings_);
+      portMappings_.MergeFrom(other.portMappings_);
       mounts_.Add(other.mounts_);
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.credentials_ != null) {
         if (credentials_ == null) {
           Credentials = new global::Google.Cloud.LifeSciences.V2Beta.Secret();
@@ -3425,7 +3425,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
       if (other.Preemptible != false) {
         Preemptible = other.Preemptible;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       disks_.Add(other.disks_);
       if (other.network_ != null) {
         if (network_ == null) {
@@ -6109,7 +6109,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
         }
         Pipeline.MergeFrom(other.Pipeline);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       events_.Add(other.events_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
@@ -8428,7 +8428,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
       if (other.ActionId != 0) {
         ActionId = other.ActionId;
       }
-      portMappings_.Add(other.portMappings_);
+      portMappings_.MergeFrom(other.portMappings_);
       if (other.IpAddress.Length != 0) {
         IpAddress = other.IpAddress;
       }

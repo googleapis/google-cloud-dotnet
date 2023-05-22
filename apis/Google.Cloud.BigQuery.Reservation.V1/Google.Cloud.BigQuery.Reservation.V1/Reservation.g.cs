@@ -1812,6 +1812,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         /// Same as FLEX, should only be used if flat-rate commitments are still
         /// available.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("FLEX_FLAT_RATE")] FlexFlatRate = 7,
         /// <summary>
         /// Trial commitments have a committed period of 182 days after becoming
@@ -1830,6 +1831,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         /// Same as MONTHLY, should only be used if flat-rate commitments are still
         /// available.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("MONTHLY_FLAT_RATE")] MonthlyFlatRate = 8,
         /// <summary>
         /// Annual commitments have a committed period of 365 days after becoming
@@ -1841,6 +1843,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         /// Same as ANNUAL, should only be used if flat-rate commitments are still
         /// available.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("ANNUAL_FLAT_RATE")] AnnualFlatRate = 9,
         /// <summary>
         /// 3-year commitments have a committed period of 1095(3 * 365) days after

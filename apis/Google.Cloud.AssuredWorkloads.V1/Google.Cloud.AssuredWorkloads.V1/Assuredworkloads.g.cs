@@ -2389,7 +2389,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.ProvisionedResourcesParent.Length != 0) {
         ProvisionedResourcesParent = other.ProvisionedResourcesParent;
       }
@@ -2948,6 +2948,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
             /// will continue to provide projects information.
             /// Use CONSUMER_FOLDER instead.
             /// </summary>
+            [global::System.ObsoleteAttribute]
             [pbr::OriginalName("CONSUMER_PROJECT")] ConsumerProject = 1,
             /// <summary>
             /// Consumer Folder.
@@ -3563,6 +3564,8 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
 
         /// <summary>Field number for the "setup_status" field.</summary>
         public const int SetupStatusFieldNumber = 1;
+        private readonly static global::Google.Cloud.AssuredWorkloads.V1.Workload.Types.SaaEnrollmentResponse.Types.SetupState SetupStatusDefaultValue = global::Google.Cloud.AssuredWorkloads.V1.Workload.Types.SaaEnrollmentResponse.Types.SetupState.Unspecified;
+
         private global::Google.Cloud.AssuredWorkloads.V1.Workload.Types.SaaEnrollmentResponse.Types.SetupState setupStatus_;
         /// <summary>
         /// Indicates SAA enrollment status of a given workload.
@@ -3570,7 +3573,7 @@ namespace Google.Cloud.AssuredWorkloads.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AssuredWorkloads.V1.Workload.Types.SaaEnrollmentResponse.Types.SetupState SetupStatus {
-          get { if ((_hasBits0 & 1) != 0) { return setupStatus_; } else { return global::Google.Cloud.AssuredWorkloads.V1.Workload.Types.SaaEnrollmentResponse.Types.SetupState.Unspecified; } }
+          get { if ((_hasBits0 & 1) != 0) { return setupStatus_; } else { return SetupStatusDefaultValue; } }
           set {
             _hasBits0 |= 1;
             setupStatus_ = value;

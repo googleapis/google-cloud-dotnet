@@ -581,7 +581,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       if (other.ExternalUri.Length != 0) {
         ExternalUri = other.ExternalUri;
       }
-      sourceProperties_.Add(other.sourceProperties_);
+      sourceProperties_.MergeFrom(other.sourceProperties_);
       if (other.securityMarks_ != null) {
         if (securityMarks_ == null) {
           SecurityMarks = new global::Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarks();

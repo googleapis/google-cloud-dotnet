@@ -675,7 +675,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (other.State != global::Google.Cloud.Dataplex.V1.State.Unspecified) {
         State = other.State;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.triggerSpec_ != null) {
         if (triggerSpec_ == null) {
           TriggerSpec = new global::Google.Cloud.Dataplex.V1.Task.Types.TriggerSpec();
@@ -1768,7 +1768,7 @@ namespace Google.Cloud.Dataplex.V1 {
               }
               javaJars_.Add(other.javaJars_);
               pythonPackages_.Add(other.pythonPackages_);
-              properties_.Add(other.properties_);
+              properties_.MergeFrom(other.properties_);
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
 
@@ -1903,10 +1903,24 @@ namespace Google.Cloud.Dataplex.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Network {
-              get { return networkNameCase_ == NetworkNameOneofCase.Network ? (string) networkName_ : ""; }
+              get { return HasNetwork ? (string) networkName_ : ""; }
               set {
                 networkName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 networkNameCase_ = NetworkNameOneofCase.Network;
+              }
+            }
+            /// <summary>Gets whether the "network" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasNetwork {
+              get { return networkNameCase_ == NetworkNameOneofCase.Network; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "network" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearNetwork() {
+              if (HasNetwork) {
+                ClearNetworkName();
               }
             }
 
@@ -1918,10 +1932,24 @@ namespace Google.Cloud.Dataplex.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string SubNetwork {
-              get { return networkNameCase_ == NetworkNameOneofCase.SubNetwork ? (string) networkName_ : ""; }
+              get { return HasSubNetwork ? (string) networkName_ : ""; }
               set {
                 networkName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 networkNameCase_ = NetworkNameOneofCase.SubNetwork;
+              }
+            }
+            /// <summary>Gets whether the "sub_network" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasSubNetwork {
+              get { return networkNameCase_ == NetworkNameOneofCase.SubNetwork; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "sub_network" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearSubNetwork() {
+              if (HasSubNetwork) {
+                ClearNetworkName();
               }
             }
 
@@ -1986,8 +2014,8 @@ namespace Google.Cloud.Dataplex.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
-              if (networkNameCase_ == NetworkNameOneofCase.Network) hash ^= Network.GetHashCode();
-              if (networkNameCase_ == NetworkNameOneofCase.SubNetwork) hash ^= SubNetwork.GetHashCode();
+              if (HasNetwork) hash ^= Network.GetHashCode();
+              if (HasSubNetwork) hash ^= SubNetwork.GetHashCode();
               hash ^= networkTags_.GetHashCode();
               hash ^= (int) networkNameCase_;
               if (_unknownFields != null) {
@@ -2008,11 +2036,11 @@ namespace Google.Cloud.Dataplex.V1 {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
-              if (networkNameCase_ == NetworkNameOneofCase.Network) {
+              if (HasNetwork) {
                 output.WriteRawTag(10);
                 output.WriteString(Network);
               }
-              if (networkNameCase_ == NetworkNameOneofCase.SubNetwork) {
+              if (HasSubNetwork) {
                 output.WriteRawTag(18);
                 output.WriteString(SubNetwork);
               }
@@ -2027,11 +2055,11 @@ namespace Google.Cloud.Dataplex.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (networkNameCase_ == NetworkNameOneofCase.Network) {
+              if (HasNetwork) {
                 output.WriteRawTag(10);
                 output.WriteString(Network);
               }
-              if (networkNameCase_ == NetworkNameOneofCase.SubNetwork) {
+              if (HasSubNetwork) {
                 output.WriteRawTag(18);
                 output.WriteString(SubNetwork);
               }
@@ -2046,10 +2074,10 @@ namespace Google.Cloud.Dataplex.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
-              if (networkNameCase_ == NetworkNameOneofCase.Network) {
+              if (HasNetwork) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
               }
-              if (networkNameCase_ == NetworkNameOneofCase.SubNetwork) {
+              if (HasSubNetwork) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(SubNetwork);
               }
               size += networkTags_.CalculateSize(_repeated_networkTags_codec);
@@ -2276,10 +2304,24 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Schedule {
-          get { return triggerCase_ == TriggerOneofCase.Schedule ? (string) trigger_ : ""; }
+          get { return HasSchedule ? (string) trigger_ : ""; }
           set {
             trigger_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             triggerCase_ = TriggerOneofCase.Schedule;
+          }
+        }
+        /// <summary>Gets whether the "schedule" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSchedule {
+          get { return triggerCase_ == TriggerOneofCase.Schedule; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "schedule" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSchedule() {
+          if (HasSchedule) {
+            ClearTrigger();
           }
         }
 
@@ -2335,7 +2377,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (startTime_ != null) hash ^= StartTime.GetHashCode();
           if (Disabled != false) hash ^= Disabled.GetHashCode();
           if (MaxRetries != 0) hash ^= MaxRetries.GetHashCode();
-          if (triggerCase_ == TriggerOneofCase.Schedule) hash ^= Schedule.GetHashCode();
+          if (HasSchedule) hash ^= Schedule.GetHashCode();
           hash ^= (int) triggerCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2371,7 +2413,7 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(56);
             output.WriteInt32(MaxRetries);
           }
-          if (triggerCase_ == TriggerOneofCase.Schedule) {
+          if (HasSchedule) {
             output.WriteRawTag(162, 6);
             output.WriteString(Schedule);
           }
@@ -2401,7 +2443,7 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(56);
             output.WriteInt32(MaxRetries);
           }
-          if (triggerCase_ == TriggerOneofCase.Schedule) {
+          if (HasSchedule) {
             output.WriteRawTag(162, 6);
             output.WriteString(Schedule);
           }
@@ -2427,7 +2469,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (MaxRetries != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxRetries);
           }
-          if (triggerCase_ == TriggerOneofCase.Schedule) {
+          if (HasSchedule) {
             size += 2 + pb::CodedOutputStream.ComputeStringSize(Schedule);
           }
           if (_unknownFields != null) {
@@ -2843,7 +2885,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (other == null) {
             return;
           }
-          args_.Add(other.args_);
+          args_.MergeFrom(other.args_);
           if (other.ServiceAccount.Length != 0) {
             ServiceAccount = other.ServiceAccount;
           }
@@ -3019,10 +3061,24 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string MainJarFileUri {
-          get { return driverCase_ == DriverOneofCase.MainJarFileUri ? (string) driver_ : ""; }
+          get { return HasMainJarFileUri ? (string) driver_ : ""; }
           set {
             driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             driverCase_ = DriverOneofCase.MainJarFileUri;
+          }
+        }
+        /// <summary>Gets whether the "main_jar_file_uri" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMainJarFileUri {
+          get { return driverCase_ == DriverOneofCase.MainJarFileUri; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "main_jar_file_uri" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMainJarFileUri() {
+          if (HasMainJarFileUri) {
+            ClearDriver();
           }
         }
 
@@ -3038,10 +3094,24 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string MainClass {
-          get { return driverCase_ == DriverOneofCase.MainClass ? (string) driver_ : ""; }
+          get { return HasMainClass ? (string) driver_ : ""; }
           set {
             driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             driverCase_ = DriverOneofCase.MainClass;
+          }
+        }
+        /// <summary>Gets whether the "main_class" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMainClass {
+          get { return driverCase_ == DriverOneofCase.MainClass; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "main_class" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMainClass() {
+          if (HasMainClass) {
+            ClearDriver();
           }
         }
 
@@ -3055,10 +3125,24 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string PythonScriptFile {
-          get { return driverCase_ == DriverOneofCase.PythonScriptFile ? (string) driver_ : ""; }
+          get { return HasPythonScriptFile ? (string) driver_ : ""; }
           set {
             driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             driverCase_ = DriverOneofCase.PythonScriptFile;
+          }
+        }
+        /// <summary>Gets whether the "python_script_file" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPythonScriptFile {
+          get { return driverCase_ == DriverOneofCase.PythonScriptFile; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "python_script_file" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPythonScriptFile() {
+          if (HasPythonScriptFile) {
+            ClearDriver();
           }
         }
 
@@ -3073,10 +3157,24 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string SqlScriptFile {
-          get { return driverCase_ == DriverOneofCase.SqlScriptFile ? (string) driver_ : ""; }
+          get { return HasSqlScriptFile ? (string) driver_ : ""; }
           set {
             driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             driverCase_ = DriverOneofCase.SqlScriptFile;
+          }
+        }
+        /// <summary>Gets whether the "sql_script_file" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSqlScriptFile {
+          get { return driverCase_ == DriverOneofCase.SqlScriptFile; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "sql_script_file" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSqlScriptFile() {
+          if (HasSqlScriptFile) {
+            ClearDriver();
           }
         }
 
@@ -3090,10 +3188,24 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string SqlScript {
-          get { return driverCase_ == DriverOneofCase.SqlScript ? (string) driver_ : ""; }
+          get { return HasSqlScript ? (string) driver_ : ""; }
           set {
             driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             driverCase_ = DriverOneofCase.SqlScript;
+          }
+        }
+        /// <summary>Gets whether the "sql_script" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSqlScript {
+          get { return driverCase_ == DriverOneofCase.SqlScript; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "sql_script" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSqlScript() {
+          if (HasSqlScript) {
+            ClearDriver();
           }
         }
 
@@ -3198,11 +3310,11 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (driverCase_ == DriverOneofCase.MainJarFileUri) hash ^= MainJarFileUri.GetHashCode();
-          if (driverCase_ == DriverOneofCase.MainClass) hash ^= MainClass.GetHashCode();
-          if (driverCase_ == DriverOneofCase.PythonScriptFile) hash ^= PythonScriptFile.GetHashCode();
-          if (driverCase_ == DriverOneofCase.SqlScriptFile) hash ^= SqlScriptFile.GetHashCode();
-          if (driverCase_ == DriverOneofCase.SqlScript) hash ^= SqlScript.GetHashCode();
+          if (HasMainJarFileUri) hash ^= MainJarFileUri.GetHashCode();
+          if (HasMainClass) hash ^= MainClass.GetHashCode();
+          if (HasPythonScriptFile) hash ^= PythonScriptFile.GetHashCode();
+          if (HasSqlScriptFile) hash ^= SqlScriptFile.GetHashCode();
+          if (HasSqlScript) hash ^= SqlScript.GetHashCode();
           hash ^= fileUris_.GetHashCode();
           hash ^= archiveUris_.GetHashCode();
           if (infrastructureSpec_ != null) hash ^= InfrastructureSpec.GetHashCode();
@@ -3231,23 +3343,23 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(50);
             output.WriteMessage(InfrastructureSpec);
           }
-          if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+          if (HasMainJarFileUri) {
             output.WriteRawTag(162, 6);
             output.WriteString(MainJarFileUri);
           }
-          if (driverCase_ == DriverOneofCase.MainClass) {
+          if (HasMainClass) {
             output.WriteRawTag(170, 6);
             output.WriteString(MainClass);
           }
-          if (driverCase_ == DriverOneofCase.PythonScriptFile) {
+          if (HasPythonScriptFile) {
             output.WriteRawTag(178, 6);
             output.WriteString(PythonScriptFile);
           }
-          if (driverCase_ == DriverOneofCase.SqlScriptFile) {
+          if (HasSqlScriptFile) {
             output.WriteRawTag(194, 6);
             output.WriteString(SqlScriptFile);
           }
-          if (driverCase_ == DriverOneofCase.SqlScript) {
+          if (HasSqlScript) {
             output.WriteRawTag(202, 6);
             output.WriteString(SqlScript);
           }
@@ -3267,23 +3379,23 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(50);
             output.WriteMessage(InfrastructureSpec);
           }
-          if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+          if (HasMainJarFileUri) {
             output.WriteRawTag(162, 6);
             output.WriteString(MainJarFileUri);
           }
-          if (driverCase_ == DriverOneofCase.MainClass) {
+          if (HasMainClass) {
             output.WriteRawTag(170, 6);
             output.WriteString(MainClass);
           }
-          if (driverCase_ == DriverOneofCase.PythonScriptFile) {
+          if (HasPythonScriptFile) {
             output.WriteRawTag(178, 6);
             output.WriteString(PythonScriptFile);
           }
-          if (driverCase_ == DriverOneofCase.SqlScriptFile) {
+          if (HasSqlScriptFile) {
             output.WriteRawTag(194, 6);
             output.WriteString(SqlScriptFile);
           }
-          if (driverCase_ == DriverOneofCase.SqlScript) {
+          if (HasSqlScript) {
             output.WriteRawTag(202, 6);
             output.WriteString(SqlScript);
           }
@@ -3297,19 +3409,19 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+          if (HasMainJarFileUri) {
             size += 2 + pb::CodedOutputStream.ComputeStringSize(MainJarFileUri);
           }
-          if (driverCase_ == DriverOneofCase.MainClass) {
+          if (HasMainClass) {
             size += 2 + pb::CodedOutputStream.ComputeStringSize(MainClass);
           }
-          if (driverCase_ == DriverOneofCase.PythonScriptFile) {
+          if (HasPythonScriptFile) {
             size += 2 + pb::CodedOutputStream.ComputeStringSize(PythonScriptFile);
           }
-          if (driverCase_ == DriverOneofCase.SqlScriptFile) {
+          if (HasSqlScriptFile) {
             size += 2 + pb::CodedOutputStream.ComputeStringSize(SqlScriptFile);
           }
-          if (driverCase_ == DriverOneofCase.SqlScript) {
+          if (HasSqlScript) {
             size += 2 + pb::CodedOutputStream.ComputeStringSize(SqlScript);
           }
           size += fileUris_.CalculateSize(_repeated_fileUris_codec);

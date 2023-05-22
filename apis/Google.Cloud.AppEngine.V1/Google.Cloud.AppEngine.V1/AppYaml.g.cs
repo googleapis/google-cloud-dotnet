@@ -1789,7 +1789,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (other.UploadPathRegex.Length != 0) {
         UploadPathRegex = other.UploadPathRegex;
       }
-      httpHeaders_.Add(other.httpHeaders_);
+      httpHeaders_.MergeFrom(other.httpHeaders_);
       if (other.MimeType.Length != 0) {
         MimeType = other.MimeType;
       }

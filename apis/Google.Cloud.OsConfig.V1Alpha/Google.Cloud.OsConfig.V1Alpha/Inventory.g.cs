@@ -398,7 +398,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
         OsInfo.MergeFrom(other.OsInfo);
       }
-      items_.Add(other.items_);
+      items_.MergeFrom(other.items_);
       if (other.updateTime_ != null) {
         if (updateTime_ == null) {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();

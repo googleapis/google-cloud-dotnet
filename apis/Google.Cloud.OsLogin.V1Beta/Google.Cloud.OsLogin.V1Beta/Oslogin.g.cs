@@ -367,7 +367,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
         Name = other.Name;
       }
       posixAccounts_.Add(other.posixAccounts_);
-      sshPublicKeys_.Add(other.sshPublicKeys_);
+      sshPublicKeys_.MergeFrom(other.sshPublicKeys_);
       securityKeys_.Add(other.securityKeys_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }

@@ -235,10 +235,24 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TextPayload {
-      get { return payloadCase_ == PayloadOneofCase.TextPayload ? (string) payload_ : ""; }
+      get { return HasTextPayload ? (string) payload_ : ""; }
       set {
         payload_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadCase_ = PayloadOneofCase.TextPayload;
+      }
+    }
+    /// <summary>Gets whether the "text_payload" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTextPayload {
+      get { return payloadCase_ == PayloadOneofCase.TextPayload; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "text_payload" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTextPayload() {
+      if (HasTextPayload) {
+        ClearPayload();
       }
     }
 
@@ -584,7 +598,7 @@ namespace Google.Cloud.Logging.V2 {
       if (LogName.Length != 0) hash ^= LogName.GetHashCode();
       if (resource_ != null) hash ^= Resource.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.ProtoPayload) hash ^= ProtoPayload.GetHashCode();
-      if (payloadCase_ == PayloadOneofCase.TextPayload) hash ^= TextPayload.GetHashCode();
+      if (HasTextPayload) hash ^= TextPayload.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.JsonPayload) hash ^= JsonPayload.GetHashCode();
       if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
       if (receiveTimestamp_ != null) hash ^= ReceiveTimestamp.GetHashCode();
@@ -621,7 +635,7 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(ProtoPayload);
       }
-      if (payloadCase_ == PayloadOneofCase.TextPayload) {
+      if (HasTextPayload) {
         output.WriteRawTag(26);
         output.WriteString(TextPayload);
       }
@@ -696,7 +710,7 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(ProtoPayload);
       }
-      if (payloadCase_ == PayloadOneofCase.TextPayload) {
+      if (HasTextPayload) {
         output.WriteRawTag(26);
         output.WriteString(TextPayload);
       }
@@ -776,7 +790,7 @@ namespace Google.Cloud.Logging.V2 {
       if (payloadCase_ == PayloadOneofCase.ProtoPayload) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProtoPayload);
       }
-      if (payloadCase_ == PayloadOneofCase.TextPayload) {
+      if (HasTextPayload) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TextPayload);
       }
       if (payloadCase_ == PayloadOneofCase.JsonPayload) {
@@ -861,7 +875,7 @@ namespace Google.Cloud.Logging.V2 {
         }
         HttpRequest.MergeFrom(other.HttpRequest);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.operation_ != null) {
         if (operation_ == null) {
           Operation = new global::Google.Cloud.Logging.V2.LogEntryOperation();

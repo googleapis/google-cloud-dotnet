@@ -223,10 +223,24 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Run.V2.Condition.Types.CommonReason Reason {
-      get { return reasonsCase_ == ReasonsOneofCase.Reason ? (global::Google.Cloud.Run.V2.Condition.Types.CommonReason) reasons_ : global::Google.Cloud.Run.V2.Condition.Types.CommonReason.Undefined; }
+      get { return HasReason ? (global::Google.Cloud.Run.V2.Condition.Types.CommonReason) reasons_ : global::Google.Cloud.Run.V2.Condition.Types.CommonReason.Undefined; }
       set {
         reasons_ = value;
         reasonsCase_ = ReasonsOneofCase.Reason;
+      }
+    }
+    /// <summary>Gets whether the "reason" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReason {
+      get { return reasonsCase_ == ReasonsOneofCase.Reason; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "reason" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReason() {
+      if (HasReason) {
+        ClearReasons();
       }
     }
 
@@ -238,10 +252,24 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Run.V2.Condition.Types.RevisionReason RevisionReason {
-      get { return reasonsCase_ == ReasonsOneofCase.RevisionReason ? (global::Google.Cloud.Run.V2.Condition.Types.RevisionReason) reasons_ : global::Google.Cloud.Run.V2.Condition.Types.RevisionReason.Undefined; }
+      get { return HasRevisionReason ? (global::Google.Cloud.Run.V2.Condition.Types.RevisionReason) reasons_ : global::Google.Cloud.Run.V2.Condition.Types.RevisionReason.Undefined; }
       set {
         reasons_ = value;
         reasonsCase_ = ReasonsOneofCase.RevisionReason;
+      }
+    }
+    /// <summary>Gets whether the "revision_reason" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRevisionReason {
+      get { return reasonsCase_ == ReasonsOneofCase.RevisionReason; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "revision_reason" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRevisionReason() {
+      if (HasRevisionReason) {
+        ClearReasons();
       }
     }
 
@@ -253,10 +281,24 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Run.V2.Condition.Types.ExecutionReason ExecutionReason {
-      get { return reasonsCase_ == ReasonsOneofCase.ExecutionReason ? (global::Google.Cloud.Run.V2.Condition.Types.ExecutionReason) reasons_ : global::Google.Cloud.Run.V2.Condition.Types.ExecutionReason.Undefined; }
+      get { return HasExecutionReason ? (global::Google.Cloud.Run.V2.Condition.Types.ExecutionReason) reasons_ : global::Google.Cloud.Run.V2.Condition.Types.ExecutionReason.Undefined; }
       set {
         reasons_ = value;
         reasonsCase_ = ReasonsOneofCase.ExecutionReason;
+      }
+    }
+    /// <summary>Gets whether the "execution_reason" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExecutionReason {
+      get { return reasonsCase_ == ReasonsOneofCase.ExecutionReason; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "execution_reason" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExecutionReason() {
+      if (HasExecutionReason) {
+        ClearReasons();
       }
     }
 
@@ -318,9 +360,9 @@ namespace Google.Cloud.Run.V2 {
       if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (lastTransitionTime_ != null) hash ^= LastTransitionTime.GetHashCode();
       if (Severity != global::Google.Cloud.Run.V2.Condition.Types.Severity.Unspecified) hash ^= Severity.GetHashCode();
-      if (reasonsCase_ == ReasonsOneofCase.Reason) hash ^= Reason.GetHashCode();
-      if (reasonsCase_ == ReasonsOneofCase.RevisionReason) hash ^= RevisionReason.GetHashCode();
-      if (reasonsCase_ == ReasonsOneofCase.ExecutionReason) hash ^= ExecutionReason.GetHashCode();
+      if (HasReason) hash ^= Reason.GetHashCode();
+      if (HasRevisionReason) hash ^= RevisionReason.GetHashCode();
+      if (HasExecutionReason) hash ^= ExecutionReason.GetHashCode();
       hash ^= (int) reasonsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -360,15 +402,15 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(40);
         output.WriteEnum((int) Severity);
       }
-      if (reasonsCase_ == ReasonsOneofCase.Reason) {
+      if (HasReason) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Reason);
       }
-      if (reasonsCase_ == ReasonsOneofCase.RevisionReason) {
+      if (HasRevisionReason) {
         output.WriteRawTag(72);
         output.WriteEnum((int) RevisionReason);
       }
-      if (reasonsCase_ == ReasonsOneofCase.ExecutionReason) {
+      if (HasExecutionReason) {
         output.WriteRawTag(88);
         output.WriteEnum((int) ExecutionReason);
       }
@@ -402,15 +444,15 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(40);
         output.WriteEnum((int) Severity);
       }
-      if (reasonsCase_ == ReasonsOneofCase.Reason) {
+      if (HasReason) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Reason);
       }
-      if (reasonsCase_ == ReasonsOneofCase.RevisionReason) {
+      if (HasRevisionReason) {
         output.WriteRawTag(72);
         output.WriteEnum((int) RevisionReason);
       }
-      if (reasonsCase_ == ReasonsOneofCase.ExecutionReason) {
+      if (HasExecutionReason) {
         output.WriteRawTag(88);
         output.WriteEnum((int) ExecutionReason);
       }
@@ -439,13 +481,13 @@ namespace Google.Cloud.Run.V2 {
       if (Severity != global::Google.Cloud.Run.V2.Condition.Types.Severity.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Severity);
       }
-      if (reasonsCase_ == ReasonsOneofCase.Reason) {
+      if (HasReason) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
       }
-      if (reasonsCase_ == ReasonsOneofCase.RevisionReason) {
+      if (HasRevisionReason) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RevisionReason);
       }
-      if (reasonsCase_ == ReasonsOneofCase.ExecutionReason) {
+      if (HasExecutionReason) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExecutionReason);
       }
       if (_unknownFields != null) {

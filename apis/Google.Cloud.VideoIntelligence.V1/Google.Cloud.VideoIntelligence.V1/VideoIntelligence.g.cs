@@ -12350,10 +12350,24 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long TrackId {
-      get { return trackInfoCase_ == TrackInfoOneofCase.TrackId ? (long) trackInfo_ : 0L; }
+      get { return HasTrackId ? (long) trackInfo_ : 0L; }
       set {
         trackInfo_ = value;
         trackInfoCase_ = TrackInfoOneofCase.TrackId;
+      }
+    }
+    /// <summary>Gets whether the "track_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTrackId {
+      get { return trackInfoCase_ == TrackInfoOneofCase.TrackId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "track_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTrackId() {
+      if (HasTrackId) {
+        ClearTrackInfo();
       }
     }
 
@@ -12470,7 +12484,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (trackInfoCase_ == TrackInfoOneofCase.Segment) hash ^= Segment.GetHashCode();
-      if (trackInfoCase_ == TrackInfoOneofCase.TrackId) hash ^= TrackId.GetHashCode();
+      if (HasTrackId) hash ^= TrackId.GetHashCode();
       if (entity_ != null) hash ^= Entity.GetHashCode();
       if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
       hash ^= frames_.GetHashCode();
@@ -12507,7 +12521,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteRawTag(37);
         output.WriteFloat(Confidence);
       }
-      if (trackInfoCase_ == TrackInfoOneofCase.TrackId) {
+      if (HasTrackId) {
         output.WriteRawTag(40);
         output.WriteInt64(TrackId);
       }
@@ -12538,7 +12552,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteRawTag(37);
         output.WriteFloat(Confidence);
       }
-      if (trackInfoCase_ == TrackInfoOneofCase.TrackId) {
+      if (HasTrackId) {
         output.WriteRawTag(40);
         output.WriteInt64(TrackId);
       }
@@ -12559,7 +12573,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (trackInfoCase_ == TrackInfoOneofCase.Segment) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Segment);
       }
-      if (trackInfoCase_ == TrackInfoOneofCase.TrackId) {
+      if (HasTrackId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(TrackId);
       }
       if (entity_ != null) {

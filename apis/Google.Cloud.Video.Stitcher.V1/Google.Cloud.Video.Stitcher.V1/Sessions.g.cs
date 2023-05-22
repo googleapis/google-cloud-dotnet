@@ -537,7 +537,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (other.AdTagUri.Length != 0) {
         AdTagUri = other.AdTagUri;
       }
-      adTagMacroMap_.Add(other.adTagMacroMap_);
+      adTagMacroMap_.MergeFrom(other.adTagMacroMap_);
       if (other.manifestOptions_ != null) {
         if (manifestOptions_ == null) {
           ManifestOptions = new global::Google.Cloud.Video.Stitcher.V1.ManifestOptions();
@@ -2275,7 +2275,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (other.PlayUri.Length != 0) {
         PlayUri = other.PlayUri;
       }
-      adTagMacros_.Add(other.adTagMacros_);
+      adTagMacros_.MergeFrom(other.adTagMacros_);
       if (other.manifestOptions_ != null) {
         if (manifestOptions_ == null) {
           ManifestOptions = new global::Google.Cloud.Video.Stitcher.V1.ManifestOptions();

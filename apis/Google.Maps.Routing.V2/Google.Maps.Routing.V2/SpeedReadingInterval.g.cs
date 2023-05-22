@@ -109,6 +109,8 @@ namespace Google.Maps.Routing.V2 {
 
     /// <summary>Field number for the "start_polyline_point_index" field.</summary>
     public const int StartPolylinePointIndexFieldNumber = 1;
+    private readonly static int StartPolylinePointIndexDefaultValue = 0;
+
     private int startPolylinePointIndex_;
     /// <summary>
     /// The starting index of this interval in the polyline.
@@ -116,7 +118,7 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int StartPolylinePointIndex {
-      get { if ((_hasBits0 & 1) != 0) { return startPolylinePointIndex_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return startPolylinePointIndex_; } else { return StartPolylinePointIndexDefaultValue; } }
       set {
         _hasBits0 |= 1;
         startPolylinePointIndex_ = value;
@@ -137,6 +139,8 @@ namespace Google.Maps.Routing.V2 {
 
     /// <summary>Field number for the "end_polyline_point_index" field.</summary>
     public const int EndPolylinePointIndexFieldNumber = 2;
+    private readonly static int EndPolylinePointIndexDefaultValue = 0;
+
     private int endPolylinePointIndex_;
     /// <summary>
     /// The ending index of this interval in the polyline.
@@ -144,7 +148,7 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int EndPolylinePointIndex {
-      get { if ((_hasBits0 & 2) != 0) { return endPolylinePointIndex_; } else { return 0; } }
+      get { if ((_hasBits0 & 2) != 0) { return endPolylinePointIndex_; } else { return EndPolylinePointIndexDefaultValue; } }
       set {
         _hasBits0 |= 2;
         endPolylinePointIndex_ = value;
@@ -171,10 +175,24 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed Speed {
-      get { return speedTypeCase_ == SpeedTypeOneofCase.Speed ? (global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed) speedType_ : global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed.Unspecified; }
+      get { return HasSpeed ? (global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed) speedType_ : global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed.Unspecified; }
       set {
         speedType_ = value;
         speedTypeCase_ = SpeedTypeOneofCase.Speed;
+      }
+    }
+    /// <summary>Gets whether the "speed" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSpeed {
+      get { return speedTypeCase_ == SpeedTypeOneofCase.Speed; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "speed" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSpeed() {
+      if (HasSpeed) {
+        ClearSpeedType();
       }
     }
 
@@ -226,7 +244,7 @@ namespace Google.Maps.Routing.V2 {
       int hash = 1;
       if (HasStartPolylinePointIndex) hash ^= StartPolylinePointIndex.GetHashCode();
       if (HasEndPolylinePointIndex) hash ^= EndPolylinePointIndex.GetHashCode();
-      if (speedTypeCase_ == SpeedTypeOneofCase.Speed) hash ^= Speed.GetHashCode();
+      if (HasSpeed) hash ^= Speed.GetHashCode();
       hash ^= (int) speedTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -254,7 +272,7 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(16);
         output.WriteInt32(EndPolylinePointIndex);
       }
-      if (speedTypeCase_ == SpeedTypeOneofCase.Speed) {
+      if (HasSpeed) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Speed);
       }
@@ -276,7 +294,7 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(16);
         output.WriteInt32(EndPolylinePointIndex);
       }
-      if (speedTypeCase_ == SpeedTypeOneofCase.Speed) {
+      if (HasSpeed) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Speed);
       }
@@ -296,7 +314,7 @@ namespace Google.Maps.Routing.V2 {
       if (HasEndPolylinePointIndex) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(EndPolylinePointIndex);
       }
-      if (speedTypeCase_ == SpeedTypeOneofCase.Speed) {
+      if (HasSpeed) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Speed);
       }
       if (_unknownFields != null) {

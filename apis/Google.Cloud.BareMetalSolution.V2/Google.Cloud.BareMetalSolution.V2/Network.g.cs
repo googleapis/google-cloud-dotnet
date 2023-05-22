@@ -581,7 +581,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         }
         Vrf.MergeFrom(other.Vrf);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.ServicesCidr.Length != 0) {
         ServicesCidr = other.ServicesCidr;
       }

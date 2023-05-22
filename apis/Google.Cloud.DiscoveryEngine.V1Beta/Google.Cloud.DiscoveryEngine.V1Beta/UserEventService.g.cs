@@ -414,6 +414,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "uri" field.</summary>
     public const int UriFieldNumber = 3;
+    private readonly static string UriDefaultValue = "";
+
     private string uri_;
     /// <summary>
     /// The URL including cgi-parameters but excluding the hash fragment with a
@@ -424,7 +426,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uri {
-      get { return uri_ ?? ""; }
+      get { return uri_ ?? UriDefaultValue; }
       set {
         uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -444,6 +446,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "ets" field.</summary>
     public const int EtsFieldNumber = 4;
+    private readonly static long EtsDefaultValue = 0L;
+
     private long ets_;
     /// <summary>
     /// The event timestamp in milliseconds. This prevents browser caching of
@@ -453,7 +457,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Ets {
-      get { if ((_hasBits0 & 1) != 0) { return ets_; } else { return 0L; } }
+      get { if ((_hasBits0 & 1) != 0) { return ets_; } else { return EtsDefaultValue; } }
       set {
         _hasBits0 |= 1;
         ets_ = value;

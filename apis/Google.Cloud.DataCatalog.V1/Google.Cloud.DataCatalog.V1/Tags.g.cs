@@ -213,10 +213,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Column {
-      get { return scopeCase_ == ScopeOneofCase.Column ? (string) scope_ : ""; }
+      get { return HasColumn ? (string) scope_ : ""; }
       set {
         scope_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         scopeCase_ = ScopeOneofCase.Column;
+      }
+    }
+    /// <summary>Gets whether the "column" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasColumn {
+      get { return scopeCase_ == ScopeOneofCase.Column; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "column" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearColumn() {
+      if (HasColumn) {
+        ClearScope();
       }
     }
 
@@ -289,7 +303,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Template.Length != 0) hash ^= Template.GetHashCode();
       if (TemplateDisplayName.Length != 0) hash ^= TemplateDisplayName.GetHashCode();
-      if (scopeCase_ == ScopeOneofCase.Column) hash ^= Column.GetHashCode();
+      if (HasColumn) hash ^= Column.GetHashCode();
       hash ^= Fields.GetHashCode();
       hash ^= (int) scopeCase_;
       if (_unknownFields != null) {
@@ -319,7 +333,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteString(Template);
       }
       fields_.WriteTo(output, _map_fields_codec);
-      if (scopeCase_ == ScopeOneofCase.Column) {
+      if (HasColumn) {
         output.WriteRawTag(34);
         output.WriteString(Column);
       }
@@ -346,7 +360,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteString(Template);
       }
       fields_.WriteTo(ref output, _map_fields_codec);
-      if (scopeCase_ == ScopeOneofCase.Column) {
+      if (HasColumn) {
         output.WriteRawTag(34);
         output.WriteString(Column);
       }
@@ -373,7 +387,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (TemplateDisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TemplateDisplayName);
       }
-      if (scopeCase_ == ScopeOneofCase.Column) {
+      if (HasColumn) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Column);
       }
       size += fields_.CalculateSize(_map_fields_codec);
@@ -398,7 +412,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (other.TemplateDisplayName.Length != 0) {
         TemplateDisplayName = other.TemplateDisplayName;
       }
-      fields_.Add(other.fields_);
+      fields_.MergeFrom(other.fields_);
       switch (other.ScopeCase) {
         case ScopeOneofCase.Column:
           Column = other.Column;
@@ -575,10 +589,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double DoubleValue {
-      get { return kindCase_ == KindOneofCase.DoubleValue ? (double) kind_ : 0D; }
+      get { return HasDoubleValue ? (double) kind_ : 0D; }
       set {
         kind_ = value;
         kindCase_ = KindOneofCase.DoubleValue;
+      }
+    }
+    /// <summary>Gets whether the "double_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDoubleValue {
+      get { return kindCase_ == KindOneofCase.DoubleValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "double_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDoubleValue() {
+      if (HasDoubleValue) {
+        ClearKind();
       }
     }
 
@@ -592,10 +620,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StringValue {
-      get { return kindCase_ == KindOneofCase.StringValue ? (string) kind_ : ""; }
+      get { return HasStringValue ? (string) kind_ : ""; }
       set {
         kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         kindCase_ = KindOneofCase.StringValue;
+      }
+    }
+    /// <summary>Gets whether the "string_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStringValue {
+      get { return kindCase_ == KindOneofCase.StringValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "string_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStringValue() {
+      if (HasStringValue) {
+        ClearKind();
       }
     }
 
@@ -607,10 +649,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BoolValue {
-      get { return kindCase_ == KindOneofCase.BoolValue ? (bool) kind_ : false; }
+      get { return HasBoolValue ? (bool) kind_ : false; }
       set {
         kind_ = value;
         kindCase_ = KindOneofCase.BoolValue;
+      }
+    }
+    /// <summary>Gets whether the "bool_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBoolValue {
+      get { return kindCase_ == KindOneofCase.BoolValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "bool_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBoolValue() {
+      if (HasBoolValue) {
+        ClearKind();
       }
     }
 
@@ -658,10 +714,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RichtextValue {
-      get { return kindCase_ == KindOneofCase.RichtextValue ? (string) kind_ : ""; }
+      get { return HasRichtextValue ? (string) kind_ : ""; }
       set {
         kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         kindCase_ = KindOneofCase.RichtextValue;
+      }
+    }
+    /// <summary>Gets whether the "richtext_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRichtextValue {
+      get { return kindCase_ == KindOneofCase.RichtextValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "richtext_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRichtextValue() {
+      if (HasRichtextValue) {
+        ClearKind();
       }
     }
 
@@ -743,12 +813,12 @@ namespace Google.Cloud.DataCatalog.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (kindCase_ == KindOneofCase.DoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
-      if (kindCase_ == KindOneofCase.StringValue) hash ^= StringValue.GetHashCode();
-      if (kindCase_ == KindOneofCase.BoolValue) hash ^= BoolValue.GetHashCode();
+      if (HasDoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
+      if (HasStringValue) hash ^= StringValue.GetHashCode();
+      if (HasBoolValue) hash ^= BoolValue.GetHashCode();
       if (kindCase_ == KindOneofCase.TimestampValue) hash ^= TimestampValue.GetHashCode();
       if (kindCase_ == KindOneofCase.EnumValue) hash ^= EnumValue.GetHashCode();
-      if (kindCase_ == KindOneofCase.RichtextValue) hash ^= RichtextValue.GetHashCode();
+      if (HasRichtextValue) hash ^= RichtextValue.GetHashCode();
       if (Order != 0) hash ^= Order.GetHashCode();
       hash ^= (int) kindCase_;
       if (_unknownFields != null) {
@@ -773,15 +843,15 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(10);
         output.WriteString(DisplayName);
       }
-      if (kindCase_ == KindOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(17);
         output.WriteDouble(DoubleValue);
       }
-      if (kindCase_ == KindOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(26);
         output.WriteString(StringValue);
       }
-      if (kindCase_ == KindOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(32);
         output.WriteBool(BoolValue);
       }
@@ -797,7 +867,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(56);
         output.WriteInt32(Order);
       }
-      if (kindCase_ == KindOneofCase.RichtextValue) {
+      if (HasRichtextValue) {
         output.WriteRawTag(66);
         output.WriteString(RichtextValue);
       }
@@ -815,15 +885,15 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(10);
         output.WriteString(DisplayName);
       }
-      if (kindCase_ == KindOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(17);
         output.WriteDouble(DoubleValue);
       }
-      if (kindCase_ == KindOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(26);
         output.WriteString(StringValue);
       }
-      if (kindCase_ == KindOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(32);
         output.WriteBool(BoolValue);
       }
@@ -839,7 +909,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(56);
         output.WriteInt32(Order);
       }
-      if (kindCase_ == KindOneofCase.RichtextValue) {
+      if (HasRichtextValue) {
         output.WriteRawTag(66);
         output.WriteString(RichtextValue);
       }
@@ -856,13 +926,13 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (kindCase_ == KindOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         size += 1 + 8;
       }
-      if (kindCase_ == KindOneofCase.StringValue) {
+      if (HasStringValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StringValue);
       }
-      if (kindCase_ == KindOneofCase.BoolValue) {
+      if (HasBoolValue) {
         size += 1 + 1;
       }
       if (kindCase_ == KindOneofCase.TimestampValue) {
@@ -871,7 +941,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (kindCase_ == KindOneofCase.EnumValue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnumValue);
       }
-      if (kindCase_ == KindOneofCase.RichtextValue) {
+      if (HasRichtextValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RichtextValue);
       }
       if (Order != 0) {
@@ -1510,7 +1580,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (other.IsPubliclyReadable != false) {
         IsPubliclyReadable = other.IsPubliclyReadable;
       }
-      fields_.Add(other.fields_);
+      fields_.MergeFrom(other.fields_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2063,10 +2133,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType PrimitiveType {
-      get { return typeDeclCase_ == TypeDeclOneofCase.PrimitiveType ? (global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType) typeDecl_ : global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType.Unspecified; }
+      get { return HasPrimitiveType ? (global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType) typeDecl_ : global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType.Unspecified; }
       set {
         typeDecl_ = value;
         typeDeclCase_ = TypeDeclOneofCase.PrimitiveType;
+      }
+    }
+    /// <summary>Gets whether the "primitive_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPrimitiveType {
+      get { return typeDeclCase_ == TypeDeclOneofCase.PrimitiveType; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "primitive_type" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPrimitiveType() {
+      if (HasPrimitiveType) {
+        ClearTypeDecl();
       }
     }
 
@@ -2131,7 +2215,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (typeDeclCase_ == TypeDeclOneofCase.PrimitiveType) hash ^= PrimitiveType.GetHashCode();
+      if (HasPrimitiveType) hash ^= PrimitiveType.GetHashCode();
       if (typeDeclCase_ == TypeDeclOneofCase.EnumType) hash ^= EnumType.GetHashCode();
       hash ^= (int) typeDeclCase_;
       if (_unknownFields != null) {
@@ -2152,7 +2236,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (typeDeclCase_ == TypeDeclOneofCase.PrimitiveType) {
+      if (HasPrimitiveType) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PrimitiveType);
       }
@@ -2170,7 +2254,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (typeDeclCase_ == TypeDeclOneofCase.PrimitiveType) {
+      if (HasPrimitiveType) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PrimitiveType);
       }
@@ -2188,7 +2272,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (typeDeclCase_ == TypeDeclOneofCase.PrimitiveType) {
+      if (HasPrimitiveType) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PrimitiveType);
       }
       if (typeDeclCase_ == TypeDeclOneofCase.EnumType) {

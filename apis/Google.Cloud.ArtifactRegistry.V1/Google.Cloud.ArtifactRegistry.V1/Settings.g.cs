@@ -324,6 +324,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         /// <summary>
         /// Redirection is enabled, and has been finalized so cannot be reverted.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("REDIRECTION_FROM_GCR_IO_FINALIZED")] RedirectionFromGcrIoFinalized = 3,
       }
 

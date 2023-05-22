@@ -2189,10 +2189,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FeatureTimeField {
-      get { return featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTimeField ? (string) featureTimeSource_ : ""; }
+      get { return HasFeatureTimeField ? (string) featureTimeSource_ : ""; }
       set {
         featureTimeSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         featureTimeSourceCase_ = FeatureTimeSourceOneofCase.FeatureTimeField;
+      }
+    }
+    /// <summary>Gets whether the "feature_time_field" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFeatureTimeField {
+      get { return featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTimeField; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "feature_time_field" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFeatureTimeField() {
+      if (HasFeatureTimeField) {
+        ClearFeatureTimeSource();
       }
     }
 
@@ -2394,7 +2408,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (sourceCase_ == SourceOneofCase.AvroSource) hash ^= AvroSource.GetHashCode();
       if (sourceCase_ == SourceOneofCase.BigquerySource) hash ^= BigquerySource.GetHashCode();
       if (sourceCase_ == SourceOneofCase.CsvSource) hash ^= CsvSource.GetHashCode();
-      if (featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTimeField) hash ^= FeatureTimeField.GetHashCode();
+      if (HasFeatureTimeField) hash ^= FeatureTimeField.GetHashCode();
       if (featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTime) hash ^= FeatureTime.GetHashCode();
       if (EntityType.Length != 0) hash ^= EntityType.GetHashCode();
       if (EntityIdField.Length != 0) hash ^= EntityIdField.GetHashCode();
@@ -2442,7 +2456,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteString(EntityIdField);
       }
-      if (featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTimeField) {
+      if (HasFeatureTimeField) {
         output.WriteRawTag(50);
         output.WriteString(FeatureTimeField);
       }
@@ -2493,7 +2507,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteString(EntityIdField);
       }
-      if (featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTimeField) {
+      if (HasFeatureTimeField) {
         output.WriteRawTag(50);
         output.WriteString(FeatureTimeField);
       }
@@ -2533,7 +2547,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (sourceCase_ == SourceOneofCase.CsvSource) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CsvSource);
       }
-      if (featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTimeField) {
+      if (HasFeatureTimeField) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FeatureTimeField);
       }
       if (featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTime) {

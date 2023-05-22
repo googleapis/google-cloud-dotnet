@@ -1225,10 +1225,24 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Text {
-      get { return inputSourceCase_ == InputSourceOneofCase.Text ? (string) inputSource_ : ""; }
+      get { return HasText ? (string) inputSource_ : ""; }
       set {
         inputSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         inputSourceCase_ = InputSourceOneofCase.Text;
+      }
+    }
+    /// <summary>Gets whether the "text" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasText {
+      get { return inputSourceCase_ == InputSourceOneofCase.Text; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "text" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearText() {
+      if (HasText) {
+        ClearInputSource();
       }
     }
 
@@ -1244,10 +1258,24 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Ssml {
-      get { return inputSourceCase_ == InputSourceOneofCase.Ssml ? (string) inputSource_ : ""; }
+      get { return HasSsml ? (string) inputSource_ : ""; }
       set {
         inputSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         inputSourceCase_ = InputSourceOneofCase.Ssml;
+      }
+    }
+    /// <summary>Gets whether the "ssml" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSsml {
+      get { return inputSourceCase_ == InputSourceOneofCase.Ssml; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "ssml" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSsml() {
+      if (HasSsml) {
+        ClearInputSource();
       }
     }
 
@@ -1297,8 +1325,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (inputSourceCase_ == InputSourceOneofCase.Text) hash ^= Text.GetHashCode();
-      if (inputSourceCase_ == InputSourceOneofCase.Ssml) hash ^= Ssml.GetHashCode();
+      if (HasText) hash ^= Text.GetHashCode();
+      if (HasSsml) hash ^= Ssml.GetHashCode();
       hash ^= (int) inputSourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1318,11 +1346,11 @@ namespace Google.Cloud.TextToSpeech.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (inputSourceCase_ == InputSourceOneofCase.Text) {
+      if (HasText) {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
-      if (inputSourceCase_ == InputSourceOneofCase.Ssml) {
+      if (HasSsml) {
         output.WriteRawTag(18);
         output.WriteString(Ssml);
       }
@@ -1336,11 +1364,11 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (inputSourceCase_ == InputSourceOneofCase.Text) {
+      if (HasText) {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
-      if (inputSourceCase_ == InputSourceOneofCase.Ssml) {
+      if (HasSsml) {
         output.WriteRawTag(18);
         output.WriteString(Ssml);
       }
@@ -1354,10 +1382,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (inputSourceCase_ == InputSourceOneofCase.Text) {
+      if (HasText) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
-      if (inputSourceCase_ == InputSourceOneofCase.Ssml) {
+      if (HasSsml) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Ssml);
       }
       if (_unknownFields != null) {

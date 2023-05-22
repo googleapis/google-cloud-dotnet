@@ -841,7 +841,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         Error.MergeFrom(other.Error);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.runtimeConfig_ != null) {
         if (runtimeConfig_ == null) {
           RuntimeConfig = new global::Google.Cloud.AIPlatform.V1.PipelineJob.Types.RuntimeConfig();
@@ -1367,15 +1367,15 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (other == null) {
             return;
           }
-          parameters_.Add(other.parameters_);
+          parameters_.MergeFrom(other.parameters_);
           if (other.GcsOutputDirectory.Length != 0) {
             GcsOutputDirectory = other.GcsOutputDirectory;
           }
-          parameterValues_.Add(other.parameterValues_);
+          parameterValues_.MergeFrom(other.parameterValues_);
           if (other.FailurePolicy != global::Google.Cloud.AIPlatform.V1.PipelineFailurePolicy.Unspecified) {
             FailurePolicy = other.FailurePolicy;
           }
-          inputArtifacts_.Add(other.inputArtifacts_);
+          inputArtifacts_.MergeFrom(other.inputArtifacts_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1520,10 +1520,24 @@ namespace Google.Cloud.AIPlatform.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string ArtifactId {
-              get { return kindCase_ == KindOneofCase.ArtifactId ? (string) kind_ : ""; }
+              get { return HasArtifactId ? (string) kind_ : ""; }
               set {
                 kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 kindCase_ = KindOneofCase.ArtifactId;
+              }
+            }
+            /// <summary>Gets whether the "artifact_id" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasArtifactId {
+              get { return kindCase_ == KindOneofCase.ArtifactId; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "artifact_id" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearArtifactId() {
+              if (HasArtifactId) {
+                ClearKind();
               }
             }
 
@@ -1571,7 +1585,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
-              if (kindCase_ == KindOneofCase.ArtifactId) hash ^= ArtifactId.GetHashCode();
+              if (HasArtifactId) hash ^= ArtifactId.GetHashCode();
               hash ^= (int) kindCase_;
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -1591,7 +1605,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
-              if (kindCase_ == KindOneofCase.ArtifactId) {
+              if (HasArtifactId) {
                 output.WriteRawTag(10);
                 output.WriteString(ArtifactId);
               }
@@ -1605,7 +1619,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (kindCase_ == KindOneofCase.ArtifactId) {
+              if (HasArtifactId) {
                 output.WriteRawTag(10);
                 output.WriteString(ArtifactId);
               }
@@ -1619,7 +1633,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
-              if (kindCase_ == KindOneofCase.ArtifactId) {
+              if (HasArtifactId) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(ArtifactId);
               }
               if (_unknownFields != null) {
@@ -2702,8 +2716,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         Error.MergeFrom(other.Error);
       }
       pipelineTaskStatus_.Add(other.pipelineTaskStatus_);
-      inputs_.Add(other.inputs_);
-      outputs_.Add(other.outputs_);
+      inputs_.MergeFrom(other.inputs_);
+      outputs_.MergeFrom(other.outputs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

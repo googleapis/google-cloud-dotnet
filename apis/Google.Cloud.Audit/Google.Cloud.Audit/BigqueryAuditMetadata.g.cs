@@ -9793,7 +9793,7 @@ namespace Google.Cloud.Audit {
           if (other.Type != global::Google.Cloud.Audit.BigQueryAuditMetadata.Types.JobConfig.Types.Type.Unspecified) {
             Type = other.Type;
           }
-          labels_.Add(other.labels_);
+          labels_.MergeFrom(other.labels_);
           switch (other.ConfigCase) {
             case ConfigOneofCase.QueryConfig:
               if (QueryConfig == null) {
@@ -11126,10 +11126,24 @@ namespace Google.Cloud.Audit {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string SourceTable {
-              get { return sourceCase_ == SourceOneofCase.SourceTable ? (string) source_ : ""; }
+              get { return HasSourceTable ? (string) source_ : ""; }
               set {
                 source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 sourceCase_ = SourceOneofCase.SourceTable;
+              }
+            }
+            /// <summary>Gets whether the "source_table" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasSourceTable {
+              get { return sourceCase_ == SourceOneofCase.SourceTable; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "source_table" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearSourceTable() {
+              if (HasSourceTable) {
+                ClearSource();
               }
             }
 
@@ -11141,10 +11155,24 @@ namespace Google.Cloud.Audit {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string SourceModel {
-              get { return sourceCase_ == SourceOneofCase.SourceModel ? (string) source_ : ""; }
+              get { return HasSourceModel ? (string) source_ : ""; }
               set {
                 source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 sourceCase_ = SourceOneofCase.SourceModel;
+              }
+            }
+            /// <summary>Gets whether the "source_model" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasSourceModel {
+              get { return sourceCase_ == SourceOneofCase.SourceModel; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "source_model" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearSourceModel() {
+              if (HasSourceModel) {
+                ClearSource();
               }
             }
 
@@ -11198,8 +11226,8 @@ namespace Google.Cloud.Audit {
               int hash = 1;
               hash ^= destinationUris_.GetHashCode();
               if (DestinationUrisTruncated != false) hash ^= DestinationUrisTruncated.GetHashCode();
-              if (sourceCase_ == SourceOneofCase.SourceTable) hash ^= SourceTable.GetHashCode();
-              if (sourceCase_ == SourceOneofCase.SourceModel) hash ^= SourceModel.GetHashCode();
+              if (HasSourceTable) hash ^= SourceTable.GetHashCode();
+              if (HasSourceModel) hash ^= SourceModel.GetHashCode();
               hash ^= (int) sourceCase_;
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -11220,7 +11248,7 @@ namespace Google.Cloud.Audit {
               output.WriteRawMessage(this);
             #else
               destinationUris_.WriteTo(output, _repeated_destinationUris_codec);
-              if (sourceCase_ == SourceOneofCase.SourceTable) {
+              if (HasSourceTable) {
                 output.WriteRawTag(18);
                 output.WriteString(SourceTable);
               }
@@ -11228,7 +11256,7 @@ namespace Google.Cloud.Audit {
                 output.WriteRawTag(24);
                 output.WriteBool(DestinationUrisTruncated);
               }
-              if (sourceCase_ == SourceOneofCase.SourceModel) {
+              if (HasSourceModel) {
                 output.WriteRawTag(34);
                 output.WriteString(SourceModel);
               }
@@ -11243,7 +11271,7 @@ namespace Google.Cloud.Audit {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               destinationUris_.WriteTo(ref output, _repeated_destinationUris_codec);
-              if (sourceCase_ == SourceOneofCase.SourceTable) {
+              if (HasSourceTable) {
                 output.WriteRawTag(18);
                 output.WriteString(SourceTable);
               }
@@ -11251,7 +11279,7 @@ namespace Google.Cloud.Audit {
                 output.WriteRawTag(24);
                 output.WriteBool(DestinationUrisTruncated);
               }
-              if (sourceCase_ == SourceOneofCase.SourceModel) {
+              if (HasSourceModel) {
                 output.WriteRawTag(34);
                 output.WriteString(SourceModel);
               }
@@ -11269,10 +11297,10 @@ namespace Google.Cloud.Audit {
               if (DestinationUrisTruncated != false) {
                 size += 1 + 1;
               }
-              if (sourceCase_ == SourceOneofCase.SourceTable) {
+              if (HasSourceTable) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceTable);
               }
-              if (sourceCase_ == SourceOneofCase.SourceModel) {
+              if (HasSourceModel) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceModel);
               }
               if (_unknownFields != null) {
@@ -15602,7 +15630,7 @@ namespace Google.Cloud.Audit {
           if (other.Description.Length != 0) {
             Description = other.Description;
           }
-          labels_.Add(other.labels_);
+          labels_.MergeFrom(other.labels_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

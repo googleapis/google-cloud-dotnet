@@ -367,10 +367,24 @@ namespace Google.Cloud.GkeBackup.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool AllNamespaces {
-      get { return backupScopeCase_ == BackupScopeOneofCase.AllNamespaces ? (bool) backupScope_ : false; }
+      get { return HasAllNamespaces ? (bool) backupScope_ : false; }
       set {
         backupScope_ = value;
         backupScopeCase_ = BackupScopeOneofCase.AllNamespaces;
+      }
+    }
+    /// <summary>Gets whether the "all_namespaces" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAllNamespaces {
+      get { return backupScopeCase_ == BackupScopeOneofCase.AllNamespaces; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "all_namespaces" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAllNamespaces() {
+      if (HasAllNamespaces) {
+        ClearBackupScope();
       }
     }
 
@@ -695,7 +709,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (RetainDays != 0) hash ^= RetainDays.GetHashCode();
       if (retainExpireTime_ != null) hash ^= RetainExpireTime.GetHashCode();
       if (encryptionKey_ != null) hash ^= EncryptionKey.GetHashCode();
-      if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) hash ^= AllNamespaces.GetHashCode();
+      if (HasAllNamespaces) hash ^= AllNamespaces.GetHashCode();
       if (backupScopeCase_ == BackupScopeOneofCase.SelectedNamespaces) hash ^= SelectedNamespaces.GetHashCode();
       if (backupScopeCase_ == BackupScopeOneofCase.SelectedApplications) hash ^= SelectedApplications.GetHashCode();
       if (ContainsVolumeData != false) hash ^= ContainsVolumeData.GetHashCode();
@@ -771,7 +785,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(EncryptionKey);
       }
-      if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) {
+      if (HasAllNamespaces) {
         output.WriteRawTag(96);
         output.WriteBool(AllNamespaces);
       }
@@ -886,7 +900,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(EncryptionKey);
       }
-      if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) {
+      if (HasAllNamespaces) {
         output.WriteRawTag(96);
         output.WriteBool(AllNamespaces);
       }
@@ -991,7 +1005,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (encryptionKey_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionKey);
       }
-      if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) {
+      if (HasAllNamespaces) {
         size += 1 + 1;
       }
       if (backupScopeCase_ == BackupScopeOneofCase.SelectedNamespaces) {
@@ -1072,7 +1086,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (other.Manual != false) {
         Manual = other.Manual;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DeleteLockDays != 0) {
         DeleteLockDays = other.DeleteLockDays;
       }
@@ -1628,10 +1642,24 @@ namespace Google.Cloud.GkeBackup.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string GkeVersion {
-          get { return platformVersionCase_ == PlatformVersionOneofCase.GkeVersion ? (string) platformVersion_ : ""; }
+          get { return HasGkeVersion ? (string) platformVersion_ : ""; }
           set {
             platformVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             platformVersionCase_ = PlatformVersionOneofCase.GkeVersion;
+          }
+        }
+        /// <summary>Gets whether the "gke_version" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasGkeVersion {
+          get { return platformVersionCase_ == PlatformVersionOneofCase.GkeVersion; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "gke_version" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGkeVersion() {
+          if (HasGkeVersion) {
+            ClearPlatformVersion();
           }
         }
 
@@ -1643,10 +1671,24 @@ namespace Google.Cloud.GkeBackup.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string AnthosVersion {
-          get { return platformVersionCase_ == PlatformVersionOneofCase.AnthosVersion ? (string) platformVersion_ : ""; }
+          get { return HasAnthosVersion ? (string) platformVersion_ : ""; }
           set {
             platformVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             platformVersionCase_ = PlatformVersionOneofCase.AnthosVersion;
+          }
+        }
+        /// <summary>Gets whether the "anthos_version" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAnthosVersion {
+          get { return platformVersionCase_ == PlatformVersionOneofCase.AnthosVersion; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "anthos_version" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAnthosVersion() {
+          if (HasAnthosVersion) {
+            ClearPlatformVersion();
           }
         }
 
@@ -1702,8 +1744,8 @@ namespace Google.Cloud.GkeBackup.V1 {
           if (Cluster.Length != 0) hash ^= Cluster.GetHashCode();
           if (K8SVersion.Length != 0) hash ^= K8SVersion.GetHashCode();
           hash ^= BackupCrdVersions.GetHashCode();
-          if (platformVersionCase_ == PlatformVersionOneofCase.GkeVersion) hash ^= GkeVersion.GetHashCode();
-          if (platformVersionCase_ == PlatformVersionOneofCase.AnthosVersion) hash ^= AnthosVersion.GetHashCode();
+          if (HasGkeVersion) hash ^= GkeVersion.GetHashCode();
+          if (HasAnthosVersion) hash ^= AnthosVersion.GetHashCode();
           hash ^= (int) platformVersionCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1732,11 +1774,11 @@ namespace Google.Cloud.GkeBackup.V1 {
             output.WriteString(K8SVersion);
           }
           backupCrdVersions_.WriteTo(output, _map_backupCrdVersions_codec);
-          if (platformVersionCase_ == PlatformVersionOneofCase.GkeVersion) {
+          if (HasGkeVersion) {
             output.WriteRawTag(34);
             output.WriteString(GkeVersion);
           }
-          if (platformVersionCase_ == PlatformVersionOneofCase.AnthosVersion) {
+          if (HasAnthosVersion) {
             output.WriteRawTag(42);
             output.WriteString(AnthosVersion);
           }
@@ -1759,11 +1801,11 @@ namespace Google.Cloud.GkeBackup.V1 {
             output.WriteString(K8SVersion);
           }
           backupCrdVersions_.WriteTo(ref output, _map_backupCrdVersions_codec);
-          if (platformVersionCase_ == PlatformVersionOneofCase.GkeVersion) {
+          if (HasGkeVersion) {
             output.WriteRawTag(34);
             output.WriteString(GkeVersion);
           }
-          if (platformVersionCase_ == PlatformVersionOneofCase.AnthosVersion) {
+          if (HasAnthosVersion) {
             output.WriteRawTag(42);
             output.WriteString(AnthosVersion);
           }
@@ -1784,10 +1826,10 @@ namespace Google.Cloud.GkeBackup.V1 {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(K8SVersion);
           }
           size += backupCrdVersions_.CalculateSize(_map_backupCrdVersions_codec);
-          if (platformVersionCase_ == PlatformVersionOneofCase.GkeVersion) {
+          if (HasGkeVersion) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(GkeVersion);
           }
-          if (platformVersionCase_ == PlatformVersionOneofCase.AnthosVersion) {
+          if (HasAnthosVersion) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(AnthosVersion);
           }
           if (_unknownFields != null) {
@@ -1808,7 +1850,7 @@ namespace Google.Cloud.GkeBackup.V1 {
           if (other.K8SVersion.Length != 0) {
             K8SVersion = other.K8SVersion;
           }
-          backupCrdVersions_.Add(other.backupCrdVersions_);
+          backupCrdVersions_.MergeFrom(other.backupCrdVersions_);
           switch (other.PlatformVersionCase) {
             case PlatformVersionOneofCase.GkeVersion:
               GkeVersion = other.GkeVersion;

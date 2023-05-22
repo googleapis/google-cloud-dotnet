@@ -1866,10 +1866,24 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BranchName {
-      get { return revisionCase_ == RevisionOneofCase.BranchName ? (string) revision_ : ""; }
+      get { return HasBranchName ? (string) revision_ : ""; }
       set {
         revision_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         revisionCase_ = RevisionOneofCase.BranchName;
+      }
+    }
+    /// <summary>Gets whether the "branch_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBranchName {
+      get { return revisionCase_ == RevisionOneofCase.BranchName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "branch_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBranchName() {
+      if (HasBranchName) {
+        ClearRevision();
       }
     }
 
@@ -1884,10 +1898,24 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TagName {
-      get { return revisionCase_ == RevisionOneofCase.TagName ? (string) revision_ : ""; }
+      get { return HasTagName ? (string) revision_ : ""; }
       set {
         revision_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         revisionCase_ = RevisionOneofCase.TagName;
+      }
+    }
+    /// <summary>Gets whether the "tag_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTagName {
+      get { return revisionCase_ == RevisionOneofCase.TagName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "tag_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTagName() {
+      if (HasTagName) {
+        ClearRevision();
       }
     }
 
@@ -1899,10 +1927,24 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CommitSha {
-      get { return revisionCase_ == RevisionOneofCase.CommitSha ? (string) revision_ : ""; }
+      get { return HasCommitSha ? (string) revision_ : ""; }
       set {
         revision_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         revisionCase_ = RevisionOneofCase.CommitSha;
+      }
+    }
+    /// <summary>Gets whether the "commit_sha" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCommitSha {
+      get { return revisionCase_ == RevisionOneofCase.CommitSha; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "commit_sha" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCommitSha() {
+      if (HasCommitSha) {
+        ClearRevision();
       }
     }
 
@@ -2010,9 +2052,9 @@ namespace Google.Cloud.CloudBuild.V1 {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (RepoName.Length != 0) hash ^= RepoName.GetHashCode();
-      if (revisionCase_ == RevisionOneofCase.BranchName) hash ^= BranchName.GetHashCode();
-      if (revisionCase_ == RevisionOneofCase.TagName) hash ^= TagName.GetHashCode();
-      if (revisionCase_ == RevisionOneofCase.CommitSha) hash ^= CommitSha.GetHashCode();
+      if (HasBranchName) hash ^= BranchName.GetHashCode();
+      if (HasTagName) hash ^= TagName.GetHashCode();
+      if (HasCommitSha) hash ^= CommitSha.GetHashCode();
       if (Dir.Length != 0) hash ^= Dir.GetHashCode();
       if (InvertRegex != false) hash ^= InvertRegex.GetHashCode();
       hash ^= Substitutions.GetHashCode();
@@ -2043,15 +2085,15 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteRawTag(18);
         output.WriteString(RepoName);
       }
-      if (revisionCase_ == RevisionOneofCase.BranchName) {
+      if (HasBranchName) {
         output.WriteRawTag(26);
         output.WriteString(BranchName);
       }
-      if (revisionCase_ == RevisionOneofCase.TagName) {
+      if (HasTagName) {
         output.WriteRawTag(34);
         output.WriteString(TagName);
       }
-      if (revisionCase_ == RevisionOneofCase.CommitSha) {
+      if (HasCommitSha) {
         output.WriteRawTag(42);
         output.WriteString(CommitSha);
       }
@@ -2082,15 +2124,15 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteRawTag(18);
         output.WriteString(RepoName);
       }
-      if (revisionCase_ == RevisionOneofCase.BranchName) {
+      if (HasBranchName) {
         output.WriteRawTag(26);
         output.WriteString(BranchName);
       }
-      if (revisionCase_ == RevisionOneofCase.TagName) {
+      if (HasTagName) {
         output.WriteRawTag(34);
         output.WriteString(TagName);
       }
-      if (revisionCase_ == RevisionOneofCase.CommitSha) {
+      if (HasCommitSha) {
         output.WriteRawTag(42);
         output.WriteString(CommitSha);
       }
@@ -2119,13 +2161,13 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (RepoName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RepoName);
       }
-      if (revisionCase_ == RevisionOneofCase.BranchName) {
+      if (HasBranchName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BranchName);
       }
-      if (revisionCase_ == RevisionOneofCase.TagName) {
+      if (HasTagName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TagName);
       }
-      if (revisionCase_ == RevisionOneofCase.CommitSha) {
+      if (HasCommitSha) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CommitSha);
       }
       if (Dir.Length != 0) {
@@ -2159,7 +2201,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (other.InvertRegex != false) {
         InvertRegex = other.InvertRegex;
       }
-      substitutions_.Add(other.substitutions_);
+      substitutions_.MergeFrom(other.substitutions_);
       switch (other.RevisionCase) {
         case RevisionOneofCase.BranchName:
           BranchName = other.BranchName;
@@ -6970,10 +7012,10 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (other.LogUrl.Length != 0) {
         LogUrl = other.LogUrl;
       }
-      substitutions_.Add(other.substitutions_);
+      substitutions_.MergeFrom(other.substitutions_);
       tags_.Add(other.tags_);
       secrets_.Add(other.secrets_);
-      timing_.Add(other.timing_);
+      timing_.MergeFrom(other.timing_);
       if (other.approval_ != null) {
         if (approval_ == null) {
           Approval = new global::Google.Cloud.CloudBuild.V1.BuildApproval();
@@ -10141,7 +10183,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
         ResolvedStorageSourceManifest.MergeFrom(other.ResolvedStorageSourceManifest);
       }
-      fileHashes_.Add(other.fileHashes_);
+      fileHashes_.MergeFrom(other.fileHashes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -11070,7 +11112,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (other.KmsKeyName.Length != 0) {
         KmsKeyName = other.KmsKeyName;
       }
-      envMap_.Add(other.envMap_);
+      envMap_.MergeFrom(other.envMap_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -11541,7 +11583,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (other.KmsKeyName.Length != 0) {
         KmsKeyName = other.KmsKeyName;
       }
-      secretEnv_.Add(other.secretEnv_);
+      secretEnv_.MergeFrom(other.secretEnv_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -14430,10 +14472,24 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Autodetect {
-      get { return buildTemplateCase_ == BuildTemplateOneofCase.Autodetect ? (bool) buildTemplate_ : false; }
+      get { return HasAutodetect ? (bool) buildTemplate_ : false; }
       set {
         buildTemplate_ = value;
         buildTemplateCase_ = BuildTemplateOneofCase.Autodetect;
+      }
+    }
+    /// <summary>Gets whether the "autodetect" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAutodetect {
+      get { return buildTemplateCase_ == BuildTemplateOneofCase.Autodetect; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "autodetect" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAutodetect() {
+      if (HasAutodetect) {
+        ClearBuildTemplate();
       }
     }
 
@@ -14461,10 +14517,24 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Filename {
-      get { return buildTemplateCase_ == BuildTemplateOneofCase.Filename ? (string) buildTemplate_ : ""; }
+      get { return HasFilename ? (string) buildTemplate_ : ""; }
       set {
         buildTemplate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         buildTemplateCase_ = BuildTemplateOneofCase.Filename;
+      }
+    }
+    /// <summary>Gets whether the "filename" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFilename {
+      get { return buildTemplateCase_ == BuildTemplateOneofCase.Filename; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "filename" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFilename() {
+      if (HasFilename) {
+        ClearBuildTemplate();
       }
     }
 
@@ -14663,9 +14733,9 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (github_ != null) hash ^= Github.GetHashCode();
       if (pubsubConfig_ != null) hash ^= PubsubConfig.GetHashCode();
       if (webhookConfig_ != null) hash ^= WebhookConfig.GetHashCode();
-      if (buildTemplateCase_ == BuildTemplateOneofCase.Autodetect) hash ^= Autodetect.GetHashCode();
+      if (HasAutodetect) hash ^= Autodetect.GetHashCode();
       if (buildTemplateCase_ == BuildTemplateOneofCase.Build) hash ^= Build.GetHashCode();
-      if (buildTemplateCase_ == BuildTemplateOneofCase.Filename) hash ^= Filename.GetHashCode();
+      if (HasFilename) hash ^= Filename.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (Disabled != false) hash ^= Disabled.GetHashCode();
       hash ^= Substitutions.GetHashCode();
@@ -14708,7 +14778,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(TriggerTemplate);
       }
-      if (buildTemplateCase_ == BuildTemplateOneofCase.Filename) {
+      if (HasFilename) {
         output.WriteRawTag(66);
         output.WriteString(Filename);
       }
@@ -14727,7 +14797,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       ignoredFiles_.WriteTo(output, _repeated_ignoredFiles_codec);
       includedFiles_.WriteTo(output, _repeated_includedFiles_codec);
-      if (buildTemplateCase_ == BuildTemplateOneofCase.Autodetect) {
+      if (HasAutodetect) {
         output.WriteRawTag(144, 1);
         output.WriteBool(Autodetect);
       }
@@ -14782,7 +14852,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(TriggerTemplate);
       }
-      if (buildTemplateCase_ == BuildTemplateOneofCase.Filename) {
+      if (HasFilename) {
         output.WriteRawTag(66);
         output.WriteString(Filename);
       }
@@ -14801,7 +14871,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       ignoredFiles_.WriteTo(ref output, _repeated_ignoredFiles_codec);
       includedFiles_.WriteTo(ref output, _repeated_includedFiles_codec);
-      if (buildTemplateCase_ == BuildTemplateOneofCase.Autodetect) {
+      if (HasAutodetect) {
         output.WriteRawTag(144, 1);
         output.WriteBool(Autodetect);
       }
@@ -14865,13 +14935,13 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (webhookConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(WebhookConfig);
       }
-      if (buildTemplateCase_ == BuildTemplateOneofCase.Autodetect) {
+      if (HasAutodetect) {
         size += 2 + 1;
       }
       if (buildTemplateCase_ == BuildTemplateOneofCase.Build) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Build);
       }
-      if (buildTemplateCase_ == BuildTemplateOneofCase.Filename) {
+      if (HasFilename) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filename);
       }
       if (createTime_ != null) {
@@ -14947,7 +15017,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (other.Disabled != false) {
         Disabled = other.Disabled;
       }
-      substitutions_.Add(other.substitutions_);
+      substitutions_.MergeFrom(other.substitutions_);
       ignoredFiles_.Add(other.ignoredFiles_);
       includedFiles_.Add(other.includedFiles_);
       if (other.Filter.Length != 0) {
@@ -16037,10 +16107,24 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Secret {
-      get { return authMethodCase_ == AuthMethodOneofCase.Secret ? (string) authMethod_ : ""; }
+      get { return HasSecret ? (string) authMethod_ : ""; }
       set {
         authMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         authMethodCase_ = AuthMethodOneofCase.Secret;
+      }
+    }
+    /// <summary>Gets whether the "secret" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSecret {
+      get { return authMethodCase_ == AuthMethodOneofCase.Secret; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "secret" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSecret() {
+      if (HasSecret) {
+        ClearAuthMethod();
       }
     }
 
@@ -16105,7 +16189,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (authMethodCase_ == AuthMethodOneofCase.Secret) hash ^= Secret.GetHashCode();
+      if (HasSecret) hash ^= Secret.GetHashCode();
       if (State != global::Google.Cloud.CloudBuild.V1.WebhookConfig.Types.State.Unspecified) hash ^= State.GetHashCode();
       hash ^= (int) authMethodCase_;
       if (_unknownFields != null) {
@@ -16126,7 +16210,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (authMethodCase_ == AuthMethodOneofCase.Secret) {
+      if (HasSecret) {
         output.WriteRawTag(26);
         output.WriteString(Secret);
       }
@@ -16144,7 +16228,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (authMethodCase_ == AuthMethodOneofCase.Secret) {
+      if (HasSecret) {
         output.WriteRawTag(26);
         output.WriteString(Secret);
       }
@@ -16162,7 +16246,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (authMethodCase_ == AuthMethodOneofCase.Secret) {
+      if (HasSecret) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Secret);
       }
       if (State != global::Google.Cloud.CloudBuild.V1.WebhookConfig.Types.State.Unspecified) {
@@ -16335,10 +16419,24 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Branch {
-      get { return gitRefCase_ == GitRefOneofCase.Branch ? (string) gitRef_ : ""; }
+      get { return HasBranch ? (string) gitRef_ : ""; }
       set {
         gitRef_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         gitRefCase_ = GitRefOneofCase.Branch;
+      }
+    }
+    /// <summary>Gets whether the "branch" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBranch {
+      get { return gitRefCase_ == GitRefOneofCase.Branch; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "branch" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBranch() {
+      if (HasBranch) {
+        ClearGitRef();
       }
     }
 
@@ -16419,7 +16517,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (gitRefCase_ == GitRefOneofCase.Branch) hash ^= Branch.GetHashCode();
+      if (HasBranch) hash ^= Branch.GetHashCode();
       if (CommentControl != global::Google.Cloud.CloudBuild.V1.PullRequestFilter.Types.CommentControl.CommentsDisabled) hash ^= CommentControl.GetHashCode();
       if (InvertRegex != false) hash ^= InvertRegex.GetHashCode();
       hash ^= (int) gitRefCase_;
@@ -16441,7 +16539,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (gitRefCase_ == GitRefOneofCase.Branch) {
+      if (HasBranch) {
         output.WriteRawTag(18);
         output.WriteString(Branch);
       }
@@ -16463,7 +16561,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (gitRefCase_ == GitRefOneofCase.Branch) {
+      if (HasBranch) {
         output.WriteRawTag(18);
         output.WriteString(Branch);
       }
@@ -16485,7 +16583,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (gitRefCase_ == GitRefOneofCase.Branch) {
+      if (HasBranch) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Branch);
       }
       if (CommentControl != global::Google.Cloud.CloudBuild.V1.PullRequestFilter.Types.CommentControl.CommentsDisabled) {
@@ -16674,10 +16772,24 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Branch {
-      get { return gitRefCase_ == GitRefOneofCase.Branch ? (string) gitRef_ : ""; }
+      get { return HasBranch ? (string) gitRef_ : ""; }
       set {
         gitRef_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         gitRefCase_ = GitRefOneofCase.Branch;
+      }
+    }
+    /// <summary>Gets whether the "branch" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBranch {
+      get { return gitRefCase_ == GitRefOneofCase.Branch; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "branch" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBranch() {
+      if (HasBranch) {
+        ClearGitRef();
       }
     }
 
@@ -16692,10 +16804,24 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Tag {
-      get { return gitRefCase_ == GitRefOneofCase.Tag ? (string) gitRef_ : ""; }
+      get { return HasTag ? (string) gitRef_ : ""; }
       set {
         gitRef_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         gitRefCase_ = GitRefOneofCase.Tag;
+      }
+    }
+    /// <summary>Gets whether the "tag" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTag {
+      get { return gitRefCase_ == GitRefOneofCase.Tag; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "tag" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTag() {
+      if (HasTag) {
+        ClearGitRef();
       }
     }
 
@@ -16762,8 +16888,8 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (gitRefCase_ == GitRefOneofCase.Branch) hash ^= Branch.GetHashCode();
-      if (gitRefCase_ == GitRefOneofCase.Tag) hash ^= Tag.GetHashCode();
+      if (HasBranch) hash ^= Branch.GetHashCode();
+      if (HasTag) hash ^= Tag.GetHashCode();
       if (InvertRegex != false) hash ^= InvertRegex.GetHashCode();
       hash ^= (int) gitRefCase_;
       if (_unknownFields != null) {
@@ -16784,11 +16910,11 @@ namespace Google.Cloud.CloudBuild.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (gitRefCase_ == GitRefOneofCase.Branch) {
+      if (HasBranch) {
         output.WriteRawTag(18);
         output.WriteString(Branch);
       }
-      if (gitRefCase_ == GitRefOneofCase.Tag) {
+      if (HasTag) {
         output.WriteRawTag(26);
         output.WriteString(Tag);
       }
@@ -16806,11 +16932,11 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (gitRefCase_ == GitRefOneofCase.Branch) {
+      if (HasBranch) {
         output.WriteRawTag(18);
         output.WriteString(Branch);
       }
-      if (gitRefCase_ == GitRefOneofCase.Tag) {
+      if (HasTag) {
         output.WriteRawTag(26);
         output.WriteString(Tag);
       }
@@ -16828,10 +16954,10 @@ namespace Google.Cloud.CloudBuild.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (gitRefCase_ == GitRefOneofCase.Branch) {
+      if (HasBranch) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Branch);
       }
-      if (gitRefCase_ == GitRefOneofCase.Tag) {
+      if (HasTag) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Tag);
       }
       if (InvertRegex != false) {
@@ -19400,6 +19526,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// <summary>
         /// This option is the same as CLOUD_LOGGING_ONLY.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("STACKDRIVER_ONLY")] StackdriverOnly = 3,
         /// <summary>
         /// Build logs are stored in Cloud Logging. Selecting this option will not
@@ -20617,7 +20744,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       if (other.Uid.Length != 0) {
         Uid = other.Uid;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();

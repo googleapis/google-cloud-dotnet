@@ -1500,7 +1500,7 @@ namespace Google.Cloud.Retail.V2 {
       if (other.LanguageCode.Length != 0) {
         LanguageCode = other.LanguageCode;
       }
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       tags_.Add(other.tags_);
       if (other.priceInfo_ != null) {
         if (priceInfo_ == null) {

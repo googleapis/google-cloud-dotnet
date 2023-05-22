@@ -1199,8 +1199,8 @@ namespace Google.Cloud.Deploy.V1 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      annotations_.Add(other.annotations_);
-      labels_.Add(other.labels_);
+      annotations_.MergeFrom(other.annotations_);
+      labels_.MergeFrom(other.labels_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -8390,8 +8390,8 @@ namespace Google.Cloud.Deploy.V1 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      annotations_.Add(other.annotations_);
-      labels_.Add(other.labels_);
+      annotations_.MergeFrom(other.annotations_);
+      labels_.MergeFrom(other.labels_);
       if (other.RequireApproval != false) {
         RequireApproval = other.RequireApproval;
       }
@@ -13160,8 +13160,8 @@ namespace Google.Cloud.Deploy.V1 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      annotations_.Add(other.annotations_);
-      labels_.Add(other.labels_);
+      annotations_.MergeFrom(other.annotations_);
+      labels_.MergeFrom(other.labels_);
       if (other.Abandoned != false) {
         Abandoned = other.Abandoned;
       }
@@ -13206,8 +13206,8 @@ namespace Google.Cloud.Deploy.V1 {
       if (other.SkaffoldVersion.Length != 0) {
         SkaffoldVersion = other.SkaffoldVersion;
       }
-      targetArtifacts_.Add(other.targetArtifacts_);
-      targetRenders_.Add(other.targetRenders_);
+      targetArtifacts_.MergeFrom(other.targetArtifacts_);
+      targetRenders_.MergeFrom(other.targetRenders_);
       if (other.condition_ != null) {
         if (condition_ == null) {
           Condition = new global::Google.Cloud.Deploy.V1.Release.Types.ReleaseCondition();
@@ -14987,10 +14987,24 @@ namespace Google.Cloud.Deploy.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ArtifactUri {
-      get { return uriCase_ == UriOneofCase.ArtifactUri ? (string) uri_ : ""; }
+      get { return HasArtifactUri ? (string) uri_ : ""; }
       set {
         uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         uriCase_ = UriOneofCase.ArtifactUri;
+      }
+    }
+    /// <summary>Gets whether the "artifact_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasArtifactUri {
+      get { return uriCase_ == UriOneofCase.ArtifactUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "artifact_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearArtifactUri() {
+      if (HasArtifactUri) {
+        ClearUri();
       }
     }
 
@@ -15086,7 +15100,7 @@ namespace Google.Cloud.Deploy.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (uriCase_ == UriOneofCase.ArtifactUri) hash ^= ArtifactUri.GetHashCode();
+      if (HasArtifactUri) hash ^= ArtifactUri.GetHashCode();
       if (SkaffoldConfigPath.Length != 0) hash ^= SkaffoldConfigPath.GetHashCode();
       if (ManifestPath.Length != 0) hash ^= ManifestPath.GetHashCode();
       hash ^= PhaseArtifacts.GetHashCode();
@@ -15117,7 +15131,7 @@ namespace Google.Cloud.Deploy.V1 {
         output.WriteRawTag(26);
         output.WriteString(ManifestPath);
       }
-      if (uriCase_ == UriOneofCase.ArtifactUri) {
+      if (HasArtifactUri) {
         output.WriteRawTag(34);
         output.WriteString(ArtifactUri);
       }
@@ -15140,7 +15154,7 @@ namespace Google.Cloud.Deploy.V1 {
         output.WriteRawTag(26);
         output.WriteString(ManifestPath);
       }
-      if (uriCase_ == UriOneofCase.ArtifactUri) {
+      if (HasArtifactUri) {
         output.WriteRawTag(34);
         output.WriteString(ArtifactUri);
       }
@@ -15155,7 +15169,7 @@ namespace Google.Cloud.Deploy.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (uriCase_ == UriOneofCase.ArtifactUri) {
+      if (HasArtifactUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ArtifactUri);
       }
       if (SkaffoldConfigPath.Length != 0) {
@@ -15183,7 +15197,7 @@ namespace Google.Cloud.Deploy.V1 {
       if (other.ManifestPath.Length != 0) {
         ManifestPath = other.ManifestPath;
       }
-      phaseArtifacts_.Add(other.phaseArtifacts_);
+      phaseArtifacts_.MergeFrom(other.phaseArtifacts_);
       switch (other.UriCase) {
         case UriOneofCase.ArtifactUri:
           ArtifactUri = other.ArtifactUri;
@@ -18072,8 +18086,8 @@ namespace Google.Cloud.Deploy.V1 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      annotations_.Add(other.annotations_);
-      labels_.Add(other.labels_);
+      annotations_.MergeFrom(other.annotations_);
+      labels_.MergeFrom(other.labels_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();

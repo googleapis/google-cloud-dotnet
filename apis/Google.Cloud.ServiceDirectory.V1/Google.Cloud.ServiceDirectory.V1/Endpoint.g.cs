@@ -315,7 +315,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
       if (other.Port != 0) {
         Port = other.Port;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

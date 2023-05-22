@@ -2148,10 +2148,24 @@ namespace Google.Cloud.AutoML.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string GcsOutputDirectory {
-          get { return outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory ? (string) outputLocation_ : ""; }
+          get { return HasGcsOutputDirectory ? (string) outputLocation_ : ""; }
           set {
             outputLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             outputLocationCase_ = OutputLocationOneofCase.GcsOutputDirectory;
+          }
+        }
+        /// <summary>Gets whether the "gcs_output_directory" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasGcsOutputDirectory {
+          get { return outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "gcs_output_directory" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGcsOutputDirectory() {
+          if (HasGcsOutputDirectory) {
+            ClearOutputLocation();
           }
         }
 
@@ -2199,7 +2213,7 @@ namespace Google.Cloud.AutoML.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) hash ^= GcsOutputDirectory.GetHashCode();
+          if (HasGcsOutputDirectory) hash ^= GcsOutputDirectory.GetHashCode();
           hash ^= (int) outputLocationCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2219,7 +2233,7 @@ namespace Google.Cloud.AutoML.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
+          if (HasGcsOutputDirectory) {
             output.WriteRawTag(10);
             output.WriteString(GcsOutputDirectory);
           }
@@ -2233,7 +2247,7 @@ namespace Google.Cloud.AutoML.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
+          if (HasGcsOutputDirectory) {
             output.WriteRawTag(10);
             output.WriteString(GcsOutputDirectory);
           }
@@ -2247,7 +2261,7 @@ namespace Google.Cloud.AutoML.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
+          if (HasGcsOutputDirectory) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsOutputDirectory);
           }
           if (_unknownFields != null) {
@@ -2638,10 +2652,24 @@ namespace Google.Cloud.AutoML.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string GcsOutputDirectory {
-          get { return outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory ? (string) outputLocation_ : ""; }
+          get { return HasGcsOutputDirectory ? (string) outputLocation_ : ""; }
           set {
             outputLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             outputLocationCase_ = OutputLocationOneofCase.GcsOutputDirectory;
+          }
+        }
+        /// <summary>Gets whether the "gcs_output_directory" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasGcsOutputDirectory {
+          get { return outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "gcs_output_directory" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGcsOutputDirectory() {
+          if (HasGcsOutputDirectory) {
+            ClearOutputLocation();
           }
         }
 
@@ -2689,7 +2717,7 @@ namespace Google.Cloud.AutoML.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) hash ^= GcsOutputDirectory.GetHashCode();
+          if (HasGcsOutputDirectory) hash ^= GcsOutputDirectory.GetHashCode();
           hash ^= (int) outputLocationCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2709,7 +2737,7 @@ namespace Google.Cloud.AutoML.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
+          if (HasGcsOutputDirectory) {
             output.WriteRawTag(10);
             output.WriteString(GcsOutputDirectory);
           }
@@ -2723,7 +2751,7 @@ namespace Google.Cloud.AutoML.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
+          if (HasGcsOutputDirectory) {
             output.WriteRawTag(10);
             output.WriteString(GcsOutputDirectory);
           }
@@ -2737,7 +2765,7 @@ namespace Google.Cloud.AutoML.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
+          if (HasGcsOutputDirectory) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsOutputDirectory);
           }
           if (_unknownFields != null) {

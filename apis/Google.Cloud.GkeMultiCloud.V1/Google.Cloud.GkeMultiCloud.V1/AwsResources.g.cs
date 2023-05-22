@@ -950,7 +950,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.workloadIdentityConfig_ != null) {
         if (workloadIdentityConfig_ == null) {
           WorkloadIdentityConfig = new global::Google.Cloud.GkeMultiCloud.V1.WorkloadIdentityConfig();
@@ -1841,7 +1841,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         }
         DatabaseEncryption.MergeFrom(other.DatabaseEncryption);
       }
-      tags_.Add(other.tags_);
+      tags_.MergeFrom(other.tags_);
       if (other.awsServicesAuthentication_ != null) {
         if (awsServicesAuthentication_ == null) {
           AwsServicesAuthentication = new global::Google.Cloud.GkeMultiCloud.V1.AwsServicesAuthentication();
@@ -4073,7 +4073,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.maxPodsConstraint_ != null) {
         if (maxPodsConstraint_ == null) {
           MaxPodsConstraint = new global::Google.Cloud.GkeMultiCloud.V1.MaxPodsConstraint();
@@ -4796,8 +4796,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         RootVolume.MergeFrom(other.RootVolume);
       }
       taints_.Add(other.taints_);
-      labels_.Add(other.labels_);
-      tags_.Add(other.tags_);
+      labels_.MergeFrom(other.labels_);
+      tags_.MergeFrom(other.tags_);
       if (other.IamInstanceProfile.Length != 0) {
         IamInstanceProfile = other.IamInstanceProfile;
       }

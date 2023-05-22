@@ -603,6 +603,7 @@ namespace Google.Cloud.Talent.V4 {
   ///
   /// An enum that represents who has view access to the resource.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public enum Visibility {
     /// <summary>
     /// Default value.

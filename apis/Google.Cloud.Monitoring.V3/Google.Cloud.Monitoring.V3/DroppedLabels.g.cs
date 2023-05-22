@@ -197,7 +197,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (other == null) {
         return;
       }
-      label_.Add(other.label_);
+      label_.MergeFrom(other.label_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

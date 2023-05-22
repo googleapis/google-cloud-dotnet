@@ -8180,10 +8180,24 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DeleteOrphanProducts {
-      get { return targetCase_ == TargetOneofCase.DeleteOrphanProducts ? (bool) target_ : false; }
+      get { return HasDeleteOrphanProducts ? (bool) target_ : false; }
       set {
         target_ = value;
         targetCase_ = TargetOneofCase.DeleteOrphanProducts;
+      }
+    }
+    /// <summary>Gets whether the "delete_orphan_products" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDeleteOrphanProducts {
+      get { return targetCase_ == TargetOneofCase.DeleteOrphanProducts; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "delete_orphan_products" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeleteOrphanProducts() {
+      if (HasDeleteOrphanProducts) {
+        ClearTarget();
       }
     }
 
@@ -8269,7 +8283,7 @@ namespace Google.Cloud.Vision.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (targetCase_ == TargetOneofCase.ProductSetPurgeConfig) hash ^= ProductSetPurgeConfig.GetHashCode();
-      if (targetCase_ == TargetOneofCase.DeleteOrphanProducts) hash ^= DeleteOrphanProducts.GetHashCode();
+      if (HasDeleteOrphanProducts) hash ^= DeleteOrphanProducts.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (Force != false) hash ^= Force.GetHashCode();
       hash ^= (int) targetCase_;
@@ -8299,7 +8313,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(ProductSetPurgeConfig);
       }
-      if (targetCase_ == TargetOneofCase.DeleteOrphanProducts) {
+      if (HasDeleteOrphanProducts) {
         output.WriteRawTag(24);
         output.WriteBool(DeleteOrphanProducts);
       }
@@ -8325,7 +8339,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(ProductSetPurgeConfig);
       }
-      if (targetCase_ == TargetOneofCase.DeleteOrphanProducts) {
+      if (HasDeleteOrphanProducts) {
         output.WriteRawTag(24);
         output.WriteBool(DeleteOrphanProducts);
       }
@@ -8346,7 +8360,7 @@ namespace Google.Cloud.Vision.V1 {
       if (targetCase_ == TargetOneofCase.ProductSetPurgeConfig) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProductSetPurgeConfig);
       }
-      if (targetCase_ == TargetOneofCase.DeleteOrphanProducts) {
+      if (HasDeleteOrphanProducts) {
         size += 1 + 1;
       }
       if (Parent.Length != 0) {

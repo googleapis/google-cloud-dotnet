@@ -1363,7 +1363,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (other.ExternalUri.Length != 0) {
         ExternalUri = other.ExternalUri;
       }
-      sourceProperties_.Add(other.sourceProperties_);
+      sourceProperties_.MergeFrom(other.sourceProperties_);
       if (other.securityMarks_ != null) {
         if (securityMarks_ == null) {
           SecurityMarks = new global::Google.Cloud.SecurityCenter.V1.SecurityMarks();
@@ -1412,7 +1412,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         }
         MuteUpdateTime.MergeFrom(other.MuteUpdateTime);
       }
-      externalSystems_.Add(other.externalSystems_);
+      externalSystems_.MergeFrom(other.externalSystems_);
       if (other.mitreAttack_ != null) {
         if (mitreAttack_ == null) {
           MitreAttack = new global::Google.Cloud.SecurityCenter.V1.MitreAttack();
@@ -1430,7 +1430,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         MuteInitiator = other.MuteInitiator;
       }
       processes_.Add(other.processes_);
-      contacts_.Add(other.contacts_);
+      contacts_.MergeFrom(other.contacts_);
       compliances_.Add(other.compliances_);
       if (other.ParentDisplayName.Length != 0) {
         ParentDisplayName = other.ParentDisplayName;

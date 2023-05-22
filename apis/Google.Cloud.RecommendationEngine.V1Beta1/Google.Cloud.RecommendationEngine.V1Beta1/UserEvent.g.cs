@@ -2088,8 +2088,8 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       if (other.Revenue != 0F) {
         Revenue = other.Revenue;
       }
-      taxes_.Add(other.taxes_);
-      costs_.Add(other.costs_);
+      taxes_.MergeFrom(other.taxes_);
+      costs_.MergeFrom(other.costs_);
       if (other.CurrencyCode.Length != 0) {
         CurrencyCode = other.CurrencyCode;
       }

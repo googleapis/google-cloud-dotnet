@@ -1508,12 +1508,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         /// the user typed the correct password. Deprecated, prefer indicating
         /// CORRECT_PASSWORD through the reasons field instead.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("PASSWORD_CORRECT")] PasswordCorrect = 3,
         /// <summary>
         /// Provides information that the event was related to a login event in which
         /// the user typed the incorrect password. Deprecated, prefer indicating
         /// INCORRECT_PASSWORD through the reasons field instead.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("PASSWORD_INCORRECT")] PasswordIncorrect = 4,
       }
 
@@ -1825,10 +1827,24 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EmailAddress {
-      get { return endpointCase_ == EndpointOneofCase.EmailAddress ? (string) endpoint_ : ""; }
+      get { return HasEmailAddress ? (string) endpoint_ : ""; }
       set {
         endpoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         endpointCase_ = EndpointOneofCase.EmailAddress;
+      }
+    }
+    /// <summary>Gets whether the "email_address" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEmailAddress {
+      get { return endpointCase_ == EndpointOneofCase.EmailAddress; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "email_address" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEmailAddress() {
+      if (HasEmailAddress) {
+        ClearEndpoint();
       }
     }
 
@@ -1841,10 +1857,24 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PhoneNumber {
-      get { return endpointCase_ == EndpointOneofCase.PhoneNumber ? (string) endpoint_ : ""; }
+      get { return HasPhoneNumber ? (string) endpoint_ : ""; }
       set {
         endpoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         endpointCase_ = EndpointOneofCase.PhoneNumber;
+      }
+    }
+    /// <summary>Gets whether the "phone_number" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPhoneNumber {
+      get { return endpointCase_ == EndpointOneofCase.PhoneNumber; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "phone_number" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPhoneNumber() {
+      if (HasPhoneNumber) {
+        ClearEndpoint();
       }
     }
 
@@ -1928,8 +1958,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (endpointCase_ == EndpointOneofCase.EmailAddress) hash ^= EmailAddress.GetHashCode();
-      if (endpointCase_ == EndpointOneofCase.PhoneNumber) hash ^= PhoneNumber.GetHashCode();
+      if (HasEmailAddress) hash ^= EmailAddress.GetHashCode();
+      if (HasPhoneNumber) hash ^= PhoneNumber.GetHashCode();
       if (RequestToken.Length != 0) hash ^= RequestToken.GetHashCode();
       if (lastVerificationTime_ != null) hash ^= LastVerificationTime.GetHashCode();
       hash ^= (int) endpointCase_;
@@ -1951,11 +1981,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (endpointCase_ == EndpointOneofCase.EmailAddress) {
+      if (HasEmailAddress) {
         output.WriteRawTag(10);
         output.WriteString(EmailAddress);
       }
-      if (endpointCase_ == EndpointOneofCase.PhoneNumber) {
+      if (HasPhoneNumber) {
         output.WriteRawTag(18);
         output.WriteString(PhoneNumber);
       }
@@ -1977,11 +2007,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (endpointCase_ == EndpointOneofCase.EmailAddress) {
+      if (HasEmailAddress) {
         output.WriteRawTag(10);
         output.WriteString(EmailAddress);
       }
-      if (endpointCase_ == EndpointOneofCase.PhoneNumber) {
+      if (HasPhoneNumber) {
         output.WriteRawTag(18);
         output.WriteString(PhoneNumber);
       }
@@ -2003,10 +2033,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (endpointCase_ == EndpointOneofCase.EmailAddress) {
+      if (HasEmailAddress) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EmailAddress);
       }
-      if (endpointCase_ == EndpointOneofCase.PhoneNumber) {
+      if (HasPhoneNumber) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PhoneNumber);
       }
       if (RequestToken.Length != 0) {
@@ -3860,6 +3890,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
 
     /// <summary>Field number for the "transaction_id" field.</summary>
     public const int TransactionIdFieldNumber = 11;
+    private readonly static string TransactionIdDefaultValue = "";
+
     private string transactionId_;
     /// <summary>
     /// Unique identifier for the transaction. This custom identifier can be used
@@ -3870,7 +3902,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TransactionId {
-      get { return transactionId_ ?? ""; }
+      get { return transactionId_ ?? TransactionIdDefaultValue; }
       set {
         transactionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -10575,7 +10607,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -12038,7 +12070,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       if (other == null) {
         return;
       }
-      scoreBuckets_.Add(other.scoreBuckets_);
+      scoreBuckets_.MergeFrom(other.scoreBuckets_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -12258,7 +12290,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         }
         OverallMetrics.MergeFrom(other.OverallMetrics);
       }
-      actionMetrics_.Add(other.actionMetrics_);
+      actionMetrics_.MergeFrom(other.actionMetrics_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

@@ -2036,10 +2036,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public double Ratio {
-              get { return valueCase_ == ValueOneofCase.Ratio ? (double) value_ : 0D; }
+              get { return HasRatio ? (double) value_ : 0D; }
               set {
                 value_ = value;
                 valueCase_ = ValueOneofCase.Ratio;
+              }
+            }
+            /// <summary>Gets whether the "ratio" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasRatio {
+              get { return valueCase_ == ValueOneofCase.Ratio; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "ratio" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearRatio() {
+              if (HasRatio) {
+                ClearValue();
               }
             }
 
@@ -2051,10 +2065,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public double Count {
-              get { return valueCase_ == ValueOneofCase.Count ? (double) value_ : 0D; }
+              get { return HasCount ? (double) value_ : 0D; }
               set {
                 value_ = value;
                 valueCase_ = ValueOneofCase.Count;
+              }
+            }
+            /// <summary>Gets whether the "count" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasCount {
+              get { return valueCase_ == ValueOneofCase.Count; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "count" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearCount() {
+              if (HasCount) {
+                ClearValue();
               }
             }
 
@@ -2125,8 +2153,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
               int hash = 1;
               if (Type != global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Result.Types.MetricType.MetricUnspecified) hash ^= Type.GetHashCode();
               if (CountType != global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Result.Types.CountType.Unspecified) hash ^= CountType.GetHashCode();
-              if (valueCase_ == ValueOneofCase.Ratio) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Ratio);
-              if (valueCase_ == ValueOneofCase.Count) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Count);
+              if (HasRatio) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Ratio);
+              if (HasCount) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Count);
               if (confidenceInterval_ != null) hash ^= ConfidenceInterval.GetHashCode();
               hash ^= (int) valueCase_;
               if (_unknownFields != null) {
@@ -2151,7 +2179,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
                 output.WriteRawTag(8);
                 output.WriteEnum((int) Type);
               }
-              if (valueCase_ == ValueOneofCase.Ratio) {
+              if (HasRatio) {
                 output.WriteRawTag(17);
                 output.WriteDouble(Ratio);
               }
@@ -2159,7 +2187,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
                 output.WriteRawTag(26);
                 output.WriteMessage(ConfidenceInterval);
               }
-              if (valueCase_ == ValueOneofCase.Count) {
+              if (HasCount) {
                 output.WriteRawTag(33);
                 output.WriteDouble(Count);
               }
@@ -2181,7 +2209,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
                 output.WriteRawTag(8);
                 output.WriteEnum((int) Type);
               }
-              if (valueCase_ == ValueOneofCase.Ratio) {
+              if (HasRatio) {
                 output.WriteRawTag(17);
                 output.WriteDouble(Ratio);
               }
@@ -2189,7 +2217,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
                 output.WriteRawTag(26);
                 output.WriteMessage(ConfidenceInterval);
               }
-              if (valueCase_ == ValueOneofCase.Count) {
+              if (HasCount) {
                 output.WriteRawTag(33);
                 output.WriteDouble(Count);
               }
@@ -2213,10 +2241,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
               if (CountType != global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Types.Result.Types.CountType.Unspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CountType);
               }
-              if (valueCase_ == ValueOneofCase.Ratio) {
+              if (HasRatio) {
                 size += 1 + 8;
               }
-              if (valueCase_ == ValueOneofCase.Count) {
+              if (HasCount) {
                 size += 1 + 8;
               }
               if (confidenceInterval_ != null) {

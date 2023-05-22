@@ -433,7 +433,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Action != global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy.Types.Action.Unspecified) {
         Action = other.Action;
       }
@@ -1383,10 +1383,24 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string RegexMatch {
-                  get { return typeCase_ == TypeOneofCase.RegexMatch ? (string) type_ : ""; }
+                  get { return HasRegexMatch ? (string) type_ : ""; }
                   set {
                     type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                     typeCase_ = TypeOneofCase.RegexMatch;
+                  }
+                }
+                /// <summary>Gets whether the "regex_match" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasRegexMatch {
+                  get { return typeCase_ == TypeOneofCase.RegexMatch; }
+                }
+                /// <summary> Clears the value of the oneof if it's currently set to "regex_match" </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearRegexMatch() {
+                  if (HasRegexMatch) {
+                    ClearType();
                   }
                 }
 
@@ -1453,7 +1467,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
-                  if (typeCase_ == TypeOneofCase.RegexMatch) hash ^= RegexMatch.GetHashCode();
+                  if (HasRegexMatch) hash ^= RegexMatch.GetHashCode();
                   if (HeaderName.Length != 0) hash ^= HeaderName.GetHashCode();
                   hash ^= (int) typeCase_;
                   if (_unknownFields != null) {
@@ -1478,7 +1492,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                     output.WriteRawTag(10);
                     output.WriteString(HeaderName);
                   }
-                  if (typeCase_ == TypeOneofCase.RegexMatch) {
+                  if (HasRegexMatch) {
                     output.WriteRawTag(18);
                     output.WriteString(RegexMatch);
                   }
@@ -1496,7 +1510,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                     output.WriteRawTag(10);
                     output.WriteString(HeaderName);
                   }
-                  if (typeCase_ == TypeOneofCase.RegexMatch) {
+                  if (HasRegexMatch) {
                     output.WriteRawTag(18);
                     output.WriteString(RegexMatch);
                   }
@@ -1510,7 +1524,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
-                  if (typeCase_ == TypeOneofCase.RegexMatch) {
+                  if (HasRegexMatch) {
                     size += 1 + pb::CodedOutputStream.ComputeStringSize(RegexMatch);
                   }
                   if (HeaderName.Length != 0) {

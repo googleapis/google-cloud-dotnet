@@ -4032,6 +4032,8 @@ namespace Google.Cloud.Retail.V2 {
 
     /// <summary>Field number for the "searchable" field.</summary>
     public const int SearchableFieldNumber = 3;
+    private readonly static bool SearchableDefaultValue = false;
+
     private bool searchable_;
     /// <summary>
     /// This field is normally ignored unless
@@ -4052,7 +4054,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Searchable {
-      get { if ((_hasBits0 & 1) != 0) { return searchable_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return searchable_; } else { return SearchableDefaultValue; } }
       set {
         _hasBits0 |= 1;
         searchable_ = value;
@@ -4075,6 +4077,8 @@ namespace Google.Cloud.Retail.V2 {
 
     /// <summary>Field number for the "indexable" field.</summary>
     public const int IndexableFieldNumber = 4;
+    private readonly static bool IndexableDefaultValue = false;
+
     private bool indexable_;
     /// <summary>
     /// This field is normally ignored unless
@@ -4099,7 +4103,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Indexable {
-      get { if ((_hasBits0 & 2) != 0) { return indexable_; } else { return false; } }
+      get { if ((_hasBits0 & 2) != 0) { return indexable_; } else { return IndexableDefaultValue; } }
       set {
         _hasBits0 |= 2;
         indexable_ = value;
@@ -4921,10 +4925,24 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Minimum {
-      get { return minCase_ == MinOneofCase.Minimum ? (double) min_ : 0D; }
+      get { return HasMinimum ? (double) min_ : 0D; }
       set {
         min_ = value;
         minCase_ = MinOneofCase.Minimum;
+      }
+    }
+    /// <summary>Gets whether the "minimum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMinimum {
+      get { return minCase_ == MinOneofCase.Minimum; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "minimum" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMinimum() {
+      if (HasMinimum) {
+        ClearMin();
       }
     }
 
@@ -4936,10 +4954,24 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double ExclusiveMinimum {
-      get { return minCase_ == MinOneofCase.ExclusiveMinimum ? (double) min_ : 0D; }
+      get { return HasExclusiveMinimum ? (double) min_ : 0D; }
       set {
         min_ = value;
         minCase_ = MinOneofCase.ExclusiveMinimum;
+      }
+    }
+    /// <summary>Gets whether the "exclusive_minimum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExclusiveMinimum {
+      get { return minCase_ == MinOneofCase.ExclusiveMinimum; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "exclusive_minimum" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExclusiveMinimum() {
+      if (HasExclusiveMinimum) {
+        ClearMin();
       }
     }
 
@@ -4951,10 +4983,24 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Maximum {
-      get { return maxCase_ == MaxOneofCase.Maximum ? (double) max_ : 0D; }
+      get { return HasMaximum ? (double) max_ : 0D; }
       set {
         max_ = value;
         maxCase_ = MaxOneofCase.Maximum;
+      }
+    }
+    /// <summary>Gets whether the "maximum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaximum {
+      get { return maxCase_ == MaxOneofCase.Maximum; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "maximum" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaximum() {
+      if (HasMaximum) {
+        ClearMax();
       }
     }
 
@@ -4966,10 +5012,24 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double ExclusiveMaximum {
-      get { return maxCase_ == MaxOneofCase.ExclusiveMaximum ? (double) max_ : 0D; }
+      get { return HasExclusiveMaximum ? (double) max_ : 0D; }
       set {
         max_ = value;
         maxCase_ = MaxOneofCase.ExclusiveMaximum;
+      }
+    }
+    /// <summary>Gets whether the "exclusive_maximum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExclusiveMaximum {
+      get { return maxCase_ == MaxOneofCase.ExclusiveMaximum; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "exclusive_maximum" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExclusiveMaximum() {
+      if (HasExclusiveMaximum) {
+        ClearMax();
       }
     }
 
@@ -5043,10 +5103,10 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (minCase_ == MinOneofCase.Minimum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Minimum);
-      if (minCase_ == MinOneofCase.ExclusiveMinimum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ExclusiveMinimum);
-      if (maxCase_ == MaxOneofCase.Maximum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Maximum);
-      if (maxCase_ == MaxOneofCase.ExclusiveMaximum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ExclusiveMaximum);
+      if (HasMinimum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Minimum);
+      if (HasExclusiveMinimum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ExclusiveMinimum);
+      if (HasMaximum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Maximum);
+      if (HasExclusiveMaximum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ExclusiveMaximum);
       hash ^= (int) minCase_;
       hash ^= (int) maxCase_;
       if (_unknownFields != null) {
@@ -5067,19 +5127,19 @@ namespace Google.Cloud.Retail.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (minCase_ == MinOneofCase.Minimum) {
+      if (HasMinimum) {
         output.WriteRawTag(9);
         output.WriteDouble(Minimum);
       }
-      if (minCase_ == MinOneofCase.ExclusiveMinimum) {
+      if (HasExclusiveMinimum) {
         output.WriteRawTag(17);
         output.WriteDouble(ExclusiveMinimum);
       }
-      if (maxCase_ == MaxOneofCase.Maximum) {
+      if (HasMaximum) {
         output.WriteRawTag(25);
         output.WriteDouble(Maximum);
       }
-      if (maxCase_ == MaxOneofCase.ExclusiveMaximum) {
+      if (HasExclusiveMaximum) {
         output.WriteRawTag(33);
         output.WriteDouble(ExclusiveMaximum);
       }
@@ -5093,19 +5153,19 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (minCase_ == MinOneofCase.Minimum) {
+      if (HasMinimum) {
         output.WriteRawTag(9);
         output.WriteDouble(Minimum);
       }
-      if (minCase_ == MinOneofCase.ExclusiveMinimum) {
+      if (HasExclusiveMinimum) {
         output.WriteRawTag(17);
         output.WriteDouble(ExclusiveMinimum);
       }
-      if (maxCase_ == MaxOneofCase.Maximum) {
+      if (HasMaximum) {
         output.WriteRawTag(25);
         output.WriteDouble(Maximum);
       }
-      if (maxCase_ == MaxOneofCase.ExclusiveMaximum) {
+      if (HasExclusiveMaximum) {
         output.WriteRawTag(33);
         output.WriteDouble(ExclusiveMaximum);
       }
@@ -5119,16 +5179,16 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (minCase_ == MinOneofCase.Minimum) {
+      if (HasMinimum) {
         size += 1 + 8;
       }
-      if (minCase_ == MinOneofCase.ExclusiveMinimum) {
+      if (HasExclusiveMinimum) {
         size += 1 + 8;
       }
-      if (maxCase_ == MaxOneofCase.Maximum) {
+      if (HasMaximum) {
         size += 1 + 8;
       }
-      if (maxCase_ == MaxOneofCase.ExclusiveMaximum) {
+      if (HasExclusiveMaximum) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -6928,7 +6988,7 @@ namespace Google.Cloud.Retail.V2 {
         }
         PriceInfo.MergeFrom(other.PriceInfo);
       }
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       fulfillmentTypes_.Add(other.fulfillmentTypes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }

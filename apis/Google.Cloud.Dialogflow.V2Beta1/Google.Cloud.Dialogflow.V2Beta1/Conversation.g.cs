@@ -4234,7 +4234,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           if (other.Text.Length != 0) {
             Text = other.Text;
           }
-          textSections_.Add(other.textSections_);
+          textSections_.MergeFrom(other.textSections_);
           if (other.AnswerRecord.Length != 0) {
             AnswerRecord = other.AnswerRecord;
           }
@@ -5349,7 +5349,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           if (other.Text.Length != 0) {
             Text = other.Text;
           }
-          textSections_.Add(other.textSections_);
+          textSections_.MergeFrom(other.textSections_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

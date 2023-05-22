@@ -3078,7 +3078,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3303,7 +3303,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      items_.Add(other.items_);
+      items_.MergeFrom(other.items_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3495,7 +3495,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other == null) {
         return;
       }
-      items_.Add(other.items_);
+      items_.MergeFrom(other.items_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4776,7 +4776,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other.VmId.Length != 0) {
         VmId = other.VmId;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5767,7 +5767,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other.HealthState != global::Google.Cloud.Notebooks.V1.GetInstanceHealthResponse.Types.HealthState.Unspecified) {
         HealthState = other.HealthState;
       }
-      healthInfo_.Add(other.healthInfo_);
+      healthInfo_.MergeFrom(other.healthInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

@@ -14102,10 +14102,24 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProcessorVersionSource {
-      get { return sourceCase_ == SourceOneofCase.ProcessorVersionSource ? (string) source_ : ""; }
+      get { return HasProcessorVersionSource ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.ProcessorVersionSource;
+      }
+    }
+    /// <summary>Gets whether the "processor_version_source" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasProcessorVersionSource {
+      get { return sourceCase_ == SourceOneofCase.ProcessorVersionSource; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "processor_version_source" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearProcessorVersionSource() {
+      if (HasProcessorVersionSource) {
+        ClearSource();
       }
     }
 
@@ -14171,7 +14185,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (sourceCase_ == SourceOneofCase.ProcessorVersionSource) hash ^= ProcessorVersionSource.GetHashCode();
+      if (HasProcessorVersionSource) hash ^= ProcessorVersionSource.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
@@ -14196,7 +14210,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (sourceCase_ == SourceOneofCase.ProcessorVersionSource) {
+      if (HasProcessorVersionSource) {
         output.WriteRawTag(18);
         output.WriteString(ProcessorVersionSource);
       }
@@ -14214,7 +14228,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (sourceCase_ == SourceOneofCase.ProcessorVersionSource) {
+      if (HasProcessorVersionSource) {
         output.WriteRawTag(18);
         output.WriteString(ProcessorVersionSource);
       }
@@ -14228,7 +14242,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (sourceCase_ == SourceOneofCase.ProcessorVersionSource) {
+      if (HasProcessorVersionSource) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ProcessorVersionSource);
       }
       if (Parent.Length != 0) {

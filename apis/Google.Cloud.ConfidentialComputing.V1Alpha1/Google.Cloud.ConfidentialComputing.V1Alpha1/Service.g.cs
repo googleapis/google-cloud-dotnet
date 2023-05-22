@@ -1973,7 +1973,7 @@ namespace Google.Cloud.ConfidentialComputing.V1Alpha1 {
           if (other.HashAlgo != 0) {
             HashAlgo = other.HashAlgo;
           }
-          pcrValues_.Add(other.pcrValues_);
+          pcrValues_.MergeFrom(other.pcrValues_);
           if (other.RawQuote.Length != 0) {
             RawQuote = other.RawQuote;
           }

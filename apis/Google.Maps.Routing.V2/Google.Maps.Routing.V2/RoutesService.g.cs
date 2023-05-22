@@ -2295,6 +2295,8 @@ namespace Google.Maps.Routing.V2 {
 
     /// <summary>Field number for the "origin_index" field.</summary>
     public const int OriginIndexFieldNumber = 1;
+    private readonly static int OriginIndexDefaultValue = 0;
+
     private int originIndex_;
     /// <summary>
     /// Zero-based index of the origin in the request.
@@ -2302,7 +2304,7 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int OriginIndex {
-      get { if ((_hasBits0 & 1) != 0) { return originIndex_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return originIndex_; } else { return OriginIndexDefaultValue; } }
       set {
         _hasBits0 |= 1;
         originIndex_ = value;
@@ -2323,6 +2325,8 @@ namespace Google.Maps.Routing.V2 {
 
     /// <summary>Field number for the "destination_index" field.</summary>
     public const int DestinationIndexFieldNumber = 2;
+    private readonly static int DestinationIndexDefaultValue = 0;
+
     private int destinationIndex_;
     /// <summary>
     /// Zero-based index of the destination in the request.
@@ -2330,7 +2334,7 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int DestinationIndex {
-      get { if ((_hasBits0 & 2) != 0) { return destinationIndex_; } else { return 0; } }
+      get { if ((_hasBits0 & 2) != 0) { return destinationIndex_; } else { return DestinationIndexDefaultValue; } }
       set {
         _hasBits0 |= 2;
         destinationIndex_ = value;

@@ -279,6 +279,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     /// <summary>Field number for the "satisfies_pzs" field.</summary>
     public const int SatisfiesPzsFieldNumber = 8;
+    private readonly static bool SatisfiesPzsDefaultValue = false;
+
     private bool satisfiesPzs_;
     /// <summary>
     /// Output only. Reserved for future use.
@@ -286,7 +288,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool SatisfiesPzs {
-      get { if ((_hasBits0 & 1) != 0) { return satisfiesPzs_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return satisfiesPzs_; } else { return SatisfiesPzsDefaultValue; } }
       set {
         _hasBits0 |= 1;
         satisfiesPzs_ = value;
@@ -472,7 +474,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (other.Type != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type.Unspecified) {
         Type = other.Type;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();

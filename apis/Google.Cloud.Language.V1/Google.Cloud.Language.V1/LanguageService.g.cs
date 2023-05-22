@@ -373,10 +373,24 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Content {
-      get { return sourceCase_ == SourceOneofCase.Content ? (string) source_ : ""; }
+      get { return HasContent ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Content;
+      }
+    }
+    /// <summary>Gets whether the "content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContent {
+      get { return sourceCase_ == SourceOneofCase.Content; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContent() {
+      if (HasContent) {
+        ClearSource();
       }
     }
 
@@ -391,10 +405,24 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsContentUri {
-      get { return sourceCase_ == SourceOneofCase.GcsContentUri ? (string) source_ : ""; }
+      get { return HasGcsContentUri ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.GcsContentUri;
+      }
+    }
+    /// <summary>Gets whether the "gcs_content_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsContentUri {
+      get { return sourceCase_ == SourceOneofCase.GcsContentUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_content_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsContentUri() {
+      if (HasGcsContentUri) {
+        ClearSource();
       }
     }
 
@@ -469,8 +497,8 @@ namespace Google.Cloud.Language.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Type != global::Google.Cloud.Language.V1.Document.Types.Type.Unspecified) hash ^= Type.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.Content) hash ^= Content.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.GcsContentUri) hash ^= GcsContentUri.GetHashCode();
+      if (HasContent) hash ^= Content.GetHashCode();
+      if (HasGcsContentUri) hash ^= GcsContentUri.GetHashCode();
       if (Language.Length != 0) hash ^= Language.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
@@ -495,11 +523,11 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(18);
         output.WriteString(Content);
       }
-      if (sourceCase_ == SourceOneofCase.GcsContentUri) {
+      if (HasGcsContentUri) {
         output.WriteRawTag(26);
         output.WriteString(GcsContentUri);
       }
@@ -521,11 +549,11 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(18);
         output.WriteString(Content);
       }
-      if (sourceCase_ == SourceOneofCase.GcsContentUri) {
+      if (HasGcsContentUri) {
         output.WriteRawTag(26);
         output.WriteString(GcsContentUri);
       }
@@ -546,10 +574,10 @@ namespace Google.Cloud.Language.V1 {
       if (Type != global::Google.Cloud.Language.V1.Document.Types.Type.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
       }
-      if (sourceCase_ == SourceOneofCase.GcsContentUri) {
+      if (HasGcsContentUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsContentUri);
       }
       if (Language.Length != 0) {
@@ -1227,7 +1255,7 @@ namespace Google.Cloud.Language.V1 {
       if (other.Type != global::Google.Cloud.Language.V1.Entity.Types.Type.Unknown) {
         Type = other.Type;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.Salience != 0F) {
         Salience = other.Salience;
       }

@@ -1035,7 +1035,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         LogTtl.MergeFrom(other.LogTtl);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();

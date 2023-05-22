@@ -1055,7 +1055,7 @@ namespace Google.Cloud.Retail.V2 {
           if (other.Suggestion.Length != 0) {
             Suggestion = other.Suggestion;
           }
-          attributes_.Add(other.attributes_);
+          attributes_.MergeFrom(other.attributes_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

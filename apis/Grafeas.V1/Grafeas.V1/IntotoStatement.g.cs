@@ -668,7 +668,7 @@ namespace Grafeas.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      digest_.Add(other.digest_);
+      digest_.MergeFrom(other.digest_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

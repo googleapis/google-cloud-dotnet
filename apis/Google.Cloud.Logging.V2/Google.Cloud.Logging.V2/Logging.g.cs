@@ -686,7 +686,7 @@ namespace Google.Cloud.Logging.V2 {
         }
         Resource.MergeFrom(other.Resource);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       entries_.Add(other.entries_);
       if (other.PartialSuccess != false) {
         PartialSuccess = other.PartialSuccess;
@@ -1083,7 +1083,7 @@ namespace Google.Cloud.Logging.V2 {
       if (other == null) {
         return;
       }
-      logEntryErrors_.Add(other.logEntryErrors_);
+      logEntryErrors_.MergeFrom(other.logEntryErrors_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

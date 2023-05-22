@@ -1114,6 +1114,7 @@ namespace Google.Cloud.Notebooks.V1 {
         /// <summary>
         /// Accelerator type is Nvidia Tesla K80.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("NVIDIA_TESLA_K80")] NvidiaTeslaK80 = 1,
         /// <summary>
         /// Accelerator type is Nvidia Tesla P100.
@@ -2516,7 +2517,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other.DiskType != global::Google.Cloud.Notebooks.V1.LocalDiskInitializeParams.Types.DiskType.Unspecified) {
         DiskType = other.DiskType;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3018,6 +3019,8 @@ namespace Google.Cloud.Notebooks.V1 {
 
     /// <summary>Field number for the "enable_health_monitoring" field.</summary>
     public const int EnableHealthMonitoringFieldNumber = 2;
+    private readonly static bool EnableHealthMonitoringDefaultValue = false;
+
     private bool enableHealthMonitoring_;
     /// <summary>
     /// Verifies core internal services are running.
@@ -3026,7 +3029,7 @@ namespace Google.Cloud.Notebooks.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnableHealthMonitoring {
-      get { if ((_hasBits0 & 1) != 0) { return enableHealthMonitoring_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return enableHealthMonitoring_; } else { return EnableHealthMonitoringDefaultValue; } }
       set {
         _hasBits0 |= 1;
         enableHealthMonitoring_ = value;
@@ -3047,6 +3050,8 @@ namespace Google.Cloud.Notebooks.V1 {
 
     /// <summary>Field number for the "idle_shutdown" field.</summary>
     public const int IdleShutdownFieldNumber = 3;
+    private readonly static bool IdleShutdownDefaultValue = false;
+
     private bool idleShutdown_;
     /// <summary>
     /// Runtime will automatically shutdown after idle_shutdown_time.
@@ -3055,7 +3060,7 @@ namespace Google.Cloud.Notebooks.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IdleShutdown {
-      get { if ((_hasBits0 & 2) != 0) { return idleShutdown_; } else { return false; } }
+      get { if ((_hasBits0 & 2) != 0) { return idleShutdown_; } else { return IdleShutdownDefaultValue; } }
       set {
         _hasBits0 |= 2;
         idleShutdown_ = value;
@@ -3154,6 +3159,8 @@ namespace Google.Cloud.Notebooks.V1 {
 
     /// <summary>Field number for the "upgradeable" field.</summary>
     public const int UpgradeableFieldNumber = 9;
+    private readonly static bool UpgradeableDefaultValue = false;
+
     private bool upgradeable_;
     /// <summary>
     /// Output only. Bool indicating whether an newer image is available in an image family.
@@ -3161,7 +3168,7 @@ namespace Google.Cloud.Notebooks.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Upgradeable {
-      get { if ((_hasBits0 & 4) != 0) { return upgradeable_; } else { return false; } }
+      get { if ((_hasBits0 & 4) != 0) { return upgradeable_; } else { return UpgradeableDefaultValue; } }
       set {
         _hasBits0 |= 4;
         upgradeable_ = value;
@@ -3197,6 +3204,8 @@ namespace Google.Cloud.Notebooks.V1 {
 
     /// <summary>Field number for the "disable_terminal" field.</summary>
     public const int DisableTerminalFieldNumber = 11;
+    private readonly static bool DisableTerminalDefaultValue = false;
+
     private bool disableTerminal_;
     /// <summary>
     /// Bool indicating whether JupyterLab terminal will be available or not.
@@ -3205,7 +3214,7 @@ namespace Google.Cloud.Notebooks.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisableTerminal {
-      get { if ((_hasBits0 & 8) != 0) { return disableTerminal_; } else { return false; } }
+      get { if ((_hasBits0 & 8) != 0) { return disableTerminal_; } else { return DisableTerminalDefaultValue; } }
       set {
         _hasBits0 |= 8;
         disableTerminal_ = value;
@@ -3226,6 +3235,8 @@ namespace Google.Cloud.Notebooks.V1 {
 
     /// <summary>Field number for the "version" field.</summary>
     public const int VersionFieldNumber = 12;
+    private readonly static string VersionDefaultValue = "";
+
     private string version_;
     /// <summary>
     /// Output only. version of boot image such as M100, from release label of the image.
@@ -3233,7 +3244,7 @@ namespace Google.Cloud.Notebooks.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
-      get { return version_ ?? ""; }
+      get { return version_ ?? VersionDefaultValue; }
       set {
         version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -3802,7 +3813,7 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other == null) {
         return;
       }
-      systemMetrics_.Add(other.systemMetrics_);
+      systemMetrics_.MergeFrom(other.systemMetrics_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5088,9 +5099,9 @@ namespace Google.Cloud.Notebooks.V1 {
         InternalIpOnly = other.InternalIpOnly;
       }
       tags_.Add(other.tags_);
-      guestAttributes_.Add(other.guestAttributes_);
-      metadata_.Add(other.metadata_);
-      labels_.Add(other.labels_);
+      guestAttributes_.MergeFrom(other.guestAttributes_);
+      metadata_.MergeFrom(other.metadata_);
+      labels_.MergeFrom(other.labels_);
       if (other.NicType != global::Google.Cloud.Notebooks.V1.VirtualMachineConfig.Types.NicType.UnspecifiedNicType) {
         NicType = other.NicType;
       }

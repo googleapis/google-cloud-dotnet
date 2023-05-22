@@ -700,6 +700,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "start_minutes_ago" field.</summary>
     public const int StartMinutesAgoFieldNumber = 1;
+    private readonly static int StartMinutesAgoDefaultValue = 0;
+
     private int startMinutesAgo_;
     /// <summary>
     /// The inclusive start minute for the query as a number of minutes before now.
@@ -714,7 +716,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int StartMinutesAgo {
-      get { if ((_hasBits0 & 1) != 0) { return startMinutesAgo_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return startMinutesAgo_; } else { return StartMinutesAgoDefaultValue; } }
       set {
         _hasBits0 |= 1;
         startMinutesAgo_ = value;
@@ -735,6 +737,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "end_minutes_ago" field.</summary>
     public const int EndMinutesAgoFieldNumber = 2;
+    private readonly static int EndMinutesAgoDefaultValue = 0;
+
     private int endMinutesAgo_;
     /// <summary>
     /// The inclusive end minute for the query as a number of minutes before now.
@@ -750,7 +754,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int EndMinutesAgo {
-      get { if ((_hasBits0 & 2) != 0) { return endMinutesAgo_; } else { return 0; } }
+      get { if ((_hasBits0 & 2) != 0) { return endMinutesAgo_; } else { return EndMinutesAgoDefaultValue; } }
       set {
         _hasBits0 |= 2;
         endMinutesAgo_ = value;
@@ -7350,6 +7354,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "currency_code" field.</summary>
     public const int CurrencyCodeFieldNumber = 5;
+    private readonly static string CurrencyCodeDefaultValue = "";
+
     private string currencyCode_;
     /// <summary>
     /// The currency code used in this report. Intended to be used in formatting
@@ -7366,7 +7372,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CurrencyCode {
-      get { return currencyCode_ ?? ""; }
+      get { return currencyCode_ ?? CurrencyCodeDefaultValue; }
       set {
         currencyCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -7386,6 +7392,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "time_zone" field.</summary>
     public const int TimeZoneFieldNumber = 6;
+    private readonly static string TimeZoneDefaultValue = "";
+
     private string timeZone_;
     /// <summary>
     /// The property's current timezone. Intended to be used to interpret
@@ -7396,7 +7404,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TimeZone {
-      get { return timeZone_ ?? ""; }
+      get { return timeZone_ ?? TimeZoneDefaultValue; }
       set {
         timeZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -7416,6 +7424,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "empty_reason" field.</summary>
     public const int EmptyReasonFieldNumber = 7;
+    private readonly static string EmptyReasonDefaultValue = "";
+
     private string emptyReason_;
     /// <summary>
     /// If empty reason is specified, the report is empty for this reason.
@@ -7423,7 +7433,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EmptyReason {
-      get { return emptyReason_ ?? ""; }
+      get { return emptyReason_ ?? EmptyReasonDefaultValue; }
       set {
         emptyReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -7443,6 +7453,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "subject_to_thresholding" field.</summary>
     public const int SubjectToThresholdingFieldNumber = 8;
+    private readonly static bool SubjectToThresholdingDefaultValue = false;
+
     private bool subjectToThresholding_;
     /// <summary>
     /// If `subjectToThresholding` is true, this report is subject to thresholding
@@ -7457,7 +7469,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool SubjectToThresholding {
-      get { if ((_hasBits0 & 1) != 0) { return subjectToThresholding_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return subjectToThresholding_; } else { return SubjectToThresholdingDefaultValue; } }
       set {
         _hasBits0 |= 1;
         subjectToThresholding_ = value;
@@ -7983,6 +7995,8 @@ namespace Google.Analytics.Data.V1Beta {
 
             /// <summary>Field number for the "metric_name" field.</summary>
             public const int MetricNameFieldNumber = 1;
+            private readonly static string MetricNameDefaultValue = "";
+
             private string metricName_;
             /// <summary>
             /// The name of the restricted metric.
@@ -7990,7 +8004,7 @@ namespace Google.Analytics.Data.V1Beta {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string MetricName {
-              get { return metricName_ ?? ""; }
+              get { return metricName_ ?? MetricNameDefaultValue; }
               set {
                 metricName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
               }
@@ -9338,10 +9352,24 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Value {
-      get { return oneValueCase_ == OneValueOneofCase.Value ? (string) oneValue_ : ""; }
+      get { return HasValue ? (string) oneValue_ : ""; }
       set {
         oneValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         oneValueCase_ = OneValueOneofCase.Value;
+      }
+    }
+    /// <summary>Gets whether the "value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasValue {
+      get { return oneValueCase_ == OneValueOneofCase.Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValue() {
+      if (HasValue) {
+        ClearOneValue();
       }
     }
 
@@ -9389,7 +9417,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (oneValueCase_ == OneValueOneofCase.Value) hash ^= Value.GetHashCode();
+      if (HasValue) hash ^= Value.GetHashCode();
       hash ^= (int) oneValueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -9409,7 +9437,7 @@ namespace Google.Analytics.Data.V1Beta {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (oneValueCase_ == OneValueOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(10);
         output.WriteString(Value);
       }
@@ -9423,7 +9451,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (oneValueCase_ == OneValueOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(10);
         output.WriteString(Value);
       }
@@ -9437,7 +9465,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (oneValueCase_ == OneValueOneofCase.Value) {
+      if (HasValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
       }
       if (_unknownFields != null) {
@@ -9563,10 +9591,24 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Value {
-      get { return oneValueCase_ == OneValueOneofCase.Value ? (string) oneValue_ : ""; }
+      get { return HasValue ? (string) oneValue_ : ""; }
       set {
         oneValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         oneValueCase_ = OneValueOneofCase.Value;
+      }
+    }
+    /// <summary>Gets whether the "value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasValue {
+      get { return oneValueCase_ == OneValueOneofCase.Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValue() {
+      if (HasValue) {
+        ClearOneValue();
       }
     }
 
@@ -9614,7 +9656,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (oneValueCase_ == OneValueOneofCase.Value) hash ^= Value.GetHashCode();
+      if (HasValue) hash ^= Value.GetHashCode();
       hash ^= (int) oneValueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -9634,7 +9676,7 @@ namespace Google.Analytics.Data.V1Beta {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (oneValueCase_ == OneValueOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(34);
         output.WriteString(Value);
       }
@@ -9648,7 +9690,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (oneValueCase_ == OneValueOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(34);
         output.WriteString(Value);
       }
@@ -9662,7 +9704,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (oneValueCase_ == OneValueOneofCase.Value) {
+      if (HasValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
       }
       if (_unknownFields != null) {
@@ -9791,10 +9833,24 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Int64Value {
-      get { return oneValueCase_ == OneValueOneofCase.Int64Value ? (long) oneValue_ : 0L; }
+      get { return HasInt64Value ? (long) oneValue_ : 0L; }
       set {
         oneValue_ = value;
         oneValueCase_ = OneValueOneofCase.Int64Value;
+      }
+    }
+    /// <summary>Gets whether the "int64_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInt64Value {
+      get { return oneValueCase_ == OneValueOneofCase.Int64Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "int64_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInt64Value() {
+      if (HasInt64Value) {
+        ClearOneValue();
       }
     }
 
@@ -9806,10 +9862,24 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double DoubleValue {
-      get { return oneValueCase_ == OneValueOneofCase.DoubleValue ? (double) oneValue_ : 0D; }
+      get { return HasDoubleValue ? (double) oneValue_ : 0D; }
       set {
         oneValue_ = value;
         oneValueCase_ = OneValueOneofCase.DoubleValue;
+      }
+    }
+    /// <summary>Gets whether the "double_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDoubleValue {
+      get { return oneValueCase_ == OneValueOneofCase.DoubleValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "double_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDoubleValue() {
+      if (HasDoubleValue) {
+        ClearOneValue();
       }
     }
 
@@ -9859,8 +9929,8 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (oneValueCase_ == OneValueOneofCase.Int64Value) hash ^= Int64Value.GetHashCode();
-      if (oneValueCase_ == OneValueOneofCase.DoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
+      if (HasInt64Value) hash ^= Int64Value.GetHashCode();
+      if (HasDoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
       hash ^= (int) oneValueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -9880,11 +9950,11 @@ namespace Google.Analytics.Data.V1Beta {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (oneValueCase_ == OneValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(8);
         output.WriteInt64(Int64Value);
       }
-      if (oneValueCase_ == OneValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(17);
         output.WriteDouble(DoubleValue);
       }
@@ -9898,11 +9968,11 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (oneValueCase_ == OneValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(8);
         output.WriteInt64(Int64Value);
       }
-      if (oneValueCase_ == OneValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(17);
         output.WriteDouble(DoubleValue);
       }
@@ -9916,10 +9986,10 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (oneValueCase_ == OneValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Int64Value);
       }
-      if (oneValueCase_ == OneValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -11695,6 +11765,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "compatibility" field.</summary>
     public const int CompatibilityFieldNumber = 2;
+    private readonly static global::Google.Analytics.Data.V1Beta.Compatibility CompatibilityDefaultValue = global::Google.Analytics.Data.V1Beta.Compatibility.Unspecified;
+
     private global::Google.Analytics.Data.V1Beta.Compatibility compatibility_;
     /// <summary>
     /// The compatibility of this dimension. If the compatibility is COMPATIBLE,
@@ -11703,7 +11775,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Data.V1Beta.Compatibility Compatibility {
-      get { if ((_hasBits0 & 1) != 0) { return compatibility_; } else { return global::Google.Analytics.Data.V1Beta.Compatibility.Unspecified; } }
+      get { if ((_hasBits0 & 1) != 0) { return compatibility_; } else { return CompatibilityDefaultValue; } }
       set {
         _hasBits0 |= 1;
         compatibility_ = value;
@@ -11957,6 +12029,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "compatibility" field.</summary>
     public const int CompatibilityFieldNumber = 2;
+    private readonly static global::Google.Analytics.Data.V1Beta.Compatibility CompatibilityDefaultValue = global::Google.Analytics.Data.V1Beta.Compatibility.Unspecified;
+
     private global::Google.Analytics.Data.V1Beta.Compatibility compatibility_;
     /// <summary>
     /// The compatibility of this metric. If the compatibility is COMPATIBLE,
@@ -11965,7 +12039,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Data.V1Beta.Compatibility Compatibility {
-      get { if ((_hasBits0 & 1) != 0) { return compatibility_; } else { return global::Google.Analytics.Data.V1Beta.Compatibility.Unspecified; } }
+      get { if ((_hasBits0 & 1) != 0) { return compatibility_; } else { return CompatibilityDefaultValue; } }
       set {
         _hasBits0 |= 1;
         compatibility_ = value;

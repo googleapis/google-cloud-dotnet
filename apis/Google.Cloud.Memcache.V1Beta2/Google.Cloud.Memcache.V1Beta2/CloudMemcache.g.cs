@@ -910,7 +910,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.AuthorizedNetwork.Length != 0) {
         AuthorizedNetwork = other.AuthorizedNetwork;
       }
@@ -6005,7 +6005,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      params_.Add(other.params_);
+      params_.MergeFrom(other.params_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6655,7 +6655,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       if (other == null) {
         return;
       }
-      availableZones_.Add(other.availableZones_);
+      availableZones_.MergeFrom(other.availableZones_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

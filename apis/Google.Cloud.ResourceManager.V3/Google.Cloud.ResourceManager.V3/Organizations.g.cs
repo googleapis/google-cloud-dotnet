@@ -197,10 +197,24 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DirectoryCustomerId {
-      get { return ownerCase_ == OwnerOneofCase.DirectoryCustomerId ? (string) owner_ : ""; }
+      get { return HasDirectoryCustomerId ? (string) owner_ : ""; }
       set {
         owner_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         ownerCase_ = OwnerOneofCase.DirectoryCustomerId;
+      }
+    }
+    /// <summary>Gets whether the "directory_customer_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDirectoryCustomerId {
+      get { return ownerCase_ == OwnerOneofCase.DirectoryCustomerId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "directory_customer_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDirectoryCustomerId() {
+      if (HasDirectoryCustomerId) {
+        ClearOwner();
       }
     }
 
@@ -334,7 +348,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (ownerCase_ == OwnerOneofCase.DirectoryCustomerId) hash ^= DirectoryCustomerId.GetHashCode();
+      if (HasDirectoryCustomerId) hash ^= DirectoryCustomerId.GetHashCode();
       if (State != global::Google.Cloud.ResourceManager.V3.Organization.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
@@ -367,7 +381,7 @@ namespace Google.Cloud.ResourceManager.V3 {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (ownerCase_ == OwnerOneofCase.DirectoryCustomerId) {
+      if (HasDirectoryCustomerId) {
         output.WriteRawTag(26);
         output.WriteString(DirectoryCustomerId);
       }
@@ -409,7 +423,7 @@ namespace Google.Cloud.ResourceManager.V3 {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (ownerCase_ == OwnerOneofCase.DirectoryCustomerId) {
+      if (HasDirectoryCustomerId) {
         output.WriteRawTag(26);
         output.WriteString(DirectoryCustomerId);
       }
@@ -449,7 +463,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (ownerCase_ == OwnerOneofCase.DirectoryCustomerId) {
+      if (HasDirectoryCustomerId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DirectoryCustomerId);
       }
       if (State != global::Google.Cloud.ResourceManager.V3.Organization.Types.State.Unspecified) {

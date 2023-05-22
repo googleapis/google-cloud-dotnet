@@ -1284,12 +1284,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         /// the user typed the correct password. Deprecated, prefer indicating
         /// CORRECT_PASSWORD through the reasons field instead.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("PASSWORD_CORRECT")] PasswordCorrect = 3,
         /// <summary>
         /// Provides information that the event was related to a login event in which
         /// the user typed the incorrect password. Deprecated, prefer indicating
         /// INCORRECT_PASSWORD through the reasons field instead.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("PASSWORD_INCORRECT")] PasswordIncorrect = 4,
       }
 
@@ -2893,6 +2895,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
 
     /// <summary>Field number for the "transaction_id" field.</summary>
     public const int TransactionIdFieldNumber = 11;
+    private readonly static string TransactionIdDefaultValue = "";
+
     private string transactionId_;
     /// <summary>
     /// Unique identifier for the transaction. This custom identifier can be used
@@ -2903,7 +2907,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TransactionId {
-      get { return transactionId_ ?? ""; }
+      get { return transactionId_ ?? TransactionIdDefaultValue; }
       set {
         transactionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -5370,6 +5374,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         /// production) or end users trying to use verification tokens from other
         /// sites.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("SITE_MISMATCH")] SiteMismatch = 5,
         /// <summary>
         /// The user verification token was not present.  It is a required input.

@@ -623,7 +623,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.ObfuscatedExternalUserId.Length != 0) {
         ObfuscatedExternalUserId = other.ObfuscatedExternalUserId;
       }
-      documentsMetadataFilters_.Add(other.documentsMetadataFilters_);
+      documentsMetadataFilters_.MergeFrom(other.documentsMetadataFilters_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3942,10 +3942,24 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString InputAudio {
-      get { return inputCase_ == InputOneofCase.InputAudio ? (pb::ByteString) input_ : pb::ByteString.Empty; }
+      get { return HasInputAudio ? (pb::ByteString) input_ : pb::ByteString.Empty; }
       set {
         input_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         inputCase_ = InputOneofCase.InputAudio;
+      }
+    }
+    /// <summary>Gets whether the "input_audio" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInputAudio {
+      get { return inputCase_ == InputOneofCase.InputAudio; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "input_audio" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInputAudio() {
+      if (HasInputAudio) {
+        ClearInput();
       }
     }
 
@@ -3960,10 +3974,24 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string InputText {
-      get { return inputCase_ == InputOneofCase.InputText ? (string) input_ : ""; }
+      get { return HasInputText ? (string) input_ : ""; }
       set {
         input_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         inputCase_ = InputOneofCase.InputText;
+      }
+    }
+    /// <summary>Gets whether the "input_text" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInputText {
+      get { return inputCase_ == InputOneofCase.InputText; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "input_text" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInputText() {
+      if (HasInputText) {
+        ClearInput();
       }
     }
 
@@ -4152,8 +4180,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (configCase_ == ConfigOneofCase.AudioConfig) hash ^= AudioConfig.GetHashCode();
       if (configCase_ == ConfigOneofCase.TextConfig) hash ^= TextConfig.GetHashCode();
       if (replyAudioConfig_ != null) hash ^= ReplyAudioConfig.GetHashCode();
-      if (inputCase_ == InputOneofCase.InputAudio) hash ^= InputAudio.GetHashCode();
-      if (inputCase_ == InputOneofCase.InputText) hash ^= InputText.GetHashCode();
+      if (HasInputAudio) hash ^= InputAudio.GetHashCode();
+      if (HasInputText) hash ^= InputText.GetHashCode();
       if (inputCase_ == InputOneofCase.InputDtmf) hash ^= InputDtmf.GetHashCode();
       if (queryParams_ != null) hash ^= QueryParams.GetHashCode();
       if (assistQueryParams_ != null) hash ^= AssistQueryParams.GetHashCode();
@@ -4196,11 +4224,11 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(34);
         output.WriteMessage(ReplyAudioConfig);
       }
-      if (inputCase_ == InputOneofCase.InputAudio) {
+      if (HasInputAudio) {
         output.WriteRawTag(42);
         output.WriteBytes(InputAudio);
       }
-      if (inputCase_ == InputOneofCase.InputText) {
+      if (HasInputText) {
         output.WriteRawTag(50);
         output.WriteString(InputText);
       }
@@ -4254,11 +4282,11 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(34);
         output.WriteMessage(ReplyAudioConfig);
       }
-      if (inputCase_ == InputOneofCase.InputAudio) {
+      if (HasInputAudio) {
         output.WriteRawTag(42);
         output.WriteBytes(InputAudio);
       }
-      if (inputCase_ == InputOneofCase.InputText) {
+      if (HasInputText) {
         output.WriteRawTag(50);
         output.WriteString(InputText);
       }
@@ -4308,10 +4336,10 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (replyAudioConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReplyAudioConfig);
       }
-      if (inputCase_ == InputOneofCase.InputAudio) {
+      if (HasInputAudio) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(InputAudio);
       }
-      if (inputCase_ == InputOneofCase.InputText) {
+      if (HasInputText) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(InputText);
       }
       if (inputCase_ == InputOneofCase.InputDtmf) {
@@ -7904,7 +7932,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.Confidence != 0F) {
         Confidence = other.Confidence;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.AnswerRecord.Length != 0) {
         AnswerRecord = other.AnswerRecord;
       }
@@ -8296,7 +8324,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.Source.Length != 0) {
         Source = other.Source;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.AnswerRecord.Length != 0) {
         AnswerRecord = other.AnswerRecord;
       }
@@ -9952,7 +9980,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other == null) {
         return;
       }
-      documentsMetadataFilters_.Add(other.documentsMetadataFilters_);
+      documentsMetadataFilters_.MergeFrom(other.documentsMetadataFilters_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

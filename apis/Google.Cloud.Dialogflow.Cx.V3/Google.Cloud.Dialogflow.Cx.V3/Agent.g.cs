@@ -2992,10 +2992,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AgentUri {
-      get { return agentCase_ == AgentOneofCase.AgentUri ? (string) agent_ : ""; }
+      get { return HasAgentUri ? (string) agent_ : ""; }
       set {
         agent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         agentCase_ = AgentOneofCase.AgentUri;
+      }
+    }
+    /// <summary>Gets whether the "agent_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgentUri {
+      get { return agentCase_ == AgentOneofCase.AgentUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "agent_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentUri() {
+      if (HasAgentUri) {
+        ClearAgent();
       }
     }
 
@@ -3007,10 +3021,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString AgentContent {
-      get { return agentCase_ == AgentOneofCase.AgentContent ? (pb::ByteString) agent_ : pb::ByteString.Empty; }
+      get { return HasAgentContent ? (pb::ByteString) agent_ : pb::ByteString.Empty; }
       set {
         agent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         agentCase_ = AgentOneofCase.AgentContent;
+      }
+    }
+    /// <summary>Gets whether the "agent_content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgentContent {
+      get { return agentCase_ == AgentOneofCase.AgentContent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "agent_content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentContent() {
+      if (HasAgentContent) {
+        ClearAgent();
       }
     }
 
@@ -3060,8 +3088,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (agentCase_ == AgentOneofCase.AgentUri) hash ^= AgentUri.GetHashCode();
-      if (agentCase_ == AgentOneofCase.AgentContent) hash ^= AgentContent.GetHashCode();
+      if (HasAgentUri) hash ^= AgentUri.GetHashCode();
+      if (HasAgentContent) hash ^= AgentContent.GetHashCode();
       hash ^= (int) agentCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3081,11 +3109,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         output.WriteRawTag(10);
         output.WriteString(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         output.WriteRawTag(18);
         output.WriteBytes(AgentContent);
       }
@@ -3099,11 +3127,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         output.WriteRawTag(10);
         output.WriteString(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         output.WriteRawTag(18);
         output.WriteBytes(AgentContent);
       }
@@ -3117,10 +3145,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(AgentContent);
       }
       if (_unknownFields != null) {
@@ -3287,10 +3315,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AgentUri {
-      get { return agentCase_ == AgentOneofCase.AgentUri ? (string) agent_ : ""; }
+      get { return HasAgentUri ? (string) agent_ : ""; }
       set {
         agent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         agentCase_ = AgentOneofCase.AgentUri;
+      }
+    }
+    /// <summary>Gets whether the "agent_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgentUri {
+      get { return agentCase_ == AgentOneofCase.AgentUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "agent_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentUri() {
+      if (HasAgentUri) {
+        ClearAgent();
       }
     }
 
@@ -3302,10 +3344,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString AgentContent {
-      get { return agentCase_ == AgentOneofCase.AgentContent ? (pb::ByteString) agent_ : pb::ByteString.Empty; }
+      get { return HasAgentContent ? (pb::ByteString) agent_ : pb::ByteString.Empty; }
       set {
         agent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         agentCase_ = AgentOneofCase.AgentContent;
+      }
+    }
+    /// <summary>Gets whether the "agent_content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgentContent {
+      get { return agentCase_ == AgentOneofCase.AgentContent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "agent_content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentContent() {
+      if (HasAgentContent) {
+        ClearAgent();
       }
     }
 
@@ -3373,8 +3429,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (agentCase_ == AgentOneofCase.AgentUri) hash ^= AgentUri.GetHashCode();
-      if (agentCase_ == AgentOneofCase.AgentContent) hash ^= AgentContent.GetHashCode();
+      if (HasAgentUri) hash ^= AgentUri.GetHashCode();
+      if (HasAgentContent) hash ^= AgentContent.GetHashCode();
       if (RestoreOption != global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.RestoreOption.Unspecified) hash ^= RestoreOption.GetHashCode();
       hash ^= (int) agentCase_;
       if (_unknownFields != null) {
@@ -3399,11 +3455,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         output.WriteRawTag(18);
         output.WriteString(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         output.WriteRawTag(26);
         output.WriteBytes(AgentContent);
       }
@@ -3425,11 +3481,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         output.WriteRawTag(18);
         output.WriteString(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         output.WriteRawTag(26);
         output.WriteBytes(AgentContent);
       }
@@ -3450,10 +3506,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (agentCase_ == AgentOneofCase.AgentUri) {
+      if (HasAgentUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AgentUri);
       }
-      if (agentCase_ == AgentOneofCase.AgentContent) {
+      if (HasAgentContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(AgentContent);
       }
       if (RestoreOption != global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.RestoreOption.Unspecified) {

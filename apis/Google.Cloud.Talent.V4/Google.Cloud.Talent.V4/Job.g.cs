@@ -1246,7 +1246,7 @@ namespace Google.Cloud.Talent.V4 {
         }
         CompensationInfo.MergeFrom(other.CompensationInfo);
       }
-      customAttributes_.Add(other.customAttributes_);
+      customAttributes_.MergeFrom(other.customAttributes_);
       degreeTypes_.Add(other.degreeTypes_);
       if (other.Department.Length != 0) {
         Department = other.Department;

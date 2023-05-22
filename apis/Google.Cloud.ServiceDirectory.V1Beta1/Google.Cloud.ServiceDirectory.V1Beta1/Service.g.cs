@@ -336,7 +336,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       endpoints_.Add(other.endpoints_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {

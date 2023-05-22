@@ -819,10 +819,24 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsUri {
-      get { return outputTypeCase_ == OutputTypeOneofCase.GcsUri ? (string) outputType_ : ""; }
+      get { return HasGcsUri ? (string) outputType_ : ""; }
       set {
         outputType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         outputTypeCase_ = OutputTypeOneofCase.GcsUri;
+      }
+    }
+    /// <summary>Gets whether the "gcs_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsUri {
+      get { return outputTypeCase_ == OutputTypeOneofCase.GcsUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsUri() {
+      if (HasGcsUri) {
+        ClearOutputType();
       }
     }
 
@@ -870,7 +884,7 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (outputTypeCase_ == OutputTypeOneofCase.GcsUri) hash ^= GcsUri.GetHashCode();
+      if (HasGcsUri) hash ^= GcsUri.GetHashCode();
       hash ^= (int) outputTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -890,7 +904,7 @@ namespace Google.Cloud.Speech.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (outputTypeCase_ == OutputTypeOneofCase.GcsUri) {
+      if (HasGcsUri) {
         output.WriteRawTag(10);
         output.WriteString(GcsUri);
       }
@@ -904,7 +918,7 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (outputTypeCase_ == OutputTypeOneofCase.GcsUri) {
+      if (HasGcsUri) {
         output.WriteRawTag(10);
         output.WriteString(GcsUri);
       }
@@ -918,7 +932,7 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (outputTypeCase_ == OutputTypeOneofCase.GcsUri) {
+      if (HasGcsUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsUri);
       }
       if (_unknownFields != null) {
@@ -1075,10 +1089,24 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString AudioContent {
-      get { return streamingRequestCase_ == StreamingRequestOneofCase.AudioContent ? (pb::ByteString) streamingRequest_ : pb::ByteString.Empty; }
+      get { return HasAudioContent ? (pb::ByteString) streamingRequest_ : pb::ByteString.Empty; }
       set {
         streamingRequest_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         streamingRequestCase_ = StreamingRequestOneofCase.AudioContent;
+      }
+    }
+    /// <summary>Gets whether the "audio_content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAudioContent {
+      get { return streamingRequestCase_ == StreamingRequestOneofCase.AudioContent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "audio_content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAudioContent() {
+      if (HasAudioContent) {
+        ClearStreamingRequest();
       }
     }
 
@@ -1129,7 +1157,7 @@ namespace Google.Cloud.Speech.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) hash ^= StreamingConfig.GetHashCode();
-      if (streamingRequestCase_ == StreamingRequestOneofCase.AudioContent) hash ^= AudioContent.GetHashCode();
+      if (HasAudioContent) hash ^= AudioContent.GetHashCode();
       hash ^= (int) streamingRequestCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1153,7 +1181,7 @@ namespace Google.Cloud.Speech.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(StreamingConfig);
       }
-      if (streamingRequestCase_ == StreamingRequestOneofCase.AudioContent) {
+      if (HasAudioContent) {
         output.WriteRawTag(18);
         output.WriteBytes(AudioContent);
       }
@@ -1171,7 +1199,7 @@ namespace Google.Cloud.Speech.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(StreamingConfig);
       }
-      if (streamingRequestCase_ == StreamingRequestOneofCase.AudioContent) {
+      if (HasAudioContent) {
         output.WriteRawTag(18);
         output.WriteBytes(AudioContent);
       }
@@ -1188,7 +1216,7 @@ namespace Google.Cloud.Speech.V1 {
       if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StreamingConfig);
       }
-      if (streamingRequestCase_ == StreamingRequestOneofCase.AudioContent) {
+      if (HasAudioContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(AudioContent);
       }
       if (_unknownFields != null) {
@@ -4360,10 +4388,24 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Content {
-      get { return audioSourceCase_ == AudioSourceOneofCase.Content ? (pb::ByteString) audioSource_ : pb::ByteString.Empty; }
+      get { return HasContent ? (pb::ByteString) audioSource_ : pb::ByteString.Empty; }
       set {
         audioSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         audioSourceCase_ = AudioSourceOneofCase.Content;
+      }
+    }
+    /// <summary>Gets whether the "content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContent {
+      get { return audioSourceCase_ == AudioSourceOneofCase.Content; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContent() {
+      if (HasContent) {
+        ClearAudioSource();
       }
     }
 
@@ -4382,10 +4424,24 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uri {
-      get { return audioSourceCase_ == AudioSourceOneofCase.Uri ? (string) audioSource_ : ""; }
+      get { return HasUri ? (string) audioSource_ : ""; }
       set {
         audioSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         audioSourceCase_ = AudioSourceOneofCase.Uri;
+      }
+    }
+    /// <summary>Gets whether the "uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUri {
+      get { return audioSourceCase_ == AudioSourceOneofCase.Uri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUri() {
+      if (HasUri) {
+        ClearAudioSource();
       }
     }
 
@@ -4435,8 +4491,8 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (audioSourceCase_ == AudioSourceOneofCase.Content) hash ^= Content.GetHashCode();
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) hash ^= Uri.GetHashCode();
+      if (HasContent) hash ^= Content.GetHashCode();
+      if (HasUri) hash ^= Uri.GetHashCode();
       hash ^= (int) audioSourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4456,11 +4512,11 @@ namespace Google.Cloud.Speech.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (audioSourceCase_ == AudioSourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(10);
         output.WriteBytes(Content);
       }
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(18);
         output.WriteString(Uri);
       }
@@ -4474,11 +4530,11 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (audioSourceCase_ == AudioSourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(10);
         output.WriteBytes(Content);
       }
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(18);
         output.WriteString(Uri);
       }
@@ -4492,10 +4548,10 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (audioSourceCase_ == AudioSourceOneofCase.Content) {
+      if (HasContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Content);
       }
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) {
+      if (HasUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
       if (_unknownFields != null) {

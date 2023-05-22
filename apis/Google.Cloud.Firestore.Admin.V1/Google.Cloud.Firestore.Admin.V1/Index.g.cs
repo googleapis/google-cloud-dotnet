@@ -595,10 +595,24 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order Order {
-          get { return valueModeCase_ == ValueModeOneofCase.Order ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order) valueMode_ : global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order.Unspecified; }
+          get { return HasOrder ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order) valueMode_ : global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order.Unspecified; }
           set {
             valueMode_ = value;
             valueModeCase_ = ValueModeOneofCase.Order;
+          }
+        }
+        /// <summary>Gets whether the "order" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasOrder {
+          get { return valueModeCase_ == ValueModeOneofCase.Order; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "order" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearOrder() {
+          if (HasOrder) {
+            ClearValueMode();
           }
         }
 
@@ -610,10 +624,24 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig ArrayConfig {
-          get { return valueModeCase_ == ValueModeOneofCase.ArrayConfig ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) valueMode_ : global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig.Unspecified; }
+          get { return HasArrayConfig ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) valueMode_ : global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig.Unspecified; }
           set {
             valueMode_ = value;
             valueModeCase_ = ValueModeOneofCase.ArrayConfig;
+          }
+        }
+        /// <summary>Gets whether the "array_config" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasArrayConfig {
+          get { return valueModeCase_ == ValueModeOneofCase.ArrayConfig; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "array_config" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearArrayConfig() {
+          if (HasArrayConfig) {
+            ClearValueMode();
           }
         }
 
@@ -665,8 +693,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (FieldPath.Length != 0) hash ^= FieldPath.GetHashCode();
-          if (valueModeCase_ == ValueModeOneofCase.Order) hash ^= Order.GetHashCode();
-          if (valueModeCase_ == ValueModeOneofCase.ArrayConfig) hash ^= ArrayConfig.GetHashCode();
+          if (HasOrder) hash ^= Order.GetHashCode();
+          if (HasArrayConfig) hash ^= ArrayConfig.GetHashCode();
           hash ^= (int) valueModeCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -690,11 +718,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             output.WriteRawTag(10);
             output.WriteString(FieldPath);
           }
-          if (valueModeCase_ == ValueModeOneofCase.Order) {
+          if (HasOrder) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Order);
           }
-          if (valueModeCase_ == ValueModeOneofCase.ArrayConfig) {
+          if (HasArrayConfig) {
             output.WriteRawTag(24);
             output.WriteEnum((int) ArrayConfig);
           }
@@ -712,11 +740,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             output.WriteRawTag(10);
             output.WriteString(FieldPath);
           }
-          if (valueModeCase_ == ValueModeOneofCase.Order) {
+          if (HasOrder) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Order);
           }
-          if (valueModeCase_ == ValueModeOneofCase.ArrayConfig) {
+          if (HasArrayConfig) {
             output.WriteRawTag(24);
             output.WriteEnum((int) ArrayConfig);
           }
@@ -733,10 +761,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           if (FieldPath.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(FieldPath);
           }
-          if (valueModeCase_ == ValueModeOneofCase.Order) {
+          if (HasOrder) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Order);
           }
-          if (valueModeCase_ == ValueModeOneofCase.ArrayConfig) {
+          if (HasArrayConfig) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ArrayConfig);
           }
           if (_unknownFields != null) {

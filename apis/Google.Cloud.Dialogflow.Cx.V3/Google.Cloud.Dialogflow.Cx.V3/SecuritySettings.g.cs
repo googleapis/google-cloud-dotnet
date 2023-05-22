@@ -1745,10 +1745,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int RetentionWindowDays {
-      get { return dataRetentionCase_ == DataRetentionOneofCase.RetentionWindowDays ? (int) dataRetention_ : 0; }
+      get { return HasRetentionWindowDays ? (int) dataRetention_ : 0; }
       set {
         dataRetention_ = value;
         dataRetentionCase_ = DataRetentionOneofCase.RetentionWindowDays;
+      }
+    }
+    /// <summary>Gets whether the "retention_window_days" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRetentionWindowDays {
+      get { return dataRetentionCase_ == DataRetentionOneofCase.RetentionWindowDays; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "retention_window_days" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRetentionWindowDays() {
+      if (HasRetentionWindowDays) {
+        ClearDataRetention();
       }
     }
 
@@ -1877,7 +1891,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (RedactionScope != global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Types.RedactionScope.Unspecified) hash ^= RedactionScope.GetHashCode();
       if (InspectTemplate.Length != 0) hash ^= InspectTemplate.GetHashCode();
       if (DeidentifyTemplate.Length != 0) hash ^= DeidentifyTemplate.GetHashCode();
-      if (dataRetentionCase_ == DataRetentionOneofCase.RetentionWindowDays) hash ^= RetentionWindowDays.GetHashCode();
+      if (HasRetentionWindowDays) hash ^= RetentionWindowDays.GetHashCode();
       hash ^= purgeDataTypes_.GetHashCode();
       if (audioExportSettings_ != null) hash ^= AudioExportSettings.GetHashCode();
       if (insightsExportSettings_ != null) hash ^= InsightsExportSettings.GetHashCode();
@@ -1916,7 +1930,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(32);
         output.WriteEnum((int) RedactionScope);
       }
-      if (dataRetentionCase_ == DataRetentionOneofCase.RetentionWindowDays) {
+      if (HasRetentionWindowDays) {
         output.WriteRawTag(48);
         output.WriteInt32(RetentionWindowDays);
       }
@@ -1963,7 +1977,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(32);
         output.WriteEnum((int) RedactionScope);
       }
-      if (dataRetentionCase_ == DataRetentionOneofCase.RetentionWindowDays) {
+      if (HasRetentionWindowDays) {
         output.WriteRawTag(48);
         output.WriteInt32(RetentionWindowDays);
       }
@@ -2012,7 +2026,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (DeidentifyTemplate.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(DeidentifyTemplate);
       }
-      if (dataRetentionCase_ == DataRetentionOneofCase.RetentionWindowDays) {
+      if (HasRetentionWindowDays) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RetentionWindowDays);
       }
       size += purgeDataTypes_.CalculateSize(_repeated_purgeDataTypes_codec);

@@ -3989,10 +3989,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OrderByDataItem {
-      get { return orderCase_ == OrderOneofCase.OrderByDataItem ? (string) order_ : ""; }
+      get { return HasOrderByDataItem ? (string) order_ : ""; }
       set {
         order_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         orderCase_ = OrderOneofCase.OrderByDataItem;
+      }
+    }
+    /// <summary>Gets whether the "order_by_data_item" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOrderByDataItem {
+      get { return orderCase_ == OrderOneofCase.OrderByDataItem; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "order_by_data_item" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOrderByDataItem() {
+      if (HasOrderByDataItem) {
+        ClearOrder();
       }
     }
 
@@ -4271,7 +4285,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (orderCase_ == OrderOneofCase.OrderByDataItem) hash ^= OrderByDataItem.GetHashCode();
+      if (HasOrderByDataItem) hash ^= OrderByDataItem.GetHashCode();
       if (orderCase_ == OrderOneofCase.OrderByAnnotation) hash ^= OrderByAnnotation.GetHashCode();
       if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
       if (SavedQuery.Length != 0) hash ^= SavedQuery.GetHashCode();
@@ -4344,7 +4358,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteString(PageToken);
       }
       annotationFilters_.WriteTo(output, _repeated_annotationFilters_codec);
-      if (orderCase_ == OrderOneofCase.OrderByDataItem) {
+      if (HasOrderByDataItem) {
         output.WriteRawTag(98);
         output.WriteString(OrderByDataItem);
       }
@@ -4403,7 +4417,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteString(PageToken);
       }
       annotationFilters_.WriteTo(ref output, _repeated_annotationFilters_codec);
-      if (orderCase_ == OrderOneofCase.OrderByDataItem) {
+      if (HasOrderByDataItem) {
         output.WriteRawTag(98);
         output.WriteString(OrderByDataItem);
       }
@@ -4421,7 +4435,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (orderCase_ == OrderOneofCase.OrderByDataItem) {
+      if (HasOrderByDataItem) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderByDataItem);
       }
       if (orderCase_ == OrderOneofCase.OrderByAnnotation) {

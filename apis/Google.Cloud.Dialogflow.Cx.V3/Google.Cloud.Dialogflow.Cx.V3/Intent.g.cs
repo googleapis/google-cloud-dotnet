@@ -510,7 +510,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (other.IsFallback != false) {
         IsFallback = other.IsFallback;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }

@@ -2174,8 +2174,8 @@ namespace Google.Cloud.DataFusion.V1 {
         }
         NetworkConfig.MergeFrom(other.NetworkConfig);
       }
-      labels_.Add(other.labels_);
-      options_.Add(other.options_);
+      labels_.MergeFrom(other.labels_);
+      options_.MergeFrom(other.options_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -5293,7 +5293,7 @@ namespace Google.Cloud.DataFusion.V1 {
       if (other.ApiVersion.Length != 0) {
         ApiVersion = other.ApiVersion;
       }
-      additionalStatus_.Add(other.additionalStatus_);
+      additionalStatus_.MergeFrom(other.additionalStatus_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

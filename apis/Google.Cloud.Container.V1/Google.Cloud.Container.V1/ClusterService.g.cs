@@ -1459,7 +1459,7 @@ namespace Google.Cloud.Container.V1 {
       if (other == null) {
         return;
       }
-      sysctls_.Add(other.sysctls_);
+      sysctls_.MergeFrom(other.sysctls_);
       if (other.CgroupMode != global::Google.Cloud.Container.V1.LinuxNodeConfig.Types.CgroupMode.Unspecified) {
         CgroupMode = other.CgroupMode;
       }
@@ -3248,11 +3248,11 @@ namespace Google.Cloud.Container.V1 {
       if (other.ServiceAccount.Length != 0) {
         ServiceAccount = other.ServiceAccount;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.ImageType.Length != 0) {
         ImageType = other.ImageType;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.LocalSsdCount != 0) {
         LocalSsdCount = other.LocalSsdCount;
       }
@@ -3343,7 +3343,7 @@ namespace Google.Cloud.Container.V1 {
         }
         FastSocket.MergeFrom(other.FastSocket);
       }
-      resourceLabels_.Add(other.resourceLabels_);
+      resourceLabels_.MergeFrom(other.resourceLabels_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
           LoggingConfig = new global::Google.Cloud.Container.V1.NodePoolLoggingConfig();
@@ -3810,6 +3810,8 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "threads_per_core" field.</summary>
     public const int ThreadsPerCoreFieldNumber = 1;
+    private readonly static long ThreadsPerCoreDefaultValue = 0L;
+
     private long threadsPerCore_;
     /// <summary>
     /// The number of threads per physical core. To disable simultaneous
@@ -3819,7 +3821,7 @@ namespace Google.Cloud.Container.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ThreadsPerCore {
-      get { if ((_hasBits0 & 1) != 0) { return threadsPerCore_; } else { return 0L; } }
+      get { if ((_hasBits0 & 1) != 0) { return threadsPerCore_; } else { return ThreadsPerCoreDefaultValue; } }
       set {
         _hasBits0 |= 1;
         threadsPerCore_ = value;
@@ -4104,6 +4106,8 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "enable_private_nodes" field.</summary>
     public const int EnablePrivateNodesFieldNumber = 9;
+    private readonly static bool EnablePrivateNodesDefaultValue = false;
+
     private bool enablePrivateNodes_;
     /// <summary>
     /// Whether nodes have internal IP addresses only.
@@ -4113,7 +4117,7 @@ namespace Google.Cloud.Container.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnablePrivateNodes {
-      get { if ((_hasBits0 & 1) != 0) { return enablePrivateNodes_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return enablePrivateNodes_; } else { return EnablePrivateNodesDefaultValue; } }
       set {
         _hasBits0 |= 1;
         enablePrivateNodes_ = value;
@@ -4498,6 +4502,8 @@ namespace Google.Cloud.Container.V1 {
 
         /// <summary>Field number for the "total_egress_bandwidth_tier" field.</summary>
         public const int TotalEgressBandwidthTierFieldNumber = 1;
+        private readonly static global::Google.Cloud.Container.V1.NodeNetworkConfig.Types.NetworkPerformanceConfig.Types.Tier TotalEgressBandwidthTierDefaultValue = global::Google.Cloud.Container.V1.NodeNetworkConfig.Types.NetworkPerformanceConfig.Types.Tier.Unspecified;
+
         private global::Google.Cloud.Container.V1.NodeNetworkConfig.Types.NetworkPerformanceConfig.Types.Tier totalEgressBandwidthTier_;
         /// <summary>
         /// Specifies the total network bandwidth tier for the NodePool.
@@ -4505,7 +4511,7 @@ namespace Google.Cloud.Container.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Container.V1.NodeNetworkConfig.Types.NetworkPerformanceConfig.Types.Tier TotalEgressBandwidthTier {
-          get { if ((_hasBits0 & 1) != 0) { return totalEgressBandwidthTier_; } else { return global::Google.Cloud.Container.V1.NodeNetworkConfig.Types.NetworkPerformanceConfig.Types.Tier.Unspecified; } }
+          get { if ((_hasBits0 & 1) != 0) { return totalEgressBandwidthTier_; } else { return TotalEgressBandwidthTierDefaultValue; } }
           set {
             _hasBits0 |= 1;
             totalEgressBandwidthTier_ = value;
@@ -6275,7 +6281,7 @@ namespace Google.Cloud.Container.V1 {
       if (other == null) {
         return;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6460,7 +6466,7 @@ namespace Google.Cloud.Container.V1 {
       if (other == null) {
         return;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -11005,6 +11011,8 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "gcp_public_cidrs_access_enabled" field.</summary>
     public const int GcpPublicCidrsAccessEnabledFieldNumber = 3;
+    private readonly static bool GcpPublicCidrsAccessEnabledDefaultValue = false;
+
     private bool gcpPublicCidrsAccessEnabled_;
     /// <summary>
     /// Whether master is accessbile via Google Compute Engine Public IP addresses.
@@ -11012,7 +11020,7 @@ namespace Google.Cloud.Container.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool GcpPublicCidrsAccessEnabled {
-      get { if ((_hasBits0 & 1) != 0) { return gcpPublicCidrsAccessEnabled_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return gcpPublicCidrsAccessEnabled_; } else { return GcpPublicCidrsAccessEnabledDefaultValue; } }
       set {
         _hasBits0 |= 1;
         gcpPublicCidrsAccessEnabled_ = value;
@@ -15508,7 +15516,7 @@ namespace Google.Cloud.Container.V1 {
       if (other.EnableKubernetesAlpha != false) {
         EnableKubernetesAlpha = other.EnableKubernetesAlpha;
       }
-      resourceLabels_.Add(other.resourceLabels_);
+      resourceLabels_.MergeFrom(other.resourceLabels_);
       if (other.LabelFingerprint.Length != 0) {
         LabelFingerprint = other.LabelFingerprint;
       }
@@ -17803,6 +17811,8 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "desired_enable_private_endpoint" field.</summary>
     public const int DesiredEnablePrivateEndpointFieldNumber = 71;
+    private readonly static bool DesiredEnablePrivateEndpointDefaultValue = false;
+
     private bool desiredEnablePrivateEndpoint_;
     /// <summary>
     /// Enable/Disable private endpoint for the cluster's master.
@@ -17810,7 +17820,7 @@ namespace Google.Cloud.Container.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DesiredEnablePrivateEndpoint {
-      get { if ((_hasBits0 & 1) != 0) { return desiredEnablePrivateEndpoint_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return desiredEnablePrivateEndpoint_; } else { return DesiredEnablePrivateEndpointDefaultValue; } }
       set {
         _hasBits0 |= 1;
         desiredEnablePrivateEndpoint_ = value;
@@ -20507,16 +20517,19 @@ namespace Google.Cloud.Container.V1 {
         /// Unused. Automatic node upgrade uses
         /// [UPGRADE_NODES][google.container.v1.Operation.Type.UPGRADE_NODES].
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("AUTO_UPGRADE_NODES")] AutoUpgradeNodes = 11,
         /// <summary>
         /// Unused. Updating labels uses
         /// [UPDATE_CLUSTER][google.container.v1.Operation.Type.UPDATE_CLUSTER].
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("SET_LABELS")] SetLabels = 12,
         /// <summary>
         /// Unused. Updating master auth uses
         /// [UPDATE_CLUSTER][google.container.v1.Operation.Type.UPDATE_CLUSTER].
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("SET_MASTER_AUTH")] SetMasterAuth = 13,
         /// <summary>
         /// The node pool is being resized. With the exception of resizing to or from
@@ -20527,11 +20540,13 @@ namespace Google.Cloud.Container.V1 {
         /// Unused. Updating network policy uses
         /// [UPDATE_CLUSTER][google.container.v1.Operation.Type.UPDATE_CLUSTER].
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("SET_NETWORK_POLICY")] SetNetworkPolicy = 15,
         /// <summary>
         /// Unused. Updating maintenance policy uses
         /// [UPDATE_CLUSTER][google.container.v1.Operation.Type.UPDATE_CLUSTER].
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("SET_MAINTENANCE_POLICY")] SetMaintenancePolicy = 16,
         /// <summary>
         /// The control plane is being resized. This operation type is initiated by
@@ -20934,10 +20949,24 @@ namespace Google.Cloud.Container.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long IntValue {
-          get { return valueCase_ == ValueOneofCase.IntValue ? (long) value_ : 0L; }
+          get { return HasIntValue ? (long) value_ : 0L; }
           set {
             value_ = value;
             valueCase_ = ValueOneofCase.IntValue;
+          }
+        }
+        /// <summary>Gets whether the "int_value" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasIntValue {
+          get { return valueCase_ == ValueOneofCase.IntValue; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "int_value" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearIntValue() {
+          if (HasIntValue) {
+            ClearValue();
           }
         }
 
@@ -20949,10 +20978,24 @@ namespace Google.Cloud.Container.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double DoubleValue {
-          get { return valueCase_ == ValueOneofCase.DoubleValue ? (double) value_ : 0D; }
+          get { return HasDoubleValue ? (double) value_ : 0D; }
           set {
             value_ = value;
             valueCase_ = ValueOneofCase.DoubleValue;
+          }
+        }
+        /// <summary>Gets whether the "double_value" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDoubleValue {
+          get { return valueCase_ == ValueOneofCase.DoubleValue; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "double_value" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDoubleValue() {
+          if (HasDoubleValue) {
+            ClearValue();
           }
         }
 
@@ -20964,10 +21007,24 @@ namespace Google.Cloud.Container.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string StringValue {
-          get { return valueCase_ == ValueOneofCase.StringValue ? (string) value_ : ""; }
+          get { return HasStringValue ? (string) value_ : ""; }
           set {
             value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             valueCase_ = ValueOneofCase.StringValue;
+          }
+        }
+        /// <summary>Gets whether the "string_value" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasStringValue {
+          get { return valueCase_ == ValueOneofCase.StringValue; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "string_value" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearStringValue() {
+          if (HasStringValue) {
+            ClearValue();
           }
         }
 
@@ -21021,9 +21078,9 @@ namespace Google.Cloud.Container.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (Name.Length != 0) hash ^= Name.GetHashCode();
-          if (valueCase_ == ValueOneofCase.IntValue) hash ^= IntValue.GetHashCode();
-          if (valueCase_ == ValueOneofCase.DoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
-          if (valueCase_ == ValueOneofCase.StringValue) hash ^= StringValue.GetHashCode();
+          if (HasIntValue) hash ^= IntValue.GetHashCode();
+          if (HasDoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
+          if (HasStringValue) hash ^= StringValue.GetHashCode();
           hash ^= (int) valueCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -21047,15 +21104,15 @@ namespace Google.Cloud.Container.V1 {
             output.WriteRawTag(10);
             output.WriteString(Name);
           }
-          if (valueCase_ == ValueOneofCase.IntValue) {
+          if (HasIntValue) {
             output.WriteRawTag(16);
             output.WriteInt64(IntValue);
           }
-          if (valueCase_ == ValueOneofCase.DoubleValue) {
+          if (HasDoubleValue) {
             output.WriteRawTag(25);
             output.WriteDouble(DoubleValue);
           }
-          if (valueCase_ == ValueOneofCase.StringValue) {
+          if (HasStringValue) {
             output.WriteRawTag(34);
             output.WriteString(StringValue);
           }
@@ -21073,15 +21130,15 @@ namespace Google.Cloud.Container.V1 {
             output.WriteRawTag(10);
             output.WriteString(Name);
           }
-          if (valueCase_ == ValueOneofCase.IntValue) {
+          if (HasIntValue) {
             output.WriteRawTag(16);
             output.WriteInt64(IntValue);
           }
-          if (valueCase_ == ValueOneofCase.DoubleValue) {
+          if (HasDoubleValue) {
             output.WriteRawTag(25);
             output.WriteDouble(DoubleValue);
           }
-          if (valueCase_ == ValueOneofCase.StringValue) {
+          if (HasStringValue) {
             output.WriteRawTag(34);
             output.WriteString(StringValue);
           }
@@ -21098,13 +21155,13 @@ namespace Google.Cloud.Container.V1 {
           if (Name.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
           }
-          if (valueCase_ == ValueOneofCase.IntValue) {
+          if (HasIntValue) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(IntValue);
           }
-          if (valueCase_ == ValueOneofCase.DoubleValue) {
+          if (HasDoubleValue) {
             size += 1 + 8;
           }
-          if (valueCase_ == ValueOneofCase.StringValue) {
+          if (HasStringValue) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(StringValue);
           }
           if (_unknownFields != null) {
@@ -30911,10 +30968,24 @@ namespace Google.Cloud.Container.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float BatchPercentage {
-          get { return updateBatchSizeCase_ == UpdateBatchSizeOneofCase.BatchPercentage ? (float) updateBatchSize_ : 0F; }
+          get { return HasBatchPercentage ? (float) updateBatchSize_ : 0F; }
           set {
             updateBatchSize_ = value;
             updateBatchSizeCase_ = UpdateBatchSizeOneofCase.BatchPercentage;
+          }
+        }
+        /// <summary>Gets whether the "batch_percentage" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasBatchPercentage {
+          get { return updateBatchSizeCase_ == UpdateBatchSizeOneofCase.BatchPercentage; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "batch_percentage" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearBatchPercentage() {
+          if (HasBatchPercentage) {
+            ClearUpdateBatchSize();
           }
         }
 
@@ -30926,10 +30997,24 @@ namespace Google.Cloud.Container.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int BatchNodeCount {
-          get { return updateBatchSizeCase_ == UpdateBatchSizeOneofCase.BatchNodeCount ? (int) updateBatchSize_ : 0; }
+          get { return HasBatchNodeCount ? (int) updateBatchSize_ : 0; }
           set {
             updateBatchSize_ = value;
             updateBatchSizeCase_ = UpdateBatchSizeOneofCase.BatchNodeCount;
+          }
+        }
+        /// <summary>Gets whether the "batch_node_count" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasBatchNodeCount {
+          get { return updateBatchSizeCase_ == UpdateBatchSizeOneofCase.BatchNodeCount; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "batch_node_count" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearBatchNodeCount() {
+          if (HasBatchNodeCount) {
+            ClearUpdateBatchSize();
           }
         }
 
@@ -30995,8 +31080,8 @@ namespace Google.Cloud.Container.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (updateBatchSizeCase_ == UpdateBatchSizeOneofCase.BatchPercentage) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(BatchPercentage);
-          if (updateBatchSizeCase_ == UpdateBatchSizeOneofCase.BatchNodeCount) hash ^= BatchNodeCount.GetHashCode();
+          if (HasBatchPercentage) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(BatchPercentage);
+          if (HasBatchNodeCount) hash ^= BatchNodeCount.GetHashCode();
           if (batchSoakDuration_ != null) hash ^= BatchSoakDuration.GetHashCode();
           hash ^= (int) updateBatchSizeCase_;
           if (_unknownFields != null) {
@@ -31017,11 +31102,11 @@ namespace Google.Cloud.Container.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (updateBatchSizeCase_ == UpdateBatchSizeOneofCase.BatchPercentage) {
+          if (HasBatchPercentage) {
             output.WriteRawTag(13);
             output.WriteFloat(BatchPercentage);
           }
-          if (updateBatchSizeCase_ == UpdateBatchSizeOneofCase.BatchNodeCount) {
+          if (HasBatchNodeCount) {
             output.WriteRawTag(16);
             output.WriteInt32(BatchNodeCount);
           }
@@ -31039,11 +31124,11 @@ namespace Google.Cloud.Container.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (updateBatchSizeCase_ == UpdateBatchSizeOneofCase.BatchPercentage) {
+          if (HasBatchPercentage) {
             output.WriteRawTag(13);
             output.WriteFloat(BatchPercentage);
           }
-          if (updateBatchSizeCase_ == UpdateBatchSizeOneofCase.BatchNodeCount) {
+          if (HasBatchNodeCount) {
             output.WriteRawTag(16);
             output.WriteInt32(BatchNodeCount);
           }
@@ -31061,10 +31146,10 @@ namespace Google.Cloud.Container.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (updateBatchSizeCase_ == UpdateBatchSizeOneofCase.BatchPercentage) {
+          if (HasBatchPercentage) {
             size += 1 + 4;
           }
-          if (updateBatchSizeCase_ == UpdateBatchSizeOneofCase.BatchNodeCount) {
+          if (HasBatchNodeCount) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(BatchNodeCount);
           }
           if (batchSoakDuration_ != null) {
@@ -32331,6 +32416,8 @@ namespace Google.Cloud.Container.V1 {
 
         /// <summary>Field number for the "strategy" field.</summary>
         public const int StrategyFieldNumber = 3;
+        private readonly static global::Google.Cloud.Container.V1.NodePoolUpdateStrategy StrategyDefaultValue = global::Google.Cloud.Container.V1.NodePoolUpdateStrategy.Unspecified;
+
         private global::Google.Cloud.Container.V1.NodePoolUpdateStrategy strategy_;
         /// <summary>
         /// Update strategy of the node pool.
@@ -32338,7 +32425,7 @@ namespace Google.Cloud.Container.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Container.V1.NodePoolUpdateStrategy Strategy {
-          get { if ((_hasBits0 & 1) != 0) { return strategy_; } else { return global::Google.Cloud.Container.V1.NodePoolUpdateStrategy.Unspecified; } }
+          get { if ((_hasBits0 & 1) != 0) { return strategy_; } else { return StrategyDefaultValue; } }
           set {
             _hasBits0 |= 1;
             strategy_ = value;
@@ -34413,7 +34500,7 @@ namespace Google.Cloud.Container.V1 {
       if (other == null) {
         return;
       }
-      maintenanceExclusions_.Add(other.maintenanceExclusions_);
+      maintenanceExclusions_.MergeFrom(other.maintenanceExclusions_);
       switch (other.PolicyCase) {
         case PolicyOneofCase.DailyMaintenanceWindow:
           if (DailyMaintenanceWindow == null) {
@@ -39237,7 +39324,7 @@ namespace Google.Cloud.Container.V1 {
       if (other.ClusterId.Length != 0) {
         ClusterId = other.ClusterId;
       }
-      resourceLabels_.Add(other.resourceLabels_);
+      resourceLabels_.MergeFrom(other.resourceLabels_);
       if (other.LabelFingerprint.Length != 0) {
         LabelFingerprint = other.LabelFingerprint;
       }
@@ -40781,6 +40868,8 @@ namespace Google.Cloud.Container.V1 {
 
     /// <summary>Field number for the "gpu_sharing_strategy" field.</summary>
     public const int GpuSharingStrategyFieldNumber = 2;
+    private readonly static global::Google.Cloud.Container.V1.GPUSharingConfig.Types.GPUSharingStrategy GpuSharingStrategyDefaultValue = global::Google.Cloud.Container.V1.GPUSharingConfig.Types.GPUSharingStrategy.Unspecified;
+
     private global::Google.Cloud.Container.V1.GPUSharingConfig.Types.GPUSharingStrategy gpuSharingStrategy_;
     /// <summary>
     /// The type of GPU sharing strategy to enable on the GPU node.
@@ -40788,7 +40877,7 @@ namespace Google.Cloud.Container.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Container.V1.GPUSharingConfig.Types.GPUSharingStrategy GpuSharingStrategy {
-      get { if ((_hasBits0 & 1) != 0) { return gpuSharingStrategy_; } else { return global::Google.Cloud.Container.V1.GPUSharingConfig.Types.GPUSharingStrategy.Unspecified; } }
+      get { if ((_hasBits0 & 1) != 0) { return gpuSharingStrategy_; } else { return GpuSharingStrategyDefaultValue; } }
       set {
         _hasBits0 |= 1;
         gpuSharingStrategy_ = value;

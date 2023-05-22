@@ -1252,7 +1252,7 @@ namespace Google.Cloud.Retail.V2 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      catalogAttributes_.Add(other.catalogAttributes_);
+      catalogAttributes_.MergeFrom(other.catalogAttributes_);
       if (other.AttributeConfigLevel != global::Google.Cloud.Retail.V2.AttributeConfigLevel.Unspecified) {
         AttributeConfigLevel = other.AttributeConfigLevel;
       }

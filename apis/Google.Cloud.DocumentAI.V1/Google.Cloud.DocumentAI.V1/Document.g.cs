@@ -338,10 +338,24 @@ namespace Google.Cloud.DocumentAI.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uri {
-      get { return sourceCase_ == SourceOneofCase.Uri ? (string) source_ : ""; }
+      get { return HasUri ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Uri;
+      }
+    }
+    /// <summary>Gets whether the "uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUri {
+      get { return sourceCase_ == SourceOneofCase.Uri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUri() {
+      if (HasUri) {
+        ClearSource();
       }
     }
 
@@ -355,10 +369,24 @@ namespace Google.Cloud.DocumentAI.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Content {
-      get { return sourceCase_ == SourceOneofCase.Content ? (pb::ByteString) source_ : pb::ByteString.Empty; }
+      get { return HasContent ? (pb::ByteString) source_ : pb::ByteString.Empty; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Content;
+      }
+    }
+    /// <summary>Gets whether the "content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContent {
+      get { return sourceCase_ == SourceOneofCase.Content; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContent() {
+      if (HasContent) {
+        ClearSource();
       }
     }
 
@@ -572,8 +600,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (sourceCase_ == SourceOneofCase.Uri) hash ^= Uri.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.Content) hash ^= Content.GetHashCode();
+      if (HasUri) hash ^= Uri.GetHashCode();
+      if (HasContent) hash ^= Content.GetHashCode();
       if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
       if (Text.Length != 0) hash ^= Text.GetHashCode();
       hash ^= textStyles_.GetHashCode();
@@ -603,11 +631,11 @@ namespace Google.Cloud.DocumentAI.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (sourceCase_ == SourceOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(18);
         output.WriteBytes(Content);
       }
@@ -643,11 +671,11 @@ namespace Google.Cloud.DocumentAI.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (sourceCase_ == SourceOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(18);
         output.WriteBytes(Content);
       }
@@ -683,10 +711,10 @@ namespace Google.Cloud.DocumentAI.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (sourceCase_ == SourceOneofCase.Uri) {
+      if (HasUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Content);
       }
       if (MimeType.Length != 0) {
@@ -9024,10 +9052,24 @@ namespace Google.Cloud.DocumentAI.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool BooleanValue {
-              get { return structuredValueCase_ == StructuredValueOneofCase.BooleanValue ? (bool) structuredValue_ : false; }
+              get { return HasBooleanValue ? (bool) structuredValue_ : false; }
               set {
                 structuredValue_ = value;
                 structuredValueCase_ = StructuredValueOneofCase.BooleanValue;
+              }
+            }
+            /// <summary>Gets whether the "boolean_value" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasBooleanValue {
+              get { return structuredValueCase_ == StructuredValueOneofCase.BooleanValue; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "boolean_value" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearBooleanValue() {
+              if (HasBooleanValue) {
+                ClearStructuredValue();
               }
             }
 
@@ -9039,10 +9081,24 @@ namespace Google.Cloud.DocumentAI.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int IntegerValue {
-              get { return structuredValueCase_ == StructuredValueOneofCase.IntegerValue ? (int) structuredValue_ : 0; }
+              get { return HasIntegerValue ? (int) structuredValue_ : 0; }
               set {
                 structuredValue_ = value;
                 structuredValueCase_ = StructuredValueOneofCase.IntegerValue;
+              }
+            }
+            /// <summary>Gets whether the "integer_value" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasIntegerValue {
+              get { return structuredValueCase_ == StructuredValueOneofCase.IntegerValue; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "integer_value" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearIntegerValue() {
+              if (HasIntegerValue) {
+                ClearStructuredValue();
               }
             }
 
@@ -9054,10 +9110,24 @@ namespace Google.Cloud.DocumentAI.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public float FloatValue {
-              get { return structuredValueCase_ == StructuredValueOneofCase.FloatValue ? (float) structuredValue_ : 0F; }
+              get { return HasFloatValue ? (float) structuredValue_ : 0F; }
               set {
                 structuredValue_ = value;
                 structuredValueCase_ = StructuredValueOneofCase.FloatValue;
+              }
+            }
+            /// <summary>Gets whether the "float_value" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasFloatValue {
+              get { return structuredValueCase_ == StructuredValueOneofCase.FloatValue; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "float_value" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearFloatValue() {
+              if (HasFloatValue) {
+                ClearStructuredValue();
               }
             }
 
@@ -9147,9 +9217,9 @@ namespace Google.Cloud.DocumentAI.V1 {
               if (structuredValueCase_ == StructuredValueOneofCase.DateValue) hash ^= DateValue.GetHashCode();
               if (structuredValueCase_ == StructuredValueOneofCase.DatetimeValue) hash ^= DatetimeValue.GetHashCode();
               if (structuredValueCase_ == StructuredValueOneofCase.AddressValue) hash ^= AddressValue.GetHashCode();
-              if (structuredValueCase_ == StructuredValueOneofCase.BooleanValue) hash ^= BooleanValue.GetHashCode();
-              if (structuredValueCase_ == StructuredValueOneofCase.IntegerValue) hash ^= IntegerValue.GetHashCode();
-              if (structuredValueCase_ == StructuredValueOneofCase.FloatValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FloatValue);
+              if (HasBooleanValue) hash ^= BooleanValue.GetHashCode();
+              if (HasIntegerValue) hash ^= IntegerValue.GetHashCode();
+              if (HasFloatValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FloatValue);
               if (Text.Length != 0) hash ^= Text.GetHashCode();
               hash ^= (int) structuredValueCase_;
               if (_unknownFields != null) {
@@ -9190,15 +9260,15 @@ namespace Google.Cloud.DocumentAI.V1 {
                 output.WriteRawTag(42);
                 output.WriteMessage(AddressValue);
               }
-              if (structuredValueCase_ == StructuredValueOneofCase.BooleanValue) {
+              if (HasBooleanValue) {
                 output.WriteRawTag(48);
                 output.WriteBool(BooleanValue);
               }
-              if (structuredValueCase_ == StructuredValueOneofCase.IntegerValue) {
+              if (HasIntegerValue) {
                 output.WriteRawTag(56);
                 output.WriteInt32(IntegerValue);
               }
-              if (structuredValueCase_ == StructuredValueOneofCase.FloatValue) {
+              if (HasFloatValue) {
                 output.WriteRawTag(69);
                 output.WriteFloat(FloatValue);
               }
@@ -9232,15 +9302,15 @@ namespace Google.Cloud.DocumentAI.V1 {
                 output.WriteRawTag(42);
                 output.WriteMessage(AddressValue);
               }
-              if (structuredValueCase_ == StructuredValueOneofCase.BooleanValue) {
+              if (HasBooleanValue) {
                 output.WriteRawTag(48);
                 output.WriteBool(BooleanValue);
               }
-              if (structuredValueCase_ == StructuredValueOneofCase.IntegerValue) {
+              if (HasIntegerValue) {
                 output.WriteRawTag(56);
                 output.WriteInt32(IntegerValue);
               }
-              if (structuredValueCase_ == StructuredValueOneofCase.FloatValue) {
+              if (HasFloatValue) {
                 output.WriteRawTag(69);
                 output.WriteFloat(FloatValue);
               }
@@ -9266,13 +9336,13 @@ namespace Google.Cloud.DocumentAI.V1 {
               if (structuredValueCase_ == StructuredValueOneofCase.AddressValue) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddressValue);
               }
-              if (structuredValueCase_ == StructuredValueOneofCase.BooleanValue) {
+              if (HasBooleanValue) {
                 size += 1 + 1;
               }
-              if (structuredValueCase_ == StructuredValueOneofCase.IntegerValue) {
+              if (HasIntegerValue) {
                 size += 1 + pb::CodedOutputStream.ComputeInt32Size(IntegerValue);
               }
-              if (structuredValueCase_ == StructuredValueOneofCase.FloatValue) {
+              if (HasFloatValue) {
                 size += 1 + 4;
               }
               if (Text.Length != 0) {
@@ -11202,15 +11272,18 @@ namespace Google.Cloud.DocumentAI.V1 {
             /// Deprecated. Request human review for the element identified by
             /// `parent`.
             /// </summary>
+            [global::System.ObsoleteAttribute]
             [pbr::OriginalName("EVAL_REQUESTED")] EvalRequested = 4,
             /// <summary>
             /// Deprecated. Element is reviewed and approved at human review,
             /// confidence will be set to 1.0.
             /// </summary>
+            [global::System.ObsoleteAttribute]
             [pbr::OriginalName("EVAL_APPROVED")] EvalApproved = 5,
             /// <summary>
             /// Deprecated. Element is skipped in the validation process.
             /// </summary>
+            [global::System.ObsoleteAttribute]
             [pbr::OriginalName("EVAL_SKIPPED")] EvalSkipped = 6,
           }
 
@@ -11566,10 +11639,24 @@ namespace Google.Cloud.DocumentAI.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Agent {
-          get { return sourceCase_ == SourceOneofCase.Agent ? (string) source_ : ""; }
+          get { return HasAgent ? (string) source_ : ""; }
           set {
             source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             sourceCase_ = SourceOneofCase.Agent;
+          }
+        }
+        /// <summary>Gets whether the "agent" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAgent {
+          get { return sourceCase_ == SourceOneofCase.Agent; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "agent" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAgent() {
+          if (HasAgent) {
+            ClearSource();
           }
         }
 
@@ -11582,10 +11669,24 @@ namespace Google.Cloud.DocumentAI.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Processor {
-          get { return sourceCase_ == SourceOneofCase.Processor ? (string) source_ : ""; }
+          get { return HasProcessor ? (string) source_ : ""; }
           set {
             source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             sourceCase_ = SourceOneofCase.Processor;
+          }
+        }
+        /// <summary>Gets whether the "processor" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasProcessor {
+          get { return sourceCase_ == SourceOneofCase.Processor; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "processor" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearProcessor() {
+          if (HasProcessor) {
+            ClearSource();
           }
         }
 
@@ -11720,8 +11821,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (sourceCase_ == SourceOneofCase.Agent) hash ^= Agent.GetHashCode();
-          if (sourceCase_ == SourceOneofCase.Processor) hash ^= Processor.GetHashCode();
+          if (HasAgent) hash ^= Agent.GetHashCode();
+          if (HasProcessor) hash ^= Processor.GetHashCode();
           if (Id.Length != 0) hash ^= Id.GetHashCode();
           hash ^= parent_.GetHashCode();
           hash ^= parentIds_.GetHashCode();
@@ -11755,11 +11856,11 @@ namespace Google.Cloud.DocumentAI.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(CreateTime);
           }
-          if (sourceCase_ == SourceOneofCase.Agent) {
+          if (HasAgent) {
             output.WriteRawTag(34);
             output.WriteString(Agent);
           }
-          if (sourceCase_ == SourceOneofCase.Processor) {
+          if (HasProcessor) {
             output.WriteRawTag(42);
             output.WriteString(Processor);
           }
@@ -11787,11 +11888,11 @@ namespace Google.Cloud.DocumentAI.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(CreateTime);
           }
-          if (sourceCase_ == SourceOneofCase.Agent) {
+          if (HasAgent) {
             output.WriteRawTag(34);
             output.WriteString(Agent);
           }
-          if (sourceCase_ == SourceOneofCase.Processor) {
+          if (HasProcessor) {
             output.WriteRawTag(42);
             output.WriteString(Processor);
           }
@@ -11810,10 +11911,10 @@ namespace Google.Cloud.DocumentAI.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (sourceCase_ == SourceOneofCase.Agent) {
+          if (HasAgent) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Agent);
           }
-          if (sourceCase_ == SourceOneofCase.Processor) {
+          if (HasProcessor) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Processor);
           }
           if (Id.Length != 0) {

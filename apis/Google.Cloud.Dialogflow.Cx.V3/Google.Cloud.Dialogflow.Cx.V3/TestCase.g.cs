@@ -8809,10 +8809,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsUri {
-      get { return sourceCase_ == SourceOneofCase.GcsUri ? (string) source_ : ""; }
+      get { return HasGcsUri ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.GcsUri;
+      }
+    }
+    /// <summary>Gets whether the "gcs_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsUri {
+      get { return sourceCase_ == SourceOneofCase.GcsUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsUri() {
+      if (HasGcsUri) {
+        ClearSource();
       }
     }
 
@@ -8824,10 +8838,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Content {
-      get { return sourceCase_ == SourceOneofCase.Content ? (pb::ByteString) source_ : pb::ByteString.Empty; }
+      get { return HasContent ? (pb::ByteString) source_ : pb::ByteString.Empty; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Content;
+      }
+    }
+    /// <summary>Gets whether the "content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContent {
+      get { return sourceCase_ == SourceOneofCase.Content; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContent() {
+      if (HasContent) {
+        ClearSource();
       }
     }
 
@@ -8879,8 +8907,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.GcsUri) hash ^= GcsUri.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.Content) hash ^= Content.GetHashCode();
+      if (HasGcsUri) hash ^= GcsUri.GetHashCode();
+      if (HasContent) hash ^= Content.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -8904,11 +8932,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (sourceCase_ == SourceOneofCase.GcsUri) {
+      if (HasGcsUri) {
         output.WriteRawTag(18);
         output.WriteString(GcsUri);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(26);
         output.WriteBytes(Content);
       }
@@ -8926,11 +8954,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (sourceCase_ == SourceOneofCase.GcsUri) {
+      if (HasGcsUri) {
         output.WriteRawTag(18);
         output.WriteString(GcsUri);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(26);
         output.WriteBytes(Content);
       }
@@ -8947,10 +8975,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (sourceCase_ == SourceOneofCase.GcsUri) {
+      if (HasGcsUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsUri);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Content);
       }
       if (_unknownFields != null) {
@@ -9753,10 +9781,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsUri {
-      get { return destinationCase_ == DestinationOneofCase.GcsUri ? (string) destination_ : ""; }
+      get { return HasGcsUri ? (string) destination_ : ""; }
       set {
         destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         destinationCase_ = DestinationOneofCase.GcsUri;
+      }
+    }
+    /// <summary>Gets whether the "gcs_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsUri {
+      get { return destinationCase_ == DestinationOneofCase.GcsUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsUri() {
+      if (HasGcsUri) {
+        ClearDestination();
       }
     }
 
@@ -9848,7 +9890,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (destinationCase_ == DestinationOneofCase.GcsUri) hash ^= GcsUri.GetHashCode();
+      if (HasGcsUri) hash ^= GcsUri.GetHashCode();
       if (DataFormat != global::Google.Cloud.Dialogflow.Cx.V3.ExportTestCasesRequest.Types.DataFormat.Unspecified) hash ^= DataFormat.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       hash ^= (int) destinationCase_;
@@ -9874,7 +9916,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (destinationCase_ == DestinationOneofCase.GcsUri) {
+      if (HasGcsUri) {
         output.WriteRawTag(18);
         output.WriteString(GcsUri);
       }
@@ -9900,7 +9942,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (destinationCase_ == DestinationOneofCase.GcsUri) {
+      if (HasGcsUri) {
         output.WriteRawTag(18);
         output.WriteString(GcsUri);
       }
@@ -9925,7 +9967,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (destinationCase_ == DestinationOneofCase.GcsUri) {
+      if (HasGcsUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsUri);
       }
       if (DataFormat != global::Google.Cloud.Dialogflow.Cx.V3.ExportTestCasesRequest.Types.DataFormat.Unspecified) {
@@ -10122,10 +10164,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsUri {
-      get { return destinationCase_ == DestinationOneofCase.GcsUri ? (string) destination_ : ""; }
+      get { return HasGcsUri ? (string) destination_ : ""; }
       set {
         destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         destinationCase_ = DestinationOneofCase.GcsUri;
+      }
+    }
+    /// <summary>Gets whether the "gcs_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsUri {
+      get { return destinationCase_ == DestinationOneofCase.GcsUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsUri() {
+      if (HasGcsUri) {
+        ClearDestination();
       }
     }
 
@@ -10137,10 +10193,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Content {
-      get { return destinationCase_ == DestinationOneofCase.Content ? (pb::ByteString) destination_ : pb::ByteString.Empty; }
+      get { return HasContent ? (pb::ByteString) destination_ : pb::ByteString.Empty; }
       set {
         destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         destinationCase_ = DestinationOneofCase.Content;
+      }
+    }
+    /// <summary>Gets whether the "content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContent {
+      get { return destinationCase_ == DestinationOneofCase.Content; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContent() {
+      if (HasContent) {
+        ClearDestination();
       }
     }
 
@@ -10190,8 +10260,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (destinationCase_ == DestinationOneofCase.GcsUri) hash ^= GcsUri.GetHashCode();
-      if (destinationCase_ == DestinationOneofCase.Content) hash ^= Content.GetHashCode();
+      if (HasGcsUri) hash ^= GcsUri.GetHashCode();
+      if (HasContent) hash ^= Content.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -10211,11 +10281,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (destinationCase_ == DestinationOneofCase.GcsUri) {
+      if (HasGcsUri) {
         output.WriteRawTag(10);
         output.WriteString(GcsUri);
       }
-      if (destinationCase_ == DestinationOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(18);
         output.WriteBytes(Content);
       }
@@ -10229,11 +10299,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (destinationCase_ == DestinationOneofCase.GcsUri) {
+      if (HasGcsUri) {
         output.WriteRawTag(10);
         output.WriteString(GcsUri);
       }
-      if (destinationCase_ == DestinationOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(18);
         output.WriteBytes(Content);
       }
@@ -10247,10 +10317,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (destinationCase_ == DestinationOneofCase.GcsUri) {
+      if (HasGcsUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsUri);
       }
-      if (destinationCase_ == DestinationOneofCase.Content) {
+      if (HasContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Content);
       }
       if (_unknownFields != null) {

@@ -1237,7 +1237,7 @@ namespace Google.Cloud.Profiler.V2 {
       if (other.ProfileBytes.Length != 0) {
         ProfileBytes = other.ProfileBytes;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1555,7 +1555,7 @@ namespace Google.Cloud.Profiler.V2 {
       if (other.Target.Length != 0) {
         Target = other.Target;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

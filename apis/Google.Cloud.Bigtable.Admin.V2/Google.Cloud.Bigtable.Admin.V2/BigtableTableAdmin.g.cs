@@ -402,10 +402,24 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Backup {
-      get { return sourceCase_ == SourceOneofCase.Backup ? (string) source_ : ""; }
+      get { return HasBackup ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Backup;
+      }
+    }
+    /// <summary>Gets whether the "backup" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBackup {
+      get { return sourceCase_ == SourceOneofCase.Backup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "backup" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBackup() {
+      if (HasBackup) {
+        ClearSource();
       }
     }
 
@@ -457,7 +471,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (TableId.Length != 0) hash ^= TableId.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.Backup) hash ^= Backup.GetHashCode();
+      if (HasBackup) hash ^= Backup.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -485,7 +499,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(18);
         output.WriteString(TableId);
       }
-      if (sourceCase_ == SourceOneofCase.Backup) {
+      if (HasBackup) {
         output.WriteRawTag(26);
         output.WriteString(Backup);
       }
@@ -507,7 +521,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(18);
         output.WriteString(TableId);
       }
-      if (sourceCase_ == SourceOneofCase.Backup) {
+      if (HasBackup) {
         output.WriteRawTag(26);
         output.WriteString(Backup);
       }
@@ -527,7 +541,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (TableId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableId);
       }
-      if (sourceCase_ == SourceOneofCase.Backup) {
+      if (HasBackup) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Backup);
       }
       if (_unknownFields != null) {
@@ -2180,10 +2194,24 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString RowKeyPrefix {
-      get { return targetCase_ == TargetOneofCase.RowKeyPrefix ? (pb::ByteString) target_ : pb::ByteString.Empty; }
+      get { return HasRowKeyPrefix ? (pb::ByteString) target_ : pb::ByteString.Empty; }
       set {
         target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         targetCase_ = TargetOneofCase.RowKeyPrefix;
+      }
+    }
+    /// <summary>Gets whether the "row_key_prefix" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRowKeyPrefix {
+      get { return targetCase_ == TargetOneofCase.RowKeyPrefix; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "row_key_prefix" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRowKeyPrefix() {
+      if (HasRowKeyPrefix) {
+        ClearTarget();
       }
     }
 
@@ -2195,10 +2223,24 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DeleteAllDataFromTable {
-      get { return targetCase_ == TargetOneofCase.DeleteAllDataFromTable ? (bool) target_ : false; }
+      get { return HasDeleteAllDataFromTable ? (bool) target_ : false; }
       set {
         target_ = value;
         targetCase_ = TargetOneofCase.DeleteAllDataFromTable;
+      }
+    }
+    /// <summary>Gets whether the "delete_all_data_from_table" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDeleteAllDataFromTable {
+      get { return targetCase_ == TargetOneofCase.DeleteAllDataFromTable; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "delete_all_data_from_table" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeleteAllDataFromTable() {
+      if (HasDeleteAllDataFromTable) {
+        ClearTarget();
       }
     }
 
@@ -2250,8 +2292,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (targetCase_ == TargetOneofCase.RowKeyPrefix) hash ^= RowKeyPrefix.GetHashCode();
-      if (targetCase_ == TargetOneofCase.DeleteAllDataFromTable) hash ^= DeleteAllDataFromTable.GetHashCode();
+      if (HasRowKeyPrefix) hash ^= RowKeyPrefix.GetHashCode();
+      if (HasDeleteAllDataFromTable) hash ^= DeleteAllDataFromTable.GetHashCode();
       hash ^= (int) targetCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2275,11 +2317,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (targetCase_ == TargetOneofCase.RowKeyPrefix) {
+      if (HasRowKeyPrefix) {
         output.WriteRawTag(18);
         output.WriteBytes(RowKeyPrefix);
       }
-      if (targetCase_ == TargetOneofCase.DeleteAllDataFromTable) {
+      if (HasDeleteAllDataFromTable) {
         output.WriteRawTag(24);
         output.WriteBool(DeleteAllDataFromTable);
       }
@@ -2297,11 +2339,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (targetCase_ == TargetOneofCase.RowKeyPrefix) {
+      if (HasRowKeyPrefix) {
         output.WriteRawTag(18);
         output.WriteBytes(RowKeyPrefix);
       }
-      if (targetCase_ == TargetOneofCase.DeleteAllDataFromTable) {
+      if (HasDeleteAllDataFromTable) {
         output.WriteRawTag(24);
         output.WriteBool(DeleteAllDataFromTable);
       }
@@ -2318,10 +2360,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (targetCase_ == TargetOneofCase.RowKeyPrefix) {
+      if (HasRowKeyPrefix) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(RowKeyPrefix);
       }
-      if (targetCase_ == TargetOneofCase.DeleteAllDataFromTable) {
+      if (HasDeleteAllDataFromTable) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -4795,10 +4837,24 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Drop {
-          get { return modCase_ == ModOneofCase.Drop ? (bool) mod_ : false; }
+          get { return HasDrop ? (bool) mod_ : false; }
           set {
             mod_ = value;
             modCase_ = ModOneofCase.Drop;
+          }
+        }
+        /// <summary>Gets whether the "drop" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDrop {
+          get { return modCase_ == ModOneofCase.Drop; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "drop" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDrop() {
+          if (HasDrop) {
+            ClearMod();
           }
         }
 
@@ -4854,7 +4910,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           if (Id.Length != 0) hash ^= Id.GetHashCode();
           if (modCase_ == ModOneofCase.Create) hash ^= Create.GetHashCode();
           if (modCase_ == ModOneofCase.Update) hash ^= Update.GetHashCode();
-          if (modCase_ == ModOneofCase.Drop) hash ^= Drop.GetHashCode();
+          if (HasDrop) hash ^= Drop.GetHashCode();
           hash ^= (int) modCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -4886,7 +4942,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             output.WriteRawTag(26);
             output.WriteMessage(Update);
           }
-          if (modCase_ == ModOneofCase.Drop) {
+          if (HasDrop) {
             output.WriteRawTag(32);
             output.WriteBool(Drop);
           }
@@ -4912,7 +4968,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             output.WriteRawTag(26);
             output.WriteMessage(Update);
           }
-          if (modCase_ == ModOneofCase.Drop) {
+          if (HasDrop) {
             output.WriteRawTag(32);
             output.WriteBool(Drop);
           }
@@ -4935,7 +4991,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           if (modCase_ == ModOneofCase.Update) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Update);
           }
-          if (modCase_ == ModOneofCase.Drop) {
+          if (HasDrop) {
             size += 1 + 1;
           }
           if (_unknownFields != null) {

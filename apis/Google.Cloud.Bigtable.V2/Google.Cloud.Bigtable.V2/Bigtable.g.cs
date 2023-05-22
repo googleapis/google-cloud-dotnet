@@ -1201,10 +1201,24 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool ResetRow {
-          get { return rowStatusCase_ == RowStatusOneofCase.ResetRow ? (bool) rowStatus_ : false; }
+          get { return HasResetRow ? (bool) rowStatus_ : false; }
           set {
             rowStatus_ = value;
             rowStatusCase_ = RowStatusOneofCase.ResetRow;
+          }
+        }
+        /// <summary>Gets whether the "reset_row" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasResetRow {
+          get { return rowStatusCase_ == RowStatusOneofCase.ResetRow; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "reset_row" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearResetRow() {
+          if (HasResetRow) {
+            ClearRowStatus();
           }
         }
 
@@ -1217,10 +1231,24 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool CommitRow {
-          get { return rowStatusCase_ == RowStatusOneofCase.CommitRow ? (bool) rowStatus_ : false; }
+          get { return HasCommitRow ? (bool) rowStatus_ : false; }
           set {
             rowStatus_ = value;
             rowStatusCase_ = RowStatusOneofCase.CommitRow;
+          }
+        }
+        /// <summary>Gets whether the "commit_row" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasCommitRow {
+          get { return rowStatusCase_ == RowStatusOneofCase.CommitRow; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "commit_row" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearCommitRow() {
+          if (HasCommitRow) {
+            ClearRowStatus();
           }
         }
 
@@ -1284,8 +1312,8 @@ namespace Google.Cloud.Bigtable.V2 {
           hash ^= labels_.GetHashCode();
           if (Value.Length != 0) hash ^= Value.GetHashCode();
           if (ValueSize != 0) hash ^= ValueSize.GetHashCode();
-          if (rowStatusCase_ == RowStatusOneofCase.ResetRow) hash ^= ResetRow.GetHashCode();
-          if (rowStatusCase_ == RowStatusOneofCase.CommitRow) hash ^= CommitRow.GetHashCode();
+          if (HasResetRow) hash ^= ResetRow.GetHashCode();
+          if (HasCommitRow) hash ^= CommitRow.GetHashCode();
           hash ^= (int) rowStatusCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1328,11 +1356,11 @@ namespace Google.Cloud.Bigtable.V2 {
             output.WriteRawTag(56);
             output.WriteInt32(ValueSize);
           }
-          if (rowStatusCase_ == RowStatusOneofCase.ResetRow) {
+          if (HasResetRow) {
             output.WriteRawTag(64);
             output.WriteBool(ResetRow);
           }
-          if (rowStatusCase_ == RowStatusOneofCase.CommitRow) {
+          if (HasCommitRow) {
             output.WriteRawTag(72);
             output.WriteBool(CommitRow);
           }
@@ -1369,11 +1397,11 @@ namespace Google.Cloud.Bigtable.V2 {
             output.WriteRawTag(56);
             output.WriteInt32(ValueSize);
           }
-          if (rowStatusCase_ == RowStatusOneofCase.ResetRow) {
+          if (HasResetRow) {
             output.WriteRawTag(64);
             output.WriteBool(ResetRow);
           }
-          if (rowStatusCase_ == RowStatusOneofCase.CommitRow) {
+          if (HasCommitRow) {
             output.WriteRawTag(72);
             output.WriteBool(CommitRow);
           }
@@ -1406,10 +1434,10 @@ namespace Google.Cloud.Bigtable.V2 {
           if (ValueSize != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(ValueSize);
           }
-          if (rowStatusCase_ == RowStatusOneofCase.ResetRow) {
+          if (HasResetRow) {
             size += 1 + 1;
           }
-          if (rowStatusCase_ == RowStatusOneofCase.CommitRow) {
+          if (HasCommitRow) {
             size += 1 + 1;
           }
           if (_unknownFields != null) {

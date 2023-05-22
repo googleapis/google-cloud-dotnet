@@ -2024,6 +2024,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
 
     /// <summary>Field number for the "delay_hours" field.</summary>
     public const int DelayHoursFieldNumber = 4;
+    private readonly static int DelayHoursDefaultValue = 0;
+
     private int delayHours_;
     /// <summary>
     /// Optional. Time delay of the deletion specified in hours. The default value
@@ -2038,7 +2040,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int DelayHours {
-      get { if ((_hasBits0 & 1) != 0) { return delayHours_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return delayHours_; } else { return DelayHoursDefaultValue; } }
       set {
         _hasBits0 |= 1;
         delayHours_ = value;

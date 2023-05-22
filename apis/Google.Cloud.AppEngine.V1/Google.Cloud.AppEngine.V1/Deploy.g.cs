@@ -290,7 +290,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (other == null) {
         return;
       }
-      files_.Add(other.files_);
+      files_.MergeFrom(other.files_);
       if (other.container_ != null) {
         if (container_ == null) {
           Container = new global::Google.Cloud.AppEngine.V1.ContainerInfo();

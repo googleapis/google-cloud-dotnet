@@ -568,7 +568,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
@@ -1112,7 +1112,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }

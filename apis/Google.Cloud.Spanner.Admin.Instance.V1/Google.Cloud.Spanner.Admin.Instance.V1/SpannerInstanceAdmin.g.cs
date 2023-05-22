@@ -1023,7 +1023,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (other.BaseConfig.Length != 0) {
         BaseConfig = other.BaseConfig;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -1656,7 +1656,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (other.State != global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State.Unspecified) {
         State = other.State;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       endpointUris_.Add(other.endpointUris_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {

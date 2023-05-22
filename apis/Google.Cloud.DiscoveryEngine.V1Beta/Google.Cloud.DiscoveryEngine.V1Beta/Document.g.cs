@@ -151,10 +151,24 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string JsonData {
-      get { return dataCase_ == DataOneofCase.JsonData ? (string) data_ : ""; }
+      get { return HasJsonData ? (string) data_ : ""; }
       set {
         data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         dataCase_ = DataOneofCase.JsonData;
+      }
+    }
+    /// <summary>Gets whether the "json_data" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasJsonData {
+      get { return dataCase_ == DataOneofCase.JsonData; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "json_data" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearJsonData() {
+      if (HasJsonData) {
+        ClearData();
       }
     }
 
@@ -316,7 +330,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public override int GetHashCode() {
       int hash = 1;
       if (dataCase_ == DataOneofCase.StructData) hash ^= StructData.GetHashCode();
-      if (dataCase_ == DataOneofCase.JsonData) hash ^= JsonData.GetHashCode();
+      if (HasJsonData) hash ^= JsonData.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (SchemaId.Length != 0) hash ^= SchemaId.GetHashCode();
@@ -358,7 +372,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(StructData);
       }
-      if (dataCase_ == DataOneofCase.JsonData) {
+      if (HasJsonData) {
         output.WriteRawTag(42);
         output.WriteString(JsonData);
       }
@@ -400,7 +414,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(StructData);
       }
-      if (dataCase_ == DataOneofCase.JsonData) {
+      if (HasJsonData) {
         output.WriteRawTag(42);
         output.WriteString(JsonData);
       }
@@ -429,7 +443,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (dataCase_ == DataOneofCase.StructData) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StructData);
       }
-      if (dataCase_ == DataOneofCase.JsonData) {
+      if (HasJsonData) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(JsonData);
       }
       if (Name.Length != 0) {
@@ -695,10 +709,24 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pb::ByteString RawBytes {
-          get { return contentCase_ == ContentOneofCase.RawBytes ? (pb::ByteString) content_ : pb::ByteString.Empty; }
+          get { return HasRawBytes ? (pb::ByteString) content_ : pb::ByteString.Empty; }
           set {
             content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             contentCase_ = ContentOneofCase.RawBytes;
+          }
+        }
+        /// <summary>Gets whether the "raw_bytes" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasRawBytes {
+          get { return contentCase_ == ContentOneofCase.RawBytes; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "raw_bytes" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearRawBytes() {
+          if (HasRawBytes) {
+            ClearContent();
           }
         }
 
@@ -712,10 +740,24 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Uri {
-          get { return contentCase_ == ContentOneofCase.Uri ? (string) content_ : ""; }
+          get { return HasUri ? (string) content_ : ""; }
           set {
             content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             contentCase_ = ContentOneofCase.Uri;
+          }
+        }
+        /// <summary>Gets whether the "uri" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasUri {
+          get { return contentCase_ == ContentOneofCase.Uri; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "uri" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearUri() {
+          if (HasUri) {
+            ClearContent();
           }
         }
 
@@ -786,8 +828,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (contentCase_ == ContentOneofCase.RawBytes) hash ^= RawBytes.GetHashCode();
-          if (contentCase_ == ContentOneofCase.Uri) hash ^= Uri.GetHashCode();
+          if (HasRawBytes) hash ^= RawBytes.GetHashCode();
+          if (HasUri) hash ^= Uri.GetHashCode();
           if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
           hash ^= (int) contentCase_;
           if (_unknownFields != null) {
@@ -812,11 +854,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             output.WriteRawTag(10);
             output.WriteString(MimeType);
           }
-          if (contentCase_ == ContentOneofCase.RawBytes) {
+          if (HasRawBytes) {
             output.WriteRawTag(18);
             output.WriteBytes(RawBytes);
           }
-          if (contentCase_ == ContentOneofCase.Uri) {
+          if (HasUri) {
             output.WriteRawTag(26);
             output.WriteString(Uri);
           }
@@ -834,11 +876,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             output.WriteRawTag(10);
             output.WriteString(MimeType);
           }
-          if (contentCase_ == ContentOneofCase.RawBytes) {
+          if (HasRawBytes) {
             output.WriteRawTag(18);
             output.WriteBytes(RawBytes);
           }
-          if (contentCase_ == ContentOneofCase.Uri) {
+          if (HasUri) {
             output.WriteRawTag(26);
             output.WriteString(Uri);
           }
@@ -852,10 +894,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (contentCase_ == ContentOneofCase.RawBytes) {
+          if (HasRawBytes) {
             size += 1 + pb::CodedOutputStream.ComputeBytesSize(RawBytes);
           }
-          if (contentCase_ == ContentOneofCase.Uri) {
+          if (HasUri) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
           }
           if (MimeType.Length != 0) {

@@ -4009,7 +4009,7 @@ namespace Google.Cloud.Asset.V1 {
       if (other.Location.Length != 0) {
         Location = other.Location;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       networkTags_.Add(other.networkTags_);
       if (other.KmsKey.Length != 0) {
         KmsKey = other.KmsKey;
@@ -4041,7 +4041,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       versionedResources_.Add(other.versionedResources_);
       attachedResources_.Add(other.attachedResources_);
-      relationships_.Add(other.relationships_);
+      relationships_.MergeFrom(other.relationships_);
       tagKeys_.Add(other.tagKeys_);
       tagValues_.Add(other.tagValues_);
       tagValueIds_.Add(other.tagValueIds_);
@@ -5850,7 +5850,7 @@ namespace Google.Cloud.Asset.V1 {
           if (other == null) {
             return;
           }
-          matchedPermissions_.Add(other.matchedPermissions_);
+          matchedPermissions_.MergeFrom(other.matchedPermissions_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -7247,10 +7247,24 @@ namespace Google.Cloud.Asset.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Role {
-          get { return oneofAccessCase_ == OneofAccessOneofCase.Role ? (string) oneofAccess_ : ""; }
+          get { return HasRole ? (string) oneofAccess_ : ""; }
           set {
             oneofAccess_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             oneofAccessCase_ = OneofAccessOneofCase.Role;
+          }
+        }
+        /// <summary>Gets whether the "role" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasRole {
+          get { return oneofAccessCase_ == OneofAccessOneofCase.Role; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "role" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearRole() {
+          if (HasRole) {
+            ClearOneofAccess();
           }
         }
 
@@ -7262,10 +7276,24 @@ namespace Google.Cloud.Asset.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Permission {
-          get { return oneofAccessCase_ == OneofAccessOneofCase.Permission ? (string) oneofAccess_ : ""; }
+          get { return HasPermission ? (string) oneofAccess_ : ""; }
           set {
             oneofAccess_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             oneofAccessCase_ = OneofAccessOneofCase.Permission;
+          }
+        }
+        /// <summary>Gets whether the "permission" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPermission {
+          get { return oneofAccessCase_ == OneofAccessOneofCase.Permission; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "permission" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPermission() {
+          if (HasPermission) {
+            ClearOneofAccess();
           }
         }
 
@@ -7331,8 +7359,8 @@ namespace Google.Cloud.Asset.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (oneofAccessCase_ == OneofAccessOneofCase.Role) hash ^= Role.GetHashCode();
-          if (oneofAccessCase_ == OneofAccessOneofCase.Permission) hash ^= Permission.GetHashCode();
+          if (HasRole) hash ^= Role.GetHashCode();
+          if (HasPermission) hash ^= Permission.GetHashCode();
           if (analysisState_ != null) hash ^= AnalysisState.GetHashCode();
           hash ^= (int) oneofAccessCase_;
           if (_unknownFields != null) {
@@ -7353,11 +7381,11 @@ namespace Google.Cloud.Asset.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (oneofAccessCase_ == OneofAccessOneofCase.Role) {
+          if (HasRole) {
             output.WriteRawTag(10);
             output.WriteString(Role);
           }
-          if (oneofAccessCase_ == OneofAccessOneofCase.Permission) {
+          if (HasPermission) {
             output.WriteRawTag(18);
             output.WriteString(Permission);
           }
@@ -7375,11 +7403,11 @@ namespace Google.Cloud.Asset.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (oneofAccessCase_ == OneofAccessOneofCase.Role) {
+          if (HasRole) {
             output.WriteRawTag(10);
             output.WriteString(Role);
           }
-          if (oneofAccessCase_ == OneofAccessOneofCase.Permission) {
+          if (HasPermission) {
             output.WriteRawTag(18);
             output.WriteString(Permission);
           }
@@ -7397,10 +7425,10 @@ namespace Google.Cloud.Asset.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (oneofAccessCase_ == OneofAccessOneofCase.Role) {
+          if (HasRole) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Role);
           }
-          if (oneofAccessCase_ == OneofAccessOneofCase.Permission) {
+          if (HasPermission) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Permission);
           }
           if (analysisState_ != null) {

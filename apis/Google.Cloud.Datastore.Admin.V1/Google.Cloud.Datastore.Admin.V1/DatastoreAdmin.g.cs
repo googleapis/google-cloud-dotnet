@@ -449,7 +449,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (other.OperationType != global::Google.Cloud.Datastore.Admin.V1.OperationType.Unspecified) {
         OperationType = other.OperationType;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.State != global::Google.Cloud.Datastore.Admin.V1.CommonMetadata.Types.State.Unspecified) {
         State = other.State;
       }
@@ -1073,7 +1073,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (other.ProjectId.Length != 0) {
         ProjectId = other.ProjectId;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.entityFilter_ != null) {
         if (entityFilter_ == null) {
           EntityFilter = new global::Google.Cloud.Datastore.Admin.V1.EntityFilter();
@@ -1402,7 +1402,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (other.ProjectId.Length != 0) {
         ProjectId = other.ProjectId;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.InputUrl.Length != 0) {
         InputUrl = other.InputUrl;
       }

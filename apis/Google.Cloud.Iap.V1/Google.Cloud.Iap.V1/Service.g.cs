@@ -4059,6 +4059,7 @@ namespace Google.Cloud.Iap.V1 {
         /// Prompts the user to log in again.
         /// </summary>
         [pbr::OriginalName("LOGIN")] Login = 1,
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("PASSWORD")] Password = 2,
         /// <summary>
         /// User must use their secure key 2nd factor device.
@@ -4147,6 +4148,8 @@ namespace Google.Cloud.Iap.V1 {
 
     /// <summary>Field number for the "enable" field.</summary>
     public const int EnableFieldNumber = 1;
+    private readonly static bool EnableDefaultValue = false;
+
     private bool enable_;
     /// <summary>
     /// Configuration for customers to opt in for the feature.
@@ -4154,7 +4157,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Enable {
-      get { if ((_hasBits0 & 1) != 0) { return enable_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return enable_; } else { return EnableDefaultValue; } }
       set {
         _hasBits0 |= 1;
         enable_ = value;
@@ -5250,6 +5253,8 @@ namespace Google.Cloud.Iap.V1 {
 
     /// <summary>Field number for the "expression" field.</summary>
     public const int ExpressionFieldNumber = 1;
+    private readonly static string ExpressionDefaultValue = "";
+
     private string expression_;
     /// <summary>
     /// Raw string CEL expression. Must return a list of attributes. A maximum of
@@ -5284,7 +5289,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Expression {
-      get { return expression_ ?? ""; }
+      get { return expression_ ?? ExpressionDefaultValue; }
       set {
         expression_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -5320,6 +5325,8 @@ namespace Google.Cloud.Iap.V1 {
 
     /// <summary>Field number for the "enable" field.</summary>
     public const int EnableFieldNumber = 3;
+    private readonly static bool EnableDefaultValue = false;
+
     private bool enable_;
     /// <summary>
     /// Whether the provided attribute propagation settings should be evaluated on
@@ -5329,7 +5336,7 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Enable {
-      get { if ((_hasBits0 & 1) != 0) { return enable_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return enable_; } else { return EnableDefaultValue; } }
       set {
         _hasBits0 |= 1;
         enable_ = value;

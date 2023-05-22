@@ -2926,10 +2926,24 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Asset {
-      get { return sourceCase_ == SourceOneofCase.Asset ? (string) source_ : ""; }
+      get { return HasAsset ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Asset;
+      }
+    }
+    /// <summary>Gets whether the "asset" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAsset {
+      get { return sourceCase_ == SourceOneofCase.Asset; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "asset" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAsset() {
+      if (HasAsset) {
+        ClearSource();
       }
     }
 
@@ -2942,10 +2956,26 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsPath {
-      get { return sourceCase_ == SourceOneofCase.GcsPath ? (string) source_ : ""; }
+      get { return HasGcsPath ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.GcsPath;
+      }
+    }
+    /// <summary>Gets whether the "gcs_path" field is set</summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsPath {
+      get { return sourceCase_ == SourceOneofCase.GcsPath; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_path" </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsPath() {
+      if (HasGcsPath) {
+        ClearSource();
       }
     }
 
@@ -3087,8 +3117,8 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
       if (inputs_ != null) hash ^= Inputs.GetHashCode();
       if (ValidationStatus != global::Google.Cloud.PrivateCatalog.V1Beta1.AssetReference.Types.AssetValidationState.Unspecified) hash ^= ValidationStatus.GetHashCode();
       if (validationOperation_ != null) hash ^= ValidationOperation.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.Asset) hash ^= Asset.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.GcsPath) hash ^= GcsPath.GetHashCode();
+      if (HasAsset) hash ^= Asset.GetHashCode();
+      if (HasGcsPath) hash ^= GcsPath.GetHashCode();
       if (sourceCase_ == SourceOneofCase.GitSource) hash ^= GitSource.GetHashCode();
       if (gcsSource_ != null) hash ^= GcsSource.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
@@ -3133,11 +3163,11 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(ValidationOperation);
       }
-      if (sourceCase_ == SourceOneofCase.Asset) {
+      if (HasAsset) {
         output.WriteRawTag(82);
         output.WriteString(Asset);
       }
-      if (sourceCase_ == SourceOneofCase.GcsPath) {
+      if (HasGcsPath) {
         output.WriteRawTag(90);
         output.WriteString(GcsPath);
       }
@@ -3191,11 +3221,11 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(ValidationOperation);
       }
-      if (sourceCase_ == SourceOneofCase.Asset) {
+      if (HasAsset) {
         output.WriteRawTag(82);
         output.WriteString(Asset);
       }
-      if (sourceCase_ == SourceOneofCase.GcsPath) {
+      if (HasGcsPath) {
         output.WriteRawTag(90);
         output.WriteString(GcsPath);
       }
@@ -3244,10 +3274,10 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
       if (validationOperation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ValidationOperation);
       }
-      if (sourceCase_ == SourceOneofCase.Asset) {
+      if (HasAsset) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Asset);
       }
-      if (sourceCase_ == SourceOneofCase.GcsPath) {
+      if (HasGcsPath) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsPath);
       }
       if (sourceCase_ == SourceOneofCase.GitSource) {
@@ -4127,10 +4157,24 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Commit {
-      get { return refCase_ == RefOneofCase.Commit ? (string) ref_ : ""; }
+      get { return HasCommit ? (string) ref_ : ""; }
       set {
         ref_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         refCase_ = RefOneofCase.Commit;
+      }
+    }
+    /// <summary>Gets whether the "commit" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCommit {
+      get { return refCase_ == RefOneofCase.Commit; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "commit" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCommit() {
+      if (HasCommit) {
+        ClearRef();
       }
     }
 
@@ -4142,10 +4186,24 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Branch {
-      get { return refCase_ == RefOneofCase.Branch ? (string) ref_ : ""; }
+      get { return HasBranch ? (string) ref_ : ""; }
       set {
         ref_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         refCase_ = RefOneofCase.Branch;
+      }
+    }
+    /// <summary>Gets whether the "branch" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBranch {
+      get { return refCase_ == RefOneofCase.Branch; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "branch" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBranch() {
+      if (HasBranch) {
+        ClearRef();
       }
     }
 
@@ -4157,10 +4215,24 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Tag {
-      get { return refCase_ == RefOneofCase.Tag ? (string) ref_ : ""; }
+      get { return HasTag ? (string) ref_ : ""; }
       set {
         ref_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         refCase_ = RefOneofCase.Tag;
+      }
+    }
+    /// <summary>Gets whether the "tag" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTag {
+      get { return refCase_ == RefOneofCase.Tag; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "tag" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTag() {
+      if (HasTag) {
+        ClearRef();
       }
     }
 
@@ -4216,9 +4288,9 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
       int hash = 1;
       if (Repo.Length != 0) hash ^= Repo.GetHashCode();
       if (Dir.Length != 0) hash ^= Dir.GetHashCode();
-      if (refCase_ == RefOneofCase.Commit) hash ^= Commit.GetHashCode();
-      if (refCase_ == RefOneofCase.Branch) hash ^= Branch.GetHashCode();
-      if (refCase_ == RefOneofCase.Tag) hash ^= Tag.GetHashCode();
+      if (HasCommit) hash ^= Commit.GetHashCode();
+      if (HasBranch) hash ^= Branch.GetHashCode();
+      if (HasTag) hash ^= Tag.GetHashCode();
       hash ^= (int) refCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4246,15 +4318,15 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(Dir);
       }
-      if (refCase_ == RefOneofCase.Commit) {
+      if (HasCommit) {
         output.WriteRawTag(26);
         output.WriteString(Commit);
       }
-      if (refCase_ == RefOneofCase.Branch) {
+      if (HasBranch) {
         output.WriteRawTag(34);
         output.WriteString(Branch);
       }
-      if (refCase_ == RefOneofCase.Tag) {
+      if (HasTag) {
         output.WriteRawTag(42);
         output.WriteString(Tag);
       }
@@ -4276,15 +4348,15 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(Dir);
       }
-      if (refCase_ == RefOneofCase.Commit) {
+      if (HasCommit) {
         output.WriteRawTag(26);
         output.WriteString(Commit);
       }
-      if (refCase_ == RefOneofCase.Branch) {
+      if (HasBranch) {
         output.WriteRawTag(34);
         output.WriteString(Branch);
       }
-      if (refCase_ == RefOneofCase.Tag) {
+      if (HasTag) {
         output.WriteRawTag(42);
         output.WriteString(Tag);
       }
@@ -4304,13 +4376,13 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
       if (Dir.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Dir);
       }
-      if (refCase_ == RefOneofCase.Commit) {
+      if (HasCommit) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Commit);
       }
-      if (refCase_ == RefOneofCase.Branch) {
+      if (HasBranch) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Branch);
       }
-      if (refCase_ == RefOneofCase.Tag) {
+      if (HasTag) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Tag);
       }
       if (_unknownFields != null) {

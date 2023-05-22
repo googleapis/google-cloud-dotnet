@@ -1662,7 +1662,7 @@ namespace Google.Cloud.Batch.V1 {
         }
         Timeout.MergeFrom(other.Timeout);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.ExecutableCase) {
         case ExecutableOneofCase.Container:
           if (Container == null) {
@@ -2374,10 +2374,24 @@ namespace Google.Cloud.Batch.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Path {
-          get { return commandCase_ == CommandOneofCase.Path ? (string) command_ : ""; }
+          get { return HasPath ? (string) command_ : ""; }
           set {
             command_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             commandCase_ = CommandOneofCase.Path;
+          }
+        }
+        /// <summary>Gets whether the "path" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPath {
+          get { return commandCase_ == CommandOneofCase.Path; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "path" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPath() {
+          if (HasPath) {
+            ClearCommand();
           }
         }
 
@@ -2395,10 +2409,24 @@ namespace Google.Cloud.Batch.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Text {
-          get { return commandCase_ == CommandOneofCase.Text ? (string) command_ : ""; }
+          get { return HasText ? (string) command_ : ""; }
           set {
             command_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             commandCase_ = CommandOneofCase.Text;
+          }
+        }
+        /// <summary>Gets whether the "text" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasText {
+          get { return commandCase_ == CommandOneofCase.Text; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "text" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearText() {
+          if (HasText) {
+            ClearCommand();
           }
         }
 
@@ -2448,8 +2476,8 @@ namespace Google.Cloud.Batch.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (commandCase_ == CommandOneofCase.Path) hash ^= Path.GetHashCode();
-          if (commandCase_ == CommandOneofCase.Text) hash ^= Text.GetHashCode();
+          if (HasPath) hash ^= Path.GetHashCode();
+          if (HasText) hash ^= Text.GetHashCode();
           hash ^= (int) commandCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2469,11 +2497,11 @@ namespace Google.Cloud.Batch.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (commandCase_ == CommandOneofCase.Path) {
+          if (HasPath) {
             output.WriteRawTag(10);
             output.WriteString(Path);
           }
-          if (commandCase_ == CommandOneofCase.Text) {
+          if (HasText) {
             output.WriteRawTag(18);
             output.WriteString(Text);
           }
@@ -2487,11 +2515,11 @@ namespace Google.Cloud.Batch.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (commandCase_ == CommandOneofCase.Path) {
+          if (HasPath) {
             output.WriteRawTag(10);
             output.WriteString(Path);
           }
-          if (commandCase_ == CommandOneofCase.Text) {
+          if (HasText) {
             output.WriteRawTag(18);
             output.WriteString(Text);
           }
@@ -2505,10 +2533,10 @@ namespace Google.Cloud.Batch.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (commandCase_ == CommandOneofCase.Path) {
+          if (HasPath) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
           }
-          if (commandCase_ == CommandOneofCase.Text) {
+          if (HasText) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
           }
           if (_unknownFields != null) {
@@ -3137,7 +3165,7 @@ namespace Google.Cloud.Batch.V1 {
         MaxRetryCount = other.MaxRetryCount;
       }
       lifecyclePolicies_.Add(other.lifecyclePolicies_);
-      environments_.Add(other.environments_);
+      environments_.MergeFrom(other.environments_);
       volumes_.Add(other.volumes_);
       if (other.environment_ != null) {
         if (environment_ == null) {
@@ -4166,8 +4194,8 @@ namespace Google.Cloud.Batch.V1 {
       if (other == null) {
         return;
       }
-      variables_.Add(other.variables_);
-      secretVariables_.Add(other.secretVariables_);
+      variables_.MergeFrom(other.variables_);
+      secretVariables_.MergeFrom(other.secretVariables_);
       if (other.encryptedVariables_ != null) {
         if (encryptedVariables_ == null) {
           EncryptedVariables = new global::Google.Cloud.Batch.V1.Environment.Types.KMSEnvMap();

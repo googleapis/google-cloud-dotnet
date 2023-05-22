@@ -445,10 +445,24 @@ namespace Google.Cloud.Datastream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ConnectionProfileName {
-      get { return targetCase_ == TargetOneofCase.ConnectionProfileName ? (string) target_ : ""; }
+      get { return HasConnectionProfileName ? (string) target_ : ""; }
       set {
         target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         targetCase_ = TargetOneofCase.ConnectionProfileName;
+      }
+    }
+    /// <summary>Gets whether the "connection_profile_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConnectionProfileName {
+      get { return targetCase_ == TargetOneofCase.ConnectionProfileName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "connection_profile_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConnectionProfileName() {
+      if (HasConnectionProfileName) {
+        ClearTarget();
       }
     }
 
@@ -461,10 +475,24 @@ namespace Google.Cloud.Datastream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool FullHierarchy {
-      get { return hierarchyCase_ == HierarchyOneofCase.FullHierarchy ? (bool) hierarchy_ : false; }
+      get { return HasFullHierarchy ? (bool) hierarchy_ : false; }
       set {
         hierarchy_ = value;
         hierarchyCase_ = HierarchyOneofCase.FullHierarchy;
+      }
+    }
+    /// <summary>Gets whether the "full_hierarchy" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFullHierarchy {
+      get { return hierarchyCase_ == HierarchyOneofCase.FullHierarchy; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "full_hierarchy" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFullHierarchy() {
+      if (HasFullHierarchy) {
+        ClearHierarchy();
       }
     }
 
@@ -476,10 +504,24 @@ namespace Google.Cloud.Datastream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int HierarchyDepth {
-      get { return hierarchyCase_ == HierarchyOneofCase.HierarchyDepth ? (int) hierarchy_ : 0; }
+      get { return HasHierarchyDepth ? (int) hierarchy_ : 0; }
       set {
         hierarchy_ = value;
         hierarchyCase_ = HierarchyOneofCase.HierarchyDepth;
+      }
+    }
+    /// <summary>Gets whether the "hierarchy_depth" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHierarchyDepth {
+      get { return hierarchyCase_ == HierarchyOneofCase.HierarchyDepth; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "hierarchy_depth" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHierarchyDepth() {
+      if (HasHierarchyDepth) {
+        ClearHierarchy();
       }
     }
 
@@ -627,9 +669,9 @@ namespace Google.Cloud.Datastream.V1 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (targetCase_ == TargetOneofCase.ConnectionProfile) hash ^= ConnectionProfile.GetHashCode();
-      if (targetCase_ == TargetOneofCase.ConnectionProfileName) hash ^= ConnectionProfileName.GetHashCode();
-      if (hierarchyCase_ == HierarchyOneofCase.FullHierarchy) hash ^= FullHierarchy.GetHashCode();
-      if (hierarchyCase_ == HierarchyOneofCase.HierarchyDepth) hash ^= HierarchyDepth.GetHashCode();
+      if (HasConnectionProfileName) hash ^= ConnectionProfileName.GetHashCode();
+      if (HasFullHierarchy) hash ^= FullHierarchy.GetHashCode();
+      if (HasHierarchyDepth) hash ^= HierarchyDepth.GetHashCode();
       if (dataObjectCase_ == DataObjectOneofCase.OracleRdbms) hash ^= OracleRdbms.GetHashCode();
       if (dataObjectCase_ == DataObjectOneofCase.MysqlRdbms) hash ^= MysqlRdbms.GetHashCode();
       if (dataObjectCase_ == DataObjectOneofCase.PostgresqlRdbms) hash ^= PostgresqlRdbms.GetHashCode();
@@ -658,11 +700,11 @@ namespace Google.Cloud.Datastream.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (hierarchyCase_ == HierarchyOneofCase.FullHierarchy) {
+      if (HasFullHierarchy) {
         output.WriteRawTag(24);
         output.WriteBool(FullHierarchy);
       }
-      if (hierarchyCase_ == HierarchyOneofCase.HierarchyDepth) {
+      if (HasHierarchyDepth) {
         output.WriteRawTag(32);
         output.WriteInt32(HierarchyDepth);
       }
@@ -682,7 +724,7 @@ namespace Google.Cloud.Datastream.V1 {
         output.WriteRawTag(194, 12);
         output.WriteMessage(ConnectionProfile);
       }
-      if (targetCase_ == TargetOneofCase.ConnectionProfileName) {
+      if (HasConnectionProfileName) {
         output.WriteRawTag(202, 12);
         output.WriteString(ConnectionProfileName);
       }
@@ -700,11 +742,11 @@ namespace Google.Cloud.Datastream.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (hierarchyCase_ == HierarchyOneofCase.FullHierarchy) {
+      if (HasFullHierarchy) {
         output.WriteRawTag(24);
         output.WriteBool(FullHierarchy);
       }
-      if (hierarchyCase_ == HierarchyOneofCase.HierarchyDepth) {
+      if (HasHierarchyDepth) {
         output.WriteRawTag(32);
         output.WriteInt32(HierarchyDepth);
       }
@@ -724,7 +766,7 @@ namespace Google.Cloud.Datastream.V1 {
         output.WriteRawTag(194, 12);
         output.WriteMessage(ConnectionProfile);
       }
-      if (targetCase_ == TargetOneofCase.ConnectionProfileName) {
+      if (HasConnectionProfileName) {
         output.WriteRawTag(202, 12);
         output.WriteString(ConnectionProfileName);
       }
@@ -744,13 +786,13 @@ namespace Google.Cloud.Datastream.V1 {
       if (targetCase_ == TargetOneofCase.ConnectionProfile) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ConnectionProfile);
       }
-      if (targetCase_ == TargetOneofCase.ConnectionProfileName) {
+      if (HasConnectionProfileName) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ConnectionProfileName);
       }
-      if (hierarchyCase_ == HierarchyOneofCase.FullHierarchy) {
+      if (HasFullHierarchy) {
         size += 1 + 1;
       }
-      if (hierarchyCase_ == HierarchyOneofCase.HierarchyDepth) {
+      if (HasHierarchyDepth) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(HierarchyDepth);
       }
       if (dataObjectCase_ == DataObjectOneofCase.OracleRdbms) {

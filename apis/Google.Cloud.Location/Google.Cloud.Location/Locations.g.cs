@@ -1065,7 +1065,7 @@ namespace Google.Cloud.Location {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.metadata_ != null) {
         if (metadata_ == null) {
           Metadata = new global::Google.Protobuf.WellKnownTypes.Any();

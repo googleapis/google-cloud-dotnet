@@ -139,10 +139,24 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString ImageBytes {
-      get { return dataCase_ == DataOneofCase.ImageBytes ? (pb::ByteString) data_ : pb::ByteString.Empty; }
+      get { return HasImageBytes ? (pb::ByteString) data_ : pb::ByteString.Empty; }
       set {
         data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         dataCase_ = DataOneofCase.ImageBytes;
+      }
+    }
+    /// <summary>Gets whether the "image_bytes" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasImageBytes {
+      get { return dataCase_ == DataOneofCase.ImageBytes; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "image_bytes" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearImageBytes() {
+      if (HasImageBytes) {
+        ClearData();
       }
     }
 
@@ -206,7 +220,7 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (dataCase_ == DataOneofCase.ImageBytes) hash ^= ImageBytes.GetHashCode();
+      if (HasImageBytes) hash ^= ImageBytes.GetHashCode();
       if (ThumbnailUri.Length != 0) hash ^= ThumbnailUri.GetHashCode();
       hash ^= (int) dataCase_;
       if (_unknownFields != null) {
@@ -227,7 +241,7 @@ namespace Google.Cloud.AutoML.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (dataCase_ == DataOneofCase.ImageBytes) {
+      if (HasImageBytes) {
         output.WriteRawTag(10);
         output.WriteBytes(ImageBytes);
       }
@@ -245,7 +259,7 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (dataCase_ == DataOneofCase.ImageBytes) {
+      if (HasImageBytes) {
         output.WriteRawTag(10);
         output.WriteBytes(ImageBytes);
       }
@@ -263,7 +277,7 @@ namespace Google.Cloud.AutoML.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (dataCase_ == DataOneofCase.ImageBytes) {
+      if (HasImageBytes) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(ImageBytes);
       }
       if (ThumbnailUri.Length != 0) {

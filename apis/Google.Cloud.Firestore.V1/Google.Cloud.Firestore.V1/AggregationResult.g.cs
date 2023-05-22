@@ -193,7 +193,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (other == null) {
         return;
       }
-      aggregateFields_.Add(other.aggregateFields_);
+      aggregateFields_.MergeFrom(other.aggregateFields_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

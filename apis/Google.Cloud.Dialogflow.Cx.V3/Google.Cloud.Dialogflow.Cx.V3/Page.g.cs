@@ -1676,10 +1676,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TargetPage {
-      get { return targetCase_ == TargetOneofCase.TargetPage ? (string) target_ : ""; }
+      get { return HasTargetPage ? (string) target_ : ""; }
       set {
         target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         targetCase_ = TargetOneofCase.TargetPage;
+      }
+    }
+    /// <summary>Gets whether the "target_page" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTargetPage {
+      get { return targetCase_ == TargetOneofCase.TargetPage; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "target_page" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTargetPage() {
+      if (HasTargetPage) {
+        ClearTarget();
       }
     }
 
@@ -1693,10 +1707,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TargetFlow {
-      get { return targetCase_ == TargetOneofCase.TargetFlow ? (string) target_ : ""; }
+      get { return HasTargetFlow ? (string) target_ : ""; }
       set {
         target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         targetCase_ = TargetOneofCase.TargetFlow;
+      }
+    }
+    /// <summary>Gets whether the "target_flow" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTargetFlow {
+      get { return targetCase_ == TargetOneofCase.TargetFlow; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "target_flow" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTargetFlow() {
+      if (HasTargetFlow) {
+        ClearTarget();
       }
     }
 
@@ -1752,8 +1780,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Event.Length != 0) hash ^= Event.GetHashCode();
       if (triggerFulfillment_ != null) hash ^= TriggerFulfillment.GetHashCode();
-      if (targetCase_ == TargetOneofCase.TargetPage) hash ^= TargetPage.GetHashCode();
-      if (targetCase_ == TargetOneofCase.TargetFlow) hash ^= TargetFlow.GetHashCode();
+      if (HasTargetPage) hash ^= TargetPage.GetHashCode();
+      if (HasTargetFlow) hash ^= TargetFlow.GetHashCode();
       hash ^= (int) targetCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1773,11 +1801,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (targetCase_ == TargetOneofCase.TargetPage) {
+      if (HasTargetPage) {
         output.WriteRawTag(18);
         output.WriteString(TargetPage);
       }
-      if (targetCase_ == TargetOneofCase.TargetFlow) {
+      if (HasTargetFlow) {
         output.WriteRawTag(26);
         output.WriteString(TargetFlow);
       }
@@ -1803,11 +1831,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (targetCase_ == TargetOneofCase.TargetPage) {
+      if (HasTargetPage) {
         output.WriteRawTag(18);
         output.WriteString(TargetPage);
       }
-      if (targetCase_ == TargetOneofCase.TargetFlow) {
+      if (HasTargetFlow) {
         output.WriteRawTag(26);
         output.WriteString(TargetFlow);
       }
@@ -1842,10 +1870,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (triggerFulfillment_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TriggerFulfillment);
       }
-      if (targetCase_ == TargetOneofCase.TargetPage) {
+      if (HasTargetPage) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetPage);
       }
-      if (targetCase_ == TargetOneofCase.TargetFlow) {
+      if (HasTargetFlow) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetFlow);
       }
       if (_unknownFields != null) {
@@ -2125,10 +2153,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TargetPage {
-      get { return targetCase_ == TargetOneofCase.TargetPage ? (string) target_ : ""; }
+      get { return HasTargetPage ? (string) target_ : ""; }
       set {
         target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         targetCase_ = TargetOneofCase.TargetPage;
+      }
+    }
+    /// <summary>Gets whether the "target_page" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTargetPage {
+      get { return targetCase_ == TargetOneofCase.TargetPage; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "target_page" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTargetPage() {
+      if (HasTargetPage) {
+        ClearTarget();
       }
     }
 
@@ -2142,10 +2184,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TargetFlow {
-      get { return targetCase_ == TargetOneofCase.TargetFlow ? (string) target_ : ""; }
+      get { return HasTargetFlow ? (string) target_ : ""; }
       set {
         target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         targetCase_ = TargetOneofCase.TargetFlow;
+      }
+    }
+    /// <summary>Gets whether the "target_flow" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTargetFlow {
+      get { return targetCase_ == TargetOneofCase.TargetFlow; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "target_flow" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTargetFlow() {
+      if (HasTargetFlow) {
+        ClearTarget();
       }
     }
 
@@ -2203,8 +2259,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Intent.Length != 0) hash ^= Intent.GetHashCode();
       if (Condition.Length != 0) hash ^= Condition.GetHashCode();
       if (triggerFulfillment_ != null) hash ^= TriggerFulfillment.GetHashCode();
-      if (targetCase_ == TargetOneofCase.TargetPage) hash ^= TargetPage.GetHashCode();
-      if (targetCase_ == TargetOneofCase.TargetFlow) hash ^= TargetFlow.GetHashCode();
+      if (HasTargetPage) hash ^= TargetPage.GetHashCode();
+      if (HasTargetFlow) hash ^= TargetFlow.GetHashCode();
       hash ^= (int) targetCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2236,11 +2292,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(26);
         output.WriteMessage(TriggerFulfillment);
       }
-      if (targetCase_ == TargetOneofCase.TargetPage) {
+      if (HasTargetPage) {
         output.WriteRawTag(34);
         output.WriteString(TargetPage);
       }
-      if (targetCase_ == TargetOneofCase.TargetFlow) {
+      if (HasTargetFlow) {
         output.WriteRawTag(42);
         output.WriteString(TargetFlow);
       }
@@ -2270,11 +2326,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(26);
         output.WriteMessage(TriggerFulfillment);
       }
-      if (targetCase_ == TargetOneofCase.TargetPage) {
+      if (HasTargetPage) {
         output.WriteRawTag(34);
         output.WriteString(TargetPage);
       }
-      if (targetCase_ == TargetOneofCase.TargetFlow) {
+      if (HasTargetFlow) {
         output.WriteRawTag(42);
         output.WriteString(TargetFlow);
       }
@@ -2304,10 +2360,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (triggerFulfillment_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TriggerFulfillment);
       }
-      if (targetCase_ == TargetOneofCase.TargetPage) {
+      if (HasTargetPage) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetPage);
       }
-      if (targetCase_ == TargetOneofCase.TargetFlow) {
+      if (HasTargetFlow) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetFlow);
       }
       if (_unknownFields != null) {

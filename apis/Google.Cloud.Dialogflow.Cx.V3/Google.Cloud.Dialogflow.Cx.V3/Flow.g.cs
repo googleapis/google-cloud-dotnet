@@ -3658,10 +3658,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FlowUri {
-      get { return flowCase_ == FlowOneofCase.FlowUri ? (string) flow_ : ""; }
+      get { return HasFlowUri ? (string) flow_ : ""; }
       set {
         flow_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         flowCase_ = FlowOneofCase.FlowUri;
+      }
+    }
+    /// <summary>Gets whether the "flow_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFlowUri {
+      get { return flowCase_ == FlowOneofCase.FlowUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "flow_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFlowUri() {
+      if (HasFlowUri) {
+        ClearFlow();
       }
     }
 
@@ -3673,10 +3687,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString FlowContent {
-      get { return flowCase_ == FlowOneofCase.FlowContent ? (pb::ByteString) flow_ : pb::ByteString.Empty; }
+      get { return HasFlowContent ? (pb::ByteString) flow_ : pb::ByteString.Empty; }
       set {
         flow_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         flowCase_ = FlowOneofCase.FlowContent;
+      }
+    }
+    /// <summary>Gets whether the "flow_content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFlowContent {
+      get { return flowCase_ == FlowOneofCase.FlowContent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "flow_content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFlowContent() {
+      if (HasFlowContent) {
+        ClearFlow();
       }
     }
 
@@ -3744,8 +3772,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (flowCase_ == FlowOneofCase.FlowUri) hash ^= FlowUri.GetHashCode();
-      if (flowCase_ == FlowOneofCase.FlowContent) hash ^= FlowContent.GetHashCode();
+      if (HasFlowUri) hash ^= FlowUri.GetHashCode();
+      if (HasFlowContent) hash ^= FlowContent.GetHashCode();
       if (ImportOption != global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Types.ImportOption.Unspecified) hash ^= ImportOption.GetHashCode();
       hash ^= (int) flowCase_;
       if (_unknownFields != null) {
@@ -3770,11 +3798,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (flowCase_ == FlowOneofCase.FlowUri) {
+      if (HasFlowUri) {
         output.WriteRawTag(18);
         output.WriteString(FlowUri);
       }
-      if (flowCase_ == FlowOneofCase.FlowContent) {
+      if (HasFlowContent) {
         output.WriteRawTag(26);
         output.WriteBytes(FlowContent);
       }
@@ -3796,11 +3824,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (flowCase_ == FlowOneofCase.FlowUri) {
+      if (HasFlowUri) {
         output.WriteRawTag(18);
         output.WriteString(FlowUri);
       }
-      if (flowCase_ == FlowOneofCase.FlowContent) {
+      if (HasFlowContent) {
         output.WriteRawTag(26);
         output.WriteBytes(FlowContent);
       }
@@ -3821,10 +3849,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (flowCase_ == FlowOneofCase.FlowUri) {
+      if (HasFlowUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FlowUri);
       }
-      if (flowCase_ == FlowOneofCase.FlowContent) {
+      if (HasFlowContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(FlowContent);
       }
       if (ImportOption != global::Google.Cloud.Dialogflow.Cx.V3.ImportFlowRequest.Types.ImportOption.Unspecified) {
@@ -4507,10 +4535,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FlowUri {
-      get { return flowCase_ == FlowOneofCase.FlowUri ? (string) flow_ : ""; }
+      get { return HasFlowUri ? (string) flow_ : ""; }
       set {
         flow_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         flowCase_ = FlowOneofCase.FlowUri;
+      }
+    }
+    /// <summary>Gets whether the "flow_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFlowUri {
+      get { return flowCase_ == FlowOneofCase.FlowUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "flow_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFlowUri() {
+      if (HasFlowUri) {
+        ClearFlow();
       }
     }
 
@@ -4522,10 +4564,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString FlowContent {
-      get { return flowCase_ == FlowOneofCase.FlowContent ? (pb::ByteString) flow_ : pb::ByteString.Empty; }
+      get { return HasFlowContent ? (pb::ByteString) flow_ : pb::ByteString.Empty; }
       set {
         flow_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         flowCase_ = FlowOneofCase.FlowContent;
+      }
+    }
+    /// <summary>Gets whether the "flow_content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFlowContent {
+      get { return flowCase_ == FlowOneofCase.FlowContent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "flow_content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFlowContent() {
+      if (HasFlowContent) {
+        ClearFlow();
       }
     }
 
@@ -4575,8 +4631,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (flowCase_ == FlowOneofCase.FlowUri) hash ^= FlowUri.GetHashCode();
-      if (flowCase_ == FlowOneofCase.FlowContent) hash ^= FlowContent.GetHashCode();
+      if (HasFlowUri) hash ^= FlowUri.GetHashCode();
+      if (HasFlowContent) hash ^= FlowContent.GetHashCode();
       hash ^= (int) flowCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4596,11 +4652,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (flowCase_ == FlowOneofCase.FlowUri) {
+      if (HasFlowUri) {
         output.WriteRawTag(10);
         output.WriteString(FlowUri);
       }
-      if (flowCase_ == FlowOneofCase.FlowContent) {
+      if (HasFlowContent) {
         output.WriteRawTag(18);
         output.WriteBytes(FlowContent);
       }
@@ -4614,11 +4670,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (flowCase_ == FlowOneofCase.FlowUri) {
+      if (HasFlowUri) {
         output.WriteRawTag(10);
         output.WriteString(FlowUri);
       }
-      if (flowCase_ == FlowOneofCase.FlowContent) {
+      if (HasFlowContent) {
         output.WriteRawTag(18);
         output.WriteBytes(FlowContent);
       }
@@ -4632,10 +4688,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (flowCase_ == FlowOneofCase.FlowUri) {
+      if (HasFlowUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FlowUri);
       }
-      if (flowCase_ == FlowOneofCase.FlowContent) {
+      if (HasFlowContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(FlowContent);
       }
       if (_unknownFields != null) {

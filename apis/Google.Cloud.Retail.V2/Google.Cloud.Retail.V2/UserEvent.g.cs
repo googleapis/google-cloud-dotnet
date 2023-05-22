@@ -968,7 +968,7 @@ namespace Google.Cloud.Retail.V2 {
         }
         CompletionDetail.MergeFrom(other.CompletionDetail);
       }
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       if (other.CartId.Length != 0) {
         CartId = other.CartId;
       }

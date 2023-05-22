@@ -447,10 +447,24 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PrebuiltRule {
-      get { return conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule ? (string) conversionRule_ : ""; }
+      get { return HasPrebuiltRule ? (string) conversionRule_ : ""; }
       set {
         conversionRule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         conversionRuleCase_ = ConversionRuleOneofCase.PrebuiltRule;
+      }
+    }
+    /// <summary>Gets whether the "prebuilt_rule" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPrebuiltRule {
+      get { return conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "prebuilt_rule" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPrebuiltRule() {
+      if (HasPrebuiltRule) {
+        ClearConversionRule();
       }
     }
 
@@ -588,7 +602,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule) hash ^= PrebuiltRule.GetHashCode();
+      if (HasPrebuiltRule) hash ^= PrebuiltRule.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (UserEvent.Length != 0) hash ^= UserEvent.GetHashCode();
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
@@ -633,7 +647,7 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(42);
         output.WriteString(RawJson);
       }
-      if (conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule) {
+      if (HasPrebuiltRule) {
         output.WriteRawTag(50);
         output.WriteString(PrebuiltRule);
       }
@@ -667,7 +681,7 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(42);
         output.WriteString(RawJson);
       }
-      if (conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule) {
+      if (HasPrebuiltRule) {
         output.WriteRawTag(50);
         output.WriteString(PrebuiltRule);
       }
@@ -681,7 +695,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule) {
+      if (HasPrebuiltRule) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PrebuiltRule);
       }
       if (Parent.Length != 0) {

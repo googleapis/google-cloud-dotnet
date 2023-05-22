@@ -1781,6 +1781,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             /// training phrases in template mode, they will be removed during training
             /// and it can cause a drop in agent performance.
             /// </summary>
+            [global::System.ObsoleteAttribute]
             [pbr::OriginalName("TEMPLATE")] Template = 2,
           }
 
@@ -8702,10 +8703,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Text {
-              get { return sourceCase_ == SourceOneofCase.Text ? (string) source_ : ""; }
+              get { return HasText ? (string) source_ : ""; }
               set {
                 source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 sourceCase_ = SourceOneofCase.Text;
+              }
+            }
+            /// <summary>Gets whether the "text" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasText {
+              get { return sourceCase_ == SourceOneofCase.Text; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "text" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearText() {
+              if (HasText) {
+                ClearSource();
               }
             }
 
@@ -8718,10 +8733,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Ssml {
-              get { return sourceCase_ == SourceOneofCase.Ssml ? (string) source_ : ""; }
+              get { return HasSsml ? (string) source_ : ""; }
               set {
                 source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 sourceCase_ = SourceOneofCase.Ssml;
+              }
+            }
+            /// <summary>Gets whether the "ssml" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasSsml {
+              get { return sourceCase_ == SourceOneofCase.Ssml; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "ssml" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearSsml() {
+              if (HasSsml) {
+                ClearSource();
               }
             }
 
@@ -8771,8 +8800,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
-              if (sourceCase_ == SourceOneofCase.Text) hash ^= Text.GetHashCode();
-              if (sourceCase_ == SourceOneofCase.Ssml) hash ^= Ssml.GetHashCode();
+              if (HasText) hash ^= Text.GetHashCode();
+              if (HasSsml) hash ^= Ssml.GetHashCode();
               hash ^= (int) sourceCase_;
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -8792,11 +8821,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
-              if (sourceCase_ == SourceOneofCase.Text) {
+              if (HasText) {
                 output.WriteRawTag(10);
                 output.WriteString(Text);
               }
-              if (sourceCase_ == SourceOneofCase.Ssml) {
+              if (HasSsml) {
                 output.WriteRawTag(18);
                 output.WriteString(Ssml);
               }
@@ -8810,11 +8839,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (sourceCase_ == SourceOneofCase.Text) {
+              if (HasText) {
                 output.WriteRawTag(10);
                 output.WriteString(Text);
               }
-              if (sourceCase_ == SourceOneofCase.Ssml) {
+              if (HasSsml) {
                 output.WriteRawTag(18);
                 output.WriteString(Ssml);
               }
@@ -8828,10 +8857,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
-              if (sourceCase_ == SourceOneofCase.Text) {
+              if (HasText) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
               }
-              if (sourceCase_ == SourceOneofCase.Ssml) {
+              if (HasSsml) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Ssml);
               }
               if (_unknownFields != null) {
@@ -16839,10 +16868,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string IntentBatchUri {
-      get { return intentBatchCase_ == IntentBatchOneofCase.IntentBatchUri ? (string) intentBatch_ : ""; }
+      get { return HasIntentBatchUri ? (string) intentBatch_ : ""; }
       set {
         intentBatch_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         intentBatchCase_ = IntentBatchOneofCase.IntentBatchUri;
+      }
+    }
+    /// <summary>Gets whether the "intent_batch_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIntentBatchUri {
+      get { return intentBatchCase_ == IntentBatchOneofCase.IntentBatchUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "intent_batch_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIntentBatchUri() {
+      if (HasIntentBatchUri) {
+        ClearIntentBatch();
       }
     }
 
@@ -16961,7 +17004,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (intentBatchCase_ == IntentBatchOneofCase.IntentBatchUri) hash ^= IntentBatchUri.GetHashCode();
+      if (HasIntentBatchUri) hash ^= IntentBatchUri.GetHashCode();
       if (intentBatchCase_ == IntentBatchOneofCase.IntentBatchInline) hash ^= IntentBatchInline.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
@@ -16989,7 +17032,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (intentBatchCase_ == IntentBatchOneofCase.IntentBatchUri) {
+      if (HasIntentBatchUri) {
         output.WriteRawTag(18);
         output.WriteString(IntentBatchUri);
       }
@@ -17023,7 +17066,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (intentBatchCase_ == IntentBatchOneofCase.IntentBatchUri) {
+      if (HasIntentBatchUri) {
         output.WriteRawTag(18);
         output.WriteString(IntentBatchUri);
       }
@@ -17056,7 +17099,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (intentBatchCase_ == IntentBatchOneofCase.IntentBatchUri) {
+      if (HasIntentBatchUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(IntentBatchUri);
       }
       if (intentBatchCase_ == IntentBatchOneofCase.IntentBatchInline) {
