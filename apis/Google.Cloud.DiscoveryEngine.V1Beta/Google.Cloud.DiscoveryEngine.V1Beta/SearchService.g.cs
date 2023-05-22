@@ -880,7 +880,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         }
         BoostSpec.MergeFrom(other.BoostSpec);
       }
-      params_.Add(other.params_);
+      params_.MergeFrom(other.params_);
       if (other.queryExpansionSpec_ != null) {
         if (queryExpansionSpec_ == null) {
           QueryExpansionSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.QueryExpansionSpec();
@@ -905,7 +905,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (other.SafeSearch != false) {
         SafeSearch = other.SafeSearch;
       }
-      userLabels_.Add(other.userLabels_);
+      userLabels_.MergeFrom(other.userLabels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4642,10 +4642,24 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Value {
-              get { return facetValueCase_ == FacetValueOneofCase.Value ? (string) facetValue_ : ""; }
+              get { return HasValue ? (string) facetValue_ : ""; }
               set {
                 facetValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 facetValueCase_ = FacetValueOneofCase.Value;
+              }
+            }
+            /// <summary>Gets whether the "value" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasValue {
+              get { return facetValueCase_ == FacetValueOneofCase.Value; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "value" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearValue() {
+              if (HasValue) {
+                ClearFacetValue();
               }
             }
 
@@ -4728,7 +4742,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
-              if (facetValueCase_ == FacetValueOneofCase.Value) hash ^= Value.GetHashCode();
+              if (HasValue) hash ^= Value.GetHashCode();
               if (facetValueCase_ == FacetValueOneofCase.Interval) hash ^= Interval.GetHashCode();
               if (Count != 0L) hash ^= Count.GetHashCode();
               hash ^= (int) facetValueCase_;
@@ -4750,7 +4764,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
-              if (facetValueCase_ == FacetValueOneofCase.Value) {
+              if (HasValue) {
                 output.WriteRawTag(10);
                 output.WriteString(Value);
               }
@@ -4772,7 +4786,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (facetValueCase_ == FacetValueOneofCase.Value) {
+              if (HasValue) {
                 output.WriteRawTag(10);
                 output.WriteString(Value);
               }
@@ -4794,7 +4808,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
-              if (facetValueCase_ == FacetValueOneofCase.Value) {
+              if (HasValue) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
               }
               if (facetValueCase_ == FacetValueOneofCase.Interval) {

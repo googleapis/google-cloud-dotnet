@@ -541,11 +541,11 @@ namespace Google.Cloud.Metastore.V1Beta {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Version.Length != 0) {
         Version = other.Version;
       }
-      backendMetastores_.Add(other.backendMetastores_);
+      backendMetastores_.MergeFrom(other.backendMetastores_);
       if (other.EndpointUri.Length != 0) {
         EndpointUri = other.EndpointUri;
       }

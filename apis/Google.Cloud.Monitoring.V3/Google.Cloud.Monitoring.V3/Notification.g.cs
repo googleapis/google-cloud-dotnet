@@ -952,8 +952,8 @@ namespace Google.Cloud.Monitoring.V3 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      labels_.Add(other.labels_);
-      userLabels_.Add(other.userLabels_);
+      labels_.MergeFrom(other.labels_);
+      userLabels_.MergeFrom(other.userLabels_);
       if (other.VerificationStatus != global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus.Unspecified) {
         VerificationStatus = other.VerificationStatus;
       }

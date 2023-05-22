@@ -2821,10 +2821,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Domain {
-      get { return customerIdentityCase_ == CustomerIdentityOneofCase.Domain ? (string) customerIdentity_ : ""; }
+      get { return HasDomain ? (string) customerIdentity_ : ""; }
       set {
         customerIdentity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         customerIdentityCase_ = CustomerIdentityOneofCase.Domain;
+      }
+    }
+    /// <summary>Gets whether the "domain" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDomain {
+      get { return customerIdentityCase_ == CustomerIdentityOneofCase.Domain; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "domain" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDomain() {
+      if (HasDomain) {
+        ClearCustomerIdentity();
       }
     }
 
@@ -2836,10 +2850,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CloudIdentityId {
-      get { return customerIdentityCase_ == CustomerIdentityOneofCase.CloudIdentityId ? (string) customerIdentity_ : ""; }
+      get { return HasCloudIdentityId ? (string) customerIdentity_ : ""; }
       set {
         customerIdentity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         customerIdentityCase_ = CustomerIdentityOneofCase.CloudIdentityId;
+      }
+    }
+    /// <summary>Gets whether the "cloud_identity_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCloudIdentityId {
+      get { return customerIdentityCase_ == CustomerIdentityOneofCase.CloudIdentityId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "cloud_identity_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCloudIdentityId() {
+      if (HasCloudIdentityId) {
+        ClearCustomerIdentity();
       }
     }
 
@@ -2981,8 +3009,8 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (customerIdentityCase_ == CustomerIdentityOneofCase.Domain) hash ^= Domain.GetHashCode();
-      if (customerIdentityCase_ == CustomerIdentityOneofCase.CloudIdentityId) hash ^= CloudIdentityId.GetHashCode();
+      if (HasDomain) hash ^= Domain.GetHashCode();
+      if (HasCloudIdentityId) hash ^= CloudIdentityId.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (AuthToken.Length != 0) hash ^= AuthToken.GetHashCode();
       if (OverwriteIfExists != false) hash ^= OverwriteIfExists.GetHashCode();
@@ -3011,11 +3039,11 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (customerIdentityCase_ == CustomerIdentityOneofCase.Domain) {
+      if (HasDomain) {
         output.WriteRawTag(18);
         output.WriteString(Domain);
       }
-      if (customerIdentityCase_ == CustomerIdentityOneofCase.CloudIdentityId) {
+      if (HasCloudIdentityId) {
         output.WriteRawTag(26);
         output.WriteString(CloudIdentityId);
       }
@@ -3049,11 +3077,11 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (customerIdentityCase_ == CustomerIdentityOneofCase.Domain) {
+      if (HasDomain) {
         output.WriteRawTag(18);
         output.WriteString(Domain);
       }
-      if (customerIdentityCase_ == CustomerIdentityOneofCase.CloudIdentityId) {
+      if (HasCloudIdentityId) {
         output.WriteRawTag(26);
         output.WriteString(CloudIdentityId);
       }
@@ -3083,10 +3111,10 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (customerIdentityCase_ == CustomerIdentityOneofCase.Domain) {
+      if (HasDomain) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Domain);
       }
-      if (customerIdentityCase_ == CustomerIdentityOneofCase.CloudIdentityId) {
+      if (HasCloudIdentityId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CloudIdentityId);
       }
       if (Parent.Length != 0) {
@@ -4150,10 +4178,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CloudIdentityId {
-      get { return transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CloudIdentityId ? (string) transferredCustomerIdentity_ : ""; }
+      get { return HasCloudIdentityId ? (string) transferredCustomerIdentity_ : ""; }
       set {
         transferredCustomerIdentity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         transferredCustomerIdentityCase_ = TransferredCustomerIdentityOneofCase.CloudIdentityId;
+      }
+    }
+    /// <summary>Gets whether the "cloud_identity_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCloudIdentityId {
+      get { return transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CloudIdentityId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "cloud_identity_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCloudIdentityId() {
+      if (HasCloudIdentityId) {
+        ClearTransferredCustomerIdentity();
       }
     }
 
@@ -4168,10 +4210,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerName {
-      get { return transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CustomerName ? (string) transferredCustomerIdentity_ : ""; }
+      get { return HasCustomerName ? (string) transferredCustomerIdentity_ : ""; }
       set {
         transferredCustomerIdentity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         transferredCustomerIdentityCase_ = TransferredCustomerIdentityOneofCase.CustomerName;
+      }
+    }
+    /// <summary>Gets whether the "customer_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomerName {
+      get { return transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CustomerName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "customer_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomerName() {
+      if (HasCustomerName) {
+        ClearTransferredCustomerIdentity();
       }
     }
 
@@ -4316,8 +4372,8 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CloudIdentityId) hash ^= CloudIdentityId.GetHashCode();
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CustomerName) hash ^= CustomerName.GetHashCode();
+      if (HasCloudIdentityId) hash ^= CloudIdentityId.GetHashCode();
+      if (HasCustomerName) hash ^= CustomerName.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
@@ -4354,7 +4410,7 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CloudIdentityId) {
+      if (HasCloudIdentityId) {
         output.WriteRawTag(34);
         output.WriteString(CloudIdentityId);
       }
@@ -4366,7 +4422,7 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(50);
         output.WriteString(LanguageCode);
       }
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CustomerName) {
+      if (HasCustomerName) {
         output.WriteRawTag(58);
         output.WriteString(CustomerName);
       }
@@ -4392,7 +4448,7 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CloudIdentityId) {
+      if (HasCloudIdentityId) {
         output.WriteRawTag(34);
         output.WriteString(CloudIdentityId);
       }
@@ -4404,7 +4460,7 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(50);
         output.WriteString(LanguageCode);
       }
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CustomerName) {
+      if (HasCustomerName) {
         output.WriteRawTag(58);
         output.WriteString(CustomerName);
       }
@@ -4418,10 +4474,10 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CloudIdentityId) {
+      if (HasCloudIdentityId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CloudIdentityId);
       }
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CustomerName) {
+      if (HasCustomerName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerName);
       }
       if (Parent.Length != 0) {
@@ -4865,10 +4921,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CloudIdentityId {
-      get { return transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CloudIdentityId ? (string) transferredCustomerIdentity_ : ""; }
+      get { return HasCloudIdentityId ? (string) transferredCustomerIdentity_ : ""; }
       set {
         transferredCustomerIdentity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         transferredCustomerIdentityCase_ = TransferredCustomerIdentityOneofCase.CloudIdentityId;
+      }
+    }
+    /// <summary>Gets whether the "cloud_identity_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCloudIdentityId {
+      get { return transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CloudIdentityId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "cloud_identity_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCloudIdentityId() {
+      if (HasCloudIdentityId) {
+        ClearTransferredCustomerIdentity();
       }
     }
 
@@ -4881,10 +4951,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerName {
-      get { return transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CustomerName ? (string) transferredCustomerIdentity_ : ""; }
+      get { return HasCustomerName ? (string) transferredCustomerIdentity_ : ""; }
       set {
         transferredCustomerIdentity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         transferredCustomerIdentityCase_ = TransferredCustomerIdentityOneofCase.CustomerName;
+      }
+    }
+    /// <summary>Gets whether the "customer_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomerName {
+      get { return transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CustomerName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "customer_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomerName() {
+      if (HasCustomerName) {
+        ClearTransferredCustomerIdentity();
       }
     }
 
@@ -5023,8 +5107,8 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CloudIdentityId) hash ^= CloudIdentityId.GetHashCode();
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CustomerName) hash ^= CustomerName.GetHashCode();
+      if (HasCloudIdentityId) hash ^= CloudIdentityId.GetHashCode();
+      if (HasCustomerName) hash ^= CustomerName.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
@@ -5061,11 +5145,11 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CloudIdentityId) {
+      if (HasCloudIdentityId) {
         output.WriteRawTag(34);
         output.WriteString(CloudIdentityId);
       }
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CustomerName) {
+      if (HasCustomerName) {
         output.WriteRawTag(42);
         output.WriteString(CustomerName);
       }
@@ -5099,11 +5183,11 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CloudIdentityId) {
+      if (HasCloudIdentityId) {
         output.WriteRawTag(34);
         output.WriteString(CloudIdentityId);
       }
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CustomerName) {
+      if (HasCustomerName) {
         output.WriteRawTag(42);
         output.WriteString(CustomerName);
       }
@@ -5125,10 +5209,10 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CloudIdentityId) {
+      if (HasCloudIdentityId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CloudIdentityId);
       }
-      if (transferredCustomerIdentityCase_ == TransferredCustomerIdentityOneofCase.CustomerName) {
+      if (HasCustomerName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerName);
       }
       if (Parent.Length != 0) {

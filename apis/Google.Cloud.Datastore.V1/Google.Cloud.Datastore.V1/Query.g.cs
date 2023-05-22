@@ -3916,7 +3916,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (other.AllowLiterals != false) {
         AllowLiterals = other.AllowLiterals;
       }
-      namedBindings_.Add(other.namedBindings_);
+      namedBindings_.MergeFrom(other.namedBindings_);
       positionalBindings_.Add(other.positionalBindings_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4066,10 +4066,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Cursor {
-      get { return parameterTypeCase_ == ParameterTypeOneofCase.Cursor ? (pb::ByteString) parameterType_ : pb::ByteString.Empty; }
+      get { return HasCursor ? (pb::ByteString) parameterType_ : pb::ByteString.Empty; }
       set {
         parameterType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         parameterTypeCase_ = ParameterTypeOneofCase.Cursor;
+      }
+    }
+    /// <summary>Gets whether the "cursor" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCursor {
+      get { return parameterTypeCase_ == ParameterTypeOneofCase.Cursor; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "cursor" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCursor() {
+      if (HasCursor) {
+        ClearParameterType();
       }
     }
 
@@ -4120,7 +4134,7 @@ namespace Google.Cloud.Datastore.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (parameterTypeCase_ == ParameterTypeOneofCase.Value) hash ^= Value.GetHashCode();
-      if (parameterTypeCase_ == ParameterTypeOneofCase.Cursor) hash ^= Cursor.GetHashCode();
+      if (HasCursor) hash ^= Cursor.GetHashCode();
       hash ^= (int) parameterTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4144,7 +4158,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Value);
       }
-      if (parameterTypeCase_ == ParameterTypeOneofCase.Cursor) {
+      if (HasCursor) {
         output.WriteRawTag(26);
         output.WriteBytes(Cursor);
       }
@@ -4162,7 +4176,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Value);
       }
-      if (parameterTypeCase_ == ParameterTypeOneofCase.Cursor) {
+      if (HasCursor) {
         output.WriteRawTag(26);
         output.WriteBytes(Cursor);
       }
@@ -4179,7 +4193,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (parameterTypeCase_ == ParameterTypeOneofCase.Value) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Value);
       }
-      if (parameterTypeCase_ == ParameterTypeOneofCase.Cursor) {
+      if (HasCursor) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Cursor);
       }
       if (_unknownFields != null) {

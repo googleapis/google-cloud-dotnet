@@ -389,7 +389,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      tasks_.Add(other.tasks_);
+      tasks_.MergeFrom(other.tasks_);
       if (other.State != global::Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow.Types.State.Unspecified) {
         State = other.State;
       }

@@ -4734,10 +4734,24 @@ namespace Google.Cloud.WebRisk.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float Score {
-          get { return valueCase_ == ValueOneofCase.Score ? (float) value_ : 0F; }
+          get { return HasScore ? (float) value_ : 0F; }
           set {
             value_ = value;
             valueCase_ = ValueOneofCase.Score;
+          }
+        }
+        /// <summary>Gets whether the "score" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasScore {
+          get { return valueCase_ == ValueOneofCase.Score; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "score" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearScore() {
+          if (HasScore) {
+            ClearValue();
           }
         }
 
@@ -4749,10 +4763,24 @@ namespace Google.Cloud.WebRisk.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence.Types.ConfidenceLevel Level {
-          get { return valueCase_ == ValueOneofCase.Level ? (global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence.Types.ConfidenceLevel) value_ : global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence.Types.ConfidenceLevel.Unspecified; }
+          get { return HasLevel ? (global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence.Types.ConfidenceLevel) value_ : global::Google.Cloud.WebRisk.V1.ThreatInfo.Types.Confidence.Types.ConfidenceLevel.Unspecified; }
           set {
             value_ = value;
             valueCase_ = ValueOneofCase.Level;
+          }
+        }
+        /// <summary>Gets whether the "level" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasLevel {
+          get { return valueCase_ == ValueOneofCase.Level; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "level" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearLevel() {
+          if (HasLevel) {
+            ClearValue();
           }
         }
 
@@ -4802,8 +4830,8 @@ namespace Google.Cloud.WebRisk.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (valueCase_ == ValueOneofCase.Score) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Score);
-          if (valueCase_ == ValueOneofCase.Level) hash ^= Level.GetHashCode();
+          if (HasScore) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Score);
+          if (HasLevel) hash ^= Level.GetHashCode();
           hash ^= (int) valueCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -4823,11 +4851,11 @@ namespace Google.Cloud.WebRisk.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (valueCase_ == ValueOneofCase.Score) {
+          if (HasScore) {
             output.WriteRawTag(13);
             output.WriteFloat(Score);
           }
-          if (valueCase_ == ValueOneofCase.Level) {
+          if (HasLevel) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Level);
           }
@@ -4841,11 +4869,11 @@ namespace Google.Cloud.WebRisk.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (valueCase_ == ValueOneofCase.Score) {
+          if (HasScore) {
             output.WriteRawTag(13);
             output.WriteFloat(Score);
           }
-          if (valueCase_ == ValueOneofCase.Level) {
+          if (HasLevel) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Level);
           }
@@ -4859,10 +4887,10 @@ namespace Google.Cloud.WebRisk.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (valueCase_ == ValueOneofCase.Score) {
+          if (HasScore) {
             size += 1 + 4;
           }
-          if (valueCase_ == ValueOneofCase.Level) {
+          if (HasLevel) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
           }
           if (_unknownFields != null) {

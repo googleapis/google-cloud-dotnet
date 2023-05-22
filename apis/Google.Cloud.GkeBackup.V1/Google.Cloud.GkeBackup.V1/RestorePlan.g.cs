@@ -511,7 +511,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         }
         RestoreConfig.MergeFrom(other.RestoreConfig);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }

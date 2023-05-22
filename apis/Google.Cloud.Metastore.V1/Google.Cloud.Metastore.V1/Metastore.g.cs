@@ -1146,7 +1146,7 @@ namespace Google.Cloud.Metastore.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Network.Length != 0) {
         Network = other.Network;
       }
@@ -2074,14 +2074,14 @@ namespace Google.Cloud.Metastore.V1 {
       if (other.Version.Length != 0) {
         Version = other.Version;
       }
-      configOverrides_.Add(other.configOverrides_);
+      configOverrides_.MergeFrom(other.configOverrides_);
       if (other.kerberosConfig_ != null) {
         if (kerberosConfig_ == null) {
           KerberosConfig = new global::Google.Cloud.Metastore.V1.KerberosConfig();
         }
         KerberosConfig.MergeFrom(other.KerberosConfig);
       }
-      auxiliaryVersions_.Add(other.auxiliaryVersions_);
+      auxiliaryVersions_.MergeFrom(other.auxiliaryVersions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2509,10 +2509,24 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CloudSecret {
-      get { return valueCase_ == ValueOneofCase.CloudSecret ? (string) value_ : ""; }
+      get { return HasCloudSecret ? (string) value_ : ""; }
       set {
         value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueCase_ = ValueOneofCase.CloudSecret;
+      }
+    }
+    /// <summary>Gets whether the "cloud_secret" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCloudSecret {
+      get { return valueCase_ == ValueOneofCase.CloudSecret; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "cloud_secret" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCloudSecret() {
+      if (HasCloudSecret) {
+        ClearValue();
       }
     }
 
@@ -2560,7 +2574,7 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (valueCase_ == ValueOneofCase.CloudSecret) hash ^= CloudSecret.GetHashCode();
+      if (HasCloudSecret) hash ^= CloudSecret.GetHashCode();
       hash ^= (int) valueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2580,7 +2594,7 @@ namespace Google.Cloud.Metastore.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (valueCase_ == ValueOneofCase.CloudSecret) {
+      if (HasCloudSecret) {
         output.WriteRawTag(18);
         output.WriteString(CloudSecret);
       }
@@ -2594,7 +2608,7 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (valueCase_ == ValueOneofCase.CloudSecret) {
+      if (HasCloudSecret) {
         output.WriteRawTag(18);
         output.WriteString(CloudSecret);
       }
@@ -2608,7 +2622,7 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (valueCase_ == ValueOneofCase.CloudSecret) {
+      if (HasCloudSecret) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CloudSecret);
       }
       if (_unknownFields != null) {
@@ -3077,7 +3091,7 @@ namespace Google.Cloud.Metastore.V1 {
       if (other.Version.Length != 0) {
         Version = other.Version;
       }
-      configOverrides_.Add(other.configOverrides_);
+      configOverrides_.MergeFrom(other.configOverrides_);
       if (other.networkConfig_ != null) {
         if (networkConfig_ == null) {
           NetworkConfig = new global::Google.Cloud.Metastore.V1.NetworkConfig();
@@ -3407,10 +3421,24 @@ namespace Google.Cloud.Metastore.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Subnetwork {
-          get { return vpcResourceCase_ == VpcResourceOneofCase.Subnetwork ? (string) vpcResource_ : ""; }
+          get { return HasSubnetwork ? (string) vpcResource_ : ""; }
           set {
             vpcResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             vpcResourceCase_ = VpcResourceOneofCase.Subnetwork;
+          }
+        }
+        /// <summary>Gets whether the "subnetwork" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSubnetwork {
+          get { return vpcResourceCase_ == VpcResourceOneofCase.Subnetwork; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "subnetwork" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSubnetwork() {
+          if (HasSubnetwork) {
+            ClearVpcResource();
           }
         }
 
@@ -3475,7 +3503,7 @@ namespace Google.Cloud.Metastore.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (vpcResourceCase_ == VpcResourceOneofCase.Subnetwork) hash ^= Subnetwork.GetHashCode();
+          if (HasSubnetwork) hash ^= Subnetwork.GetHashCode();
           if (EndpointUri.Length != 0) hash ^= EndpointUri.GetHashCode();
           hash ^= (int) vpcResourceCase_;
           if (_unknownFields != null) {
@@ -3496,7 +3524,7 @@ namespace Google.Cloud.Metastore.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (vpcResourceCase_ == VpcResourceOneofCase.Subnetwork) {
+          if (HasSubnetwork) {
             output.WriteRawTag(10);
             output.WriteString(Subnetwork);
           }
@@ -3514,7 +3542,7 @@ namespace Google.Cloud.Metastore.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (vpcResourceCase_ == VpcResourceOneofCase.Subnetwork) {
+          if (HasSubnetwork) {
             output.WriteRawTag(10);
             output.WriteString(Subnetwork);
           }
@@ -3532,7 +3560,7 @@ namespace Google.Cloud.Metastore.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (vpcResourceCase_ == VpcResourceOneofCase.Subnetwork) {
+          if (HasSubnetwork) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Subnetwork);
           }
           if (EndpointUri.Length != 0) {
@@ -4958,10 +4986,24 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DestinationGcsUri {
-      get { return destinationCase_ == DestinationOneofCase.DestinationGcsUri ? (string) destination_ : ""; }
+      get { return HasDestinationGcsUri ? (string) destination_ : ""; }
       set {
         destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         destinationCase_ = DestinationOneofCase.DestinationGcsUri;
+      }
+    }
+    /// <summary>Gets whether the "destination_gcs_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationGcsUri {
+      get { return destinationCase_ == DestinationOneofCase.DestinationGcsUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "destination_gcs_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationGcsUri() {
+      if (HasDestinationGcsUri) {
+        ClearDestination();
       }
     }
 
@@ -5073,7 +5115,7 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (destinationCase_ == DestinationOneofCase.DestinationGcsUri) hash ^= DestinationGcsUri.GetHashCode();
+      if (HasDestinationGcsUri) hash ^= DestinationGcsUri.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       if (State != global::Google.Cloud.Metastore.V1.MetadataExport.Types.State.Unspecified) hash ^= State.GetHashCode();
@@ -5109,7 +5151,7 @@ namespace Google.Cloud.Metastore.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
-      if (destinationCase_ == DestinationOneofCase.DestinationGcsUri) {
+      if (HasDestinationGcsUri) {
         output.WriteRawTag(34);
         output.WriteString(DestinationGcsUri);
       }
@@ -5139,7 +5181,7 @@ namespace Google.Cloud.Metastore.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) State);
       }
-      if (destinationCase_ == DestinationOneofCase.DestinationGcsUri) {
+      if (HasDestinationGcsUri) {
         output.WriteRawTag(34);
         output.WriteString(DestinationGcsUri);
       }
@@ -5157,7 +5199,7 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (destinationCase_ == DestinationOneofCase.DestinationGcsUri) {
+      if (HasDestinationGcsUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationGcsUri);
       }
       if (startTime_ != null) {
@@ -6355,10 +6397,24 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Metastore.V1.ScalingConfig.Types.InstanceSize InstanceSize {
-      get { return scalingModelCase_ == ScalingModelOneofCase.InstanceSize ? (global::Google.Cloud.Metastore.V1.ScalingConfig.Types.InstanceSize) scalingModel_ : global::Google.Cloud.Metastore.V1.ScalingConfig.Types.InstanceSize.Unspecified; }
+      get { return HasInstanceSize ? (global::Google.Cloud.Metastore.V1.ScalingConfig.Types.InstanceSize) scalingModel_ : global::Google.Cloud.Metastore.V1.ScalingConfig.Types.InstanceSize.Unspecified; }
       set {
         scalingModel_ = value;
         scalingModelCase_ = ScalingModelOneofCase.InstanceSize;
+      }
+    }
+    /// <summary>Gets whether the "instance_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInstanceSize {
+      get { return scalingModelCase_ == ScalingModelOneofCase.InstanceSize; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "instance_size" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInstanceSize() {
+      if (HasInstanceSize) {
+        ClearScalingModel();
       }
     }
 
@@ -6371,10 +6427,24 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float ScalingFactor {
-      get { return scalingModelCase_ == ScalingModelOneofCase.ScalingFactor ? (float) scalingModel_ : 0F; }
+      get { return HasScalingFactor ? (float) scalingModel_ : 0F; }
       set {
         scalingModel_ = value;
         scalingModelCase_ = ScalingModelOneofCase.ScalingFactor;
+      }
+    }
+    /// <summary>Gets whether the "scaling_factor" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasScalingFactor {
+      get { return scalingModelCase_ == ScalingModelOneofCase.ScalingFactor; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "scaling_factor" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearScalingFactor() {
+      if (HasScalingFactor) {
+        ClearScalingModel();
       }
     }
 
@@ -6424,8 +6494,8 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (scalingModelCase_ == ScalingModelOneofCase.InstanceSize) hash ^= InstanceSize.GetHashCode();
-      if (scalingModelCase_ == ScalingModelOneofCase.ScalingFactor) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ScalingFactor);
+      if (HasInstanceSize) hash ^= InstanceSize.GetHashCode();
+      if (HasScalingFactor) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ScalingFactor);
       hash ^= (int) scalingModelCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6445,11 +6515,11 @@ namespace Google.Cloud.Metastore.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (scalingModelCase_ == ScalingModelOneofCase.InstanceSize) {
+      if (HasInstanceSize) {
         output.WriteRawTag(8);
         output.WriteEnum((int) InstanceSize);
       }
-      if (scalingModelCase_ == ScalingModelOneofCase.ScalingFactor) {
+      if (HasScalingFactor) {
         output.WriteRawTag(21);
         output.WriteFloat(ScalingFactor);
       }
@@ -6463,11 +6533,11 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (scalingModelCase_ == ScalingModelOneofCase.InstanceSize) {
+      if (HasInstanceSize) {
         output.WriteRawTag(8);
         output.WriteEnum((int) InstanceSize);
       }
-      if (scalingModelCase_ == ScalingModelOneofCase.ScalingFactor) {
+      if (HasScalingFactor) {
         output.WriteRawTag(21);
         output.WriteFloat(ScalingFactor);
       }
@@ -6481,10 +6551,10 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (scalingModelCase_ == ScalingModelOneofCase.InstanceSize) {
+      if (HasInstanceSize) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InstanceSize);
       }
-      if (scalingModelCase_ == ScalingModelOneofCase.ScalingFactor) {
+      if (HasScalingFactor) {
         size += 1 + 4;
       }
       if (_unknownFields != null) {
@@ -11304,10 +11374,24 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DestinationGcsFolder {
-      get { return destinationCase_ == DestinationOneofCase.DestinationGcsFolder ? (string) destination_ : ""; }
+      get { return HasDestinationGcsFolder ? (string) destination_ : ""; }
       set {
         destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         destinationCase_ = DestinationOneofCase.DestinationGcsFolder;
+      }
+    }
+    /// <summary>Gets whether the "destination_gcs_folder" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationGcsFolder {
+      get { return destinationCase_ == DestinationOneofCase.DestinationGcsFolder; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "destination_gcs_folder" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationGcsFolder() {
+      if (HasDestinationGcsFolder) {
+        ClearDestination();
       }
     }
 
@@ -11418,7 +11502,7 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (destinationCase_ == DestinationOneofCase.DestinationGcsFolder) hash ^= DestinationGcsFolder.GetHashCode();
+      if (HasDestinationGcsFolder) hash ^= DestinationGcsFolder.GetHashCode();
       if (Service.Length != 0) hash ^= Service.GetHashCode();
       if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (DatabaseDumpType != global::Google.Cloud.Metastore.V1.DatabaseDumpSpec.Types.Type.Unspecified) hash ^= DatabaseDumpType.GetHashCode();
@@ -11445,7 +11529,7 @@ namespace Google.Cloud.Metastore.V1 {
         output.WriteRawTag(10);
         output.WriteString(Service);
       }
-      if (destinationCase_ == DestinationOneofCase.DestinationGcsFolder) {
+      if (HasDestinationGcsFolder) {
         output.WriteRawTag(18);
         output.WriteString(DestinationGcsFolder);
       }
@@ -11471,7 +11555,7 @@ namespace Google.Cloud.Metastore.V1 {
         output.WriteRawTag(10);
         output.WriteString(Service);
       }
-      if (destinationCase_ == DestinationOneofCase.DestinationGcsFolder) {
+      if (HasDestinationGcsFolder) {
         output.WriteRawTag(18);
         output.WriteString(DestinationGcsFolder);
       }
@@ -11493,7 +11577,7 @@ namespace Google.Cloud.Metastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (destinationCase_ == DestinationOneofCase.DestinationGcsFolder) {
+      if (HasDestinationGcsFolder) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationGcsFolder);
       }
       if (Service.Length != 0) {

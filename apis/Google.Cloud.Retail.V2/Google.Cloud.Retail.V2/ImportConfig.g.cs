@@ -1283,10 +1283,24 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsPrefix {
-      get { return destinationCase_ == DestinationOneofCase.GcsPrefix ? (string) destination_ : ""; }
+      get { return HasGcsPrefix ? (string) destination_ : ""; }
       set {
         destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         destinationCase_ = DestinationOneofCase.GcsPrefix;
+      }
+    }
+    /// <summary>Gets whether the "gcs_prefix" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsPrefix {
+      get { return destinationCase_ == DestinationOneofCase.GcsPrefix; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_prefix" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsPrefix() {
+      if (HasGcsPrefix) {
+        ClearDestination();
       }
     }
 
@@ -1334,7 +1348,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (destinationCase_ == DestinationOneofCase.GcsPrefix) hash ^= GcsPrefix.GetHashCode();
+      if (HasGcsPrefix) hash ^= GcsPrefix.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1354,7 +1368,7 @@ namespace Google.Cloud.Retail.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (destinationCase_ == DestinationOneofCase.GcsPrefix) {
+      if (HasGcsPrefix) {
         output.WriteRawTag(10);
         output.WriteString(GcsPrefix);
       }
@@ -1368,7 +1382,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (destinationCase_ == DestinationOneofCase.GcsPrefix) {
+      if (HasGcsPrefix) {
         output.WriteRawTag(10);
         output.WriteString(GcsPrefix);
       }
@@ -1382,7 +1396,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (destinationCase_ == DestinationOneofCase.GcsPrefix) {
+      if (HasGcsPrefix) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsPrefix);
       }
       if (_unknownFields != null) {

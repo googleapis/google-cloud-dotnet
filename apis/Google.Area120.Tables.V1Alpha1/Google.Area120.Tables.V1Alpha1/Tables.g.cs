@@ -5702,7 +5702,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      values_.Add(other.values_);
+      values_.MergeFrom(other.values_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

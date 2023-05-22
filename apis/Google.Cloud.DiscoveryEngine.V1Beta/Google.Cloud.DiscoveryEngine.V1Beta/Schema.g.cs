@@ -131,10 +131,24 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string JsonSchema {
-      get { return schemaCase_ == SchemaOneofCase.JsonSchema ? (string) schema_ : ""; }
+      get { return HasJsonSchema ? (string) schema_ : ""; }
       set {
         schema_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         schemaCase_ = SchemaOneofCase.JsonSchema;
+      }
+    }
+    /// <summary>Gets whether the "json_schema" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasJsonSchema {
+      get { return schemaCase_ == SchemaOneofCase.JsonSchema; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "json_schema" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearJsonSchema() {
+      if (HasJsonSchema) {
+        ClearSchema();
       }
     }
 
@@ -205,7 +219,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public override int GetHashCode() {
       int hash = 1;
       if (schemaCase_ == SchemaOneofCase.StructSchema) hash ^= StructSchema.GetHashCode();
-      if (schemaCase_ == SchemaOneofCase.JsonSchema) hash ^= JsonSchema.GetHashCode();
+      if (HasJsonSchema) hash ^= JsonSchema.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= (int) schemaCase_;
       if (_unknownFields != null) {
@@ -234,7 +248,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(18);
         output.WriteMessage(StructSchema);
       }
-      if (schemaCase_ == SchemaOneofCase.JsonSchema) {
+      if (HasJsonSchema) {
         output.WriteRawTag(26);
         output.WriteString(JsonSchema);
       }
@@ -256,7 +270,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(18);
         output.WriteMessage(StructSchema);
       }
-      if (schemaCase_ == SchemaOneofCase.JsonSchema) {
+      if (HasJsonSchema) {
         output.WriteRawTag(26);
         output.WriteString(JsonSchema);
       }
@@ -273,7 +287,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (schemaCase_ == SchemaOneofCase.StructSchema) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StructSchema);
       }
-      if (schemaCase_ == SchemaOneofCase.JsonSchema) {
+      if (HasJsonSchema) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(JsonSchema);
       }
       if (Name.Length != 0) {

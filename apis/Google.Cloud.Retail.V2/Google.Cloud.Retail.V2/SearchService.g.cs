@@ -1144,7 +1144,7 @@ namespace Google.Cloud.Retail.V2 {
         }
         PersonalizationSpec.MergeFrom(other.PersonalizationSpec);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.spellCorrectionSpec_ != null) {
         if (spellCorrectionSpec_ == null) {
           SpellCorrectionSpec = new global::Google.Cloud.Retail.V2.SearchRequest.Types.SpellCorrectionSpec();
@@ -2719,6 +2719,8 @@ namespace Google.Cloud.Retail.V2 {
 
         /// <summary>Field number for the "skip_boost_spec_validation" field.</summary>
         public const int SkipBoostSpecValidationFieldNumber = 2;
+        private readonly static bool SkipBoostSpecValidationDefaultValue = false;
+
         private bool skipBoostSpecValidation_;
         /// <summary>
         /// Whether to skip boostspec validation. If this field is set to true,
@@ -2731,7 +2733,7 @@ namespace Google.Cloud.Retail.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool SkipBoostSpecValidation {
-          get { if ((_hasBits0 & 1) != 0) { return skipBoostSpecValidation_; } else { return false; } }
+          get { if ((_hasBits0 & 1) != 0) { return skipBoostSpecValidation_; } else { return SkipBoostSpecValidationDefaultValue; } }
           set {
             _hasBits0 |= 1;
             skipBoostSpecValidation_ = value;
@@ -4811,8 +4813,8 @@ namespace Google.Cloud.Retail.V2 {
           if (other.MatchingVariantCount != 0) {
             MatchingVariantCount = other.MatchingVariantCount;
           }
-          matchingVariantFields_.Add(other.matchingVariantFields_);
-          variantRollupValues_.Add(other.variantRollupValues_);
+          matchingVariantFields_.MergeFrom(other.matchingVariantFields_);
+          variantRollupValues_.MergeFrom(other.variantRollupValues_);
           personalLabels_.Add(other.personalLabels_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -5239,10 +5241,24 @@ namespace Google.Cloud.Retail.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Value {
-              get { return facetValueCase_ == FacetValueOneofCase.Value ? (string) facetValue_ : ""; }
+              get { return HasValue ? (string) facetValue_ : ""; }
               set {
                 facetValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 facetValueCase_ = FacetValueOneofCase.Value;
+              }
+            }
+            /// <summary>Gets whether the "value" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasValue {
+              get { return facetValueCase_ == FacetValueOneofCase.Value; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "value" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearValue() {
+              if (HasValue) {
+                ClearFacetValue();
               }
             }
 
@@ -5363,7 +5379,7 @@ namespace Google.Cloud.Retail.V2 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
-              if (facetValueCase_ == FacetValueOneofCase.Value) hash ^= Value.GetHashCode();
+              if (HasValue) hash ^= Value.GetHashCode();
               if (facetValueCase_ == FacetValueOneofCase.Interval) hash ^= Interval.GetHashCode();
               if (Count != 0L) hash ^= Count.GetHashCode();
               if (MinValue != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(MinValue);
@@ -5387,7 +5403,7 @@ namespace Google.Cloud.Retail.V2 {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
-              if (facetValueCase_ == FacetValueOneofCase.Value) {
+              if (HasValue) {
                 output.WriteRawTag(10);
                 output.WriteString(Value);
               }
@@ -5417,7 +5433,7 @@ namespace Google.Cloud.Retail.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (facetValueCase_ == FacetValueOneofCase.Value) {
+              if (HasValue) {
                 output.WriteRawTag(10);
                 output.WriteString(Value);
               }
@@ -5447,7 +5463,7 @@ namespace Google.Cloud.Retail.V2 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
-              if (facetValueCase_ == FacetValueOneofCase.Value) {
+              if (HasValue) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
               }
               if (facetValueCase_ == FacetValueOneofCase.Interval) {

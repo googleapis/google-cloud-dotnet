@@ -1013,10 +1013,24 @@ namespace Google.Cloud.ResourceSettings.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BooleanValue {
-      get { return valueCase_ == ValueOneofCase.BooleanValue ? (bool) value_ : false; }
+      get { return HasBooleanValue ? (bool) value_ : false; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.BooleanValue;
+      }
+    }
+    /// <summary>Gets whether the "boolean_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBooleanValue {
+      get { return valueCase_ == ValueOneofCase.BooleanValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "boolean_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBooleanValue() {
+      if (HasBooleanValue) {
+        ClearValue();
       }
     }
 
@@ -1028,10 +1042,24 @@ namespace Google.Cloud.ResourceSettings.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StringValue {
-      get { return valueCase_ == ValueOneofCase.StringValue ? (string) value_ : ""; }
+      get { return HasStringValue ? (string) value_ : ""; }
       set {
         value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueCase_ = ValueOneofCase.StringValue;
+      }
+    }
+    /// <summary>Gets whether the "string_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStringValue {
+      get { return valueCase_ == ValueOneofCase.StringValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "string_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStringValue() {
+      if (HasStringValue) {
+        ClearValue();
       }
     }
 
@@ -1115,8 +1143,8 @@ namespace Google.Cloud.ResourceSettings.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (valueCase_ == ValueOneofCase.BooleanValue) hash ^= BooleanValue.GetHashCode();
-      if (valueCase_ == ValueOneofCase.StringValue) hash ^= StringValue.GetHashCode();
+      if (HasBooleanValue) hash ^= BooleanValue.GetHashCode();
+      if (HasStringValue) hash ^= StringValue.GetHashCode();
       if (valueCase_ == ValueOneofCase.StringSetValue) hash ^= StringSetValue.GetHashCode();
       if (valueCase_ == ValueOneofCase.EnumValue) hash ^= EnumValue.GetHashCode();
       hash ^= (int) valueCase_;
@@ -1138,11 +1166,11 @@ namespace Google.Cloud.ResourceSettings.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (valueCase_ == ValueOneofCase.BooleanValue) {
+      if (HasBooleanValue) {
         output.WriteRawTag(8);
         output.WriteBool(BooleanValue);
       }
-      if (valueCase_ == ValueOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(18);
         output.WriteString(StringValue);
       }
@@ -1164,11 +1192,11 @@ namespace Google.Cloud.ResourceSettings.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (valueCase_ == ValueOneofCase.BooleanValue) {
+      if (HasBooleanValue) {
         output.WriteRawTag(8);
         output.WriteBool(BooleanValue);
       }
-      if (valueCase_ == ValueOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(18);
         output.WriteString(StringValue);
       }
@@ -1190,10 +1218,10 @@ namespace Google.Cloud.ResourceSettings.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (valueCase_ == ValueOneofCase.BooleanValue) {
+      if (HasBooleanValue) {
         size += 1 + 1;
       }
-      if (valueCase_ == ValueOneofCase.StringValue) {
+      if (HasStringValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StringValue);
       }
       if (valueCase_ == ValueOneofCase.StringSetValue) {

@@ -677,7 +677,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (other.HyperthreadingEnabled != false) {
         HyperthreadingEnabled = other.HyperthreadingEnabled;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       luns_.Add(other.luns_);
       networks_.Add(other.networks_);
       if (other.InteractiveSerialConsoleEnabled != false) {

@@ -1435,10 +1435,24 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Method {
-          get { return kindCase_ == KindOneofCase.Method ? (string) kind_ : ""; }
+          get { return HasMethod ? (string) kind_ : ""; }
           set {
             kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             kindCase_ = KindOneofCase.Method;
+          }
+        }
+        /// <summary>Gets whether the "method" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMethod {
+          get { return kindCase_ == KindOneofCase.Method; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "method" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMethod() {
+          if (HasMethod) {
+            ClearKind();
           }
         }
 
@@ -1452,10 +1466,24 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Permission {
-          get { return kindCase_ == KindOneofCase.Permission ? (string) kind_ : ""; }
+          get { return HasPermission ? (string) kind_ : ""; }
           set {
             kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             kindCase_ = KindOneofCase.Permission;
+          }
+        }
+        /// <summary>Gets whether the "permission" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPermission {
+          get { return kindCase_ == KindOneofCase.Permission; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "permission" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPermission() {
+          if (HasPermission) {
+            ClearKind();
           }
         }
 
@@ -1505,8 +1533,8 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (kindCase_ == KindOneofCase.Method) hash ^= Method.GetHashCode();
-          if (kindCase_ == KindOneofCase.Permission) hash ^= Permission.GetHashCode();
+          if (HasMethod) hash ^= Method.GetHashCode();
+          if (HasPermission) hash ^= Permission.GetHashCode();
           hash ^= (int) kindCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1526,11 +1554,11 @@ namespace Google.Identity.AccessContextManager.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (kindCase_ == KindOneofCase.Method) {
+          if (HasMethod) {
             output.WriteRawTag(10);
             output.WriteString(Method);
           }
-          if (kindCase_ == KindOneofCase.Permission) {
+          if (HasPermission) {
             output.WriteRawTag(18);
             output.WriteString(Permission);
           }
@@ -1544,11 +1572,11 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (kindCase_ == KindOneofCase.Method) {
+          if (HasMethod) {
             output.WriteRawTag(10);
             output.WriteString(Method);
           }
-          if (kindCase_ == KindOneofCase.Permission) {
+          if (HasPermission) {
             output.WriteRawTag(18);
             output.WriteString(Permission);
           }
@@ -1562,10 +1590,10 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (kindCase_ == KindOneofCase.Method) {
+          if (HasMethod) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Method);
           }
-          if (kindCase_ == KindOneofCase.Permission) {
+          if (HasPermission) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Permission);
           }
           if (_unknownFields != null) {
@@ -1959,10 +1987,24 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string AccessLevel {
-          get { return sourceCase_ == SourceOneofCase.AccessLevel ? (string) source_ : ""; }
+          get { return HasAccessLevel ? (string) source_ : ""; }
           set {
             source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             sourceCase_ = SourceOneofCase.AccessLevel;
+          }
+        }
+        /// <summary>Gets whether the "access_level" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAccessLevel {
+          get { return sourceCase_ == SourceOneofCase.AccessLevel; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "access_level" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAccessLevel() {
+          if (HasAccessLevel) {
+            ClearSource();
           }
         }
 
@@ -1980,10 +2022,24 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Resource {
-          get { return sourceCase_ == SourceOneofCase.Resource ? (string) source_ : ""; }
+          get { return HasResource ? (string) source_ : ""; }
           set {
             source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             sourceCase_ = SourceOneofCase.Resource;
+          }
+        }
+        /// <summary>Gets whether the "resource" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasResource {
+          get { return sourceCase_ == SourceOneofCase.Resource; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "resource" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearResource() {
+          if (HasResource) {
+            ClearSource();
           }
         }
 
@@ -2033,8 +2089,8 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (sourceCase_ == SourceOneofCase.AccessLevel) hash ^= AccessLevel.GetHashCode();
-          if (sourceCase_ == SourceOneofCase.Resource) hash ^= Resource.GetHashCode();
+          if (HasAccessLevel) hash ^= AccessLevel.GetHashCode();
+          if (HasResource) hash ^= Resource.GetHashCode();
           hash ^= (int) sourceCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2054,11 +2110,11 @@ namespace Google.Identity.AccessContextManager.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (sourceCase_ == SourceOneofCase.AccessLevel) {
+          if (HasAccessLevel) {
             output.WriteRawTag(10);
             output.WriteString(AccessLevel);
           }
-          if (sourceCase_ == SourceOneofCase.Resource) {
+          if (HasResource) {
             output.WriteRawTag(18);
             output.WriteString(Resource);
           }
@@ -2072,11 +2128,11 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (sourceCase_ == SourceOneofCase.AccessLevel) {
+          if (HasAccessLevel) {
             output.WriteRawTag(10);
             output.WriteString(AccessLevel);
           }
-          if (sourceCase_ == SourceOneofCase.Resource) {
+          if (HasResource) {
             output.WriteRawTag(18);
             output.WriteString(Resource);
           }
@@ -2090,10 +2146,10 @@ namespace Google.Identity.AccessContextManager.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (sourceCase_ == SourceOneofCase.AccessLevel) {
+          if (HasAccessLevel) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(AccessLevel);
           }
-          if (sourceCase_ == SourceOneofCase.Resource) {
+          if (HasResource) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Resource);
           }
           if (_unknownFields != null) {

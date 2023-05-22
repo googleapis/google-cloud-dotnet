@@ -106,10 +106,24 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Fixed {
-      get { return modeCase_ == ModeOneofCase.Fixed ? (int) mode_ : 0; }
+      get { return HasFixed ? (int) mode_ : 0; }
       set {
         mode_ = value;
         modeCase_ = ModeOneofCase.Fixed;
+      }
+    }
+    /// <summary>Gets whether the "fixed" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFixed {
+      get { return modeCase_ == ModeOneofCase.Fixed; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "fixed" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFixed() {
+      if (HasFixed) {
+        ClearMode();
       }
     }
 
@@ -122,10 +136,24 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Percent {
-      get { return modeCase_ == ModeOneofCase.Percent ? (int) mode_ : 0; }
+      get { return HasPercent ? (int) mode_ : 0; }
       set {
         mode_ = value;
         modeCase_ = ModeOneofCase.Percent;
+      }
+    }
+    /// <summary>Gets whether the "percent" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPercent {
+      get { return modeCase_ == ModeOneofCase.Percent; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "percent" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPercent() {
+      if (HasPercent) {
+        ClearMode();
       }
     }
 
@@ -175,8 +203,8 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (modeCase_ == ModeOneofCase.Fixed) hash ^= Fixed.GetHashCode();
-      if (modeCase_ == ModeOneofCase.Percent) hash ^= Percent.GetHashCode();
+      if (HasFixed) hash ^= Fixed.GetHashCode();
+      if (HasPercent) hash ^= Percent.GetHashCode();
       hash ^= (int) modeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -196,11 +224,11 @@ namespace Google.Cloud.OsConfig.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (modeCase_ == ModeOneofCase.Fixed) {
+      if (HasFixed) {
         output.WriteRawTag(8);
         output.WriteInt32(Fixed);
       }
-      if (modeCase_ == ModeOneofCase.Percent) {
+      if (HasPercent) {
         output.WriteRawTag(16);
         output.WriteInt32(Percent);
       }
@@ -214,11 +242,11 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (modeCase_ == ModeOneofCase.Fixed) {
+      if (HasFixed) {
         output.WriteRawTag(8);
         output.WriteInt32(Fixed);
       }
-      if (modeCase_ == ModeOneofCase.Percent) {
+      if (HasPercent) {
         output.WriteRawTag(16);
         output.WriteInt32(Percent);
       }
@@ -232,10 +260,10 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (modeCase_ == ModeOneofCase.Fixed) {
+      if (HasFixed) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Fixed);
       }
-      if (modeCase_ == ModeOneofCase.Percent) {
+      if (HasPercent) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Percent);
       }
       if (_unknownFields != null) {

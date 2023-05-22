@@ -973,7 +973,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (other == null) {
             return;
           }
-          parameters_.Add(other.parameters_);
+          parameters_.MergeFrom(other.parameters_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -4554,7 +4554,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (other.Passed != false) {
             Passed = other.Passed;
           }
-          dimensionPassed_.Add(other.dimensionPassed_);
+          dimensionPassed_.MergeFrom(other.dimensionPassed_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

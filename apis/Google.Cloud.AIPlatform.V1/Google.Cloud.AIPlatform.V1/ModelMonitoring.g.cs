@@ -547,10 +547,24 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Dataset {
-          get { return dataSourceCase_ == DataSourceOneofCase.Dataset ? (string) dataSource_ : ""; }
+          get { return HasDataset ? (string) dataSource_ : ""; }
           set {
             dataSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             dataSourceCase_ = DataSourceOneofCase.Dataset;
+          }
+        }
+        /// <summary>Gets whether the "dataset" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDataset {
+          get { return dataSourceCase_ == DataSourceOneofCase.Dataset; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "dataset" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDataset() {
+          if (HasDataset) {
+            ClearDataSource();
           }
         }
 
@@ -695,7 +709,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (dataSourceCase_ == DataSourceOneofCase.Dataset) hash ^= Dataset.GetHashCode();
+          if (HasDataset) hash ^= Dataset.GetHashCode();
           if (dataSourceCase_ == DataSourceOneofCase.GcsSource) hash ^= GcsSource.GetHashCode();
           if (dataSourceCase_ == DataSourceOneofCase.BigquerySource) hash ^= BigquerySource.GetHashCode();
           if (DataFormat.Length != 0) hash ^= DataFormat.GetHashCode();
@@ -724,7 +738,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(18);
             output.WriteString(DataFormat);
           }
-          if (dataSourceCase_ == DataSourceOneofCase.Dataset) {
+          if (HasDataset) {
             output.WriteRawTag(26);
             output.WriteString(Dataset);
           }
@@ -758,7 +772,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(18);
             output.WriteString(DataFormat);
           }
-          if (dataSourceCase_ == DataSourceOneofCase.Dataset) {
+          if (HasDataset) {
             output.WriteRawTag(26);
             output.WriteString(Dataset);
           }
@@ -788,7 +802,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (dataSourceCase_ == DataSourceOneofCase.Dataset) {
+          if (HasDataset) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
           }
           if (dataSourceCase_ == DataSourceOneofCase.GcsSource) {
@@ -1154,8 +1168,8 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (other == null) {
             return;
           }
-          skewThresholds_.Add(other.skewThresholds_);
-          attributionScoreSkewThresholds_.Add(other.attributionScoreSkewThresholds_);
+          skewThresholds_.MergeFrom(other.skewThresholds_);
+          attributionScoreSkewThresholds_.MergeFrom(other.attributionScoreSkewThresholds_);
           if (other.defaultSkewThreshold_ != null) {
             if (defaultSkewThreshold_ == null) {
               DefaultSkewThreshold = new global::Google.Cloud.AIPlatform.V1.ThresholdConfig();
@@ -1422,8 +1436,8 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (other == null) {
             return;
           }
-          driftThresholds_.Add(other.driftThresholds_);
-          attributionScoreDriftThresholds_.Add(other.attributionScoreDriftThresholds_);
+          driftThresholds_.MergeFrom(other.driftThresholds_);
+          attributionScoreDriftThresholds_.MergeFrom(other.attributionScoreDriftThresholds_);
           if (other.defaultDriftThreshold_ != null) {
             if (defaultDriftThreshold_ == null) {
               DefaultDriftThreshold = new global::Google.Cloud.AIPlatform.V1.ThresholdConfig();
@@ -2658,10 +2672,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Value {
-      get { return thresholdCase_ == ThresholdOneofCase.Value ? (double) threshold_ : 0D; }
+      get { return HasValue ? (double) threshold_ : 0D; }
       set {
         threshold_ = value;
         thresholdCase_ = ThresholdOneofCase.Value;
+      }
+    }
+    /// <summary>Gets whether the "value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasValue {
+      get { return thresholdCase_ == ThresholdOneofCase.Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValue() {
+      if (HasValue) {
+        ClearThreshold();
       }
     }
 
@@ -2709,7 +2737,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (thresholdCase_ == ThresholdOneofCase.Value) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Value);
+      if (HasValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Value);
       hash ^= (int) thresholdCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2729,7 +2757,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (thresholdCase_ == ThresholdOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(9);
         output.WriteDouble(Value);
       }
@@ -2743,7 +2771,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (thresholdCase_ == ThresholdOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(9);
         output.WriteDouble(Value);
       }
@@ -2757,7 +2785,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (thresholdCase_ == ThresholdOneofCase.Value) {
+      if (HasValue) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {

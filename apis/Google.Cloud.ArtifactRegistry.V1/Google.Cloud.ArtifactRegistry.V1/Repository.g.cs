@@ -476,7 +476,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();

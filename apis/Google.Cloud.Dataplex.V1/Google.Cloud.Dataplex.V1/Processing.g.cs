@@ -782,10 +782,24 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Entity {
-      get { return sourceCase_ == SourceOneofCase.Entity ? (string) source_ : ""; }
+      get { return HasEntity ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Entity;
+      }
+    }
+    /// <summary>Gets whether the "entity" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEntity {
+      get { return sourceCase_ == SourceOneofCase.Entity; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "entity" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEntity() {
+      if (HasEntity) {
+        ClearSource();
       }
     }
 
@@ -800,10 +814,24 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Resource {
-      get { return sourceCase_ == SourceOneofCase.Resource ? (string) source_ : ""; }
+      get { return HasResource ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Resource;
+      }
+    }
+    /// <summary>Gets whether the "resource" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasResource {
+      get { return sourceCase_ == SourceOneofCase.Resource; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "resource" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearResource() {
+      if (HasResource) {
+        ClearSource();
       }
     }
 
@@ -853,8 +881,8 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (sourceCase_ == SourceOneofCase.Entity) hash ^= Entity.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.Resource) hash ^= Resource.GetHashCode();
+      if (HasEntity) hash ^= Entity.GetHashCode();
+      if (HasResource) hash ^= Resource.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -874,11 +902,11 @@ namespace Google.Cloud.Dataplex.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (sourceCase_ == SourceOneofCase.Entity) {
+      if (HasEntity) {
         output.WriteRawTag(162, 6);
         output.WriteString(Entity);
       }
-      if (sourceCase_ == SourceOneofCase.Resource) {
+      if (HasResource) {
         output.WriteRawTag(170, 6);
         output.WriteString(Resource);
       }
@@ -892,11 +920,11 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (sourceCase_ == SourceOneofCase.Entity) {
+      if (HasEntity) {
         output.WriteRawTag(162, 6);
         output.WriteString(Entity);
       }
-      if (sourceCase_ == SourceOneofCase.Resource) {
+      if (HasResource) {
         output.WriteRawTag(170, 6);
         output.WriteString(Resource);
       }
@@ -910,10 +938,10 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (sourceCase_ == SourceOneofCase.Entity) {
+      if (HasEntity) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Entity);
       }
-      if (sourceCase_ == SourceOneofCase.Resource) {
+      if (HasResource) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Resource);
       }
       if (_unknownFields != null) {

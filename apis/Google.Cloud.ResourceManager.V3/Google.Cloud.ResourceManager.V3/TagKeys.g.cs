@@ -616,7 +616,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       if (other.Purpose != global::Google.Cloud.ResourceManager.V3.Purpose.Unspecified) {
         Purpose = other.Purpose;
       }
-      purposeData_.Add(other.purposeData_);
+      purposeData_.MergeFrom(other.purposeData_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

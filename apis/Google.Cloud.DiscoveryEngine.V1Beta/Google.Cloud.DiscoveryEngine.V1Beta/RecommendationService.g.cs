@@ -484,8 +484,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (other.ValidateOnly != false) {
         ValidateOnly = other.ValidateOnly;
       }
-      params_.Add(other.params_);
-      userLabels_.Add(other.userLabels_);
+      params_.MergeFrom(other.params_);
+      userLabels_.MergeFrom(other.userLabels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1101,7 +1101,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             }
             Document.MergeFrom(other.Document);
           }
-          metadata_.Add(other.metadata_);
+          metadata_.MergeFrom(other.metadata_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

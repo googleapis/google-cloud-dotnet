@@ -1589,7 +1589,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (other.AppEngineApis != false) {
         AppEngineApis = other.AppEngineApis;
       }
-      betaSettings_.Add(other.betaSettings_);
+      betaSettings_.MergeFrom(other.betaSettings_);
       if (other.Env.Length != 0) {
         Env = other.Env;
       }
@@ -1626,8 +1626,8 @@ namespace Google.Cloud.AppEngine.V1 {
         }
         ApiConfig.MergeFrom(other.ApiConfig);
       }
-      envVariables_.Add(other.envVariables_);
-      buildEnvVariables_.Add(other.buildEnvVariables_);
+      envVariables_.MergeFrom(other.envVariables_);
+      buildEnvVariables_.MergeFrom(other.buildEnvVariables_);
       if (other.defaultExpiration_ != null) {
         if (defaultExpiration_ == null) {
           DefaultExpiration = new global::Google.Protobuf.WellKnownTypes.Duration();
@@ -6478,10 +6478,24 @@ namespace Google.Cloud.AppEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Shell {
-      get { return commandCase_ == CommandOneofCase.Shell ? (string) command_ : ""; }
+      get { return HasShell ? (string) command_ : ""; }
       set {
         command_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         commandCase_ = CommandOneofCase.Shell;
+      }
+    }
+    /// <summary>Gets whether the "shell" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasShell {
+      get { return commandCase_ == CommandOneofCase.Shell; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "shell" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearShell() {
+      if (HasShell) {
+        ClearCommand();
       }
     }
 
@@ -6529,7 +6543,7 @@ namespace Google.Cloud.AppEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (commandCase_ == CommandOneofCase.Shell) hash ^= Shell.GetHashCode();
+      if (HasShell) hash ^= Shell.GetHashCode();
       hash ^= (int) commandCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6549,7 +6563,7 @@ namespace Google.Cloud.AppEngine.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (commandCase_ == CommandOneofCase.Shell) {
+      if (HasShell) {
         output.WriteRawTag(10);
         output.WriteString(Shell);
       }
@@ -6563,7 +6577,7 @@ namespace Google.Cloud.AppEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (commandCase_ == CommandOneofCase.Shell) {
+      if (HasShell) {
         output.WriteRawTag(10);
         output.WriteString(Shell);
       }
@@ -6577,7 +6591,7 @@ namespace Google.Cloud.AppEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (commandCase_ == CommandOneofCase.Shell) {
+      if (HasShell) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Shell);
       }
       if (_unknownFields != null) {

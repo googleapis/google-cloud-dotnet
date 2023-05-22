@@ -713,10 +713,24 @@ namespace Google.Cloud.Datastore.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long Id {
-          get { return idTypeCase_ == IdTypeOneofCase.Id ? (long) idType_ : 0L; }
+          get { return HasId ? (long) idType_ : 0L; }
           set {
             idType_ = value;
             idTypeCase_ = IdTypeOneofCase.Id;
+          }
+        }
+        /// <summary>Gets whether the "id" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasId {
+          get { return idTypeCase_ == IdTypeOneofCase.Id; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "id" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearId() {
+          if (HasId) {
+            ClearIdType();
           }
         }
 
@@ -736,10 +750,24 @@ namespace Google.Cloud.Datastore.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Name {
-          get { return idTypeCase_ == IdTypeOneofCase.Name ? (string) idType_ : ""; }
+          get { return HasName ? (string) idType_ : ""; }
           set {
             idType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             idTypeCase_ = IdTypeOneofCase.Name;
+          }
+        }
+        /// <summary>Gets whether the "name" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasName {
+          get { return idTypeCase_ == IdTypeOneofCase.Name; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "name" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearName() {
+          if (HasName) {
+            ClearIdType();
           }
         }
 
@@ -791,8 +819,8 @@ namespace Google.Cloud.Datastore.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (Kind.Length != 0) hash ^= Kind.GetHashCode();
-          if (idTypeCase_ == IdTypeOneofCase.Id) hash ^= Id.GetHashCode();
-          if (idTypeCase_ == IdTypeOneofCase.Name) hash ^= Name.GetHashCode();
+          if (HasId) hash ^= Id.GetHashCode();
+          if (HasName) hash ^= Name.GetHashCode();
           hash ^= (int) idTypeCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -816,11 +844,11 @@ namespace Google.Cloud.Datastore.V1 {
             output.WriteRawTag(10);
             output.WriteString(Kind);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Id) {
+          if (HasId) {
             output.WriteRawTag(16);
             output.WriteInt64(Id);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Name) {
+          if (HasName) {
             output.WriteRawTag(26);
             output.WriteString(Name);
           }
@@ -838,11 +866,11 @@ namespace Google.Cloud.Datastore.V1 {
             output.WriteRawTag(10);
             output.WriteString(Kind);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Id) {
+          if (HasId) {
             output.WriteRawTag(16);
             output.WriteInt64(Id);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Name) {
+          if (HasName) {
             output.WriteRawTag(26);
             output.WriteString(Name);
           }
@@ -859,10 +887,10 @@ namespace Google.Cloud.Datastore.V1 {
           if (Kind.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Kind);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Id) {
+          if (HasId) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Name) {
+          if (HasName) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
           }
           if (_unknownFields != null) {
@@ -1234,10 +1262,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.NullValue NullValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.NullValue ? (global::Google.Protobuf.WellKnownTypes.NullValue) valueType_ : global::Google.Protobuf.WellKnownTypes.NullValue.NullValue; }
+      get { return HasNullValue ? (global::Google.Protobuf.WellKnownTypes.NullValue) valueType_ : global::Google.Protobuf.WellKnownTypes.NullValue.NullValue; }
       set {
         valueType_ = value;
         valueTypeCase_ = ValueTypeOneofCase.NullValue;
+      }
+    }
+    /// <summary>Gets whether the "null_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNullValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.NullValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "null_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNullValue() {
+      if (HasNullValue) {
+        ClearValueType();
       }
     }
 
@@ -1249,10 +1291,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BooleanValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.BooleanValue ? (bool) valueType_ : false; }
+      get { return HasBooleanValue ? (bool) valueType_ : false; }
       set {
         valueType_ = value;
         valueTypeCase_ = ValueTypeOneofCase.BooleanValue;
+      }
+    }
+    /// <summary>Gets whether the "boolean_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBooleanValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.BooleanValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "boolean_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBooleanValue() {
+      if (HasBooleanValue) {
+        ClearValueType();
       }
     }
 
@@ -1264,10 +1320,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long IntegerValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.IntegerValue ? (long) valueType_ : 0L; }
+      get { return HasIntegerValue ? (long) valueType_ : 0L; }
       set {
         valueType_ = value;
         valueTypeCase_ = ValueTypeOneofCase.IntegerValue;
+      }
+    }
+    /// <summary>Gets whether the "integer_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIntegerValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.IntegerValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "integer_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIntegerValue() {
+      if (HasIntegerValue) {
+        ClearValueType();
       }
     }
 
@@ -1279,10 +1349,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double DoubleValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.DoubleValue ? (double) valueType_ : 0D; }
+      get { return HasDoubleValue ? (double) valueType_ : 0D; }
       set {
         valueType_ = value;
         valueTypeCase_ = ValueTypeOneofCase.DoubleValue;
+      }
+    }
+    /// <summary>Gets whether the "double_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDoubleValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.DoubleValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "double_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDoubleValue() {
+      if (HasDoubleValue) {
+        ClearValueType();
       }
     }
 
@@ -1328,10 +1412,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StringValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.StringValue ? (string) valueType_ : ""; }
+      get { return HasStringValue ? (string) valueType_ : ""; }
       set {
         valueType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueTypeCase_ = ValueTypeOneofCase.StringValue;
+      }
+    }
+    /// <summary>Gets whether the "string_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStringValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.StringValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "string_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStringValue() {
+      if (HasStringValue) {
+        ClearValueType();
       }
     }
 
@@ -1346,10 +1444,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString BlobValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.BlobValue ? (pb::ByteString) valueType_ : pb::ByteString.Empty; }
+      get { return HasBlobValue ? (pb::ByteString) valueType_ : pb::ByteString.Empty; }
       set {
         valueType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueTypeCase_ = ValueTypeOneofCase.BlobValue;
+      }
+    }
+    /// <summary>Gets whether the "blob_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBlobValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.BlobValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "blob_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBlobValue() {
+      if (HasBlobValue) {
+        ClearValueType();
       }
     }
 
@@ -1502,14 +1614,14 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (valueTypeCase_ == ValueTypeOneofCase.NullValue) hash ^= NullValue.GetHashCode();
-      if (valueTypeCase_ == ValueTypeOneofCase.BooleanValue) hash ^= BooleanValue.GetHashCode();
-      if (valueTypeCase_ == ValueTypeOneofCase.IntegerValue) hash ^= IntegerValue.GetHashCode();
-      if (valueTypeCase_ == ValueTypeOneofCase.DoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
+      if (HasNullValue) hash ^= NullValue.GetHashCode();
+      if (HasBooleanValue) hash ^= BooleanValue.GetHashCode();
+      if (HasIntegerValue) hash ^= IntegerValue.GetHashCode();
+      if (HasDoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
       if (valueTypeCase_ == ValueTypeOneofCase.TimestampValue) hash ^= TimestampValue.GetHashCode();
       if (valueTypeCase_ == ValueTypeOneofCase.KeyValue) hash ^= KeyValue.GetHashCode();
-      if (valueTypeCase_ == ValueTypeOneofCase.StringValue) hash ^= StringValue.GetHashCode();
-      if (valueTypeCase_ == ValueTypeOneofCase.BlobValue) hash ^= BlobValue.GetHashCode();
+      if (HasStringValue) hash ^= StringValue.GetHashCode();
+      if (HasBlobValue) hash ^= BlobValue.GetHashCode();
       if (valueTypeCase_ == ValueTypeOneofCase.GeoPointValue) hash ^= GeoPointValue.GetHashCode();
       if (valueTypeCase_ == ValueTypeOneofCase.EntityValue) hash ^= EntityValue.GetHashCode();
       if (valueTypeCase_ == ValueTypeOneofCase.ArrayValue) hash ^= ArrayValue.GetHashCode();
@@ -1534,15 +1646,15 @@ namespace Google.Cloud.Datastore.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (valueTypeCase_ == ValueTypeOneofCase.BooleanValue) {
+      if (HasBooleanValue) {
         output.WriteRawTag(8);
         output.WriteBool(BooleanValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.IntegerValue) {
+      if (HasIntegerValue) {
         output.WriteRawTag(16);
         output.WriteInt64(IntegerValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(25);
         output.WriteDouble(DoubleValue);
       }
@@ -1566,7 +1678,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(TimestampValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.NullValue) {
+      if (HasNullValue) {
         output.WriteRawTag(88);
         output.WriteEnum((int) NullValue);
       }
@@ -1574,11 +1686,11 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(112);
         output.WriteInt32(Meaning);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(138, 1);
         output.WriteString(StringValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.BlobValue) {
+      if (HasBlobValue) {
         output.WriteRawTag(146, 1);
         output.WriteBytes(BlobValue);
       }
@@ -1596,15 +1708,15 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (valueTypeCase_ == ValueTypeOneofCase.BooleanValue) {
+      if (HasBooleanValue) {
         output.WriteRawTag(8);
         output.WriteBool(BooleanValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.IntegerValue) {
+      if (HasIntegerValue) {
         output.WriteRawTag(16);
         output.WriteInt64(IntegerValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(25);
         output.WriteDouble(DoubleValue);
       }
@@ -1628,7 +1740,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(TimestampValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.NullValue) {
+      if (HasNullValue) {
         output.WriteRawTag(88);
         output.WriteEnum((int) NullValue);
       }
@@ -1636,11 +1748,11 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(112);
         output.WriteInt32(Meaning);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(138, 1);
         output.WriteString(StringValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.BlobValue) {
+      if (HasBlobValue) {
         output.WriteRawTag(146, 1);
         output.WriteBytes(BlobValue);
       }
@@ -1658,16 +1770,16 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (valueTypeCase_ == ValueTypeOneofCase.NullValue) {
+      if (HasNullValue) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NullValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.BooleanValue) {
+      if (HasBooleanValue) {
         size += 1 + 1;
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.IntegerValue) {
+      if (HasIntegerValue) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(IntegerValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         size += 1 + 8;
       }
       if (valueTypeCase_ == ValueTypeOneofCase.TimestampValue) {
@@ -1676,10 +1788,10 @@ namespace Google.Cloud.Datastore.V1 {
       if (valueTypeCase_ == ValueTypeOneofCase.KeyValue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(KeyValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.StringValue) {
+      if (HasStringValue) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(StringValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.BlobValue) {
+      if (HasBlobValue) {
         size += 2 + pb::CodedOutputStream.ComputeBytesSize(BlobValue);
       }
       if (valueTypeCase_ == ValueTypeOneofCase.GeoPointValue) {
@@ -2144,7 +2256,7 @@ namespace Google.Cloud.Datastore.V1 {
         }
         Key.MergeFrom(other.Key);
       }
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

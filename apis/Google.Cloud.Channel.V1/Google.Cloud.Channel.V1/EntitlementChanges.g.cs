@@ -154,10 +154,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.Entitlement.Types.SuspensionReason SuspensionReason {
-      get { return changeReasonCase_ == ChangeReasonOneofCase.SuspensionReason ? (global::Google.Cloud.Channel.V1.Entitlement.Types.SuspensionReason) changeReason_ : global::Google.Cloud.Channel.V1.Entitlement.Types.SuspensionReason.Unspecified; }
+      get { return HasSuspensionReason ? (global::Google.Cloud.Channel.V1.Entitlement.Types.SuspensionReason) changeReason_ : global::Google.Cloud.Channel.V1.Entitlement.Types.SuspensionReason.Unspecified; }
       set {
         changeReason_ = value;
         changeReasonCase_ = ChangeReasonOneofCase.SuspensionReason;
+      }
+    }
+    /// <summary>Gets whether the "suspension_reason" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSuspensionReason {
+      get { return changeReasonCase_ == ChangeReasonOneofCase.SuspensionReason; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "suspension_reason" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSuspensionReason() {
+      if (HasSuspensionReason) {
+        ClearChangeReason();
       }
     }
 
@@ -169,10 +183,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.EntitlementChange.Types.CancellationReason CancellationReason {
-      get { return changeReasonCase_ == ChangeReasonOneofCase.CancellationReason ? (global::Google.Cloud.Channel.V1.EntitlementChange.Types.CancellationReason) changeReason_ : global::Google.Cloud.Channel.V1.EntitlementChange.Types.CancellationReason.Unspecified; }
+      get { return HasCancellationReason ? (global::Google.Cloud.Channel.V1.EntitlementChange.Types.CancellationReason) changeReason_ : global::Google.Cloud.Channel.V1.EntitlementChange.Types.CancellationReason.Unspecified; }
       set {
         changeReason_ = value;
         changeReasonCase_ = ChangeReasonOneofCase.CancellationReason;
+      }
+    }
+    /// <summary>Gets whether the "cancellation_reason" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCancellationReason {
+      get { return changeReasonCase_ == ChangeReasonOneofCase.CancellationReason; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "cancellation_reason" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCancellationReason() {
+      if (HasCancellationReason) {
+        ClearChangeReason();
       }
     }
 
@@ -184,10 +212,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.EntitlementChange.Types.ActivationReason ActivationReason {
-      get { return changeReasonCase_ == ChangeReasonOneofCase.ActivationReason ? (global::Google.Cloud.Channel.V1.EntitlementChange.Types.ActivationReason) changeReason_ : global::Google.Cloud.Channel.V1.EntitlementChange.Types.ActivationReason.Unspecified; }
+      get { return HasActivationReason ? (global::Google.Cloud.Channel.V1.EntitlementChange.Types.ActivationReason) changeReason_ : global::Google.Cloud.Channel.V1.EntitlementChange.Types.ActivationReason.Unspecified; }
       set {
         changeReason_ = value;
         changeReasonCase_ = ChangeReasonOneofCase.ActivationReason;
+      }
+    }
+    /// <summary>Gets whether the "activation_reason" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActivationReason {
+      get { return changeReasonCase_ == ChangeReasonOneofCase.ActivationReason; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "activation_reason" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActivationReason() {
+      if (HasActivationReason) {
+        ClearChangeReason();
       }
     }
 
@@ -199,10 +241,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OtherChangeReason {
-      get { return changeReasonCase_ == ChangeReasonOneofCase.OtherChangeReason ? (string) changeReason_ : ""; }
+      get { return HasOtherChangeReason ? (string) changeReason_ : ""; }
       set {
         changeReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         changeReasonCase_ = ChangeReasonOneofCase.OtherChangeReason;
+      }
+    }
+    /// <summary>Gets whether the "other_change_reason" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOtherChangeReason {
+      get { return changeReasonCase_ == ChangeReasonOneofCase.OtherChangeReason; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "other_change_reason" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOtherChangeReason() {
+      if (HasOtherChangeReason) {
+        ClearChangeReason();
       }
     }
 
@@ -390,10 +446,10 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (changeReasonCase_ == ChangeReasonOneofCase.SuspensionReason) hash ^= SuspensionReason.GetHashCode();
-      if (changeReasonCase_ == ChangeReasonOneofCase.CancellationReason) hash ^= CancellationReason.GetHashCode();
-      if (changeReasonCase_ == ChangeReasonOneofCase.ActivationReason) hash ^= ActivationReason.GetHashCode();
-      if (changeReasonCase_ == ChangeReasonOneofCase.OtherChangeReason) hash ^= OtherChangeReason.GetHashCode();
+      if (HasSuspensionReason) hash ^= SuspensionReason.GetHashCode();
+      if (HasCancellationReason) hash ^= CancellationReason.GetHashCode();
+      if (HasActivationReason) hash ^= ActivationReason.GetHashCode();
+      if (HasOtherChangeReason) hash ^= OtherChangeReason.GetHashCode();
       if (Entitlement.Length != 0) hash ^= Entitlement.GetHashCode();
       if (Offer.Length != 0) hash ^= Offer.GetHashCode();
       if (provisionedService_ != null) hash ^= ProvisionedService.GetHashCode();
@@ -446,15 +502,15 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteEnum((int) OperatorType);
       }
       parameters_.WriteTo(output, _repeated_parameters_codec);
-      if (changeReasonCase_ == ChangeReasonOneofCase.SuspensionReason) {
+      if (HasSuspensionReason) {
         output.WriteRawTag(72);
         output.WriteEnum((int) SuspensionReason);
       }
-      if (changeReasonCase_ == ChangeReasonOneofCase.CancellationReason) {
+      if (HasCancellationReason) {
         output.WriteRawTag(80);
         output.WriteEnum((int) CancellationReason);
       }
-      if (changeReasonCase_ == ChangeReasonOneofCase.ActivationReason) {
+      if (HasActivationReason) {
         output.WriteRawTag(88);
         output.WriteEnum((int) ActivationReason);
       }
@@ -462,7 +518,7 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(98);
         output.WriteString(Operator);
       }
-      if (changeReasonCase_ == ChangeReasonOneofCase.OtherChangeReason) {
+      if (HasOtherChangeReason) {
         output.WriteRawTag(162, 6);
         output.WriteString(OtherChangeReason);
       }
@@ -501,15 +557,15 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteEnum((int) OperatorType);
       }
       parameters_.WriteTo(ref output, _repeated_parameters_codec);
-      if (changeReasonCase_ == ChangeReasonOneofCase.SuspensionReason) {
+      if (HasSuspensionReason) {
         output.WriteRawTag(72);
         output.WriteEnum((int) SuspensionReason);
       }
-      if (changeReasonCase_ == ChangeReasonOneofCase.CancellationReason) {
+      if (HasCancellationReason) {
         output.WriteRawTag(80);
         output.WriteEnum((int) CancellationReason);
       }
-      if (changeReasonCase_ == ChangeReasonOneofCase.ActivationReason) {
+      if (HasActivationReason) {
         output.WriteRawTag(88);
         output.WriteEnum((int) ActivationReason);
       }
@@ -517,7 +573,7 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(98);
         output.WriteString(Operator);
       }
-      if (changeReasonCase_ == ChangeReasonOneofCase.OtherChangeReason) {
+      if (HasOtherChangeReason) {
         output.WriteRawTag(162, 6);
         output.WriteString(OtherChangeReason);
       }
@@ -531,16 +587,16 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (changeReasonCase_ == ChangeReasonOneofCase.SuspensionReason) {
+      if (HasSuspensionReason) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SuspensionReason);
       }
-      if (changeReasonCase_ == ChangeReasonOneofCase.CancellationReason) {
+      if (HasCancellationReason) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CancellationReason);
       }
-      if (changeReasonCase_ == ChangeReasonOneofCase.ActivationReason) {
+      if (HasActivationReason) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ActivationReason);
       }
-      if (changeReasonCase_ == ChangeReasonOneofCase.OtherChangeReason) {
+      if (HasOtherChangeReason) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(OtherChangeReason);
       }
       if (Entitlement.Length != 0) {

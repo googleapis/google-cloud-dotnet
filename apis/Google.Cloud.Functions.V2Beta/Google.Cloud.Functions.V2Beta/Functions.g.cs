@@ -730,7 +730,7 @@ namespace Google.Cloud.Functions.V2Beta {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       stateMessages_.Add(other.stateMessages_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1571,10 +1571,24 @@ namespace Google.Cloud.Functions.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BranchName {
-      get { return revisionCase_ == RevisionOneofCase.BranchName ? (string) revision_ : ""; }
+      get { return HasBranchName ? (string) revision_ : ""; }
       set {
         revision_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         revisionCase_ = RevisionOneofCase.BranchName;
+      }
+    }
+    /// <summary>Gets whether the "branch_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBranchName {
+      get { return revisionCase_ == RevisionOneofCase.BranchName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "branch_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBranchName() {
+      if (HasBranchName) {
+        ClearRevision();
       }
     }
 
@@ -1589,10 +1603,24 @@ namespace Google.Cloud.Functions.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TagName {
-      get { return revisionCase_ == RevisionOneofCase.TagName ? (string) revision_ : ""; }
+      get { return HasTagName ? (string) revision_ : ""; }
       set {
         revision_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         revisionCase_ = RevisionOneofCase.TagName;
+      }
+    }
+    /// <summary>Gets whether the "tag_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTagName {
+      get { return revisionCase_ == RevisionOneofCase.TagName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "tag_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTagName() {
+      if (HasTagName) {
+        ClearRevision();
       }
     }
 
@@ -1604,10 +1632,24 @@ namespace Google.Cloud.Functions.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CommitSha {
-      get { return revisionCase_ == RevisionOneofCase.CommitSha ? (string) revision_ : ""; }
+      get { return HasCommitSha ? (string) revision_ : ""; }
       set {
         revision_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         revisionCase_ = RevisionOneofCase.CommitSha;
+      }
+    }
+    /// <summary>Gets whether the "commit_sha" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCommitSha {
+      get { return revisionCase_ == RevisionOneofCase.CommitSha; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "commit_sha" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCommitSha() {
+      if (HasCommitSha) {
+        ClearRevision();
       }
     }
 
@@ -1729,9 +1771,9 @@ namespace Google.Cloud.Functions.V2Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (revisionCase_ == RevisionOneofCase.BranchName) hash ^= BranchName.GetHashCode();
-      if (revisionCase_ == RevisionOneofCase.TagName) hash ^= TagName.GetHashCode();
-      if (revisionCase_ == RevisionOneofCase.CommitSha) hash ^= CommitSha.GetHashCode();
+      if (HasBranchName) hash ^= BranchName.GetHashCode();
+      if (HasTagName) hash ^= TagName.GetHashCode();
+      if (HasCommitSha) hash ^= CommitSha.GetHashCode();
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (RepoName.Length != 0) hash ^= RepoName.GetHashCode();
       if (Dir.Length != 0) hash ^= Dir.GetHashCode();
@@ -1763,15 +1805,15 @@ namespace Google.Cloud.Functions.V2Beta {
         output.WriteRawTag(18);
         output.WriteString(RepoName);
       }
-      if (revisionCase_ == RevisionOneofCase.BranchName) {
+      if (HasBranchName) {
         output.WriteRawTag(26);
         output.WriteString(BranchName);
       }
-      if (revisionCase_ == RevisionOneofCase.TagName) {
+      if (HasTagName) {
         output.WriteRawTag(34);
         output.WriteString(TagName);
       }
-      if (revisionCase_ == RevisionOneofCase.CommitSha) {
+      if (HasCommitSha) {
         output.WriteRawTag(42);
         output.WriteString(CommitSha);
       }
@@ -1801,15 +1843,15 @@ namespace Google.Cloud.Functions.V2Beta {
         output.WriteRawTag(18);
         output.WriteString(RepoName);
       }
-      if (revisionCase_ == RevisionOneofCase.BranchName) {
+      if (HasBranchName) {
         output.WriteRawTag(26);
         output.WriteString(BranchName);
       }
-      if (revisionCase_ == RevisionOneofCase.TagName) {
+      if (HasTagName) {
         output.WriteRawTag(34);
         output.WriteString(TagName);
       }
-      if (revisionCase_ == RevisionOneofCase.CommitSha) {
+      if (HasCommitSha) {
         output.WriteRawTag(42);
         output.WriteString(CommitSha);
       }
@@ -1831,13 +1873,13 @@ namespace Google.Cloud.Functions.V2Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (revisionCase_ == RevisionOneofCase.BranchName) {
+      if (HasBranchName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BranchName);
       }
-      if (revisionCase_ == RevisionOneofCase.TagName) {
+      if (HasTagName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TagName);
       }
-      if (revisionCase_ == RevisionOneofCase.CommitSha) {
+      if (HasCommitSha) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CommitSha);
       }
       if (ProjectId.Length != 0) {
@@ -2930,7 +2972,7 @@ namespace Google.Cloud.Functions.V2Beta {
       if (other.WorkerPool.Length != 0) {
         WorkerPool = other.WorkerPool;
       }
-      environmentVariables_.Add(other.environmentVariables_);
+      environmentVariables_.MergeFrom(other.environmentVariables_);
       if (other.DockerRepository.Length != 0) {
         DockerRepository = other.DockerRepository;
       }
@@ -3619,7 +3661,7 @@ namespace Google.Cloud.Functions.V2Beta {
       if (other.AvailableMemory.Length != 0) {
         AvailableMemory = other.AvailableMemory;
       }
-      environmentVariables_.Add(other.environmentVariables_);
+      environmentVariables_.MergeFrom(other.environmentVariables_);
       if (other.MaxInstanceCount != 0) {
         MaxInstanceCount = other.MaxInstanceCount;
       }

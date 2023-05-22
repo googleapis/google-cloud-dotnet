@@ -1279,7 +1279,7 @@ namespace Google.Cloud.Monitoring.V3 {
         IsInternal = other.IsInternal;
       }
       internalCheckers_.Add(other.internalCheckers_);
-      userLabels_.Add(other.userLabels_);
+      userLabels_.MergeFrom(other.userLabels_);
       switch (other.ResourceCase) {
         case ResourceOneofCase.MonitoredResource:
           if (MonitoredResource == null) {
@@ -2518,7 +2518,7 @@ namespace Google.Cloud.Monitoring.V3 {
           if (other.MaskHeaders != false) {
             MaskHeaders = other.MaskHeaders;
           }
-          headers_.Add(other.headers_);
+          headers_.MergeFrom(other.headers_);
           if (other.ContentType != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType.TypeUnspecified) {
             ContentType = other.ContentType;
           }
@@ -3035,10 +3035,24 @@ namespace Google.Cloud.Monitoring.V3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int StatusValue {
-              get { return statusCodeCase_ == StatusCodeOneofCase.StatusValue ? (int) statusCode_ : 0; }
+              get { return HasStatusValue ? (int) statusCode_ : 0; }
               set {
                 statusCode_ = value;
                 statusCodeCase_ = StatusCodeOneofCase.StatusValue;
+              }
+            }
+            /// <summary>Gets whether the "status_value" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasStatusValue {
+              get { return statusCodeCase_ == StatusCodeOneofCase.StatusValue; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "status_value" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearStatusValue() {
+              if (HasStatusValue) {
+                ClearStatusCode();
               }
             }
 
@@ -3050,10 +3064,24 @@ namespace Google.Cloud.Monitoring.V3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ResponseStatusCode.Types.StatusClass StatusClass {
-              get { return statusCodeCase_ == StatusCodeOneofCase.StatusClass ? (global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ResponseStatusCode.Types.StatusClass) statusCode_ : global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ResponseStatusCode.Types.StatusClass.Unspecified; }
+              get { return HasStatusClass ? (global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ResponseStatusCode.Types.StatusClass) statusCode_ : global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ResponseStatusCode.Types.StatusClass.Unspecified; }
               set {
                 statusCode_ = value;
                 statusCodeCase_ = StatusCodeOneofCase.StatusClass;
+              }
+            }
+            /// <summary>Gets whether the "status_class" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasStatusClass {
+              get { return statusCodeCase_ == StatusCodeOneofCase.StatusClass; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "status_class" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearStatusClass() {
+              if (HasStatusClass) {
+                ClearStatusCode();
               }
             }
 
@@ -3103,8 +3131,8 @@ namespace Google.Cloud.Monitoring.V3 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
-              if (statusCodeCase_ == StatusCodeOneofCase.StatusValue) hash ^= StatusValue.GetHashCode();
-              if (statusCodeCase_ == StatusCodeOneofCase.StatusClass) hash ^= StatusClass.GetHashCode();
+              if (HasStatusValue) hash ^= StatusValue.GetHashCode();
+              if (HasStatusClass) hash ^= StatusClass.GetHashCode();
               hash ^= (int) statusCodeCase_;
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -3124,11 +3152,11 @@ namespace Google.Cloud.Monitoring.V3 {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
-              if (statusCodeCase_ == StatusCodeOneofCase.StatusValue) {
+              if (HasStatusValue) {
                 output.WriteRawTag(8);
                 output.WriteInt32(StatusValue);
               }
-              if (statusCodeCase_ == StatusCodeOneofCase.StatusClass) {
+              if (HasStatusClass) {
                 output.WriteRawTag(16);
                 output.WriteEnum((int) StatusClass);
               }
@@ -3142,11 +3170,11 @@ namespace Google.Cloud.Monitoring.V3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (statusCodeCase_ == StatusCodeOneofCase.StatusValue) {
+              if (HasStatusValue) {
                 output.WriteRawTag(8);
                 output.WriteInt32(StatusValue);
               }
-              if (statusCodeCase_ == StatusCodeOneofCase.StatusClass) {
+              if (HasStatusClass) {
                 output.WriteRawTag(16);
                 output.WriteEnum((int) StatusClass);
               }
@@ -3160,10 +3188,10 @@ namespace Google.Cloud.Monitoring.V3 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
-              if (statusCodeCase_ == StatusCodeOneofCase.StatusValue) {
+              if (HasStatusValue) {
                 size += 1 + pb::CodedOutputStream.ComputeInt32Size(StatusValue);
               }
-              if (statusCodeCase_ == StatusCodeOneofCase.StatusClass) {
+              if (HasStatusClass) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) StatusClass);
               }
               if (_unknownFields != null) {

@@ -1166,7 +1166,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (other.State != global::Google.Cloud.Recommender.V1.InsightStateInfo.Types.State.Unspecified) {
         State = other.State;
       }
-      stateMetadata_.Add(other.stateMetadata_);
+      stateMetadata_.MergeFrom(other.stateMetadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

@@ -6656,7 +6656,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -7570,7 +7570,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8904,7 +8904,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
       if (other.DryRun != false) {
         DryRun = other.DryRun;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.ConfigurationCase) {
         case ConfigurationOneofCase.Query:
           if (Query == null) {

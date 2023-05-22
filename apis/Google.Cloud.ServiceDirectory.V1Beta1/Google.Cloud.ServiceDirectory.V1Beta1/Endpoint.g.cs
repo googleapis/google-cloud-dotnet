@@ -420,7 +420,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       if (other.Port != 0) {
         Port = other.Port;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.Network.Length != 0) {
         Network = other.Network;
       }

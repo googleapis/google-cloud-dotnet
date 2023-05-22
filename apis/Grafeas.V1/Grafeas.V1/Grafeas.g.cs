@@ -6360,7 +6360,7 @@ namespace Grafeas.V1 {
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
       }
-      notes_.Add(other.notes_);
+      notes_.MergeFrom(other.notes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

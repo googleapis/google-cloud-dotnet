@@ -131,10 +131,24 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PlaceId {
-      get { return locationTypeCase_ == LocationTypeOneofCase.PlaceId ? (string) locationType_ : ""; }
+      get { return HasPlaceId ? (string) locationType_ : ""; }
       set {
         locationType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         locationTypeCase_ = LocationTypeOneofCase.PlaceId;
+      }
+    }
+    /// <summary>Gets whether the "place_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPlaceId {
+      get { return locationTypeCase_ == LocationTypeOneofCase.PlaceId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "place_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPlaceId() {
+      if (HasPlaceId) {
+        ClearLocationType();
       }
     }
 
@@ -147,10 +161,24 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Address {
-      get { return locationTypeCase_ == LocationTypeOneofCase.Address ? (string) locationType_ : ""; }
+      get { return HasAddress ? (string) locationType_ : ""; }
       set {
         locationType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         locationTypeCase_ = LocationTypeOneofCase.Address;
+      }
+    }
+    /// <summary>Gets whether the "address" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAddress {
+      get { return locationTypeCase_ == LocationTypeOneofCase.Address; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "address" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAddress() {
+      if (HasAddress) {
+        ClearLocationType();
       }
     }
 
@@ -271,8 +299,8 @@ namespace Google.Maps.Routing.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (locationTypeCase_ == LocationTypeOneofCase.Location) hash ^= Location.GetHashCode();
-      if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) hash ^= PlaceId.GetHashCode();
-      if (locationTypeCase_ == LocationTypeOneofCase.Address) hash ^= Address.GetHashCode();
+      if (HasPlaceId) hash ^= PlaceId.GetHashCode();
+      if (HasAddress) hash ^= Address.GetHashCode();
       if (Via != false) hash ^= Via.GetHashCode();
       if (VehicleStopover != false) hash ^= VehicleStopover.GetHashCode();
       if (SideOfRoad != false) hash ^= SideOfRoad.GetHashCode();
@@ -299,7 +327,7 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(Location);
       }
-      if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) {
+      if (HasPlaceId) {
         output.WriteRawTag(18);
         output.WriteString(PlaceId);
       }
@@ -315,7 +343,7 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(40);
         output.WriteBool(SideOfRoad);
       }
-      if (locationTypeCase_ == LocationTypeOneofCase.Address) {
+      if (HasAddress) {
         output.WriteRawTag(58);
         output.WriteString(Address);
       }
@@ -333,7 +361,7 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(Location);
       }
-      if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) {
+      if (HasPlaceId) {
         output.WriteRawTag(18);
         output.WriteString(PlaceId);
       }
@@ -349,7 +377,7 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(40);
         output.WriteBool(SideOfRoad);
       }
-      if (locationTypeCase_ == LocationTypeOneofCase.Address) {
+      if (HasAddress) {
         output.WriteRawTag(58);
         output.WriteString(Address);
       }
@@ -366,10 +394,10 @@ namespace Google.Maps.Routing.V2 {
       if (locationTypeCase_ == LocationTypeOneofCase.Location) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Location);
       }
-      if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) {
+      if (HasPlaceId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlaceId);
       }
-      if (locationTypeCase_ == LocationTypeOneofCase.Address) {
+      if (HasAddress) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
       }
       if (Via != false) {

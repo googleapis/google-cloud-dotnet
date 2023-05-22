@@ -343,7 +343,7 @@ namespace Google.Cloud.AppEngine.V1 {
         }
         Split.MergeFrom(other.Split);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.networkSettings_ != null) {
         if (networkSettings_ == null) {
           NetworkSettings = new global::Google.Cloud.AppEngine.V1.NetworkSettings();
@@ -619,7 +619,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (other.ShardBy != global::Google.Cloud.AppEngine.V1.TrafficSplit.Types.ShardBy.Unspecified) {
         ShardBy = other.ShardBy;
       }
-      allocations_.Add(other.allocations_);
+      allocations_.MergeFrom(other.allocations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

@@ -651,7 +651,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (other.SnapshotAutoDeleteBehavior != global::Google.Cloud.BareMetalSolution.V2.Volume.Types.SnapshotAutoDeleteBehavior.Unspecified) {
         SnapshotAutoDeleteBehavior = other.SnapshotAutoDeleteBehavior;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.SnapshotEnabled != false) {
         SnapshotEnabled = other.SnapshotEnabled;
       }

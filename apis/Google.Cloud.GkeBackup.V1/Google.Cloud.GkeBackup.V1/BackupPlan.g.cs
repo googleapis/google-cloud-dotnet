@@ -612,7 +612,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         }
         RetentionPolicy.MergeFrom(other.RetentionPolicy);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.backupSchedule_ != null) {
         if (backupSchedule_ == null) {
           BackupSchedule = new global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.Schedule();
@@ -1419,10 +1419,24 @@ namespace Google.Cloud.GkeBackup.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool AllNamespaces {
-          get { return backupScopeCase_ == BackupScopeOneofCase.AllNamespaces ? (bool) backupScope_ : false; }
+          get { return HasAllNamespaces ? (bool) backupScope_ : false; }
           set {
             backupScope_ = value;
             backupScopeCase_ = BackupScopeOneofCase.AllNamespaces;
+          }
+        }
+        /// <summary>Gets whether the "all_namespaces" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAllNamespaces {
+          get { return backupScopeCase_ == BackupScopeOneofCase.AllNamespaces; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "all_namespaces" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAllNamespaces() {
+          if (HasAllNamespaces) {
+            ClearBackupScope();
           }
         }
 
@@ -1563,7 +1577,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) hash ^= AllNamespaces.GetHashCode();
+          if (HasAllNamespaces) hash ^= AllNamespaces.GetHashCode();
           if (backupScopeCase_ == BackupScopeOneofCase.SelectedNamespaces) hash ^= SelectedNamespaces.GetHashCode();
           if (backupScopeCase_ == BackupScopeOneofCase.SelectedApplications) hash ^= SelectedApplications.GetHashCode();
           if (IncludeVolumeData != false) hash ^= IncludeVolumeData.GetHashCode();
@@ -1588,7 +1602,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) {
+          if (HasAllNamespaces) {
             output.WriteRawTag(8);
             output.WriteBool(AllNamespaces);
           }
@@ -1622,7 +1636,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) {
+          if (HasAllNamespaces) {
             output.WriteRawTag(8);
             output.WriteBool(AllNamespaces);
           }
@@ -1656,7 +1670,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) {
+          if (HasAllNamespaces) {
             size += 1 + 1;
           }
           if (backupScopeCase_ == BackupScopeOneofCase.SelectedNamespaces) {

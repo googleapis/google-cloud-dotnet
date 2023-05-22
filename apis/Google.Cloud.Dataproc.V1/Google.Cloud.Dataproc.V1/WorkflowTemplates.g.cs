@@ -667,7 +667,7 @@ namespace Google.Cloud.Dataproc.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.placement_ != null) {
         if (placement_ == null) {
           Placement = new global::Google.Cloud.Dataproc.V1.WorkflowTemplatePlacement();
@@ -1341,7 +1341,7 @@ namespace Google.Cloud.Dataproc.V1 {
         }
         Config.MergeFrom(other.Config);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1584,7 +1584,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.Zone.Length != 0) {
         Zone = other.Zone;
       }
-      clusterLabels_.Add(other.clusterLabels_);
+      clusterLabels_.MergeFrom(other.clusterLabels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2157,7 +2157,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.StepId.Length != 0) {
         StepId = other.StepId;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.scheduling_ != null) {
         if (scheduling_ == null) {
           Scheduling = new global::Google.Cloud.Dataproc.V1.JobScheduling();
@@ -4031,7 +4031,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.ClusterName.Length != 0) {
         ClusterName = other.ClusterName;
       }
-      parameters_.Add(other.parameters_);
+      parameters_.MergeFrom(other.parameters_);
       if (other.startTime_ != null) {
         if (startTime_ == null) {
           StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -5891,7 +5891,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.RequestId.Length != 0) {
         RequestId = other.RequestId;
       }
-      parameters_.Add(other.parameters_);
+      parameters_.MergeFrom(other.parameters_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

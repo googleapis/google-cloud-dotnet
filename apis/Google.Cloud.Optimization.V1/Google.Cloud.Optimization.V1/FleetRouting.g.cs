@@ -597,6 +597,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "max_validation_errors" field.</summary>
     public const int MaxValidationErrorsFieldNumber = 5;
+    private readonly static int MaxValidationErrorsDefaultValue = 0;
+
     private int maxValidationErrors_;
     /// <summary>
     /// Truncates the number of validation errors returned. These errors are
@@ -610,7 +612,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxValidationErrors {
-      get { if ((_hasBits0 & 1) != 0) { return maxValidationErrors_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return maxValidationErrors_; } else { return MaxValidationErrorsDefaultValue; } }
       set {
         _hasBits0 |= 1;
         maxValidationErrors_ = value;
@@ -909,6 +911,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "geodesic_meters_per_second" field.</summary>
     public const int GeodesicMetersPerSecondFieldNumber = 16;
+    private readonly static double GeodesicMetersPerSecondDefaultValue = 0D;
+
     private double geodesicMetersPerSecond_;
     /// <summary>
     /// When `use_geodesic_distances` is true, this field must be set and defines
@@ -918,7 +922,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double GeodesicMetersPerSecond {
-      get { if ((_hasBits0 & 2) != 0) { return geodesicMetersPerSecond_; } else { return 0D; } }
+      get { if ((_hasBits0 & 2) != 0) { return geodesicMetersPerSecond_; } else { return GeodesicMetersPerSecondDefaultValue; } }
       set {
         _hasBits0 |= 2;
         geodesicMetersPerSecond_ = value;
@@ -2319,7 +2323,7 @@ namespace Google.Cloud.Optimization.V1 {
             }
             LatestVehicleEndTime.MergeFrom(other.LatestVehicleEndTime);
           }
-          costs_.Add(other.costs_);
+          costs_.MergeFrom(other.costs_);
           if (other.TotalCost != 0D) {
             TotalCost = other.TotalCost;
           }
@@ -3275,6 +3279,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "max_active_vehicles" field.</summary>
     public const int MaxActiveVehiclesFieldNumber = 4;
+    private readonly static int MaxActiveVehiclesDefaultValue = 0;
+
     private int maxActiveVehicles_;
     /// <summary>
     /// Constrains the maximum number of active vehicles. A vehicle is active if
@@ -3287,7 +3293,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxActiveVehicles {
-      get { if ((_hasBits0 & 1) != 0) { return maxActiveVehicles_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return maxActiveVehicles_; } else { return MaxActiveVehiclesDefaultValue; } }
       set {
         _hasBits0 |= 1;
         maxActiveVehicles_ = value;
@@ -4486,6 +4492,8 @@ namespace Google.Cloud.Optimization.V1 {
 
         /// <summary>Field number for the "first_index" field.</summary>
         public const int FirstIndexFieldNumber = 1;
+        private readonly static int FirstIndexDefaultValue = 0;
+
         private int firstIndex_;
         /// <summary>
         /// Shipment index of the "first" event. This field must be specified.
@@ -4493,7 +4501,7 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int FirstIndex {
-          get { if ((_hasBits0 & 1) != 0) { return firstIndex_; } else { return 0; } }
+          get { if ((_hasBits0 & 1) != 0) { return firstIndex_; } else { return FirstIndexDefaultValue; } }
           set {
             _hasBits0 |= 1;
             firstIndex_ = value;
@@ -4529,6 +4537,8 @@ namespace Google.Cloud.Optimization.V1 {
 
         /// <summary>Field number for the "second_index" field.</summary>
         public const int SecondIndexFieldNumber = 2;
+        private readonly static int SecondIndexDefaultValue = 0;
+
         private int secondIndex_;
         /// <summary>
         /// Shipment index of the "second" event. This field must be specified.
@@ -4536,7 +4546,7 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int SecondIndex {
-          get { if ((_hasBits0 & 2) != 0) { return secondIndex_; } else { return 0; } }
+          get { if ((_hasBits0 & 2) != 0) { return secondIndex_; } else { return SecondIndexDefaultValue; } }
           set {
             _hasBits0 |= 2;
             secondIndex_ = value;
@@ -5774,6 +5784,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "penalty_cost" field.</summary>
     public const int PenaltyCostFieldNumber = 4;
+    private readonly static double PenaltyCostDefaultValue = 0D;
+
     private double penaltyCost_;
     /// <summary>
     /// If the shipment is not completed, this penalty is added to the overall
@@ -5788,7 +5800,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double PenaltyCost {
-      get { if ((_hasBits0 & 1) != 0) { return penaltyCost_; } else { return 0D; } }
+      get { if ((_hasBits0 & 1) != 0) { return penaltyCost_; } else { return PenaltyCostDefaultValue; } }
       set {
         _hasBits0 |= 1;
         penaltyCost_ = value;
@@ -5866,6 +5878,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "pickup_to_delivery_relative_detour_limit" field.</summary>
     public const int PickupToDeliveryRelativeDetourLimitFieldNumber = 8;
+    private readonly static double PickupToDeliveryRelativeDetourLimitDefaultValue = 0D;
+
     private double pickupToDeliveryRelativeDetourLimit_;
     /// <summary>
     /// Specifies the maximum relative detour time compared to the shortest path
@@ -5889,7 +5903,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double PickupToDeliveryRelativeDetourLimit {
-      get { if ((_hasBits0 & 2) != 0) { return pickupToDeliveryRelativeDetourLimit_; } else { return 0D; } }
+      get { if ((_hasBits0 & 2) != 0) { return pickupToDeliveryRelativeDetourLimit_; } else { return PickupToDeliveryRelativeDetourLimitDefaultValue; } }
       set {
         _hasBits0 |= 2;
         pickupToDeliveryRelativeDetourLimit_ = value;
@@ -6238,7 +6252,7 @@ namespace Google.Cloud.Optimization.V1 {
       }
       pickups_.Add(other.pickups_);
       deliveries_.Add(other.deliveries_);
-      loadDemands_.Add(other.loadDemands_);
+      loadDemands_.MergeFrom(other.loadDemands_);
       if (other.HasPenaltyCost) {
         PenaltyCost = other.PenaltyCost;
       }
@@ -6943,7 +6957,7 @@ namespace Google.Cloud.Optimization.V1 {
           if (other.Cost != 0D) {
             Cost = other.Cost;
           }
-          loadDemands_.Add(other.loadDemands_);
+          loadDemands_.MergeFrom(other.loadDemands_);
           visitTypes_.Add(other.visitTypes_);
           if (other.Label.Length != 0) {
             Label = other.Label;
@@ -8134,6 +8148,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "travel_duration_multiple" field.</summary>
     public const int TravelDurationMultipleFieldNumber = 11;
+    private readonly static double TravelDurationMultipleDefaultValue = 0D;
+
     private double travelDurationMultiple_;
     /// <summary>
     /// Specifies a multiplicative factor that can be used to increase or decrease
@@ -8153,7 +8169,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double TravelDurationMultiple {
-      get { if ((_hasBits0 & 1) != 0) { return travelDurationMultiple_; } else { return 0D; } }
+      get { if ((_hasBits0 & 1) != 0) { return travelDurationMultiple_; } else { return TravelDurationMultipleDefaultValue; } }
       set {
         _hasBits0 |= 1;
         travelDurationMultiple_ = value;
@@ -8902,7 +8918,7 @@ namespace Google.Cloud.Optimization.V1 {
       if (other.UnloadingPolicy != global::Google.Cloud.Optimization.V1.Vehicle.Types.UnloadingPolicy.Unspecified) {
         UnloadingPolicy = other.UnloadingPolicy;
       }
-      loadLimits_.Add(other.loadLimits_);
+      loadLimits_.MergeFrom(other.loadLimits_);
       if (other.CostPerHour != 0D) {
         CostPerHour = other.CostPerHour;
       }
@@ -8936,7 +8952,7 @@ namespace Google.Cloud.Optimization.V1 {
         }
         RouteDistanceLimit.MergeFrom(other.RouteDistanceLimit);
       }
-      extraVisitDurationForVisitType_.Add(other.extraVisitDurationForVisitType_);
+      extraVisitDurationForVisitType_.MergeFrom(other.extraVisitDurationForVisitType_);
       if (other.breakRule_ != null) {
         if (breakRule_ == null) {
           BreakRule = new global::Google.Cloud.Optimization.V1.BreakRule();
@@ -9365,6 +9381,8 @@ namespace Google.Cloud.Optimization.V1 {
 
         /// <summary>Field number for the "max_load" field.</summary>
         public const int MaxLoadFieldNumber = 1;
+        private readonly static long MaxLoadDefaultValue = 0L;
+
         private long maxLoad_;
         /// <summary>
         /// The maximum acceptable amount of load.
@@ -9372,7 +9390,7 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long MaxLoad {
-          get { if ((_hasBits0 & 1) != 0) { return maxLoad_; } else { return 0L; } }
+          get { if ((_hasBits0 & 1) != 0) { return maxLoad_; } else { return MaxLoadDefaultValue; } }
           set {
             _hasBits0 |= 1;
             maxLoad_ = value;
@@ -9780,6 +9798,8 @@ namespace Google.Cloud.Optimization.V1 {
 
             /// <summary>Field number for the "max" field.</summary>
             public const int MaxFieldNumber = 2;
+            private readonly static long MaxDefaultValue = 0L;
+
             private long max_;
             /// <summary>
             /// A maximum acceptable load. Must be ≥ 0. If unspecified, the maximum
@@ -9792,7 +9812,7 @@ namespace Google.Cloud.Optimization.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public long Max {
-              get { if ((_hasBits0 & 1) != 0) { return max_; } else { return 0L; } }
+              get { if ((_hasBits0 & 1) != 0) { return max_; } else { return MaxDefaultValue; } }
               set {
                 _hasBits0 |= 1;
                 max_ = value;
@@ -10067,6 +10087,8 @@ namespace Google.Cloud.Optimization.V1 {
 
         /// <summary>Field number for the "cost_per_hour_after_soft_max" field.</summary>
         public const int CostPerHourAfterSoftMaxFieldNumber = 3;
+        private readonly static double CostPerHourAfterSoftMaxDefaultValue = 0D;
+
         private double costPerHourAfterSoftMax_;
         /// <summary>
         /// Cost per hour incurred if the `soft_max_duration` threshold is violated.
@@ -10080,7 +10102,7 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double CostPerHourAfterSoftMax {
-          get { if ((_hasBits0 & 1) != 0) { return costPerHourAfterSoftMax_; } else { return 0D; } }
+          get { if ((_hasBits0 & 1) != 0) { return costPerHourAfterSoftMax_; } else { return CostPerHourAfterSoftMaxDefaultValue; } }
           set {
             _hasBits0 |= 1;
             costPerHourAfterSoftMax_ = value;
@@ -10125,6 +10147,8 @@ namespace Google.Cloud.Optimization.V1 {
 
         /// <summary>Field number for the "cost_per_square_hour_after_quadratic_soft_max" field.</summary>
         public const int CostPerSquareHourAfterQuadraticSoftMaxFieldNumber = 5;
+        private readonly static double CostPerSquareHourAfterQuadraticSoftMaxDefaultValue = 0D;
+
         private double costPerSquareHourAfterQuadraticSoftMax_;
         /// <summary>
         /// Cost per square hour incurred if the
@@ -10143,7 +10167,7 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double CostPerSquareHourAfterQuadraticSoftMax {
-          get { if ((_hasBits0 & 2) != 0) { return costPerSquareHourAfterQuadraticSoftMax_; } else { return 0D; } }
+          get { if ((_hasBits0 & 2) != 0) { return costPerSquareHourAfterQuadraticSoftMax_; } else { return CostPerSquareHourAfterQuadraticSoftMaxDefaultValue; } }
           set {
             _hasBits0 |= 2;
             costPerSquareHourAfterQuadraticSoftMax_ = value;
@@ -10561,6 +10585,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "cost_per_hour_before_soft_start_time" field.</summary>
     public const int CostPerHourBeforeSoftStartTimeFieldNumber = 5;
+    private readonly static double CostPerHourBeforeSoftStartTimeDefaultValue = 0D;
+
     private double costPerHourBeforeSoftStartTime_;
     /// <summary>
     /// A cost per hour added to other costs in the model if the event occurs
@@ -10578,7 +10604,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double CostPerHourBeforeSoftStartTime {
-      get { if ((_hasBits0 & 1) != 0) { return costPerHourBeforeSoftStartTime_; } else { return 0D; } }
+      get { if ((_hasBits0 & 1) != 0) { return costPerHourBeforeSoftStartTime_; } else { return CostPerHourBeforeSoftStartTimeDefaultValue; } }
       set {
         _hasBits0 |= 1;
         costPerHourBeforeSoftStartTime_ = value;
@@ -10599,6 +10625,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "cost_per_hour_after_soft_end_time" field.</summary>
     public const int CostPerHourAfterSoftEndTimeFieldNumber = 6;
+    private readonly static double CostPerHourAfterSoftEndTimeDefaultValue = 0D;
+
     private double costPerHourAfterSoftEndTime_;
     /// <summary>
     /// A cost per hour added to other costs in the model if the event occurs after
@@ -10616,7 +10644,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double CostPerHourAfterSoftEndTime {
-      get { if ((_hasBits0 & 2) != 0) { return costPerHourAfterSoftEndTime_; } else { return 0D; } }
+      get { if ((_hasBits0 & 2) != 0) { return costPerHourAfterSoftEndTime_; } else { return CostPerHourAfterSoftEndTimeDefaultValue; } }
       set {
         _hasBits0 |= 2;
         costPerHourAfterSoftEndTime_ = value;
@@ -11224,11 +11252,13 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "min_value" field.</summary>
     public const int MinValueFieldNumber = 2;
+    private readonly static long MinValueDefaultValue = 0L;
+
     private long minValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long MinValue {
-      get { if ((_hasBits0 & 1) != 0) { return minValue_; } else { return 0L; } }
+      get { if ((_hasBits0 & 1) != 0) { return minValue_; } else { return MinValueDefaultValue; } }
       set {
         _hasBits0 |= 1;
         minValue_ = value;
@@ -11249,11 +11279,13 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "max_value" field.</summary>
     public const int MaxValueFieldNumber = 3;
+    private readonly static long MaxValueDefaultValue = 0L;
+
     private long maxValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long MaxValue {
-      get { if ((_hasBits0 & 2) != 0) { return maxValue_; } else { return 0L; } }
+      get { if ((_hasBits0 & 2) != 0) { return maxValue_; } else { return MaxValueDefaultValue; } }
       set {
         _hasBits0 |= 2;
         maxValue_ = value;
@@ -11510,6 +11542,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "max_meters" field.</summary>
     public const int MaxMetersFieldNumber = 1;
+    private readonly static long MaxMetersDefaultValue = 0L;
+
     private long maxMeters_;
     /// <summary>
     /// A hard limit constraining the distance to be at most max_meters. The limit
@@ -11518,7 +11552,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long MaxMeters {
-      get { if ((_hasBits0 & 1) != 0) { return maxMeters_; } else { return 0L; } }
+      get { if ((_hasBits0 & 1) != 0) { return maxMeters_; } else { return MaxMetersDefaultValue; } }
       set {
         _hasBits0 |= 1;
         maxMeters_ = value;
@@ -11539,6 +11573,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "soft_max_meters" field.</summary>
     public const int SoftMaxMetersFieldNumber = 2;
+    private readonly static long SoftMaxMetersDefaultValue = 0L;
+
     private long softMaxMeters_;
     /// <summary>
     /// A soft limit not enforcing a maximum distance limit, but when violated
@@ -11551,7 +11587,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long SoftMaxMeters {
-      get { if ((_hasBits0 & 2) != 0) { return softMaxMeters_; } else { return 0L; } }
+      get { if ((_hasBits0 & 2) != 0) { return softMaxMeters_; } else { return SoftMaxMetersDefaultValue; } }
       set {
         _hasBits0 |= 2;
         softMaxMeters_ = value;
@@ -11572,6 +11608,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "cost_per_kilometer_above_soft_max" field.</summary>
     public const int CostPerKilometerAboveSoftMaxFieldNumber = 3;
+    private readonly static double CostPerKilometerAboveSoftMaxDefaultValue = 0D;
+
     private double costPerKilometerAboveSoftMax_;
     /// <summary>
     /// Cost per kilometer incurred if distance is above `soft_max_meters` limit.
@@ -11586,7 +11624,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double CostPerKilometerAboveSoftMax {
-      get { if ((_hasBits0 & 4) != 0) { return costPerKilometerAboveSoftMax_; } else { return 0D; } }
+      get { if ((_hasBits0 & 4) != 0) { return costPerKilometerAboveSoftMax_; } else { return CostPerKilometerAboveSoftMaxDefaultValue; } }
       set {
         _hasBits0 |= 4;
         costPerKilometerAboveSoftMax_ = value;
@@ -12386,10 +12424,24 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PlaceId {
-      get { return locationTypeCase_ == LocationTypeOneofCase.PlaceId ? (string) locationType_ : ""; }
+      get { return HasPlaceId ? (string) locationType_ : ""; }
       set {
         locationType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         locationTypeCase_ = LocationTypeOneofCase.PlaceId;
+      }
+    }
+    /// <summary>Gets whether the "place_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPlaceId {
+      get { return locationTypeCase_ == LocationTypeOneofCase.PlaceId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "place_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPlaceId() {
+      if (HasPlaceId) {
+        ClearLocationType();
       }
     }
 
@@ -12461,7 +12513,7 @@ namespace Google.Cloud.Optimization.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (locationTypeCase_ == LocationTypeOneofCase.Location) hash ^= Location.GetHashCode();
-      if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) hash ^= PlaceId.GetHashCode();
+      if (HasPlaceId) hash ^= PlaceId.GetHashCode();
       if (SideOfRoad != false) hash ^= SideOfRoad.GetHashCode();
       hash ^= (int) locationTypeCase_;
       if (_unknownFields != null) {
@@ -12486,7 +12538,7 @@ namespace Google.Cloud.Optimization.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Location);
       }
-      if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) {
+      if (HasPlaceId) {
         output.WriteRawTag(18);
         output.WriteString(PlaceId);
       }
@@ -12508,7 +12560,7 @@ namespace Google.Cloud.Optimization.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Location);
       }
-      if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) {
+      if (HasPlaceId) {
         output.WriteRawTag(18);
         output.WriteString(PlaceId);
       }
@@ -12529,7 +12581,7 @@ namespace Google.Cloud.Optimization.V1 {
       if (locationTypeCase_ == LocationTypeOneofCase.Location) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Location);
       }
-      if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) {
+      if (HasPlaceId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlaceId);
       }
       if (SideOfRoad != false) {
@@ -12700,6 +12752,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "heading" field.</summary>
     public const int HeadingFieldNumber = 2;
+    private readonly static int HeadingDefaultValue = 0;
+
     private int heading_;
     /// <summary>
     /// The compass heading associated with the direction of the flow of traffic.
@@ -12710,7 +12764,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Heading {
-      get { if ((_hasBits0 & 1) != 0) { return heading_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return heading_; } else { return HeadingDefaultValue; } }
       set {
         _hasBits0 |= 1;
         heading_ = value;
@@ -14429,7 +14483,7 @@ namespace Google.Cloud.Optimization.V1 {
         }
         Metrics.MergeFrom(other.Metrics);
       }
-      routeCosts_.Add(other.routeCosts_);
+      routeCosts_.MergeFrom(other.routeCosts_);
       if (other.RouteTotalCost != 0D) {
         RouteTotalCost = other.RouteTotalCost;
       }
@@ -15375,7 +15429,7 @@ namespace Google.Cloud.Optimization.V1 {
             }
             StartTime.MergeFrom(other.StartTime);
           }
-          loadDemands_.Add(other.loadDemands_);
+          loadDemands_.MergeFrom(other.loadDemands_);
           if (other.detour_ != null) {
             if (detour_ == null) {
               Detour = new global::Google.Protobuf.WellKnownTypes.Duration();
@@ -16046,7 +16100,7 @@ namespace Google.Cloud.Optimization.V1 {
             }
             RoutePolyline.MergeFrom(other.RoutePolyline);
           }
-          vehicleLoads_.Add(other.vehicleLoads_);
+          vehicleLoads_.MergeFrom(other.vehicleLoads_);
           loads_.Add(other.loads_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -17592,6 +17646,8 @@ namespace Google.Cloud.Optimization.V1 {
 
         /// <summary>Field number for the "example_vehicle_index" field.</summary>
         public const int ExampleVehicleIndexFieldNumber = 2;
+        private readonly static int ExampleVehicleIndexDefaultValue = 0;
+
         private int exampleVehicleIndex_;
         /// <summary>
         /// If the reason is related to a shipment-vehicle incompatibility, this
@@ -17600,7 +17656,7 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int ExampleVehicleIndex {
-          get { if ((_hasBits0 & 1) != 0) { return exampleVehicleIndex_; } else { return 0; } }
+          get { if ((_hasBits0 & 1) != 0) { return exampleVehicleIndex_; } else { return ExampleVehicleIndexDefaultValue; } }
           set {
             _hasBits0 |= 1;
             exampleVehicleIndex_ = value;
@@ -18372,8 +18428,8 @@ namespace Google.Cloud.Optimization.V1 {
       if (other.TravelDistanceMeters != 0D) {
         TravelDistanceMeters = other.TravelDistanceMeters;
       }
-      maxLoads_.Add(other.maxLoads_);
-      costs_.Add(other.costs_);
+      maxLoads_.MergeFrom(other.maxLoads_);
+      costs_.MergeFrom(other.costs_);
       if (other.TotalCost != 0D) {
         TotalCost = other.TotalCost;
       }
@@ -20086,10 +20142,24 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int Index {
-          get { return indexOrKeyCase_ == IndexOrKeyOneofCase.Index ? (int) indexOrKey_ : 0; }
+          get { return HasIndex ? (int) indexOrKey_ : 0; }
           set {
             indexOrKey_ = value;
             indexOrKeyCase_ = IndexOrKeyOneofCase.Index;
+          }
+        }
+        /// <summary>Gets whether the "index" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasIndex {
+          get { return indexOrKeyCase_ == IndexOrKeyOneofCase.Index; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "index" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearIndex() {
+          if (HasIndex) {
+            ClearIndexOrKey();
           }
         }
 
@@ -20101,10 +20171,24 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Key {
-          get { return indexOrKeyCase_ == IndexOrKeyOneofCase.Key ? (string) indexOrKey_ : ""; }
+          get { return HasKey ? (string) indexOrKey_ : ""; }
           set {
             indexOrKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             indexOrKeyCase_ = IndexOrKeyOneofCase.Key;
+          }
+        }
+        /// <summary>Gets whether the "key" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasKey {
+          get { return indexOrKeyCase_ == IndexOrKeyOneofCase.Key; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "key" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearKey() {
+          if (HasKey) {
+            ClearIndexOrKey();
           }
         }
 
@@ -20172,8 +20256,8 @@ namespace Google.Cloud.Optimization.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (Name.Length != 0) hash ^= Name.GetHashCode();
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Index) hash ^= Index.GetHashCode();
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Key) hash ^= Key.GetHashCode();
+          if (HasIndex) hash ^= Index.GetHashCode();
+          if (HasKey) hash ^= Key.GetHashCode();
           if (subField_ != null) hash ^= SubField.GetHashCode();
           hash ^= (int) indexOrKeyCase_;
           if (_unknownFields != null) {
@@ -20198,7 +20282,7 @@ namespace Google.Cloud.Optimization.V1 {
             output.WriteRawTag(10);
             output.WriteString(Name);
           }
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Index) {
+          if (HasIndex) {
             output.WriteRawTag(16);
             output.WriteInt32(Index);
           }
@@ -20206,7 +20290,7 @@ namespace Google.Cloud.Optimization.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(SubField);
           }
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Key) {
+          if (HasKey) {
             output.WriteRawTag(34);
             output.WriteString(Key);
           }
@@ -20224,7 +20308,7 @@ namespace Google.Cloud.Optimization.V1 {
             output.WriteRawTag(10);
             output.WriteString(Name);
           }
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Index) {
+          if (HasIndex) {
             output.WriteRawTag(16);
             output.WriteInt32(Index);
           }
@@ -20232,7 +20316,7 @@ namespace Google.Cloud.Optimization.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(SubField);
           }
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Key) {
+          if (HasKey) {
             output.WriteRawTag(34);
             output.WriteString(Key);
           }
@@ -20249,10 +20333,10 @@ namespace Google.Cloud.Optimization.V1 {
           if (Name.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
           }
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Index) {
+          if (HasIndex) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
           }
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Key) {
+          if (HasKey) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
           }
           if (subField_ != null) {

@@ -617,7 +617,7 @@ namespace Google.Cloud.SecretManager.V1 {
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       topics_.Add(other.topics_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
@@ -628,8 +628,8 @@ namespace Google.Cloud.SecretManager.V1 {
         }
         Rotation.MergeFrom(other.Rotation);
       }
-      versionAliases_.Add(other.versionAliases_);
-      annotations_.Add(other.annotations_);
+      versionAliases_.MergeFrom(other.versionAliases_);
+      annotations_.MergeFrom(other.annotations_);
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.ExpireTime:
           if (ExpireTime == null) {
@@ -4217,6 +4217,8 @@ namespace Google.Cloud.SecretManager.V1 {
 
     /// <summary>Field number for the "data_crc32c" field.</summary>
     public const int DataCrc32CFieldNumber = 2;
+    private readonly static long DataCrc32CDefaultValue = 0L;
+
     private long dataCrc32C_;
     /// <summary>
     /// Optional. If specified,
@@ -4239,7 +4241,7 @@ namespace Google.Cloud.SecretManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long DataCrc32C {
-      get { if ((_hasBits0 & 1) != 0) { return dataCrc32C_; } else { return 0L; } }
+      get { if ((_hasBits0 & 1) != 0) { return dataCrc32C_; } else { return DataCrc32CDefaultValue; } }
       set {
         _hasBits0 |= 1;
         dataCrc32C_ = value;

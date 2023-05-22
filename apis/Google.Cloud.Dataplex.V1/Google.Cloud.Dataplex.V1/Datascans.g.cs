@@ -3759,7 +3759,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.State != global::Google.Cloud.Dataplex.V1.State.Unspecified) {
         State = other.State;
       }
@@ -4146,10 +4146,24 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Field {
-          get { return incrementalCase_ == IncrementalOneofCase.Field ? (string) incremental_ : ""; }
+          get { return HasField ? (string) incremental_ : ""; }
           set {
             incremental_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             incrementalCase_ = IncrementalOneofCase.Field;
+          }
+        }
+        /// <summary>Gets whether the "field" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasField {
+          get { return incrementalCase_ == IncrementalOneofCase.Field; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "field" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearField() {
+          if (HasField) {
+            ClearIncremental();
           }
         }
 
@@ -4199,7 +4213,7 @@ namespace Google.Cloud.Dataplex.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (trigger_ != null) hash ^= Trigger.GetHashCode();
-          if (incrementalCase_ == IncrementalOneofCase.Field) hash ^= Field.GetHashCode();
+          if (HasField) hash ^= Field.GetHashCode();
           hash ^= (int) incrementalCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -4223,7 +4237,7 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(Trigger);
           }
-          if (incrementalCase_ == IncrementalOneofCase.Field) {
+          if (HasField) {
             output.WriteRawTag(162, 6);
             output.WriteString(Field);
           }
@@ -4241,7 +4255,7 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(Trigger);
           }
-          if (incrementalCase_ == IncrementalOneofCase.Field) {
+          if (HasField) {
             output.WriteRawTag(162, 6);
             output.WriteString(Field);
           }
@@ -4258,7 +4272,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (trigger_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Trigger);
           }
-          if (incrementalCase_ == IncrementalOneofCase.Field) {
+          if (HasField) {
             size += 2 + pb::CodedOutputStream.ComputeStringSize(Field);
           }
           if (_unknownFields != null) {

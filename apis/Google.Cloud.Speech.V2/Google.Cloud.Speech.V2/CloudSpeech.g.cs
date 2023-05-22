@@ -4474,7 +4474,7 @@ namespace Google.Cloud.Speech.V2 {
         }
         DefaultRecognitionConfig.MergeFrom(other.DefaultRecognitionConfig);
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.State != global::Google.Cloud.Speech.V2.Recognizer.Types.State.Unspecified) {
         State = other.State;
       }
@@ -6336,10 +6336,24 @@ namespace Google.Cloud.Speech.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string PhraseSet {
-          get { return valueCase_ == ValueOneofCase.PhraseSet ? (string) value_ : ""; }
+          get { return HasPhraseSet ? (string) value_ : ""; }
           set {
             value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             valueCase_ = ValueOneofCase.PhraseSet;
+          }
+        }
+        /// <summary>Gets whether the "phrase_set" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPhraseSet {
+          get { return valueCase_ == ValueOneofCase.PhraseSet; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "phrase_set" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPhraseSet() {
+          if (HasPhraseSet) {
+            ClearValue();
           }
         }
 
@@ -6404,7 +6418,7 @@ namespace Google.Cloud.Speech.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (valueCase_ == ValueOneofCase.PhraseSet) hash ^= PhraseSet.GetHashCode();
+          if (HasPhraseSet) hash ^= PhraseSet.GetHashCode();
           if (valueCase_ == ValueOneofCase.InlinePhraseSet) hash ^= InlinePhraseSet.GetHashCode();
           hash ^= (int) valueCase_;
           if (_unknownFields != null) {
@@ -6425,7 +6439,7 @@ namespace Google.Cloud.Speech.V2 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (valueCase_ == ValueOneofCase.PhraseSet) {
+          if (HasPhraseSet) {
             output.WriteRawTag(10);
             output.WriteString(PhraseSet);
           }
@@ -6443,7 +6457,7 @@ namespace Google.Cloud.Speech.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (valueCase_ == ValueOneofCase.PhraseSet) {
+          if (HasPhraseSet) {
             output.WriteRawTag(10);
             output.WriteString(PhraseSet);
           }
@@ -6461,7 +6475,7 @@ namespace Google.Cloud.Speech.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (valueCase_ == ValueOneofCase.PhraseSet) {
+          if (HasPhraseSet) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(PhraseSet);
           }
           if (valueCase_ == ValueOneofCase.InlinePhraseSet) {
@@ -7092,10 +7106,24 @@ namespace Google.Cloud.Speech.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Content {
-      get { return audioSourceCase_ == AudioSourceOneofCase.Content ? (pb::ByteString) audioSource_ : pb::ByteString.Empty; }
+      get { return HasContent ? (pb::ByteString) audioSource_ : pb::ByteString.Empty; }
       set {
         audioSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         audioSourceCase_ = AudioSourceOneofCase.Content;
+      }
+    }
+    /// <summary>Gets whether the "content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContent {
+      get { return audioSourceCase_ == AudioSourceOneofCase.Content; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContent() {
+      if (HasContent) {
+        ClearAudioSource();
       }
     }
 
@@ -7114,10 +7142,24 @@ namespace Google.Cloud.Speech.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uri {
-      get { return audioSourceCase_ == AudioSourceOneofCase.Uri ? (string) audioSource_ : ""; }
+      get { return HasUri ? (string) audioSource_ : ""; }
       set {
         audioSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         audioSourceCase_ = AudioSourceOneofCase.Uri;
+      }
+    }
+    /// <summary>Gets whether the "uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUri {
+      get { return audioSourceCase_ == AudioSourceOneofCase.Uri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUri() {
+      if (HasUri) {
+        ClearAudioSource();
       }
     }
 
@@ -7173,8 +7215,8 @@ namespace Google.Cloud.Speech.V2 {
       if (Recognizer.Length != 0) hash ^= Recognizer.GetHashCode();
       if (config_ != null) hash ^= Config.GetHashCode();
       if (configMask_ != null) hash ^= ConfigMask.GetHashCode();
-      if (audioSourceCase_ == AudioSourceOneofCase.Content) hash ^= Content.GetHashCode();
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) hash ^= Uri.GetHashCode();
+      if (HasContent) hash ^= Content.GetHashCode();
+      if (HasUri) hash ^= Uri.GetHashCode();
       hash ^= (int) audioSourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -7202,11 +7244,11 @@ namespace Google.Cloud.Speech.V2 {
         output.WriteRawTag(26);
         output.WriteString(Recognizer);
       }
-      if (audioSourceCase_ == AudioSourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(42);
         output.WriteBytes(Content);
       }
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(50);
         output.WriteString(Uri);
       }
@@ -7232,11 +7274,11 @@ namespace Google.Cloud.Speech.V2 {
         output.WriteRawTag(26);
         output.WriteString(Recognizer);
       }
-      if (audioSourceCase_ == AudioSourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(42);
         output.WriteBytes(Content);
       }
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(50);
         output.WriteString(Uri);
       }
@@ -7263,10 +7305,10 @@ namespace Google.Cloud.Speech.V2 {
       if (configMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConfigMask);
       }
-      if (audioSourceCase_ == AudioSourceOneofCase.Content) {
+      if (HasContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Content);
       }
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) {
+      if (HasUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
       if (_unknownFields != null) {
@@ -9812,10 +9854,24 @@ namespace Google.Cloud.Speech.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Audio {
-      get { return streamingRequestCase_ == StreamingRequestOneofCase.Audio ? (pb::ByteString) streamingRequest_ : pb::ByteString.Empty; }
+      get { return HasAudio ? (pb::ByteString) streamingRequest_ : pb::ByteString.Empty; }
       set {
         streamingRequest_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         streamingRequestCase_ = StreamingRequestOneofCase.Audio;
+      }
+    }
+    /// <summary>Gets whether the "audio" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAudio {
+      get { return streamingRequestCase_ == StreamingRequestOneofCase.Audio; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "audio" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAudio() {
+      if (HasAudio) {
+        ClearStreamingRequest();
       }
     }
 
@@ -9868,7 +9924,7 @@ namespace Google.Cloud.Speech.V2 {
       int hash = 1;
       if (Recognizer.Length != 0) hash ^= Recognizer.GetHashCode();
       if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) hash ^= StreamingConfig.GetHashCode();
-      if (streamingRequestCase_ == StreamingRequestOneofCase.Audio) hash ^= Audio.GetHashCode();
+      if (HasAudio) hash ^= Audio.GetHashCode();
       hash ^= (int) streamingRequestCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -9892,7 +9948,7 @@ namespace Google.Cloud.Speech.V2 {
         output.WriteRawTag(26);
         output.WriteString(Recognizer);
       }
-      if (streamingRequestCase_ == StreamingRequestOneofCase.Audio) {
+      if (HasAudio) {
         output.WriteRawTag(42);
         output.WriteBytes(Audio);
       }
@@ -9914,7 +9970,7 @@ namespace Google.Cloud.Speech.V2 {
         output.WriteRawTag(26);
         output.WriteString(Recognizer);
       }
-      if (streamingRequestCase_ == StreamingRequestOneofCase.Audio) {
+      if (HasAudio) {
         output.WriteRawTag(42);
         output.WriteBytes(Audio);
       }
@@ -9938,7 +9994,7 @@ namespace Google.Cloud.Speech.V2 {
       if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StreamingConfig);
       }
-      if (streamingRequestCase_ == StreamingRequestOneofCase.Audio) {
+      if (HasAudio) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Audio);
       }
       if (_unknownFields != null) {
@@ -11313,7 +11369,7 @@ namespace Google.Cloud.Speech.V2 {
       if (other == null) {
         return;
       }
-      results_.Add(other.results_);
+      results_.MergeFrom(other.results_);
       if (other.totalBilledDuration_ != null) {
         if (totalBilledDuration_ == null) {
           TotalBilledDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
@@ -12381,7 +12437,7 @@ namespace Google.Cloud.Speech.V2 {
       if (other == null) {
         return;
       }
-      transcriptionMetadata_.Add(other.transcriptionMetadata_);
+      transcriptionMetadata_.MergeFrom(other.transcriptionMetadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -12489,10 +12545,24 @@ namespace Google.Cloud.Speech.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uri {
-      get { return audioSourceCase_ == AudioSourceOneofCase.Uri ? (string) audioSource_ : ""; }
+      get { return HasUri ? (string) audioSource_ : ""; }
       set {
         audioSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         audioSourceCase_ = AudioSourceOneofCase.Uri;
+      }
+    }
+    /// <summary>Gets whether the "uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUri {
+      get { return audioSourceCase_ == AudioSourceOneofCase.Uri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUri() {
+      if (HasUri) {
+        ClearAudioSource();
       }
     }
 
@@ -12591,7 +12661,7 @@ namespace Google.Cloud.Speech.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) hash ^= Uri.GetHashCode();
+      if (HasUri) hash ^= Uri.GetHashCode();
       if (config_ != null) hash ^= Config.GetHashCode();
       if (configMask_ != null) hash ^= ConfigMask.GetHashCode();
       hash ^= (int) audioSourceCase_;
@@ -12613,7 +12683,7 @@ namespace Google.Cloud.Speech.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
@@ -12635,7 +12705,7 @@ namespace Google.Cloud.Speech.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
@@ -12657,7 +12727,7 @@ namespace Google.Cloud.Speech.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (audioSourceCase_ == AudioSourceOneofCase.Uri) {
+      if (HasUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
       if (config_ != null) {
@@ -14904,7 +14974,7 @@ namespace Google.Cloud.Speech.V2 {
         }
         ExpireTime.MergeFrom(other.ExpireTime);
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -15907,7 +15977,7 @@ namespace Google.Cloud.Speech.V2 {
         }
         ExpireTime.MergeFrom(other.ExpireTime);
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }

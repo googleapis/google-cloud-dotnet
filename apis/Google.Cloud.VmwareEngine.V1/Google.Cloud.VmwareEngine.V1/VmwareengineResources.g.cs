@@ -1735,7 +1735,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
           if (other.ClusterId.Length != 0) {
             ClusterId = other.ClusterId;
           }
-          nodeTypeConfigs_.Add(other.nodeTypeConfigs_);
+          nodeTypeConfigs_.MergeFrom(other.nodeTypeConfigs_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -2137,7 +2137,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
       if (other.Uid.Length != 0) {
         Uid = other.Uid;
       }
-      nodeTypeConfigs_.Add(other.nodeTypeConfigs_);
+      nodeTypeConfigs_.MergeFrom(other.nodeTypeConfigs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

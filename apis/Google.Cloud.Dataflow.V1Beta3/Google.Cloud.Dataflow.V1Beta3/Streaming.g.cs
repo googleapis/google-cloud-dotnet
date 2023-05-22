@@ -338,7 +338,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       computations_.Add(other.computations_);
       dataDiskAssignments_.Add(other.dataDiskAssignments_);
-      userStageToComputationNameMap_.Add(other.userStageToComputationNameMap_);
+      userStageToComputationNameMap_.MergeFrom(other.userStageToComputationNameMap_);
       if (other.ForwardingKeyBits != 0) {
         ForwardingKeyBits = other.ForwardingKeyBits;
       }

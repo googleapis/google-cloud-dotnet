@@ -1204,7 +1204,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      stateMetadata_.Add(other.stateMetadata_);
+      stateMetadata_.MergeFrom(other.stateMetadata_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -2247,7 +2247,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      stateMetadata_.Add(other.stateMetadata_);
+      stateMetadata_.MergeFrom(other.stateMetadata_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -2514,7 +2514,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      stateMetadata_.Add(other.stateMetadata_);
+      stateMetadata_.MergeFrom(other.stateMetadata_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -2781,7 +2781,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      stateMetadata_.Add(other.stateMetadata_);
+      stateMetadata_.MergeFrom(other.stateMetadata_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }

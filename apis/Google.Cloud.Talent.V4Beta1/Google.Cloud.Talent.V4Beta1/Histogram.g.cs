@@ -428,7 +428,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.HistogramQuery.Length != 0) {
         HistogramQuery = other.HistogramQuery;
       }
-      histogram_.Add(other.histogram_);
+      histogram_.MergeFrom(other.histogram_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

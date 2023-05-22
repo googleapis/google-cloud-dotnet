@@ -3086,7 +3086,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -3271,10 +3271,24 @@ namespace Google.Cloud.Gaming.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ConfigVersion {
-      get { return changeCase_ == ChangeOneofCase.ConfigVersion ? (string) change_ : ""; }
+      get { return HasConfigVersion ? (string) change_ : ""; }
       set {
         change_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         changeCase_ = ChangeOneofCase.ConfigVersion;
+      }
+    }
+    /// <summary>Gets whether the "config_version" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConfigVersion {
+      get { return changeCase_ == ChangeOneofCase.ConfigVersion; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "config_version" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConfigVersion() {
+      if (HasConfigVersion) {
+        ClearChange();
       }
     }
 
@@ -3345,7 +3359,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public override int GetHashCode() {
       int hash = 1;
       if (selectorCase_ == SelectorOneofCase.RealmsSelector) hash ^= RealmsSelector.GetHashCode();
-      if (changeCase_ == ChangeOneofCase.ConfigVersion) hash ^= ConfigVersion.GetHashCode();
+      if (HasConfigVersion) hash ^= ConfigVersion.GetHashCode();
       hash ^= (int) selectorCase_;
       hash ^= (int) changeCase_;
       if (_unknownFields != null) {
@@ -3370,7 +3384,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         output.WriteRawTag(10);
         output.WriteMessage(RealmsSelector);
       }
-      if (changeCase_ == ChangeOneofCase.ConfigVersion) {
+      if (HasConfigVersion) {
         output.WriteRawTag(162, 6);
         output.WriteString(ConfigVersion);
       }
@@ -3388,7 +3402,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         output.WriteRawTag(10);
         output.WriteMessage(RealmsSelector);
       }
-      if (changeCase_ == ChangeOneofCase.ConfigVersion) {
+      if (HasConfigVersion) {
         output.WriteRawTag(162, 6);
         output.WriteString(ConfigVersion);
       }
@@ -3405,7 +3419,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       if (selectorCase_ == SelectorOneofCase.RealmsSelector) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RealmsSelector);
       }
-      if (changeCase_ == ChangeOneofCase.ConfigVersion) {
+      if (HasConfigVersion) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ConfigVersion);
       }
       if (_unknownFields != null) {

@@ -499,7 +499,7 @@ namespace Google.Cloud.Gaming.V1 {
         ApiVersion = other.ApiVersion;
       }
       unreachable_.Add(other.unreachable_);
-      operationStatus_.Add(other.operationStatus_);
+      operationStatus_.MergeFrom(other.operationStatus_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1046,7 +1046,7 @@ namespace Google.Cloud.Gaming.V1 {
       if (other == null) {
         return;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

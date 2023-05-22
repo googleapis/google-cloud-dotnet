@@ -389,10 +389,24 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TemplateId {
-      get { return jobConfigCase_ == JobConfigOneofCase.TemplateId ? (string) jobConfig_ : ""; }
+      get { return HasTemplateId ? (string) jobConfig_ : ""; }
       set {
         jobConfig_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         jobConfigCase_ = JobConfigOneofCase.TemplateId;
+      }
+    }
+    /// <summary>Gets whether the "template_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTemplateId {
+      get { return jobConfigCase_ == JobConfigOneofCase.TemplateId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "template_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTemplateId() {
+      if (HasTemplateId) {
+        ClearJobConfig();
       }
     }
 
@@ -595,7 +609,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (InputUri.Length != 0) hash ^= InputUri.GetHashCode();
       if (OutputUri.Length != 0) hash ^= OutputUri.GetHashCode();
-      if (jobConfigCase_ == JobConfigOneofCase.TemplateId) hash ^= TemplateId.GetHashCode();
+      if (HasTemplateId) hash ^= TemplateId.GetHashCode();
       if (jobConfigCase_ == JobConfigOneofCase.Config) hash ^= Config.GetHashCode();
       if (State != global::Google.Cloud.Video.Transcoder.V1.Job.Types.ProcessingState.Unspecified) hash ^= State.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
@@ -636,7 +650,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(26);
         output.WriteString(OutputUri);
       }
-      if (jobConfigCase_ == JobConfigOneofCase.TemplateId) {
+      if (HasTemplateId) {
         output.WriteRawTag(34);
         output.WriteString(TemplateId);
       }
@@ -695,7 +709,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(26);
         output.WriteString(OutputUri);
       }
-      if (jobConfigCase_ == JobConfigOneofCase.TemplateId) {
+      if (HasTemplateId) {
         output.WriteRawTag(34);
         output.WriteString(TemplateId);
       }
@@ -751,7 +765,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (OutputUri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OutputUri);
       }
-      if (jobConfigCase_ == JobConfigOneofCase.TemplateId) {
+      if (HasTemplateId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TemplateId);
       }
       if (jobConfigCase_ == JobConfigOneofCase.Config) {
@@ -824,7 +838,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (other.TtlAfterCompletionDays != 0) {
         TtlAfterCompletionDays = other.TtlAfterCompletionDays;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.error_ != null) {
         if (error_ == null) {
           Error = new global::Google.Rpc.Status();
@@ -1285,7 +1299,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
         Config.MergeFrom(other.Config);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4342,10 +4356,24 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TotalCount {
-      get { return extractionStrategyCase_ == ExtractionStrategyOneofCase.TotalCount ? (int) extractionStrategy_ : 0; }
+      get { return HasTotalCount ? (int) extractionStrategy_ : 0; }
       set {
         extractionStrategy_ = value;
         extractionStrategyCase_ = ExtractionStrategyOneofCase.TotalCount;
+      }
+    }
+    /// <summary>Gets whether the "total_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTotalCount {
+      get { return extractionStrategyCase_ == ExtractionStrategyOneofCase.TotalCount; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "total_count" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTotalCount() {
+      if (HasTotalCount) {
+        ClearExtractionStrategy();
       }
     }
 
@@ -4446,7 +4474,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (RowCount != 0) hash ^= RowCount.GetHashCode();
       if (startTimeOffset_ != null) hash ^= StartTimeOffset.GetHashCode();
       if (endTimeOffset_ != null) hash ^= EndTimeOffset.GetHashCode();
-      if (extractionStrategyCase_ == ExtractionStrategyOneofCase.TotalCount) hash ^= TotalCount.GetHashCode();
+      if (HasTotalCount) hash ^= TotalCount.GetHashCode();
       if (extractionStrategyCase_ == ExtractionStrategyOneofCase.Interval) hash ^= Interval.GetHashCode();
       if (Quality != 0) hash ^= Quality.GetHashCode();
       hash ^= (int) extractionStrategyCase_;
@@ -4500,7 +4528,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(EndTimeOffset);
       }
-      if (extractionStrategyCase_ == ExtractionStrategyOneofCase.TotalCount) {
+      if (HasTotalCount) {
         output.WriteRawTag(72);
         output.WriteInt32(TotalCount);
       }
@@ -4554,7 +4582,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(EndTimeOffset);
       }
-      if (extractionStrategyCase_ == ExtractionStrategyOneofCase.TotalCount) {
+      if (HasTotalCount) {
         output.WriteRawTag(72);
         output.WriteInt32(TotalCount);
       }
@@ -4600,7 +4628,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (endTimeOffset_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTimeOffset);
       }
-      if (extractionStrategyCase_ == ExtractionStrategyOneofCase.TotalCount) {
+      if (HasTotalCount) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalCount);
       }
       if (extractionStrategyCase_ == ExtractionStrategyOneofCase.Interval) {
@@ -10461,10 +10489,24 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int GopFrameCount {
-          get { return gopModeCase_ == GopModeOneofCase.GopFrameCount ? (int) gopMode_ : 0; }
+          get { return HasGopFrameCount ? (int) gopMode_ : 0; }
           set {
             gopMode_ = value;
             gopModeCase_ = GopModeOneofCase.GopFrameCount;
+          }
+        }
+        /// <summary>Gets whether the "gop_frame_count" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasGopFrameCount {
+          get { return gopModeCase_ == GopModeOneofCase.GopFrameCount; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "gop_frame_count" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGopFrameCount() {
+          if (HasGopFrameCount) {
+            ClearGopMode();
           }
         }
 
@@ -10743,7 +10785,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (RateControlMode.Length != 0) hash ^= RateControlMode.GetHashCode();
           if (CrfLevel != 0) hash ^= CrfLevel.GetHashCode();
           if (AllowOpenGop != false) hash ^= AllowOpenGop.GetHashCode();
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) hash ^= GopFrameCount.GetHashCode();
+          if (HasGopFrameCount) hash ^= GopFrameCount.GetHashCode();
           if (gopModeCase_ == GopModeOneofCase.GopDuration) hash ^= GopDuration.GetHashCode();
           if (EnableTwoPass != false) hash ^= EnableTwoPass.GetHashCode();
           if (VbvSizeBits != 0) hash ^= VbvSizeBits.GetHashCode();
@@ -10806,7 +10848,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             output.WriteRawTag(64);
             output.WriteBool(AllowOpenGop);
           }
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) {
+          if (HasGopFrameCount) {
             output.WriteRawTag(72);
             output.WriteInt32(GopFrameCount);
           }
@@ -10896,7 +10938,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             output.WriteRawTag(64);
             output.WriteBool(AllowOpenGop);
           }
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) {
+          if (HasGopFrameCount) {
             output.WriteRawTag(72);
             output.WriteInt32(GopFrameCount);
           }
@@ -10978,7 +11020,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (AllowOpenGop != false) {
             size += 1 + 1;
           }
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) {
+          if (HasGopFrameCount) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(GopFrameCount);
           }
           if (gopModeCase_ == GopModeOneofCase.GopDuration) {
@@ -11540,10 +11582,24 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int GopFrameCount {
-          get { return gopModeCase_ == GopModeOneofCase.GopFrameCount ? (int) gopMode_ : 0; }
+          get { return HasGopFrameCount ? (int) gopMode_ : 0; }
           set {
             gopMode_ = value;
             gopModeCase_ = GopModeOneofCase.GopFrameCount;
+          }
+        }
+        /// <summary>Gets whether the "gop_frame_count" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasGopFrameCount {
+          get { return gopModeCase_ == GopModeOneofCase.GopFrameCount; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "gop_frame_count" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGopFrameCount() {
+          if (HasGopFrameCount) {
+            ClearGopMode();
           }
         }
 
@@ -11816,7 +11872,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (RateControlMode.Length != 0) hash ^= RateControlMode.GetHashCode();
           if (CrfLevel != 0) hash ^= CrfLevel.GetHashCode();
           if (AllowOpenGop != false) hash ^= AllowOpenGop.GetHashCode();
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) hash ^= GopFrameCount.GetHashCode();
+          if (HasGopFrameCount) hash ^= GopFrameCount.GetHashCode();
           if (gopModeCase_ == GopModeOneofCase.GopDuration) hash ^= GopDuration.GetHashCode();
           if (EnableTwoPass != false) hash ^= EnableTwoPass.GetHashCode();
           if (VbvSizeBits != 0) hash ^= VbvSizeBits.GetHashCode();
@@ -11878,7 +11934,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             output.WriteRawTag(64);
             output.WriteBool(AllowOpenGop);
           }
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) {
+          if (HasGopFrameCount) {
             output.WriteRawTag(72);
             output.WriteInt32(GopFrameCount);
           }
@@ -11964,7 +12020,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             output.WriteRawTag(64);
             output.WriteBool(AllowOpenGop);
           }
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) {
+          if (HasGopFrameCount) {
             output.WriteRawTag(72);
             output.WriteInt32(GopFrameCount);
           }
@@ -12042,7 +12098,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (AllowOpenGop != false) {
             size += 1 + 1;
           }
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) {
+          if (HasGopFrameCount) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(GopFrameCount);
           }
           if (gopModeCase_ == GopModeOneofCase.GopDuration) {
@@ -12566,10 +12622,24 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int GopFrameCount {
-          get { return gopModeCase_ == GopModeOneofCase.GopFrameCount ? (int) gopMode_ : 0; }
+          get { return HasGopFrameCount ? (int) gopMode_ : 0; }
           set {
             gopMode_ = value;
             gopModeCase_ = GopModeOneofCase.GopFrameCount;
+          }
+        }
+        /// <summary>Gets whether the "gop_frame_count" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasGopFrameCount {
+          get { return gopModeCase_ == GopModeOneofCase.GopFrameCount; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "gop_frame_count" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGopFrameCount() {
+          if (HasGopFrameCount) {
+            ClearGopMode();
           }
         }
 
@@ -12680,7 +12750,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (PixelFormat.Length != 0) hash ^= PixelFormat.GetHashCode();
           if (RateControlMode.Length != 0) hash ^= RateControlMode.GetHashCode();
           if (CrfLevel != 0) hash ^= CrfLevel.GetHashCode();
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) hash ^= GopFrameCount.GetHashCode();
+          if (HasGopFrameCount) hash ^= GopFrameCount.GetHashCode();
           if (gopModeCase_ == GopModeOneofCase.GopDuration) hash ^= GopDuration.GetHashCode();
           if (Profile.Length != 0) hash ^= Profile.GetHashCode();
           hash ^= (int) gopModeCase_;
@@ -12730,7 +12800,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             output.WriteRawTag(56);
             output.WriteInt32(CrfLevel);
           }
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) {
+          if (HasGopFrameCount) {
             output.WriteRawTag(64);
             output.WriteInt32(GopFrameCount);
           }
@@ -12780,7 +12850,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             output.WriteRawTag(56);
             output.WriteInt32(CrfLevel);
           }
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) {
+          if (HasGopFrameCount) {
             output.WriteRawTag(64);
             output.WriteInt32(GopFrameCount);
           }
@@ -12823,7 +12893,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           if (CrfLevel != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(CrfLevel);
           }
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) {
+          if (HasGopFrameCount) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(GopFrameCount);
           }
           if (gopModeCase_ == GopModeOneofCase.GopDuration) {

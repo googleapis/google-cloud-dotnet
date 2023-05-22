@@ -169,10 +169,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Delete {
-      get { return operationCase_ == OperationOneofCase.Delete ? (string) operation_ : ""; }
+      get { return HasDelete ? (string) operation_ : ""; }
       set {
         operation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         operationCase_ = OperationOneofCase.Delete;
+      }
+    }
+    /// <summary>Gets whether the "delete" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDelete {
+      get { return operationCase_ == OperationOneofCase.Delete; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "delete" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDelete() {
+      if (HasDelete) {
+        ClearOperation();
       }
     }
 
@@ -302,7 +316,7 @@ namespace Google.Cloud.Firestore.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (operationCase_ == OperationOneofCase.Update) hash ^= Update.GetHashCode();
-      if (operationCase_ == OperationOneofCase.Delete) hash ^= Delete.GetHashCode();
+      if (HasDelete) hash ^= Delete.GetHashCode();
       if (operationCase_ == OperationOneofCase.Transform) hash ^= Transform.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
       hash ^= updateTransforms_.GetHashCode();
@@ -330,7 +344,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Update);
       }
-      if (operationCase_ == OperationOneofCase.Delete) {
+      if (HasDelete) {
         output.WriteRawTag(18);
         output.WriteString(Delete);
       }
@@ -361,7 +375,7 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Update);
       }
-      if (operationCase_ == OperationOneofCase.Delete) {
+      if (HasDelete) {
         output.WriteRawTag(18);
         output.WriteString(Delete);
       }
@@ -391,7 +405,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (operationCase_ == OperationOneofCase.Update) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Update);
       }
-      if (operationCase_ == OperationOneofCase.Delete) {
+      if (HasDelete) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Delete);
       }
       if (operationCase_ == OperationOneofCase.Transform) {
@@ -886,10 +900,24 @@ namespace Google.Cloud.Firestore.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue SetToServerValue {
-          get { return transformTypeCase_ == TransformTypeOneofCase.SetToServerValue ? (global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue) transformType_ : global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue.Unspecified; }
+          get { return HasSetToServerValue ? (global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue) transformType_ : global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue.Unspecified; }
           set {
             transformType_ = value;
             transformTypeCase_ = TransformTypeOneofCase.SetToServerValue;
+          }
+        }
+        /// <summary>Gets whether the "set_to_server_value" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSetToServerValue {
+          get { return transformTypeCase_ == TransformTypeOneofCase.SetToServerValue; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "set_to_server_value" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSetToServerValue() {
+          if (HasSetToServerValue) {
+            ClearTransformType();
           }
         }
 
@@ -1075,7 +1103,7 @@ namespace Google.Cloud.Firestore.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (FieldPath.Length != 0) hash ^= FieldPath.GetHashCode();
-          if (transformTypeCase_ == TransformTypeOneofCase.SetToServerValue) hash ^= SetToServerValue.GetHashCode();
+          if (HasSetToServerValue) hash ^= SetToServerValue.GetHashCode();
           if (transformTypeCase_ == TransformTypeOneofCase.Increment) hash ^= Increment.GetHashCode();
           if (transformTypeCase_ == TransformTypeOneofCase.Maximum) hash ^= Maximum.GetHashCode();
           if (transformTypeCase_ == TransformTypeOneofCase.Minimum) hash ^= Minimum.GetHashCode();
@@ -1104,7 +1132,7 @@ namespace Google.Cloud.Firestore.V1 {
             output.WriteRawTag(10);
             output.WriteString(FieldPath);
           }
-          if (transformTypeCase_ == TransformTypeOneofCase.SetToServerValue) {
+          if (HasSetToServerValue) {
             output.WriteRawTag(16);
             output.WriteEnum((int) SetToServerValue);
           }
@@ -1142,7 +1170,7 @@ namespace Google.Cloud.Firestore.V1 {
             output.WriteRawTag(10);
             output.WriteString(FieldPath);
           }
-          if (transformTypeCase_ == TransformTypeOneofCase.SetToServerValue) {
+          if (HasSetToServerValue) {
             output.WriteRawTag(16);
             output.WriteEnum((int) SetToServerValue);
           }
@@ -1179,7 +1207,7 @@ namespace Google.Cloud.Firestore.V1 {
           if (FieldPath.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(FieldPath);
           }
-          if (transformTypeCase_ == TransformTypeOneofCase.SetToServerValue) {
+          if (HasSetToServerValue) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SetToServerValue);
           }
           if (transformTypeCase_ == TransformTypeOneofCase.Increment) {

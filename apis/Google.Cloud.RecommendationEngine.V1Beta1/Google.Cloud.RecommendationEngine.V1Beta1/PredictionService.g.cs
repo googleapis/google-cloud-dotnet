@@ -510,8 +510,8 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       if (other.DryRun != false) {
         DryRun = other.DryRun;
       }
-      params_.Add(other.params_);
-      labels_.Add(other.labels_);
+      params_.MergeFrom(other.params_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -896,7 +896,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       if (other.DryRun != false) {
         DryRun = other.DryRun;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
@@ -1165,7 +1165,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
           if (other.Id.Length != 0) {
             Id = other.Id;
           }
-          itemMetadata_.Add(other.itemMetadata_);
+          itemMetadata_.MergeFrom(other.itemMetadata_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

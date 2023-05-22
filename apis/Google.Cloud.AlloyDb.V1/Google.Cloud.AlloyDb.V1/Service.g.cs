@@ -4756,7 +4756,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         return;
       }
       instanceTargets_.Add(other.instanceTargets_);
-      instanceStatuses_.Add(other.instanceStatuses_);
+      instanceStatuses_.MergeFrom(other.instanceStatuses_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

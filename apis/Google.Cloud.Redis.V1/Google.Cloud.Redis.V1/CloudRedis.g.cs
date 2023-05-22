@@ -1677,7 +1677,7 @@ namespace Google.Cloud.Redis.V1 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.LocationId.Length != 0) {
         LocationId = other.LocationId;
       }
@@ -1714,7 +1714,7 @@ namespace Google.Cloud.Redis.V1 {
       if (other.StatusMessage.Length != 0) {
         StatusMessage = other.StatusMessage;
       }
-      redisConfigs_.Add(other.redisConfigs_);
+      redisConfigs_.MergeFrom(other.redisConfigs_);
       if (other.Tier != global::Google.Cloud.Redis.V1.Instance.Types.Tier.Unspecified) {
         Tier = other.Tier;
       }
@@ -8300,7 +8300,7 @@ namespace Google.Cloud.Redis.V1 {
       if (other == null) {
         return;
       }
-      availableZones_.Add(other.availableZones_);
+      availableZones_.MergeFrom(other.availableZones_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

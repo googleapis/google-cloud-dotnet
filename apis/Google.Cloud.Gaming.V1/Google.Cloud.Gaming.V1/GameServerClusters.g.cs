@@ -4356,7 +4356,7 @@ namespace Google.Cloud.Gaming.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.connectionInfo_ != null) {
         if (connectionInfo_ == null) {
           ConnectionInfo = new global::Google.Cloud.Gaming.V1.GameServerClusterConnectionInfo();

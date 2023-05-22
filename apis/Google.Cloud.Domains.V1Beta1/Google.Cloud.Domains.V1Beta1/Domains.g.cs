@@ -913,7 +913,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         State = other.State;
       }
       issues_.Add(other.issues_);
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.managementSettings_ != null) {
         if (managementSettings_ == null) {
           ManagementSettings = new global::Google.Cloud.Domains.V1Beta1.ManagementSettings();

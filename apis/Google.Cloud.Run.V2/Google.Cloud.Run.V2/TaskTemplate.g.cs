@@ -148,10 +148,24 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxRetries {
-      get { return retriesCase_ == RetriesOneofCase.MaxRetries ? (int) retries_ : 0; }
+      get { return HasMaxRetries ? (int) retries_ : 0; }
       set {
         retries_ = value;
         retriesCase_ = RetriesOneofCase.MaxRetries;
+      }
+    }
+    /// <summary>Gets whether the "max_retries" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxRetries {
+      get { return retriesCase_ == RetriesOneofCase.MaxRetries; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "max_retries" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxRetries() {
+      if (HasMaxRetries) {
+        ClearRetries();
       }
     }
 
@@ -292,7 +306,7 @@ namespace Google.Cloud.Run.V2 {
       int hash = 1;
       hash ^= containers_.GetHashCode();
       hash ^= volumes_.GetHashCode();
-      if (retriesCase_ == RetriesOneofCase.MaxRetries) hash ^= MaxRetries.GetHashCode();
+      if (HasMaxRetries) hash ^= MaxRetries.GetHashCode();
       if (timeout_ != null) hash ^= Timeout.GetHashCode();
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       if (ExecutionEnvironment != global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified) hash ^= ExecutionEnvironment.GetHashCode();
@@ -319,7 +333,7 @@ namespace Google.Cloud.Run.V2 {
     #else
       containers_.WriteTo(output, _repeated_containers_codec);
       volumes_.WriteTo(output, _repeated_volumes_codec);
-      if (retriesCase_ == RetriesOneofCase.MaxRetries) {
+      if (HasMaxRetries) {
         output.WriteRawTag(24);
         output.WriteInt32(MaxRetries);
       }
@@ -355,7 +369,7 @@ namespace Google.Cloud.Run.V2 {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       containers_.WriteTo(ref output, _repeated_containers_codec);
       volumes_.WriteTo(ref output, _repeated_volumes_codec);
-      if (retriesCase_ == RetriesOneofCase.MaxRetries) {
+      if (HasMaxRetries) {
         output.WriteRawTag(24);
         output.WriteInt32(MaxRetries);
       }
@@ -391,7 +405,7 @@ namespace Google.Cloud.Run.V2 {
       int size = 0;
       size += containers_.CalculateSize(_repeated_containers_codec);
       size += volumes_.CalculateSize(_repeated_volumes_codec);
-      if (retriesCase_ == RetriesOneofCase.MaxRetries) {
+      if (HasMaxRetries) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxRetries);
       }
       if (timeout_ != null) {

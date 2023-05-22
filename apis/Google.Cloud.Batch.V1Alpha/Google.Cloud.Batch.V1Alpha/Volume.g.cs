@@ -174,10 +174,24 @@ namespace Google.Cloud.Batch.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DeviceName {
-      get { return sourceCase_ == SourceOneofCase.DeviceName ? (string) source_ : ""; }
+      get { return HasDeviceName ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.DeviceName;
+      }
+    }
+    /// <summary>Gets whether the "device_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDeviceName {
+      get { return sourceCase_ == SourceOneofCase.DeviceName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "device_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeviceName() {
+      if (HasDeviceName) {
+        ClearSource();
       }
     }
 
@@ -273,7 +287,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       if (sourceCase_ == SourceOneofCase.Nfs) hash ^= Nfs.GetHashCode();
       if (sourceCase_ == SourceOneofCase.Pd) hash ^= Pd.GetHashCode();
       if (sourceCase_ == SourceOneofCase.Gcs) hash ^= Gcs.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.DeviceName) hash ^= DeviceName.GetHashCode();
+      if (HasDeviceName) hash ^= DeviceName.GetHashCode();
       if (MountPath.Length != 0) hash ^= MountPath.GetHashCode();
       hash ^= mountOptions_.GetHashCode();
       hash ^= (int) sourceCase_;
@@ -312,7 +326,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteString(MountPath);
       }
       mountOptions_.WriteTo(output, _repeated_mountOptions_codec);
-      if (sourceCase_ == SourceOneofCase.DeviceName) {
+      if (HasDeviceName) {
         output.WriteRawTag(50);
         output.WriteString(DeviceName);
       }
@@ -343,7 +357,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteString(MountPath);
       }
       mountOptions_.WriteTo(ref output, _repeated_mountOptions_codec);
-      if (sourceCase_ == SourceOneofCase.DeviceName) {
+      if (HasDeviceName) {
         output.WriteRawTag(50);
         output.WriteString(DeviceName);
       }
@@ -366,7 +380,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       if (sourceCase_ == SourceOneofCase.Gcs) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Gcs);
       }
-      if (sourceCase_ == SourceOneofCase.DeviceName) {
+      if (HasDeviceName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceName);
       }
       if (MountPath.Length != 0) {

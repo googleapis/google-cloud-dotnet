@@ -518,14 +518,17 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1 {
         /// <summary>
         /// People entity.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("PEOPLE")] People = 1,
         /// <summary>
         /// Establishment entity.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("ESTABLISHMENT")] Establishment = 2,
         /// <summary>
         /// Property entity. e.g. real estate property.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("PROPERTY")] Property = 3,
         /// <summary>
         /// Product entity.

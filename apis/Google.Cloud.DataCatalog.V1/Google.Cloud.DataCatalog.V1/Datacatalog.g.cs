@@ -4229,10 +4229,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LinkedResource {
-      get { return targetNameCase_ == TargetNameOneofCase.LinkedResource ? (string) targetName_ : ""; }
+      get { return HasLinkedResource ? (string) targetName_ : ""; }
       set {
         targetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         targetNameCase_ = TargetNameOneofCase.LinkedResource;
+      }
+    }
+    /// <summary>Gets whether the "linked_resource" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLinkedResource {
+      get { return targetNameCase_ == TargetNameOneofCase.LinkedResource; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "linked_resource" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLinkedResource() {
+      if (HasLinkedResource) {
+        ClearTargetName();
       }
     }
 
@@ -4256,10 +4270,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SqlResource {
-      get { return targetNameCase_ == TargetNameOneofCase.SqlResource ? (string) targetName_ : ""; }
+      get { return HasSqlResource ? (string) targetName_ : ""; }
       set {
         targetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         targetNameCase_ = TargetNameOneofCase.SqlResource;
+      }
+    }
+    /// <summary>Gets whether the "sql_resource" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSqlResource {
+      get { return targetNameCase_ == TargetNameOneofCase.SqlResource; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "sql_resource" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSqlResource() {
+      if (HasSqlResource) {
+        ClearTargetName();
       }
     }
 
@@ -4285,10 +4313,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FullyQualifiedName {
-      get { return targetNameCase_ == TargetNameOneofCase.FullyQualifiedName ? (string) targetName_ : ""; }
+      get { return HasFullyQualifiedName ? (string) targetName_ : ""; }
       set {
         targetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         targetNameCase_ = TargetNameOneofCase.FullyQualifiedName;
+      }
+    }
+    /// <summary>Gets whether the "fully_qualified_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFullyQualifiedName {
+      get { return targetNameCase_ == TargetNameOneofCase.FullyQualifiedName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "fully_qualified_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFullyQualifiedName() {
+      if (HasFullyQualifiedName) {
+        ClearTargetName();
       }
     }
 
@@ -4340,9 +4382,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (targetNameCase_ == TargetNameOneofCase.LinkedResource) hash ^= LinkedResource.GetHashCode();
-      if (targetNameCase_ == TargetNameOneofCase.SqlResource) hash ^= SqlResource.GetHashCode();
-      if (targetNameCase_ == TargetNameOneofCase.FullyQualifiedName) hash ^= FullyQualifiedName.GetHashCode();
+      if (HasLinkedResource) hash ^= LinkedResource.GetHashCode();
+      if (HasSqlResource) hash ^= SqlResource.GetHashCode();
+      if (HasFullyQualifiedName) hash ^= FullyQualifiedName.GetHashCode();
       hash ^= (int) targetNameCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4362,15 +4404,15 @@ namespace Google.Cloud.DataCatalog.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (targetNameCase_ == TargetNameOneofCase.LinkedResource) {
+      if (HasLinkedResource) {
         output.WriteRawTag(10);
         output.WriteString(LinkedResource);
       }
-      if (targetNameCase_ == TargetNameOneofCase.SqlResource) {
+      if (HasSqlResource) {
         output.WriteRawTag(26);
         output.WriteString(SqlResource);
       }
-      if (targetNameCase_ == TargetNameOneofCase.FullyQualifiedName) {
+      if (HasFullyQualifiedName) {
         output.WriteRawTag(42);
         output.WriteString(FullyQualifiedName);
       }
@@ -4384,15 +4426,15 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (targetNameCase_ == TargetNameOneofCase.LinkedResource) {
+      if (HasLinkedResource) {
         output.WriteRawTag(10);
         output.WriteString(LinkedResource);
       }
-      if (targetNameCase_ == TargetNameOneofCase.SqlResource) {
+      if (HasSqlResource) {
         output.WriteRawTag(26);
         output.WriteString(SqlResource);
       }
-      if (targetNameCase_ == TargetNameOneofCase.FullyQualifiedName) {
+      if (HasFullyQualifiedName) {
         output.WriteRawTag(42);
         output.WriteString(FullyQualifiedName);
       }
@@ -4406,13 +4448,13 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (targetNameCase_ == TargetNameOneofCase.LinkedResource) {
+      if (HasLinkedResource) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LinkedResource);
       }
-      if (targetNameCase_ == TargetNameOneofCase.SqlResource) {
+      if (HasSqlResource) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SqlResource);
       }
-      if (targetNameCase_ == TargetNameOneofCase.FullyQualifiedName) {
+      if (HasFullyQualifiedName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FullyQualifiedName);
       }
       if (_unknownFields != null) {
@@ -4714,10 +4756,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataCatalog.V1.EntryType Type {
-      get { return entryTypeCase_ == EntryTypeOneofCase.Type ? (global::Google.Cloud.DataCatalog.V1.EntryType) entryType_ : global::Google.Cloud.DataCatalog.V1.EntryType.Unspecified; }
+      get { return HasType ? (global::Google.Cloud.DataCatalog.V1.EntryType) entryType_ : global::Google.Cloud.DataCatalog.V1.EntryType.Unspecified; }
       set {
         entryType_ = value;
         entryTypeCase_ = EntryTypeOneofCase.Type;
+      }
+    }
+    /// <summary>Gets whether the "type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasType {
+      get { return entryTypeCase_ == EntryTypeOneofCase.Type; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "type" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearType() {
+      if (HasType) {
+        ClearEntryType();
       }
     }
 
@@ -4741,10 +4797,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UserSpecifiedType {
-      get { return entryTypeCase_ == EntryTypeOneofCase.UserSpecifiedType ? (string) entryType_ : ""; }
+      get { return HasUserSpecifiedType ? (string) entryType_ : ""; }
       set {
         entryType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         entryTypeCase_ = EntryTypeOneofCase.UserSpecifiedType;
+      }
+    }
+    /// <summary>Gets whether the "user_specified_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUserSpecifiedType {
+      get { return entryTypeCase_ == EntryTypeOneofCase.UserSpecifiedType; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "user_specified_type" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUserSpecifiedType() {
+      if (HasUserSpecifiedType) {
+        ClearEntryType();
       }
     }
 
@@ -4757,10 +4827,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataCatalog.V1.IntegratedSystem IntegratedSystem {
-      get { return systemCase_ == SystemOneofCase.IntegratedSystem ? (global::Google.Cloud.DataCatalog.V1.IntegratedSystem) system_ : global::Google.Cloud.DataCatalog.V1.IntegratedSystem.Unspecified; }
+      get { return HasIntegratedSystem ? (global::Google.Cloud.DataCatalog.V1.IntegratedSystem) system_ : global::Google.Cloud.DataCatalog.V1.IntegratedSystem.Unspecified; }
       set {
         system_ = value;
         systemCase_ = SystemOneofCase.IntegratedSystem;
+      }
+    }
+    /// <summary>Gets whether the "integrated_system" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIntegratedSystem {
+      get { return systemCase_ == SystemOneofCase.IntegratedSystem; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "integrated_system" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIntegratedSystem() {
+      if (HasIntegratedSystem) {
+        ClearSystem();
       }
     }
 
@@ -4780,10 +4864,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UserSpecifiedSystem {
-      get { return systemCase_ == SystemOneofCase.UserSpecifiedSystem ? (string) system_ : ""; }
+      get { return HasUserSpecifiedSystem ? (string) system_ : ""; }
       set {
         system_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         systemCase_ = SystemOneofCase.UserSpecifiedSystem;
+      }
+    }
+    /// <summary>Gets whether the "user_specified_system" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUserSpecifiedSystem {
+      get { return systemCase_ == SystemOneofCase.UserSpecifiedSystem; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "user_specified_system" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUserSpecifiedSystem() {
+      if (HasUserSpecifiedSystem) {
+        ClearSystem();
       }
     }
 
@@ -5251,10 +5349,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (LinkedResource.Length != 0) hash ^= LinkedResource.GetHashCode();
       if (FullyQualifiedName.Length != 0) hash ^= FullyQualifiedName.GetHashCode();
-      if (entryTypeCase_ == EntryTypeOneofCase.Type) hash ^= Type.GetHashCode();
-      if (entryTypeCase_ == EntryTypeOneofCase.UserSpecifiedType) hash ^= UserSpecifiedType.GetHashCode();
-      if (systemCase_ == SystemOneofCase.IntegratedSystem) hash ^= IntegratedSystem.GetHashCode();
-      if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) hash ^= UserSpecifiedSystem.GetHashCode();
+      if (HasType) hash ^= Type.GetHashCode();
+      if (HasUserSpecifiedType) hash ^= UserSpecifiedType.GetHashCode();
+      if (HasIntegratedSystem) hash ^= IntegratedSystem.GetHashCode();
+      if (HasUserSpecifiedSystem) hash ^= UserSpecifiedSystem.GetHashCode();
       if (systemSpecCase_ == SystemSpecOneofCase.SqlDatabaseSystemSpec) hash ^= SqlDatabaseSystemSpec.GetHashCode();
       if (systemSpecCase_ == SystemSpecOneofCase.LookerSystemSpec) hash ^= LookerSystemSpec.GetHashCode();
       if (typeSpecCase_ == TypeSpecOneofCase.GcsFilesetSpec) hash ^= GcsFilesetSpec.GetHashCode();
@@ -5300,7 +5398,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (entryTypeCase_ == EntryTypeOneofCase.Type) {
+      if (HasType) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -5341,15 +5439,15 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(BigqueryDateShardedSpec);
       }
-      if (entryTypeCase_ == EntryTypeOneofCase.UserSpecifiedType) {
+      if (HasUserSpecifiedType) {
         output.WriteRawTag(130, 1);
         output.WriteString(UserSpecifiedType);
       }
-      if (systemCase_ == SystemOneofCase.IntegratedSystem) {
+      if (HasIntegratedSystem) {
         output.WriteRawTag(136, 1);
         output.WriteEnum((int) IntegratedSystem);
       }
-      if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) {
+      if (HasUserSpecifiedSystem) {
         output.WriteRawTag(146, 1);
         output.WriteString(UserSpecifiedSystem);
       }
@@ -5407,7 +5505,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (entryTypeCase_ == EntryTypeOneofCase.Type) {
+      if (HasType) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Type);
       }
@@ -5448,15 +5546,15 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(BigqueryDateShardedSpec);
       }
-      if (entryTypeCase_ == EntryTypeOneofCase.UserSpecifiedType) {
+      if (HasUserSpecifiedType) {
         output.WriteRawTag(130, 1);
         output.WriteString(UserSpecifiedType);
       }
-      if (systemCase_ == SystemOneofCase.IntegratedSystem) {
+      if (HasIntegratedSystem) {
         output.WriteRawTag(136, 1);
         output.WriteEnum((int) IntegratedSystem);
       }
-      if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) {
+      if (HasUserSpecifiedSystem) {
         output.WriteRawTag(146, 1);
         output.WriteString(UserSpecifiedSystem);
       }
@@ -5519,16 +5617,16 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (FullyQualifiedName.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(FullyQualifiedName);
       }
-      if (entryTypeCase_ == EntryTypeOneofCase.Type) {
+      if (HasType) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (entryTypeCase_ == EntryTypeOneofCase.UserSpecifiedType) {
+      if (HasUserSpecifiedType) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(UserSpecifiedType);
       }
-      if (systemCase_ == SystemOneofCase.IntegratedSystem) {
+      if (HasIntegratedSystem) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) IntegratedSystem);
       }
-      if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) {
+      if (HasUserSpecifiedSystem) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(UserSpecifiedSystem);
       }
       if (systemSpecCase_ == SystemSpecOneofCase.SqlDatabaseSystemSpec) {
@@ -5634,7 +5732,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         }
         UsageSignal.MergeFrom(other.UsageSignal);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.dataSource_ != null) {
         if (dataSource_ == null) {
           DataSource = new global::Google.Cloud.DataCatalog.V1.DataSource();
@@ -6491,10 +6589,24 @@ namespace Google.Cloud.DataCatalog.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string BaseTable {
-          get { return sourceDefinitionCase_ == SourceDefinitionOneofCase.BaseTable ? (string) sourceDefinition_ : ""; }
+          get { return HasBaseTable ? (string) sourceDefinition_ : ""; }
           set {
             sourceDefinition_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             sourceDefinitionCase_ = SourceDefinitionOneofCase.BaseTable;
+          }
+        }
+        /// <summary>Gets whether the "base_table" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasBaseTable {
+          get { return sourceDefinitionCase_ == SourceDefinitionOneofCase.BaseTable; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "base_table" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearBaseTable() {
+          if (HasBaseTable) {
+            ClearSourceDefinition();
           }
         }
 
@@ -6506,10 +6618,24 @@ namespace Google.Cloud.DataCatalog.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string SqlQuery {
-          get { return sourceDefinitionCase_ == SourceDefinitionOneofCase.SqlQuery ? (string) sourceDefinition_ : ""; }
+          get { return HasSqlQuery ? (string) sourceDefinition_ : ""; }
           set {
             sourceDefinition_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             sourceDefinitionCase_ = SourceDefinitionOneofCase.SqlQuery;
+          }
+        }
+        /// <summary>Gets whether the "sql_query" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSqlQuery {
+          get { return sourceDefinitionCase_ == SourceDefinitionOneofCase.SqlQuery; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "sql_query" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSqlQuery() {
+          if (HasSqlQuery) {
+            ClearSourceDefinition();
           }
         }
 
@@ -6561,8 +6687,8 @@ namespace Google.Cloud.DataCatalog.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (ViewType != global::Google.Cloud.DataCatalog.V1.DatabaseTableSpec.Types.DatabaseViewSpec.Types.ViewType.Unspecified) hash ^= ViewType.GetHashCode();
-          if (sourceDefinitionCase_ == SourceDefinitionOneofCase.BaseTable) hash ^= BaseTable.GetHashCode();
-          if (sourceDefinitionCase_ == SourceDefinitionOneofCase.SqlQuery) hash ^= SqlQuery.GetHashCode();
+          if (HasBaseTable) hash ^= BaseTable.GetHashCode();
+          if (HasSqlQuery) hash ^= SqlQuery.GetHashCode();
           hash ^= (int) sourceDefinitionCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -6586,11 +6712,11 @@ namespace Google.Cloud.DataCatalog.V1 {
             output.WriteRawTag(8);
             output.WriteEnum((int) ViewType);
           }
-          if (sourceDefinitionCase_ == SourceDefinitionOneofCase.BaseTable) {
+          if (HasBaseTable) {
             output.WriteRawTag(18);
             output.WriteString(BaseTable);
           }
-          if (sourceDefinitionCase_ == SourceDefinitionOneofCase.SqlQuery) {
+          if (HasSqlQuery) {
             output.WriteRawTag(26);
             output.WriteString(SqlQuery);
           }
@@ -6608,11 +6734,11 @@ namespace Google.Cloud.DataCatalog.V1 {
             output.WriteRawTag(8);
             output.WriteEnum((int) ViewType);
           }
-          if (sourceDefinitionCase_ == SourceDefinitionOneofCase.BaseTable) {
+          if (HasBaseTable) {
             output.WriteRawTag(18);
             output.WriteString(BaseTable);
           }
-          if (sourceDefinitionCase_ == SourceDefinitionOneofCase.SqlQuery) {
+          if (HasSqlQuery) {
             output.WriteRawTag(26);
             output.WriteString(SqlQuery);
           }
@@ -6629,10 +6755,10 @@ namespace Google.Cloud.DataCatalog.V1 {
           if (ViewType != global::Google.Cloud.DataCatalog.V1.DatabaseTableSpec.Types.DatabaseViewSpec.Types.ViewType.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ViewType);
           }
-          if (sourceDefinitionCase_ == SourceDefinitionOneofCase.BaseTable) {
+          if (HasBaseTable) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(BaseTable);
           }
-          if (sourceDefinitionCase_ == SourceDefinitionOneofCase.SqlQuery) {
+          if (HasSqlQuery) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(SqlQuery);
           }
           if (_unknownFields != null) {
@@ -14108,7 +14234,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (other.State != global::Google.Cloud.DataCatalog.V1.ReconcileTagsMetadata.Types.ReconciliationState.Unspecified) {
         State = other.State;
       }
-      errors_.Add(other.errors_);
+      errors_.MergeFrom(other.errors_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -15535,10 +15661,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsBucketPath {
-      get { return sourceCase_ == SourceOneofCase.GcsBucketPath ? (string) source_ : ""; }
+      get { return HasGcsBucketPath ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.GcsBucketPath;
+      }
+    }
+    /// <summary>Gets whether the "gcs_bucket_path" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsBucketPath {
+      get { return sourceCase_ == SourceOneofCase.GcsBucketPath; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_bucket_path" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsBucketPath() {
+      if (HasGcsBucketPath) {
+        ClearSource();
       }
     }
 
@@ -15588,7 +15728,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.GcsBucketPath) hash ^= GcsBucketPath.GetHashCode();
+      if (HasGcsBucketPath) hash ^= GcsBucketPath.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -15612,7 +15752,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (sourceCase_ == SourceOneofCase.GcsBucketPath) {
+      if (HasGcsBucketPath) {
         output.WriteRawTag(18);
         output.WriteString(GcsBucketPath);
       }
@@ -15630,7 +15770,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (sourceCase_ == SourceOneofCase.GcsBucketPath) {
+      if (HasGcsBucketPath) {
         output.WriteRawTag(18);
         output.WriteString(GcsBucketPath);
       }
@@ -15647,7 +15787,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (sourceCase_ == SourceOneofCase.GcsBucketPath) {
+      if (HasGcsBucketPath) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsBucketPath);
       }
       if (_unknownFields != null) {
@@ -15778,6 +15918,8 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     /// <summary>Field number for the "upserted_entries_count" field.</summary>
     public const int UpsertedEntriesCountFieldNumber = 5;
+    private readonly static long UpsertedEntriesCountDefaultValue = 0L;
+
     private long upsertedEntriesCount_;
     /// <summary>
     /// Cumulative number of entries created and entries updated as a result of
@@ -15786,7 +15928,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long UpsertedEntriesCount {
-      get { if ((_hasBits0 & 1) != 0) { return upsertedEntriesCount_; } else { return 0L; } }
+      get { if ((_hasBits0 & 1) != 0) { return upsertedEntriesCount_; } else { return UpsertedEntriesCountDefaultValue; } }
       set {
         _hasBits0 |= 1;
         upsertedEntriesCount_ = value;
@@ -15807,6 +15949,8 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     /// <summary>Field number for the "deleted_entries_count" field.</summary>
     public const int DeletedEntriesCountFieldNumber = 6;
+    private readonly static long DeletedEntriesCountDefaultValue = 0L;
+
     private long deletedEntriesCount_;
     /// <summary>
     /// Number of entries deleted as a result of import operation.
@@ -15814,7 +15958,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long DeletedEntriesCount {
-      get { if ((_hasBits0 & 2) != 0) { return deletedEntriesCount_; } else { return 0L; } }
+      get { if ((_hasBits0 & 2) != 0) { return deletedEntriesCount_; } else { return DeletedEntriesCountDefaultValue; } }
       set {
         _hasBits0 |= 2;
         deletedEntriesCount_ = value;

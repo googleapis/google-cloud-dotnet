@@ -2229,7 +2229,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       fleetConfigs_.Add(other.fleetConfigs_);
       scalingConfigs_.Add(other.scalingConfigs_);
       if (other.Description.Length != 0) {

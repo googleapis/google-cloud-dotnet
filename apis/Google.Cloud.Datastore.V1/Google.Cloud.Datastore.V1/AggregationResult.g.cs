@@ -200,7 +200,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (other == null) {
         return;
       }
-      aggregateProperties_.Add(other.aggregateProperties_);
+      aggregateProperties_.MergeFrom(other.aggregateProperties_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

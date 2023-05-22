@@ -111,6 +111,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// <summary>
   /// DEPRECATED. Represents data transfer type.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public enum TransferType {
     /// <summary>
     /// Invalid or Unknown transfer type placeholder.
@@ -709,6 +710,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     /// <summary>Field number for the "email" field.</summary>
     public const int EmailFieldNumber = 1;
+    private readonly static string EmailDefaultValue = "";
+
     private string email_;
     /// <summary>
     /// E-mail address of the user.
@@ -716,7 +719,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Email {
-      get { return email_ ?? ""; }
+      get { return email_ ?? EmailDefaultValue; }
       set {
         email_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -968,10 +971,24 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DestinationDatasetId {
-      get { return destinationCase_ == DestinationOneofCase.DestinationDatasetId ? (string) destination_ : ""; }
+      get { return HasDestinationDatasetId ? (string) destination_ : ""; }
       set {
         destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         destinationCase_ = DestinationOneofCase.DestinationDatasetId;
+      }
+    }
+    /// <summary>Gets whether the "destination_dataset_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationDatasetId {
+      get { return destinationCase_ == DestinationOneofCase.DestinationDatasetId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "destination_dataset_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationDatasetId() {
+      if (HasDestinationDatasetId) {
+        ClearDestination();
       }
     }
 
@@ -1292,7 +1309,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) hash ^= DestinationDatasetId.GetHashCode();
+      if (HasDestinationDatasetId) hash ^= DestinationDatasetId.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (DataSourceId.Length != 0) hash ^= DataSourceId.GetHashCode();
       if (params_ != null) hash ^= Params.GetHashCode();
@@ -1331,7 +1348,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) {
+      if (HasDestinationDatasetId) {
         output.WriteRawTag(18);
         output.WriteString(DestinationDatasetId);
       }
@@ -1409,7 +1426,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) {
+      if (HasDestinationDatasetId) {
         output.WriteRawTag(18);
         output.WriteString(DestinationDatasetId);
       }
@@ -1486,7 +1503,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) {
+      if (HasDestinationDatasetId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationDatasetId);
       }
       if (DisplayName.Length != 0) {
@@ -2031,10 +2048,24 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DestinationDatasetId {
-      get { return destinationCase_ == DestinationOneofCase.DestinationDatasetId ? (string) destination_ : ""; }
+      get { return HasDestinationDatasetId ? (string) destination_ : ""; }
       set {
         destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         destinationCase_ = DestinationOneofCase.DestinationDatasetId;
+      }
+    }
+    /// <summary>Gets whether the "destination_dataset_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationDatasetId {
+      get { return destinationCase_ == DestinationOneofCase.DestinationDatasetId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "destination_dataset_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationDatasetId() {
+      if (HasDestinationDatasetId) {
+        ClearDestination();
       }
     }
 
@@ -2204,7 +2235,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (params_ != null) hash ^= Params.GetHashCode();
-      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) hash ^= DestinationDatasetId.GetHashCode();
+      if (HasDestinationDatasetId) hash ^= DestinationDatasetId.GetHashCode();
       if (DataSourceId.Length != 0) hash ^= DataSourceId.GetHashCode();
       if (State != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState.Unspecified) hash ^= State.GetHashCode();
       if (UserId != 0L) hash ^= UserId.GetHashCode();
@@ -2234,7 +2265,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) {
+      if (HasDestinationDatasetId) {
         output.WriteRawTag(18);
         output.WriteString(DestinationDatasetId);
       }
@@ -2304,7 +2335,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) {
+      if (HasDestinationDatasetId) {
         output.WriteRawTag(18);
         output.WriteString(DestinationDatasetId);
       }
@@ -2394,7 +2425,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (params_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Params);
       }
-      if (destinationCase_ == DestinationOneofCase.DestinationDatasetId) {
+      if (HasDestinationDatasetId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationDatasetId);
       }
       if (DataSourceId.Length != 0) {

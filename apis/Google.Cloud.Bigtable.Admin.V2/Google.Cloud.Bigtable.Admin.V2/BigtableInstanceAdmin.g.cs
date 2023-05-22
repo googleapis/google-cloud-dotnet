@@ -511,7 +511,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         }
         Instance.MergeFrom(other.Instance);
       }
-      clusters_.Add(other.clusters_);
+      clusters_.MergeFrom(other.clusters_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3757,7 +3757,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         }
         FinishTime.MergeFrom(other.FinishTime);
       }
-      tables_.Add(other.tables_);
+      tables_.MergeFrom(other.tables_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

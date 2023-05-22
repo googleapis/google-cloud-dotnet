@@ -2197,7 +2197,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         DeployedModel.MergeFrom(other.DeployedModel);
       }
-      trafficSplit_.Add(other.trafficSplit_);
+      trafficSplit_.MergeFrom(other.trafficSplit_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2886,7 +2886,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.DeployedModelId.Length != 0) {
         DeployedModelId = other.DeployedModelId;
       }
-      trafficSplit_.Add(other.trafficSplit_);
+      trafficSplit_.MergeFrom(other.trafficSplit_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

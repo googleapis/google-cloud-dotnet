@@ -867,7 +867,7 @@ namespace Google.Cloud.AutoML.V1 {
       if (other == null) {
         return;
       }
-      params_.Add(other.params_);
+      params_.MergeFrom(other.params_);
       switch (other.SourceCase) {
         case SourceOneofCase.GcsSource:
           if (GcsSource == null) {
@@ -2686,7 +2686,7 @@ namespace Google.Cloud.AutoML.V1 {
       if (other.ModelFormat.Length != 0) {
         ModelFormat = other.ModelFormat;
       }
-      params_.Add(other.params_);
+      params_.MergeFrom(other.params_);
       switch (other.DestinationCase) {
         case DestinationOneofCase.GcsDestination:
           if (GcsDestination == null) {

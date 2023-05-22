@@ -12531,10 +12531,24 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string User {
-      get { return accessTargetCase_ == AccessTargetOneofCase.User ? (string) accessTarget_ : ""; }
+      get { return HasUser ? (string) accessTarget_ : ""; }
       set {
         accessTarget_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         accessTargetCase_ = AccessTargetOneofCase.User;
+      }
+    }
+    /// <summary>Gets whether the "user" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUser {
+      get { return accessTargetCase_ == AccessTargetOneofCase.User; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "user" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUser() {
+      if (HasUser) {
+        ClearAccessTarget();
       }
     }
 
@@ -12630,7 +12644,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (accessTargetCase_ == AccessTargetOneofCase.User) hash ^= User.GetHashCode();
+      if (HasUser) hash ^= User.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= roles_.GetHashCode();
       hash ^= (int) accessTargetCase_;
@@ -12656,7 +12670,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (accessTargetCase_ == AccessTargetOneofCase.User) {
+      if (HasUser) {
         output.WriteRawTag(18);
         output.WriteString(User);
       }
@@ -12675,7 +12689,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (accessTargetCase_ == AccessTargetOneofCase.User) {
+      if (HasUser) {
         output.WriteRawTag(18);
         output.WriteString(User);
       }
@@ -12690,7 +12704,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (accessTargetCase_ == AccessTargetOneofCase.User) {
+      if (HasUser) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(User);
       }
       if (Name.Length != 0) {

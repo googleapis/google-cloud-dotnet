@@ -329,7 +329,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

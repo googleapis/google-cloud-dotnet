@@ -525,7 +525,7 @@ namespace Google.Cloud.ApiKeys.V2 {
         }
         DeleteTime.MergeFrom(other.DeleteTime);
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.restrictions_ != null) {
         if (restrictions_ == null) {
           Restrictions = new global::Google.Cloud.ApiKeys.V2.Restrictions();

@@ -1604,10 +1604,24 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PolicyTag {
-      get { return matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag ? (string) matchingLabel_ : ""; }
+      get { return HasPolicyTag ? (string) matchingLabel_ : ""; }
       set {
         matchingLabel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         matchingLabelCase_ = MatchingLabelOneofCase.PolicyTag;
+      }
+    }
+    /// <summary>Gets whether the "policy_tag" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPolicyTag {
+      get { return matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "policy_tag" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPolicyTag() {
+      if (HasPolicyTag) {
+        ClearMatchingLabel();
       }
     }
 
@@ -1743,7 +1757,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag) hash ^= PolicyTag.GetHashCode();
+      if (HasPolicyTag) hash ^= PolicyTag.GetHashCode();
       if (policyCase_ == PolicyOneofCase.DataMaskingPolicy) hash ^= DataMaskingPolicy.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DataPolicyType != global::Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataPolicy.Types.DataPolicyType.Unspecified) hash ^= DataPolicyType.GetHashCode();
@@ -1780,7 +1794,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteString(DataPolicyId);
       }
-      if (matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag) {
+      if (HasPolicyTag) {
         output.WriteRawTag(34);
         output.WriteString(PolicyTag);
       }
@@ -1810,7 +1824,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteString(DataPolicyId);
       }
-      if (matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag) {
+      if (HasPolicyTag) {
         output.WriteRawTag(34);
         output.WriteString(PolicyTag);
       }
@@ -1828,7 +1842,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag) {
+      if (HasPolicyTag) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PolicyTag);
       }
       if (policyCase_ == PolicyOneofCase.DataMaskingPolicy) {
@@ -2053,10 +2067,24 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataMaskingPolicy.Types.PredefinedExpression PredefinedExpression {
-      get { return maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression ? (global::Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataMaskingPolicy.Types.PredefinedExpression) maskingExpression_ : global::Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataMaskingPolicy.Types.PredefinedExpression.Unspecified; }
+      get { return HasPredefinedExpression ? (global::Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataMaskingPolicy.Types.PredefinedExpression) maskingExpression_ : global::Google.Cloud.BigQuery.DataPolicies.V1Beta1.DataMaskingPolicy.Types.PredefinedExpression.Unspecified; }
       set {
         maskingExpression_ = value;
         maskingExpressionCase_ = MaskingExpressionOneofCase.PredefinedExpression;
+      }
+    }
+    /// <summary>Gets whether the "predefined_expression" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPredefinedExpression {
+      get { return maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "predefined_expression" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPredefinedExpression() {
+      if (HasPredefinedExpression) {
+        ClearMaskingExpression();
       }
     }
 
@@ -2104,7 +2132,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression) hash ^= PredefinedExpression.GetHashCode();
+      if (HasPredefinedExpression) hash ^= PredefinedExpression.GetHashCode();
       hash ^= (int) maskingExpressionCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2124,7 +2152,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression) {
+      if (HasPredefinedExpression) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PredefinedExpression);
       }
@@ -2138,7 +2166,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression) {
+      if (HasPredefinedExpression) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PredefinedExpression);
       }
@@ -2152,7 +2180,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression) {
+      if (HasPredefinedExpression) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PredefinedExpression);
       }
       if (_unknownFields != null) {

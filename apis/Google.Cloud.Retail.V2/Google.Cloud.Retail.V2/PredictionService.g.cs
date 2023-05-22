@@ -537,8 +537,8 @@ namespace Google.Cloud.Retail.V2 {
       if (other.ValidateOnly != false) {
         ValidateOnly = other.ValidateOnly;
       }
-      params_.Add(other.params_);
-      labels_.Add(other.labels_);
+      params_.MergeFrom(other.params_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1123,7 +1123,7 @@ namespace Google.Cloud.Retail.V2 {
           if (other.Id.Length != 0) {
             Id = other.Id;
           }
-          metadata_.Add(other.metadata_);
+          metadata_.MergeFrom(other.metadata_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

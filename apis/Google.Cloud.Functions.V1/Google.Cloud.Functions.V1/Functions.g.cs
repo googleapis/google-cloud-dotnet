@@ -387,10 +387,24 @@ namespace Google.Cloud.Functions.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceArchiveUrl {
-      get { return sourceCodeCase_ == SourceCodeOneofCase.SourceArchiveUrl ? (string) sourceCode_ : ""; }
+      get { return HasSourceArchiveUrl ? (string) sourceCode_ : ""; }
       set {
         sourceCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCodeCase_ = SourceCodeOneofCase.SourceArchiveUrl;
+      }
+    }
+    /// <summary>Gets whether the "source_archive_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSourceArchiveUrl {
+      get { return sourceCodeCase_ == SourceCodeOneofCase.SourceArchiveUrl; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "source_archive_url" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSourceArchiveUrl() {
+      if (HasSourceArchiveUrl) {
+        ClearSourceCode();
       }
     }
 
@@ -424,10 +438,24 @@ namespace Google.Cloud.Functions.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceUploadUrl {
-      get { return sourceCodeCase_ == SourceCodeOneofCase.SourceUploadUrl ? (string) sourceCode_ : ""; }
+      get { return HasSourceUploadUrl ? (string) sourceCode_ : ""; }
       set {
         sourceCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCodeCase_ = SourceCodeOneofCase.SourceUploadUrl;
+      }
+    }
+    /// <summary>Gets whether the "source_upload_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSourceUploadUrl {
+      get { return sourceCodeCase_ == SourceCodeOneofCase.SourceUploadUrl; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "source_upload_url" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSourceUploadUrl() {
+      if (HasSourceUploadUrl) {
+        ClearSourceCode();
       }
     }
 
@@ -1057,9 +1085,9 @@ namespace Google.Cloud.Functions.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceArchiveUrl) hash ^= SourceArchiveUrl.GetHashCode();
+      if (HasSourceArchiveUrl) hash ^= SourceArchiveUrl.GetHashCode();
       if (sourceCodeCase_ == SourceCodeOneofCase.SourceRepository) hash ^= SourceRepository.GetHashCode();
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceUploadUrl) hash ^= SourceUploadUrl.GetHashCode();
+      if (HasSourceUploadUrl) hash ^= SourceUploadUrl.GetHashCode();
       if (triggerCase_ == TriggerOneofCase.HttpsTrigger) hash ^= HttpsTrigger.GetHashCode();
       if (triggerCase_ == TriggerOneofCase.EventTrigger) hash ^= EventTrigger.GetHashCode();
       if (Status != global::Google.Cloud.Functions.V1.CloudFunctionStatus.Unspecified) hash ^= Status.GetHashCode();
@@ -1116,7 +1144,7 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(18);
         output.WriteString(Description);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceArchiveUrl) {
+      if (HasSourceArchiveUrl) {
         output.WriteRawTag(26);
         output.WriteString(SourceArchiveUrl);
       }
@@ -1161,7 +1189,7 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteInt64(VersionId);
       }
       labels_.WriteTo(output, _map_labels_codec);
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceUploadUrl) {
+      if (HasSourceUploadUrl) {
         output.WriteRawTag(130, 1);
         output.WriteString(SourceUploadUrl);
       }
@@ -1243,7 +1271,7 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(18);
         output.WriteString(Description);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceArchiveUrl) {
+      if (HasSourceArchiveUrl) {
         output.WriteRawTag(26);
         output.WriteString(SourceArchiveUrl);
       }
@@ -1288,7 +1316,7 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteInt64(VersionId);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceUploadUrl) {
+      if (HasSourceUploadUrl) {
         output.WriteRawTag(130, 1);
         output.WriteString(SourceUploadUrl);
       }
@@ -1368,13 +1396,13 @@ namespace Google.Cloud.Functions.V1 {
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceArchiveUrl) {
+      if (HasSourceArchiveUrl) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceArchiveUrl);
       }
       if (sourceCodeCase_ == SourceCodeOneofCase.SourceRepository) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SourceRepository);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceUploadUrl) {
+      if (HasSourceUploadUrl) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(SourceUploadUrl);
       }
       if (triggerCase_ == TriggerOneofCase.HttpsTrigger) {
@@ -1499,9 +1527,9 @@ namespace Google.Cloud.Functions.V1 {
       if (other.VersionId != 0L) {
         VersionId = other.VersionId;
       }
-      labels_.Add(other.labels_);
-      environmentVariables_.Add(other.environmentVariables_);
-      buildEnvironmentVariables_.Add(other.buildEnvironmentVariables_);
+      labels_.MergeFrom(other.labels_);
+      environmentVariables_.MergeFrom(other.environmentVariables_);
+      buildEnvironmentVariables_.MergeFrom(other.buildEnvironmentVariables_);
       if (other.Network.Length != 0) {
         Network = other.Network;
       }

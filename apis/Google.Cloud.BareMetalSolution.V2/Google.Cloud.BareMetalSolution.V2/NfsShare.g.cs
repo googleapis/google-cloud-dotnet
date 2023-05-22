@@ -368,7 +368,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         Volume = other.Volume;
       }
       allowedClients_.Add(other.allowedClients_);
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

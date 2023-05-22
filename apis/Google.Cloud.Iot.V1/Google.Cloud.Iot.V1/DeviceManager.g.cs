@@ -3107,10 +3107,24 @@ namespace Google.Cloud.Iot.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.GatewayType GatewayType {
-      get { return filterCase_ == FilterOneofCase.GatewayType ? (global::Google.Cloud.Iot.V1.GatewayType) filter_ : global::Google.Cloud.Iot.V1.GatewayType.Unspecified; }
+      get { return HasGatewayType ? (global::Google.Cloud.Iot.V1.GatewayType) filter_ : global::Google.Cloud.Iot.V1.GatewayType.Unspecified; }
       set {
         filter_ = value;
         filterCase_ = FilterOneofCase.GatewayType;
+      }
+    }
+    /// <summary>Gets whether the "gateway_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGatewayType {
+      get { return filterCase_ == FilterOneofCase.GatewayType; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gateway_type" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGatewayType() {
+      if (HasGatewayType) {
+        ClearFilter();
       }
     }
 
@@ -3125,10 +3139,24 @@ namespace Google.Cloud.Iot.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AssociationsGatewayId {
-      get { return filterCase_ == FilterOneofCase.AssociationsGatewayId ? (string) filter_ : ""; }
+      get { return HasAssociationsGatewayId ? (string) filter_ : ""; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         filterCase_ = FilterOneofCase.AssociationsGatewayId;
+      }
+    }
+    /// <summary>Gets whether the "associations_gateway_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAssociationsGatewayId {
+      get { return filterCase_ == FilterOneofCase.AssociationsGatewayId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "associations_gateway_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAssociationsGatewayId() {
+      if (HasAssociationsGatewayId) {
+        ClearFilter();
       }
     }
 
@@ -3143,10 +3171,24 @@ namespace Google.Cloud.Iot.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AssociationsDeviceId {
-      get { return filterCase_ == FilterOneofCase.AssociationsDeviceId ? (string) filter_ : ""; }
+      get { return HasAssociationsDeviceId ? (string) filter_ : ""; }
       set {
         filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         filterCase_ = FilterOneofCase.AssociationsDeviceId;
+      }
+    }
+    /// <summary>Gets whether the "associations_device_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAssociationsDeviceId {
+      get { return filterCase_ == FilterOneofCase.AssociationsDeviceId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "associations_device_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAssociationsDeviceId() {
+      if (HasAssociationsDeviceId) {
+        ClearFilter();
       }
     }
 
@@ -3198,9 +3240,9 @@ namespace Google.Cloud.Iot.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (filterCase_ == FilterOneofCase.GatewayType) hash ^= GatewayType.GetHashCode();
-      if (filterCase_ == FilterOneofCase.AssociationsGatewayId) hash ^= AssociationsGatewayId.GetHashCode();
-      if (filterCase_ == FilterOneofCase.AssociationsDeviceId) hash ^= AssociationsDeviceId.GetHashCode();
+      if (HasGatewayType) hash ^= GatewayType.GetHashCode();
+      if (HasAssociationsGatewayId) hash ^= AssociationsGatewayId.GetHashCode();
+      if (HasAssociationsDeviceId) hash ^= AssociationsDeviceId.GetHashCode();
       hash ^= (int) filterCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3220,15 +3262,15 @@ namespace Google.Cloud.Iot.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (filterCase_ == FilterOneofCase.GatewayType) {
+      if (HasGatewayType) {
         output.WriteRawTag(8);
         output.WriteEnum((int) GatewayType);
       }
-      if (filterCase_ == FilterOneofCase.AssociationsGatewayId) {
+      if (HasAssociationsGatewayId) {
         output.WriteRawTag(18);
         output.WriteString(AssociationsGatewayId);
       }
-      if (filterCase_ == FilterOneofCase.AssociationsDeviceId) {
+      if (HasAssociationsDeviceId) {
         output.WriteRawTag(26);
         output.WriteString(AssociationsDeviceId);
       }
@@ -3242,15 +3284,15 @@ namespace Google.Cloud.Iot.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (filterCase_ == FilterOneofCase.GatewayType) {
+      if (HasGatewayType) {
         output.WriteRawTag(8);
         output.WriteEnum((int) GatewayType);
       }
-      if (filterCase_ == FilterOneofCase.AssociationsGatewayId) {
+      if (HasAssociationsGatewayId) {
         output.WriteRawTag(18);
         output.WriteString(AssociationsGatewayId);
       }
-      if (filterCase_ == FilterOneofCase.AssociationsDeviceId) {
+      if (HasAssociationsDeviceId) {
         output.WriteRawTag(26);
         output.WriteString(AssociationsDeviceId);
       }
@@ -3264,13 +3306,13 @@ namespace Google.Cloud.Iot.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (filterCase_ == FilterOneofCase.GatewayType) {
+      if (HasGatewayType) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GatewayType);
       }
-      if (filterCase_ == FilterOneofCase.AssociationsGatewayId) {
+      if (HasAssociationsGatewayId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AssociationsGatewayId);
       }
-      if (filterCase_ == FilterOneofCase.AssociationsDeviceId) {
+      if (HasAssociationsDeviceId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AssociationsDeviceId);
       }
       if (_unknownFields != null) {

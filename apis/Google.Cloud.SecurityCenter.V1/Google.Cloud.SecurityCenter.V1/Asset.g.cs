@@ -440,7 +440,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         }
         SecurityCenterProperties.MergeFrom(other.SecurityCenterProperties);
       }
-      resourceProperties_.Add(other.resourceProperties_);
+      resourceProperties_.MergeFrom(other.resourceProperties_);
       if (other.securityMarks_ != null) {
         if (securityMarks_ == null) {
           SecurityMarks = new global::Google.Cloud.SecurityCenter.V1.SecurityMarks();

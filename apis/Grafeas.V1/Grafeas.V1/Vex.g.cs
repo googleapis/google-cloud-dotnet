@@ -928,10 +928,24 @@ namespace Grafeas.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string GenericUri {
-          get { return identifierCase_ == IdentifierOneofCase.GenericUri ? (string) identifier_ : ""; }
+          get { return HasGenericUri ? (string) identifier_ : ""; }
           set {
             identifier_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             identifierCase_ = IdentifierOneofCase.GenericUri;
+          }
+        }
+        /// <summary>Gets whether the "generic_uri" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasGenericUri {
+          get { return identifierCase_ == IdentifierOneofCase.GenericUri; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "generic_uri" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGenericUri() {
+          if (HasGenericUri) {
+            ClearIdentifier();
           }
         }
 
@@ -983,7 +997,7 @@ namespace Grafeas.V1 {
           int hash = 1;
           if (Name.Length != 0) hash ^= Name.GetHashCode();
           if (Id.Length != 0) hash ^= Id.GetHashCode();
-          if (identifierCase_ == IdentifierOneofCase.GenericUri) hash ^= GenericUri.GetHashCode();
+          if (HasGenericUri) hash ^= GenericUri.GetHashCode();
           hash ^= (int) identifierCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1011,7 +1025,7 @@ namespace Grafeas.V1 {
             output.WriteRawTag(18);
             output.WriteString(Id);
           }
-          if (identifierCase_ == IdentifierOneofCase.GenericUri) {
+          if (HasGenericUri) {
             output.WriteRawTag(26);
             output.WriteString(GenericUri);
           }
@@ -1033,7 +1047,7 @@ namespace Grafeas.V1 {
             output.WriteRawTag(18);
             output.WriteString(Id);
           }
-          if (identifierCase_ == IdentifierOneofCase.GenericUri) {
+          if (HasGenericUri) {
             output.WriteRawTag(26);
             output.WriteString(GenericUri);
           }
@@ -1053,7 +1067,7 @@ namespace Grafeas.V1 {
           if (Id.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
           }
-          if (identifierCase_ == IdentifierOneofCase.GenericUri) {
+          if (HasGenericUri) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(GenericUri);
           }
           if (_unknownFields != null) {

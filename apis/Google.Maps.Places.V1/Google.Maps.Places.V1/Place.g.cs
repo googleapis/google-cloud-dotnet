@@ -599,6 +599,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "takeout" field.</summary>
     public const int TakeoutFieldNumber = 33;
+    private readonly static bool TakeoutDefaultValue = false;
+
     private bool takeout_;
     /// <summary>
     /// Specifies if the business supports takeout.
@@ -606,7 +608,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Takeout {
-      get { if ((_hasBits0 & 1) != 0) { return takeout_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return takeout_; } else { return TakeoutDefaultValue; } }
       set {
         _hasBits0 |= 1;
         takeout_ = value;
@@ -627,6 +629,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "delivery" field.</summary>
     public const int DeliveryFieldNumber = 34;
+    private readonly static bool DeliveryDefaultValue = false;
+
     private bool delivery_;
     /// <summary>
     /// Specifies if the business supports delivery.
@@ -634,7 +638,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Delivery {
-      get { if ((_hasBits0 & 2) != 0) { return delivery_; } else { return false; } }
+      get { if ((_hasBits0 & 2) != 0) { return delivery_; } else { return DeliveryDefaultValue; } }
       set {
         _hasBits0 |= 2;
         delivery_ = value;
@@ -655,6 +659,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "dine_in" field.</summary>
     public const int DineInFieldNumber = 35;
+    private readonly static bool DineInDefaultValue = false;
+
     private bool dineIn_;
     /// <summary>
     /// Specifies if the business supports indoor or outdoor seating options.
@@ -662,7 +668,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DineIn {
-      get { if ((_hasBits0 & 4) != 0) { return dineIn_; } else { return false; } }
+      get { if ((_hasBits0 & 4) != 0) { return dineIn_; } else { return DineInDefaultValue; } }
       set {
         _hasBits0 |= 4;
         dineIn_ = value;
@@ -683,6 +689,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "curbside_pickup" field.</summary>
     public const int CurbsidePickupFieldNumber = 36;
+    private readonly static bool CurbsidePickupDefaultValue = false;
+
     private bool curbsidePickup_;
     /// <summary>
     /// Specifies if the business supports curbside pickup.
@@ -690,7 +698,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool CurbsidePickup {
-      get { if ((_hasBits0 & 8) != 0) { return curbsidePickup_; } else { return false; } }
+      get { if ((_hasBits0 & 8) != 0) { return curbsidePickup_; } else { return CurbsidePickupDefaultValue; } }
       set {
         _hasBits0 |= 8;
         curbsidePickup_ = value;
@@ -711,6 +719,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "wheelchair_accessible_entrance" field.</summary>
     public const int WheelchairAccessibleEntranceFieldNumber = 37;
+    private readonly static bool WheelchairAccessibleEntranceDefaultValue = false;
+
     private bool wheelchairAccessibleEntrance_;
     /// <summary>
     /// Specifies if the place has an entrance that is wheelchair-accessible.
@@ -718,7 +728,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool WheelchairAccessibleEntrance {
-      get { if ((_hasBits0 & 16) != 0) { return wheelchairAccessibleEntrance_; } else { return false; } }
+      get { if ((_hasBits0 & 16) != 0) { return wheelchairAccessibleEntrance_; } else { return WheelchairAccessibleEntranceDefaultValue; } }
       set {
         _hasBits0 |= 16;
         wheelchairAccessibleEntrance_ = value;
@@ -739,6 +749,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "reservable" field.</summary>
     public const int ReservableFieldNumber = 38;
+    private readonly static bool ReservableDefaultValue = false;
+
     private bool reservable_;
     /// <summary>
     /// Specifies if the place supports reservations.
@@ -746,7 +758,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Reservable {
-      get { if ((_hasBits0 & 32) != 0) { return reservable_; } else { return false; } }
+      get { if ((_hasBits0 & 32) != 0) { return reservable_; } else { return ReservableDefaultValue; } }
       set {
         _hasBits0 |= 32;
         reservable_ = value;
@@ -767,6 +779,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "serves_breakfast" field.</summary>
     public const int ServesBreakfastFieldNumber = 39;
+    private readonly static bool ServesBreakfastDefaultValue = false;
+
     private bool servesBreakfast_;
     /// <summary>
     /// Specifies if the place serves breakfast.
@@ -774,7 +788,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesBreakfast {
-      get { if ((_hasBits0 & 64) != 0) { return servesBreakfast_; } else { return false; } }
+      get { if ((_hasBits0 & 64) != 0) { return servesBreakfast_; } else { return ServesBreakfastDefaultValue; } }
       set {
         _hasBits0 |= 64;
         servesBreakfast_ = value;
@@ -795,6 +809,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "serves_lunch" field.</summary>
     public const int ServesLunchFieldNumber = 40;
+    private readonly static bool ServesLunchDefaultValue = false;
+
     private bool servesLunch_;
     /// <summary>
     /// Specifies if the place serves lunch.
@@ -802,7 +818,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesLunch {
-      get { if ((_hasBits0 & 128) != 0) { return servesLunch_; } else { return false; } }
+      get { if ((_hasBits0 & 128) != 0) { return servesLunch_; } else { return ServesLunchDefaultValue; } }
       set {
         _hasBits0 |= 128;
         servesLunch_ = value;
@@ -823,6 +839,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "serves_dinner" field.</summary>
     public const int ServesDinnerFieldNumber = 41;
+    private readonly static bool ServesDinnerDefaultValue = false;
+
     private bool servesDinner_;
     /// <summary>
     /// Specifies if the place serves dinner.
@@ -830,7 +848,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesDinner {
-      get { if ((_hasBits0 & 256) != 0) { return servesDinner_; } else { return false; } }
+      get { if ((_hasBits0 & 256) != 0) { return servesDinner_; } else { return ServesDinnerDefaultValue; } }
       set {
         _hasBits0 |= 256;
         servesDinner_ = value;
@@ -851,6 +869,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "serves_beer" field.</summary>
     public const int ServesBeerFieldNumber = 42;
+    private readonly static bool ServesBeerDefaultValue = false;
+
     private bool servesBeer_;
     /// <summary>
     /// Specifies if the place serves beer.
@@ -858,7 +878,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesBeer {
-      get { if ((_hasBits0 & 512) != 0) { return servesBeer_; } else { return false; } }
+      get { if ((_hasBits0 & 512) != 0) { return servesBeer_; } else { return ServesBeerDefaultValue; } }
       set {
         _hasBits0 |= 512;
         servesBeer_ = value;
@@ -879,6 +899,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "serves_wine" field.</summary>
     public const int ServesWineFieldNumber = 43;
+    private readonly static bool ServesWineDefaultValue = false;
+
     private bool servesWine_;
     /// <summary>
     /// Specifies if the place serves wine.
@@ -886,7 +908,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesWine {
-      get { if ((_hasBits0 & 1024) != 0) { return servesWine_; } else { return false; } }
+      get { if ((_hasBits0 & 1024) != 0) { return servesWine_; } else { return ServesWineDefaultValue; } }
       set {
         _hasBits0 |= 1024;
         servesWine_ = value;
@@ -907,6 +929,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "serves_brunch" field.</summary>
     public const int ServesBrunchFieldNumber = 44;
+    private readonly static bool ServesBrunchDefaultValue = false;
+
     private bool servesBrunch_;
     /// <summary>
     /// Specifies if the place serves brunch.
@@ -914,7 +938,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesBrunch {
-      get { if ((_hasBits0 & 2048) != 0) { return servesBrunch_; } else { return false; } }
+      get { if ((_hasBits0 & 2048) != 0) { return servesBrunch_; } else { return ServesBrunchDefaultValue; } }
       set {
         _hasBits0 |= 2048;
         servesBrunch_ = value;
@@ -935,6 +959,8 @@ namespace Google.Maps.Places.V1 {
 
     /// <summary>Field number for the "serves_vegetarian_food" field.</summary>
     public const int ServesVegetarianFoodFieldNumber = 45;
+    private readonly static bool ServesVegetarianFoodDefaultValue = false;
+
     private bool servesVegetarianFood_;
     /// <summary>
     /// Specifies if the place serves vegetarian food.
@@ -942,7 +968,7 @@ namespace Google.Maps.Places.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServesVegetarianFood {
-      get { if ((_hasBits0 & 4096) != 0) { return servesVegetarianFood_; } else { return false; } }
+      get { if ((_hasBits0 & 4096) != 0) { return servesVegetarianFood_; } else { return ServesVegetarianFoodDefaultValue; } }
       set {
         _hasBits0 |= 4096;
         servesVegetarianFood_ = value;
@@ -3934,6 +3960,8 @@ namespace Google.Maps.Places.V1 {
 
                 /// <summary>Field number for the "day" field.</summary>
                 public const int DayFieldNumber = 1;
+                private readonly static int DayDefaultValue = 0;
+
                 private int day_;
                 /// <summary>
                 /// A day of the week, as an integer in the range 0-6.  0 is Sunday, 1 is
@@ -3942,7 +3970,7 @@ namespace Google.Maps.Places.V1 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int Day {
-                  get { if ((_hasBits0 & 1) != 0) { return day_; } else { return 0; } }
+                  get { if ((_hasBits0 & 1) != 0) { return day_; } else { return DayDefaultValue; } }
                   set {
                     _hasBits0 |= 1;
                     day_ = value;
@@ -3963,6 +3991,8 @@ namespace Google.Maps.Places.V1 {
 
                 /// <summary>Field number for the "hour" field.</summary>
                 public const int HourFieldNumber = 2;
+                private readonly static int HourDefaultValue = 0;
+
                 private int hour_;
                 /// <summary>
                 /// The hour in 2 digits. Ranges from 00 to 23.
@@ -3970,7 +4000,7 @@ namespace Google.Maps.Places.V1 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int Hour {
-                  get { if ((_hasBits0 & 2) != 0) { return hour_; } else { return 0; } }
+                  get { if ((_hasBits0 & 2) != 0) { return hour_; } else { return HourDefaultValue; } }
                   set {
                     _hasBits0 |= 2;
                     hour_ = value;
@@ -3991,6 +4021,8 @@ namespace Google.Maps.Places.V1 {
 
                 /// <summary>Field number for the "minute" field.</summary>
                 public const int MinuteFieldNumber = 3;
+                private readonly static int MinuteDefaultValue = 0;
+
                 private int minute_;
                 /// <summary>
                 /// The minute in 2 digits. Ranges from 00 to 59.
@@ -3998,7 +4030,7 @@ namespace Google.Maps.Places.V1 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int Minute {
-                  get { if ((_hasBits0 & 4) != 0) { return minute_; } else { return 0; } }
+                  get { if ((_hasBits0 & 4) != 0) { return minute_; } else { return MinuteDefaultValue; } }
                   set {
                     _hasBits0 |= 4;
                     minute_ = value;

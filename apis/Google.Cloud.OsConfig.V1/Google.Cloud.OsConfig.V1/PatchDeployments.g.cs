@@ -2069,10 +2069,24 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MonthDay {
-      get { return dayOfMonthCase_ == DayOfMonthOneofCase.MonthDay ? (int) dayOfMonth_ : 0; }
+      get { return HasMonthDay ? (int) dayOfMonth_ : 0; }
       set {
         dayOfMonth_ = value;
         dayOfMonthCase_ = DayOfMonthOneofCase.MonthDay;
+      }
+    }
+    /// <summary>Gets whether the "month_day" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMonthDay {
+      get { return dayOfMonthCase_ == DayOfMonthOneofCase.MonthDay; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "month_day" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMonthDay() {
+      if (HasMonthDay) {
+        ClearDayOfMonth();
       }
     }
 
@@ -2123,7 +2137,7 @@ namespace Google.Cloud.OsConfig.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (dayOfMonthCase_ == DayOfMonthOneofCase.WeekDayOfMonth) hash ^= WeekDayOfMonth.GetHashCode();
-      if (dayOfMonthCase_ == DayOfMonthOneofCase.MonthDay) hash ^= MonthDay.GetHashCode();
+      if (HasMonthDay) hash ^= MonthDay.GetHashCode();
       hash ^= (int) dayOfMonthCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2147,7 +2161,7 @@ namespace Google.Cloud.OsConfig.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(WeekDayOfMonth);
       }
-      if (dayOfMonthCase_ == DayOfMonthOneofCase.MonthDay) {
+      if (HasMonthDay) {
         output.WriteRawTag(16);
         output.WriteInt32(MonthDay);
       }
@@ -2165,7 +2179,7 @@ namespace Google.Cloud.OsConfig.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(WeekDayOfMonth);
       }
-      if (dayOfMonthCase_ == DayOfMonthOneofCase.MonthDay) {
+      if (HasMonthDay) {
         output.WriteRawTag(16);
         output.WriteInt32(MonthDay);
       }
@@ -2182,7 +2196,7 @@ namespace Google.Cloud.OsConfig.V1 {
       if (dayOfMonthCase_ == DayOfMonthOneofCase.WeekDayOfMonth) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(WeekDayOfMonth);
       }
-      if (dayOfMonthCase_ == DayOfMonthOneofCase.MonthDay) {
+      if (HasMonthDay) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MonthDay);
       }
       if (_unknownFields != null) {

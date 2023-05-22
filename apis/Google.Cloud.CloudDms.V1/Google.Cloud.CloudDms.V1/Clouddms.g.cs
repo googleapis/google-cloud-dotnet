@@ -10398,10 +10398,24 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ConnectionProfile {
-      get { return destinationCase_ == DestinationOneofCase.ConnectionProfile ? (string) destination_ : ""; }
+      get { return HasConnectionProfile ? (string) destination_ : ""; }
       set {
         destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         destinationCase_ = DestinationOneofCase.ConnectionProfile;
+      }
+    }
+    /// <summary>Gets whether the "connection_profile" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConnectionProfile {
+      get { return destinationCase_ == DestinationOneofCase.ConnectionProfile; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "connection_profile" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConnectionProfile() {
+      if (HasConnectionProfile) {
+        ClearDestination();
       }
     }
 
@@ -10453,7 +10467,7 @@ namespace Google.Cloud.CloudDms.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
-      if (destinationCase_ == DestinationOneofCase.ConnectionProfile) hash ^= ConnectionProfile.GetHashCode();
+      if (HasConnectionProfile) hash ^= ConnectionProfile.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -10481,7 +10495,7 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(18);
         output.WriteString(Filter);
       }
-      if (destinationCase_ == DestinationOneofCase.ConnectionProfile) {
+      if (HasConnectionProfile) {
         output.WriteRawTag(162, 6);
         output.WriteString(ConnectionProfile);
       }
@@ -10503,7 +10517,7 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(18);
         output.WriteString(Filter);
       }
-      if (destinationCase_ == DestinationOneofCase.ConnectionProfile) {
+      if (HasConnectionProfile) {
         output.WriteRawTag(162, 6);
         output.WriteString(ConnectionProfile);
       }
@@ -10523,7 +10537,7 @@ namespace Google.Cloud.CloudDms.V1 {
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
       }
-      if (destinationCase_ == DestinationOneofCase.ConnectionProfile) {
+      if (HasConnectionProfile) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ConnectionProfile);
       }
       if (_unknownFields != null) {
@@ -10709,10 +10723,24 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceConnectionProfile {
-      get { return seedFromCase_ == SeedFromOneofCase.SourceConnectionProfile ? (string) seedFrom_ : ""; }
+      get { return HasSourceConnectionProfile ? (string) seedFrom_ : ""; }
       set {
         seedFrom_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         seedFromCase_ = SeedFromOneofCase.SourceConnectionProfile;
+      }
+    }
+    /// <summary>Gets whether the "source_connection_profile" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSourceConnectionProfile {
+      get { return seedFromCase_ == SeedFromOneofCase.SourceConnectionProfile; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "source_connection_profile" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSourceConnectionProfile() {
+      if (HasSourceConnectionProfile) {
+        ClearSeedFrom();
       }
     }
 
@@ -10724,10 +10752,24 @@ namespace Google.Cloud.CloudDms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DestinationConnectionProfile {
-      get { return seedFromCase_ == SeedFromOneofCase.DestinationConnectionProfile ? (string) seedFrom_ : ""; }
+      get { return HasDestinationConnectionProfile ? (string) seedFrom_ : ""; }
       set {
         seedFrom_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         seedFromCase_ = SeedFromOneofCase.DestinationConnectionProfile;
+      }
+    }
+    /// <summary>Gets whether the "destination_connection_profile" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDestinationConnectionProfile {
+      get { return seedFromCase_ == SeedFromOneofCase.DestinationConnectionProfile; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "destination_connection_profile" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestinationConnectionProfile() {
+      if (HasDestinationConnectionProfile) {
+        ClearSeedFrom();
       }
     }
 
@@ -10781,8 +10823,8 @@ namespace Google.Cloud.CloudDms.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (AutoCommit != false) hash ^= AutoCommit.GetHashCode();
-      if (seedFromCase_ == SeedFromOneofCase.SourceConnectionProfile) hash ^= SourceConnectionProfile.GetHashCode();
-      if (seedFromCase_ == SeedFromOneofCase.DestinationConnectionProfile) hash ^= DestinationConnectionProfile.GetHashCode();
+      if (HasSourceConnectionProfile) hash ^= SourceConnectionProfile.GetHashCode();
+      if (HasDestinationConnectionProfile) hash ^= DestinationConnectionProfile.GetHashCode();
       hash ^= (int) seedFromCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -10810,11 +10852,11 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(16);
         output.WriteBool(AutoCommit);
       }
-      if (seedFromCase_ == SeedFromOneofCase.SourceConnectionProfile) {
+      if (HasSourceConnectionProfile) {
         output.WriteRawTag(162, 6);
         output.WriteString(SourceConnectionProfile);
       }
-      if (seedFromCase_ == SeedFromOneofCase.DestinationConnectionProfile) {
+      if (HasDestinationConnectionProfile) {
         output.WriteRawTag(170, 6);
         output.WriteString(DestinationConnectionProfile);
       }
@@ -10836,11 +10878,11 @@ namespace Google.Cloud.CloudDms.V1 {
         output.WriteRawTag(16);
         output.WriteBool(AutoCommit);
       }
-      if (seedFromCase_ == SeedFromOneofCase.SourceConnectionProfile) {
+      if (HasSourceConnectionProfile) {
         output.WriteRawTag(162, 6);
         output.WriteString(SourceConnectionProfile);
       }
-      if (seedFromCase_ == SeedFromOneofCase.DestinationConnectionProfile) {
+      if (HasDestinationConnectionProfile) {
         output.WriteRawTag(170, 6);
         output.WriteString(DestinationConnectionProfile);
       }
@@ -10860,10 +10902,10 @@ namespace Google.Cloud.CloudDms.V1 {
       if (AutoCommit != false) {
         size += 1 + 1;
       }
-      if (seedFromCase_ == SeedFromOneofCase.SourceConnectionProfile) {
+      if (HasSourceConnectionProfile) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(SourceConnectionProfile);
       }
-      if (seedFromCase_ == SeedFromOneofCase.DestinationConnectionProfile) {
+      if (HasDestinationConnectionProfile) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(DestinationConnectionProfile);
       }
       if (_unknownFields != null) {

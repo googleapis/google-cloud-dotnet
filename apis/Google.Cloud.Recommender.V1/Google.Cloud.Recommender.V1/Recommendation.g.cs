@@ -1932,8 +1932,8 @@ namespace Google.Cloud.Recommender.V1 {
       if (other.SourcePath.Length != 0) {
         SourcePath = other.SourcePath;
       }
-      pathFilters_.Add(other.pathFilters_);
-      pathValueMatchers_.Add(other.pathValueMatchers_);
+      pathFilters_.MergeFrom(other.pathFilters_);
+      pathValueMatchers_.MergeFrom(other.pathValueMatchers_);
       switch (other.PathValueCase) {
         case PathValueOneofCase.Value:
           if (Value == null) {
@@ -2148,10 +2148,24 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MatchesPattern {
-      get { return matchVariantCase_ == MatchVariantOneofCase.MatchesPattern ? (string) matchVariant_ : ""; }
+      get { return HasMatchesPattern ? (string) matchVariant_ : ""; }
       set {
         matchVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         matchVariantCase_ = MatchVariantOneofCase.MatchesPattern;
+      }
+    }
+    /// <summary>Gets whether the "matches_pattern" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMatchesPattern {
+      get { return matchVariantCase_ == MatchVariantOneofCase.MatchesPattern; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "matches_pattern" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMatchesPattern() {
+      if (HasMatchesPattern) {
+        ClearMatchVariant();
       }
     }
 
@@ -2199,7 +2213,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (matchVariantCase_ == MatchVariantOneofCase.MatchesPattern) hash ^= MatchesPattern.GetHashCode();
+      if (HasMatchesPattern) hash ^= MatchesPattern.GetHashCode();
       hash ^= (int) matchVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2219,7 +2233,7 @@ namespace Google.Cloud.Recommender.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (matchVariantCase_ == MatchVariantOneofCase.MatchesPattern) {
+      if (HasMatchesPattern) {
         output.WriteRawTag(10);
         output.WriteString(MatchesPattern);
       }
@@ -2233,7 +2247,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (matchVariantCase_ == MatchVariantOneofCase.MatchesPattern) {
+      if (HasMatchesPattern) {
         output.WriteRawTag(10);
         output.WriteString(MatchesPattern);
       }
@@ -2247,7 +2261,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (matchVariantCase_ == MatchVariantOneofCase.MatchesPattern) {
+      if (HasMatchesPattern) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MatchesPattern);
       }
       if (_unknownFields != null) {
@@ -3313,7 +3327,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (other.State != global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State.Unspecified) {
         State = other.State;
       }
-      stateMetadata_.Add(other.stateMetadata_);
+      stateMetadata_.MergeFrom(other.stateMetadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

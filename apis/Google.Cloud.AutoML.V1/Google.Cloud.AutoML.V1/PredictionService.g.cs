@@ -319,7 +319,7 @@ namespace Google.Cloud.AutoML.V1 {
         }
         Payload.MergeFrom(other.Payload);
       }
-      params_.Add(other.params_);
+      params_.MergeFrom(other.params_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -607,7 +607,7 @@ namespace Google.Cloud.AutoML.V1 {
         }
         PreprocessedInput.MergeFrom(other.PreprocessedInput);
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -997,7 +997,7 @@ namespace Google.Cloud.AutoML.V1 {
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
-      params_.Add(other.params_);
+      params_.MergeFrom(other.params_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1229,7 +1229,7 @@ namespace Google.Cloud.AutoML.V1 {
       if (other == null) {
         return;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

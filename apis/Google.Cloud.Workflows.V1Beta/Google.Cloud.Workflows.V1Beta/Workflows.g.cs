@@ -339,10 +339,24 @@ namespace Google.Cloud.Workflows.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceContents {
-      get { return sourceCodeCase_ == SourceCodeOneofCase.SourceContents ? (string) sourceCode_ : ""; }
+      get { return HasSourceContents ? (string) sourceCode_ : ""; }
       set {
         sourceCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCodeCase_ = SourceCodeOneofCase.SourceContents;
+      }
+    }
+    /// <summary>Gets whether the "source_contents" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSourceContents {
+      get { return sourceCodeCase_ == SourceCodeOneofCase.SourceContents; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "source_contents" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSourceContents() {
+      if (HasSourceContents) {
+        ClearSourceCode();
       }
     }
 
@@ -408,7 +422,7 @@ namespace Google.Cloud.Workflows.V1Beta {
       if (revisionCreateTime_ != null) hash ^= RevisionCreateTime.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceContents) hash ^= SourceContents.GetHashCode();
+      if (HasSourceContents) hash ^= SourceContents.GetHashCode();
       hash ^= (int) sourceCodeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -461,7 +475,7 @@ namespace Google.Cloud.Workflows.V1Beta {
         output.WriteRawTag(74);
         output.WriteString(ServiceAccount);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceContents) {
+      if (HasSourceContents) {
         output.WriteRawTag(82);
         output.WriteString(SourceContents);
       }
@@ -508,7 +522,7 @@ namespace Google.Cloud.Workflows.V1Beta {
         output.WriteRawTag(74);
         output.WriteString(ServiceAccount);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceContents) {
+      if (HasSourceContents) {
         output.WriteRawTag(82);
         output.WriteString(SourceContents);
       }
@@ -547,7 +561,7 @@ namespace Google.Cloud.Workflows.V1Beta {
       if (ServiceAccount.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceContents) {
+      if (HasSourceContents) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceContents);
       }
       if (_unknownFields != null) {
@@ -592,7 +606,7 @@ namespace Google.Cloud.Workflows.V1Beta {
         }
         RevisionCreateTime.MergeFrom(other.RevisionCreateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.ServiceAccount.Length != 0) {
         ServiceAccount = other.ServiceAccount;
       }

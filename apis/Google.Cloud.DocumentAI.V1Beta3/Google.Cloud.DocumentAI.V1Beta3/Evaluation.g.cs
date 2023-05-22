@@ -762,7 +762,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         }
         AllEntitiesMetrics.MergeFrom(other.AllEntitiesMetrics);
       }
-      entityMetrics_.Add(other.entityMetrics_);
+      entityMetrics_.MergeFrom(other.entityMetrics_);
       if (other.KmsKeyName.Length != 0) {
         KmsKeyName = other.KmsKeyName;
       }

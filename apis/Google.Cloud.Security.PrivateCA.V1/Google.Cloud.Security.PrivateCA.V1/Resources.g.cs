@@ -1156,7 +1156,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         }
         ExpireTime.MergeFrom(other.ExpireTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1816,10 +1816,24 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string CloudKmsKeyVersion {
-          get { return keyVersionCase_ == KeyVersionOneofCase.CloudKmsKeyVersion ? (string) keyVersion_ : ""; }
+          get { return HasCloudKmsKeyVersion ? (string) keyVersion_ : ""; }
           set {
             keyVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             keyVersionCase_ = KeyVersionOneofCase.CloudKmsKeyVersion;
+          }
+        }
+        /// <summary>Gets whether the "cloud_kms_key_version" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasCloudKmsKeyVersion {
+          get { return keyVersionCase_ == KeyVersionOneofCase.CloudKmsKeyVersion; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "cloud_kms_key_version" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearCloudKmsKeyVersion() {
+          if (HasCloudKmsKeyVersion) {
+            ClearKeyVersion();
           }
         }
 
@@ -1833,10 +1847,24 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority.Types.SignHashAlgorithm Algorithm {
-          get { return keyVersionCase_ == KeyVersionOneofCase.Algorithm ? (global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority.Types.SignHashAlgorithm) keyVersion_ : global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority.Types.SignHashAlgorithm.Unspecified; }
+          get { return HasAlgorithm ? (global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority.Types.SignHashAlgorithm) keyVersion_ : global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority.Types.SignHashAlgorithm.Unspecified; }
           set {
             keyVersion_ = value;
             keyVersionCase_ = KeyVersionOneofCase.Algorithm;
+          }
+        }
+        /// <summary>Gets whether the "algorithm" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAlgorithm {
+          get { return keyVersionCase_ == KeyVersionOneofCase.Algorithm; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "algorithm" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAlgorithm() {
+          if (HasAlgorithm) {
+            ClearKeyVersion();
           }
         }
 
@@ -1886,8 +1914,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (keyVersionCase_ == KeyVersionOneofCase.CloudKmsKeyVersion) hash ^= CloudKmsKeyVersion.GetHashCode();
-          if (keyVersionCase_ == KeyVersionOneofCase.Algorithm) hash ^= Algorithm.GetHashCode();
+          if (HasCloudKmsKeyVersion) hash ^= CloudKmsKeyVersion.GetHashCode();
+          if (HasAlgorithm) hash ^= Algorithm.GetHashCode();
           hash ^= (int) keyVersionCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1907,11 +1935,11 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (keyVersionCase_ == KeyVersionOneofCase.CloudKmsKeyVersion) {
+          if (HasCloudKmsKeyVersion) {
             output.WriteRawTag(10);
             output.WriteString(CloudKmsKeyVersion);
           }
-          if (keyVersionCase_ == KeyVersionOneofCase.Algorithm) {
+          if (HasAlgorithm) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Algorithm);
           }
@@ -1925,11 +1953,11 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (keyVersionCase_ == KeyVersionOneofCase.CloudKmsKeyVersion) {
+          if (HasCloudKmsKeyVersion) {
             output.WriteRawTag(10);
             output.WriteString(CloudKmsKeyVersion);
           }
-          if (keyVersionCase_ == KeyVersionOneofCase.Algorithm) {
+          if (HasAlgorithm) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Algorithm);
           }
@@ -1943,10 +1971,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (keyVersionCase_ == KeyVersionOneofCase.CloudKmsKeyVersion) {
+          if (HasCloudKmsKeyVersion) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(CloudKmsKeyVersion);
           }
-          if (keyVersionCase_ == KeyVersionOneofCase.Algorithm) {
+          if (HasAlgorithm) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Algorithm);
           }
           if (_unknownFields != null) {
@@ -2321,7 +2349,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         }
         PublishingOptions.MergeFrom(other.PublishingOptions);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4633,7 +4661,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       if (other.RevisionId.Length != 0) {
         RevisionId = other.RevisionId;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5170,10 +5198,24 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PemCsr {
-      get { return certificateConfigCase_ == CertificateConfigOneofCase.PemCsr ? (string) certificateConfig_ : ""; }
+      get { return HasPemCsr ? (string) certificateConfig_ : ""; }
       set {
         certificateConfig_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         certificateConfigCase_ = CertificateConfigOneofCase.PemCsr;
+      }
+    }
+    /// <summary>Gets whether the "pem_csr" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPemCsr {
+      get { return certificateConfigCase_ == CertificateConfigOneofCase.PemCsr; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "pem_csr" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPemCsr() {
+      if (HasPemCsr) {
+        ClearCertificateConfig();
       }
     }
 
@@ -5436,7 +5478,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (certificateConfigCase_ == CertificateConfigOneofCase.PemCsr) hash ^= PemCsr.GetHashCode();
+      if (HasPemCsr) hash ^= PemCsr.GetHashCode();
       if (certificateConfigCase_ == CertificateConfigOneofCase.Config) hash ^= Config.GetHashCode();
       if (IssuerCertificateAuthority.Length != 0) hash ^= IssuerCertificateAuthority.GetHashCode();
       if (lifetime_ != null) hash ^= Lifetime.GetHashCode();
@@ -5472,7 +5514,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (certificateConfigCase_ == CertificateConfigOneofCase.PemCsr) {
+      if (HasPemCsr) {
         output.WriteRawTag(18);
         output.WriteString(PemCsr);
       }
@@ -5532,7 +5574,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (certificateConfigCase_ == CertificateConfigOneofCase.PemCsr) {
+      if (HasPemCsr) {
         output.WriteRawTag(18);
         output.WriteString(PemCsr);
       }
@@ -5591,7 +5633,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (certificateConfigCase_ == CertificateConfigOneofCase.PemCsr) {
+      if (HasPemCsr) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PemCsr);
       }
       if (certificateConfigCase_ == CertificateConfigOneofCase.Config) {
@@ -5684,7 +5726,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.CertificateConfigCase) {
         case CertificateConfigOneofCase.PemCsr:
           PemCsr = other.PemCsr;
@@ -6556,7 +6598,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -7141,6 +7183,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
 
         /// <summary>Field number for the "is_ca" field.</summary>
         public const int IsCaFieldNumber = 1;
+        private readonly static bool IsCaDefaultValue = false;
+
         private bool isCa_;
         /// <summary>
         /// Optional. Refers to the "CA" X.509 extension, which is a boolean value.
@@ -7150,7 +7194,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool IsCa {
-          get { if ((_hasBits0 & 1) != 0) { return isCa_; } else { return false; } }
+          get { if ((_hasBits0 & 1) != 0) { return isCa_; } else { return IsCaDefaultValue; } }
           set {
             _hasBits0 |= 1;
             isCa_ = value;
@@ -7171,6 +7215,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
 
         /// <summary>Field number for the "max_issuer_path_length" field.</summary>
         public const int MaxIssuerPathLengthFieldNumber = 2;
+        private readonly static int MaxIssuerPathLengthDefaultValue = 0;
+
         private int maxIssuerPathLength_;
         /// <summary>
         /// Optional. Refers to the path length restriction X.509 extension. For a CA
@@ -7183,7 +7229,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int MaxIssuerPathLength {
-          get { if ((_hasBits0 & 2) != 0) { return maxIssuerPathLength_; } else { return 0; } }
+          get { if ((_hasBits0 & 2) != 0) { return maxIssuerPathLength_; } else { return MaxIssuerPathLengthDefaultValue; } }
           set {
             _hasBits0 |= 2;
             maxIssuerPathLength_ = value;
@@ -7888,10 +7934,24 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CertificateAuthority {
-      get { return subordinateConfigCase_ == SubordinateConfigOneofCase.CertificateAuthority ? (string) subordinateConfig_ : ""; }
+      get { return HasCertificateAuthority ? (string) subordinateConfig_ : ""; }
       set {
         subordinateConfig_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         subordinateConfigCase_ = SubordinateConfigOneofCase.CertificateAuthority;
+      }
+    }
+    /// <summary>Gets whether the "certificate_authority" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCertificateAuthority {
+      get { return subordinateConfigCase_ == SubordinateConfigOneofCase.CertificateAuthority; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "certificate_authority" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCertificateAuthority() {
+      if (HasCertificateAuthority) {
+        ClearSubordinateConfig();
       }
     }
 
@@ -7958,7 +8018,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (subordinateConfigCase_ == SubordinateConfigOneofCase.CertificateAuthority) hash ^= CertificateAuthority.GetHashCode();
+      if (HasCertificateAuthority) hash ^= CertificateAuthority.GetHashCode();
       if (subordinateConfigCase_ == SubordinateConfigOneofCase.PemIssuerChain) hash ^= PemIssuerChain.GetHashCode();
       hash ^= (int) subordinateConfigCase_;
       if (_unknownFields != null) {
@@ -7979,7 +8039,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (subordinateConfigCase_ == SubordinateConfigOneofCase.CertificateAuthority) {
+      if (HasCertificateAuthority) {
         output.WriteRawTag(10);
         output.WriteString(CertificateAuthority);
       }
@@ -7997,7 +8057,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (subordinateConfigCase_ == SubordinateConfigOneofCase.CertificateAuthority) {
+      if (HasCertificateAuthority) {
         output.WriteRawTag(10);
         output.WriteString(CertificateAuthority);
       }
@@ -8015,7 +8075,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (subordinateConfigCase_ == SubordinateConfigOneofCase.CertificateAuthority) {
+      if (HasCertificateAuthority) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CertificateAuthority);
       }
       if (subordinateConfigCase_ == SubordinateConfigOneofCase.PemIssuerChain) {
@@ -13056,6 +13116,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
 
     /// <summary>Field number for the "allow_subject_passthrough" field.</summary>
     public const int AllowSubjectPassthroughFieldNumber = 2;
+    private readonly static bool AllowSubjectPassthroughDefaultValue = false;
+
     private bool allowSubjectPassthrough_;
     /// <summary>
     /// Required. If this is true, the
@@ -13067,7 +13129,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool AllowSubjectPassthrough {
-      get { if ((_hasBits0 & 1) != 0) { return allowSubjectPassthrough_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return allowSubjectPassthrough_; } else { return AllowSubjectPassthroughDefaultValue; } }
       set {
         _hasBits0 |= 1;
         allowSubjectPassthrough_ = value;
@@ -13088,6 +13150,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
 
     /// <summary>Field number for the "allow_subject_alt_names_passthrough" field.</summary>
     public const int AllowSubjectAltNamesPassthroughFieldNumber = 3;
+    private readonly static bool AllowSubjectAltNamesPassthroughDefaultValue = false;
+
     private bool allowSubjectAltNamesPassthrough_;
     /// <summary>
     /// Required. If this is true, the
@@ -13100,7 +13164,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool AllowSubjectAltNamesPassthrough {
-      get { if ((_hasBits0 & 2) != 0) { return allowSubjectAltNamesPassthrough_; } else { return false; } }
+      get { if ((_hasBits0 & 2) != 0) { return allowSubjectAltNamesPassthrough_; } else { return AllowSubjectAltNamesPassthroughDefaultValue; } }
       set {
         _hasBits0 |= 2;
         allowSubjectAltNamesPassthrough_ = value;

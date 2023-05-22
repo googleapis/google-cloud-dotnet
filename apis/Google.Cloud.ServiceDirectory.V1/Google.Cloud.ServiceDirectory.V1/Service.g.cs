@@ -269,7 +269,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       endpoints_.Add(other.endpoints_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }

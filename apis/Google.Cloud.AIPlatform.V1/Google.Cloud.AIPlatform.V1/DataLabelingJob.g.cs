@@ -740,7 +740,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         DisplayName = other.DisplayName;
       }
       datasets_.Add(other.datasets_);
-      annotationLabels_.Add(other.annotationLabels_);
+      annotationLabels_.MergeFrom(other.annotationLabels_);
       if (other.LabelerCount != 0) {
         LabelerCount = other.LabelerCount;
       }
@@ -786,7 +786,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         Error.MergeFrom(other.Error);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       specialistPools_.Add(other.specialistPools_);
       if (other.encryptionSpec_ != null) {
         if (encryptionSpec_ == null) {
@@ -1090,10 +1090,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long MaxDataItemCount {
-      get { return humanLabelingBudgetCase_ == HumanLabelingBudgetOneofCase.MaxDataItemCount ? (long) humanLabelingBudget_ : 0L; }
+      get { return HasMaxDataItemCount ? (long) humanLabelingBudget_ : 0L; }
       set {
         humanLabelingBudget_ = value;
         humanLabelingBudgetCase_ = HumanLabelingBudgetOneofCase.MaxDataItemCount;
+      }
+    }
+    /// <summary>Gets whether the "max_data_item_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxDataItemCount {
+      get { return humanLabelingBudgetCase_ == HumanLabelingBudgetOneofCase.MaxDataItemCount; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "max_data_item_count" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxDataItemCount() {
+      if (HasMaxDataItemCount) {
+        ClearHumanLabelingBudget();
       }
     }
 
@@ -1105,10 +1119,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxDataItemPercentage {
-      get { return humanLabelingBudgetCase_ == HumanLabelingBudgetOneofCase.MaxDataItemPercentage ? (int) humanLabelingBudget_ : 0; }
+      get { return HasMaxDataItemPercentage ? (int) humanLabelingBudget_ : 0; }
       set {
         humanLabelingBudget_ = value;
         humanLabelingBudgetCase_ = HumanLabelingBudgetOneofCase.MaxDataItemPercentage;
+      }
+    }
+    /// <summary>Gets whether the "max_data_item_percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxDataItemPercentage {
+      get { return humanLabelingBudgetCase_ == HumanLabelingBudgetOneofCase.MaxDataItemPercentage; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "max_data_item_percentage" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxDataItemPercentage() {
+      if (HasMaxDataItemPercentage) {
+        ClearHumanLabelingBudget();
       }
     }
 
@@ -1193,8 +1221,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (humanLabelingBudgetCase_ == HumanLabelingBudgetOneofCase.MaxDataItemCount) hash ^= MaxDataItemCount.GetHashCode();
-      if (humanLabelingBudgetCase_ == HumanLabelingBudgetOneofCase.MaxDataItemPercentage) hash ^= MaxDataItemPercentage.GetHashCode();
+      if (HasMaxDataItemCount) hash ^= MaxDataItemCount.GetHashCode();
+      if (HasMaxDataItemPercentage) hash ^= MaxDataItemPercentage.GetHashCode();
       if (sampleConfig_ != null) hash ^= SampleConfig.GetHashCode();
       if (trainingConfig_ != null) hash ^= TrainingConfig.GetHashCode();
       hash ^= (int) humanLabelingBudgetCase_;
@@ -1216,11 +1244,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (humanLabelingBudgetCase_ == HumanLabelingBudgetOneofCase.MaxDataItemCount) {
+      if (HasMaxDataItemCount) {
         output.WriteRawTag(8);
         output.WriteInt64(MaxDataItemCount);
       }
-      if (humanLabelingBudgetCase_ == HumanLabelingBudgetOneofCase.MaxDataItemPercentage) {
+      if (HasMaxDataItemPercentage) {
         output.WriteRawTag(16);
         output.WriteInt32(MaxDataItemPercentage);
       }
@@ -1242,11 +1270,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (humanLabelingBudgetCase_ == HumanLabelingBudgetOneofCase.MaxDataItemCount) {
+      if (HasMaxDataItemCount) {
         output.WriteRawTag(8);
         output.WriteInt64(MaxDataItemCount);
       }
-      if (humanLabelingBudgetCase_ == HumanLabelingBudgetOneofCase.MaxDataItemPercentage) {
+      if (HasMaxDataItemPercentage) {
         output.WriteRawTag(16);
         output.WriteInt32(MaxDataItemPercentage);
       }
@@ -1268,10 +1296,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (humanLabelingBudgetCase_ == HumanLabelingBudgetOneofCase.MaxDataItemCount) {
+      if (HasMaxDataItemCount) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxDataItemCount);
       }
-      if (humanLabelingBudgetCase_ == HumanLabelingBudgetOneofCase.MaxDataItemPercentage) {
+      if (HasMaxDataItemPercentage) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxDataItemPercentage);
       }
       if (sampleConfig_ != null) {
@@ -1462,10 +1490,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int InitialBatchSamplePercentage {
-      get { return initialBatchSampleSizeCase_ == InitialBatchSampleSizeOneofCase.InitialBatchSamplePercentage ? (int) initialBatchSampleSize_ : 0; }
+      get { return HasInitialBatchSamplePercentage ? (int) initialBatchSampleSize_ : 0; }
       set {
         initialBatchSampleSize_ = value;
         initialBatchSampleSizeCase_ = InitialBatchSampleSizeOneofCase.InitialBatchSamplePercentage;
+      }
+    }
+    /// <summary>Gets whether the "initial_batch_sample_percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInitialBatchSamplePercentage {
+      get { return initialBatchSampleSizeCase_ == InitialBatchSampleSizeOneofCase.InitialBatchSamplePercentage; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "initial_batch_sample_percentage" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInitialBatchSamplePercentage() {
+      if (HasInitialBatchSamplePercentage) {
+        ClearInitialBatchSampleSize();
       }
     }
 
@@ -1478,10 +1520,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int FollowingBatchSamplePercentage {
-      get { return followingBatchSampleSizeCase_ == FollowingBatchSampleSizeOneofCase.FollowingBatchSamplePercentage ? (int) followingBatchSampleSize_ : 0; }
+      get { return HasFollowingBatchSamplePercentage ? (int) followingBatchSampleSize_ : 0; }
       set {
         followingBatchSampleSize_ = value;
         followingBatchSampleSizeCase_ = FollowingBatchSampleSizeOneofCase.FollowingBatchSamplePercentage;
+      }
+    }
+    /// <summary>Gets whether the "following_batch_sample_percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFollowingBatchSamplePercentage {
+      get { return followingBatchSampleSizeCase_ == FollowingBatchSampleSizeOneofCase.FollowingBatchSamplePercentage; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "following_batch_sample_percentage" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFollowingBatchSamplePercentage() {
+      if (HasFollowingBatchSamplePercentage) {
+        ClearFollowingBatchSampleSize();
       }
     }
 
@@ -1568,8 +1624,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (initialBatchSampleSizeCase_ == InitialBatchSampleSizeOneofCase.InitialBatchSamplePercentage) hash ^= InitialBatchSamplePercentage.GetHashCode();
-      if (followingBatchSampleSizeCase_ == FollowingBatchSampleSizeOneofCase.FollowingBatchSamplePercentage) hash ^= FollowingBatchSamplePercentage.GetHashCode();
+      if (HasInitialBatchSamplePercentage) hash ^= InitialBatchSamplePercentage.GetHashCode();
+      if (HasFollowingBatchSamplePercentage) hash ^= FollowingBatchSamplePercentage.GetHashCode();
       if (SampleStrategy != global::Google.Cloud.AIPlatform.V1.SampleConfig.Types.SampleStrategy.Unspecified) hash ^= SampleStrategy.GetHashCode();
       hash ^= (int) initialBatchSampleSizeCase_;
       hash ^= (int) followingBatchSampleSizeCase_;
@@ -1591,11 +1647,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (initialBatchSampleSizeCase_ == InitialBatchSampleSizeOneofCase.InitialBatchSamplePercentage) {
+      if (HasInitialBatchSamplePercentage) {
         output.WriteRawTag(8);
         output.WriteInt32(InitialBatchSamplePercentage);
       }
-      if (followingBatchSampleSizeCase_ == FollowingBatchSampleSizeOneofCase.FollowingBatchSamplePercentage) {
+      if (HasFollowingBatchSamplePercentage) {
         output.WriteRawTag(24);
         output.WriteInt32(FollowingBatchSamplePercentage);
       }
@@ -1613,11 +1669,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (initialBatchSampleSizeCase_ == InitialBatchSampleSizeOneofCase.InitialBatchSamplePercentage) {
+      if (HasInitialBatchSamplePercentage) {
         output.WriteRawTag(8);
         output.WriteInt32(InitialBatchSamplePercentage);
       }
-      if (followingBatchSampleSizeCase_ == FollowingBatchSampleSizeOneofCase.FollowingBatchSamplePercentage) {
+      if (HasFollowingBatchSamplePercentage) {
         output.WriteRawTag(24);
         output.WriteInt32(FollowingBatchSamplePercentage);
       }
@@ -1635,10 +1691,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (initialBatchSampleSizeCase_ == InitialBatchSampleSizeOneofCase.InitialBatchSamplePercentage) {
+      if (HasInitialBatchSamplePercentage) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(InitialBatchSamplePercentage);
       }
-      if (followingBatchSampleSizeCase_ == FollowingBatchSampleSizeOneofCase.FollowingBatchSamplePercentage) {
+      if (HasFollowingBatchSamplePercentage) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(FollowingBatchSamplePercentage);
       }
       if (SampleStrategy != global::Google.Cloud.AIPlatform.V1.SampleConfig.Types.SampleStrategy.Unspecified) {

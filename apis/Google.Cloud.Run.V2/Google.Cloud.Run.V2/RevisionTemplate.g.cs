@@ -551,8 +551,8 @@ namespace Google.Cloud.Run.V2 {
       if (other.Revision.Length != 0) {
         Revision = other.Revision;
       }
-      labels_.Add(other.labels_);
-      annotations_.Add(other.annotations_);
+      labels_.MergeFrom(other.labels_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.scaling_ != null) {
         if (scaling_ == null) {
           Scaling = new global::Google.Cloud.Run.V2.RevisionScaling();

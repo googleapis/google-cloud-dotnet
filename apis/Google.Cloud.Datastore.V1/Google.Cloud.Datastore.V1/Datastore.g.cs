@@ -3438,10 +3438,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Transaction {
-      get { return transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction ? (pb::ByteString) transactionSelector_ : pb::ByteString.Empty; }
+      get { return HasTransaction ? (pb::ByteString) transactionSelector_ : pb::ByteString.Empty; }
       set {
         transactionSelector_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         transactionSelectorCase_ = TransactionSelectorOneofCase.Transaction;
+      }
+    }
+    /// <summary>Gets whether the "transaction" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTransaction {
+      get { return transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "transaction" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTransaction() {
+      if (HasTransaction) {
+        ClearTransactionSelector();
       }
     }
 
@@ -3542,7 +3556,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (DatabaseId.Length != 0) hash ^= DatabaseId.GetHashCode();
       if (Mode != global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode.Unspecified) hash ^= Mode.GetHashCode();
-      if (transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction) hash ^= Transaction.GetHashCode();
+      if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (transactionSelectorCase_ == TransactionSelectorOneofCase.SingleUseTransaction) hash ^= SingleUseTransaction.GetHashCode();
       hash ^= mutations_.GetHashCode();
       hash ^= (int) transactionSelectorCase_;
@@ -3564,7 +3578,7 @@ namespace Google.Cloud.Datastore.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(10);
         output.WriteBytes(Transaction);
       }
@@ -3595,7 +3609,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(10);
         output.WriteBytes(Transaction);
       }
@@ -3635,7 +3649,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (Mode != global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
       }
-      if (transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
       }
       if (transactionSelectorCase_ == TransactionSelectorOneofCase.SingleUseTransaction) {
@@ -5098,10 +5112,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long BaseVersion {
-      get { return conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion ? (long) conflictDetectionStrategy_ : 0L; }
+      get { return HasBaseVersion ? (long) conflictDetectionStrategy_ : 0L; }
       set {
         conflictDetectionStrategy_ = value;
         conflictDetectionStrategyCase_ = ConflictDetectionStrategyOneofCase.BaseVersion;
+      }
+    }
+    /// <summary>Gets whether the "base_version" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBaseVersion {
+      get { return conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "base_version" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBaseVersion() {
+      if (HasBaseVersion) {
+        ClearConflictDetectionStrategy();
       }
     }
 
@@ -5200,7 +5228,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (operationCase_ == OperationOneofCase.Update) hash ^= Update.GetHashCode();
       if (operationCase_ == OperationOneofCase.Upsert) hash ^= Upsert.GetHashCode();
       if (operationCase_ == OperationOneofCase.Delete) hash ^= Delete.GetHashCode();
-      if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion) hash ^= BaseVersion.GetHashCode();
+      if (HasBaseVersion) hash ^= BaseVersion.GetHashCode();
       if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) hash ^= UpdateTime.GetHashCode();
       hash ^= (int) operationCase_;
       hash ^= (int) conflictDetectionStrategyCase_;
@@ -5238,7 +5266,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(Delete);
       }
-      if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion) {
+      if (HasBaseVersion) {
         output.WriteRawTag(64);
         output.WriteInt64(BaseVersion);
       }
@@ -5272,7 +5300,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(Delete);
       }
-      if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion) {
+      if (HasBaseVersion) {
         output.WriteRawTag(64);
         output.WriteInt64(BaseVersion);
       }
@@ -5302,7 +5330,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (operationCase_ == OperationOneofCase.Delete) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Delete);
       }
-      if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion) {
+      if (HasBaseVersion) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(BaseVersion);
       }
       if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) {
@@ -5954,10 +5982,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency ReadConsistency {
-      get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency ? (global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency) consistencyType_ : global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency.Unspecified; }
+      get { return HasReadConsistency ? (global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency) consistencyType_ : global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency.Unspecified; }
       set {
         consistencyType_ = value;
         consistencyTypeCase_ = ConsistencyTypeOneofCase.ReadConsistency;
+      }
+    }
+    /// <summary>Gets whether the "read_consistency" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReadConsistency {
+      get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "read_consistency" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReadConsistency() {
+      if (HasReadConsistency) {
+        ClearConsistencyType();
       }
     }
 
@@ -5971,10 +6013,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Transaction {
-      get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction ? (pb::ByteString) consistencyType_ : pb::ByteString.Empty; }
+      get { return HasTransaction ? (pb::ByteString) consistencyType_ : pb::ByteString.Empty; }
       set {
         consistencyType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         consistencyTypeCase_ = ConsistencyTypeOneofCase.Transaction;
+      }
+    }
+    /// <summary>Gets whether the "transaction" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTransaction {
+      get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "transaction" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTransaction() {
+      if (HasTransaction) {
+        ClearConsistencyType();
       }
     }
 
@@ -6066,8 +6122,8 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency) hash ^= ReadConsistency.GetHashCode();
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction) hash ^= Transaction.GetHashCode();
+      if (HasReadConsistency) hash ^= ReadConsistency.GetHashCode();
+      if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.NewTransaction) hash ^= NewTransaction.GetHashCode();
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
       hash ^= (int) consistencyTypeCase_;
@@ -6089,11 +6145,11 @@ namespace Google.Cloud.Datastore.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency) {
+      if (HasReadConsistency) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ReadConsistency);
       }
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(18);
         output.WriteBytes(Transaction);
       }
@@ -6115,11 +6171,11 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency) {
+      if (HasReadConsistency) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ReadConsistency);
       }
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(18);
         output.WriteBytes(Transaction);
       }
@@ -6141,10 +6197,10 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency) {
+      if (HasReadConsistency) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReadConsistency);
       }
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction) {
+      if (HasTransaction) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
       }
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.NewTransaction) {

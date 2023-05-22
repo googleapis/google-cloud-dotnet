@@ -756,7 +756,7 @@ namespace Google.Cloud.Notebooks.V1 {
         }
         AcceleratorConfig.MergeFrom(other.AcceleratorConfig);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.InputNotebookFile.Length != 0) {
         InputNotebookFile = other.InputNotebookFile;
       }
@@ -1705,7 +1705,7 @@ namespace Google.Cloud.Notebooks.V1 {
           if (other.Network.Length != 0) {
             Network = other.Network;
           }
-          env_.Add(other.env_);
+          env_.MergeFrom(other.env_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

@@ -3656,7 +3656,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (other.Group.Length != 0) {
         Group = other.Group;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       recentCloneJobs_.Add(other.recentCloneJobs_);
       if (other.error_ != null) {
         if (error_ == null) {
@@ -8753,7 +8753,7 @@ namespace Google.Cloud.VMMigration.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
@@ -9585,7 +9585,7 @@ namespace Google.Cloud.VMMigration.V1 {
       }
       inventoryTagList_.Add(other.inventoryTagList_);
       inventorySecurityGroupNames_.Add(other.inventorySecurityGroupNames_);
-      migrationResourcesUserTags_.Add(other.migrationResourcesUserTags_);
+      migrationResourcesUserTags_.MergeFrom(other.migrationResourcesUserTags_);
       if (other.PublicIp.Length != 0) {
         PublicIp = other.PublicIp;
       }
@@ -15302,7 +15302,7 @@ namespace Google.Cloud.VMMigration.V1 {
         VpcId = other.VpcId;
       }
       securityGroups_.Add(other.securityGroups_);
-      tags_.Add(other.tags_);
+      tags_.MergeFrom(other.tags_);
       if (other.Zone.Length != 0) {
         Zone = other.Zone;
       }
@@ -21885,7 +21885,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (other.DiskType != global::Google.Cloud.VMMigration.V1.ComputeEngineDiskType.Unspecified) {
         DiskType = other.DiskType;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.LicenseType != global::Google.Cloud.VMMigration.V1.ComputeEngineLicenseType.Default) {
         LicenseType = other.LicenseType;
       }
@@ -21907,7 +21907,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (other.BootOption != global::Google.Cloud.VMMigration.V1.ComputeEngineBootOption.Unspecified) {
         BootOption = other.BootOption;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       additionalLicenses_.Add(other.additionalLicenses_);
       if (other.Hostname.Length != 0) {
         Hostname = other.Hostname;
@@ -22725,7 +22725,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (other.DiskType != global::Google.Cloud.VMMigration.V1.ComputeEngineDiskType.Unspecified) {
         DiskType = other.DiskType;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.LicenseType != global::Google.Cloud.VMMigration.V1.ComputeEngineLicenseType.Default) {
         LicenseType = other.LicenseType;
       }
@@ -22747,7 +22747,7 @@ namespace Google.Cloud.VMMigration.V1 {
       if (other.BootOption != global::Google.Cloud.VMMigration.V1.ComputeEngineBootOption.Unspecified) {
         BootOption = other.BootOption;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       additionalLicenses_.Add(other.additionalLicenses_);
       if (other.Hostname.Length != 0) {
         Hostname = other.Hostname;

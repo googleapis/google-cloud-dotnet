@@ -3020,10 +3020,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float NoiseSigma {
-      get { return gradientNoiseSigmaCase_ == GradientNoiseSigmaOneofCase.NoiseSigma ? (float) gradientNoiseSigma_ : 0F; }
+      get { return HasNoiseSigma ? (float) gradientNoiseSigma_ : 0F; }
       set {
         gradientNoiseSigma_ = value;
         gradientNoiseSigmaCase_ = GradientNoiseSigmaOneofCase.NoiseSigma;
+      }
+    }
+    /// <summary>Gets whether the "noise_sigma" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNoiseSigma {
+      get { return gradientNoiseSigmaCase_ == GradientNoiseSigmaOneofCase.NoiseSigma; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "noise_sigma" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNoiseSigma() {
+      if (HasNoiseSigma) {
+        ClearGradientNoiseSigma();
       }
     }
 
@@ -3114,7 +3128,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (gradientNoiseSigmaCase_ == GradientNoiseSigmaOneofCase.NoiseSigma) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(NoiseSigma);
+      if (HasNoiseSigma) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(NoiseSigma);
       if (gradientNoiseSigmaCase_ == GradientNoiseSigmaOneofCase.FeatureNoiseSigma) hash ^= FeatureNoiseSigma.GetHashCode();
       if (NoisySampleCount != 0) hash ^= NoisySampleCount.GetHashCode();
       hash ^= (int) gradientNoiseSigmaCase_;
@@ -3136,7 +3150,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (gradientNoiseSigmaCase_ == GradientNoiseSigmaOneofCase.NoiseSigma) {
+      if (HasNoiseSigma) {
         output.WriteRawTag(13);
         output.WriteFloat(NoiseSigma);
       }
@@ -3158,7 +3172,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (gradientNoiseSigmaCase_ == GradientNoiseSigmaOneofCase.NoiseSigma) {
+      if (HasNoiseSigma) {
         output.WriteRawTag(13);
         output.WriteFloat(NoiseSigma);
       }
@@ -3180,7 +3194,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (gradientNoiseSigmaCase_ == GradientNoiseSigmaOneofCase.NoiseSigma) {
+      if (HasNoiseSigma) {
         size += 1 + 4;
       }
       if (gradientNoiseSigmaCase_ == GradientNoiseSigmaOneofCase.FeatureNoiseSigma) {
@@ -4674,6 +4688,8 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     /// <summary>Field number for the "query" field.</summary>
     public const int QueryFieldNumber = 1;
+    private readonly static global::Google.Cloud.AIPlatform.V1.Presets.Types.Query QueryDefaultValue = global::Google.Cloud.AIPlatform.V1.Presets.Types.Query.Precise;
+
     private global::Google.Cloud.AIPlatform.V1.Presets.Types.Query query_;
     /// <summary>
     /// Preset option controlling parameters for speed-precision trade-off when
@@ -4682,7 +4698,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.Presets.Types.Query Query {
-      get { if ((_hasBits0 & 1) != 0) { return query_; } else { return global::Google.Cloud.AIPlatform.V1.Presets.Types.Query.Precise; } }
+      get { if ((_hasBits0 & 1) != 0) { return query_; } else { return QueryDefaultValue; } }
       set {
         _hasBits0 |= 1;
         query_ = value;
@@ -5371,7 +5387,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other == null) {
         return;
       }
-      inputs_.Add(other.inputs_);
+      inputs_.MergeFrom(other.inputs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

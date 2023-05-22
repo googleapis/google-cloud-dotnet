@@ -1260,7 +1260,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         }
         HumanAnnotationConfig.MergeFrom(other.HumanAnnotationConfig);
       }
-      bigqueryImportKeys_.Add(other.bigqueryImportKeys_);
+      bigqueryImportKeys_.MergeFrom(other.bigqueryImportKeys_);
       if (other.ExampleCount != 0) {
         ExampleCount = other.ExampleCount;
       }

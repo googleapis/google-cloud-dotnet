@@ -1216,10 +1216,24 @@ namespace Google.Cloud.Spanner.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Strong {
-          get { return timestampBoundCase_ == TimestampBoundOneofCase.Strong ? (bool) timestampBound_ : false; }
+          get { return HasStrong ? (bool) timestampBound_ : false; }
           set {
             timestampBound_ = value;
             timestampBoundCase_ = TimestampBoundOneofCase.Strong;
+          }
+        }
+        /// <summary>Gets whether the "strong" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasStrong {
+          get { return timestampBoundCase_ == TimestampBoundOneofCase.Strong; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "strong" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearStrong() {
+          if (HasStrong) {
+            ClearTimestampBound();
           }
         }
 
@@ -1395,7 +1409,7 @@ namespace Google.Cloud.Spanner.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (timestampBoundCase_ == TimestampBoundOneofCase.Strong) hash ^= Strong.GetHashCode();
+          if (HasStrong) hash ^= Strong.GetHashCode();
           if (timestampBoundCase_ == TimestampBoundOneofCase.MinReadTimestamp) hash ^= MinReadTimestamp.GetHashCode();
           if (timestampBoundCase_ == TimestampBoundOneofCase.MaxStaleness) hash ^= MaxStaleness.GetHashCode();
           if (timestampBoundCase_ == TimestampBoundOneofCase.ReadTimestamp) hash ^= ReadTimestamp.GetHashCode();
@@ -1420,7 +1434,7 @@ namespace Google.Cloud.Spanner.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (timestampBoundCase_ == TimestampBoundOneofCase.Strong) {
+          if (HasStrong) {
             output.WriteRawTag(8);
             output.WriteBool(Strong);
           }
@@ -1454,7 +1468,7 @@ namespace Google.Cloud.Spanner.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (timestampBoundCase_ == TimestampBoundOneofCase.Strong) {
+          if (HasStrong) {
             output.WriteRawTag(8);
             output.WriteBool(Strong);
           }
@@ -1488,7 +1502,7 @@ namespace Google.Cloud.Spanner.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (timestampBoundCase_ == TimestampBoundOneofCase.Strong) {
+          if (HasStrong) {
             size += 1 + 1;
           }
           if (timestampBoundCase_ == TimestampBoundOneofCase.MinReadTimestamp) {
@@ -2025,10 +2039,24 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Id {
-      get { return selectorCase_ == SelectorOneofCase.Id ? (pb::ByteString) selector_ : pb::ByteString.Empty; }
+      get { return HasId ? (pb::ByteString) selector_ : pb::ByteString.Empty; }
       set {
         selector_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         selectorCase_ = SelectorOneofCase.Id;
+      }
+    }
+    /// <summary>Gets whether the "id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasId {
+      get { return selectorCase_ == SelectorOneofCase.Id; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearId() {
+      if (HasId) {
+        ClearSelector();
       }
     }
 
@@ -2099,7 +2127,7 @@ namespace Google.Cloud.Spanner.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (selectorCase_ == SelectorOneofCase.SingleUse) hash ^= SingleUse.GetHashCode();
-      if (selectorCase_ == SelectorOneofCase.Id) hash ^= Id.GetHashCode();
+      if (HasId) hash ^= Id.GetHashCode();
       if (selectorCase_ == SelectorOneofCase.Begin) hash ^= Begin.GetHashCode();
       hash ^= (int) selectorCase_;
       if (_unknownFields != null) {
@@ -2124,7 +2152,7 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(SingleUse);
       }
-      if (selectorCase_ == SelectorOneofCase.Id) {
+      if (HasId) {
         output.WriteRawTag(18);
         output.WriteBytes(Id);
       }
@@ -2146,7 +2174,7 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(SingleUse);
       }
-      if (selectorCase_ == SelectorOneofCase.Id) {
+      if (HasId) {
         output.WriteRawTag(18);
         output.WriteBytes(Id);
       }
@@ -2167,7 +2195,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (selectorCase_ == SelectorOneofCase.SingleUse) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SingleUse);
       }
-      if (selectorCase_ == SelectorOneofCase.Id) {
+      if (HasId) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Id);
       }
       if (selectorCase_ == SelectorOneofCase.Begin) {

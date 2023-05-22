@@ -3369,10 +3369,24 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int GopFrameCount {
-          get { return gopModeCase_ == GopModeOneofCase.GopFrameCount ? (int) gopMode_ : 0; }
+          get { return HasGopFrameCount ? (int) gopMode_ : 0; }
           set {
             gopMode_ = value;
             gopModeCase_ = GopModeOneofCase.GopFrameCount;
+          }
+        }
+        /// <summary>Gets whether the "gop_frame_count" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasGopFrameCount {
+          get { return gopModeCase_ == GopModeOneofCase.GopFrameCount; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "gop_frame_count" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGopFrameCount() {
+          if (HasGopFrameCount) {
+            ClearGopMode();
           }
         }
 
@@ -3615,7 +3629,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           if (FrameRate != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(FrameRate);
           if (BitrateBps != 0) hash ^= BitrateBps.GetHashCode();
           if (AllowOpenGop != false) hash ^= AllowOpenGop.GetHashCode();
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) hash ^= GopFrameCount.GetHashCode();
+          if (HasGopFrameCount) hash ^= GopFrameCount.GetHashCode();
           if (gopModeCase_ == GopModeOneofCase.GopDuration) hash ^= GopDuration.GetHashCode();
           if (VbvSizeBits != 0) hash ^= VbvSizeBits.GetHashCode();
           if (VbvFullnessBits != 0) hash ^= VbvFullnessBits.GetHashCode();
@@ -3664,7 +3678,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             output.WriteRawTag(48);
             output.WriteBool(AllowOpenGop);
           }
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) {
+          if (HasGopFrameCount) {
             output.WriteRawTag(56);
             output.WriteInt32(GopFrameCount);
           }
@@ -3734,7 +3748,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             output.WriteRawTag(48);
             output.WriteBool(AllowOpenGop);
           }
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) {
+          if (HasGopFrameCount) {
             output.WriteRawTag(56);
             output.WriteInt32(GopFrameCount);
           }
@@ -3799,7 +3813,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           if (AllowOpenGop != false) {
             size += 1 + 1;
           }
-          if (gopModeCase_ == GopModeOneofCase.GopFrameCount) {
+          if (HasGopFrameCount) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(GopFrameCount);
           }
           if (gopModeCase_ == GopModeOneofCase.GopDuration) {

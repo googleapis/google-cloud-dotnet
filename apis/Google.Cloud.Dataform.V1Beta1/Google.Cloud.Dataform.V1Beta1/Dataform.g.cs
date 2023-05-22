@@ -8139,10 +8139,24 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string File {
-          get { return entryCase_ == EntryOneofCase.File ? (string) entry_ : ""; }
+          get { return HasFile ? (string) entry_ : ""; }
           set {
             entry_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             entryCase_ = EntryOneofCase.File;
+          }
+        }
+        /// <summary>Gets whether the "file" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasFile {
+          get { return entryCase_ == EntryOneofCase.File; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "file" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearFile() {
+          if (HasFile) {
+            ClearEntry();
           }
         }
 
@@ -8154,10 +8168,24 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Directory {
-          get { return entryCase_ == EntryOneofCase.Directory ? (string) entry_ : ""; }
+          get { return HasDirectory ? (string) entry_ : ""; }
           set {
             entry_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             entryCase_ = EntryOneofCase.Directory;
+          }
+        }
+        /// <summary>Gets whether the "directory" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDirectory {
+          get { return entryCase_ == EntryOneofCase.Directory; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "directory" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDirectory() {
+          if (HasDirectory) {
+            ClearEntry();
           }
         }
 
@@ -8207,8 +8235,8 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (entryCase_ == EntryOneofCase.File) hash ^= File.GetHashCode();
-          if (entryCase_ == EntryOneofCase.Directory) hash ^= Directory.GetHashCode();
+          if (HasFile) hash ^= File.GetHashCode();
+          if (HasDirectory) hash ^= Directory.GetHashCode();
           hash ^= (int) entryCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -8228,11 +8256,11 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (entryCase_ == EntryOneofCase.File) {
+          if (HasFile) {
             output.WriteRawTag(10);
             output.WriteString(File);
           }
-          if (entryCase_ == EntryOneofCase.Directory) {
+          if (HasDirectory) {
             output.WriteRawTag(18);
             output.WriteString(Directory);
           }
@@ -8246,11 +8274,11 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (entryCase_ == EntryOneofCase.File) {
+          if (HasFile) {
             output.WriteRawTag(10);
             output.WriteString(File);
           }
-          if (entryCase_ == EntryOneofCase.Directory) {
+          if (HasDirectory) {
             output.WriteRawTag(18);
             output.WriteString(Directory);
           }
@@ -8264,10 +8292,10 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (entryCase_ == EntryOneofCase.File) {
+          if (HasFile) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(File);
           }
-          if (entryCase_ == EntryOneofCase.Directory) {
+          if (HasDirectory) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Directory);
           }
           if (_unknownFields != null) {
@@ -11370,10 +11398,24 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GitCommitish {
-      get { return sourceCase_ == SourceOneofCase.GitCommitish ? (string) source_ : ""; }
+      get { return HasGitCommitish ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.GitCommitish;
+      }
+    }
+    /// <summary>Gets whether the "git_commitish" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGitCommitish {
+      get { return sourceCase_ == SourceOneofCase.GitCommitish; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "git_commitish" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGitCommitish() {
+      if (HasGitCommitish) {
+        ClearSource();
       }
     }
 
@@ -11386,10 +11428,24 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Workspace {
-      get { return sourceCase_ == SourceOneofCase.Workspace ? (string) source_ : ""; }
+      get { return HasWorkspace ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Workspace;
+      }
+    }
+    /// <summary>Gets whether the "workspace" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasWorkspace {
+      get { return sourceCase_ == SourceOneofCase.Workspace; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "workspace" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearWorkspace() {
+      if (HasWorkspace) {
+        ClearSource();
       }
     }
 
@@ -11489,8 +11545,8 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.GitCommitish) hash ^= GitCommitish.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.Workspace) hash ^= Workspace.GetHashCode();
+      if (HasGitCommitish) hash ^= GitCommitish.GetHashCode();
+      if (HasWorkspace) hash ^= Workspace.GetHashCode();
       if (codeCompilationConfig_ != null) hash ^= CodeCompilationConfig.GetHashCode();
       if (DataformCoreVersion.Length != 0) hash ^= DataformCoreVersion.GetHashCode();
       hash ^= compilationErrors_.GetHashCode();
@@ -11517,11 +11573,11 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (sourceCase_ == SourceOneofCase.GitCommitish) {
+      if (HasGitCommitish) {
         output.WriteRawTag(18);
         output.WriteString(GitCommitish);
       }
-      if (sourceCase_ == SourceOneofCase.Workspace) {
+      if (HasWorkspace) {
         output.WriteRawTag(26);
         output.WriteString(Workspace);
       }
@@ -11548,11 +11604,11 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (sourceCase_ == SourceOneofCase.GitCommitish) {
+      if (HasGitCommitish) {
         output.WriteRawTag(18);
         output.WriteString(GitCommitish);
       }
-      if (sourceCase_ == SourceOneofCase.Workspace) {
+      if (HasWorkspace) {
         output.WriteRawTag(26);
         output.WriteString(Workspace);
       }
@@ -11578,10 +11634,10 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (sourceCase_ == SourceOneofCase.GitCommitish) {
+      if (HasGitCommitish) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GitCommitish);
       }
-      if (sourceCase_ == SourceOneofCase.Workspace) {
+      if (HasWorkspace) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Workspace);
       }
       if (codeCompilationConfig_ != null) {
@@ -12077,7 +12133,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
           if (other.AssertionSchema.Length != 0) {
             AssertionSchema = other.AssertionSchema;
           }
-          vars_.Add(other.vars_);
+          vars_.MergeFrom(other.vars_);
           if (other.DatabaseSuffix.Length != 0) {
             DatabaseSuffix = other.DatabaseSuffix;
           }
@@ -13961,7 +14017,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         Description = other.Description;
       }
       columns_.Add(other.columns_);
-      bigqueryLabels_.Add(other.bigqueryLabels_);
+      bigqueryLabels_.MergeFrom(other.bigqueryLabels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -15344,7 +15400,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
           if (other.RequirePartitionFilter != false) {
             RequirePartitionFilter = other.RequirePartitionFilter;
           }
-          additionalOptions_.Add(other.additionalOptions_);
+          additionalOptions_.MergeFrom(other.additionalOptions_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

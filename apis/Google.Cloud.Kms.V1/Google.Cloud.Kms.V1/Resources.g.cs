@@ -1008,7 +1008,7 @@ namespace Google.Cloud.Kms.V1 {
         }
         VersionTemplate.MergeFrom(other.VersionTemplate);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.ImportOnly != false) {
         ImportOnly = other.ImportOnly;
       }

@@ -589,11 +589,11 @@ namespace Google.Cloud.Eventarc.V1 {
         }
         Transport.MergeFrom(other.Transport);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Channel.Length != 0) {
         Channel = other.Channel;
       }
-      conditions_.Add(other.conditions_);
+      conditions_.MergeFrom(other.conditions_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -1356,10 +1356,24 @@ namespace Google.Cloud.Eventarc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CloudFunction {
-      get { return descriptorCase_ == DescriptorOneofCase.CloudFunction ? (string) descriptor_ : ""; }
+      get { return HasCloudFunction ? (string) descriptor_ : ""; }
       set {
         descriptor_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         descriptorCase_ = DescriptorOneofCase.CloudFunction;
+      }
+    }
+    /// <summary>Gets whether the "cloud_function" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCloudFunction {
+      get { return descriptorCase_ == DescriptorOneofCase.CloudFunction; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "cloud_function" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCloudFunction() {
+      if (HasCloudFunction) {
+        ClearDescriptor();
       }
     }
 
@@ -1390,10 +1404,24 @@ namespace Google.Cloud.Eventarc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Workflow {
-      get { return descriptorCase_ == DescriptorOneofCase.Workflow ? (string) descriptor_ : ""; }
+      get { return HasWorkflow ? (string) descriptor_ : ""; }
       set {
         descriptor_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         descriptorCase_ = DescriptorOneofCase.Workflow;
+      }
+    }
+    /// <summary>Gets whether the "workflow" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasWorkflow {
+      get { return descriptorCase_ == DescriptorOneofCase.Workflow; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "workflow" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearWorkflow() {
+      if (HasWorkflow) {
+        ClearDescriptor();
       }
     }
 
@@ -1448,9 +1476,9 @@ namespace Google.Cloud.Eventarc.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (descriptorCase_ == DescriptorOneofCase.CloudRun) hash ^= CloudRun.GetHashCode();
-      if (descriptorCase_ == DescriptorOneofCase.CloudFunction) hash ^= CloudFunction.GetHashCode();
+      if (HasCloudFunction) hash ^= CloudFunction.GetHashCode();
       if (descriptorCase_ == DescriptorOneofCase.Gke) hash ^= Gke.GetHashCode();
-      if (descriptorCase_ == DescriptorOneofCase.Workflow) hash ^= Workflow.GetHashCode();
+      if (HasWorkflow) hash ^= Workflow.GetHashCode();
       hash ^= (int) descriptorCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1474,7 +1502,7 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(CloudRun);
       }
-      if (descriptorCase_ == DescriptorOneofCase.CloudFunction) {
+      if (HasCloudFunction) {
         output.WriteRawTag(18);
         output.WriteString(CloudFunction);
       }
@@ -1482,7 +1510,7 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Gke);
       }
-      if (descriptorCase_ == DescriptorOneofCase.Workflow) {
+      if (HasWorkflow) {
         output.WriteRawTag(34);
         output.WriteString(Workflow);
       }
@@ -1500,7 +1528,7 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(CloudRun);
       }
-      if (descriptorCase_ == DescriptorOneofCase.CloudFunction) {
+      if (HasCloudFunction) {
         output.WriteRawTag(18);
         output.WriteString(CloudFunction);
       }
@@ -1508,7 +1536,7 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Gke);
       }
-      if (descriptorCase_ == DescriptorOneofCase.Workflow) {
+      if (HasWorkflow) {
         output.WriteRawTag(34);
         output.WriteString(Workflow);
       }
@@ -1525,13 +1553,13 @@ namespace Google.Cloud.Eventarc.V1 {
       if (descriptorCase_ == DescriptorOneofCase.CloudRun) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudRun);
       }
-      if (descriptorCase_ == DescriptorOneofCase.CloudFunction) {
+      if (HasCloudFunction) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CloudFunction);
       }
       if (descriptorCase_ == DescriptorOneofCase.Gke) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Gke);
       }
-      if (descriptorCase_ == DescriptorOneofCase.Workflow) {
+      if (HasWorkflow) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Workflow);
       }
       if (_unknownFields != null) {

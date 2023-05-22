@@ -1228,10 +1228,24 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long RowCountExact {
-      get { return rowCountCase_ == RowCountOneofCase.RowCountExact ? (long) rowCount_ : 0L; }
+      get { return HasRowCountExact ? (long) rowCount_ : 0L; }
       set {
         rowCount_ = value;
         rowCountCase_ = RowCountOneofCase.RowCountExact;
+      }
+    }
+    /// <summary>Gets whether the "row_count_exact" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRowCountExact {
+      get { return rowCountCase_ == RowCountOneofCase.RowCountExact; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "row_count_exact" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRowCountExact() {
+      if (HasRowCountExact) {
+        ClearRowCount();
       }
     }
 
@@ -1244,10 +1258,24 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long RowCountLowerBound {
-      get { return rowCountCase_ == RowCountOneofCase.RowCountLowerBound ? (long) rowCount_ : 0L; }
+      get { return HasRowCountLowerBound ? (long) rowCount_ : 0L; }
       set {
         rowCount_ = value;
         rowCountCase_ = RowCountOneofCase.RowCountLowerBound;
+      }
+    }
+    /// <summary>Gets whether the "row_count_lower_bound" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRowCountLowerBound {
+      get { return rowCountCase_ == RowCountOneofCase.RowCountLowerBound; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "row_count_lower_bound" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRowCountLowerBound() {
+      if (HasRowCountLowerBound) {
+        ClearRowCount();
       }
     }
 
@@ -1301,8 +1329,8 @@ namespace Google.Cloud.Spanner.V1 {
       int hash = 1;
       if (queryPlan_ != null) hash ^= QueryPlan.GetHashCode();
       if (queryStats_ != null) hash ^= QueryStats.GetHashCode();
-      if (rowCountCase_ == RowCountOneofCase.RowCountExact) hash ^= RowCountExact.GetHashCode();
-      if (rowCountCase_ == RowCountOneofCase.RowCountLowerBound) hash ^= RowCountLowerBound.GetHashCode();
+      if (HasRowCountExact) hash ^= RowCountExact.GetHashCode();
+      if (HasRowCountLowerBound) hash ^= RowCountLowerBound.GetHashCode();
       hash ^= (int) rowCountCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1330,11 +1358,11 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(QueryStats);
       }
-      if (rowCountCase_ == RowCountOneofCase.RowCountExact) {
+      if (HasRowCountExact) {
         output.WriteRawTag(24);
         output.WriteInt64(RowCountExact);
       }
-      if (rowCountCase_ == RowCountOneofCase.RowCountLowerBound) {
+      if (HasRowCountLowerBound) {
         output.WriteRawTag(32);
         output.WriteInt64(RowCountLowerBound);
       }
@@ -1356,11 +1384,11 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(QueryStats);
       }
-      if (rowCountCase_ == RowCountOneofCase.RowCountExact) {
+      if (HasRowCountExact) {
         output.WriteRawTag(24);
         output.WriteInt64(RowCountExact);
       }
-      if (rowCountCase_ == RowCountOneofCase.RowCountLowerBound) {
+      if (HasRowCountLowerBound) {
         output.WriteRawTag(32);
         output.WriteInt64(RowCountLowerBound);
       }
@@ -1380,10 +1408,10 @@ namespace Google.Cloud.Spanner.V1 {
       if (queryStats_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryStats);
       }
-      if (rowCountCase_ == RowCountOneofCase.RowCountExact) {
+      if (HasRowCountExact) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(RowCountExact);
       }
-      if (rowCountCase_ == RowCountOneofCase.RowCountLowerBound) {
+      if (HasRowCountLowerBound) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(RowCountLowerBound);
       }
       if (_unknownFields != null) {

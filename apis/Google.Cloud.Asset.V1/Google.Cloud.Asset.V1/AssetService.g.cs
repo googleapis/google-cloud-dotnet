@@ -4915,10 +4915,24 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uri {
-      get { return objectUriCase_ == ObjectUriOneofCase.Uri ? (string) objectUri_ : ""; }
+      get { return HasUri ? (string) objectUri_ : ""; }
       set {
         objectUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         objectUriCase_ = ObjectUriOneofCase.Uri;
+      }
+    }
+    /// <summary>Gets whether the "uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUri {
+      get { return objectUriCase_ == ObjectUriOneofCase.Uri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUri() {
+      if (HasUri) {
+        ClearObjectUri();
       }
     }
 
@@ -4938,10 +4952,24 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UriPrefix {
-      get { return objectUriCase_ == ObjectUriOneofCase.UriPrefix ? (string) objectUri_ : ""; }
+      get { return HasUriPrefix ? (string) objectUri_ : ""; }
       set {
         objectUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         objectUriCase_ = ObjectUriOneofCase.UriPrefix;
+      }
+    }
+    /// <summary>Gets whether the "uri_prefix" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUriPrefix {
+      get { return objectUriCase_ == ObjectUriOneofCase.UriPrefix; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uri_prefix" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUriPrefix() {
+      if (HasUriPrefix) {
+        ClearObjectUri();
       }
     }
 
@@ -4991,8 +5019,8 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (objectUriCase_ == ObjectUriOneofCase.Uri) hash ^= Uri.GetHashCode();
-      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) hash ^= UriPrefix.GetHashCode();
+      if (HasUri) hash ^= Uri.GetHashCode();
+      if (HasUriPrefix) hash ^= UriPrefix.GetHashCode();
       hash ^= (int) objectUriCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5012,11 +5040,11 @@ namespace Google.Cloud.Asset.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (objectUriCase_ == ObjectUriOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
-      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) {
+      if (HasUriPrefix) {
         output.WriteRawTag(18);
         output.WriteString(UriPrefix);
       }
@@ -5030,11 +5058,11 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (objectUriCase_ == ObjectUriOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
-      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) {
+      if (HasUriPrefix) {
         output.WriteRawTag(18);
         output.WriteString(UriPrefix);
       }
@@ -5048,10 +5076,10 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (objectUriCase_ == ObjectUriOneofCase.Uri) {
+      if (HasUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
-      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) {
+      if (HasUriPrefix) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UriPrefix);
       }
       if (_unknownFields != null) {
@@ -12594,7 +12622,7 @@ namespace Google.Cloud.Asset.V1 {
       if (other.LastUpdater.Length != 0) {
         LastUpdater = other.LastUpdater;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.content_ != null) {
         if (content_ == null) {
           Content = new global::Google.Cloud.Asset.V1.SavedQuery.Types.QueryContent();
@@ -16323,10 +16351,24 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Statement {
-      get { return queryCase_ == QueryOneofCase.Statement ? (string) query_ : ""; }
+      get { return HasStatement ? (string) query_ : ""; }
       set {
         query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queryCase_ = QueryOneofCase.Statement;
+      }
+    }
+    /// <summary>Gets whether the "statement" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatement {
+      get { return queryCase_ == QueryOneofCase.Statement; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "statement" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatement() {
+      if (HasStatement) {
+        ClearQuery();
       }
     }
 
@@ -16339,10 +16381,24 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string JobReference {
-      get { return queryCase_ == QueryOneofCase.JobReference ? (string) query_ : ""; }
+      get { return HasJobReference ? (string) query_ : ""; }
       set {
         query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queryCase_ = QueryOneofCase.JobReference;
+      }
+    }
+    /// <summary>Gets whether the "job_reference" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasJobReference {
+      get { return queryCase_ == QueryOneofCase.JobReference; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "job_reference" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearJobReference() {
+      if (HasJobReference) {
+        ClearQuery();
       }
     }
 
@@ -16543,8 +16599,8 @@ namespace Google.Cloud.Asset.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (queryCase_ == QueryOneofCase.Statement) hash ^= Statement.GetHashCode();
-      if (queryCase_ == QueryOneofCase.JobReference) hash ^= JobReference.GetHashCode();
+      if (HasStatement) hash ^= Statement.GetHashCode();
+      if (HasJobReference) hash ^= JobReference.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (timeout_ != null) hash ^= Timeout.GetHashCode();
@@ -16575,11 +16631,11 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (queryCase_ == QueryOneofCase.Statement) {
+      if (HasStatement) {
         output.WriteRawTag(18);
         output.WriteString(Statement);
       }
-      if (queryCase_ == QueryOneofCase.JobReference) {
+      if (HasJobReference) {
         output.WriteRawTag(26);
         output.WriteString(JobReference);
       }
@@ -16621,11 +16677,11 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (queryCase_ == QueryOneofCase.Statement) {
+      if (HasStatement) {
         output.WriteRawTag(18);
         output.WriteString(Statement);
       }
-      if (queryCase_ == QueryOneofCase.JobReference) {
+      if (HasJobReference) {
         output.WriteRawTag(26);
         output.WriteString(JobReference);
       }
@@ -16666,10 +16722,10 @@ namespace Google.Cloud.Asset.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (queryCase_ == QueryOneofCase.Statement) {
+      if (HasStatement) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Statement);
       }
-      if (queryCase_ == QueryOneofCase.JobReference) {
+      if (HasJobReference) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(JobReference);
       }
       if (PageSize != 0) {
@@ -19545,10 +19601,24 @@ namespace Google.Cloud.Asset.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool AllowAll {
-          get { return kindCase_ == KindOneofCase.AllowAll ? (bool) kind_ : false; }
+          get { return HasAllowAll ? (bool) kind_ : false; }
           set {
             kind_ = value;
             kindCase_ = KindOneofCase.AllowAll;
+          }
+        }
+        /// <summary>Gets whether the "allow_all" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAllowAll {
+          get { return kindCase_ == KindOneofCase.AllowAll; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "allow_all" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAllowAll() {
+          if (HasAllowAll) {
+            ClearKind();
           }
         }
 
@@ -19561,10 +19631,24 @@ namespace Google.Cloud.Asset.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool DenyAll {
-          get { return kindCase_ == KindOneofCase.DenyAll ? (bool) kind_ : false; }
+          get { return HasDenyAll ? (bool) kind_ : false; }
           set {
             kind_ = value;
             kindCase_ = KindOneofCase.DenyAll;
+          }
+        }
+        /// <summary>Gets whether the "deny_all" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDenyAll {
+          get { return kindCase_ == KindOneofCase.DenyAll; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "deny_all" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDenyAll() {
+          if (HasDenyAll) {
+            ClearKind();
           }
         }
 
@@ -19578,10 +19662,24 @@ namespace Google.Cloud.Asset.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Enforce {
-          get { return kindCase_ == KindOneofCase.Enforce ? (bool) kind_ : false; }
+          get { return HasEnforce ? (bool) kind_ : false; }
           set {
             kind_ = value;
             kindCase_ = KindOneofCase.Enforce;
+          }
+        }
+        /// <summary>Gets whether the "enforce" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasEnforce {
+          get { return kindCase_ == KindOneofCase.Enforce; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "enforce" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearEnforce() {
+          if (HasEnforce) {
+            ClearKind();
           }
         }
 
@@ -19652,9 +19750,9 @@ namespace Google.Cloud.Asset.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (kindCase_ == KindOneofCase.Values) hash ^= Values.GetHashCode();
-          if (kindCase_ == KindOneofCase.AllowAll) hash ^= AllowAll.GetHashCode();
-          if (kindCase_ == KindOneofCase.DenyAll) hash ^= DenyAll.GetHashCode();
-          if (kindCase_ == KindOneofCase.Enforce) hash ^= Enforce.GetHashCode();
+          if (HasAllowAll) hash ^= AllowAll.GetHashCode();
+          if (HasDenyAll) hash ^= DenyAll.GetHashCode();
+          if (HasEnforce) hash ^= Enforce.GetHashCode();
           if (condition_ != null) hash ^= Condition.GetHashCode();
           hash ^= (int) kindCase_;
           if (_unknownFields != null) {
@@ -19679,15 +19777,15 @@ namespace Google.Cloud.Asset.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(Values);
           }
-          if (kindCase_ == KindOneofCase.AllowAll) {
+          if (HasAllowAll) {
             output.WriteRawTag(32);
             output.WriteBool(AllowAll);
           }
-          if (kindCase_ == KindOneofCase.DenyAll) {
+          if (HasDenyAll) {
             output.WriteRawTag(40);
             output.WriteBool(DenyAll);
           }
-          if (kindCase_ == KindOneofCase.Enforce) {
+          if (HasEnforce) {
             output.WriteRawTag(48);
             output.WriteBool(Enforce);
           }
@@ -19709,15 +19807,15 @@ namespace Google.Cloud.Asset.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(Values);
           }
-          if (kindCase_ == KindOneofCase.AllowAll) {
+          if (HasAllowAll) {
             output.WriteRawTag(32);
             output.WriteBool(AllowAll);
           }
-          if (kindCase_ == KindOneofCase.DenyAll) {
+          if (HasDenyAll) {
             output.WriteRawTag(40);
             output.WriteBool(DenyAll);
           }
-          if (kindCase_ == KindOneofCase.Enforce) {
+          if (HasEnforce) {
             output.WriteRawTag(48);
             output.WriteBool(Enforce);
           }
@@ -19738,13 +19836,13 @@ namespace Google.Cloud.Asset.V1 {
           if (kindCase_ == KindOneofCase.Values) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Values);
           }
-          if (kindCase_ == KindOneofCase.AllowAll) {
+          if (HasAllowAll) {
             size += 1 + 1;
           }
-          if (kindCase_ == KindOneofCase.DenyAll) {
+          if (HasDenyAll) {
             size += 1 + 1;
           }
-          if (kindCase_ == KindOneofCase.Enforce) {
+          if (HasEnforce) {
             size += 1 + 1;
           }
           if (condition_ != null) {
@@ -21883,6 +21981,8 @@ namespace Google.Cloud.Asset.V1 {
 
     /// <summary>Field number for the "page_size" field.</summary>
     public const int PageSizeFieldNumber = 4;
+    private readonly static int PageSizeDefaultValue = 0;
+
     private int pageSize_;
     /// <summary>
     /// The maximum number of items to return per page. If unspecified,
@@ -21892,7 +21992,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
-      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return PageSizeDefaultValue; } }
       set {
         _hasBits0 |= 1;
         pageSize_ = value;
@@ -22797,6 +22897,8 @@ namespace Google.Cloud.Asset.V1 {
 
     /// <summary>Field number for the "page_size" field.</summary>
     public const int PageSizeFieldNumber = 4;
+    private readonly static int PageSizeDefaultValue = 0;
+
     private int pageSize_;
     /// <summary>
     /// The maximum number of items to return per page. If unspecified,
@@ -22806,7 +22908,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
-      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return PageSizeDefaultValue; } }
       set {
         _hasBits0 |= 1;
         pageSize_ = value;
@@ -23800,6 +23902,8 @@ namespace Google.Cloud.Asset.V1 {
 
     /// <summary>Field number for the "page_size" field.</summary>
     public const int PageSizeFieldNumber = 4;
+    private readonly static int PageSizeDefaultValue = 0;
+
     private int pageSize_;
     /// <summary>
     /// The maximum number of items to return per page. If unspecified,
@@ -23809,7 +23913,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
-      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return PageSizeDefaultValue; } }
       set {
         _hasBits0 |= 1;
         pageSize_ = value;

@@ -474,7 +474,7 @@ namespace Google.Cloud.Dataproc.V1 {
         }
         SecondaryWorkerConfig.MergeFrom(other.SecondaryWorkerConfig);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.AlgorithmCase) {
         case AlgorithmOneofCase.BasicAlgorithm:
           if (BasicAlgorithm == null) {

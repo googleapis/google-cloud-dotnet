@@ -6399,7 +6399,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (other == null) {
         return;
       }
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       if (other.Count != 0L) {
         Count = other.Count;
       }

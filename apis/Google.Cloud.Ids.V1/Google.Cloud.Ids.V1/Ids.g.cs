@@ -549,7 +549,7 @@ namespace Google.Cloud.Ids.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Network.Length != 0) {
         Network = other.Network;
       }

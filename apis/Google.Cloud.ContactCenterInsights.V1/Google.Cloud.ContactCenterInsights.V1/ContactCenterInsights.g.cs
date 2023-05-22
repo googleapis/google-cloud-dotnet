@@ -1145,10 +1145,10 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       if (other.ConversationCount != 0) {
         ConversationCount = other.ConversationCount;
       }
-      smartHighlighterMatches_.Add(other.smartHighlighterMatches_);
-      customHighlighterMatches_.Add(other.customHighlighterMatches_);
-      issueMatches_.Add(other.issueMatches_);
-      issueMatchesStats_.Add(other.issueMatchesStats_);
+      smartHighlighterMatches_.MergeFrom(other.smartHighlighterMatches_);
+      customHighlighterMatches_.MergeFrom(other.customHighlighterMatches_);
+      issueMatches_.MergeFrom(other.issueMatches_);
+      issueMatchesStats_.MergeFrom(other.issueMatchesStats_);
       if (other.conversationCountTimeSeries_ != null) {
         if (conversationCountTimeSeries_ == null) {
           ConversationCountTimeSeries = new global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse.Types.TimeSeries();

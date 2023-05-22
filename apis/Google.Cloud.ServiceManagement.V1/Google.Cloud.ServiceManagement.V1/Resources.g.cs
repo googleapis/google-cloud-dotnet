@@ -2865,7 +2865,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
           if (other == null) {
             return;
           }
-          percentages_.Add(other.percentages_);
+          percentages_.MergeFrom(other.percentages_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

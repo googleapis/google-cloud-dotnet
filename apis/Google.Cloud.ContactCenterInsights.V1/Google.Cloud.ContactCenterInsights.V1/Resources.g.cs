@@ -1210,7 +1210,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       if (other.AgentId.Length != 0) {
         AgentId = other.AgentId;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.transcript_ != null) {
         if (transcript_ == null) {
           Transcript = new global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Transcript();
@@ -1242,7 +1242,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         LatestSummary.MergeFrom(other.LatestSummary);
       }
       runtimeAnnotations_.Add(other.runtimeAnnotations_);
-      dialogflowIntents_.Add(other.dialogflowIntents_);
+      dialogflowIntents_.MergeFrom(other.dialogflowIntents_);
       if (other.ObfuscatedUserId.Length != 0) {
         ObfuscatedUserId = other.ObfuscatedUserId;
       }
@@ -4787,10 +4787,10 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             return;
           }
           annotations_.Add(other.annotations_);
-          entities_.Add(other.entities_);
+          entities_.MergeFrom(other.entities_);
           sentiments_.Add(other.sentiments_);
-          intents_.Add(other.intents_);
-          phraseMatchers_.Add(other.phraseMatchers_);
+          intents_.MergeFrom(other.intents_);
+          phraseMatchers_.MergeFrom(other.phraseMatchers_);
           if (other.issueModelResult_ != null) {
             if (issueModelResult_ == null) {
               IssueModelResult = new global::Google.Cloud.ContactCenterInsights.V1.IssueModelResult();
@@ -6470,10 +6470,24 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int WordIndex {
-      get { return detailedBoundaryCase_ == DetailedBoundaryOneofCase.WordIndex ? (int) detailedBoundary_ : 0; }
+      get { return HasWordIndex ? (int) detailedBoundary_ : 0; }
       set {
         detailedBoundary_ = value;
         detailedBoundaryCase_ = DetailedBoundaryOneofCase.WordIndex;
+      }
+    }
+    /// <summary>Gets whether the "word_index" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasWordIndex {
+      get { return detailedBoundaryCase_ == DetailedBoundaryOneofCase.WordIndex; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "word_index" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearWordIndex() {
+      if (HasWordIndex) {
+        ClearDetailedBoundary();
       }
     }
 
@@ -6538,7 +6552,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (detailedBoundaryCase_ == DetailedBoundaryOneofCase.WordIndex) hash ^= WordIndex.GetHashCode();
+      if (HasWordIndex) hash ^= WordIndex.GetHashCode();
       if (TranscriptIndex != 0) hash ^= TranscriptIndex.GetHashCode();
       hash ^= (int) detailedBoundaryCase_;
       if (_unknownFields != null) {
@@ -6563,7 +6577,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         output.WriteRawTag(8);
         output.WriteInt32(TranscriptIndex);
       }
-      if (detailedBoundaryCase_ == DetailedBoundaryOneofCase.WordIndex) {
+      if (HasWordIndex) {
         output.WriteRawTag(24);
         output.WriteInt32(WordIndex);
       }
@@ -6581,7 +6595,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         output.WriteRawTag(8);
         output.WriteInt32(TranscriptIndex);
       }
-      if (detailedBoundaryCase_ == DetailedBoundaryOneofCase.WordIndex) {
+      if (HasWordIndex) {
         output.WriteRawTag(24);
         output.WriteInt32(WordIndex);
       }
@@ -6595,7 +6609,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (detailedBoundaryCase_ == DetailedBoundaryOneofCase.WordIndex) {
+      if (HasWordIndex) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(WordIndex);
       }
       if (TranscriptIndex != 0) {
@@ -6946,7 +6960,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       if (other.Type != global::Google.Cloud.ContactCenterInsights.V1.Entity.Types.Type.Unspecified) {
         Type = other.Type;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.Salience != 0F) {
         Salience = other.Salience;
       }
@@ -10626,7 +10640,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       if (other.UnclassifiedConversationsCount != 0L) {
         UnclassifiedConversationsCount = other.UnclassifiedConversationsCount;
       }
-      issueStats_.Add(other.issueStats_);
+      issueStats_.MergeFrom(other.issueStats_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -12978,7 +12992,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
         ConversationTtl.MergeFrom(other.ConversationTtl);
       }
-      pubsubNotificationSettings_.Add(other.pubsubNotificationSettings_);
+      pubsubNotificationSettings_.MergeFrom(other.pubsubNotificationSettings_);
       if (other.analysisConfig_ != null) {
         if (analysisConfig_ == null) {
           AnalysisConfig = new global::Google.Cloud.ContactCenterInsights.V1.Settings.Types.AnalysisConfig();
@@ -15018,7 +15032,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       if (other.ConfidenceScore != 0F) {
         ConfidenceScore = other.ConfidenceScore;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.QueryRecord.Length != 0) {
         QueryRecord = other.QueryRecord;
       }
@@ -15409,7 +15423,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       if (other.Question.Length != 0) {
         Question = other.Question;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.QueryRecord.Length != 0) {
         QueryRecord = other.QueryRecord;
       }
@@ -15737,7 +15751,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       if (other.ConfidenceScore != 0D) {
         ConfidenceScore = other.ConfidenceScore;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.QueryRecord.Length != 0) {
         QueryRecord = other.QueryRecord;
       }
@@ -16046,7 +16060,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       if (other.ConfidenceScore != 0D) {
         ConfidenceScore = other.ConfidenceScore;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.QueryRecord.Length != 0) {
         QueryRecord = other.QueryRecord;
       }
@@ -16640,11 +16654,11 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       if (other.Text.Length != 0) {
         Text = other.Text;
       }
-      textSections_.Add(other.textSections_);
+      textSections_.MergeFrom(other.textSections_);
       if (other.Confidence != 0F) {
         Confidence = other.Confidence;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.AnswerRecord.Length != 0) {
         AnswerRecord = other.AnswerRecord;
       }
@@ -16803,10 +16817,24 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DialogflowParticipantName {
-      get { return participantCase_ == ParticipantOneofCase.DialogflowParticipantName ? (string) participant_ : ""; }
+      get { return HasDialogflowParticipantName ? (string) participant_ : ""; }
       set {
         participant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         participantCase_ = ParticipantOneofCase.DialogflowParticipantName;
+      }
+    }
+    /// <summary>Gets whether the "dialogflow_participant_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDialogflowParticipantName {
+      get { return participantCase_ == ParticipantOneofCase.DialogflowParticipantName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "dialogflow_participant_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDialogflowParticipantName() {
+      if (HasDialogflowParticipantName) {
+        ClearParticipant();
       }
     }
 
@@ -16818,10 +16846,24 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UserId {
-      get { return participantCase_ == ParticipantOneofCase.UserId ? (string) participant_ : ""; }
+      get { return HasUserId ? (string) participant_ : ""; }
       set {
         participant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         participantCase_ = ParticipantOneofCase.UserId;
+      }
+    }
+    /// <summary>Gets whether the "user_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUserId {
+      get { return participantCase_ == ParticipantOneofCase.UserId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "user_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUserId() {
+      if (HasUserId) {
+        ClearParticipant();
       }
     }
 
@@ -16922,8 +16964,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (participantCase_ == ParticipantOneofCase.DialogflowParticipantName) hash ^= DialogflowParticipantName.GetHashCode();
-      if (participantCase_ == ParticipantOneofCase.UserId) hash ^= UserId.GetHashCode();
+      if (HasDialogflowParticipantName) hash ^= DialogflowParticipantName.GetHashCode();
+      if (HasUserId) hash ^= UserId.GetHashCode();
       if (DialogflowParticipant.Length != 0) hash ^= DialogflowParticipant.GetHashCode();
       if (ObfuscatedExternalUserId.Length != 0) hash ^= ObfuscatedExternalUserId.GetHashCode();
       if (Role != global::Google.Cloud.ContactCenterInsights.V1.ConversationParticipant.Types.Role.Unspecified) hash ^= Role.GetHashCode();
@@ -16958,11 +17000,11 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         output.WriteRawTag(26);
         output.WriteString(ObfuscatedExternalUserId);
       }
-      if (participantCase_ == ParticipantOneofCase.DialogflowParticipantName) {
+      if (HasDialogflowParticipantName) {
         output.WriteRawTag(42);
         output.WriteString(DialogflowParticipantName);
       }
-      if (participantCase_ == ParticipantOneofCase.UserId) {
+      if (HasUserId) {
         output.WriteRawTag(50);
         output.WriteString(UserId);
       }
@@ -16988,11 +17030,11 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         output.WriteRawTag(26);
         output.WriteString(ObfuscatedExternalUserId);
       }
-      if (participantCase_ == ParticipantOneofCase.DialogflowParticipantName) {
+      if (HasDialogflowParticipantName) {
         output.WriteRawTag(42);
         output.WriteString(DialogflowParticipantName);
       }
-      if (participantCase_ == ParticipantOneofCase.UserId) {
+      if (HasUserId) {
         output.WriteRawTag(50);
         output.WriteString(UserId);
       }
@@ -17006,10 +17048,10 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (participantCase_ == ParticipantOneofCase.DialogflowParticipantName) {
+      if (HasDialogflowParticipantName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DialogflowParticipantName);
       }
-      if (participantCase_ == ParticipantOneofCase.UserId) {
+      if (HasUserId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
       }
       if (DialogflowParticipant.Length != 0) {
@@ -18196,10 +18238,24 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string ConversationProfile {
-          get { return modelSourceCase_ == ModelSourceOneofCase.ConversationProfile ? (string) modelSource_ : ""; }
+          get { return HasConversationProfile ? (string) modelSource_ : ""; }
           set {
             modelSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             modelSourceCase_ = ModelSourceOneofCase.ConversationProfile;
+          }
+        }
+        /// <summary>Gets whether the "conversation_profile" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasConversationProfile {
+          get { return modelSourceCase_ == ModelSourceOneofCase.ConversationProfile; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "conversation_profile" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearConversationProfile() {
+          if (HasConversationProfile) {
+            ClearModelSource();
           }
         }
 
@@ -18211,10 +18267,24 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.ContactCenterInsights.V1.AnnotatorSelector.Types.SummarizationConfig.Types.SummarizationModel SummarizationModel {
-          get { return modelSourceCase_ == ModelSourceOneofCase.SummarizationModel ? (global::Google.Cloud.ContactCenterInsights.V1.AnnotatorSelector.Types.SummarizationConfig.Types.SummarizationModel) modelSource_ : global::Google.Cloud.ContactCenterInsights.V1.AnnotatorSelector.Types.SummarizationConfig.Types.SummarizationModel.Unspecified; }
+          get { return HasSummarizationModel ? (global::Google.Cloud.ContactCenterInsights.V1.AnnotatorSelector.Types.SummarizationConfig.Types.SummarizationModel) modelSource_ : global::Google.Cloud.ContactCenterInsights.V1.AnnotatorSelector.Types.SummarizationConfig.Types.SummarizationModel.Unspecified; }
           set {
             modelSource_ = value;
             modelSourceCase_ = ModelSourceOneofCase.SummarizationModel;
+          }
+        }
+        /// <summary>Gets whether the "summarization_model" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSummarizationModel {
+          get { return modelSourceCase_ == ModelSourceOneofCase.SummarizationModel; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "summarization_model" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSummarizationModel() {
+          if (HasSummarizationModel) {
+            ClearModelSource();
           }
         }
 
@@ -18264,8 +18334,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (modelSourceCase_ == ModelSourceOneofCase.ConversationProfile) hash ^= ConversationProfile.GetHashCode();
-          if (modelSourceCase_ == ModelSourceOneofCase.SummarizationModel) hash ^= SummarizationModel.GetHashCode();
+          if (HasConversationProfile) hash ^= ConversationProfile.GetHashCode();
+          if (HasSummarizationModel) hash ^= SummarizationModel.GetHashCode();
           hash ^= (int) modelSourceCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -18285,11 +18355,11 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (modelSourceCase_ == ModelSourceOneofCase.ConversationProfile) {
+          if (HasConversationProfile) {
             output.WriteRawTag(10);
             output.WriteString(ConversationProfile);
           }
-          if (modelSourceCase_ == ModelSourceOneofCase.SummarizationModel) {
+          if (HasSummarizationModel) {
             output.WriteRawTag(16);
             output.WriteEnum((int) SummarizationModel);
           }
@@ -18303,11 +18373,11 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (modelSourceCase_ == ModelSourceOneofCase.ConversationProfile) {
+          if (HasConversationProfile) {
             output.WriteRawTag(10);
             output.WriteString(ConversationProfile);
           }
-          if (modelSourceCase_ == ModelSourceOneofCase.SummarizationModel) {
+          if (HasSummarizationModel) {
             output.WriteRawTag(16);
             output.WriteEnum((int) SummarizationModel);
           }
@@ -18321,10 +18391,10 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (modelSourceCase_ == ModelSourceOneofCase.ConversationProfile) {
+          if (HasConversationProfile) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(ConversationProfile);
           }
-          if (modelSourceCase_ == ModelSourceOneofCase.SummarizationModel) {
+          if (HasSummarizationModel) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SummarizationModel);
           }
           if (_unknownFields != null) {

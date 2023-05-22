@@ -1683,7 +1683,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1 {
           Description = other.Description;
         }
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Location.Length != 0) {
         Location = other.Location;
       }

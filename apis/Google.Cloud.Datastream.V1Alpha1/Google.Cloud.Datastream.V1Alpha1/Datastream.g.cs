@@ -406,10 +406,24 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ConnectionProfileName {
-      get { return targetCase_ == TargetOneofCase.ConnectionProfileName ? (string) target_ : ""; }
+      get { return HasConnectionProfileName ? (string) target_ : ""; }
       set {
         target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         targetCase_ = TargetOneofCase.ConnectionProfileName;
+      }
+    }
+    /// <summary>Gets whether the "connection_profile_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConnectionProfileName {
+      get { return targetCase_ == TargetOneofCase.ConnectionProfileName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "connection_profile_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConnectionProfileName() {
+      if (HasConnectionProfileName) {
+        ClearTarget();
       }
     }
 
@@ -422,10 +436,24 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Recursive {
-      get { return depthCase_ == DepthOneofCase.Recursive ? (bool) depth_ : false; }
+      get { return HasRecursive ? (bool) depth_ : false; }
       set {
         depth_ = value;
         depthCase_ = DepthOneofCase.Recursive;
+      }
+    }
+    /// <summary>Gets whether the "recursive" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRecursive {
+      get { return depthCase_ == DepthOneofCase.Recursive; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "recursive" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRecursive() {
+      if (HasRecursive) {
+        ClearDepth();
       }
     }
 
@@ -437,10 +465,24 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int RecursionDepth {
-      get { return depthCase_ == DepthOneofCase.RecursionDepth ? (int) depth_ : 0; }
+      get { return HasRecursionDepth ? (int) depth_ : 0; }
       set {
         depth_ = value;
         depthCase_ = DepthOneofCase.RecursionDepth;
+      }
+    }
+    /// <summary>Gets whether the "recursion_depth" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRecursionDepth {
+      get { return depthCase_ == DepthOneofCase.RecursionDepth; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "recursion_depth" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRecursionDepth() {
+      if (HasRecursionDepth) {
+        ClearDepth();
       }
     }
 
@@ -571,9 +613,9 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (targetCase_ == TargetOneofCase.ConnectionProfile) hash ^= ConnectionProfile.GetHashCode();
-      if (targetCase_ == TargetOneofCase.ConnectionProfileName) hash ^= ConnectionProfileName.GetHashCode();
-      if (depthCase_ == DepthOneofCase.Recursive) hash ^= Recursive.GetHashCode();
-      if (depthCase_ == DepthOneofCase.RecursionDepth) hash ^= RecursionDepth.GetHashCode();
+      if (HasConnectionProfileName) hash ^= ConnectionProfileName.GetHashCode();
+      if (HasRecursive) hash ^= Recursive.GetHashCode();
+      if (HasRecursionDepth) hash ^= RecursionDepth.GetHashCode();
       if (dataObjectCase_ == DataObjectOneofCase.OracleRdbms) hash ^= OracleRdbms.GetHashCode();
       if (dataObjectCase_ == DataObjectOneofCase.MysqlRdbms) hash ^= MysqlRdbms.GetHashCode();
       hash ^= (int) targetCase_;
@@ -601,11 +643,11 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (depthCase_ == DepthOneofCase.Recursive) {
+      if (HasRecursive) {
         output.WriteRawTag(24);
         output.WriteBool(Recursive);
       }
-      if (depthCase_ == DepthOneofCase.RecursionDepth) {
+      if (HasRecursionDepth) {
         output.WriteRawTag(32);
         output.WriteInt32(RecursionDepth);
       }
@@ -621,7 +663,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         output.WriteRawTag(194, 12);
         output.WriteMessage(ConnectionProfile);
       }
-      if (targetCase_ == TargetOneofCase.ConnectionProfileName) {
+      if (HasConnectionProfileName) {
         output.WriteRawTag(202, 12);
         output.WriteString(ConnectionProfileName);
       }
@@ -639,11 +681,11 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (depthCase_ == DepthOneofCase.Recursive) {
+      if (HasRecursive) {
         output.WriteRawTag(24);
         output.WriteBool(Recursive);
       }
-      if (depthCase_ == DepthOneofCase.RecursionDepth) {
+      if (HasRecursionDepth) {
         output.WriteRawTag(32);
         output.WriteInt32(RecursionDepth);
       }
@@ -659,7 +701,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         output.WriteRawTag(194, 12);
         output.WriteMessage(ConnectionProfile);
       }
-      if (targetCase_ == TargetOneofCase.ConnectionProfileName) {
+      if (HasConnectionProfileName) {
         output.WriteRawTag(202, 12);
         output.WriteString(ConnectionProfileName);
       }
@@ -679,13 +721,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       if (targetCase_ == TargetOneofCase.ConnectionProfile) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ConnectionProfile);
       }
-      if (targetCase_ == TargetOneofCase.ConnectionProfileName) {
+      if (HasConnectionProfileName) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ConnectionProfileName);
       }
-      if (depthCase_ == DepthOneofCase.Recursive) {
+      if (HasRecursive) {
         size += 1 + 1;
       }
-      if (depthCase_ == DepthOneofCase.RecursionDepth) {
+      if (HasRecursionDepth) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RecursionDepth);
       }
       if (dataObjectCase_ == DataObjectOneofCase.OracleRdbms) {

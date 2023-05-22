@@ -515,10 +515,24 @@ namespace Google.Apps.Script.Type.Gmail {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OpenLink {
-      get { return actionTypeCase_ == ActionTypeOneofCase.OpenLink ? (string) actionType_ : ""; }
+      get { return HasOpenLink ? (string) actionType_ : ""; }
       set {
         actionType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         actionTypeCase_ = ActionTypeOneofCase.OpenLink;
+      }
+    }
+    /// <summary>Gets whether the "open_link" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOpenLink {
+      get { return actionTypeCase_ == ActionTypeOneofCase.OpenLink; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "open_link" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOpenLink() {
+      if (HasOpenLink) {
+        ClearActionType();
       }
     }
 
@@ -532,10 +546,24 @@ namespace Google.Apps.Script.Type.Gmail {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RunFunction {
-      get { return actionTypeCase_ == ActionTypeOneofCase.RunFunction ? (string) actionType_ : ""; }
+      get { return HasRunFunction ? (string) actionType_ : ""; }
       set {
         actionType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         actionTypeCase_ = ActionTypeOneofCase.RunFunction;
+      }
+    }
+    /// <summary>Gets whether the "run_function" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRunFunction {
+      get { return actionTypeCase_ == ActionTypeOneofCase.RunFunction; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "run_function" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRunFunction() {
+      if (HasRunFunction) {
+        ClearActionType();
       }
     }
 
@@ -587,8 +615,8 @@ namespace Google.Apps.Script.Type.Gmail {
     public override int GetHashCode() {
       int hash = 1;
       if (Text.Length != 0) hash ^= Text.GetHashCode();
-      if (actionTypeCase_ == ActionTypeOneofCase.OpenLink) hash ^= OpenLink.GetHashCode();
-      if (actionTypeCase_ == ActionTypeOneofCase.RunFunction) hash ^= RunFunction.GetHashCode();
+      if (HasOpenLink) hash ^= OpenLink.GetHashCode();
+      if (HasRunFunction) hash ^= RunFunction.GetHashCode();
       hash ^= (int) actionTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -612,11 +640,11 @@ namespace Google.Apps.Script.Type.Gmail {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
-      if (actionTypeCase_ == ActionTypeOneofCase.OpenLink) {
+      if (HasOpenLink) {
         output.WriteRawTag(18);
         output.WriteString(OpenLink);
       }
-      if (actionTypeCase_ == ActionTypeOneofCase.RunFunction) {
+      if (HasRunFunction) {
         output.WriteRawTag(26);
         output.WriteString(RunFunction);
       }
@@ -634,11 +662,11 @@ namespace Google.Apps.Script.Type.Gmail {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
-      if (actionTypeCase_ == ActionTypeOneofCase.OpenLink) {
+      if (HasOpenLink) {
         output.WriteRawTag(18);
         output.WriteString(OpenLink);
       }
-      if (actionTypeCase_ == ActionTypeOneofCase.RunFunction) {
+      if (HasRunFunction) {
         output.WriteRawTag(26);
         output.WriteString(RunFunction);
       }
@@ -655,10 +683,10 @@ namespace Google.Apps.Script.Type.Gmail {
       if (Text.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
-      if (actionTypeCase_ == ActionTypeOneofCase.OpenLink) {
+      if (HasOpenLink) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OpenLink);
       }
-      if (actionTypeCase_ == ActionTypeOneofCase.RunFunction) {
+      if (HasRunFunction) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RunFunction);
       }
       if (_unknownFields != null) {

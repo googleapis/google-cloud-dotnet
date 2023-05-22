@@ -971,7 +971,7 @@ namespace Google.Cloud.Translate.V3 {
         }
         GlossaryConfig.MergeFrom(other.GlossaryConfig);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1743,10 +1743,24 @@ namespace Google.Cloud.Translate.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Content {
-      get { return sourceCase_ == SourceOneofCase.Content ? (string) source_ : ""; }
+      get { return HasContent ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Content;
+      }
+    }
+    /// <summary>Gets whether the "content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContent {
+      get { return sourceCase_ == SourceOneofCase.Content; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContent() {
+      if (HasContent) {
+        ClearSource();
       }
     }
 
@@ -1838,7 +1852,7 @@ namespace Google.Cloud.Translate.V3 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (Model.Length != 0) hash ^= Model.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.Content) hash ^= Content.GetHashCode();
+      if (HasContent) hash ^= Content.GetHashCode();
       if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= (int) sourceCase_;
@@ -1860,7 +1874,7 @@ namespace Google.Cloud.Translate.V3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(10);
         output.WriteString(Content);
       }
@@ -1887,7 +1901,7 @@ namespace Google.Cloud.Translate.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(10);
         output.WriteString(Content);
       }
@@ -1920,7 +1934,7 @@ namespace Google.Cloud.Translate.V3 {
       if (Model.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
       }
       if (MimeType.Length != 0) {
@@ -1948,7 +1962,7 @@ namespace Google.Cloud.Translate.V3 {
       if (other.MimeType.Length != 0) {
         MimeType = other.MimeType;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.SourceCase) {
         case SourceOneofCase.Content:
           Content = other.Content;
@@ -4322,10 +4336,24 @@ namespace Google.Cloud.Translate.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Content {
-      get { return sourceCase_ == SourceOneofCase.Content ? (pb::ByteString) source_ : pb::ByteString.Empty; }
+      get { return HasContent ? (pb::ByteString) source_ : pb::ByteString.Empty; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Content;
+      }
+    }
+    /// <summary>Gets whether the "content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContent {
+      get { return sourceCase_ == SourceOneofCase.Content; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContent() {
+      if (HasContent) {
+        ClearSource();
       }
     }
 
@@ -4416,7 +4444,7 @@ namespace Google.Cloud.Translate.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (sourceCase_ == SourceOneofCase.Content) hash ^= Content.GetHashCode();
+      if (HasContent) hash ^= Content.GetHashCode();
       if (sourceCase_ == SourceOneofCase.GcsSource) hash ^= GcsSource.GetHashCode();
       if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
       hash ^= (int) sourceCase_;
@@ -4438,7 +4466,7 @@ namespace Google.Cloud.Translate.V3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(10);
         output.WriteBytes(Content);
       }
@@ -4460,7 +4488,7 @@ namespace Google.Cloud.Translate.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(10);
         output.WriteBytes(Content);
       }
@@ -4482,7 +4510,7 @@ namespace Google.Cloud.Translate.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Content);
       }
       if (sourceCase_ == SourceOneofCase.GcsSource) {
@@ -5422,7 +5450,7 @@ namespace Google.Cloud.Translate.V3 {
         }
         GlossaryConfig.MergeFrom(other.GlossaryConfig);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.CustomizedAttribution.Length != 0) {
         CustomizedAttribution = other.CustomizedAttribution;
       }
@@ -6543,7 +6571,7 @@ namespace Google.Cloud.Translate.V3 {
         SourceLanguageCode = other.SourceLanguageCode;
       }
       targetLanguageCodes_.Add(other.targetLanguageCodes_);
-      models_.Add(other.models_);
+      models_.MergeFrom(other.models_);
       inputConfigs_.Add(other.inputConfigs_);
       if (other.outputConfig_ != null) {
         if (outputConfig_ == null) {
@@ -6551,8 +6579,8 @@ namespace Google.Cloud.Translate.V3 {
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
-      glossaries_.Add(other.glossaries_);
-      labels_.Add(other.labels_);
+      glossaries_.MergeFrom(other.glossaries_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -11229,9 +11257,9 @@ namespace Google.Cloud.Translate.V3 {
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
-      models_.Add(other.models_);
-      glossaries_.Add(other.glossaries_);
-      formatConversions_.Add(other.formatConversions_);
+      models_.MergeFrom(other.models_);
+      glossaries_.MergeFrom(other.glossaries_);
+      formatConversions_.MergeFrom(other.formatConversions_);
       if (other.CustomizedAttribution.Length != 0) {
         CustomizedAttribution = other.CustomizedAttribution;
       }

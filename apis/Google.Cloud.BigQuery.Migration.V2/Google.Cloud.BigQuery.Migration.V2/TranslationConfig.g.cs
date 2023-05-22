@@ -199,10 +199,24 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsSourcePath {
-      get { return sourceLocationCase_ == SourceLocationOneofCase.GcsSourcePath ? (string) sourceLocation_ : ""; }
+      get { return HasGcsSourcePath ? (string) sourceLocation_ : ""; }
       set {
         sourceLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceLocationCase_ = SourceLocationOneofCase.GcsSourcePath;
+      }
+    }
+    /// <summary>Gets whether the "gcs_source_path" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsSourcePath {
+      get { return sourceLocationCase_ == SourceLocationOneofCase.GcsSourcePath; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_source_path" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsSourcePath() {
+      if (HasGcsSourcePath) {
+        ClearSourceLocation();
       }
     }
 
@@ -214,10 +228,24 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsTargetPath {
-      get { return targetLocationCase_ == TargetLocationOneofCase.GcsTargetPath ? (string) targetLocation_ : ""; }
+      get { return HasGcsTargetPath ? (string) targetLocation_ : ""; }
       set {
         targetLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         targetLocationCase_ = TargetLocationOneofCase.GcsTargetPath;
+      }
+    }
+    /// <summary>Gets whether the "gcs_target_path" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsTargetPath {
+      get { return targetLocationCase_ == TargetLocationOneofCase.GcsTargetPath; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_target_path" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsTargetPath() {
+      if (HasGcsTargetPath) {
+        ClearTargetLocation();
       }
     }
 
@@ -388,8 +416,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (sourceLocationCase_ == SourceLocationOneofCase.GcsSourcePath) hash ^= GcsSourcePath.GetHashCode();
-      if (targetLocationCase_ == TargetLocationOneofCase.GcsTargetPath) hash ^= GcsTargetPath.GetHashCode();
+      if (HasGcsSourcePath) hash ^= GcsSourcePath.GetHashCode();
+      if (HasGcsTargetPath) hash ^= GcsTargetPath.GetHashCode();
       if (outputNameMappingCase_ == OutputNameMappingOneofCase.NameMappingList) hash ^= NameMappingList.GetHashCode();
       if (sourceDialect_ != null) hash ^= SourceDialect.GetHashCode();
       if (targetDialect_ != null) hash ^= TargetDialect.GetHashCode();
@@ -416,11 +444,11 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (sourceLocationCase_ == SourceLocationOneofCase.GcsSourcePath) {
+      if (HasGcsSourcePath) {
         output.WriteRawTag(10);
         output.WriteString(GcsSourcePath);
       }
-      if (targetLocationCase_ == TargetLocationOneofCase.GcsTargetPath) {
+      if (HasGcsTargetPath) {
         output.WriteRawTag(18);
         output.WriteString(GcsTargetPath);
       }
@@ -454,11 +482,11 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (sourceLocationCase_ == SourceLocationOneofCase.GcsSourcePath) {
+      if (HasGcsSourcePath) {
         output.WriteRawTag(10);
         output.WriteString(GcsSourcePath);
       }
-      if (targetLocationCase_ == TargetLocationOneofCase.GcsTargetPath) {
+      if (HasGcsTargetPath) {
         output.WriteRawTag(18);
         output.WriteString(GcsTargetPath);
       }
@@ -492,10 +520,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (sourceLocationCase_ == SourceLocationOneofCase.GcsSourcePath) {
+      if (HasGcsSourcePath) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsSourcePath);
       }
-      if (targetLocationCase_ == TargetLocationOneofCase.GcsTargetPath) {
+      if (HasGcsTargetPath) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsTargetPath);
       }
       if (outputNameMappingCase_ == OutputNameMappingOneofCase.NameMappingList) {

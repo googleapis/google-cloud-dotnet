@@ -863,10 +863,24 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GooglePublicKeyPem {
-      get { return verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem ? (string) verificationInfo_ : ""; }
+      get { return HasGooglePublicKeyPem ? (string) verificationInfo_ : ""; }
       set {
         verificationInfo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         verificationInfoCase_ = VerificationInfoOneofCase.GooglePublicKeyPem;
+      }
+    }
+    /// <summary>Gets whether the "google_public_key_pem" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGooglePublicKeyPem {
+      get { return verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "google_public_key_pem" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGooglePublicKeyPem() {
+      if (HasGooglePublicKeyPem) {
+        ClearVerificationInfo();
       }
     }
 
@@ -878,10 +892,24 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerKmsKeyVersion {
-      get { return verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion ? (string) verificationInfo_ : ""; }
+      get { return HasCustomerKmsKeyVersion ? (string) verificationInfo_ : ""; }
       set {
         verificationInfo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         verificationInfoCase_ = VerificationInfoOneofCase.CustomerKmsKeyVersion;
+      }
+    }
+    /// <summary>Gets whether the "customer_kms_key_version" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomerKmsKeyVersion {
+      get { return verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "customer_kms_key_version" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomerKmsKeyVersion() {
+      if (HasCustomerKmsKeyVersion) {
+        ClearVerificationInfo();
       }
     }
 
@@ -933,8 +961,8 @@ namespace Google.Cloud.AccessApproval.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Signature.Length != 0) hash ^= Signature.GetHashCode();
-      if (verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem) hash ^= GooglePublicKeyPem.GetHashCode();
-      if (verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion) hash ^= CustomerKmsKeyVersion.GetHashCode();
+      if (HasGooglePublicKeyPem) hash ^= GooglePublicKeyPem.GetHashCode();
+      if (HasCustomerKmsKeyVersion) hash ^= CustomerKmsKeyVersion.GetHashCode();
       hash ^= (int) verificationInfoCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -958,11 +986,11 @@ namespace Google.Cloud.AccessApproval.V1 {
         output.WriteRawTag(10);
         output.WriteBytes(Signature);
       }
-      if (verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem) {
+      if (HasGooglePublicKeyPem) {
         output.WriteRawTag(18);
         output.WriteString(GooglePublicKeyPem);
       }
-      if (verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion) {
+      if (HasCustomerKmsKeyVersion) {
         output.WriteRawTag(26);
         output.WriteString(CustomerKmsKeyVersion);
       }
@@ -980,11 +1008,11 @@ namespace Google.Cloud.AccessApproval.V1 {
         output.WriteRawTag(10);
         output.WriteBytes(Signature);
       }
-      if (verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem) {
+      if (HasGooglePublicKeyPem) {
         output.WriteRawTag(18);
         output.WriteString(GooglePublicKeyPem);
       }
-      if (verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion) {
+      if (HasCustomerKmsKeyVersion) {
         output.WriteRawTag(26);
         output.WriteString(CustomerKmsKeyVersion);
       }
@@ -1001,10 +1029,10 @@ namespace Google.Cloud.AccessApproval.V1 {
       if (Signature.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Signature);
       }
-      if (verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem) {
+      if (HasGooglePublicKeyPem) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GooglePublicKeyPem);
       }
-      if (verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion) {
+      if (HasCustomerKmsKeyVersion) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerKmsKeyVersion);
       }
       if (_unknownFields != null) {

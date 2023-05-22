@@ -976,7 +976,7 @@ namespace Google.Cloud.CloudDms.V1 {
         }
         Destination.MergeFrom(other.Destination);
       }
-      globalSettings_.Add(other.globalSettings_);
+      globalSettings_.MergeFrom(other.globalSettings_);
       if (other.HasUncommittedChanges != false) {
         HasUncommittedChanges = other.HasUncommittedChanges;
       }

@@ -519,10 +519,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
         GlobalPolicyEvaluationMode = other.GlobalPolicyEvaluationMode;
       }
       admissionWhitelistPatterns_.Add(other.admissionWhitelistPatterns_);
-      clusterAdmissionRules_.Add(other.clusterAdmissionRules_);
-      kubernetesNamespaceAdmissionRules_.Add(other.kubernetesNamespaceAdmissionRules_);
-      kubernetesServiceAccountAdmissionRules_.Add(other.kubernetesServiceAccountAdmissionRules_);
-      istioServiceIdentityAdmissionRules_.Add(other.istioServiceIdentityAdmissionRules_);
+      clusterAdmissionRules_.MergeFrom(other.clusterAdmissionRules_);
+      kubernetesNamespaceAdmissionRules_.MergeFrom(other.kubernetesNamespaceAdmissionRules_);
+      kubernetesServiceAccountAdmissionRules_.MergeFrom(other.kubernetesServiceAccountAdmissionRules_);
+      istioServiceIdentityAdmissionRules_.MergeFrom(other.istioServiceIdentityAdmissionRules_);
       if (other.defaultAdmissionRule_ != null) {
         if (defaultAdmissionRule_ == null) {
           DefaultAdmissionRule = new global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule();
@@ -2302,10 +2302,24 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AsciiArmoredPgpPublicKey {
-      get { return publicKeyCase_ == PublicKeyOneofCase.AsciiArmoredPgpPublicKey ? (string) publicKey_ : ""; }
+      get { return HasAsciiArmoredPgpPublicKey ? (string) publicKey_ : ""; }
       set {
         publicKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         publicKeyCase_ = PublicKeyOneofCase.AsciiArmoredPgpPublicKey;
+      }
+    }
+    /// <summary>Gets whether the "ascii_armored_pgp_public_key" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAsciiArmoredPgpPublicKey {
+      get { return publicKeyCase_ == PublicKeyOneofCase.AsciiArmoredPgpPublicKey; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "ascii_armored_pgp_public_key" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAsciiArmoredPgpPublicKey() {
+      if (HasAsciiArmoredPgpPublicKey) {
+        ClearPublicKey();
       }
     }
 
@@ -2379,7 +2393,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       int hash = 1;
       if (Comment.Length != 0) hash ^= Comment.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (publicKeyCase_ == PublicKeyOneofCase.AsciiArmoredPgpPublicKey) hash ^= AsciiArmoredPgpPublicKey.GetHashCode();
+      if (HasAsciiArmoredPgpPublicKey) hash ^= AsciiArmoredPgpPublicKey.GetHashCode();
       if (publicKeyCase_ == PublicKeyOneofCase.PkixPublicKey) hash ^= PkixPublicKey.GetHashCode();
       hash ^= (int) publicKeyCase_;
       if (_unknownFields != null) {
@@ -2408,7 +2422,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
         output.WriteRawTag(18);
         output.WriteString(Id);
       }
-      if (publicKeyCase_ == PublicKeyOneofCase.AsciiArmoredPgpPublicKey) {
+      if (HasAsciiArmoredPgpPublicKey) {
         output.WriteRawTag(26);
         output.WriteString(AsciiArmoredPgpPublicKey);
       }
@@ -2434,7 +2448,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
         output.WriteRawTag(18);
         output.WriteString(Id);
       }
-      if (publicKeyCase_ == PublicKeyOneofCase.AsciiArmoredPgpPublicKey) {
+      if (HasAsciiArmoredPgpPublicKey) {
         output.WriteRawTag(26);
         output.WriteString(AsciiArmoredPgpPublicKey);
       }
@@ -2458,7 +2472,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (publicKeyCase_ == PublicKeyOneofCase.AsciiArmoredPgpPublicKey) {
+      if (HasAsciiArmoredPgpPublicKey) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AsciiArmoredPgpPublicKey);
       }
       if (publicKeyCase_ == PublicKeyOneofCase.PkixPublicKey) {

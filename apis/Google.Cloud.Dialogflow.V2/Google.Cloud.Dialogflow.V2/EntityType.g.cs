@@ -2547,10 +2547,24 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EntityTypeBatchUri {
-      get { return entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchUri ? (string) entityTypeBatch_ : ""; }
+      get { return HasEntityTypeBatchUri ? (string) entityTypeBatch_ : ""; }
       set {
         entityTypeBatch_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         entityTypeBatchCase_ = EntityTypeBatchOneofCase.EntityTypeBatchUri;
+      }
+    }
+    /// <summary>Gets whether the "entity_type_batch_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEntityTypeBatchUri {
+      get { return entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "entity_type_batch_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEntityTypeBatchUri() {
+      if (HasEntityTypeBatchUri) {
+        ClearEntityTypeBatch();
       }
     }
 
@@ -2653,7 +2667,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchUri) hash ^= EntityTypeBatchUri.GetHashCode();
+      if (HasEntityTypeBatchUri) hash ^= EntityTypeBatchUri.GetHashCode();
       if (entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchInline) hash ^= EntityTypeBatchInline.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
@@ -2680,7 +2694,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchUri) {
+      if (HasEntityTypeBatchUri) {
         output.WriteRawTag(18);
         output.WriteString(EntityTypeBatchUri);
       }
@@ -2710,7 +2724,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchUri) {
+      if (HasEntityTypeBatchUri) {
         output.WriteRawTag(18);
         output.WriteString(EntityTypeBatchUri);
       }
@@ -2739,7 +2753,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchUri) {
+      if (HasEntityTypeBatchUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EntityTypeBatchUri);
       }
       if (entityTypeBatchCase_ == EntityTypeBatchOneofCase.EntityTypeBatchInline) {

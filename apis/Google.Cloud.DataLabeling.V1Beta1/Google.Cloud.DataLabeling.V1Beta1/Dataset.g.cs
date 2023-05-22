@@ -3833,7 +3833,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       if (other == null) {
         return;
       }
-      exampleCount_.Add(other.exampleCount_);
+      exampleCount_.MergeFrom(other.exampleCount_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

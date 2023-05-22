@@ -437,10 +437,24 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float OptimizationObjectiveRecallValue {
-      get { return additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue ? (float) additionalOptimizationObjectiveConfig_ : 0F; }
+      get { return HasOptimizationObjectiveRecallValue ? (float) additionalOptimizationObjectiveConfig_ : 0F; }
       set {
         additionalOptimizationObjectiveConfig_ = value;
         additionalOptimizationObjectiveConfigCase_ = AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue;
+      }
+    }
+    /// <summary>Gets whether the "optimization_objective_recall_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOptimizationObjectiveRecallValue {
+      get { return additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "optimization_objective_recall_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOptimizationObjectiveRecallValue() {
+      if (HasOptimizationObjectiveRecallValue) {
+        ClearAdditionalOptimizationObjectiveConfig();
       }
     }
 
@@ -453,10 +467,24 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float OptimizationObjectivePrecisionValue {
-      get { return additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue ? (float) additionalOptimizationObjectiveConfig_ : 0F; }
+      get { return HasOptimizationObjectivePrecisionValue ? (float) additionalOptimizationObjectiveConfig_ : 0F; }
       set {
         additionalOptimizationObjectiveConfig_ = value;
         additionalOptimizationObjectiveConfigCase_ = AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue;
+      }
+    }
+    /// <summary>Gets whether the "optimization_objective_precision_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOptimizationObjectivePrecisionValue {
+      get { return additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "optimization_objective_precision_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOptimizationObjectivePrecisionValue() {
+      if (HasOptimizationObjectivePrecisionValue) {
+        ClearAdditionalOptimizationObjectiveConfig();
       }
     }
 
@@ -701,8 +729,8 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(OptimizationObjectiveRecallValue);
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(OptimizationObjectivePrecisionValue);
+      if (HasOptimizationObjectiveRecallValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(OptimizationObjectiveRecallValue);
+      if (HasOptimizationObjectivePrecisionValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(OptimizationObjectivePrecisionValue);
       if (PredictionType.Length != 0) hash ^= PredictionType.GetHashCode();
       if (TargetColumn.Length != 0) hash ^= TargetColumn.GetHashCode();
       hash ^= transformations_.GetHashCode();
@@ -744,11 +772,11 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         output.WriteRawTag(34);
         output.WriteString(OptimizationObjective);
       }
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue) {
+      if (HasOptimizationObjectiveRecallValue) {
         output.WriteRawTag(45);
         output.WriteFloat(OptimizationObjectiveRecallValue);
       }
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue) {
+      if (HasOptimizationObjectivePrecisionValue) {
         output.WriteRawTag(53);
         output.WriteFloat(OptimizationObjectivePrecisionValue);
       }
@@ -792,11 +820,11 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         output.WriteRawTag(34);
         output.WriteString(OptimizationObjective);
       }
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue) {
+      if (HasOptimizationObjectiveRecallValue) {
         output.WriteRawTag(45);
         output.WriteFloat(OptimizationObjectiveRecallValue);
       }
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue) {
+      if (HasOptimizationObjectivePrecisionValue) {
         output.WriteRawTag(53);
         output.WriteFloat(OptimizationObjectivePrecisionValue);
       }
@@ -827,10 +855,10 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue) {
+      if (HasOptimizationObjectiveRecallValue) {
         size += 1 + 4;
       }
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue) {
+      if (HasOptimizationObjectivePrecisionValue) {
         size += 1 + 4;
       }
       if (PredictionType.Length != 0) {

@@ -309,10 +309,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Exists {
-      get { return conditionTypeCase_ == ConditionTypeOneofCase.Exists ? (bool) conditionType_ : false; }
+      get { return HasExists ? (bool) conditionType_ : false; }
       set {
         conditionType_ = value;
         conditionTypeCase_ = ConditionTypeOneofCase.Exists;
+      }
+    }
+    /// <summary>Gets whether the "exists" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExists {
+      get { return conditionTypeCase_ == ConditionTypeOneofCase.Exists; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "exists" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExists() {
+      if (HasExists) {
+        ClearConditionType();
       }
     }
 
@@ -378,7 +392,7 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (conditionTypeCase_ == ConditionTypeOneofCase.Exists) hash ^= Exists.GetHashCode();
+      if (HasExists) hash ^= Exists.GetHashCode();
       if (conditionTypeCase_ == ConditionTypeOneofCase.UpdateTime) hash ^= UpdateTime.GetHashCode();
       hash ^= (int) conditionTypeCase_;
       if (_unknownFields != null) {
@@ -399,7 +413,7 @@ namespace Google.Cloud.Firestore.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (conditionTypeCase_ == ConditionTypeOneofCase.Exists) {
+      if (HasExists) {
         output.WriteRawTag(8);
         output.WriteBool(Exists);
       }
@@ -417,7 +431,7 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (conditionTypeCase_ == ConditionTypeOneofCase.Exists) {
+      if (HasExists) {
         output.WriteRawTag(8);
         output.WriteBool(Exists);
       }
@@ -435,7 +449,7 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (conditionTypeCase_ == ConditionTypeOneofCase.Exists) {
+      if (HasExists) {
         size += 1 + 1;
       }
       if (conditionTypeCase_ == ConditionTypeOneofCase.UpdateTime) {

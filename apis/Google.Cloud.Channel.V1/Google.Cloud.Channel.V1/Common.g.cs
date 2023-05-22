@@ -991,10 +991,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Int64Value {
-      get { return kindCase_ == KindOneofCase.Int64Value ? (long) kind_ : 0L; }
+      get { return HasInt64Value ? (long) kind_ : 0L; }
       set {
         kind_ = value;
         kindCase_ = KindOneofCase.Int64Value;
+      }
+    }
+    /// <summary>Gets whether the "int64_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInt64Value {
+      get { return kindCase_ == KindOneofCase.Int64Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "int64_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInt64Value() {
+      if (HasInt64Value) {
+        ClearKind();
       }
     }
 
@@ -1006,10 +1020,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StringValue {
-      get { return kindCase_ == KindOneofCase.StringValue ? (string) kind_ : ""; }
+      get { return HasStringValue ? (string) kind_ : ""; }
       set {
         kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         kindCase_ = KindOneofCase.StringValue;
+      }
+    }
+    /// <summary>Gets whether the "string_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStringValue {
+      get { return kindCase_ == KindOneofCase.StringValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "string_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStringValue() {
+      if (HasStringValue) {
+        ClearKind();
       }
     }
 
@@ -1021,10 +1049,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double DoubleValue {
-      get { return kindCase_ == KindOneofCase.DoubleValue ? (double) kind_ : 0D; }
+      get { return HasDoubleValue ? (double) kind_ : 0D; }
       set {
         kind_ = value;
         kindCase_ = KindOneofCase.DoubleValue;
+      }
+    }
+    /// <summary>Gets whether the "double_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDoubleValue {
+      get { return kindCase_ == KindOneofCase.DoubleValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "double_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDoubleValue() {
+      if (HasDoubleValue) {
+        ClearKind();
       }
     }
 
@@ -1051,10 +1093,24 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BoolValue {
-      get { return kindCase_ == KindOneofCase.BoolValue ? (bool) kind_ : false; }
+      get { return HasBoolValue ? (bool) kind_ : false; }
       set {
         kind_ = value;
         kindCase_ = KindOneofCase.BoolValue;
+      }
+    }
+    /// <summary>Gets whether the "bool_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBoolValue {
+      get { return kindCase_ == KindOneofCase.BoolValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "bool_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBoolValue() {
+      if (HasBoolValue) {
+        ClearKind();
       }
     }
 
@@ -1110,11 +1166,11 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (kindCase_ == KindOneofCase.Int64Value) hash ^= Int64Value.GetHashCode();
-      if (kindCase_ == KindOneofCase.StringValue) hash ^= StringValue.GetHashCode();
-      if (kindCase_ == KindOneofCase.DoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
+      if (HasInt64Value) hash ^= Int64Value.GetHashCode();
+      if (HasStringValue) hash ^= StringValue.GetHashCode();
+      if (HasDoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
       if (kindCase_ == KindOneofCase.ProtoValue) hash ^= ProtoValue.GetHashCode();
-      if (kindCase_ == KindOneofCase.BoolValue) hash ^= BoolValue.GetHashCode();
+      if (HasBoolValue) hash ^= BoolValue.GetHashCode();
       hash ^= (int) kindCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1134,15 +1190,15 @@ namespace Google.Cloud.Channel.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (kindCase_ == KindOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(8);
         output.WriteInt64(Int64Value);
       }
-      if (kindCase_ == KindOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(18);
         output.WriteString(StringValue);
       }
-      if (kindCase_ == KindOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(25);
         output.WriteDouble(DoubleValue);
       }
@@ -1150,7 +1206,7 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ProtoValue);
       }
-      if (kindCase_ == KindOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(40);
         output.WriteBool(BoolValue);
       }
@@ -1164,15 +1220,15 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (kindCase_ == KindOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(8);
         output.WriteInt64(Int64Value);
       }
-      if (kindCase_ == KindOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(18);
         output.WriteString(StringValue);
       }
-      if (kindCase_ == KindOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(25);
         output.WriteDouble(DoubleValue);
       }
@@ -1180,7 +1236,7 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ProtoValue);
       }
-      if (kindCase_ == KindOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(40);
         output.WriteBool(BoolValue);
       }
@@ -1194,19 +1250,19 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (kindCase_ == KindOneofCase.Int64Value) {
+      if (HasInt64Value) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Int64Value);
       }
-      if (kindCase_ == KindOneofCase.StringValue) {
+      if (HasStringValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StringValue);
       }
-      if (kindCase_ == KindOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         size += 1 + 8;
       }
       if (kindCase_ == KindOneofCase.ProtoValue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProtoValue);
       }
-      if (kindCase_ == KindOneofCase.BoolValue) {
+      if (HasBoolValue) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {

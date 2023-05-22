@@ -1170,7 +1170,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       if (other.RolePermissionRelevance != global::Google.Cloud.PolicyTroubleshooter.V1.HeuristicRelevance.Unspecified) {
         RolePermissionRelevance = other.RolePermissionRelevance;
       }
-      memberships_.Add(other.memberships_);
+      memberships_.MergeFrom(other.memberships_);
       if (other.Relevance != global::Google.Cloud.PolicyTroubleshooter.V1.HeuristicRelevance.Unspecified) {
         Relevance = other.Relevance;
       }

@@ -1226,7 +1226,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -3140,7 +3140,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
         Params.MergeFrom(other.Params);
       }
-      paramTypes_.Add(other.paramTypes_);
+      paramTypes_.MergeFrom(other.paramTypes_);
       if (other.ResumeToken.Length != 0) {
         ResumeToken = other.ResumeToken;
       }
@@ -4236,7 +4236,7 @@ namespace Google.Cloud.Spanner.V1 {
             }
             Params.MergeFrom(other.Params);
           }
-          paramTypes_.Add(other.paramTypes_);
+          paramTypes_.MergeFrom(other.paramTypes_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -5149,7 +5149,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
         Params.MergeFrom(other.Params);
       }
-      paramTypes_.Add(other.paramTypes_);
+      paramTypes_.MergeFrom(other.paramTypes_);
       if (other.partitionOptions_ != null) {
         if (partitionOptions_ == null) {
           PartitionOptions = new global::Google.Cloud.Spanner.V1.PartitionOptions();
@@ -7172,10 +7172,24 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString TransactionId {
-      get { return transactionCase_ == TransactionOneofCase.TransactionId ? (pb::ByteString) transaction_ : pb::ByteString.Empty; }
+      get { return HasTransactionId ? (pb::ByteString) transaction_ : pb::ByteString.Empty; }
       set {
         transaction_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         transactionCase_ = TransactionOneofCase.TransactionId;
+      }
+    }
+    /// <summary>Gets whether the "transaction_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTransactionId {
+      get { return transactionCase_ == TransactionOneofCase.TransactionId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "transaction_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTransactionId() {
+      if (HasTransactionId) {
+        ClearTransaction();
       }
     }
 
@@ -7301,7 +7315,7 @@ namespace Google.Cloud.Spanner.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Session.Length != 0) hash ^= Session.GetHashCode();
-      if (transactionCase_ == TransactionOneofCase.TransactionId) hash ^= TransactionId.GetHashCode();
+      if (HasTransactionId) hash ^= TransactionId.GetHashCode();
       if (transactionCase_ == TransactionOneofCase.SingleUseTransaction) hash ^= SingleUseTransaction.GetHashCode();
       hash ^= mutations_.GetHashCode();
       if (ReturnCommitStats != false) hash ^= ReturnCommitStats.GetHashCode();
@@ -7329,7 +7343,7 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(10);
         output.WriteString(Session);
       }
-      if (transactionCase_ == TransactionOneofCase.TransactionId) {
+      if (HasTransactionId) {
         output.WriteRawTag(18);
         output.WriteBytes(TransactionId);
       }
@@ -7360,7 +7374,7 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(10);
         output.WriteString(Session);
       }
-      if (transactionCase_ == TransactionOneofCase.TransactionId) {
+      if (HasTransactionId) {
         output.WriteRawTag(18);
         output.WriteBytes(TransactionId);
       }
@@ -7390,7 +7404,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (Session.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Session);
       }
-      if (transactionCase_ == TransactionOneofCase.TransactionId) {
+      if (HasTransactionId) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(TransactionId);
       }
       if (transactionCase_ == TransactionOneofCase.SingleUseTransaction) {

@@ -754,7 +754,7 @@ namespace Google.Cloud.Dataplex.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
@@ -2279,7 +2279,7 @@ namespace Google.Cloud.Dataplex.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
@@ -2869,10 +2869,24 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Schedule {
-          get { return triggerCase_ == TriggerOneofCase.Schedule ? (string) trigger_ : ""; }
+          get { return HasSchedule ? (string) trigger_ : ""; }
           set {
             trigger_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             triggerCase_ = TriggerOneofCase.Schedule;
+          }
+        }
+        /// <summary>Gets whether the "schedule" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSchedule {
+          get { return triggerCase_ == TriggerOneofCase.Schedule; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "schedule" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSchedule() {
+          if (HasSchedule) {
+            ClearTrigger();
           }
         }
 
@@ -2930,7 +2944,7 @@ namespace Google.Cloud.Dataplex.V1 {
           hash ^= excludePatterns_.GetHashCode();
           if (csvOptions_ != null) hash ^= CsvOptions.GetHashCode();
           if (jsonOptions_ != null) hash ^= JsonOptions.GetHashCode();
-          if (triggerCase_ == TriggerOneofCase.Schedule) hash ^= Schedule.GetHashCode();
+          if (HasSchedule) hash ^= Schedule.GetHashCode();
           hash ^= (int) triggerCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2964,7 +2978,7 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(42);
             output.WriteMessage(JsonOptions);
           }
-          if (triggerCase_ == TriggerOneofCase.Schedule) {
+          if (HasSchedule) {
             output.WriteRawTag(82);
             output.WriteString(Schedule);
           }
@@ -2992,7 +3006,7 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(42);
             output.WriteMessage(JsonOptions);
           }
-          if (triggerCase_ == TriggerOneofCase.Schedule) {
+          if (HasSchedule) {
             output.WriteRawTag(82);
             output.WriteString(Schedule);
           }
@@ -3017,7 +3031,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (jsonOptions_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(JsonOptions);
           }
-          if (triggerCase_ == TriggerOneofCase.Schedule) {
+          if (HasSchedule) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Schedule);
           }
           if (_unknownFields != null) {
@@ -6906,7 +6920,7 @@ namespace Google.Cloud.Dataplex.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
@@ -7599,10 +7613,24 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Schedule {
-          get { return triggerCase_ == TriggerOneofCase.Schedule ? (string) trigger_ : ""; }
+          get { return HasSchedule ? (string) trigger_ : ""; }
           set {
             trigger_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             triggerCase_ = TriggerOneofCase.Schedule;
+          }
+        }
+        /// <summary>Gets whether the "schedule" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSchedule {
+          get { return triggerCase_ == TriggerOneofCase.Schedule; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "schedule" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSchedule() {
+          if (HasSchedule) {
+            ClearTrigger();
           }
         }
 
@@ -7660,7 +7688,7 @@ namespace Google.Cloud.Dataplex.V1 {
           hash ^= excludePatterns_.GetHashCode();
           if (csvOptions_ != null) hash ^= CsvOptions.GetHashCode();
           if (jsonOptions_ != null) hash ^= JsonOptions.GetHashCode();
-          if (triggerCase_ == TriggerOneofCase.Schedule) hash ^= Schedule.GetHashCode();
+          if (HasSchedule) hash ^= Schedule.GetHashCode();
           hash ^= (int) triggerCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -7694,7 +7722,7 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(42);
             output.WriteMessage(JsonOptions);
           }
-          if (triggerCase_ == TriggerOneofCase.Schedule) {
+          if (HasSchedule) {
             output.WriteRawTag(82);
             output.WriteString(Schedule);
           }
@@ -7722,7 +7750,7 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(42);
             output.WriteMessage(JsonOptions);
           }
-          if (triggerCase_ == TriggerOneofCase.Schedule) {
+          if (HasSchedule) {
             output.WriteRawTag(82);
             output.WriteString(Schedule);
           }
@@ -7747,7 +7775,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if (jsonOptions_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(JsonOptions);
           }
-          if (triggerCase_ == TriggerOneofCase.Schedule) {
+          if (HasSchedule) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Schedule);
           }
           if (_unknownFields != null) {

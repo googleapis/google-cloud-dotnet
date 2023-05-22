@@ -1216,7 +1216,7 @@ namespace Google.Cloud.PubSub.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.messageStoragePolicy_ != null) {
         if (messageStoragePolicy_ == null) {
           MessageStoragePolicy = new global::Google.Cloud.PubSub.V1.MessageStoragePolicy();
@@ -1631,7 +1631,7 @@ namespace Google.Cloud.PubSub.V1 {
       if (other.Data.Length != 0) {
         Data = other.Data;
       }
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       if (other.MessageId.Length != 0) {
         MessageId = other.MessageId;
       }
@@ -5405,7 +5405,7 @@ namespace Google.Cloud.PubSub.V1 {
         }
         MessageRetentionDuration.MergeFrom(other.MessageRetentionDuration);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.EnableMessageOrdering != false) {
         EnableMessageOrdering = other.EnableMessageOrdering;
       }
@@ -6684,7 +6684,7 @@ namespace Google.Cloud.PubSub.V1 {
       if (other.PushEndpoint.Length != 0) {
         PushEndpoint = other.PushEndpoint;
       }
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       switch (other.AuthenticationMethodCase) {
         case AuthenticationMethodOneofCase.OidcToken:
           if (OidcToken == null) {
@@ -12834,7 +12834,7 @@ namespace Google.Cloud.PubSub.V1 {
       if (other.Subscription.Length != 0) {
         Subscription = other.Subscription;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -13401,7 +13401,7 @@ namespace Google.Cloud.PubSub.V1 {
         }
         ExpireTime.MergeFrom(other.ExpireTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -14478,10 +14478,24 @@ namespace Google.Cloud.PubSub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Snapshot {
-      get { return targetCase_ == TargetOneofCase.Snapshot ? (string) target_ : ""; }
+      get { return HasSnapshot ? (string) target_ : ""; }
       set {
         target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         targetCase_ = TargetOneofCase.Snapshot;
+      }
+    }
+    /// <summary>Gets whether the "snapshot" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSnapshot {
+      get { return targetCase_ == TargetOneofCase.Snapshot; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "snapshot" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSnapshot() {
+      if (HasSnapshot) {
+        ClearTarget();
       }
     }
 
@@ -14534,7 +14548,7 @@ namespace Google.Cloud.PubSub.V1 {
       int hash = 1;
       if (Subscription.Length != 0) hash ^= Subscription.GetHashCode();
       if (targetCase_ == TargetOneofCase.Time) hash ^= Time.GetHashCode();
-      if (targetCase_ == TargetOneofCase.Snapshot) hash ^= Snapshot.GetHashCode();
+      if (HasSnapshot) hash ^= Snapshot.GetHashCode();
       hash ^= (int) targetCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -14562,7 +14576,7 @@ namespace Google.Cloud.PubSub.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Time);
       }
-      if (targetCase_ == TargetOneofCase.Snapshot) {
+      if (HasSnapshot) {
         output.WriteRawTag(26);
         output.WriteString(Snapshot);
       }
@@ -14584,7 +14598,7 @@ namespace Google.Cloud.PubSub.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Time);
       }
-      if (targetCase_ == TargetOneofCase.Snapshot) {
+      if (HasSnapshot) {
         output.WriteRawTag(26);
         output.WriteString(Snapshot);
       }
@@ -14604,7 +14618,7 @@ namespace Google.Cloud.PubSub.V1 {
       if (targetCase_ == TargetOneofCase.Time) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Time);
       }
-      if (targetCase_ == TargetOneofCase.Snapshot) {
+      if (HasSnapshot) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Snapshot);
       }
       if (_unknownFields != null) {

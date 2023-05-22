@@ -2120,7 +2120,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (other == null) {
         return;
       }
-      synthesizeSpeechConfigs_.Add(other.synthesizeSpeechConfigs_);
+      synthesizeSpeechConfigs_.MergeFrom(other.synthesizeSpeechConfigs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

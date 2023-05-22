@@ -1501,8 +1501,8 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       if (other.Subnet.Length != 0) {
         Subnet = other.Subnet;
       }
-      labels_.Add(other.labels_);
-      metadata_.Add(other.metadata_);
+      labels_.MergeFrom(other.labels_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.NicType != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.NicType.UnspecifiedNicType) {
         NicType = other.NicType;
       }

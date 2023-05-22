@@ -648,10 +648,24 @@ namespace Google.Cloud.ApigeeConnect.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ApigeeConnect.V1.Action Action {
-      get { return kindCase_ == KindOneofCase.Action ? (global::Google.Cloud.ApigeeConnect.V1.Action) kind_ : global::Google.Cloud.ApigeeConnect.V1.Action.Unspecified; }
+      get { return HasAction ? (global::Google.Cloud.ApigeeConnect.V1.Action) kind_ : global::Google.Cloud.ApigeeConnect.V1.Action.Unspecified; }
       set {
         kind_ = value;
         kindCase_ = KindOneofCase.Action;
+      }
+    }
+    /// <summary>Gets whether the "action" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAction {
+      get { return kindCase_ == KindOneofCase.Action; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "action" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAction() {
+      if (HasAction) {
+        ClearKind();
       }
     }
 
@@ -705,7 +719,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
       int hash = 1;
       if (kindCase_ == KindOneofCase.HttpRequest) hash ^= HttpRequest.GetHashCode();
       if (kindCase_ == KindOneofCase.StreamInfo) hash ^= StreamInfo.GetHashCode();
-      if (kindCase_ == KindOneofCase.Action) hash ^= Action.GetHashCode();
+      if (HasAction) hash ^= Action.GetHashCode();
       hash ^= (int) kindCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -733,7 +747,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(StreamInfo);
       }
-      if (kindCase_ == KindOneofCase.Action) {
+      if (HasAction) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Action);
       }
@@ -755,7 +769,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(StreamInfo);
       }
-      if (kindCase_ == KindOneofCase.Action) {
+      if (HasAction) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Action);
       }
@@ -775,7 +789,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
       if (kindCase_ == KindOneofCase.StreamInfo) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StreamInfo);
       }
-      if (kindCase_ == KindOneofCase.Action) {
+      if (HasAction) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Action);
       }
       if (_unknownFields != null) {

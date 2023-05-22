@@ -498,7 +498,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
         EndTime.MergeFrom(other.EndTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       metricValueSets_.Add(other.metricValueSets_);
       logEntries_.Add(other.logEntries_);
       if (other.Importance != global::Google.Cloud.ServiceControl.V1.Operation.Types.Importance.Low) {

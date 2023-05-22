@@ -1375,7 +1375,7 @@ namespace Google.Cloud.Tpu.V1 {
       if (other.Health != global::Google.Cloud.Tpu.V1.Node.Types.Health.Unspecified) {
         Health = other.Health;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.UseServiceNetworking != false) {
         UseServiceNetworking = other.UseServiceNetworking;
       }

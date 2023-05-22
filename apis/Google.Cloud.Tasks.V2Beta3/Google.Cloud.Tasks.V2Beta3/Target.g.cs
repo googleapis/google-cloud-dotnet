@@ -765,7 +765,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (other.HttpMethod != global::Google.Cloud.Tasks.V2Beta3.HttpMethod.Unspecified) {
         HttpMethod = other.HttpMethod;
       }
-      headers_.Add(other.headers_);
+      headers_.MergeFrom(other.headers_);
       if (other.Body.Length != 0) {
         Body = other.Body;
       }
@@ -1511,7 +1511,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (other.RelativeUri.Length != 0) {
         RelativeUri = other.RelativeUri;
       }
-      headers_.Add(other.headers_);
+      headers_.MergeFrom(other.headers_);
       if (other.Body.Length != 0) {
         Body = other.Body;
       }

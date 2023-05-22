@@ -1011,7 +1011,7 @@ namespace Google.Cloud.Spanner.V1 {
           if (other.Description.Length != 0) {
             Description = other.Description;
           }
-          subqueries_.Add(other.subqueries_);
+          subqueries_.MergeFrom(other.subqueries_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

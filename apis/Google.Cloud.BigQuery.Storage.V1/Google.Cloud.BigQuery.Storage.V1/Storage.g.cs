@@ -3086,7 +3086,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (other.TraceId.Length != 0) {
         TraceId = other.TraceId;
       }
-      missingValueInterpretations_.Add(other.missingValueInterpretations_);
+      missingValueInterpretations_.MergeFrom(other.missingValueInterpretations_);
       switch (other.RowsCase) {
         case RowsOneofCase.ProtoRows:
           if (ProtoRows == null) {

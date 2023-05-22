@@ -479,8 +479,8 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         }
         SinkSettings.MergeFrom(other.SinkSettings);
       }
-      componentSettings_.Add(other.componentSettings_);
-      detectorGroupSettings_.Add(other.detectorGroupSettings_);
+      componentSettings_.MergeFrom(other.componentSettings_);
+      detectorGroupSettings_.MergeFrom(other.detectorGroupSettings_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }

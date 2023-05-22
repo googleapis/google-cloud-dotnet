@@ -1657,10 +1657,24 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Source {
-      get { return projectOrWorkloadResourceCase_ == ProjectOrWorkloadResourceOneofCase.Source ? (string) projectOrWorkloadResource_ : ""; }
+      get { return HasSource ? (string) projectOrWorkloadResource_ : ""; }
       set {
         projectOrWorkloadResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         projectOrWorkloadResourceCase_ = ProjectOrWorkloadResourceOneofCase.Source;
+      }
+    }
+    /// <summary>Gets whether the "source" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSource {
+      get { return projectOrWorkloadResourceCase_ == ProjectOrWorkloadResourceOneofCase.Source; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "source" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSource() {
+      if (HasSource) {
+        ClearProjectOrWorkloadResource();
       }
     }
 
@@ -1677,10 +1691,24 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Project {
-      get { return projectOrWorkloadResourceCase_ == ProjectOrWorkloadResourceOneofCase.Project ? (string) projectOrWorkloadResource_ : ""; }
+      get { return HasProject ? (string) projectOrWorkloadResource_ : ""; }
       set {
         projectOrWorkloadResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         projectOrWorkloadResourceCase_ = ProjectOrWorkloadResourceOneofCase.Project;
+      }
+    }
+    /// <summary>Gets whether the "project" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasProject {
+      get { return projectOrWorkloadResourceCase_ == ProjectOrWorkloadResourceOneofCase.Project; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "project" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearProject() {
+      if (HasProject) {
+        ClearProjectOrWorkloadResource();
       }
     }
 
@@ -1751,8 +1779,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (projectOrWorkloadResourceCase_ == ProjectOrWorkloadResourceOneofCase.Source) hash ^= Source.GetHashCode();
-      if (projectOrWorkloadResourceCase_ == ProjectOrWorkloadResourceOneofCase.Project) hash ^= Project.GetHashCode();
+      if (HasSource) hash ^= Source.GetHashCode();
+      if (HasProject) hash ^= Project.GetHashCode();
       if (Target.Length != 0) hash ^= Target.GetHashCode();
       hash ^= (int) projectOrWorkloadResourceCase_;
       if (_unknownFields != null) {
@@ -1773,7 +1801,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (projectOrWorkloadResourceCase_ == ProjectOrWorkloadResourceOneofCase.Source) {
+      if (HasSource) {
         output.WriteRawTag(10);
         output.WriteString(Source);
       }
@@ -1781,7 +1809,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(Target);
       }
-      if (projectOrWorkloadResourceCase_ == ProjectOrWorkloadResourceOneofCase.Project) {
+      if (HasProject) {
         output.WriteRawTag(26);
         output.WriteString(Project);
       }
@@ -1795,7 +1823,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (projectOrWorkloadResourceCase_ == ProjectOrWorkloadResourceOneofCase.Source) {
+      if (HasSource) {
         output.WriteRawTag(10);
         output.WriteString(Source);
       }
@@ -1803,7 +1831,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(Target);
       }
-      if (projectOrWorkloadResourceCase_ == ProjectOrWorkloadResourceOneofCase.Project) {
+      if (HasProject) {
         output.WriteRawTag(26);
         output.WriteString(Project);
       }
@@ -1817,10 +1845,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (projectOrWorkloadResourceCase_ == ProjectOrWorkloadResourceOneofCase.Source) {
+      if (HasSource) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Source);
       }
-      if (projectOrWorkloadResourceCase_ == ProjectOrWorkloadResourceOneofCase.Project) {
+      if (HasProject) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
       }
       if (Target.Length != 0) {
@@ -3373,7 +3401,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.ProvisionedResourcesParent.Length != 0) {
         ProvisionedResourcesParent = other.ProvisionedResourcesParent;
       }
@@ -3997,6 +4025,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             /// Deprecated. Existing workloads will continue to support this, but new
             /// CreateWorkloadRequests should not specify this as an input value.
             /// </summary>
+            [global::System.ObsoleteAttribute]
             [pbr::OriginalName("CONSUMER_PROJECT")] ConsumerProject = 1,
             /// <summary>
             /// Consumer Folder.
@@ -5433,6 +5462,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
 
         /// <summary>Field number for the "setup_status" field.</summary>
         public const int SetupStatusFieldNumber = 1;
+        private readonly static global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupState SetupStatusDefaultValue = global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupState.Unspecified;
+
         private global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupState setupStatus_;
         /// <summary>
         /// Indicates SAA enrollment status of a given workload.
@@ -5440,7 +5471,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupState SetupStatus {
-          get { if ((_hasBits0 & 1) != 0) { return setupStatus_; } else { return global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupState.Unspecified; } }
+          get { if ((_hasBits0 & 1) != 0) { return setupStatus_; } else { return SetupStatusDefaultValue; } }
           set {
             _hasBits0 |= 1;
             setupStatus_ = value;

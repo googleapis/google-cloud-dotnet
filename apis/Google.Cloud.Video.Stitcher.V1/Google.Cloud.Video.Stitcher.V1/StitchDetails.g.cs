@@ -550,7 +550,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (other.SkipReason.Length != 0) {
         SkipReason = other.SkipReason;
       }
-      media_.Add(other.media_);
+      media_.MergeFrom(other.media_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

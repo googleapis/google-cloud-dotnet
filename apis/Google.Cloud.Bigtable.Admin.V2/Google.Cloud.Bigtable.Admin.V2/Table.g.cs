@@ -721,8 +721,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      clusterStates_.Add(other.clusterStates_);
-      columnFamilies_.Add(other.columnFamilies_);
+      clusterStates_.MergeFrom(other.clusterStates_);
+      columnFamilies_.MergeFrom(other.columnFamilies_);
       if (other.Granularity != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity.Unspecified) {
         Granularity = other.Granularity;
       }
@@ -1433,10 +1433,24 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxNumVersions {
-      get { return ruleCase_ == RuleOneofCase.MaxNumVersions ? (int) rule_ : 0; }
+      get { return HasMaxNumVersions ? (int) rule_ : 0; }
       set {
         rule_ = value;
         ruleCase_ = RuleOneofCase.MaxNumVersions;
+      }
+    }
+    /// <summary>Gets whether the "max_num_versions" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxNumVersions {
+      get { return ruleCase_ == RuleOneofCase.MaxNumVersions; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "max_num_versions" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxNumVersions() {
+      if (HasMaxNumVersions) {
+        ClearRule();
       }
     }
 
@@ -1537,7 +1551,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ruleCase_ == RuleOneofCase.MaxNumVersions) hash ^= MaxNumVersions.GetHashCode();
+      if (HasMaxNumVersions) hash ^= MaxNumVersions.GetHashCode();
       if (ruleCase_ == RuleOneofCase.MaxAge) hash ^= MaxAge.GetHashCode();
       if (ruleCase_ == RuleOneofCase.Intersection) hash ^= Intersection.GetHashCode();
       if (ruleCase_ == RuleOneofCase.Union) hash ^= Union.GetHashCode();
@@ -1560,7 +1574,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ruleCase_ == RuleOneofCase.MaxNumVersions) {
+      if (HasMaxNumVersions) {
         output.WriteRawTag(8);
         output.WriteInt32(MaxNumVersions);
       }
@@ -1586,7 +1600,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ruleCase_ == RuleOneofCase.MaxNumVersions) {
+      if (HasMaxNumVersions) {
         output.WriteRawTag(8);
         output.WriteInt32(MaxNumVersions);
       }
@@ -1612,7 +1626,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ruleCase_ == RuleOneofCase.MaxNumVersions) {
+      if (HasMaxNumVersions) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxNumVersions);
       }
       if (ruleCase_ == RuleOneofCase.MaxAge) {

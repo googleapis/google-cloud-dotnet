@@ -1351,6 +1351,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// Deprecated: Ignore telecommute status of jobs. Use
         /// TELECOMMUTE_JOBS_EXCLUDED if want to exclude telecommute jobs.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("TELECOMMUTE_EXCLUDED")] TelecommuteExcluded = 1,
         /// <summary>
         /// Allow telecommute jobs.
@@ -1879,10 +1880,24 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic RoadTraffic {
-      get { return trafficOptionCase_ == TrafficOptionOneofCase.RoadTraffic ? (global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic) trafficOption_ : global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic.Unspecified; }
+      get { return HasRoadTraffic ? (global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic) trafficOption_ : global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic.Unspecified; }
       set {
         trafficOption_ = value;
         trafficOptionCase_ = TrafficOptionOneofCase.RoadTraffic;
+      }
+    }
+    /// <summary>Gets whether the "road_traffic" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRoadTraffic {
+      get { return trafficOptionCase_ == TrafficOptionOneofCase.RoadTraffic; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "road_traffic" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRoadTraffic() {
+      if (HasRoadTraffic) {
+        ClearTrafficOption();
       }
     }
 
@@ -1958,7 +1973,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (startCoordinates_ != null) hash ^= StartCoordinates.GetHashCode();
       if (travelDuration_ != null) hash ^= TravelDuration.GetHashCode();
       if (AllowImpreciseAddresses != false) hash ^= AllowImpreciseAddresses.GetHashCode();
-      if (trafficOptionCase_ == TrafficOptionOneofCase.RoadTraffic) hash ^= RoadTraffic.GetHashCode();
+      if (HasRoadTraffic) hash ^= RoadTraffic.GetHashCode();
       if (trafficOptionCase_ == TrafficOptionOneofCase.DepartureTime) hash ^= DepartureTime.GetHashCode();
       hash ^= (int) trafficOptionCase_;
       if (_unknownFields != null) {
@@ -1995,7 +2010,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(32);
         output.WriteBool(AllowImpreciseAddresses);
       }
-      if (trafficOptionCase_ == TrafficOptionOneofCase.RoadTraffic) {
+      if (HasRoadTraffic) {
         output.WriteRawTag(40);
         output.WriteEnum((int) RoadTraffic);
       }
@@ -2029,7 +2044,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(32);
         output.WriteBool(AllowImpreciseAddresses);
       }
-      if (trafficOptionCase_ == TrafficOptionOneofCase.RoadTraffic) {
+      if (HasRoadTraffic) {
         output.WriteRawTag(40);
         output.WriteEnum((int) RoadTraffic);
       }
@@ -2059,7 +2074,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (AllowImpreciseAddresses != false) {
         size += 1 + 1;
       }
-      if (trafficOptionCase_ == TrafficOptionOneofCase.RoadTraffic) {
+      if (HasRoadTraffic) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RoadTraffic);
       }
       if (trafficOptionCase_ == TrafficOptionOneofCase.DepartureTime) {

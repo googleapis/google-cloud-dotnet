@@ -531,7 +531,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       authorizedNetworks_.Add(other.authorizedNetworks_);
       if (other.ReservedIpRange.Length != 0) {
         ReservedIpRange = other.ReservedIpRange;

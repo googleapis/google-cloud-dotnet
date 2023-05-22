@@ -2648,7 +2648,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3691,7 +3691,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       if (other.VmId.Length != 0) {
         VmId = other.VmId;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

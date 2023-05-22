@@ -751,7 +751,7 @@ namespace Google.Cloud.Dataproc.V1 {
         }
         VirtualClusterConfig.MergeFrom(other.VirtualClusterConfig);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.status_ != null) {
         if (status_ == null) {
           Status = new global::Google.Cloud.Dataproc.V1.ClusterStatus();
@@ -2581,7 +2581,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other == null) {
         return;
       }
-      httpPorts_.Add(other.httpPorts_);
+      httpPorts_.MergeFrom(other.httpPorts_);
       if (other.EnableHttpPortAccess != false) {
         EnableHttpPortAccess = other.EnableHttpPortAccess;
       }
@@ -3172,6 +3172,8 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "internal_ip_only" field.</summary>
     public const int InternalIpOnlyFieldNumber = 7;
+    private readonly static bool InternalIpOnlyDefaultValue = false;
+
     private bool internalIpOnly_;
     /// <summary>
     /// Optional. If true, all instances in the cluster will only have internal IP
@@ -3184,7 +3186,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool InternalIpOnly {
-      get { if ((_hasBits0 & 1) != 0) { return internalIpOnly_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return internalIpOnly_; } else { return InternalIpOnlyDefaultValue; } }
       set {
         _hasBits0 |= 1;
         internalIpOnly_ = value;
@@ -3601,7 +3603,7 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       serviceAccountScopes_.Add(other.serviceAccountScopes_);
       tags_.Add(other.tags_);
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.reservationAffinity_ != null) {
         if (reservationAffinity_ == null) {
           ReservationAffinity = new global::Google.Cloud.Dataproc.V1.ReservationAffinity();
@@ -4091,6 +4093,8 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "enable_secure_boot" field.</summary>
     public const int EnableSecureBootFieldNumber = 1;
+    private readonly static bool EnableSecureBootDefaultValue = false;
+
     private bool enableSecureBoot_;
     /// <summary>
     /// Optional. Defines whether instances have Secure Boot enabled.
@@ -4098,7 +4102,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnableSecureBoot {
-      get { if ((_hasBits0 & 1) != 0) { return enableSecureBoot_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return enableSecureBoot_; } else { return EnableSecureBootDefaultValue; } }
       set {
         _hasBits0 |= 1;
         enableSecureBoot_ = value;
@@ -4119,6 +4123,8 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "enable_vtpm" field.</summary>
     public const int EnableVtpmFieldNumber = 2;
+    private readonly static bool EnableVtpmDefaultValue = false;
+
     private bool enableVtpm_;
     /// <summary>
     /// Optional. Defines whether instances have the vTPM enabled.
@@ -4126,7 +4132,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnableVtpm {
-      get { if ((_hasBits0 & 2) != 0) { return enableVtpm_; } else { return false; } }
+      get { if ((_hasBits0 & 2) != 0) { return enableVtpm_; } else { return EnableVtpmDefaultValue; } }
       set {
         _hasBits0 |= 2;
         enableVtpm_ = value;
@@ -4147,6 +4153,8 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Field number for the "enable_integrity_monitoring" field.</summary>
     public const int EnableIntegrityMonitoringFieldNumber = 3;
+    private readonly static bool EnableIntegrityMonitoringDefaultValue = false;
+
     private bool enableIntegrityMonitoring_;
     /// <summary>
     /// Optional. Defines whether instances have integrity monitoring enabled.
@@ -4154,7 +4162,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnableIntegrityMonitoring {
-      get { if ((_hasBits0 & 4) != 0) { return enableIntegrityMonitoring_; } else { return false; } }
+      get { if ((_hasBits0 & 4) != 0) { return enableIntegrityMonitoring_; } else { return EnableIntegrityMonitoringDefaultValue; } }
       set {
         _hasBits0 |= 4;
         enableIntegrityMonitoring_ = value;
@@ -6499,7 +6507,7 @@ namespace Google.Cloud.Dataproc.V1 {
         }
         NodeGroupConfig.MergeFrom(other.NodeGroupConfig);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8430,7 +8438,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other == null) {
         return;
       }
-      userServiceAccountMapping_.Add(other.userServiceAccountMapping_);
+      userServiceAccountMapping_.MergeFrom(other.userServiceAccountMapping_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8689,7 +8697,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.ImageVersion.Length != 0) {
         ImageVersion = other.ImageVersion;
       }
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       optionalComponents_.Add(other.optionalComponents_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9518,8 +9526,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other == null) {
         return;
       }
-      hdfsMetrics_.Add(other.hdfsMetrics_);
-      yarnMetrics_.Add(other.yarnMetrics_);
+      hdfsMetrics_.MergeFrom(other.hdfsMetrics_);
+      yarnMetrics_.MergeFrom(other.yarnMetrics_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

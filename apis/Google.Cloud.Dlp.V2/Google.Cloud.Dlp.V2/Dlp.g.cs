@@ -4478,10 +4478,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Value {
-      get { return dataItemCase_ == DataItemOneofCase.Value ? (string) dataItem_ : ""; }
+      get { return HasValue ? (string) dataItem_ : ""; }
       set {
         dataItem_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         dataItemCase_ = DataItemOneofCase.Value;
+      }
+    }
+    /// <summary>Gets whether the "value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasValue {
+      get { return dataItemCase_ == DataItemOneofCase.Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValue() {
+      if (HasValue) {
+        ClearDataItem();
       }
     }
 
@@ -4565,7 +4579,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (dataItemCase_ == DataItemOneofCase.Value) hash ^= Value.GetHashCode();
+      if (HasValue) hash ^= Value.GetHashCode();
       if (dataItemCase_ == DataItemOneofCase.Table) hash ^= Table.GetHashCode();
       if (dataItemCase_ == DataItemOneofCase.ByteItem) hash ^= ByteItem.GetHashCode();
       hash ^= (int) dataItemCase_;
@@ -4587,7 +4601,7 @@ namespace Google.Cloud.Dlp.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (dataItemCase_ == DataItemOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(26);
         output.WriteString(Value);
       }
@@ -4609,7 +4623,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (dataItemCase_ == DataItemOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(26);
         output.WriteString(Value);
       }
@@ -4631,7 +4645,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (dataItemCase_ == DataItemOneofCase.Value) {
+      if (HasValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
       }
       if (dataItemCase_ == DataItemOneofCase.Table) {
@@ -5933,7 +5947,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (other.TriggerName.Length != 0) {
         TriggerName = other.TriggerName;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.jobCreateTime_ != null) {
         if (jobCreateTime_ == null) {
           JobCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -9876,10 +9890,24 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool RedactAllText {
-          get { return targetCase_ == TargetOneofCase.RedactAllText ? (bool) target_ : false; }
+          get { return HasRedactAllText ? (bool) target_ : false; }
           set {
             target_ = value;
             targetCase_ = TargetOneofCase.RedactAllText;
+          }
+        }
+        /// <summary>Gets whether the "redact_all_text" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasRedactAllText {
+          get { return targetCase_ == TargetOneofCase.RedactAllText; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "redact_all_text" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearRedactAllText() {
+          if (HasRedactAllText) {
+            ClearTarget();
           }
         }
 
@@ -9947,7 +9975,7 @@ namespace Google.Cloud.Dlp.V2 {
         public override int GetHashCode() {
           int hash = 1;
           if (targetCase_ == TargetOneofCase.InfoType) hash ^= InfoType.GetHashCode();
-          if (targetCase_ == TargetOneofCase.RedactAllText) hash ^= RedactAllText.GetHashCode();
+          if (HasRedactAllText) hash ^= RedactAllText.GetHashCode();
           if (redactionColor_ != null) hash ^= RedactionColor.GetHashCode();
           hash ^= (int) targetCase_;
           if (_unknownFields != null) {
@@ -9972,7 +10000,7 @@ namespace Google.Cloud.Dlp.V2 {
             output.WriteRawTag(10);
             output.WriteMessage(InfoType);
           }
-          if (targetCase_ == TargetOneofCase.RedactAllText) {
+          if (HasRedactAllText) {
             output.WriteRawTag(16);
             output.WriteBool(RedactAllText);
           }
@@ -9994,7 +10022,7 @@ namespace Google.Cloud.Dlp.V2 {
             output.WriteRawTag(10);
             output.WriteMessage(InfoType);
           }
-          if (targetCase_ == TargetOneofCase.RedactAllText) {
+          if (HasRedactAllText) {
             output.WriteRawTag(16);
             output.WriteBool(RedactAllText);
           }
@@ -10015,7 +10043,7 @@ namespace Google.Cloud.Dlp.V2 {
           if (targetCase_ == TargetOneofCase.InfoType) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(InfoType);
           }
-          if (targetCase_ == TargetOneofCase.RedactAllText) {
+          if (HasRedactAllText) {
             size += 1 + 1;
           }
           if (redactionColor_ != null) {
@@ -14915,10 +14943,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.LocationCategory LocationCategory {
-      get { return categoryCase_ == CategoryOneofCase.LocationCategory ? (global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.LocationCategory) category_ : global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.LocationCategory.LocationUnspecified; }
+      get { return HasLocationCategory ? (global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.LocationCategory) category_ : global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.LocationCategory.LocationUnspecified; }
       set {
         category_ = value;
         categoryCase_ = CategoryOneofCase.LocationCategory;
+      }
+    }
+    /// <summary>Gets whether the "location_category" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLocationCategory {
+      get { return categoryCase_ == CategoryOneofCase.LocationCategory; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "location_category" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLocationCategory() {
+      if (HasLocationCategory) {
+        ClearCategory();
       }
     }
 
@@ -14930,10 +14972,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.IndustryCategory IndustryCategory {
-      get { return categoryCase_ == CategoryOneofCase.IndustryCategory ? (global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.IndustryCategory) category_ : global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.IndustryCategory.IndustryUnspecified; }
+      get { return HasIndustryCategory ? (global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.IndustryCategory) category_ : global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.IndustryCategory.IndustryUnspecified; }
       set {
         category_ = value;
         categoryCase_ = CategoryOneofCase.IndustryCategory;
+      }
+    }
+    /// <summary>Gets whether the "industry_category" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIndustryCategory {
+      get { return categoryCase_ == CategoryOneofCase.IndustryCategory; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "industry_category" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIndustryCategory() {
+      if (HasIndustryCategory) {
+        ClearCategory();
       }
     }
 
@@ -14945,10 +15001,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.TypeCategory TypeCategory {
-      get { return categoryCase_ == CategoryOneofCase.TypeCategory ? (global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.TypeCategory) category_ : global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.TypeCategory.TypeUnspecified; }
+      get { return HasTypeCategory ? (global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.TypeCategory) category_ : global::Google.Cloud.Dlp.V2.InfoTypeCategory.Types.TypeCategory.TypeUnspecified; }
       set {
         category_ = value;
         categoryCase_ = CategoryOneofCase.TypeCategory;
+      }
+    }
+    /// <summary>Gets whether the "type_category" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTypeCategory {
+      get { return categoryCase_ == CategoryOneofCase.TypeCategory; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "type_category" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTypeCategory() {
+      if (HasTypeCategory) {
+        ClearCategory();
       }
     }
 
@@ -15000,9 +15070,9 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (categoryCase_ == CategoryOneofCase.LocationCategory) hash ^= LocationCategory.GetHashCode();
-      if (categoryCase_ == CategoryOneofCase.IndustryCategory) hash ^= IndustryCategory.GetHashCode();
-      if (categoryCase_ == CategoryOneofCase.TypeCategory) hash ^= TypeCategory.GetHashCode();
+      if (HasLocationCategory) hash ^= LocationCategory.GetHashCode();
+      if (HasIndustryCategory) hash ^= IndustryCategory.GetHashCode();
+      if (HasTypeCategory) hash ^= TypeCategory.GetHashCode();
       hash ^= (int) categoryCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -15022,15 +15092,15 @@ namespace Google.Cloud.Dlp.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (categoryCase_ == CategoryOneofCase.LocationCategory) {
+      if (HasLocationCategory) {
         output.WriteRawTag(8);
         output.WriteEnum((int) LocationCategory);
       }
-      if (categoryCase_ == CategoryOneofCase.IndustryCategory) {
+      if (HasIndustryCategory) {
         output.WriteRawTag(16);
         output.WriteEnum((int) IndustryCategory);
       }
-      if (categoryCase_ == CategoryOneofCase.TypeCategory) {
+      if (HasTypeCategory) {
         output.WriteRawTag(24);
         output.WriteEnum((int) TypeCategory);
       }
@@ -15044,15 +15114,15 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (categoryCase_ == CategoryOneofCase.LocationCategory) {
+      if (HasLocationCategory) {
         output.WriteRawTag(8);
         output.WriteEnum((int) LocationCategory);
       }
-      if (categoryCase_ == CategoryOneofCase.IndustryCategory) {
+      if (HasIndustryCategory) {
         output.WriteRawTag(16);
         output.WriteEnum((int) IndustryCategory);
       }
-      if (categoryCase_ == CategoryOneofCase.TypeCategory) {
+      if (HasTypeCategory) {
         output.WriteRawTag(24);
         output.WriteEnum((int) TypeCategory);
       }
@@ -15066,13 +15136,13 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (categoryCase_ == CategoryOneofCase.LocationCategory) {
+      if (HasLocationCategory) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LocationCategory);
       }
-      if (categoryCase_ == CategoryOneofCase.IndustryCategory) {
+      if (HasIndustryCategory) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IndustryCategory);
       }
-      if (categoryCase_ == CategoryOneofCase.TypeCategory) {
+      if (HasTypeCategory) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TypeCategory);
       }
       if (_unknownFields != null) {
@@ -16544,10 +16614,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomTag {
-      get { return tagCase_ == TagOneofCase.CustomTag ? (string) tag_ : ""; }
+      get { return HasCustomTag ? (string) tag_ : ""; }
       set {
         tag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         tagCase_ = TagOneofCase.CustomTag;
+      }
+    }
+    /// <summary>Gets whether the "custom_tag" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomTag {
+      get { return tagCase_ == TagOneofCase.CustomTag; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "custom_tag" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomTag() {
+      if (HasCustomTag) {
+        ClearTag();
       }
     }
 
@@ -16618,7 +16702,7 @@ namespace Google.Cloud.Dlp.V2 {
       int hash = 1;
       if (field_ != null) hash ^= Field.GetHashCode();
       if (tagCase_ == TagOneofCase.InfoType) hash ^= InfoType.GetHashCode();
-      if (tagCase_ == TagOneofCase.CustomTag) hash ^= CustomTag.GetHashCode();
+      if (HasCustomTag) hash ^= CustomTag.GetHashCode();
       if (tagCase_ == TagOneofCase.Inferred) hash ^= Inferred.GetHashCode();
       hash ^= (int) tagCase_;
       if (_unknownFields != null) {
@@ -16647,7 +16731,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(InfoType);
       }
-      if (tagCase_ == TagOneofCase.CustomTag) {
+      if (HasCustomTag) {
         output.WriteRawTag(26);
         output.WriteString(CustomTag);
       }
@@ -16673,7 +16757,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(InfoType);
       }
-      if (tagCase_ == TagOneofCase.CustomTag) {
+      if (HasCustomTag) {
         output.WriteRawTag(26);
         output.WriteString(CustomTag);
       }
@@ -16697,7 +16781,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (tagCase_ == TagOneofCase.InfoType) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(InfoType);
       }
-      if (tagCase_ == TagOneofCase.CustomTag) {
+      if (HasCustomTag) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomTag);
       }
       if (tagCase_ == TagOneofCase.Inferred) {
@@ -19163,10 +19247,24 @@ namespace Google.Cloud.Dlp.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string CustomTag {
-              get { return tagCase_ == TagOneofCase.CustomTag ? (string) tag_ : ""; }
+              get { return HasCustomTag ? (string) tag_ : ""; }
               set {
                 tag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 tagCase_ = TagOneofCase.CustomTag;
+              }
+            }
+            /// <summary>Gets whether the "custom_tag" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasCustomTag {
+              get { return tagCase_ == TagOneofCase.CustomTag; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "custom_tag" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearCustomTag() {
+              if (HasCustomTag) {
+                ClearTag();
               }
             }
 
@@ -19237,7 +19335,7 @@ namespace Google.Cloud.Dlp.V2 {
               int hash = 1;
               if (field_ != null) hash ^= Field.GetHashCode();
               if (tagCase_ == TagOneofCase.InfoType) hash ^= InfoType.GetHashCode();
-              if (tagCase_ == TagOneofCase.CustomTag) hash ^= CustomTag.GetHashCode();
+              if (HasCustomTag) hash ^= CustomTag.GetHashCode();
               if (tagCase_ == TagOneofCase.Inferred) hash ^= Inferred.GetHashCode();
               hash ^= (int) tagCase_;
               if (_unknownFields != null) {
@@ -19266,7 +19364,7 @@ namespace Google.Cloud.Dlp.V2 {
                 output.WriteRawTag(18);
                 output.WriteMessage(InfoType);
               }
-              if (tagCase_ == TagOneofCase.CustomTag) {
+              if (HasCustomTag) {
                 output.WriteRawTag(26);
                 output.WriteString(CustomTag);
               }
@@ -19292,7 +19390,7 @@ namespace Google.Cloud.Dlp.V2 {
                 output.WriteRawTag(18);
                 output.WriteMessage(InfoType);
               }
-              if (tagCase_ == TagOneofCase.CustomTag) {
+              if (HasCustomTag) {
                 output.WriteRawTag(26);
                 output.WriteString(CustomTag);
               }
@@ -19316,7 +19414,7 @@ namespace Google.Cloud.Dlp.V2 {
               if (tagCase_ == TagOneofCase.InfoType) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(InfoType);
               }
-              if (tagCase_ == TagOneofCase.CustomTag) {
+              if (HasCustomTag) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomTag);
               }
               if (tagCase_ == TagOneofCase.Inferred) {
@@ -25450,10 +25548,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long IntegerValue {
-      get { return typeCase_ == TypeOneofCase.IntegerValue ? (long) type_ : 0L; }
+      get { return HasIntegerValue ? (long) type_ : 0L; }
       set {
         type_ = value;
         typeCase_ = TypeOneofCase.IntegerValue;
+      }
+    }
+    /// <summary>Gets whether the "integer_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIntegerValue {
+      get { return typeCase_ == TypeOneofCase.IntegerValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "integer_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIntegerValue() {
+      if (HasIntegerValue) {
+        ClearType();
       }
     }
 
@@ -25465,10 +25577,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double FloatValue {
-      get { return typeCase_ == TypeOneofCase.FloatValue ? (double) type_ : 0D; }
+      get { return HasFloatValue ? (double) type_ : 0D; }
       set {
         type_ = value;
         typeCase_ = TypeOneofCase.FloatValue;
+      }
+    }
+    /// <summary>Gets whether the "float_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFloatValue {
+      get { return typeCase_ == TypeOneofCase.FloatValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "float_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFloatValue() {
+      if (HasFloatValue) {
+        ClearType();
       }
     }
 
@@ -25480,10 +25606,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StringValue {
-      get { return typeCase_ == TypeOneofCase.StringValue ? (string) type_ : ""; }
+      get { return HasStringValue ? (string) type_ : ""; }
       set {
         type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         typeCase_ = TypeOneofCase.StringValue;
+      }
+    }
+    /// <summary>Gets whether the "string_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStringValue {
+      get { return typeCase_ == TypeOneofCase.StringValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "string_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStringValue() {
+      if (HasStringValue) {
+        ClearType();
       }
     }
 
@@ -25495,10 +25635,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BooleanValue {
-      get { return typeCase_ == TypeOneofCase.BooleanValue ? (bool) type_ : false; }
+      get { return HasBooleanValue ? (bool) type_ : false; }
       set {
         type_ = value;
         typeCase_ = TypeOneofCase.BooleanValue;
+      }
+    }
+    /// <summary>Gets whether the "boolean_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBooleanValue {
+      get { return typeCase_ == TypeOneofCase.BooleanValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "boolean_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBooleanValue() {
+      if (HasBooleanValue) {
+        ClearType();
       }
     }
 
@@ -25555,10 +25709,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Type.DayOfWeek DayOfWeekValue {
-      get { return typeCase_ == TypeOneofCase.DayOfWeekValue ? (global::Google.Type.DayOfWeek) type_ : global::Google.Type.DayOfWeek.Unspecified; }
+      get { return HasDayOfWeekValue ? (global::Google.Type.DayOfWeek) type_ : global::Google.Type.DayOfWeek.Unspecified; }
       set {
         type_ = value;
         typeCase_ = TypeOneofCase.DayOfWeekValue;
+      }
+    }
+    /// <summary>Gets whether the "day_of_week_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDayOfWeekValue {
+      get { return typeCase_ == TypeOneofCase.DayOfWeekValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "day_of_week_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDayOfWeekValue() {
+      if (HasDayOfWeekValue) {
+        ClearType();
       }
     }
 
@@ -25620,14 +25788,14 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (typeCase_ == TypeOneofCase.IntegerValue) hash ^= IntegerValue.GetHashCode();
-      if (typeCase_ == TypeOneofCase.FloatValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(FloatValue);
-      if (typeCase_ == TypeOneofCase.StringValue) hash ^= StringValue.GetHashCode();
-      if (typeCase_ == TypeOneofCase.BooleanValue) hash ^= BooleanValue.GetHashCode();
+      if (HasIntegerValue) hash ^= IntegerValue.GetHashCode();
+      if (HasFloatValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(FloatValue);
+      if (HasStringValue) hash ^= StringValue.GetHashCode();
+      if (HasBooleanValue) hash ^= BooleanValue.GetHashCode();
       if (typeCase_ == TypeOneofCase.TimestampValue) hash ^= TimestampValue.GetHashCode();
       if (typeCase_ == TypeOneofCase.TimeValue) hash ^= TimeValue.GetHashCode();
       if (typeCase_ == TypeOneofCase.DateValue) hash ^= DateValue.GetHashCode();
-      if (typeCase_ == TypeOneofCase.DayOfWeekValue) hash ^= DayOfWeekValue.GetHashCode();
+      if (HasDayOfWeekValue) hash ^= DayOfWeekValue.GetHashCode();
       hash ^= (int) typeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -25647,19 +25815,19 @@ namespace Google.Cloud.Dlp.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (typeCase_ == TypeOneofCase.IntegerValue) {
+      if (HasIntegerValue) {
         output.WriteRawTag(8);
         output.WriteInt64(IntegerValue);
       }
-      if (typeCase_ == TypeOneofCase.FloatValue) {
+      if (HasFloatValue) {
         output.WriteRawTag(17);
         output.WriteDouble(FloatValue);
       }
-      if (typeCase_ == TypeOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(26);
         output.WriteString(StringValue);
       }
-      if (typeCase_ == TypeOneofCase.BooleanValue) {
+      if (HasBooleanValue) {
         output.WriteRawTag(32);
         output.WriteBool(BooleanValue);
       }
@@ -25675,7 +25843,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(58);
         output.WriteMessage(DateValue);
       }
-      if (typeCase_ == TypeOneofCase.DayOfWeekValue) {
+      if (HasDayOfWeekValue) {
         output.WriteRawTag(64);
         output.WriteEnum((int) DayOfWeekValue);
       }
@@ -25689,19 +25857,19 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (typeCase_ == TypeOneofCase.IntegerValue) {
+      if (HasIntegerValue) {
         output.WriteRawTag(8);
         output.WriteInt64(IntegerValue);
       }
-      if (typeCase_ == TypeOneofCase.FloatValue) {
+      if (HasFloatValue) {
         output.WriteRawTag(17);
         output.WriteDouble(FloatValue);
       }
-      if (typeCase_ == TypeOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(26);
         output.WriteString(StringValue);
       }
-      if (typeCase_ == TypeOneofCase.BooleanValue) {
+      if (HasBooleanValue) {
         output.WriteRawTag(32);
         output.WriteBool(BooleanValue);
       }
@@ -25717,7 +25885,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(58);
         output.WriteMessage(DateValue);
       }
-      if (typeCase_ == TypeOneofCase.DayOfWeekValue) {
+      if (HasDayOfWeekValue) {
         output.WriteRawTag(64);
         output.WriteEnum((int) DayOfWeekValue);
       }
@@ -25731,16 +25899,16 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (typeCase_ == TypeOneofCase.IntegerValue) {
+      if (HasIntegerValue) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(IntegerValue);
       }
-      if (typeCase_ == TypeOneofCase.FloatValue) {
+      if (HasFloatValue) {
         size += 1 + 8;
       }
-      if (typeCase_ == TypeOneofCase.StringValue) {
+      if (HasStringValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StringValue);
       }
-      if (typeCase_ == TypeOneofCase.BooleanValue) {
+      if (HasBooleanValue) {
         size += 1 + 1;
       }
       if (typeCase_ == TypeOneofCase.TimestampValue) {
@@ -25752,7 +25920,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (typeCase_ == TypeOneofCase.DateValue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DateValue);
       }
-      if (typeCase_ == TypeOneofCase.DayOfWeekValue) {
+      if (HasDayOfWeekValue) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DayOfWeekValue);
       }
       if (_unknownFields != null) {
@@ -31318,10 +31486,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CharactersToSkip {
-      get { return charactersCase_ == CharactersOneofCase.CharactersToSkip ? (string) characters_ : ""; }
+      get { return HasCharactersToSkip ? (string) characters_ : ""; }
       set {
         characters_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         charactersCase_ = CharactersOneofCase.CharactersToSkip;
+      }
+    }
+    /// <summary>Gets whether the "characters_to_skip" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCharactersToSkip {
+      get { return charactersCase_ == CharactersOneofCase.CharactersToSkip; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "characters_to_skip" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCharactersToSkip() {
+      if (HasCharactersToSkip) {
+        ClearCharacters();
       }
     }
 
@@ -31334,10 +31516,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dlp.V2.CharsToIgnore.Types.CommonCharsToIgnore CommonCharactersToIgnore {
-      get { return charactersCase_ == CharactersOneofCase.CommonCharactersToIgnore ? (global::Google.Cloud.Dlp.V2.CharsToIgnore.Types.CommonCharsToIgnore) characters_ : global::Google.Cloud.Dlp.V2.CharsToIgnore.Types.CommonCharsToIgnore.Unspecified; }
+      get { return HasCommonCharactersToIgnore ? (global::Google.Cloud.Dlp.V2.CharsToIgnore.Types.CommonCharsToIgnore) characters_ : global::Google.Cloud.Dlp.V2.CharsToIgnore.Types.CommonCharsToIgnore.Unspecified; }
       set {
         characters_ = value;
         charactersCase_ = CharactersOneofCase.CommonCharactersToIgnore;
+      }
+    }
+    /// <summary>Gets whether the "common_characters_to_ignore" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCommonCharactersToIgnore {
+      get { return charactersCase_ == CharactersOneofCase.CommonCharactersToIgnore; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "common_characters_to_ignore" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCommonCharactersToIgnore() {
+      if (HasCommonCharactersToIgnore) {
+        ClearCharacters();
       }
     }
 
@@ -31387,8 +31583,8 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (charactersCase_ == CharactersOneofCase.CharactersToSkip) hash ^= CharactersToSkip.GetHashCode();
-      if (charactersCase_ == CharactersOneofCase.CommonCharactersToIgnore) hash ^= CommonCharactersToIgnore.GetHashCode();
+      if (HasCharactersToSkip) hash ^= CharactersToSkip.GetHashCode();
+      if (HasCommonCharactersToIgnore) hash ^= CommonCharactersToIgnore.GetHashCode();
       hash ^= (int) charactersCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -31408,11 +31604,11 @@ namespace Google.Cloud.Dlp.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (charactersCase_ == CharactersOneofCase.CharactersToSkip) {
+      if (HasCharactersToSkip) {
         output.WriteRawTag(10);
         output.WriteString(CharactersToSkip);
       }
-      if (charactersCase_ == CharactersOneofCase.CommonCharactersToIgnore) {
+      if (HasCommonCharactersToIgnore) {
         output.WriteRawTag(16);
         output.WriteEnum((int) CommonCharactersToIgnore);
       }
@@ -31426,11 +31622,11 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (charactersCase_ == CharactersOneofCase.CharactersToSkip) {
+      if (HasCharactersToSkip) {
         output.WriteRawTag(10);
         output.WriteString(CharactersToSkip);
       }
-      if (charactersCase_ == CharactersOneofCase.CommonCharactersToIgnore) {
+      if (HasCommonCharactersToIgnore) {
         output.WriteRawTag(16);
         output.WriteEnum((int) CommonCharactersToIgnore);
       }
@@ -31444,10 +31640,10 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (charactersCase_ == CharactersOneofCase.CharactersToSkip) {
+      if (HasCharactersToSkip) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CharactersToSkip);
       }
-      if (charactersCase_ == CharactersOneofCase.CommonCharactersToIgnore) {
+      if (HasCommonCharactersToIgnore) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CommonCharactersToIgnore);
       }
       if (_unknownFields != null) {
@@ -32847,10 +33043,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet CommonAlphabet {
-      get { return alphabetCase_ == AlphabetOneofCase.CommonAlphabet ? (global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet) alphabet_ : global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet.Unspecified; }
+      get { return HasCommonAlphabet ? (global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet) alphabet_ : global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig.Types.FfxCommonNativeAlphabet.Unspecified; }
       set {
         alphabet_ = value;
         alphabetCase_ = AlphabetOneofCase.CommonAlphabet;
+      }
+    }
+    /// <summary>Gets whether the "common_alphabet" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCommonAlphabet {
+      get { return alphabetCase_ == AlphabetOneofCase.CommonAlphabet; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "common_alphabet" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCommonAlphabet() {
+      if (HasCommonAlphabet) {
+        ClearAlphabet();
       }
     }
 
@@ -32871,10 +33081,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomAlphabet {
-      get { return alphabetCase_ == AlphabetOneofCase.CustomAlphabet ? (string) alphabet_ : ""; }
+      get { return HasCustomAlphabet ? (string) alphabet_ : ""; }
       set {
         alphabet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         alphabetCase_ = AlphabetOneofCase.CustomAlphabet;
+      }
+    }
+    /// <summary>Gets whether the "custom_alphabet" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomAlphabet {
+      get { return alphabetCase_ == AlphabetOneofCase.CustomAlphabet; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "custom_alphabet" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomAlphabet() {
+      if (HasCustomAlphabet) {
+        ClearAlphabet();
       }
     }
 
@@ -32886,10 +33110,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Radix {
-      get { return alphabetCase_ == AlphabetOneofCase.Radix ? (int) alphabet_ : 0; }
+      get { return HasRadix ? (int) alphabet_ : 0; }
       set {
         alphabet_ = value;
         alphabetCase_ = AlphabetOneofCase.Radix;
+      }
+    }
+    /// <summary>Gets whether the "radix" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRadix {
+      get { return alphabetCase_ == AlphabetOneofCase.Radix; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "radix" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRadix() {
+      if (HasRadix) {
+        ClearAlphabet();
       }
     }
 
@@ -32985,9 +33223,9 @@ namespace Google.Cloud.Dlp.V2 {
       int hash = 1;
       if (cryptoKey_ != null) hash ^= CryptoKey.GetHashCode();
       if (context_ != null) hash ^= Context.GetHashCode();
-      if (alphabetCase_ == AlphabetOneofCase.CommonAlphabet) hash ^= CommonAlphabet.GetHashCode();
-      if (alphabetCase_ == AlphabetOneofCase.CustomAlphabet) hash ^= CustomAlphabet.GetHashCode();
-      if (alphabetCase_ == AlphabetOneofCase.Radix) hash ^= Radix.GetHashCode();
+      if (HasCommonAlphabet) hash ^= CommonAlphabet.GetHashCode();
+      if (HasCustomAlphabet) hash ^= CustomAlphabet.GetHashCode();
+      if (HasRadix) hash ^= Radix.GetHashCode();
       if (surrogateInfoType_ != null) hash ^= SurrogateInfoType.GetHashCode();
       hash ^= (int) alphabetCase_;
       if (_unknownFields != null) {
@@ -33016,15 +33254,15 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(Context);
       }
-      if (alphabetCase_ == AlphabetOneofCase.CommonAlphabet) {
+      if (HasCommonAlphabet) {
         output.WriteRawTag(32);
         output.WriteEnum((int) CommonAlphabet);
       }
-      if (alphabetCase_ == AlphabetOneofCase.CustomAlphabet) {
+      if (HasCustomAlphabet) {
         output.WriteRawTag(42);
         output.WriteString(CustomAlphabet);
       }
-      if (alphabetCase_ == AlphabetOneofCase.Radix) {
+      if (HasRadix) {
         output.WriteRawTag(48);
         output.WriteInt32(Radix);
       }
@@ -33050,15 +33288,15 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(Context);
       }
-      if (alphabetCase_ == AlphabetOneofCase.CommonAlphabet) {
+      if (HasCommonAlphabet) {
         output.WriteRawTag(32);
         output.WriteEnum((int) CommonAlphabet);
       }
-      if (alphabetCase_ == AlphabetOneofCase.CustomAlphabet) {
+      if (HasCustomAlphabet) {
         output.WriteRawTag(42);
         output.WriteString(CustomAlphabet);
       }
-      if (alphabetCase_ == AlphabetOneofCase.Radix) {
+      if (HasRadix) {
         output.WriteRawTag(48);
         output.WriteInt32(Radix);
       }
@@ -33082,13 +33320,13 @@ namespace Google.Cloud.Dlp.V2 {
       if (context_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Context);
       }
-      if (alphabetCase_ == AlphabetOneofCase.CommonAlphabet) {
+      if (HasCommonAlphabet) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CommonAlphabet);
       }
-      if (alphabetCase_ == AlphabetOneofCase.CustomAlphabet) {
+      if (HasCustomAlphabet) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomAlphabet);
       }
-      if (alphabetCase_ == AlphabetOneofCase.Radix) {
+      if (HasRadix) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Radix);
       }
       if (surrogateInfoType_ != null) {
@@ -38696,10 +38934,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FindingId {
-      get { return locationTypeCase_ == LocationTypeOneofCase.FindingId ? (string) locationType_ : ""; }
+      get { return HasFindingId ? (string) locationType_ : ""; }
       set {
         locationType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         locationTypeCase_ = LocationTypeOneofCase.FindingId;
+      }
+    }
+    /// <summary>Gets whether the "finding_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFindingId {
+      get { return locationTypeCase_ == LocationTypeOneofCase.FindingId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "finding_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFindingId() {
+      if (HasFindingId) {
+        ClearLocationType();
       }
     }
 
@@ -38781,7 +39033,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (locationTypeCase_ == LocationTypeOneofCase.FindingId) hash ^= FindingId.GetHashCode();
+      if (HasFindingId) hash ^= FindingId.GetHashCode();
       if (locationTypeCase_ == LocationTypeOneofCase.RecordTransformation) hash ^= RecordTransformation.GetHashCode();
       if (ContainerType != global::Google.Cloud.Dlp.V2.TransformationContainerType.TransformUnknownContainer) hash ^= ContainerType.GetHashCode();
       hash ^= (int) locationTypeCase_;
@@ -38803,7 +39055,7 @@ namespace Google.Cloud.Dlp.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (locationTypeCase_ == LocationTypeOneofCase.FindingId) {
+      if (HasFindingId) {
         output.WriteRawTag(10);
         output.WriteString(FindingId);
       }
@@ -38825,7 +39077,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (locationTypeCase_ == LocationTypeOneofCase.FindingId) {
+      if (HasFindingId) {
         output.WriteRawTag(10);
         output.WriteString(FindingId);
       }
@@ -38847,7 +39099,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (locationTypeCase_ == LocationTypeOneofCase.FindingId) {
+      if (HasFindingId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FindingId);
       }
       if (locationTypeCase_ == LocationTypeOneofCase.RecordTransformation) {
@@ -43601,10 +43853,24 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string CloudStorageOutput {
-          get { return outputCase_ == OutputOneofCase.CloudStorageOutput ? (string) output_ : ""; }
+          get { return HasCloudStorageOutput ? (string) output_ : ""; }
           set {
             output_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             outputCase_ = OutputOneofCase.CloudStorageOutput;
+          }
+        }
+        /// <summary>Gets whether the "cloud_storage_output" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasCloudStorageOutput {
+          get { return outputCase_ == OutputOneofCase.CloudStorageOutput; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "cloud_storage_output" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearCloudStorageOutput() {
+          if (HasCloudStorageOutput) {
+            ClearOutput();
           }
         }
 
@@ -43677,7 +43943,7 @@ namespace Google.Cloud.Dlp.V2 {
           int hash = 1;
           if (transformationConfig_ != null) hash ^= TransformationConfig.GetHashCode();
           if (transformationDetailsStorageConfig_ != null) hash ^= TransformationDetailsStorageConfig.GetHashCode();
-          if (outputCase_ == OutputOneofCase.CloudStorageOutput) hash ^= CloudStorageOutput.GetHashCode();
+          if (HasCloudStorageOutput) hash ^= CloudStorageOutput.GetHashCode();
           hash ^= fileTypesToTransform_.GetHashCode();
           hash ^= (int) outputCase_;
           if (_unknownFields != null) {
@@ -43707,7 +43973,7 @@ namespace Google.Cloud.Dlp.V2 {
             output.WriteMessage(TransformationConfig);
           }
           fileTypesToTransform_.WriteTo(output, _repeated_fileTypesToTransform_codec);
-          if (outputCase_ == OutputOneofCase.CloudStorageOutput) {
+          if (HasCloudStorageOutput) {
             output.WriteRawTag(74);
             output.WriteString(CloudStorageOutput);
           }
@@ -43730,7 +43996,7 @@ namespace Google.Cloud.Dlp.V2 {
             output.WriteMessage(TransformationConfig);
           }
           fileTypesToTransform_.WriteTo(ref output, _repeated_fileTypesToTransform_codec);
-          if (outputCase_ == OutputOneofCase.CloudStorageOutput) {
+          if (HasCloudStorageOutput) {
             output.WriteRawTag(74);
             output.WriteString(CloudStorageOutput);
           }
@@ -43750,7 +44016,7 @@ namespace Google.Cloud.Dlp.V2 {
           if (transformationDetailsStorageConfig_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransformationDetailsStorageConfig);
           }
-          if (outputCase_ == OutputOneofCase.CloudStorageOutput) {
+          if (HasCloudStorageOutput) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(CloudStorageOutput);
           }
           size += fileTypesToTransform_.CalculateSize(_repeated_fileTypesToTransform_codec);
@@ -50110,10 +50376,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long OrganizationId {
-      get { return locationCase_ == LocationOneofCase.OrganizationId ? (long) location_ : 0L; }
+      get { return HasOrganizationId ? (long) location_ : 0L; }
       set {
         location_ = value;
         locationCase_ = LocationOneofCase.OrganizationId;
+      }
+    }
+    /// <summary>Gets whether the "organization_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOrganizationId {
+      get { return locationCase_ == LocationOneofCase.OrganizationId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "organization_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOrganizationId() {
+      if (HasOrganizationId) {
+        ClearLocation();
       }
     }
 
@@ -50125,10 +50405,24 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long FolderId {
-      get { return locationCase_ == LocationOneofCase.FolderId ? (long) location_ : 0L; }
+      get { return HasFolderId ? (long) location_ : 0L; }
       set {
         location_ = value;
         locationCase_ = LocationOneofCase.FolderId;
+      }
+    }
+    /// <summary>Gets whether the "folder_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFolderId {
+      get { return locationCase_ == LocationOneofCase.FolderId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "folder_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFolderId() {
+      if (HasFolderId) {
+        ClearLocation();
       }
     }
 
@@ -50178,8 +50472,8 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (locationCase_ == LocationOneofCase.OrganizationId) hash ^= OrganizationId.GetHashCode();
-      if (locationCase_ == LocationOneofCase.FolderId) hash ^= FolderId.GetHashCode();
+      if (HasOrganizationId) hash ^= OrganizationId.GetHashCode();
+      if (HasFolderId) hash ^= FolderId.GetHashCode();
       hash ^= (int) locationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -50199,11 +50493,11 @@ namespace Google.Cloud.Dlp.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (locationCase_ == LocationOneofCase.OrganizationId) {
+      if (HasOrganizationId) {
         output.WriteRawTag(8);
         output.WriteInt64(OrganizationId);
       }
-      if (locationCase_ == LocationOneofCase.FolderId) {
+      if (HasFolderId) {
         output.WriteRawTag(16);
         output.WriteInt64(FolderId);
       }
@@ -50217,11 +50511,11 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (locationCase_ == LocationOneofCase.OrganizationId) {
+      if (HasOrganizationId) {
         output.WriteRawTag(8);
         output.WriteInt64(OrganizationId);
       }
-      if (locationCase_ == LocationOneofCase.FolderId) {
+      if (HasFolderId) {
         output.WriteRawTag(16);
         output.WriteInt64(FolderId);
       }
@@ -50235,10 +50529,10 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (locationCase_ == LocationOneofCase.OrganizationId) {
+      if (HasOrganizationId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(OrganizationId);
       }
-      if (locationCase_ == LocationOneofCase.FolderId) {
+      if (HasFolderId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(FolderId);
       }
       if (_unknownFields != null) {
@@ -58698,7 +58992,7 @@ namespace Google.Cloud.Dlp.V2 {
         }
         TableOptions.MergeFrom(other.TableOptions);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -60336,7 +60630,7 @@ namespace Google.Cloud.Dlp.V2 {
         }
         ProfileLastGenerated.MergeFrom(other.ProfileLastGenerated);
       }
-      resourceLabels_.Add(other.resourceLabels_);
+      resourceLabels_.MergeFrom(other.resourceLabels_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -61685,10 +61979,24 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dlp.V2.DataProfilePubSubCondition.Types.ProfileScoreBucket MinimumRiskScore {
-          get { return valueCase_ == ValueOneofCase.MinimumRiskScore ? (global::Google.Cloud.Dlp.V2.DataProfilePubSubCondition.Types.ProfileScoreBucket) value_ : global::Google.Cloud.Dlp.V2.DataProfilePubSubCondition.Types.ProfileScoreBucket.Unspecified; }
+          get { return HasMinimumRiskScore ? (global::Google.Cloud.Dlp.V2.DataProfilePubSubCondition.Types.ProfileScoreBucket) value_ : global::Google.Cloud.Dlp.V2.DataProfilePubSubCondition.Types.ProfileScoreBucket.Unspecified; }
           set {
             value_ = value;
             valueCase_ = ValueOneofCase.MinimumRiskScore;
+          }
+        }
+        /// <summary>Gets whether the "minimum_risk_score" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMinimumRiskScore {
+          get { return valueCase_ == ValueOneofCase.MinimumRiskScore; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "minimum_risk_score" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMinimumRiskScore() {
+          if (HasMinimumRiskScore) {
+            ClearValue();
           }
         }
 
@@ -61700,10 +62008,24 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dlp.V2.DataProfilePubSubCondition.Types.ProfileScoreBucket MinimumSensitivityScore {
-          get { return valueCase_ == ValueOneofCase.MinimumSensitivityScore ? (global::Google.Cloud.Dlp.V2.DataProfilePubSubCondition.Types.ProfileScoreBucket) value_ : global::Google.Cloud.Dlp.V2.DataProfilePubSubCondition.Types.ProfileScoreBucket.Unspecified; }
+          get { return HasMinimumSensitivityScore ? (global::Google.Cloud.Dlp.V2.DataProfilePubSubCondition.Types.ProfileScoreBucket) value_ : global::Google.Cloud.Dlp.V2.DataProfilePubSubCondition.Types.ProfileScoreBucket.Unspecified; }
           set {
             value_ = value;
             valueCase_ = ValueOneofCase.MinimumSensitivityScore;
+          }
+        }
+        /// <summary>Gets whether the "minimum_sensitivity_score" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMinimumSensitivityScore {
+          get { return valueCase_ == ValueOneofCase.MinimumSensitivityScore; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "minimum_sensitivity_score" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMinimumSensitivityScore() {
+          if (HasMinimumSensitivityScore) {
+            ClearValue();
           }
         }
 
@@ -61753,8 +62075,8 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (valueCase_ == ValueOneofCase.MinimumRiskScore) hash ^= MinimumRiskScore.GetHashCode();
-          if (valueCase_ == ValueOneofCase.MinimumSensitivityScore) hash ^= MinimumSensitivityScore.GetHashCode();
+          if (HasMinimumRiskScore) hash ^= MinimumRiskScore.GetHashCode();
+          if (HasMinimumSensitivityScore) hash ^= MinimumSensitivityScore.GetHashCode();
           hash ^= (int) valueCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -61774,11 +62096,11 @@ namespace Google.Cloud.Dlp.V2 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (valueCase_ == ValueOneofCase.MinimumRiskScore) {
+          if (HasMinimumRiskScore) {
             output.WriteRawTag(8);
             output.WriteEnum((int) MinimumRiskScore);
           }
-          if (valueCase_ == ValueOneofCase.MinimumSensitivityScore) {
+          if (HasMinimumSensitivityScore) {
             output.WriteRawTag(16);
             output.WriteEnum((int) MinimumSensitivityScore);
           }
@@ -61792,11 +62114,11 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (valueCase_ == ValueOneofCase.MinimumRiskScore) {
+          if (HasMinimumRiskScore) {
             output.WriteRawTag(8);
             output.WriteEnum((int) MinimumRiskScore);
           }
-          if (valueCase_ == ValueOneofCase.MinimumSensitivityScore) {
+          if (HasMinimumSensitivityScore) {
             output.WriteRawTag(16);
             output.WriteEnum((int) MinimumSensitivityScore);
           }
@@ -61810,10 +62132,10 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (valueCase_ == ValueOneofCase.MinimumRiskScore) {
+          if (HasMinimumRiskScore) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MinimumRiskScore);
           }
-          if (valueCase_ == ValueOneofCase.MinimumSensitivityScore) {
+          if (HasMinimumSensitivityScore) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MinimumSensitivityScore);
           }
           if (_unknownFields != null) {

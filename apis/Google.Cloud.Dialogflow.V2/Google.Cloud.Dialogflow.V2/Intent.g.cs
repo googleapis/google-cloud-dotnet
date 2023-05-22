@@ -1642,6 +1642,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// phrases that you've created in template mode, those will continue to
             /// work.
             /// </summary>
+            [global::System.ObsoleteAttribute]
             [pbr::OriginalName("TEMPLATE")] Template = 2,
           }
 
@@ -12658,10 +12659,24 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string IntentBatchUri {
-      get { return intentBatchCase_ == IntentBatchOneofCase.IntentBatchUri ? (string) intentBatch_ : ""; }
+      get { return HasIntentBatchUri ? (string) intentBatch_ : ""; }
       set {
         intentBatch_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         intentBatchCase_ = IntentBatchOneofCase.IntentBatchUri;
+      }
+    }
+    /// <summary>Gets whether the "intent_batch_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIntentBatchUri {
+      get { return intentBatchCase_ == IntentBatchOneofCase.IntentBatchUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "intent_batch_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIntentBatchUri() {
+      if (HasIntentBatchUri) {
+        ClearIntentBatch();
       }
     }
 
@@ -12780,7 +12795,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (intentBatchCase_ == IntentBatchOneofCase.IntentBatchUri) hash ^= IntentBatchUri.GetHashCode();
+      if (HasIntentBatchUri) hash ^= IntentBatchUri.GetHashCode();
       if (intentBatchCase_ == IntentBatchOneofCase.IntentBatchInline) hash ^= IntentBatchInline.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
@@ -12808,7 +12823,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (intentBatchCase_ == IntentBatchOneofCase.IntentBatchUri) {
+      if (HasIntentBatchUri) {
         output.WriteRawTag(18);
         output.WriteString(IntentBatchUri);
       }
@@ -12842,7 +12857,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (intentBatchCase_ == IntentBatchOneofCase.IntentBatchUri) {
+      if (HasIntentBatchUri) {
         output.WriteRawTag(18);
         output.WriteString(IntentBatchUri);
       }
@@ -12875,7 +12890,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (intentBatchCase_ == IntentBatchOneofCase.IntentBatchUri) {
+      if (HasIntentBatchUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(IntentBatchUri);
       }
       if (intentBatchCase_ == IntentBatchOneofCase.IntentBatchInline) {

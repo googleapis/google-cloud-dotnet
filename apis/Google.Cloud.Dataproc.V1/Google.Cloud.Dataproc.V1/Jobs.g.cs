@@ -412,7 +412,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other == null) {
         return;
       }
-      driverLogLevels_.Add(other.driverLogLevels_);
+      driverLogLevels_.MergeFrom(other.driverLogLevels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -587,10 +587,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MainJarFileUri {
-      get { return driverCase_ == DriverOneofCase.MainJarFileUri ? (string) driver_ : ""; }
+      get { return HasMainJarFileUri ? (string) driver_ : ""; }
       set {
         driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         driverCase_ = DriverOneofCase.MainJarFileUri;
+      }
+    }
+    /// <summary>Gets whether the "main_jar_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMainJarFileUri {
+      get { return driverCase_ == DriverOneofCase.MainJarFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "main_jar_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMainJarFileUri() {
+      if (HasMainJarFileUri) {
+        ClearDriver();
       }
     }
 
@@ -603,10 +617,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MainClass {
-      get { return driverCase_ == DriverOneofCase.MainClass ? (string) driver_ : ""; }
+      get { return HasMainClass ? (string) driver_ : ""; }
       set {
         driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         driverCase_ = DriverOneofCase.MainClass;
+      }
+    }
+    /// <summary>Gets whether the "main_class" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMainClass {
+      get { return driverCase_ == DriverOneofCase.MainClass; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "main_class" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMainClass() {
+      if (HasMainClass) {
+        ClearDriver();
       }
     }
 
@@ -758,8 +786,8 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) hash ^= MainJarFileUri.GetHashCode();
-      if (driverCase_ == DriverOneofCase.MainClass) hash ^= MainClass.GetHashCode();
+      if (HasMainJarFileUri) hash ^= MainJarFileUri.GetHashCode();
+      if (HasMainClass) hash ^= MainClass.GetHashCode();
       hash ^= args_.GetHashCode();
       hash ^= jarFileUris_.GetHashCode();
       hash ^= fileUris_.GetHashCode();
@@ -785,11 +813,11 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         output.WriteRawTag(10);
         output.WriteString(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         output.WriteRawTag(18);
         output.WriteString(MainClass);
       }
@@ -812,11 +840,11 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         output.WriteRawTag(10);
         output.WriteString(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         output.WriteRawTag(18);
         output.WriteString(MainClass);
       }
@@ -839,10 +867,10 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MainClass);
       }
       size += args_.CalculateSize(_repeated_args_codec);
@@ -869,7 +897,7 @@ namespace Google.Cloud.Dataproc.V1 {
       jarFileUris_.Add(other.jarFileUris_);
       fileUris_.Add(other.fileUris_);
       archiveUris_.Add(other.archiveUris_);
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
           LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
@@ -1062,10 +1090,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MainJarFileUri {
-      get { return driverCase_ == DriverOneofCase.MainJarFileUri ? (string) driver_ : ""; }
+      get { return HasMainJarFileUri ? (string) driver_ : ""; }
       set {
         driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         driverCase_ = DriverOneofCase.MainJarFileUri;
+      }
+    }
+    /// <summary>Gets whether the "main_jar_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMainJarFileUri {
+      get { return driverCase_ == DriverOneofCase.MainJarFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "main_jar_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMainJarFileUri() {
+      if (HasMainJarFileUri) {
+        ClearDriver();
       }
     }
 
@@ -1078,10 +1120,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MainClass {
-      get { return driverCase_ == DriverOneofCase.MainClass ? (string) driver_ : ""; }
+      get { return HasMainClass ? (string) driver_ : ""; }
       set {
         driver_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         driverCase_ = DriverOneofCase.MainClass;
+      }
+    }
+    /// <summary>Gets whether the "main_class" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMainClass {
+      get { return driverCase_ == DriverOneofCase.MainClass; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "main_class" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMainClass() {
+      if (HasMainClass) {
+        ClearDriver();
       }
     }
 
@@ -1231,8 +1287,8 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) hash ^= MainJarFileUri.GetHashCode();
-      if (driverCase_ == DriverOneofCase.MainClass) hash ^= MainClass.GetHashCode();
+      if (HasMainJarFileUri) hash ^= MainJarFileUri.GetHashCode();
+      if (HasMainClass) hash ^= MainClass.GetHashCode();
       hash ^= args_.GetHashCode();
       hash ^= jarFileUris_.GetHashCode();
       hash ^= fileUris_.GetHashCode();
@@ -1258,11 +1314,11 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         output.WriteRawTag(10);
         output.WriteString(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         output.WriteRawTag(18);
         output.WriteString(MainClass);
       }
@@ -1285,11 +1341,11 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         output.WriteRawTag(10);
         output.WriteString(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         output.WriteRawTag(18);
         output.WriteString(MainClass);
       }
@@ -1312,10 +1368,10 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (driverCase_ == DriverOneofCase.MainJarFileUri) {
+      if (HasMainJarFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MainJarFileUri);
       }
-      if (driverCase_ == DriverOneofCase.MainClass) {
+      if (HasMainClass) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MainClass);
       }
       size += args_.CalculateSize(_repeated_args_codec);
@@ -1342,7 +1398,7 @@ namespace Google.Cloud.Dataproc.V1 {
       jarFileUris_.Add(other.jarFileUris_);
       fileUris_.Add(other.fileUris_);
       archiveUris_.Add(other.archiveUris_);
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
           LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
@@ -1783,7 +1839,7 @@ namespace Google.Cloud.Dataproc.V1 {
       jarFileUris_.Add(other.jarFileUris_);
       fileUris_.Add(other.fileUris_);
       archiveUris_.Add(other.archiveUris_);
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
           LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
@@ -2162,10 +2218,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryFileUri {
-      get { return queriesCase_ == QueriesOneofCase.QueryFileUri ? (string) queries_ : ""; }
+      get { return HasQueryFileUri ? (string) queries_ : ""; }
       set {
         queries_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queriesCase_ = QueriesOneofCase.QueryFileUri;
+      }
+    }
+    /// <summary>Gets whether the "query_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasQueryFileUri {
+      get { return queriesCase_ == QueriesOneofCase.QueryFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "query_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearQueryFileUri() {
+      if (HasQueryFileUri) {
+        ClearQueries();
       }
     }
 
@@ -2299,7 +2369,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) hash ^= QueryFileUri.GetHashCode();
+      if (HasQueryFileUri) hash ^= QueryFileUri.GetHashCode();
       if (queriesCase_ == QueriesOneofCase.QueryList) hash ^= QueryList.GetHashCode();
       if (ContinueOnFailure != false) hash ^= ContinueOnFailure.GetHashCode();
       hash ^= ScriptVariables.GetHashCode();
@@ -2324,7 +2394,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -2349,7 +2419,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -2374,7 +2444,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryFileUri);
       }
       if (queriesCase_ == QueriesOneofCase.QueryList) {
@@ -2401,8 +2471,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.ContinueOnFailure != false) {
         ContinueOnFailure = other.ContinueOnFailure;
       }
-      scriptVariables_.Add(other.scriptVariables_);
-      properties_.Add(other.properties_);
+      scriptVariables_.MergeFrom(other.scriptVariables_);
+      properties_.MergeFrom(other.properties_);
       jarFileUris_.Add(other.jarFileUris_);
       switch (other.QueriesCase) {
         case QueriesOneofCase.QueryFileUri:
@@ -2579,10 +2649,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryFileUri {
-      get { return queriesCase_ == QueriesOneofCase.QueryFileUri ? (string) queries_ : ""; }
+      get { return HasQueryFileUri ? (string) queries_ : ""; }
       set {
         queries_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queriesCase_ = QueriesOneofCase.QueryFileUri;
+      }
+    }
+    /// <summary>Gets whether the "query_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasQueryFileUri {
+      get { return queriesCase_ == QueriesOneofCase.QueryFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "query_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearQueryFileUri() {
+      if (HasQueryFileUri) {
+        ClearQueries();
       }
     }
 
@@ -2711,7 +2795,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) hash ^= QueryFileUri.GetHashCode();
+      if (HasQueryFileUri) hash ^= QueryFileUri.GetHashCode();
       if (queriesCase_ == QueriesOneofCase.QueryList) hash ^= QueryList.GetHashCode();
       hash ^= ScriptVariables.GetHashCode();
       hash ^= Properties.GetHashCode();
@@ -2736,7 +2820,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -2761,7 +2845,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -2786,7 +2870,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryFileUri);
       }
       if (queriesCase_ == QueriesOneofCase.QueryList) {
@@ -2810,8 +2894,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other == null) {
         return;
       }
-      scriptVariables_.Add(other.scriptVariables_);
-      properties_.Add(other.properties_);
+      scriptVariables_.MergeFrom(other.scriptVariables_);
+      properties_.MergeFrom(other.properties_);
       jarFileUris_.Add(other.jarFileUris_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
@@ -3001,10 +3085,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryFileUri {
-      get { return queriesCase_ == QueriesOneofCase.QueryFileUri ? (string) queries_ : ""; }
+      get { return HasQueryFileUri ? (string) queries_ : ""; }
       set {
         queries_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queriesCase_ = QueriesOneofCase.QueryFileUri;
+      }
+    }
+    /// <summary>Gets whether the "query_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasQueryFileUri {
+      get { return queriesCase_ == QueriesOneofCase.QueryFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "query_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearQueryFileUri() {
+      if (HasQueryFileUri) {
+        ClearQueries();
       }
     }
 
@@ -3153,7 +3251,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) hash ^= QueryFileUri.GetHashCode();
+      if (HasQueryFileUri) hash ^= QueryFileUri.GetHashCode();
       if (queriesCase_ == QueriesOneofCase.QueryList) hash ^= QueryList.GetHashCode();
       if (ContinueOnFailure != false) hash ^= ContinueOnFailure.GetHashCode();
       hash ^= ScriptVariables.GetHashCode();
@@ -3179,7 +3277,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -3208,7 +3306,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -3237,7 +3335,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryFileUri);
       }
       if (queriesCase_ == QueriesOneofCase.QueryList) {
@@ -3267,8 +3365,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.ContinueOnFailure != false) {
         ContinueOnFailure = other.ContinueOnFailure;
       }
-      scriptVariables_.Add(other.scriptVariables_);
-      properties_.Add(other.properties_);
+      scriptVariables_.MergeFrom(other.scriptVariables_);
+      properties_.MergeFrom(other.properties_);
       jarFileUris_.Add(other.jarFileUris_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
@@ -3670,7 +3768,7 @@ namespace Google.Cloud.Dataproc.V1 {
       args_.Add(other.args_);
       fileUris_.Add(other.fileUris_);
       archiveUris_.Add(other.archiveUris_);
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
           LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
@@ -3840,10 +3938,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryFileUri {
-      get { return queriesCase_ == QueriesOneofCase.QueryFileUri ? (string) queries_ : ""; }
+      get { return HasQueryFileUri ? (string) queries_ : ""; }
       set {
         queries_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queriesCase_ = QueriesOneofCase.QueryFileUri;
+      }
+    }
+    /// <summary>Gets whether the "query_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasQueryFileUri {
+      get { return queriesCase_ == QueriesOneofCase.QueryFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "query_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearQueryFileUri() {
+      if (HasQueryFileUri) {
+        ClearQueries();
       }
     }
 
@@ -3991,7 +4103,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) hash ^= QueryFileUri.GetHashCode();
+      if (HasQueryFileUri) hash ^= QueryFileUri.GetHashCode();
       if (queriesCase_ == QueriesOneofCase.QueryList) hash ^= QueryList.GetHashCode();
       if (ContinueOnFailure != false) hash ^= ContinueOnFailure.GetHashCode();
       if (OutputFormat.Length != 0) hash ^= OutputFormat.GetHashCode();
@@ -4017,7 +4129,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -4049,7 +4161,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -4081,7 +4193,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryFileUri);
       }
       if (queriesCase_ == QueriesOneofCase.QueryList) {
@@ -4117,7 +4229,7 @@ namespace Google.Cloud.Dataproc.V1 {
         OutputFormat = other.OutputFormat;
       }
       clientTags_.Add(other.clientTags_);
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
           LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
@@ -4317,10 +4429,24 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryFileUri {
-      get { return queriesCase_ == QueriesOneofCase.QueryFileUri ? (string) queries_ : ""; }
+      get { return HasQueryFileUri ? (string) queries_ : ""; }
       set {
         queries_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queriesCase_ = QueriesOneofCase.QueryFileUri;
+      }
+    }
+    /// <summary>Gets whether the "query_file_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasQueryFileUri {
+      get { return queriesCase_ == QueriesOneofCase.QueryFileUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "query_file_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearQueryFileUri() {
+      if (HasQueryFileUri) {
+        ClearQueries();
       }
     }
 
@@ -4468,7 +4594,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) hash ^= QueryFileUri.GetHashCode();
+      if (HasQueryFileUri) hash ^= QueryFileUri.GetHashCode();
       if (queriesCase_ == QueriesOneofCase.QueryList) hash ^= QueryList.GetHashCode();
       if (ContinueOnFailure != false) hash ^= ContinueOnFailure.GetHashCode();
       if (OutputFormat.Length != 0) hash ^= OutputFormat.GetHashCode();
@@ -4494,7 +4620,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -4526,7 +4652,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         output.WriteRawTag(10);
         output.WriteString(QueryFileUri);
       }
@@ -4558,7 +4684,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (queriesCase_ == QueriesOneofCase.QueryFileUri) {
+      if (HasQueryFileUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryFileUri);
       }
       if (queriesCase_ == QueriesOneofCase.QueryList) {
@@ -4594,7 +4720,7 @@ namespace Google.Cloud.Dataproc.V1 {
         OutputFormat = other.OutputFormat;
       }
       clientTags_.Add(other.clientTags_);
-      properties_.Add(other.properties_);
+      properties_.MergeFrom(other.properties_);
       if (other.loggingConfig_ != null) {
         if (loggingConfig_ == null) {
           LoggingConfig = new global::Google.Cloud.Dataproc.V1.LoggingConfig();
@@ -4926,7 +5052,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.ClusterUuid.Length != 0) {
         ClusterUuid = other.ClusterUuid;
       }
-      clusterLabels_.Add(other.clusterLabels_);
+      clusterLabels_.MergeFrom(other.clusterLabels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6819,7 +6945,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (other.DriverControlFilesUri.Length != 0) {
         DriverControlFilesUri = other.DriverControlFilesUri;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.scheduling_ != null) {
         if (scheduling_ == null) {
           Scheduling = new global::Google.Cloud.Dataproc.V1.JobScheduling();

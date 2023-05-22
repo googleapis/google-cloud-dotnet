@@ -261,6 +261,7 @@ namespace Google.Cloud.AlloyDb.V1 {
     /// <summary>
     /// DEPRECATED - The database version is Postgres 13.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [pbr::OriginalName("POSTGRES_13")] Postgres13 = 1,
     /// <summary>
     /// The database version is Postgres 14.
@@ -1683,6 +1684,8 @@ namespace Google.Cloud.AlloyDb.V1 {
 
     /// <summary>Field number for the "enabled" field.</summary>
     public const int EnabledFieldNumber = 1;
+    private readonly static bool EnabledDefaultValue = false;
+
     private bool enabled_;
     /// <summary>
     /// Whether automated automated backups are enabled. If not set, defaults to
@@ -1691,7 +1694,7 @@ namespace Google.Cloud.AlloyDb.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Enabled {
-      get { if ((_hasBits0 & 1) != 0) { return enabled_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return enabled_; } else { return EnabledDefaultValue; } }
       set {
         _hasBits0 |= 1;
         enabled_ = value;
@@ -2011,7 +2014,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (other.Location.Length != 0) {
         Location = other.Location;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.ScheduleCase) {
         case ScheduleOneofCase.WeeklySchedule:
           if (WeeklySchedule == null) {
@@ -3912,7 +3915,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         }
         DeleteTime.MergeFrom(other.DeleteTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.State != global::Google.Cloud.AlloyDb.V1.Cluster.Types.State.Unspecified) {
         State = other.State;
       }
@@ -3928,7 +3931,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.Reconciling != false) {
         Reconciling = other.Reconciling;
       }
@@ -5512,7 +5515,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         }
         DeleteTime.MergeFrom(other.DeleteTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.State != global::Google.Cloud.AlloyDb.V1.Instance.Types.State.Unspecified) {
         State = other.State;
       }
@@ -5531,7 +5534,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (other.GceZone.Length != 0) {
         GceZone = other.GceZone;
       }
-      databaseFlags_.Add(other.databaseFlags_);
+      databaseFlags_.MergeFrom(other.databaseFlags_);
       if (other.writableNode_ != null) {
         if (writableNode_ == null) {
           WritableNode = new global::Google.Cloud.AlloyDb.V1.Instance.Types.Node();
@@ -5560,7 +5563,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6477,6 +6480,8 @@ namespace Google.Cloud.AlloyDb.V1 {
 
         /// <summary>Field number for the "record_application_tags" field.</summary>
         public const int RecordApplicationTagsFieldNumber = 2;
+        private readonly static bool RecordApplicationTagsDefaultValue = false;
+
         private bool recordApplicationTags_;
         /// <summary>
         /// Record application tags for an instance.
@@ -6485,7 +6490,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool RecordApplicationTags {
-          get { if ((_hasBits0 & 1) != 0) { return recordApplicationTags_; } else { return false; } }
+          get { if ((_hasBits0 & 1) != 0) { return recordApplicationTags_; } else { return RecordApplicationTagsDefaultValue; } }
           set {
             _hasBits0 |= 1;
             recordApplicationTags_ = value;
@@ -6506,6 +6511,8 @@ namespace Google.Cloud.AlloyDb.V1 {
 
         /// <summary>Field number for the "record_client_address" field.</summary>
         public const int RecordClientAddressFieldNumber = 3;
+        private readonly static bool RecordClientAddressDefaultValue = false;
+
         private bool recordClientAddress_;
         /// <summary>
         /// Record client address for an instance. Client address is PII information.
@@ -6514,7 +6521,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool RecordClientAddress {
-          get { if ((_hasBits0 & 2) != 0) { return recordClientAddress_; } else { return false; } }
+          get { if ((_hasBits0 & 2) != 0) { return recordClientAddress_; } else { return RecordClientAddressDefaultValue; } }
           set {
             _hasBits0 |= 2;
             recordClientAddress_ = value;
@@ -6551,6 +6558,8 @@ namespace Google.Cloud.AlloyDb.V1 {
 
         /// <summary>Field number for the "query_plans_per_minute" field.</summary>
         public const int QueryPlansPerMinuteFieldNumber = 5;
+        private readonly static uint QueryPlansPerMinuteDefaultValue = 0;
+
         private uint queryPlansPerMinute_;
         /// <summary>
         /// Number of query execution plans captured by Insights per minute
@@ -6560,7 +6569,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public uint QueryPlansPerMinute {
-          get { if ((_hasBits0 & 4) != 0) { return queryPlansPerMinute_; } else { return 0; } }
+          get { if ((_hasBits0 & 4) != 0) { return queryPlansPerMinute_; } else { return QueryPlansPerMinuteDefaultValue; } }
           set {
             _hasBits0 |= 4;
             queryPlansPerMinute_ = value;
@@ -7683,7 +7692,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         }
         DeleteTime.MergeFrom(other.DeleteTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.State != global::Google.Cloud.AlloyDb.V1.Backup.Types.State.Unspecified) {
         State = other.State;
       }
@@ -7717,7 +7726,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.SizeBytes != 0L) {
         SizeBytes = other.SizeBytes;
       }

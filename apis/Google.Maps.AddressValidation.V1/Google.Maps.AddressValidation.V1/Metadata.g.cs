@@ -99,6 +99,8 @@ namespace Google.Maps.AddressValidation.V1 {
 
     /// <summary>Field number for the "business" field.</summary>
     public const int BusinessFieldNumber = 2;
+    private readonly static bool BusinessDefaultValue = false;
+
     private bool business_;
     /// <summary>
     /// Indicates that this is the address of a business.
@@ -107,7 +109,7 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Business {
-      get { if ((_hasBits0 & 1) != 0) { return business_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return business_; } else { return BusinessDefaultValue; } }
       set {
         _hasBits0 |= 1;
         business_ = value;
@@ -128,6 +130,8 @@ namespace Google.Maps.AddressValidation.V1 {
 
     /// <summary>Field number for the "po_box" field.</summary>
     public const int PoBoxFieldNumber = 3;
+    private readonly static bool PoBoxDefaultValue = false;
+
     private bool poBox_;
     /// <summary>
     /// Indicates that the address of a PO box.
@@ -136,7 +140,7 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool PoBox {
-      get { if ((_hasBits0 & 2) != 0) { return poBox_; } else { return false; } }
+      get { if ((_hasBits0 & 2) != 0) { return poBox_; } else { return PoBoxDefaultValue; } }
       set {
         _hasBits0 |= 2;
         poBox_ = value;
@@ -157,6 +161,8 @@ namespace Google.Maps.AddressValidation.V1 {
 
     /// <summary>Field number for the "residential" field.</summary>
     public const int ResidentialFieldNumber = 6;
+    private readonly static bool ResidentialDefaultValue = false;
+
     private bool residential_;
     /// <summary>
     /// Indicates that this is the address of a residence.
@@ -165,7 +171,7 @@ namespace Google.Maps.AddressValidation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Residential {
-      get { if ((_hasBits0 & 4) != 0) { return residential_; } else { return false; } }
+      get { if ((_hasBits0 & 4) != 0) { return residential_; } else { return ResidentialDefaultValue; } }
       set {
         _hasBits0 |= 4;
         residential_ = value;

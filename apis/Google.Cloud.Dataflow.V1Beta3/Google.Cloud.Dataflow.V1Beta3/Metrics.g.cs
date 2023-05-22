@@ -374,7 +374,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      context_.Add(other.context_);
+      context_.MergeFrom(other.context_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

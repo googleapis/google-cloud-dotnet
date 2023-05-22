@@ -907,7 +907,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       tagIds_.Add(other.tagIds_);
       promotionIds_.Add(other.promotionIds_);
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       if (other.mediaInfo_ != null) {
         if (mediaInfo_ == null) {
           MediaInfo = new global::Google.Cloud.DiscoveryEngine.V1Beta.MediaInfo();
@@ -1593,6 +1593,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "offset" field.</summary>
     public const int OffsetFieldNumber = 3;
+    private readonly static int OffsetDefaultValue = 0;
+
     private int offset_;
     /// <summary>
     /// An integer that specifies the current offset for pagination (the 0-indexed
@@ -1610,7 +1612,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Offset {
-      get { if ((_hasBits0 & 1) != 0) { return offset_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return offset_; } else { return OffsetDefaultValue; } }
       set {
         _hasBits0 |= 1;
         offset_ = value;
@@ -2103,6 +2105,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 1;
+    private readonly static float ValueDefaultValue = 0F;
+
     private float value_;
     /// <summary>
     /// Required. Total non-zero value associated with the transaction. This value
@@ -2112,7 +2116,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Value {
-      get { if ((_hasBits0 & 1) != 0) { return value_; } else { return 0F; } }
+      get { if ((_hasBits0 & 1) != 0) { return value_; } else { return ValueDefaultValue; } }
       set {
         _hasBits0 |= 1;
         value_ = value;
@@ -2163,6 +2167,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "tax" field.</summary>
     public const int TaxFieldNumber = 4;
+    private readonly static float TaxDefaultValue = 0F;
+
     private float tax_;
     /// <summary>
     /// All the taxes associated with the transaction.
@@ -2170,7 +2176,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Tax {
-      get { if ((_hasBits0 & 2) != 0) { return tax_; } else { return 0F; } }
+      get { if ((_hasBits0 & 2) != 0) { return tax_; } else { return TaxDefaultValue; } }
       set {
         _hasBits0 |= 2;
         tax_ = value;
@@ -2191,6 +2197,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "cost" field.</summary>
     public const int CostFieldNumber = 5;
+    private readonly static float CostDefaultValue = 0F;
+
     private float cost_;
     /// <summary>
     /// All the costs associated with the products. These can be manufacturing
@@ -2205,7 +2213,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Cost {
-      get { if ((_hasBits0 & 4) != 0) { return cost_; } else { return 0F; } }
+      get { if ((_hasBits0 & 4) != 0) { return cost_; } else { return CostDefaultValue; } }
       set {
         _hasBits0 |= 4;
         cost_ = value;
@@ -2226,6 +2234,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "discount_value" field.</summary>
     public const int DiscountValueFieldNumber = 6;
+    private readonly static float DiscountValueDefaultValue = 0F;
+
     private float discountValue_;
     /// <summary>
     /// The total discount(s) value applied to this transaction.
@@ -2253,7 +2263,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float DiscountValue {
-      get { if ((_hasBits0 & 8) != 0) { return discountValue_; } else { return 0F; } }
+      get { if ((_hasBits0 & 8) != 0) { return discountValue_; } else { return DiscountValueDefaultValue; } }
       set {
         _hasBits0 |= 8;
         discountValue_ = value;
@@ -2592,10 +2602,24 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
-      get { return documentDescriptorCase_ == DocumentDescriptorOneofCase.Id ? (string) documentDescriptor_ : ""; }
+      get { return HasId ? (string) documentDescriptor_ : ""; }
       set {
         documentDescriptor_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         documentDescriptorCase_ = DocumentDescriptorOneofCase.Id;
+      }
+    }
+    /// <summary>Gets whether the "id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasId {
+      get { return documentDescriptorCase_ == DocumentDescriptorOneofCase.Id; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearId() {
+      if (HasId) {
+        ClearDocumentDescriptor();
       }
     }
 
@@ -2608,15 +2632,31 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
-      get { return documentDescriptorCase_ == DocumentDescriptorOneofCase.Name ? (string) documentDescriptor_ : ""; }
+      get { return HasName ? (string) documentDescriptor_ : ""; }
       set {
         documentDescriptor_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         documentDescriptorCase_ = DocumentDescriptorOneofCase.Name;
       }
     }
+    /// <summary>Gets whether the "name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasName {
+      get { return documentDescriptorCase_ == DocumentDescriptorOneofCase.Name; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearName() {
+      if (HasName) {
+        ClearDocumentDescriptor();
+      }
+    }
 
     /// <summary>Field number for the "quantity" field.</summary>
     public const int QuantityFieldNumber = 3;
+    private readonly static int QuantityDefaultValue = 0;
+
     private int quantity_;
     /// <summary>
     /// Quantity of the Document associated with the user event. Defaults to 1.
@@ -2632,7 +2672,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Quantity {
-      get { if ((_hasBits0 & 1) != 0) { return quantity_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return quantity_; } else { return QuantityDefaultValue; } }
       set {
         _hasBits0 |= 1;
         quantity_ = value;
@@ -2714,8 +2754,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Id) hash ^= Id.GetHashCode();
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Name) hash ^= Name.GetHashCode();
+      if (HasId) hash ^= Id.GetHashCode();
+      if (HasName) hash ^= Name.GetHashCode();
       if (HasQuantity) hash ^= Quantity.GetHashCode();
       hash ^= promotionIds_.GetHashCode();
       hash ^= (int) documentDescriptorCase_;
@@ -2737,11 +2777,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Id) {
+      if (HasId) {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Name) {
+      if (HasName) {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
@@ -2760,11 +2800,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Id) {
+      if (HasId) {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Name) {
+      if (HasName) {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
@@ -2783,10 +2823,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Id) {
+      if (HasId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Name) {
+      if (HasName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (HasQuantity) {
@@ -2971,6 +3011,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "panel_position" field.</summary>
     public const int PanelPositionFieldNumber = 4;
+    private readonly static int PanelPositionDefaultValue = 0;
+
     private int panelPosition_;
     /// <summary>
     /// The ordered position of the panel, if shown to the user with other panels.
@@ -2981,7 +3023,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PanelPosition {
-      get { if ((_hasBits0 & 1) != 0) { return panelPosition_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return panelPosition_; } else { return PanelPositionDefaultValue; } }
       set {
         _hasBits0 |= 1;
         panelPosition_ = value;
@@ -3002,6 +3044,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "total_panels" field.</summary>
     public const int TotalPanelsFieldNumber = 5;
+    private readonly static int TotalPanelsDefaultValue = 0;
+
     private int totalPanels_;
     /// <summary>
     /// The total number of panels, including this one, shown to the user.
@@ -3012,7 +3056,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TotalPanels {
-      get { if ((_hasBits0 & 2) != 0) { return totalPanels_; } else { return 0; } }
+      get { if ((_hasBits0 & 2) != 0) { return totalPanels_; } else { return TotalPanelsDefaultValue; } }
       set {
         _hasBits0 |= 2;
         totalPanels_ = value;
@@ -3306,6 +3350,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "media_progress_percentage" field.</summary>
     public const int MediaProgressPercentageFieldNumber = 2;
+    private readonly static float MediaProgressPercentageDefaultValue = 0F;
+
     private float mediaProgressPercentage_;
     /// <summary>
     /// Media progress should be computed using only the media_progress_duration
@@ -3319,7 +3365,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float MediaProgressPercentage {
-      get { if ((_hasBits0 & 1) != 0) { return mediaProgressPercentage_; } else { return 0F; } }
+      get { if ((_hasBits0 & 1) != 0) { return mediaProgressPercentage_; } else { return MediaProgressPercentageDefaultValue; } }
       set {
         _hasBits0 |= 1;
         mediaProgressPercentage_ = value;

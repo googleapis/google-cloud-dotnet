@@ -259,6 +259,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// File format in Cloud Storage.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public enum GcsFileFormat {
     /// <summary>
     /// Unspecified Cloud Storage file format.
@@ -589,7 +590,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       if (other.DatabaseService.Length != 0) {
         DatabaseService = other.DatabaseService;
       }
-      connectionAttributes_.Add(other.connectionAttributes_);
+      connectionAttributes_.MergeFrom(other.connectionAttributes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1696,10 +1697,24 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Password {
-      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.Password ? (string) authenticationMethod_ : ""; }
+      get { return HasPassword ? (string) authenticationMethod_ : ""; }
       set {
         authenticationMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         authenticationMethodCase_ = AuthenticationMethodOneofCase.Password;
+      }
+    }
+    /// <summary>Gets whether the "password" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPassword {
+      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.Password; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "password" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPassword() {
+      if (HasPassword) {
+        ClearAuthenticationMethod();
       }
     }
 
@@ -1711,10 +1726,24 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PrivateKey {
-      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey ? (string) authenticationMethod_ : ""; }
+      get { return HasPrivateKey ? (string) authenticationMethod_ : ""; }
       set {
         authenticationMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         authenticationMethodCase_ = AuthenticationMethodOneofCase.PrivateKey;
+      }
+    }
+    /// <summary>Gets whether the "private_key" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPrivateKey {
+      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "private_key" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPrivateKey() {
+      if (HasPrivateKey) {
+        ClearAuthenticationMethod();
       }
     }
 
@@ -1770,8 +1799,8 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       if (Hostname.Length != 0) hash ^= Hostname.GetHashCode();
       if (Username.Length != 0) hash ^= Username.GetHashCode();
       if (Port != 0) hash ^= Port.GetHashCode();
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.Password) hash ^= Password.GetHashCode();
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey) hash ^= PrivateKey.GetHashCode();
+      if (HasPassword) hash ^= Password.GetHashCode();
+      if (HasPrivateKey) hash ^= PrivateKey.GetHashCode();
       hash ^= (int) authenticationMethodCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1803,11 +1832,11 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         output.WriteRawTag(24);
         output.WriteInt32(Port);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.Password) {
+      if (HasPassword) {
         output.WriteRawTag(162, 6);
         output.WriteString(Password);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey) {
+      if (HasPrivateKey) {
         output.WriteRawTag(170, 6);
         output.WriteString(PrivateKey);
       }
@@ -1833,11 +1862,11 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         output.WriteRawTag(24);
         output.WriteInt32(Port);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.Password) {
+      if (HasPassword) {
         output.WriteRawTag(162, 6);
         output.WriteString(Password);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey) {
+      if (HasPrivateKey) {
         output.WriteRawTag(170, 6);
         output.WriteString(PrivateKey);
       }
@@ -1860,10 +1889,10 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       if (Port != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Port);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.Password) {
+      if (HasPassword) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Password);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey) {
+      if (HasPrivateKey) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(PrivateKey);
       }
       if (_unknownFields != null) {
@@ -2566,7 +2595,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -3257,7 +3286,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -4310,7 +4339,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -9255,7 +9284,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -10233,7 +10262,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
         ErrorTime.MergeFrom(other.ErrorTime);
       }
-      details_.Add(other.details_);
+      details_.MergeFrom(other.details_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -11064,7 +11093,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       if (other.Level != global::Google.Cloud.Datastream.V1Alpha1.ValidationMessage.Types.Level.Unspecified) {
         Level = other.Level;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.Code.Length != 0) {
         Code = other.Code;
       }

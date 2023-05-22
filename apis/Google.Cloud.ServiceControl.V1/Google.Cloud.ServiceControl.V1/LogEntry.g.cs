@@ -270,10 +270,24 @@ namespace Google.Cloud.ServiceControl.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TextPayload {
-      get { return payloadCase_ == PayloadOneofCase.TextPayload ? (string) payload_ : ""; }
+      get { return HasTextPayload ? (string) payload_ : ""; }
       set {
         payload_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadCase_ = PayloadOneofCase.TextPayload;
+      }
+    }
+    /// <summary>Gets whether the "text_payload" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTextPayload {
+      get { return payloadCase_ == PayloadOneofCase.TextPayload; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "text_payload" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTextPayload() {
+      if (HasTextPayload) {
+        ClearPayload();
       }
     }
 
@@ -390,7 +404,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       if (InsertId.Length != 0) hash ^= InsertId.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.ProtoPayload) hash ^= ProtoPayload.GetHashCode();
-      if (payloadCase_ == PayloadOneofCase.TextPayload) hash ^= TextPayload.GetHashCode();
+      if (HasTextPayload) hash ^= TextPayload.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.StructPayload) hash ^= StructPayload.GetHashCode();
       if (operation_ != null) hash ^= Operation.GetHashCode();
       if (sourceLocation_ != null) hash ^= SourceLocation.GetHashCode();
@@ -417,7 +431,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(ProtoPayload);
       }
-      if (payloadCase_ == PayloadOneofCase.TextPayload) {
+      if (HasTextPayload) {
         output.WriteRawTag(26);
         output.WriteString(TextPayload);
       }
@@ -472,7 +486,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(ProtoPayload);
       }
-      if (payloadCase_ == PayloadOneofCase.TextPayload) {
+      if (HasTextPayload) {
         output.WriteRawTag(26);
         output.WriteString(TextPayload);
       }
@@ -545,7 +559,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       if (payloadCase_ == PayloadOneofCase.ProtoPayload) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProtoPayload);
       }
-      if (payloadCase_ == PayloadOneofCase.TextPayload) {
+      if (HasTextPayload) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TextPayload);
       }
       if (payloadCase_ == PayloadOneofCase.StructPayload) {
@@ -593,7 +607,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       if (other.InsertId.Length != 0) {
         InsertId = other.InsertId;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.operation_ != null) {
         if (operation_ == null) {
           Operation = new global::Google.Cloud.ServiceControl.V1.LogEntryOperation();

@@ -685,7 +685,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       if (other.ConsumerId.Length != 0) {
         ConsumerId = other.ConsumerId;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       quotaMetrics_.Add(other.quotaMetrics_);
       if (other.QuotaMode != global::Google.Cloud.ServiceControl.V1.QuotaOperation.Types.QuotaMode.Unspecified) {
         QuotaMode = other.QuotaMode;

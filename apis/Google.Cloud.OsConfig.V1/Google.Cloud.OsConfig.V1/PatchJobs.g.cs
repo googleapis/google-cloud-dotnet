@@ -6764,10 +6764,24 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LocalPath {
-      get { return executableCase_ == ExecutableOneofCase.LocalPath ? (string) executable_ : ""; }
+      get { return HasLocalPath ? (string) executable_ : ""; }
       set {
         executable_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         executableCase_ = ExecutableOneofCase.LocalPath;
+      }
+    }
+    /// <summary>Gets whether the "local_path" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLocalPath {
+      get { return executableCase_ == ExecutableOneofCase.LocalPath; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "local_path" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLocalPath() {
+      if (HasLocalPath) {
+        ClearExecutable();
       }
     }
 
@@ -6867,7 +6881,7 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (executableCase_ == ExecutableOneofCase.LocalPath) hash ^= LocalPath.GetHashCode();
+      if (HasLocalPath) hash ^= LocalPath.GetHashCode();
       if (executableCase_ == ExecutableOneofCase.GcsObject) hash ^= GcsObject.GetHashCode();
       hash ^= allowedSuccessCodes_.GetHashCode();
       if (Interpreter != global::Google.Cloud.OsConfig.V1.ExecStepConfig.Types.Interpreter.Unspecified) hash ^= Interpreter.GetHashCode();
@@ -6890,7 +6904,7 @@ namespace Google.Cloud.OsConfig.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (executableCase_ == ExecutableOneofCase.LocalPath) {
+      if (HasLocalPath) {
         output.WriteRawTag(10);
         output.WriteString(LocalPath);
       }
@@ -6913,7 +6927,7 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (executableCase_ == ExecutableOneofCase.LocalPath) {
+      if (HasLocalPath) {
         output.WriteRawTag(10);
         output.WriteString(LocalPath);
       }
@@ -6936,7 +6950,7 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (executableCase_ == ExecutableOneofCase.LocalPath) {
+      if (HasLocalPath) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LocalPath);
       }
       if (executableCase_ == ExecutableOneofCase.GcsObject) {
@@ -7832,7 +7846,7 @@ namespace Google.Cloud.OsConfig.V1 {
           if (other == null) {
             return;
           }
-          labels_.Add(other.labels_);
+          labels_.MergeFrom(other.labels_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

@@ -898,7 +898,7 @@ namespace Google.Cloud.Run.V2 {
       if (other == null) {
         return;
       }
-      limits_.Add(other.limits_);
+      limits_.MergeFrom(other.limits_);
       if (other.CpuIdle != false) {
         CpuIdle = other.CpuIdle;
       }
@@ -1053,10 +1053,24 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Value {
-      get { return valuesCase_ == ValuesOneofCase.Value ? (string) values_ : ""; }
+      get { return HasValue ? (string) values_ : ""; }
       set {
         values_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valuesCase_ = ValuesOneofCase.Value;
+      }
+    }
+    /// <summary>Gets whether the "value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasValue {
+      get { return valuesCase_ == ValuesOneofCase.Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValue() {
+      if (HasValue) {
+        ClearValues();
       }
     }
 
@@ -1123,7 +1137,7 @@ namespace Google.Cloud.Run.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (valuesCase_ == ValuesOneofCase.Value) hash ^= Value.GetHashCode();
+      if (HasValue) hash ^= Value.GetHashCode();
       if (valuesCase_ == ValuesOneofCase.ValueSource) hash ^= ValueSource.GetHashCode();
       hash ^= (int) valuesCase_;
       if (_unknownFields != null) {
@@ -1148,7 +1162,7 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (valuesCase_ == ValuesOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(18);
         output.WriteString(Value);
       }
@@ -1170,7 +1184,7 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (valuesCase_ == ValuesOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(18);
         output.WriteString(Value);
       }
@@ -1191,7 +1205,7 @@ namespace Google.Cloud.Run.V2 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (valuesCase_ == ValuesOneofCase.Value) {
+      if (HasValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
       }
       if (valuesCase_ == ValuesOneofCase.ValueSource) {

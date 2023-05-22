@@ -1804,7 +1804,7 @@ namespace Grafeas.V1 {
           if (other.Uri.Length != 0) {
             Uri = other.Uri;
           }
-          digest_.Add(other.digest_);
+          digest_.MergeFrom(other.digest_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 

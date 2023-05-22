@@ -410,6 +410,8 @@ namespace Google.Maps.Routing.V2 {
 
     /// <summary>Field number for the "intermediate_waypoint_request_index" field.</summary>
     public const int IntermediateWaypointRequestIndexFieldNumber = 2;
+    private readonly static int IntermediateWaypointRequestIndexDefaultValue = 0;
+
     private int intermediateWaypointRequestIndex_;
     /// <summary>
     /// The index of the corresponding intermediate waypoint in the request.
@@ -419,7 +421,7 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int IntermediateWaypointRequestIndex {
-      get { if ((_hasBits0 & 1) != 0) { return intermediateWaypointRequestIndex_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return intermediateWaypointRequestIndex_; } else { return IntermediateWaypointRequestIndexDefaultValue; } }
       set {
         _hasBits0 |= 1;
         intermediateWaypointRequestIndex_ = value;

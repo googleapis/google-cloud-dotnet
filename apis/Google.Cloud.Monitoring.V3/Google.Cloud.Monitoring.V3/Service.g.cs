@@ -606,7 +606,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
         Telemetry.MergeFrom(other.Telemetry);
       }
-      userLabels_.Add(other.userLabels_);
+      userLabels_.MergeFrom(other.userLabels_);
       switch (other.IdentifierCase) {
         case IdentifierOneofCase.Custom:
           if (Custom == null) {
@@ -2625,10 +2625,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Type.CalendarPeriod CalendarPeriod {
-      get { return periodCase_ == PeriodOneofCase.CalendarPeriod ? (global::Google.Type.CalendarPeriod) period_ : global::Google.Type.CalendarPeriod.Unspecified; }
+      get { return HasCalendarPeriod ? (global::Google.Type.CalendarPeriod) period_ : global::Google.Type.CalendarPeriod.Unspecified; }
       set {
         period_ = value;
         periodCase_ = PeriodOneofCase.CalendarPeriod;
+      }
+    }
+    /// <summary>Gets whether the "calendar_period" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCalendarPeriod {
+      get { return periodCase_ == PeriodOneofCase.CalendarPeriod; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "calendar_period" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCalendarPeriod() {
+      if (HasCalendarPeriod) {
+        ClearPeriod();
       }
     }
 
@@ -2707,7 +2721,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (serviceLevelIndicator_ != null) hash ^= ServiceLevelIndicator.GetHashCode();
       if (Goal != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Goal);
       if (periodCase_ == PeriodOneofCase.RollingPeriod) hash ^= RollingPeriod.GetHashCode();
-      if (periodCase_ == PeriodOneofCase.CalendarPeriod) hash ^= CalendarPeriod.GetHashCode();
+      if (HasCalendarPeriod) hash ^= CalendarPeriod.GetHashCode();
       hash ^= UserLabels.GetHashCode();
       hash ^= (int) periodCase_;
       if (_unknownFields != null) {
@@ -2744,7 +2758,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(42);
         output.WriteMessage(RollingPeriod);
       }
-      if (periodCase_ == PeriodOneofCase.CalendarPeriod) {
+      if (HasCalendarPeriod) {
         output.WriteRawTag(48);
         output.WriteEnum((int) CalendarPeriod);
       }
@@ -2779,7 +2793,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(42);
         output.WriteMessage(RollingPeriod);
       }
-      if (periodCase_ == PeriodOneofCase.CalendarPeriod) {
+      if (HasCalendarPeriod) {
         output.WriteRawTag(48);
         output.WriteEnum((int) CalendarPeriod);
       }
@@ -2813,7 +2827,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (periodCase_ == PeriodOneofCase.RollingPeriod) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RollingPeriod);
       }
-      if (periodCase_ == PeriodOneofCase.CalendarPeriod) {
+      if (HasCalendarPeriod) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CalendarPeriod);
       }
       size += userLabels_.CalculateSize(_map_userLabels_codec);
@@ -2844,7 +2858,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (other.Goal != 0D) {
         Goal = other.Goal;
       }
-      userLabels_.Add(other.userLabels_);
+      userLabels_.MergeFrom(other.userLabels_);
       switch (other.PeriodCase) {
         case PeriodOneofCase.RollingPeriod:
           if (RollingPeriod == null) {
@@ -5280,10 +5294,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GoodBadMetricFilter {
-      get { return windowCriterionCase_ == WindowCriterionOneofCase.GoodBadMetricFilter ? (string) windowCriterion_ : ""; }
+      get { return HasGoodBadMetricFilter ? (string) windowCriterion_ : ""; }
       set {
         windowCriterion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         windowCriterionCase_ = WindowCriterionOneofCase.GoodBadMetricFilter;
+      }
+    }
+    /// <summary>Gets whether the "good_bad_metric_filter" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGoodBadMetricFilter {
+      get { return windowCriterionCase_ == WindowCriterionOneofCase.GoodBadMetricFilter; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "good_bad_metric_filter" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGoodBadMetricFilter() {
+      if (HasGoodBadMetricFilter) {
+        ClearWindowCriterion();
       }
     }
 
@@ -5401,7 +5429,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (windowCriterionCase_ == WindowCriterionOneofCase.GoodBadMetricFilter) hash ^= GoodBadMetricFilter.GetHashCode();
+      if (HasGoodBadMetricFilter) hash ^= GoodBadMetricFilter.GetHashCode();
       if (windowCriterionCase_ == WindowCriterionOneofCase.GoodTotalRatioThreshold) hash ^= GoodTotalRatioThreshold.GetHashCode();
       if (windowCriterionCase_ == WindowCriterionOneofCase.MetricMeanInRange) hash ^= MetricMeanInRange.GetHashCode();
       if (windowCriterionCase_ == WindowCriterionOneofCase.MetricSumInRange) hash ^= MetricSumInRange.GetHashCode();
@@ -5433,7 +5461,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(34);
         output.WriteMessage(WindowPeriod);
       }
-      if (windowCriterionCase_ == WindowCriterionOneofCase.GoodBadMetricFilter) {
+      if (HasGoodBadMetricFilter) {
         output.WriteRawTag(42);
         output.WriteString(GoodBadMetricFilter);
       }
@@ -5463,7 +5491,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(34);
         output.WriteMessage(WindowPeriod);
       }
-      if (windowCriterionCase_ == WindowCriterionOneofCase.GoodBadMetricFilter) {
+      if (HasGoodBadMetricFilter) {
         output.WriteRawTag(42);
         output.WriteString(GoodBadMetricFilter);
       }
@@ -5485,7 +5513,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (windowCriterionCase_ == WindowCriterionOneofCase.GoodBadMetricFilter) {
+      if (HasGoodBadMetricFilter) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GoodBadMetricFilter);
       }
       if (windowCriterionCase_ == WindowCriterionOneofCase.GoodTotalRatioThreshold) {

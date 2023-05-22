@@ -366,7 +366,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.payload_ != null) {
         if (payload_ == null) {
           Payload = new global::Google.Protobuf.WellKnownTypes.Value();
