@@ -489,7 +489,8 @@
         "audit"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.0.0"
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Protobuf": "3.23.0"
       },
       "generator": "proto",
       "protoPath": "google/cloud/audit"
@@ -845,7 +846,8 @@
         "logs"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.0.0"
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Protobuf": "3.23.0"
       },
       "generator": "proto",
       "protoPath": "google/cloud/bigquery/logging/v1"
