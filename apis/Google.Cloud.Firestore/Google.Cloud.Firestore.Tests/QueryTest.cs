@@ -25,8 +25,8 @@ using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
-using ProtoFilter = Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter;
 using ProtoCompositeFilter = Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter;
+using ProtoFilter = Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -908,12 +908,14 @@ namespace Google.Cloud.Firestore.Tests
                     }
                 }
             };
-            mock.Setup(c => c.RunQuery(request, It.IsAny<CallSettings>())).Returns(new FakeQueryStream(responses));
+            var fakeQueryStream = new FakeQueryStream(responses);
+            mock.Setup(c => c.RunQuery(request, It.IsAny<CallSettings>())).Returns(fakeQueryStream);
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var query = db.Collection("col").Select("Name").Offset(3);
             // Just for variety, we'll provide a transaction ID this time...
             var documents = await query.StreamAsync(ByteString.CopyFrom(1, 2, 3, 4), CancellationToken.None, allowLimitToLast: false).ToListAsync();
             Assert.Equal(2, documents.Count);
+            Assert.True(fakeQueryStream.Disposed);
 
             var doc1 = documents[0];
             Assert.Equal(db.Document("col/doc1"), doc1.Reference);
@@ -950,6 +952,46 @@ namespace Google.Cloud.Firestore.Tests
             var query = db.Collection("col").Select("Name");
             var documents = await query.StreamAsync().ToListAsync();
             Assert.Empty(documents);
+            mock.VerifyAll();
+        }
+
+        [Fact]
+        public void StreamAsync_RpcIsLazy()
+        {
+            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            var query = db.Collection("col").Select("Name");
+            // We deliberately don't do anything with the result here. We're asserting
+            // that when the result isn't iterated over, there's no RPC so we don't need to dispose of anything.
+            query.StreamAsync();
+            mock.VerifyAll();
+        }
+
+        [Fact]
+        public async Task StreamAsync_IteratorDisposal()
+        {
+            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var runQueryResponse = new RunQueryResponse
+            {
+                ReadTime = CreateProtoTimestamp(1, 3),
+                Document = new Document
+                {
+                    CreateTime = CreateProtoTimestamp(0, 3),
+                    UpdateTime = CreateProtoTimestamp(0, 4),
+                    Name = "projects/proj/databases/db/documents/col/doc2",
+                    Fields = { { "Name", CreateValue("y") } }
+                }
+            };
+            var fakeQueryStream = new FakeQueryStream(new[] { runQueryResponse });
+            mock.Setup(c => c.RunQuery(It.IsAny<RunQueryRequest>(), It.IsAny<CallSettings>())).Returns(fakeQueryStream);
+            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            var query = db.Collection("col").Select("Name");
+            var sequence = query.StreamAsync();
+            var iterator = sequence.GetAsyncEnumerator();
+            Assert.True(await iterator.MoveNextAsync());
+            Assert.False(fakeQueryStream.Disposed);
+            await iterator.DisposeAsync();
+            Assert.True(fakeQueryStream.Disposed);
             mock.VerifyAll();
         }
 

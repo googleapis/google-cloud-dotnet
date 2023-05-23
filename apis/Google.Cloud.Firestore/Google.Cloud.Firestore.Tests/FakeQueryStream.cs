@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -29,9 +29,11 @@ namespace Google.Cloud.Firestore.Tests
         internal FakeQueryStream(IEnumerable<RunQueryResponse> responses)
         {
             var adapter = new AsyncStreamAdapter<RunQueryResponse>(responses.ToAsyncEnumerable().GetAsyncEnumerator(default));
-            GrpcCall = new AsyncServerStreamingCall<RunQueryResponse>(adapter, null, null, null, () => { });
+            GrpcCall = new AsyncServerStreamingCall<RunQueryResponse>(adapter, null, null, null, () => Disposed = true);
         }
 
         public override AsyncServerStreamingCall<RunQueryResponse> GrpcCall { get; }
+
+        public bool Disposed { get; private set;  }
     }
 }

@@ -19,6 +19,7 @@ using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types;
@@ -80,7 +81,11 @@ public sealed class AggregateQuery : IEquatable<AggregateQuery>
         }
     }
 
-    private IAsyncEnumerable<RunAggregationQueryResponse> GetAggregationQueryResponseStreamAsync(ByteString transactionId, CancellationToken cancellationToken)
+    // Note: this *could* just return FirestoreClient.RunAggregationQueryStream, as it's only called
+    // from GetSnapshotAsync which could ensure it disposes of the response. However, it's simplest
+    // to keep this implementation in common with Query.StreamResponsesAsync, which effectively
+    // needs to use an iterator block so we can return an IAsyncEnumerable from Query.StreamAsync.
+    private async IAsyncEnumerable<RunAggregationQueryResponse> GetAggregationQueryResponseStreamAsync(ByteString transactionId, [EnumeratorCancellation] CancellationToken cancellationToken)
     {
         RunAggregationQueryRequest request = new RunAggregationQueryRequest
         {
@@ -92,8 +97,12 @@ public sealed class AggregateQuery : IEquatable<AggregateQuery>
             request.Transaction = transactionId;
         }
         var settings = CallSettings.FromCancellationToken(cancellationToken);
-        var response = _query.Database.Client.RunAggregationQuery(request, settings);
-        return response.GetResponseStream();
+        using var response = _query.Database.Client.RunAggregationQuery(request, settings);
+        IAsyncEnumerable<RunAggregationQueryResponse> stream = response.GetResponseStream();
+        await foreach (var result in stream.ConfigureAwait(false))
+        {
+            yield return result;
+        }
     }
 
     internal StructuredAggregationQuery ToStructuredAggregationQuery() =>
