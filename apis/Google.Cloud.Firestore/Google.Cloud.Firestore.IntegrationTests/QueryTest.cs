@@ -133,10 +133,11 @@ namespace Google.Cloud.Firestore.IntegrationTests
         }
 
         [Fact]
-        public void LimitToLast_StreamingThrows()
+        public async Task LimitToLast_StreamingThrows()
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").LimitToLast(3);
-            Assert.Throws<InvalidOperationException>(() => query.StreamAsync());
+            // We need to use the result, as the validation is deferred.
+            await Assert.ThrowsAsync<InvalidOperationException>(() => query.StreamAsync().CountAsync().AsTask());
         }
 
         [Fact]

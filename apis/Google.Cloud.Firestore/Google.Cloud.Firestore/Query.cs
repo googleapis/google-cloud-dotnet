@@ -20,6 +20,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
@@ -727,7 +729,10 @@ namespace Google.Cloud.Firestore
                 .Where(resp => resp.Document != null)
                 .Select(resp => DocumentSnapshot.ForDocument(Database, resp.Document, Timestamp.FromProto(resp.ReadTime)));
 
-        private IAsyncEnumerable<RunQueryResponse> StreamResponsesAsync(ByteString transactionId, CancellationToken cancellationToken, bool allowLimitToLast)
+        // Implementation note: this uses an iterator block so that we can dispose of the gRPC call
+        // appropriately. The code will only execute when GetEnumerator() is called on the returned value,
+        // so the gRPC call *will* be disposed so long as the caller disposes of the iterator (or completes it).
+        private async IAsyncEnumerable<RunQueryResponse> StreamResponsesAsync(ByteString transactionId, [EnumeratorCancellation] CancellationToken cancellationToken, bool allowLimitToLast)
         {
             if (IsLimitToLast && !allowLimitToLast)
             {
@@ -739,7 +744,12 @@ namespace Google.Cloud.Firestore
                 request.Transaction = transactionId;
             }
             var settings = CallSettings.FromCancellationToken(cancellationToken);
-            return Database.Client.RunQuery(request, settings).GetResponseStream();
+            using var response = Database.Client.RunQuery(request, settings);
+            IAsyncEnumerable<RunQueryResponse> stream = response.GetResponseStream();
+            await foreach (var result in stream.ConfigureAwait(false))
+            {
+                yield return result;
+            }
         }
 
         // Helper methods for cursor-related functionality
