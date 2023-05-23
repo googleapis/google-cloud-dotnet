@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +28,9 @@ namespace Google.Cloud.Tools.ReleaseManager
         // releases, but fundamentally it's "the current source of truth we're basing this release on".
         internal const string PrimaryBranch = "main";
 
-        private readonly int _expectedArgCount;
+        private readonly int _minArgs;
+        private readonly int _maxArgs;
+        private bool _requireExactArguments { get; }
 
         public string Description { get; }
 
@@ -36,20 +38,25 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         public string ExpectedArguments { get; }
 
-
-        protected CommandBase(string command, string description, params string[] argNames)
+        protected CommandBase(string command, string description, int minArgs, int maxArgs, string expectedArguments)
         {
             Command = command;
             Description = description;
-            _expectedArgCount = argNames.Length;
-            ExpectedArguments = string.Join(" ", argNames.Select(arg => $"<{arg}>"));
+            _minArgs = minArgs;
+            _maxArgs = maxArgs;
+            ExpectedArguments = expectedArguments;
+        }
+
+        protected CommandBase(string command, string description, params string[] argNames)
+            : this(command, description, argNames.Length, argNames.Length, string.Join(" ", argNames.Select(arg => $"<{arg}>")))
+        {
         }
 
         public void Execute(string[] args)
         {
-            if (args.Length != _expectedArgCount)
+            if (args.Length < _minArgs || args.Length > _maxArgs)
             {
-                throw new UserErrorException(_expectedArgCount == 0
+                throw new UserErrorException(_maxArgs == 0
                     ? $"{Command} does not accept additional arguments"
                     : $"{Command} expected arguments: {ExpectedArguments}");
             }
