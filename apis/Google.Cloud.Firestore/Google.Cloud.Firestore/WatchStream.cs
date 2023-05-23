@@ -184,25 +184,30 @@ namespace Google.Cloud.Firestore
 
             async Task CloseStreamAsync()
             {
-                if (underlyingStream != null)
+                if (underlyingStream is null)
                 {
-                    try
-                    {
-                        var completeTask = underlyingStream.TryWriteCompleteAsync();
-                        if (completeTask != null)
-                        {
-                            await completeTask.ConfigureAwait(false);
-                        }
-                    }
-                    catch (RpcException)
-                    {
-                        // Swallow gRPC errors when trying to "complete" the stream. This may be in response to the network connection
-                        // being dropped, at which point completing the stream will fail; we don't want the listener to stop at that
-                        // point. Instead, it will reconnect.
-                    }
-                    underlyingStream.Dispose();
+                    return;
                 }
-                underlyingStream = null;
+
+                try
+                {
+                    var completeTask = underlyingStream.TryWriteCompleteAsync();
+                    if (completeTask != null)
+                    {
+                        await completeTask.ConfigureAwait(false);
+                    }
+                }
+                catch (RpcException)
+                {
+                    // Swallow gRPC errors when trying to "complete" the stream. This may be in response to the network connection
+                    // being dropped, at which point completing the stream will fail; we don't want the listener to stop at that
+                    // point. Instead, it will reconnect.
+                }
+                finally
+                {
+                    underlyingStream.Dispose();
+                    underlyingStream = null;
+                }
             }
 
             // Create a new enumerator for the retry attempt sequence, starting with a backoff of zero.
