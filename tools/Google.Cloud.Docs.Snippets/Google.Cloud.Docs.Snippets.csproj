@@ -23,8 +23,6 @@
 
   <ItemGroup>
     <PackageReference Include="Apache.Avro" Version="1.11.1" />
-    <!-- Temporary update until Google.Cloud.BigQuery.Storage.V1 depends on GAX 4.4.0 or later -->
-    <PackageReference Include="Google.Api.Gax.Grpc" Version="4.4.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" />
     <PackageReference Include="xunit" Version="2.4.2" />
