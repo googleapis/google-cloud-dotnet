@@ -304,7 +304,7 @@ namespace Google.Cloud.Firestore
             // request the remaining documents. Given how rarely we retry anyway in practice, that's probably not worth doing.
             Func<BatchGetDocumentsRequest, CallSettings, Task<List<DocumentSnapshot>>> function = async (req, settings) =>
             {
-                var stream = Client.BatchGetDocuments(req, settings);
+                using var stream = Client.BatchGetDocuments(req, settings);
                 var responseStream = stream.GrpcCall.ResponseStream;
                 List<DocumentSnapshot> snapshots = new List<DocumentSnapshot>();
 
