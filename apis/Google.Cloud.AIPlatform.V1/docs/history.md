@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.15.0, released 2023-05-23
+
+### New features
+
+- Add match service in aiplatform v1 ([commit 7fa56aa](https://github.com/googleapis/google-cloud-dotnet/commit/7fa56aa6604cfeb78597c7799e3d9ea10a39e4a7))
+- Add examples to ExplanationParameters in aiplatform v1 explanation.proto ([commit 0ec8cc2](https://github.com/googleapis/google-cloud-dotnet/commit/0ec8cc2caa812e2a879687d0ba2150806b42078a))
+
 ## Version 2.14.0, released 2023-05-03
 
 ### New features
