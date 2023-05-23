@@ -73,7 +73,7 @@ namespace Google.Cloud.Bigtable.V2
 
         public ValueTask DisposeAsync()
         {
-            GrpcCall?.Dispose();
+            _stream?.Dispose();
             return default;
         }
 
