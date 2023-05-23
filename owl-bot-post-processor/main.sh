@@ -141,5 +141,9 @@ then
   rm -rf owl-bot-staging
 fi
 
+# Update dependencies if we're releasing anything.
+# (This is for release-please integration.)
+dotnet run --project tools/Google.Cloud.Tools.ReleaseManager -- update-dependencies --owlbot
+
 # Generate .csproj files in all the /apis directories.
 ./generateprojects.sh
