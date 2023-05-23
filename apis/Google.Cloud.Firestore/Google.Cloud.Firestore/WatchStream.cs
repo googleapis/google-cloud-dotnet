@@ -1,4 +1,4 @@
-﻿// Copyright 2018, Google LLC
+// Copyright 2018, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -200,7 +200,7 @@ namespace Google.Cloud.Firestore
                         // being dropped, at which point completing the stream will fail; we don't want the listener to stop at that
                         // point. Instead, it will reconnect.
                     }
-                    underlyingStream.GrpcCall.Dispose();
+                    underlyingStream.Dispose();
                 }
                 underlyingStream = null;
             }
