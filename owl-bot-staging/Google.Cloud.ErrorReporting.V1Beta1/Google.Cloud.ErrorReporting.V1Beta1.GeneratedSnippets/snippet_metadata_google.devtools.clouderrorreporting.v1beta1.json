@@ -1,0 +1,1753 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.ErrorReporting.V1Beta1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.devtools.clouderrorreporting.v1beta1",
+        "version": "v1beta1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorGroupService_GetGroup_sync",
+      "title": "GetGroupRequestObject",
+      "description": "Snippet for GetGroup",
+      "file": "ErrorGroupServiceClient.GetGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGroup",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
+        "client": {
+          "shortName": "ErrorGroupServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient"
+        },
+        "method": {
+          "shortName": "GetGroup",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService.GetGroup",
+          "service": {
+            "shortName": "ErrorGroupService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorGroupService_GetGroup_async",
+      "title": "GetGroupRequestObjectAsync",
+      "description": "Snippet for GetGroupAsync",
+      "file": "ErrorGroupServiceClient.GetGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGroupAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>",
+        "client": {
+          "shortName": "ErrorGroupServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient"
+        },
+        "method": {
+          "shortName": "GetGroup",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService.GetGroup",
+          "service": {
+            "shortName": "ErrorGroupService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorGroupService_GetGroup_sync_flattened",
+      "title": "GetGroup",
+      "description": "Snippet for GetGroup",
+      "file": "ErrorGroupServiceClient.GetGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGroup",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "groupName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
+        "client": {
+          "shortName": "ErrorGroupServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient"
+        },
+        "method": {
+          "shortName": "GetGroup",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService.GetGroup",
+          "service": {
+            "shortName": "ErrorGroupService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorGroupService_GetGroup_async_flattened",
+      "title": "GetGroupAsync",
+      "description": "Snippet for GetGroupAsync",
+      "file": "ErrorGroupServiceClient.GetGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGroupAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "groupName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>",
+        "client": {
+          "shortName": "ErrorGroupServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient"
+        },
+        "method": {
+          "shortName": "GetGroup",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService.GetGroup",
+          "service": {
+            "shortName": "ErrorGroupService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorGroupService_GetGroup_sync_flattened_resourceNames",
+      "title": "GetGroupResourceNames",
+      "description": "Snippet for GetGroup",
+      "file": "ErrorGroupServiceClient.GetGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGroup",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupName",
+            "name": "groupName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
+        "client": {
+          "shortName": "ErrorGroupServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient"
+        },
+        "method": {
+          "shortName": "GetGroup",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService.GetGroup",
+          "service": {
+            "shortName": "ErrorGroupService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorGroupService_GetGroup_async_flattened_resourceNames",
+      "title": "GetGroupResourceNamesAsync",
+      "description": "Snippet for GetGroupAsync",
+      "file": "ErrorGroupServiceClient.GetGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGroupAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupName",
+            "name": "groupName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>",
+        "client": {
+          "shortName": "ErrorGroupServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient"
+        },
+        "method": {
+          "shortName": "GetGroup",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService.GetGroup",
+          "service": {
+            "shortName": "ErrorGroupService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorGroupService_UpdateGroup_sync",
+      "title": "UpdateGroupRequestObject",
+      "description": "Snippet for UpdateGroup",
+      "file": "ErrorGroupServiceClient.UpdateGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGroup",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.UpdateGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
+        "client": {
+          "shortName": "ErrorGroupServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGroup",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService.UpdateGroup",
+          "service": {
+            "shortName": "ErrorGroupService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorGroupService_UpdateGroup_async",
+      "title": "UpdateGroupRequestObjectAsync",
+      "description": "Snippet for UpdateGroupAsync",
+      "file": "ErrorGroupServiceClient.UpdateGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGroupAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.UpdateGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>",
+        "client": {
+          "shortName": "ErrorGroupServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGroup",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService.UpdateGroup",
+          "service": {
+            "shortName": "ErrorGroupService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorGroupService_UpdateGroup_sync_flattened",
+      "title": "UpdateGroup",
+      "description": "Snippet for UpdateGroup",
+      "file": "ErrorGroupServiceClient.UpdateGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGroup",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.UpdateGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
+            "name": "group"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
+        "client": {
+          "shortName": "ErrorGroupServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGroup",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService.UpdateGroup",
+          "service": {
+            "shortName": "ErrorGroupService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorGroupService_UpdateGroup_async_flattened",
+      "title": "UpdateGroupAsync",
+      "description": "Snippet for UpdateGroupAsync",
+      "file": "ErrorGroupServiceClient.UpdateGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGroupAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.UpdateGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup",
+            "name": "group"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>",
+        "client": {
+          "shortName": "ErrorGroupServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGroup",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService.UpdateGroup",
+          "service": {
+            "shortName": "ErrorGroupService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_ListGroupStats_sync",
+      "title": "ListGroupStatsRequestObject",
+      "description": "Snippet for ListGroupStats",
+      "file": "ErrorStatsServiceClient.ListGroupStatsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGroupStats",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "ListGroupStats",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListGroupStats",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 87,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 85,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_ListGroupStats_async",
+      "title": "ListGroupStatsRequestObjectAsync",
+      "description": "Snippet for ListGroupStatsAsync",
+      "file": "ErrorStatsServiceClient.ListGroupStatsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGroupStatsAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "ListGroupStats",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListGroupStats",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 89,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 87,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_ListGroupStats_sync_flattened",
+      "title": "ListGroupStats",
+      "description": "Snippet for ListGroupStats",
+      "file": "ErrorStatsServiceClient.ListGroupStatsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGroupStats",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange",
+            "name": "timeRange"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "ListGroupStats",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListGroupStats",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_ListGroupStats_async_flattened",
+      "title": "ListGroupStatsAsync",
+      "description": "Snippet for ListGroupStatsAsync",
+      "file": "ErrorStatsServiceClient.ListGroupStatsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGroupStatsAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange",
+            "name": "timeRange"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "ListGroupStats",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListGroupStats",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_ListGroupStats_sync_flattened_resourceNames",
+      "title": "ListGroupStatsResourceNames",
+      "description": "Snippet for ListGroupStats",
+      "file": "ErrorStatsServiceClient.ListGroupStatsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGroupStats",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange",
+            "name": "timeRange"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "ListGroupStats",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListGroupStats",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_ListGroupStats_async_flattened_resourceNames",
+      "title": "ListGroupStatsResourceNamesAsync",
+      "description": "Snippet for ListGroupStatsAsync",
+      "file": "ErrorStatsServiceClient.ListGroupStatsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGroupStatsAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange",
+            "name": "timeRange"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "ListGroupStats",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListGroupStats",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_ListEvents_sync",
+      "title": "ListEventsRequestObject",
+      "description": "Snippet for ListEvents",
+      "file": "ErrorStatsServiceClient.ListEventsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvents",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvents",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListEvents",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_ListEvents_async",
+      "title": "ListEventsRequestObjectAsync",
+      "description": "Snippet for ListEventsAsync",
+      "file": "ErrorStatsServiceClient.ListEventsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEventsAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvents",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListEvents",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_ListEvents_sync_flattened",
+      "title": "ListEvents",
+      "description": "Snippet for ListEvents",
+      "file": "ErrorStatsServiceClient.ListEventsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvents",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "System.String",
+            "name": "groupId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvents",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListEvents",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_ListEvents_async_flattened",
+      "title": "ListEventsAsync",
+      "description": "Snippet for ListEventsAsync",
+      "file": "ErrorStatsServiceClient.ListEventsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEventsAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "System.String",
+            "name": "groupId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvents",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListEvents",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_ListEvents_sync_flattened_resourceNames",
+      "title": "ListEventsResourceNames",
+      "description": "Snippet for ListEvents",
+      "file": "ErrorStatsServiceClient.ListEventsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvents",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "System.String",
+            "name": "groupId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvents",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListEvents",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_ListEvents_async_flattened_resourceNames",
+      "title": "ListEventsResourceNamesAsync",
+      "description": "Snippet for ListEventsAsync",
+      "file": "ErrorStatsServiceClient.ListEventsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEventsAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "System.String",
+            "name": "groupId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse, Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvents",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.ListEvents",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_DeleteEvents_sync",
+      "title": "DeleteEventsRequestObject",
+      "description": "Snippet for DeleteEvents",
+      "file": "ErrorStatsServiceClient.DeleteEventsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEvents",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEvents",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.DeleteEvents",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_DeleteEvents_async",
+      "title": "DeleteEventsRequestObjectAsync",
+      "description": "Snippet for DeleteEventsAsync",
+      "file": "ErrorStatsServiceClient.DeleteEventsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEventsAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEvents",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.DeleteEvents",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_DeleteEvents_sync_flattened",
+      "title": "DeleteEvents",
+      "description": "Snippet for DeleteEvents",
+      "file": "ErrorStatsServiceClient.DeleteEventsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEvents",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEvents",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.DeleteEvents",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_DeleteEvents_async_flattened",
+      "title": "DeleteEventsAsync",
+      "description": "Snippet for DeleteEventsAsync",
+      "file": "ErrorStatsServiceClient.DeleteEventsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEventsAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEvents",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.DeleteEvents",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_DeleteEvents_sync_flattened_resourceNames",
+      "title": "DeleteEventsResourceNames",
+      "description": "Snippet for DeleteEvents",
+      "file": "ErrorStatsServiceClient.DeleteEventsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEvents",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEvents",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.DeleteEvents",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ErrorStatsService_DeleteEvents_async_flattened_resourceNames",
+      "title": "DeleteEventsResourceNamesAsync",
+      "description": "Snippet for DeleteEventsAsync",
+      "file": "ErrorStatsServiceClient.DeleteEventsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEventsAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse>",
+        "client": {
+          "shortName": "ErrorStatsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEvents",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService.DeleteEvents",
+          "service": {
+            "shortName": "ErrorStatsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ReportErrorsService_ReportErrorEvent_sync",
+      "title": "ReportErrorEventRequestObject",
+      "description": "Snippet for ReportErrorEvent",
+      "file": "ReportErrorsServiceClient.ReportErrorEventRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReportErrorEvent",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse",
+        "client": {
+          "shortName": "ReportErrorsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient"
+        },
+        "method": {
+          "shortName": "ReportErrorEvent",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ReportErrorsService.ReportErrorEvent",
+          "service": {
+            "shortName": "ReportErrorsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ReportErrorsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ReportErrorsService_ReportErrorEvent_async",
+      "title": "ReportErrorEventRequestObjectAsync",
+      "description": "Snippet for ReportErrorEventAsync",
+      "file": "ReportErrorsServiceClient.ReportErrorEventRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReportErrorEventAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse>",
+        "client": {
+          "shortName": "ReportErrorsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient"
+        },
+        "method": {
+          "shortName": "ReportErrorEvent",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ReportErrorsService.ReportErrorEvent",
+          "service": {
+            "shortName": "ReportErrorsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ReportErrorsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ReportErrorsService_ReportErrorEvent_sync_flattened",
+      "title": "ReportErrorEvent",
+      "description": "Snippet for ReportErrorEvent",
+      "file": "ReportErrorsServiceClient.ReportErrorEventSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReportErrorEvent",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent",
+            "name": "event"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse",
+        "client": {
+          "shortName": "ReportErrorsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient"
+        },
+        "method": {
+          "shortName": "ReportErrorEvent",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ReportErrorsService.ReportErrorEvent",
+          "service": {
+            "shortName": "ReportErrorsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ReportErrorsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ReportErrorsService_ReportErrorEvent_async_flattened",
+      "title": "ReportErrorEventAsync",
+      "description": "Snippet for ReportErrorEventAsync",
+      "file": "ReportErrorsServiceClient.ReportErrorEventAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReportErrorEventAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent",
+            "name": "event"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse>",
+        "client": {
+          "shortName": "ReportErrorsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient"
+        },
+        "method": {
+          "shortName": "ReportErrorEvent",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ReportErrorsService.ReportErrorEvent",
+          "service": {
+            "shortName": "ReportErrorsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ReportErrorsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ReportErrorsService_ReportErrorEvent_sync_flattened_resourceNames",
+      "title": "ReportErrorEventResourceNames",
+      "description": "Snippet for ReportErrorEvent",
+      "file": "ReportErrorsServiceClient.ReportErrorEventResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReportErrorEvent",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent",
+            "name": "event"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse",
+        "client": {
+          "shortName": "ReportErrorsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient"
+        },
+        "method": {
+          "shortName": "ReportErrorEvent",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ReportErrorsService.ReportErrorEvent",
+          "service": {
+            "shortName": "ReportErrorsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ReportErrorsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "clouderrorreporting_v1beta1_generated_ReportErrorsService_ReportErrorEvent_async_flattened_resourceNames",
+      "title": "ReportErrorEventResourceNamesAsync",
+      "description": "Snippet for ReportErrorEventAsync",
+      "file": "ReportErrorsServiceClient.ReportErrorEventResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReportErrorEventAsync",
+        "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "projectName"
+          },
+          {
+            "type": "Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent",
+            "name": "event"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse>",
+        "client": {
+          "shortName": "ReportErrorsServiceClient",
+          "fullName": "Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient"
+        },
+        "method": {
+          "shortName": "ReportErrorEvent",
+          "fullName": "google.devtools.clouderrorreporting.v1beta1.ReportErrorsService.ReportErrorEvent",
+          "service": {
+            "shortName": "ReportErrorsService",
+            "fullName": "google.devtools.clouderrorreporting.v1beta1.ReportErrorsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
