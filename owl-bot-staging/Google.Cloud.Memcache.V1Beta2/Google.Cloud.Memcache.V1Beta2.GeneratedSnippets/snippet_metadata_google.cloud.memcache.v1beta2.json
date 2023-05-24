@@ -1,0 +1,2702 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Memcache.V1Beta2",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.memcache.v1beta2",
+        "version": "v1beta2"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ListInstances_sync",
+      "title": "ListInstancesRequestObject",
+      "description": "Snippet for ListInstances",
+      "file": "CloudMemcacheClient.ListInstancesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstances",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memcache.V1Beta2.ListInstancesResponse, Google.Cloud.Memcache.V1Beta2.Instance>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ListInstances",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ListInstances_async",
+      "title": "ListInstancesRequestObjectAsync",
+      "description": "Snippet for ListInstancesAsync",
+      "file": "CloudMemcacheClient.ListInstancesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancesAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ListInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memcache.V1Beta2.ListInstancesResponse, Google.Cloud.Memcache.V1Beta2.Instance>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ListInstances",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ListInstances_sync_flattened",
+      "title": "ListInstances",
+      "description": "Snippet for ListInstances",
+      "file": "CloudMemcacheClient.ListInstancesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstances",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ListInstances",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memcache.V1Beta2.ListInstancesResponse, Google.Cloud.Memcache.V1Beta2.Instance>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ListInstances",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ListInstances_async_flattened",
+      "title": "ListInstancesAsync",
+      "description": "Snippet for ListInstancesAsync",
+      "file": "CloudMemcacheClient.ListInstancesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancesAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ListInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memcache.V1Beta2.ListInstancesResponse, Google.Cloud.Memcache.V1Beta2.Instance>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ListInstances",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ListInstances_sync_flattened_resourceNames",
+      "title": "ListInstancesResourceNames",
+      "description": "Snippet for ListInstances",
+      "file": "CloudMemcacheClient.ListInstancesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstances",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memcache.V1Beta2.ListInstancesResponse, Google.Cloud.Memcache.V1Beta2.Instance>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ListInstances",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ListInstances_async_flattened_resourceNames",
+      "title": "ListInstancesResourceNamesAsync",
+      "description": "Snippet for ListInstancesAsync",
+      "file": "CloudMemcacheClient.ListInstancesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancesAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ListInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memcache.V1Beta2.ListInstancesResponse, Google.Cloud.Memcache.V1Beta2.Instance>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ListInstances",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_GetInstance_sync",
+      "title": "GetInstanceRequestObject",
+      "description": "Snippet for GetInstance",
+      "file": "CloudMemcacheClient.GetInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memcache.V1Beta2.Instance",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.GetInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_GetInstance_async",
+      "title": "GetInstanceRequestObjectAsync",
+      "description": "Snippet for GetInstanceAsync",
+      "file": "CloudMemcacheClient.GetInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.GetInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memcache.V1Beta2.Instance>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.GetInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_GetInstance_sync_flattened",
+      "title": "GetInstance",
+      "description": "Snippet for GetInstance",
+      "file": "CloudMemcacheClient.GetInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.GetInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memcache.V1Beta2.Instance",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.GetInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_GetInstance_async_flattened",
+      "title": "GetInstanceAsync",
+      "description": "Snippet for GetInstanceAsync",
+      "file": "CloudMemcacheClient.GetInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.GetInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memcache.V1Beta2.Instance>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.GetInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_GetInstance_sync_flattened_resourceNames",
+      "title": "GetInstanceResourceNames",
+      "description": "Snippet for GetInstance",
+      "file": "CloudMemcacheClient.GetInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memcache.V1Beta2.Instance",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.GetInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_GetInstance_async_flattened_resourceNames",
+      "title": "GetInstanceResourceNamesAsync",
+      "description": "Snippet for GetInstanceAsync",
+      "file": "CloudMemcacheClient.GetInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.GetInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memcache.V1Beta2.Instance>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.GetInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_CreateInstance_sync",
+      "title": "CreateInstanceRequestObject",
+      "description": "Snippet for CreateInstance",
+      "file": "CloudMemcacheClient.CreateInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.CreateInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_CreateInstance_async",
+      "title": "CreateInstanceRequestObjectAsync",
+      "description": "Snippet for CreateInstanceAsync",
+      "file": "CloudMemcacheClient.CreateInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.CreateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.CreateInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_CreateInstance_sync_flattened",
+      "title": "CreateInstance",
+      "description": "Snippet for CreateInstance",
+      "file": "CloudMemcacheClient.CreateInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.Instance",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.CreateInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_CreateInstance_async_flattened",
+      "title": "CreateInstanceAsync",
+      "description": "Snippet for CreateInstanceAsync",
+      "file": "CloudMemcacheClient.CreateInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.CreateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.Instance",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.CreateInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_CreateInstance_sync_flattened_resourceNames",
+      "title": "CreateInstanceResourceNames",
+      "description": "Snippet for CreateInstance",
+      "file": "CloudMemcacheClient.CreateInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.Instance",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.CreateInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_CreateInstance_async_flattened_resourceNames",
+      "title": "CreateInstanceResourceNamesAsync",
+      "description": "Snippet for CreateInstanceAsync",
+      "file": "CloudMemcacheClient.CreateInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.CreateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.Instance",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.CreateInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_UpdateInstance_sync",
+      "title": "UpdateInstanceRequestObject",
+      "description": "Snippet for UpdateInstance",
+      "file": "CloudMemcacheClient.UpdateInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.UpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.UpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "UpdateInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.UpdateInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_UpdateInstance_async",
+      "title": "UpdateInstanceRequestObjectAsync",
+      "description": "Snippet for UpdateInstanceAsync",
+      "file": "CloudMemcacheClient.UpdateInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.UpdateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.UpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "UpdateInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.UpdateInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_UpdateInstance_sync_flattened",
+      "title": "UpdateInstance",
+      "description": "Snippet for UpdateInstance",
+      "file": "CloudMemcacheClient.UpdateInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.UpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.Instance",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "UpdateInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.UpdateInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_UpdateInstance_async_flattened",
+      "title": "UpdateInstanceAsync",
+      "description": "Snippet for UpdateInstanceAsync",
+      "file": "CloudMemcacheClient.UpdateInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.UpdateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.Instance",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "UpdateInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.UpdateInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_UpdateParameters_sync",
+      "title": "UpdateParametersRequestObject",
+      "description": "Snippet for UpdateParameters",
+      "file": "CloudMemcacheClient.UpdateParametersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateParameters",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.UpdateParameters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.UpdateParametersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "UpdateParameters",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.UpdateParameters",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_UpdateParameters_async",
+      "title": "UpdateParametersRequestObjectAsync",
+      "description": "Snippet for UpdateParametersAsync",
+      "file": "CloudMemcacheClient.UpdateParametersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateParametersAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.UpdateParametersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.UpdateParametersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "UpdateParameters",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.UpdateParameters",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_UpdateParameters_sync_flattened",
+      "title": "UpdateParameters",
+      "description": "Snippet for UpdateParameters",
+      "file": "CloudMemcacheClient.UpdateParametersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateParameters",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.UpdateParameters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.MemcacheParameters",
+            "name": "parameters"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "UpdateParameters",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.UpdateParameters",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_UpdateParameters_async_flattened",
+      "title": "UpdateParametersAsync",
+      "description": "Snippet for UpdateParametersAsync",
+      "file": "CloudMemcacheClient.UpdateParametersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateParametersAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.UpdateParametersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.MemcacheParameters",
+            "name": "parameters"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "UpdateParameters",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.UpdateParameters",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_UpdateParameters_sync_flattened_resourceNames",
+      "title": "UpdateParametersResourceNames",
+      "description": "Snippet for UpdateParameters",
+      "file": "CloudMemcacheClient.UpdateParametersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateParameters",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.UpdateParameters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.MemcacheParameters",
+            "name": "parameters"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "UpdateParameters",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.UpdateParameters",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_UpdateParameters_async_flattened_resourceNames",
+      "title": "UpdateParametersResourceNamesAsync",
+      "description": "Snippet for UpdateParametersAsync",
+      "file": "CloudMemcacheClient.UpdateParametersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateParametersAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.UpdateParametersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.MemcacheParameters",
+            "name": "parameters"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "UpdateParameters",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.UpdateParameters",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_DeleteInstance_sync",
+      "title": "DeleteInstanceRequestObject",
+      "description": "Snippet for DeleteInstance",
+      "file": "CloudMemcacheClient.DeleteInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.DeleteInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_DeleteInstance_async",
+      "title": "DeleteInstanceRequestObjectAsync",
+      "description": "Snippet for DeleteInstanceAsync",
+      "file": "CloudMemcacheClient.DeleteInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.DeleteInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.DeleteInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_DeleteInstance_sync_flattened",
+      "title": "DeleteInstance",
+      "description": "Snippet for DeleteInstance",
+      "file": "CloudMemcacheClient.DeleteInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.DeleteInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_DeleteInstance_async_flattened",
+      "title": "DeleteInstanceAsync",
+      "description": "Snippet for DeleteInstanceAsync",
+      "file": "CloudMemcacheClient.DeleteInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.DeleteInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.DeleteInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_DeleteInstance_sync_flattened_resourceNames",
+      "title": "DeleteInstanceResourceNames",
+      "description": "Snippet for DeleteInstance",
+      "file": "CloudMemcacheClient.DeleteInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.DeleteInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_DeleteInstance_async_flattened_resourceNames",
+      "title": "DeleteInstanceResourceNamesAsync",
+      "description": "Snippet for DeleteInstanceAsync",
+      "file": "CloudMemcacheClient.DeleteInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.DeleteInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.DeleteInstance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ApplyParameters_sync",
+      "title": "ApplyParametersRequestObject",
+      "description": "Snippet for ApplyParameters",
+      "file": "CloudMemcacheClient.ApplyParametersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplyParameters",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ApplyParameters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.ApplyParametersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ApplyParameters",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ApplyParameters",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ApplyParameters_async",
+      "title": "ApplyParametersRequestObjectAsync",
+      "description": "Snippet for ApplyParametersAsync",
+      "file": "CloudMemcacheClient.ApplyParametersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplyParametersAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ApplyParametersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.ApplyParametersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ApplyParameters",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ApplyParameters",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ApplyParameters_sync_flattened",
+      "title": "ApplyParameters",
+      "description": "Snippet for ApplyParameters",
+      "file": "CloudMemcacheClient.ApplyParametersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplyParameters",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ApplyParameters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "nodeIds"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "applyAll"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ApplyParameters",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ApplyParameters",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ApplyParameters_async_flattened",
+      "title": "ApplyParametersAsync",
+      "description": "Snippet for ApplyParametersAsync",
+      "file": "CloudMemcacheClient.ApplyParametersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplyParametersAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ApplyParametersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "nodeIds"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "applyAll"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ApplyParameters",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ApplyParameters",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ApplyParameters_sync_flattened_resourceNames",
+      "title": "ApplyParametersResourceNames",
+      "description": "Snippet for ApplyParameters",
+      "file": "CloudMemcacheClient.ApplyParametersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplyParameters",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ApplyParameters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "nodeIds"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "applyAll"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ApplyParameters",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ApplyParameters",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ApplyParameters_async_flattened_resourceNames",
+      "title": "ApplyParametersResourceNamesAsync",
+      "description": "Snippet for ApplyParametersAsync",
+      "file": "CloudMemcacheClient.ApplyParametersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplyParametersAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ApplyParametersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "nodeIds"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "applyAll"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ApplyParameters",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ApplyParameters",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ApplySoftwareUpdate_sync",
+      "title": "ApplySoftwareUpdateRequestObject",
+      "description": "Snippet for ApplySoftwareUpdate",
+      "file": "CloudMemcacheClient.ApplySoftwareUpdateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplySoftwareUpdate",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ApplySoftwareUpdate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ApplySoftwareUpdate",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ApplySoftwareUpdate",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ApplySoftwareUpdate_async",
+      "title": "ApplySoftwareUpdateRequestObjectAsync",
+      "description": "Snippet for ApplySoftwareUpdateAsync",
+      "file": "CloudMemcacheClient.ApplySoftwareUpdateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplySoftwareUpdateAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ApplySoftwareUpdateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ApplySoftwareUpdate",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ApplySoftwareUpdate",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ApplySoftwareUpdate_sync_flattened",
+      "title": "ApplySoftwareUpdate",
+      "description": "Snippet for ApplySoftwareUpdate",
+      "file": "CloudMemcacheClient.ApplySoftwareUpdateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplySoftwareUpdate",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ApplySoftwareUpdate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instance"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "nodeIds"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "applyAll"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ApplySoftwareUpdate",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ApplySoftwareUpdate",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ApplySoftwareUpdate_async_flattened",
+      "title": "ApplySoftwareUpdateAsync",
+      "description": "Snippet for ApplySoftwareUpdateAsync",
+      "file": "CloudMemcacheClient.ApplySoftwareUpdateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplySoftwareUpdateAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ApplySoftwareUpdateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instance"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "nodeIds"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "applyAll"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ApplySoftwareUpdate",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ApplySoftwareUpdate",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ApplySoftwareUpdate_sync_flattened_resourceNames",
+      "title": "ApplySoftwareUpdateResourceNames",
+      "description": "Snippet for ApplySoftwareUpdate",
+      "file": "CloudMemcacheClient.ApplySoftwareUpdateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplySoftwareUpdate",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ApplySoftwareUpdate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.InstanceName",
+            "name": "instance"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "nodeIds"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "applyAll"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ApplySoftwareUpdate",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ApplySoftwareUpdate",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_ApplySoftwareUpdate_async_flattened_resourceNames",
+      "title": "ApplySoftwareUpdateResourceNamesAsync",
+      "description": "Snippet for ApplySoftwareUpdateAsync",
+      "file": "CloudMemcacheClient.ApplySoftwareUpdateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ApplySoftwareUpdateAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.ApplySoftwareUpdateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.InstanceName",
+            "name": "instance"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "nodeIds"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "applyAll"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "ApplySoftwareUpdate",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.ApplySoftwareUpdate",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_RescheduleMaintenance_sync",
+      "title": "RescheduleMaintenanceRequestObject",
+      "description": "Snippet for RescheduleMaintenance",
+      "file": "CloudMemcacheClient.RescheduleMaintenanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.RescheduleMaintenance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_RescheduleMaintenance_async",
+      "title": "RescheduleMaintenanceRequestObjectAsync",
+      "description": "Snippet for RescheduleMaintenanceAsync",
+      "file": "CloudMemcacheClient.RescheduleMaintenanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.RescheduleMaintenanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_RescheduleMaintenance_sync_flattened",
+      "title": "RescheduleMaintenance",
+      "description": "Snippet for RescheduleMaintenance",
+      "file": "CloudMemcacheClient.RescheduleMaintenanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.RescheduleMaintenance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_RescheduleMaintenance_async_flattened",
+      "title": "RescheduleMaintenanceAsync",
+      "description": "Snippet for RescheduleMaintenanceAsync",
+      "file": "CloudMemcacheClient.RescheduleMaintenanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.RescheduleMaintenanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_RescheduleMaintenance_sync_flattened_resourceNames",
+      "title": "RescheduleMaintenanceResourceNames",
+      "description": "Snippet for RescheduleMaintenance",
+      "file": "CloudMemcacheClient.RescheduleMaintenanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenance",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.RescheduleMaintenance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.InstanceName",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memcache_v1beta2_generated_CloudMemcache_RescheduleMaintenance_async_flattened_resourceNames",
+      "title": "RescheduleMaintenanceResourceNamesAsync",
+      "description": "Snippet for RescheduleMaintenanceAsync",
+      "file": "CloudMemcacheClient.RescheduleMaintenanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenanceAsync",
+        "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient.RescheduleMaintenanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.InstanceName",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Cloud.Memcache.V1Beta2.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memcache.V1Beta2.Instance, Google.Cloud.Memcache.V1Beta2.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudMemcacheClient",
+          "fullName": "Google.Cloud.Memcache.V1Beta2.CloudMemcacheClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.memcache.v1beta2.CloudMemcache.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudMemcache",
+            "fullName": "google.cloud.memcache.v1beta2.CloudMemcache"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
