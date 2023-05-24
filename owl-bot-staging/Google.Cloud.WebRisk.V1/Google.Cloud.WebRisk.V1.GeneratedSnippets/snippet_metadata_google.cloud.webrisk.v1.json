@@ -1,0 +1,1022 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.WebRisk.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.webrisk.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_ComputeThreatListDiff_sync",
+      "title": "ComputeThreatListDiffRequestObject",
+      "description": "Snippet for ComputeThreatListDiff",
+      "file": "WebRiskServiceClient.ComputeThreatListDiffRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeThreatListDiff",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.ComputeThreatListDiff",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.ComputeThreatListDiffRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WebRisk.V1.ComputeThreatListDiffResponse",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeThreatListDiff",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.ComputeThreatListDiff",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_ComputeThreatListDiff_async",
+      "title": "ComputeThreatListDiffRequestObjectAsync",
+      "description": "Snippet for ComputeThreatListDiffAsync",
+      "file": "WebRiskServiceClient.ComputeThreatListDiffRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeThreatListDiffAsync",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.ComputeThreatListDiffAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.ComputeThreatListDiffRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1.ComputeThreatListDiffResponse>",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeThreatListDiff",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.ComputeThreatListDiff",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_ComputeThreatListDiff_sync_flattened",
+      "title": "ComputeThreatListDiff",
+      "description": "Snippet for ComputeThreatListDiff",
+      "file": "WebRiskServiceClient.ComputeThreatListDiffSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeThreatListDiff",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.ComputeThreatListDiff",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.ThreatType",
+            "name": "threatType"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "versionToken"
+          },
+          {
+            "type": "Google.Cloud.WebRisk.V1.ComputeThreatListDiffRequest+Types+Constraints",
+            "name": "constraints"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WebRisk.V1.ComputeThreatListDiffResponse",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeThreatListDiff",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.ComputeThreatListDiff",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_ComputeThreatListDiff_async_flattened",
+      "title": "ComputeThreatListDiffAsync",
+      "description": "Snippet for ComputeThreatListDiffAsync",
+      "file": "WebRiskServiceClient.ComputeThreatListDiffAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeThreatListDiffAsync",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.ComputeThreatListDiffAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.ThreatType",
+            "name": "threatType"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "versionToken"
+          },
+          {
+            "type": "Google.Cloud.WebRisk.V1.ComputeThreatListDiffRequest+Types+Constraints",
+            "name": "constraints"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1.ComputeThreatListDiffResponse>",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeThreatListDiff",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.ComputeThreatListDiff",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_SearchUris_sync",
+      "title": "SearchUrisRequestObject",
+      "description": "Snippet for SearchUris",
+      "file": "WebRiskServiceClient.SearchUrisRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchUris",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.SearchUris",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.SearchUrisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WebRisk.V1.SearchUrisResponse",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "SearchUris",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.SearchUris",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_SearchUris_async",
+      "title": "SearchUrisRequestObjectAsync",
+      "description": "Snippet for SearchUrisAsync",
+      "file": "WebRiskServiceClient.SearchUrisRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchUrisAsync",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.SearchUrisAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.SearchUrisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1.SearchUrisResponse>",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "SearchUris",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.SearchUris",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_SearchUris_sync_flattened",
+      "title": "SearchUris",
+      "description": "Snippet for SearchUris",
+      "file": "WebRiskServiceClient.SearchUrisSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchUris",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.SearchUris",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "uri"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.WebRisk.V1.ThreatType>",
+            "name": "threatTypes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WebRisk.V1.SearchUrisResponse",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "SearchUris",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.SearchUris",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_SearchUris_async_flattened",
+      "title": "SearchUrisAsync",
+      "description": "Snippet for SearchUrisAsync",
+      "file": "WebRiskServiceClient.SearchUrisAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchUrisAsync",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.SearchUrisAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "uri"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.WebRisk.V1.ThreatType>",
+            "name": "threatTypes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1.SearchUrisResponse>",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "SearchUris",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.SearchUris",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_SearchHashes_sync",
+      "title": "SearchHashesRequestObject",
+      "description": "Snippet for SearchHashes",
+      "file": "WebRiskServiceClient.SearchHashesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchHashes",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.SearchHashes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.SearchHashesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WebRisk.V1.SearchHashesResponse",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "SearchHashes",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.SearchHashes",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_SearchHashes_async",
+      "title": "SearchHashesRequestObjectAsync",
+      "description": "Snippet for SearchHashesAsync",
+      "file": "WebRiskServiceClient.SearchHashesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchHashesAsync",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.SearchHashesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.SearchHashesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1.SearchHashesResponse>",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "SearchHashes",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.SearchHashes",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_SearchHashes_sync_flattened",
+      "title": "SearchHashes",
+      "description": "Snippet for SearchHashes",
+      "file": "WebRiskServiceClient.SearchHashesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchHashes",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.SearchHashes",
+        "parameters": [
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "hashPrefix"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.WebRisk.V1.ThreatType>",
+            "name": "threatTypes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WebRisk.V1.SearchHashesResponse",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "SearchHashes",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.SearchHashes",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_SearchHashes_async_flattened",
+      "title": "SearchHashesAsync",
+      "description": "Snippet for SearchHashesAsync",
+      "file": "WebRiskServiceClient.SearchHashesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchHashesAsync",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.SearchHashesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "hashPrefix"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.WebRisk.V1.ThreatType>",
+            "name": "threatTypes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1.SearchHashesResponse>",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "SearchHashes",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.SearchHashes",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_CreateSubmission_sync",
+      "title": "CreateSubmissionRequestObject",
+      "description": "Snippet for CreateSubmission",
+      "file": "WebRiskServiceClient.CreateSubmissionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubmission",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.CreateSubmission",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.CreateSubmissionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WebRisk.V1.Submission",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubmission",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.CreateSubmission",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_CreateSubmission_async",
+      "title": "CreateSubmissionRequestObjectAsync",
+      "description": "Snippet for CreateSubmissionAsync",
+      "file": "WebRiskServiceClient.CreateSubmissionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubmissionAsync",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.CreateSubmissionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.CreateSubmissionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1.Submission>",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubmission",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.CreateSubmission",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_CreateSubmission_sync_flattened",
+      "title": "CreateSubmission",
+      "description": "Snippet for CreateSubmission",
+      "file": "WebRiskServiceClient.CreateSubmissionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubmission",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.CreateSubmission",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.WebRisk.V1.Submission",
+            "name": "submission"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WebRisk.V1.Submission",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubmission",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.CreateSubmission",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_CreateSubmission_async_flattened",
+      "title": "CreateSubmissionAsync",
+      "description": "Snippet for CreateSubmissionAsync",
+      "file": "WebRiskServiceClient.CreateSubmissionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubmissionAsync",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.CreateSubmissionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.WebRisk.V1.Submission",
+            "name": "submission"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1.Submission>",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubmission",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.CreateSubmission",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_CreateSubmission_sync_flattened_resourceNames",
+      "title": "CreateSubmissionResourceNames",
+      "description": "Snippet for CreateSubmission",
+      "file": "WebRiskServiceClient.CreateSubmissionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubmission",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.CreateSubmission",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.WebRisk.V1.Submission",
+            "name": "submission"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.WebRisk.V1.Submission",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubmission",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.CreateSubmission",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_CreateSubmission_async_flattened_resourceNames",
+      "title": "CreateSubmissionResourceNamesAsync",
+      "description": "Snippet for CreateSubmissionAsync",
+      "file": "WebRiskServiceClient.CreateSubmissionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubmissionAsync",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.CreateSubmissionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.WebRisk.V1.Submission",
+            "name": "submission"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.WebRisk.V1.Submission>",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubmission",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.CreateSubmission",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_SubmitUri_sync",
+      "title": "SubmitUriRequestObject",
+      "description": "Snippet for SubmitUri",
+      "file": "WebRiskServiceClient.SubmitUriRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitUri",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.SubmitUri",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.SubmitUriRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.WebRisk.V1.Submission, Google.Cloud.WebRisk.V1.SubmitUriMetadata>",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "SubmitUri",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.SubmitUri",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "webrisk_v1_generated_WebRiskService_SubmitUri_async",
+      "title": "SubmitUriRequestObjectAsync",
+      "description": "Snippet for SubmitUriAsync",
+      "file": "WebRiskServiceClient.SubmitUriRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitUriAsync",
+        "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient.SubmitUriAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WebRisk.V1.SubmitUriRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.WebRisk.V1.Submission, Google.Cloud.WebRisk.V1.SubmitUriMetadata>>",
+        "client": {
+          "shortName": "WebRiskServiceClient",
+          "fullName": "Google.Cloud.WebRisk.V1.WebRiskServiceClient"
+        },
+        "method": {
+          "shortName": "SubmitUri",
+          "fullName": "google.cloud.webrisk.v1.WebRiskService.SubmitUri",
+          "service": {
+            "shortName": "WebRiskService",
+            "fullName": "google.cloud.webrisk.v1.WebRiskService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

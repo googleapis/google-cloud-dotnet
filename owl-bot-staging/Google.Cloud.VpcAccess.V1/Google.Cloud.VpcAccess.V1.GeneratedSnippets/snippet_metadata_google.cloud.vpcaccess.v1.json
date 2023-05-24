@@ -1,0 +1,1226 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.VpcAccess.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.vpcaccess.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_CreateConnector_sync",
+      "title": "CreateConnectorRequestObject",
+      "description": "Snippet for CreateConnector",
+      "file": "VpcAccessServiceClient.CreateConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnector",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.CreateConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VpcAccess.V1.CreateConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VpcAccess.V1.Connector, Google.Cloud.VpcAccess.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.CreateConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_CreateConnector_async",
+      "title": "CreateConnectorRequestObjectAsync",
+      "description": "Snippet for CreateConnectorAsync",
+      "file": "VpcAccessServiceClient.CreateConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectorAsync",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.CreateConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VpcAccess.V1.CreateConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VpcAccess.V1.Connector, Google.Cloud.VpcAccess.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.CreateConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_CreateConnector_sync_flattened",
+      "title": "CreateConnector",
+      "description": "Snippet for CreateConnector",
+      "file": "VpcAccessServiceClient.CreateConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnector",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.CreateConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "connectorId"
+          },
+          {
+            "type": "Google.Cloud.VpcAccess.V1.Connector",
+            "name": "connector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VpcAccess.V1.Connector, Google.Cloud.VpcAccess.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.CreateConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_CreateConnector_async_flattened",
+      "title": "CreateConnectorAsync",
+      "description": "Snippet for CreateConnectorAsync",
+      "file": "VpcAccessServiceClient.CreateConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectorAsync",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.CreateConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "connectorId"
+          },
+          {
+            "type": "Google.Cloud.VpcAccess.V1.Connector",
+            "name": "connector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VpcAccess.V1.Connector, Google.Cloud.VpcAccess.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.CreateConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_CreateConnector_sync_flattened_resourceNames",
+      "title": "CreateConnectorResourceNames",
+      "description": "Snippet for CreateConnector",
+      "file": "VpcAccessServiceClient.CreateConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnector",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.CreateConnector",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "connectorId"
+          },
+          {
+            "type": "Google.Cloud.VpcAccess.V1.Connector",
+            "name": "connector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VpcAccess.V1.Connector, Google.Cloud.VpcAccess.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.CreateConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_CreateConnector_async_flattened_resourceNames",
+      "title": "CreateConnectorResourceNamesAsync",
+      "description": "Snippet for CreateConnectorAsync",
+      "file": "VpcAccessServiceClient.CreateConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectorAsync",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.CreateConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "connectorId"
+          },
+          {
+            "type": "Google.Cloud.VpcAccess.V1.Connector",
+            "name": "connector"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VpcAccess.V1.Connector, Google.Cloud.VpcAccess.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.CreateConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_GetConnector_sync",
+      "title": "GetConnectorRequestObject",
+      "description": "Snippet for GetConnector",
+      "file": "VpcAccessServiceClient.GetConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnector",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.GetConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VpcAccess.V1.GetConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VpcAccess.V1.Connector",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.GetConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_GetConnector_async",
+      "title": "GetConnectorRequestObjectAsync",
+      "description": "Snippet for GetConnectorAsync",
+      "file": "VpcAccessServiceClient.GetConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorAsync",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.GetConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VpcAccess.V1.GetConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VpcAccess.V1.Connector>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.GetConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_GetConnector_sync_flattened",
+      "title": "GetConnector",
+      "description": "Snippet for GetConnector",
+      "file": "VpcAccessServiceClient.GetConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnector",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.GetConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VpcAccess.V1.Connector",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.GetConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_GetConnector_async_flattened",
+      "title": "GetConnectorAsync",
+      "description": "Snippet for GetConnectorAsync",
+      "file": "VpcAccessServiceClient.GetConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorAsync",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.GetConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VpcAccess.V1.Connector>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.GetConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_GetConnector_sync_flattened_resourceNames",
+      "title": "GetConnectorResourceNames",
+      "description": "Snippet for GetConnector",
+      "file": "VpcAccessServiceClient.GetConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnector",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.GetConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VpcAccess.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VpcAccess.V1.Connector",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.GetConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_GetConnector_async_flattened_resourceNames",
+      "title": "GetConnectorResourceNamesAsync",
+      "description": "Snippet for GetConnectorAsync",
+      "file": "VpcAccessServiceClient.GetConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorAsync",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.GetConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VpcAccess.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VpcAccess.V1.Connector>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.GetConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_ListConnectors_sync",
+      "title": "ListConnectorsRequestObject",
+      "description": "Snippet for ListConnectors",
+      "file": "VpcAccessServiceClient.ListConnectorsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectors",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.ListConnectors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VpcAccess.V1.ListConnectorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VpcAccess.V1.ListConnectorsResponse, Google.Cloud.VpcAccess.V1.Connector>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.ListConnectors",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_ListConnectors_async",
+      "title": "ListConnectorsRequestObjectAsync",
+      "description": "Snippet for ListConnectorsAsync",
+      "file": "VpcAccessServiceClient.ListConnectorsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorsAsync",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.ListConnectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VpcAccess.V1.ListConnectorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VpcAccess.V1.ListConnectorsResponse, Google.Cloud.VpcAccess.V1.Connector>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.ListConnectors",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_ListConnectors_sync_flattened",
+      "title": "ListConnectors",
+      "description": "Snippet for ListConnectors",
+      "file": "VpcAccessServiceClient.ListConnectorsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectors",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.ListConnectors",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VpcAccess.V1.ListConnectorsResponse, Google.Cloud.VpcAccess.V1.Connector>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.ListConnectors",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_ListConnectors_async_flattened",
+      "title": "ListConnectorsAsync",
+      "description": "Snippet for ListConnectorsAsync",
+      "file": "VpcAccessServiceClient.ListConnectorsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorsAsync",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.ListConnectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VpcAccess.V1.ListConnectorsResponse, Google.Cloud.VpcAccess.V1.Connector>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.ListConnectors",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_ListConnectors_sync_flattened_resourceNames",
+      "title": "ListConnectorsResourceNames",
+      "description": "Snippet for ListConnectors",
+      "file": "VpcAccessServiceClient.ListConnectorsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectors",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.ListConnectors",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VpcAccess.V1.ListConnectorsResponse, Google.Cloud.VpcAccess.V1.Connector>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.ListConnectors",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_ListConnectors_async_flattened_resourceNames",
+      "title": "ListConnectorsResourceNamesAsync",
+      "description": "Snippet for ListConnectorsAsync",
+      "file": "VpcAccessServiceClient.ListConnectorsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorsAsync",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.ListConnectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VpcAccess.V1.ListConnectorsResponse, Google.Cloud.VpcAccess.V1.Connector>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.ListConnectors",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_DeleteConnector_sync",
+      "title": "DeleteConnectorRequestObject",
+      "description": "Snippet for DeleteConnector",
+      "file": "VpcAccessServiceClient.DeleteConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnector",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.DeleteConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VpcAccess.V1.DeleteConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VpcAccess.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.DeleteConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_DeleteConnector_async",
+      "title": "DeleteConnectorRequestObjectAsync",
+      "description": "Snippet for DeleteConnectorAsync",
+      "file": "VpcAccessServiceClient.DeleteConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectorAsync",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.DeleteConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VpcAccess.V1.DeleteConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VpcAccess.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.DeleteConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_DeleteConnector_sync_flattened",
+      "title": "DeleteConnector",
+      "description": "Snippet for DeleteConnector",
+      "file": "VpcAccessServiceClient.DeleteConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnector",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.DeleteConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VpcAccess.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.DeleteConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_DeleteConnector_async_flattened",
+      "title": "DeleteConnectorAsync",
+      "description": "Snippet for DeleteConnectorAsync",
+      "file": "VpcAccessServiceClient.DeleteConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectorAsync",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.DeleteConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VpcAccess.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.DeleteConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_DeleteConnector_sync_flattened_resourceNames",
+      "title": "DeleteConnectorResourceNames",
+      "description": "Snippet for DeleteConnector",
+      "file": "VpcAccessServiceClient.DeleteConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnector",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.DeleteConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VpcAccess.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VpcAccess.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.DeleteConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vpcaccess_v1_generated_VpcAccessService_DeleteConnector_async_flattened_resourceNames",
+      "title": "DeleteConnectorResourceNamesAsync",
+      "description": "Snippet for DeleteConnectorAsync",
+      "file": "VpcAccessServiceClient.DeleteConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectorAsync",
+        "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient.DeleteConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VpcAccess.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VpcAccess.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcAccessServiceClient",
+          "fullName": "Google.Cloud.VpcAccess.V1.VpcAccessServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnector",
+          "fullName": "google.cloud.vpcaccess.v1.VpcAccessService.DeleteConnector",
+          "service": {
+            "shortName": "VpcAccessService",
+            "fullName": "google.cloud.vpcaccess.v1.VpcAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

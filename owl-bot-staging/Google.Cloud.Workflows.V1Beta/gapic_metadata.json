@@ -1,0 +1,48 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.workflows.v1beta",
+  "libraryPackage": "Google.Cloud.Workflows.V1Beta",
+  "services": {
+    "Workflows": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "WorkflowsClient",
+          "rpcs": {
+            "CreateWorkflow": {
+              "methods": [
+                "CreateWorkflow",
+                "CreateWorkflowAsync"
+              ]
+            },
+            "DeleteWorkflow": {
+              "methods": [
+                "DeleteWorkflow",
+                "DeleteWorkflowAsync"
+              ]
+            },
+            "GetWorkflow": {
+              "methods": [
+                "GetWorkflow",
+                "GetWorkflowAsync"
+              ]
+            },
+            "ListWorkflows": {
+              "methods": [
+                "ListWorkflows",
+                "ListWorkflowsAsync"
+              ]
+            },
+            "UpdateWorkflow": {
+              "methods": [
+                "UpdateWorkflow",
+                "UpdateWorkflowAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
