@@ -52,7 +52,7 @@ namespace GoogleCSharpSnippets
                 DataBoostEnabled = false,
             };
             // Make the request, returning a streaming response
-            SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);
+            using SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

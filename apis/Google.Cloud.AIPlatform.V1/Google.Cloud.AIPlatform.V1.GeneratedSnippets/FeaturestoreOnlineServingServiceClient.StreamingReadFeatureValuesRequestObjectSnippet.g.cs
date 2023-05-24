@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 FeatureSelector = new FeatureSelector(),
             };
             // Make the request, returning a streaming response
-            FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(request);
+            using FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

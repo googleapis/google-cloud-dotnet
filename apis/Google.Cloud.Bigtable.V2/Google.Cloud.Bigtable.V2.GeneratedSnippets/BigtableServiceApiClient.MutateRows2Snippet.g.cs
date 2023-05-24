@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
             };
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries, appProfileId);
+            using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

@@ -129,7 +129,7 @@ namespace GoogleCSharpSnippets
                 FeatureSelector = new FeatureSelector(),
             };
             // Make the request, returning a streaming response
-            FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(request);
+            using FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -152,7 +152,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string entityType = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
             // Make the request, returning a streaming response
-            FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(entityType);
+            using FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(entityType);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -175,7 +175,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntityTypeName entityType = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
             // Make the request, returning a streaming response
-            FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(entityType);
+            using FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(entityType);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

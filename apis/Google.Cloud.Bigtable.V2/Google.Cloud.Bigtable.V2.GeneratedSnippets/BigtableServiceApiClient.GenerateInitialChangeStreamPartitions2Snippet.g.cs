@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName, appProfileId);
+            using BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

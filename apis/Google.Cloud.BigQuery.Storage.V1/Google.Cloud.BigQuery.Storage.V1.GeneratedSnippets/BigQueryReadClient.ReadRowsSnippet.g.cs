@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             string readStream = "projects/[PROJECT]/locations/[LOCATION]/sessions/[SESSION]/streams/[STREAM]";
             long offset = 0L;
             // Make the request, returning a streaming response
-            BigQueryReadClient.ReadRowsStream response = bigQueryReadClient.ReadRows(readStream, offset);
+            using BigQueryReadClient.ReadRowsStream response = bigQueryReadClient.ReadRows(readStream, offset);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

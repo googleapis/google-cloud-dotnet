@@ -30,7 +30,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SpeechTranslationServiceClient speechTranslationServiceClient = SpeechTranslationServiceClient.Create();
             // Initialize streaming call, retrieving the stream object
-            SpeechTranslationServiceClient.StreamingTranslateSpeechStream response = speechTranslationServiceClient.StreamingTranslateSpeech();
+            using SpeechTranslationServiceClient.StreamingTranslateSpeechStream response = speechTranslationServiceClient.StreamingTranslateSpeech();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior

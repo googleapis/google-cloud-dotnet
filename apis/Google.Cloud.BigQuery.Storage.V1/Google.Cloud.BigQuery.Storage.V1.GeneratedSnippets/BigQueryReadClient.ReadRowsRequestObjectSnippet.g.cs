@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 Offset = 0L,
             };
             // Make the request, returning a streaming response
-            BigQueryReadClient.ReadRowsStream response = bigQueryReadClient.ReadRows(request);
+            using BigQueryReadClient.ReadRowsStream response = bigQueryReadClient.ReadRows(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

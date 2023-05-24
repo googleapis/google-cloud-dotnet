@@ -123,7 +123,7 @@ namespace GoogleCSharpSnippets
             // Create client
             BigQueryWriteClient bigQueryWriteClient = BigQueryWriteClient.Create();
             // Initialize streaming call, retrieving the stream object
-            BigQueryWriteClient.AppendRowsStream response = bigQueryWriteClient.AppendRows();
+            using BigQueryWriteClient.AppendRowsStream response = bigQueryWriteClient.AppendRows();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior

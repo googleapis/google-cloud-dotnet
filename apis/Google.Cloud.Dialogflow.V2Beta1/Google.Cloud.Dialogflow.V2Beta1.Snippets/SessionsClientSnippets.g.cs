@@ -133,7 +133,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SessionsClient sessionsClient = SessionsClient.Create();
             // Initialize streaming call, retrieving the stream object
-            SessionsClient.StreamingDetectIntentStream response = sessionsClient.StreamingDetectIntent();
+            using SessionsClient.StreamingDetectIntentStream response = sessionsClient.StreamingDetectIntent();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior

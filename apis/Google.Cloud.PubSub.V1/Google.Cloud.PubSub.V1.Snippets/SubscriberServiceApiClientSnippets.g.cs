@@ -1038,7 +1038,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = SubscriberServiceApiClient.Create();
             // Initialize streaming call, retrieving the stream object
-            SubscriberServiceApiClient.StreamingPullStream response = subscriberServiceApiClient.StreamingPull();
+            using SubscriberServiceApiClient.StreamingPullStream response = subscriberServiceApiClient.StreamingPull();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior
