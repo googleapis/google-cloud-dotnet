@@ -30,7 +30,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "LnByb3RvGixnb29nbGUvY2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MS9hcnJv",
             "dy5wcm90bxorZ29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2UvdjEvYXZy",
             "by5wcm90bxosZ29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2UvdjEvdGFi",
-            "bGUucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ixAkK",
+            "bGUucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i/wkK",
             "C1JlYWRTZXNzaW9uEhEKBG5hbWUYASABKAlCA+BBAxI0CgtleHBpcmVfdGlt",
             "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJGCgtk",
             "YXRhX2Zvcm1hdBgDIAEoDjIsLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9y",
@@ -48,47 +48,48 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "bF9ieXRlc19zY2FubmVkGAwgASgDQgPgQQMSIAoTZXN0aW1hdGVkX3Jvd19j",
             "b3VudBgOIAEoA0ID4EEDEhUKCHRyYWNlX2lkGA0gASgJQgPgQQEaQwoOVGFi",
             "bGVNb2RpZmllcnMSMQoNc25hcHNob3RfdGltZRgBIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXAauwIKEFRhYmxlUmVhZE9wdGlvbnMSFwoPc2Vs",
+            "cm90b2J1Zi5UaW1lc3RhbXAa9gIKEFRhYmxlUmVhZE9wdGlvbnMSFwoPc2Vs",
             "ZWN0ZWRfZmllbGRzGAEgAygJEhcKD3Jvd19yZXN0cmljdGlvbhgCIAEoCRJn",
             "ChthcnJvd19zZXJpYWxpemF0aW9uX29wdGlvbnMYAyABKAsyOy5nb29nbGUu",
             "Y2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5BcnJvd1NlcmlhbGl6YXRpb25P",
             "cHRpb25zQgPgQQFIABJlChphdnJvX3NlcmlhbGl6YXRpb25fb3B0aW9ucxgE",
             "IAEoCzI6Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkF2cm9T",
-            "ZXJpYWxpemF0aW9uT3B0aW9uc0ID4EEBSABCJQojb3V0cHV0X2Zvcm1hdF9z",
-            "ZXJpYWxpemF0aW9uX29wdGlvbnM6a+pBaAoqYmlncXVlcnlzdG9yYWdlLmdv",
-            "b2dsZWFwaXMuY29tL1JlYWRTZXNzaW9uEjpwcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vc2Vzc2lvbnMve3Nlc3Npb259QggKBnNj",
-            "aGVtYSKcAQoKUmVhZFN0cmVhbRIRCgRuYW1lGAEgASgJQgPgQQM6e+pBeAop",
-            "YmlncXVlcnlzdG9yYWdlLmdvb2dsZWFwaXMuY29tL1JlYWRTdHJlYW0SS3By",
-            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zZXNzaW9u",
-            "cy97c2Vzc2lvbn0vc3RyZWFtcy97c3RyZWFtfSL7BAoLV3JpdGVTdHJlYW0S",
-            "EQoEbmFtZRgBIAEoCUID4EEDEkUKBHR5cGUYAiABKA4yMi5nb29nbGUuY2xv",
-            "dWQuYmlncXVlcnkuc3RvcmFnZS52MS5Xcml0ZVN0cmVhbS5UeXBlQgPgQQUS",
-            "NAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSNAoLY29tbWl0X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSSAoMdGFibGVfc2NoZW1hGAUgASgLMi0uZ29v",
-            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuVGFibGVTY2hlbWFCA+BB",
-            "AxJQCgp3cml0ZV9tb2RlGAcgASgOMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
-            "LnN0b3JhZ2UudjEuV3JpdGVTdHJlYW0uV3JpdGVNb2RlQgPgQQUSFQoIbG9j",
-            "YXRpb24YCCABKAlCA+BBBSJGCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQ",
-            "ABINCglDT01NSVRURUQQARILCgdQRU5ESU5HEAISDAoIQlVGRkVSRUQQAyIz",
-            "CglXcml0ZU1vZGUSGgoWV1JJVEVfTU9ERV9VTlNQRUNJRklFRBAAEgoKBklO",
-            "U0VSVBABOnbqQXMKKmJpZ3F1ZXJ5c3RvcmFnZS5nb29nbGVhcGlzLmNvbS9X",
-            "cml0ZVN0cmVhbRJFcHJvamVjdHMve3Byb2plY3R9L2RhdGFzZXRzL3tkYXRh",
-            "c2V0fS90YWJsZXMve3RhYmxlfS9zdHJlYW1zL3tzdHJlYW19Kj4KCkRhdGFG",
-            "b3JtYXQSGwoXREFUQV9GT1JNQVRfVU5TUEVDSUZJRUQQABIICgRBVlJPEAES",
-            "CQoFQVJST1cQAipJCg9Xcml0ZVN0cmVhbVZpZXcSIQodV1JJVEVfU1RSRUFN",
-            "X1ZJRVdfVU5TUEVDSUZJRUQQABIJCgVCQVNJQxABEggKBEZVTEwQAkK7AQok",
-            "Y29tLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxQgtTdHJlYW1Q",
-            "cm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2JpZ3F1ZXJ5L3N0b3JhZ2Uv",
-            "YXBpdjEvc3RvcmFnZXBiO3N0b3JhZ2VwYqoCIEdvb2dsZS5DbG91ZC5CaWdR",
-            "dWVyeS5TdG9yYWdlLlYxygIgR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XFN0b3Jh",
-            "Z2VcVjFiBnByb3RvMw=="));
+            "ZXJpYWxpemF0aW9uT3B0aW9uc0ID4EEBSAASIwoRc2FtcGxlX3BlcmNlbnRh",
+            "Z2UYBSABKAFCA+BBAUgBiAEBQiUKI291dHB1dF9mb3JtYXRfc2VyaWFsaXph",
+            "dGlvbl9vcHRpb25zQhQKEl9zYW1wbGVfcGVyY2VudGFnZTpr6kFoCipiaWdx",
+            "dWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vUmVhZFNlc3Npb24SOnByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zZXNzaW9ucy97",
+            "c2Vzc2lvbn1CCAoGc2NoZW1hIpwBCgpSZWFkU3RyZWFtEhEKBG5hbWUYASAB",
+            "KAlCA+BBAzp76kF4CiliaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20v",
+            "UmVhZFN0cmVhbRJLcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L3Nlc3Npb25zL3tzZXNzaW9ufS9zdHJlYW1zL3tzdHJlYW19IvsE",
+            "CgtXcml0ZVN0cmVhbRIRCgRuYW1lGAEgASgJQgPgQQMSRQoEdHlwZRgCIAEo",
+            "DjIyLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLldyaXRlU3Ry",
+            "ZWFtLlR5cGVCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgtjb21taXRfdGltZRgEIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJICgx0YWJsZV9zY2hl",
+            "bWEYBSABKAsyLS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5U",
+            "YWJsZVNjaGVtYUID4EEDElAKCndyaXRlX21vZGUYByABKA4yNy5nb29nbGUu",
+            "Y2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5Xcml0ZVN0cmVhbS5Xcml0ZU1v",
+            "ZGVCA+BBBRIVCghsb2NhdGlvbhgIIAEoCUID4EEFIkYKBFR5cGUSFAoQVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEg0KCUNPTU1JVFRFRBABEgsKB1BFTkRJTkcQAhIM",
+            "CghCVUZGRVJFRBADIjMKCVdyaXRlTW9kZRIaChZXUklURV9NT0RFX1VOU1BF",
+            "Q0lGSUVEEAASCgoGSU5TRVJUEAE6dupBcwoqYmlncXVlcnlzdG9yYWdlLmdv",
+            "b2dsZWFwaXMuY29tL1dyaXRlU3RyZWFtEkVwcm9qZWN0cy97cHJvamVjdH0v",
+            "ZGF0YXNldHMve2RhdGFzZXR9L3RhYmxlcy97dGFibGV9L3N0cmVhbXMve3N0",
+            "cmVhbX0qPgoKRGF0YUZvcm1hdBIbChdEQVRBX0ZPUk1BVF9VTlNQRUNJRklF",
+            "RBAAEggKBEFWUk8QARIJCgVBUlJPVxACKkkKD1dyaXRlU3RyZWFtVmlldxIh",
+            "Ch1XUklURV9TVFJFQU1fVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAES",
+            "CAoERlVMTBACQrsBCiRjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3Jh",
+            "Z2UudjFCC1N0cmVhbVByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYmln",
+            "cXVlcnkvc3RvcmFnZS9hcGl2MS9zdG9yYWdlcGI7c3RvcmFnZXBiqgIgR29v",
+            "Z2xlLkNsb3VkLkJpZ1F1ZXJ5LlN0b3JhZ2UuVjHKAiBHb29nbGVcQ2xvdWRc",
+            "QmlnUXVlcnlcU3RvcmFnZVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.ArrowReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.AvroReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.TableReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.Storage.V1.DataFormat), typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStreamView), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Parser, new[]{ "Name", "ExpireTime", "DataFormat", "AvroSchema", "ArrowSchema", "Table", "TableModifiers", "ReadOptions", "Streams", "EstimatedTotalBytesScanned", "EstimatedRowCount", "TraceId" }, new[]{ "Schema" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers.Parser, new[]{ "SnapshotTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Parser, new[]{ "SelectedFields", "RowRestriction", "ArrowSerializationOptions", "AvroSerializationOptions" }, new[]{ "OutputFormatSerializationOptions" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Parser, new[]{ "SelectedFields", "RowRestriction", "ArrowSerializationOptions", "AvroSerializationOptions", "SamplePercentage" }, new[]{ "OutputFormatSerializationOptions", "SamplePercentage" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadStream), global::Google.Cloud.BigQuery.Storage.V1.ReadStream.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream), global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Parser, new[]{ "Name", "Type", "CreateTime", "CommitTime", "TableSchema", "WriteMode", "Location" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type), typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode) }, null, null)
           }));
@@ -1091,6 +1092,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       {
         private static readonly pb::MessageParser<TableReadOptions> _parser = new pb::MessageParser<TableReadOptions>(() => new TableReadOptions());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<TableReadOptions> Parser { get { return _parser; } }
@@ -1118,8 +1120,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TableReadOptions(TableReadOptions other) : this() {
+          _hasBits0 = other._hasBits0;
           selectedFields_ = other.selectedFields_.Clone();
           rowRestriction_ = other.rowRestriction_;
+          samplePercentage_ = other.samplePercentage_;
           switch (other.OutputFormatSerializationOptionsCase) {
             case OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions:
               ArrowSerializationOptions = other.ArrowSerializationOptions.Clone();
@@ -1252,6 +1256,41 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
         }
 
+        /// <summary>Field number for the "sample_percentage" field.</summary>
+        public const int SamplePercentageFieldNumber = 5;
+        private readonly static double SamplePercentageDefaultValue = 0D;
+
+        private double samplePercentage_;
+        /// <summary>
+        /// Optional. Specifies a table sampling percentage. Specifically, the query
+        /// planner will use TABLESAMPLE SYSTEM (sample_percentage PERCENT). This
+        /// samples at the file-level. It will randomly choose for each file whether
+        /// to include that file in the sample returned. Note, that if the table only
+        /// has one file, then TABLESAMPLE SYSTEM will select that file and return
+        /// all returnable rows contained within.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double SamplePercentage {
+          get { if ((_hasBits0 & 1) != 0) { return samplePercentage_; } else { return SamplePercentageDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            samplePercentage_ = value;
+          }
+        }
+        /// <summary>Gets whether the "sample_percentage" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSamplePercentage {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "sample_percentage" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSamplePercentage() {
+          _hasBits0 &= ~1;
+        }
+
         private object outputFormatSerializationOptions_;
         /// <summary>Enum of possible cases for the "output_format_serialization_options" oneof.</summary>
         public enum OutputFormatSerializationOptionsOneofCase {
@@ -1292,6 +1331,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           if (RowRestriction != other.RowRestriction) return false;
           if (!object.Equals(ArrowSerializationOptions, other.ArrowSerializationOptions)) return false;
           if (!object.Equals(AvroSerializationOptions, other.AvroSerializationOptions)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(SamplePercentage, other.SamplePercentage)) return false;
           if (OutputFormatSerializationOptionsCase != other.OutputFormatSerializationOptionsCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -1304,6 +1344,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           if (RowRestriction.Length != 0) hash ^= RowRestriction.GetHashCode();
           if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) hash ^= ArrowSerializationOptions.GetHashCode();
           if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.AvroSerializationOptions) hash ^= AvroSerializationOptions.GetHashCode();
+          if (HasSamplePercentage) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(SamplePercentage);
           hash ^= (int) outputFormatSerializationOptionsCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1336,6 +1377,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             output.WriteRawTag(34);
             output.WriteMessage(AvroSerializationOptions);
           }
+          if (HasSamplePercentage) {
+            output.WriteRawTag(41);
+            output.WriteDouble(SamplePercentage);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1359,6 +1404,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             output.WriteRawTag(34);
             output.WriteMessage(AvroSerializationOptions);
           }
+          if (HasSamplePercentage) {
+            output.WriteRawTag(41);
+            output.WriteDouble(SamplePercentage);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1379,6 +1428,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.AvroSerializationOptions) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(AvroSerializationOptions);
           }
+          if (HasSamplePercentage) {
+            size += 1 + 8;
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -1394,6 +1446,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           selectedFields_.Add(other.selectedFields_);
           if (other.RowRestriction.Length != 0) {
             RowRestriction = other.RowRestriction;
+          }
+          if (other.HasSamplePercentage) {
+            SamplePercentage = other.SamplePercentage;
           }
           switch (other.OutputFormatSerializationOptionsCase) {
             case OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions:
@@ -1451,6 +1506,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
                 AvroSerializationOptions = subBuilder;
                 break;
               }
+              case 41: {
+                SamplePercentage = input.ReadDouble();
+                break;
+              }
             }
           }
         #endif
@@ -1490,6 +1549,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
                 }
                 input.ReadMessage(subBuilder);
                 AvroSerializationOptions = subBuilder;
+                break;
+              }
+              case 41: {
+                SamplePercentage = input.ReadDouble();
                 break;
               }
             }
