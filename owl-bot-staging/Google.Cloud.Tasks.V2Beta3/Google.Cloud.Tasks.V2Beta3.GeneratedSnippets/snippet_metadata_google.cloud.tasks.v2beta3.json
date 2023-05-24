@@ -1,0 +1,4641 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Tasks.V2Beta3",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.tasks.v2beta3",
+        "version": "v2beta3"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ListQueues_sync",
+      "title": "ListQueuesRequestObject",
+      "description": "Snippet for ListQueues",
+      "file": "CloudTasksClient.ListQueuesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQueues",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListQueues",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.ListQueuesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tasks.V2Beta3.ListQueuesResponse, Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ListQueues",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ListQueues",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ListQueues_async",
+      "title": "ListQueuesRequestObjectAsync",
+      "description": "Snippet for ListQueuesAsync",
+      "file": "CloudTasksClient.ListQueuesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQueuesAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListQueuesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.ListQueuesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tasks.V2Beta3.ListQueuesResponse, Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ListQueues",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ListQueues",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 86,
+          "type": "FULL"
+        },
+        {
+          "start": 42,
+          "end": 84,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ListQueues_sync_flattened",
+      "title": "ListQueues",
+      "description": "Snippet for ListQueues",
+      "file": "CloudTasksClient.ListQueuesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQueues",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListQueues",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tasks.V2Beta3.ListQueuesResponse, Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ListQueues",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ListQueues",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ListQueues_async_flattened",
+      "title": "ListQueuesAsync",
+      "description": "Snippet for ListQueuesAsync",
+      "file": "CloudTasksClient.ListQueuesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQueuesAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListQueuesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tasks.V2Beta3.ListQueuesResponse, Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ListQueues",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ListQueues",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ListQueues_sync_flattened_resourceNames",
+      "title": "ListQueuesResourceNames",
+      "description": "Snippet for ListQueues",
+      "file": "CloudTasksClient.ListQueuesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQueues",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListQueues",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tasks.V2Beta3.ListQueuesResponse, Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ListQueues",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ListQueues",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ListQueues_async_flattened_resourceNames",
+      "title": "ListQueuesResourceNamesAsync",
+      "description": "Snippet for ListQueuesAsync",
+      "file": "CloudTasksClient.ListQueuesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQueuesAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListQueuesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tasks.V2Beta3.ListQueuesResponse, Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ListQueues",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ListQueues",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetQueue_sync",
+      "title": "GetQueueRequestObject",
+      "description": "Snippet for GetQueue",
+      "file": "CloudTasksClient.GetQueueRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.GetQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetQueue_async",
+      "title": "GetQueueRequestObjectAsync",
+      "description": "Snippet for GetQueueAsync",
+      "file": "CloudTasksClient.GetQueueRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.GetQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetQueue_sync_flattened",
+      "title": "GetQueue",
+      "description": "Snippet for GetQueue",
+      "file": "CloudTasksClient.GetQueueSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetQueue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetQueue_async_flattened",
+      "title": "GetQueueAsync",
+      "description": "Snippet for GetQueueAsync",
+      "file": "CloudTasksClient.GetQueueAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetQueue_sync_flattened_resourceNames",
+      "title": "GetQueueResourceNames",
+      "description": "Snippet for GetQueue",
+      "file": "CloudTasksClient.GetQueueResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetQueue_async_flattened_resourceNames",
+      "title": "GetQueueResourceNamesAsync",
+      "description": "Snippet for GetQueueAsync",
+      "file": "CloudTasksClient.GetQueueResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_CreateQueue_sync",
+      "title": "CreateQueueRequestObject",
+      "description": "Snippet for CreateQueue",
+      "file": "CloudTasksClient.CreateQueueRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.CreateQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "CreateQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.CreateQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_CreateQueue_async",
+      "title": "CreateQueueRequestObjectAsync",
+      "description": "Snippet for CreateQueueAsync",
+      "file": "CloudTasksClient.CreateQueueRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.CreateQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "CreateQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.CreateQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_CreateQueue_sync_flattened",
+      "title": "CreateQueue",
+      "description": "Snippet for CreateQueue",
+      "file": "CloudTasksClient.CreateQueueSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateQueue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Queue",
+            "name": "queue"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "CreateQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.CreateQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_CreateQueue_async_flattened",
+      "title": "CreateQueueAsync",
+      "description": "Snippet for CreateQueueAsync",
+      "file": "CloudTasksClient.CreateQueueAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Queue",
+            "name": "queue"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "CreateQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.CreateQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_CreateQueue_sync_flattened_resourceNames",
+      "title": "CreateQueueResourceNames",
+      "description": "Snippet for CreateQueue",
+      "file": "CloudTasksClient.CreateQueueResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateQueue",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Queue",
+            "name": "queue"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "CreateQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.CreateQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_CreateQueue_async_flattened_resourceNames",
+      "title": "CreateQueueResourceNamesAsync",
+      "description": "Snippet for CreateQueueAsync",
+      "file": "CloudTasksClient.CreateQueueResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Queue",
+            "name": "queue"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "CreateQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.CreateQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_UpdateQueue_sync",
+      "title": "UpdateQueueRequestObject",
+      "description": "Snippet for UpdateQueue",
+      "file": "CloudTasksClient.UpdateQueueRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.UpdateQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "UpdateQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_UpdateQueue_async",
+      "title": "UpdateQueueRequestObjectAsync",
+      "description": "Snippet for UpdateQueueAsync",
+      "file": "CloudTasksClient.UpdateQueueRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.UpdateQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "UpdateQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_UpdateQueue_sync_flattened",
+      "title": "UpdateQueue",
+      "description": "Snippet for UpdateQueue",
+      "file": "CloudTasksClient.UpdateQueueSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.UpdateQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Queue",
+            "name": "queue"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "UpdateQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_UpdateQueue_async_flattened",
+      "title": "UpdateQueueAsync",
+      "description": "Snippet for UpdateQueueAsync",
+      "file": "CloudTasksClient.UpdateQueueAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.UpdateQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Queue",
+            "name": "queue"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "UpdateQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_DeleteQueue_sync",
+      "title": "DeleteQueueRequestObject",
+      "description": "Snippet for DeleteQueue",
+      "file": "CloudTasksClient.DeleteQueueRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "DeleteQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.DeleteQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_DeleteQueue_async",
+      "title": "DeleteQueueRequestObjectAsync",
+      "description": "Snippet for DeleteQueueAsync",
+      "file": "CloudTasksClient.DeleteQueueRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "DeleteQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.DeleteQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_DeleteQueue_sync_flattened",
+      "title": "DeleteQueue",
+      "description": "Snippet for DeleteQueue",
+      "file": "CloudTasksClient.DeleteQueueSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteQueue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "DeleteQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.DeleteQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_DeleteQueue_async_flattened",
+      "title": "DeleteQueueAsync",
+      "description": "Snippet for DeleteQueueAsync",
+      "file": "CloudTasksClient.DeleteQueueAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "DeleteQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.DeleteQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_DeleteQueue_sync_flattened_resourceNames",
+      "title": "DeleteQueueResourceNames",
+      "description": "Snippet for DeleteQueue",
+      "file": "CloudTasksClient.DeleteQueueResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "DeleteQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.DeleteQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_DeleteQueue_async_flattened_resourceNames",
+      "title": "DeleteQueueResourceNamesAsync",
+      "description": "Snippet for DeleteQueueAsync",
+      "file": "CloudTasksClient.DeleteQueueResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "DeleteQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.DeleteQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_PurgeQueue_sync",
+      "title": "PurgeQueueRequestObject",
+      "description": "Snippet for PurgeQueue",
+      "file": "CloudTasksClient.PurgeQueueRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PurgeQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "PurgeQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_PurgeQueue_async",
+      "title": "PurgeQueueRequestObjectAsync",
+      "description": "Snippet for PurgeQueueAsync",
+      "file": "CloudTasksClient.PurgeQueueRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PurgeQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "PurgeQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_PurgeQueue_sync_flattened",
+      "title": "PurgeQueue",
+      "description": "Snippet for PurgeQueue",
+      "file": "CloudTasksClient.PurgeQueueSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PurgeQueue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "PurgeQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_PurgeQueue_async_flattened",
+      "title": "PurgeQueueAsync",
+      "description": "Snippet for PurgeQueueAsync",
+      "file": "CloudTasksClient.PurgeQueueAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PurgeQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "PurgeQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_PurgeQueue_sync_flattened_resourceNames",
+      "title": "PurgeQueueResourceNames",
+      "description": "Snippet for PurgeQueue",
+      "file": "CloudTasksClient.PurgeQueueResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PurgeQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "PurgeQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_PurgeQueue_async_flattened_resourceNames",
+      "title": "PurgeQueueResourceNamesAsync",
+      "description": "Snippet for PurgeQueueAsync",
+      "file": "CloudTasksClient.PurgeQueueResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PurgeQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "PurgeQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_PauseQueue_sync",
+      "title": "PauseQueueRequestObject",
+      "description": "Snippet for PauseQueue",
+      "file": "CloudTasksClient.PauseQueueRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PauseQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.PauseQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "PauseQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.PauseQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_PauseQueue_async",
+      "title": "PauseQueueRequestObjectAsync",
+      "description": "Snippet for PauseQueueAsync",
+      "file": "CloudTasksClient.PauseQueueRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PauseQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.PauseQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "PauseQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.PauseQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_PauseQueue_sync_flattened",
+      "title": "PauseQueue",
+      "description": "Snippet for PauseQueue",
+      "file": "CloudTasksClient.PauseQueueSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PauseQueue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "PauseQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.PauseQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_PauseQueue_async_flattened",
+      "title": "PauseQueueAsync",
+      "description": "Snippet for PauseQueueAsync",
+      "file": "CloudTasksClient.PauseQueueAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PauseQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "PauseQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.PauseQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_PauseQueue_sync_flattened_resourceNames",
+      "title": "PauseQueueResourceNames",
+      "description": "Snippet for PauseQueue",
+      "file": "CloudTasksClient.PauseQueueResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PauseQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "PauseQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.PauseQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_PauseQueue_async_flattened_resourceNames",
+      "title": "PauseQueueResourceNamesAsync",
+      "description": "Snippet for PauseQueueAsync",
+      "file": "CloudTasksClient.PauseQueueResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.PauseQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "PauseQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.PauseQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ResumeQueue_sync",
+      "title": "ResumeQueueRequestObject",
+      "description": "Snippet for ResumeQueue",
+      "file": "CloudTasksClient.ResumeQueueRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ResumeQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ResumeQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ResumeQueue_async",
+      "title": "ResumeQueueRequestObjectAsync",
+      "description": "Snippet for ResumeQueueAsync",
+      "file": "CloudTasksClient.ResumeQueueRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ResumeQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ResumeQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ResumeQueue_sync_flattened",
+      "title": "ResumeQueue",
+      "description": "Snippet for ResumeQueue",
+      "file": "CloudTasksClient.ResumeQueueSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ResumeQueue",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ResumeQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ResumeQueue_async_flattened",
+      "title": "ResumeQueueAsync",
+      "description": "Snippet for ResumeQueueAsync",
+      "file": "CloudTasksClient.ResumeQueueAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ResumeQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ResumeQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ResumeQueue_sync_flattened_resourceNames",
+      "title": "ResumeQueueResourceNames",
+      "description": "Snippet for ResumeQueue",
+      "file": "CloudTasksClient.ResumeQueueResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeQueue",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ResumeQueue",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Queue",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ResumeQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ResumeQueue_async_flattened_resourceNames",
+      "title": "ResumeQueueResourceNamesAsync",
+      "description": "Snippet for ResumeQueueAsync",
+      "file": "CloudTasksClient.ResumeQueueResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeQueueAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ResumeQueueAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Queue>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ResumeQueue",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetIamPolicy_sync",
+      "title": "GetIamPolicyRequestObject",
+      "description": "Snippet for GetIamPolicy",
+      "file": "CloudTasksClient.GetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetIamPolicy",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetIamPolicy_async",
+      "title": "GetIamPolicyRequestObjectAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "CloudTasksClient.GetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetIamPolicy",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetIamPolicy_sync_flattened",
+      "title": "GetIamPolicy",
+      "description": "Snippet for GetIamPolicy",
+      "file": "CloudTasksClient.GetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetIamPolicy",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetIamPolicy_async_flattened",
+      "title": "GetIamPolicyAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "CloudTasksClient.GetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetIamPolicy",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetIamPolicy_sync_flattened_resourceNames",
+      "title": "GetIamPolicyResourceNames",
+      "description": "Snippet for GetIamPolicy",
+      "file": "CloudTasksClient.GetIamPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetIamPolicy",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetIamPolicy_async_flattened_resourceNames",
+      "title": "GetIamPolicyResourceNamesAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "CloudTasksClient.GetIamPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetIamPolicy",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_SetIamPolicy_sync",
+      "title": "SetIamPolicyRequestObject",
+      "description": "Snippet for SetIamPolicy",
+      "file": "CloudTasksClient.SetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.SetIamPolicy",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_SetIamPolicy_async",
+      "title": "SetIamPolicyRequestObjectAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "CloudTasksClient.SetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.SetIamPolicy",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_SetIamPolicy_sync_flattened",
+      "title": "SetIamPolicy",
+      "description": "Snippet for SetIamPolicy",
+      "file": "CloudTasksClient.SetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.SetIamPolicy",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_SetIamPolicy_async_flattened",
+      "title": "SetIamPolicyAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "CloudTasksClient.SetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.SetIamPolicy",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_SetIamPolicy_sync_flattened_resourceNames",
+      "title": "SetIamPolicyResourceNames",
+      "description": "Snippet for SetIamPolicy",
+      "file": "CloudTasksClient.SetIamPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.SetIamPolicy",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_SetIamPolicy_async_flattened_resourceNames",
+      "title": "SetIamPolicyResourceNamesAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "CloudTasksClient.SetIamPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.SetIamPolicy",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_TestIamPermissions_sync",
+      "title": "TestIamPermissionsRequestObject",
+      "description": "Snippet for TestIamPermissions",
+      "file": "CloudTasksClient.TestIamPermissionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.TestIamPermissions",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_TestIamPermissions_async",
+      "title": "TestIamPermissionsRequestObjectAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "CloudTasksClient.TestIamPermissionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.TestIamPermissionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.TestIamPermissions",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_TestIamPermissions_sync_flattened",
+      "title": "TestIamPermissions",
+      "description": "Snippet for TestIamPermissions",
+      "file": "CloudTasksClient.TestIamPermissionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.TestIamPermissions",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_TestIamPermissions_async_flattened",
+      "title": "TestIamPermissionsAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "CloudTasksClient.TestIamPermissionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.TestIamPermissionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.TestIamPermissions",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_TestIamPermissions_sync_flattened_resourceNames",
+      "title": "TestIamPermissionsResourceNames",
+      "description": "Snippet for TestIamPermissions",
+      "file": "CloudTasksClient.TestIamPermissionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.TestIamPermissions",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_TestIamPermissions_async_flattened_resourceNames",
+      "title": "TestIamPermissionsResourceNamesAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "CloudTasksClient.TestIamPermissionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.TestIamPermissionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.TestIamPermissions",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ListTasks_sync",
+      "title": "ListTasksRequestObject",
+      "description": "Snippet for ListTasks",
+      "file": "CloudTasksClient.ListTasksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasks",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListTasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.ListTasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tasks.V2Beta3.ListTasksResponse, Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ListTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ListTasks_async",
+      "title": "ListTasksRequestObjectAsync",
+      "description": "Snippet for ListTasksAsync",
+      "file": "CloudTasksClient.ListTasksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasksAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListTasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.ListTasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tasks.V2Beta3.ListTasksResponse, Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ListTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ListTasks_sync_flattened",
+      "title": "ListTasks",
+      "description": "Snippet for ListTasks",
+      "file": "CloudTasksClient.ListTasksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasks",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListTasks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tasks.V2Beta3.ListTasksResponse, Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ListTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ListTasks_async_flattened",
+      "title": "ListTasksAsync",
+      "description": "Snippet for ListTasksAsync",
+      "file": "CloudTasksClient.ListTasksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasksAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListTasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tasks.V2Beta3.ListTasksResponse, Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ListTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ListTasks_sync_flattened_resourceNames",
+      "title": "ListTasksResourceNames",
+      "description": "Snippet for ListTasks",
+      "file": "CloudTasksClient.ListTasksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasks",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListTasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Tasks.V2Beta3.ListTasksResponse, Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ListTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_ListTasks_async_flattened_resourceNames",
+      "title": "ListTasksResourceNamesAsync",
+      "description": "Snippet for ListTasksAsync",
+      "file": "CloudTasksClient.ListTasksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasksAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.ListTasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Tasks.V2Beta3.ListTasksResponse, Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.ListTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetTask_sync",
+      "title": "GetTaskRequestObject",
+      "description": "Snippet for GetTask",
+      "file": "CloudTasksClient.GetTaskRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.GetTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetTask_async",
+      "title": "GetTaskRequestObjectAsync",
+      "description": "Snippet for GetTaskAsync",
+      "file": "CloudTasksClient.GetTaskRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.GetTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetTask_sync_flattened",
+      "title": "GetTask",
+      "description": "Snippet for GetTask",
+      "file": "CloudTasksClient.GetTaskSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetTask",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetTask_async_flattened",
+      "title": "GetTaskAsync",
+      "description": "Snippet for GetTaskAsync",
+      "file": "CloudTasksClient.GetTaskAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetTask_sync_flattened_resourceNames",
+      "title": "GetTaskResourceNames",
+      "description": "Snippet for GetTask",
+      "file": "CloudTasksClient.GetTaskResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetTask_async_flattened_resourceNames",
+      "title": "GetTaskResourceNamesAsync",
+      "description": "Snippet for GetTaskAsync",
+      "file": "CloudTasksClient.GetTaskResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_CreateTask_sync",
+      "title": "CreateTaskRequestObject",
+      "description": "Snippet for CreateTask",
+      "file": "CloudTasksClient.CreateTaskRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.CreateTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "CreateTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.CreateTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_CreateTask_async",
+      "title": "CreateTaskRequestObjectAsync",
+      "description": "Snippet for CreateTaskAsync",
+      "file": "CloudTasksClient.CreateTaskRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.CreateTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "CreateTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.CreateTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_CreateTask_sync_flattened",
+      "title": "CreateTask",
+      "description": "Snippet for CreateTask",
+      "file": "CloudTasksClient.CreateTaskSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateTask",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Task",
+            "name": "task"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "CreateTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.CreateTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_CreateTask_async_flattened",
+      "title": "CreateTaskAsync",
+      "description": "Snippet for CreateTaskAsync",
+      "file": "CloudTasksClient.CreateTaskAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Task",
+            "name": "task"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "CreateTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.CreateTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_CreateTask_sync_flattened_resourceNames",
+      "title": "CreateTaskResourceNames",
+      "description": "Snippet for CreateTask",
+      "file": "CloudTasksClient.CreateTaskResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Task",
+            "name": "task"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "CreateTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.CreateTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_CreateTask_async_flattened_resourceNames",
+      "title": "CreateTaskResourceNamesAsync",
+      "description": "Snippet for CreateTaskAsync",
+      "file": "CloudTasksClient.CreateTaskResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.CreateTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.Task",
+            "name": "task"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "CreateTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.CreateTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_DeleteTask_sync",
+      "title": "DeleteTaskRequestObject",
+      "description": "Snippet for DeleteTask",
+      "file": "CloudTasksClient.DeleteTaskRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "DeleteTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.DeleteTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_DeleteTask_async",
+      "title": "DeleteTaskRequestObjectAsync",
+      "description": "Snippet for DeleteTaskAsync",
+      "file": "CloudTasksClient.DeleteTaskRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "DeleteTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.DeleteTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_DeleteTask_sync_flattened",
+      "title": "DeleteTask",
+      "description": "Snippet for DeleteTask",
+      "file": "CloudTasksClient.DeleteTaskSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteTask",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "DeleteTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.DeleteTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_DeleteTask_async_flattened",
+      "title": "DeleteTaskAsync",
+      "description": "Snippet for DeleteTaskAsync",
+      "file": "CloudTasksClient.DeleteTaskAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "DeleteTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.DeleteTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_DeleteTask_sync_flattened_resourceNames",
+      "title": "DeleteTaskResourceNames",
+      "description": "Snippet for DeleteTask",
+      "file": "CloudTasksClient.DeleteTaskResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "DeleteTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.DeleteTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_DeleteTask_async_flattened_resourceNames",
+      "title": "DeleteTaskResourceNamesAsync",
+      "description": "Snippet for DeleteTaskAsync",
+      "file": "CloudTasksClient.DeleteTaskResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.DeleteTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "DeleteTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.DeleteTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_RunTask_sync",
+      "title": "RunTaskRequestObject",
+      "description": "Snippet for RunTask",
+      "file": "CloudTasksClient.RunTaskRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.RunTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.RunTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "RunTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.RunTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_RunTask_async",
+      "title": "RunTaskRequestObjectAsync",
+      "description": "Snippet for RunTaskAsync",
+      "file": "CloudTasksClient.RunTaskRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.RunTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.RunTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "RunTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.RunTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_RunTask_sync_flattened",
+      "title": "RunTask",
+      "description": "Snippet for RunTask",
+      "file": "CloudTasksClient.RunTaskSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.RunTask",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "RunTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.RunTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_RunTask_async_flattened",
+      "title": "RunTaskAsync",
+      "description": "Snippet for RunTaskAsync",
+      "file": "CloudTasksClient.RunTaskAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.RunTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "RunTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.RunTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_RunTask_sync_flattened_resourceNames",
+      "title": "RunTaskResourceNames",
+      "description": "Snippet for RunTask",
+      "file": "CloudTasksClient.RunTaskResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.RunTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.Task",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "RunTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.RunTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_RunTask_async_flattened_resourceNames",
+      "title": "RunTaskResourceNamesAsync",
+      "description": "Snippet for RunTaskAsync",
+      "file": "CloudTasksClient.RunTaskResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.RunTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.Task>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "RunTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.RunTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
