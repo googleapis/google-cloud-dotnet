@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Create client
             gcav::TetherClient tetherClient = gcav::TetherClient.Create();
             // Initialize streaming call, retrieving the stream object
-            gcav::TetherClient.EgressStream response = tetherClient.Egress();
+            using gcav::TetherClient.EgressStream response = tetherClient.Egress();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior

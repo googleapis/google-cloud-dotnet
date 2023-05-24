@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 Transaction = ByteString.Empty,
             };
             // Make the request, returning a streaming response
-            FirestoreClient.RunAggregationQueryStream response = firestoreClient.RunAggregationQuery(request);
+            using FirestoreClient.RunAggregationQueryStream response = firestoreClient.RunAggregationQuery(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

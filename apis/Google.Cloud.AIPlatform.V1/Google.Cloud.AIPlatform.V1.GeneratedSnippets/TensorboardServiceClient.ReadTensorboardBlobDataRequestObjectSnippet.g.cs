@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 BlobIds = { "", },
             };
             // Make the request, returning a streaming response
-            TensorboardServiceClient.ReadTensorboardBlobDataStream response = tensorboardServiceClient.ReadTensorboardBlobData(request);
+            using TensorboardServiceClient.ReadTensorboardBlobDataStream response = tensorboardServiceClient.ReadTensorboardBlobData(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

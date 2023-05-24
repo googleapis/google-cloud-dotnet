@@ -44,7 +44,7 @@ namespace GoogleCSharpSnippets
                 RequestStatsView = ReadRowsRequest.Types.RequestStatsView.Unspecified,
             };
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(request);
+            using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -67,7 +67,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName);
+            using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -90,7 +90,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName);
+            using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -114,7 +114,7 @@ namespace GoogleCSharpSnippets
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName, appProfileId);
+            using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -138,7 +138,7 @@ namespace GoogleCSharpSnippets
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName, appProfileId);
+            using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -165,7 +165,7 @@ namespace GoogleCSharpSnippets
                 AppProfileId = "",
             };
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(request);
+            using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -188,7 +188,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName);
+            using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -211,7 +211,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName);
+            using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -235,7 +235,7 @@ namespace GoogleCSharpSnippets
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName, appProfileId);
+            using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -259,7 +259,7 @@ namespace GoogleCSharpSnippets
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName, appProfileId);
+            using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -457,7 +457,7 @@ namespace GoogleCSharpSnippets
                 AppProfileId = "",
             };
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(request);
+            using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -484,7 +484,7 @@ namespace GoogleCSharpSnippets
                 new MutateRowsRequest.Types.Entry(),
             };
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries);
+            using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -511,7 +511,7 @@ namespace GoogleCSharpSnippets
                 new MutateRowsRequest.Types.Entry(),
             };
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries);
+            using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -539,7 +539,7 @@ namespace GoogleCSharpSnippets
             };
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries, appProfileId);
+            using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -567,7 +567,7 @@ namespace GoogleCSharpSnippets
             };
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries, appProfileId);
+            using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(tableName, entries, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -1125,7 +1125,7 @@ namespace GoogleCSharpSnippets
                 AppProfileId = "",
             };
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(request);
+            using BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -1148,7 +1148,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName);
+            using BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -1171,7 +1171,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName);
+            using BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -1195,7 +1195,7 @@ namespace GoogleCSharpSnippets
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName, appProfileId);
+            using BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -1219,7 +1219,7 @@ namespace GoogleCSharpSnippets
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName, appProfileId);
+            using BigtableServiceApiClient.GenerateInitialChangeStreamPartitionsStream response = bigtableServiceApiClient.GenerateInitialChangeStreamPartitions(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -1250,7 +1250,7 @@ namespace GoogleCSharpSnippets
                 HeartbeatDuration = new Duration(),
             };
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(request);
+            using BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -1273,7 +1273,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName);
+            using BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -1296,7 +1296,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName);
+            using BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -1320,7 +1320,7 @@ namespace GoogleCSharpSnippets
             string tableName = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName, appProfileId);
+            using BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -1344,7 +1344,7 @@ namespace GoogleCSharpSnippets
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName, appProfileId);
+            using BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

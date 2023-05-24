@@ -48,7 +48,7 @@ namespace GoogleCSharpSnippets
                 HeartbeatDuration = new Duration(),
             };
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(request);
+            using BigtableServiceApiClient.ReadChangeStreamStream response = bigtableServiceApiClient.ReadChangeStream(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

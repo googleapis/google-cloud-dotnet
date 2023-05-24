@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 AppProfileId = "",
             };
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(request);
+            using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

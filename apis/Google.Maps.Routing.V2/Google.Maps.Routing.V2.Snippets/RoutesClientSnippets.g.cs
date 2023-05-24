@@ -125,7 +125,7 @@ namespace GoogleCSharpSnippets
                 RegionCode = "",
             };
             // Make the request, returning a streaming response
-            RoutesClient.ComputeRouteMatrixStream response = routesClient.ComputeRouteMatrix(request);
+            using RoutesClient.ComputeRouteMatrixStream response = routesClient.ComputeRouteMatrix(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

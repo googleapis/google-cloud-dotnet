@@ -764,7 +764,7 @@ namespace GoogleCSharpSnippets
                 DataBoostEnabled = false,
             };
             // Make the request, returning a streaming response
-            gcsv::SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);
+            using gcsv::SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -900,7 +900,7 @@ namespace GoogleCSharpSnippets
                 DataBoostEnabled = false,
             };
             // Make the request, returning a streaming response
-            gcsv::SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);
+            using gcsv::SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

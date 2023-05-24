@@ -47,7 +47,7 @@ namespace GoogleCSharpSnippets
                 RequestStatsView = ReadRowsRequest.Types.RequestStatsView.Unspecified,
             };
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(request);
+            using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

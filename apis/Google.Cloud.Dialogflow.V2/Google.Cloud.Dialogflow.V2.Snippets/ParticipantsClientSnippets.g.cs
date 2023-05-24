@@ -716,7 +716,7 @@ namespace GoogleCSharpSnippets
             // Create client
             ParticipantsClient participantsClient = ParticipantsClient.Create();
             // Initialize streaming call, retrieving the stream object
-            ParticipantsClient.StreamingAnalyzeContentStream response = participantsClient.StreamingAnalyzeContent();
+            using ParticipantsClient.StreamingAnalyzeContentStream response = participantsClient.StreamingAnalyzeContent();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior

@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntityTypeName entityType = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
             // Make the request, returning a streaming response
-            FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(entityType);
+            using FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(entityType);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             SpeechClient speechClient = SpeechClient.Create();
             // Initialize streaming call, retrieving the stream object
-            SpeechClient.StreamingRecognizeStream response = speechClient.StreamingRecognize();
+            using SpeechClient.StreamingRecognizeStream response = speechClient.StreamingRecognize();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior

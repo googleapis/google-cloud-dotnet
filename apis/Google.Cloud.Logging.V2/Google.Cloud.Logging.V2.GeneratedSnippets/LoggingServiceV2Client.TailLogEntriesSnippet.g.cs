@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize streaming call, retrieving the stream object
-            LoggingServiceV2Client.TailLogEntriesStream response = loggingServiceV2Client.TailLogEntries();
+            using LoggingServiceV2Client.TailLogEntriesStream response = loggingServiceV2Client.TailLogEntries();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior

@@ -317,7 +317,7 @@ namespace GoogleCSharpSnippets
                 Transaction = ByteString.Empty,
             };
             // Make the request, returning a streaming response
-            FirestoreClient.BatchGetDocumentsStream response = firestoreClient.BatchGetDocuments(request);
+            using FirestoreClient.BatchGetDocumentsStream response = firestoreClient.BatchGetDocuments(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -537,7 +537,7 @@ namespace GoogleCSharpSnippets
                 Transaction = ByteString.Empty,
             };
             // Make the request, returning a streaming response
-            FirestoreClient.RunQueryStream response = firestoreClient.RunQuery(request);
+            using FirestoreClient.RunQueryStream response = firestoreClient.RunQuery(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -565,7 +565,7 @@ namespace GoogleCSharpSnippets
                 Transaction = ByteString.Empty,
             };
             // Make the request, returning a streaming response
-            FirestoreClient.RunAggregationQueryStream response = firestoreClient.RunAggregationQuery(request);
+            using FirestoreClient.RunAggregationQueryStream response = firestoreClient.RunAggregationQuery(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -688,7 +688,7 @@ namespace GoogleCSharpSnippets
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize streaming call, retrieving the stream object
-            FirestoreClient.WriteStream response = firestoreClient.Write();
+            using FirestoreClient.WriteStream response = firestoreClient.Write();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior
@@ -739,7 +739,7 @@ namespace GoogleCSharpSnippets
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize streaming call, retrieving the stream object
-            FirestoreClient.ListenStream response = firestoreClient.Listen();
+            using FirestoreClient.ListenStream response = firestoreClient.Listen();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior

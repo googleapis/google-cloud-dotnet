@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             TableName tableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
             string appProfileId = "";
             // Make the request, returning a streaming response
-            BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName, appProfileId);
+            using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(tableName, appProfileId);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
