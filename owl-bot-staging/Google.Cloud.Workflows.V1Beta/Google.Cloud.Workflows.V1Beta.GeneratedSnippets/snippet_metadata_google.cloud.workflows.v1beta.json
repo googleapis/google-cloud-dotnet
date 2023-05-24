@@ -1,0 +1,1426 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Workflows.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.workflows.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_ListWorkflows_sync",
+      "title": "ListWorkflowsRequestObject",
+      "description": "Snippet for ListWorkflows",
+      "file": "WorkflowsClient.ListWorkflowsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkflows",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.ListWorkflows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.ListWorkflowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Workflows.V1Beta.ListWorkflowsResponse, Google.Cloud.Workflows.V1Beta.Workflow>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "ListWorkflows",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.ListWorkflows",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_ListWorkflows_async",
+      "title": "ListWorkflowsRequestObjectAsync",
+      "description": "Snippet for ListWorkflowsAsync",
+      "file": "WorkflowsClient.ListWorkflowsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkflowsAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.ListWorkflowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.ListWorkflowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Workflows.V1Beta.ListWorkflowsResponse, Google.Cloud.Workflows.V1Beta.Workflow>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "ListWorkflows",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.ListWorkflows",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_ListWorkflows_sync_flattened",
+      "title": "ListWorkflows",
+      "description": "Snippet for ListWorkflows",
+      "file": "WorkflowsClient.ListWorkflowsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkflows",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.ListWorkflows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Workflows.V1Beta.ListWorkflowsResponse, Google.Cloud.Workflows.V1Beta.Workflow>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "ListWorkflows",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.ListWorkflows",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_ListWorkflows_async_flattened",
+      "title": "ListWorkflowsAsync",
+      "description": "Snippet for ListWorkflowsAsync",
+      "file": "WorkflowsClient.ListWorkflowsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkflowsAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.ListWorkflowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Workflows.V1Beta.ListWorkflowsResponse, Google.Cloud.Workflows.V1Beta.Workflow>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "ListWorkflows",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.ListWorkflows",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_ListWorkflows_sync_flattened_resourceNames",
+      "title": "ListWorkflowsResourceNames",
+      "description": "Snippet for ListWorkflows",
+      "file": "WorkflowsClient.ListWorkflowsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkflows",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.ListWorkflows",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Workflows.V1Beta.ListWorkflowsResponse, Google.Cloud.Workflows.V1Beta.Workflow>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "ListWorkflows",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.ListWorkflows",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_ListWorkflows_async_flattened_resourceNames",
+      "title": "ListWorkflowsResourceNamesAsync",
+      "description": "Snippet for ListWorkflowsAsync",
+      "file": "WorkflowsClient.ListWorkflowsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkflowsAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.ListWorkflowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Workflows.V1Beta.ListWorkflowsResponse, Google.Cloud.Workflows.V1Beta.Workflow>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "ListWorkflows",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.ListWorkflows",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_GetWorkflow_sync",
+      "title": "GetWorkflowRequestObject",
+      "description": "Snippet for GetWorkflow",
+      "file": "WorkflowsClient.GetWorkflowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkflow",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.GetWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.GetWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Workflows.V1Beta.Workflow",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "GetWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.GetWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_GetWorkflow_async",
+      "title": "GetWorkflowRequestObjectAsync",
+      "description": "Snippet for GetWorkflowAsync",
+      "file": "WorkflowsClient.GetWorkflowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkflowAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.GetWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.GetWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.V1Beta.Workflow>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "GetWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.GetWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_GetWorkflow_sync_flattened",
+      "title": "GetWorkflow",
+      "description": "Snippet for GetWorkflow",
+      "file": "WorkflowsClient.GetWorkflowSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkflow",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.GetWorkflow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Workflows.V1Beta.Workflow",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "GetWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.GetWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_GetWorkflow_async_flattened",
+      "title": "GetWorkflowAsync",
+      "description": "Snippet for GetWorkflowAsync",
+      "file": "WorkflowsClient.GetWorkflowAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkflowAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.GetWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.V1Beta.Workflow>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "GetWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.GetWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_GetWorkflow_sync_flattened_resourceNames",
+      "title": "GetWorkflowResourceNames",
+      "description": "Snippet for GetWorkflow",
+      "file": "WorkflowsClient.GetWorkflowResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkflow",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.GetWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.WorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Workflows.V1Beta.Workflow",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "GetWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.GetWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_GetWorkflow_async_flattened_resourceNames",
+      "title": "GetWorkflowResourceNamesAsync",
+      "description": "Snippet for GetWorkflowAsync",
+      "file": "WorkflowsClient.GetWorkflowResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkflowAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.GetWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.WorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Workflows.V1Beta.Workflow>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "GetWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.GetWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_CreateWorkflow_sync",
+      "title": "CreateWorkflowRequestObject",
+      "description": "Snippet for CreateWorkflow",
+      "file": "WorkflowsClient.CreateWorkflowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkflow",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.CreateWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.CreateWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Workflows.V1Beta.Workflow, Google.Cloud.Workflows.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "CreateWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.CreateWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_CreateWorkflow_async",
+      "title": "CreateWorkflowRequestObjectAsync",
+      "description": "Snippet for CreateWorkflowAsync",
+      "file": "WorkflowsClient.CreateWorkflowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkflowAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.CreateWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.CreateWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Workflows.V1Beta.Workflow, Google.Cloud.Workflows.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "CreateWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.CreateWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_CreateWorkflow_sync_flattened",
+      "title": "CreateWorkflow",
+      "description": "Snippet for CreateWorkflow",
+      "file": "WorkflowsClient.CreateWorkflowSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkflow",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.CreateWorkflow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.Workflow",
+            "name": "workflow"
+          },
+          {
+            "type": "System.String",
+            "name": "workflowId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Workflows.V1Beta.Workflow, Google.Cloud.Workflows.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "CreateWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.CreateWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_CreateWorkflow_async_flattened",
+      "title": "CreateWorkflowAsync",
+      "description": "Snippet for CreateWorkflowAsync",
+      "file": "WorkflowsClient.CreateWorkflowAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkflowAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.CreateWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.Workflow",
+            "name": "workflow"
+          },
+          {
+            "type": "System.String",
+            "name": "workflowId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Workflows.V1Beta.Workflow, Google.Cloud.Workflows.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "CreateWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.CreateWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_CreateWorkflow_sync_flattened_resourceNames",
+      "title": "CreateWorkflowResourceNames",
+      "description": "Snippet for CreateWorkflow",
+      "file": "WorkflowsClient.CreateWorkflowResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkflow",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.CreateWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.Workflow",
+            "name": "workflow"
+          },
+          {
+            "type": "System.String",
+            "name": "workflowId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Workflows.V1Beta.Workflow, Google.Cloud.Workflows.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "CreateWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.CreateWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_CreateWorkflow_async_flattened_resourceNames",
+      "title": "CreateWorkflowResourceNamesAsync",
+      "description": "Snippet for CreateWorkflowAsync",
+      "file": "WorkflowsClient.CreateWorkflowResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkflowAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.CreateWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.Workflow",
+            "name": "workflow"
+          },
+          {
+            "type": "System.String",
+            "name": "workflowId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Workflows.V1Beta.Workflow, Google.Cloud.Workflows.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "CreateWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.CreateWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_DeleteWorkflow_sync",
+      "title": "DeleteWorkflowRequestObject",
+      "description": "Snippet for DeleteWorkflow",
+      "file": "WorkflowsClient.DeleteWorkflowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkflow",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.DeleteWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.DeleteWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Workflows.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.DeleteWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_DeleteWorkflow_async",
+      "title": "DeleteWorkflowRequestObjectAsync",
+      "description": "Snippet for DeleteWorkflowAsync",
+      "file": "WorkflowsClient.DeleteWorkflowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkflowAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.DeleteWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.DeleteWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Workflows.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.DeleteWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_DeleteWorkflow_sync_flattened",
+      "title": "DeleteWorkflow",
+      "description": "Snippet for DeleteWorkflow",
+      "file": "WorkflowsClient.DeleteWorkflowSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkflow",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.DeleteWorkflow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Workflows.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.DeleteWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_DeleteWorkflow_async_flattened",
+      "title": "DeleteWorkflowAsync",
+      "description": "Snippet for DeleteWorkflowAsync",
+      "file": "WorkflowsClient.DeleteWorkflowAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkflowAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.DeleteWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Workflows.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.DeleteWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_DeleteWorkflow_sync_flattened_resourceNames",
+      "title": "DeleteWorkflowResourceNames",
+      "description": "Snippet for DeleteWorkflow",
+      "file": "WorkflowsClient.DeleteWorkflowResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkflow",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.DeleteWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.WorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Workflows.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.DeleteWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_DeleteWorkflow_async_flattened_resourceNames",
+      "title": "DeleteWorkflowResourceNamesAsync",
+      "description": "Snippet for DeleteWorkflowAsync",
+      "file": "WorkflowsClient.DeleteWorkflowResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkflowAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.DeleteWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.WorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Workflows.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.DeleteWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_UpdateWorkflow_sync",
+      "title": "UpdateWorkflowRequestObject",
+      "description": "Snippet for UpdateWorkflow",
+      "file": "WorkflowsClient.UpdateWorkflowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkflow",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.UpdateWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.UpdateWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Workflows.V1Beta.Workflow, Google.Cloud.Workflows.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.UpdateWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_UpdateWorkflow_async",
+      "title": "UpdateWorkflowRequestObjectAsync",
+      "description": "Snippet for UpdateWorkflowAsync",
+      "file": "WorkflowsClient.UpdateWorkflowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkflowAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.UpdateWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.UpdateWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Workflows.V1Beta.Workflow, Google.Cloud.Workflows.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.UpdateWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_UpdateWorkflow_sync_flattened",
+      "title": "UpdateWorkflow",
+      "description": "Snippet for UpdateWorkflow",
+      "file": "WorkflowsClient.UpdateWorkflowSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkflow",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.UpdateWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.Workflow",
+            "name": "workflow"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Workflows.V1Beta.Workflow, Google.Cloud.Workflows.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.UpdateWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1beta_generated_Workflows_UpdateWorkflow_async_flattened",
+      "title": "UpdateWorkflowAsync",
+      "description": "Snippet for UpdateWorkflowAsync",
+      "file": "WorkflowsClient.UpdateWorkflowAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkflowAsync",
+        "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient.UpdateWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1Beta.Workflow",
+            "name": "workflow"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Workflows.V1Beta.Workflow, Google.Cloud.Workflows.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1Beta.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkflow",
+          "fullName": "google.cloud.workflows.v1beta.Workflows.UpdateWorkflow",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1beta.Workflows"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

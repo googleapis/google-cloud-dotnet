@@ -1,0 +1,111 @@
+{
+  "clientLibrary": {
+    "name": "Google.Maps.Places.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.maps.places.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "places_v1_generated_Places_SearchText_sync",
+      "title": "SearchTextRequestObject",
+      "description": "Snippet for SearchText",
+      "file": "PlacesClient.SearchTextRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchText",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.SearchText",
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.SearchTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Places.V1.SearchTextResponse",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "SearchText",
+          "fullName": "google.maps.places.v1.Places.SearchText",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_SearchText_async",
+      "title": "SearchTextRequestObjectAsync",
+      "description": "Snippet for SearchTextAsync",
+      "file": "PlacesClient.SearchTextRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTextAsync",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.SearchTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.SearchTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Places.V1.SearchTextResponse>",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "SearchText",
+          "fullName": "google.maps.places.v1.Places.SearchText",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
