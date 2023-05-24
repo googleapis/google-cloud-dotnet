@@ -1,0 +1,3038 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Redis.V1Beta1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.redis.v1beta1",
+        "version": "v1beta1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ListInstances_sync",
+      "title": "ListInstancesRequestObject",
+      "description": "Snippet for ListInstances",
+      "file": "CloudRedisClient.ListInstancesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstances",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.V1Beta1.ListInstancesResponse, Google.Cloud.Redis.V1Beta1.Instance>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ListInstances",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ListInstances_async",
+      "title": "ListInstancesRequestObjectAsync",
+      "description": "Snippet for ListInstancesAsync",
+      "file": "CloudRedisClient.ListInstancesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancesAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ListInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.ListInstancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.V1Beta1.ListInstancesResponse, Google.Cloud.Redis.V1Beta1.Instance>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ListInstances",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ListInstances_sync_flattened",
+      "title": "ListInstances",
+      "description": "Snippet for ListInstances",
+      "file": "CloudRedisClient.ListInstancesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstances",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ListInstances",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.V1Beta1.ListInstancesResponse, Google.Cloud.Redis.V1Beta1.Instance>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ListInstances",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ListInstances_async_flattened",
+      "title": "ListInstancesAsync",
+      "description": "Snippet for ListInstancesAsync",
+      "file": "CloudRedisClient.ListInstancesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancesAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ListInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.V1Beta1.ListInstancesResponse, Google.Cloud.Redis.V1Beta1.Instance>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ListInstances",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ListInstances_sync_flattened_resourceNames",
+      "title": "ListInstancesResourceNames",
+      "description": "Snippet for ListInstances",
+      "file": "CloudRedisClient.ListInstancesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstances",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ListInstances",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Redis.V1Beta1.ListInstancesResponse, Google.Cloud.Redis.V1Beta1.Instance>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ListInstances",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ListInstances_async_flattened_resourceNames",
+      "title": "ListInstancesResourceNamesAsync",
+      "description": "Snippet for ListInstancesAsync",
+      "file": "CloudRedisClient.ListInstancesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancesAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ListInstancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Redis.V1Beta1.ListInstancesResponse, Google.Cloud.Redis.V1Beta1.Instance>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ListInstances",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ListInstances",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_GetInstance_sync",
+      "title": "GetInstanceRequestObject",
+      "description": "Snippet for GetInstance",
+      "file": "CloudRedisClient.GetInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.V1Beta1.Instance",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.GetInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_GetInstance_async",
+      "title": "GetInstanceRequestObjectAsync",
+      "description": "Snippet for GetInstanceAsync",
+      "file": "CloudRedisClient.GetInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.GetInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1Beta1.Instance>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.GetInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_GetInstance_sync_flattened",
+      "title": "GetInstance",
+      "description": "Snippet for GetInstance",
+      "file": "CloudRedisClient.GetInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.V1Beta1.Instance",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.GetInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_GetInstance_async_flattened",
+      "title": "GetInstanceAsync",
+      "description": "Snippet for GetInstanceAsync",
+      "file": "CloudRedisClient.GetInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1Beta1.Instance>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.GetInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_GetInstance_sync_flattened_resourceNames",
+      "title": "GetInstanceResourceNames",
+      "description": "Snippet for GetInstance",
+      "file": "CloudRedisClient.GetInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.V1Beta1.Instance",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.GetInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_GetInstance_async_flattened_resourceNames",
+      "title": "GetInstanceResourceNamesAsync",
+      "description": "Snippet for GetInstanceAsync",
+      "file": "CloudRedisClient.GetInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1Beta1.Instance>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.GetInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_GetInstanceAuthString_sync",
+      "title": "GetInstanceAuthStringRequestObject",
+      "description": "Snippet for GetInstanceAuthString",
+      "file": "CloudRedisClient.GetInstanceAuthStringRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAuthString",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAuthString",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.V1Beta1.InstanceAuthString",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstanceAuthString",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.GetInstanceAuthString",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_GetInstanceAuthString_async",
+      "title": "GetInstanceAuthStringRequestObjectAsync",
+      "description": "Snippet for GetInstanceAuthStringAsync",
+      "file": "CloudRedisClient.GetInstanceAuthStringRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAuthStringAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAuthStringAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1Beta1.InstanceAuthString>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstanceAuthString",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.GetInstanceAuthString",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_GetInstanceAuthString_sync_flattened",
+      "title": "GetInstanceAuthString",
+      "description": "Snippet for GetInstanceAuthString",
+      "file": "CloudRedisClient.GetInstanceAuthStringSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAuthString",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAuthString",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.V1Beta1.InstanceAuthString",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstanceAuthString",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.GetInstanceAuthString",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_GetInstanceAuthString_async_flattened",
+      "title": "GetInstanceAuthStringAsync",
+      "description": "Snippet for GetInstanceAuthStringAsync",
+      "file": "CloudRedisClient.GetInstanceAuthStringAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAuthStringAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAuthStringAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1Beta1.InstanceAuthString>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstanceAuthString",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.GetInstanceAuthString",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_GetInstanceAuthString_sync_flattened_resourceNames",
+      "title": "GetInstanceAuthStringResourceNames",
+      "description": "Snippet for GetInstanceAuthString",
+      "file": "CloudRedisClient.GetInstanceAuthStringResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAuthString",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAuthString",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Redis.V1Beta1.InstanceAuthString",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstanceAuthString",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.GetInstanceAuthString",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_GetInstanceAuthString_async_flattened_resourceNames",
+      "title": "GetInstanceAuthStringResourceNamesAsync",
+      "description": "Snippet for GetInstanceAuthStringAsync",
+      "file": "CloudRedisClient.GetInstanceAuthStringResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstanceAuthStringAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.GetInstanceAuthStringAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Redis.V1Beta1.InstanceAuthString>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "GetInstanceAuthString",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.GetInstanceAuthString",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_CreateInstance_sync",
+      "title": "CreateInstanceRequestObject",
+      "description": "Snippet for CreateInstance",
+      "file": "CloudRedisClient.CreateInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.CreateInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_CreateInstance_async",
+      "title": "CreateInstanceRequestObjectAsync",
+      "description": "Snippet for CreateInstanceAsync",
+      "file": "CloudRedisClient.CreateInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.CreateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.CreateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.CreateInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_CreateInstance_sync_flattened",
+      "title": "CreateInstance",
+      "description": "Snippet for CreateInstance",
+      "file": "CloudRedisClient.CreateInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.CreateInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_CreateInstance_async_flattened",
+      "title": "CreateInstanceAsync",
+      "description": "Snippet for CreateInstanceAsync",
+      "file": "CloudRedisClient.CreateInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.CreateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.CreateInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_CreateInstance_sync_flattened_resourceNames",
+      "title": "CreateInstanceResourceNames",
+      "description": "Snippet for CreateInstance",
+      "file": "CloudRedisClient.CreateInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.CreateInstance",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.CreateInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_CreateInstance_async_flattened_resourceNames",
+      "title": "CreateInstanceResourceNamesAsync",
+      "description": "Snippet for CreateInstanceAsync",
+      "file": "CloudRedisClient.CreateInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.CreateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "CreateInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.CreateInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_UpdateInstance_sync",
+      "title": "UpdateInstanceRequestObject",
+      "description": "Snippet for UpdateInstance",
+      "file": "CloudRedisClient.UpdateInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "UpdateInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.UpdateInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_UpdateInstance_async",
+      "title": "UpdateInstanceRequestObjectAsync",
+      "description": "Snippet for UpdateInstanceAsync",
+      "file": "CloudRedisClient.UpdateInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpdateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "UpdateInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.UpdateInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_UpdateInstance_sync_flattened",
+      "title": "UpdateInstance",
+      "description": "Snippet for UpdateInstance",
+      "file": "CloudRedisClient.UpdateInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpdateInstance",
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "UpdateInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.UpdateInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_UpdateInstance_async_flattened",
+      "title": "UpdateInstanceAsync",
+      "description": "Snippet for UpdateInstanceAsync",
+      "file": "CloudRedisClient.UpdateInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpdateInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "UpdateInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.UpdateInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_UpgradeInstance_sync",
+      "title": "UpgradeInstanceRequestObject",
+      "description": "Snippet for UpgradeInstance",
+      "file": "CloudRedisClient.UpgradeInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpgradeInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.UpgradeInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "UpgradeInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.UpgradeInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_UpgradeInstance_async",
+      "title": "UpgradeInstanceRequestObjectAsync",
+      "description": "Snippet for UpgradeInstanceAsync",
+      "file": "CloudRedisClient.UpgradeInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpgradeInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.UpgradeInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "UpgradeInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.UpgradeInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_UpgradeInstance_sync_flattened",
+      "title": "UpgradeInstance",
+      "description": "Snippet for UpgradeInstance",
+      "file": "CloudRedisClient.UpgradeInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpgradeInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "redisVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "UpgradeInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.UpgradeInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_UpgradeInstance_async_flattened",
+      "title": "UpgradeInstanceAsync",
+      "description": "Snippet for UpgradeInstanceAsync",
+      "file": "CloudRedisClient.UpgradeInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpgradeInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "redisVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "UpgradeInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.UpgradeInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_UpgradeInstance_sync_flattened_resourceNames",
+      "title": "UpgradeInstanceResourceNames",
+      "description": "Snippet for UpgradeInstance",
+      "file": "CloudRedisClient.UpgradeInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpgradeInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "redisVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "UpgradeInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.UpgradeInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_UpgradeInstance_async_flattened_resourceNames",
+      "title": "UpgradeInstanceResourceNamesAsync",
+      "description": "Snippet for UpgradeInstanceAsync",
+      "file": "CloudRedisClient.UpgradeInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.UpgradeInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "redisVersion"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "UpgradeInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.UpgradeInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ImportInstance_sync",
+      "title": "ImportInstanceRequestObject",
+      "description": "Snippet for ImportInstance",
+      "file": "CloudRedisClient.ImportInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ImportInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.ImportInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ImportInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ImportInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ImportInstance_async",
+      "title": "ImportInstanceRequestObjectAsync",
+      "description": "Snippet for ImportInstanceAsync",
+      "file": "CloudRedisClient.ImportInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ImportInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.ImportInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ImportInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ImportInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ImportInstance_sync_flattened",
+      "title": "ImportInstance",
+      "description": "Snippet for ImportInstance",
+      "file": "CloudRedisClient.ImportInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ImportInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ImportInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ImportInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ImportInstance_async_flattened",
+      "title": "ImportInstanceAsync",
+      "description": "Snippet for ImportInstanceAsync",
+      "file": "CloudRedisClient.ImportInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ImportInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ImportInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ImportInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ExportInstance_sync",
+      "title": "ExportInstanceRequestObject",
+      "description": "Snippet for ExportInstance",
+      "file": "CloudRedisClient.ExportInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ExportInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.ExportInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ExportInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ExportInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ExportInstance_async",
+      "title": "ExportInstanceRequestObjectAsync",
+      "description": "Snippet for ExportInstanceAsync",
+      "file": "CloudRedisClient.ExportInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ExportInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.ExportInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ExportInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ExportInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ExportInstance_sync_flattened",
+      "title": "ExportInstance",
+      "description": "Snippet for ExportInstance",
+      "file": "CloudRedisClient.ExportInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ExportInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ExportInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ExportInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_ExportInstance_async_flattened",
+      "title": "ExportInstanceAsync",
+      "description": "Snippet for ExportInstanceAsync",
+      "file": "CloudRedisClient.ExportInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.ExportInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "ExportInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.ExportInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_FailoverInstance_sync",
+      "title": "FailoverInstanceRequestObject",
+      "description": "Snippet for FailoverInstance",
+      "file": "CloudRedisClient.FailoverInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FailoverInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.FailoverInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "FailoverInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.FailoverInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_FailoverInstance_async",
+      "title": "FailoverInstanceRequestObjectAsync",
+      "description": "Snippet for FailoverInstanceAsync",
+      "file": "CloudRedisClient.FailoverInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FailoverInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.FailoverInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "FailoverInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.FailoverInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_FailoverInstance_sync_flattened",
+      "title": "FailoverInstance",
+      "description": "Snippet for FailoverInstance",
+      "file": "CloudRedisClient.FailoverInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FailoverInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.FailoverInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest+Types+DataProtectionMode",
+            "name": "dataProtectionMode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "FailoverInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.FailoverInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_FailoverInstance_async_flattened",
+      "title": "FailoverInstanceAsync",
+      "description": "Snippet for FailoverInstanceAsync",
+      "file": "CloudRedisClient.FailoverInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FailoverInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.FailoverInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest+Types+DataProtectionMode",
+            "name": "dataProtectionMode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "FailoverInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.FailoverInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_FailoverInstance_sync_flattened_resourceNames",
+      "title": "FailoverInstanceResourceNames",
+      "description": "Snippet for FailoverInstance",
+      "file": "CloudRedisClient.FailoverInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FailoverInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.FailoverInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest+Types+DataProtectionMode",
+            "name": "dataProtectionMode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "FailoverInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.FailoverInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_FailoverInstance_async_flattened_resourceNames",
+      "title": "FailoverInstanceResourceNamesAsync",
+      "description": "Snippet for FailoverInstanceAsync",
+      "file": "CloudRedisClient.FailoverInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FailoverInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.FailoverInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest+Types+DataProtectionMode",
+            "name": "dataProtectionMode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "FailoverInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.FailoverInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_DeleteInstance_sync",
+      "title": "DeleteInstanceRequestObject",
+      "description": "Snippet for DeleteInstance",
+      "file": "CloudRedisClient.DeleteInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.DeleteInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_DeleteInstance_async",
+      "title": "DeleteInstanceRequestObjectAsync",
+      "description": "Snippet for DeleteInstanceAsync",
+      "file": "CloudRedisClient.DeleteInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.DeleteInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.DeleteInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_DeleteInstance_sync_flattened",
+      "title": "DeleteInstance",
+      "description": "Snippet for DeleteInstance",
+      "file": "CloudRedisClient.DeleteInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.DeleteInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_DeleteInstance_async_flattened",
+      "title": "DeleteInstanceAsync",
+      "description": "Snippet for DeleteInstanceAsync",
+      "file": "CloudRedisClient.DeleteInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.DeleteInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.DeleteInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_DeleteInstance_sync_flattened_resourceNames",
+      "title": "DeleteInstanceResourceNames",
+      "description": "Snippet for DeleteInstance",
+      "file": "CloudRedisClient.DeleteInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.DeleteInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.DeleteInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_DeleteInstance_async_flattened_resourceNames",
+      "title": "DeleteInstanceResourceNamesAsync",
+      "description": "Snippet for DeleteInstanceAsync",
+      "file": "CloudRedisClient.DeleteInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.DeleteInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "DeleteInstance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.DeleteInstance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_RescheduleMaintenance_sync",
+      "title": "RescheduleMaintenanceRequestObject",
+      "description": "Snippet for RescheduleMaintenance",
+      "file": "CloudRedisClient.RescheduleMaintenanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.RescheduleMaintenance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_RescheduleMaintenance_async",
+      "title": "RescheduleMaintenanceRequestObjectAsync",
+      "description": "Snippet for RescheduleMaintenanceAsync",
+      "file": "CloudRedisClient.RescheduleMaintenanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.RescheduleMaintenanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_RescheduleMaintenance_sync_flattened",
+      "title": "RescheduleMaintenance",
+      "description": "Snippet for RescheduleMaintenance",
+      "file": "CloudRedisClient.RescheduleMaintenanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.RescheduleMaintenance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_RescheduleMaintenance_async_flattened",
+      "title": "RescheduleMaintenanceAsync",
+      "description": "Snippet for RescheduleMaintenanceAsync",
+      "file": "CloudRedisClient.RescheduleMaintenanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.RescheduleMaintenanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_RescheduleMaintenance_sync_flattened_resourceNames",
+      "title": "RescheduleMaintenanceResourceNames",
+      "description": "Snippet for RescheduleMaintenance",
+      "file": "CloudRedisClient.RescheduleMaintenanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenance",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.RescheduleMaintenance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "redis_v1beta1_generated_CloudRedis_RescheduleMaintenance_async_flattened_resourceNames",
+      "title": "RescheduleMaintenanceResourceNamesAsync",
+      "description": "Snippet for RescheduleMaintenanceAsync",
+      "file": "CloudRedisClient.RescheduleMaintenanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RescheduleMaintenanceAsync",
+        "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient.RescheduleMaintenanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest+Types+RescheduleType",
+            "name": "rescheduleType"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "scheduleTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Redis.V1Beta1.Instance, Google.Protobuf.WellKnownTypes.Any>>",
+        "client": {
+          "shortName": "CloudRedisClient",
+          "fullName": "Google.Cloud.Redis.V1Beta1.CloudRedisClient"
+        },
+        "method": {
+          "shortName": "RescheduleMaintenance",
+          "fullName": "google.cloud.redis.v1beta1.CloudRedis.RescheduleMaintenance",
+          "service": {
+            "shortName": "CloudRedis",
+            "fullName": "google.cloud.redis.v1beta1.CloudRedis"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
