@@ -34,10 +34,10 @@ namespace Google.Cloud.PubSub.V1;
 // - A suffix of "window" indicates the duration of time before the ackDeadline at which the lease is extended.
 // - A suffix of "interval" indicates the delay between sending one auto-lease extension request and the next; This is derived from the ackDeadline and the window.
 // The rules for manipulating the field values are:
-// - The "ackDeadline" should be within the MinAckDeadline and MaxAckDeadline. If not specified the DefaultAckDeadline is used.
-// - The "window" should be greater than or equal to the MinAckExtensionWindow. If not specified the DefaultAckExtensionWindow is used.
-// - The "interval" is calculated as the "ackDeadline" minus the "window".
-// - If the interval is less than the MinimumLeaseExtensionDelay, it is clamped to MinimumLeaseExtensionDelay.
+// - The "ackDeadline" should be within a minimum and maximum value.
+// - The "window" should be greater than or equal to the minimum value.
+// - An "interval" is calculated as the "ackDeadline" minus the "window".
+// - An interval should be within a minimum and maximum value.
 // - Any other computation is forbidden.
 
 /// <summary>
@@ -73,7 +73,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         _modifyDeadlineSeconds = (int)((settings.AckDeadline ?? DefaultAckDeadline).TotalSeconds);
         var autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
         // FIXME: MinimumAckExtensionWindowForExactlyOnceDelivery is incorrectly named. It should be renamed to MinimumLeaseExtensionDelay or MinimumLeaseExtensionSchedule with the default value of 60 seconds.
-        // FIXME: The default minimum value of 60 seconds causes the issue of duplicate message delivery in the case, when AckDeadline is 60 seconds and messages take longer to handle as extends aren't sent on time.
+        // This field violates the rule by assigning a window to an interval, which is prohibited.
         var autoExtendIntervalForExactlyOnceDelivery = settings.AckExtensionWindow ?? MinimumAckExtensionWindowForExactlyOnceDelivery;
         // For exactly once delivery subscription, minimum ack extension window value should be the default value of 60 seconds or the user provided value.
         // Ensure the duration between lease extensions is at least MinimumLeaseExtensionDelay (5 seconds).
