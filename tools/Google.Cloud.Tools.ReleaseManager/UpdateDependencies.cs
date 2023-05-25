@@ -74,11 +74,20 @@ namespace Google.Cloud.Tools.ReleaseManager
             var root = DirectoryLayout.DetermineRootDirectory();
             using var repo = new Repository(root);
             // OwlBot will be post-processing a new commit from either OwlBot itself or
-            // release-please; we want to find out what the API catalog looked like in the commit
-            // *before* that.
-            var previousCommit = repo.Head.Commits.Skip(1).First();
-            var oldCatalogBlob = (Blob) previousCommit.Tree["apis/apis.json"].Target;
-            var text = oldCatalogBlob.GetContentText();
+            // release-please; we want to find out what the API catalog looked like in
+            // the parent commit.
+            var headCommit = repo.Head.Tip;
+            var parentCommit = headCommit.Parents.First();
+            var headApisJson = headCommit.Tree["apis/apis.json"].Target;
+            var parentApisJson = parentCommit.Tree["apis/apis.json"].Target;
+
+            // Let's not even bother parsing if apis.json hasn't changed.
+            if (headApisJson.Sha == parentApisJson.Sha)
+            {
+                return new();
+            }
+
+            var text = ((Blob) parentApisJson).GetContentText();
             var oldCatalog = ApiCatalog.FromJson(text);
 
             // We only want to check for dependency updates in APIs that have changed *and* aren't patch releases.
