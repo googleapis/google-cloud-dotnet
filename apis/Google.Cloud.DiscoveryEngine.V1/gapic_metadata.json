@@ -1,0 +1,156 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.discoveryengine.v1",
+  "libraryPackage": "Google.Cloud.DiscoveryEngine.V1",
+  "services": {
+    "CompletionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CompletionServiceClient",
+          "rpcs": {
+            "CompleteQuery": {
+              "methods": [
+                "CompleteQuery",
+                "CompleteQueryAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "DocumentService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DocumentServiceClient",
+          "rpcs": {
+            "CreateDocument": {
+              "methods": [
+                "CreateDocument",
+                "CreateDocumentAsync"
+              ]
+            },
+            "DeleteDocument": {
+              "methods": [
+                "DeleteDocument",
+                "DeleteDocumentAsync"
+              ]
+            },
+            "GetDocument": {
+              "methods": [
+                "GetDocument",
+                "GetDocumentAsync"
+              ]
+            },
+            "ImportDocuments": {
+              "methods": [
+                "ImportDocuments",
+                "ImportDocumentsAsync"
+              ]
+            },
+            "ListDocuments": {
+              "methods": [
+                "ListDocuments",
+                "ListDocumentsAsync"
+              ]
+            },
+            "PurgeDocuments": {
+              "methods": [
+                "PurgeDocuments",
+                "PurgeDocumentsAsync"
+              ]
+            },
+            "UpdateDocument": {
+              "methods": [
+                "UpdateDocument",
+                "UpdateDocumentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SchemaService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SchemaServiceClient",
+          "rpcs": {
+            "CreateSchema": {
+              "methods": [
+                "CreateSchema",
+                "CreateSchemaAsync"
+              ]
+            },
+            "DeleteSchema": {
+              "methods": [
+                "DeleteSchema",
+                "DeleteSchemaAsync"
+              ]
+            },
+            "GetSchema": {
+              "methods": [
+                "GetSchema",
+                "GetSchemaAsync"
+              ]
+            },
+            "ListSchemas": {
+              "methods": [
+                "ListSchemas",
+                "ListSchemasAsync"
+              ]
+            },
+            "UpdateSchema": {
+              "methods": [
+                "UpdateSchema",
+                "UpdateSchemaAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SearchService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SearchServiceClient",
+          "rpcs": {
+            "Search": {
+              "methods": [
+                "Search",
+                "SearchAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "UserEventService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "UserEventServiceClient",
+          "rpcs": {
+            "CollectUserEvent": {
+              "methods": [
+                "CollectUserEvent",
+                "CollectUserEventAsync"
+              ]
+            },
+            "ImportUserEvents": {
+              "methods": [
+                "ImportUserEvents",
+                "ImportUserEventsAsync"
+              ]
+            },
+            "WriteUserEvent": {
+              "methods": [
+                "WriteUserEvent",
+                "WriteUserEventAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
