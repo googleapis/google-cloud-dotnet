@@ -1838,6 +1838,26 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Cloud.DiscoveryEngine.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Discovery Engine",
+      "productUrl": "https://cloud.google.com/discovery-engine/docs",
+      "description": "Recommended Google client library to access the Google Discovery Engine API (v1). Discovery Engine powers high-quality content recommendations on your digital properties for Discovery for Media.",
+      "tags": [
+        "discovery",
+        "media"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/discoveryengine/v1",
+      "shortName": "discoveryengine",
+      "serviceConfigFile": "discoveryengine_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.DiscoveryEngine.V1Beta",
       "version": "1.0.0-beta04",
       "type": "grpc",
