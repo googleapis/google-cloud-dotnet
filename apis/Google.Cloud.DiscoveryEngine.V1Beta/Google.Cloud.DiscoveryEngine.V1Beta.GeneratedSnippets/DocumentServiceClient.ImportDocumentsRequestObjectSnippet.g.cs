@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
                 InlineSource = new ImportDocumentsRequest.Types.InlineSource(),
                 ErrorConfig = new ImportErrorConfig(),
                 ReconciliationMode = ImportDocumentsRequest.Types.ReconciliationMode.Unspecified,
+                AutoGenerateIds = false,
+                IdField = "",
             };
             // Make the request
             Operation<ImportDocumentsResponse, ImportDocumentsMetadata> response = documentServiceClient.ImportDocuments(request);
