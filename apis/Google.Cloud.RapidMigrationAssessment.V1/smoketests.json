@@ -1,0 +1,19 @@
+[
+  {
+    "method": "ListLocations",
+    "client": "RapidMigrationAssessmentClient",
+    "clientNavigationProperty": "LocationsClient",
+    "arguments": {
+      "request": {
+        "name": "projects/${PROJECT_ID}"
+      }
+    }
+  },
+  {
+    "method": "ListCollectors",
+    "client": "RapidMigrationAssessmentClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  }
+]
