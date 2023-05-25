@@ -3492,6 +3492,26 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.RapidMigrationAssessment.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Rapid Migration Assessment",
+      "productUrl": "https://cloud.google.com/migration-center/docs",
+      "description": "Recommended Google client library to access the Google Cloud Rapid Migration Assessment API.",
+      "tags": [
+        "migration"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/rapidmigrationassessment/v1",
+      "shortName": "rapidmigrationassessment",
+      "serviceConfigFile": "rapidmigrationassessment_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.RecaptchaEnterprise.V1",
       "generator": "micro",
       "protoPath": "google/cloud/recaptchaenterprise/v1",

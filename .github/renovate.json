@@ -159,6 +159,7 @@
     "apis/Google.Cloud.PrivateCatalog.V1Beta1/Google.Cloud.PrivateCatalog.V1Beta1/**",
     "apis/Google.Cloud.Profiler.V2/Google.Cloud.Profiler.V2/**",
     "apis/Google.Cloud.PubSub.V1/Google.Cloud.PubSub.V1/**",
+    "apis/Google.Cloud.RapidMigrationAssessment.V1/Google.Cloud.RapidMigrationAssessment.V1/**",
     "apis/Google.Cloud.RecaptchaEnterprise.V1/Google.Cloud.RecaptchaEnterprise.V1/**",
     "apis/Google.Cloud.RecaptchaEnterprise.V1Beta1/Google.Cloud.RecaptchaEnterprise.V1Beta1/**",
     "apis/Google.Cloud.RecommendationEngine.V1Beta1/Google.Cloud.RecommendationEngine.V1Beta1/**",
