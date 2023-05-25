@@ -143,7 +143,10 @@ fi
 
 # Update dependencies if we're releasing anything.
 # (This is for release-please integration.)
-dotnet run --project tools/Google.Cloud.Tools.ReleaseManager -- update-dependencies --owlbot
+# Temporarily commented out for now, as it looks like
+# we only have the head commit.
+# Once OwlBot is working again, we can find a proper fix.
+# dotnet run --project tools/Google.Cloud.Tools.ReleaseManager -- update-dependencies --owlbot
 
 # Generate .csproj files in all the /apis directories.
 ./generateprojects.sh
