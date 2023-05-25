@@ -1855,7 +1855,8 @@
       "protoPath": "google/cloud/discoveryengine/v1",
       "shortName": "discoveryengine",
       "serviceConfigFile": "discoveryengine_v1.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "blockRelease": "Smoke test needs fixing before release"
     },
     {
       "id": "Google.Cloud.DiscoveryEngine.V1Beta",
