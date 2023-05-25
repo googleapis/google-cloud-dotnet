@@ -62,7 +62,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "SW1wb3J0RG9jdW1lbnRzTWV0YWRhdGESLwoLY3JlYXRlX3RpbWUYASABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAIg",
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIVCg1zdWNjZXNzX2Nv",
-            "dW50GAMgASgDEhUKDWZhaWx1cmVfY291bnQYBCABKAMiwgUKFkltcG9ydERv",
+            "dW50GAMgASgDEhUKDWZhaWx1cmVfY291bnQYBCABKAMi7wUKFkltcG9ydERv",
             "Y3VtZW50c1JlcXVlc3QSYQoNaW5saW5lX3NvdXJjZRgCIAEoCzJILmdvb2ds",
             "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkltcG9ydERvY3VtZW50",
             "c1JlcXVlc3QuSW5saW5lU291cmNlSAASRAoKZ2NzX3NvdXJjZRgDIAEoCzIu",
@@ -74,7 +74,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuSW1wb3J0RXJyb3JDb25maWcS",
             "awoTcmVjb25jaWxpYXRpb25fbW9kZRgGIAEoDjJOLmdvb2dsZS5jbG91ZC5k",
             "aXNjb3ZlcnllbmdpbmUudjFiZXRhLkltcG9ydERvY3VtZW50c1JlcXVlc3Qu",
-            "UmVjb25jaWxpYXRpb25Nb2RlGlUKDElubGluZVNvdXJjZRJFCglkb2N1bWVu",
+            "UmVjb25jaWxpYXRpb25Nb2RlEhkKEWF1dG9fZ2VuZXJhdGVfaWRzGAggASgI",
+            "EhAKCGlkX2ZpZWxkGAkgASgJGlUKDElubGluZVNvdXJjZRJFCglkb2N1bWVu",
             "dHMYASADKAsyLS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0",
             "YS5Eb2N1bWVudEID4EECIlQKElJlY29uY2lsaWF0aW9uTW9kZRIjCh9SRUNP",
             "TkNJTElBVElPTl9NT0RFX1VOU1BFQ0lGSUVEEAASDwoLSU5DUkVNRU5UQUwQ",
@@ -99,7 +100,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ImportUserEventsResponse), global::Google.Cloud.DiscoveryEngine.V1Beta.ImportUserEventsResponse.Parser, new[]{ "ErrorSamples", "ErrorConfig", "JoinedEventsCount", "UnjoinedEventsCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ImportUserEventsMetadata), global::Google.Cloud.DiscoveryEngine.V1Beta.ImportUserEventsMetadata.Parser, new[]{ "CreateTime", "UpdateTime", "SuccessCount", "FailureCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsMetadata), global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsMetadata.Parser, new[]{ "CreateTime", "UpdateTime", "SuccessCount", "FailureCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest.Parser, new[]{ "InlineSource", "GcsSource", "BigquerySource", "Parent", "ErrorConfig", "ReconciliationMode" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest.Types.ReconciliationMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest.Types.InlineSource), global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest.Types.InlineSource.Parser, new[]{ "Documents" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest.Parser, new[]{ "InlineSource", "GcsSource", "BigquerySource", "Parent", "ErrorConfig", "ReconciliationMode", "AutoGenerateIds", "IdField" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest.Types.ReconciliationMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest.Types.InlineSource), global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest.Types.InlineSource.Parser, new[]{ "Documents" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsResponse), global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsResponse.Parser, new[]{ "ErrorSamples", "ErrorConfig" }, null, null, null, null)
           }));
     }
@@ -2721,6 +2722,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       parent_ = other.parent_;
       errorConfig_ = other.errorConfig_ != null ? other.errorConfig_.Clone() : null;
       reconciliationMode_ = other.reconciliationMode_;
+      autoGenerateIds_ = other.autoGenerateIds_;
+      idField_ = other.idField_;
       switch (other.SourceCase) {
         case SourceOneofCase.InlineSource:
           InlineSource = other.InlineSource.Clone();
@@ -2836,6 +2839,84 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "auto_generate_ids" field.</summary>
+    public const int AutoGenerateIdsFieldNumber = 8;
+    private bool autoGenerateIds_;
+    /// <summary>
+    /// Whether to automatically generate IDs for the documents if absent.
+    ///
+    /// If set to `true`,
+    /// [Document.id][google.cloud.discoveryengine.v1beta.Document.id]s are
+    /// automatically generated based on the hash of the payload, where IDs may not
+    /// be consistent during multiple imports. In which case
+    /// [ReconciliationMode.FULL][google.cloud.discoveryengine.v1beta.ImportDocumentsRequest.ReconciliationMode.FULL]
+    /// is highly recommended to avoid duplicate contents. If unset or set to
+    /// `false`, [Document.id][google.cloud.discoveryengine.v1beta.Document.id]s
+    /// have to be specified using
+    /// [id_field][google.cloud.discoveryengine.v1beta.ImportDocumentsRequest.id_field],
+    /// otherwises, documents without IDs will fail to be imported.
+    ///
+    /// Only set this field when using
+    /// [GcsSource][google.cloud.discoveryengine.v1beta.GcsSource] or
+    /// [BigQuerySource][google.cloud.discoveryengine.v1beta.BigQuerySource], and
+    /// when
+    /// [GcsSource.data_schema][google.cloud.discoveryengine.v1beta.GcsSource.data_schema]
+    /// or
+    /// [BigQuerySource.data_schema][google.cloud.discoveryengine.v1beta.BigQuerySource.data_schema]
+    /// is `custom`. Otherwise, an INVALID_ARGUMENT error is thrown.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AutoGenerateIds {
+      get { return autoGenerateIds_; }
+      set {
+        autoGenerateIds_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "id_field" field.</summary>
+    public const int IdFieldFieldNumber = 9;
+    private string idField_ = "";
+    /// <summary>
+    /// The field in the Cloud Storage and BigQuery sources that indicates the
+    /// unique IDs of the documents.
+    ///
+    /// For [GcsSource][google.cloud.discoveryengine.v1beta.GcsSource] it is the
+    /// key of the JSON field. For instance, `my_id` for JSON `{"my_id":
+    /// "some_uuid"}`. For
+    /// [BigQuerySource][google.cloud.discoveryengine.v1beta.BigQuerySource] it is
+    /// the column name of the BigQuery table where the unique ids are stored.
+    ///
+    /// The values of the JSON field or the BigQuery column will be used as the
+    /// [Document.id][google.cloud.discoveryengine.v1beta.Document.id]s. The JSON
+    /// field or the BigQuery column must be of string type, and the values must be
+    /// set as valid strings conform to
+    /// [RFC-1034](https://tools.ietf.org/html/rfc1034) with 1-63 characters.
+    /// Otherwise, documents without valid IDs will fail to be imported.
+    ///
+    /// Only set this field when using
+    /// [GcsSource][google.cloud.discoveryengine.v1beta.GcsSource] or
+    /// [BigQuerySource][google.cloud.discoveryengine.v1beta.BigQuerySource], and
+    /// when
+    /// [GcsSource.data_schema][google.cloud.discoveryengine.v1beta.GcsSource.data_schema]
+    /// or
+    /// [BigQuerySource.data_schema][google.cloud.discoveryengine.v1beta.BigQuerySource.data_schema]
+    /// is `custom`. And only set this field when
+    /// [auto_generate_ids][google.cloud.discoveryengine.v1beta.ImportDocumentsRequest.auto_generate_ids]
+    /// is unset or set as `false`. Otherwise, an INVALID_ARGUMENT error is thrown.
+    ///
+    /// If it is unset, a default value `_id` is used when importing from the
+    /// allowed data sources.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IdField {
+      get { return idField_; }
+      set {
+        idField_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object source_;
     /// <summary>Enum of possible cases for the "source" oneof.</summary>
     public enum SourceOneofCase {
@@ -2879,6 +2960,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (Parent != other.Parent) return false;
       if (!object.Equals(ErrorConfig, other.ErrorConfig)) return false;
       if (ReconciliationMode != other.ReconciliationMode) return false;
+      if (AutoGenerateIds != other.AutoGenerateIds) return false;
+      if (IdField != other.IdField) return false;
       if (SourceCase != other.SourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2893,6 +2976,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (errorConfig_ != null) hash ^= ErrorConfig.GetHashCode();
       if (ReconciliationMode != global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest.Types.ReconciliationMode.Unspecified) hash ^= ReconciliationMode.GetHashCode();
+      if (AutoGenerateIds != false) hash ^= AutoGenerateIds.GetHashCode();
+      if (IdField.Length != 0) hash ^= IdField.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2936,6 +3021,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(48);
         output.WriteEnum((int) ReconciliationMode);
       }
+      if (AutoGenerateIds != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(AutoGenerateIds);
+      }
+      if (IdField.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(IdField);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2970,6 +3063,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(48);
         output.WriteEnum((int) ReconciliationMode);
       }
+      if (AutoGenerateIds != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(AutoGenerateIds);
+      }
+      if (IdField.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(IdField);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2998,6 +3099,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (ReconciliationMode != global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest.Types.ReconciliationMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReconciliationMode);
       }
+      if (AutoGenerateIds != false) {
+        size += 1 + 1;
+      }
+      if (IdField.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IdField);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3021,6 +3128,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (other.ReconciliationMode != global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest.Types.ReconciliationMode.Unspecified) {
         ReconciliationMode = other.ReconciliationMode;
+      }
+      if (other.AutoGenerateIds != false) {
+        AutoGenerateIds = other.AutoGenerateIds;
+      }
+      if (other.IdField.Length != 0) {
+        IdField = other.IdField;
       }
       switch (other.SourceCase) {
         case SourceOneofCase.InlineSource:
@@ -3100,6 +3213,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             ReconciliationMode = (global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest.Types.ReconciliationMode) input.ReadEnum();
             break;
           }
+          case 64: {
+            AutoGenerateIds = input.ReadBool();
+            break;
+          }
+          case 74: {
+            IdField = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -3155,6 +3276,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
           case 48: {
             ReconciliationMode = (global::Google.Cloud.DiscoveryEngine.V1Beta.ImportDocumentsRequest.Types.ReconciliationMode) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            AutoGenerateIds = input.ReadBool();
+            break;
+          }
+          case 74: {
+            IdField = input.ReadString();
             break;
           }
         }
