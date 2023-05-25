@@ -126,6 +126,9 @@ copy_one_api() {
 echo ".NET SDKs:"
 dotnet --list-sdks
 
+echo "Git log:"
+git log
+
 # Avoid .NET complaining about submodules being missing
 git config --global --add safe.directory /repo
 git submodule update --init --recursive
