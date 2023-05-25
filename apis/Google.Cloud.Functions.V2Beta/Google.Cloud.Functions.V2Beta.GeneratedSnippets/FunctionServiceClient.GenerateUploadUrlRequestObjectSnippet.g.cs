@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             GenerateUploadUrlRequest request = new GenerateUploadUrlRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
             };
             // Make the request
             GenerateUploadUrlResponse response = functionServiceClient.GenerateUploadUrl(request);
