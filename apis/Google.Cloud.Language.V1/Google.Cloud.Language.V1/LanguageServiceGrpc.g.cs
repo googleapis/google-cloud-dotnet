@@ -85,6 +85,10 @@ namespace Google.Cloud.Language.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.ClassifyTextResponse> __Marshaller_google_cloud_language_v1_ClassifyTextResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.ClassifyTextResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.ModerateTextRequest> __Marshaller_google_cloud_language_v1_ModerateTextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.ModerateTextRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.ModerateTextResponse> __Marshaller_google_cloud_language_v1_ModerateTextResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.ModerateTextResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnnotateTextRequest> __Marshaller_google_cloud_language_v1_AnnotateTextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnnotateTextRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnnotateTextResponse> __Marshaller_google_cloud_language_v1_AnnotateTextResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnnotateTextResponse.Parser));
@@ -128,6 +132,14 @@ namespace Google.Cloud.Language.V1 {
         "ClassifyText",
         __Marshaller_google_cloud_language_v1_ClassifyTextRequest,
         __Marshaller_google_cloud_language_v1_ClassifyTextResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Language.V1.ModerateTextRequest, global::Google.Cloud.Language.V1.ModerateTextResponse> __Method_ModerateText = new grpc::Method<global::Google.Cloud.Language.V1.ModerateTextRequest, global::Google.Cloud.Language.V1.ModerateTextResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ModerateText",
+        __Marshaller_google_cloud_language_v1_ModerateTextRequest,
+        __Marshaller_google_cloud_language_v1_ModerateTextResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Language.V1.AnnotateTextRequest, global::Google.Cloud.Language.V1.AnnotateTextResponse> __Method_AnnotateText = new grpc::Method<global::Google.Cloud.Language.V1.AnnotateTextRequest, global::Google.Cloud.Language.V1.AnnotateTextResponse>(
@@ -210,6 +222,18 @@ namespace Google.Cloud.Language.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Language.V1.ClassifyTextResponse> ClassifyText(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Moderates a document for harmful and sensitive categories.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Language.V1.ModerateTextResponse> ModerateText(global::Google.Cloud.Language.V1.ModerateTextRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -525,6 +549,54 @@ namespace Google.Cloud.Language.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ClassifyText, null, options, request);
       }
       /// <summary>
+      /// Moderates a document for harmful and sensitive categories.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Language.V1.ModerateTextResponse ModerateText(global::Google.Cloud.Language.V1.ModerateTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ModerateText(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Moderates a document for harmful and sensitive categories.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Language.V1.ModerateTextResponse ModerateText(global::Google.Cloud.Language.V1.ModerateTextRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ModerateText, null, options, request);
+      }
+      /// <summary>
+      /// Moderates a document for harmful and sensitive categories.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.ModerateTextResponse> ModerateTextAsync(global::Google.Cloud.Language.V1.ModerateTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ModerateTextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Moderates a document for harmful and sensitive categories.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.ModerateTextResponse> ModerateTextAsync(global::Google.Cloud.Language.V1.ModerateTextRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ModerateText, null, options, request);
+      }
+      /// <summary>
       /// A convenience method that provides all the features that analyzeSentiment,
       /// analyzeEntities, and analyzeSyntax provide in one call.
       /// </summary>
@@ -595,6 +667,7 @@ namespace Google.Cloud.Language.V1 {
           .AddMethod(__Method_AnalyzeEntitySentiment, serviceImpl.AnalyzeEntitySentiment)
           .AddMethod(__Method_AnalyzeSyntax, serviceImpl.AnalyzeSyntax)
           .AddMethod(__Method_ClassifyText, serviceImpl.ClassifyText)
+          .AddMethod(__Method_ModerateText, serviceImpl.ModerateText)
           .AddMethod(__Method_AnnotateText, serviceImpl.AnnotateText).Build();
     }
 
@@ -610,6 +683,7 @@ namespace Google.Cloud.Language.V1 {
       serviceBinder.AddMethod(__Method_AnalyzeEntitySentiment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest, global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse>(serviceImpl.AnalyzeEntitySentiment));
       serviceBinder.AddMethod(__Method_AnalyzeSyntax, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest, global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse>(serviceImpl.AnalyzeSyntax));
       serviceBinder.AddMethod(__Method_ClassifyText, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Language.V1.ClassifyTextRequest, global::Google.Cloud.Language.V1.ClassifyTextResponse>(serviceImpl.ClassifyText));
+      serviceBinder.AddMethod(__Method_ModerateText, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Language.V1.ModerateTextRequest, global::Google.Cloud.Language.V1.ModerateTextResponse>(serviceImpl.ModerateText));
       serviceBinder.AddMethod(__Method_AnnotateText, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Language.V1.AnnotateTextRequest, global::Google.Cloud.Language.V1.AnnotateTextResponse>(serviceImpl.AnnotateText));
     }
 

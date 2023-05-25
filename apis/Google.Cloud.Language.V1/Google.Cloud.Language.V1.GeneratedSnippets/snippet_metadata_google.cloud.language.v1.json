@@ -1383,6 +1383,198 @@
       ]
     },
     {
+      "regionTag": "language_v1_generated_LanguageService_ModerateText_sync",
+      "title": "ModerateTextRequestObject",
+      "description": "Snippet for ModerateText",
+      "file": "LanguageServiceClient.ModerateTextRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModerateText",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.ModerateText",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.ModerateTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.ModerateTextResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "ModerateText",
+          "fullName": "google.cloud.language.v1.LanguageService.ModerateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_ModerateText_async",
+      "title": "ModerateTextRequestObjectAsync",
+      "description": "Snippet for ModerateTextAsync",
+      "file": "LanguageServiceClient.ModerateTextRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModerateTextAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.ModerateTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.ModerateTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.ModerateTextResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "ModerateText",
+          "fullName": "google.cloud.language.v1.LanguageService.ModerateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_ModerateText_sync_flattened",
+      "title": "ModerateText",
+      "description": "Snippet for ModerateText",
+      "file": "LanguageServiceClient.ModerateTextSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModerateText",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.ModerateText",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.ModerateTextResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "ModerateText",
+          "fullName": "google.cloud.language.v1.LanguageService.ModerateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_ModerateText_async_flattened",
+      "title": "ModerateTextAsync",
+      "description": "Snippet for ModerateTextAsync",
+      "file": "LanguageServiceClient.ModerateTextAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModerateTextAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.ModerateTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.ModerateTextResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "ModerateText",
+          "fullName": "google.cloud.language.v1.LanguageService.ModerateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "language_v1_generated_LanguageService_AnnotateText_sync",
       "title": "AnnotateTextRequestObject",
       "description": "Snippet for AnnotateText",

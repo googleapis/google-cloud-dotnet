@@ -45,6 +45,12 @@
                 "ClassifyText",
                 "ClassifyTextAsync"
               ]
+            },
+            "ModerateText": {
+              "methods": [
+                "ModerateText",
+                "ModerateTextAsync"
+              ]
             }
           }
         }
