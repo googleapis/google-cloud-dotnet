@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.1.0, released 2023-05-26
+
+### New features
+
+- Add Oracle to PostgreSQL migration APIs ([commit fcf9391](https://github.com/googleapis/google-cloud-dotnet/commit/fcf93912233be05f0f170eb3472ca3a23f8d0815))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
