@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.7.0, released 2023-05-26
+
+### New features
+
+- Added partition_keys field to filter results from FetchReportResults ([commit fde5897](https://github.com/googleapis/google-cloud-dotnet/commit/fde58971e156bacda1b547f770c210c0c14eca9c))
+
+### Documentation improvements
+
+- Change references from GCP to Google Cloud ([commit fde5897](https://github.com/googleapis/google-cloud-dotnet/commit/fde58971e156bacda1b547f770c210c0c14eca9c))
+
 ## Version 2.6.0, released 2023-05-11
 
 ### New features
