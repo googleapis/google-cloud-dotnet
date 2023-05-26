@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.4.0, released 2023-05-26
+
+### New features
+
+- Add ChangeStreamConfig to CreateTable and UpdateTable ([commit d00cf93](https://github.com/googleapis/google-cloud-dotnet/commit/d00cf93767c057936cdc6883dca6b62bbdb0a765))
+
+### Documentation improvements
+
+- Remove unnecessary comment ([commit 62c70cb](https://github.com/googleapis/google-cloud-dotnet/commit/62c70cb90901b26652f4961a84dc809386a1c657))
+
 ## Version 3.3.0, released 2022-09-15
 
 ### New features
