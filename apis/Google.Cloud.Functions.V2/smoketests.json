@@ -15,7 +15,6 @@
   },
   {
     "method": "ListLocations",
-    "skip": "b/283396160",
     "client": "FunctionServiceClient",
     "clientNavigationProperty": "LocationsClient",
     "arguments": {
