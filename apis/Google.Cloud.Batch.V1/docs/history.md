@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.1.0, released 2023-05-26
+
+### New features
+
+- Add support for placement policies ([commit 173ed3d](https://github.com/googleapis/google-cloud-dotnet/commit/173ed3d470c7276f6e839501b3e12aaee26e435c))
+- Per-Runnable labels ([commit 173ed3d](https://github.com/googleapis/google-cloud-dotnet/commit/173ed3d470c7276f6e839501b3e12aaee26e435c))
+- Support order_by in ListJobs and ListTasks requests ([commit 87c14ef](https://github.com/googleapis/google-cloud-dotnet/commit/87c14efeb50b793e80f7ad99b039c7cdd3118b9c))
+- Add support for placement policies ([commit 87c14ef](https://github.com/googleapis/google-cloud-dotnet/commit/87c14efeb50b793e80f7ad99b039c7cdd3118b9c))
+- Per-Runnable labels ([commit 87c14ef](https://github.com/googleapis/google-cloud-dotnet/commit/87c14efeb50b793e80f7ad99b039c7cdd3118b9c))
+- Support order_by in ListJobs and ListTasks requests ([commit dd462ce](https://github.com/googleapis/google-cloud-dotnet/commit/dd462ceb1d2016e5ad339a675050ab00bd7fb1bf))
+- Add support for placement policies ([commit dd462ce](https://github.com/googleapis/google-cloud-dotnet/commit/dd462ceb1d2016e5ad339a675050ab00bd7fb1bf))
+- Per-Runnable labels ([commit dd462ce](https://github.com/googleapis/google-cloud-dotnet/commit/dd462ceb1d2016e5ad339a675050ab00bd7fb1bf))
+
 ## Version 2.0.0, released 2023-03-09
 
 ### BREAKING CHANGE
