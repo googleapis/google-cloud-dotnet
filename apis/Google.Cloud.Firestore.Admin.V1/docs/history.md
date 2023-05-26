@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.2.0, released 2023-05-26
+
+### New features
+
+- Add ApiScope and COLLECTION_RECURSIVE query_scope for Firestore index ([commit 4c82bff](https://github.com/googleapis/google-cloud-dotnet/commit/4c82bffa5257d5083f5c06681c7540bf4a03bcfc))
+
 ## Version 3.1.0, released 2023-01-16
 
 ### New features
