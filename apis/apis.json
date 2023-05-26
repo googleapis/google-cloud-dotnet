@@ -2258,7 +2258,7 @@
     },
     {
       "id": "Google.Cloud.Functions.V2Beta",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Cloud Functions",
       "productUrl": "https://cloud.google.com/functions",
