@@ -82,8 +82,17 @@ public abstract partial class SubscriberClient : IAsyncDisposable
     public static TimeSpan MinimumAckExtensionWindow { get; } = TimeSpan.FromMilliseconds(50);
 
     /// <summary>
+    /// The default minimum message Acknowledgement deadline extension of 60 seconds for exactly-once delivery subscriptions.
+    /// </summary>
+    public static TimeSpan MinimumAckDeadlineExtensionForExactlyOnceDelivery { get; } = TimeSpan.FromSeconds(60);
+
+    /// <summary>
     /// The minimum message acknowledgement extension window of 60 seconds for exactly once delivery subscriptions.
     /// </summary>
+    /// <remarks>
+    /// This property is deprecated. Use <see cref="MinimumAckDeadlineExtensionForExactlyOnceDelivery"/> instead.
+    /// </remarks>
+    [Obsolete("Use MinimumAckDeadlineExtensionForExactlyOnceDelivery instead.")]
     public static TimeSpan MinimumAckExtensionWindowForExactlyOnceDelivery { get; } = TimeSpan.FromSeconds(60);
 
     /// <summary>
