@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.5.0, released 2023-05-26
+
+### New features
+
+- Added VerifyConnectivity RPC ([commit 6a49888](https://github.com/googleapis/google-cloud-dotnet/commit/6a4988813f39d14905cdcb84ddf93b452f062d86))
+
+### Documentation improvements
+
+- Improve descriptions of different hash functions/values for ECDSA signing ([issue 10118](https://github.com/googleapis/google-cloud-dotnet/issues/10118)) ([commit c41a931](https://github.com/googleapis/google-cloud-dotnet/commit/c41a9317d52a5d26eb47fd6fa9adf0f4af69e260))
+
 ## Version 3.4.0, released 2023-03-20
 
 ### New features
