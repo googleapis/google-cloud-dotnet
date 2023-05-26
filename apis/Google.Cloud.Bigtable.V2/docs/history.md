@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.6.0, released 2023-05-26
+
+### Bug fixes
+
+- Bigtable disposal of gRPC streaming call. ([commit 2a12927](https://github.com/googleapis/google-cloud-dotnet/commit/2a1292746e30e4dabc6ae5eddbb63fecf75521db))
+
 ## Version 3.5.0, released 2023-05-03
 
 ### New features
