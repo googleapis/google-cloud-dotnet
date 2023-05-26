@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2023-05-26
+
+### Bug fixes
+
+- Fix the field name typo for search service user_labels ([commit ff70f0c](https://github.com/googleapis/google-cloud-dotnet/commit/ff70f0c0b9518f1e7a2b07bb047c1c14fc90ea7e))
+
+### New features
+
+- Allow users to specify id field in documents gcs import ([commit 4e42464](https://github.com/googleapis/google-cloud-dotnet/commit/4e42464505887cbe5accc88aa0b0d58bf72c6218))
+- Add LRO API for schema service ([commit 4e42464](https://github.com/googleapis/google-cloud-dotnet/commit/4e42464505887cbe5accc88aa0b0d58bf72c6218))
+- Enable safe search feature for site search ([commit 561d40d](https://github.com/googleapis/google-cloud-dotnet/commit/561d40d47ea651dddf4a252887b047d6b6d4ae4b))
+- Allow users to provide user info in search ([commit 561d40d](https://github.com/googleapis/google-cloud-dotnet/commit/561d40d47ea651dddf4a252887b047d6b6d4ae4b))
+- Allow users to provide additional labels in search ([commit 561d40d](https://github.com/googleapis/google-cloud-dotnet/commit/561d40d47ea651dddf4a252887b047d6b6d4ae4b))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 4e42464](https://github.com/googleapis/google-cloud-dotnet/commit/4e42464505887cbe5accc88aa0b0d58bf72c6218))
 ## Version 1.0.0-beta04, released 2023-05-03
 
 ### New features
