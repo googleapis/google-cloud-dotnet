@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-alpha11, released 2023-05-26
+
+### Bug fixes
+
+- Override HTTP URLs for LRO cancel/delete operations ([commit 82d9df4](https://github.com/googleapis/google-cloud-dotnet/commit/82d9df47ef8c379a593be70dd07749aa46775d41))
+
+### New features
+
+- Support order_by in ListJobs and ListTasks requests ([issue 21](https://github.com/googleapis/google-cloud-dotnet/issues/21)) ([commit 2890c2a](https://github.com/googleapis/google-cloud-dotnet/commit/2890c2a8b3e963bf5172dca1ee6dbf17b5f02ded))
+
 ## Version 1.0.0-alpha10, released 2023-04-19
 
 ### New features
