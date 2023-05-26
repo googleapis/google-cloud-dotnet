@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.3.0, released 2023-05-26
+
+### New features
+
+- Add SubmitUri endpoint ([commit bb16fb8](https://github.com/googleapis/google-cloud-dotnet/commit/bb16fb8d44f4dd3e922e10aca6ead540ed74481c))
+
 ## Version 2.2.0, released 2023-01-17
 
 ### New features
