@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.3.0, released 2023-05-26
+
+### New features
+
+- ListFunctions now include metadata which indicates whether a function is a `GEN_1` or `GEN_2` function ([commit a678905](https://github.com/googleapis/google-cloud-dotnet/commit/a678905cbacd1970ed1b3e2d46e14d82635c5dcd))
+
 ## Version 1.2.0, released 2023-03-20
 
 ### New features
