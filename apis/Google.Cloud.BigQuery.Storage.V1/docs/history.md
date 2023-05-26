@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.7.0, released 2023-05-26
+
+### New features
+
+- Add table sampling to ReadAPI v1 ([commit 954a186](https://github.com/googleapis/google-cloud-dotnet/commit/954a1867605844c1889aadb6bf4ff480c5eadd36))
+- Add storage error codes for KMS ([commit 954a186](https://github.com/googleapis/google-cloud-dotnet/commit/954a1867605844c1889aadb6bf4ff480c5eadd36))
 ## Version 3.6.0, released 2023-02-22
 
 ### New features
