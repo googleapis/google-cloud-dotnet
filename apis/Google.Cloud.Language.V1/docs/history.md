@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.3.0, released 2023-05-26
+
+### New features
+
+- Added support for ModerateText ([commit 0af8e03](https://github.com/googleapis/google-cloud-dotnet/commit/0af8e03d9dbb5ccb1f8c72243bfa6934ed961cb0))
+
 ## Version 3.2.0, released 2023-01-16
 
 ### New features
