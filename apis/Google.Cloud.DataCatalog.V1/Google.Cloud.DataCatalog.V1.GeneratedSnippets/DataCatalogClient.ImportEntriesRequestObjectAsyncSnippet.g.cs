@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
                 GcsBucketPath = "",
+                JobId = "",
             };
             // Make the request
             Operation<ImportEntriesResponse, ImportEntriesMetadata> response = await dataCatalogClient.ImportEntriesAsync(request);

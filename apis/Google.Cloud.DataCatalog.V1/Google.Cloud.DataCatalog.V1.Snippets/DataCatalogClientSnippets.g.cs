@@ -1294,7 +1294,12 @@ namespace GoogleCSharpSnippets
             // Create client
             DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
             // Initialize request argument(s)
-            LookupEntryRequest request = new LookupEntryRequest { LinkedResource = "", };
+            LookupEntryRequest request = new LookupEntryRequest
+            {
+                LinkedResource = "",
+                Project = "",
+                Location = "",
+            };
             // Make the request
             Entry response = dataCatalogClient.LookupEntry(request);
             // End snippet
@@ -1308,7 +1313,12 @@ namespace GoogleCSharpSnippets
             // Create client
             DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            LookupEntryRequest request = new LookupEntryRequest { LinkedResource = "", };
+            LookupEntryRequest request = new LookupEntryRequest
+            {
+                LinkedResource = "",
+                Project = "",
+                Location = "",
+            };
             // Make the request
             Entry response = await dataCatalogClient.LookupEntryAsync(request);
             // End snippet
@@ -3589,6 +3599,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
                 GcsBucketPath = "",
+                JobId = "",
             };
             // Make the request
             Operation<ImportEntriesResponse, ImportEntriesMetadata> response = dataCatalogClient.ImportEntries(request);
@@ -3623,6 +3634,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
                 GcsBucketPath = "",
+                JobId = "",
             };
             // Make the request
             Operation<ImportEntriesResponse, ImportEntriesMetadata> response = await dataCatalogClient.ImportEntriesAsync(request);

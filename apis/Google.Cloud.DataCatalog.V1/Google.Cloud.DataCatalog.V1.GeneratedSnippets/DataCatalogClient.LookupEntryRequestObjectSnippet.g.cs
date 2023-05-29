@@ -34,7 +34,12 @@ namespace GoogleCSharpSnippets
             // Create client
             DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
             // Initialize request argument(s)
-            LookupEntryRequest request = new LookupEntryRequest { LinkedResource = "", };
+            LookupEntryRequest request = new LookupEntryRequest
+            {
+                LinkedResource = "",
+                Project = "",
+                Location = "",
+            };
             // Make the request
             Entry response = dataCatalogClient.LookupEntry(request);
         }

@@ -35,7 +35,12 @@ namespace GoogleCSharpSnippets
             // Create client
             DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            LookupEntryRequest request = new LookupEntryRequest { LinkedResource = "", };
+            LookupEntryRequest request = new LookupEntryRequest
+            {
+                LinkedResource = "",
+                Project = "",
+                Location = "",
+            };
             // Make the request
             Entry response = await dataCatalogClient.LookupEntryAsync(request);
         }

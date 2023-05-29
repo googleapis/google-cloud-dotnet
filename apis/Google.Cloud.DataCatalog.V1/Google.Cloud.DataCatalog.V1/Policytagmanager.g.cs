@@ -740,7 +740,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         public const int IdentityFieldNumber = 2;
         private string identity_ = "";
         /// <summary>
-        /// P4SA Identity of the service.
+        /// The service agent for the service.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

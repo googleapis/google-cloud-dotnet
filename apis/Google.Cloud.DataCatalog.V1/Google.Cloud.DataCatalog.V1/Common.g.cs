@@ -28,17 +28,18 @@ namespace Google.Cloud.DataCatalog.V1 {
             "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEaH2dvb2dsZS9wcm90b2J1Zi90",
             "aW1lc3RhbXAucHJvdG8iUQoPUGVyc29uYWxEZXRhaWxzEg8KB3N0YXJyZWQY",
             "ASABKAgSLQoJc3Rhcl90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcCqWAQoQSW50ZWdyYXRlZFN5c3RlbRIhCh1JTlRFR1JBVEVEX1NZ",
+            "bWVzdGFtcCq9AQoQSW50ZWdyYXRlZFN5c3RlbRIhCh1JTlRFR1JBVEVEX1NZ",
             "U1RFTV9VTlNQRUNJRklFRBAAEgwKCEJJR1FVRVJZEAESEAoMQ0xPVURfUFVC",
-            "U1VCEAISFgoSREFUQVBST0NfTUVUQVNUT1JFEAMSDAoIREFUQVBMRVgQBBIN",
-            "CglDTE9VRF9TUUwQCBIKCgZMT09LRVIQCSpqCg5NYW5hZ2luZ1N5c3RlbRIf",
-            "ChtNQU5BR0lOR19TWVNURU1fVU5TUEVDSUZJRUQQABIcChhNQU5BR0lOR19T",
-            "WVNURU1fREFUQVBMRVgQARIZChVNQU5BR0lOR19TWVNURU1fT1RIRVIQAkLG",
-            "AQofY29tLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MVABWkFjbG91ZC5n",
-            "b29nbGUuY29tL2dvL2RhdGFjYXRhbG9nL2FwaXYxL2RhdGFjYXRhbG9ncGI7",
-            "ZGF0YWNhdGFsb2dwYvgBAaoCG0dvb2dsZS5DbG91ZC5EYXRhQ2F0YWxvZy5W",
-            "McoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6Q2xv",
-            "dWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
+            "U1VCEAISFgoSREFUQVBST0NfTUVUQVNUT1JFEAMSDAoIREFUQVBMRVgQBBIR",
+            "Cg1DTE9VRF9TUEFOTkVSEAYSEgoOQ0xPVURfQklHVEFCTEUQBxINCglDTE9V",
+            "RF9TUUwQCBIKCgZMT09LRVIQCSpqCg5NYW5hZ2luZ1N5c3RlbRIfChtNQU5B",
+            "R0lOR19TWVNURU1fVU5TUEVDSUZJRUQQABIcChhNQU5BR0lOR19TWVNURU1f",
+            "REFUQVBMRVgQARIZChVNQU5BR0lOR19TWVNURU1fT1RIRVIQAkLGAQofY29t",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MVABWkFjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2RhdGFjYXRhbG9nL2FwaXYxL2RhdGFjYXRhbG9ncGI7ZGF0YWNh",
+            "dGFsb2dwYvgBAaoCG0dvb2dsZS5DbG91ZC5EYXRhQ2F0YWxvZy5WMcoCG0dv",
+            "b2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkRh",
+            "dGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DataCatalog.V1.IntegratedSystem), typeof(global::Google.Cloud.DataCatalog.V1.ManagingSystem), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -73,6 +74,14 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Dataplex.
     /// </summary>
     [pbr::OriginalName("DATAPLEX")] Dataplex = 4,
+    /// <summary>
+    /// Cloud Spanner
+    /// </summary>
+    [pbr::OriginalName("CLOUD_SPANNER")] CloudSpanner = 6,
+    /// <summary>
+    /// Cloud Bigtable
+    /// </summary>
+    [pbr::OriginalName("CLOUD_BIGTABLE")] CloudBigtable = 7,
     /// <summary>
     /// Cloud Sql
     /// </summary>
