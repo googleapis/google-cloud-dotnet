@@ -25,22 +25,23 @@ namespace Google.Cloud.DataCatalog.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5nb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvZHVtcF9jb250ZW50LnBy",
-            "b3RvEhtnb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEaLWdvb2dsZS9jbG91",
-            "ZC9kYXRhY2F0YWxvZy92MS9kYXRhY2F0YWxvZy5wcm90bxomZ29vZ2xlL2Ns",
-            "b3VkL2RhdGFjYXRhbG9nL3YxL3RhZ3MucHJvdG8ivQEKC1RhZ2dlZEVudHJ5",
-            "EjYKCHYxX2VudHJ5GAEgASgLMiIuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9n",
-            "LnYxLkVudHJ5SAASNgoMcHJlc2VudF90YWdzGAIgAygLMiAuZ29vZ2xlLmNs",
-            "b3VkLmRhdGFjYXRhbG9nLnYxLlRhZxI1CgthYnNlbnRfdGFncxgDIAMoCzIg",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5UYWdCBwoFZW50cnkiVAoI",
-            "RHVtcEl0ZW0SQAoMdGFnZ2VkX2VudHJ5GAEgASgLMiguZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFjYXRhbG9nLnYxLlRhZ2dlZEVudHJ5SABCBgoEaXRlbULYAQofY29t",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MUIQRHVtcENvbnRlbnRQcm90",
-            "b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFjYXRhbG9nL2FwaXYxL2Rh",
-            "dGFjYXRhbG9ncGI7ZGF0YWNhdGFsb2dwYvgBAaoCG0dvb2dsZS5DbG91ZC5E",
-            "YXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoC",
-            "Hkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
+            "b3RvEhtnb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEaH2dvb2dsZS9hcGkv",
+            "ZmllbGRfYmVoYXZpb3IucHJvdG8aLWdvb2dsZS9jbG91ZC9kYXRhY2F0YWxv",
+            "Zy92MS9kYXRhY2F0YWxvZy5wcm90bxomZ29vZ2xlL2Nsb3VkL2RhdGFjYXRh",
+            "bG9nL3YxL3RhZ3MucHJvdG8ixwEKC1RhZ2dlZEVudHJ5EjYKCHYxX2VudHJ5",
+            "GAEgASgLMiIuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkVudHJ5SAAS",
+            "OwoMcHJlc2VudF90YWdzGAIgAygLMiAuZ29vZ2xlLmNsb3VkLmRhdGFjYXRh",
+            "bG9nLnYxLlRhZ0ID4EEBEjoKC2Fic2VudF90YWdzGAMgAygLMiAuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRhZ0ID4EEBQgcKBWVudHJ5IlQKCER1",
+            "bXBJdGVtEkAKDHRhZ2dlZF9lbnRyeRgBIAEoCzIoLmdvb2dsZS5jbG91ZC5k",
+            "YXRhY2F0YWxvZy52MS5UYWdnZWRFbnRyeUgAQgYKBGl0ZW1C2AEKH2NvbS5n",
+            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjFCEER1bXBDb250ZW50UHJvdG9Q",
+            "AVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhY2F0YWxvZy9hcGl2MS9kYXRh",
+            "Y2F0YWxvZ3BiO2RhdGFjYXRhbG9ncGL4AQGqAhtHb29nbGUuQ2xvdWQuRGF0",
+            "YUNhdGFsb2cuVjHKAhtHb29nbGVcQ2xvdWRcRGF0YUNhdGFsb2dcVjHqAh5H",
+            "b29nbGU6OkNsb3VkOjpEYXRhQ2F0YWxvZzo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.TagsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.DatacatalogReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.TagsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TaggedEntry), global::Google.Cloud.DataCatalog.V1.TaggedEntry.Parser, new[]{ "V1Entry", "PresentTags", "AbsentTags" }, new[]{ "Entry" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.DumpItem), global::Google.Cloud.DataCatalog.V1.DumpItem.Parser, new[]{ "TaggedEntry" }, new[]{ "Item" }, null, null, null)
@@ -126,7 +127,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.DataCatalog.V1.Tag.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.Tag> presentTags_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.Tag>();
     /// <summary>
-    /// Tags that should be ingested into the Data Catalog.
+    /// Optional. Tags that should be ingested into the Data Catalog.
     /// Caller should populate template name, column and fields.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -141,7 +142,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.DataCatalog.V1.Tag.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.Tag> absentTags_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.Tag>();
     /// <summary>
-    /// Tags that should be deleted from the Data Catalog.
+    /// Optional. Tags that should be deleted from the Data Catalog.
     /// Caller should populate template name and column only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
