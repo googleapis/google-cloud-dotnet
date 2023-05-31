@@ -38274,6 +38274,293 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_ModelGardenService_GetPublisherModel_sync",
+      "title": "GetPublisherModelRequestObject",
+      "description": "Snippet for GetPublisherModel",
+      "file": "ModelGardenServiceClient.GetPublisherModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPublisherModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient.GetPublisherModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetPublisherModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.PublisherModel",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "GetPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelGardenService.GetPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1.ModelGardenService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelGardenService_GetPublisherModel_async",
+      "title": "GetPublisherModelRequestObjectAsync",
+      "description": "Snippet for GetPublisherModelAsync",
+      "file": "ModelGardenServiceClient.GetPublisherModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPublisherModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient.GetPublisherModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetPublisherModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.PublisherModel>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "GetPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelGardenService.GetPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1.ModelGardenService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelGardenService_GetPublisherModel_sync_flattened",
+      "title": "GetPublisherModel",
+      "description": "Snippet for GetPublisherModel",
+      "file": "ModelGardenServiceClient.GetPublisherModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPublisherModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient.GetPublisherModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.PublisherModel",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "GetPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelGardenService.GetPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelGardenService_GetPublisherModel_async_flattened",
+      "title": "GetPublisherModelAsync",
+      "description": "Snippet for GetPublisherModelAsync",
+      "file": "ModelGardenServiceClient.GetPublisherModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPublisherModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient.GetPublisherModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.PublisherModel>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "GetPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelGardenService.GetPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelGardenService_GetPublisherModel_sync_flattened_resourceNames",
+      "title": "GetPublisherModelResourceNames",
+      "description": "Snippet for GetPublisherModel",
+      "file": "ModelGardenServiceClient.GetPublisherModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPublisherModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient.GetPublisherModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PublisherModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.PublisherModel",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "GetPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelGardenService.GetPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelGardenService_GetPublisherModel_async_flattened_resourceNames",
+      "title": "GetPublisherModelResourceNamesAsync",
+      "description": "Snippet for GetPublisherModelAsync",
+      "file": "ModelGardenServiceClient.GetPublisherModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPublisherModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient.GetPublisherModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PublisherModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.PublisherModel>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "GetPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelGardenService.GetPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_ModelService_UploadModel_sync",
       "title": "UploadModelRequestObject",
       "description": "Snippet for UploadModel",

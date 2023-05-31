@@ -202,6 +202,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::ModelGardenServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddModelGardenServiceClient(this IServiceCollection services, sys::Action<gcav::ModelGardenServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::ModelGardenServiceClientBuilder builder = new gcav::ModelGardenServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcav::ModelServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
