@@ -72,6 +72,17 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             await AssertObjects(prefix, options, expectedNames.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
         }
 
+        [Theory]
+        [InlineData("la*", "large.txt")]
+        [InlineData("a/*.txt", "a/o1.txt", "a/o2.txt")]
+        [InlineData("a/x/*.txt", "a/x/o3.txt", "a/x/o4.txt")]
+        public void MatchGlob(string globPattern, params string[] expectedNames)
+        {
+            var options = new ListObjectsOptions { MatchGlob = globPattern };
+            IEnumerable<Object> actual = _fixture.Client.ListObjects(_fixture.ReadBucket, prefix: null, options);
+            AssertObjectNames(actual, expectedNames);
+        }
+
         [Fact]
         public async Task CancellationTokenRespected()
         {
