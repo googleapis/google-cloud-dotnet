@@ -35,6 +35,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Null(request.PageToken);
             Assert.Null(request.StartOffset);
             Assert.Null(request.EndOffset);
+            Assert.Null(request.MatchGlob);
         }
 
         [Fact]
@@ -52,7 +53,8 @@ namespace Google.Cloud.Storage.V1.Tests
                 PageToken = "nextpage",
                 Fields = "items(name),nextPageToken",
                 StartOffset = "start",
-                EndOffset = "end"
+                EndOffset = "end",
+                MatchGlob = "a/*.txt"
             };
             options.ModifyRequest(request);
             Assert.Equal(10, request.MaxResults);
@@ -65,6 +67,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Equal("items(name),nextPageToken", request.Fields);
             Assert.Equal("start", request.StartOffset);
             Assert.Equal("end", request.EndOffset);
+            Assert.Equal("a/*.txt", request.MatchGlob);
         }
     }
 }
