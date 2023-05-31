@@ -138,6 +138,7 @@ namespace Google.Cloud.AIPlatform.V1
             yield return ModelDeploymentMonitoringJobReflection.Descriptor;
             yield return ModelEvaluationReflection.Descriptor;
             yield return ModelEvaluationSliceReflection.Descriptor;
+            yield return ModelGardenServiceReflection.Descriptor;
             yield return ModelMonitoringReflection.Descriptor;
             yield return ModelServiceReflection.Descriptor;
             yield return NasJobReflection.Descriptor;
@@ -147,6 +148,7 @@ namespace Google.Cloud.AIPlatform.V1
             yield return PipelineServiceReflection.Descriptor;
             yield return PipelineStateReflection.Descriptor;
             yield return PredictionServiceReflection.Descriptor;
+            yield return PublisherModelReflection.Descriptor;
             yield return SavedQueryReflection.Descriptor;
             yield return ServiceNetworkingReflection.Descriptor;
             yield return SpecialistPoolReflection.Descriptor;
