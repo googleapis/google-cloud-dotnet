@@ -155,8 +155,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
       /// is not specified, all DeployedModels must have
       /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-      /// populated. Only deployed AutoML tabular Models have
-      /// explanation_spec.
+      /// populated.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -343,8 +342,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
       /// is not specified, all DeployedModels must have
       /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-      /// populated. Only deployed AutoML tabular Models have
-      /// explanation_spec.
+      /// populated.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -367,8 +365,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
       /// is not specified, all DeployedModels must have
       /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-      /// populated. Only deployed AutoML tabular Models have
-      /// explanation_spec.
+      /// populated.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -389,8 +386,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
       /// is not specified, all DeployedModels must have
       /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-      /// populated. Only deployed AutoML tabular Models have
-      /// explanation_spec.
+      /// populated.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -413,8 +409,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
       /// is not specified, all DeployedModels must have
       /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-      /// populated. Only deployed AutoML tabular Models have
-      /// explanation_spec.
+      /// populated.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

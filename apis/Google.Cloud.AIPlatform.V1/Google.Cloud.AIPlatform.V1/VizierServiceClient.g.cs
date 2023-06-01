@@ -1059,7 +1059,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// suggested by Vertex AI Vizier. Returns a long-running
         /// operation associated with the generation of Trial suggestions.
         /// When this long-running operation succeeds, it will contain
-        /// a [SuggestTrialsResponse][google.cloud.ml.v1.SuggestTrialsResponse].
+        /// a
+        /// [SuggestTrialsResponse][google.cloud.aiplatform.v1.SuggestTrialsResponse].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1072,7 +1073,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// suggested by Vertex AI Vizier. Returns a long-running
         /// operation associated with the generation of Trial suggestions.
         /// When this long-running operation succeeds, it will contain
-        /// a [SuggestTrialsResponse][google.cloud.ml.v1.SuggestTrialsResponse].
+        /// a
+        /// [SuggestTrialsResponse][google.cloud.aiplatform.v1.SuggestTrialsResponse].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1085,7 +1087,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// suggested by Vertex AI Vizier. Returns a long-running
         /// operation associated with the generation of Trial suggestions.
         /// When this long-running operation succeeds, it will contain
-        /// a [SuggestTrialsResponse][google.cloud.ml.v1.SuggestTrialsResponse].
+        /// a
+        /// [SuggestTrialsResponse][google.cloud.aiplatform.v1.SuggestTrialsResponse].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2192,7 +2195,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// suggested by Vertex AI Vizier. Returns a long-running
         /// operation associated with the generation of Trial suggestions.
         /// When this long-running operation succeeds, it will contain
-        /// a [SuggestTrialsResponse][google.cloud.ml.v1.SuggestTrialsResponse].
+        /// a
+        /// [SuggestTrialsResponse][google.cloud.aiplatform.v1.SuggestTrialsResponse].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2208,7 +2212,8 @@ namespace Google.Cloud.AIPlatform.V1
         /// suggested by Vertex AI Vizier. Returns a long-running
         /// operation associated with the generation of Trial suggestions.
         /// When this long-running operation succeeds, it will contain
-        /// a [SuggestTrialsResponse][google.cloud.ml.v1.SuggestTrialsResponse].
+        /// a
+        /// [SuggestTrialsResponse][google.cloud.aiplatform.v1.SuggestTrialsResponse].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

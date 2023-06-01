@@ -820,8 +820,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. Only deployed AutoML tabular Models have
-        /// explanation_spec.
+        /// populated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -840,8 +839,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. Only deployed AutoML tabular Models have
-        /// explanation_spec.
+        /// populated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -860,8 +858,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. Only deployed AutoML tabular Models have
-        /// explanation_spec.
+        /// populated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -880,8 +877,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. Only deployed AutoML tabular Models have
-        /// explanation_spec.
+        /// populated.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the explanation.
@@ -936,8 +932,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. Only deployed AutoML tabular Models have
-        /// explanation_spec.
+        /// populated.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the explanation.
@@ -992,8 +987,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. Only deployed AutoML tabular Models have
-        /// explanation_spec.
+        /// populated.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the explanation.
@@ -1039,8 +1033,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. Only deployed AutoML tabular Models have
-        /// explanation_spec.
+        /// populated.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the explanation.
@@ -1095,8 +1088,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. Only deployed AutoML tabular Models have
-        /// explanation_spec.
+        /// populated.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the explanation.
@@ -1151,8 +1143,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. Only deployed AutoML tabular Models have
-        /// explanation_spec.
+        /// populated.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the explanation.
@@ -1329,8 +1320,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. Only deployed AutoML tabular Models have
-        /// explanation_spec.
+        /// populated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1352,8 +1342,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
         /// is not specified, all DeployedModels must have
         /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
-        /// populated. Only deployed AutoML tabular Models have
-        /// explanation_spec.
+        /// populated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
