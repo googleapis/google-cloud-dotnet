@@ -367,7 +367,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             "ZWN0b3IuU3VtbWFyaXphdGlvbkNvbmZpZy5TdW1tYXJpemF0aW9uTW9kZWxI",
             "ACJNChJTdW1tYXJpemF0aW9uTW9kZWwSIwofU1VNTUFSSVpBVElPTl9NT0RF",
             "TF9VTlNQRUNJRklFRBAAEhIKDkJBU0VMSU5FX01PREVMEAFCDgoMbW9kZWxf",
-            "c291cmNlQvkECiljb20uZ29vZ2xlLmNsb3VkLmNvbnRhY3RjZW50ZXJpbnNp",
+            "c291cmNlQuAFCiljb20uZ29vZ2xlLmNsb3VkLmNvbnRhY3RjZW50ZXJpbnNp",
             "Z2h0cy52MUIOUmVzb3VyY2VzUHJvdG9QAVpfY2xvdWQuZ29vZ2xlLmNvbS9n",
             "by9jb250YWN0Y2VudGVyaW5zaWdodHMvYXBpdjEvY29udGFjdGNlbnRlcmlu",
             "c2lnaHRzcGI7Y29udGFjdGNlbnRlcmluc2lnaHRzcGKqAiVHb29nbGUuQ2xv",
@@ -381,7 +381,9 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             "cnNhdGlvbnMve2NvbnZlcnNhdGlvbn0vcGFydGljaXBhbnRzL3twYXJ0aWNp",
             "cGFudH0SX3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
             "fS9jb252ZXJzYXRpb25zL3tjb252ZXJzYXRpb259L3BhcnRpY2lwYW50cy97",
-            "cGFydGljaXBhbnR9YgZwcm90bzM="));
+            "cGFydGljaXBhbnR96kFkCiBzcGVlY2guZ29vZ2xlYXBpcy5jb20vUmVjb2du",
+            "aXplchJAcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L3JlY29nbml6ZXJzL3tyZWNvZ25pemVyfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
