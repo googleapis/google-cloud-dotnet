@@ -2282,6 +2282,245 @@ namespace Google.Cloud.ContactCenterInsights.V1
         public static bool operator !=(ParticipantName a, ParticipantName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Recognizer</c> resource.</summary>
+    public sealed partial class RecognizerName : gax::IResourceName, sys::IEquatable<RecognizerName>
+    {
+        /// <summary>The possible contents of <see cref="RecognizerName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/recognizers/{recognizer}</c>.
+            /// </summary>
+            ProjectLocationRecognizer = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationRecognizer = new gax::PathTemplate("projects/{project}/locations/{location}/recognizers/{recognizer}");
+
+        /// <summary>Creates a <see cref="RecognizerName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="RecognizerName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static RecognizerName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new RecognizerName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="RecognizerName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/recognizers/{recognizer}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recognizerId">The <c>Recognizer</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="RecognizerName"/> constructed from the provided ids.</returns>
+        public static RecognizerName FromProjectLocationRecognizer(string projectId, string locationId, string recognizerId) =>
+            new RecognizerName(ResourceNameType.ProjectLocationRecognizer, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), recognizerId: gax::GaxPreconditions.CheckNotNullOrEmpty(recognizerId, nameof(recognizerId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RecognizerName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/recognizers/{recognizer}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recognizerId">The <c>Recognizer</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RecognizerName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/recognizers/{recognizer}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string recognizerId) =>
+            FormatProjectLocationRecognizer(projectId, locationId, recognizerId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RecognizerName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/recognizers/{recognizer}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recognizerId">The <c>Recognizer</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RecognizerName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/recognizers/{recognizer}</c>.
+        /// </returns>
+        public static string FormatProjectLocationRecognizer(string projectId, string locationId, string recognizerId) =>
+            s_projectLocationRecognizer.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(recognizerId, nameof(recognizerId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="RecognizerName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/recognizers/{recognizer}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="recognizerName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="RecognizerName"/> if successful.</returns>
+        public static RecognizerName Parse(string recognizerName) => Parse(recognizerName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="RecognizerName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/recognizers/{recognizer}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="recognizerName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="RecognizerName"/> if successful.</returns>
+        public static RecognizerName Parse(string recognizerName, bool allowUnparsed) =>
+            TryParse(recognizerName, allowUnparsed, out RecognizerName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RecognizerName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/recognizers/{recognizer}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="recognizerName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RecognizerName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string recognizerName, out RecognizerName result) =>
+            TryParse(recognizerName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RecognizerName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/recognizers/{recognizer}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="recognizerName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RecognizerName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string recognizerName, bool allowUnparsed, out RecognizerName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(recognizerName, nameof(recognizerName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationRecognizer.TryParseName(recognizerName, out resourceName))
+            {
+                result = FromProjectLocationRecognizer(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(recognizerName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private RecognizerName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string recognizerId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            RecognizerId = recognizerId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="RecognizerName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/recognizers/{recognizer}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="recognizerId">The <c>Recognizer</c> ID. Must not be <c>null</c> or empty.</param>
+        public RecognizerName(string projectId, string locationId, string recognizerId) : this(ResourceNameType.ProjectLocationRecognizer, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), recognizerId: gax::GaxPreconditions.CheckNotNullOrEmpty(recognizerId, nameof(recognizerId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Recognizer</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string RecognizerId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationRecognizer: return s_projectLocationRecognizer.Expand(ProjectId, LocationId, RecognizerId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as RecognizerName);
+
+        /// <inheritdoc/>
+        public bool Equals(RecognizerName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(RecognizerName a, RecognizerName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(RecognizerName a, RecognizerName b) => !(a == b);
+    }
+
     public partial class Conversation
     {
         /// <summary>
