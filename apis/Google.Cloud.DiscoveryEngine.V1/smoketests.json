@@ -2,7 +2,6 @@
   {
     "method": "ListDocuments",
     "client": "DocumentServiceClient",
-    "skip": "b/284167057",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/global/dataStores/default_data_store/branches/default_branch"
     }
