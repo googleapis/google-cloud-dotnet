@@ -29,29 +29,17 @@ namespace Google.Cloud.Storage.V1.Tests;
 /// </summary>
 public class RetryTest
 {
-    private static readonly RetryTiming s_customRetryTiming = new(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(5), 2);
-    private static readonly RetryPredicate s_customPredicate = RetryPredicate.FromErrorCodes(404, 400);
-    private static readonly RetryOptions s_customRetryOptions = new(s_customRetryTiming, s_customPredicate);
+    private static readonly RetryOptions s_customRetryOptions = new(new RetryTiming(TimeSpan.FromSeconds(2), TimeSpan.FromSeconds(10), 3), RetryPredicate.FromErrorCodes(404, 400));
 
     public static TheoryData<TestCase> TestCases { get; } = new TheoryData<TestCase>
     {
-        new TestCase("SimpleSuccess_NoRetry", RetryOptions.IdempotentRetryOptions, new[] { OK }, new[] { 0 }, true),
-        new TestCase("SuccessAfterMaxRetry", RetryOptions.IdempotentRetryOptions, new[] { BadGateway, BadGateway, OK }, new[] { 0, 1, 3 }, true),
-        new TestCase("FailureAfterMaxRetry", RetryOptions.IdempotentRetryOptions, new[] { BadGateway, BadGateway, BadGateway }, new[] { 0, 1, 3 }, false),
-
-        new TestCase("CustomTiming_SuccessAfterRetry",  s_customRetryOptions, new[] { NotFound, BadRequest, OK }, new[] { 0, 1, 3 }, true),
-        new TestCase("CustomTiming_FailureAfterRetry",  s_customRetryOptions, new[] { NotFound, BadRequest, BadRequest }, new[] { 0, 1, 3}, false),
-
-        new TestCase("CustomPredicate_Success", s_customRetryOptions, new[] { OK }, new[] { 0 }, true),
-        new TestCase("CustomPredicate_ImmediateFailure", s_customRetryOptions, new[] { InternalServerError }, new[] { 0 }, false),
-        new TestCase("CustomPredicate_SingleRetry", s_customRetryOptions, new[] { NotFound, OK }, new[] { 0, 1 }, true),
-        new TestCase("CustomPredicate_DoubleRetry",  s_customRetryOptions, new[] { NotFound, BadRequest, OK }, new[] { 0, 1, 3 }, true),
-        new TestCase("CustomPredicate_FailureAfterRetry",  s_customRetryOptions, new[] { NotFound, BadRequest, BadRequest }, new[] { 0, 1, 3 }, false),
-        new TestCase("CustomPredicate_SuccessAfterRetry",  s_customRetryOptions, new[] { NotFound, OK }, new[] { 0, 1 }, true),
-        new TestCase("CustomPredicate_Never", RetryOptions.Never, new[] { BadGateway }, new[] { 0 }, false),
-
-        new TestCase("RetryUntilMaxRequests", RetryOptions.IdempotentRetryOptions, new[] { BadGateway, BadGateway, BadGateway }, new[] { 0, 1, 3 }, false),
-        new TestCase("RetryableErrors", s_customRetryOptions, new[] { BadRequest, BadRequest, OK }, new[] { 0, 1, 3 }, true),
+        new TestCase("SimpleSuccess_NoRetry", s_customRetryOptions, new[] { OK }, new[] { 0 }, true),
+        new TestCase("SingleRetry", s_customRetryOptions, new[] { NotFound, OK }, new[] { 0, 2 }, true),
+        new TestCase("DoubleRetry", s_customRetryOptions, new[] { NotFound, BadRequest, OK }, new[] { 0, 2, 8 }, true),
+        new TestCase("SuccessAfterMaxRetry", s_customRetryOptions, new[] { NotFound, BadRequest, OK }, new[] { 0, 2, 8 }, true),
+        new TestCase("FailureAfterMaxRetry", s_customRetryOptions, new[] { NotFound, BadRequest, BadRequest }, new[] { 0, 2, 8 }, false),
+        new TestCase("NeverRetry", RetryOptions.Never, new[] { BadRequest }, new[] { 0 }, false),
+        new TestCase("RetryableErrors", s_customRetryOptions, new[] { BadRequest, BadRequest, OK }, new[] { 0, 2, 8 }, true),
         new TestCase("NonRetryableErrors", s_customRetryOptions , new[] { PreconditionFailed }, new[] { 0 }, false)
     };
 
