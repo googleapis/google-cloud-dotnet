@@ -62,6 +62,8 @@ namespace Google.Cloud.Firestore.Admin.V1
             ExportDocumentsOperationsSettings = existing.ExportDocumentsOperationsSettings.Clone();
             ImportDocumentsSettings = existing.ImportDocumentsSettings;
             ImportDocumentsOperationsSettings = existing.ImportDocumentsOperationsSettings.Clone();
+            CreateDatabaseSettings = existing.CreateDatabaseSettings;
+            CreateDatabaseOperationsSettings = existing.CreateDatabaseOperationsSettings.Clone();
             GetDatabaseSettings = existing.GetDatabaseSettings;
             ListDatabasesSettings = existing.ListDatabasesSettings;
             UpdateDatabaseSettings = existing.UpdateDatabaseSettings;
@@ -299,6 +301,36 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.CreateDatabase</c> and <c>FirestoreAdminClient.CreateDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDatabaseSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FirestoreAdminClient.CreateDatabase</c> and
+        /// <c>FirestoreAdminClient.CreateDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>FirestoreAdminClient.GetDatabase</c> and <c>FirestoreAdminClient.GetDatabaseAsync</c>.
         /// </summary>
         /// <remarks>
@@ -530,9 +562,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -541,9 +575,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -552,9 +588,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -589,9 +627,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             lro::Operation<Index, IndexOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateIndexOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -610,9 +650,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -631,9 +673,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -648,9 +692,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             CreateIndexAsync(parent, index, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -669,9 +715,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -690,9 +738,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -1160,13 +1210,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -1181,13 +1234,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -1202,13 +1258,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -1249,13 +1308,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -1275,13 +1337,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -1301,13 +1366,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -1324,10 +1392,12 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1338,10 +1408,12 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1352,10 +1424,12 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -1382,10 +1456,12 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -1412,10 +1488,12 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -1442,10 +1520,12 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -1870,6 +1950,205 @@ namespace Google.Cloud.Firestore.Admin.V1
             ImportDocumentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, CreateDatabaseMetadata> CreateDatabase(CreateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(CreateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(CreateDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            CreateDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateDatabase</c>.</summary>
+        public virtual lro::OperationsClient CreateDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Database, CreateDatabaseMetadata> PollOnceCreateDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, CreateDatabaseMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> PollOnceCreateDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, CreateDatabaseMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}`
+        /// </param>
+        /// <param name="database">
+        /// Required. The Database to create.
+        /// </param>
+        /// <param name="databaseId">
+        /// Required. The ID to use for the database, which will become the final
+        /// component of the database's resource name.
+        /// 
+        /// The value must be set to "(default)".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, CreateDatabaseMetadata> CreateDatabase(string parent, Database database, string databaseId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatabase(new CreateDatabaseRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Database = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                DatabaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(databaseId, nameof(databaseId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}`
+        /// </param>
+        /// <param name="database">
+        /// Required. The Database to create.
+        /// </param>
+        /// <param name="databaseId">
+        /// Required. The ID to use for the database, which will become the final
+        /// component of the database's resource name.
+        /// 
+        /// The value must be set to "(default)".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(string parent, Database database, string databaseId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatabaseAsync(new CreateDatabaseRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Database = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                DatabaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(databaseId, nameof(databaseId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}`
+        /// </param>
+        /// <param name="database">
+        /// Required. The Database to create.
+        /// </param>
+        /// <param name="databaseId">
+        /// Required. The ID to use for the database, which will become the final
+        /// component of the database's resource name.
+        /// 
+        /// The value must be set to "(default)".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(string parent, Database database, string databaseId, st::CancellationToken cancellationToken) =>
+            CreateDatabaseAsync(parent, database, databaseId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}`
+        /// </param>
+        /// <param name="database">
+        /// Required. The Database to create.
+        /// </param>
+        /// <param name="databaseId">
+        /// Required. The ID to use for the database, which will become the final
+        /// component of the database's resource name.
+        /// 
+        /// The value must be set to "(default)".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, CreateDatabaseMetadata> CreateDatabase(gagr::ProjectName parent, Database database, string databaseId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatabase(new CreateDatabaseRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Database = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                DatabaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(databaseId, nameof(databaseId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}`
+        /// </param>
+        /// <param name="database">
+        /// Required. The Database to create.
+        /// </param>
+        /// <param name="databaseId">
+        /// Required. The ID to use for the database, which will become the final
+        /// component of the database's resource name.
+        /// 
+        /// The value must be set to "(default)".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(gagr::ProjectName parent, Database database, string databaseId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatabaseAsync(new CreateDatabaseRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Database = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                DatabaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(databaseId, nameof(databaseId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}`
+        /// </param>
+        /// <param name="database">
+        /// Required. The Database to create.
+        /// </param>
+        /// <param name="databaseId">
+        /// Required. The ID to use for the database, which will become the final
+        /// component of the database's resource name.
+        /// 
+        /// The value must be set to "(default)".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(gagr::ProjectName parent, Database database, string databaseId, st::CancellationToken cancellationToken) =>
+            CreateDatabaseAsync(parent, database, databaseId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets information about a database.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2246,6 +2525,8 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         private readonly gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> _callImportDocuments;
 
+        private readonly gaxgrpc::ApiCall<CreateDatabaseRequest, lro::Operation> _callCreateDatabase;
+
         private readonly gaxgrpc::ApiCall<GetDatabaseRequest, Database> _callGetDatabase;
 
         private readonly gaxgrpc::ApiCall<ListDatabasesRequest, ListDatabasesResponse> _callListDatabases;
@@ -2267,6 +2548,7 @@ namespace Google.Cloud.Firestore.Admin.V1
             UpdateFieldOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFieldOperationsSettings, logger);
             ExportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDocumentsOperationsSettings, logger);
             ImportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDocumentsOperationsSettings, logger);
+            CreateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatabaseOperationsSettings, logger);
             UpdateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateIndex = clientHelper.BuildApiCall<CreateIndexRequest, lro::Operation>("CreateIndex", grpcClient.CreateIndexAsync, grpcClient.CreateIndex, effectiveSettings.CreateIndexSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2296,6 +2578,9 @@ namespace Google.Cloud.Firestore.Admin.V1
             _callImportDocuments = clientHelper.BuildApiCall<ImportDocumentsRequest, lro::Operation>("ImportDocuments", grpcClient.ImportDocumentsAsync, grpcClient.ImportDocuments, effectiveSettings.ImportDocumentsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callImportDocuments);
             Modify_ImportDocumentsApiCall(ref _callImportDocuments);
+            _callCreateDatabase = clientHelper.BuildApiCall<CreateDatabaseRequest, lro::Operation>("CreateDatabase", grpcClient.CreateDatabaseAsync, grpcClient.CreateDatabase, effectiveSettings.CreateDatabaseSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateDatabase);
+            Modify_CreateDatabaseApiCall(ref _callCreateDatabase);
             _callGetDatabase = clientHelper.BuildApiCall<GetDatabaseRequest, Database>("GetDatabase", grpcClient.GetDatabaseAsync, grpcClient.GetDatabase, effectiveSettings.GetDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDatabase);
             Modify_GetDatabaseApiCall(ref _callGetDatabase);
@@ -2327,6 +2612,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         partial void Modify_ExportDocumentsApiCall(ref gaxgrpc::ApiCall<ExportDocumentsRequest, lro::Operation> call);
 
         partial void Modify_ImportDocumentsApiCall(ref gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> call);
+
+        partial void Modify_CreateDatabaseApiCall(ref gaxgrpc::ApiCall<CreateDatabaseRequest, lro::Operation> call);
 
         partial void Modify_GetDatabaseApiCall(ref gaxgrpc::ApiCall<GetDatabaseRequest, Database> call);
 
@@ -2360,6 +2647,8 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         partial void Modify_ImportDocumentsRequest(ref ImportDocumentsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateDatabaseRequest(ref CreateDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetDatabaseRequest(ref GetDatabaseRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDatabasesRequest(ref ListDatabasesRequest request, ref gaxgrpc::CallSettings settings);
@@ -2370,9 +2659,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         public override lro::OperationsClient CreateIndexOperationsClient { get; }
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2384,9 +2675,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         }
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2499,13 +2792,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -2523,13 +2819,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -2547,10 +2846,12 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2564,10 +2865,12 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` .
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2658,6 +2961,33 @@ namespace Google.Cloud.Firestore.Admin.V1
         {
             Modify_ImportDocumentsRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, ImportDocumentsMetadata>(await _callImportDocuments.Async(request, callSettings).ConfigureAwait(false), ImportDocumentsOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateDatabase</c>.</summary>
+        public override lro::OperationsClient CreateDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Database, CreateDatabaseMetadata> CreateDatabase(CreateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, CreateDatabaseMetadata>(_callCreateDatabase.Sync(request, callSettings), CreateDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(CreateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, CreateDatabaseMetadata>(await _callCreateDatabase.Async(request, callSettings).ConfigureAwait(false), CreateDatabaseOperationsClient);
         }
 
         /// <summary>

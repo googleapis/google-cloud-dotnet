@@ -1536,6 +1536,201 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateDatabase</summary>
+        public void CreateDatabaseRequestObject()
+        {
+            // Snippet: CreateDatabase(CreateDatabaseRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::CreateDatabaseRequest request = new gcfav::CreateDatabaseRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Database = new gcfav::Database(),
+                DatabaseId = "",
+            };
+            // Make the request
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> response = firestoreAdminClient.CreateDatabase(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> retrievedResponse = firestoreAdminClient.PollOnceCreateDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseAsync</summary>
+        public async Task CreateDatabaseRequestObjectAsync()
+        {
+            // Snippet: CreateDatabaseAsync(CreateDatabaseRequest, CallSettings)
+            // Additional: CreateDatabaseAsync(CreateDatabaseRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::CreateDatabaseRequest request = new gcfav::CreateDatabaseRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Database = new gcfav::Database(),
+                DatabaseId = "",
+            };
+            // Make the request
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> response = await firestoreAdminClient.CreateDatabaseAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> retrievedResponse = await firestoreAdminClient.PollOnceCreateDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabase</summary>
+        public void CreateDatabase()
+        {
+            // Snippet: CreateDatabase(string, Database, string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            gcfav::Database database = new gcfav::Database();
+            string databaseId = "";
+            // Make the request
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> response = firestoreAdminClient.CreateDatabase(parent, database, databaseId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> retrievedResponse = firestoreAdminClient.PollOnceCreateDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseAsync</summary>
+        public async Task CreateDatabaseAsync()
+        {
+            // Snippet: CreateDatabaseAsync(string, Database, string, CallSettings)
+            // Additional: CreateDatabaseAsync(string, Database, string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            gcfav::Database database = new gcfav::Database();
+            string databaseId = "";
+            // Make the request
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> response = await firestoreAdminClient.CreateDatabaseAsync(parent, database, databaseId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> retrievedResponse = await firestoreAdminClient.PollOnceCreateDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabase</summary>
+        public void CreateDatabaseResourceNames()
+        {
+            // Snippet: CreateDatabase(ProjectName, Database, string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            gcfav::Database database = new gcfav::Database();
+            string databaseId = "";
+            // Make the request
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> response = firestoreAdminClient.CreateDatabase(parent, database, databaseId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> retrievedResponse = firestoreAdminClient.PollOnceCreateDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseAsync</summary>
+        public async Task CreateDatabaseResourceNamesAsync()
+        {
+            // Snippet: CreateDatabaseAsync(ProjectName, Database, string, CallSettings)
+            // Additional: CreateDatabaseAsync(ProjectName, Database, string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            gcfav::Database database = new gcfav::Database();
+            string databaseId = "";
+            // Make the request
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> response = await firestoreAdminClient.CreateDatabaseAsync(parent, database, databaseId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::CreateDatabaseMetadata> retrievedResponse = await firestoreAdminClient.PollOnceCreateDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetDatabase</summary>
         public void GetDatabaseRequestObject()
         {
