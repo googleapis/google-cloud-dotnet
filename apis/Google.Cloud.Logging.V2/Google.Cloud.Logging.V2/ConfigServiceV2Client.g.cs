@@ -50,10 +50,10 @@ namespace Google.Cloud.Logging.V2
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListBucketsSettings = existing.ListBucketsSettings;
             GetBucketSettings = existing.GetBucketSettings;
-            BeginCreateBucketSettings = existing.BeginCreateBucketSettings;
-            BeginCreateBucketOperationsSettings = existing.BeginCreateBucketOperationsSettings.Clone();
-            BeginUpdateBucketSettings = existing.BeginUpdateBucketSettings;
-            BeginUpdateBucketOperationsSettings = existing.BeginUpdateBucketOperationsSettings.Clone();
+            CreateBucketLongRunningSettings = existing.CreateBucketLongRunningSettings;
+            CreateBucketLongRunningOperationsSettings = existing.CreateBucketLongRunningOperationsSettings.Clone();
+            UpdateBucketLongRunningSettings = existing.UpdateBucketLongRunningSettings;
+            UpdateBucketLongRunningOperationsSettings = existing.UpdateBucketLongRunningOperationsSettings.Clone();
             CreateBucketSettings = existing.CreateBucketSettings;
             UpdateBucketSettings = existing.UpdateBucketSettings;
             DeleteBucketSettings = existing.DeleteBucketSettings;
@@ -116,7 +116,8 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>ConfigServiceV2Client.BeginCreateBucket</c> and <c>ConfigServiceV2Client.BeginCreateBucketAsync</c>.
+        /// <c>ConfigServiceV2Client.CreateBucketLongRunning</c> and
+        /// <c>ConfigServiceV2Client.CreateBucketLongRunningAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
@@ -124,11 +125,11 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings BeginCreateBucketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateBucketLongRunningSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
-        /// Long Running Operation settings for calls to <c>ConfigServiceV2Client.BeginCreateBucket</c> and
-        /// <c>ConfigServiceV2Client.BeginCreateBucketAsync</c>.
+        /// Long Running Operation settings for calls to <c>ConfigServiceV2Client.CreateBucketLongRunning</c> and
+        /// <c>ConfigServiceV2Client.CreateBucketLongRunningAsync</c>.
         /// </summary>
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
@@ -139,14 +140,15 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Total timeout: 24 hours.</description></item>
         /// </list>
         /// </remarks>
-        public lro::OperationsSettings BeginCreateBucketOperationsSettings { get; set; } = new lro::OperationsSettings
+        public lro::OperationsSettings CreateBucketLongRunningOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>ConfigServiceV2Client.BeginUpdateBucket</c> and <c>ConfigServiceV2Client.BeginUpdateBucketAsync</c>.
+        /// <c>ConfigServiceV2Client.UpdateBucketLongRunning</c> and
+        /// <c>ConfigServiceV2Client.UpdateBucketLongRunningAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
@@ -154,11 +156,11 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings BeginUpdateBucketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateBucketLongRunningSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
-        /// Long Running Operation settings for calls to <c>ConfigServiceV2Client.BeginUpdateBucket</c> and
-        /// <c>ConfigServiceV2Client.BeginUpdateBucketAsync</c>.
+        /// Long Running Operation settings for calls to <c>ConfigServiceV2Client.UpdateBucketLongRunning</c> and
+        /// <c>ConfigServiceV2Client.UpdateBucketLongRunningAsync</c>.
         /// </summary>
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
@@ -169,7 +171,7 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Total timeout: 24 hours.</description></item>
         /// </list>
         /// </remarks>
-        public lro::OperationsSettings BeginUpdateBucketOperationsSettings { get; set; } = new lro::OperationsSettings
+        public lro::OperationsSettings UpdateBucketLongRunningOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1157,7 +1159,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<LogBucket, BucketMetadata> BeginCreateBucket(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<LogBucket, BucketMetadata> CreateBucketLongRunning(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1168,7 +1170,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> BeginCreateBucketAsync(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> CreateBucketLongRunningAsync(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1179,35 +1181,35 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> BeginCreateBucketAsync(CreateBucketRequest request, st::CancellationToken cancellationToken) =>
-            BeginCreateBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> CreateBucketLongRunningAsync(CreateBucketRequest request, st::CancellationToken cancellationToken) =>
+            CreateBucketLongRunningAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
-        /// <summary>The long-running operations client for <c>BeginCreateBucket</c>.</summary>
-        public virtual lro::OperationsClient BeginCreateBucketOperationsClient => throw new sys::NotImplementedException();
+        /// <summary>The long-running operations client for <c>CreateBucketLongRunning</c>.</summary>
+        public virtual lro::OperationsClient CreateBucketLongRunningOperationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BeginCreateBucket</c>
-        /// .
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateBucketLongRunning</c>.
         /// </summary>
         /// <param name="operationName">
         /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<LogBucket, BucketMetadata> PollOnceBeginCreateBucket(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<LogBucket, BucketMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BeginCreateBucketOperationsClient, callSettings);
+        public virtual lro::Operation<LogBucket, BucketMetadata> PollOnceCreateBucketLongRunning(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LogBucket, BucketMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBucketLongRunningOperationsClient, callSettings);
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
-        /// <c>BeginCreateBucket</c>.
+        /// <c>CreateBucketLongRunning</c>.
         /// </summary>
         /// <param name="operationName">
         /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> PollOnceBeginCreateBucketAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<LogBucket, BucketMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BeginCreateBucketOperationsClient, callSettings);
+        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> PollOnceCreateBucketLongRunningAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LogBucket, BucketMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBucketLongRunningOperationsClient, callSettings);
 
         /// <summary>
         /// Updates a log bucket asynchronously.
@@ -1220,7 +1222,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<LogBucket, BucketMetadata> BeginUpdateBucket(UpdateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<LogBucket, BucketMetadata> UpdateBucketLongRunning(UpdateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1234,7 +1236,7 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> BeginUpdateBucketAsync(UpdateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> UpdateBucketLongRunningAsync(UpdateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1248,35 +1250,35 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> BeginUpdateBucketAsync(UpdateBucketRequest request, st::CancellationToken cancellationToken) =>
-            BeginUpdateBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> UpdateBucketLongRunningAsync(UpdateBucketRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBucketLongRunningAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
-        /// <summary>The long-running operations client for <c>BeginUpdateBucket</c>.</summary>
-        public virtual lro::OperationsClient BeginUpdateBucketOperationsClient => throw new sys::NotImplementedException();
+        /// <summary>The long-running operations client for <c>UpdateBucketLongRunning</c>.</summary>
+        public virtual lro::OperationsClient UpdateBucketLongRunningOperationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BeginUpdateBucket</c>
-        /// .
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateBucketLongRunning</c>.
         /// </summary>
         /// <param name="operationName">
         /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<LogBucket, BucketMetadata> PollOnceBeginUpdateBucket(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<LogBucket, BucketMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BeginUpdateBucketOperationsClient, callSettings);
+        public virtual lro::Operation<LogBucket, BucketMetadata> PollOnceUpdateBucketLongRunning(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LogBucket, BucketMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBucketLongRunningOperationsClient, callSettings);
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
-        /// <c>BeginUpdateBucket</c>.
+        /// <c>UpdateBucketLongRunning</c>.
         /// </summary>
         /// <param name="operationName">
         /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> PollOnceBeginUpdateBucketAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<LogBucket, BucketMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BeginUpdateBucketOperationsClient, callSettings);
+        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> PollOnceUpdateBucketLongRunningAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LogBucket, BucketMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBucketLongRunningOperationsClient, callSettings);
 
         /// <summary>
         /// Creates a log bucket that can be used to store log entries. After a bucket
@@ -5981,9 +5983,9 @@ namespace Google.Cloud.Logging.V2
 
         private readonly gaxgrpc::ApiCall<GetBucketRequest, LogBucket> _callGetBucket;
 
-        private readonly gaxgrpc::ApiCall<CreateBucketRequest, lro::Operation> _callBeginCreateBucket;
+        private readonly gaxgrpc::ApiCall<CreateBucketRequest, lro::Operation> _callCreateBucketLongRunning;
 
-        private readonly gaxgrpc::ApiCall<UpdateBucketRequest, lro::Operation> _callBeginUpdateBucket;
+        private readonly gaxgrpc::ApiCall<UpdateBucketRequest, lro::Operation> _callUpdateBucketLongRunning;
 
         private readonly gaxgrpc::ApiCall<CreateBucketRequest, LogBucket> _callCreateBucket;
 
@@ -6052,8 +6054,8 @@ namespace Google.Cloud.Logging.V2
             GrpcClient = grpcClient;
             ConfigServiceV2Settings effectiveSettings = settings ?? ConfigServiceV2Settings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
-            BeginCreateBucketOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BeginCreateBucketOperationsSettings, logger);
-            BeginUpdateBucketOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BeginUpdateBucketOperationsSettings, logger);
+            CreateBucketLongRunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBucketLongRunningOperationsSettings, logger);
+            UpdateBucketLongRunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBucketLongRunningOperationsSettings, logger);
             CreateLinkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateLinkOperationsSettings, logger);
             DeleteLinkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteLinkOperationsSettings, logger);
             CopyLogEntriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CopyLogEntriesOperationsSettings, logger);
@@ -6063,12 +6065,12 @@ namespace Google.Cloud.Logging.V2
             _callGetBucket = clientHelper.BuildApiCall<GetBucketRequest, LogBucket>("GetBucket", grpcClient.GetBucketAsync, grpcClient.GetBucket, effectiveSettings.GetBucketSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBucket);
             Modify_GetBucketApiCall(ref _callGetBucket);
-            _callBeginCreateBucket = clientHelper.BuildApiCall<CreateBucketRequest, lro::Operation>("BeginCreateBucket", grpcClient.BeginCreateBucketAsync, grpcClient.BeginCreateBucket, effectiveSettings.BeginCreateBucketSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callBeginCreateBucket);
-            Modify_BeginCreateBucketApiCall(ref _callBeginCreateBucket);
-            _callBeginUpdateBucket = clientHelper.BuildApiCall<UpdateBucketRequest, lro::Operation>("BeginUpdateBucket", grpcClient.BeginUpdateBucketAsync, grpcClient.BeginUpdateBucket, effectiveSettings.BeginUpdateBucketSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callBeginUpdateBucket);
-            Modify_BeginUpdateBucketApiCall(ref _callBeginUpdateBucket);
+            _callCreateBucketLongRunning = clientHelper.BuildApiCall<CreateBucketRequest, lro::Operation>("CreateBucketLongRunning", grpcClient.CreateBucketLongRunningAsync, grpcClient.CreateBucketLongRunning, effectiveSettings.CreateBucketLongRunningSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBucketLongRunning);
+            Modify_CreateBucketLongRunningApiCall(ref _callCreateBucketLongRunning);
+            _callUpdateBucketLongRunning = clientHelper.BuildApiCall<UpdateBucketRequest, lro::Operation>("UpdateBucketLongRunning", grpcClient.UpdateBucketLongRunningAsync, grpcClient.UpdateBucketLongRunning, effectiveSettings.UpdateBucketLongRunningSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUpdateBucketLongRunning);
+            Modify_UpdateBucketLongRunningApiCall(ref _callUpdateBucketLongRunning);
             _callCreateBucket = clientHelper.BuildApiCall<CreateBucketRequest, LogBucket>("CreateBucket", grpcClient.CreateBucketAsync, grpcClient.CreateBucket, effectiveSettings.CreateBucketSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBucket);
             Modify_CreateBucketApiCall(ref _callCreateBucket);
@@ -6162,9 +6164,9 @@ namespace Google.Cloud.Logging.V2
 
         partial void Modify_GetBucketApiCall(ref gaxgrpc::ApiCall<GetBucketRequest, LogBucket> call);
 
-        partial void Modify_BeginCreateBucketApiCall(ref gaxgrpc::ApiCall<CreateBucketRequest, lro::Operation> call);
+        partial void Modify_CreateBucketLongRunningApiCall(ref gaxgrpc::ApiCall<CreateBucketRequest, lro::Operation> call);
 
-        partial void Modify_BeginUpdateBucketApiCall(ref gaxgrpc::ApiCall<UpdateBucketRequest, lro::Operation> call);
+        partial void Modify_UpdateBucketLongRunningApiCall(ref gaxgrpc::ApiCall<UpdateBucketRequest, lro::Operation> call);
 
         partial void Modify_CreateBucketApiCall(ref gaxgrpc::ApiCall<CreateBucketRequest, LogBucket> call);
 
@@ -6335,8 +6337,8 @@ namespace Google.Cloud.Logging.V2
             return _callGetBucket.Async(request, callSettings);
         }
 
-        /// <summary>The long-running operations client for <c>BeginCreateBucket</c>.</summary>
-        public override lro::OperationsClient BeginCreateBucketOperationsClient { get; }
+        /// <summary>The long-running operations client for <c>CreateBucketLongRunning</c>.</summary>
+        public override lro::OperationsClient CreateBucketLongRunningOperationsClient { get; }
 
         /// <summary>
         /// Creates a log bucket asynchronously that can be used to store log entries.
@@ -6346,10 +6348,10 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override lro::Operation<LogBucket, BucketMetadata> BeginCreateBucket(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<LogBucket, BucketMetadata> CreateBucketLongRunning(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateBucketRequest(ref request, ref callSettings);
-            return new lro::Operation<LogBucket, BucketMetadata>(_callBeginCreateBucket.Sync(request, callSettings), BeginCreateBucketOperationsClient);
+            return new lro::Operation<LogBucket, BucketMetadata>(_callCreateBucketLongRunning.Sync(request, callSettings), CreateBucketLongRunningOperationsClient);
         }
 
         /// <summary>
@@ -6360,14 +6362,14 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override async stt::Task<lro::Operation<LogBucket, BucketMetadata>> BeginCreateBucketAsync(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<LogBucket, BucketMetadata>> CreateBucketLongRunningAsync(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateBucketRequest(ref request, ref callSettings);
-            return new lro::Operation<LogBucket, BucketMetadata>(await _callBeginCreateBucket.Async(request, callSettings).ConfigureAwait(false), BeginCreateBucketOperationsClient);
+            return new lro::Operation<LogBucket, BucketMetadata>(await _callCreateBucketLongRunning.Async(request, callSettings).ConfigureAwait(false), CreateBucketLongRunningOperationsClient);
         }
 
-        /// <summary>The long-running operations client for <c>BeginUpdateBucket</c>.</summary>
-        public override lro::OperationsClient BeginUpdateBucketOperationsClient { get; }
+        /// <summary>The long-running operations client for <c>UpdateBucketLongRunning</c>.</summary>
+        public override lro::OperationsClient UpdateBucketLongRunningOperationsClient { get; }
 
         /// <summary>
         /// Updates a log bucket asynchronously.
@@ -6380,10 +6382,10 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override lro::Operation<LogBucket, BucketMetadata> BeginUpdateBucket(UpdateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<LogBucket, BucketMetadata> UpdateBucketLongRunning(UpdateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateBucketRequest(ref request, ref callSettings);
-            return new lro::Operation<LogBucket, BucketMetadata>(_callBeginUpdateBucket.Sync(request, callSettings), BeginUpdateBucketOperationsClient);
+            return new lro::Operation<LogBucket, BucketMetadata>(_callUpdateBucketLongRunning.Sync(request, callSettings), UpdateBucketLongRunningOperationsClient);
         }
 
         /// <summary>
@@ -6397,10 +6399,10 @@ namespace Google.Cloud.Logging.V2
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override async stt::Task<lro::Operation<LogBucket, BucketMetadata>> BeginUpdateBucketAsync(UpdateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<LogBucket, BucketMetadata>> UpdateBucketLongRunningAsync(UpdateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateBucketRequest(ref request, ref callSettings);
-            return new lro::Operation<LogBucket, BucketMetadata>(await _callBeginUpdateBucket.Async(request, callSettings).ConfigureAwait(false), BeginUpdateBucketOperationsClient);
+            return new lro::Operation<LogBucket, BucketMetadata>(await _callUpdateBucketLongRunning.Async(request, callSettings).ConfigureAwait(false), UpdateBucketLongRunningOperationsClient);
         }
 
         /// <summary>

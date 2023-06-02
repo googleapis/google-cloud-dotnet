@@ -169,7 +169,7 @@ namespace Google.Cloud.Logging.V2 {
         __Marshaller_google_logging_v2_LogBucket);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Logging.V2.CreateBucketRequest, global::Google.LongRunning.Operation> __Method_BeginCreateBucket = new grpc::Method<global::Google.Cloud.Logging.V2.CreateBucketRequest, global::Google.LongRunning.Operation>(
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.CreateBucketRequest, global::Google.LongRunning.Operation> __Method_CreateBucketLongRunning = new grpc::Method<global::Google.Cloud.Logging.V2.CreateBucketRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateBucketAsync",
@@ -177,7 +177,7 @@ namespace Google.Cloud.Logging.V2 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Logging.V2.UpdateBucketRequest, global::Google.LongRunning.Operation> __Method_BeginUpdateBucket = new grpc::Method<global::Google.Cloud.Logging.V2.UpdateBucketRequest, global::Google.LongRunning.Operation>(
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.UpdateBucketRequest, global::Google.LongRunning.Operation> __Method_UpdateBucketLongRunning = new grpc::Method<global::Google.Cloud.Logging.V2.UpdateBucketRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UpdateBucketAsync",
@@ -451,7 +451,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BeginCreateBucket(global::Google.Cloud.Logging.V2.CreateBucketRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateBucketLongRunning(global::Google.Cloud.Logging.V2.CreateBucketRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -468,7 +468,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BeginUpdateBucket(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateBucketLongRunning(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1025,9 +1025,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.LongRunning.Operation BeginCreateBucket(global::Google.Cloud.Logging.V2.CreateBucketRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.LongRunning.Operation CreateBucketLongRunning(global::Google.Cloud.Logging.V2.CreateBucketRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return BeginCreateBucket(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return CreateBucketLongRunning(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Creates a log bucket asynchronously that can be used to store log entries.
@@ -1038,9 +1038,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.LongRunning.Operation BeginCreateBucket(global::Google.Cloud.Logging.V2.CreateBucketRequest request, grpc::CallOptions options)
+      public virtual global::Google.LongRunning.Operation CreateBucketLongRunning(global::Google.Cloud.Logging.V2.CreateBucketRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_BeginCreateBucket, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_CreateBucketLongRunning, null, options, request);
       }
       /// <summary>
       /// Creates a log bucket asynchronously that can be used to store log entries.
@@ -1053,9 +1053,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BeginCreateBucketAsync(global::Google.Cloud.Logging.V2.CreateBucketRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBucketLongRunningAsync(global::Google.Cloud.Logging.V2.CreateBucketRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return BeginCreateBucketAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return CreateBucketLongRunningAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Creates a log bucket asynchronously that can be used to store log entries.
@@ -1066,43 +1066,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BeginCreateBucketAsync(global::Google.Cloud.Logging.V2.CreateBucketRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBucketLongRunningAsync(global::Google.Cloud.Logging.V2.CreateBucketRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_BeginCreateBucket, null, options, request);
-      }
-      /// <summary>
-      /// Updates a log bucket asynchronously.
-      ///
-      /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
-      /// `FAILED_PRECONDITION` will be returned.
-      ///
-      /// After a bucket has been created, the bucket's location cannot be changed.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.LongRunning.Operation BeginUpdateBucket(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return BeginUpdateBucket(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates a log bucket asynchronously.
-      ///
-      /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
-      /// `FAILED_PRECONDITION` will be returned.
-      ///
-      /// After a bucket has been created, the bucket's location cannot be changed.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.LongRunning.Operation BeginUpdateBucket(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_BeginUpdateBucket, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_CreateBucketLongRunning, null, options, request);
       }
       /// <summary>
       /// Updates a log bucket asynchronously.
@@ -1116,11 +1082,45 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBucketLongRunning(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBucketLongRunning(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a log bucket asynchronously.
+      ///
+      /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+      /// `FAILED_PRECONDITION` will be returned.
+      ///
+      /// After a bucket has been created, the bucket's location cannot be changed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBucketLongRunning(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBucketLongRunning, null, options, request);
+      }
+      /// <summary>
+      /// Updates a log bucket asynchronously.
+      ///
+      /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+      /// `FAILED_PRECONDITION` will be returned.
+      ///
+      /// After a bucket has been created, the bucket's location cannot be changed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BeginUpdateBucketAsync(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBucketLongRunningAsync(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return BeginUpdateBucketAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return UpdateBucketLongRunningAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Updates a log bucket asynchronously.
@@ -1134,9 +1134,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BeginUpdateBucketAsync(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBucketLongRunningAsync(global::Google.Cloud.Logging.V2.UpdateBucketRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_BeginUpdateBucket, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBucketLongRunning, null, options, request);
       }
       /// <summary>
       /// Creates a log bucket that can be used to store log entries. After a bucket
@@ -2818,8 +2818,8 @@ namespace Google.Cloud.Logging.V2 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListBuckets, serviceImpl.ListBuckets)
           .AddMethod(__Method_GetBucket, serviceImpl.GetBucket)
-          .AddMethod(__Method_BeginCreateBucket, serviceImpl.BeginCreateBucket)
-          .AddMethod(__Method_BeginUpdateBucket, serviceImpl.BeginUpdateBucket)
+          .AddMethod(__Method_CreateBucketLongRunning, serviceImpl.CreateBucketLongRunning)
+          .AddMethod(__Method_UpdateBucketLongRunning, serviceImpl.UpdateBucketLongRunning)
           .AddMethod(__Method_CreateBucket, serviceImpl.CreateBucket)
           .AddMethod(__Method_UpdateBucket, serviceImpl.UpdateBucket)
           .AddMethod(__Method_DeleteBucket, serviceImpl.DeleteBucket)
@@ -2859,8 +2859,8 @@ namespace Google.Cloud.Logging.V2 {
     {
       serviceBinder.AddMethod(__Method_ListBuckets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.ListBucketsRequest, global::Google.Cloud.Logging.V2.ListBucketsResponse>(serviceImpl.ListBuckets));
       serviceBinder.AddMethod(__Method_GetBucket, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.GetBucketRequest, global::Google.Cloud.Logging.V2.LogBucket>(serviceImpl.GetBucket));
-      serviceBinder.AddMethod(__Method_BeginCreateBucket, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.CreateBucketRequest, global::Google.LongRunning.Operation>(serviceImpl.BeginCreateBucket));
-      serviceBinder.AddMethod(__Method_BeginUpdateBucket, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.UpdateBucketRequest, global::Google.LongRunning.Operation>(serviceImpl.BeginUpdateBucket));
+      serviceBinder.AddMethod(__Method_CreateBucketLongRunning, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.CreateBucketRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBucketLongRunning));
+      serviceBinder.AddMethod(__Method_UpdateBucketLongRunning, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.UpdateBucketRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBucketLongRunning));
       serviceBinder.AddMethod(__Method_CreateBucket, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.CreateBucketRequest, global::Google.Cloud.Logging.V2.LogBucket>(serviceImpl.CreateBucket));
       serviceBinder.AddMethod(__Method_UpdateBucket, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.UpdateBucketRequest, global::Google.Cloud.Logging.V2.LogBucket>(serviceImpl.UpdateBucket));
       serviceBinder.AddMethod(__Method_DeleteBucket, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.DeleteBucketRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBucket));

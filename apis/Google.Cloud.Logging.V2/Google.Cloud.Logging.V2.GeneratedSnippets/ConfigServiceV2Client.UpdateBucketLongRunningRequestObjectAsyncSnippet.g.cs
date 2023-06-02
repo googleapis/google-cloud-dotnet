@@ -16,15 +16,15 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START logging_v2_generated_ConfigServiceV2_BeginCreateBucket_async]
-    using Google.Api.Gax.ResourceNames;
+    // [START logging_v2_generated_ConfigServiceV2_UpdateBucketLongRunning_async]
     using Google.Cloud.Logging.V2;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedConfigServiceV2ClientSnippets
     {
-        /// <summary>Snippet for BeginCreateBucketAsync</summary>
+        /// <summary>Snippet for UpdateBucketLongRunningAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,19 +32,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task BeginCreateBucketRequestObjectAsync()
+        public async Task UpdateBucketLongRunningRequestObjectAsync()
         {
             // Create client
             ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            CreateBucketRequest request = new CreateBucketRequest
+            UpdateBucketRequest request = new UpdateBucketRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                BucketId = "",
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
                 Bucket = new LogBucket(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<LogBucket, BucketMetadata> response = await configServiceV2Client.BeginCreateBucketAsync(request);
+            Operation<LogBucket, BucketMetadata> response = await configServiceV2Client.UpdateBucketLongRunningAsync(request);
 
             // Poll until the returned long-running operation is complete
             Operation<LogBucket, BucketMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -54,7 +54,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<LogBucket, BucketMetadata> retrievedResponse = await configServiceV2Client.PollOnceBeginCreateBucketAsync(operationName);
+            Operation<LogBucket, BucketMetadata> retrievedResponse = await configServiceV2Client.PollOnceUpdateBucketLongRunningAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -63,5 +63,5 @@ namespace GoogleCSharpSnippets
             }
         }
     }
-    // [END logging_v2_generated_ConfigServiceV2_BeginCreateBucket_async]
+    // [END logging_v2_generated_ConfigServiceV2_UpdateBucketLongRunning_async]
 }

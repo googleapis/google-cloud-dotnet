@@ -760,14 +760,14 @@
       ]
     },
     {
-      "regionTag": "logging_v2_generated_ConfigServiceV2_BeginCreateBucket_sync",
-      "title": "BeginCreateBucketRequestObject",
-      "description": "Snippet for BeginCreateBucket",
-      "file": "ConfigServiceV2Client.BeginCreateBucketRequestObjectSnippet.g.cs",
+      "regionTag": "logging_v2_generated_ConfigServiceV2_CreateBucketLongRunning_sync",
+      "title": "CreateBucketLongRunningRequestObject",
+      "description": "Snippet for CreateBucketLongRunning",
+      "file": "ConfigServiceV2Client.CreateBucketLongRunningRequestObjectSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "BeginCreateBucket",
-        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.BeginCreateBucket",
+        "shortName": "CreateBucketLongRunning",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateBucketLongRunning",
         "parameters": [
           {
             "type": "Google.Cloud.Logging.V2.CreateBucketRequest",
@@ -784,8 +784,8 @@
           "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
         },
         "method": {
-          "shortName": "BeginCreateBucket",
-          "fullName": "google.logging.v2.ConfigServiceV2.BeginCreateBucket",
+          "shortName": "CreateBucketLongRunning",
+          "fullName": "google.logging.v2.ConfigServiceV2.CreateBucketLongRunning",
           "service": {
             "shortName": "ConfigServiceV2",
             "fullName": "google.logging.v2.ConfigServiceV2"
@@ -808,14 +808,14 @@
       ]
     },
     {
-      "regionTag": "logging_v2_generated_ConfigServiceV2_BeginCreateBucket_async",
-      "title": "BeginCreateBucketRequestObjectAsync",
-      "description": "Snippet for BeginCreateBucketAsync",
-      "file": "ConfigServiceV2Client.BeginCreateBucketRequestObjectAsyncSnippet.g.cs",
+      "regionTag": "logging_v2_generated_ConfigServiceV2_CreateBucketLongRunning_async",
+      "title": "CreateBucketLongRunningRequestObjectAsync",
+      "description": "Snippet for CreateBucketLongRunningAsync",
+      "file": "ConfigServiceV2Client.CreateBucketLongRunningRequestObjectAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "BeginCreateBucketAsync",
-        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.BeginCreateBucketAsync",
+        "shortName": "CreateBucketLongRunningAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateBucketLongRunningAsync",
         "async": true,
         "parameters": [
           {
@@ -833,8 +833,8 @@
           "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
         },
         "method": {
-          "shortName": "BeginCreateBucket",
-          "fullName": "google.logging.v2.ConfigServiceV2.BeginCreateBucket",
+          "shortName": "CreateBucketLongRunning",
+          "fullName": "google.logging.v2.ConfigServiceV2.CreateBucketLongRunning",
           "service": {
             "shortName": "ConfigServiceV2",
             "fullName": "google.logging.v2.ConfigServiceV2"
@@ -857,14 +857,14 @@
       ]
     },
     {
-      "regionTag": "logging_v2_generated_ConfigServiceV2_BeginUpdateBucket_sync",
-      "title": "BeginUpdateBucketRequestObject",
-      "description": "Snippet for BeginUpdateBucket",
-      "file": "ConfigServiceV2Client.BeginUpdateBucketRequestObjectSnippet.g.cs",
+      "regionTag": "logging_v2_generated_ConfigServiceV2_UpdateBucketLongRunning_sync",
+      "title": "UpdateBucketLongRunningRequestObject",
+      "description": "Snippet for UpdateBucketLongRunning",
+      "file": "ConfigServiceV2Client.UpdateBucketLongRunningRequestObjectSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "BeginUpdateBucket",
-        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.BeginUpdateBucket",
+        "shortName": "UpdateBucketLongRunning",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateBucketLongRunning",
         "parameters": [
           {
             "type": "Google.Cloud.Logging.V2.UpdateBucketRequest",
@@ -881,8 +881,8 @@
           "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
         },
         "method": {
-          "shortName": "BeginUpdateBucket",
-          "fullName": "google.logging.v2.ConfigServiceV2.BeginUpdateBucket",
+          "shortName": "UpdateBucketLongRunning",
+          "fullName": "google.logging.v2.ConfigServiceV2.UpdateBucketLongRunning",
           "service": {
             "shortName": "ConfigServiceV2",
             "fullName": "google.logging.v2.ConfigServiceV2"
@@ -905,14 +905,14 @@
       ]
     },
     {
-      "regionTag": "logging_v2_generated_ConfigServiceV2_BeginUpdateBucket_async",
-      "title": "BeginUpdateBucketRequestObjectAsync",
-      "description": "Snippet for BeginUpdateBucketAsync",
-      "file": "ConfigServiceV2Client.BeginUpdateBucketRequestObjectAsyncSnippet.g.cs",
+      "regionTag": "logging_v2_generated_ConfigServiceV2_UpdateBucketLongRunning_async",
+      "title": "UpdateBucketLongRunningRequestObjectAsync",
+      "description": "Snippet for UpdateBucketLongRunningAsync",
+      "file": "ConfigServiceV2Client.UpdateBucketLongRunningRequestObjectAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
-        "shortName": "BeginUpdateBucketAsync",
-        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.BeginUpdateBucketAsync",
+        "shortName": "UpdateBucketLongRunningAsync",
+        "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateBucketLongRunningAsync",
         "async": true,
         "parameters": [
           {
@@ -930,8 +930,8 @@
           "fullName": "Google.Cloud.Logging.V2.ConfigServiceV2Client"
         },
         "method": {
-          "shortName": "BeginUpdateBucket",
-          "fullName": "google.logging.v2.ConfigServiceV2.BeginUpdateBucket",
+          "shortName": "UpdateBucketLongRunning",
+          "fullName": "google.logging.v2.ConfigServiceV2.UpdateBucketLongRunning",
           "service": {
             "shortName": "ConfigServiceV2",
             "fullName": "google.logging.v2.ConfigServiceV2"
