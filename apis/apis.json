@@ -1856,7 +1856,7 @@
       "shortName": "discoveryengine",
       "serviceConfigFile": "discoveryengine_v1.yaml",
       "restNumericEnums": true,
-      "blockRelease": "Smoke test needs fixing before release"
+      "blockRelease": "API is behind an allow-list"
     },
     {
       "id": "Google.Cloud.DiscoveryEngine.V1Beta",
