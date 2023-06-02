@@ -2576,6 +2576,325 @@
       ]
     },
     {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CreateDatabase_sync",
+      "title": "CreateDatabaseRequestObject",
+      "description": "Snippet for CreateDatabase",
+      "file": "FirestoreAdminClient.CreateDatabaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatabase",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.CreateDatabaseMetadata>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CreateDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CreateDatabase_async",
+      "title": "CreateDatabaseRequestObjectAsync",
+      "description": "Snippet for CreateDatabaseAsync",
+      "file": "FirestoreAdminClient.CreateDatabaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatabaseAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.CreateDatabaseMetadata>>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CreateDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CreateDatabase_sync_flattened",
+      "title": "CreateDatabase",
+      "description": "Snippet for CreateDatabase",
+      "file": "FirestoreAdminClient.CreateDatabaseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatabase",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateDatabase",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.Database",
+            "name": "database"
+          },
+          {
+            "type": "System.String",
+            "name": "databaseId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.CreateDatabaseMetadata>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CreateDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CreateDatabase_async_flattened",
+      "title": "CreateDatabaseAsync",
+      "description": "Snippet for CreateDatabaseAsync",
+      "file": "FirestoreAdminClient.CreateDatabaseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatabaseAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.Database",
+            "name": "database"
+          },
+          {
+            "type": "System.String",
+            "name": "databaseId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.CreateDatabaseMetadata>>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CreateDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CreateDatabase_sync_flattened_resourceNames",
+      "title": "CreateDatabaseResourceNames",
+      "description": "Snippet for CreateDatabase",
+      "file": "FirestoreAdminClient.CreateDatabaseResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatabase",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateDatabase",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.Database",
+            "name": "database"
+          },
+          {
+            "type": "System.String",
+            "name": "databaseId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.CreateDatabaseMetadata>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CreateDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CreateDatabase_async_flattened_resourceNames",
+      "title": "CreateDatabaseResourceNamesAsync",
+      "description": "Snippet for CreateDatabaseAsync",
+      "file": "FirestoreAdminClient.CreateDatabaseResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatabaseAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.Database",
+            "name": "database"
+          },
+          {
+            "type": "System.String",
+            "name": "databaseId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.CreateDatabaseMetadata>>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CreateDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "firestore_v1_generated_FirestoreAdmin_GetDatabase_sync",
       "title": "GetDatabaseRequestObject",
       "description": "Snippet for GetDatabase",

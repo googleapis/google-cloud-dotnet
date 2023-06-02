@@ -3,7 +3,7 @@
 //     source: google/firestore/admin/v1/firestore_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -121,6 +121,8 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest> __Marshaller_google_firestore_admin_v1_ImportDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest> __Marshaller_google_firestore_admin_v1_CreateDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest> __Marshaller_google_firestore_admin_v1_GetDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.Database> __Marshaller_google_firestore_admin_v1_Database = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.Database.Parser));
@@ -204,6 +206,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest, global::Google.LongRunning.Operation> __Method_CreateDatabase = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDatabase",
+        __Marshaller_google_firestore_admin_v1_CreateDatabaseRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest, global::Google.Cloud.Firestore.Admin.V1.Database> __Method_GetDatabase = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest, global::Google.Cloud.Firestore.Admin.V1.Database>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -238,9 +248,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     public abstract partial class FirestoreAdminBase
     {
       /// <summary>
-      /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-      /// which may be used to track the status of the creation. The metadata for
-      /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+      /// Creates a composite index. This returns a
+      /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+      /// used to track the status of the creation. The metadata for the operation
+      /// will be the type
+      /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -302,13 +314,16 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Updates a field configuration. Currently, field updates apply only to
       /// single field index configuration. However, calls to
-      /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-      /// changing any configuration that the caller isn't aware of. The field mask
-      /// should be specified as: `{ paths: "index_config" }`.
+      /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+      /// should provide a field mask to avoid changing any configuration that the
+      /// caller isn't aware of. The field mask should be specified as: `{ paths:
+      /// "index_config" }`.
       ///
-      /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-      /// track the status of the field update. The metadata for
-      /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+      /// This call returns a
+      /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+      /// used to track the status of the field update. The metadata for the
+      /// operation will be the type
+      /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
       ///
       /// To configure the default field settings for the database, use
       /// the special `Field` with resource name:
@@ -326,10 +341,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Lists the field configuration and metadata for this database.
       ///
-      /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-      /// that have been explicitly overridden. To issue this query, call
-      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-      /// `indexConfig.usesAncestorConfig:false` .
+      /// Currently,
+      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+      /// only supports listing fields that have been explicitly overridden. To issue
+      /// this query, call
+      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+      /// with the filter set to `indexConfig.usesAncestorConfig:false` .
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -374,6 +391,18 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportDocuments(global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create a database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDatabase(global::Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -444,9 +473,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
 
       /// <summary>
-      /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-      /// which may be used to track the status of the creation. The metadata for
-      /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+      /// Creates a composite index. This returns a
+      /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+      /// used to track the status of the creation. The metadata for the operation
+      /// will be the type
+      /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -459,9 +490,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         return CreateIndex(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-      /// which may be used to track the status of the creation. The metadata for
-      /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+      /// Creates a composite index. This returns a
+      /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+      /// used to track the status of the creation. The metadata for the operation
+      /// will be the type
+      /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -472,9 +505,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateIndex, null, options, request);
       }
       /// <summary>
-      /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-      /// which may be used to track the status of the creation. The metadata for
-      /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+      /// Creates a composite index. This returns a
+      /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+      /// used to track the status of the creation. The metadata for the operation
+      /// will be the type
+      /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -487,9 +522,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         return CreateIndexAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-      /// which may be used to track the status of the creation. The metadata for
-      /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+      /// Creates a composite index. This returns a
+      /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+      /// used to track the status of the creation. The metadata for the operation
+      /// will be the type
+      /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -694,13 +731,16 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Updates a field configuration. Currently, field updates apply only to
       /// single field index configuration. However, calls to
-      /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-      /// changing any configuration that the caller isn't aware of. The field mask
-      /// should be specified as: `{ paths: "index_config" }`.
+      /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+      /// should provide a field mask to avoid changing any configuration that the
+      /// caller isn't aware of. The field mask should be specified as: `{ paths:
+      /// "index_config" }`.
       ///
-      /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-      /// track the status of the field update. The metadata for
-      /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+      /// This call returns a
+      /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+      /// used to track the status of the field update. The metadata for the
+      /// operation will be the type
+      /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
       ///
       /// To configure the default field settings for the database, use
       /// the special `Field` with resource name:
@@ -719,13 +759,16 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Updates a field configuration. Currently, field updates apply only to
       /// single field index configuration. However, calls to
-      /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-      /// changing any configuration that the caller isn't aware of. The field mask
-      /// should be specified as: `{ paths: "index_config" }`.
+      /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+      /// should provide a field mask to avoid changing any configuration that the
+      /// caller isn't aware of. The field mask should be specified as: `{ paths:
+      /// "index_config" }`.
       ///
-      /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-      /// track the status of the field update. The metadata for
-      /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+      /// This call returns a
+      /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+      /// used to track the status of the field update. The metadata for the
+      /// operation will be the type
+      /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
       ///
       /// To configure the default field settings for the database, use
       /// the special `Field` with resource name:
@@ -742,13 +785,16 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Updates a field configuration. Currently, field updates apply only to
       /// single field index configuration. However, calls to
-      /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-      /// changing any configuration that the caller isn't aware of. The field mask
-      /// should be specified as: `{ paths: "index_config" }`.
+      /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+      /// should provide a field mask to avoid changing any configuration that the
+      /// caller isn't aware of. The field mask should be specified as: `{ paths:
+      /// "index_config" }`.
       ///
-      /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-      /// track the status of the field update. The metadata for
-      /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+      /// This call returns a
+      /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+      /// used to track the status of the field update. The metadata for the
+      /// operation will be the type
+      /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
       ///
       /// To configure the default field settings for the database, use
       /// the special `Field` with resource name:
@@ -767,13 +813,16 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Updates a field configuration. Currently, field updates apply only to
       /// single field index configuration. However, calls to
-      /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-      /// changing any configuration that the caller isn't aware of. The field mask
-      /// should be specified as: `{ paths: "index_config" }`.
+      /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+      /// should provide a field mask to avoid changing any configuration that the
+      /// caller isn't aware of. The field mask should be specified as: `{ paths:
+      /// "index_config" }`.
       ///
-      /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-      /// track the status of the field update. The metadata for
-      /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+      /// This call returns a
+      /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+      /// used to track the status of the field update. The metadata for the
+      /// operation will be the type
+      /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
       ///
       /// To configure the default field settings for the database, use
       /// the special `Field` with resource name:
@@ -790,10 +839,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Lists the field configuration and metadata for this database.
       ///
-      /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-      /// that have been explicitly overridden. To issue this query, call
-      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-      /// `indexConfig.usesAncestorConfig:false` .
+      /// Currently,
+      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+      /// only supports listing fields that have been explicitly overridden. To issue
+      /// this query, call
+      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+      /// with the filter set to `indexConfig.usesAncestorConfig:false` .
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -808,10 +859,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Lists the field configuration and metadata for this database.
       ///
-      /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-      /// that have been explicitly overridden. To issue this query, call
-      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-      /// `indexConfig.usesAncestorConfig:false` .
+      /// Currently,
+      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+      /// only supports listing fields that have been explicitly overridden. To issue
+      /// this query, call
+      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+      /// with the filter set to `indexConfig.usesAncestorConfig:false` .
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -824,10 +877,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Lists the field configuration and metadata for this database.
       ///
-      /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-      /// that have been explicitly overridden. To issue this query, call
-      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-      /// `indexConfig.usesAncestorConfig:false` .
+      /// Currently,
+      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+      /// only supports listing fields that have been explicitly overridden. To issue
+      /// this query, call
+      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+      /// with the filter set to `indexConfig.usesAncestorConfig:false` .
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -842,10 +897,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Lists the field configuration and metadata for this database.
       ///
-      /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-      /// that have been explicitly overridden. To issue this query, call
-      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-      /// `indexConfig.usesAncestorConfig:false` .
+      /// Currently,
+      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+      /// only supports listing fields that have been explicitly overridden. To issue
+      /// this query, call
+      /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+      /// with the filter set to `indexConfig.usesAncestorConfig:false` .
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1006,6 +1063,54 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportDocumentsAsync(global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ImportDocuments, null, options, request);
+      }
+      /// <summary>
+      /// Create a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDatabase(global::Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDatabase(global::Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Create a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatabaseAsync(global::Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatabaseAsync(global::Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDatabase, null, options, request);
       }
       /// <summary>
       /// Gets information about a database.
@@ -1174,6 +1279,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           .AddMethod(__Method_ListFields, serviceImpl.ListFields)
           .AddMethod(__Method_ExportDocuments, serviceImpl.ExportDocuments)
           .AddMethod(__Method_ImportDocuments, serviceImpl.ImportDocuments)
+          .AddMethod(__Method_CreateDatabase, serviceImpl.CreateDatabase)
           .AddMethod(__Method_GetDatabase, serviceImpl.GetDatabase)
           .AddMethod(__Method_ListDatabases, serviceImpl.ListDatabases)
           .AddMethod(__Method_UpdateDatabase, serviceImpl.UpdateDatabase).Build();
@@ -1195,6 +1301,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       serviceBinder.AddMethod(__Method_ListFields, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest, global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse>(serviceImpl.ListFields));
       serviceBinder.AddMethod(__Method_ExportDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportDocuments));
       serviceBinder.AddMethod(__Method_ImportDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportDocuments));
+      serviceBinder.AddMethod(__Method_CreateDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.CreateDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDatabase));
       serviceBinder.AddMethod(__Method_GetDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest, global::Google.Cloud.Firestore.Admin.V1.Database>(serviceImpl.GetDatabase));
       serviceBinder.AddMethod(__Method_ListDatabases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest, global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse>(serviceImpl.ListDatabases));
       serviceBinder.AddMethod(__Method_UpdateDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDatabase));
