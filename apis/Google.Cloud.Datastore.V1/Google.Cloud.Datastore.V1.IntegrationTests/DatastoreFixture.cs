@@ -31,30 +31,12 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         private const int RetryCount = 10;
         private static readonly TimeSpan RetryDelay = TimeSpan.FromSeconds(3);
 
-        public DatastoreDb DatastoreTestDb { get; }
-
         public string NamespaceId { get; }
         public PartitionId PartitionId => new PartitionId { ProjectId = ProjectId, NamespaceId = NamespaceId };
 
         public DatastoreFixture()
         {
             NamespaceId = IdGenerator.FromDateTime(prefix: "test-");
-            DatastoreTestDb = CreateTestStudents();
-        }
-
-        private DatastoreDb CreateTestStudents()
-        {
-            var db = CreateDatastoreDb();
-            var keyFactory = db.CreateKeyFactory("Students");
-            var entities = new[]
-            {
-                new Entity { Key = keyFactory.CreateKey("1"), ["age"] = 12, ["height"] = 5  },
-                new Entity { Key = keyFactory.CreateKey("2"), ["age"] = 12, ["height"] = 4.6  },
-                new Entity { Key = keyFactory.CreateKey("3"), ["age"] = 14, ["height"] = 4  },
-                new Entity { Key = keyFactory.CreateKey("4"), ["age"] = 11, ["height"] = 5.2  }
-            };
-            db.Insert(entities);
-            return db;
         }
 
         public override void Dispose()

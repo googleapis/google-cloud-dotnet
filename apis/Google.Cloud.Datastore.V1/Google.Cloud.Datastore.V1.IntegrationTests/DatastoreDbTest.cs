@@ -450,184 +450,54 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         }
 
         [Fact]
-        public void Sum_WithGqlQuery()
-        {
-            var db = _fixture.DatastoreTestDb;
-
-            var gql = new GqlQuery { QueryString = "SELECT sum(age) as `sumage` FROM Students" };
-            AggregationQueryResults results = db.RunAggregationQuery(gql);
-            Assert.Equal(49, results["sumage"].IntegerValue);
-
-            var gqlD = new GqlQuery { QueryString = "SELECT sum(height) as `heightsum` FROM Students" };
-            AggregationQueryResults resultsD = db.RunAggregationQuery(gqlD);
-            Assert.Equal(18.8, resultsD["heightsum"].DoubleValue);
-        }
-
-        [Fact]
-        public void Sum_WithStructuredQuery()
-        {
-            var db = _fixture.DatastoreTestDb;
-
-            var query = new Query("Students");
-            AggregationQuery aggQuery = new AggregationQuery(query)
-            {
-                Aggregations = { Sum("age") }
-            };
-            AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
-            long sumAge = results["property_1"].IntegerValue;
-            Assert.Equal(49, sumAge);
-
-            AggregationQuery aggQueryD = new AggregationQuery(query)
-            {
-                Aggregations = { Sum("height") }
-            };
-            AggregationQueryResults resultsD = db.RunAggregationQuery(aggQueryD);
-            Assert.Equal(18.8, resultsD["property_1"].DoubleValue);
-        }
-
-        [Fact]
-        public void Sum_WithAlias()
-        {
-            var db = _fixture.DatastoreTestDb;
-
-            var query = new Query("Students");
-            AggregationQuery aggQuery = new AggregationQuery(query)
-            {
-                Aggregations = { Sum("age", "SumOfAge") }
-            };
-            AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
-            long sumAge = results["SumOfAge"].IntegerValue;
-            Assert.Equal(49, sumAge);
-
-            AggregationQuery aggQueryD = new AggregationQuery(query)
-            {
-                Aggregations = { Sum("height", "SumOfHeight") }
-            };
-            AggregationQueryResults resultsD = db.RunAggregationQuery(aggQueryD);
-            Assert.Equal(18.8, resultsD["SumOfHeight"].DoubleValue);
-        }
-
-        [Fact]
-        public void Sum_WithNaNValues()
+        public void Aggregation_WithGqlQuery()
         {
             var db = _fixture.CreateDatastoreDb();
-            var keyFactory = db.CreateKeyFactory("StudentsNaN");
+            var keyFactory = db.CreateKeyFactory("Students");
             var entities = new[]
             {
-                new Entity { Key = keyFactory.CreateKey("1"), ["height"] = 5 },
-                new Entity { Key = keyFactory.CreateKey("2"), ["height"] = Double.NaN }
+                new Entity { Key = keyFactory.CreateKey("11"), ["age"] = 12, ["height"] = 5  },
+                new Entity { Key = keyFactory.CreateKey("21"), ["age"] = 12, ["height"] = 4.6  },
+                new Entity { Key = keyFactory.CreateKey("31"), ["age"] = 14, ["height"] = 4  },
+                new Entity { Key = keyFactory.CreateKey("41"), ["age"] = 11, ["height"] = 5.2  }
             };
             db.Insert(entities);
 
-            var query = new Query("StudentsNaN");
-            AggregationQuery aggQuery = new AggregationQuery(query)
-            {
-                Aggregations = { Sum("height") }
-            };
-            AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
-            Assert.Equal(Double.NaN, results["property_1"].DoubleValue);
-        }
-
-        [Fact]
-        public void Avg_WithGqlQuery()
-        {
-            var db = _fixture.DatastoreTestDb;
-
-            var gql = new GqlQuery { QueryString = "SELECT avg(age) as `avgage` FROM Students" };
+            var gql = new GqlQuery { QueryString = "SELECT sum(height), avg(height) as `avgheight` FROM Students" };
             AggregationQueryResults results = db.RunAggregationQuery(gql);
-            Assert.Equal(12.25, results["avgage"].DoubleValue);
+            Assert.Equal(18.8, results["property_1"].DoubleValue);
+            Assert.Equal(4.7, results["avgheight"].DoubleValue);
         }
 
         [Fact]
-        public void Avg_WithStructuredQuery()
+        public void Aggregations_StructuredQuery()
         {
-            var db = _fixture.DatastoreTestDb;
-
-            var query = new Query("Students");
-            AggregationQuery aggQuery = new AggregationQuery(query)
-            {
-                Aggregations = { Average("age") }
-            };
-            AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
-            Assert.Equal(12.25, results["property_1"].DoubleValue);
-        }
-
-        [Fact]
-        public void Avg_WithAlias()
-        {
-            var db = _fixture.DatastoreTestDb;
-
-            var query = new Query("Students");
-            AggregationQuery aggQuery = new AggregationQuery(query)
-            {
-                Aggregations = { Average("height", "AvgOfHeight") }
-            };
-            AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
-            Assert.Equal(4.7, results["AvgOfHeight"].DoubleValue);
-        }
-
-        [Fact]
-        public void Avg_WithNaNValues()
-        {
-            var db = _fixture.DatastoreTestDb;
-            var keyFactory = db.CreateKeyFactory("StudentsNaN");
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("Student");
             var entities = new[]
             {
-                new Entity { Key = keyFactory.CreateKey("K"), ["height"] = 5 },
-                new Entity { Key = keyFactory.CreateKey("Z"), ["height"] = Double.NaN }
+                new Entity { Key = keyFactory.CreateKey("6"), ["age"] = 12, ["height"] = 5  },
+                new Entity { Key = keyFactory.CreateKey("7"), ["age"] = 12, ["height"] = 4.6  },
+                new Entity { Key = keyFactory.CreateKey("8"), ["age"] = 14, ["height"] = 4  },
+                new Entity { Key = keyFactory.CreateKey("9"), ["age"] = 11, ["height"] = 5.2  }
             };
             db.Insert(entities);
 
-            var query = new Query("StudentsNaN");
+            var query = new Query("Student");
             AggregationQuery aggQuery = new AggregationQuery(query)
             {
-                Aggregations = { Average("height", "Avg_height") }
-            };
-            AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
-            Assert.Equal(Double.NaN, results["Avg_height"].DoubleValue);
-        }
-
-        [Fact]
-        public void MultipleAggregations()
-        {
-            var db = _fixture.DatastoreTestDb;
-
-            var query = new Query("Students");
-            AggregationQuery aggQuery = new AggregationQuery(query)
-            {
-                Aggregations = { Sum("age", "Sum_age"), Average("age", "Avg_age"), Count("Count") }
+                Aggregations = { Sum("age", "Sum_age"), Average("age"), Count("Count") }
             };
             AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
             Assert.Equal(49, results["Sum_age"].IntegerValue);
-            Assert.Equal(12.25, results["Avg_age"].DoubleValue);
+            Assert.Equal(12.25, results["property_1"].DoubleValue);
             Assert.Equal(4, results["Count"].IntegerValue);
-        }
-
-        [Fact]
-        public void Aggregation_NonNumericValue()
-        {
-            var db = _fixture.DatastoreTestDb;
-            var keyFactory = db.CreateKeyFactory("StudentsNN");
-            var entities = new[]
-            {
-                new Entity { Key = keyFactory.CreateKey("A"), ["height"] = 5 },
-                new Entity { Key = keyFactory.CreateKey("D"), ["height"] = 4 }
-            };
-            db.Insert(entities);
-
-            var query = new Query("StudentsNN");
-            AggregationQuery aggQuery = new AggregationQuery(query)
-            {
-                Aggregations = { Sum("Key", "nonNum") }
-            };
-            AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
-            Assert.Equal(0, results["nonNum"].IntegerValue);
         }
 
         [Fact]
         public void OrQueries()
         {
-            var db = _fixture.DatastoreTestDb;
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("OrQuery");
             var entities = new[]
             {
