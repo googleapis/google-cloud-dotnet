@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.8.0, released 2023-06-05
+
+### New features
+
+- Add the resource definition of a STT recognizer ([commit 2f4ff72](https://github.com/googleapis/google-cloud-dotnet/commit/2f4ff7209aa4b7942f36bebda1413298d554245a))
+
 ## Version 2.7.0, released 2023-05-03
 
 ### New features
