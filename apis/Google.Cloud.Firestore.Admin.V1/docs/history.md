@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.3.0, released 2023-06-05
+
+### New features
+
+- Add CreateDatabase API ([commit 09a1ae4](https://github.com/googleapis/google-cloud-dotnet/commit/09a1ae43740e16ae1d27024044aa1c62c7b1ed16))
+
 ## Version 3.2.0, released 2023-05-26
 
 ### New features
