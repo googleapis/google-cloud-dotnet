@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -90,6 +90,14 @@ namespace Google.Cloud.BigQuery.V2
         /// BigQuery interprets the empty string as an empty value.
         /// </summary>
         public string NullMarker { get; set; }
+
+        /// <summary>
+        /// The character encoding of the data. The default value is UTF-8. BigQuery decodes the data after the
+        /// raw, binary data has been split using the values of the <see cref="Quote"/> and <see cref="FieldDelimiter"/>
+        /// properties.
+        /// See https://cloud.google.com/bigquery/docs/reference/rest/v2/Job#JobConfigurationLoad.FIELDS.encoding for more details.
+        /// </summary>
+        public string Encoding { get; set; }
 
         /// <summary>
         /// If sourceFormat is set to <see cref="FileFormat.DatastoreBackup"/>, indicates which entity properties
@@ -203,6 +211,10 @@ namespace Google.Cloud.BigQuery.V2
             if (UseAvroLogicalTypes != null)
             {
                 load.UseAvroLogicalTypes = UseAvroLogicalTypes;
+            }
+            if (Encoding != null)
+            {
+                load.Encoding = Encoding;
             }
         }
     }
