@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListDatasets",
+    "client": "MapsPlatformDatasetsClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]
