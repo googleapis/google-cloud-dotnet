@@ -29,20 +29,6 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.PubSub.V1;
 
-// The class follows following conventions for the field names:
-// - An "ackDeadline" is the amount of time before which the message must be acknowledged or have its lease extended.
-// - A suffix of "Window" indicates the duration of time before the ackDeadline during which the lease is extended.
-// - A suffix of "Delay" indicates the delay between sending one auto-lease extension request and the next;
-// This is derived from the ackDeadline and the window. The delay should always be less than the ackDeadline.
-// - A suffix of "Interval" indicates the difference between the ackDeadline and the delay.
-// The rules for manipulating the field values are:
-// - The "ackDeadline" should be within a minimum and maximum value. This is either a user specified value or a default value. It is not calculated.
-// - The "Window" should be greater than or equal to the minimum value. This is either a user specified value or a default value. It is not calculated.
-// - The "Delay" is calculated as the "ackDeadline" minus the "Window".
-// - The "Interval" is calculated as the "ackDeadline" minus the "Delay".
-// - The delay should be within a minimum and maximum value.
-// - Any other computation is forbidden.
-
 /// <summary>
 /// Implementation of <see cref="SubscriberClient"/>. 
 /// </summary>
