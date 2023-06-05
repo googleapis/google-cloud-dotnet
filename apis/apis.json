@@ -5038,6 +5038,25 @@
       "transport": "grpc"
     },
     {
+      "id": "Google.Maps.MapsPlatformDatasets.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Maps Platform Datasets",
+      "productUrl": "https://developers.google.com/maps/documentation",
+      "description": "Recommended Google client library to access the Google Maps Platform Datasets API (v1).",
+      "tags": [
+        "maps",
+        "platform",
+        "datasets"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/maps/mapsplatformdatasets/v1",
+      "shortName": "mapsplatformdatasets",
+      "serviceConfigFile": "mapsplatformdatasets_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Maps.MapsPlatformDatasets.V1Alpha",
       "version": "1.0.0-alpha01",
       "type": "grpc",
