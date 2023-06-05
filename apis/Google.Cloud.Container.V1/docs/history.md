@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.13.0, released 2023-06-05
+
+### New features
+
+- Add SoleTenantConfig API ([commit bdcd865](https://github.com/googleapis/google-cloud-dotnet/commit/bdcd8652db405d069f3541d15ae0c07f451ead90))
+
+### Documentation improvements
+
+- Clarified release channel defaulting behavior for create cluster requests when release channel is unspecified ([commit 8f6305d](https://github.com/googleapis/google-cloud-dotnet/commit/8f6305d0207d7b6119b1eaa28473b68f43ef34a9))
+
 ## Version 3.12.0, released 2023-05-11
 
 ### New features
