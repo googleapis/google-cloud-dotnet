@@ -463,10 +463,10 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             };
             db.Insert(entities);
 
-            var gql = new GqlQuery { QueryString = "SELECT sum(height), avg(height) as `avgheight` FROM Students" };
+            var gql = new GqlQuery { QueryString = "SELECT sum(height), avg(height) as `avg_height` FROM Students" };
             AggregationQueryResults results = db.RunAggregationQuery(gql);
             Assert.Equal(18.8, results["property_1"].DoubleValue);
-            Assert.Equal(4.7, results["avgheight"].DoubleValue);
+            Assert.Equal(4.7, results["avg_height"].DoubleValue);
         }
 
         [Fact]
@@ -486,12 +486,12 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             var query = new Query("Student");
             AggregationQuery aggQuery = new AggregationQuery(query)
             {
-                Aggregations = { Sum("age", "Sum_age"), Average("age"), Count("Count") }
+                Aggregations = { Sum("age", "sum_age"), Average("age"), Count("count") }
             };
             AggregationQueryResults results = db.RunAggregationQuery(aggQuery);
-            Assert.Equal(49, results["Sum_age"].IntegerValue);
+            Assert.Equal(49, results["sum_age"].IntegerValue);
             Assert.Equal(12.25, results["property_1"].DoubleValue);
-            Assert.Equal(4, results["Count"].IntegerValue);
+            Assert.Equal(4, results["count"].IntegerValue);
         }
 
         [Fact]

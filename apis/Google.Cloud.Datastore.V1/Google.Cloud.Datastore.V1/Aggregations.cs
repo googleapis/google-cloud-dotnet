@@ -27,8 +27,8 @@ public static class Aggregations
     /// Returns an instance of count(*) aggregation.
     /// </summary>
     /// <param name="alias">A string used to retrieve the result of this aggregation.
-    /// If not provided, Datastore will pick a default name following the format `property_&lt;incremental_id++>`
-    /// eg. property_1
+    /// If not provided, Datastore will pick a default name with a prefix of <c>property_</c>
+    /// followed by an auto-incremented ID, e.g. <c>property_1</c>.
     /// </param>
     /// <returns>A count(*) aggregation.</returns>
     public static Aggregation Count(string alias = "") =>
@@ -67,8 +67,8 @@ public static class Aggregations
     /// </summary>
     /// <param name="property">Property for which the sum is to be calculated.</param>
     /// <param name="alias">A string used to retrieve the result of this aggregation.
-    /// If not provided, Datastore will pick a default name following the format `property_incremental_id++`
-    /// e.g. property_1
+    /// If not provided, Datastore will pick a default name with a prefix of <c>property_</c>
+    /// followed by an auto-incremented ID, e.g. <c>property_1</c>.
     /// </param>
     /// <returns>A Sum(property) aggregation.</returns>
     public static Aggregation Sum(string property, string alias = "") =>
@@ -96,8 +96,8 @@ public static class Aggregations
     /// </summary>
     /// <param name="property">Property for which the average is to be calculated</param>
     /// <param name="alias">A string used to retrieve the result of this aggregation.
-    /// If not provided, Datastore will pick a default name following the format `property_incremental_id++`
-    /// e.g. property_1
+    /// If not provided, Datastore will pick a default name with a prefix of <c>property_</c>
+    /// followed by an auto-incremented ID, e.g. <c>property_1</c>.
     /// </param>
     /// <returns>An Average(property) aggregation.</returns>
     public static Aggregation Average(string property, string alias = "") =>
