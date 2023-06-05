@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -88,6 +88,14 @@ namespace Google.Cloud.BigQuery.V2
         public string NullMarker { get; set; }
 
         /// <summary>
+        /// The character encoding of the data. The default value is UTF-8. BigQuery decodes the data after the
+        /// raw, binary data has been split using the values of the <see cref="Quote"/> and <see cref="FieldDelimiter"/>
+        /// properties.
+        /// See https://cloud.google.com/bigquery/docs/reference/rest/v2/Job#JobConfigurationLoad.FIELDS.encoding for more details.
+        /// </summary>
+        public string Encoding { get; set; }
+
+        /// <summary>
         /// The time partitioning to apply, if any. See <see cref="TimePartition"/> to create instances of <see cref="TimePartitioning"/>.
         /// </summary>
         public TimePartitioning TimePartitioning { get; set; }
@@ -167,7 +175,10 @@ namespace Google.Cloud.BigQuery.V2
             {
                 loadRequest.SchemaUpdateOptions = new List<string>(EnumMap.ToApiValues(DestinationSchemaUpdateOptions.Value));
             }
-            // TODO: Encoding? Only UTF-8 and ISO-8859-1 are supported... unsure what to do with this.
+            if (Encoding != null)
+            {
+                loadRequest.Encoding = Encoding;
+            }
         }
     }
 }
