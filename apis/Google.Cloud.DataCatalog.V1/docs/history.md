@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.4.0, released 2023-06-05
+
+### New features
+
+- Add support for entries associated with Spanner and ClougBigTable ([commit 065b49c](https://github.com/googleapis/google-cloud-dotnet/commit/065b49c46d85cf2a0bbb517f32274669d7eac4d0))
+- Expand SearchCatalogResponse with totalSize ([commit 065b49c](https://github.com/googleapis/google-cloud-dotnet/commit/065b49c46d85cf2a0bbb517f32274669d7eac4d0))
+- Modify documentation for FQN support ([commit 065b49c](https://github.com/googleapis/google-cloud-dotnet/commit/065b49c46d85cf2a0bbb517f32274669d7eac4d0))
+- Extend ImportApiRequest with jobId parameter ([commit 065b49c](https://github.com/googleapis/google-cloud-dotnet/commit/065b49c46d85cf2a0bbb517f32274669d7eac4d0))
+
 ## Version 2.3.0, released 2023-03-20
 
 ### New features
