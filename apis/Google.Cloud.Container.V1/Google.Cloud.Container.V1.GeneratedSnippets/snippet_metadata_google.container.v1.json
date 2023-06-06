@@ -8223,6 +8223,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "container_v1_generated_ClusterManager_CheckAutopilotCompatibility_sync",
+      "title": "CheckAutopilotCompatibilityRequestObject",
+      "description": "Snippet for CheckAutopilotCompatibility",
+      "file": "ClusterManagerClient.CheckAutopilotCompatibilityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckAutopilotCompatibility",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CheckAutopilotCompatibility",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.CheckAutopilotCompatibilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Container.V1.CheckAutopilotCompatibilityResponse",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "CheckAutopilotCompatibility",
+          "fullName": "google.container.v1.ClusterManager.CheckAutopilotCompatibility",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "container_v1_generated_ClusterManager_CheckAutopilotCompatibility_async",
+      "title": "CheckAutopilotCompatibilityRequestObjectAsync",
+      "description": "Snippet for CheckAutopilotCompatibilityAsync",
+      "file": "ClusterManagerClient.CheckAutopilotCompatibilityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckAutopilotCompatibilityAsync",
+        "fullName": "Google.Cloud.Container.V1.ClusterManagerClient.CheckAutopilotCompatibilityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Container.V1.CheckAutopilotCompatibilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Container.V1.CheckAutopilotCompatibilityResponse>",
+        "client": {
+          "shortName": "ClusterManagerClient",
+          "fullName": "Google.Cloud.Container.V1.ClusterManagerClient"
+        },
+        "method": {
+          "shortName": "CheckAutopilotCompatibility",
+          "fullName": "google.container.v1.ClusterManager.CheckAutopilotCompatibility",
+          "service": {
+            "shortName": "ClusterManager",
+            "fullName": "google.container.v1.ClusterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

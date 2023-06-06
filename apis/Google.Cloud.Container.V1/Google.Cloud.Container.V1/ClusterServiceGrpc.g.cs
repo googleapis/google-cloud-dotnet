@@ -149,6 +149,10 @@ namespace Google.Cloud.Container.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest> __Marshaller_google_container_v1_ListUsableSubnetworksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse> __Marshaller_google_container_v1_ListUsableSubnetworksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityRequest> __Marshaller_google_container_v1_CheckAutopilotCompatibilityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityResponse> __Marshaller_google_container_v1_CheckAutopilotCompatibilityResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Container.V1.ListClustersRequest, global::Google.Cloud.Container.V1.ListClustersResponse> __Method_ListClusters = new grpc::Method<global::Google.Cloud.Container.V1.ListClustersRequest, global::Google.Cloud.Container.V1.ListClustersResponse>(
@@ -413,6 +417,14 @@ namespace Google.Cloud.Container.V1 {
         "ListUsableSubnetworks",
         __Marshaller_google_container_v1_ListUsableSubnetworksRequest,
         __Marshaller_google_container_v1_ListUsableSubnetworksResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityRequest, global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityResponse> __Method_CheckAutopilotCompatibility = new grpc::Method<global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityRequest, global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CheckAutopilotCompatibility",
+        __Marshaller_google_container_v1_CheckAutopilotCompatibilityRequest,
+        __Marshaller_google_container_v1_CheckAutopilotCompatibilityResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -850,6 +862,19 @@ namespace Google.Cloud.Container.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse> ListUsableSubnetworks(global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Checks the cluster compatibility with Autopilot mode, and returns a list of
+      /// compatibility issues.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityResponse> CheckAutopilotCompatibility(global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2603,6 +2628,58 @@ namespace Google.Cloud.Container.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListUsableSubnetworks, null, options, request);
       }
+      /// <summary>
+      /// Checks the cluster compatibility with Autopilot mode, and returns a list of
+      /// compatibility issues.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityResponse CheckAutopilotCompatibility(global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CheckAutopilotCompatibility(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Checks the cluster compatibility with Autopilot mode, and returns a list of
+      /// compatibility issues.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityResponse CheckAutopilotCompatibility(global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CheckAutopilotCompatibility, null, options, request);
+      }
+      /// <summary>
+      /// Checks the cluster compatibility with Autopilot mode, and returns a list of
+      /// compatibility issues.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityResponse> CheckAutopilotCompatibilityAsync(global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CheckAutopilotCompatibilityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Checks the cluster compatibility with Autopilot mode, and returns a list of
+      /// compatibility issues.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityResponse> CheckAutopilotCompatibilityAsync(global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CheckAutopilotCompatibility, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ClusterManagerClient NewInstance(ClientBaseConfiguration configuration)
@@ -2649,7 +2726,8 @@ namespace Google.Cloud.Container.V1 {
           .AddMethod(__Method_SetNodePoolSize, serviceImpl.SetNodePoolSize)
           .AddMethod(__Method_SetNetworkPolicy, serviceImpl.SetNetworkPolicy)
           .AddMethod(__Method_SetMaintenancePolicy, serviceImpl.SetMaintenancePolicy)
-          .AddMethod(__Method_ListUsableSubnetworks, serviceImpl.ListUsableSubnetworks).Build();
+          .AddMethod(__Method_ListUsableSubnetworks, serviceImpl.ListUsableSubnetworks)
+          .AddMethod(__Method_CheckAutopilotCompatibility, serviceImpl.CheckAutopilotCompatibility).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2692,6 +2770,7 @@ namespace Google.Cloud.Container.V1 {
       serviceBinder.AddMethod(__Method_SetNetworkPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetNetworkPolicyRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetNetworkPolicy));
       serviceBinder.AddMethod(__Method_SetMaintenancePolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.SetMaintenancePolicy));
       serviceBinder.AddMethod(__Method_ListUsableSubnetworks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.ListUsableSubnetworksRequest, global::Google.Cloud.Container.V1.ListUsableSubnetworksResponse>(serviceImpl.ListUsableSubnetworks));
+      serviceBinder.AddMethod(__Method_CheckAutopilotCompatibility, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityRequest, global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityResponse>(serviceImpl.CheckAutopilotCompatibility));
     }
 
   }

@@ -2692,5 +2692,32 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for CheckAutopilotCompatibility</summary>
+        public void CheckAutopilotCompatibilityRequestObject()
+        {
+            // Snippet: CheckAutopilotCompatibility(CheckAutopilotCompatibilityRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            CheckAutopilotCompatibilityRequest request = new CheckAutopilotCompatibilityRequest { Name = "", };
+            // Make the request
+            CheckAutopilotCompatibilityResponse response = clusterManagerClient.CheckAutopilotCompatibility(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckAutopilotCompatibilityAsync</summary>
+        public async Task CheckAutopilotCompatibilityRequestObjectAsync()
+        {
+            // Snippet: CheckAutopilotCompatibilityAsync(CheckAutopilotCompatibilityRequest, CallSettings)
+            // Additional: CheckAutopilotCompatibilityAsync(CheckAutopilotCompatibilityRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            CheckAutopilotCompatibilityRequest request = new CheckAutopilotCompatibilityRequest { Name = "", };
+            // Make the request
+            CheckAutopilotCompatibilityResponse response = await clusterManagerClient.CheckAutopilotCompatibilityAsync(request);
+            // End snippet
+        }
     }
 }
