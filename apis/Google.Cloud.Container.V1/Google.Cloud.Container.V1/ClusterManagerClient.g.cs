@@ -79,6 +79,7 @@ namespace Google.Cloud.Container.V1
             SetNetworkPolicySettings = existing.SetNetworkPolicySettings;
             SetMaintenancePolicySettings = existing.SetMaintenancePolicySettings;
             ListUsableSubnetworksSettings = existing.ListUsableSubnetworksSettings;
+            CheckAutopilotCompatibilitySettings = existing.CheckAutopilotCompatibilitySettings;
             OnCopy(existing);
         }
 
@@ -565,6 +566,19 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListUsableSubnetworksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ClusterManagerClient.CheckAutopilotCompatibility</c> and
+        /// <c>ClusterManagerClient.CheckAutopilotCompatibilityAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CheckAutopilotCompatibilitySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ClusterManagerSettings"/> object.</returns>
@@ -5188,6 +5202,36 @@ namespace Google.Cloud.Container.V1
         /// <returns>A pageable asynchronous sequence of <see cref="UsableSubnetwork"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<ListUsableSubnetworksResponse, UsableSubnetwork> ListUsableSubnetworksAsync(ListUsableSubnetworksRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Checks the cluster compatibility with Autopilot mode, and returns a list of
+        /// compatibility issues.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CheckAutopilotCompatibilityResponse CheckAutopilotCompatibility(CheckAutopilotCompatibilityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Checks the cluster compatibility with Autopilot mode, and returns a list of
+        /// compatibility issues.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CheckAutopilotCompatibilityResponse> CheckAutopilotCompatibilityAsync(CheckAutopilotCompatibilityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Checks the cluster compatibility with Autopilot mode, and returns a list of
+        /// compatibility issues.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CheckAutopilotCompatibilityResponse> CheckAutopilotCompatibilityAsync(CheckAutopilotCompatibilityRequest request, st::CancellationToken cancellationToken) =>
+            CheckAutopilotCompatibilityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ClusterManager client wrapper implementation, for convenient use.</summary>
@@ -5261,6 +5305,8 @@ namespace Google.Cloud.Container.V1
         private readonly gaxgrpc::ApiCall<SetMaintenancePolicyRequest, Operation> _callSetMaintenancePolicy;
 
         private readonly gaxgrpc::ApiCall<ListUsableSubnetworksRequest, ListUsableSubnetworksResponse> _callListUsableSubnetworks;
+
+        private readonly gaxgrpc::ApiCall<CheckAutopilotCompatibilityRequest, CheckAutopilotCompatibilityResponse> _callCheckAutopilotCompatibility;
 
         /// <summary>
         /// Constructs a client wrapper for the ClusterManager service, with the specified gRPC client and settings.
@@ -5374,6 +5420,9 @@ namespace Google.Cloud.Container.V1
             _callListUsableSubnetworks = clientHelper.BuildApiCall<ListUsableSubnetworksRequest, ListUsableSubnetworksResponse>("ListUsableSubnetworks", grpcClient.ListUsableSubnetworksAsync, grpcClient.ListUsableSubnetworks, effectiveSettings.ListUsableSubnetworksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListUsableSubnetworks);
             Modify_ListUsableSubnetworksApiCall(ref _callListUsableSubnetworks);
+            _callCheckAutopilotCompatibility = clientHelper.BuildApiCall<CheckAutopilotCompatibilityRequest, CheckAutopilotCompatibilityResponse>("CheckAutopilotCompatibility", grpcClient.CheckAutopilotCompatibilityAsync, grpcClient.CheckAutopilotCompatibility, effectiveSettings.CheckAutopilotCompatibilitySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCheckAutopilotCompatibility);
+            Modify_CheckAutopilotCompatibilityApiCall(ref _callCheckAutopilotCompatibility);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5445,6 +5494,8 @@ namespace Google.Cloud.Container.V1
 
         partial void Modify_ListUsableSubnetworksApiCall(ref gaxgrpc::ApiCall<ListUsableSubnetworksRequest, ListUsableSubnetworksResponse> call);
 
+        partial void Modify_CheckAutopilotCompatibilityApiCall(ref gaxgrpc::ApiCall<CheckAutopilotCompatibilityRequest, CheckAutopilotCompatibilityResponse> call);
+
         partial void OnConstruction(ClusterManager.ClusterManagerClient grpcClient, ClusterManagerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ClusterManager client</summary>
@@ -5515,6 +5566,8 @@ namespace Google.Cloud.Container.V1
         partial void Modify_SetMaintenancePolicyRequest(ref SetMaintenancePolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListUsableSubnetworksRequest(ref ListUsableSubnetworksRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CheckAutopilotCompatibilityRequest(ref CheckAutopilotCompatibilityRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists all clusters owned by a project in either the specified zone or all
@@ -6376,6 +6429,32 @@ namespace Google.Cloud.Container.V1
         {
             Modify_ListUsableSubnetworksRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListUsableSubnetworksRequest, ListUsableSubnetworksResponse, UsableSubnetwork>(_callListUsableSubnetworks, request, callSettings);
+        }
+
+        /// <summary>
+        /// Checks the cluster compatibility with Autopilot mode, and returns a list of
+        /// compatibility issues.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CheckAutopilotCompatibilityResponse CheckAutopilotCompatibility(CheckAutopilotCompatibilityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CheckAutopilotCompatibilityRequest(ref request, ref callSettings);
+            return _callCheckAutopilotCompatibility.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Checks the cluster compatibility with Autopilot mode, and returns a list of
+        /// compatibility issues.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CheckAutopilotCompatibilityResponse> CheckAutopilotCompatibilityAsync(CheckAutopilotCompatibilityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CheckAutopilotCompatibilityRequest(ref request, ref callSettings);
+            return _callCheckAutopilotCompatibility.Async(request, callSettings);
         }
     }
 
