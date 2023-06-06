@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
-using System.Collections.Generic;
 using Xunit;
 using static Google.Cloud.Datastore.V1.AggregationQuery.Types;
+using static Google.Cloud.Datastore.V1.AggregationQuery.Types.Aggregation.Types;
 using static Google.Cloud.Datastore.V1.Aggregations;
 
 namespace Google.Cloud.Datastore.V1.Tests;
@@ -23,30 +23,16 @@ public class AggregationsTest
     [Fact]
     public void AggregationTest()
     {
-        var avgAgg = Average("age");
-        var sumAgg = Sum("height");
-        List<Aggregation> aggregations = new List<Aggregation> { avgAgg, sumAgg };
-
-        AggregationQuery aggQuery = new AggregationQuery()
-        {
-            Aggregations = { Average("age"), Sum("height") }
-        };       
-
-        Assert.Equal(aggregations, aggQuery.Aggregations);
+        Assert.Equal(new Aggregation { Count = new Count() }, Count());
+        Assert.Equal(new Aggregation { Sum = new Sum { Property = new PropertyReference("age") }}, Sum("age"));
+        Assert.Equal(new Aggregation { Avg = new Avg { Property = new PropertyReference("age") }}, Average("age"));        
     }
 
     [Fact]
     public void AggregationTest_WithAlias()
     {
-        var avgAgg = Average("age", "Avg_age");
-        var sumAgg = Sum("height", "Sum_height");
-        List<Aggregation> aggregations = new List<Aggregation> { avgAgg, sumAgg };
-
-        AggregationQuery aggQuery = new AggregationQuery()
-        {
-            Aggregations = { Average("age", "Avg_age"), Sum("height", "Sum_height") }
-        };
-
-        Assert.Equal(aggregations, aggQuery.Aggregations);
+        Assert.Equal(new Aggregation { Count = new Count(), Alias = "count" }, Count("count"));
+        Assert.Equal(new Aggregation { Sum = new Sum { Property = new PropertyReference("age") }, Alias = "sum_alias" }, Sum("age", "sum_alias"));
+        Assert.Equal(new Aggregation { Avg = new Avg { Property = new PropertyReference("age") }, Alias = "age_alias" }, Average("age", "age_alias"));
     }
 }
