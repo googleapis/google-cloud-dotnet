@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,6 +27,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         public IReadOnlyList<string> ColumnNames => new List<string> { "OrderID", "OrderDate", "Product" }.AsReadOnly();
 
+        // We don't modify this table so it's fine to have this value here.
+        public long TableRowCount { get; private set; }
+
         public PartitionedReadTableFixture() : base("PartitionedRead")
         {
         }
@@ -42,39 +45,42 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         protected override void PopulateTable(bool fresh)
         {
-            // Assume old data is still valid
-            if (!fresh)
-            {
-                return;
-            }
-            const int PartitionSize = 5000;
+            using var connection = GetConnection();
+            connection.Open();
 
-            using (var connection = GetConnection())
+            // Assume old data is still valid
+            if (fresh)
             {
-                connection.Open();
+                PopulateTableImpl();
+            }
+
+            using var cmd = connection.CreateSelectCommand($"SELECT COUNT(*) FROM {TableName}");
+            TableRowCount = (long) cmd.ExecuteScalar();
+
+            void PopulateTableImpl()
+            {
+                const int PartitionSize = 5000;
+
                 for (var i = 0; i < NumPartitionReadRows / PartitionSize; i++)
                 {
                     RetryHelpers.ExecuteWithRetry(() =>
                     {
-                        using (var tx = connection.BeginTransaction())
+                        using var tx = connection.BeginTransaction();
+                        using var cmd = connection.CreateInsertCommand(TableName);
+
+                        var idParameter = cmd.Parameters.Add("OrderId", SpannerDbType.String);
+                        var dateParameter = cmd.Parameters.Add("OrderDate", SpannerDbType.Timestamp);
+                        var productParameter = cmd.Parameters.Add("Product", SpannerDbType.String);
+                        cmd.Transaction = tx;
+                        DateTime now = DateTime.UtcNow;
+                        for (var x = 1; x < PartitionSize; x++)
                         {
-                            using (var cmd = connection.CreateInsertCommand(TableName))
-                            {
-                                var idParameter = cmd.Parameters.Add("OrderId", SpannerDbType.String);
-                                var dateParameter = cmd.Parameters.Add("OrderDate", SpannerDbType.Timestamp);
-                                var productParameter = cmd.Parameters.Add("Product", SpannerDbType.String);
-                                cmd.Transaction = tx;
-                                DateTime now = DateTime.UtcNow;
-                                for (var x = 1; x < PartitionSize; x++)
-                                {
-                                    idParameter.Value = IdGenerator.FromGuid();
-                                    dateParameter.Value = now.AddDays(-x);
-                                    productParameter.Value = $"Widget#{x}";
-                                    cmd.ExecuteNonQuery();
-                                }
-                                tx.Commit();
-                            }
+                            idParameter.Value = IdGenerator.FromGuid();
+                            dateParameter.Value = now.AddDays(-x);
+                            productParameter.Value = $"Widget#{x}";
+                            cmd.ExecuteNonQuery();
                         }
+                        tx.Commit();
                     });
                 }
             }
