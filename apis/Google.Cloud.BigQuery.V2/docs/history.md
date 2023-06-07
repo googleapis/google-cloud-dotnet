@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.4.0, released 2023-06-07
+
+### New features
+
+- Add support for encoding in BigQuery load jobs ([commit a1db93c](https://github.com/googleapis/google-cloud-dotnet/commit/a1db93c7a66590b3365869ccd71bfd02985b6576))
+
 ## Version 3.3.0, released 2023-04-19
 
 ### New features
