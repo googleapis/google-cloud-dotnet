@@ -18,6 +18,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace Google.Cloud.Tools.ReleaseManager
@@ -36,19 +37,19 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             string id = args[0];
             var smokeTests = LoadSmokeTests(id);
             if (smokeTests.Count == 0)
             {
                 Console.WriteLine($"No smoke tests defined for {id}");
-                return;
+                return 0;
             }
 
             var assembly = PublishAndLoadAssembly(id);
             var templateVariables = CreateTemplateVariables();
-            RunTests(smokeTests, assembly, templateVariables);
+            return RunTests(smokeTests, assembly, templateVariables);
         }
 
         private List<SmokeTest> LoadSmokeTests(string id)
@@ -69,7 +70,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             return Assembly.LoadFrom(assemblyFile);
         }
 
-        private void RunTests(List<SmokeTest> tests, Assembly assembly, IReadOnlyDictionary<string, string> templateVariables)
+        private int RunTests(List<SmokeTest> tests, Assembly assembly, IReadOnlyDictionary<string, string> templateVariables)
         {
             var testOrTests = tests.Count == 1 ? "test" : "tests";
             Console.WriteLine($"Running {tests.Count} smoke {testOrTests}");
@@ -78,6 +79,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 test.Execute(assembly, templateVariables);
             }
+            return 0;
         }
 
         private static IReadOnlyDictionary<string, string> CreateTemplateVariables()

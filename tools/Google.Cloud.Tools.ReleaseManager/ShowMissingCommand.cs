@@ -30,7 +30,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             var catalog = ApiCatalog.Load();
             var root = DirectoryLayout.DetermineRootDirectory();
@@ -51,6 +51,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 Console.WriteLine($"{api.Directory} => {api.DeriveCSharpNamespace()}");
             }
+            return 0;
         }
 
         private static Func<ApiIndex.V1.Api, bool> BuildStabilityFilter(string minStability) => minStability switch

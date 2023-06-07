@@ -28,7 +28,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             var catalog = ApiCatalog.Load();
             var apiNames = catalog.CreateIdHashSet();
@@ -45,7 +45,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 // Don't even bother checking if we don't have any updates.
                 if (apisToUpdate.Count == 0)
                 {
-                    return;
+                    return 0;
                 }
             }
 
@@ -67,6 +67,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 File.WriteAllText(ApiCatalog.CatalogPath, formatted);
                 Console.WriteLine("Updated apis.json");
             }
+            return 0;
         }
 
         private static List<ApiMetadata> FindApisToUpdateFromPreviousCommit(ApiCatalog catalog)

@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             Console.WriteLine($"Lagging packages (package ID, current version, date range of current version prerelease series):");
             var root = DirectoryLayout.DetermineRootDirectory();
@@ -43,6 +43,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                     MaybeShowLagging(allTags, api);
                 }
             }
+            return 0;
         }
 
         private static void MaybeShowLagging(List<Tag> allTags, ApiMetadata api)

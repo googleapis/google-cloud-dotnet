@@ -30,7 +30,6 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private readonly int _minArgs;
         private readonly int _maxArgs;
-        private bool _requireExactArguments { get; }
 
         public string Description { get; }
 
@@ -52,7 +51,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        public void Execute(string[] args)
+        public int Execute(string[] args)
         {
             if (args.Length < _minArgs || args.Length > _maxArgs)
             {
@@ -60,7 +59,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                     ? $"{Command} does not accept additional arguments"
                     : $"{Command} expected arguments: {ExpectedArguments}");
             }
-            ExecuteImpl(args);
+            return ExecuteImpl(args);
         }
 
         /// <summary>
@@ -68,7 +67,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// </summary>
         /// <param name="args">The command line arguments other than the command name.
         /// This will have been validated to have the expected number of arguments.</param>
-        protected abstract void ExecuteImpl(string[] args);
+        protected abstract int ExecuteImpl(string[] args);
 
         protected List<ApiVersionPair> FindChangedVersions()
         {

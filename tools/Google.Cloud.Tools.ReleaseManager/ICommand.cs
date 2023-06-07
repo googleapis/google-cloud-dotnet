@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -40,6 +40,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// will be caught and displayed in a brief form. Other exceptions result in a full stack trace.
         /// </summary>
         /// <param name="args">The command line parameters, excluding the command name.</param>
-        void Execute(string[] args);
+        /// <returns>The exit code for the process.</returns>
+        int Execute(string[] args);
     }
 }

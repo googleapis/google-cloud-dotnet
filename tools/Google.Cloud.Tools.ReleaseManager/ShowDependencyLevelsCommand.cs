@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ internal class ShowDependencyLevelsCommand : CommandBase
     {
     }
 
-    protected override void ExecuteImpl(string[] args)
+    protected override int ExecuteImpl(string[] args)
     {
         var catalog = ApiCatalog.Load();
 
@@ -57,7 +57,7 @@ internal class ShowDependencyLevelsCommand : CommandBase
             {
                 Console.WriteLine($"ERROR: {apiToDependencies.Count} dependencies still to resolve, but nothing left with no dependencies:");
                 Console.WriteLine(string.Join(", ", apiToDependencies.Keys));
-                return;
+                return 0;
             }
             
             Console.WriteLine($"Level {level}:");
@@ -98,5 +98,6 @@ internal class ShowDependencyLevelsCommand : CommandBase
         {
             Console.WriteLine($"  {api.Id}");
         }
+        return 0;
     }
 }

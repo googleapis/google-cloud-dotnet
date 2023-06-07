@@ -31,7 +31,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         public string ExpectedArguments => "[id [id...]]";
 
-        public void Execute(string[] args)
+        public int Execute(string[] args)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             var catalog = ApiCatalog.Load();
@@ -69,6 +69,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                     }
                 }
             }
+            return 0;
         }
 
         // Visible for testing

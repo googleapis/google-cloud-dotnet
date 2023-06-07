@@ -34,7 +34,7 @@ public class AddPullRequestCommentCommand : CommandBase
     {
     }
 
-    protected override void ExecuteImpl(string[] args)
+    protected override int ExecuteImpl(string[] args)
     {
         string file = args[0];
         int pr = int.Parse(args[1]);
@@ -47,6 +47,7 @@ public class AddPullRequestCommentCommand : CommandBase
         string comment = ReplaceEscapeSequences(File.ReadAllText(file));
 
         client.Issue.Comment.Create(RepositoryOwner, RepositoryName, pr, comment).GetAwaiter().GetResult();
+        return 0;
     }
 
     private static string ReplaceEscapeSequences(string text)

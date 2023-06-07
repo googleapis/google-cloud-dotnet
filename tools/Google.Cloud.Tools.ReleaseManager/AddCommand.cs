@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Tools.ApiIndex.V1;
 using Google.Cloud.Tools.Common;
 using Google.Protobuf;
 using Newtonsoft.Json;
@@ -20,7 +19,6 @@ using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using YamlDotNet.Serialization;
@@ -37,7 +35,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             string id = args[0];
 
@@ -127,6 +125,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             File.WriteAllText(ApiCatalog.CatalogPath, catalog.FormatJson());
             Console.WriteLine($"Added {id} to the API catalog with the following configuration:");
             Console.WriteLine(api.Json.ToString(Formatting.Indented));
+            return 0;
         }
 
         private static Api.Service ParseServiceConfigYaml(string path)
