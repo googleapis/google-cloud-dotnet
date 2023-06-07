@@ -1,0 +1,60 @@
+[
+  {
+    "method": "ListLocations",
+    "client": "MigrationCenterClient",
+    "clientNavigationProperty": "LocationsClient",
+    "arguments": {
+      "request": {
+        "name": "projects/${PROJECT_ID}"
+      }
+    }
+  },
+  {
+    "skip": "b/286188831",
+    "method": "ListReportConfigs",
+    "client": "MigrationCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "skip": "b/286188831",
+    "method": "ListSources",
+    "client": "MigrationCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "skip": "b/286188831",
+    "method": "ListPreferenceSets",
+    "client": "MigrationCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "skip": "b/286188831",
+    "method": "ListGroups",
+    "client": "MigrationCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "skip": "b/286188831",
+    "method": "ListAssets",
+    "client": "MigrationCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "skip": "b/286188831",
+    "method": "ListImportJobs",
+    "client": "MigrationCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  }
+]
