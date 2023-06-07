@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             string configFile = args[0];
             var json = File.ReadAllText(configFile);
@@ -65,6 +65,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 // Note: This takes into account the dry-run flag.
                 proposal.Execute(config);
             }
+            return 0;
         }
     }
 }

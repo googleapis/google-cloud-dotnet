@@ -42,7 +42,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             string id = args[0];
             var assembly = PublishAndLoadAssembly(id);
@@ -76,6 +76,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                     Console.WriteLine("Written suggested smoke tests to smoketests.json. Please review the tests carefully before committing.");
                 }
             }
+            return 0;
         }
 
         private Assembly PublishAndLoadAssembly(string id)

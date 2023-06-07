@@ -40,9 +40,9 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args) => InternalExecute();
+        protected override int ExecuteImpl(string[] args) => InternalExecute();
 
-        internal void InternalExecute()
+        internal int InternalExecute()
         {
             string gitHubToken = Environment.GetEnvironmentVariable(AccessTokenEnvironmentVariable);
             if (string.IsNullOrEmpty(gitHubToken))
@@ -62,6 +62,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 string branch = PushBranch(repo, upstream, gitHubToken);
                 CreatePullRequest(repo, gitHubClient, branch);
             }
+            return 0;
         }
 
         private GitHubClient CreateGitHubClient(string gitHubToken) =>

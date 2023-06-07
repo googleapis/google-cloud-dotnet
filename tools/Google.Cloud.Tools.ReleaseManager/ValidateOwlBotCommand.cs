@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             string googleapisGen = args[0];
             ApiCatalog catalog = ApiCatalog.Load();
@@ -45,6 +45,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 Console.WriteLine($"Ungenerated API: {api.Id}");
             }
             Console.WriteLine($"Total OwlBot APIs: {apis.Count}; ungenerated APIs: {ungenerated.Count}");
+            return 0;
         }
 
         private bool IsGenerated(ApiMetadata api, string googleapisGen)

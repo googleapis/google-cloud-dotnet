@@ -25,7 +25,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             string id = args[0];
 
@@ -51,6 +51,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 var version = apiToIncrement.StructuredVersion.AfterIncrement().ToString();
                 new SetVersionCommand().InternalExecute(apiToIncrement.Id, version, quiet: false);
             }
+            return 0;
         }
     }
 }

@@ -31,7 +31,7 @@ public class CreateClientsCommand : CommandBase
     {
     }
 
-    protected override void ExecuteImpl(string[] args)
+    protected override int ExecuteImpl(string[] args)
     {
         string id = args[0];
         var catalog = ApiCatalog.Load();
@@ -42,11 +42,12 @@ public class CreateClientsCommand : CommandBase
         if (api.Generator != GeneratorType.Micro)
         {
             Console.WriteLine($"{id} is not a GAPIC-generated API; skipping client creation test.");
-            return;
+            return 0;
         }
 
         var assembly = PublishAndLoadAssembly(id);
         CreateClients(assembly, id);
+        return 0;
     }
 
     // Note: a lot of code from here on is copied/modified from SmokeTest and SuggestSmokeTestsCommand.

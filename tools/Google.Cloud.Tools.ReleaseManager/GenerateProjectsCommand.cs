@@ -145,7 +145,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             ValidateCommonHiddenProductionDependencies();
             var root = DirectoryLayout.DetermineRootDirectory();
@@ -167,6 +167,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 GenerateOwlBotConfiguration(path, api);
                 GenerateMetadataFile(path, api);
             }
+            return 0;
         }
 
         /// <summary>
