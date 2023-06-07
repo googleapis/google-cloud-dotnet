@@ -75,9 +75,34 @@ namespace Google.Cloud.Tools.ReleaseManager
             var testOrTests = tests.Count == 1 ? "test" : "tests";
             Console.WriteLine($"Running {tests.Count} smoke {testOrTests}");
 
+            var skipped = new List<string>();
+            var failed = new List<string>();
+
             foreach (var test in tests)
             {
-                test.Execute(assembly, templateVariables);
+                try
+                {
+                    test.Execute(assembly, templateVariables);
+                    if (test.Skip is string)
+                    {
+                        skipped.Add($"{test.Client}.{test.Method}");
+                    }
+                }
+                catch (Exception e)
+                {
+                    failed.Add($"{test.Client}.{test.Method}");
+                    Console.WriteLine($"{test.Client}.{test.Method} failed: {e.GetType().Name} {e.Message}");
+                }
+            }
+            Console.WriteLine($"Passed: {tests.Count - skipped.Count - failed.Count}");
+            if (skipped.Any())
+            {
+                Console.WriteLine($"Skipped: {skipped.Count} ({string.Join(", ", skipped)})");
+            }
+            if (failed.Any())
+            {
+                Console.WriteLine($"Failed: {failed.Count} ({string.Join(", ", failed)})");
+                return 1;
             }
             return 0;
         }
