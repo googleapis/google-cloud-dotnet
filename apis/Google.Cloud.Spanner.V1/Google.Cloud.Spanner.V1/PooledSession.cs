@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -224,6 +224,34 @@ namespace Google.Cloud.Spanner.V1
                 // back as part of releasing the session. (We don't block on the rollback happening though.)
                 ByteString transactionToRollback = TransactionMode == ModeOneofCase.ReadWrite && !IsCommittedOrRolledBack() ? TransactionId : null;
                 _pool.Release(AfterReset(), transactionToRollback, forceDelete || ServerExpired || ShouldBeEvicted);
+            }
+            else
+            {
+                // Log?
+            }
+        }
+
+        /// <summary>
+        /// Detaches this session from the session pool from which it was acquired, so that the session pool
+        /// stops tracking this session and counting it as active.
+        /// This method should only be called once per instance; subsequent calls are ignored.
+        /// No other methods can be called after this.
+        /// </summary>
+        /// <remarks>
+        /// This method should be called only for sessions that are meant to be explicitly shared across processes.
+        /// Note that we don't attempt to rollback a transaction that is being detached, or attempt to delete the session,
+        /// under the assumption that it will be reused across processes.
+        /// If there's a process capable of knowing when all other processes are done using the session, then that process could call
+        /// <see cref="SessionPool.CreateDetachedSession(SessionName, ByteString, ModeOneofCase)"/> (or an overload) to create an instance
+        /// of <see cref="PooledSession"/> representing the shared transaction and then call <see cref="ReleaseToPool(bool)"/> passing true
+        /// to force session deletion and clean up resources.
+        /// Else, the application can rely on Spaner service garbage collection to clean up this session once it becomes stale.
+        /// </remarks>
+        public void DetachFromPool()
+        {
+            if (MarkAsDisposed())
+            {
+                _pool.Detach(AfterReset());
             }
             else
             {

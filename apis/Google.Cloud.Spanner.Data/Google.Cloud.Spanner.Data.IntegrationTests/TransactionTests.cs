@@ -87,6 +87,19 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
+        public async Task DetachOnDisposeTransactionIsDetached()
+        {
+            using var connection = new SpannerConnection(_fixture.ConnectionString);
+            await connection.OpenAsync();
+
+            using var transaction = await connection.BeginTransactionAsync();
+            transaction.DisposeBehavior = DisposeBehavior.Detach;
+
+            // We are testing (through the CommonTestsDiagnostics attribute) that there
+            // are no active sessions or connections after we have disposed of both.
+        }
+
+        [Fact]
         public async Task DisposedTransactionDoesntLeak()
         {
             // This test ensures that a transaction that had neither commit nor rollback called does

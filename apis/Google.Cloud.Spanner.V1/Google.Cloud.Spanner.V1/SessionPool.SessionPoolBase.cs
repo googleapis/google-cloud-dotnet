@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,6 +33,8 @@ namespace Google.Cloud.Spanner.V1
             protected SessionPool Parent { get; }
             public abstract Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken);
             public abstract void Release(PooledSession session, ByteString transactionToRollback, bool deleteSession);
+            public abstract void Detach(PooledSession session);
+
             protected SessionPoolBase(SessionPool parent) => Parent = parent;
         }
     }
