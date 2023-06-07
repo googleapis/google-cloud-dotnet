@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -51,7 +51,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var pool = new FakeSessionPool();
             var session = PooledSession.FromSessionName(pool, new SessionName("project", "instance", "database", "session"));
 
-            var transaction = new SpannerTransaction(connection, TransactionMode.ReadWrite, session: session, timestampBound: null);
+            var transaction = new SpannerTransaction(connection, TransactionMode.ReadWrite, session: session, timestampBound: null, isRetriable: false);
             var command = new SpannerBatchCommand(transaction);
 
             Assert.Empty(command.Commands);
@@ -254,6 +254,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             public IClock Clock => SystemClock.Instance;
             public SessionPoolOptions Options { get; } = new SessionPoolOptions();
             public void Release(PooledSession session, ByteString transactionId, bool deleteSession) =>  throw new NotImplementedException();
+            public void Detach(PooledSession session) => throw new NotImplementedException();
 
             public Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
                 throw new NotImplementedException();

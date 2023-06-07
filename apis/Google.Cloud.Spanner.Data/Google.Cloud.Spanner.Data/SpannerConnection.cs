@@ -280,7 +280,7 @@ namespace Google.Cloud.Spanner.Data
             ByteString transactionIdBytes = ByteString.FromBase64(transactionId.Id);
             var session = _sessionPool.CreateDetachedSession(sessionName, transactionIdBytes, TransactionOptions.ModeOneofCase.ReadOnly);
             // This transaction is coming from another process potentially, so we don't auto close it.
-            return new SpannerTransaction(this, TransactionMode.ReadOnly, session, transactionId.TimestampBound)
+            return new SpannerTransaction(this, TransactionMode.ReadOnly, session, transactionId.TimestampBound, false)
             {
                 Shared = true,
                 DisposeBehavior = DisposeBehavior.Detach
@@ -863,7 +863,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     await OpenAsync(cancellationToken).ConfigureAwait(false);
                     var session = await AcquireSessionAsync(transactionOptions, cancellationToken).ConfigureAwait(false);
-                    return new SpannerTransaction(this, transactionMode, session, targetReadTimestamp);
+                    return new SpannerTransaction(this, transactionMode, session, targetReadTimestamp, false);
                 }, "SpannerConnection.BeginTransaction", Logger);
         }
 

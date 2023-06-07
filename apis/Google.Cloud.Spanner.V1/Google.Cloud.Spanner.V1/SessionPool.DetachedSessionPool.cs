@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -41,6 +41,11 @@ namespace Google.Cloud.Spanner.V1
                 {
                     Parent.DeleteSessionFireAndForget(session);
                 }
+            }
+
+            public override void Detach(PooledSession session)
+            {
+                // No-op: We are already in the detached session pool which doesn't keep track of sessions.
             }
 
             public override Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>

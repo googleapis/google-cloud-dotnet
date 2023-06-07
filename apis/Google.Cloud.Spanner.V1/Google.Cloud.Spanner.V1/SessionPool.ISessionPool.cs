@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,6 +30,14 @@ namespace Google.Cloud.Spanner.V1
             IClock Clock { get; }
             Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken);
             void Release(PooledSession session, ByteString transactionToRollback, bool deleteSession);
+            /// <summary>
+            /// Detaches the given session from the pool, meaning the pool stops tracking this session as active,
+            /// but does nothing else, in particular it doesn't return the session to the pool or attempts to delete it.
+            /// </summary>
+            /// <param name="session">The pooled session to be detached. Currently unusued by all <see cref="ISessionPool"/>
+            /// implementations, but that's just an implementation detail: the <see cref="TargetedSessionPool"/> does not
+            /// keep track of active <see cref="PooledSession"/> instances themselves, but only through counters.</param>
+            void Detach(PooledSession session);
             SessionPoolOptions Options { get; }
         }
     }
