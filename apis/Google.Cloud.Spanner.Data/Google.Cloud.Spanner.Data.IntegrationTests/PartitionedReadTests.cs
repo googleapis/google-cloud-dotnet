@@ -31,7 +31,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public PartitionedReadTests(PartitionedReadTableFixture fixture) =>
             _fixture = fixture;
 
-        [Theory, CombinatorialData]
+        [Theory(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/10492"), CombinatorialData]
         [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public async Task DistributedReadAsync(bool query, bool dataBoostEnabled)
         {
