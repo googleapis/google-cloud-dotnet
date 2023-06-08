@@ -2843,7 +2843,7 @@
       },
       "shortName": "logging",
       "serviceConfigFile": "logging_v2.yaml",
-      "restNumericEnums": true,
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.ManagedIdentities.V1",
@@ -4151,7 +4151,7 @@
         "Microsoft.Extensions.Configuration": "6.0.0",
         "Microsoft.Extensions.DependencyInjection": "6.0.0",
         "Xunit.Combinatorial": "1.4.1"
-      }
+      },
       "blockRelease": "https://github.com/googleapis/google-cloud-dotnet/issues/10492"
     },
     {
