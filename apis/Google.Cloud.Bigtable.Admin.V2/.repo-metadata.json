@@ -3,5 +3,6 @@
   "release_level": "stable",
   "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Bigtable.Admin.V2/latest",
   "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
   "api_shortname": "bigtableadmin"
 }

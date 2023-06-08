@@ -3,5 +3,6 @@
   "release_level": "stable",
   "client_documentation": "https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/latest",
   "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
   "api_shortname": "analyticsadmin"
 }
