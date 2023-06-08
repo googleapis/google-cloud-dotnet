@@ -1,0 +1,14 @@
+name: Check that apis.json is valid JSON
+
+on: [pull_request, push]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+        
+    - name: Validate API catalog
+      run: python -c 'import json; json.load(open("apis/apis.json", "r"))'
