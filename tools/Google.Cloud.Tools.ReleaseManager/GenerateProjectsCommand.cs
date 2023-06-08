@@ -578,7 +578,8 @@ api-name: {api.Id}
                 ["distribution_name"] = api.Id,
                 ["release_level"] = releaseLevel,
                 ["client_documentation"] = ApiMetadata.IsCloudPackage(api.Id) ? $"https://cloud.google.com/dotnet/docs/reference/{api.Id}/latest" : $"https://googleapis.dev/dotnet/{api.Id}/latest",
-                ["library_type"] = api.EffectiveMetadataType
+                ["library_type"] = api.EffectiveMetadataType,
+                ["language"] = "dotnet"
             };
             if (api.ShortName is object)
             {
