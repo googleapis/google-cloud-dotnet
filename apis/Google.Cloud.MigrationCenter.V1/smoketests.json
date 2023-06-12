@@ -10,7 +10,6 @@
     }
   },
   {
-    "skip": "b/286188831",
     "method": "ListReportConfigs",
     "client": "MigrationCenterClient",
     "arguments": {
@@ -18,7 +17,6 @@
     }
   },
   {
-    "skip": "b/286188831",
     "method": "ListSources",
     "client": "MigrationCenterClient",
     "arguments": {
@@ -26,7 +24,6 @@
     }
   },
   {
-    "skip": "b/286188831",
     "method": "ListPreferenceSets",
     "client": "MigrationCenterClient",
     "arguments": {
@@ -34,7 +31,6 @@
     }
   },
   {
-    "skip": "b/286188831",
     "method": "ListGroups",
     "client": "MigrationCenterClient",
     "arguments": {
@@ -42,7 +38,6 @@
     }
   },
   {
-    "skip": "b/286188831",
     "method": "ListAssets",
     "client": "MigrationCenterClient",
     "arguments": {
@@ -50,7 +45,6 @@
     }
   },
   {
-    "skip": "b/286188831",
     "method": "ListImportJobs",
     "client": "MigrationCenterClient",
     "arguments": {

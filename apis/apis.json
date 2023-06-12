@@ -3025,8 +3025,7 @@
       "protoPath": "google/cloud/migrationcenter/v1",
       "shortName": "migrationcenter",
       "serviceConfigFile": "migrationcenter_v1.yaml",
-      "restNumericEnums": true,
-      "blockRelease": "b/286188831"
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.Monitoring.V3",
