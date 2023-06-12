@@ -110,7 +110,7 @@
     },
     {
       "id": "Google.Cloud.AdvisoryNotifications.V1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Advisory Notifications",
       "productUrl": "https://cloud.google.com/advisory-notifications/docs/overview",
@@ -121,7 +121,10 @@
         "security",
         "privacy"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Api.Gax.Grpc": "4.4.0",
+        "Grpc.Core": "2.46.6"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/advisorynotifications/v1",
       "shortName": "advisorynotifications",
