@@ -121,7 +121,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The full name of the RestorePlan resource.
-    /// Format: projects/*/locations/*/restorePlans/*.
+    /// Format: `projects/*/locations/*/restorePlans/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -199,9 +199,10 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int BackupPlanFieldNumber = 6;
     private string backupPlan_ = "";
     /// <summary>
-    /// Required. Immutable. A reference to the [BackupPlan][google.cloud.gkebackup.v1.BackupPlan] from which Backups may be used as the
-    /// source for Restores created via this RestorePlan.
-    /// Format: projects/*/locations/*/backupPlans/*.
+    /// Required. Immutable. A reference to the
+    /// [BackupPlan][google.cloud.gkebackup.v1.BackupPlan] from which Backups may
+    /// be used as the source for Restores created via this RestorePlan. Format:
+    /// `projects/*/locations/*/backupPlans/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -216,13 +217,12 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int ClusterFieldNumber = 7;
     private string cluster_ = "";
     /// <summary>
-    /// Required. Immutable. The target cluster into which Restores created via this RestorePlan
-    /// will restore data. NOTE: the cluster's region must be the same as the
-    /// RestorePlan.
-    /// Valid formats:
+    /// Required. Immutable. The target cluster into which Restores created via
+    /// this RestorePlan will restore data. NOTE: the cluster's region must be the
+    /// same as the RestorePlan. Valid formats:
     ///
-    ///   - projects/*/locations/*/clusters/*
-    ///   - projects/*/zones/*/clusters/*
+    ///   - `projects/*/locations/*/clusters/*`
+    ///   - `projects/*/zones/*/clusters/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -266,8 +266,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int EtagFieldNumber = 10;
     private string etag_ = "";
     /// <summary>
-    /// Output only. `etag` is used for optimistic concurrency control as a way to help
-    /// prevent simultaneous updates of a restore from overwriting each other.
+    /// Output only. `etag` is used for optimistic concurrency control as a way to
+    /// help prevent simultaneous updates of a restore from overwriting each other.
     /// It is strongly suggested that systems make use of the `etag` in the
     /// read-modify-write cycle to perform restore updates in order to avoid
     /// race conditions: An `etag` is returned in the response to `GetRestorePlan`,

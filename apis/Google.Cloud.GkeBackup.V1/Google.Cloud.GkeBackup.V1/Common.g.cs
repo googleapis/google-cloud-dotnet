@@ -706,7 +706,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     private string gcpKmsEncryptionKey_ = "";
     /// <summary>
     /// Google Cloud KMS encryption key. Format:
-    /// projects/*/locations/*/keyRings/*/cryptoKeys/*
+    /// `projects/*/locations/*/keyRings/*/cryptoKeys/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -152,7 +152,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The full name of the VolumeBackup resource.
-    /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*.
+    /// Format: `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -215,8 +215,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int SourcePvcFieldNumber = 5;
     private global::Google.Cloud.GkeBackup.V1.NamespacedName sourcePvc_;
     /// <summary>
-    /// Output only. A reference to the source Kubernetes PVC from which this VolumeBackup
-    /// was created.
+    /// Output only. A reference to the source Kubernetes PVC from which this
+    /// VolumeBackup was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -231,7 +231,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int VolumeBackupHandleFieldNumber = 6;
     private string volumeBackupHandle_ = "";
     /// <summary>
-    /// Output only. A storage system-specific opaque handle to the underlying volume backup.
+    /// Output only. A storage system-specific opaque handle to the underlying
+    /// volume backup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -261,8 +262,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int StorageBytesFieldNumber = 8;
     private long storageBytes_;
     /// <summary>
-    /// Output only. The aggregate size of the underlying artifacts associated with this
-    /// VolumeBackup in the backup storage. This may change over time when
+    /// Output only. The aggregate size of the underlying artifacts associated with
+    /// this VolumeBackup in the backup storage. This may change over time when
     /// multiple backups of the same volume share the same backup storage
     /// location. In particular, this is likely to increase in size when
     /// the immediately preceding backup of the same volume is deleted.
@@ -280,7 +281,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int DiskSizeBytesFieldNumber = 9;
     private long diskSizeBytes_;
     /// <summary>
-    /// Output only. The minimum size of the disk to which this VolumeBackup can be restored.
+    /// Output only. The minimum size of the disk to which this VolumeBackup can be
+    /// restored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -326,8 +328,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int StateMessageFieldNumber = 12;
     private string stateMessage_ = "";
     /// <summary>
-    /// Output only. A human readable message explaining why the VolumeBackup is in its current
-    /// state.
+    /// Output only. A human readable message explaining why the VolumeBackup is in
+    /// its current state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -342,8 +344,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int EtagFieldNumber = 13;
     private string etag_ = "";
     /// <summary>
-    /// Output only. `etag` is used for optimistic concurrency control as a way to help
-    /// prevent simultaneous updates of a volume backup from overwriting each
+    /// Output only. `etag` is used for optimistic concurrency control as a way to
+    /// help prevent simultaneous updates of a volume backup from overwriting each
     /// other. It is strongly suggested that systems make use of the `etag` in the
     /// read-modify-write cycle to perform volume backup updates in order to avoid
     /// race conditions.
@@ -940,7 +942,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     private string name_ = "";
     /// <summary>
     /// Output only. Full name of the VolumeRestore resource.
-    /// Format: projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*.
+    /// Format: `projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1003,8 +1005,9 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int VolumeBackupFieldNumber = 5;
     private string volumeBackup_ = "";
     /// <summary>
-    /// Output only. The full name of the VolumeBackup from which the volume will be restored.
-    /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*.
+    /// Output only. The full name of the VolumeBackup from which the volume will
+    /// be restored. Format:
+    /// `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1034,8 +1037,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int VolumeHandleFieldNumber = 7;
     private string volumeHandle_ = "";
     /// <summary>
-    /// Output only. A storage system-specific opaque handler to the underlying volume created
-    /// for the target PVC from the volume backup.
+    /// Output only. A storage system-specific opaque handler to the underlying
+    /// volume created for the target PVC from the volume backup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1096,8 +1099,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int StateMessageFieldNumber = 11;
     private string stateMessage_ = "";
     /// <summary>
-    /// Output only. A human readable message explaining why the VolumeRestore is in its
-    /// current state.
+    /// Output only. A human readable message explaining why the VolumeRestore is
+    /// in its current state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1112,8 +1115,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int EtagFieldNumber = 12;
     private string etag_ = "";
     /// <summary>
-    /// Output only. `etag` is used for optimistic concurrency control as a way to help
-    /// prevent simultaneous updates of a volume restore from overwriting each
+    /// Output only. `etag` is used for optimistic concurrency control as a way to
+    /// help prevent simultaneous updates of a volume restore from overwriting each
     /// other. It is strongly suggested that systems make use of the `etag` in the
     /// read-modify-write cycle to perform volume restore updates in order to avoid
     /// race conditions.
