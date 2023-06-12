@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START alloydb_v1_generated_AlloyDBAdmin_GetCluster_sync]
+    // [START alloydb_v1_generated_AlloyDBAdmin_UpdateUser_sync]
     using Google.Cloud.AlloyDb.V1;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedAlloyDBAdminClientSnippets
     {
-        /// <summary>Snippet for GetCluster</summary>
+        /// <summary>Snippet for UpdateUser</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,19 +30,22 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GetClusterRequestObject()
+        public void UpdateUserRequestObject()
         {
             // Create client
             AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
             // Initialize request argument(s)
-            GetClusterRequest request = new GetClusterRequest
+            UpdateUserRequest request = new UpdateUserRequest
             {
-                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
-                View = ClusterView.Unspecified,
+                UpdateMask = new FieldMask(),
+                User = new User(),
+                RequestId = "",
+                ValidateOnly = false,
+                AllowMissing = false,
             };
             // Make the request
-            Cluster response = alloyDBAdminClient.GetCluster(request);
+            User response = alloyDBAdminClient.UpdateUser(request);
         }
     }
-    // [END alloydb_v1_generated_AlloyDBAdmin_GetCluster_sync]
+    // [END alloydb_v1_generated_AlloyDBAdmin_UpdateUser_sync]
 }

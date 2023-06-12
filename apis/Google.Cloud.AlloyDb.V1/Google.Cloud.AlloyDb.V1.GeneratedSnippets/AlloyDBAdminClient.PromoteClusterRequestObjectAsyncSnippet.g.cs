@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START alloydb_v1_generated_AlloyDBAdmin_GetCluster_async]
+    // [START alloydb_v1_generated_AlloyDBAdmin_PromoteCluster_async]
     using Google.Cloud.AlloyDb.V1;
+    using Google.LongRunning;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedAlloyDBAdminClientSnippets
     {
-        /// <summary>Snippet for GetClusterAsync</summary>
+        /// <summary>Snippet for PromoteClusterAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,19 +31,37 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GetClusterRequestObjectAsync()
+        public async Task PromoteClusterRequestObjectAsync()
         {
             // Create client
             AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
             // Initialize request argument(s)
-            GetClusterRequest request = new GetClusterRequest
+            PromoteClusterRequest request = new PromoteClusterRequest
             {
                 ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
-                View = ClusterView.Unspecified,
+                RequestId = "",
+                Etag = "",
+                ValidateOnly = false,
             };
             // Make the request
-            Cluster response = await alloyDBAdminClient.GetClusterAsync(request);
+            Operation<Cluster, OperationMetadata> response = await alloyDBAdminClient.PromoteClusterAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Cluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Cluster, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOncePromoteClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
+            }
         }
     }
-    // [END alloydb_v1_generated_AlloyDBAdmin_GetCluster_async]
+    // [END alloydb_v1_generated_AlloyDBAdmin_PromoteCluster_async]
 }
