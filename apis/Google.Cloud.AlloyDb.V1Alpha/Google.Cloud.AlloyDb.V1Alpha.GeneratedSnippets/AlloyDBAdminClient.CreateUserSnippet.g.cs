@@ -16,14 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START alloydb_v1alpha_generated_AlloyDBAdmin_GenerateClientCertificate_async]
+    // [START alloydb_v1alpha_generated_AlloyDBAdmin_CreateUser_sync_flattened]
     using Google.Cloud.AlloyDb.V1Alpha;
-    using Google.Protobuf.WellKnownTypes;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedAlloyDBAdminClientSnippets
     {
-        /// <summary>Snippet for GenerateClientCertificateAsync</summary>
+        /// <summary>Snippet for CreateUser</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,21 +29,17 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GenerateClientCertificateRequestObjectAsync()
+        public void CreateUser()
         {
             // Create client
-            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
             // Initialize request argument(s)
-            GenerateClientCertificateRequest request = new GenerateClientCertificateRequest
-            {
-                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
-                RequestId = "",
-                CertDuration = new Duration(),
-                PublicKey = "",
-            };
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            User user = new User();
+            string userId = "";
             // Make the request
-            GenerateClientCertificateResponse response = await alloyDBAdminClient.GenerateClientCertificateAsync(request);
+            User response = alloyDBAdminClient.CreateUser(parent, user, userId);
         }
     }
-    // [END alloydb_v1alpha_generated_AlloyDBAdmin_GenerateClientCertificate_async]
+    // [END alloydb_v1alpha_generated_AlloyDBAdmin_CreateUser_sync_flattened]
 }

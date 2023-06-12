@@ -16,14 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START alloydb_v1alpha_generated_AlloyDBAdmin_GenerateClientCertificate_async]
+    // [START alloydb_v1alpha_generated_AlloyDBAdmin_UpdateUser_sync]
     using Google.Cloud.AlloyDb.V1Alpha;
     using Google.Protobuf.WellKnownTypes;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedAlloyDBAdminClientSnippets
     {
-        /// <summary>Snippet for GenerateClientCertificateAsync</summary>
+        /// <summary>Snippet for UpdateUser</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,21 +30,22 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GenerateClientCertificateRequestObjectAsync()
+        public void UpdateUserRequestObject()
         {
             // Create client
-            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
             // Initialize request argument(s)
-            GenerateClientCertificateRequest request = new GenerateClientCertificateRequest
+            UpdateUserRequest request = new UpdateUserRequest
             {
-                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                UpdateMask = new FieldMask(),
+                User = new User(),
                 RequestId = "",
-                CertDuration = new Duration(),
-                PublicKey = "",
+                ValidateOnly = false,
+                AllowMissing = false,
             };
             // Make the request
-            GenerateClientCertificateResponse response = await alloyDBAdminClient.GenerateClientCertificateAsync(request);
+            User response = alloyDBAdminClient.UpdateUser(request);
         }
     }
-    // [END alloydb_v1alpha_generated_AlloyDBAdmin_GenerateClientCertificate_async]
+    // [END alloydb_v1alpha_generated_AlloyDBAdmin_UpdateUser_sync]
 }

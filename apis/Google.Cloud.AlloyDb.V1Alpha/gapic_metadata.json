@@ -46,6 +46,12 @@
                 "CreateSecondaryInstanceAsync"
               ]
             },
+            "CreateUser": {
+              "methods": [
+                "CreateUser",
+                "CreateUserAsync"
+              ]
+            },
             "DeleteBackup": {
               "methods": [
                 "DeleteBackup",
@@ -62,6 +68,12 @@
               "methods": [
                 "DeleteInstance",
                 "DeleteInstanceAsync"
+              ]
+            },
+            "DeleteUser": {
+              "methods": [
+                "DeleteUser",
+                "DeleteUserAsync"
               ]
             },
             "FailoverInstance": {
@@ -100,6 +112,18 @@
                 "GetInstanceAsync"
               ]
             },
+            "GetUser": {
+              "methods": [
+                "GetUser",
+                "GetUserAsync"
+              ]
+            },
+            "InjectFault": {
+              "methods": [
+                "InjectFault",
+                "InjectFaultAsync"
+              ]
+            },
             "ListBackups": {
               "methods": [
                 "ListBackups",
@@ -122,6 +146,12 @@
               "methods": [
                 "ListSupportedDatabaseFlags",
                 "ListSupportedDatabaseFlagsAsync"
+              ]
+            },
+            "ListUsers": {
+              "methods": [
+                "ListUsers",
+                "ListUsersAsync"
               ]
             },
             "PromoteCluster": {
@@ -158,6 +188,12 @@
               "methods": [
                 "UpdateInstance",
                 "UpdateInstanceAsync"
+              ]
+            },
+            "UpdateUser": {
+              "methods": [
+                "UpdateUser",
+                "UpdateUserAsync"
               ]
             }
           }
