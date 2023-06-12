@@ -3,7 +3,7 @@
 //     source: google/cloud/vmwareengine/v1/vmwareengine.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -100,6 +100,12 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListSubnetsResponse> __Marshaller_google_cloud_vmwareengine_v1_ListSubnetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListSubnetsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.GetSubnetRequest> __Marshaller_google_cloud_vmwareengine_v1_GetSubnetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.GetSubnetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.Subnet> __Marshaller_google_cloud_vmwareengine_v1_Subnet = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.Subnet.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest> __Marshaller_google_cloud_vmwareengine_v1_UpdateSubnetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListNodeTypesRequest> __Marshaller_google_cloud_vmwareengine_v1_ListNodeTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListNodeTypesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListNodeTypesResponse> __Marshaller_google_cloud_vmwareengine_v1_ListNodeTypesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListNodeTypesResponse.Parser));
@@ -155,6 +161,24 @@ namespace Google.Cloud.VmwareEngine.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksRequest> __Marshaller_google_cloud_vmwareengine_v1_ListVmwareEngineNetworksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksResponse> __Marshaller_google_cloud_vmwareengine_v1_ListVmwareEngineNetworksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.CreatePrivateConnectionRequest> __Marshaller_google_cloud_vmwareengine_v1_CreatePrivateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.CreatePrivateConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.GetPrivateConnectionRequest> __Marshaller_google_cloud_vmwareengine_v1_GetPrivateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.GetPrivateConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.PrivateConnection> __Marshaller_google_cloud_vmwareengine_v1_PrivateConnection = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsRequest> __Marshaller_google_cloud_vmwareengine_v1_ListPrivateConnectionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse> __Marshaller_google_cloud_vmwareengine_v1_ListPrivateConnectionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.UpdatePrivateConnectionRequest> __Marshaller_google_cloud_vmwareengine_v1_UpdatePrivateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.UpdatePrivateConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.DeletePrivateConnectionRequest> __Marshaller_google_cloud_vmwareengine_v1_DeletePrivateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.DeletePrivateConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest> __Marshaller_google_cloud_vmwareengine_v1_ListPrivateConnectionPeeringRoutesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse> __Marshaller_google_cloud_vmwareengine_v1_ListPrivateConnectionPeeringRoutesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListPrivateCloudsRequest, global::Google.Cloud.VmwareEngine.V1.ListPrivateCloudsResponse> __Method_ListPrivateClouds = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListPrivateCloudsRequest, global::Google.Cloud.VmwareEngine.V1.ListPrivateCloudsResponse>(
@@ -251,6 +275,22 @@ namespace Google.Cloud.VmwareEngine.V1 {
         "ListSubnets",
         __Marshaller_google_cloud_vmwareengine_v1_ListSubnetsRequest,
         __Marshaller_google_cloud_vmwareengine_v1_ListSubnetsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetSubnetRequest, global::Google.Cloud.VmwareEngine.V1.Subnet> __Method_GetSubnet = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetSubnetRequest, global::Google.Cloud.VmwareEngine.V1.Subnet>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSubnet",
+        __Marshaller_google_cloud_vmwareengine_v1_GetSubnetRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_Subnet);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest, global::Google.LongRunning.Operation> __Method_UpdateSubnet = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSubnet",
+        __Marshaller_google_cloud_vmwareengine_v1_UpdateSubnetRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListNodeTypesRequest, global::Google.Cloud.VmwareEngine.V1.ListNodeTypesResponse> __Method_ListNodeTypes = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListNodeTypesRequest, global::Google.Cloud.VmwareEngine.V1.ListNodeTypesResponse>(
@@ -403,6 +443,54 @@ namespace Google.Cloud.VmwareEngine.V1 {
         "ListVmwareEngineNetworks",
         __Marshaller_google_cloud_vmwareengine_v1_ListVmwareEngineNetworksRequest,
         __Marshaller_google_cloud_vmwareengine_v1_ListVmwareEngineNetworksResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreatePrivateConnectionRequest, global::Google.LongRunning.Operation> __Method_CreatePrivateConnection = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.CreatePrivateConnectionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreatePrivateConnection",
+        __Marshaller_google_cloud_vmwareengine_v1_CreatePrivateConnectionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetPrivateConnectionRequest, global::Google.Cloud.VmwareEngine.V1.PrivateConnection> __Method_GetPrivateConnection = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.GetPrivateConnectionRequest, global::Google.Cloud.VmwareEngine.V1.PrivateConnection>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPrivateConnection",
+        __Marshaller_google_cloud_vmwareengine_v1_GetPrivateConnectionRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_PrivateConnection);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsRequest, global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse> __Method_ListPrivateConnections = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsRequest, global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPrivateConnections",
+        __Marshaller_google_cloud_vmwareengine_v1_ListPrivateConnectionsRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_ListPrivateConnectionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdatePrivateConnectionRequest, global::Google.LongRunning.Operation> __Method_UpdatePrivateConnection = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.UpdatePrivateConnectionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdatePrivateConnection",
+        __Marshaller_google_cloud_vmwareengine_v1_UpdatePrivateConnectionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.DeletePrivateConnectionRequest, global::Google.LongRunning.Operation> __Method_DeletePrivateConnection = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.DeletePrivateConnectionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeletePrivateConnection",
+        __Marshaller_google_cloud_vmwareengine_v1_DeletePrivateConnectionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest, global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse> __Method_ListPrivateConnectionPeeringRoutes = new grpc::Method<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest, global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPrivateConnectionPeeringRoutes",
+        __Marshaller_google_cloud_vmwareengine_v1_ListPrivateConnectionPeeringRoutesRequest,
+        __Marshaller_google_cloud_vmwareengine_v1_ListPrivateConnectionPeeringRoutesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -597,6 +685,35 @@ namespace Google.Cloud.VmwareEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ListSubnetsResponse> ListSubnets(global::Google.Cloud.VmwareEngine.V1.ListSubnetsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single subnet.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.Subnet> GetSubnet(global::Google.Cloud.VmwareEngine.V1.GetSubnetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single subnet. Only fields specified in
+      /// `update_mask` are applied.
+      ///
+      /// *Note*: This API is synchronous and always returns a successful
+      /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+      /// `done` and `response` fields.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateSubnet(global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -848,6 +965,85 @@ namespace Google.Cloud.VmwareEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksResponse> ListVmwareEngineNetworks(global::Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new private connection that can be used for accessing private
+      /// Clouds.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreatePrivateConnection(global::Google.Cloud.VmwareEngine.V1.CreatePrivateConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+      /// contains details of the private connection, such as connected
+      /// network, routing mode and state.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.PrivateConnection> GetPrivateConnection(global::Google.Cloud.VmwareEngine.V1.GetPrivateConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists `PrivateConnection` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse> ListPrivateConnections(global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Modifies a `PrivateConnection` resource. Only `description` and
+      /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+      /// are applied.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdatePrivateConnection(global::Google.Cloud.VmwareEngine.V1.UpdatePrivateConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a `PrivateConnection` resource. When a private connection is
+      /// deleted for a VMware Engine network, the connected network becomes
+      /// inaccessible to that VMware Engine network.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeletePrivateConnection(global::Google.Cloud.VmwareEngine.V1.DeletePrivateConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the private connection routes exchanged over a peering connection.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse> ListPrivateConnectionPeeringRoutes(global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1628,6 +1824,122 @@ namespace Google.Cloud.VmwareEngine.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListSubnetsResponse> ListSubnetsAsync(global::Google.Cloud.VmwareEngine.V1.ListSubnetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSubnets, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single subnet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.Subnet GetSubnet(global::Google.Cloud.VmwareEngine.V1.GetSubnetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSubnet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single subnet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.Subnet GetSubnet(global::Google.Cloud.VmwareEngine.V1.GetSubnetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSubnet, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single subnet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.Subnet> GetSubnetAsync(global::Google.Cloud.VmwareEngine.V1.GetSubnetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSubnetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single subnet.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.Subnet> GetSubnetAsync(global::Google.Cloud.VmwareEngine.V1.GetSubnetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSubnet, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single subnet. Only fields specified in
+      /// `update_mask` are applied.
+      ///
+      /// *Note*: This API is synchronous and always returns a successful
+      /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+      /// `done` and `response` fields.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateSubnet(global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSubnet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single subnet. Only fields specified in
+      /// `update_mask` are applied.
+      ///
+      /// *Note*: This API is synchronous and always returns a successful
+      /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+      /// `done` and `response` fields.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateSubnet(global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSubnet, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single subnet. Only fields specified in
+      /// `update_mask` are applied.
+      ///
+      /// *Note*: This API is synchronous and always returns a successful
+      /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+      /// `done` and `response` fields.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateSubnetAsync(global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSubnetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single subnet. Only fields specified in
+      /// `update_mask` are applied.
+      ///
+      /// *Note*: This API is synchronous and always returns a successful
+      /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+      /// `done` and `response` fields.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateSubnetAsync(global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSubnet, null, options, request);
       }
       /// <summary>
       /// Lists node types
@@ -2633,6 +2945,322 @@ namespace Google.Cloud.VmwareEngine.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListVmwareEngineNetworks, null, options, request);
       }
+      /// <summary>
+      /// Creates a new private connection that can be used for accessing private
+      /// Clouds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreatePrivateConnection(global::Google.Cloud.VmwareEngine.V1.CreatePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePrivateConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new private connection that can be used for accessing private
+      /// Clouds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreatePrivateConnection(global::Google.Cloud.VmwareEngine.V1.CreatePrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreatePrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new private connection that can be used for accessing private
+      /// Clouds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePrivateConnectionAsync(global::Google.Cloud.VmwareEngine.V1.CreatePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePrivateConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new private connection that can be used for accessing private
+      /// Clouds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePrivateConnectionAsync(global::Google.Cloud.VmwareEngine.V1.CreatePrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreatePrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+      /// contains details of the private connection, such as connected
+      /// network, routing mode and state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.PrivateConnection GetPrivateConnection(global::Google.Cloud.VmwareEngine.V1.GetPrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPrivateConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+      /// contains details of the private connection, such as connected
+      /// network, routing mode and state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.PrivateConnection GetPrivateConnection(global::Google.Cloud.VmwareEngine.V1.GetPrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+      /// contains details of the private connection, such as connected
+      /// network, routing mode and state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.PrivateConnection> GetPrivateConnectionAsync(global::Google.Cloud.VmwareEngine.V1.GetPrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPrivateConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+      /// contains details of the private connection, such as connected
+      /// network, routing mode and state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.PrivateConnection> GetPrivateConnectionAsync(global::Google.Cloud.VmwareEngine.V1.GetPrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Lists `PrivateConnection` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse ListPrivateConnections(global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPrivateConnections(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `PrivateConnection` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse ListPrivateConnections(global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPrivateConnections, null, options, request);
+      }
+      /// <summary>
+      /// Lists `PrivateConnection` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse> ListPrivateConnectionsAsync(global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPrivateConnectionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `PrivateConnection` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse> ListPrivateConnectionsAsync(global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPrivateConnections, null, options, request);
+      }
+      /// <summary>
+      /// Modifies a `PrivateConnection` resource. Only `description` and
+      /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+      /// are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdatePrivateConnection(global::Google.Cloud.VmwareEngine.V1.UpdatePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePrivateConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies a `PrivateConnection` resource. Only `description` and
+      /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+      /// are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdatePrivateConnection(global::Google.Cloud.VmwareEngine.V1.UpdatePrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdatePrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Modifies a `PrivateConnection` resource. Only `description` and
+      /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+      /// are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdatePrivateConnectionAsync(global::Google.Cloud.VmwareEngine.V1.UpdatePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePrivateConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies a `PrivateConnection` resource. Only `description` and
+      /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+      /// are applied.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdatePrivateConnectionAsync(global::Google.Cloud.VmwareEngine.V1.UpdatePrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdatePrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a `PrivateConnection` resource. When a private connection is
+      /// deleted for a VMware Engine network, the connected network becomes
+      /// inaccessible to that VMware Engine network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeletePrivateConnection(global::Google.Cloud.VmwareEngine.V1.DeletePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePrivateConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a `PrivateConnection` resource. When a private connection is
+      /// deleted for a VMware Engine network, the connected network becomes
+      /// inaccessible to that VMware Engine network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeletePrivateConnection(global::Google.Cloud.VmwareEngine.V1.DeletePrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeletePrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a `PrivateConnection` resource. When a private connection is
+      /// deleted for a VMware Engine network, the connected network becomes
+      /// inaccessible to that VMware Engine network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePrivateConnectionAsync(global::Google.Cloud.VmwareEngine.V1.DeletePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePrivateConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a `PrivateConnection` resource. When a private connection is
+      /// deleted for a VMware Engine network, the connected network becomes
+      /// inaccessible to that VMware Engine network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePrivateConnectionAsync(global::Google.Cloud.VmwareEngine.V1.DeletePrivateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeletePrivateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Lists the private connection routes exchanged over a peering connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse ListPrivateConnectionPeeringRoutes(global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPrivateConnectionPeeringRoutes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the private connection routes exchanged over a peering connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse ListPrivateConnectionPeeringRoutes(global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPrivateConnectionPeeringRoutes, null, options, request);
+      }
+      /// <summary>
+      /// Lists the private connection routes exchanged over a peering connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse> ListPrivateConnectionPeeringRoutesAsync(global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPrivateConnectionPeeringRoutesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the private connection routes exchanged over a peering connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse> ListPrivateConnectionPeeringRoutesAsync(global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPrivateConnectionPeeringRoutes, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override VmwareEngineClient NewInstance(ClientBaseConfiguration configuration)
@@ -2659,6 +3287,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
           .AddMethod(__Method_UpdateCluster, serviceImpl.UpdateCluster)
           .AddMethod(__Method_DeleteCluster, serviceImpl.DeleteCluster)
           .AddMethod(__Method_ListSubnets, serviceImpl.ListSubnets)
+          .AddMethod(__Method_GetSubnet, serviceImpl.GetSubnet)
+          .AddMethod(__Method_UpdateSubnet, serviceImpl.UpdateSubnet)
           .AddMethod(__Method_ListNodeTypes, serviceImpl.ListNodeTypes)
           .AddMethod(__Method_GetNodeType, serviceImpl.GetNodeType)
           .AddMethod(__Method_ShowNsxCredentials, serviceImpl.ShowNsxCredentials)
@@ -2677,7 +3307,13 @@ namespace Google.Cloud.VmwareEngine.V1 {
           .AddMethod(__Method_UpdateVmwareEngineNetwork, serviceImpl.UpdateVmwareEngineNetwork)
           .AddMethod(__Method_DeleteVmwareEngineNetwork, serviceImpl.DeleteVmwareEngineNetwork)
           .AddMethod(__Method_GetVmwareEngineNetwork, serviceImpl.GetVmwareEngineNetwork)
-          .AddMethod(__Method_ListVmwareEngineNetworks, serviceImpl.ListVmwareEngineNetworks).Build();
+          .AddMethod(__Method_ListVmwareEngineNetworks, serviceImpl.ListVmwareEngineNetworks)
+          .AddMethod(__Method_CreatePrivateConnection, serviceImpl.CreatePrivateConnection)
+          .AddMethod(__Method_GetPrivateConnection, serviceImpl.GetPrivateConnection)
+          .AddMethod(__Method_ListPrivateConnections, serviceImpl.ListPrivateConnections)
+          .AddMethod(__Method_UpdatePrivateConnection, serviceImpl.UpdatePrivateConnection)
+          .AddMethod(__Method_DeletePrivateConnection, serviceImpl.DeletePrivateConnection)
+          .AddMethod(__Method_ListPrivateConnectionPeeringRoutes, serviceImpl.ListPrivateConnectionPeeringRoutes).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2699,6 +3335,8 @@ namespace Google.Cloud.VmwareEngine.V1 {
       serviceBinder.AddMethod(__Method_UpdateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdateClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateCluster));
       serviceBinder.AddMethod(__Method_DeleteCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.DeleteClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteCluster));
       serviceBinder.AddMethod(__Method_ListSubnets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListSubnetsRequest, global::Google.Cloud.VmwareEngine.V1.ListSubnetsResponse>(serviceImpl.ListSubnets));
+      serviceBinder.AddMethod(__Method_GetSubnet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetSubnetRequest, global::Google.Cloud.VmwareEngine.V1.Subnet>(serviceImpl.GetSubnet));
+      serviceBinder.AddMethod(__Method_UpdateSubnet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateSubnet));
       serviceBinder.AddMethod(__Method_ListNodeTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListNodeTypesRequest, global::Google.Cloud.VmwareEngine.V1.ListNodeTypesResponse>(serviceImpl.ListNodeTypes));
       serviceBinder.AddMethod(__Method_GetNodeType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetNodeTypeRequest, global::Google.Cloud.VmwareEngine.V1.NodeType>(serviceImpl.GetNodeType));
       serviceBinder.AddMethod(__Method_ShowNsxCredentials, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ShowNsxCredentialsRequest, global::Google.Cloud.VmwareEngine.V1.Credentials>(serviceImpl.ShowNsxCredentials));
@@ -2718,6 +3356,12 @@ namespace Google.Cloud.VmwareEngine.V1 {
       serviceBinder.AddMethod(__Method_DeleteVmwareEngineNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.DeleteVmwareEngineNetworkRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteVmwareEngineNetwork));
       serviceBinder.AddMethod(__Method_GetVmwareEngineNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetVmwareEngineNetworkRequest, global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork>(serviceImpl.GetVmwareEngineNetwork));
       serviceBinder.AddMethod(__Method_ListVmwareEngineNetworks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksRequest, global::Google.Cloud.VmwareEngine.V1.ListVmwareEngineNetworksResponse>(serviceImpl.ListVmwareEngineNetworks));
+      serviceBinder.AddMethod(__Method_CreatePrivateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.CreatePrivateConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreatePrivateConnection));
+      serviceBinder.AddMethod(__Method_GetPrivateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.GetPrivateConnectionRequest, global::Google.Cloud.VmwareEngine.V1.PrivateConnection>(serviceImpl.GetPrivateConnection));
+      serviceBinder.AddMethod(__Method_ListPrivateConnections, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsRequest, global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse>(serviceImpl.ListPrivateConnections));
+      serviceBinder.AddMethod(__Method_UpdatePrivateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.UpdatePrivateConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdatePrivateConnection));
+      serviceBinder.AddMethod(__Method_DeletePrivateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.DeletePrivateConnectionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeletePrivateConnection));
+      serviceBinder.AddMethod(__Method_ListPrivateConnectionPeeringRoutes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest, global::Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse>(serviceImpl.ListPrivateConnectionPeeringRoutes));
     }
 
   }
