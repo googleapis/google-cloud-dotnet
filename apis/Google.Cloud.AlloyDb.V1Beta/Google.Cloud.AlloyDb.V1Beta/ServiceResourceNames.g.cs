@@ -188,6 +188,18 @@ namespace Google.Cloud.AlloyDb.V1Beta
         }
     }
 
+    public partial class InjectFaultRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class RestartInstanceRequest
     {
         /// <summary>
@@ -281,6 +293,54 @@ namespace Google.Cloud.AlloyDb.V1Beta
         {
             get => string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListUsersRequest
+    {
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ClusterName ParentAsClusterName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ClusterName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetUserRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::UserName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::UserName UserName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::UserName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateUserRequest
+    {
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ClusterName ParentAsClusterName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ClusterName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteUserRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::UserName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::UserName UserName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::UserName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }
