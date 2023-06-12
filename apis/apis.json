@@ -4968,6 +4968,28 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Cloud.Workstations.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Workstations",
+      "productUrl": "https://cloud.google.com/workstations/docs",
+      "description": "Allows administrators to create managed developer environments in the cloud.",
+      "tags": [
+        "developer",
+        "workstations"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/workstations/v1",
+      "shortName": "workstations",
+      "serviceConfigFile": "workstations_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Geo.Type",
       "version": "1.0.0",
       "targetFrameworks": "netstandard2.1;net462",
