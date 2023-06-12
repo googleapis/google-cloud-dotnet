@@ -1,5 +1,21 @@
 # Version history
 
+## Version 3.6.0, released 2023-06-12
+
+### Bug fixes
+
+- Correct the auto-extend lease interval for exactly-once delivery. ([commit c33999d](https://github.com/googleapis/google-cloud-dotnet/commit/c33999d4bed6d7777bd1d1e4bc019d67448ce844))
+- Dispose the pull stream. ([commit 3518402](https://github.com/googleapis/google-cloud-dotnet/commit/351840238416353db7a87431ac2f8687537c9352))
+
+### New features
+
+- Add push config wrapper fields ([commit 1cdef74](https://github.com/googleapis/google-cloud-dotnet/commit/1cdef749b46a406e6abea44001db68b9276c338d))
+- Add support for Publisher Compression. ([commit e684e05](https://github.com/googleapis/google-cloud-dotnet/commit/e684e05a21cd47042f05b4f4662611e13632bef9))
+
+### Documentation improvements
+
+- Clarify the use of FlowControlSettings in SusbcriberClient. ([commit 7081baf](https://github.com/googleapis/google-cloud-dotnet/commit/7081baf1a5b95aaaa09d513fe380208f8e039c57))
+
 ## Version 3.6.0-beta01, released 2023-05-16
 
 Note that this is a beta release as the deadlock workaround for
