@@ -45,12 +45,17 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
   #region Messages
   /// <summary>
-  /// Represents database access information, such as queries.
-  /// A database may be a sub-resource of an instance (as in the case of CloudSQL
-  /// instances or Cloud Spanner instances), or the database instance itself.
-  /// Some database resources may not have the full resource name populated
-  /// because these resource types are not yet supported by Cloud Asset Inventory
-  /// (e.g. CloudSQL databases). In these cases only the display name will be
+  /// Represents database access information, such as queries. A database may be a
+  /// sub-resource of an instance (as in the case of Cloud SQL instances or Cloud
+  /// Spanner instances), or the database instance itself. Some database resources
+  /// might not have the [full resource
+  /// name](https://google.aip.dev/122#full-resource-names) populated because these
+  /// resource types, such as Cloud SQL databases, are not yet supported by Cloud
+  /// Asset Inventory. In these cases only the display name is provided.
+  /// Some database resources may not have the [full resource
+  /// name](https://google.aip.dev/122#full-resource-names) populated because
+  /// these resource types are not yet supported by Cloud Asset Inventory (e.g.
+  /// Cloud SQL databases). In these cases only the display name will be
   /// provided.
   /// </summary>
   public sealed partial class Database : pb::IMessage<Database>
@@ -105,8 +110,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The full resource name of the database the user connected to, if it is
-    /// supported by CAI. (https://google.aip.dev/122#full-resource-names)
+    /// The [full resource name](https://google.aip.dev/122#full-resource-names) of
+    /// the database that the user connected to, if it is supported by Cloud Asset
+    /// Inventory.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -121,7 +127,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// The human readable name of the database the user connected to.
+    /// The human-readable name of the database that the user connected to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,8 +142,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UserNameFieldNumber = 3;
     private string userName_ = "";
     /// <summary>
-    /// The username used to connect to the DB. This may not necessarily be an IAM
-    /// principal, and has no required format.
+    /// The username used to connect to the database. The username might not be an
+    /// IAM principal and does not have a set format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +158,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int QueryFieldNumber = 4;
     private string query_ = "";
     /// <summary>
-    /// The SQL statement associated with the relevant access.
+    /// The SQL statement that is associated with the database access.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,8 +175,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> grantees_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The target usernames/roles/groups of a SQL privilege grant (not an IAM
-    /// policy change).
+    /// The target usernames, roles, or groups of an SQL privilege grant, which is
+    /// not an IAM policy change.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

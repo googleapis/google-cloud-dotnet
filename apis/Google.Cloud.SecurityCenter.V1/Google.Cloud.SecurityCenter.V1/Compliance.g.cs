@@ -97,8 +97,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int StandardFieldNumber = 1;
     private string standard_ = "";
     /// <summary>
-    /// Refers to industry wide standards or benchmarks e.g. "cis", "pci", "owasp",
-    /// etc.
+    /// Industry-wide compliance standards or benchmarks, such as CIS, PCI, and
+    /// OWASP.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -113,7 +113,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int VersionFieldNumber = 2;
     private string version_ = "";
     /// <summary>
-    /// Version of the standard/benchmark e.g. 1.1
+    /// Version of the standard or benchmark, for example, 1.1
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -130,7 +130,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> ids_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Policies within the standard/benchmark e.g. A.12.4.1
+    /// Policies within the standard or benchmark, for example, A.12.4.1
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

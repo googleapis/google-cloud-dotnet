@@ -180,8 +180,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ContentsFieldNumber = 6;
     private string contents_ = "";
     /// <summary>
-    /// Prefix of the file contents as a JSON encoded string.
-    /// (Currently only populated for Malicious Script Executed findings.)
+    /// Prefix of the file contents as a JSON-encoded string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

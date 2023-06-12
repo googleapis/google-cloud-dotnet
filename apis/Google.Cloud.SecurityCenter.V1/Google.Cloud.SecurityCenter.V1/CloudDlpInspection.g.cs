@@ -121,8 +121,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int InfoTypeFieldNumber = 2;
     private string infoType_ = "";
     /// <summary>
-    /// The [type of
-    /// information](https://cloud.google.com/dlp/docs/infotypes-reference) found,
+    /// The type of information (or
+    /// *[infoType](https://cloud.google.com/dlp/docs/infotypes-reference)*) found,
     /// for example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -127,9 +127,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private bool enableAssetDiscovery_;
     /// <summary>
     /// A flag that indicates if Asset Discovery should be enabled. If the flag is
-    /// set to `true`, then discovery of assets will occur. If it is set to `false,
-    /// all historical assets will remain, but discovery of future assets will not
-    /// occur.
+    /// set to `true`, then discovery of assets will occur. If it is set to
+    /// `false`, all historical assets will remain, but discovery of future assets
+    /// will not occur.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

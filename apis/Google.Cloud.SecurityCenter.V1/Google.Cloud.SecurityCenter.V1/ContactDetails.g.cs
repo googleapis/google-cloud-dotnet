@@ -46,7 +46,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
   #region Messages
   /// <summary>
-  /// The details pertaining to specific contacts
+  /// Details about specific contacts
   /// </summary>
   public sealed partial class ContactDetails : pb::IMessage<ContactDetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
