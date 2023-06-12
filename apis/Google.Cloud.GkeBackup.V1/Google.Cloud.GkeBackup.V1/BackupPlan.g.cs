@@ -138,7 +138,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The full name of the BackupPlan resource.
-    /// Format: projects/*/locations/*/backupPlans/*
+    /// Format: `projects/*/locations/*/backupPlans/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -215,12 +215,11 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int ClusterFieldNumber = 6;
     private string cluster_ = "";
     /// <summary>
-    /// Required. Immutable. The source cluster from which Backups will be created via
-    /// this BackupPlan.
-    /// Valid formats:
+    /// Required. Immutable. The source cluster from which Backups will be created
+    /// via this BackupPlan. Valid formats:
     ///
-    /// - projects/*/locations/*/clusters/*
-    /// - projects/*/zones/*/clusters/*
+    /// - `projects/*/locations/*/clusters/*`
+    /// - `projects/*/zones/*/clusters/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -279,9 +278,9 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int EtagFieldNumber = 10;
     private string etag_ = "";
     /// <summary>
-    /// Output only. `etag` is used for optimistic concurrency control as a way to help
-    /// prevent simultaneous updates of a backup plan from overwriting each other.
-    /// It is strongly suggested that systems make use of the 'etag' in the
+    /// Output only. `etag` is used for optimistic concurrency control as a way to
+    /// help prevent simultaneous updates of a backup plan from overwriting each
+    /// other. It is strongly suggested that systems make use of the 'etag' in the
     /// read-modify-write cycle to perform BackupPlan updates in order to avoid
     /// race conditions: An `etag` is returned in the response to `GetBackupPlan`,
     /// and systems are expected to put that etag in the request to
@@ -885,7 +884,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         private int backupRetainDays_;
         /// <summary>
         /// The default maximum age of a Backup created via this BackupPlan.
-        /// This field MUST be an integer value >= 0.
+        /// This field MUST be an integer value >= 0 and &lt;= 365.
         /// If specified, a Backup created under this BackupPlan will be
         /// automatically deleted after its age reaches (create_time +
         /// backup_retain_days).
@@ -894,7 +893,12 @@ namespace Google.Cloud.GkeBackup.V1 {
         /// Updating this field does NOT affect existing Backups under it. Backups
         /// created AFTER a successful update will automatically pick up the new
         /// value.
-        /// NOTE: backup_retain_days must be >= [backup_delete_lock_days][google.cloud.gkebackup.v1.BackupPlan.RetentionPolicy.backup_delete_lock_days].
+        /// NOTE: backup_retain_days must be >=
+        /// [backup_delete_lock_days][google.cloud.gkebackup.v1.BackupPlan.RetentionPolicy.backup_delete_lock_days].
+        /// If
+        /// [cron_schedule][google.cloud.gkebackup.v1.BackupPlan.Schedule.cron_schedule]
+        /// is defined, then this must be
+        /// &lt;= 360 * the creation interval.
         ///
         /// Default: 0 (no automatic deletion)
         /// </summary>
@@ -1161,7 +1165,10 @@ namespace Google.Cloud.GkeBackup.V1 {
         private string cronSchedule_ = "";
         /// <summary>
         /// A standard [cron](https://wikipedia.com/wiki/cron) string that defines a
-        /// repeating schedule for creating Backups via this BackupPlan.
+        /// repeating schedule for creating Backups via this BackupPlan. If this is
+        /// defined, then
+        /// [backup_retain_days][google.cloud.gkebackup.v1.BackupPlan.RetentionPolicy.backup_retain_days]
+        /// must also be defined.
         ///
         /// Default (empty): no automatic backup creation will occur.
         /// </summary>
