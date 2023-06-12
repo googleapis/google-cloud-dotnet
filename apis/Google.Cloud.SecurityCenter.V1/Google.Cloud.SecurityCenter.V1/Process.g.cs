@@ -113,8 +113,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NameFieldNumber = 12;
     private string name_ = "";
     /// <summary>
-    /// The process name visible in utilities like `top` and `ps`; it can
-    /// be accessed via `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
+    /// The process name, as displayed in utilities like `top` and `ps`. This name
+    /// can be accessed through `/proc/[pid]/comm` and changed with
+    /// `prctl(PR_SET_NAME)`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -158,10 +159,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ScriptFieldNumber = 5;
     private global::Google.Cloud.SecurityCenter.V1.File script_;
     /// <summary>
-    /// When the process represents the invocation of a script,
-    /// `binary` provides information about the interpreter while `script`
-    /// provides information about the script file provided to the
-    /// interpreter.
+    /// When the process represents the invocation of a script, `binary` provides
+    /// information about the interpreter, while `script` provides information
+    /// about the script file provided to the interpreter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -234,7 +234,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int PidFieldNumber = 10;
     private long pid_;
     /// <summary>
-    /// The process id.
+    /// The process ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -249,7 +249,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ParentPidFieldNumber = 11;
     private long parentPid_;
     /// <summary>
-    /// The parent process id.
+    /// The parent process ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -598,8 +598,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// EnvironmentVariable is a name-value pair to store environment variables for
-  /// Process.
+  /// A name-value pair representing an environment variable used in an operating
+  /// system process.
   /// </summary>
   public sealed partial class EnvironmentVariable : pb::IMessage<EnvironmentVariable>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

@@ -1894,9 +1894,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1921,9 +1921,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1948,9 +1948,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1970,9 +1970,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1997,9 +1997,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2024,9 +2024,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2046,9 +2046,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2073,9 +2073,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2100,9 +2100,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2122,9 +2122,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2149,9 +2149,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2176,9 +2176,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7118,9 +7118,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7145,9 +7145,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7172,9 +7172,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7194,9 +7194,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7221,9 +7221,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7248,9 +7248,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7270,9 +7270,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7297,9 +7297,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7324,9 +7324,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7346,9 +7346,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7373,9 +7373,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7400,9 +7400,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

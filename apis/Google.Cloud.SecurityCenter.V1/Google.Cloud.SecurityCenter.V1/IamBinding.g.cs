@@ -130,8 +130,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int MemberFieldNumber = 3;
     private string member_ = "";
     /// <summary>
-    /// A single identity requesting access for a Cloud Platform resource,
-    /// e.g. "foo@google.com".
+    /// A single identity requesting access for a Cloud Platform resource, for
+    /// example, "foo@google.com".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

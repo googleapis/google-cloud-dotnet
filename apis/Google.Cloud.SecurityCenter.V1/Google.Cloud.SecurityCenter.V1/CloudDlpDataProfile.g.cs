@@ -26,22 +26,26 @@ namespace Google.Cloud.SecurityCenter.V1 {
           string.Concat(
             "Cjtnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvY2xvdWRfZGxwX2Rh",
             "dGFfcHJvZmlsZS5wcm90bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVy",
-            "LnYxGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIlUKE0Nsb3VkRGxwRGF0",
-            "YVByb2ZpbGUSPgoMZGF0YV9wcm9maWxlGAEgASgJQij6QSUKI2RscC5nb29n",
-            "bGVhcGlzLmNvbS9UYWJsZURhdGFQcm9maWxlQpQDCiJjb20uZ29vZ2xlLmNs",
-            "b3VkLnNlY3VyaXR5Y2VudGVyLnYxQhhDbG91ZERscERhdGFQcm9maWxlUHJv",
-            "dG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1cml0eWNlbnRlci9hcGl2",
-            "MS9zZWN1cml0eWNlbnRlcnBiO3NlY3VyaXR5Y2VudGVycGKqAh5Hb29nbGUu",
-            "Q2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHKAh5Hb29nbGVcQ2xvdWRcU2VjdXJp",
-            "dHlDZW50ZXJcVjHqAiFHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNlbnRlcjo6",
-            "VjHqQZ4BCiNkbHAuZ29vZ2xlYXBpcy5jb20vVGFibGVEYXRhUHJvZmlsZRIw",
-            "cHJvamVjdHMve3Byb2plY3R9L3RhYmxlUHJvZmlsZXMve3RhYmxlX3Byb2Zp",
-            "bGV9EkVwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "dGFibGVQcm9maWxlcy97dGFibGVfcHJvZmlsZX1iBnByb3RvMw=="));
+            "LnYxGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIvQBChNDbG91ZERscERh",
+            "dGFQcm9maWxlEj4KDGRhdGFfcHJvZmlsZRgBIAEoCUIo+kElCiNkbHAuZ29v",
+            "Z2xlYXBpcy5jb20vVGFibGVEYXRhUHJvZmlsZRJTCgtwYXJlbnRfdHlwZRgC",
+            "IAEoDjI+Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5DbG91ZERs",
+            "cERhdGFQcm9maWxlLlBhcmVudFR5cGUiSAoKUGFyZW50VHlwZRIbChdQQVJF",
+            "TlRfVFlQRV9VTlNQRUNJRklFRBAAEhAKDE9SR0FOSVpBVElPThABEgsKB1BS",
+            "T0pFQ1QQAkKUAwoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52",
+            "MUIYQ2xvdWREbHBEYXRhUHJvZmlsZVByb3RvUAFaSmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vc2VjdXJpdHljZW50ZXIvYXBpdjEvc2VjdXJpdHljZW50ZXJwYjtz",
+            "ZWN1cml0eWNlbnRlcnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVy",
+            "LlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xl",
+            "OjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYx6kGeAQojZGxwLmdvb2dsZWFw",
+            "aXMuY29tL1RhYmxlRGF0YVByb2ZpbGUSMHByb2plY3RzL3twcm9qZWN0fS90",
+            "YWJsZVByb2ZpbGVzL3t0YWJsZV9wcm9maWxlfRJFcHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3RhYmxlUHJvZmlsZXMve3RhYmxl",
+            "X3Byb2ZpbGV9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile), global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Parser, new[]{ "DataProfile" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile), global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Parser, new[]{ "DataProfile", "ParentType" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType) }, null, null)
           }));
     }
     #endregion
@@ -87,6 +91,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudDlpDataProfile(CloudDlpDataProfile other) : this() {
       dataProfile_ = other.dataProfile_;
+      parentType_ = other.parentType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -112,6 +117,21 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
+    /// <summary>Field number for the "parent_type" field.</summary>
+    public const int ParentTypeFieldNumber = 2;
+    private global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType parentType_ = global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType.Unspecified;
+    /// <summary>
+    /// The resource hierarchy level at which the data profile was generated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType ParentType {
+      get { return parentType_; }
+      set {
+        parentType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -128,6 +148,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return true;
       }
       if (DataProfile != other.DataProfile) return false;
+      if (ParentType != other.ParentType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -136,6 +157,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (DataProfile.Length != 0) hash ^= DataProfile.GetHashCode();
+      if (ParentType != global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType.Unspecified) hash ^= ParentType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -158,6 +180,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(10);
         output.WriteString(DataProfile);
       }
+      if (ParentType != global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ParentType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -172,6 +198,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(10);
         output.WriteString(DataProfile);
       }
+      if (ParentType != global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ParentType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -184,6 +214,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       int size = 0;
       if (DataProfile.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DataProfile);
+      }
+      if (ParentType != global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ParentType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -199,6 +232,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (other.DataProfile.Length != 0) {
         DataProfile = other.DataProfile;
+      }
+      if (other.ParentType != global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType.Unspecified) {
+        ParentType = other.ParentType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -217,6 +253,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             break;
           case 10: {
             DataProfile = input.ReadString();
+            break;
+          }
+          case 16: {
+            ParentType = (global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType) input.ReadEnum();
             break;
           }
         }
@@ -238,10 +278,40 @@ namespace Google.Cloud.SecurityCenter.V1 {
             DataProfile = input.ReadString();
             break;
           }
+          case 16: {
+            ParentType = (global::Google.Cloud.SecurityCenter.V1.CloudDlpDataProfile.Types.ParentType) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CloudDlpDataProfile message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Parents for configurations that produce data profile findings.
+      /// </summary>
+      public enum ParentType {
+        /// <summary>
+        /// Unspecified parent type.
+        /// </summary>
+        [pbr::OriginalName("PARENT_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Organization-level configurations.
+        /// </summary>
+        [pbr::OriginalName("ORGANIZATION")] Organization = 1,
+        /// <summary>
+        /// Project-level configurations.
+        /// </summary>
+        [pbr::OriginalName("PROJECT")] Project = 2,
+      }
+
+    }
+    #endregion
 
   }
 
