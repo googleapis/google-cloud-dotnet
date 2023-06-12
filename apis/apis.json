@@ -2007,7 +2007,7 @@
     },
     {
       "id": "Google.Cloud.EnterpriseKnowledgeGraph.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Enterprise Knowledge Graph",
       "productUrl": "https://cloud.google.com/enterprise-knowledge-graph/docs/overview",
