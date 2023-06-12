@@ -2609,6 +2609,9 @@ namespace Google.Cloud.Firestore.V1 {
     ///
     /// If different from the count of documents in the client that match, the
     /// client must manually determine which documents no longer match the target.
+    ///
+    /// The client can use the `unchanged_names` bloom filter to assist with
+    /// this determination.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
