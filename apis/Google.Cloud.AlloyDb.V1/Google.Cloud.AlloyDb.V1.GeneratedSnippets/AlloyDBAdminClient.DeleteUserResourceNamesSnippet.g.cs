@@ -16,12 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START alloydb_v1_generated_AlloyDBAdmin_GetCluster_sync]
+    // [START alloydb_v1_generated_AlloyDBAdmin_DeleteUser_sync_flattened_resourceNames]
     using Google.Cloud.AlloyDb.V1;
 
     public sealed partial class GeneratedAlloyDBAdminClientSnippets
     {
-        /// <summary>Snippet for GetCluster</summary>
+        /// <summary>Snippet for DeleteUser</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,19 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GetClusterRequestObject()
+        public void DeleteUserResourceNames()
         {
             // Create client
             AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
             // Initialize request argument(s)
-            GetClusterRequest request = new GetClusterRequest
-            {
-                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
-                View = ClusterView.Unspecified,
-            };
+            UserName name = UserName.FromProjectLocationClusterUser("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[USER]");
             // Make the request
-            Cluster response = alloyDBAdminClient.GetCluster(request);
+            alloyDBAdminClient.DeleteUser(name);
         }
     }
-    // [END alloydb_v1_generated_AlloyDBAdmin_GetCluster_sync]
+    // [END alloydb_v1_generated_AlloyDBAdmin_DeleteUser_sync_flattened_resourceNames]
 }

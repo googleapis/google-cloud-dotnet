@@ -16,12 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START alloydb_v1_generated_AlloyDBAdmin_GetCluster_sync]
+    // [START alloydb_v1_generated_AlloyDBAdmin_CreateUser_sync]
     using Google.Cloud.AlloyDb.V1;
 
     public sealed partial class GeneratedAlloyDBAdminClientSnippets
     {
-        /// <summary>Snippet for GetCluster</summary>
+        /// <summary>Snippet for CreateUser</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,19 +29,22 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GetClusterRequestObject()
+        public void CreateUserRequestObject()
         {
             // Create client
             AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
             // Initialize request argument(s)
-            GetClusterRequest request = new GetClusterRequest
+            CreateUserRequest request = new CreateUserRequest
             {
-                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
-                View = ClusterView.Unspecified,
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                UserId = "",
+                User = new User(),
+                RequestId = "",
+                ValidateOnly = false,
             };
             // Make the request
-            Cluster response = alloyDBAdminClient.GetCluster(request);
+            User response = alloyDBAdminClient.CreateUser(request);
         }
     }
-    // [END alloydb_v1_generated_AlloyDBAdmin_GetCluster_sync]
+    // [END alloydb_v1_generated_AlloyDBAdmin_CreateUser_sync]
 }

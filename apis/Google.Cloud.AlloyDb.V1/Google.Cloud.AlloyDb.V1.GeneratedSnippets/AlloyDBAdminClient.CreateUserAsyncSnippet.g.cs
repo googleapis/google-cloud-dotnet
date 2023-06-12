@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START alloydb_v1_generated_AlloyDBAdmin_GetCluster_sync]
+    // [START alloydb_v1_generated_AlloyDBAdmin_CreateUser_async_flattened]
     using Google.Cloud.AlloyDb.V1;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedAlloyDBAdminClientSnippets
     {
-        /// <summary>Snippet for GetCluster</summary>
+        /// <summary>Snippet for CreateUserAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,19 +30,17 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GetClusterRequestObject()
+        public async Task CreateUserAsync()
         {
             // Create client
-            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
             // Initialize request argument(s)
-            GetClusterRequest request = new GetClusterRequest
-            {
-                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
-                View = ClusterView.Unspecified,
-            };
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            User user = new User();
+            string userId = "";
             // Make the request
-            Cluster response = alloyDBAdminClient.GetCluster(request);
+            User response = await alloyDBAdminClient.CreateUserAsync(parent, user, userId);
         }
     }
-    // [END alloydb_v1_generated_AlloyDBAdmin_GetCluster_sync]
+    // [END alloydb_v1_generated_AlloyDBAdmin_CreateUser_async_flattened]
 }
