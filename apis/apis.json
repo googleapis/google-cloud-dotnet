@@ -3009,7 +3009,7 @@
     },
     {
       "id": "Google.Cloud.MigrationCenter.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Migration Center",
       "productUrl": "https://cloud.google.com/migration-center/docs/migration-center-overview",
@@ -3025,8 +3025,7 @@
       "protoPath": "google/cloud/migrationcenter/v1",
       "shortName": "migrationcenter",
       "serviceConfigFile": "migrationcenter_v1.yaml",
-      "restNumericEnums": true,
-      "blockRelease": "b/286188831"
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.Monitoring.V3",
