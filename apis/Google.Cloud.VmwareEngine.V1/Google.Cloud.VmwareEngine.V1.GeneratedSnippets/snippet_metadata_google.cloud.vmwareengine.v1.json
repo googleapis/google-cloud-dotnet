@@ -3441,6 +3441,493 @@
       ]
     },
     {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_GetSubnet_sync",
+      "title": "GetSubnetRequestObject",
+      "description": "Snippet for GetSubnet",
+      "file": "VmwareEngineClient.GetSubnetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubnet",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetSubnet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetSubnetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VmwareEngine.V1.Subnet",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "GetSubnet",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.GetSubnet",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_GetSubnet_async",
+      "title": "GetSubnetRequestObjectAsync",
+      "description": "Snippet for GetSubnetAsync",
+      "file": "VmwareEngineClient.GetSubnetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubnetAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetSubnetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetSubnetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.Subnet>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "GetSubnet",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.GetSubnet",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_GetSubnet_sync_flattened",
+      "title": "GetSubnet",
+      "description": "Snippet for GetSubnet",
+      "file": "VmwareEngineClient.GetSubnetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubnet",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetSubnet",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VmwareEngine.V1.Subnet",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "GetSubnet",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.GetSubnet",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_GetSubnet_async_flattened",
+      "title": "GetSubnetAsync",
+      "description": "Snippet for GetSubnetAsync",
+      "file": "VmwareEngineClient.GetSubnetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubnetAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetSubnetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.Subnet>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "GetSubnet",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.GetSubnet",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_GetSubnet_sync_flattened_resourceNames",
+      "title": "GetSubnetResourceNames",
+      "description": "Snippet for GetSubnet",
+      "file": "VmwareEngineClient.GetSubnetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubnet",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetSubnet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.SubnetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VmwareEngine.V1.Subnet",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "GetSubnet",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.GetSubnet",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_GetSubnet_async_flattened_resourceNames",
+      "title": "GetSubnetResourceNamesAsync",
+      "description": "Snippet for GetSubnetAsync",
+      "file": "VmwareEngineClient.GetSubnetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSubnetAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetSubnetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.SubnetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.Subnet>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "GetSubnet",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.GetSubnet",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_UpdateSubnet_sync",
+      "title": "UpdateSubnetRequestObject",
+      "description": "Snippet for UpdateSubnet",
+      "file": "VmwareEngineClient.UpdateSubnetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubnet",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateSubnet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Subnet, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "UpdateSubnet",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.UpdateSubnet",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_UpdateSubnet_async",
+      "title": "UpdateSubnetRequestObjectAsync",
+      "description": "Snippet for UpdateSubnetAsync",
+      "file": "VmwareEngineClient.UpdateSubnetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubnetAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateSubnetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UpdateSubnetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Subnet, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "UpdateSubnet",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.UpdateSubnet",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_UpdateSubnet_sync_flattened",
+      "title": "UpdateSubnet",
+      "description": "Snippet for UpdateSubnet",
+      "file": "VmwareEngineClient.UpdateSubnetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubnet",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateSubnet",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.Subnet",
+            "name": "subnet"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Subnet, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "UpdateSubnet",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.UpdateSubnet",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_UpdateSubnet_async_flattened",
+      "title": "UpdateSubnetAsync",
+      "description": "Snippet for UpdateSubnetAsync",
+      "file": "VmwareEngineClient.UpdateSubnetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubnetAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdateSubnetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.Subnet",
+            "name": "subnet"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.Subnet, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "UpdateSubnet",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.UpdateSubnet",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "vmwareengine_v1_generated_VmwareEngine_ListNodeTypes_sync",
       "title": "ListNodeTypesRequestObject",
       "description": "Snippet for ListNodeTypes",
@@ -8939,6 +9426,1737 @@
         {
           "start": 39,
           "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_CreatePrivateConnection_sync",
+      "title": "CreatePrivateConnectionRequestObject",
+      "description": "Snippet for CreatePrivateConnection",
+      "file": "VmwareEngineClient.CreatePrivateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrivateConnection",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreatePrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.CreatePrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateConnection, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "CreatePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.CreatePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_CreatePrivateConnection_async",
+      "title": "CreatePrivateConnectionRequestObjectAsync",
+      "description": "Snippet for CreatePrivateConnectionAsync",
+      "file": "VmwareEngineClient.CreatePrivateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrivateConnectionAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreatePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.CreatePrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateConnection, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "CreatePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.CreatePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_CreatePrivateConnection_sync_flattened",
+      "title": "CreatePrivateConnection",
+      "description": "Snippet for CreatePrivateConnection",
+      "file": "VmwareEngineClient.CreatePrivateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrivateConnection",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreatePrivateConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateConnection",
+            "name": "privateConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "privateConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateConnection, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "CreatePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.CreatePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_CreatePrivateConnection_async_flattened",
+      "title": "CreatePrivateConnectionAsync",
+      "description": "Snippet for CreatePrivateConnectionAsync",
+      "file": "VmwareEngineClient.CreatePrivateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrivateConnectionAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreatePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateConnection",
+            "name": "privateConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "privateConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateConnection, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "CreatePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.CreatePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_CreatePrivateConnection_sync_flattened_resourceNames",
+      "title": "CreatePrivateConnectionResourceNames",
+      "description": "Snippet for CreatePrivateConnection",
+      "file": "VmwareEngineClient.CreatePrivateConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrivateConnection",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreatePrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateConnection",
+            "name": "privateConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "privateConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateConnection, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "CreatePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.CreatePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_CreatePrivateConnection_async_flattened_resourceNames",
+      "title": "CreatePrivateConnectionResourceNamesAsync",
+      "description": "Snippet for CreatePrivateConnectionAsync",
+      "file": "VmwareEngineClient.CreatePrivateConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrivateConnectionAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.CreatePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateConnection",
+            "name": "privateConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "privateConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateConnection, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "CreatePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.CreatePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_GetPrivateConnection_sync",
+      "title": "GetPrivateConnectionRequestObject",
+      "description": "Snippet for GetPrivateConnection",
+      "file": "VmwareEngineClient.GetPrivateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrivateConnection",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetPrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetPrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VmwareEngine.V1.PrivateConnection",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "GetPrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.GetPrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_GetPrivateConnection_async",
+      "title": "GetPrivateConnectionRequestObjectAsync",
+      "description": "Snippet for GetPrivateConnectionAsync",
+      "file": "VmwareEngineClient.GetPrivateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrivateConnectionAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetPrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.GetPrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.PrivateConnection>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "GetPrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.GetPrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_GetPrivateConnection_sync_flattened",
+      "title": "GetPrivateConnection",
+      "description": "Snippet for GetPrivateConnection",
+      "file": "VmwareEngineClient.GetPrivateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrivateConnection",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetPrivateConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VmwareEngine.V1.PrivateConnection",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "GetPrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.GetPrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_GetPrivateConnection_async_flattened",
+      "title": "GetPrivateConnectionAsync",
+      "description": "Snippet for GetPrivateConnectionAsync",
+      "file": "VmwareEngineClient.GetPrivateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrivateConnectionAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetPrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.PrivateConnection>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "GetPrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.GetPrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_GetPrivateConnection_sync_flattened_resourceNames",
+      "title": "GetPrivateConnectionResourceNames",
+      "description": "Snippet for GetPrivateConnection",
+      "file": "VmwareEngineClient.GetPrivateConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrivateConnection",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetPrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.VmwareEngine.V1.PrivateConnection",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "GetPrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.GetPrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_GetPrivateConnection_async_flattened_resourceNames",
+      "title": "GetPrivateConnectionResourceNamesAsync",
+      "description": "Snippet for GetPrivateConnectionAsync",
+      "file": "VmwareEngineClient.GetPrivateConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrivateConnectionAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.GetPrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.VmwareEngine.V1.PrivateConnection>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "GetPrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.GetPrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_ListPrivateConnections_sync",
+      "title": "ListPrivateConnectionsRequestObject",
+      "description": "Snippet for ListPrivateConnections",
+      "file": "VmwareEngineClient.ListPrivateConnectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnections",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse, Google.Cloud.VmwareEngine.V1.PrivateConnection>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnections",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateConnections",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_ListPrivateConnections_async",
+      "title": "ListPrivateConnectionsRequestObjectAsync",
+      "description": "Snippet for ListPrivateConnectionsAsync",
+      "file": "VmwareEngineClient.ListPrivateConnectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnectionsAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse, Google.Cloud.VmwareEngine.V1.PrivateConnection>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnections",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateConnections",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_ListPrivateConnections_sync_flattened",
+      "title": "ListPrivateConnections",
+      "description": "Snippet for ListPrivateConnections",
+      "file": "VmwareEngineClient.ListPrivateConnectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnections",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse, Google.Cloud.VmwareEngine.V1.PrivateConnection>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnections",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateConnections",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_ListPrivateConnections_async_flattened",
+      "title": "ListPrivateConnectionsAsync",
+      "description": "Snippet for ListPrivateConnectionsAsync",
+      "file": "VmwareEngineClient.ListPrivateConnectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnectionsAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse, Google.Cloud.VmwareEngine.V1.PrivateConnection>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnections",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateConnections",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_ListPrivateConnections_sync_flattened_resourceNames",
+      "title": "ListPrivateConnectionsResourceNames",
+      "description": "Snippet for ListPrivateConnections",
+      "file": "VmwareEngineClient.ListPrivateConnectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnections",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateConnections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse, Google.Cloud.VmwareEngine.V1.PrivateConnection>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnections",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateConnections",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_ListPrivateConnections_async_flattened_resourceNames",
+      "title": "ListPrivateConnectionsResourceNamesAsync",
+      "description": "Snippet for ListPrivateConnectionsAsync",
+      "file": "VmwareEngineClient.ListPrivateConnectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnectionsAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateConnectionsResponse, Google.Cloud.VmwareEngine.V1.PrivateConnection>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnections",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateConnections",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_UpdatePrivateConnection_sync",
+      "title": "UpdatePrivateConnectionRequestObject",
+      "description": "Snippet for UpdatePrivateConnection",
+      "file": "VmwareEngineClient.UpdatePrivateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePrivateConnection",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdatePrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UpdatePrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateConnection, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "UpdatePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.UpdatePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_UpdatePrivateConnection_async",
+      "title": "UpdatePrivateConnectionRequestObjectAsync",
+      "description": "Snippet for UpdatePrivateConnectionAsync",
+      "file": "VmwareEngineClient.UpdatePrivateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePrivateConnectionAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdatePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.UpdatePrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateConnection, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "UpdatePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.UpdatePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_UpdatePrivateConnection_sync_flattened",
+      "title": "UpdatePrivateConnection",
+      "description": "Snippet for UpdatePrivateConnection",
+      "file": "VmwareEngineClient.UpdatePrivateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePrivateConnection",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdatePrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateConnection",
+            "name": "privateConnection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateConnection, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "UpdatePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.UpdatePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_UpdatePrivateConnection_async_flattened",
+      "title": "UpdatePrivateConnectionAsync",
+      "description": "Snippet for UpdatePrivateConnectionAsync",
+      "file": "VmwareEngineClient.UpdatePrivateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePrivateConnectionAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.UpdatePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateConnection",
+            "name": "privateConnection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.VmwareEngine.V1.PrivateConnection, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "UpdatePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.UpdatePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_DeletePrivateConnection_sync",
+      "title": "DeletePrivateConnectionRequestObject",
+      "description": "Snippet for DeletePrivateConnection",
+      "file": "VmwareEngineClient.DeletePrivateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrivateConnection",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeletePrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.DeletePrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "DeletePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.DeletePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_DeletePrivateConnection_async",
+      "title": "DeletePrivateConnectionRequestObjectAsync",
+      "description": "Snippet for DeletePrivateConnectionAsync",
+      "file": "VmwareEngineClient.DeletePrivateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrivateConnectionAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeletePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.DeletePrivateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "DeletePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.DeletePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_DeletePrivateConnection_sync_flattened",
+      "title": "DeletePrivateConnection",
+      "description": "Snippet for DeletePrivateConnection",
+      "file": "VmwareEngineClient.DeletePrivateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrivateConnection",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeletePrivateConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "DeletePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.DeletePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_DeletePrivateConnection_async_flattened",
+      "title": "DeletePrivateConnectionAsync",
+      "description": "Snippet for DeletePrivateConnectionAsync",
+      "file": "VmwareEngineClient.DeletePrivateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrivateConnectionAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeletePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "DeletePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.DeletePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_DeletePrivateConnection_sync_flattened_resourceNames",
+      "title": "DeletePrivateConnectionResourceNames",
+      "description": "Snippet for DeletePrivateConnection",
+      "file": "VmwareEngineClient.DeletePrivateConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrivateConnection",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeletePrivateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "DeletePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.DeletePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_DeletePrivateConnection_async_flattened_resourceNames",
+      "title": "DeletePrivateConnectionResourceNamesAsync",
+      "description": "Snippet for DeletePrivateConnectionAsync",
+      "file": "VmwareEngineClient.DeletePrivateConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrivateConnectionAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.DeletePrivateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.VmwareEngine.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "DeletePrivateConnection",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.DeletePrivateConnection",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_ListPrivateConnectionPeeringRoutes_sync",
+      "title": "ListPrivateConnectionPeeringRoutesRequestObject",
+      "description": "Snippet for ListPrivateConnectionPeeringRoutes",
+      "file": "VmwareEngineClient.ListPrivateConnectionPeeringRoutesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnectionPeeringRoutes",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateConnectionPeeringRoutes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse, Google.Cloud.VmwareEngine.V1.PeeringRoute>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnectionPeeringRoutes",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateConnectionPeeringRoutes",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_ListPrivateConnectionPeeringRoutes_async",
+      "title": "ListPrivateConnectionPeeringRoutesRequestObjectAsync",
+      "description": "Snippet for ListPrivateConnectionPeeringRoutesAsync",
+      "file": "VmwareEngineClient.ListPrivateConnectionPeeringRoutesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnectionPeeringRoutesAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateConnectionPeeringRoutesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse, Google.Cloud.VmwareEngine.V1.PeeringRoute>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnectionPeeringRoutes",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateConnectionPeeringRoutes",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_ListPrivateConnectionPeeringRoutes_sync_flattened",
+      "title": "ListPrivateConnectionPeeringRoutes",
+      "description": "Snippet for ListPrivateConnectionPeeringRoutes",
+      "file": "VmwareEngineClient.ListPrivateConnectionPeeringRoutesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnectionPeeringRoutes",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateConnectionPeeringRoutes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse, Google.Cloud.VmwareEngine.V1.PeeringRoute>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnectionPeeringRoutes",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateConnectionPeeringRoutes",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_ListPrivateConnectionPeeringRoutes_async_flattened",
+      "title": "ListPrivateConnectionPeeringRoutesAsync",
+      "description": "Snippet for ListPrivateConnectionPeeringRoutesAsync",
+      "file": "VmwareEngineClient.ListPrivateConnectionPeeringRoutesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnectionPeeringRoutesAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateConnectionPeeringRoutesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse, Google.Cloud.VmwareEngine.V1.PeeringRoute>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnectionPeeringRoutes",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateConnectionPeeringRoutes",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_ListPrivateConnectionPeeringRoutes_sync_flattened_resourceNames",
+      "title": "ListPrivateConnectionPeeringRoutesResourceNames",
+      "description": "Snippet for ListPrivateConnectionPeeringRoutes",
+      "file": "VmwareEngineClient.ListPrivateConnectionPeeringRoutesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnectionPeeringRoutes",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateConnectionPeeringRoutes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse, Google.Cloud.VmwareEngine.V1.PeeringRoute>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnectionPeeringRoutes",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateConnectionPeeringRoutes",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "vmwareengine_v1_generated_VmwareEngine_ListPrivateConnectionPeeringRoutes_async_flattened_resourceNames",
+      "title": "ListPrivateConnectionPeeringRoutesResourceNamesAsync",
+      "description": "Snippet for ListPrivateConnectionPeeringRoutesAsync",
+      "file": "VmwareEngineClient.ListPrivateConnectionPeeringRoutesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrivateConnectionPeeringRoutesAsync",
+        "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient.ListPrivateConnectionPeeringRoutesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.VmwareEngine.V1.PrivateConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.VmwareEngine.V1.ListPrivateConnectionPeeringRoutesResponse, Google.Cloud.VmwareEngine.V1.PeeringRoute>",
+        "client": {
+          "shortName": "VmwareEngineClient",
+          "fullName": "Google.Cloud.VmwareEngine.V1.VmwareEngineClient"
+        },
+        "method": {
+          "shortName": "ListPrivateConnectionPeeringRoutes",
+          "fullName": "google.cloud.vmwareengine.v1.VmwareEngine.ListPrivateConnectionPeeringRoutes",
+          "service": {
+            "shortName": "VmwareEngine",
+            "fullName": "google.cloud.vmwareengine.v1.VmwareEngine"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
           "type": "SHORT"
         }
       ]

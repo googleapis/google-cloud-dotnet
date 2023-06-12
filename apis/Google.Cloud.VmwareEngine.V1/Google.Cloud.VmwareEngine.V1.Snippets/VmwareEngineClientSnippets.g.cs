@@ -2257,6 +2257,221 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSubnet</summary>
+        public void GetSubnetRequestObject()
+        {
+            // Snippet: GetSubnet(GetSubnetRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            GetSubnetRequest request = new GetSubnetRequest
+            {
+                SubnetName = SubnetName.FromProjectLocationPrivateCloudSubnet("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[SUBNET]"),
+            };
+            // Make the request
+            Subnet response = vmwareEngineClient.GetSubnet(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubnetAsync</summary>
+        public async Task GetSubnetRequestObjectAsync()
+        {
+            // Snippet: GetSubnetAsync(GetSubnetRequest, CallSettings)
+            // Additional: GetSubnetAsync(GetSubnetRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSubnetRequest request = new GetSubnetRequest
+            {
+                SubnetName = SubnetName.FromProjectLocationPrivateCloudSubnet("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[SUBNET]"),
+            };
+            // Make the request
+            Subnet response = await vmwareEngineClient.GetSubnetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubnet</summary>
+        public void GetSubnet()
+        {
+            // Snippet: GetSubnet(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/subnets/[SUBNET]";
+            // Make the request
+            Subnet response = vmwareEngineClient.GetSubnet(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubnetAsync</summary>
+        public async Task GetSubnetAsync()
+        {
+            // Snippet: GetSubnetAsync(string, CallSettings)
+            // Additional: GetSubnetAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateClouds/[PRIVATE_CLOUD]/subnets/[SUBNET]";
+            // Make the request
+            Subnet response = await vmwareEngineClient.GetSubnetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubnet</summary>
+        public void GetSubnetResourceNames()
+        {
+            // Snippet: GetSubnet(SubnetName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            SubnetName name = SubnetName.FromProjectLocationPrivateCloudSubnet("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[SUBNET]");
+            // Make the request
+            Subnet response = vmwareEngineClient.GetSubnet(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubnetAsync</summary>
+        public async Task GetSubnetResourceNamesAsync()
+        {
+            // Snippet: GetSubnetAsync(SubnetName, CallSettings)
+            // Additional: GetSubnetAsync(SubnetName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            SubnetName name = SubnetName.FromProjectLocationPrivateCloudSubnet("[PROJECT]", "[LOCATION]", "[PRIVATE_CLOUD]", "[SUBNET]");
+            // Make the request
+            Subnet response = await vmwareEngineClient.GetSubnetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubnet</summary>
+        public void UpdateSubnetRequestObject()
+        {
+            // Snippet: UpdateSubnet(UpdateSubnetRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            UpdateSubnetRequest request = new UpdateSubnetRequest
+            {
+                UpdateMask = new FieldMask(),
+                Subnet = new Subnet(),
+            };
+            // Make the request
+            Operation<Subnet, OperationMetadata> response = vmwareEngineClient.UpdateSubnet(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subnet, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Subnet result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subnet, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateSubnet(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subnet retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubnetAsync</summary>
+        public async Task UpdateSubnetRequestObjectAsync()
+        {
+            // Snippet: UpdateSubnetAsync(UpdateSubnetRequest, CallSettings)
+            // Additional: UpdateSubnetAsync(UpdateSubnetRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSubnetRequest request = new UpdateSubnetRequest
+            {
+                UpdateMask = new FieldMask(),
+                Subnet = new Subnet(),
+            };
+            // Make the request
+            Operation<Subnet, OperationMetadata> response = await vmwareEngineClient.UpdateSubnetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subnet, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Subnet result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subnet, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateSubnetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subnet retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubnet</summary>
+        public void UpdateSubnet()
+        {
+            // Snippet: UpdateSubnet(Subnet, FieldMask, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            Subnet subnet = new Subnet();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Subnet, OperationMetadata> response = vmwareEngineClient.UpdateSubnet(subnet, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subnet, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Subnet result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subnet, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdateSubnet(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subnet retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubnetAsync</summary>
+        public async Task UpdateSubnetAsync()
+        {
+            // Snippet: UpdateSubnetAsync(Subnet, FieldMask, CallSettings)
+            // Additional: UpdateSubnetAsync(Subnet, FieldMask, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            Subnet subnet = new Subnet();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Subnet, OperationMetadata> response = await vmwareEngineClient.UpdateSubnetAsync(subnet, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subnet, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Subnet result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subnet, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdateSubnetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subnet retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListNodeTypes</summary>
         public void ListNodeTypesRequestObject()
         {
@@ -5477,6 +5692,1161 @@ namespace GoogleCSharpSnippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (VmwareEngineNetwork item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePrivateConnection</summary>
+        public void CreatePrivateConnectionRequestObject()
+        {
+            // Snippet: CreatePrivateConnection(CreatePrivateConnectionRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            CreatePrivateConnectionRequest request = new CreatePrivateConnectionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PrivateConnectionId = "",
+                PrivateConnection = new PrivateConnection(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = vmwareEngineClient.CreatePrivateConnection(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreatePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePrivateConnectionAsync</summary>
+        public async Task CreatePrivateConnectionRequestObjectAsync()
+        {
+            // Snippet: CreatePrivateConnectionAsync(CreatePrivateConnectionRequest, CallSettings)
+            // Additional: CreatePrivateConnectionAsync(CreatePrivateConnectionRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            CreatePrivateConnectionRequest request = new CreatePrivateConnectionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                PrivateConnectionId = "",
+                PrivateConnection = new PrivateConnection(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = await vmwareEngineClient.CreatePrivateConnectionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreatePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePrivateConnection</summary>
+        public void CreatePrivateConnection()
+        {
+            // Snippet: CreatePrivateConnection(string, PrivateConnection, string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            PrivateConnection privateConnection = new PrivateConnection();
+            string privateConnectionId = "";
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = vmwareEngineClient.CreatePrivateConnection(parent, privateConnection, privateConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreatePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePrivateConnectionAsync</summary>
+        public async Task CreatePrivateConnectionAsync()
+        {
+            // Snippet: CreatePrivateConnectionAsync(string, PrivateConnection, string, CallSettings)
+            // Additional: CreatePrivateConnectionAsync(string, PrivateConnection, string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            PrivateConnection privateConnection = new PrivateConnection();
+            string privateConnectionId = "";
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = await vmwareEngineClient.CreatePrivateConnectionAsync(parent, privateConnection, privateConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreatePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePrivateConnection</summary>
+        public void CreatePrivateConnectionResourceNames()
+        {
+            // Snippet: CreatePrivateConnection(LocationName, PrivateConnection, string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            PrivateConnection privateConnection = new PrivateConnection();
+            string privateConnectionId = "";
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = vmwareEngineClient.CreatePrivateConnection(parent, privateConnection, privateConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceCreatePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreatePrivateConnectionAsync</summary>
+        public async Task CreatePrivateConnectionResourceNamesAsync()
+        {
+            // Snippet: CreatePrivateConnectionAsync(LocationName, PrivateConnection, string, CallSettings)
+            // Additional: CreatePrivateConnectionAsync(LocationName, PrivateConnection, string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            PrivateConnection privateConnection = new PrivateConnection();
+            string privateConnectionId = "";
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = await vmwareEngineClient.CreatePrivateConnectionAsync(parent, privateConnection, privateConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceCreatePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPrivateConnection</summary>
+        public void GetPrivateConnectionRequestObject()
+        {
+            // Snippet: GetPrivateConnection(GetPrivateConnectionRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
+            {
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
+            };
+            // Make the request
+            PrivateConnection response = vmwareEngineClient.GetPrivateConnection(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPrivateConnectionAsync</summary>
+        public async Task GetPrivateConnectionRequestObjectAsync()
+        {
+            // Snippet: GetPrivateConnectionAsync(GetPrivateConnectionRequest, CallSettings)
+            // Additional: GetPrivateConnectionAsync(GetPrivateConnectionRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
+            {
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
+            };
+            // Make the request
+            PrivateConnection response = await vmwareEngineClient.GetPrivateConnectionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPrivateConnection</summary>
+        public void GetPrivateConnection()
+        {
+            // Snippet: GetPrivateConnection(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATE_CONNECTION]";
+            // Make the request
+            PrivateConnection response = vmwareEngineClient.GetPrivateConnection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPrivateConnectionAsync</summary>
+        public async Task GetPrivateConnectionAsync()
+        {
+            // Snippet: GetPrivateConnectionAsync(string, CallSettings)
+            // Additional: GetPrivateConnectionAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATE_CONNECTION]";
+            // Make the request
+            PrivateConnection response = await vmwareEngineClient.GetPrivateConnectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPrivateConnection</summary>
+        public void GetPrivateConnectionResourceNames()
+        {
+            // Snippet: GetPrivateConnection(PrivateConnectionName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]");
+            // Make the request
+            PrivateConnection response = vmwareEngineClient.GetPrivateConnection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPrivateConnectionAsync</summary>
+        public async Task GetPrivateConnectionResourceNamesAsync()
+        {
+            // Snippet: GetPrivateConnectionAsync(PrivateConnectionName, CallSettings)
+            // Additional: GetPrivateConnectionAsync(PrivateConnectionName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]");
+            // Make the request
+            PrivateConnection response = await vmwareEngineClient.GetPrivateConnectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnections</summary>
+        public void ListPrivateConnectionsRequestObject()
+        {
+            // Snippet: ListPrivateConnections(ListPrivateConnectionsRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = vmwareEngineClient.ListPrivateConnections(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PrivateConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPrivateConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PrivateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PrivateConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PrivateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnectionsAsync</summary>
+        public async Task ListPrivateConnectionsRequestObjectAsync()
+        {
+            // Snippet: ListPrivateConnectionsAsync(ListPrivateConnectionsRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = vmwareEngineClient.ListPrivateConnectionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PrivateConnection item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PrivateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PrivateConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PrivateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnections</summary>
+        public void ListPrivateConnections()
+        {
+            // Snippet: ListPrivateConnections(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = vmwareEngineClient.ListPrivateConnections(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PrivateConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPrivateConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PrivateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PrivateConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PrivateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnectionsAsync</summary>
+        public async Task ListPrivateConnectionsAsync()
+        {
+            // Snippet: ListPrivateConnectionsAsync(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = vmwareEngineClient.ListPrivateConnectionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PrivateConnection item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PrivateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PrivateConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PrivateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnections</summary>
+        public void ListPrivateConnectionsResourceNames()
+        {
+            // Snippet: ListPrivateConnections(LocationName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = vmwareEngineClient.ListPrivateConnections(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PrivateConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPrivateConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PrivateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PrivateConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PrivateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnectionsAsync</summary>
+        public async Task ListPrivateConnectionsResourceNamesAsync()
+        {
+            // Snippet: ListPrivateConnectionsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> response = vmwareEngineClient.ListPrivateConnectionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PrivateConnection item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PrivateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PrivateConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PrivateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePrivateConnection</summary>
+        public void UpdatePrivateConnectionRequestObject()
+        {
+            // Snippet: UpdatePrivateConnection(UpdatePrivateConnectionRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            UpdatePrivateConnectionRequest request = new UpdatePrivateConnectionRequest
+            {
+                PrivateConnection = new PrivateConnection(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = vmwareEngineClient.UpdatePrivateConnection(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdatePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePrivateConnectionAsync</summary>
+        public async Task UpdatePrivateConnectionRequestObjectAsync()
+        {
+            // Snippet: UpdatePrivateConnectionAsync(UpdatePrivateConnectionRequest, CallSettings)
+            // Additional: UpdatePrivateConnectionAsync(UpdatePrivateConnectionRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdatePrivateConnectionRequest request = new UpdatePrivateConnectionRequest
+            {
+                PrivateConnection = new PrivateConnection(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = await vmwareEngineClient.UpdatePrivateConnectionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdatePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePrivateConnection</summary>
+        public void UpdatePrivateConnection()
+        {
+            // Snippet: UpdatePrivateConnection(PrivateConnection, FieldMask, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            PrivateConnection privateConnection = new PrivateConnection();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = vmwareEngineClient.UpdatePrivateConnection(privateConnection, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceUpdatePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePrivateConnectionAsync</summary>
+        public async Task UpdatePrivateConnectionAsync()
+        {
+            // Snippet: UpdatePrivateConnectionAsync(PrivateConnection, FieldMask, CallSettings)
+            // Additional: UpdatePrivateConnectionAsync(PrivateConnection, FieldMask, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            PrivateConnection privateConnection = new PrivateConnection();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<PrivateConnection, OperationMetadata> response = await vmwareEngineClient.UpdatePrivateConnectionAsync(privateConnection, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PrivateConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PrivateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PrivateConnection, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceUpdatePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PrivateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePrivateConnection</summary>
+        public void DeletePrivateConnectionRequestObject()
+        {
+            // Snippet: DeletePrivateConnection(DeletePrivateConnectionRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            DeletePrivateConnectionRequest request = new DeletePrivateConnectionRequest
+            {
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeletePrivateConnection(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeletePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePrivateConnectionAsync</summary>
+        public async Task DeletePrivateConnectionRequestObjectAsync()
+        {
+            // Snippet: DeletePrivateConnectionAsync(DeletePrivateConnectionRequest, CallSettings)
+            // Additional: DeletePrivateConnectionAsync(DeletePrivateConnectionRequest, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            DeletePrivateConnectionRequest request = new DeletePrivateConnectionRequest
+            {
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeletePrivateConnectionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeletePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePrivateConnection</summary>
+        public void DeletePrivateConnection()
+        {
+            // Snippet: DeletePrivateConnection(string, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATE_CONNECTION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeletePrivateConnection(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeletePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePrivateConnectionAsync</summary>
+        public async Task DeletePrivateConnectionAsync()
+        {
+            // Snippet: DeletePrivateConnectionAsync(string, CallSettings)
+            // Additional: DeletePrivateConnectionAsync(string, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATE_CONNECTION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeletePrivateConnectionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeletePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePrivateConnection</summary>
+        public void DeletePrivateConnectionResourceNames()
+        {
+            // Snippet: DeletePrivateConnection(PrivateConnectionName, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmwareEngineClient.DeletePrivateConnection(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmwareEngineClient.PollOnceDeletePrivateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeletePrivateConnectionAsync</summary>
+        public async Task DeletePrivateConnectionResourceNamesAsync()
+        {
+            // Snippet: DeletePrivateConnectionAsync(PrivateConnectionName, CallSettings)
+            // Additional: DeletePrivateConnectionAsync(PrivateConnectionName, CancellationToken)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            PrivateConnectionName name = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmwareEngineClient.DeletePrivateConnectionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmwareEngineClient.PollOnceDeletePrivateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnectionPeeringRoutes</summary>
+        public void ListPrivateConnectionPeeringRoutesRequestObject()
+        {
+            // Snippet: ListPrivateConnectionPeeringRoutes(ListPrivateConnectionPeeringRoutesRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            ListPrivateConnectionPeeringRoutesRequest request = new ListPrivateConnectionPeeringRoutesRequest
+            {
+                ParentAsPrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPrivateConnectionPeeringRoutes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PeeringRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPrivateConnectionPeeringRoutesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PeeringRoute> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnectionPeeringRoutesAsync</summary>
+        public async Task ListPrivateConnectionPeeringRoutesRequestObjectAsync()
+        {
+            // Snippet: ListPrivateConnectionPeeringRoutesAsync(ListPrivateConnectionPeeringRoutesRequest, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            ListPrivateConnectionPeeringRoutesRequest request = new ListPrivateConnectionPeeringRoutesRequest
+            {
+                ParentAsPrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPrivateConnectionPeeringRoutesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PeeringRoute item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionPeeringRoutesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PeeringRoute> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnectionPeeringRoutes</summary>
+        public void ListPrivateConnectionPeeringRoutes()
+        {
+            // Snippet: ListPrivateConnectionPeeringRoutes(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATE_CONNECTION]";
+            // Make the request
+            PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPrivateConnectionPeeringRoutes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PeeringRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPrivateConnectionPeeringRoutesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PeeringRoute> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnectionPeeringRoutesAsync</summary>
+        public async Task ListPrivateConnectionPeeringRoutesAsync()
+        {
+            // Snippet: ListPrivateConnectionPeeringRoutesAsync(string, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/privateConnections/[PRIVATE_CONNECTION]";
+            // Make the request
+            PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPrivateConnectionPeeringRoutesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PeeringRoute item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionPeeringRoutesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PeeringRoute> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnectionPeeringRoutes</summary>
+        public void ListPrivateConnectionPeeringRoutesResourceNames()
+        {
+            // Snippet: ListPrivateConnectionPeeringRoutes(PrivateConnectionName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = VmwareEngineClient.Create();
+            // Initialize request argument(s)
+            PrivateConnectionName parent = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]");
+            // Make the request
+            PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPrivateConnectionPeeringRoutes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PeeringRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPrivateConnectionPeeringRoutesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PeeringRoute> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PeeringRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPrivateConnectionPeeringRoutesAsync</summary>
+        public async Task ListPrivateConnectionPeeringRoutesResourceNamesAsync()
+        {
+            // Snippet: ListPrivateConnectionPeeringRoutesAsync(PrivateConnectionName, string, int?, CallSettings)
+            // Create client
+            VmwareEngineClient vmwareEngineClient = await VmwareEngineClient.CreateAsync();
+            // Initialize request argument(s)
+            PrivateConnectionName parent = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]");
+            // Make the request
+            PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> response = vmwareEngineClient.ListPrivateConnectionPeeringRoutesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PeeringRoute item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListPrivateConnectionPeeringRoutesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PeeringRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PeeringRoute> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PeeringRoute item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
