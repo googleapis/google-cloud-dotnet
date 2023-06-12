@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Geo.Type",
-  "release_level": "preview",
+  "release_level": "stable",
   "client_documentation": "https://googleapis.dev/dotnet/Google.Geo.Type/latest",
   "library_type": "OTHER",
   "language": "dotnet"
