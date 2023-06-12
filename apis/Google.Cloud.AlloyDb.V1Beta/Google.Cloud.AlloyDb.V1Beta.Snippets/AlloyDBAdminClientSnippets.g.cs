@@ -318,6 +318,7 @@ namespace GoogleCSharpSnippets
             GetClusterRequest request = new GetClusterRequest
             {
                 ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                View = ClusterView.Unspecified,
             };
             // Make the request
             Cluster response = alloyDBAdminClient.GetCluster(request);
@@ -335,6 +336,7 @@ namespace GoogleCSharpSnippets
             GetClusterRequest request = new GetClusterRequest
             {
                 ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                View = ClusterView.Unspecified,
             };
             // Make the request
             Cluster response = await alloyDBAdminClient.GetClusterAsync(request);
@@ -2728,6 +2730,199 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for InjectFault</summary>
+        public void InjectFaultRequestObject()
+        {
+            // Snippet: InjectFault(InjectFaultRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            InjectFaultRequest request = new InjectFaultRequest
+            {
+                FaultType = InjectFaultRequest.Types.FaultType.Unspecified,
+                InstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = alloyDBAdminClient.InjectFault(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceInjectFault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InjectFaultAsync</summary>
+        public async Task InjectFaultRequestObjectAsync()
+        {
+            // Snippet: InjectFaultAsync(InjectFaultRequest, CallSettings)
+            // Additional: InjectFaultAsync(InjectFaultRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InjectFaultRequest request = new InjectFaultRequest
+            {
+                FaultType = InjectFaultRequest.Types.FaultType.Unspecified,
+                InstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await alloyDBAdminClient.InjectFaultAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceInjectFaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InjectFault</summary>
+        public void InjectFault()
+        {
+            // Snippet: InjectFault(InjectFaultRequest.Types.FaultType, string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            InjectFaultRequest.Types.FaultType faultType = InjectFaultRequest.Types.FaultType.Unspecified;
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/instances/[INSTANCE]";
+            // Make the request
+            Operation<Instance, OperationMetadata> response = alloyDBAdminClient.InjectFault(faultType, name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceInjectFault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InjectFaultAsync</summary>
+        public async Task InjectFaultAsync()
+        {
+            // Snippet: InjectFaultAsync(InjectFaultRequest.Types.FaultType, string, CallSettings)
+            // Additional: InjectFaultAsync(InjectFaultRequest.Types.FaultType, string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InjectFaultRequest.Types.FaultType faultType = InjectFaultRequest.Types.FaultType.Unspecified;
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/instances/[INSTANCE]";
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await alloyDBAdminClient.InjectFaultAsync(faultType, name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceInjectFaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InjectFault</summary>
+        public void InjectFaultResourceNames()
+        {
+            // Snippet: InjectFault(InjectFaultRequest.Types.FaultType, InstanceName, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            InjectFaultRequest.Types.FaultType faultType = InjectFaultRequest.Types.FaultType.Unspecified;
+            InstanceName name = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]");
+            // Make the request
+            Operation<Instance, OperationMetadata> response = alloyDBAdminClient.InjectFault(faultType, name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceInjectFault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InjectFaultAsync</summary>
+        public async Task InjectFaultResourceNamesAsync()
+        {
+            // Snippet: InjectFaultAsync(InjectFaultRequest.Types.FaultType, InstanceName, CallSettings)
+            // Additional: InjectFaultAsync(InjectFaultRequest.Types.FaultType, InstanceName, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InjectFaultRequest.Types.FaultType faultType = InjectFaultRequest.Types.FaultType.Unspecified;
+            InstanceName name = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]");
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await alloyDBAdminClient.InjectFaultAsync(faultType, name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceInjectFaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for RestartInstance</summary>
         public void RestartInstanceRequestObject()
         {
@@ -4091,8 +4286,8 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
                 RequestId = "",
-                PemCsr = "",
                 CertDuration = new Duration(),
+                PublicKey = "",
             };
             // Make the request
             GenerateClientCertificateResponse response = alloyDBAdminClient.GenerateClientCertificate(request);
@@ -4111,8 +4306,8 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
                 RequestId = "",
-                PemCsr = "",
                 CertDuration = new Duration(),
+                PublicKey = "",
             };
             // Make the request
             GenerateClientCertificateResponse response = await alloyDBAdminClient.GenerateClientCertificateAsync(request);
@@ -4259,6 +4454,637 @@ namespace GoogleCSharpSnippets
             InstanceName parent = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]");
             // Make the request
             ConnectionInfo response = await alloyDBAdminClient.GetConnectionInfoAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsers</summary>
+        public void ListUsersRequestObject()
+        {
+            // Snippet: ListUsers(ListUsersRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ListUsersRequest request = new ListUsersRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListUsersResponse, User> response = alloyDBAdminClient.ListUsers(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (User item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListUsersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (User item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<User> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (User item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsersAsync</summary>
+        public async Task ListUsersRequestObjectAsync()
+        {
+            // Snippet: ListUsersAsync(ListUsersRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListUsersRequest request = new ListUsersRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListUsersResponse, User> response = alloyDBAdminClient.ListUsersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((User item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListUsersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (User item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<User> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (User item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsers</summary>
+        public void ListUsers()
+        {
+            // Snippet: ListUsers(string, string, int?, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            // Make the request
+            PagedEnumerable<ListUsersResponse, User> response = alloyDBAdminClient.ListUsers(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (User item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListUsersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (User item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<User> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (User item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsersAsync</summary>
+        public async Task ListUsersAsync()
+        {
+            // Snippet: ListUsersAsync(string, string, int?, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            // Make the request
+            PagedAsyncEnumerable<ListUsersResponse, User> response = alloyDBAdminClient.ListUsersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((User item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListUsersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (User item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<User> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (User item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsers</summary>
+        public void ListUsersResourceNames()
+        {
+            // Snippet: ListUsers(ClusterName, string, int?, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            // Make the request
+            PagedEnumerable<ListUsersResponse, User> response = alloyDBAdminClient.ListUsers(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (User item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListUsersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (User item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<User> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (User item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsersAsync</summary>
+        public async Task ListUsersResourceNamesAsync()
+        {
+            // Snippet: ListUsersAsync(ClusterName, string, int?, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            // Make the request
+            PagedAsyncEnumerable<ListUsersResponse, User> response = alloyDBAdminClient.ListUsersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((User item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListUsersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (User item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<User> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (User item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUser</summary>
+        public void GetUserRequestObject()
+        {
+            // Snippet: GetUser(GetUserRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            GetUserRequest request = new GetUserRequest
+            {
+                UserName = UserName.FromProjectLocationClusterUser("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[USER]"),
+            };
+            // Make the request
+            User response = alloyDBAdminClient.GetUser(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserAsync</summary>
+        public async Task GetUserRequestObjectAsync()
+        {
+            // Snippet: GetUserAsync(GetUserRequest, CallSettings)
+            // Additional: GetUserAsync(GetUserRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetUserRequest request = new GetUserRequest
+            {
+                UserName = UserName.FromProjectLocationClusterUser("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[USER]"),
+            };
+            // Make the request
+            User response = await alloyDBAdminClient.GetUserAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUser</summary>
+        public void GetUser()
+        {
+            // Snippet: GetUser(string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/users/[USER]";
+            // Make the request
+            User response = alloyDBAdminClient.GetUser(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserAsync</summary>
+        public async Task GetUserAsync()
+        {
+            // Snippet: GetUserAsync(string, CallSettings)
+            // Additional: GetUserAsync(string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/users/[USER]";
+            // Make the request
+            User response = await alloyDBAdminClient.GetUserAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUser</summary>
+        public void GetUserResourceNames()
+        {
+            // Snippet: GetUser(UserName, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            UserName name = UserName.FromProjectLocationClusterUser("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[USER]");
+            // Make the request
+            User response = alloyDBAdminClient.GetUser(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserAsync</summary>
+        public async Task GetUserResourceNamesAsync()
+        {
+            // Snippet: GetUserAsync(UserName, CallSettings)
+            // Additional: GetUserAsync(UserName, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UserName name = UserName.FromProjectLocationClusterUser("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[USER]");
+            // Make the request
+            User response = await alloyDBAdminClient.GetUserAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUser</summary>
+        public void CreateUserRequestObject()
+        {
+            // Snippet: CreateUser(CreateUserRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            CreateUserRequest request = new CreateUserRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                UserId = "",
+                User = new User(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            User response = alloyDBAdminClient.CreateUser(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUserAsync</summary>
+        public async Task CreateUserRequestObjectAsync()
+        {
+            // Snippet: CreateUserAsync(CreateUserRequest, CallSettings)
+            // Additional: CreateUserAsync(CreateUserRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateUserRequest request = new CreateUserRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                UserId = "",
+                User = new User(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            User response = await alloyDBAdminClient.CreateUserAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUser</summary>
+        public void CreateUser()
+        {
+            // Snippet: CreateUser(string, User, string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            User user = new User();
+            string userId = "";
+            // Make the request
+            User response = alloyDBAdminClient.CreateUser(parent, user, userId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUserAsync</summary>
+        public async Task CreateUserAsync()
+        {
+            // Snippet: CreateUserAsync(string, User, string, CallSettings)
+            // Additional: CreateUserAsync(string, User, string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            User user = new User();
+            string userId = "";
+            // Make the request
+            User response = await alloyDBAdminClient.CreateUserAsync(parent, user, userId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUser</summary>
+        public void CreateUserResourceNames()
+        {
+            // Snippet: CreateUser(ClusterName, User, string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            User user = new User();
+            string userId = "";
+            // Make the request
+            User response = alloyDBAdminClient.CreateUser(parent, user, userId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUserAsync</summary>
+        public async Task CreateUserResourceNamesAsync()
+        {
+            // Snippet: CreateUserAsync(ClusterName, User, string, CallSettings)
+            // Additional: CreateUserAsync(ClusterName, User, string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            User user = new User();
+            string userId = "";
+            // Make the request
+            User response = await alloyDBAdminClient.CreateUserAsync(parent, user, userId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateUser</summary>
+        public void UpdateUserRequestObject()
+        {
+            // Snippet: UpdateUser(UpdateUserRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateUserRequest request = new UpdateUserRequest
+            {
+                UpdateMask = new FieldMask(),
+                User = new User(),
+                RequestId = "",
+                ValidateOnly = false,
+                AllowMissing = false,
+            };
+            // Make the request
+            User response = alloyDBAdminClient.UpdateUser(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateUserAsync</summary>
+        public async Task UpdateUserRequestObjectAsync()
+        {
+            // Snippet: UpdateUserAsync(UpdateUserRequest, CallSettings)
+            // Additional: UpdateUserAsync(UpdateUserRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateUserRequest request = new UpdateUserRequest
+            {
+                UpdateMask = new FieldMask(),
+                User = new User(),
+                RequestId = "",
+                ValidateOnly = false,
+                AllowMissing = false,
+            };
+            // Make the request
+            User response = await alloyDBAdminClient.UpdateUserAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateUser</summary>
+        public void UpdateUser()
+        {
+            // Snippet: UpdateUser(User, FieldMask, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            User user = new User();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            User response = alloyDBAdminClient.UpdateUser(user, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateUserAsync</summary>
+        public async Task UpdateUserAsync()
+        {
+            // Snippet: UpdateUserAsync(User, FieldMask, CallSettings)
+            // Additional: UpdateUserAsync(User, FieldMask, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            User user = new User();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            User response = await alloyDBAdminClient.UpdateUserAsync(user, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUser</summary>
+        public void DeleteUserRequestObject()
+        {
+            // Snippet: DeleteUser(DeleteUserRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            DeleteUserRequest request = new DeleteUserRequest
+            {
+                UserName = UserName.FromProjectLocationClusterUser("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[USER]"),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            alloyDBAdminClient.DeleteUser(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUserAsync</summary>
+        public async Task DeleteUserRequestObjectAsync()
+        {
+            // Snippet: DeleteUserAsync(DeleteUserRequest, CallSettings)
+            // Additional: DeleteUserAsync(DeleteUserRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteUserRequest request = new DeleteUserRequest
+            {
+                UserName = UserName.FromProjectLocationClusterUser("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[USER]"),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            await alloyDBAdminClient.DeleteUserAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUser</summary>
+        public void DeleteUser()
+        {
+            // Snippet: DeleteUser(string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/users/[USER]";
+            // Make the request
+            alloyDBAdminClient.DeleteUser(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUserAsync</summary>
+        public async Task DeleteUserAsync()
+        {
+            // Snippet: DeleteUserAsync(string, CallSettings)
+            // Additional: DeleteUserAsync(string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/users/[USER]";
+            // Make the request
+            await alloyDBAdminClient.DeleteUserAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUser</summary>
+        public void DeleteUserResourceNames()
+        {
+            // Snippet: DeleteUser(UserName, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            UserName name = UserName.FromProjectLocationClusterUser("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[USER]");
+            // Make the request
+            alloyDBAdminClient.DeleteUser(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUserAsync</summary>
+        public async Task DeleteUserResourceNamesAsync()
+        {
+            // Snippet: DeleteUserAsync(UserName, CallSettings)
+            // Additional: DeleteUserAsync(UserName, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UserName name = UserName.FromProjectLocationClusterUser("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[USER]");
+            // Make the request
+            await alloyDBAdminClient.DeleteUserAsync(name);
             // End snippet
         }
     }

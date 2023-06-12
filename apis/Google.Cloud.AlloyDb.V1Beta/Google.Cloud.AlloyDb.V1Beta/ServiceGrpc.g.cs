@@ -3,7 +3,7 @@
 //     source: google/cloud/alloydb/v1beta/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -106,6 +106,8 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.FailoverInstanceRequest> __Marshaller_google_cloud_alloydb_v1beta_FailoverInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.FailoverInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.InjectFaultRequest> __Marshaller_google_cloud_alloydb_v1beta_InjectFaultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.InjectFaultRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.RestartInstanceRequest> __Marshaller_google_cloud_alloydb_v1beta_RestartInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.RestartInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.ListBackupsRequest> __Marshaller_google_cloud_alloydb_v1beta_ListBackupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.ListBackupsRequest.Parser));
@@ -133,6 +135,22 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.GetConnectionInfoRequest> __Marshaller_google_cloud_alloydb_v1beta_GetConnectionInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.GetConnectionInfoRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.ConnectionInfo> __Marshaller_google_cloud_alloydb_v1beta_ConnectionInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.ConnectionInfo.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.ListUsersRequest> __Marshaller_google_cloud_alloydb_v1beta_ListUsersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.ListUsersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.ListUsersResponse> __Marshaller_google_cloud_alloydb_v1beta_ListUsersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.ListUsersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.GetUserRequest> __Marshaller_google_cloud_alloydb_v1beta_GetUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.GetUserRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.User> __Marshaller_google_cloud_alloydb_v1beta_User = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.User.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.CreateUserRequest> __Marshaller_google_cloud_alloydb_v1beta_CreateUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.CreateUserRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.UpdateUserRequest> __Marshaller_google_cloud_alloydb_v1beta_UpdateUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.UpdateUserRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.DeleteUserRequest> __Marshaller_google_cloud_alloydb_v1beta_DeleteUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.DeleteUserRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.ListClustersRequest, global::Google.Cloud.AlloyDb.V1Beta.ListClustersResponse> __Method_ListClusters = new grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.ListClustersRequest, global::Google.Cloud.AlloyDb.V1Beta.ListClustersResponse>(
@@ -263,6 +281,14 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.InjectFaultRequest, global::Google.LongRunning.Operation> __Method_InjectFault = new grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.InjectFaultRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "InjectFault",
+        __Marshaller_google_cloud_alloydb_v1beta_InjectFaultRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.RestartInstanceRequest, global::Google.LongRunning.Operation> __Method_RestartInstance = new grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.RestartInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -333,6 +359,46 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         "GetConnectionInfo",
         __Marshaller_google_cloud_alloydb_v1beta_GetConnectionInfoRequest,
         __Marshaller_google_cloud_alloydb_v1beta_ConnectionInfo);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.ListUsersRequest, global::Google.Cloud.AlloyDb.V1Beta.ListUsersResponse> __Method_ListUsers = new grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.ListUsersRequest, global::Google.Cloud.AlloyDb.V1Beta.ListUsersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListUsers",
+        __Marshaller_google_cloud_alloydb_v1beta_ListUsersRequest,
+        __Marshaller_google_cloud_alloydb_v1beta_ListUsersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.GetUserRequest, global::Google.Cloud.AlloyDb.V1Beta.User> __Method_GetUser = new grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.GetUserRequest, global::Google.Cloud.AlloyDb.V1Beta.User>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetUser",
+        __Marshaller_google_cloud_alloydb_v1beta_GetUserRequest,
+        __Marshaller_google_cloud_alloydb_v1beta_User);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.CreateUserRequest, global::Google.Cloud.AlloyDb.V1Beta.User> __Method_CreateUser = new grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.CreateUserRequest, global::Google.Cloud.AlloyDb.V1Beta.User>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateUser",
+        __Marshaller_google_cloud_alloydb_v1beta_CreateUserRequest,
+        __Marshaller_google_cloud_alloydb_v1beta_User);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.UpdateUserRequest, global::Google.Cloud.AlloyDb.V1Beta.User> __Method_UpdateUser = new grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.UpdateUserRequest, global::Google.Cloud.AlloyDb.V1Beta.User>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateUser",
+        __Marshaller_google_cloud_alloydb_v1beta_UpdateUserRequest,
+        __Marshaller_google_cloud_alloydb_v1beta_User);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.DeleteUserRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteUser = new grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.DeleteUserRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteUser",
+        __Marshaller_google_cloud_alloydb_v1beta_DeleteUserRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -554,6 +620,19 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       }
 
       /// <summary>
+      /// Injects fault in an instance.
+      /// Imperative only.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> InjectFault(global::Google.Cloud.AlloyDb.V1Beta.InjectFaultRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Restart an Instance in a cluster.
       /// Imperative only.
       /// </summary>
@@ -662,6 +741,66 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AlloyDb.V1Beta.ConnectionInfo> GetConnectionInfo(global::Google.Cloud.AlloyDb.V1Beta.GetConnectionInfoRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Users in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AlloyDb.V1Beta.ListUsersResponse> ListUsers(global::Google.Cloud.AlloyDb.V1Beta.ListUsersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single User.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AlloyDb.V1Beta.User> GetUser(global::Google.Cloud.AlloyDb.V1Beta.GetUserRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new User in a given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AlloyDb.V1Beta.User> CreateUser(global::Google.Cloud.AlloyDb.V1Beta.CreateUserRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single User.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AlloyDb.V1Beta.User> UpdateUser(global::Google.Cloud.AlloyDb.V1Beta.UpdateUserRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single User.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUser(global::Google.Cloud.AlloyDb.V1Beta.DeleteUserRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1532,6 +1671,58 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_FailoverInstance, null, options, request);
       }
       /// <summary>
+      /// Injects fault in an instance.
+      /// Imperative only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation InjectFault(global::Google.Cloud.AlloyDb.V1Beta.InjectFaultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InjectFault(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Injects fault in an instance.
+      /// Imperative only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation InjectFault(global::Google.Cloud.AlloyDb.V1Beta.InjectFaultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_InjectFault, null, options, request);
+      }
+      /// <summary>
+      /// Injects fault in an instance.
+      /// Imperative only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> InjectFaultAsync(global::Google.Cloud.AlloyDb.V1Beta.InjectFaultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InjectFaultAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Injects fault in an instance.
+      /// Imperative only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> InjectFaultAsync(global::Google.Cloud.AlloyDb.V1Beta.InjectFaultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_InjectFault, null, options, request);
+      }
+      /// <summary>
       /// Restart an Instance in a cluster.
       /// Imperative only.
       /// </summary>
@@ -1983,6 +2174,246 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetConnectionInfo, null, options, request);
       }
+      /// <summary>
+      /// Lists Users in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AlloyDb.V1Beta.ListUsersResponse ListUsers(global::Google.Cloud.AlloyDb.V1Beta.ListUsersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUsers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Users in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AlloyDb.V1Beta.ListUsersResponse ListUsers(global::Google.Cloud.AlloyDb.V1Beta.ListUsersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListUsers, null, options, request);
+      }
+      /// <summary>
+      /// Lists Users in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AlloyDb.V1Beta.ListUsersResponse> ListUsersAsync(global::Google.Cloud.AlloyDb.V1Beta.ListUsersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUsersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Users in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AlloyDb.V1Beta.ListUsersResponse> ListUsersAsync(global::Google.Cloud.AlloyDb.V1Beta.ListUsersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListUsers, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AlloyDb.V1Beta.User GetUser(global::Google.Cloud.AlloyDb.V1Beta.GetUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AlloyDb.V1Beta.User GetUser(global::Google.Cloud.AlloyDb.V1Beta.GetUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetUser, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AlloyDb.V1Beta.User> GetUserAsync(global::Google.Cloud.AlloyDb.V1Beta.GetUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AlloyDb.V1Beta.User> GetUserAsync(global::Google.Cloud.AlloyDb.V1Beta.GetUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetUser, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new User in a given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AlloyDb.V1Beta.User CreateUser(global::Google.Cloud.AlloyDb.V1Beta.CreateUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new User in a given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AlloyDb.V1Beta.User CreateUser(global::Google.Cloud.AlloyDb.V1Beta.CreateUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateUser, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new User in a given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AlloyDb.V1Beta.User> CreateUserAsync(global::Google.Cloud.AlloyDb.V1Beta.CreateUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new User in a given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AlloyDb.V1Beta.User> CreateUserAsync(global::Google.Cloud.AlloyDb.V1Beta.CreateUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateUser, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AlloyDb.V1Beta.User UpdateUser(global::Google.Cloud.AlloyDb.V1Beta.UpdateUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AlloyDb.V1Beta.User UpdateUser(global::Google.Cloud.AlloyDb.V1Beta.UpdateUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateUser, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AlloyDb.V1Beta.User> UpdateUserAsync(global::Google.Cloud.AlloyDb.V1Beta.UpdateUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AlloyDb.V1Beta.User> UpdateUserAsync(global::Google.Cloud.AlloyDb.V1Beta.UpdateUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateUser, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUser(global::Google.Cloud.AlloyDb.V1Beta.DeleteUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUser(global::Google.Cloud.AlloyDb.V1Beta.DeleteUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteUser, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserAsync(global::Google.Cloud.AlloyDb.V1Beta.DeleteUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserAsync(global::Google.Cloud.AlloyDb.V1Beta.DeleteUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteUser, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AlloyDBAdminClient NewInstance(ClientBaseConfiguration configuration)
@@ -2013,6 +2444,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
           .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance)
           .AddMethod(__Method_FailoverInstance, serviceImpl.FailoverInstance)
+          .AddMethod(__Method_InjectFault, serviceImpl.InjectFault)
           .AddMethod(__Method_RestartInstance, serviceImpl.RestartInstance)
           .AddMethod(__Method_ListBackups, serviceImpl.ListBackups)
           .AddMethod(__Method_GetBackup, serviceImpl.GetBackup)
@@ -2021,7 +2453,12 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup)
           .AddMethod(__Method_ListSupportedDatabaseFlags, serviceImpl.ListSupportedDatabaseFlags)
           .AddMethod(__Method_GenerateClientCertificate, serviceImpl.GenerateClientCertificate)
-          .AddMethod(__Method_GetConnectionInfo, serviceImpl.GetConnectionInfo).Build();
+          .AddMethod(__Method_GetConnectionInfo, serviceImpl.GetConnectionInfo)
+          .AddMethod(__Method_ListUsers, serviceImpl.ListUsers)
+          .AddMethod(__Method_GetUser, serviceImpl.GetUser)
+          .AddMethod(__Method_CreateUser, serviceImpl.CreateUser)
+          .AddMethod(__Method_UpdateUser, serviceImpl.UpdateUser)
+          .AddMethod(__Method_DeleteUser, serviceImpl.DeleteUser).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2047,6 +2484,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       serviceBinder.AddMethod(__Method_UpdateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.UpdateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstance));
       serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.DeleteInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInstance));
       serviceBinder.AddMethod(__Method_FailoverInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.FailoverInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.FailoverInstance));
+      serviceBinder.AddMethod(__Method_InjectFault, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.InjectFaultRequest, global::Google.LongRunning.Operation>(serviceImpl.InjectFault));
       serviceBinder.AddMethod(__Method_RestartInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.RestartInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.RestartInstance));
       serviceBinder.AddMethod(__Method_ListBackups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.ListBackupsRequest, global::Google.Cloud.AlloyDb.V1Beta.ListBackupsResponse>(serviceImpl.ListBackups));
       serviceBinder.AddMethod(__Method_GetBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.GetBackupRequest, global::Google.Cloud.AlloyDb.V1Beta.Backup>(serviceImpl.GetBackup));
@@ -2056,6 +2494,11 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       serviceBinder.AddMethod(__Method_ListSupportedDatabaseFlags, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.ListSupportedDatabaseFlagsRequest, global::Google.Cloud.AlloyDb.V1Beta.ListSupportedDatabaseFlagsResponse>(serviceImpl.ListSupportedDatabaseFlags));
       serviceBinder.AddMethod(__Method_GenerateClientCertificate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.GenerateClientCertificateRequest, global::Google.Cloud.AlloyDb.V1Beta.GenerateClientCertificateResponse>(serviceImpl.GenerateClientCertificate));
       serviceBinder.AddMethod(__Method_GetConnectionInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.GetConnectionInfoRequest, global::Google.Cloud.AlloyDb.V1Beta.ConnectionInfo>(serviceImpl.GetConnectionInfo));
+      serviceBinder.AddMethod(__Method_ListUsers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.ListUsersRequest, global::Google.Cloud.AlloyDb.V1Beta.ListUsersResponse>(serviceImpl.ListUsers));
+      serviceBinder.AddMethod(__Method_GetUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.GetUserRequest, global::Google.Cloud.AlloyDb.V1Beta.User>(serviceImpl.GetUser));
+      serviceBinder.AddMethod(__Method_CreateUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.CreateUserRequest, global::Google.Cloud.AlloyDb.V1Beta.User>(serviceImpl.CreateUser));
+      serviceBinder.AddMethod(__Method_UpdateUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.UpdateUserRequest, global::Google.Cloud.AlloyDb.V1Beta.User>(serviceImpl.UpdateUser));
+      serviceBinder.AddMethod(__Method_DeleteUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.DeleteUserRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteUser));
     }
 
   }

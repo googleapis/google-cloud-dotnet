@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START alloydb_v1beta_generated_AlloyDBAdmin_GenerateClientCertificate_sync]
+    // [START alloydb_v1beta_generated_AlloyDBAdmin_GetUser_sync_flattened_resourceNames]
     using Google.Cloud.AlloyDb.V1Beta;
-    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedAlloyDBAdminClientSnippets
     {
-        /// <summary>Snippet for GenerateClientCertificate</summary>
+        /// <summary>Snippet for GetUser</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,21 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GenerateClientCertificateRequestObject()
+        public void GetUserResourceNames()
         {
             // Create client
             AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
             // Initialize request argument(s)
-            GenerateClientCertificateRequest request = new GenerateClientCertificateRequest
-            {
-                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
-                RequestId = "",
-                CertDuration = new Duration(),
-                PublicKey = "",
-            };
+            UserName name = UserName.FromProjectLocationClusterUser("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[USER]");
             // Make the request
-            GenerateClientCertificateResponse response = alloyDBAdminClient.GenerateClientCertificate(request);
+            User response = alloyDBAdminClient.GetUser(name);
         }
     }
-    // [END alloydb_v1beta_generated_AlloyDBAdmin_GenerateClientCertificate_sync]
+    // [END alloydb_v1beta_generated_AlloyDBAdmin_GetUser_sync_flattened_resourceNames]
 }
