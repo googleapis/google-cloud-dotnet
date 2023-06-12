@@ -2536,7 +2536,7 @@
     },
     {
       "id": "Google.Cloud.Iam.V2",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Google Cloud Identity and Access Management (IAM)",
       "productUrl": "https://cloud.google.com/iam/",
@@ -2547,7 +2547,9 @@
         "Access"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.0.0"
+        "Google.Api.Gax.Grpc": "4.4.0",
+        "Google.LongRunning": "3.0.0",
+        "Grpc.Core": "2.46.6"
       },
       "generator": "micro",
       "protoPath": "google/iam/v2",
