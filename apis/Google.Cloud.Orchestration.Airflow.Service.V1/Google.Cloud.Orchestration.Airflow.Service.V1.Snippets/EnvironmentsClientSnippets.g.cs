@@ -641,6 +641,127 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ExecuteAirflowCommand</summary>
+        public void ExecuteAirflowCommandRequestObject()
+        {
+            // Snippet: ExecuteAirflowCommand(ExecuteAirflowCommandRequest, CallSettings)
+            // Create client
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
+            // Initialize request argument(s)
+            gcoasv::ExecuteAirflowCommandRequest request = new gcoasv::ExecuteAirflowCommandRequest
+            {
+                Environment = "",
+                Command = "",
+                Subcommand = "",
+                Parameters = { "", },
+            };
+            // Make the request
+            gcoasv::ExecuteAirflowCommandResponse response = environmentsClient.ExecuteAirflowCommand(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteAirflowCommandAsync</summary>
+        public async Task ExecuteAirflowCommandRequestObjectAsync()
+        {
+            // Snippet: ExecuteAirflowCommandAsync(ExecuteAirflowCommandRequest, CallSettings)
+            // Additional: ExecuteAirflowCommandAsync(ExecuteAirflowCommandRequest, CancellationToken)
+            // Create client
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            gcoasv::ExecuteAirflowCommandRequest request = new gcoasv::ExecuteAirflowCommandRequest
+            {
+                Environment = "",
+                Command = "",
+                Subcommand = "",
+                Parameters = { "", },
+            };
+            // Make the request
+            gcoasv::ExecuteAirflowCommandResponse response = await environmentsClient.ExecuteAirflowCommandAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopAirflowCommand</summary>
+        public void StopAirflowCommandRequestObject()
+        {
+            // Snippet: StopAirflowCommand(StopAirflowCommandRequest, CallSettings)
+            // Create client
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
+            // Initialize request argument(s)
+            gcoasv::StopAirflowCommandRequest request = new gcoasv::StopAirflowCommandRequest
+            {
+                Environment = "",
+                ExecutionId = "",
+                Pod = "",
+                PodNamespace = "",
+                Force = false,
+            };
+            // Make the request
+            gcoasv::StopAirflowCommandResponse response = environmentsClient.StopAirflowCommand(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopAirflowCommandAsync</summary>
+        public async Task StopAirflowCommandRequestObjectAsync()
+        {
+            // Snippet: StopAirflowCommandAsync(StopAirflowCommandRequest, CallSettings)
+            // Additional: StopAirflowCommandAsync(StopAirflowCommandRequest, CancellationToken)
+            // Create client
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            gcoasv::StopAirflowCommandRequest request = new gcoasv::StopAirflowCommandRequest
+            {
+                Environment = "",
+                ExecutionId = "",
+                Pod = "",
+                PodNamespace = "",
+                Force = false,
+            };
+            // Make the request
+            gcoasv::StopAirflowCommandResponse response = await environmentsClient.StopAirflowCommandAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PollAirflowCommand</summary>
+        public void PollAirflowCommandRequestObject()
+        {
+            // Snippet: PollAirflowCommand(PollAirflowCommandRequest, CallSettings)
+            // Create client
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
+            // Initialize request argument(s)
+            gcoasv::PollAirflowCommandRequest request = new gcoasv::PollAirflowCommandRequest
+            {
+                Environment = "",
+                ExecutionId = "",
+                Pod = "",
+                PodNamespace = "",
+                NextLineNumber = 0,
+            };
+            // Make the request
+            gcoasv::PollAirflowCommandResponse response = environmentsClient.PollAirflowCommand(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PollAirflowCommandAsync</summary>
+        public async Task PollAirflowCommandRequestObjectAsync()
+        {
+            // Snippet: PollAirflowCommandAsync(PollAirflowCommandRequest, CallSettings)
+            // Additional: PollAirflowCommandAsync(PollAirflowCommandRequest, CancellationToken)
+            // Create client
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            gcoasv::PollAirflowCommandRequest request = new gcoasv::PollAirflowCommandRequest
+            {
+                Environment = "",
+                ExecutionId = "",
+                Pod = "",
+                PodNamespace = "",
+                NextLineNumber = 0,
+            };
+            // Make the request
+            gcoasv::PollAirflowCommandResponse response = await environmentsClient.PollAirflowCommandAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for SaveSnapshot</summary>
         public void SaveSnapshotRequestObject()
         {
@@ -780,6 +901,98 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 gcoasv::LoadSnapshotResponse retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DatabaseFailover</summary>
+        public void DatabaseFailoverRequestObject()
+        {
+            // Snippet: DatabaseFailover(DatabaseFailoverRequest, CallSettings)
+            // Create client
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
+            // Initialize request argument(s)
+            gcoasv::DatabaseFailoverRequest request = new gcoasv::DatabaseFailoverRequest { Environment = "", };
+            // Make the request
+            Operation<gcoasv::DatabaseFailoverResponse, gcoasv::OperationMetadata> response = environmentsClient.DatabaseFailover(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcoasv::DatabaseFailoverResponse, gcoasv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcoasv::DatabaseFailoverResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcoasv::DatabaseFailoverResponse, gcoasv::OperationMetadata> retrievedResponse = environmentsClient.PollOnceDatabaseFailover(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcoasv::DatabaseFailoverResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DatabaseFailoverAsync</summary>
+        public async Task DatabaseFailoverRequestObjectAsync()
+        {
+            // Snippet: DatabaseFailoverAsync(DatabaseFailoverRequest, CallSettings)
+            // Additional: DatabaseFailoverAsync(DatabaseFailoverRequest, CancellationToken)
+            // Create client
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            gcoasv::DatabaseFailoverRequest request = new gcoasv::DatabaseFailoverRequest { Environment = "", };
+            // Make the request
+            Operation<gcoasv::DatabaseFailoverResponse, gcoasv::OperationMetadata> response = await environmentsClient.DatabaseFailoverAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcoasv::DatabaseFailoverResponse, gcoasv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcoasv::DatabaseFailoverResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcoasv::DatabaseFailoverResponse, gcoasv::OperationMetadata> retrievedResponse = await environmentsClient.PollOnceDatabaseFailoverAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcoasv::DatabaseFailoverResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDatabaseProperties</summary>
+        public void FetchDatabasePropertiesRequestObject()
+        {
+            // Snippet: FetchDatabaseProperties(FetchDatabasePropertiesRequest, CallSettings)
+            // Create client
+            gcoasv::EnvironmentsClient environmentsClient = gcoasv::EnvironmentsClient.Create();
+            // Initialize request argument(s)
+            gcoasv::FetchDatabasePropertiesRequest request = new gcoasv::FetchDatabasePropertiesRequest
+            {
+                EnvironmentAsEnvironmentName = gcoasv::EnvironmentName.FromProjectLocationEnvironment("[PROJECT]", "[LOCATION]", "[ENVIRONMENT]"),
+            };
+            // Make the request
+            gcoasv::FetchDatabasePropertiesResponse response = environmentsClient.FetchDatabaseProperties(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDatabasePropertiesAsync</summary>
+        public async Task FetchDatabasePropertiesRequestObjectAsync()
+        {
+            // Snippet: FetchDatabasePropertiesAsync(FetchDatabasePropertiesRequest, CallSettings)
+            // Additional: FetchDatabasePropertiesAsync(FetchDatabasePropertiesRequest, CancellationToken)
+            // Create client
+            gcoasv::EnvironmentsClient environmentsClient = await gcoasv::EnvironmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            gcoasv::FetchDatabasePropertiesRequest request = new gcoasv::FetchDatabasePropertiesRequest
+            {
+                EnvironmentAsEnvironmentName = gcoasv::EnvironmentName.FromProjectLocationEnvironment("[PROJECT]", "[LOCATION]", "[ENVIRONMENT]"),
+            };
+            // Make the request
+            gcoasv::FetchDatabasePropertiesResponse response = await environmentsClient.FetchDatabasePropertiesAsync(request);
             // End snippet
         }
     }

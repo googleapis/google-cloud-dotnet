@@ -27,7 +27,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
             "Cj5nb29nbGUvY2xvdWQvb3JjaGVzdHJhdGlvbi9haXJmbG93L3NlcnZpY2Uv",
             "djEvb3BlcmF0aW9ucy5wcm90bxItZ29vZ2xlLmNsb3VkLm9yY2hlc3RyYXRp",
             "b24uYWlyZmxvdy5zZXJ2aWNlLnYxGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvIq0EChFPcGVyYXRpb25NZXRhZGF0YRJVCgVzdGF0ZRgBIAEo",
+            "YW1wLnByb3RvIsUEChFPcGVyYXRpb25NZXRhZGF0YRJVCgVzdGF0ZRgBIAEo",
             "DjJGLmdvb2dsZS5jbG91ZC5vcmNoZXN0cmF0aW9uLmFpcmZsb3cuc2Vydmlj",
             "ZS52MS5PcGVyYXRpb25NZXRhZGF0YS5TdGF0ZRJdCg5vcGVyYXRpb25fdHlw",
             "ZRgCIAEoDjJFLmdvb2dsZS5jbG91ZC5vcmNoZXN0cmF0aW9uLmFpcmZsb3cu",
@@ -37,13 +37,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
             "GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJnCgVTdGF0ZRIV",
             "ChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARILCgdSVU5OSU5H",
             "EAISDQoJU1VDQ0VFREVEEAMSDgoKU1VDQ0VTU0ZVTBADEgoKBkZBSUxFRBAE",
-            "GgIQASJxCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIKCgZDUkVBVEUQ",
-            "ARIKCgZERUxFVEUQAhIKCgZVUERBVEUQAxIJCgVDSEVDSxAEEhEKDVNBVkVf",
-            "U05BUFNIT1QQBRIRCg1MT0FEX1NOQVBTSE9UEAZCkwEKMWNvbS5nb29nbGUu",
-            "Y2xvdWQub3JjaGVzdHJhdGlvbi5haXJmbG93LnNlcnZpY2UudjFCD09wZXJh",
-            "dGlvbnNQcm90b1ABWktjbG91ZC5nb29nbGUuY29tL2dvL29yY2hlc3RyYXRp",
-            "b24vYWlyZmxvdy9zZXJ2aWNlL2FwaXYxL3NlcnZpY2VwYjtzZXJ2aWNlcGJi",
-            "BnByb3RvMw=="));
+            "GgIQASKIAQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoGQ1JFQVRF",
+            "EAESCgoGREVMRVRFEAISCgoGVVBEQVRFEAMSCQoFQ0hFQ0sQBBIRCg1TQVZF",
+            "X1NOQVBTSE9UEAUSEQoNTE9BRF9TTkFQU0hPVBAGEhUKEURBVEFCQVNFX0ZB",
+            "SUxPVkVSEAdCkwEKMWNvbS5nb29nbGUuY2xvdWQub3JjaGVzdHJhdGlvbi5h",
+            "aXJmbG93LnNlcnZpY2UudjFCD09wZXJhdGlvbnNQcm90b1ABWktjbG91ZC5n",
+            "b29nbGUuY29tL2dvL29yY2hlc3RyYXRpb24vYWlyZmxvdy9zZXJ2aWNlL2Fw",
+            "aXYxL3NlcnZpY2VwYjtzZXJ2aWNlcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -531,6 +531,11 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         /// Loads snapshot of the resource operation.
         /// </summary>
         [pbr::OriginalName("LOAD_SNAPSHOT")] LoadSnapshot = 6,
+        /// <summary>
+        /// Triggers failover of environment's Cloud SQL instance (only for highly
+        /// resilient environments).
+        /// </summary>
+        [pbr::OriginalName("DATABASE_FAILOVER")] DatabaseFailover = 7,
       }
 
     }

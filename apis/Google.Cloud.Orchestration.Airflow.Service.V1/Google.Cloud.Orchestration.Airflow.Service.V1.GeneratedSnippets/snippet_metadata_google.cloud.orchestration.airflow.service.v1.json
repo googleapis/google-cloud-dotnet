@@ -1011,6 +1011,297 @@
       ]
     },
     {
+      "regionTag": "composer_v1_generated_Environments_ExecuteAirflowCommand_sync",
+      "title": "ExecuteAirflowCommandRequestObject",
+      "description": "Snippet for ExecuteAirflowCommand",
+      "file": "EnvironmentsClient.ExecuteAirflowCommandRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteAirflowCommand",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ExecuteAirflowCommand",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ExecuteAirflowCommand",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ExecuteAirflowCommand",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ExecuteAirflowCommand_async",
+      "title": "ExecuteAirflowCommandRequestObjectAsync",
+      "description": "Snippet for ExecuteAirflowCommandAsync",
+      "file": "EnvironmentsClient.ExecuteAirflowCommandRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecuteAirflowCommandAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ExecuteAirflowCommandAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ExecuteAirflowCommand",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ExecuteAirflowCommand",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_StopAirflowCommand_sync",
+      "title": "StopAirflowCommandRequestObject",
+      "description": "Snippet for StopAirflowCommand",
+      "file": "EnvironmentsClient.StopAirflowCommandRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopAirflowCommand",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.StopAirflowCommand",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "StopAirflowCommand",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.StopAirflowCommand",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_StopAirflowCommand_async",
+      "title": "StopAirflowCommandRequestObjectAsync",
+      "description": "Snippet for StopAirflowCommandAsync",
+      "file": "EnvironmentsClient.StopAirflowCommandRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopAirflowCommandAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.StopAirflowCommandAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "StopAirflowCommand",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.StopAirflowCommand",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_PollAirflowCommand_sync",
+      "title": "PollAirflowCommandRequestObject",
+      "description": "Snippet for PollAirflowCommand",
+      "file": "EnvironmentsClient.PollAirflowCommandRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PollAirflowCommand",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.PollAirflowCommand",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "PollAirflowCommand",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.PollAirflowCommand",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_PollAirflowCommand_async",
+      "title": "PollAirflowCommandRequestObjectAsync",
+      "description": "Snippet for PollAirflowCommandAsync",
+      "file": "EnvironmentsClient.PollAirflowCommandRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PollAirflowCommandAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.PollAirflowCommandAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "PollAirflowCommand",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.PollAirflowCommand",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "composer_v1_generated_Environments_SaveSnapshot_sync",
       "title": "SaveSnapshotRequestObject",
       "description": "Snippet for SaveSnapshot",
@@ -1200,6 +1491,200 @@
         {
           "start": 36,
           "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DatabaseFailover_sync",
+      "title": "DatabaseFailoverRequestObject",
+      "description": "Snippet for DatabaseFailover",
+      "file": "EnvironmentsClient.DatabaseFailoverRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DatabaseFailover",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DatabaseFailover",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverResponse, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DatabaseFailover",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DatabaseFailover",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DatabaseFailover_async",
+      "title": "DatabaseFailoverRequestObjectAsync",
+      "description": "Snippet for DatabaseFailoverAsync",
+      "file": "EnvironmentsClient.DatabaseFailoverRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DatabaseFailoverAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DatabaseFailoverAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverResponse, Google.Cloud.Orchestration.Airflow.Service.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DatabaseFailover",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DatabaseFailover",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_FetchDatabaseProperties_sync",
+      "title": "FetchDatabasePropertiesRequestObject",
+      "description": "Snippet for FetchDatabaseProperties",
+      "file": "EnvironmentsClient.FetchDatabasePropertiesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchDatabaseProperties",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.FetchDatabaseProperties",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "FetchDatabaseProperties",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.FetchDatabaseProperties",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_FetchDatabaseProperties_async",
+      "title": "FetchDatabasePropertiesRequestObjectAsync",
+      "description": "Snippet for FetchDatabasePropertiesAsync",
+      "file": "EnvironmentsClient.FetchDatabasePropertiesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchDatabasePropertiesAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.FetchDatabasePropertiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "FetchDatabaseProperties",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.FetchDatabaseProperties",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
           "type": "SHORT"
         }
       ]
