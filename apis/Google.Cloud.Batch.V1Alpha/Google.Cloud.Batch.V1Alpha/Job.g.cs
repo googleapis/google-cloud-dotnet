@@ -5101,7 +5101,6 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// The minimum CPU platform.
         /// See
         /// https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform.
-        /// Not yet implemented.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6537,8 +6536,7 @@ namespace Google.Cloud.Batch.V1Alpha {
   }
 
   /// <summary>
-  /// A TaskGroup contains one or multiple Tasks that share the same
-  /// Runnable but with different runtime parameters.
+  /// A TaskGroup defines one or more Tasks that all share the same TaskSpec.
   /// </summary>
   public sealed partial class TaskGroup : pb::IMessage<TaskGroup>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6726,8 +6724,6 @@ namespace Google.Cloud.Batch.V1Alpha {
     /// addition to any environment variables set in task_environments, specifying
     /// the number of Tasks in the Task's parent TaskGroup, and the specific Task's
     /// index in the TaskGroup (0 through BATCH_TASK_COUNT - 1).
-    ///
-    /// task_environments supports up to 200 entries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7176,8 +7172,6 @@ namespace Google.Cloud.Batch.V1Alpha {
         [pbr::OriginalName("AS_SOON_AS_POSSIBLE")] AsSoonAsPossible = 1,
         /// <summary>
         /// Run Tasks sequentially with increased task index.
-        ///
-        /// Not yet implemented.
         /// </summary>
         [pbr::OriginalName("IN_ORDER")] InOrder = 2,
       }
