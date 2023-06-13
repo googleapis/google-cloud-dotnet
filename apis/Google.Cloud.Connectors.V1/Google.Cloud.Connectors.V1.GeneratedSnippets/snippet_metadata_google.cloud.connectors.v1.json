@@ -1,0 +1,5030 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Connectors.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.connectors.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnections_sync",
+      "title": "ListConnectionsRequestObject",
+      "description": "Snippet for ListConnections",
+      "file": "ConnectorsClient.ListConnectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListConnectionsResponse, Google.Cloud.Connectors.V1.Connection>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnections",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnections_async",
+      "title": "ListConnectionsRequestObjectAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "ConnectorsClient.ListConnectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListConnectionsResponse, Google.Cloud.Connectors.V1.Connection>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnections",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnections_sync_flattened",
+      "title": "ListConnections",
+      "description": "Snippet for ListConnections",
+      "file": "ConnectorsClient.ListConnectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListConnectionsResponse, Google.Cloud.Connectors.V1.Connection>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnections",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnections_async_flattened",
+      "title": "ListConnectionsAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "ConnectorsClient.ListConnectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListConnectionsResponse, Google.Cloud.Connectors.V1.Connection>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnections",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnections_sync_flattened_resourceNames",
+      "title": "ListConnectionsResourceNames",
+      "description": "Snippet for ListConnections",
+      "file": "ConnectorsClient.ListConnectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListConnectionsResponse, Google.Cloud.Connectors.V1.Connection>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnections",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnections_async_flattened_resourceNames",
+      "title": "ListConnectionsResourceNamesAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "ConnectorsClient.ListConnectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListConnectionsResponse, Google.Cloud.Connectors.V1.Connection>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnections",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnection_sync",
+      "title": "GetConnectionRequestObject",
+      "description": "Snippet for GetConnection",
+      "file": "ConnectorsClient.GetConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.Connection",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnection_async",
+      "title": "GetConnectionRequestObjectAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "ConnectorsClient.GetConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.Connection>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnection_sync_flattened",
+      "title": "GetConnection",
+      "description": "Snippet for GetConnection",
+      "file": "ConnectorsClient.GetConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.Connection",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnection_async_flattened",
+      "title": "GetConnectionAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "ConnectorsClient.GetConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.Connection>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnection_sync_flattened_resourceNames",
+      "title": "GetConnectionResourceNames",
+      "description": "Snippet for GetConnection",
+      "file": "ConnectorsClient.GetConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.Connection",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnection_async_flattened_resourceNames",
+      "title": "GetConnectionResourceNamesAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "ConnectorsClient.GetConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.Connection>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_CreateConnection_sync",
+      "title": "CreateConnectionRequestObject",
+      "description": "Snippet for CreateConnection",
+      "file": "ConnectorsClient.CreateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.CreateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Connectors.V1.Connection, Google.Cloud.Connectors.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.CreateConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_CreateConnection_async",
+      "title": "CreateConnectionRequestObjectAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "ConnectorsClient.CreateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.CreateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Connectors.V1.Connection, Google.Cloud.Connectors.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.CreateConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_CreateConnection_sync_flattened",
+      "title": "CreateConnection",
+      "description": "Snippet for CreateConnection",
+      "file": "ConnectorsClient.CreateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Connectors.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Connectors.V1.Connection, Google.Cloud.Connectors.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.CreateConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_CreateConnection_async_flattened",
+      "title": "CreateConnectionAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "ConnectorsClient.CreateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Connectors.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Connectors.V1.Connection, Google.Cloud.Connectors.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.CreateConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_CreateConnection_sync_flattened_resourceNames",
+      "title": "CreateConnectionResourceNames",
+      "description": "Snippet for CreateConnection",
+      "file": "ConnectorsClient.CreateConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Connectors.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Connectors.V1.Connection, Google.Cloud.Connectors.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.CreateConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_CreateConnection_async_flattened_resourceNames",
+      "title": "CreateConnectionResourceNamesAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "ConnectorsClient.CreateConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Connectors.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Connectors.V1.Connection, Google.Cloud.Connectors.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.CreateConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_UpdateConnection_sync",
+      "title": "UpdateConnectionRequestObject",
+      "description": "Snippet for UpdateConnection",
+      "file": "ConnectorsClient.UpdateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnection",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.UpdateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.UpdateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Connectors.V1.Connection, Google.Cloud.Connectors.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.UpdateConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_UpdateConnection_async",
+      "title": "UpdateConnectionRequestObjectAsync",
+      "description": "Snippet for UpdateConnectionAsync",
+      "file": "ConnectorsClient.UpdateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.UpdateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.UpdateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Connectors.V1.Connection, Google.Cloud.Connectors.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.UpdateConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_UpdateConnection_sync_flattened",
+      "title": "UpdateConnection",
+      "description": "Snippet for UpdateConnection",
+      "file": "ConnectorsClient.UpdateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnection",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.UpdateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Connectors.V1.Connection, Google.Cloud.Connectors.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.UpdateConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_UpdateConnection_async_flattened",
+      "title": "UpdateConnectionAsync",
+      "description": "Snippet for UpdateConnectionAsync",
+      "file": "ConnectorsClient.UpdateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.UpdateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Connectors.V1.Connection, Google.Cloud.Connectors.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.UpdateConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_DeleteConnection_sync",
+      "title": "DeleteConnectionRequestObject",
+      "description": "Snippet for DeleteConnection",
+      "file": "ConnectorsClient.DeleteConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.DeleteConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Connectors.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.DeleteConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_DeleteConnection_async",
+      "title": "DeleteConnectionRequestObjectAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "ConnectorsClient.DeleteConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.DeleteConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Connectors.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.DeleteConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_DeleteConnection_sync_flattened",
+      "title": "DeleteConnection",
+      "description": "Snippet for DeleteConnection",
+      "file": "ConnectorsClient.DeleteConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Connectors.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.DeleteConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_DeleteConnection_async_flattened",
+      "title": "DeleteConnectionAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "ConnectorsClient.DeleteConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Connectors.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.DeleteConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_DeleteConnection_sync_flattened_resourceNames",
+      "title": "DeleteConnectionResourceNames",
+      "description": "Snippet for DeleteConnection",
+      "file": "ConnectorsClient.DeleteConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Connectors.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.DeleteConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_DeleteConnection_async_flattened_resourceNames",
+      "title": "DeleteConnectionResourceNamesAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "ConnectorsClient.DeleteConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Connectors.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.connectors.v1.Connectors.DeleteConnection",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListProviders_sync",
+      "title": "ListProvidersRequestObject",
+      "description": "Snippet for ListProviders",
+      "file": "ConnectorsClient.ListProvidersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProviders",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListProviders",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ListProvidersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListProvidersResponse, Google.Cloud.Connectors.V1.Provider>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListProviders",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListProviders",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListProviders_async",
+      "title": "ListProvidersRequestObjectAsync",
+      "description": "Snippet for ListProvidersAsync",
+      "file": "ConnectorsClient.ListProvidersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProvidersAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListProvidersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ListProvidersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListProvidersResponse, Google.Cloud.Connectors.V1.Provider>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListProviders",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListProviders",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListProviders_sync_flattened",
+      "title": "ListProviders",
+      "description": "Snippet for ListProviders",
+      "file": "ConnectorsClient.ListProvidersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProviders",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListProviders",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListProvidersResponse, Google.Cloud.Connectors.V1.Provider>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListProviders",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListProviders",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListProviders_async_flattened",
+      "title": "ListProvidersAsync",
+      "description": "Snippet for ListProvidersAsync",
+      "file": "ConnectorsClient.ListProvidersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProvidersAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListProvidersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListProvidersResponse, Google.Cloud.Connectors.V1.Provider>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListProviders",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListProviders",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListProviders_sync_flattened_resourceNames",
+      "title": "ListProvidersResourceNames",
+      "description": "Snippet for ListProviders",
+      "file": "ConnectorsClient.ListProvidersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProviders",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListProviders",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListProvidersResponse, Google.Cloud.Connectors.V1.Provider>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListProviders",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListProviders",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListProviders_async_flattened_resourceNames",
+      "title": "ListProvidersResourceNamesAsync",
+      "description": "Snippet for ListProvidersAsync",
+      "file": "ConnectorsClient.ListProvidersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProvidersAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListProvidersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListProvidersResponse, Google.Cloud.Connectors.V1.Provider>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListProviders",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListProviders",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetProvider_sync",
+      "title": "GetProviderRequestObject",
+      "description": "Snippet for GetProvider",
+      "file": "ConnectorsClient.GetProviderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProvider",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetProvider",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetProviderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.Provider",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetProvider",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetProvider",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetProvider_async",
+      "title": "GetProviderRequestObjectAsync",
+      "description": "Snippet for GetProviderAsync",
+      "file": "ConnectorsClient.GetProviderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProviderAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetProviderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetProviderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.Provider>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetProvider",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetProvider",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetProvider_sync_flattened",
+      "title": "GetProvider",
+      "description": "Snippet for GetProvider",
+      "file": "ConnectorsClient.GetProviderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProvider",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetProvider",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.Provider",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetProvider",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetProvider",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetProvider_async_flattened",
+      "title": "GetProviderAsync",
+      "description": "Snippet for GetProviderAsync",
+      "file": "ConnectorsClient.GetProviderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProviderAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetProviderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.Provider>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetProvider",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetProvider",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetProvider_sync_flattened_resourceNames",
+      "title": "GetProviderResourceNames",
+      "description": "Snippet for GetProvider",
+      "file": "ConnectorsClient.GetProviderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProvider",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetProvider",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ProviderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.Provider",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetProvider",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetProvider",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetProvider_async_flattened_resourceNames",
+      "title": "GetProviderResourceNamesAsync",
+      "description": "Snippet for GetProviderAsync",
+      "file": "ConnectorsClient.GetProviderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProviderAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetProviderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ProviderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.Provider>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetProvider",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetProvider",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnectors_sync",
+      "title": "ListConnectorsRequestObject",
+      "description": "Snippet for ListConnectors",
+      "file": "ConnectorsClient.ListConnectorsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectors",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ListConnectorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListConnectorsResponse, Google.Cloud.Connectors.V1.Connector>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnectors",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnectors_async",
+      "title": "ListConnectorsRequestObjectAsync",
+      "description": "Snippet for ListConnectorsAsync",
+      "file": "ConnectorsClient.ListConnectorsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorsAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ListConnectorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListConnectorsResponse, Google.Cloud.Connectors.V1.Connector>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnectors",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnectors_sync_flattened",
+      "title": "ListConnectors",
+      "description": "Snippet for ListConnectors",
+      "file": "ConnectorsClient.ListConnectorsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectors",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectors",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListConnectorsResponse, Google.Cloud.Connectors.V1.Connector>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnectors",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnectors_async_flattened",
+      "title": "ListConnectorsAsync",
+      "description": "Snippet for ListConnectorsAsync",
+      "file": "ConnectorsClient.ListConnectorsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorsAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListConnectorsResponse, Google.Cloud.Connectors.V1.Connector>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnectors",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnectors_sync_flattened_resourceNames",
+      "title": "ListConnectorsResourceNames",
+      "description": "Snippet for ListConnectors",
+      "file": "ConnectorsClient.ListConnectorsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectors",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ProviderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListConnectorsResponse, Google.Cloud.Connectors.V1.Connector>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnectors",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnectors_async_flattened_resourceNames",
+      "title": "ListConnectorsResourceNamesAsync",
+      "description": "Snippet for ListConnectorsAsync",
+      "file": "ConnectorsClient.ListConnectorsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorsAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ProviderName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListConnectorsResponse, Google.Cloud.Connectors.V1.Connector>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnectors",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnector_sync",
+      "title": "GetConnectorRequestObject",
+      "description": "Snippet for GetConnector",
+      "file": "ConnectorsClient.GetConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnector",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.Connector",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnector",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnector_async",
+      "title": "GetConnectorRequestObjectAsync",
+      "description": "Snippet for GetConnectorAsync",
+      "file": "ConnectorsClient.GetConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.Connector>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnector",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnector_sync_flattened",
+      "title": "GetConnector",
+      "description": "Snippet for GetConnector",
+      "file": "ConnectorsClient.GetConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnector",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.Connector",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnector",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnector_async_flattened",
+      "title": "GetConnectorAsync",
+      "description": "Snippet for GetConnectorAsync",
+      "file": "ConnectorsClient.GetConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.Connector>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnector",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnector_sync_flattened_resourceNames",
+      "title": "GetConnectorResourceNames",
+      "description": "Snippet for GetConnector",
+      "file": "ConnectorsClient.GetConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnector",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.Connector",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnector",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnector_async_flattened_resourceNames",
+      "title": "GetConnectorResourceNamesAsync",
+      "description": "Snippet for GetConnectorAsync",
+      "file": "ConnectorsClient.GetConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.Connector>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnector",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnectorVersions_sync",
+      "title": "ListConnectorVersionsRequestObject",
+      "description": "Snippet for ListConnectorVersions",
+      "file": "ConnectorsClient.ListConnectorVersionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorVersions",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectorVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ListConnectorVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListConnectorVersionsResponse, Google.Cloud.Connectors.V1.ConnectorVersion>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnectorVersions",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnectorVersions",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnectorVersions_async",
+      "title": "ListConnectorVersionsRequestObjectAsync",
+      "description": "Snippet for ListConnectorVersionsAsync",
+      "file": "ConnectorsClient.ListConnectorVersionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorVersionsAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectorVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ListConnectorVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListConnectorVersionsResponse, Google.Cloud.Connectors.V1.ConnectorVersion>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnectorVersions",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnectorVersions",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnectorVersions_sync_flattened",
+      "title": "ListConnectorVersions",
+      "description": "Snippet for ListConnectorVersions",
+      "file": "ConnectorsClient.ListConnectorVersionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorVersions",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectorVersions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListConnectorVersionsResponse, Google.Cloud.Connectors.V1.ConnectorVersion>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnectorVersions",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnectorVersions",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnectorVersions_async_flattened",
+      "title": "ListConnectorVersionsAsync",
+      "description": "Snippet for ListConnectorVersionsAsync",
+      "file": "ConnectorsClient.ListConnectorVersionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorVersionsAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectorVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListConnectorVersionsResponse, Google.Cloud.Connectors.V1.ConnectorVersion>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnectorVersions",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnectorVersions",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnectorVersions_sync_flattened_resourceNames",
+      "title": "ListConnectorVersionsResourceNames",
+      "description": "Snippet for ListConnectorVersions",
+      "file": "ConnectorsClient.ListConnectorVersionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorVersions",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectorVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectorName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListConnectorVersionsResponse, Google.Cloud.Connectors.V1.ConnectorVersion>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnectorVersions",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnectorVersions",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListConnectorVersions_async_flattened_resourceNames",
+      "title": "ListConnectorVersionsResourceNamesAsync",
+      "description": "Snippet for ListConnectorVersionsAsync",
+      "file": "ConnectorsClient.ListConnectorVersionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorVersionsAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListConnectorVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectorName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListConnectorVersionsResponse, Google.Cloud.Connectors.V1.ConnectorVersion>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListConnectorVersions",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListConnectorVersions",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnectorVersion_sync",
+      "title": "GetConnectorVersionRequestObject",
+      "description": "Snippet for GetConnectorVersion",
+      "file": "ConnectorsClient.GetConnectorVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorVersion",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetConnectorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.ConnectorVersion",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnectorVersion",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnectorVersion",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnectorVersion_async",
+      "title": "GetConnectorVersionRequestObjectAsync",
+      "description": "Snippet for GetConnectorVersionAsync",
+      "file": "ConnectorsClient.GetConnectorVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorVersionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectorVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetConnectorVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.ConnectorVersion>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnectorVersion",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnectorVersion",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnectorVersion_sync_flattened",
+      "title": "GetConnectorVersion",
+      "description": "Snippet for GetConnectorVersion",
+      "file": "ConnectorsClient.GetConnectorVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorVersion",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectorVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.ConnectorVersion",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnectorVersion",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnectorVersion",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnectorVersion_async_flattened",
+      "title": "GetConnectorVersionAsync",
+      "description": "Snippet for GetConnectorVersionAsync",
+      "file": "ConnectorsClient.GetConnectorVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorVersionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectorVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.ConnectorVersion>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnectorVersion",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnectorVersion",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnectorVersion_sync_flattened_resourceNames",
+      "title": "GetConnectorVersionResourceNames",
+      "description": "Snippet for GetConnectorVersion",
+      "file": "ConnectorsClient.GetConnectorVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorVersion",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectorVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectorVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.ConnectorVersion",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnectorVersion",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnectorVersion",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnectorVersion_async_flattened_resourceNames",
+      "title": "GetConnectorVersionResourceNamesAsync",
+      "description": "Snippet for GetConnectorVersionAsync",
+      "file": "ConnectorsClient.GetConnectorVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorVersionAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectorVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectorVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.ConnectorVersion>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnectorVersion",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnectorVersion",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnectionSchemaMetadata_sync",
+      "title": "GetConnectionSchemaMetadataRequestObject",
+      "description": "Snippet for GetConnectionSchemaMetadata",
+      "file": "ConnectorsClient.GetConnectionSchemaMetadataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionSchemaMetadata",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectionSchemaMetadata",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetConnectionSchemaMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.ConnectionSchemaMetadata",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnectionSchemaMetadata",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnectionSchemaMetadata",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnectionSchemaMetadata_async",
+      "title": "GetConnectionSchemaMetadataRequestObjectAsync",
+      "description": "Snippet for GetConnectionSchemaMetadataAsync",
+      "file": "ConnectorsClient.GetConnectionSchemaMetadataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionSchemaMetadataAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectionSchemaMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetConnectionSchemaMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.ConnectionSchemaMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnectionSchemaMetadata",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnectionSchemaMetadata",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnectionSchemaMetadata_sync_flattened",
+      "title": "GetConnectionSchemaMetadata",
+      "description": "Snippet for GetConnectionSchemaMetadata",
+      "file": "ConnectorsClient.GetConnectionSchemaMetadataSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionSchemaMetadata",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectionSchemaMetadata",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.ConnectionSchemaMetadata",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnectionSchemaMetadata",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnectionSchemaMetadata",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnectionSchemaMetadata_async_flattened",
+      "title": "GetConnectionSchemaMetadataAsync",
+      "description": "Snippet for GetConnectionSchemaMetadataAsync",
+      "file": "ConnectorsClient.GetConnectionSchemaMetadataAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionSchemaMetadataAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectionSchemaMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.ConnectionSchemaMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnectionSchemaMetadata",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnectionSchemaMetadata",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnectionSchemaMetadata_sync_flattened_resourceNames",
+      "title": "GetConnectionSchemaMetadataResourceNames",
+      "description": "Snippet for GetConnectionSchemaMetadata",
+      "file": "ConnectorsClient.GetConnectionSchemaMetadataResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionSchemaMetadata",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectionSchemaMetadata",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectionSchemaMetadataName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.ConnectionSchemaMetadata",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnectionSchemaMetadata",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnectionSchemaMetadata",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetConnectionSchemaMetadata_async_flattened_resourceNames",
+      "title": "GetConnectionSchemaMetadataResourceNamesAsync",
+      "description": "Snippet for GetConnectionSchemaMetadataAsync",
+      "file": "ConnectorsClient.GetConnectionSchemaMetadataResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionSchemaMetadataAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetConnectionSchemaMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectionSchemaMetadataName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.ConnectionSchemaMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetConnectionSchemaMetadata",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetConnectionSchemaMetadata",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_RefreshConnectionSchemaMetadata_sync",
+      "title": "RefreshConnectionSchemaMetadataRequestObject",
+      "description": "Snippet for RefreshConnectionSchemaMetadata",
+      "file": "ConnectorsClient.RefreshConnectionSchemaMetadataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshConnectionSchemaMetadata",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.RefreshConnectionSchemaMetadata",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.RefreshConnectionSchemaMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Connectors.V1.ConnectionSchemaMetadata, Google.Cloud.Connectors.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "RefreshConnectionSchemaMetadata",
+          "fullName": "google.cloud.connectors.v1.Connectors.RefreshConnectionSchemaMetadata",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_RefreshConnectionSchemaMetadata_async",
+      "title": "RefreshConnectionSchemaMetadataRequestObjectAsync",
+      "description": "Snippet for RefreshConnectionSchemaMetadataAsync",
+      "file": "ConnectorsClient.RefreshConnectionSchemaMetadataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshConnectionSchemaMetadataAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.RefreshConnectionSchemaMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.RefreshConnectionSchemaMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Connectors.V1.ConnectionSchemaMetadata, Google.Cloud.Connectors.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "RefreshConnectionSchemaMetadata",
+          "fullName": "google.cloud.connectors.v1.Connectors.RefreshConnectionSchemaMetadata",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_RefreshConnectionSchemaMetadata_sync_flattened",
+      "title": "RefreshConnectionSchemaMetadata",
+      "description": "Snippet for RefreshConnectionSchemaMetadata",
+      "file": "ConnectorsClient.RefreshConnectionSchemaMetadataSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshConnectionSchemaMetadata",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.RefreshConnectionSchemaMetadata",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Connectors.V1.ConnectionSchemaMetadata, Google.Cloud.Connectors.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "RefreshConnectionSchemaMetadata",
+          "fullName": "google.cloud.connectors.v1.Connectors.RefreshConnectionSchemaMetadata",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_RefreshConnectionSchemaMetadata_async_flattened",
+      "title": "RefreshConnectionSchemaMetadataAsync",
+      "description": "Snippet for RefreshConnectionSchemaMetadataAsync",
+      "file": "ConnectorsClient.RefreshConnectionSchemaMetadataAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshConnectionSchemaMetadataAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.RefreshConnectionSchemaMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Connectors.V1.ConnectionSchemaMetadata, Google.Cloud.Connectors.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "RefreshConnectionSchemaMetadata",
+          "fullName": "google.cloud.connectors.v1.Connectors.RefreshConnectionSchemaMetadata",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_RefreshConnectionSchemaMetadata_sync_flattened_resourceNames",
+      "title": "RefreshConnectionSchemaMetadataResourceNames",
+      "description": "Snippet for RefreshConnectionSchemaMetadata",
+      "file": "ConnectorsClient.RefreshConnectionSchemaMetadataResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshConnectionSchemaMetadata",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.RefreshConnectionSchemaMetadata",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectionSchemaMetadataName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Connectors.V1.ConnectionSchemaMetadata, Google.Cloud.Connectors.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "RefreshConnectionSchemaMetadata",
+          "fullName": "google.cloud.connectors.v1.Connectors.RefreshConnectionSchemaMetadata",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_RefreshConnectionSchemaMetadata_async_flattened_resourceNames",
+      "title": "RefreshConnectionSchemaMetadataResourceNamesAsync",
+      "description": "Snippet for RefreshConnectionSchemaMetadataAsync",
+      "file": "ConnectorsClient.RefreshConnectionSchemaMetadataResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshConnectionSchemaMetadataAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.RefreshConnectionSchemaMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectionSchemaMetadataName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Connectors.V1.ConnectionSchemaMetadata, Google.Cloud.Connectors.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "RefreshConnectionSchemaMetadata",
+          "fullName": "google.cloud.connectors.v1.Connectors.RefreshConnectionSchemaMetadata",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListRuntimeEntitySchemas_sync",
+      "title": "ListRuntimeEntitySchemasRequestObject",
+      "description": "Snippet for ListRuntimeEntitySchemas",
+      "file": "ConnectorsClient.ListRuntimeEntitySchemasRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRuntimeEntitySchemas",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListRuntimeEntitySchemas",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ListRuntimeEntitySchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListRuntimeEntitySchemasResponse, Google.Cloud.Connectors.V1.RuntimeEntitySchema>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListRuntimeEntitySchemas",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListRuntimeEntitySchemas",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListRuntimeEntitySchemas_async",
+      "title": "ListRuntimeEntitySchemasRequestObjectAsync",
+      "description": "Snippet for ListRuntimeEntitySchemasAsync",
+      "file": "ConnectorsClient.ListRuntimeEntitySchemasRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRuntimeEntitySchemasAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListRuntimeEntitySchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ListRuntimeEntitySchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListRuntimeEntitySchemasResponse, Google.Cloud.Connectors.V1.RuntimeEntitySchema>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListRuntimeEntitySchemas",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListRuntimeEntitySchemas",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListRuntimeEntitySchemas_sync_flattened",
+      "title": "ListRuntimeEntitySchemas",
+      "description": "Snippet for ListRuntimeEntitySchemas",
+      "file": "ConnectorsClient.ListRuntimeEntitySchemasSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRuntimeEntitySchemas",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListRuntimeEntitySchemas",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListRuntimeEntitySchemasResponse, Google.Cloud.Connectors.V1.RuntimeEntitySchema>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListRuntimeEntitySchemas",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListRuntimeEntitySchemas",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListRuntimeEntitySchemas_async_flattened",
+      "title": "ListRuntimeEntitySchemasAsync",
+      "description": "Snippet for ListRuntimeEntitySchemasAsync",
+      "file": "ConnectorsClient.ListRuntimeEntitySchemasAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRuntimeEntitySchemasAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListRuntimeEntitySchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListRuntimeEntitySchemasResponse, Google.Cloud.Connectors.V1.RuntimeEntitySchema>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListRuntimeEntitySchemas",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListRuntimeEntitySchemas",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListRuntimeEntitySchemas_sync_flattened_resourceNames",
+      "title": "ListRuntimeEntitySchemasResourceNames",
+      "description": "Snippet for ListRuntimeEntitySchemas",
+      "file": "ConnectorsClient.ListRuntimeEntitySchemasResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRuntimeEntitySchemas",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListRuntimeEntitySchemas",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListRuntimeEntitySchemasResponse, Google.Cloud.Connectors.V1.RuntimeEntitySchema>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListRuntimeEntitySchemas",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListRuntimeEntitySchemas",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListRuntimeEntitySchemas_async_flattened_resourceNames",
+      "title": "ListRuntimeEntitySchemasResourceNamesAsync",
+      "description": "Snippet for ListRuntimeEntitySchemasAsync",
+      "file": "ConnectorsClient.ListRuntimeEntitySchemasResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRuntimeEntitySchemasAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListRuntimeEntitySchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListRuntimeEntitySchemasResponse, Google.Cloud.Connectors.V1.RuntimeEntitySchema>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListRuntimeEntitySchemas",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListRuntimeEntitySchemas",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListRuntimeActionSchemas_sync",
+      "title": "ListRuntimeActionSchemasRequestObject",
+      "description": "Snippet for ListRuntimeActionSchemas",
+      "file": "ConnectorsClient.ListRuntimeActionSchemasRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRuntimeActionSchemas",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListRuntimeActionSchemas",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ListRuntimeActionSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListRuntimeActionSchemasResponse, Google.Cloud.Connectors.V1.RuntimeActionSchema>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListRuntimeActionSchemas",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListRuntimeActionSchemas",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListRuntimeActionSchemas_async",
+      "title": "ListRuntimeActionSchemasRequestObjectAsync",
+      "description": "Snippet for ListRuntimeActionSchemasAsync",
+      "file": "ConnectorsClient.ListRuntimeActionSchemasRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRuntimeActionSchemasAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListRuntimeActionSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ListRuntimeActionSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListRuntimeActionSchemasResponse, Google.Cloud.Connectors.V1.RuntimeActionSchema>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListRuntimeActionSchemas",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListRuntimeActionSchemas",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListRuntimeActionSchemas_sync_flattened",
+      "title": "ListRuntimeActionSchemas",
+      "description": "Snippet for ListRuntimeActionSchemas",
+      "file": "ConnectorsClient.ListRuntimeActionSchemasSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRuntimeActionSchemas",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListRuntimeActionSchemas",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListRuntimeActionSchemasResponse, Google.Cloud.Connectors.V1.RuntimeActionSchema>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListRuntimeActionSchemas",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListRuntimeActionSchemas",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListRuntimeActionSchemas_async_flattened",
+      "title": "ListRuntimeActionSchemasAsync",
+      "description": "Snippet for ListRuntimeActionSchemasAsync",
+      "file": "ConnectorsClient.ListRuntimeActionSchemasAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRuntimeActionSchemasAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListRuntimeActionSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListRuntimeActionSchemasResponse, Google.Cloud.Connectors.V1.RuntimeActionSchema>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListRuntimeActionSchemas",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListRuntimeActionSchemas",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListRuntimeActionSchemas_sync_flattened_resourceNames",
+      "title": "ListRuntimeActionSchemasResourceNames",
+      "description": "Snippet for ListRuntimeActionSchemas",
+      "file": "ConnectorsClient.ListRuntimeActionSchemasResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRuntimeActionSchemas",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListRuntimeActionSchemas",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Connectors.V1.ListRuntimeActionSchemasResponse, Google.Cloud.Connectors.V1.RuntimeActionSchema>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListRuntimeActionSchemas",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListRuntimeActionSchemas",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_ListRuntimeActionSchemas_async_flattened_resourceNames",
+      "title": "ListRuntimeActionSchemasResourceNamesAsync",
+      "description": "Snippet for ListRuntimeActionSchemasAsync",
+      "file": "ConnectorsClient.ListRuntimeActionSchemasResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRuntimeActionSchemasAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.ListRuntimeActionSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Connectors.V1.ListRuntimeActionSchemasResponse, Google.Cloud.Connectors.V1.RuntimeActionSchema>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "ListRuntimeActionSchemas",
+          "fullName": "google.cloud.connectors.v1.Connectors.ListRuntimeActionSchemas",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetRuntimeConfig_sync",
+      "title": "GetRuntimeConfigRequestObject",
+      "description": "Snippet for GetRuntimeConfig",
+      "file": "ConnectorsClient.GetRuntimeConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRuntimeConfig",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetRuntimeConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetRuntimeConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.RuntimeConfig",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetRuntimeConfig",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetRuntimeConfig",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetRuntimeConfig_async",
+      "title": "GetRuntimeConfigRequestObjectAsync",
+      "description": "Snippet for GetRuntimeConfigAsync",
+      "file": "ConnectorsClient.GetRuntimeConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRuntimeConfigAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetRuntimeConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetRuntimeConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.RuntimeConfig>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetRuntimeConfig",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetRuntimeConfig",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetRuntimeConfig_sync_flattened",
+      "title": "GetRuntimeConfig",
+      "description": "Snippet for GetRuntimeConfig",
+      "file": "ConnectorsClient.GetRuntimeConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRuntimeConfig",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetRuntimeConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.RuntimeConfig",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetRuntimeConfig",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetRuntimeConfig",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetRuntimeConfig_async_flattened",
+      "title": "GetRuntimeConfigAsync",
+      "description": "Snippet for GetRuntimeConfigAsync",
+      "file": "ConnectorsClient.GetRuntimeConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRuntimeConfigAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetRuntimeConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.RuntimeConfig>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetRuntimeConfig",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetRuntimeConfig",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetRuntimeConfig_sync_flattened_resourceNames",
+      "title": "GetRuntimeConfigResourceNames",
+      "description": "Snippet for GetRuntimeConfig",
+      "file": "ConnectorsClient.GetRuntimeConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRuntimeConfig",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetRuntimeConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.RuntimeConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.RuntimeConfig",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetRuntimeConfig",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetRuntimeConfig",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetRuntimeConfig_async_flattened_resourceNames",
+      "title": "GetRuntimeConfigResourceNamesAsync",
+      "description": "Snippet for GetRuntimeConfigAsync",
+      "file": "ConnectorsClient.GetRuntimeConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRuntimeConfigAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetRuntimeConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.RuntimeConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.RuntimeConfig>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetRuntimeConfig",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetRuntimeConfig",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetGlobalSettings_sync",
+      "title": "GetGlobalSettingsRequestObject",
+      "description": "Snippet for GetGlobalSettings",
+      "file": "ConnectorsClient.GetGlobalSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlobalSettings",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetGlobalSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetGlobalSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.Settings",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetGlobalSettings",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetGlobalSettings",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetGlobalSettings_async",
+      "title": "GetGlobalSettingsRequestObjectAsync",
+      "description": "Snippet for GetGlobalSettingsAsync",
+      "file": "ConnectorsClient.GetGlobalSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlobalSettingsAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetGlobalSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.GetGlobalSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.Settings>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetGlobalSettings",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetGlobalSettings",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetGlobalSettings_sync_flattened",
+      "title": "GetGlobalSettings",
+      "description": "Snippet for GetGlobalSettings",
+      "file": "ConnectorsClient.GetGlobalSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlobalSettings",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetGlobalSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.Settings",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetGlobalSettings",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetGlobalSettings",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetGlobalSettings_async_flattened",
+      "title": "GetGlobalSettingsAsync",
+      "description": "Snippet for GetGlobalSettingsAsync",
+      "file": "ConnectorsClient.GetGlobalSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlobalSettingsAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetGlobalSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.Settings>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetGlobalSettings",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetGlobalSettings",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetGlobalSettings_sync_flattened_resourceNames",
+      "title": "GetGlobalSettingsResourceNames",
+      "description": "Snippet for GetGlobalSettings",
+      "file": "ConnectorsClient.GetGlobalSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlobalSettings",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetGlobalSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.SettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Connectors.V1.Settings",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetGlobalSettings",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetGlobalSettings",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectors_v1_generated_Connectors_GetGlobalSettings_async_flattened_resourceNames",
+      "title": "GetGlobalSettingsResourceNamesAsync",
+      "description": "Snippet for GetGlobalSettingsAsync",
+      "file": "ConnectorsClient.GetGlobalSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlobalSettingsAsync",
+        "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient.GetGlobalSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Connectors.V1.SettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Connectors.V1.Settings>",
+        "client": {
+          "shortName": "ConnectorsClient",
+          "fullName": "Google.Cloud.Connectors.V1.ConnectorsClient"
+        },
+        "method": {
+          "shortName": "GetGlobalSettings",
+          "fullName": "google.cloud.connectors.v1.Connectors.GetGlobalSettings",
+          "service": {
+            "shortName": "Connectors",
+            "fullName": "google.cloud.connectors.v1.Connectors"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
