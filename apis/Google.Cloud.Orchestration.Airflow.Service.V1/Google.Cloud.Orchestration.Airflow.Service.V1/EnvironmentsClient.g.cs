@@ -55,10 +55,16 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             UpdateEnvironmentOperationsSettings = existing.UpdateEnvironmentOperationsSettings.Clone();
             DeleteEnvironmentSettings = existing.DeleteEnvironmentSettings;
             DeleteEnvironmentOperationsSettings = existing.DeleteEnvironmentOperationsSettings.Clone();
+            ExecuteAirflowCommandSettings = existing.ExecuteAirflowCommandSettings;
+            StopAirflowCommandSettings = existing.StopAirflowCommandSettings;
+            PollAirflowCommandSettings = existing.PollAirflowCommandSettings;
             SaveSnapshotSettings = existing.SaveSnapshotSettings;
             SaveSnapshotOperationsSettings = existing.SaveSnapshotOperationsSettings.Clone();
             LoadSnapshotSettings = existing.LoadSnapshotSettings;
             LoadSnapshotOperationsSettings = existing.LoadSnapshotOperationsSettings.Clone();
+            DatabaseFailoverSettings = existing.DatabaseFailoverSettings;
+            DatabaseFailoverOperationsSettings = existing.DatabaseFailoverOperationsSettings.Clone();
+            FetchDatabasePropertiesSettings = existing.FetchDatabasePropertiesSettings;
             OnCopy(existing);
         }
 
@@ -180,6 +186,42 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.ExecuteAirflowCommand</c> and <c>EnvironmentsClient.ExecuteAirflowCommandAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExecuteAirflowCommandSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.StopAirflowCommand</c> and <c>EnvironmentsClient.StopAirflowCommandAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StopAirflowCommandSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.PollAirflowCommand</c> and <c>EnvironmentsClient.PollAirflowCommandAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PollAirflowCommandSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>EnvironmentsClient.SaveSnapshot</c> and <c>EnvironmentsClient.SaveSnapshotAsync</c>.
         /// </summary>
         /// <remarks>
@@ -237,6 +279,49 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.DatabaseFailover</c> and <c>EnvironmentsClient.DatabaseFailoverAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DatabaseFailoverSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EnvironmentsClient.DatabaseFailover</c> and
+        /// <c>EnvironmentsClient.DatabaseFailoverAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DatabaseFailoverOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.FetchDatabaseProperties</c> and <c>EnvironmentsClient.FetchDatabasePropertiesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchDatabasePropertiesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="EnvironmentsSettings"/> object.</returns>
@@ -1194,6 +1279,87 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             DeleteEnvironmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Executes Airflow CLI command.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExecuteAirflowCommandResponse ExecuteAirflowCommand(ExecuteAirflowCommandRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Executes Airflow CLI command.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteAirflowCommandResponse> ExecuteAirflowCommandAsync(ExecuteAirflowCommandRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Executes Airflow CLI command.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExecuteAirflowCommandResponse> ExecuteAirflowCommandAsync(ExecuteAirflowCommandRequest request, st::CancellationToken cancellationToken) =>
+            ExecuteAirflowCommandAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Stops Airflow CLI command execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual StopAirflowCommandResponse StopAirflowCommand(StopAirflowCommandRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops Airflow CLI command execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StopAirflowCommandResponse> StopAirflowCommandAsync(StopAirflowCommandRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops Airflow CLI command execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<StopAirflowCommandResponse> StopAirflowCommandAsync(StopAirflowCommandRequest request, st::CancellationToken cancellationToken) =>
+            StopAirflowCommandAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Polls Airflow CLI command execution and fetches logs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PollAirflowCommandResponse PollAirflowCommand(PollAirflowCommandRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Polls Airflow CLI command execution and fetches logs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PollAirflowCommandResponse> PollAirflowCommandAsync(PollAirflowCommandRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Polls Airflow CLI command execution and fetches logs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PollAirflowCommandResponse> PollAirflowCommandAsync(PollAirflowCommandRequest request, st::CancellationToken cancellationToken) =>
+            PollAirflowCommandAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a snapshots of a Cloud Composer environment.
         /// 
         /// As a result of this operation, snapshot of environment's state is stored
@@ -1316,6 +1482,86 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<LoadSnapshotResponse, OperationMetadata>> PollOnceLoadSnapshotAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<LoadSnapshotResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), LoadSnapshotOperationsClient, callSettings);
+
+        /// <summary>
+        /// Triggers database failover (only for highly resilient environments).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DatabaseFailoverResponse, OperationMetadata> DatabaseFailover(DatabaseFailoverRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Triggers database failover (only for highly resilient environments).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseFailoverResponse, OperationMetadata>> DatabaseFailoverAsync(DatabaseFailoverRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Triggers database failover (only for highly resilient environments).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseFailoverResponse, OperationMetadata>> DatabaseFailoverAsync(DatabaseFailoverRequest request, st::CancellationToken cancellationToken) =>
+            DatabaseFailoverAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DatabaseFailover</c>.</summary>
+        public virtual lro::OperationsClient DatabaseFailoverOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DatabaseFailover</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DatabaseFailoverResponse, OperationMetadata> PollOnceDatabaseFailover(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatabaseFailoverResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DatabaseFailoverOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DatabaseFailover</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DatabaseFailoverResponse, OperationMetadata>> PollOnceDatabaseFailoverAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DatabaseFailoverResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DatabaseFailoverOperationsClient, callSettings);
+
+        /// <summary>
+        /// Fetches database properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchDatabasePropertiesResponse FetchDatabaseProperties(FetchDatabasePropertiesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches database properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchDatabasePropertiesResponse> FetchDatabasePropertiesAsync(FetchDatabasePropertiesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches database properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchDatabasePropertiesResponse> FetchDatabasePropertiesAsync(FetchDatabasePropertiesRequest request, st::CancellationToken cancellationToken) =>
+            FetchDatabasePropertiesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Environments client wrapper implementation, for convenient use.</summary>
@@ -1334,9 +1580,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
 
         private readonly gaxgrpc::ApiCall<DeleteEnvironmentRequest, lro::Operation> _callDeleteEnvironment;
 
+        private readonly gaxgrpc::ApiCall<ExecuteAirflowCommandRequest, ExecuteAirflowCommandResponse> _callExecuteAirflowCommand;
+
+        private readonly gaxgrpc::ApiCall<StopAirflowCommandRequest, StopAirflowCommandResponse> _callStopAirflowCommand;
+
+        private readonly gaxgrpc::ApiCall<PollAirflowCommandRequest, PollAirflowCommandResponse> _callPollAirflowCommand;
+
         private readonly gaxgrpc::ApiCall<SaveSnapshotRequest, lro::Operation> _callSaveSnapshot;
 
         private readonly gaxgrpc::ApiCall<LoadSnapshotRequest, lro::Operation> _callLoadSnapshot;
+
+        private readonly gaxgrpc::ApiCall<DatabaseFailoverRequest, lro::Operation> _callDatabaseFailover;
+
+        private readonly gaxgrpc::ApiCall<FetchDatabasePropertiesRequest, FetchDatabasePropertiesResponse> _callFetchDatabaseProperties;
 
         /// <summary>
         /// Constructs a client wrapper for the Environments service, with the specified gRPC client and settings.
@@ -1354,6 +1610,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             DeleteEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEnvironmentOperationsSettings, logger);
             SaveSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SaveSnapshotOperationsSettings, logger);
             LoadSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LoadSnapshotOperationsSettings, logger);
+            DatabaseFailoverOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DatabaseFailoverOperationsSettings, logger);
             _callCreateEnvironment = clientHelper.BuildApiCall<CreateEnvironmentRequest, lro::Operation>("CreateEnvironment", grpcClient.CreateEnvironmentAsync, grpcClient.CreateEnvironment, effectiveSettings.CreateEnvironmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEnvironment);
             Modify_CreateEnvironmentApiCall(ref _callCreateEnvironment);
@@ -1369,12 +1626,27 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             _callDeleteEnvironment = clientHelper.BuildApiCall<DeleteEnvironmentRequest, lro::Operation>("DeleteEnvironment", grpcClient.DeleteEnvironmentAsync, grpcClient.DeleteEnvironment, effectiveSettings.DeleteEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEnvironment);
             Modify_DeleteEnvironmentApiCall(ref _callDeleteEnvironment);
+            _callExecuteAirflowCommand = clientHelper.BuildApiCall<ExecuteAirflowCommandRequest, ExecuteAirflowCommandResponse>("ExecuteAirflowCommand", grpcClient.ExecuteAirflowCommandAsync, grpcClient.ExecuteAirflowCommand, effectiveSettings.ExecuteAirflowCommandSettings).WithGoogleRequestParam("environment", request => request.Environment);
+            Modify_ApiCall(ref _callExecuteAirflowCommand);
+            Modify_ExecuteAirflowCommandApiCall(ref _callExecuteAirflowCommand);
+            _callStopAirflowCommand = clientHelper.BuildApiCall<StopAirflowCommandRequest, StopAirflowCommandResponse>("StopAirflowCommand", grpcClient.StopAirflowCommandAsync, grpcClient.StopAirflowCommand, effectiveSettings.StopAirflowCommandSettings).WithGoogleRequestParam("environment", request => request.Environment);
+            Modify_ApiCall(ref _callStopAirflowCommand);
+            Modify_StopAirflowCommandApiCall(ref _callStopAirflowCommand);
+            _callPollAirflowCommand = clientHelper.BuildApiCall<PollAirflowCommandRequest, PollAirflowCommandResponse>("PollAirflowCommand", grpcClient.PollAirflowCommandAsync, grpcClient.PollAirflowCommand, effectiveSettings.PollAirflowCommandSettings).WithGoogleRequestParam("environment", request => request.Environment);
+            Modify_ApiCall(ref _callPollAirflowCommand);
+            Modify_PollAirflowCommandApiCall(ref _callPollAirflowCommand);
             _callSaveSnapshot = clientHelper.BuildApiCall<SaveSnapshotRequest, lro::Operation>("SaveSnapshot", grpcClient.SaveSnapshotAsync, grpcClient.SaveSnapshot, effectiveSettings.SaveSnapshotSettings).WithGoogleRequestParam("environment", request => request.Environment);
             Modify_ApiCall(ref _callSaveSnapshot);
             Modify_SaveSnapshotApiCall(ref _callSaveSnapshot);
             _callLoadSnapshot = clientHelper.BuildApiCall<LoadSnapshotRequest, lro::Operation>("LoadSnapshot", grpcClient.LoadSnapshotAsync, grpcClient.LoadSnapshot, effectiveSettings.LoadSnapshotSettings).WithGoogleRequestParam("environment", request => request.Environment);
             Modify_ApiCall(ref _callLoadSnapshot);
             Modify_LoadSnapshotApiCall(ref _callLoadSnapshot);
+            _callDatabaseFailover = clientHelper.BuildApiCall<DatabaseFailoverRequest, lro::Operation>("DatabaseFailover", grpcClient.DatabaseFailoverAsync, grpcClient.DatabaseFailover, effectiveSettings.DatabaseFailoverSettings).WithGoogleRequestParam("environment", request => request.Environment);
+            Modify_ApiCall(ref _callDatabaseFailover);
+            Modify_DatabaseFailoverApiCall(ref _callDatabaseFailover);
+            _callFetchDatabaseProperties = clientHelper.BuildApiCall<FetchDatabasePropertiesRequest, FetchDatabasePropertiesResponse>("FetchDatabaseProperties", grpcClient.FetchDatabasePropertiesAsync, grpcClient.FetchDatabaseProperties, effectiveSettings.FetchDatabasePropertiesSettings).WithGoogleRequestParam("environment", request => request.Environment);
+            Modify_ApiCall(ref _callFetchDatabaseProperties);
+            Modify_FetchDatabasePropertiesApiCall(ref _callFetchDatabaseProperties);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1390,9 +1662,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
 
         partial void Modify_DeleteEnvironmentApiCall(ref gaxgrpc::ApiCall<DeleteEnvironmentRequest, lro::Operation> call);
 
+        partial void Modify_ExecuteAirflowCommandApiCall(ref gaxgrpc::ApiCall<ExecuteAirflowCommandRequest, ExecuteAirflowCommandResponse> call);
+
+        partial void Modify_StopAirflowCommandApiCall(ref gaxgrpc::ApiCall<StopAirflowCommandRequest, StopAirflowCommandResponse> call);
+
+        partial void Modify_PollAirflowCommandApiCall(ref gaxgrpc::ApiCall<PollAirflowCommandRequest, PollAirflowCommandResponse> call);
+
         partial void Modify_SaveSnapshotApiCall(ref gaxgrpc::ApiCall<SaveSnapshotRequest, lro::Operation> call);
 
         partial void Modify_LoadSnapshotApiCall(ref gaxgrpc::ApiCall<LoadSnapshotRequest, lro::Operation> call);
+
+        partial void Modify_DatabaseFailoverApiCall(ref gaxgrpc::ApiCall<DatabaseFailoverRequest, lro::Operation> call);
+
+        partial void Modify_FetchDatabasePropertiesApiCall(ref gaxgrpc::ApiCall<FetchDatabasePropertiesRequest, FetchDatabasePropertiesResponse> call);
 
         partial void OnConstruction(Environments.EnvironmentsClient grpcClient, EnvironmentsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1409,9 +1691,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
 
         partial void Modify_DeleteEnvironmentRequest(ref DeleteEnvironmentRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ExecuteAirflowCommandRequest(ref ExecuteAirflowCommandRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StopAirflowCommandRequest(ref StopAirflowCommandRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PollAirflowCommandRequest(ref PollAirflowCommandRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_SaveSnapshotRequest(ref SaveSnapshotRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_LoadSnapshotRequest(ref LoadSnapshotRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DatabaseFailoverRequest(ref DatabaseFailoverRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchDatabasePropertiesRequest(ref FetchDatabasePropertiesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateEnvironment</c>.</summary>
         public override lro::OperationsClient CreateEnvironmentOperationsClient { get; }
@@ -1542,6 +1834,78 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteEnvironment.Async(request, callSettings).ConfigureAwait(false), DeleteEnvironmentOperationsClient);
         }
 
+        /// <summary>
+        /// Executes Airflow CLI command.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExecuteAirflowCommandResponse ExecuteAirflowCommand(ExecuteAirflowCommandRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteAirflowCommandRequest(ref request, ref callSettings);
+            return _callExecuteAirflowCommand.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Executes Airflow CLI command.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExecuteAirflowCommandResponse> ExecuteAirflowCommandAsync(ExecuteAirflowCommandRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteAirflowCommandRequest(ref request, ref callSettings);
+            return _callExecuteAirflowCommand.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Stops Airflow CLI command execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override StopAirflowCommandResponse StopAirflowCommand(StopAirflowCommandRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopAirflowCommandRequest(ref request, ref callSettings);
+            return _callStopAirflowCommand.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Stops Airflow CLI command execution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<StopAirflowCommandResponse> StopAirflowCommandAsync(StopAirflowCommandRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopAirflowCommandRequest(ref request, ref callSettings);
+            return _callStopAirflowCommand.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Polls Airflow CLI command execution and fetches logs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PollAirflowCommandResponse PollAirflowCommand(PollAirflowCommandRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PollAirflowCommandRequest(ref request, ref callSettings);
+            return _callPollAirflowCommand.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Polls Airflow CLI command execution and fetches logs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PollAirflowCommandResponse> PollAirflowCommandAsync(PollAirflowCommandRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PollAirflowCommandRequest(ref request, ref callSettings);
+            return _callPollAirflowCommand.Async(request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>SaveSnapshot</c>.</summary>
         public override lro::OperationsClient SaveSnapshotOperationsClient { get; }
 
@@ -1606,6 +1970,57 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         {
             Modify_LoadSnapshotRequest(ref request, ref callSettings);
             return new lro::Operation<LoadSnapshotResponse, OperationMetadata>(await _callLoadSnapshot.Async(request, callSettings).ConfigureAwait(false), LoadSnapshotOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DatabaseFailover</c>.</summary>
+        public override lro::OperationsClient DatabaseFailoverOperationsClient { get; }
+
+        /// <summary>
+        /// Triggers database failover (only for highly resilient environments).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DatabaseFailoverResponse, OperationMetadata> DatabaseFailover(DatabaseFailoverRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DatabaseFailoverRequest(ref request, ref callSettings);
+            return new lro::Operation<DatabaseFailoverResponse, OperationMetadata>(_callDatabaseFailover.Sync(request, callSettings), DatabaseFailoverOperationsClient);
+        }
+
+        /// <summary>
+        /// Triggers database failover (only for highly resilient environments).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DatabaseFailoverResponse, OperationMetadata>> DatabaseFailoverAsync(DatabaseFailoverRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DatabaseFailoverRequest(ref request, ref callSettings);
+            return new lro::Operation<DatabaseFailoverResponse, OperationMetadata>(await _callDatabaseFailover.Async(request, callSettings).ConfigureAwait(false), DatabaseFailoverOperationsClient);
+        }
+
+        /// <summary>
+        /// Fetches database properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FetchDatabasePropertiesResponse FetchDatabaseProperties(FetchDatabasePropertiesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchDatabasePropertiesRequest(ref request, ref callSettings);
+            return _callFetchDatabaseProperties.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches database properties.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FetchDatabasePropertiesResponse> FetchDatabasePropertiesAsync(FetchDatabasePropertiesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchDatabasePropertiesRequest(ref request, ref callSettings);
+            return _callFetchDatabaseProperties.Async(request, callSettings);
         }
     }
 
