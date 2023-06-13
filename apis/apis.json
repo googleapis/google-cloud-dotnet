@@ -1312,6 +1312,31 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.Connectors.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Integration Connectors",
+      "productUrl": "https://cloud.google.com/integration-connectors/docs",
+      "description": "Recommended Google client library to access the Google Cloud Integration Connectors API, which enables users to create and manage connections to Google Cloud services and third-party business applications using the Connectors interface.",
+      "tags": [
+        "services",
+        "applications",
+        "connections",
+        "integration"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/connectors/v1",
+      "shortName": "connectors",
+      "serviceConfigFile": "connectors_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.ContactCenterInsights.V1",
       "version": "2.8.0",
       "type": "grpc",
