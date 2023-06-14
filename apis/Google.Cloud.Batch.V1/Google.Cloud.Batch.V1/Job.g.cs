@@ -115,21 +115,24 @@ namespace Google.Cloud.Batch.V1 {
             "ZRgCIAEoAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
             "AiABKAk6AjgBImAKEVByb3Zpc2lvbmluZ01vZGVsEiIKHlBST1ZJU0lPTklO",
             "R19NT0RFTF9VTlNQRUNJRklFRBAAEgwKCFNUQU5EQVJEEAESCAoEU1BPVBAC",
-            "Eg8KC1BSRUVNUFRJQkxFEAMigQMKCVRhc2tHcm91cBIRCgRuYW1lGAEgASgJ",
+            "Eg8KC1BSRUVNUFRJQkxFEAMirQQKCVRhc2tHcm91cBIRCgRuYW1lGAEgASgJ",
             "QgPgQQMSNwoJdGFza19zcGVjGAMgASgLMh8uZ29vZ2xlLmNsb3VkLmJhdGNo",
             "LnYxLlRhc2tTcGVjQgPgQQISEgoKdGFza19jb3VudBgEIAEoAxITCgtwYXJh",
-            "bGxlbGlzbRgFIAEoAxI9ChF0YXNrX2Vudmlyb25tZW50cxgJIAMoCzIiLmdv",
-            "b2dsZS5jbG91ZC5iYXRjaC52MS5FbnZpcm9ubWVudBIbChN0YXNrX2NvdW50",
-            "X3Blcl9ub2RlGAogASgDEhoKEnJlcXVpcmVfaG9zdHNfZmlsZRgLIAEoCBIW",
-            "Cg5wZXJtaXNzaXZlX3NzaBgMIAEoCDpv6kFsCh5iYXRjaC5nb29nbGVhcGlz",
-            "LmNvbS9UYXNrR3JvdXASSnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9qb2JzL3tqb2J9L3Rhc2tHcm91cHMve3Rhc2tfZ3JvdXB9",
-            "Ii8KDlNlcnZpY2VBY2NvdW50Eg0KBWVtYWlsGAEgASgJEg4KBnNjb3BlcxgC",
-            "IAMoCUKpAQoZY29tLmdvb2dsZS5jbG91ZC5iYXRjaC52MUIISm9iUHJvdG9Q",
-            "AVovY2xvdWQuZ29vZ2xlLmNvbS9nby9iYXRjaC9hcGl2MS9iYXRjaHBiO2Jh",
-            "dGNocGKiAgNHQ0KqAhVHb29nbGUuQ2xvdWQuQmF0Y2guVjHKAhVHb29nbGVc",
-            "Q2xvdWRcQmF0Y2hcVjHqAhhHb29nbGU6OkNsb3VkOjpCYXRjaDo6VjFiBnBy",
-            "b3RvMw=="));
+            "bGxlbGlzbRgFIAEoAxJMChFzY2hlZHVsaW5nX3BvbGljeRgGIAEoDjIxLmdv",
+            "b2dsZS5jbG91ZC5iYXRjaC52MS5UYXNrR3JvdXAuU2NoZWR1bGluZ1BvbGlj",
+            "eRI9ChF0YXNrX2Vudmlyb25tZW50cxgJIAMoCzIiLmdvb2dsZS5jbG91ZC5i",
+            "YXRjaC52MS5FbnZpcm9ubWVudBIbChN0YXNrX2NvdW50X3Blcl9ub2RlGAog",
+            "ASgDEhoKEnJlcXVpcmVfaG9zdHNfZmlsZRgLIAEoCBIWCg5wZXJtaXNzaXZl",
+            "X3NzaBgMIAEoCCJcChBTY2hlZHVsaW5nUG9saWN5EiEKHVNDSEVEVUxJTkdf",
+            "UE9MSUNZX1VOU1BFQ0lGSUVEEAASFwoTQVNfU09PTl9BU19QT1NTSUJMRRAB",
+            "EgwKCElOX09SREVSEAI6b+pBbAoeYmF0Y2guZ29vZ2xlYXBpcy5jb20vVGFz",
+            "a0dyb3VwEkpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vam9icy97am9ifS90YXNrR3JvdXBzL3t0YXNrX2dyb3VwfSIvCg5TZXJ2",
+            "aWNlQWNjb3VudBINCgVlbWFpbBgBIAEoCRIOCgZzY29wZXMYAiADKAlCqQEK",
+            "GWNvbS5nb29nbGUuY2xvdWQuYmF0Y2gudjFCCEpvYlByb3RvUAFaL2Nsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vYmF0Y2gvYXBpdjEvYmF0Y2hwYjtiYXRjaHBiogID",
+            "R0NCqgIVR29vZ2xlLkNsb3VkLkJhdGNoLlYxygIVR29vZ2xlXENsb3VkXEJh",
+            "dGNoXFYx6gIYR29vZ2xlOjpDbG91ZDo6QmF0Y2g6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1.TaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -149,7 +152,7 @@ namespace Google.Cloud.Batch.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.NetworkPolicy), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.NetworkPolicy.Parser, new[]{ "NetworkInterfaces" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.PlacementPolicy), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.PlacementPolicy.Parser, new[]{ "Collocation", "MaxDistance" }, null, null, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.TaskGroup), global::Google.Cloud.Batch.V1.TaskGroup.Parser, new[]{ "Name", "TaskSpec", "TaskCount", "Parallelism", "TaskEnvironments", "TaskCountPerNode", "RequireHostsFile", "PermissiveSsh" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.TaskGroup), global::Google.Cloud.Batch.V1.TaskGroup.Parser, new[]{ "Name", "TaskSpec", "TaskCount", "Parallelism", "SchedulingPolicy", "TaskEnvironments", "TaskCountPerNode", "RequireHostsFile", "PermissiveSsh" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1.TaskGroup.Types.SchedulingPolicy) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.ServiceAccount), global::Google.Cloud.Batch.V1.ServiceAccount.Parser, new[]{ "Email", "Scopes" }, null, null, null, null)
           }));
     }
@@ -4254,7 +4257,6 @@ namespace Google.Cloud.Batch.V1 {
         /// The minimum CPU platform.
         /// See
         /// https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform.
-        /// Not yet implemented.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5636,8 +5638,7 @@ namespace Google.Cloud.Batch.V1 {
   }
 
   /// <summary>
-  /// A TaskGroup contains one or multiple Tasks that share the same
-  /// Runnable but with different runtime parameters.
+  /// A TaskGroup defines one or more Tasks that all share the same TaskSpec.
   /// </summary>
   public sealed partial class TaskGroup : pb::IMessage<TaskGroup>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5677,6 +5678,7 @@ namespace Google.Cloud.Batch.V1 {
       taskSpec_ = other.taskSpec_ != null ? other.taskSpec_.Clone() : null;
       taskCount_ = other.taskCount_;
       parallelism_ = other.parallelism_;
+      schedulingPolicy_ = other.schedulingPolicy_;
       taskEnvironments_ = other.taskEnvironments_.Clone();
       taskCountPerNode_ = other.taskCountPerNode_;
       requireHostsFile_ = other.requireHostsFile_;
@@ -5756,6 +5758,22 @@ namespace Google.Cloud.Batch.V1 {
       }
     }
 
+    /// <summary>Field number for the "scheduling_policy" field.</summary>
+    public const int SchedulingPolicyFieldNumber = 6;
+    private global::Google.Cloud.Batch.V1.TaskGroup.Types.SchedulingPolicy schedulingPolicy_ = global::Google.Cloud.Batch.V1.TaskGroup.Types.SchedulingPolicy.Unspecified;
+    /// <summary>
+    /// Scheduling policy for Tasks in the TaskGroup.
+    /// The default value is AS_SOON_AS_POSSIBLE.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Batch.V1.TaskGroup.Types.SchedulingPolicy SchedulingPolicy {
+      get { return schedulingPolicy_; }
+      set {
+        schedulingPolicy_ = value;
+      }
+    }
+
     /// <summary>Field number for the "task_environments" field.</summary>
     public const int TaskEnvironmentsFieldNumber = 9;
     private static readonly pb::FieldCodec<global::Google.Cloud.Batch.V1.Environment> _repeated_taskEnvironments_codec
@@ -5771,8 +5789,6 @@ namespace Google.Cloud.Batch.V1 {
     /// addition to any environment variables set in task_environments, specifying
     /// the number of Tasks in the Task's parent TaskGroup, and the specific Task's
     /// index in the TaskGroup (0 through BATCH_TASK_COUNT - 1).
-    ///
-    /// task_environments supports up to 200 entries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5849,6 +5865,7 @@ namespace Google.Cloud.Batch.V1 {
       if (!object.Equals(TaskSpec, other.TaskSpec)) return false;
       if (TaskCount != other.TaskCount) return false;
       if (Parallelism != other.Parallelism) return false;
+      if (SchedulingPolicy != other.SchedulingPolicy) return false;
       if(!taskEnvironments_.Equals(other.taskEnvironments_)) return false;
       if (TaskCountPerNode != other.TaskCountPerNode) return false;
       if (RequireHostsFile != other.RequireHostsFile) return false;
@@ -5864,6 +5881,7 @@ namespace Google.Cloud.Batch.V1 {
       if (taskSpec_ != null) hash ^= TaskSpec.GetHashCode();
       if (TaskCount != 0L) hash ^= TaskCount.GetHashCode();
       if (Parallelism != 0L) hash ^= Parallelism.GetHashCode();
+      if (SchedulingPolicy != global::Google.Cloud.Batch.V1.TaskGroup.Types.SchedulingPolicy.Unspecified) hash ^= SchedulingPolicy.GetHashCode();
       hash ^= taskEnvironments_.GetHashCode();
       if (TaskCountPerNode != 0L) hash ^= TaskCountPerNode.GetHashCode();
       if (RequireHostsFile != false) hash ^= RequireHostsFile.GetHashCode();
@@ -5901,6 +5919,10 @@ namespace Google.Cloud.Batch.V1 {
       if (Parallelism != 0L) {
         output.WriteRawTag(40);
         output.WriteInt64(Parallelism);
+      }
+      if (SchedulingPolicy != global::Google.Cloud.Batch.V1.TaskGroup.Types.SchedulingPolicy.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) SchedulingPolicy);
       }
       taskEnvironments_.WriteTo(output, _repeated_taskEnvironments_codec);
       if (TaskCountPerNode != 0L) {
@@ -5941,6 +5963,10 @@ namespace Google.Cloud.Batch.V1 {
         output.WriteRawTag(40);
         output.WriteInt64(Parallelism);
       }
+      if (SchedulingPolicy != global::Google.Cloud.Batch.V1.TaskGroup.Types.SchedulingPolicy.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) SchedulingPolicy);
+      }
       taskEnvironments_.WriteTo(ref output, _repeated_taskEnvironments_codec);
       if (TaskCountPerNode != 0L) {
         output.WriteRawTag(80);
@@ -5975,6 +6001,9 @@ namespace Google.Cloud.Batch.V1 {
       }
       if (Parallelism != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Parallelism);
+      }
+      if (SchedulingPolicy != global::Google.Cloud.Batch.V1.TaskGroup.Types.SchedulingPolicy.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SchedulingPolicy);
       }
       size += taskEnvironments_.CalculateSize(_repeated_taskEnvironments_codec);
       if (TaskCountPerNode != 0L) {
@@ -6012,6 +6041,9 @@ namespace Google.Cloud.Batch.V1 {
       }
       if (other.Parallelism != 0L) {
         Parallelism = other.Parallelism;
+      }
+      if (other.SchedulingPolicy != global::Google.Cloud.Batch.V1.TaskGroup.Types.SchedulingPolicy.Unspecified) {
+        SchedulingPolicy = other.SchedulingPolicy;
       }
       taskEnvironments_.Add(other.taskEnvironments_);
       if (other.TaskCountPerNode != 0L) {
@@ -6055,6 +6087,10 @@ namespace Google.Cloud.Batch.V1 {
           }
           case 40: {
             Parallelism = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            SchedulingPolicy = (global::Google.Cloud.Batch.V1.TaskGroup.Types.SchedulingPolicy) input.ReadEnum();
             break;
           }
           case 74: {
@@ -6107,6 +6143,10 @@ namespace Google.Cloud.Batch.V1 {
             Parallelism = input.ReadInt64();
             break;
           }
+          case 48: {
+            SchedulingPolicy = (global::Google.Cloud.Batch.V1.TaskGroup.Types.SchedulingPolicy) input.ReadEnum();
+            break;
+          }
           case 74: {
             taskEnvironments_.AddEntriesFrom(ref input, _repeated_taskEnvironments_codec);
             break;
@@ -6127,6 +6167,35 @@ namespace Google.Cloud.Batch.V1 {
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TaskGroup message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// How Tasks in the TaskGroup should be scheduled relative to each other.
+      /// </summary>
+      public enum SchedulingPolicy {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
+        [pbr::OriginalName("SCHEDULING_POLICY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Run Tasks as soon as resources are available.
+        ///
+        /// Tasks might be executed in parallel depending on parallelism and
+        /// task_count values.
+        /// </summary>
+        [pbr::OriginalName("AS_SOON_AS_POSSIBLE")] AsSoonAsPossible = 1,
+        /// <summary>
+        /// Run Tasks sequentially with increased task index.
+        /// </summary>
+        [pbr::OriginalName("IN_ORDER")] InOrder = 2,
+      }
+
+    }
+    #endregion
 
   }
 
