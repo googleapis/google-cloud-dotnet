@@ -51,18 +51,18 @@ namespace Google.Cloud.Firestore.Tests.Converters
         {
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
             var context = new DeserializationContext(GetSampleSnapshot(db, "doc1"));
-            context.Snapshot.Document.Fields["doc-field"] = ProtoHelpers.CreateValue("FieldValue");
+            context.DocumentSnapshot.Document.Fields["doc-field"] = ProtoHelpers.CreateValue("FieldValue");
             var converter = CustomConverter.ForConverterType(typeof(DictionaryHolderConverter), typeof(DictionaryHolder));
-            var holder = (DictionaryHolder) converter.DeserializeMap(context, context.Snapshot.Document.Fields);
+            var holder = (DictionaryHolder) converter.DeserializeMap(context, context.DocumentSnapshot.Document.Fields);
             var dictionary = holder.Dictionary;
             // The regular field deserialized from the document
             Assert.Equal("FieldValue", dictionary["doc-field"]);
 
             // The server-provided values
             Assert.Equal(context.DocumentReference, dictionary["DocumentId"]);
-            Assert.Equal(context.Snapshot.CreateTime, dictionary["CreateTime"]);
-            Assert.Equal(context.Snapshot.UpdateTime, dictionary["UpdateTime"]);
-            Assert.Equal(context.Snapshot.ReadTime, dictionary["ReadTime"]);
+            Assert.Equal(context.DocumentSnapshot.CreateTime, dictionary["CreateTime"]);
+            Assert.Equal(context.DocumentSnapshot.UpdateTime, dictionary["UpdateTime"]);
+            Assert.Equal(context.DocumentSnapshot.ReadTime, dictionary["ReadTime"]);
         }
 
         [Fact]
@@ -80,9 +80,9 @@ namespace Google.Cloud.Firestore.Tests.Converters
 
             // The server-provided values
             Assert.Equal(context.DocumentReference, dictionary["DocumentId"]);
-            Assert.Equal(context.Snapshot.CreateTime, dictionary["CreateTime"]);
-            Assert.Equal(context.Snapshot.UpdateTime, dictionary["UpdateTime"]);
-            Assert.Equal(context.Snapshot.ReadTime, dictionary["ReadTime"]);
+            Assert.Equal(context.DocumentSnapshot.CreateTime, dictionary["CreateTime"]);
+            Assert.Equal(context.DocumentSnapshot.UpdateTime, dictionary["UpdateTime"]);
+            Assert.Equal(context.DocumentSnapshot.ReadTime, dictionary["ReadTime"]);
         }
 
         public class NullReturningConverter : IFirestoreConverter<string>

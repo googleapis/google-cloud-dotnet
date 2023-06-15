@@ -145,7 +145,7 @@ namespace Google.Cloud.Firestore.Converters
                 }
             }
             AttributedIdAssigner.MaybeAssignId(ret, context.DocumentReference);
-            AttributedTimestampAssigner.MaybeAssignTimestamps(ret, context.Snapshot);
+            AttributedTimestampAssigner.MaybeAssignTimestamps(ret, context.DocumentSnapshot);
             return ret;
         }
 

@@ -1,4 +1,4 @@
-﻿// Copyright 2020, Google LLC
+// Copyright 2020, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -56,9 +56,9 @@ namespace Google.Cloud.Firestore
         internal void ApplyContext(DeserializationContext context, Dictionary<string, object> map)
         {
             MaybePopulate(DocumentIdKey, context.DocumentReference);
-            MaybePopulate(CreateTimestampKey, context.Snapshot.CreateTime);
-            MaybePopulate(UpdateTimestampKey, context.Snapshot.UpdateTime);
-            MaybePopulate(ReadTimestampKey, context.Snapshot.ReadTime);
+            MaybePopulate(CreateTimestampKey, context.DocumentSnapshot.CreateTime);
+            MaybePopulate(UpdateTimestampKey, context.DocumentSnapshot.UpdateTime);
+            MaybePopulate(ReadTimestampKey, context.DocumentSnapshot.ReadTime);
 
             void MaybePopulate(string key, object value)
             {

@@ -1,4 +1,4 @@
-﻿// Copyright 2019, Google LLC
+// Copyright 2019, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,30 +24,45 @@ namespace Google.Cloud.Firestore
     internal sealed class DeserializationContext
     {
         /// <summary>
-        /// The database containing the document being deserialized. This is never null.
+        /// The database containing the document being deserialized.
         /// </summary>
-        internal FirestoreDb Database => Snapshot.Database;
+        internal FirestoreDb Database => DocumentSnapshot?.Database;
 
         /// <summary>
-        /// The document being deserialized. This is never null.
+        /// The document being deserialized.
         /// </summary>
-        internal DocumentReference DocumentReference => Snapshot.Reference;
+        internal DocumentReference DocumentReference => DocumentSnapshot?.Reference;
 
         /// <summary>
-        /// The document snapshot being deserialized. This is never null.
+        /// The document snapshot being deserialized.
         /// </summary>
-        internal DocumentSnapshot Snapshot { get; }
-        
+        internal DocumentSnapshot DocumentSnapshot { get; }
+
+        /// <summary>
+        /// The aggregate query snapshot being deserialized.
+        /// </summary>
+        internal AggregateQuerySnapshot aggregateQuerySnapshot { get; }
+
         /// <summary>
         /// Constructs a new context.
         /// </summary>
         /// <param name="snapshot">The document snapshot being deserialized. Must not be null.</param>
-        internal DeserializationContext(DocumentSnapshot snapshot)
-        {
-            Snapshot = GaxPreconditions.CheckNotNull(snapshot, nameof(snapshot));
-        }
+        internal DeserializationContext(DocumentSnapshot snapshot) => DocumentSnapshot = GaxPreconditions.CheckNotNull(snapshot, nameof(snapshot));
 
-        internal IFirestoreInternalConverter GetConverter(BclType targetType) =>
-            Database.SerializationContext.GetConverter(targetType);
+        /// <summary>
+        /// Constructs a new context.
+        /// </summary>
+        /// <param name="snapshot">The aggregate query snapshot being deserialized. Must not be null.</param>
+        internal DeserializationContext(AggregateQuerySnapshot snapshot) => aggregateQuerySnapshot = GaxPreconditions.CheckNotNull(snapshot, nameof(snapshot));
+
+        internal IFirestoreInternalConverter GetConverter(BclType targetType)
+        {
+            if (DocumentSnapshot != null)
+            {
+                return Database.SerializationContext.GetConverter(targetType);
+            }
+
+            return SerializationContext.Default.GetConverter(targetType);
+        }
     }
 }
