@@ -94,6 +94,8 @@ namespace Google.Cloud.Channel.V1
             CreateChannelPartnerRepricingConfigSettings = existing.CreateChannelPartnerRepricingConfigSettings;
             UpdateChannelPartnerRepricingConfigSettings = existing.UpdateChannelPartnerRepricingConfigSettings;
             DeleteChannelPartnerRepricingConfigSettings = existing.DeleteChannelPartnerRepricingConfigSettings;
+            ListSkuGroupsSettings = existing.ListSkuGroupsSettings;
+            ListSkuGroupBillableSkusSettings = existing.ListSkuGroupBillableSkusSettings;
             LookupOfferSettings = existing.LookupOfferSettings;
             ListProductsSettings = existing.ListProductsSettings;
             ListSkusSettings = existing.ListSkusSettings;
@@ -916,6 +918,43 @@ namespace Google.Cloud.Channel.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteChannelPartnerRepricingConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.ListSkuGroups</c> and <c>CloudChannelServiceClient.ListSkuGroupsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSkuGroupsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.ListSkuGroupBillableSkus</c> and
+        /// <c>CloudChannelServiceClient.ListSkuGroupBillableSkusAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSkuGroupBillableSkusSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -6983,6 +7022,372 @@ namespace Google.Cloud.Channel.V1
             DeleteChannelPartnerRepricingConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Lists the Rebilling supported SKU groups the account is authorized to
+        /// sell.
+        /// Reference: https://cloud.google.com/skus/sku-groups
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different, or the account doesn't exist.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+        /// The data for each resource is displayed in the alphabetical order of SKU
+        /// group display name.
+        /// The data for each resource is displayed in the ascending order of
+        /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SkuGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSkuGroupsResponse, SkuGroup> ListSkuGroups(ListSkuGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the Rebilling supported SKU groups the account is authorized to
+        /// sell.
+        /// Reference: https://cloud.google.com/skus/sku-groups
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different, or the account doesn't exist.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+        /// The data for each resource is displayed in the alphabetical order of SKU
+        /// group display name.
+        /// The data for each resource is displayed in the ascending order of
+        /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SkuGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSkuGroupsResponse, SkuGroup> ListSkuGroupsAsync(ListSkuGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the Rebilling supported SKU groups the account is authorized to
+        /// sell.
+        /// Reference: https://cloud.google.com/skus/sku-groups
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different, or the account doesn't exist.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+        /// The data for each resource is displayed in the alphabetical order of SKU
+        /// group display name.
+        /// The data for each resource is displayed in the ascending order of
+        /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the account from which to list SKU groups.
+        /// Parent uses the format: accounts/{account}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SkuGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSkuGroupsResponse, SkuGroup> ListSkuGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSkuGroups(new ListSkuGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the Rebilling supported SKU groups the account is authorized to
+        /// sell.
+        /// Reference: https://cloud.google.com/skus/sku-groups
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different, or the account doesn't exist.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+        /// The data for each resource is displayed in the alphabetical order of SKU
+        /// group display name.
+        /// The data for each resource is displayed in the ascending order of
+        /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the account from which to list SKU groups.
+        /// Parent uses the format: accounts/{account}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SkuGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSkuGroupsResponse, SkuGroup> ListSkuGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSkuGroupsAsync(new ListSkuGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the Billable SKUs in a given SKU group.
+        /// 
+        /// Possible error codes:
+        /// PERMISSION_DENIED: If the account making the request and the account
+        /// being queried for are different, or the account doesn't exist.
+        /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// INTERNAL: Any non-user error related to technical issue in the
+        /// backend. In this case, contact cloud channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+        /// resources. The data for each resource is displayed in the ascending order
+        /// of:
+        /// 
+        /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+        /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BillableSku"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkus(ListSkuGroupBillableSkusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the Billable SKUs in a given SKU group.
+        /// 
+        /// Possible error codes:
+        /// PERMISSION_DENIED: If the account making the request and the account
+        /// being queried for are different, or the account doesn't exist.
+        /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// INTERNAL: Any non-user error related to technical issue in the
+        /// backend. In this case, contact cloud channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+        /// resources. The data for each resource is displayed in the ascending order
+        /// of:
+        /// 
+        /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+        /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BillableSku"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkusAsync(ListSkuGroupBillableSkusRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the Billable SKUs in a given SKU group.
+        /// 
+        /// Possible error codes:
+        /// PERMISSION_DENIED: If the account making the request and the account
+        /// being queried for are different, or the account doesn't exist.
+        /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// INTERNAL: Any non-user error related to technical issue in the
+        /// backend. In this case, contact cloud channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+        /// resources. The data for each resource is displayed in the ascending order
+        /// of:
+        /// 
+        /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+        /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the SKU group.
+        /// Format: accounts/{account}/skuGroups/{sku_group}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BillableSku"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkus(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSkuGroupBillableSkus(new ListSkuGroupBillableSkusRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the Billable SKUs in a given SKU group.
+        /// 
+        /// Possible error codes:
+        /// PERMISSION_DENIED: If the account making the request and the account
+        /// being queried for are different, or the account doesn't exist.
+        /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// INTERNAL: Any non-user error related to technical issue in the
+        /// backend. In this case, contact cloud channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+        /// resources. The data for each resource is displayed in the ascending order
+        /// of:
+        /// 
+        /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+        /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the SKU group.
+        /// Format: accounts/{account}/skuGroups/{sku_group}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BillableSku"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkusAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSkuGroupBillableSkusAsync(new ListSkuGroupBillableSkusRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the Billable SKUs in a given SKU group.
+        /// 
+        /// Possible error codes:
+        /// PERMISSION_DENIED: If the account making the request and the account
+        /// being queried for are different, or the account doesn't exist.
+        /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// INTERNAL: Any non-user error related to technical issue in the
+        /// backend. In this case, contact cloud channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+        /// resources. The data for each resource is displayed in the ascending order
+        /// of:
+        /// 
+        /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+        /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the SKU group.
+        /// Format: accounts/{account}/skuGroups/{sku_group}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BillableSku"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkus(SkuGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSkuGroupBillableSkus(new ListSkuGroupBillableSkusRequest
+            {
+                ParentAsSkuGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the Billable SKUs in a given SKU group.
+        /// 
+        /// Possible error codes:
+        /// PERMISSION_DENIED: If the account making the request and the account
+        /// being queried for are different, or the account doesn't exist.
+        /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// INTERNAL: Any non-user error related to technical issue in the
+        /// backend. In this case, contact cloud channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+        /// resources. The data for each resource is displayed in the ascending order
+        /// of:
+        /// 
+        /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+        /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the SKU group.
+        /// Format: accounts/{account}/skuGroups/{sku_group}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BillableSku"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkusAsync(SkuGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListSkuGroupBillableSkusAsync(new ListSkuGroupBillableSkusRequest
+            {
+                ParentAsSkuGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
         /// 
         /// Possible error codes:
@@ -7719,6 +8124,10 @@ namespace Google.Cloud.Channel.V1
 
         private readonly gaxgrpc::ApiCall<DeleteChannelPartnerRepricingConfigRequest, wkt::Empty> _callDeleteChannelPartnerRepricingConfig;
 
+        private readonly gaxgrpc::ApiCall<ListSkuGroupsRequest, ListSkuGroupsResponse> _callListSkuGroups;
+
+        private readonly gaxgrpc::ApiCall<ListSkuGroupBillableSkusRequest, ListSkuGroupBillableSkusResponse> _callListSkuGroupBillableSkus;
+
         private readonly gaxgrpc::ApiCall<LookupOfferRequest, Offer> _callLookupOffer;
 
         private readonly gaxgrpc::ApiCall<ListProductsRequest, ListProductsResponse> _callListProducts;
@@ -7870,6 +8279,12 @@ namespace Google.Cloud.Channel.V1
             _callDeleteChannelPartnerRepricingConfig = clientHelper.BuildApiCall<DeleteChannelPartnerRepricingConfigRequest, wkt::Empty>("DeleteChannelPartnerRepricingConfig", grpcClient.DeleteChannelPartnerRepricingConfigAsync, grpcClient.DeleteChannelPartnerRepricingConfig, effectiveSettings.DeleteChannelPartnerRepricingConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteChannelPartnerRepricingConfig);
             Modify_DeleteChannelPartnerRepricingConfigApiCall(ref _callDeleteChannelPartnerRepricingConfig);
+            _callListSkuGroups = clientHelper.BuildApiCall<ListSkuGroupsRequest, ListSkuGroupsResponse>("ListSkuGroups", grpcClient.ListSkuGroupsAsync, grpcClient.ListSkuGroups, effectiveSettings.ListSkuGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSkuGroups);
+            Modify_ListSkuGroupsApiCall(ref _callListSkuGroups);
+            _callListSkuGroupBillableSkus = clientHelper.BuildApiCall<ListSkuGroupBillableSkusRequest, ListSkuGroupBillableSkusResponse>("ListSkuGroupBillableSkus", grpcClient.ListSkuGroupBillableSkusAsync, grpcClient.ListSkuGroupBillableSkus, effectiveSettings.ListSkuGroupBillableSkusSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSkuGroupBillableSkus);
+            Modify_ListSkuGroupBillableSkusApiCall(ref _callListSkuGroupBillableSkus);
             _callLookupOffer = clientHelper.BuildApiCall<LookupOfferRequest, Offer>("LookupOffer", grpcClient.LookupOfferAsync, grpcClient.LookupOffer, effectiveSettings.LookupOfferSettings).WithGoogleRequestParam("entitlement", request => request.Entitlement);
             Modify_ApiCall(ref _callLookupOffer);
             Modify_LookupOfferApiCall(ref _callLookupOffer);
@@ -7977,6 +8392,10 @@ namespace Google.Cloud.Channel.V1
 
         partial void Modify_DeleteChannelPartnerRepricingConfigApiCall(ref gaxgrpc::ApiCall<DeleteChannelPartnerRepricingConfigRequest, wkt::Empty> call);
 
+        partial void Modify_ListSkuGroupsApiCall(ref gaxgrpc::ApiCall<ListSkuGroupsRequest, ListSkuGroupsResponse> call);
+
+        partial void Modify_ListSkuGroupBillableSkusApiCall(ref gaxgrpc::ApiCall<ListSkuGroupBillableSkusRequest, ListSkuGroupBillableSkusResponse> call);
+
         partial void Modify_LookupOfferApiCall(ref gaxgrpc::ApiCall<LookupOfferRequest, Offer> call);
 
         partial void Modify_ListProductsApiCall(ref gaxgrpc::ApiCall<ListProductsRequest, ListProductsResponse> call);
@@ -8073,6 +8492,10 @@ namespace Google.Cloud.Channel.V1
         partial void Modify_UpdateChannelPartnerRepricingConfigRequest(ref UpdateChannelPartnerRepricingConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteChannelPartnerRepricingConfigRequest(ref DeleteChannelPartnerRepricingConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSkuGroupsRequest(ref ListSkuGroupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSkuGroupBillableSkusRequest(ref ListSkuGroupBillableSkusRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_LookupOfferRequest(ref LookupOfferRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -10468,6 +10891,126 @@ namespace Google.Cloud.Channel.V1
         }
 
         /// <summary>
+        /// Lists the Rebilling supported SKU groups the account is authorized to
+        /// sell.
+        /// Reference: https://cloud.google.com/skus/sku-groups
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different, or the account doesn't exist.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+        /// The data for each resource is displayed in the alphabetical order of SKU
+        /// group display name.
+        /// The data for each resource is displayed in the ascending order of
+        /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SkuGroup"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSkuGroupsResponse, SkuGroup> ListSkuGroups(ListSkuGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSkuGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSkuGroupsRequest, ListSkuGroupsResponse, SkuGroup>(_callListSkuGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the Rebilling supported SKU groups the account is authorized to
+        /// sell.
+        /// Reference: https://cloud.google.com/skus/sku-groups
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the account making the request and the account
+        /// being queried are different, or the account doesn't exist.
+        /// * INTERNAL: Any non-user error related to technical issues in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+        /// The data for each resource is displayed in the alphabetical order of SKU
+        /// group display name.
+        /// The data for each resource is displayed in the ascending order of
+        /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SkuGroup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSkuGroupsResponse, SkuGroup> ListSkuGroupsAsync(ListSkuGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSkuGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSkuGroupsRequest, ListSkuGroupsResponse, SkuGroup>(_callListSkuGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the Billable SKUs in a given SKU group.
+        /// 
+        /// Possible error codes:
+        /// PERMISSION_DENIED: If the account making the request and the account
+        /// being queried for are different, or the account doesn't exist.
+        /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// INTERNAL: Any non-user error related to technical issue in the
+        /// backend. In this case, contact cloud channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+        /// resources. The data for each resource is displayed in the ascending order
+        /// of:
+        /// 
+        /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+        /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BillableSku"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkus(ListSkuGroupBillableSkusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSkuGroupBillableSkusRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSkuGroupBillableSkusRequest, ListSkuGroupBillableSkusResponse, BillableSku>(_callListSkuGroupBillableSkus, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the Billable SKUs in a given SKU group.
+        /// 
+        /// Possible error codes:
+        /// PERMISSION_DENIED: If the account making the request and the account
+        /// being queried for are different, or the account doesn't exist.
+        /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// INTERNAL: Any non-user error related to technical issue in the
+        /// backend. In this case, contact cloud channel support.
+        /// 
+        /// Return Value:
+        /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+        /// resources. The data for each resource is displayed in the ascending order
+        /// of:
+        /// 
+        /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+        /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+        /// 
+        /// If unsuccessful, returns an error.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BillableSku"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> ListSkuGroupBillableSkusAsync(ListSkuGroupBillableSkusRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSkuGroupBillableSkusRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSkuGroupBillableSkusRequest, ListSkuGroupBillableSkusResponse, BillableSku>(_callListSkuGroupBillableSkus, request, callSettings);
+        }
+
+        /// <summary>
         /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
         /// 
         /// Possible error codes:
@@ -10946,6 +11489,14 @@ namespace Google.Cloud.Channel.V1
     {
     }
 
+    public partial class ListSkuGroupsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSkuGroupBillableSkusRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListProductsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -11027,6 +11578,22 @@ namespace Google.Cloud.Channel.V1
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ChannelPartnerRepricingConfig> GetEnumerator() =>
             ChannelPartnerRepricingConfigs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSkuGroupsResponse : gaxgrpc::IPageResponse<SkuGroup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SkuGroup> GetEnumerator() => SkuGroups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSkuGroupBillableSkusResponse : gaxgrpc::IPageResponse<BillableSku>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BillableSku> GetEnumerator() => BillableSkus.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

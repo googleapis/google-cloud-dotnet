@@ -217,6 +217,18 @@
                 "ListPurchasableSkusAsync"
               ]
             },
+            "ListSkuGroupBillableSkus": {
+              "methods": [
+                "ListSkuGroupBillableSkus",
+                "ListSkuGroupBillableSkusAsync"
+              ]
+            },
+            "ListSkuGroups": {
+              "methods": [
+                "ListSkuGroups",
+                "ListSkuGroupsAsync"
+              ]
+            },
             "ListSkus": {
               "methods": [
                 "ListSkus",

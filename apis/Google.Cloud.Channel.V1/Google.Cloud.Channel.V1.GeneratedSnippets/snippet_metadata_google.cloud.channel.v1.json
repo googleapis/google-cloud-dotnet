@@ -6304,6 +6304,533 @@
       ]
     },
     {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListSkuGroups_sync",
+      "title": "ListSkuGroupsRequestObject",
+      "description": "Snippet for ListSkuGroups",
+      "file": "CloudChannelServiceClient.ListSkuGroupsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSkuGroups",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSkuGroups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListSkuGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListSkuGroupsResponse, Google.Cloud.Channel.V1.SkuGroup>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListSkuGroups",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListSkuGroups",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListSkuGroups_async",
+      "title": "ListSkuGroupsRequestObjectAsync",
+      "description": "Snippet for ListSkuGroupsAsync",
+      "file": "CloudChannelServiceClient.ListSkuGroupsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSkuGroupsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSkuGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListSkuGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListSkuGroupsResponse, Google.Cloud.Channel.V1.SkuGroup>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListSkuGroups",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListSkuGroups",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListSkuGroups_sync_flattened",
+      "title": "ListSkuGroups",
+      "description": "Snippet for ListSkuGroups",
+      "file": "CloudChannelServiceClient.ListSkuGroupsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSkuGroups",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSkuGroups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListSkuGroupsResponse, Google.Cloud.Channel.V1.SkuGroup>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListSkuGroups",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListSkuGroups",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListSkuGroups_async_flattened",
+      "title": "ListSkuGroupsAsync",
+      "description": "Snippet for ListSkuGroupsAsync",
+      "file": "CloudChannelServiceClient.ListSkuGroupsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSkuGroupsAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSkuGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListSkuGroupsResponse, Google.Cloud.Channel.V1.SkuGroup>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListSkuGroups",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListSkuGroups",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListSkuGroupBillableSkus_sync",
+      "title": "ListSkuGroupBillableSkusRequestObject",
+      "description": "Snippet for ListSkuGroupBillableSkus",
+      "file": "CloudChannelServiceClient.ListSkuGroupBillableSkusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSkuGroupBillableSkus",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSkuGroupBillableSkus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse, Google.Cloud.Channel.V1.BillableSku>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListSkuGroupBillableSkus",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListSkuGroupBillableSkus",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListSkuGroupBillableSkus_async",
+      "title": "ListSkuGroupBillableSkusRequestObjectAsync",
+      "description": "Snippet for ListSkuGroupBillableSkusAsync",
+      "file": "CloudChannelServiceClient.ListSkuGroupBillableSkusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSkuGroupBillableSkusAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSkuGroupBillableSkusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse, Google.Cloud.Channel.V1.BillableSku>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListSkuGroupBillableSkus",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListSkuGroupBillableSkus",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListSkuGroupBillableSkus_sync_flattened",
+      "title": "ListSkuGroupBillableSkus",
+      "description": "Snippet for ListSkuGroupBillableSkus",
+      "file": "CloudChannelServiceClient.ListSkuGroupBillableSkusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSkuGroupBillableSkus",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSkuGroupBillableSkus",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse, Google.Cloud.Channel.V1.BillableSku>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListSkuGroupBillableSkus",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListSkuGroupBillableSkus",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListSkuGroupBillableSkus_async_flattened",
+      "title": "ListSkuGroupBillableSkusAsync",
+      "description": "Snippet for ListSkuGroupBillableSkusAsync",
+      "file": "CloudChannelServiceClient.ListSkuGroupBillableSkusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSkuGroupBillableSkusAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSkuGroupBillableSkusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse, Google.Cloud.Channel.V1.BillableSku>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListSkuGroupBillableSkus",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListSkuGroupBillableSkus",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListSkuGroupBillableSkus_sync_flattened_resourceNames",
+      "title": "ListSkuGroupBillableSkusResourceNames",
+      "description": "Snippet for ListSkuGroupBillableSkus",
+      "file": "CloudChannelServiceClient.ListSkuGroupBillableSkusResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSkuGroupBillableSkus",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSkuGroupBillableSkus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.SkuGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse, Google.Cloud.Channel.V1.BillableSku>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListSkuGroupBillableSkus",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListSkuGroupBillableSkus",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudchannel_v1_generated_CloudChannelService_ListSkuGroupBillableSkus_async_flattened_resourceNames",
+      "title": "ListSkuGroupBillableSkusResourceNamesAsync",
+      "description": "Snippet for ListSkuGroupBillableSkusAsync",
+      "file": "CloudChannelServiceClient.ListSkuGroupBillableSkusResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSkuGroupBillableSkusAsync",
+        "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient.ListSkuGroupBillableSkusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Channel.V1.SkuGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse, Google.Cloud.Channel.V1.BillableSku>",
+        "client": {
+          "shortName": "CloudChannelServiceClient",
+          "fullName": "Google.Cloud.Channel.V1.CloudChannelServiceClient"
+        },
+        "method": {
+          "shortName": "ListSkuGroupBillableSkus",
+          "fullName": "google.cloud.channel.v1.CloudChannelService.ListSkuGroupBillableSkus",
+          "service": {
+            "shortName": "CloudChannelService",
+            "fullName": "google.cloud.channel.v1.CloudChannelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudchannel_v1_generated_CloudChannelService_LookupOffer_sync",
       "title": "LookupOfferRequestObject",
       "description": "Snippet for LookupOffer",
