@@ -2956,6 +2956,462 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListSkuGroups</summary>
+        public void ListSkuGroupsRequestObject()
+        {
+            // Snippet: ListSkuGroups(ListSkuGroupsRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            ListSkuGroupsRequest request = new ListSkuGroupsRequest { Parent = "", };
+            // Make the request
+            PagedEnumerable<ListSkuGroupsResponse, SkuGroup> response = cloudChannelServiceClient.ListSkuGroups(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SkuGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSkuGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SkuGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SkuGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SkuGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSkuGroupsAsync</summary>
+        public async Task ListSkuGroupsRequestObjectAsync()
+        {
+            // Snippet: ListSkuGroupsAsync(ListSkuGroupsRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSkuGroupsRequest request = new ListSkuGroupsRequest { Parent = "", };
+            // Make the request
+            PagedAsyncEnumerable<ListSkuGroupsResponse, SkuGroup> response = cloudChannelServiceClient.ListSkuGroupsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SkuGroup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSkuGroupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SkuGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SkuGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SkuGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSkuGroups</summary>
+        public void ListSkuGroups()
+        {
+            // Snippet: ListSkuGroups(string, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            PagedEnumerable<ListSkuGroupsResponse, SkuGroup> response = cloudChannelServiceClient.ListSkuGroups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SkuGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSkuGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SkuGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SkuGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SkuGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSkuGroupsAsync</summary>
+        public async Task ListSkuGroupsAsync()
+        {
+            // Snippet: ListSkuGroupsAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            PagedAsyncEnumerable<ListSkuGroupsResponse, SkuGroup> response = cloudChannelServiceClient.ListSkuGroupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SkuGroup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSkuGroupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SkuGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SkuGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SkuGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSkuGroupBillableSkus</summary>
+        public void ListSkuGroupBillableSkusRequestObject()
+        {
+            // Snippet: ListSkuGroupBillableSkus(ListSkuGroupBillableSkusRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            ListSkuGroupBillableSkusRequest request = new ListSkuGroupBillableSkusRequest
+            {
+                ParentAsSkuGroupName = SkuGroupName.FromAccountSkuGroup("[ACCOUNT]", "[SKU_GROUP]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> response = cloudChannelServiceClient.ListSkuGroupBillableSkus(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BillableSku item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSkuGroupBillableSkusResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BillableSku item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BillableSku> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BillableSku item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSkuGroupBillableSkusAsync</summary>
+        public async Task ListSkuGroupBillableSkusRequestObjectAsync()
+        {
+            // Snippet: ListSkuGroupBillableSkusAsync(ListSkuGroupBillableSkusRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSkuGroupBillableSkusRequest request = new ListSkuGroupBillableSkusRequest
+            {
+                ParentAsSkuGroupName = SkuGroupName.FromAccountSkuGroup("[ACCOUNT]", "[SKU_GROUP]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> response = cloudChannelServiceClient.ListSkuGroupBillableSkusAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BillableSku item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSkuGroupBillableSkusResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BillableSku item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BillableSku> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BillableSku item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSkuGroupBillableSkus</summary>
+        public void ListSkuGroupBillableSkus()
+        {
+            // Snippet: ListSkuGroupBillableSkus(string, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]/skuGroups/[SKU_GROUP]";
+            // Make the request
+            PagedEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> response = cloudChannelServiceClient.ListSkuGroupBillableSkus(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BillableSku item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSkuGroupBillableSkusResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BillableSku item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BillableSku> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BillableSku item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSkuGroupBillableSkusAsync</summary>
+        public async Task ListSkuGroupBillableSkusAsync()
+        {
+            // Snippet: ListSkuGroupBillableSkusAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "accounts/[ACCOUNT]/skuGroups/[SKU_GROUP]";
+            // Make the request
+            PagedAsyncEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> response = cloudChannelServiceClient.ListSkuGroupBillableSkusAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BillableSku item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSkuGroupBillableSkusResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BillableSku item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BillableSku> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BillableSku item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSkuGroupBillableSkus</summary>
+        public void ListSkuGroupBillableSkusResourceNames()
+        {
+            // Snippet: ListSkuGroupBillableSkus(SkuGroupName, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            SkuGroupName parent = SkuGroupName.FromAccountSkuGroup("[ACCOUNT]", "[SKU_GROUP]");
+            // Make the request
+            PagedEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> response = cloudChannelServiceClient.ListSkuGroupBillableSkus(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BillableSku item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSkuGroupBillableSkusResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BillableSku item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BillableSku> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BillableSku item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSkuGroupBillableSkusAsync</summary>
+        public async Task ListSkuGroupBillableSkusResourceNamesAsync()
+        {
+            // Snippet: ListSkuGroupBillableSkusAsync(SkuGroupName, string, int?, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SkuGroupName parent = SkuGroupName.FromAccountSkuGroup("[ACCOUNT]", "[SKU_GROUP]");
+            // Make the request
+            PagedAsyncEnumerable<ListSkuGroupBillableSkusResponse, BillableSku> response = cloudChannelServiceClient.ListSkuGroupBillableSkusAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BillableSku item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSkuGroupBillableSkusResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BillableSku item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BillableSku> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BillableSku item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for LookupOffer</summary>
         public void LookupOfferRequestObject()
         {
