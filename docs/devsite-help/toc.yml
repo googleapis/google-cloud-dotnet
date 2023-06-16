@@ -16,6 +16,8 @@
     href: emulators.md
   - name: Library types
     href: library-types.md
+  - name: REST libraries
+    href: rest-libraries.md
   - name: Protocol buffers
     href: protobuf.md
   - name: Supported platforms
