@@ -107,10 +107,10 @@ namespace Google.Cloud.DocumentAI.V1
         /// <see cref="grpccore::StatusCode.Unavailable"/>.
         /// </description>
         /// </item>
-        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ProcessDocumentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ProcessDocumentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -665,7 +665,7 @@ namespace Google.Cloud.DocumentAI.V1
 
     /// <summary>DocumentProcessorService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service to call Cloud DocumentAI to process documents according to the
+    /// Service to call Document AI to process documents according to the
     /// processor's definition. Processors are built using state-of-the-art Google
     /// AI such as natural language, computer vision, and translation to extract
     /// structured information from unstructured or semi-structured documents.
@@ -1087,8 +1087,9 @@ namespace Google.Cloud.DocumentAI.V1
             BatchProcessDocumentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1097,8 +1098,9 @@ namespace Google.Cloud.DocumentAI.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1107,8 +1109,9 @@ namespace Google.Cloud.DocumentAI.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1117,13 +1120,13 @@ namespace Google.Cloud.DocumentAI.V1
             FetchProcessorTypesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1134,13 +1137,13 @@ namespace Google.Cloud.DocumentAI.V1
             }, callSettings);
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1151,13 +1154,13 @@ namespace Google.Cloud.DocumentAI.V1
             }, callSettings);
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1165,13 +1168,13 @@ namespace Google.Cloud.DocumentAI.V1
             FetchProcessorTypesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1182,13 +1185,13 @@ namespace Google.Cloud.DocumentAI.V1
             }, callSettings);
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1199,13 +1202,13 @@ namespace Google.Cloud.DocumentAI.V1
             }, callSettings);
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1234,9 +1237,8 @@ namespace Google.Cloud.DocumentAI.V1
         /// Lists the processor types that exist.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1260,9 +1262,8 @@ namespace Google.Cloud.DocumentAI.V1
         /// Lists the processor types that exist.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1286,9 +1287,8 @@ namespace Google.Cloud.DocumentAI.V1
         /// Lists the processor types that exist.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1312,9 +1312,8 @@ namespace Google.Cloud.DocumentAI.V1
         /// Lists the processor types that exist.
         /// </summary>
         /// <param name="parent">
-        /// Required. The location of processor type to list.
-        /// The available processor types may depend on the allow-listing on projects.
-        /// Format: `projects/{project}/locations/{location}`
+        /// Required. The location of processor types to list.
+        /// Format: `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1665,7 +1664,7 @@ namespace Google.Cloud.DocumentAI.V1
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1676,7 +1675,7 @@ namespace Google.Cloud.DocumentAI.V1
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1687,7 +1686,7 @@ namespace Google.Cloud.DocumentAI.V1
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1725,7 +1724,7 @@ namespace Google.Cloud.DocumentAI.V1
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project, location and processor) to create the new
@@ -1747,7 +1746,7 @@ namespace Google.Cloud.DocumentAI.V1
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project, location and processor) to create the new
@@ -1769,7 +1768,7 @@ namespace Google.Cloud.DocumentAI.V1
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project, location and processor) to create the new
@@ -1787,7 +1786,7 @@ namespace Google.Cloud.DocumentAI.V1
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project, location and processor) to create the new
@@ -1809,7 +1808,7 @@ namespace Google.Cloud.DocumentAI.V1
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project, location and processor) to create the new
@@ -1831,7 +1830,7 @@ namespace Google.Cloud.DocumentAI.V1
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project, location and processor) to create the new
@@ -2479,8 +2478,9 @@ namespace Google.Cloud.DocumentAI.V1
             UndeployProcessorVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+        /// processor will be at `ENABLED` state by default after its creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2489,8 +2489,9 @@ namespace Google.Cloud.DocumentAI.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+        /// processor will be at `ENABLED` state by default after its creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2499,8 +2500,9 @@ namespace Google.Cloud.DocumentAI.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+        /// processor will be at `ENABLED` state by default after its creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2509,17 +2511,20 @@ namespace Google.Cloud.DocumentAI.V1
             CreateProcessorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+        /// processor will be at `ENABLED` state by default after its creation.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) under which to create the
         /// processor. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="processor">
-        /// Required. The processor to be created, requires [processor_type] and
-        /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-        /// are set.
+        /// Required. The processor to be created, requires
+        /// [Processor.type][google.cloud.documentai.v1.Processor.type] and
+        /// [Processor.display_name]][] to be set. Also, the
+        /// [Processor.kms_key_name][google.cloud.documentai.v1.Processor.kms_key_name]
+        /// field must be set if the processor is under CMEK.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2531,17 +2536,20 @@ namespace Google.Cloud.DocumentAI.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+        /// processor will be at `ENABLED` state by default after its creation.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) under which to create the
         /// processor. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="processor">
-        /// Required. The processor to be created, requires [processor_type] and
-        /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-        /// are set.
+        /// Required. The processor to be created, requires
+        /// [Processor.type][google.cloud.documentai.v1.Processor.type] and
+        /// [Processor.display_name]][] to be set. Also, the
+        /// [Processor.kms_key_name][google.cloud.documentai.v1.Processor.kms_key_name]
+        /// field must be set if the processor is under CMEK.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2553,17 +2561,20 @@ namespace Google.Cloud.DocumentAI.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+        /// processor will be at `ENABLED` state by default after its creation.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) under which to create the
         /// processor. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="processor">
-        /// Required. The processor to be created, requires [processor_type] and
-        /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-        /// are set.
+        /// Required. The processor to be created, requires
+        /// [Processor.type][google.cloud.documentai.v1.Processor.type] and
+        /// [Processor.display_name]][] to be set. Also, the
+        /// [Processor.kms_key_name][google.cloud.documentai.v1.Processor.kms_key_name]
+        /// field must be set if the processor is under CMEK.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2571,17 +2582,20 @@ namespace Google.Cloud.DocumentAI.V1
             CreateProcessorAsync(parent, processor, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+        /// processor will be at `ENABLED` state by default after its creation.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) under which to create the
         /// processor. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="processor">
-        /// Required. The processor to be created, requires [processor_type] and
-        /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-        /// are set.
+        /// Required. The processor to be created, requires
+        /// [Processor.type][google.cloud.documentai.v1.Processor.type] and
+        /// [Processor.display_name]][] to be set. Also, the
+        /// [Processor.kms_key_name][google.cloud.documentai.v1.Processor.kms_key_name]
+        /// field must be set if the processor is under CMEK.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2593,17 +2607,20 @@ namespace Google.Cloud.DocumentAI.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+        /// processor will be at `ENABLED` state by default after its creation.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) under which to create the
         /// processor. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="processor">
-        /// Required. The processor to be created, requires [processor_type] and
-        /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-        /// are set.
+        /// Required. The processor to be created, requires
+        /// [Processor.type][google.cloud.documentai.v1.Processor.type] and
+        /// [Processor.display_name]][] to be set. Also, the
+        /// [Processor.kms_key_name][google.cloud.documentai.v1.Processor.kms_key_name]
+        /// field must be set if the processor is under CMEK.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2615,17 +2632,20 @@ namespace Google.Cloud.DocumentAI.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+        /// processor will be at `ENABLED` state by default after its creation.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent (project and location) under which to create the
         /// processor. Format: `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="processor">
-        /// Required. The processor to be created, requires [processor_type] and
-        /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-        /// are set.
+        /// Required. The processor to be created, requires
+        /// [Processor.type][google.cloud.documentai.v1.Processor.type] and
+        /// [Processor.display_name]][] to be set. Also, the
+        /// [Processor.kms_key_name][google.cloud.documentai.v1.Processor.kms_key_name]
+        /// field must be set if the processor is under CMEK.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3005,8 +3025,9 @@ namespace Google.Cloud.DocumentAI.V1
         /// the specified processor.
         /// </summary>
         /// <param name="humanReviewConfig">
-        /// Required. The resource name of the HumanReviewConfig that the document will
-        /// be reviewed with.
+        /// Required. The resource name of the
+        /// [HumanReviewConfig][google.cloud.documentai.v1.HumanReviewConfig] that the
+        /// document will be reviewed with.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3021,8 +3042,9 @@ namespace Google.Cloud.DocumentAI.V1
         /// the specified processor.
         /// </summary>
         /// <param name="humanReviewConfig">
-        /// Required. The resource name of the HumanReviewConfig that the document will
-        /// be reviewed with.
+        /// Required. The resource name of the
+        /// [HumanReviewConfig][google.cloud.documentai.v1.HumanReviewConfig] that the
+        /// document will be reviewed with.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3037,8 +3059,9 @@ namespace Google.Cloud.DocumentAI.V1
         /// the specified processor.
         /// </summary>
         /// <param name="humanReviewConfig">
-        /// Required. The resource name of the HumanReviewConfig that the document will
-        /// be reviewed with.
+        /// Required. The resource name of the
+        /// [HumanReviewConfig][google.cloud.documentai.v1.HumanReviewConfig] that the
+        /// document will be reviewed with.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3050,8 +3073,9 @@ namespace Google.Cloud.DocumentAI.V1
         /// the specified processor.
         /// </summary>
         /// <param name="humanReviewConfig">
-        /// Required. The resource name of the HumanReviewConfig that the document will
-        /// be reviewed with.
+        /// Required. The resource name of the
+        /// [HumanReviewConfig][google.cloud.documentai.v1.HumanReviewConfig] that the
+        /// document will be reviewed with.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3066,8 +3090,9 @@ namespace Google.Cloud.DocumentAI.V1
         /// the specified processor.
         /// </summary>
         /// <param name="humanReviewConfig">
-        /// Required. The resource name of the HumanReviewConfig that the document will
-        /// be reviewed with.
+        /// Required. The resource name of the
+        /// [HumanReviewConfig][google.cloud.documentai.v1.HumanReviewConfig] that the
+        /// document will be reviewed with.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3082,8 +3107,9 @@ namespace Google.Cloud.DocumentAI.V1
         /// the specified processor.
         /// </summary>
         /// <param name="humanReviewConfig">
-        /// Required. The resource name of the HumanReviewConfig that the document will
-        /// be reviewed with.
+        /// Required. The resource name of the
+        /// [HumanReviewConfig][google.cloud.documentai.v1.HumanReviewConfig] that the
+        /// document will be reviewed with.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3495,7 +3521,7 @@ namespace Google.Cloud.DocumentAI.V1
 
     /// <summary>DocumentProcessorService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service to call Cloud DocumentAI to process documents according to the
+    /// Service to call Document AI to process documents according to the
     /// processor's definition. Processors are built using state-of-the-art Google
     /// AI such as natural language, computer vision, and translation to extract
     /// structured information from unstructured or semi-structured documents.
@@ -3793,8 +3819,9 @@ namespace Google.Cloud.DocumentAI.V1
         }
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3806,8 +3833,9 @@ namespace Google.Cloud.DocumentAI.V1
         }
 
         /// <summary>
-        /// Fetches processor types. Note that we do not use ListProcessorTypes here
-        /// because it is not paginated.
+        /// Fetches processor types. Note that we don't use
+        /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+        /// here, because it isn't paginated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3920,7 +3948,7 @@ namespace Google.Cloud.DocumentAI.V1
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3934,7 +3962,7 @@ namespace Google.Cloud.DocumentAI.V1
         /// <summary>
         /// Trains a new processor version.
         /// Operation metadata is returned as
-        /// cloud_documentai_core.TrainProcessorVersionMetadata.
+        /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4077,8 +4105,9 @@ namespace Google.Cloud.DocumentAI.V1
         }
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+        /// processor will be at `ENABLED` state by default after its creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4090,8 +4119,9 @@ namespace Google.Cloud.DocumentAI.V1
         }
 
         /// <summary>
-        /// Creates a processor from the type processor that the user chose.
-        /// The processor will be at "ENABLED" state by default after its creation.
+        /// Creates a processor from the
+        /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+        /// processor will be at `ENABLED` state by default after its creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
