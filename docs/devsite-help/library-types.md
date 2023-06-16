@@ -137,3 +137,6 @@ Examples include:
 
 (In general, packages starting "Google.Apis" followed by a product
 name and a version number fall into this category.)
+
+More information about various aspects of these libraries can be found in the
+[dedicated page](rest-libraries.md).
