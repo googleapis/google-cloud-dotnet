@@ -151,6 +151,33 @@
           }
         }
       }
+    },
+    "DocumentService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DocumentServiceClient",
+          "rpcs": {
+            "GetDatasetSchema": {
+              "methods": [
+                "GetDatasetSchema",
+                "GetDatasetSchemaAsync"
+              ]
+            },
+            "UpdateDataset": {
+              "methods": [
+                "UpdateDataset",
+                "UpdateDatasetAsync"
+              ]
+            },
+            "UpdateDatasetSchema": {
+              "methods": [
+                "UpdateDatasetSchema",
+                "UpdateDatasetSchemaAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }
