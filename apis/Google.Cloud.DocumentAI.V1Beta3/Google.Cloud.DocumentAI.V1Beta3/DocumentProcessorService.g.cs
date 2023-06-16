@@ -37,142 +37,152 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "My9vcGVyYXRpb25fbWV0YWRhdGEucHJvdG8aL2dvb2dsZS9jbG91ZC9kb2N1",
             "bWVudGFpL3YxYmV0YTMvcHJvY2Vzc29yLnByb3RvGjRnb29nbGUvY2xvdWQv",
             "ZG9jdW1lbnRhaS92MWJldGEzL3Byb2Nlc3Nvcl90eXBlLnByb3RvGiNnb29n",
-            "bGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxogZ29vZ2xlL3Byb3Rv",
-            "YnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvIlAKDlByb2Nlc3NP",
-            "cHRpb25zEj4KCm9jcl9jb25maWcYASABKAsyKi5nb29nbGUuY2xvdWQuZG9j",
-            "dW1lbnRhaS52MWJldGEzLk9jckNvbmZpZyKVAwoOUHJvY2Vzc1JlcXVlc3QS",
-            "RAoPaW5saW5lX2RvY3VtZW50GAQgASgLMikuZ29vZ2xlLmNsb3VkLmRvY3Vt",
-            "ZW50YWkudjFiZXRhMy5Eb2N1bWVudEgAEkQKDHJhd19kb2N1bWVudBgFIAEo",
-            "CzIsLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuUmF3RG9jdW1l",
-            "bnRIABIXCgRuYW1lGAEgASgJQgngQQL6QQMKASoSPwoIZG9jdW1lbnQYAiAB",
-            "KAsyKS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50",
-            "QgIYARIZChFza2lwX2h1bWFuX3JldmlldxgDIAEoCBIuCgpmaWVsZF9tYXNr",
-            "GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxJICg9wcm9jZXNz",
-            "X29wdGlvbnMYByABKAsyLy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJl",
-            "dGEzLlByb2Nlc3NPcHRpb25zQggKBnNvdXJjZSLzAQoRSHVtYW5SZXZpZXdT",
-            "dGF0dXMSRwoFc3RhdGUYASABKA4yOC5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
-            "aS52MWJldGEzLkh1bWFuUmV2aWV3U3RhdHVzLlN0YXRlEhUKDXN0YXRlX21l",
-            "c3NhZ2UYAiABKAkSHgoWaHVtYW5fcmV2aWV3X29wZXJhdGlvbhgDIAEoCSJe",
-            "CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1NLSVBQRUQQARIV",
-            "ChFWQUxJREFUSU9OX1BBU1NFRBACEg8KC0lOX1BST0dSRVNTEAMSCQoFRVJS",
-            "T1IQBCLDAQoPUHJvY2Vzc1Jlc3BvbnNlEjsKCGRvY3VtZW50GAEgASgLMiku",
-            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudBIiChZo",
-            "dW1hbl9yZXZpZXdfb3BlcmF0aW9uGAIgASgJQgIYARJPChNodW1hbl9yZXZp",
-            "ZXdfc3RhdHVzGAMgASgLMjIuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
-            "ZXRhMy5IdW1hblJldmlld1N0YXR1cyL1BAoTQmF0Y2hQcm9jZXNzUmVxdWVz",
-            "dBIXCgRuYW1lGAEgASgJQgngQQL6QQMKASoSYAoNaW5wdXRfY29uZmlncxgC",
-            "IAMoCzJFLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuQmF0Y2hQ",
-            "cm9jZXNzUmVxdWVzdC5CYXRjaElucHV0Q29uZmlnQgIYARJhCg1vdXRwdXRf",
-            "Y29uZmlnGAMgASgLMkYuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRh",
-            "My5CYXRjaFByb2Nlc3NSZXF1ZXN0LkJhdGNoT3V0cHV0Q29uZmlnQgIYARJT",
-            "Cg9pbnB1dF9kb2N1bWVudHMYBSABKAsyOi5nb29nbGUuY2xvdWQuZG9jdW1l",
-            "bnRhaS52MWJldGEzLkJhdGNoRG9jdW1lbnRzSW5wdXRDb25maWcSVQoWZG9j",
-            "dW1lbnRfb3V0cHV0X2NvbmZpZxgGIAEoCzI1Lmdvb2dsZS5jbG91ZC5kb2N1",
-            "bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRPdXRwdXRDb25maWcSGQoRc2tpcF9o",
-            "dW1hbl9yZXZpZXcYBCABKAgSSAoPcHJvY2Vzc19vcHRpb25zGAcgASgLMi8u",
-            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Qcm9jZXNzT3B0aW9u",
-            "cxo9ChBCYXRjaElucHV0Q29uZmlnEhIKCmdjc19zb3VyY2UYASABKAkSEQoJ",
-            "bWltZV90eXBlGAIgASgJOgIYARowChFCYXRjaE91dHB1dENvbmZpZxIXCg9n",
-            "Y3NfZGVzdGluYXRpb24YASABKAk6AhgBIhYKFEJhdGNoUHJvY2Vzc1Jlc3Bv",
-            "bnNlIrIFChRCYXRjaFByb2Nlc3NNZXRhZGF0YRJKCgVzdGF0ZRgBIAEoDjI7",
-            "Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuQmF0Y2hQcm9jZXNz",
-            "TWV0YWRhdGEuU3RhdGUSFQoNc3RhdGVfbWVzc2FnZRgCIAEoCRIvCgtjcmVh",
-            "dGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoL",
-            "dXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "EnIKG2luZGl2aWR1YWxfcHJvY2Vzc19zdGF0dXNlcxgFIAMoCzJNLmdvb2ds",
-            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuQmF0Y2hQcm9jZXNzTWV0YWRh",
-            "dGEuSW5kaXZpZHVhbFByb2Nlc3NTdGF0dXMa7AEKF0luZGl2aWR1YWxQcm9j",
-            "ZXNzU3RhdHVzEhgKEGlucHV0X2djc19zb3VyY2UYASABKAkSIgoGc3RhdHVz",
-            "GAIgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSHgoWb3V0cHV0X2djc19kZXN0",
-            "aW5hdGlvbhgDIAEoCRIiChZodW1hbl9yZXZpZXdfb3BlcmF0aW9uGAQgASgJ",
-            "QgIYARJPChNodW1hbl9yZXZpZXdfc3RhdHVzGAUgASgLMjIuZ29vZ2xlLmNs",
-            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5IdW1hblJldmlld1N0YXR1cyJyCgVT",
-            "dGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1dBSVRJTkcQARILCgdS",
-            "VU5OSU5HEAISDQoJU1VDQ0VFREVEEAMSDgoKQ0FOQ0VMTElORxAEEg0KCUNB",
-            "TkNFTExFRBAFEgoKBkZBSUxFRBAGIl0KGkZldGNoUHJvY2Vzc29yVHlwZXNS",
-            "ZXF1ZXN0Ej8KBnBhcmVudBgBIAEoCUIv4EEC+kEpEidkb2N1bWVudGFpLmdv",
-            "b2dsZWFwaXMuY29tL1Byb2Nlc3NvclR5cGUiZgobRmV0Y2hQcm9jZXNzb3JU",
-            "eXBlc1Jlc3BvbnNlEkcKD3Byb2Nlc3Nvcl90eXBlcxgBIAMoCzIuLmdvb2ds",
-            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuUHJvY2Vzc29yVHlwZSKDAQoZ",
-            "TGlzdFByb2Nlc3NvclR5cGVzUmVxdWVzdBI/CgZwYXJlbnQYASABKAlCL+BB",
-            "AvpBKRInZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzb3JUeXBl",
-            "EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIn4KGkxp",
-            "c3RQcm9jZXNzb3JUeXBlc1Jlc3BvbnNlEkcKD3Byb2Nlc3Nvcl90eXBlcxgB",
-            "IAMoCzIuLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuUHJvY2Vz",
-            "c29yVHlwZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiewoVTGlzdFByb2Nl",
-            "c3NvcnNSZXF1ZXN0EjsKBnBhcmVudBgBIAEoCUIr4EEC+kElEiNkb2N1bWVu",
-            "dGFpLmdvb2dsZWFwaXMuY29tL1Byb2Nlc3NvchIRCglwYWdlX3NpemUYAiAB",
-            "KAUSEgoKcGFnZV90b2tlbhgDIAEoCSJxChZMaXN0UHJvY2Vzc29yc1Jlc3Bv",
-            "bnNlEj4KCnByb2Nlc3NvcnMYASADKAsyKi5nb29nbGUuY2xvdWQuZG9jdW1l",
-            "bnRhaS52MWJldGEzLlByb2Nlc3NvchIXCg9uZXh0X3BhZ2VfdG9rZW4YAiAB",
-            "KAkiWAoXR2V0UHJvY2Vzc29yVHlwZVJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv",
-            "4EEC+kEpCidkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29tL1Byb2Nlc3NvclR5",
-            "cGUiUAoTR2V0UHJvY2Vzc29yUmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6",
-            "QSUKI2RvY3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vUHJvY2Vzc29yIl4KGkdl",
-            "dFByb2Nlc3NvclZlcnNpb25SZXF1ZXN0EkAKBG5hbWUYASABKAlCMuBBAvpB",
-            "LAoqZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzb3JWZXJzaW9u",
-            "IokBChxMaXN0UHJvY2Vzc29yVmVyc2lvbnNSZXF1ZXN0EkIKBnBhcmVudBgB",
-            "IAEoCUIy4EEC+kEsEipkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29tL1Byb2Nl",
-            "c3NvclZlcnNpb24SEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4Y",
-            "AyABKAkihwEKHUxpc3RQcm9jZXNzb3JWZXJzaW9uc1Jlc3BvbnNlEk0KEnBy",
-            "b2Nlc3Nvcl92ZXJzaW9ucxgBIAMoCzIxLmdvb2dsZS5jbG91ZC5kb2N1bWVu",
-            "dGFpLnYxYmV0YTMuUHJvY2Vzc29yVmVyc2lvbhIXCg9uZXh0X3BhZ2VfdG9r",
-            "ZW4YAiABKAkiYQodRGVsZXRlUHJvY2Vzc29yVmVyc2lvblJlcXVlc3QSQAoE",
-            "bmFtZRgBIAEoCUIy4EEC+kEsCipkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29t",
-            "L1Byb2Nlc3NvclZlcnNpb24icwoeRGVsZXRlUHJvY2Vzc29yVmVyc2lvbk1l",
-            "dGFkYXRhElEKD2NvbW1vbl9tZXRhZGF0YRgBIAEoCzI4Lmdvb2dsZS5jbG91",
-            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuQ29tbW9uT3BlcmF0aW9uTWV0YWRhdGEi",
-            "YQodRGVwbG95UHJvY2Vzc29yVmVyc2lvblJlcXVlc3QSQAoEbmFtZRgBIAEo",
-            "CUIy4EEC+kEsCipkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29tL1Byb2Nlc3Nv",
-            "clZlcnNpb24iIAoeRGVwbG95UHJvY2Vzc29yVmVyc2lvblJlc3BvbnNlInMK",
-            "HkRlcGxveVByb2Nlc3NvclZlcnNpb25NZXRhZGF0YRJRCg9jb21tb25fbWV0",
-            "YWRhdGEYASABKAsyOC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEz",
-            "LkNvbW1vbk9wZXJhdGlvbk1ldGFkYXRhImMKH1VuZGVwbG95UHJvY2Vzc29y",
-            "VmVyc2lvblJlcXVlc3QSQAoEbmFtZRgBIAEoCUIy4EEC+kEsCipkb2N1bWVu",
-            "dGFpLmdvb2dsZWFwaXMuY29tL1Byb2Nlc3NvclZlcnNpb24iIgogVW5kZXBs",
-            "b3lQcm9jZXNzb3JWZXJzaW9uUmVzcG9uc2UidQogVW5kZXBsb3lQcm9jZXNz",
-            "b3JWZXJzaW9uTWV0YWRhdGESUQoPY29tbW9uX21ldGFkYXRhGAEgASgLMjgu",
-            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Db21tb25PcGVyYXRp",
-            "b25NZXRhZGF0YSKZAQoWQ3JlYXRlUHJvY2Vzc29yUmVxdWVzdBI7CgZwYXJl",
-            "bnQYASABKAlCK+BBAvpBJRIjZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9Q",
-            "cm9jZXNzb3ISQgoJcHJvY2Vzc29yGAIgASgLMiouZ29vZ2xlLmNsb3VkLmRv",
-            "Y3VtZW50YWkudjFiZXRhMy5Qcm9jZXNzb3JCA+BBAiJTChZEZWxldGVQcm9j",
-            "ZXNzb3JSZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpBJQojZG9jdW1lbnRh",
-            "aS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzb3IibAoXRGVsZXRlUHJvY2Vzc29y",
-            "TWV0YWRhdGESUQoPY29tbW9uX21ldGFkYXRhGAUgASgLMjguZ29vZ2xlLmNs",
-            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5Db21tb25PcGVyYXRpb25NZXRhZGF0",
-            "YSJTChZFbmFibGVQcm9jZXNzb3JSZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BB",
-            "AvpBJQojZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzb3IiGQoX",
-            "RW5hYmxlUHJvY2Vzc29yUmVzcG9uc2UibAoXRW5hYmxlUHJvY2Vzc29yTWV0",
-            "YWRhdGESUQoPY29tbW9uX21ldGFkYXRhGAUgASgLMjguZ29vZ2xlLmNsb3Vk",
-            "LmRvY3VtZW50YWkudjFiZXRhMy5Db21tb25PcGVyYXRpb25NZXRhZGF0YSJU",
-            "ChdEaXNhYmxlUHJvY2Vzc29yUmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6",
-            "QSUKI2RvY3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vUHJvY2Vzc29yIhoKGERp",
-            "c2FibGVQcm9jZXNzb3JSZXNwb25zZSJtChhEaXNhYmxlUHJvY2Vzc29yTWV0",
-            "YWRhdGESUQoPY29tbW9uX21ldGFkYXRhGAUgASgLMjguZ29vZ2xlLmNsb3Vk",
-            "LmRvY3VtZW50YWkudjFiZXRhMy5Db21tb25PcGVyYXRpb25NZXRhZGF0YSK6",
-            "AQohU2V0RGVmYXVsdFByb2Nlc3NvclZlcnNpb25SZXF1ZXN0Ej4KCXByb2Nl",
-            "c3NvchgBIAEoCUIr4EEC+kElCiNkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29t",
-            "L1Byb2Nlc3NvchJVChlkZWZhdWx0X3Byb2Nlc3Nvcl92ZXJzaW9uGAIgASgJ",
-            "QjLgQQL6QSwKKmRvY3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vUHJvY2Vzc29y",
-            "VmVyc2lvbiIkCiJTZXREZWZhdWx0UHJvY2Vzc29yVmVyc2lvblJlc3BvbnNl",
-            "IncKIlNldERlZmF1bHRQcm9jZXNzb3JWZXJzaW9uTWV0YWRhdGESUQoPY29t",
-            "bW9uX21ldGFkYXRhGAEgASgLMjguZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWku",
-            "djFiZXRhMy5Db21tb25PcGVyYXRpb25NZXRhZGF0YSK+BAocVHJhaW5Qcm9j",
-            "ZXNzb3JWZXJzaW9uUmVxdWVzdBI7CgZwYXJlbnQYASABKAlCK+BBAvpBJQoj",
-            "ZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzb3ISUQoRcHJvY2Vz",
-            "c29yX3ZlcnNpb24YAiABKAsyMS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
-            "MWJldGEzLlByb2Nlc3NvclZlcnNpb25CA+BBAhJNCg9kb2N1bWVudF9zY2hl",
-            "bWEYCiABKAsyLy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRv",
-            "Y3VtZW50U2NoZW1hQgPgQQESYAoKaW5wdXRfZGF0YRgEIAEoCzJHLmdvb2ds",
-            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuVHJhaW5Qcm9jZXNzb3JWZXJz",
-            "aW9uUmVxdWVzdC5JbnB1dERhdGFCA+BBARIjChZiYXNlX3Byb2Nlc3Nvcl92",
-            "ZXJzaW9uGAggASgJQgPgQQEatwEKCUlucHV0RGF0YRJWChJ0cmFpbmluZ19k",
-            "b2N1bWVudHMYAyABKAsyOi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJl",
-            "dGEzLkJhdGNoRG9jdW1lbnRzSW5wdXRDb25maWcSUgoOdGVzdF9kb2N1bWVu",
-            "dHMYBCABKAsyOi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkJh",
-            "dGNoRG9jdW1lbnRzSW5wdXRDb25maWciOgodVHJhaW5Qcm9jZXNzb3JWZXJz",
+            "bGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxobZ29vZ2xlL3Byb3Rv",
+            "YnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5w",
+            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xl",
+            "L3JwYy9zdGF0dXMucHJvdG8iUAoOUHJvY2Vzc09wdGlvbnMSPgoKb2NyX2Nv",
+            "bmZpZxgBIAEoCzIqLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMu",
+            "T2NyQ29uZmlnIpUDCg5Qcm9jZXNzUmVxdWVzdBJECg9pbmxpbmVfZG9jdW1l",
+            "bnQYBCABKAsyKS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRv",
+            "Y3VtZW50SAASRAoMcmF3X2RvY3VtZW50GAUgASgLMiwuZ29vZ2xlLmNsb3Vk",
+            "LmRvY3VtZW50YWkudjFiZXRhMy5SYXdEb2N1bWVudEgAEhcKBG5hbWUYASAB",
+            "KAlCCeBBAvpBAwoBKhI/Cghkb2N1bWVudBgCIAEoCzIpLmdvb2dsZS5jbG91",
+            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRCAhgBEhkKEXNraXBfaHVt",
+            "YW5fcmV2aWV3GAMgASgIEi4KCmZpZWxkX21hc2sYBiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuRmllbGRNYXNrEkgKD3Byb2Nlc3Nfb3B0aW9ucxgHIAEoCzIv",
+            "Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuUHJvY2Vzc09wdGlv",
+            "bnNCCAoGc291cmNlIvMBChFIdW1hblJldmlld1N0YXR1cxJHCgVzdGF0ZRgB",
+            "IAEoDjI4Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuSHVtYW5S",
+            "ZXZpZXdTdGF0dXMuU3RhdGUSFQoNc3RhdGVfbWVzc2FnZRgCIAEoCRIeChZo",
+            "dW1hbl9yZXZpZXdfb3BlcmF0aW9uGAMgASgJIl4KBVN0YXRlEhUKEVNUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASCwoHU0tJUFBFRBABEhUKEVZBTElEQVRJT05fUEFT",
+            "U0VEEAISDwoLSU5fUFJPR1JFU1MQAxIJCgVFUlJPUhAEIsMBCg9Qcm9jZXNz",
+            "UmVzcG9uc2USOwoIZG9jdW1lbnQYASABKAsyKS5nb29nbGUuY2xvdWQuZG9j",
+            "dW1lbnRhaS52MWJldGEzLkRvY3VtZW50EiIKFmh1bWFuX3Jldmlld19vcGVy",
+            "YXRpb24YAiABKAlCAhgBEk8KE2h1bWFuX3Jldmlld19zdGF0dXMYAyABKAsy",
+            "Mi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkh1bWFuUmV2aWV3",
+            "U3RhdHVzIvUEChNCYXRjaFByb2Nlc3NSZXF1ZXN0EhcKBG5hbWUYASABKAlC",
+            "CeBBAvpBAwoBKhJgCg1pbnB1dF9jb25maWdzGAIgAygLMkUuZ29vZ2xlLmNs",
+            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5CYXRjaFByb2Nlc3NSZXF1ZXN0LkJh",
+            "dGNoSW5wdXRDb25maWdCAhgBEmEKDW91dHB1dF9jb25maWcYAyABKAsyRi5n",
+            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkJhdGNoUHJvY2Vzc1Jl",
+            "cXVlc3QuQmF0Y2hPdXRwdXRDb25maWdCAhgBElMKD2lucHV0X2RvY3VtZW50",
+            "cxgFIAEoCzI6Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuQmF0",
+            "Y2hEb2N1bWVudHNJbnB1dENvbmZpZxJVChZkb2N1bWVudF9vdXRwdXRfY29u",
+            "ZmlnGAYgASgLMjUuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5E",
+            "b2N1bWVudE91dHB1dENvbmZpZxIZChFza2lwX2h1bWFuX3JldmlldxgEIAEo",
+            "CBJICg9wcm9jZXNzX29wdGlvbnMYByABKAsyLy5nb29nbGUuY2xvdWQuZG9j",
+            "dW1lbnRhaS52MWJldGEzLlByb2Nlc3NPcHRpb25zGj0KEEJhdGNoSW5wdXRD",
+            "b25maWcSEgoKZ2NzX3NvdXJjZRgBIAEoCRIRCgltaW1lX3R5cGUYAiABKAk6",
+            "AhgBGjAKEUJhdGNoT3V0cHV0Q29uZmlnEhcKD2djc19kZXN0aW5hdGlvbhgB",
+            "IAEoCToCGAEiFgoUQmF0Y2hQcm9jZXNzUmVzcG9uc2UisgUKFEJhdGNoUHJv",
+            "Y2Vzc01ldGFkYXRhEkoKBXN0YXRlGAEgASgOMjsuZ29vZ2xlLmNsb3VkLmRv",
+            "Y3VtZW50YWkudjFiZXRhMy5CYXRjaFByb2Nlc3NNZXRhZGF0YS5TdGF0ZRIV",
+            "Cg1zdGF0ZV9tZXNzYWdlGAIgASgJEi8KC2NyZWF0ZV90aW1lGAMgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGltZRgEIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAScgobaW5kaXZpZHVhbF9w",
+            "cm9jZXNzX3N0YXR1c2VzGAUgAygLMk0uZ29vZ2xlLmNsb3VkLmRvY3VtZW50",
+            "YWkudjFiZXRhMy5CYXRjaFByb2Nlc3NNZXRhZGF0YS5JbmRpdmlkdWFsUHJv",
+            "Y2Vzc1N0YXR1cxrsAQoXSW5kaXZpZHVhbFByb2Nlc3NTdGF0dXMSGAoQaW5w",
+            "dXRfZ2NzX3NvdXJjZRgBIAEoCRIiCgZzdGF0dXMYAiABKAsyEi5nb29nbGUu",
+            "cnBjLlN0YXR1cxIeChZvdXRwdXRfZ2NzX2Rlc3RpbmF0aW9uGAMgASgJEiIK",
+            "Fmh1bWFuX3Jldmlld19vcGVyYXRpb24YBCABKAlCAhgBEk8KE2h1bWFuX3Jl",
+            "dmlld19zdGF0dXMYBSABKAsyMi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
+            "MWJldGEzLkh1bWFuUmV2aWV3U3RhdHVzInIKBVN0YXRlEhUKEVNUQVRFX1VO",
+            "U1BFQ0lGSUVEEAASCwoHV0FJVElORxABEgsKB1JVTk5JTkcQAhINCglTVUND",
+            "RUVERUQQAxIOCgpDQU5DRUxMSU5HEAQSDQoJQ0FOQ0VMTEVEEAUSCgoGRkFJ",
+            "TEVEEAYiXQoaRmV0Y2hQcm9jZXNzb3JUeXBlc1JlcXVlc3QSPwoGcGFyZW50",
+            "GAEgASgJQi/gQQL6QSkSJ2RvY3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vUHJv",
+            "Y2Vzc29yVHlwZSJmChtGZXRjaFByb2Nlc3NvclR5cGVzUmVzcG9uc2USRwoP",
+            "cHJvY2Vzc29yX3R5cGVzGAEgAygLMi4uZ29vZ2xlLmNsb3VkLmRvY3VtZW50",
+            "YWkudjFiZXRhMy5Qcm9jZXNzb3JUeXBlIoMBChlMaXN0UHJvY2Vzc29yVHlw",
+            "ZXNSZXF1ZXN0Ej8KBnBhcmVudBgBIAEoCUIv4EEC+kEpEidkb2N1bWVudGFp",
+            "Lmdvb2dsZWFwaXMuY29tL1Byb2Nlc3NvclR5cGUSEQoJcGFnZV9zaXplGAIg",
+            "ASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkifgoaTGlzdFByb2Nlc3NvclR5cGVz",
+            "UmVzcG9uc2USRwoPcHJvY2Vzc29yX3R5cGVzGAEgAygLMi4uZ29vZ2xlLmNs",
+            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5Qcm9jZXNzb3JUeXBlEhcKD25leHRf",
+            "cGFnZV90b2tlbhgCIAEoCSJ7ChVMaXN0UHJvY2Vzc29yc1JlcXVlc3QSOwoG",
+            "cGFyZW50GAEgASgJQivgQQL6QSUSI2RvY3VtZW50YWkuZ29vZ2xlYXBpcy5j",
+            "b20vUHJvY2Vzc29yEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2Vu",
+            "GAMgASgJInEKFkxpc3RQcm9jZXNzb3JzUmVzcG9uc2USPgoKcHJvY2Vzc29y",
+            "cxgBIAMoCzIqLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuUHJv",
+            "Y2Vzc29yEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJYChdHZXRQcm9jZXNz",
+            "b3JUeXBlUmVxdWVzdBI9CgRuYW1lGAEgASgJQi/gQQL6QSkKJ2RvY3VtZW50",
+            "YWkuZ29vZ2xlYXBpcy5jb20vUHJvY2Vzc29yVHlwZSJQChNHZXRQcm9jZXNz",
+            "b3JSZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpBJQojZG9jdW1lbnRhaS5n",
+            "b29nbGVhcGlzLmNvbS9Qcm9jZXNzb3IiXgoaR2V0UHJvY2Vzc29yVmVyc2lv",
+            "blJlcXVlc3QSQAoEbmFtZRgBIAEoCUIy4EEC+kEsCipkb2N1bWVudGFpLmdv",
+            "b2dsZWFwaXMuY29tL1Byb2Nlc3NvclZlcnNpb24iiQEKHExpc3RQcm9jZXNz",
+            "b3JWZXJzaW9uc1JlcXVlc3QSQgoGcGFyZW50GAEgASgJQjLgQQL6QSwSKmRv",
+            "Y3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vUHJvY2Vzc29yVmVyc2lvbhIRCglw",
+            "YWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSKHAQodTGlzdFBy",
+            "b2Nlc3NvclZlcnNpb25zUmVzcG9uc2USTQoScHJvY2Vzc29yX3ZlcnNpb25z",
+            "GAEgAygLMjEuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Qcm9j",
+            "ZXNzb3JWZXJzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJhCh1EZWxl",
+            "dGVQcm9jZXNzb3JWZXJzaW9uUmVxdWVzdBJACgRuYW1lGAEgASgJQjLgQQL6",
+            "QSwKKmRvY3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vUHJvY2Vzc29yVmVyc2lv",
+            "biJzCh5EZWxldGVQcm9jZXNzb3JWZXJzaW9uTWV0YWRhdGESUQoPY29tbW9u",
+            "X21ldGFkYXRhGAEgASgLMjguZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
+            "ZXRhMy5Db21tb25PcGVyYXRpb25NZXRhZGF0YSJhCh1EZXBsb3lQcm9jZXNz",
+            "b3JWZXJzaW9uUmVxdWVzdBJACgRuYW1lGAEgASgJQjLgQQL6QSwKKmRvY3Vt",
+            "ZW50YWkuZ29vZ2xlYXBpcy5jb20vUHJvY2Vzc29yVmVyc2lvbiIgCh5EZXBs",
+            "b3lQcm9jZXNzb3JWZXJzaW9uUmVzcG9uc2UicwoeRGVwbG95UHJvY2Vzc29y",
+            "VmVyc2lvbk1ldGFkYXRhElEKD2NvbW1vbl9tZXRhZGF0YRgBIAEoCzI4Lmdv",
+            "b2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuQ29tbW9uT3BlcmF0aW9u",
+            "TWV0YWRhdGEiYwofVW5kZXBsb3lQcm9jZXNzb3JWZXJzaW9uUmVxdWVzdBJA",
+            "CgRuYW1lGAEgASgJQjLgQQL6QSwKKmRvY3VtZW50YWkuZ29vZ2xlYXBpcy5j",
+            "b20vUHJvY2Vzc29yVmVyc2lvbiIiCiBVbmRlcGxveVByb2Nlc3NvclZlcnNp",
+            "b25SZXNwb25zZSJ1CiBVbmRlcGxveVByb2Nlc3NvclZlcnNpb25NZXRhZGF0",
+            "YRJRCg9jb21tb25fbWV0YWRhdGEYASABKAsyOC5nb29nbGUuY2xvdWQuZG9j",
+            "dW1lbnRhaS52MWJldGEzLkNvbW1vbk9wZXJhdGlvbk1ldGFkYXRhIpkBChZD",
+            "cmVhdGVQcm9jZXNzb3JSZXF1ZXN0EjsKBnBhcmVudBgBIAEoCUIr4EEC+kEl",
+            "EiNkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29tL1Byb2Nlc3NvchJCCglwcm9j",
+            "ZXNzb3IYAiABKAsyKi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEz",
+            "LlByb2Nlc3NvckID4EECIlMKFkRlbGV0ZVByb2Nlc3NvclJlcXVlc3QSOQoE",
+            "bmFtZRgBIAEoCUIr4EEC+kElCiNkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29t",
+            "L1Byb2Nlc3NvciJsChdEZWxldGVQcm9jZXNzb3JNZXRhZGF0YRJRCg9jb21t",
+            "b25fbWV0YWRhdGEYBSABKAsyOC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
+            "MWJldGEzLkNvbW1vbk9wZXJhdGlvbk1ldGFkYXRhIlMKFkVuYWJsZVByb2Nl",
+            "c3NvclJlcXVlc3QSOQoEbmFtZRgBIAEoCUIr4EEC+kElCiNkb2N1bWVudGFp",
+            "Lmdvb2dsZWFwaXMuY29tL1Byb2Nlc3NvciIZChdFbmFibGVQcm9jZXNzb3JS",
+            "ZXNwb25zZSJsChdFbmFibGVQcm9jZXNzb3JNZXRhZGF0YRJRCg9jb21tb25f",
+            "bWV0YWRhdGEYBSABKAsyOC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJl",
+            "dGEzLkNvbW1vbk9wZXJhdGlvbk1ldGFkYXRhIlQKF0Rpc2FibGVQcm9jZXNz",
+            "b3JSZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpBJQojZG9jdW1lbnRhaS5n",
+            "b29nbGVhcGlzLmNvbS9Qcm9jZXNzb3IiGgoYRGlzYWJsZVByb2Nlc3NvclJl",
+            "c3BvbnNlIm0KGERpc2FibGVQcm9jZXNzb3JNZXRhZGF0YRJRCg9jb21tb25f",
+            "bWV0YWRhdGEYBSABKAsyOC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJl",
+            "dGEzLkNvbW1vbk9wZXJhdGlvbk1ldGFkYXRhIroBCiFTZXREZWZhdWx0UHJv",
+            "Y2Vzc29yVmVyc2lvblJlcXVlc3QSPgoJcHJvY2Vzc29yGAEgASgJQivgQQL6",
+            "QSUKI2RvY3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vUHJvY2Vzc29yElUKGWRl",
+            "ZmF1bHRfcHJvY2Vzc29yX3ZlcnNpb24YAiABKAlCMuBBAvpBLAoqZG9jdW1l",
+            "bnRhaS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzb3JWZXJzaW9uIiQKIlNldERl",
+            "ZmF1bHRQcm9jZXNzb3JWZXJzaW9uUmVzcG9uc2UidwoiU2V0RGVmYXVsdFBy",
+            "b2Nlc3NvclZlcnNpb25NZXRhZGF0YRJRCg9jb21tb25fbWV0YWRhdGEYASAB",
+            "KAsyOC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkNvbW1vbk9w",
+            "ZXJhdGlvbk1ldGFkYXRhIuMHChxUcmFpblByb2Nlc3NvclZlcnNpb25SZXF1",
+            "ZXN0EosBCiJjdXN0b21fZG9jdW1lbnRfZXh0cmFjdGlvbl9vcHRpb25zGAUg",
+            "ASgLMl0uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5UcmFpblBy",
+            "b2Nlc3NvclZlcnNpb25SZXF1ZXN0LkN1c3RvbURvY3VtZW50RXh0cmFjdGlv",
+            "bk9wdGlvbnNIABI7CgZwYXJlbnQYASABKAlCK+BBAvpBJQojZG9jdW1lbnRh",
+            "aS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzb3ISUQoRcHJvY2Vzc29yX3ZlcnNp",
+            "b24YAiABKAsyMS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLlBy",
+            "b2Nlc3NvclZlcnNpb25CA+BBAhJNCg9kb2N1bWVudF9zY2hlbWEYCiABKAsy",
+            "Ly5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50U2No",
+            "ZW1hQgPgQQESYAoKaW5wdXRfZGF0YRgEIAEoCzJHLmdvb2dsZS5jbG91ZC5k",
+            "b2N1bWVudGFpLnYxYmV0YTMuVHJhaW5Qcm9jZXNzb3JWZXJzaW9uUmVxdWVz",
+            "dC5JbnB1dERhdGFCA+BBARIjChZiYXNlX3Byb2Nlc3Nvcl92ZXJzaW9uGAgg",
+            "ASgJQgPgQQEatwEKCUlucHV0RGF0YRJWChJ0cmFpbmluZ19kb2N1bWVudHMY",
+            "AyABKAsyOi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkJhdGNo",
+            "RG9jdW1lbnRzSW5wdXRDb25maWcSUgoOdGVzdF9kb2N1bWVudHMYBCABKAsy",
+            "Oi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkJhdGNoRG9jdW1l",
+            "bnRzSW5wdXRDb25maWcagQIKH0N1c3RvbURvY3VtZW50RXh0cmFjdGlvbk9w",
+            "dGlvbnMShQEKD3RyYWluaW5nX21ldGhvZBgDIAEoDjJsLmdvb2dsZS5jbG91",
+            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuVHJhaW5Qcm9jZXNzb3JWZXJzaW9uUmVx",
+            "dWVzdC5DdXN0b21Eb2N1bWVudEV4dHJhY3Rpb25PcHRpb25zLlRyYWluaW5n",
+            "TWV0aG9kIlYKDlRyYWluaW5nTWV0aG9kEh8KG1RSQUlOSU5HX01FVEhPRF9V",
+            "TlNQRUNJRklFRBAAEg8KC01PREVMX0JBU0VEEAESEgoOVEVNUExBVEVfQkFT",
+            "RUQQAkIRCg9wcm9jZXNzb3JfZmxhZ3MiOgodVHJhaW5Qcm9jZXNzb3JWZXJz",
             "aW9uUmVzcG9uc2USGQoRcHJvY2Vzc29yX3ZlcnNpb24YASABKAkihgQKHVRy",
             "YWluUHJvY2Vzc29yVmVyc2lvbk1ldGFkYXRhElEKD2NvbW1vbl9tZXRhZGF0",
             "YRgBIAEoCzI4Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuQ29t",
@@ -381,7 +391,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "6kFNCiJkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEidwcm9q",
             "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.EvaluationReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.OperationMetadataReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.ProcessorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.ProcessorTypeReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.EvaluationReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.OperationMetadataReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.ProcessorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.ProcessorTypeReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessOptions), global::Google.Cloud.DocumentAI.V1Beta3.ProcessOptions.Parser, new[]{ "OcrConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.ProcessRequest), global::Google.Cloud.DocumentAI.V1Beta3.ProcessRequest.Parser, new[]{ "InlineDocument", "RawDocument", "Name", "Document", "SkipHumanReview", "FieldMask", "ProcessOptions" }, new[]{ "Source" }, null, null, null),
@@ -422,7 +432,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.SetDefaultProcessorVersionRequest), global::Google.Cloud.DocumentAI.V1Beta3.SetDefaultProcessorVersionRequest.Parser, new[]{ "Processor", "DefaultProcessorVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.SetDefaultProcessorVersionResponse), global::Google.Cloud.DocumentAI.V1Beta3.SetDefaultProcessorVersionResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.SetDefaultProcessorVersionMetadata), global::Google.Cloud.DocumentAI.V1Beta3.SetDefaultProcessorVersionMetadata.Parser, new[]{ "CommonMetadata" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest), global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Parser, new[]{ "Parent", "ProcessorVersion", "DocumentSchema", "InputData", "BaseProcessorVersion" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.InputData), global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.InputData.Parser, new[]{ "TrainingDocuments", "TestDocuments" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest), global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Parser, new[]{ "CustomDocumentExtractionOptions", "Parent", "ProcessorVersion", "DocumentSchema", "InputData", "BaseProcessorVersion" }, new[]{ "ProcessorFlags" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.InputData), global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.InputData.Parser, new[]{ "TrainingDocuments", "TestDocuments" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions), global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions.Parser, new[]{ "TrainingMethod" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions.Types.TrainingMethod) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionResponse), global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionResponse.Parser, new[]{ "ProcessorVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionMetadata), global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionMetadata.Parser, new[]{ "CommonMetadata", "TrainingDatasetValidation", "TestDatasetValidation" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionMetadata.Types.DatasetValidation), global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionMetadata.Types.DatasetValidation.Parser, new[]{ "DocumentErrorCount", "DatasetErrorCount", "DocumentErrors", "DatasetErrors" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentRequest), global::Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentRequest.Parser, new[]{ "InlineDocument", "HumanReviewConfig", "Document", "EnableSchemaValidation", "Priority", "DocumentSchema" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.ReviewDocumentRequest.Types.Priority) }, null, null),
@@ -494,7 +505,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int OcrConfigFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig ocrConfig_;
     /// <summary>
-    /// Only applicable to "Document OCR Processor". Returns error if set on other
+    /// Only applicable to `OCR_PROCESSOR`. Returns error if set on other
     /// processor types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -649,7 +660,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for the process document method.
+  /// Request message for the
+  /// [ProcessDocument][google.cloud.documentai.v1beta3.DocumentProcessorService.ProcessDocument]
+  /// method.
   /// </summary>
   public sealed partial class ProcessRequest : pb::IMessage<ProcessRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -766,7 +779,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int DocumentFieldNumber = 2;
     private global::Google.Cloud.DocumentAI.V1Beta3.Document document_;
     /// <summary>
-    /// The document payload, the [content] and [mime_type] fields must be set.
+    /// The document payload, the
+    /// [content][google.cloud.documentai.v1beta3.Document.content] and
+    /// [mime_type][google.cloud.documentai.v1beta3.Document.mime_type] fields must
+    /// be set.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -782,8 +798,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int SkipHumanReviewFieldNumber = 3;
     private bool skipHumanReview_;
     /// <summary>
-    /// Whether Human Review feature should be skipped for this request. Default to
-    /// false.
+    /// Whether human review should be skipped for this request. Default to
+    /// `false`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -798,9 +814,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int FieldMaskFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
     /// <summary>
-    /// Specifies which fields to include in ProcessResponse's document.
-    /// Only supports top level document and pages field so it must be in the form
-    /// of `{document_field_name}` or `pages.{page_field_name}`.
+    /// Specifies which fields to include in the
+    /// [ProcessResponse.document][google.cloud.documentai.v1beta3.ProcessResponse.document]
+    /// output. Only supports top-level document and pages field, so it must be in
+    /// the form of `{document_field_name}` or `pages.{page_field_name}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1266,9 +1283,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     private string humanReviewOperation_ = "";
     /// <summary>
     /// The name of the operation triggered by the processed document. This field
-    /// is populated only when the [state] is [HUMAN_REVIEW_IN_PROGRESS]. It has
-    /// the same response type and metadata as the long running operation returned
-    /// by [ReviewDocument] method.
+    /// is populated only when the
+    /// [state][google.cloud.documentai.v1beta3.HumanReviewStatus.state] is
+    /// `HUMAN_REVIEW_IN_PROGRESS`. It has the same response type and metadata as
+    /// the long-running operation returned by
+    /// [ReviewDocument][google.cloud.documentai.v1beta3.DocumentProcessorService.ReviewDocument].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1473,7 +1492,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Human review is skipped for the document. This can happen because human
-        /// review is not enabled on the processor or the processing request has
+        /// review isn't enabled on the processor or the processing request has
         /// been set to skip this document.
         /// </summary>
         [pbr::OriginalName("SKIPPED")] Skipped = 1,
@@ -1487,7 +1506,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         [pbr::OriginalName("IN_PROGRESS")] InProgress = 3,
         /// <summary>
         /// Some error happened during triggering human review, see the
-        /// [state_message] for details.
+        /// [state_message][google.cloud.documentai.v1beta3.HumanReviewStatus.state_message]
+        /// for details.
         /// </summary>
         [pbr::OriginalName("ERROR")] Error = 4,
       }
@@ -1498,7 +1518,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Response message for the process document method.
+  /// Response message for the
+  /// [ProcessDocument][google.cloud.documentai.v1beta3.DocumentProcessorService.ProcessDocument]
+  /// method.
   /// </summary>
   public sealed partial class ProcessResponse : pb::IMessage<ProcessResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1567,9 +1589,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     private string humanReviewOperation_ = "";
     /// <summary>
     /// The name of the operation triggered by the processed document. If the human
-    /// review process is not triggered, this field will be empty. It has the same
-    /// response type and metadata as the long running operation returned by
-    /// ReviewDocument method.
+    /// review process isn't triggered, this field is empty. It has the same
+    /// response type and metadata as the long-running operation returned by
+    /// [ReviewDocument][google.cloud.documentai.v1beta3.DocumentProcessorService.ReviewDocument].
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1796,7 +1818,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for batch process document method.
+  /// Request message for
+  /// [BatchProcessDocuments][google.cloud.documentai.v1beta3.DocumentProcessorService.BatchProcessDocuments].
   /// </summary>
   public sealed partial class BatchProcessRequest : pb::IMessage<BatchProcessRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1903,7 +1926,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int InputDocumentsFieldNumber = 5;
     private global::Google.Cloud.DocumentAI.V1Beta3.BatchDocumentsInputConfig inputDocuments_;
     /// <summary>
-    /// The input documents for batch process.
+    /// The input documents for the
+    /// [BatchProcessDocuments][google.cloud.documentai.v1beta3.DocumentProcessorService.BatchProcessDocuments]
+    /// method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1918,7 +1943,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int DocumentOutputConfigFieldNumber = 6;
     private global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig documentOutputConfig_;
     /// <summary>
-    /// The overall output config for batch process.
+    /// The output configuration for the
+    /// [BatchProcessDocuments][google.cloud.documentai.v1beta3.DocumentProcessorService.BatchProcessDocuments]
+    /// method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1933,8 +1960,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int SkipHumanReviewFieldNumber = 4;
     private bool skipHumanReview_;
     /// <summary>
-    /// Whether Human Review feature should be skipped for this request. Default to
-    /// false.
+    /// Whether human review should be skipped for this request. Default to
+    /// `false`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2334,9 +2361,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int MimeTypeFieldNumber = 2;
         private string mimeType_ = "";
         /// <summary>
-        /// Mimetype of the input. If the input is a raw document, the supported
-        /// mimetypes are application/pdf, image/tiff, and image/gif.
-        /// If the input is a [Document] proto, the type should be application/json.
+        /// An IANA published [media type (MIME
+        /// type)](https://www.iana.org/assignments/media-types/media-types.xhtml) of
+        /// the input. If the input is a raw document, refer to [supported file
+        /// types](https://cloud.google.com/document-ai/docs/file-types) for the list
+        /// of media types. If the input is a
+        /// [Document][google.cloud.documentai.v1beta3.Document], the type should be
+        /// `application/json`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2505,7 +2536,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
 
       /// <summary>
-      /// The message for output config in batch process.
+      /// The output configuration in the
+      /// [BatchProcessDocuments][google.cloud.documentai.v1beta3.DocumentProcessorService.BatchProcessDocuments]
+      /// method.
       /// </summary>
       [global::System.ObsoleteAttribute]
       public sealed partial class BatchOutputConfig : pb::IMessage<BatchOutputConfig>
@@ -2706,7 +2739,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Response message for batch process document method.
+  /// Response message for
+  /// [BatchProcessDocuments][google.cloud.documentai.v1beta3.DocumentProcessorService.BatchProcessDocuments].
   /// </summary>
   public sealed partial class BatchProcessResponse : pb::IMessage<BatchProcessResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2861,7 +2895,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// The long running operation metadata for batch process method.
+  /// The long-running operation metadata for
+  /// [BatchProcessDocuments][google.cloud.documentai.v1beta3.DocumentProcessorService.BatchProcessDocuments].
   /// </summary>
   public sealed partial class BatchProcessMetadata : pb::IMessage<BatchProcessMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3315,10 +3350,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int InputGcsSourceFieldNumber = 1;
         private string inputGcsSource_ = "";
         /// <summary>
-        /// The source of the document, same as the [input_gcs_source] field in the
-        /// request when the batch process started. The batch process is started by
-        /// take snapshot of that document, since a user can move or change that
-        /// document during the process.
+        /// The source of the document, same as the
+        /// [input_gcs_source][google.cloud.documentai.v1beta3.BatchProcessMetadata.IndividualProcessStatus.input_gcs_source]
+        /// field in the request when the batch process started.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3348,7 +3382,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int OutputGcsDestinationFieldNumber = 3;
         private string outputGcsDestination_ = "";
         /// <summary>
-        /// The output_gcs_destination (in the request as `output_gcs_destination`)
+        /// The Cloud Storage output destination (in the request as
+        /// [DocumentOutputConfig.GcsOutputConfig.gcs_uri][google.cloud.documentai.v1beta3.DocumentOutputConfig.GcsOutputConfig.gcs_uri])
         /// of the processed document if it was successful, otherwise empty.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3365,9 +3400,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         private string humanReviewOperation_ = "";
         /// <summary>
         /// The name of the operation triggered by the processed document. If the
-        /// human review process is not triggered, this field will be empty. It has
-        /// the same response type and metadata as the long running operation
-        /// returned by ReviewDocument method.
+        /// human review process isn't triggered, this field will be empty. It has
+        /// the same response type and metadata as the long-running operation
+        /// returned by the
+        /// [ReviewDocument][google.cloud.documentai.v1beta3.DocumentProcessorService.ReviewDocument]
+        /// method.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3647,7 +3684,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for fetch processor types.
+  /// Request message for the
+  /// [FetchProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.FetchProcessorTypes]
+  /// method. Some processor types may require the project be added to an
+  /// allowlist.
   /// </summary>
   public sealed partial class FetchProcessorTypesRequest : pb::IMessage<FetchProcessorTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3697,9 +3737,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The project of processor type to list.
-    /// The available processor types may depend on the allow-listing on projects.
-    /// Format: `projects/{project}/locations/{location}`
+    /// Required. The location of processor types to list.
+    /// Format: `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3844,7 +3883,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Response message for fetch processor types.
+  /// Response message for the
+  /// [FetchProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.FetchProcessorTypes]
+  /// method.
   /// </summary>
   public sealed partial class FetchProcessorTypesResponse : pb::IMessage<FetchProcessorTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4028,7 +4069,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for list processor types.
+  /// Request message for the
+  /// [ListProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorTypes]
+  /// method. Some processor types may require the project be added to an
+  /// allowlist.
   /// </summary>
   public sealed partial class ListProcessorTypesRequest : pb::IMessage<ListProcessorTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4080,9 +4124,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The location of processor type to list.
-    /// The available processor types may depend on the allow-listing on projects.
-    /// Format: `projects/{project}/locations/{location}`
+    /// Required. The location of processor types to list.
+    /// Format: `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4098,8 +4141,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     private int pageSize_;
     /// <summary>
     /// The maximum number of processor types to return.
-    /// If unspecified, at most 100 processor types will be returned.
-    /// The maximum value is 500; values above 500 will be coerced to 500.
+    /// If unspecified, at most `100` processor types will be returned.
+    /// The maximum value is `500`. Values above `500` will be coerced to `500`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4307,7 +4350,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Response message for list processor types.
+  /// Response message for the
+  /// [ListProcessorTypes][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorTypes]
+  /// method.
   /// </summary>
   public sealed partial class ListProcessorTypesResponse : pb::IMessage<ListProcessorTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4600,8 +4645,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     private int pageSize_;
     /// <summary>
     /// The maximum number of processors to return.
-    /// If unspecified, at most 50 processors will be returned.
-    /// The maximum value is 100; values above 100 will be coerced to 100.
+    /// If unspecified, at most `50` processors will be returned.
+    /// The maximum value is `100`. Values above `100` will be coerced to `100`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4810,7 +4855,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Response message for list processors.
+  /// Response message for the
+  /// [ListProcessors][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessors]
+  /// method.
   /// </summary>
   public sealed partial class ListProcessorsResponse : pb::IMessage<ListProcessorsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5034,7 +5081,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for get processor.
+  /// Request message for the
+  /// [GetProcessorType][google.cloud.documentai.v1beta3.DocumentProcessorService.GetProcessorType]
+  /// method.
   /// </summary>
   public sealed partial class GetProcessorTypeRequest : pb::IMessage<GetProcessorTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5229,7 +5278,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for get processor.
+  /// Request message for the
+  /// [GetProcessor][google.cloud.documentai.v1beta3.DocumentProcessorService.GetProcessor]
+  /// method.
   /// </summary>
   public sealed partial class GetProcessorRequest : pb::IMessage<GetProcessorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5424,7 +5475,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for get processor version.
+  /// Request message for the
+  /// [GetProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.GetProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class GetProcessorVersionRequest : pb::IMessage<GetProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5689,8 +5742,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     private int pageSize_;
     /// <summary>
     /// The maximum number of processor versions to return.
-    /// If unspecified, at most 10 processor versions will be returned.
-    /// The maximum value is 20; values above 20 will be coerced to 20.
+    /// If unspecified, at most `10` processor versions will be returned.
+    /// The maximum value is `20`. Values above `20` will be coerced to `20`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5899,7 +5952,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Response message for list processors.
+  /// Response message for the
+  /// [ListProcessorVersions][google.cloud.documentai.v1beta3.DocumentProcessorService.ListProcessorVersions]
+  /// method.
   /// </summary>
   public sealed partial class ListProcessorVersionsResponse : pb::IMessage<ListProcessorVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6123,7 +6178,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for the delete processor version method.
+  /// Request message for the
+  /// [DeleteProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.DeleteProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class DeleteProcessorVersionRequest : pb::IMessage<DeleteProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6318,7 +6375,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// The long running operation metadata for delete processor version method.
+  /// The long-running operation metadata for the
+  /// [DeleteProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.DeleteProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class DeleteProcessorVersionMetadata : pb::IMessage<DeleteProcessorVersionMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6368,7 +6427,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int CommonMetadataFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6522,7 +6581,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for the deploy processor version method.
+  /// Request message for the
+  /// [DeployProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.DeployProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class DeployProcessorVersionRequest : pb::IMessage<DeployProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6717,7 +6778,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Response message for the deploy processor version method.
+  /// Response message for the
+  /// [DeployProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.DeployProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class DeployProcessorVersionResponse : pb::IMessage<DeployProcessorVersionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6872,7 +6935,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// The long running operation metadata for deploy processor version method.
+  /// The long-running operation metadata for the
+  /// [DeployProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.DeployProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class DeployProcessorVersionMetadata : pb::IMessage<DeployProcessorVersionMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6922,7 +6987,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int CommonMetadataFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7076,7 +7141,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for the undeploy processor version method.
+  /// Request message for the
+  /// [UndeployProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.UndeployProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class UndeployProcessorVersionRequest : pb::IMessage<UndeployProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7271,7 +7338,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Response message for the undeploy processor version method.
+  /// Response message for the
+  /// [UndeployProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.UndeployProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class UndeployProcessorVersionResponse : pb::IMessage<UndeployProcessorVersionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7426,7 +7495,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// The long running operation metadata for the undeploy processor version
+  /// The long-running operation metadata for the
+  /// [UndeployProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.UndeployProcessorVersion]
   /// method.
   /// </summary>
   public sealed partial class UndeployProcessorVersionMetadata : pb::IMessage<UndeployProcessorVersionMetadata>
@@ -7477,7 +7547,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int CommonMetadataFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7631,9 +7701,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for create a processor. Notice this request is sent to
-  /// a regionalized backend service, and if the processor type is not available
-  /// on that region, the creation will fail.
+  /// Request message for the
+  /// [CreateProcessor][google.cloud.documentai.v1beta3.DocumentProcessorService.CreateProcessor]
+  /// method. Notice this request is sent to a regionalized backend service. If the
+  /// [ProcessorType][google.cloud.documentai.v1beta3.ProcessorType] isn't
+  /// available in that region, the creation fails.
   /// </summary>
   public sealed partial class CreateProcessorRequest : pb::IMessage<CreateProcessorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7700,9 +7772,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int ProcessorFieldNumber = 2;
     private global::Google.Cloud.DocumentAI.V1Beta3.Processor processor_;
     /// <summary>
-    /// Required. The processor to be created, requires [processor_type] and
-    /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-    /// are set.
+    /// Required. The processor to be created, requires
+    /// [Processor.type][google.cloud.documentai.v1beta3.Processor.type] and
+    /// [Processor.display_name]][] to be set. Also, the
+    /// [Processor.kms_key_name][google.cloud.documentai.v1beta3.Processor.kms_key_name]
+    /// field must be set if the processor is under CMEK.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7880,7 +7954,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for the delete processor method.
+  /// Request message for the
+  /// [DeleteProcessor][google.cloud.documentai.v1beta3.DocumentProcessorService.DeleteProcessor]
+  /// method.
   /// </summary>
   public sealed partial class DeleteProcessorRequest : pb::IMessage<DeleteProcessorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8075,7 +8151,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// The long running operation metadata for delete processor method.
+  /// The long-running operation metadata for the
+  /// [DeleteProcessor][google.cloud.documentai.v1beta3.DocumentProcessorService.DeleteProcessor]
+  /// method.
   /// </summary>
   public sealed partial class DeleteProcessorMetadata : pb::IMessage<DeleteProcessorMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8125,7 +8203,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int CommonMetadataFieldNumber = 5;
     private global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8279,7 +8357,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for the enable processor method.
+  /// Request message for the
+  /// [EnableProcessor][google.cloud.documentai.v1beta3.DocumentProcessorService.EnableProcessor]
+  /// method.
   /// </summary>
   public sealed partial class EnableProcessorRequest : pb::IMessage<EnableProcessorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8474,8 +8554,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Response message for the enable processor method.
-  /// Intentionally empty proto for adding fields in future.
+  /// Response message for the
+  /// [EnableProcessor][google.cloud.documentai.v1beta3.DocumentProcessorService.EnableProcessor]
+  /// method. Intentionally empty proto for adding fields in future.
   /// </summary>
   public sealed partial class EnableProcessorResponse : pb::IMessage<EnableProcessorResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8630,7 +8711,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// The long running operation metadata for enable processor method.
+  /// The long-running operation metadata for the
+  /// [EnableProcessor][google.cloud.documentai.v1beta3.DocumentProcessorService.EnableProcessor]
+  /// method.
   /// </summary>
   public sealed partial class EnableProcessorMetadata : pb::IMessage<EnableProcessorMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8680,7 +8763,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int CommonMetadataFieldNumber = 5;
     private global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8834,7 +8917,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for the disable processor method.
+  /// Request message for the
+  /// [DisableProcessor][google.cloud.documentai.v1beta3.DocumentProcessorService.DisableProcessor]
+  /// method.
   /// </summary>
   public sealed partial class DisableProcessorRequest : pb::IMessage<DisableProcessorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9029,8 +9114,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Response message for the disable processor method.
-  /// Intentionally empty proto for adding fields in future.
+  /// Response message for the
+  /// [DisableProcessor][google.cloud.documentai.v1beta3.DocumentProcessorService.DisableProcessor]
+  /// method. Intentionally empty proto for adding fields in future.
   /// </summary>
   public sealed partial class DisableProcessorResponse : pb::IMessage<DisableProcessorResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9185,7 +9271,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// The long running operation metadata for disable processor method.
+  /// The long-running operation metadata for the
+  /// [DisableProcessor][google.cloud.documentai.v1beta3.DocumentProcessorService.DisableProcessor]
+  /// method.
   /// </summary>
   public sealed partial class DisableProcessorMetadata : pb::IMessage<DisableProcessorMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9235,7 +9323,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int CommonMetadataFieldNumber = 5;
     private global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9389,7 +9477,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for the set default processor version method.
+  /// Request message for the
+  /// [SetDefaultProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.SetDefaultProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class SetDefaultProcessorVersionRequest : pb::IMessage<SetDefaultProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9629,7 +9719,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Response message for set default processor version method.
+  /// Response message for the
+  /// [SetDefaultProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.SetDefaultProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class SetDefaultProcessorVersionResponse : pb::IMessage<SetDefaultProcessorVersionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9784,7 +9876,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// The long running operation metadata for set default processor version
+  /// The long-running operation metadata for the
+  /// [SetDefaultProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.SetDefaultProcessorVersion]
   /// method.
   /// </summary>
   public sealed partial class SetDefaultProcessorVersionMetadata : pb::IMessage<SetDefaultProcessorVersionMetadata>
@@ -9835,7 +9928,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int CommonMetadataFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9989,7 +10082,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for the create processor version method.
+  /// Request message for the
+  /// [TrainProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.TrainProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class TrainProcessorVersionRequest : pb::IMessage<TrainProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10030,6 +10125,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       documentSchema_ = other.documentSchema_ != null ? other.documentSchema_.Clone() : null;
       inputData_ = other.inputData_ != null ? other.inputData_.Clone() : null;
       baseProcessorVersion_ = other.baseProcessorVersion_;
+      switch (other.ProcessorFlagsCase) {
+        case ProcessorFlagsOneofCase.CustomDocumentExtractionOptions:
+          CustomDocumentExtractionOptions = other.CustomDocumentExtractionOptions.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10037,6 +10138,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainProcessorVersionRequest Clone() {
       return new TrainProcessorVersionRequest(this);
+    }
+
+    /// <summary>Field number for the "custom_document_extraction_options" field.</summary>
+    public const int CustomDocumentExtractionOptionsFieldNumber = 5;
+    /// <summary>
+    /// Options to control Custom Document Extraction (CDE) Processor.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions CustomDocumentExtractionOptions {
+      get { return processorFlagsCase_ == ProcessorFlagsOneofCase.CustomDocumentExtractionOptions ? (global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions) processorFlags_ : null; }
+      set {
+        processorFlags_ = value;
+        processorFlagsCase_ = value == null ? ProcessorFlagsOneofCase.None : ProcessorFlagsOneofCase.CustomDocumentExtractionOptions;
+      }
     }
 
     /// <summary>Field number for the "parent" field.</summary>
@@ -10090,7 +10206,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int InputDataFieldNumber = 4;
     private global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.InputData inputData_;
     /// <summary>
-    /// Optional. The input data used to train the `ProcessorVersion`.
+    /// Optional. The input data used to train the
+    /// [ProcessorVersion][google.cloud.documentai.v1beta3.ProcessorVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10118,6 +10235,26 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
     }
 
+    private object processorFlags_;
+    /// <summary>Enum of possible cases for the "processor_flags" oneof.</summary>
+    public enum ProcessorFlagsOneofCase {
+      None = 0,
+      CustomDocumentExtractionOptions = 5,
+    }
+    private ProcessorFlagsOneofCase processorFlagsCase_ = ProcessorFlagsOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProcessorFlagsOneofCase ProcessorFlagsCase {
+      get { return processorFlagsCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearProcessorFlags() {
+      processorFlagsCase_ = ProcessorFlagsOneofCase.None;
+      processorFlags_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -10133,11 +10270,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(CustomDocumentExtractionOptions, other.CustomDocumentExtractionOptions)) return false;
       if (Parent != other.Parent) return false;
       if (!object.Equals(ProcessorVersion, other.ProcessorVersion)) return false;
       if (!object.Equals(DocumentSchema, other.DocumentSchema)) return false;
       if (!object.Equals(InputData, other.InputData)) return false;
       if (BaseProcessorVersion != other.BaseProcessorVersion) return false;
+      if (ProcessorFlagsCase != other.ProcessorFlagsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10145,11 +10284,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (processorFlagsCase_ == ProcessorFlagsOneofCase.CustomDocumentExtractionOptions) hash ^= CustomDocumentExtractionOptions.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (processorVersion_ != null) hash ^= ProcessorVersion.GetHashCode();
       if (documentSchema_ != null) hash ^= DocumentSchema.GetHashCode();
       if (inputData_ != null) hash ^= InputData.GetHashCode();
       if (BaseProcessorVersion.Length != 0) hash ^= BaseProcessorVersion.GetHashCode();
+      hash ^= (int) processorFlagsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10179,6 +10320,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (inputData_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(InputData);
+      }
+      if (processorFlagsCase_ == ProcessorFlagsOneofCase.CustomDocumentExtractionOptions) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CustomDocumentExtractionOptions);
       }
       if (BaseProcessorVersion.Length != 0) {
         output.WriteRawTag(66);
@@ -10210,6 +10355,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(34);
         output.WriteMessage(InputData);
       }
+      if (processorFlagsCase_ == ProcessorFlagsOneofCase.CustomDocumentExtractionOptions) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CustomDocumentExtractionOptions);
+      }
       if (BaseProcessorVersion.Length != 0) {
         output.WriteRawTag(66);
         output.WriteString(BaseProcessorVersion);
@@ -10228,6 +10377,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (processorFlagsCase_ == ProcessorFlagsOneofCase.CustomDocumentExtractionOptions) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomDocumentExtractionOptions);
+      }
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
@@ -10279,6 +10431,15 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (other.BaseProcessorVersion.Length != 0) {
         BaseProcessorVersion = other.BaseProcessorVersion;
       }
+      switch (other.ProcessorFlagsCase) {
+        case ProcessorFlagsOneofCase.CustomDocumentExtractionOptions:
+          if (CustomDocumentExtractionOptions == null) {
+            CustomDocumentExtractionOptions = new global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions();
+          }
+          CustomDocumentExtractionOptions.MergeFrom(other.CustomDocumentExtractionOptions);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -10310,6 +10471,15 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               InputData = new global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.InputData();
             }
             input.ReadMessage(InputData);
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions subBuilder = new global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions();
+            if (processorFlagsCase_ == ProcessorFlagsOneofCase.CustomDocumentExtractionOptions) {
+              subBuilder.MergeFrom(CustomDocumentExtractionOptions);
+            }
+            input.ReadMessage(subBuilder);
+            CustomDocumentExtractionOptions = subBuilder;
             break;
           }
           case 66: {
@@ -10356,6 +10526,15 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             input.ReadMessage(InputData);
             break;
           }
+          case 42: {
+            global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions subBuilder = new global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions();
+            if (processorFlagsCase_ == ProcessorFlagsOneofCase.CustomDocumentExtractionOptions) {
+              subBuilder.MergeFrom(CustomDocumentExtractionOptions);
+            }
+            input.ReadMessage(subBuilder);
+            CustomDocumentExtractionOptions = subBuilder;
+            break;
+          }
           case 66: {
             BaseProcessorVersion = input.ReadString();
             break;
@@ -10378,7 +10557,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The input data used to train a new `ProcessorVersion`.
+      /// The input data used to train a new
+      /// [ProcessorVersion][google.cloud.documentai.v1beta3.ProcessorVersion].
       /// </summary>
       public sealed partial class InputData : pb::IMessage<InputData>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10630,13 +10810,228 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
 
       }
 
+      /// <summary>
+      /// Options to control the training of the Custom Document Extraction (CDE)
+      /// Processor.
+      /// </summary>
+      public sealed partial class CustomDocumentExtractionOptions : pb::IMessage<CustomDocumentExtractionOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CustomDocumentExtractionOptions> _parser = new pb::MessageParser<CustomDocumentExtractionOptions>(() => new CustomDocumentExtractionOptions());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CustomDocumentExtractionOptions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomDocumentExtractionOptions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomDocumentExtractionOptions(CustomDocumentExtractionOptions other) : this() {
+          trainingMethod_ = other.trainingMethod_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomDocumentExtractionOptions Clone() {
+          return new CustomDocumentExtractionOptions(this);
+        }
+
+        /// <summary>Field number for the "training_method" field.</summary>
+        public const int TrainingMethodFieldNumber = 3;
+        private global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions.Types.TrainingMethod trainingMethod_ = global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions.Types.TrainingMethod.Unspecified;
+        /// <summary>
+        /// Training method to use for CDE training.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions.Types.TrainingMethod TrainingMethod {
+          get { return trainingMethod_; }
+          set {
+            trainingMethod_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CustomDocumentExtractionOptions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CustomDocumentExtractionOptions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (TrainingMethod != other.TrainingMethod) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (TrainingMethod != global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions.Types.TrainingMethod.Unspecified) hash ^= TrainingMethod.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (TrainingMethod != global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions.Types.TrainingMethod.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) TrainingMethod);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (TrainingMethod != global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions.Types.TrainingMethod.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) TrainingMethod);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (TrainingMethod != global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions.Types.TrainingMethod.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TrainingMethod);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CustomDocumentExtractionOptions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.TrainingMethod != global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions.Types.TrainingMethod.Unspecified) {
+            TrainingMethod = other.TrainingMethod;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 24: {
+                TrainingMethod = (global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions.Types.TrainingMethod) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 24: {
+                TrainingMethod = (global::Google.Cloud.DocumentAI.V1Beta3.TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions.Types.TrainingMethod) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the CustomDocumentExtractionOptions message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Training Method for CDE. TRAINING_METHOD_UNSPECIFIED will fallback to
+          /// MODEL_BASED.
+          /// </summary>
+          public enum TrainingMethod {
+            [pbr::OriginalName("TRAINING_METHOD_UNSPECIFIED")] Unspecified = 0,
+            [pbr::OriginalName("MODEL_BASED")] ModelBased = 1,
+            [pbr::OriginalName("TEMPLATE_BASED")] TemplateBased = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
     }
     #endregion
 
   }
 
   /// <summary>
-  /// The response for the TrainProcessorVersion method.
+  /// The response for
+  /// [TrainProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.TrainProcessorVersion].
   /// </summary>
   public sealed partial class TrainProcessorVersionResponse : pb::IMessage<TrainProcessorVersionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10883,7 +11278,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int CommonMetadataFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11439,7 +11834,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Request message for review document method.
+  /// Request message for the
+  /// [ReviewDocument][google.cloud.documentai.v1beta3.DocumentProcessorService.ReviewDocument]
+  /// method.
   /// </summary>
   public sealed partial class ReviewDocumentRequest : pb::IMessage<ReviewDocumentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11514,8 +11911,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int HumanReviewConfigFieldNumber = 1;
     private string humanReviewConfig_ = "";
     /// <summary>
-    /// Required. The resource name of the HumanReviewConfig that the document will
-    /// be reviewed with.
+    /// Required. The resource name of the
+    /// [HumanReviewConfig][google.cloud.documentai.v1beta3.HumanReviewConfig] that
+    /// the document will be reviewed with.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11920,7 +12318,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Response message for review document method.
+  /// Response message for the
+  /// [ReviewDocument][google.cloud.documentai.v1beta3.DocumentProcessorService.ReviewDocument]
+  /// method.
   /// </summary>
   public sealed partial class ReviewDocumentResponse : pb::IMessage<ReviewDocumentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12222,7 +12622,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// The long running operation metadata for review document method.
+  /// The long-running operation metadata for the
+  /// [ReviewDocument][google.cloud.documentai.v1beta3.DocumentProcessorService.ReviewDocument]
+  /// method.
   /// </summary>
   public sealed partial class ReviewDocumentOperationMetadata : pb::IMessage<ReviewDocumentOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12338,7 +12740,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int CommonMetadataFieldNumber = 5;
     private global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12648,7 +13050,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// State of the longrunning operation.
+      /// State of the long-running operation.
       /// </summary>
       public enum State {
         /// <summary>
@@ -12683,7 +13085,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Evaluates the given ProcessorVersion against the supplied documents.
+  /// Evaluates the given
+  /// [ProcessorVersion][google.cloud.documentai.v1beta3.ProcessorVersion] against
+  /// the supplied documents.
   /// </summary>
   public sealed partial class EvaluateProcessorVersionRequest : pb::IMessage<EvaluateProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12931,7 +13335,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Metadata of the EvaluateProcessorVersion method.
+  /// Metadata of the
+  /// [EvaluateProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.EvaluateProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class EvaluateProcessorVersionMetadata : pb::IMessage<EvaluateProcessorVersionMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12981,7 +13387,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int CommonMetadataFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13135,7 +13541,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Metadata of the EvaluateProcessorVersion method.
+  /// Response of the
+  /// [EvaluateProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.EvaluateProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class EvaluateProcessorVersionResponse : pb::IMessage<EvaluateProcessorVersionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -13527,7 +13935,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Retrieves a list of evaluations for a given ProcessorVersion.
+  /// Retrieves a list of evaluations for a given
+  /// [ProcessorVersion][google.cloud.documentai.v1beta3.ProcessorVersion].
   /// </summary>
   public sealed partial class ListEvaluationsRequest : pb::IMessage<ListEvaluationsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -13598,8 +14007,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     private int pageSize_;
     /// <summary>
     /// The standard list page size.
-    /// If unspecified, at most 5 evaluations will be returned.
-    /// The maximum value is 100; values above 100 will be coerced to 100.
+    /// If unspecified, at most `5` evaluations are returned.
+    /// The maximum value is `100`. Values above `100` are coerced to `100`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13808,7 +14217,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// The response from ListEvaluations.
+  /// The response from `ListEvaluations`.
   /// </summary>
   public sealed partial class ListEvaluationsResponse : pb::IMessage<ListEvaluationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -14033,16 +14442,23 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// The request message for the ImportProcessorVersion method.
-  /// This method requires Document AI Service Agent of the destination project in
-  /// the source project's IAM with [Document AI Editor
-  /// role](https://cloud.google.com/document-ai/docs/access-control/iam-roles).
+  /// The request message for the
+  /// [ImportProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.ImportProcessorVersion]
+  /// method. Requirements:
   ///
-  /// The destination project is specified as part of the `parent` field.
-  /// The source project is specified as part of `source` field.
+  /// - The source processor version and destination processor
+  /// must be in the same location.
+  /// - The Document AI [Service
+  /// Agent](https://cloud.google.com/iam/docs/service-agents) of the destination
+  /// project must have [Document AI Editor
+  /// role](https://cloud.google.com/document-ai/docs/access-control/iam-roles) on
+  /// the source project.
   ///
-  /// The Service Agent for Document AI can be found in
-  /// https://cloud.google.com/iam/docs/service-agents.
+  /// The destination project is specified as part of the
+  /// [parent][google.cloud.documentai.v1beta3.ImportProcessorVersionRequest.parent]
+  /// field. The source project is specified as part of the
+  /// [source][google.cloud.documentai.v1beta3.ImportProcessorVersionRequest.processor_version_source]
+  /// field.
   /// </summary>
   public sealed partial class ImportProcessorVersionRequest : pb::IMessage<ImportProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -14097,7 +14513,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     /// <summary>Field number for the "processor_version_source" field.</summary>
     public const int ProcessorVersionSourceFieldNumber = 2;
     /// <summary>
-    /// The source processor version to import from.
+    /// The source processor version to import from. The source processor version
+    /// and destination processor need to be in the same environment and region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14323,7 +14740,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// The response message for the ImportProcessorVersion method.
+  /// The response message for the
+  /// [ImportProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.ImportProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class ImportProcessorVersionResponse : pb::IMessage<ImportProcessorVersionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -14518,7 +14937,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// The long running operation metadata for the ImportProcessorVersion
+  /// The long-running operation metadata for the
+  /// [ImportProcessorVersion][google.cloud.documentai.v1beta3.DocumentProcessorService.ImportProcessorVersion]
   /// method.
   /// </summary>
   public sealed partial class ImportProcessorVersionMetadata : pb::IMessage<ImportProcessorVersionMetadata>
@@ -14569,7 +14989,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int CommonMetadataFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1Beta3.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata for the long running operation.
+    /// The basic metadata for the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

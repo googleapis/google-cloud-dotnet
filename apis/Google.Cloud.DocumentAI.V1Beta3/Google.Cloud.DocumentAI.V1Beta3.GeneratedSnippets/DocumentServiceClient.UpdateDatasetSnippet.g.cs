@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START documentai_v1beta3_generated_DocumentProcessorService_TrainProcessorVersion_sync]
+    // [START documentai_v1beta3_generated_DocumentService_UpdateDataset_sync_flattened]
     using Google.Cloud.DocumentAI.V1Beta3;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
-    public sealed partial class GeneratedDocumentProcessorServiceClientSnippets
+    public sealed partial class GeneratedDocumentServiceClientSnippets
     {
-        /// <summary>Snippet for TrainProcessorVersion</summary>
+        /// <summary>Snippet for UpdateDataset</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,39 +31,32 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void TrainProcessorVersionRequestObject()
+        public void UpdateDataset()
         {
             // Create client
-            DocumentProcessorServiceClient documentProcessorServiceClient = DocumentProcessorServiceClient.Create();
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
             // Initialize request argument(s)
-            TrainProcessorVersionRequest request = new TrainProcessorVersionRequest
-            {
-                ParentAsProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
-                ProcessorVersion = new ProcessorVersion(),
-                InputData = new TrainProcessorVersionRequest.Types.InputData(),
-                CustomDocumentExtractionOptions = new TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions(),
-                BaseProcessorVersion = "",
-                DocumentSchema = new DocumentSchema(),
-            };
+            Dataset dataset = new Dataset();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> response = documentProcessorServiceClient.TrainProcessorVersion(request);
+            Operation<Dataset, UpdateDatasetOperationMetadata> response = documentServiceClient.UpdateDataset(dataset, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Dataset, UpdateDatasetOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            TrainProcessorVersionResponse result = completedResponse.Result;
+            Dataset result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<TrainProcessorVersionResponse, TrainProcessorVersionMetadata> retrievedResponse = documentProcessorServiceClient.PollOnceTrainProcessorVersion(operationName);
+            Operation<Dataset, UpdateDatasetOperationMetadata> retrievedResponse = documentServiceClient.PollOnceUpdateDataset(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                TrainProcessorVersionResponse retrievedResult = retrievedResponse.Result;
+                Dataset retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END documentai_v1beta3_generated_DocumentProcessorService_TrainProcessorVersion_sync]
+    // [END documentai_v1beta3_generated_DocumentService_UpdateDataset_sync_flattened]
 }
