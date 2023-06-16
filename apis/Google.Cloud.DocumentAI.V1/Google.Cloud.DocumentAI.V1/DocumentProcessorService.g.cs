@@ -388,7 +388,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for the process document method.
+  /// Request message for the
+  /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument]
+  /// method.
   /// </summary>
   public sealed partial class ProcessRequest : pb::IMessage<ProcessRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -503,8 +505,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int SkipHumanReviewFieldNumber = 3;
     private bool skipHumanReview_;
     /// <summary>
-    /// Whether Human Review feature should be skipped for this request. Default to
-    /// false.
+    /// Whether human review should be skipped for this request. Default to
+    /// `false`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -519,9 +521,10 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int FieldMaskFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
     /// <summary>
-    /// Specifies which fields to include in ProcessResponse's document.
-    /// Only supports top level document and pages field so it must be in the form
-    /// of `{document_field_name}` or `pages.{page_field_name}`.
+    /// Specifies which fields to include in the
+    /// [ProcessResponse.document][google.cloud.documentai.v1.ProcessResponse.document]
+    /// output. Only supports top-level document and pages field, so it must be in
+    /// the form of `{document_field_name}` or `pages.{page_field_name}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -906,9 +909,11 @@ namespace Google.Cloud.DocumentAI.V1 {
     private string humanReviewOperation_ = "";
     /// <summary>
     /// The name of the operation triggered by the processed document. This field
-    /// is populated only when the [state] is [HUMAN_REVIEW_IN_PROGRESS]. It has
-    /// the same response type and metadata as the long running operation returned
-    /// by [ReviewDocument] method.
+    /// is populated only when the
+    /// [state][google.cloud.documentai.v1.HumanReviewStatus.state] is
+    /// `HUMAN_REVIEW_IN_PROGRESS`. It has the same response type and metadata as
+    /// the long-running operation returned by
+    /// [ReviewDocument][google.cloud.documentai.v1.DocumentProcessorService.ReviewDocument].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1113,7 +1118,7 @@ namespace Google.Cloud.DocumentAI.V1 {
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Human review is skipped for the document. This can happen because human
-        /// review is not enabled on the processor or the processing request has
+        /// review isn't enabled on the processor or the processing request has
         /// been set to skip this document.
         /// </summary>
         [pbr::OriginalName("SKIPPED")] Skipped = 1,
@@ -1127,7 +1132,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         [pbr::OriginalName("IN_PROGRESS")] InProgress = 3,
         /// <summary>
         /// Some error happened during triggering human review, see the
-        /// [state_message] for details.
+        /// [state_message][google.cloud.documentai.v1.HumanReviewStatus.state_message]
+        /// for details.
         /// </summary>
         [pbr::OriginalName("ERROR")] Error = 4,
       }
@@ -1138,7 +1144,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Response message for the process document method.
+  /// Response message for the
+  /// [ProcessDocument][google.cloud.documentai.v1.DocumentProcessorService.ProcessDocument]
+  /// method.
   /// </summary>
   public sealed partial class ProcessResponse : pb::IMessage<ProcessResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1392,7 +1400,8 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for batch process document method.
+  /// Request message for
+  /// [BatchProcessDocuments][google.cloud.documentai.v1.DocumentProcessorService.BatchProcessDocuments].
   /// </summary>
   public sealed partial class BatchProcessRequest : pb::IMessage<BatchProcessRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1465,7 +1474,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int InputDocumentsFieldNumber = 5;
     private global::Google.Cloud.DocumentAI.V1.BatchDocumentsInputConfig inputDocuments_;
     /// <summary>
-    /// The input documents for batch process.
+    /// The input documents for the
+    /// [BatchProcessDocuments][google.cloud.documentai.v1.DocumentProcessorService.BatchProcessDocuments]
+    /// method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1480,7 +1491,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int DocumentOutputConfigFieldNumber = 6;
     private global::Google.Cloud.DocumentAI.V1.DocumentOutputConfig documentOutputConfig_;
     /// <summary>
-    /// The overall output config for batch process.
+    /// The output configuration for the
+    /// [BatchProcessDocuments][google.cloud.documentai.v1.DocumentProcessorService.BatchProcessDocuments]
+    /// method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1495,8 +1508,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int SkipHumanReviewFieldNumber = 4;
     private bool skipHumanReview_;
     /// <summary>
-    /// Whether Human Review feature should be skipped for this request. Default to
-    /// false.
+    /// Whether human review should be skipped for this request. Default to
+    /// `false`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1731,7 +1744,8 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Response message for batch process document method.
+  /// Response message for
+  /// [BatchProcessDocuments][google.cloud.documentai.v1.DocumentProcessorService.BatchProcessDocuments].
   /// </summary>
   public sealed partial class BatchProcessResponse : pb::IMessage<BatchProcessResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1886,7 +1900,8 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// The long running operation metadata for batch process method.
+  /// The long-running operation metadata for
+  /// [BatchProcessDocuments][google.cloud.documentai.v1.DocumentProcessorService.BatchProcessDocuments].
   /// </summary>
   public sealed partial class BatchProcessMetadata : pb::IMessage<BatchProcessMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2339,10 +2354,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int InputGcsSourceFieldNumber = 1;
         private string inputGcsSource_ = "";
         /// <summary>
-        /// The source of the document, same as the [input_gcs_source] field in the
-        /// request when the batch process started. The batch process is started by
-        /// take snapshot of that document, since a user can move or change that
-        /// document during the process.
+        /// The source of the document, same as the
+        /// [input_gcs_source][google.cloud.documentai.v1.BatchProcessMetadata.IndividualProcessStatus.input_gcs_source]
+        /// field in the request when the batch process started.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2372,7 +2386,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int OutputGcsDestinationFieldNumber = 3;
         private string outputGcsDestination_ = "";
         /// <summary>
-        /// The output_gcs_destination (in the request as `output_gcs_destination`)
+        /// The Cloud Storage output destination (in the request as
+        /// [DocumentOutputConfig.GcsOutputConfig.gcs_uri][google.cloud.documentai.v1.DocumentOutputConfig.GcsOutputConfig.gcs_uri])
         /// of the processed document if it was successful, otherwise empty.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2628,7 +2643,10 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for fetch processor types.
+  /// Request message for the
+  /// [FetchProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.FetchProcessorTypes]
+  /// method. Some processor types may require the project be added to an
+  /// allowlist.
   /// </summary>
   public sealed partial class FetchProcessorTypesRequest : pb::IMessage<FetchProcessorTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2678,9 +2696,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The project of processor type to list.
-    /// The available processor types may depend on the allow-listing on projects.
-    /// Format: `projects/{project}/locations/{location}`
+    /// Required. The location of processor types to list.
+    /// Format: `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2825,7 +2842,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Response message for fetch processor types.
+  /// Response message for the
+  /// [FetchProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.FetchProcessorTypes]
+  /// method.
   /// </summary>
   public sealed partial class FetchProcessorTypesResponse : pb::IMessage<FetchProcessorTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3009,7 +3028,10 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for list processor types.
+  /// Request message for the
+  /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+  /// method. Some processor types may require the project be added to an
+  /// allowlist.
   /// </summary>
   public sealed partial class ListProcessorTypesRequest : pb::IMessage<ListProcessorTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3061,9 +3083,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The location of processor type to list.
-    /// The available processor types may depend on the allow-listing on projects.
-    /// Format: `projects/{project}/locations/{location}`
+    /// Required. The location of processor types to list.
+    /// Format: `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3079,8 +3100,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     private int pageSize_;
     /// <summary>
     /// The maximum number of processor types to return.
-    /// If unspecified, at most 100 processor types will be returned.
-    /// The maximum value is 500; values above 500 will be coerced to 500.
+    /// If unspecified, at most `100` processor types will be returned.
+    /// The maximum value is `500`. Values above `500` will be coerced to `500`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3288,7 +3309,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Response message for list processor types.
+  /// Response message for the
+  /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+  /// method.
   /// </summary>
   public sealed partial class ListProcessorTypesResponse : pb::IMessage<ListProcessorTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3581,8 +3604,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     private int pageSize_;
     /// <summary>
     /// The maximum number of processors to return.
-    /// If unspecified, at most 50 processors will be returned.
-    /// The maximum value is 100; values above 100 will be coerced to 100.
+    /// If unspecified, at most `50` processors will be returned.
+    /// The maximum value is `100`. Values above `100` will be coerced to `100`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3791,7 +3814,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Response message for list processors.
+  /// Response message for the
+  /// [ListProcessors][google.cloud.documentai.v1.DocumentProcessorService.ListProcessors]
+  /// method.
   /// </summary>
   public sealed partial class ListProcessorsResponse : pb::IMessage<ListProcessorsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4015,7 +4040,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for get processor.
+  /// Request message for the
+  /// [GetProcessorType][google.cloud.documentai.v1.DocumentProcessorService.GetProcessorType]
+  /// method.
   /// </summary>
   public sealed partial class GetProcessorTypeRequest : pb::IMessage<GetProcessorTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4210,7 +4237,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for get processor.
+  /// Request message for the
+  /// [GetProcessor][google.cloud.documentai.v1.DocumentProcessorService.GetProcessor]
+  /// method.
   /// </summary>
   public sealed partial class GetProcessorRequest : pb::IMessage<GetProcessorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4405,7 +4434,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for get processor version.
+  /// Request message for the
+  /// [GetProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.GetProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class GetProcessorVersionRequest : pb::IMessage<GetProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4670,8 +4701,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     private int pageSize_;
     /// <summary>
     /// The maximum number of processor versions to return.
-    /// If unspecified, at most 10 processor versions will be returned.
-    /// The maximum value is 20; values above 20 will be coerced to 20.
+    /// If unspecified, at most `10` processor versions will be returned.
+    /// The maximum value is `20`. Values above `20` will be coerced to `20`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4880,7 +4911,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Response message for list processors.
+  /// Response message for the
+  /// [ListProcessorVersions][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorVersions]
+  /// method.
   /// </summary>
   public sealed partial class ListProcessorVersionsResponse : pb::IMessage<ListProcessorVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5104,7 +5137,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for the delete processor version method.
+  /// Request message for the
+  /// [DeleteProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.DeleteProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class DeleteProcessorVersionRequest : pb::IMessage<DeleteProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5299,7 +5334,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// The long running operation metadata for delete processor version method.
+  /// The long-running operation metadata for the
+  /// [DeleteProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.DeleteProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class DeleteProcessorVersionMetadata : pb::IMessage<DeleteProcessorVersionMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5349,7 +5386,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int CommonMetadataFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5503,7 +5540,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for the deploy processor version method.
+  /// Request message for the
+  /// [DeployProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.DeployProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class DeployProcessorVersionRequest : pb::IMessage<DeployProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5698,7 +5737,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Response message for the deploy processor version method.
+  /// Response message for the
+  /// [DeployProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.DeployProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class DeployProcessorVersionResponse : pb::IMessage<DeployProcessorVersionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5853,7 +5894,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// The long running operation metadata for deploy processor version method.
+  /// The long-running operation metadata for the
+  /// [DeployProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.DeployProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class DeployProcessorVersionMetadata : pb::IMessage<DeployProcessorVersionMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5903,7 +5946,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int CommonMetadataFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6057,7 +6100,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for the undeploy processor version method.
+  /// Request message for the
+  /// [UndeployProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.UndeployProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class UndeployProcessorVersionRequest : pb::IMessage<UndeployProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6252,7 +6297,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Response message for the undeploy processor version method.
+  /// Response message for the
+  /// [UndeployProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.UndeployProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class UndeployProcessorVersionResponse : pb::IMessage<UndeployProcessorVersionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6407,7 +6454,8 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// The long running operation metadata for the undeploy processor version
+  /// The long-running operation metadata for the
+  /// [UndeployProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.UndeployProcessorVersion]
   /// method.
   /// </summary>
   public sealed partial class UndeployProcessorVersionMetadata : pb::IMessage<UndeployProcessorVersionMetadata>
@@ -6458,7 +6506,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int CommonMetadataFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6612,9 +6660,11 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for create a processor. Notice this request is sent to
-  /// a regionalized backend service, and if the processor type is not available
-  /// on that region, the creation will fail.
+  /// Request message for the
+  /// [CreateProcessor][google.cloud.documentai.v1.DocumentProcessorService.CreateProcessor]
+  /// method. Notice this request is sent to a regionalized backend service. If the
+  /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] isn't available in
+  /// that region, the creation fails.
   /// </summary>
   public sealed partial class CreateProcessorRequest : pb::IMessage<CreateProcessorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6681,9 +6731,11 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int ProcessorFieldNumber = 2;
     private global::Google.Cloud.DocumentAI.V1.Processor processor_;
     /// <summary>
-    /// Required. The processor to be created, requires [processor_type] and
-    /// [display_name] to be set. Also, the processor is under CMEK if CMEK fields
-    /// are set.
+    /// Required. The processor to be created, requires
+    /// [Processor.type][google.cloud.documentai.v1.Processor.type] and
+    /// [Processor.display_name]][] to be set. Also, the
+    /// [Processor.kms_key_name][google.cloud.documentai.v1.Processor.kms_key_name]
+    /// field must be set if the processor is under CMEK.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6861,7 +6913,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for the delete processor method.
+  /// Request message for the
+  /// [DeleteProcessor][google.cloud.documentai.v1.DocumentProcessorService.DeleteProcessor]
+  /// method.
   /// </summary>
   public sealed partial class DeleteProcessorRequest : pb::IMessage<DeleteProcessorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7056,7 +7110,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// The long running operation metadata for delete processor method.
+  /// The long-running operation metadata for the
+  /// [DeleteProcessor][google.cloud.documentai.v1.DocumentProcessorService.DeleteProcessor]
+  /// method.
   /// </summary>
   public sealed partial class DeleteProcessorMetadata : pb::IMessage<DeleteProcessorMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7106,7 +7162,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int CommonMetadataFieldNumber = 5;
     private global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7260,7 +7316,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for the enable processor method.
+  /// Request message for the
+  /// [EnableProcessor][google.cloud.documentai.v1.DocumentProcessorService.EnableProcessor]
+  /// method.
   /// </summary>
   public sealed partial class EnableProcessorRequest : pb::IMessage<EnableProcessorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7455,8 +7513,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Response message for the enable processor method.
-  /// Intentionally empty proto for adding fields in future.
+  /// Response message for the
+  /// [EnableProcessor][google.cloud.documentai.v1.DocumentProcessorService.EnableProcessor]
+  /// method. Intentionally empty proto for adding fields in future.
   /// </summary>
   public sealed partial class EnableProcessorResponse : pb::IMessage<EnableProcessorResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7611,7 +7670,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// The long running operation metadata for enable processor method.
+  /// The long-running operation metadata for the
+  /// [EnableProcessor][google.cloud.documentai.v1.DocumentProcessorService.EnableProcessor]
+  /// method.
   /// </summary>
   public sealed partial class EnableProcessorMetadata : pb::IMessage<EnableProcessorMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7661,7 +7722,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int CommonMetadataFieldNumber = 5;
     private global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7815,7 +7876,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for the disable processor method.
+  /// Request message for the
+  /// [DisableProcessor][google.cloud.documentai.v1.DocumentProcessorService.DisableProcessor]
+  /// method.
   /// </summary>
   public sealed partial class DisableProcessorRequest : pb::IMessage<DisableProcessorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8010,8 +8073,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Response message for the disable processor method.
-  /// Intentionally empty proto for adding fields in future.
+  /// Response message for the
+  /// [DisableProcessor][google.cloud.documentai.v1.DocumentProcessorService.DisableProcessor]
+  /// method. Intentionally empty proto for adding fields in future.
   /// </summary>
   public sealed partial class DisableProcessorResponse : pb::IMessage<DisableProcessorResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8166,7 +8230,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// The long running operation metadata for disable processor method.
+  /// The long-running operation metadata for the
+  /// [DisableProcessor][google.cloud.documentai.v1.DocumentProcessorService.DisableProcessor]
+  /// method.
   /// </summary>
   public sealed partial class DisableProcessorMetadata : pb::IMessage<DisableProcessorMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8216,7 +8282,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int CommonMetadataFieldNumber = 5;
     private global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8370,7 +8436,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for the set default processor version method.
+  /// Request message for the
+  /// [SetDefaultProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.SetDefaultProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class SetDefaultProcessorVersionRequest : pb::IMessage<SetDefaultProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8610,7 +8678,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Response message for set default processor version method.
+  /// Response message for the
+  /// [SetDefaultProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.SetDefaultProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class SetDefaultProcessorVersionResponse : pb::IMessage<SetDefaultProcessorVersionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8765,7 +8835,8 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// The long running operation metadata for set default processor version
+  /// The long-running operation metadata for the
+  /// [SetDefaultProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.SetDefaultProcessorVersion]
   /// method.
   /// </summary>
   public sealed partial class SetDefaultProcessorVersionMetadata : pb::IMessage<SetDefaultProcessorVersionMetadata>
@@ -8816,7 +8887,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int CommonMetadataFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8970,7 +9041,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for the create processor version method.
+  /// Request message for the
+  /// [TrainProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.TrainProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class TrainProcessorVersionRequest : pb::IMessage<TrainProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9071,7 +9144,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int InputDataFieldNumber = 4;
     private global::Google.Cloud.DocumentAI.V1.TrainProcessorVersionRequest.Types.InputData inputData_;
     /// <summary>
-    /// Optional. The input data used to train the `ProcessorVersion`.
+    /// Optional. The input data used to train the
+    /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9359,7 +9433,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The input data used to train a new `ProcessorVersion`.
+      /// The input data used to train a new
+      /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion].
       /// </summary>
       public sealed partial class InputData : pb::IMessage<InputData>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9617,7 +9692,8 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// The response for the TrainProcessorVersion method.
+  /// The response for
+  /// [TrainProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.TrainProcessorVersion].
   /// </summary>
   public sealed partial class TrainProcessorVersionResponse : pb::IMessage<TrainProcessorVersionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9864,7 +9940,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int CommonMetadataFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10420,7 +10496,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Request message for review document method.
+  /// Request message for the
+  /// [ReviewDocument][google.cloud.documentai.v1.DocumentProcessorService.ReviewDocument]
+  /// method.
   /// </summary>
   public sealed partial class ReviewDocumentRequest : pb::IMessage<ReviewDocumentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10494,8 +10572,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int HumanReviewConfigFieldNumber = 1;
     private string humanReviewConfig_ = "";
     /// <summary>
-    /// Required. The resource name of the HumanReviewConfig that the document will
-    /// be reviewed with.
+    /// Required. The resource name of the
+    /// [HumanReviewConfig][google.cloud.documentai.v1.HumanReviewConfig] that the
+    /// document will be reviewed with.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10851,7 +10930,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Response message for review document method.
+  /// Response message for the
+  /// [ReviewDocument][google.cloud.documentai.v1.DocumentProcessorService.ReviewDocument]
+  /// method.
   /// </summary>
   public sealed partial class ReviewDocumentResponse : pb::IMessage<ReviewDocumentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11153,7 +11234,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// The long running operation metadata for review document method.
+  /// The long-running operation metadata for the
+  /// [ReviewDocument][google.cloud.documentai.v1.DocumentProcessorService.ReviewDocument]
+  /// method.
   /// </summary>
   public sealed partial class ReviewDocumentOperationMetadata : pb::IMessage<ReviewDocumentOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11204,7 +11287,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int CommonMetadataFieldNumber = 5;
     private global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11397,7 +11480,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Evaluates the given ProcessorVersion against the supplied documents.
+  /// Evaluates the given
+  /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion] against the
+  /// supplied documents.
   /// </summary>
   public sealed partial class EvaluateProcessorVersionRequest : pb::IMessage<EvaluateProcessorVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11645,7 +11730,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Metadata of the EvaluateProcessorVersion method.
+  /// Metadata of the
+  /// [EvaluateProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.EvaluateProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class EvaluateProcessorVersionMetadata : pb::IMessage<EvaluateProcessorVersionMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11695,7 +11782,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int CommonMetadataFieldNumber = 1;
     private global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata commonMetadata_;
     /// <summary>
-    /// The basic metadata of the long running operation.
+    /// The basic metadata of the long-running operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11849,7 +11936,9 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Metadata of the EvaluateProcessorVersion method.
+  /// Response of the
+  /// [EvaluateProcessorVersion][google.cloud.documentai.v1.DocumentProcessorService.EvaluateProcessorVersion]
+  /// method.
   /// </summary>
   public sealed partial class EvaluateProcessorVersionResponse : pb::IMessage<EvaluateProcessorVersionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12241,7 +12330,8 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// Retrieves a list of evaluations for a given ProcessorVersion.
+  /// Retrieves a list of evaluations for a given
+  /// [ProcessorVersion][google.cloud.documentai.v1.ProcessorVersion].
   /// </summary>
   public sealed partial class ListEvaluationsRequest : pb::IMessage<ListEvaluationsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12312,8 +12402,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     private int pageSize_;
     /// <summary>
     /// The standard list page size.
-    /// If unspecified, at most 5 evaluations will be returned.
-    /// The maximum value is 100; values above 100 will be coerced to 100.
+    /// If unspecified, at most `5` evaluations are returned.
+    /// The maximum value is `100`. Values above `100` are coerced to `100`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12522,7 +12612,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   }
 
   /// <summary>
-  /// The response from ListEvaluations.
+  /// The response from `ListEvaluations`.
   /// </summary>
   public sealed partial class ListEvaluationsResponse : pb::IMessage<ListEvaluationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

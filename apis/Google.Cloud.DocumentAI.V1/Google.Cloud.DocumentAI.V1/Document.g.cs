@@ -32,7 +32,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             "b29nbGUvcnBjL3N0YXR1cy5wcm90bxoXZ29vZ2xlL3R5cGUvY29sb3IucHJv",
             "dG8aFmdvb2dsZS90eXBlL2RhdGUucHJvdG8aGmdvb2dsZS90eXBlL2RhdGV0",
             "aW1lLnByb3RvGhdnb29nbGUvdHlwZS9tb25leS5wcm90bxogZ29vZ2xlL3R5",
-            "cGUvcG9zdGFsX2FkZHJlc3MucHJvdG8iz0EKCERvY3VtZW50EhIKA3VyaRgB",
+            "cGUvcG9zdGFsX2FkZHJlc3MucHJvdG8ih0UKCERvY3VtZW50EhIKA3VyaRgB",
             "IAEoCUID4EEBSAASFgoHY29udGVudBgCIAEoDEID4EEBSAASEQoJbWltZV90",
             "eXBlGAMgASgJEhEKBHRleHQYBCABKAlCA+BBARJDCgt0ZXh0X3N0eWxlcxgF",
             "IAMoCzIqLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50LlN0",
@@ -55,7 +55,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             "BSABKAkSFwoPdGV4dF9kZWNvcmF0aW9uGAYgASgJEkYKCWZvbnRfc2l6ZRgH",
             "IAEoCzIzLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50LlN0",
             "eWxlLkZvbnRTaXplEhMKC2ZvbnRfZmFtaWx5GAggASgJGiYKCEZvbnRTaXpl",
-            "EgwKBHNpemUYASABKAISDAoEdW5pdBgCIAEoCRqKJgoEUGFnZRITCgtwYWdl",
+            "EgwKBHNpemUYASABKAISDAoEdW5pdBgCIAEoCRrCKQoEUGFnZRITCgtwYWdl",
             "X251bWJlchgBIAEoBRI+CgVpbWFnZRgNIAEoCzIvLmdvb2dsZS5jbG91ZC5k",
             "b2N1bWVudGFpLnYxLkRvY3VtZW50LlBhZ2UuSW1hZ2USRAoKdHJhbnNmb3Jt",
             "cxgOIAMoCzIwLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50",
@@ -110,120 +110,130 @@ namespace Google.Cloud.DocumentAI.V1 {
             "X2xhbmd1YWdlcxgCIAMoCzI6Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
             "LkRvY3VtZW50LlBhZ2UuRGV0ZWN0ZWRMYW5ndWFnZRJHCgpwcm92ZW5hbmNl",
             "GAMgASgLMi8uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnQu",
-            "UHJvdmVuYW5jZUICGAEa6gMKBVRva2VuEkAKBmxheW91dBgBIAEoCzIwLmdv",
+            "UHJvdmVuYW5jZUICGAEangcKBVRva2VuEkAKBmxheW91dBgBIAEoCzIwLmdv",
             "b2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50LlBhZ2UuTGF5b3V0",
             "ElUKDmRldGVjdGVkX2JyZWFrGAIgASgLMj0uZ29vZ2xlLmNsb3VkLmRvY3Vt",
             "ZW50YWkudjEuRG9jdW1lbnQuUGFnZS5Ub2tlbi5EZXRlY3RlZEJyZWFrElYK",
             "EmRldGVjdGVkX2xhbmd1YWdlcxgDIAMoCzI6Lmdvb2dsZS5jbG91ZC5kb2N1",
             "bWVudGFpLnYxLkRvY3VtZW50LlBhZ2UuRGV0ZWN0ZWRMYW5ndWFnZRJHCgpw",
             "cm92ZW5hbmNlGAQgASgLMi8uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEu",
-            "RG9jdW1lbnQuUHJvdmVuYW5jZUICGAEapgEKDURldGVjdGVkQnJlYWsSUAoE",
-            "dHlwZRgBIAEoDjJCLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3Vt",
-            "ZW50LlBhZ2UuVG9rZW4uRGV0ZWN0ZWRCcmVhay5UeXBlIkMKBFR5cGUSFAoQ",
-            "VFlQRV9VTlNQRUNJRklFRBAAEgkKBVNQQUNFEAESDgoKV0lERV9TUEFDRRAC",
-            "EgoKBkhZUEhFThADGqIBCgZTeW1ib2wSQAoGbGF5b3V0GAEgASgLMjAuZ29v",
-            "Z2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnQuUGFnZS5MYXlvdXQS",
-            "VgoSZGV0ZWN0ZWRfbGFuZ3VhZ2VzGAIgAygLMjouZ29vZ2xlLmNsb3VkLmRv",
-            "Y3VtZW50YWkudjEuRG9jdW1lbnQuUGFnZS5EZXRlY3RlZExhbmd1YWdlGrcB",
-            "Cg1WaXN1YWxFbGVtZW50EkAKBmxheW91dBgBIAEoCzIwLmdvb2dsZS5jbG91",
-            "ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50LlBhZ2UuTGF5b3V0EgwKBHR5cGUY",
-            "AiABKAkSVgoSZGV0ZWN0ZWRfbGFuZ3VhZ2VzGAMgAygLMjouZ29vZ2xlLmNs",
-            "b3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnQuUGFnZS5EZXRlY3RlZExhbmd1",
-            "YWdlGqQFCgVUYWJsZRJACgZsYXlvdXQYASABKAsyMC5nb29nbGUuY2xvdWQu",
-            "ZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5QYWdlLkxheW91dBJNCgtoZWFkZXJf",
-            "cm93cxgCIAMoCzI4Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3Vt",
-            "ZW50LlBhZ2UuVGFibGUuVGFibGVSb3cSSwoJYm9keV9yb3dzGAMgAygLMjgu",
-            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnQuUGFnZS5UYWJs",
-            "ZS5UYWJsZVJvdxJWChJkZXRlY3RlZF9sYW5ndWFnZXMYBCADKAsyOi5nb29n",
-            "bGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5QYWdlLkRldGVjdGVk",
-            "TGFuZ3VhZ2USQwoKcHJvdmVuYW5jZRgFIAEoCzIvLmdvb2dsZS5jbG91ZC5k",
-            "b2N1bWVudGFpLnYxLkRvY3VtZW50LlByb3ZlbmFuY2UaVAoIVGFibGVSb3cS",
-            "SAoFY2VsbHMYASADKAsyOS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5E",
-            "b2N1bWVudC5QYWdlLlRhYmxlLlRhYmxlQ2VsbBrJAQoJVGFibGVDZWxsEkAK",
-            "BmxheW91dBgBIAEoCzIwLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRv",
-            "Y3VtZW50LlBhZ2UuTGF5b3V0EhAKCHJvd19zcGFuGAIgASgFEhAKCGNvbF9z",
-            "cGFuGAMgASgFElYKEmRldGVjdGVkX2xhbmd1YWdlcxgEIAMoCzI6Lmdvb2ds",
-            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50LlBhZ2UuRGV0ZWN0ZWRM",
-            "YW5ndWFnZRrmAwoJRm9ybUZpZWxkEkQKCmZpZWxkX25hbWUYASABKAsyMC5n",
-            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5QYWdlLkxheW91",
-            "dBJFCgtmaWVsZF92YWx1ZRgCIAEoCzIwLmdvb2dsZS5jbG91ZC5kb2N1bWVu",
-            "dGFpLnYxLkRvY3VtZW50LlBhZ2UuTGF5b3V0ElsKF25hbWVfZGV0ZWN0ZWRf",
-            "bGFuZ3VhZ2VzGAMgAygLMjouZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEu",
-            "RG9jdW1lbnQuUGFnZS5EZXRlY3RlZExhbmd1YWdlElwKGHZhbHVlX2RldGVj",
-            "dGVkX2xhbmd1YWdlcxgEIAMoCzI6Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
-            "LnYxLkRvY3VtZW50LlBhZ2UuRGV0ZWN0ZWRMYW5ndWFnZRISCgp2YWx1ZV90",
-            "eXBlGAUgASgJEhoKEmNvcnJlY3RlZF9rZXlfdGV4dBgGIAEoCRIcChRjb3Jy",
-            "ZWN0ZWRfdmFsdWVfdGV4dBgHIAEoCRJDCgpwcm92ZW5hbmNlGAggASgLMi8u",
-            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnQuUHJvdmVuYW5j",
-            "ZRqJAQoPRGV0ZWN0ZWRCYXJjb2RlEkAKBmxheW91dBgBIAEoCzIwLmdvb2ds",
-            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50LlBhZ2UuTGF5b3V0EjQK",
-            "B2JhcmNvZGUYAiABKAsyIy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5C",
-            "YXJjb2RlGj0KEERldGVjdGVkTGFuZ3VhZ2USFQoNbGFuZ3VhZ2VfY29kZRgB",
-            "IAEoCRISCgpjb25maWRlbmNlGAIgASgCGsYBChJJbWFnZVF1YWxpdHlTY29y",
-            "ZXMSFQoNcXVhbGl0eV9zY29yZRgBIAEoAhJlChBkZXRlY3RlZF9kZWZlY3Rz",
-            "GAIgAygLMksuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnQu",
-            "UGFnZS5JbWFnZVF1YWxpdHlTY29yZXMuRGV0ZWN0ZWREZWZlY3QaMgoORGV0",
-            "ZWN0ZWREZWZlY3QSDAoEdHlwZRgBIAEoCRISCgpjb25maWRlbmNlGAIgASgC",
-            "GtAGCgZFbnRpdHkSSQoLdGV4dF9hbmNob3IYASABKAsyLy5nb29nbGUuY2xv",
-            "dWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5UZXh0QW5jaG9yQgPgQQESEQoE",
-            "dHlwZRgCIAEoCUID4EECEhkKDG1lbnRpb25fdGV4dBgDIAEoCUID4EEBEhcK",
-            "Cm1lbnRpb25faWQYBCABKAlCA+BBARIXCgpjb25maWRlbmNlGAUgASgCQgPg",
-            "QQESSQoLcGFnZV9hbmNob3IYBiABKAsyLy5nb29nbGUuY2xvdWQuZG9jdW1l",
-            "bnRhaS52MS5Eb2N1bWVudC5QYWdlQW5jaG9yQgPgQQESDwoCaWQYByABKAlC",
-            "A+BBARJaChBub3JtYWxpemVkX3ZhbHVlGAkgASgLMjsuZ29vZ2xlLmNsb3Vk",
-            "LmRvY3VtZW50YWkudjEuRG9jdW1lbnQuRW50aXR5Lk5vcm1hbGl6ZWRWYWx1",
-            "ZUID4EEBEkQKCnByb3BlcnRpZXMYCiADKAsyKy5nb29nbGUuY2xvdWQuZG9j",
-            "dW1lbnRhaS52MS5Eb2N1bWVudC5FbnRpdHlCA+BBARJICgpwcm92ZW5hbmNl",
-            "GAsgASgLMi8uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnQu",
-            "UHJvdmVuYW5jZUID4EEBEhUKCHJlZGFjdGVkGAwgASgIQgPgQQEauwIKD05v",
-            "cm1hbGl6ZWRWYWx1ZRIpCgttb25leV92YWx1ZRgCIAEoCzISLmdvb2dsZS50",
-            "eXBlLk1vbmV5SAASJwoKZGF0ZV92YWx1ZRgDIAEoCzIRLmdvb2dsZS50eXBl",
-            "LkRhdGVIABIvCg5kYXRldGltZV92YWx1ZRgEIAEoCzIVLmdvb2dsZS50eXBl",
-            "LkRhdGVUaW1lSAASMwoNYWRkcmVzc192YWx1ZRgFIAEoCzIaLmdvb2dsZS50",
-            "eXBlLlBvc3RhbEFkZHJlc3NIABIXCg1ib29sZWFuX3ZhbHVlGAYgASgISAAS",
-            "FwoNaW50ZWdlcl92YWx1ZRgHIAEoBUgAEhUKC2Zsb2F0X3ZhbHVlGAggASgC",
-            "SAASEQoEdGV4dBgBIAEoCUID4EEBQhIKEHN0cnVjdHVyZWRfdmFsdWUaSQoO",
-            "RW50aXR5UmVsYXRpb24SEgoKc3ViamVjdF9pZBgBIAEoCRIRCglvYmplY3Rf",
-            "aWQYAiABKAkSEAoIcmVsYXRpb24YAyABKAkaqAEKClRleHRBbmNob3ISUgoN",
-            "dGV4dF9zZWdtZW50cxgBIAMoCzI7Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
-            "LnYxLkRvY3VtZW50LlRleHRBbmNob3IuVGV4dFNlZ21lbnQSDwoHY29udGVu",
-            "dBgCIAEoCRo1CgtUZXh0U2VnbWVudBITCgtzdGFydF9pbmRleBgBIAEoAxIR",
-            "CgllbmRfaW5kZXgYAiABKAMa2AMKClBhZ2VBbmNob3ISSgoJcGFnZV9yZWZz",
-            "GAEgAygLMjcuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnQu",
-            "UGFnZUFuY2hvci5QYWdlUmVmGv0CCgdQYWdlUmVmEhEKBHBhZ2UYASABKANC",
-            "A+BBAhJcCgtsYXlvdXRfdHlwZRgCIAEoDjJCLmdvb2dsZS5jbG91ZC5kb2N1",
-            "bWVudGFpLnYxLkRvY3VtZW50LlBhZ2VBbmNob3IuUGFnZVJlZi5MYXlvdXRU",
-            "eXBlQgPgQQESGAoJbGF5b3V0X2lkGAMgASgJQgUYAeBBARJECg1ib3VuZGlu",
-            "Z19wb2x5GAQgASgLMiguZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuQm91",
-            "bmRpbmdQb2x5QgPgQQESFwoKY29uZmlkZW5jZRgFIAEoAkID4EEBIocBCgpM",
-            "YXlvdXRUeXBlEhsKF0xBWU9VVF9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFQkxP",
-            "Q0sQARINCglQQVJBR1JBUEgQAhIICgRMSU5FEAMSCQoFVE9LRU4QBBISCg5W",
-            "SVNVQUxfRUxFTUVOVBAFEgkKBVRBQkxFEAYSDgoKRk9STV9GSUVMRBAHGqgD",
-            "CgpQcm92ZW5hbmNlEhQKCHJldmlzaW9uGAEgASgFQgIYARIOCgJpZBgCIAEo",
-            "BUICGAESRwoHcGFyZW50cxgDIAMoCzI2Lmdvb2dsZS5jbG91ZC5kb2N1bWVu",
-            "dGFpLnYxLkRvY3VtZW50LlByb3ZlbmFuY2UuUGFyZW50EksKBHR5cGUYBCAB",
-            "KA4yPS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5Qcm92",
-            "ZW5hbmNlLk9wZXJhdGlvblR5cGUaOQoGUGFyZW50EhAKCHJldmlzaW9uGAEg",
-            "ASgFEg0KBWluZGV4GAMgASgFEg4KAmlkGAIgASgFQgIYASKiAQoNT3BlcmF0",
-            "aW9uVHlwZRIeChpPUEVSQVRJT05fVFlQRV9VTlNQRUNJRklFRBAAEgcKA0FE",
-            "RBABEgoKBlJFTU9WRRACEgoKBlVQREFURRAHEgsKB1JFUExBQ0UQAxIWCg5F",
-            "VkFMX1JFUVVFU1RFRBAEGgIIARIVCg1FVkFMX0FQUFJPVkVEEAUaAggBEhQK",
-            "DEVWQUxfU0tJUFBFRBAGGgIIARqlAgoIUmV2aXNpb24SDwoFYWdlbnQYBCAB",
-            "KAlIABITCglwcm9jZXNzb3IYBSABKAlIABIKCgJpZBgBIAEoCRISCgZwYXJl",
-            "bnQYAiADKAVCAhgBEhIKCnBhcmVudF9pZHMYByADKAkSLwoLY3JlYXRlX3Rp",
-            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEk8KDGh1bWFu",
-            "X3JldmlldxgGIAEoCzI5Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRv",
-            "Y3VtZW50LlJldmlzaW9uLkh1bWFuUmV2aWV3GjMKC0h1bWFuUmV2aWV3Eg0K",
-            "BXN0YXRlGAEgASgJEhUKDXN0YXRlX21lc3NhZ2UYAiABKAlCCAoGc291cmNl",
-            "GrEBCgpUZXh0Q2hhbmdlEkQKC3RleHRfYW5jaG9yGAEgASgLMi8uZ29vZ2xl",
-            "LmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnQuVGV4dEFuY2hvchIUCgxj",
-            "aGFuZ2VkX3RleHQYAiABKAkSRwoKcHJvdmVuYW5jZRgDIAMoCzIvLmdvb2ds",
-            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50LlByb3ZlbmFuY2VCAhgB",
-            "QggKBnNvdXJjZULLAQoeY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
-            "Qg1Eb2N1bWVudFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vZG9jdW1l",
-            "bnRhaS9hcGl2MS9kb2N1bWVudGFpcGI7ZG9jdW1lbnRhaXBiqgIaR29vZ2xl",
-            "LkNsb3VkLkRvY3VtZW50QUkuVjHKAhpHb29nbGVcQ2xvdWRcRG9jdW1lbnRB",
-            "SVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYxYgZwcm90bzM="));
+            "RG9jdW1lbnQuUHJvdmVuYW5jZUICGAESTQoKc3R5bGVfaW5mbxgFIAEoCzI5",
+            "Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50LlBhZ2UuVG9r",
+            "ZW4uU3R5bGVJbmZvGqYBCg1EZXRlY3RlZEJyZWFrElAKBHR5cGUYASABKA4y",
+            "Qi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5QYWdlLlRv",
+            "a2VuLkRldGVjdGVkQnJlYWsuVHlwZSJDCgRUeXBlEhQKEFRZUEVfVU5TUEVD",
+            "SUZJRUQQABIJCgVTUEFDRRABEg4KCldJREVfU1BBQ0UQAhIKCgZIWVBIRU4Q",
+            "AxriAgoJU3R5bGVJbmZvEhEKCWZvbnRfc2l6ZRgBIAEoBRIXCg9waXhlbF9m",
+            "b250X3NpemUYAiABKAESFgoObGV0dGVyX3NwYWNpbmcYAyABKAESEQoJZm9u",
+            "dF90eXBlGAQgASgJEgwKBGJvbGQYBSABKAgSDgoGaXRhbGljGAYgASgIEhIK",
+            "CnVuZGVybGluZWQYByABKAgSEQoJc3RyaWtlb3V0GAggASgIEhEKCXN1YnNj",
+            "cmlwdBgJIAEoCBITCgtzdXBlcnNjcmlwdBgKIAEoCBIRCglzbWFsbGNhcHMY",
+            "CyABKAgSEwoLZm9udF93ZWlnaHQYDCABKAUSEwoLaGFuZHdyaXR0ZW4YDSAB",
+            "KAgSJgoKdGV4dF9jb2xvchgOIAEoCzISLmdvb2dsZS50eXBlLkNvbG9yEiwK",
+            "EGJhY2tncm91bmRfY29sb3IYDyABKAsyEi5nb29nbGUudHlwZS5Db2xvchqi",
+            "AQoGU3ltYm9sEkAKBmxheW91dBgBIAEoCzIwLmdvb2dsZS5jbG91ZC5kb2N1",
+            "bWVudGFpLnYxLkRvY3VtZW50LlBhZ2UuTGF5b3V0ElYKEmRldGVjdGVkX2xh",
+            "bmd1YWdlcxgCIAMoCzI6Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRv",
+            "Y3VtZW50LlBhZ2UuRGV0ZWN0ZWRMYW5ndWFnZRq3AQoNVmlzdWFsRWxlbWVu",
+            "dBJACgZsYXlvdXQYASABKAsyMC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
+            "MS5Eb2N1bWVudC5QYWdlLkxheW91dBIMCgR0eXBlGAIgASgJElYKEmRldGVj",
+            "dGVkX2xhbmd1YWdlcxgDIAMoCzI6Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
+            "LnYxLkRvY3VtZW50LlBhZ2UuRGV0ZWN0ZWRMYW5ndWFnZRqoBQoFVGFibGUS",
+            "QAoGbGF5b3V0GAEgASgLMjAuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEu",
+            "RG9jdW1lbnQuUGFnZS5MYXlvdXQSTQoLaGVhZGVyX3Jvd3MYAiADKAsyOC5n",
+            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5QYWdlLlRhYmxl",
+            "LlRhYmxlUm93EksKCWJvZHlfcm93cxgDIAMoCzI4Lmdvb2dsZS5jbG91ZC5k",
+            "b2N1bWVudGFpLnYxLkRvY3VtZW50LlBhZ2UuVGFibGUuVGFibGVSb3cSVgoS",
+            "ZGV0ZWN0ZWRfbGFuZ3VhZ2VzGAQgAygLMjouZ29vZ2xlLmNsb3VkLmRvY3Vt",
+            "ZW50YWkudjEuRG9jdW1lbnQuUGFnZS5EZXRlY3RlZExhbmd1YWdlEkcKCnBy",
+            "b3ZlbmFuY2UYBSABKAsyLy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5E",
+            "b2N1bWVudC5Qcm92ZW5hbmNlQgIYARpUCghUYWJsZVJvdxJICgVjZWxscxgB",
+            "IAMoCzI5Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50LlBh",
+            "Z2UuVGFibGUuVGFibGVDZWxsGskBCglUYWJsZUNlbGwSQAoGbGF5b3V0GAEg",
+            "ASgLMjAuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnQuUGFn",
+            "ZS5MYXlvdXQSEAoIcm93X3NwYW4YAiABKAUSEAoIY29sX3NwYW4YAyABKAUS",
+            "VgoSZGV0ZWN0ZWRfbGFuZ3VhZ2VzGAQgAygLMjouZ29vZ2xlLmNsb3VkLmRv",
+            "Y3VtZW50YWkudjEuRG9jdW1lbnQuUGFnZS5EZXRlY3RlZExhbmd1YWdlGuYD",
+            "CglGb3JtRmllbGQSRAoKZmllbGRfbmFtZRgBIAEoCzIwLmdvb2dsZS5jbG91",
+            "ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50LlBhZ2UuTGF5b3V0EkUKC2ZpZWxk",
+            "X3ZhbHVlGAIgASgLMjAuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9j",
+            "dW1lbnQuUGFnZS5MYXlvdXQSWwoXbmFtZV9kZXRlY3RlZF9sYW5ndWFnZXMY",
+            "AyADKAsyOi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5Q",
+            "YWdlLkRldGVjdGVkTGFuZ3VhZ2USXAoYdmFsdWVfZGV0ZWN0ZWRfbGFuZ3Vh",
+            "Z2VzGAQgAygLMjouZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1l",
+            "bnQuUGFnZS5EZXRlY3RlZExhbmd1YWdlEhIKCnZhbHVlX3R5cGUYBSABKAkS",
+            "GgoSY29ycmVjdGVkX2tleV90ZXh0GAYgASgJEhwKFGNvcnJlY3RlZF92YWx1",
+            "ZV90ZXh0GAcgASgJEkMKCnByb3ZlbmFuY2UYCCABKAsyLy5nb29nbGUuY2xv",
+            "dWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5Qcm92ZW5hbmNlGokBCg9EZXRl",
+            "Y3RlZEJhcmNvZGUSQAoGbGF5b3V0GAEgASgLMjAuZ29vZ2xlLmNsb3VkLmRv",
+            "Y3VtZW50YWkudjEuRG9jdW1lbnQuUGFnZS5MYXlvdXQSNAoHYmFyY29kZRgC",
+            "IAEoCzIjLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkJhcmNvZGUaPQoQ",
+            "RGV0ZWN0ZWRMYW5ndWFnZRIVCg1sYW5ndWFnZV9jb2RlGAEgASgJEhIKCmNv",
+            "bmZpZGVuY2UYAiABKAIaxgEKEkltYWdlUXVhbGl0eVNjb3JlcxIVCg1xdWFs",
+            "aXR5X3Njb3JlGAEgASgCEmUKEGRldGVjdGVkX2RlZmVjdHMYAiADKAsySy5n",
+            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5QYWdlLkltYWdl",
+            "UXVhbGl0eVNjb3Jlcy5EZXRlY3RlZERlZmVjdBoyCg5EZXRlY3RlZERlZmVj",
+            "dBIMCgR0eXBlGAEgASgJEhIKCmNvbmZpZGVuY2UYAiABKAIa0AYKBkVudGl0",
+            "eRJJCgt0ZXh0X2FuY2hvchgBIAEoCzIvLmdvb2dsZS5jbG91ZC5kb2N1bWVu",
+            "dGFpLnYxLkRvY3VtZW50LlRleHRBbmNob3JCA+BBARIRCgR0eXBlGAIgASgJ",
+            "QgPgQQISGQoMbWVudGlvbl90ZXh0GAMgASgJQgPgQQESFwoKbWVudGlvbl9p",
+            "ZBgEIAEoCUID4EEBEhcKCmNvbmZpZGVuY2UYBSABKAJCA+BBARJJCgtwYWdl",
+            "X2FuY2hvchgGIAEoCzIvLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRv",
+            "Y3VtZW50LlBhZ2VBbmNob3JCA+BBARIPCgJpZBgHIAEoCUID4EEBEloKEG5v",
+            "cm1hbGl6ZWRfdmFsdWUYCSABKAsyOy5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
+            "aS52MS5Eb2N1bWVudC5FbnRpdHkuTm9ybWFsaXplZFZhbHVlQgPgQQESRAoK",
+            "cHJvcGVydGllcxgKIAMoCzIrLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
+            "LkRvY3VtZW50LkVudGl0eUID4EEBEkgKCnByb3ZlbmFuY2UYCyABKAsyLy5n",
+            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5Qcm92ZW5hbmNl",
+            "QgPgQQESFQoIcmVkYWN0ZWQYDCABKAhCA+BBARq7AgoPTm9ybWFsaXplZFZh",
+            "bHVlEikKC21vbmV5X3ZhbHVlGAIgASgLMhIuZ29vZ2xlLnR5cGUuTW9uZXlI",
+            "ABInCgpkYXRlX3ZhbHVlGAMgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUgAEi8K",
+            "DmRhdGV0aW1lX3ZhbHVlGAQgASgLMhUuZ29vZ2xlLnR5cGUuRGF0ZVRpbWVI",
+            "ABIzCg1hZGRyZXNzX3ZhbHVlGAUgASgLMhouZ29vZ2xlLnR5cGUuUG9zdGFs",
+            "QWRkcmVzc0gAEhcKDWJvb2xlYW5fdmFsdWUYBiABKAhIABIXCg1pbnRlZ2Vy",
+            "X3ZhbHVlGAcgASgFSAASFQoLZmxvYXRfdmFsdWUYCCABKAJIABIRCgR0ZXh0",
+            "GAEgASgJQgPgQQFCEgoQc3RydWN0dXJlZF92YWx1ZRpJCg5FbnRpdHlSZWxh",
+            "dGlvbhISCgpzdWJqZWN0X2lkGAEgASgJEhEKCW9iamVjdF9pZBgCIAEoCRIQ",
+            "CghyZWxhdGlvbhgDIAEoCRqoAQoKVGV4dEFuY2hvchJSCg10ZXh0X3NlZ21l",
+            "bnRzGAEgAygLMjsuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1l",
+            "bnQuVGV4dEFuY2hvci5UZXh0U2VnbWVudBIPCgdjb250ZW50GAIgASgJGjUK",
+            "C1RleHRTZWdtZW50EhMKC3N0YXJ0X2luZGV4GAEgASgDEhEKCWVuZF9pbmRl",
+            "eBgCIAEoAxrYAwoKUGFnZUFuY2hvchJKCglwYWdlX3JlZnMYASADKAsyNy5n",
+            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Eb2N1bWVudC5QYWdlQW5jaG9y",
+            "LlBhZ2VSZWYa/QIKB1BhZ2VSZWYSEQoEcGFnZRgBIAEoA0ID4EECElwKC2xh",
+            "eW91dF90eXBlGAIgASgOMkIuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEu",
+            "RG9jdW1lbnQuUGFnZUFuY2hvci5QYWdlUmVmLkxheW91dFR5cGVCA+BBARIY",
+            "CglsYXlvdXRfaWQYAyABKAlCBRgB4EEBEkQKDWJvdW5kaW5nX3BvbHkYBCAB",
+            "KAsyKC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Cb3VuZGluZ1BvbHlC",
+            "A+BBARIXCgpjb25maWRlbmNlGAUgASgCQgPgQQEihwEKCkxheW91dFR5cGUS",
+            "GwoXTEFZT1VUX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVCTE9DSxABEg0KCVBB",
+            "UkFHUkFQSBACEggKBExJTkUQAxIJCgVUT0tFThAEEhIKDlZJU1VBTF9FTEVN",
+            "RU5UEAUSCQoFVEFCTEUQBhIOCgpGT1JNX0ZJRUxEEAcaqAMKClByb3ZlbmFu",
+            "Y2USFAoIcmV2aXNpb24YASABKAVCAhgBEg4KAmlkGAIgASgFQgIYARJHCgdw",
+            "YXJlbnRzGAMgAygLMjYuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9j",
+            "dW1lbnQuUHJvdmVuYW5jZS5QYXJlbnQSSwoEdHlwZRgEIAEoDjI9Lmdvb2ds",
+            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxLkRvY3VtZW50LlByb3ZlbmFuY2UuT3Bl",
+            "cmF0aW9uVHlwZRo5CgZQYXJlbnQSEAoIcmV2aXNpb24YASABKAUSDQoFaW5k",
+            "ZXgYAyABKAUSDgoCaWQYAiABKAVCAhgBIqIBCg1PcGVyYXRpb25UeXBlEh4K",
+            "Gk9QRVJBVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASBwoDQUREEAESCgoGUkVN",
+            "T1ZFEAISCgoGVVBEQVRFEAcSCwoHUkVQTEFDRRADEhYKDkVWQUxfUkVRVUVT",
+            "VEVEEAQaAggBEhUKDUVWQUxfQVBQUk9WRUQQBRoCCAESFAoMRVZBTF9TS0lQ",
+            "UEVEEAYaAggBGqUCCghSZXZpc2lvbhIPCgVhZ2VudBgEIAEoCUgAEhMKCXBy",
+            "b2Nlc3NvchgFIAEoCUgAEgoKAmlkGAEgASgJEhIKBnBhcmVudBgCIAMoBUIC",
+            "GAESEgoKcGFyZW50X2lkcxgHIAMoCRIvCgtjcmVhdGVfdGltZRgDIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASTwoMaHVtYW5fcmV2aWV3GAYg",
+            "ASgLMjkuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuRG9jdW1lbnQuUmV2",
+            "aXNpb24uSHVtYW5SZXZpZXcaMwoLSHVtYW5SZXZpZXcSDQoFc3RhdGUYASAB",
+            "KAkSFQoNc3RhdGVfbWVzc2FnZRgCIAEoCUIICgZzb3VyY2UasQEKClRleHRD",
+            "aGFuZ2USRAoLdGV4dF9hbmNob3IYASABKAsyLy5nb29nbGUuY2xvdWQuZG9j",
+            "dW1lbnRhaS52MS5Eb2N1bWVudC5UZXh0QW5jaG9yEhQKDGNoYW5nZWRfdGV4",
+            "dBgCIAEoCRJHCgpwcm92ZW5hbmNlGAMgAygLMi8uZ29vZ2xlLmNsb3VkLmRv",
+            "Y3VtZW50YWkudjEuRG9jdW1lbnQuUHJvdmVuYW5jZUICGAFCCAoGc291cmNl",
+            "QssBCh5jb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFCDURvY3VtZW50",
+            "UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9kb2N1bWVudGFpL2FwaXYx",
+            "L2RvY3VtZW50YWlwYjtkb2N1bWVudGFpcGKqAhpHb29nbGUuQ2xvdWQuRG9j",
+            "dW1lbnRBSS5WMcoCGkdvb2dsZVxDbG91ZFxEb2N1bWVudEFJXFYx6gIdR29v",
+            "Z2xlOjpDbG91ZDo6RG9jdW1lbnRBSTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.BarcodeReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.GeometryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -236,7 +246,8 @@ namespace Google.Cloud.DocumentAI.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Block), global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Block.Parser, new[]{ "Layout", "DetectedLanguages", "Provenance" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Paragraph), global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Paragraph.Parser, new[]{ "Layout", "DetectedLanguages", "Provenance" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Line), global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Line.Parser, new[]{ "Layout", "DetectedLanguages", "Provenance" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token), global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Parser, new[]{ "Layout", "DetectedBreak", "DetectedLanguages", "Provenance" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.DetectedBreak), global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.DetectedBreak.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token), global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Parser, new[]{ "Layout", "DetectedBreak", "DetectedLanguages", "Provenance", "StyleInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.DetectedBreak), global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.DetectedBreak.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.StyleInfo), global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.StyleInfo.Parser, new[]{ "FontSize", "PixelFontSize", "LetterSpacing", "FontType", "Bold", "Italic", "Underlined", "Strikeout", "Subscript", "Superscript", "Smallcaps", "FontWeight", "Handwritten", "TextColor", "BackgroundColor" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Symbol), global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Symbol.Parser, new[]{ "Layout", "DetectedLanguages" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.VisualElement), global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.VisualElement.Parser, new[]{ "Layout", "Type", "DetectedLanguages" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Table), global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Table.Parser, new[]{ "Layout", "HeaderRows", "BodyRows", "DetectedLanguages", "Provenance" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Table.Types.TableRow), global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Table.Types.TableRow.Parser, new[]{ "Cells" }, null, null, null, null),
@@ -330,10 +341,9 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int UriFieldNumber = 1;
     /// <summary>
     /// Optional. Currently supports Google Cloud Storage URI of the form
-    ///    `gs://bucket_name/object_name`. Object versioning is not supported.
-    ///    See [Google Cloud Storage Request
-    ///    URIs](https://cloud.google.com/storage/docs/reference-uris) for more
-    ///    info.
+    /// `gs://bucket_name/object_name`. Object versioning is not supported.
+    /// For more information, refer to [Google Cloud Storage Request
+    /// URIs](https://cloud.google.com/storage/docs/reference-uris).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -394,9 +404,8 @@ namespace Google.Cloud.DocumentAI.V1 {
     public const int MimeTypeFieldNumber = 3;
     private string mimeType_ = "";
     /// <summary>
-    /// An IANA published MIME type (also referred to as media type). For more
-    /// information, see
-    /// https://www.iana.org/assignments/media-types/media-types.xhtml.
+    /// An IANA published [media type (MIME
+    /// type)](https://www.iana.org/assignments/media-types/media-types.xhtml).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1312,8 +1321,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int FontWeightFieldNumber = 4;
         private string fontWeight_ = "";
         /// <summary>
-        /// Font weight. Possible values are normal, bold, bolder, and lighter.
-        /// https://www.w3schools.com/cssref/pr_font_weight.asp
+        /// [Font weight](https://www.w3schools.com/cssref/pr_font_weight.asp).
+        /// Possible values are `normal`, `bold`, `bolder`, and `lighter`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1328,8 +1337,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int TextStyleFieldNumber = 5;
         private string textStyle_ = "";
         /// <summary>
-        /// Text style. Possible values are normal, italic, and oblique.
-        /// https://www.w3schools.com/cssref/pr_font_font-style.asp
+        /// [Text style](https://www.w3schools.com/cssref/pr_font_font-style.asp).
+        /// Possible values are `normal`, `italic`, and `oblique`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1344,9 +1353,10 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int TextDecorationFieldNumber = 6;
         private string textDecoration_ = "";
         /// <summary>
-        /// Text decoration. Follows CSS standard.
-        /// &lt;text-decoration-line> &lt;text-decoration-color> &lt;text-decoration-style>
-        /// https://www.w3schools.com/cssref/pr_text_text-decoration.asp
+        /// [Text
+        /// decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp).
+        /// Follows CSS standard. &lt;text-decoration-line> &lt;text-decoration-color>
+        /// &lt;text-decoration-style>
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1795,7 +1805,8 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int UnitFieldNumber = 2;
             private string unit_ = "";
             /// <summary>
-            /// Unit for the font size. Follows CSS naming (in, px, pt, etc.).
+            /// Unit for the font size. Follows CSS naming (such as `in`, `px`, and
+            /// `pt`).
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2261,7 +2272,7 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int ImageQualityScoresFieldNumber = 17;
         private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.ImageQualityScores imageQualityScores_;
         /// <summary>
-        /// Image Quality Scores.
+        /// Image quality scores.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3087,7 +3098,9 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int MimeTypeFieldNumber = 2;
             private string mimeType_ = "";
             /// <summary>
-            /// Encoding mime type for the image.
+            /// Encoding [media type (MIME
+            /// type)](https://www.iana.org/assignments/media-types/media-types.xhtml)
+            /// for the image.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4924,6 +4937,7 @@ namespace Google.Cloud.DocumentAI.V1 {
               detectedBreak_ = other.detectedBreak_ != null ? other.detectedBreak_.Clone() : null;
               detectedLanguages_ = other.detectedLanguages_.Clone();
               provenance_ = other.provenance_ != null ? other.provenance_.Clone() : null;
+              styleInfo_ = other.styleInfo_ != null ? other.styleInfo_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -4995,6 +5009,21 @@ namespace Google.Cloud.DocumentAI.V1 {
               }
             }
 
+            /// <summary>Field number for the "style_info" field.</summary>
+            public const int StyleInfoFieldNumber = 5;
+            private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.StyleInfo styleInfo_;
+            /// <summary>
+            /// Text style attributes.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.StyleInfo StyleInfo {
+              get { return styleInfo_; }
+              set {
+                styleInfo_ = value;
+              }
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
@@ -5014,6 +5043,7 @@ namespace Google.Cloud.DocumentAI.V1 {
               if (!object.Equals(DetectedBreak, other.DetectedBreak)) return false;
               if(!detectedLanguages_.Equals(other.detectedLanguages_)) return false;
               if (!object.Equals(Provenance, other.Provenance)) return false;
+              if (!object.Equals(StyleInfo, other.StyleInfo)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -5025,6 +5055,7 @@ namespace Google.Cloud.DocumentAI.V1 {
               if (detectedBreak_ != null) hash ^= DetectedBreak.GetHashCode();
               hash ^= detectedLanguages_.GetHashCode();
               if (provenance_ != null) hash ^= Provenance.GetHashCode();
+              if (styleInfo_ != null) hash ^= StyleInfo.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -5056,6 +5087,10 @@ namespace Google.Cloud.DocumentAI.V1 {
                 output.WriteRawTag(34);
                 output.WriteMessage(Provenance);
               }
+              if (styleInfo_ != null) {
+                output.WriteRawTag(42);
+                output.WriteMessage(StyleInfo);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -5079,6 +5114,10 @@ namespace Google.Cloud.DocumentAI.V1 {
                 output.WriteRawTag(34);
                 output.WriteMessage(Provenance);
               }
+              if (styleInfo_ != null) {
+                output.WriteRawTag(42);
+                output.WriteMessage(StyleInfo);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -5098,6 +5137,9 @@ namespace Google.Cloud.DocumentAI.V1 {
               size += detectedLanguages_.CalculateSize(_repeated_detectedLanguages_codec);
               if (provenance_ != null) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(Provenance);
+              }
+              if (styleInfo_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(StyleInfo);
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -5129,6 +5171,12 @@ namespace Google.Cloud.DocumentAI.V1 {
                   Provenance = new global::Google.Cloud.DocumentAI.V1.Document.Types.Provenance();
                 }
                 Provenance.MergeFrom(other.Provenance);
+              }
+              if (other.styleInfo_ != null) {
+                if (styleInfo_ == null) {
+                  StyleInfo = new global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.StyleInfo();
+                }
+                StyleInfo.MergeFrom(other.StyleInfo);
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
@@ -5170,6 +5218,13 @@ namespace Google.Cloud.DocumentAI.V1 {
                     input.ReadMessage(Provenance);
                     break;
                   }
+                  case 42: {
+                    if (styleInfo_ == null) {
+                      StyleInfo = new global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.StyleInfo();
+                    }
+                    input.ReadMessage(StyleInfo);
+                    break;
+                  }
                 }
               }
             #endif
@@ -5208,6 +5263,13 @@ namespace Google.Cloud.DocumentAI.V1 {
                       Provenance = new global::Google.Cloud.DocumentAI.V1.Document.Types.Provenance();
                     }
                     input.ReadMessage(Provenance);
+                    break;
+                  }
+                  case 42: {
+                    if (styleInfo_ == null) {
+                      StyleInfo = new global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.StyleInfo();
+                    }
+                    input.ReadMessage(StyleInfo);
                     break;
                   }
                 }
@@ -5443,6 +5505,784 @@ namespace Google.Cloud.DocumentAI.V1 {
 
                 }
                 #endregion
+
+              }
+
+              /// <summary>
+              /// Font and other text style attributes.
+              /// </summary>
+              public sealed partial class StyleInfo : pb::IMessage<StyleInfo>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<StyleInfo> _parser = new pb::MessageParser<StyleInfo>(() => new StyleInfo());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<StyleInfo> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Descriptor.NestedTypes[1]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public StyleInfo() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public StyleInfo(StyleInfo other) : this() {
+                  fontSize_ = other.fontSize_;
+                  pixelFontSize_ = other.pixelFontSize_;
+                  letterSpacing_ = other.letterSpacing_;
+                  fontType_ = other.fontType_;
+                  bold_ = other.bold_;
+                  italic_ = other.italic_;
+                  underlined_ = other.underlined_;
+                  strikeout_ = other.strikeout_;
+                  subscript_ = other.subscript_;
+                  superscript_ = other.superscript_;
+                  smallcaps_ = other.smallcaps_;
+                  fontWeight_ = other.fontWeight_;
+                  handwritten_ = other.handwritten_;
+                  textColor_ = other.textColor_ != null ? other.textColor_.Clone() : null;
+                  backgroundColor_ = other.backgroundColor_ != null ? other.backgroundColor_.Clone() : null;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public StyleInfo Clone() {
+                  return new StyleInfo(this);
+                }
+
+                /// <summary>Field number for the "font_size" field.</summary>
+                public const int FontSizeFieldNumber = 1;
+                private int fontSize_;
+                /// <summary>
+                /// Font size in points (`1` point is `¹⁄₇₂` inches).
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int FontSize {
+                  get { return fontSize_; }
+                  set {
+                    fontSize_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "pixel_font_size" field.</summary>
+                public const int PixelFontSizeFieldNumber = 2;
+                private double pixelFontSize_;
+                /// <summary>
+                /// Font size in pixels, equal to _unrounded
+                /// [font_size][google.cloud.documentai.v1.Document.Page.Token.StyleInfo.font_size]_
+                /// * _resolution_ ÷ `72.0`.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public double PixelFontSize {
+                  get { return pixelFontSize_; }
+                  set {
+                    pixelFontSize_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "letter_spacing" field.</summary>
+                public const int LetterSpacingFieldNumber = 3;
+                private double letterSpacing_;
+                /// <summary>
+                /// Letter spacing in points.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public double LetterSpacing {
+                  get { return letterSpacing_; }
+                  set {
+                    letterSpacing_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "font_type" field.</summary>
+                public const int FontTypeFieldNumber = 4;
+                private string fontType_ = "";
+                /// <summary>
+                /// Name or style of the font.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string FontType {
+                  get { return fontType_; }
+                  set {
+                    fontType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "bold" field.</summary>
+                public const int BoldFieldNumber = 5;
+                private bool bold_;
+                /// <summary>
+                /// Whether the text is bold (equivalent to
+                /// [font_weight][google.cloud.documentai.v1.Document.Page.Token.StyleInfo.font_weight]
+                /// is at least `700`).
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Bold {
+                  get { return bold_; }
+                  set {
+                    bold_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "italic" field.</summary>
+                public const int ItalicFieldNumber = 6;
+                private bool italic_;
+                /// <summary>
+                /// Whether the text is italic.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Italic {
+                  get { return italic_; }
+                  set {
+                    italic_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "underlined" field.</summary>
+                public const int UnderlinedFieldNumber = 7;
+                private bool underlined_;
+                /// <summary>
+                /// Whether the text is underlined.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Underlined {
+                  get { return underlined_; }
+                  set {
+                    underlined_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "strikeout" field.</summary>
+                public const int StrikeoutFieldNumber = 8;
+                private bool strikeout_;
+                /// <summary>
+                /// Whether the text is strikethrough.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Strikeout {
+                  get { return strikeout_; }
+                  set {
+                    strikeout_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "subscript" field.</summary>
+                public const int SubscriptFieldNumber = 9;
+                private bool subscript_;
+                /// <summary>
+                /// Whether the text is a subscript.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Subscript {
+                  get { return subscript_; }
+                  set {
+                    subscript_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "superscript" field.</summary>
+                public const int SuperscriptFieldNumber = 10;
+                private bool superscript_;
+                /// <summary>
+                /// Whether the text is a superscript.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Superscript {
+                  get { return superscript_; }
+                  set {
+                    superscript_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "smallcaps" field.</summary>
+                public const int SmallcapsFieldNumber = 11;
+                private bool smallcaps_;
+                /// <summary>
+                /// Whether the text is in small caps.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Smallcaps {
+                  get { return smallcaps_; }
+                  set {
+                    smallcaps_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "font_weight" field.</summary>
+                public const int FontWeightFieldNumber = 12;
+                private int fontWeight_;
+                /// <summary>
+                /// TrueType weight on a scale `100` (thin) to `1000` (ultra-heavy).
+                /// Normal is `400`, bold is `700`.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int FontWeight {
+                  get { return fontWeight_; }
+                  set {
+                    fontWeight_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "handwritten" field.</summary>
+                public const int HandwrittenFieldNumber = 13;
+                private bool handwritten_;
+                /// <summary>
+                /// Whether the text is handwritten.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Handwritten {
+                  get { return handwritten_; }
+                  set {
+                    handwritten_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "text_color" field.</summary>
+                public const int TextColorFieldNumber = 14;
+                private global::Google.Type.Color textColor_;
+                /// <summary>
+                /// Color of the text.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Type.Color TextColor {
+                  get { return textColor_; }
+                  set {
+                    textColor_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "background_color" field.</summary>
+                public const int BackgroundColorFieldNumber = 15;
+                private global::Google.Type.Color backgroundColor_;
+                /// <summary>
+                /// Color of the background.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Type.Color BackgroundColor {
+                  get { return backgroundColor_; }
+                  set {
+                    backgroundColor_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as StyleInfo);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(StyleInfo other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (FontSize != other.FontSize) return false;
+                  if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PixelFontSize, other.PixelFontSize)) return false;
+                  if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(LetterSpacing, other.LetterSpacing)) return false;
+                  if (FontType != other.FontType) return false;
+                  if (Bold != other.Bold) return false;
+                  if (Italic != other.Italic) return false;
+                  if (Underlined != other.Underlined) return false;
+                  if (Strikeout != other.Strikeout) return false;
+                  if (Subscript != other.Subscript) return false;
+                  if (Superscript != other.Superscript) return false;
+                  if (Smallcaps != other.Smallcaps) return false;
+                  if (FontWeight != other.FontWeight) return false;
+                  if (Handwritten != other.Handwritten) return false;
+                  if (!object.Equals(TextColor, other.TextColor)) return false;
+                  if (!object.Equals(BackgroundColor, other.BackgroundColor)) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (FontSize != 0) hash ^= FontSize.GetHashCode();
+                  if (PixelFontSize != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PixelFontSize);
+                  if (LetterSpacing != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(LetterSpacing);
+                  if (FontType.Length != 0) hash ^= FontType.GetHashCode();
+                  if (Bold != false) hash ^= Bold.GetHashCode();
+                  if (Italic != false) hash ^= Italic.GetHashCode();
+                  if (Underlined != false) hash ^= Underlined.GetHashCode();
+                  if (Strikeout != false) hash ^= Strikeout.GetHashCode();
+                  if (Subscript != false) hash ^= Subscript.GetHashCode();
+                  if (Superscript != false) hash ^= Superscript.GetHashCode();
+                  if (Smallcaps != false) hash ^= Smallcaps.GetHashCode();
+                  if (FontWeight != 0) hash ^= FontWeight.GetHashCode();
+                  if (Handwritten != false) hash ^= Handwritten.GetHashCode();
+                  if (textColor_ != null) hash ^= TextColor.GetHashCode();
+                  if (backgroundColor_ != null) hash ^= BackgroundColor.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (FontSize != 0) {
+                    output.WriteRawTag(8);
+                    output.WriteInt32(FontSize);
+                  }
+                  if (PixelFontSize != 0D) {
+                    output.WriteRawTag(17);
+                    output.WriteDouble(PixelFontSize);
+                  }
+                  if (LetterSpacing != 0D) {
+                    output.WriteRawTag(25);
+                    output.WriteDouble(LetterSpacing);
+                  }
+                  if (FontType.Length != 0) {
+                    output.WriteRawTag(34);
+                    output.WriteString(FontType);
+                  }
+                  if (Bold != false) {
+                    output.WriteRawTag(40);
+                    output.WriteBool(Bold);
+                  }
+                  if (Italic != false) {
+                    output.WriteRawTag(48);
+                    output.WriteBool(Italic);
+                  }
+                  if (Underlined != false) {
+                    output.WriteRawTag(56);
+                    output.WriteBool(Underlined);
+                  }
+                  if (Strikeout != false) {
+                    output.WriteRawTag(64);
+                    output.WriteBool(Strikeout);
+                  }
+                  if (Subscript != false) {
+                    output.WriteRawTag(72);
+                    output.WriteBool(Subscript);
+                  }
+                  if (Superscript != false) {
+                    output.WriteRawTag(80);
+                    output.WriteBool(Superscript);
+                  }
+                  if (Smallcaps != false) {
+                    output.WriteRawTag(88);
+                    output.WriteBool(Smallcaps);
+                  }
+                  if (FontWeight != 0) {
+                    output.WriteRawTag(96);
+                    output.WriteInt32(FontWeight);
+                  }
+                  if (Handwritten != false) {
+                    output.WriteRawTag(104);
+                    output.WriteBool(Handwritten);
+                  }
+                  if (textColor_ != null) {
+                    output.WriteRawTag(114);
+                    output.WriteMessage(TextColor);
+                  }
+                  if (backgroundColor_ != null) {
+                    output.WriteRawTag(122);
+                    output.WriteMessage(BackgroundColor);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (FontSize != 0) {
+                    output.WriteRawTag(8);
+                    output.WriteInt32(FontSize);
+                  }
+                  if (PixelFontSize != 0D) {
+                    output.WriteRawTag(17);
+                    output.WriteDouble(PixelFontSize);
+                  }
+                  if (LetterSpacing != 0D) {
+                    output.WriteRawTag(25);
+                    output.WriteDouble(LetterSpacing);
+                  }
+                  if (FontType.Length != 0) {
+                    output.WriteRawTag(34);
+                    output.WriteString(FontType);
+                  }
+                  if (Bold != false) {
+                    output.WriteRawTag(40);
+                    output.WriteBool(Bold);
+                  }
+                  if (Italic != false) {
+                    output.WriteRawTag(48);
+                    output.WriteBool(Italic);
+                  }
+                  if (Underlined != false) {
+                    output.WriteRawTag(56);
+                    output.WriteBool(Underlined);
+                  }
+                  if (Strikeout != false) {
+                    output.WriteRawTag(64);
+                    output.WriteBool(Strikeout);
+                  }
+                  if (Subscript != false) {
+                    output.WriteRawTag(72);
+                    output.WriteBool(Subscript);
+                  }
+                  if (Superscript != false) {
+                    output.WriteRawTag(80);
+                    output.WriteBool(Superscript);
+                  }
+                  if (Smallcaps != false) {
+                    output.WriteRawTag(88);
+                    output.WriteBool(Smallcaps);
+                  }
+                  if (FontWeight != 0) {
+                    output.WriteRawTag(96);
+                    output.WriteInt32(FontWeight);
+                  }
+                  if (Handwritten != false) {
+                    output.WriteRawTag(104);
+                    output.WriteBool(Handwritten);
+                  }
+                  if (textColor_ != null) {
+                    output.WriteRawTag(114);
+                    output.WriteMessage(TextColor);
+                  }
+                  if (backgroundColor_ != null) {
+                    output.WriteRawTag(122);
+                    output.WriteMessage(BackgroundColor);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (FontSize != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeInt32Size(FontSize);
+                  }
+                  if (PixelFontSize != 0D) {
+                    size += 1 + 8;
+                  }
+                  if (LetterSpacing != 0D) {
+                    size += 1 + 8;
+                  }
+                  if (FontType.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(FontType);
+                  }
+                  if (Bold != false) {
+                    size += 1 + 1;
+                  }
+                  if (Italic != false) {
+                    size += 1 + 1;
+                  }
+                  if (Underlined != false) {
+                    size += 1 + 1;
+                  }
+                  if (Strikeout != false) {
+                    size += 1 + 1;
+                  }
+                  if (Subscript != false) {
+                    size += 1 + 1;
+                  }
+                  if (Superscript != false) {
+                    size += 1 + 1;
+                  }
+                  if (Smallcaps != false) {
+                    size += 1 + 1;
+                  }
+                  if (FontWeight != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeInt32Size(FontWeight);
+                  }
+                  if (Handwritten != false) {
+                    size += 1 + 1;
+                  }
+                  if (textColor_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextColor);
+                  }
+                  if (backgroundColor_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(BackgroundColor);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(StyleInfo other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.FontSize != 0) {
+                    FontSize = other.FontSize;
+                  }
+                  if (other.PixelFontSize != 0D) {
+                    PixelFontSize = other.PixelFontSize;
+                  }
+                  if (other.LetterSpacing != 0D) {
+                    LetterSpacing = other.LetterSpacing;
+                  }
+                  if (other.FontType.Length != 0) {
+                    FontType = other.FontType;
+                  }
+                  if (other.Bold != false) {
+                    Bold = other.Bold;
+                  }
+                  if (other.Italic != false) {
+                    Italic = other.Italic;
+                  }
+                  if (other.Underlined != false) {
+                    Underlined = other.Underlined;
+                  }
+                  if (other.Strikeout != false) {
+                    Strikeout = other.Strikeout;
+                  }
+                  if (other.Subscript != false) {
+                    Subscript = other.Subscript;
+                  }
+                  if (other.Superscript != false) {
+                    Superscript = other.Superscript;
+                  }
+                  if (other.Smallcaps != false) {
+                    Smallcaps = other.Smallcaps;
+                  }
+                  if (other.FontWeight != 0) {
+                    FontWeight = other.FontWeight;
+                  }
+                  if (other.Handwritten != false) {
+                    Handwritten = other.Handwritten;
+                  }
+                  if (other.textColor_ != null) {
+                    if (textColor_ == null) {
+                      TextColor = new global::Google.Type.Color();
+                    }
+                    TextColor.MergeFrom(other.TextColor);
+                  }
+                  if (other.backgroundColor_ != null) {
+                    if (backgroundColor_ == null) {
+                      BackgroundColor = new global::Google.Type.Color();
+                    }
+                    BackgroundColor.MergeFrom(other.BackgroundColor);
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 8: {
+                        FontSize = input.ReadInt32();
+                        break;
+                      }
+                      case 17: {
+                        PixelFontSize = input.ReadDouble();
+                        break;
+                      }
+                      case 25: {
+                        LetterSpacing = input.ReadDouble();
+                        break;
+                      }
+                      case 34: {
+                        FontType = input.ReadString();
+                        break;
+                      }
+                      case 40: {
+                        Bold = input.ReadBool();
+                        break;
+                      }
+                      case 48: {
+                        Italic = input.ReadBool();
+                        break;
+                      }
+                      case 56: {
+                        Underlined = input.ReadBool();
+                        break;
+                      }
+                      case 64: {
+                        Strikeout = input.ReadBool();
+                        break;
+                      }
+                      case 72: {
+                        Subscript = input.ReadBool();
+                        break;
+                      }
+                      case 80: {
+                        Superscript = input.ReadBool();
+                        break;
+                      }
+                      case 88: {
+                        Smallcaps = input.ReadBool();
+                        break;
+                      }
+                      case 96: {
+                        FontWeight = input.ReadInt32();
+                        break;
+                      }
+                      case 104: {
+                        Handwritten = input.ReadBool();
+                        break;
+                      }
+                      case 114: {
+                        if (textColor_ == null) {
+                          TextColor = new global::Google.Type.Color();
+                        }
+                        input.ReadMessage(TextColor);
+                        break;
+                      }
+                      case 122: {
+                        if (backgroundColor_ == null) {
+                          BackgroundColor = new global::Google.Type.Color();
+                        }
+                        input.ReadMessage(BackgroundColor);
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 8: {
+                        FontSize = input.ReadInt32();
+                        break;
+                      }
+                      case 17: {
+                        PixelFontSize = input.ReadDouble();
+                        break;
+                      }
+                      case 25: {
+                        LetterSpacing = input.ReadDouble();
+                        break;
+                      }
+                      case 34: {
+                        FontType = input.ReadString();
+                        break;
+                      }
+                      case 40: {
+                        Bold = input.ReadBool();
+                        break;
+                      }
+                      case 48: {
+                        Italic = input.ReadBool();
+                        break;
+                      }
+                      case 56: {
+                        Underlined = input.ReadBool();
+                        break;
+                      }
+                      case 64: {
+                        Strikeout = input.ReadBool();
+                        break;
+                      }
+                      case 72: {
+                        Subscript = input.ReadBool();
+                        break;
+                      }
+                      case 80: {
+                        Superscript = input.ReadBool();
+                        break;
+                      }
+                      case 88: {
+                        Smallcaps = input.ReadBool();
+                        break;
+                      }
+                      case 96: {
+                        FontWeight = input.ReadInt32();
+                        break;
+                      }
+                      case 104: {
+                        Handwritten = input.ReadBool();
+                        break;
+                      }
+                      case 114: {
+                        if (textColor_ == null) {
+                          TextColor = new global::Google.Type.Color();
+                        }
+                        input.ReadMessage(TextColor);
+                        break;
+                      }
+                      case 122: {
+                        if (backgroundColor_ == null) {
+                          BackgroundColor = new global::Google.Type.Color();
+                        }
+                        input.ReadMessage(BackgroundColor);
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
 
               }
 
@@ -6076,6 +6916,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             /// <summary>
             /// The history of this table.
             /// </summary>
+            [global::System.ObsoleteAttribute]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.DocumentAI.V1.Document.Types.Provenance Provenance {
@@ -7607,9 +8448,9 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int LanguageCodeFieldNumber = 1;
             private string languageCode_ = "";
             /// <summary>
-            /// The BCP-47 language code, such as `en-US` or `sr-Latn`. For more
-            /// information, see
-            /// https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+            /// The [BCP-47 language
+            /// code](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier),
+            /// such as `en-US` or `sr-Latn`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7793,7 +8634,7 @@ namespace Google.Cloud.DocumentAI.V1 {
           }
 
           /// <summary>
-          /// Image Quality Scores for the page image
+          /// Image quality scores for the page image.
           /// </summary>
           public sealed partial class ImageQualityScores : pb::IMessage<ImageQualityScores>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7844,7 +8685,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int QualityScoreFieldNumber = 1;
             private float qualityScore_;
             /// <summary>
-            /// The overall quality score. Range `[0, 1]` where 1 is perfect quality.
+            /// The overall quality score. Range `[0, 1]` where `1` is perfect quality.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8095,8 +8936,8 @@ namespace Google.Cloud.DocumentAI.V1 {
                 public const int ConfidenceFieldNumber = 2;
                 private float confidence_;
                 /// <summary>
-                /// Confidence of detected defect. Range `[0, 1]` where 1 indicates
-                /// strong confidence of that the defect exists.
+                /// Confidence of detected defect. Range `[0, 1]` where `1` indicates
+                /// strong confidence that the defect exists.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11259,9 +12100,9 @@ namespace Google.Cloud.DocumentAI.V1 {
             [pbr::OriginalName("REMOVE")] Remove = 2,
             /// <summary>
             /// Updates any fields within the given provenance scope of the message. It
-            /// 'overwrites'  the fields rather than replacing them.  This is
-            /// especially relevant when we just want to update a field value of an
-            /// entity without also affecting all the child properties.
+            /// overwrites the fields rather than replacing them.  Use this when you
+            /// want to update a field value of an entity without also updating all the
+            /// child properties.
             /// </summary>
             [pbr::OriginalName("UPDATE")] Update = 7,
             /// <summary>
