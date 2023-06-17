@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbilling_v1_generated_CloudBilling_GetProjectBillingInfo_async_flattened]
+    // [START cloudbilling_v1_generated_CloudBilling_GetProjectBillingInfo_sync_flattened_resourceNames]
     using Google.Cloud.Billing.V1;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudBillingClientSnippets
     {
-        /// <summary>Snippet for GetProjectBillingInfoAsync</summary>
+        /// <summary>Snippet for GetProjectBillingInfo</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,15 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GetProjectBillingInfoAsync()
+        public void GetProjectBillingInfoResourceNames()
         {
             // Create client
-            CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
+            CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/billingInfo";
+            ProjectBillingInfoName name = ProjectBillingInfoName.FromProject("[PROJECT]");
             // Make the request
-            ProjectBillingInfo response = await cloudBillingClient.GetProjectBillingInfoAsync(name);
+            ProjectBillingInfo response = cloudBillingClient.GetProjectBillingInfo(name);
         }
     }
-    // [END cloudbilling_v1_generated_CloudBilling_GetProjectBillingInfo_async_flattened]
+    // [END cloudbilling_v1_generated_CloudBilling_GetProjectBillingInfo_sync_flattened_resourceNames]
 }

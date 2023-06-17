@@ -1175,6 +1175,60 @@ namespace Google.Cloud.Billing.V1
             GetProjectBillingInfoAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets the billing information for a project. The current authenticated user
+        /// must have the `resourcemanager.projects.get` permission for the project,
+        /// which can be granted by assigning the [Project
+        /// Viewer](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+        /// role.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the project for which billing information is
+        /// retrieved. For example, `projects/tokyo-rain-123`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ProjectBillingInfo GetProjectBillingInfo(ProjectBillingInfoName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProjectBillingInfo(new GetProjectBillingInfoRequest
+            {
+                ProjectBillingInfoName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the billing information for a project. The current authenticated user
+        /// must have the `resourcemanager.projects.get` permission for the project,
+        /// which can be granted by assigning the [Project
+        /// Viewer](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+        /// role.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the project for which billing information is
+        /// retrieved. For example, `projects/tokyo-rain-123`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProjectBillingInfo> GetProjectBillingInfoAsync(ProjectBillingInfoName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProjectBillingInfoAsync(new GetProjectBillingInfoRequest
+            {
+                ProjectBillingInfoName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the billing information for a project. The current authenticated user
+        /// must have the `resourcemanager.projects.get` permission for the project,
+        /// which can be granted by assigning the [Project
+        /// Viewer](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+        /// role.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the project for which billing information is
+        /// retrieved. For example, `projects/tokyo-rain-123`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProjectBillingInfo> GetProjectBillingInfoAsync(ProjectBillingInfoName name, st::CancellationToken cancellationToken) =>
+            GetProjectBillingInfoAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Sets or updates the billing account associated with a project. You specify
         /// the new billing account by setting the `billing_account_name` in the
         /// `ProjectBillingInfo` resource to the resource name of a billing account.

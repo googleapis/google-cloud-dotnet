@@ -1349,12 +1349,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 41,
+          "end": 44,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 39,
+          "end": 42,
           "type": "SHORT"
         }
       ]
@@ -1398,12 +1398,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 42,
+          "end": 45,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 40,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -1468,6 +1468,101 @@
         "parameters": [
           {
             "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Billing.V1.ProjectBillingInfo>",
+        "client": {
+          "shortName": "CloudBillingClient",
+          "fullName": "Google.Cloud.Billing.V1.CloudBillingClient"
+        },
+        "method": {
+          "shortName": "GetProjectBillingInfo",
+          "fullName": "google.cloud.billing.v1.CloudBilling.GetProjectBillingInfo",
+          "service": {
+            "shortName": "CloudBilling",
+            "fullName": "google.cloud.billing.v1.CloudBilling"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbilling_v1_generated_CloudBilling_GetProjectBillingInfo_sync_flattened_resourceNames",
+      "title": "GetProjectBillingInfoResourceNames",
+      "description": "Snippet for GetProjectBillingInfo",
+      "file": "CloudBillingClient.GetProjectBillingInfoResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectBillingInfo",
+        "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetProjectBillingInfo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.ProjectBillingInfoName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Billing.V1.ProjectBillingInfo",
+        "client": {
+          "shortName": "CloudBillingClient",
+          "fullName": "Google.Cloud.Billing.V1.CloudBillingClient"
+        },
+        "method": {
+          "shortName": "GetProjectBillingInfo",
+          "fullName": "google.cloud.billing.v1.CloudBilling.GetProjectBillingInfo",
+          "service": {
+            "shortName": "CloudBilling",
+            "fullName": "google.cloud.billing.v1.CloudBilling"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbilling_v1_generated_CloudBilling_GetProjectBillingInfo_async_flattened_resourceNames",
+      "title": "GetProjectBillingInfoResourceNamesAsync",
+      "description": "Snippet for GetProjectBillingInfoAsync",
+      "file": "CloudBillingClient.GetProjectBillingInfoResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectBillingInfoAsync",
+        "fullName": "Google.Cloud.Billing.V1.CloudBillingClient.GetProjectBillingInfoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Billing.V1.ProjectBillingInfoName",
             "name": "name"
           },
           {
