@@ -39989,6 +39989,293 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_ModelService_UpdateExplanationDataset_sync",
+      "title": "UpdateExplanationDatasetRequestObject",
+      "description": "Snippet for UpdateExplanationDataset",
+      "file": "ModelServiceClient.UpdateExplanationDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExplanationDataset",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.UpdateExplanationDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetResponse, Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetOperationMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExplanationDataset",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.UpdateExplanationDataset",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_UpdateExplanationDataset_async",
+      "title": "UpdateExplanationDatasetRequestObjectAsync",
+      "description": "Snippet for UpdateExplanationDatasetAsync",
+      "file": "ModelServiceClient.UpdateExplanationDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExplanationDatasetAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.UpdateExplanationDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetResponse, Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetOperationMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExplanationDataset",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.UpdateExplanationDataset",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_UpdateExplanationDataset_sync_flattened",
+      "title": "UpdateExplanationDataset",
+      "description": "Snippet for UpdateExplanationDataset",
+      "file": "ModelServiceClient.UpdateExplanationDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExplanationDataset",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.UpdateExplanationDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetResponse, Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetOperationMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExplanationDataset",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.UpdateExplanationDataset",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_UpdateExplanationDataset_async_flattened",
+      "title": "UpdateExplanationDatasetAsync",
+      "description": "Snippet for UpdateExplanationDatasetAsync",
+      "file": "ModelServiceClient.UpdateExplanationDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExplanationDatasetAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.UpdateExplanationDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetResponse, Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetOperationMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExplanationDataset",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.UpdateExplanationDataset",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_UpdateExplanationDataset_sync_flattened_resourceNames",
+      "title": "UpdateExplanationDatasetResourceNames",
+      "description": "Snippet for UpdateExplanationDataset",
+      "file": "ModelServiceClient.UpdateExplanationDatasetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExplanationDataset",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.UpdateExplanationDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ModelName",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetResponse, Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetOperationMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExplanationDataset",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.UpdateExplanationDataset",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_UpdateExplanationDataset_async_flattened_resourceNames",
+      "title": "UpdateExplanationDatasetResourceNamesAsync",
+      "description": "Snippet for UpdateExplanationDatasetAsync",
+      "file": "ModelServiceClient.UpdateExplanationDatasetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExplanationDatasetAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.UpdateExplanationDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ModelName",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetResponse, Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetOperationMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExplanationDataset",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.UpdateExplanationDataset",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_ModelService_DeleteModel_sync",
       "title": "DeleteModelRequestObject",
       "description": "Snippet for DeleteModel",

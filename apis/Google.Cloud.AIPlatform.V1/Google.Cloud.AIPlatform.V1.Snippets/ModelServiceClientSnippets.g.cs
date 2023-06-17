@@ -939,6 +939,191 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateExplanationDataset</summary>
+        public void UpdateExplanationDatasetRequestObject()
+        {
+            // Snippet: UpdateExplanationDataset(UpdateExplanationDatasetRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateExplanationDatasetRequest request = new UpdateExplanationDatasetRequest
+            {
+                ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                Examples = new Examples(),
+            };
+            // Make the request
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> response = modelServiceClient.UpdateExplanationDataset(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UpdateExplanationDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> retrievedResponse = modelServiceClient.PollOnceUpdateExplanationDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateExplanationDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExplanationDatasetAsync</summary>
+        public async Task UpdateExplanationDatasetRequestObjectAsync()
+        {
+            // Snippet: UpdateExplanationDatasetAsync(UpdateExplanationDatasetRequest, CallSettings)
+            // Additional: UpdateExplanationDatasetAsync(UpdateExplanationDatasetRequest, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateExplanationDatasetRequest request = new UpdateExplanationDatasetRequest
+            {
+                ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                Examples = new Examples(),
+            };
+            // Make the request
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> response = await modelServiceClient.UpdateExplanationDatasetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UpdateExplanationDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> retrievedResponse = await modelServiceClient.PollOnceUpdateExplanationDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateExplanationDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExplanationDataset</summary>
+        public void UpdateExplanationDataset()
+        {
+            // Snippet: UpdateExplanationDataset(string, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            string model = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> response = modelServiceClient.UpdateExplanationDataset(model);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UpdateExplanationDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> retrievedResponse = modelServiceClient.PollOnceUpdateExplanationDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateExplanationDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExplanationDatasetAsync</summary>
+        public async Task UpdateExplanationDatasetAsync()
+        {
+            // Snippet: UpdateExplanationDatasetAsync(string, CallSettings)
+            // Additional: UpdateExplanationDatasetAsync(string, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string model = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> response = await modelServiceClient.UpdateExplanationDatasetAsync(model);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UpdateExplanationDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> retrievedResponse = await modelServiceClient.PollOnceUpdateExplanationDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateExplanationDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExplanationDataset</summary>
+        public void UpdateExplanationDatasetResourceNames()
+        {
+            // Snippet: UpdateExplanationDataset(ModelName, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            ModelName model = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> response = modelServiceClient.UpdateExplanationDataset(model);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UpdateExplanationDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> retrievedResponse = modelServiceClient.PollOnceUpdateExplanationDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateExplanationDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExplanationDatasetAsync</summary>
+        public async Task UpdateExplanationDatasetResourceNamesAsync()
+        {
+            // Snippet: UpdateExplanationDatasetAsync(ModelName, CallSettings)
+            // Additional: UpdateExplanationDatasetAsync(ModelName, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelName model = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> response = await modelServiceClient.UpdateExplanationDatasetAsync(model);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UpdateExplanationDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> retrievedResponse = await modelServiceClient.PollOnceUpdateExplanationDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateExplanationDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteModel</summary>
         public void DeleteModelRequestObject()
         {

@@ -56,6 +56,8 @@ namespace Google.Cloud.AIPlatform.V1
             ListModelsSettings = existing.ListModelsSettings;
             ListModelVersionsSettings = existing.ListModelVersionsSettings;
             UpdateModelSettings = existing.UpdateModelSettings;
+            UpdateExplanationDatasetSettings = existing.UpdateExplanationDatasetSettings;
+            UpdateExplanationDatasetOperationsSettings = existing.UpdateExplanationDatasetOperationsSettings.Clone();
             DeleteModelSettings = existing.DeleteModelSettings;
             DeleteModelOperationsSettings = existing.DeleteModelOperationsSettings.Clone();
             DeleteModelVersionSettings = existing.DeleteModelVersionSettings;
@@ -156,6 +158,37 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateModelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelServiceClient.UpdateExplanationDataset</c> and <c>ModelServiceClient.UpdateExplanationDatasetAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateExplanationDatasetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ModelServiceClient.UpdateExplanationDataset</c> and
+        /// <c>ModelServiceClient.UpdateExplanationDatasetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateExplanationDatasetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1228,6 +1261,144 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Model> UpdateModelAsync(Model model, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateModelAsync(model, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> UpdateExplanationDataset(UpdateExplanationDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(UpdateExplanationDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(UpdateExplanationDatasetRequest request, st::CancellationToken cancellationToken) =>
+            UpdateExplanationDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateExplanationDataset</c>.</summary>
+        public virtual lro::OperationsClient UpdateExplanationDatasetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateExplanationDataset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> PollOnceUpdateExplanationDataset(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateExplanationDatasetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateExplanationDataset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> PollOnceUpdateExplanationDatasetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateExplanationDatasetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The resource name of the Model to update.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> UpdateExplanationDataset(string model, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExplanationDataset(new UpdateExplanationDatasetRequest
+            {
+                Model = gax::GaxPreconditions.CheckNotNullOrEmpty(model, nameof(model)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The resource name of the Model to update.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(string model, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExplanationDatasetAsync(new UpdateExplanationDatasetRequest
+            {
+                Model = gax::GaxPreconditions.CheckNotNullOrEmpty(model, nameof(model)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The resource name of the Model to update.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(string model, st::CancellationToken cancellationToken) =>
+            UpdateExplanationDatasetAsync(model, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The resource name of the Model to update.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> UpdateExplanationDataset(ModelName model, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExplanationDataset(new UpdateExplanationDatasetRequest
+            {
+                ModelAsModelName = gax::GaxPreconditions.CheckNotNull(model, nameof(model)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The resource name of the Model to update.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(ModelName model, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExplanationDatasetAsync(new UpdateExplanationDatasetRequest
+            {
+                ModelAsModelName = gax::GaxPreconditions.CheckNotNull(model, nameof(model)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The resource name of the Model to update.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(ModelName model, st::CancellationToken cancellationToken) =>
+            UpdateExplanationDatasetAsync(model, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a Model.
@@ -3190,6 +3361,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<UpdateModelRequest, Model> _callUpdateModel;
 
+        private readonly gaxgrpc::ApiCall<UpdateExplanationDatasetRequest, lro::Operation> _callUpdateExplanationDataset;
+
         private readonly gaxgrpc::ApiCall<DeleteModelRequest, lro::Operation> _callDeleteModel;
 
         private readonly gaxgrpc::ApiCall<DeleteModelVersionRequest, lro::Operation> _callDeleteModelVersion;
@@ -3226,6 +3399,7 @@ namespace Google.Cloud.AIPlatform.V1
             ModelServiceSettings effectiveSettings = settings ?? ModelServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             UploadModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UploadModelOperationsSettings, logger);
+            UpdateExplanationDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateExplanationDatasetOperationsSettings, logger);
             DeleteModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelOperationsSettings, logger);
             DeleteModelVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelVersionOperationsSettings, logger);
             ExportModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportModelOperationsSettings, logger);
@@ -3247,6 +3421,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callUpdateModel = clientHelper.BuildApiCall<UpdateModelRequest, Model>("UpdateModel", grpcClient.UpdateModelAsync, grpcClient.UpdateModel, effectiveSettings.UpdateModelSettings).WithGoogleRequestParam("model.name", request => request.Model?.Name);
             Modify_ApiCall(ref _callUpdateModel);
             Modify_UpdateModelApiCall(ref _callUpdateModel);
+            _callUpdateExplanationDataset = clientHelper.BuildApiCall<UpdateExplanationDatasetRequest, lro::Operation>("UpdateExplanationDataset", grpcClient.UpdateExplanationDatasetAsync, grpcClient.UpdateExplanationDataset, effectiveSettings.UpdateExplanationDatasetSettings).WithGoogleRequestParam("model", request => request.Model);
+            Modify_ApiCall(ref _callUpdateExplanationDataset);
+            Modify_UpdateExplanationDatasetApiCall(ref _callUpdateExplanationDataset);
             _callDeleteModel = clientHelper.BuildApiCall<DeleteModelRequest, lro::Operation>("DeleteModel", grpcClient.DeleteModelAsync, grpcClient.DeleteModel, effectiveSettings.DeleteModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteModel);
             Modify_DeleteModelApiCall(ref _callDeleteModel);
@@ -3298,6 +3475,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_UpdateModelApiCall(ref gaxgrpc::ApiCall<UpdateModelRequest, Model> call);
 
+        partial void Modify_UpdateExplanationDatasetApiCall(ref gaxgrpc::ApiCall<UpdateExplanationDatasetRequest, lro::Operation> call);
+
         partial void Modify_DeleteModelApiCall(ref gaxgrpc::ApiCall<DeleteModelRequest, lro::Operation> call);
 
         partial void Modify_DeleteModelVersionApiCall(ref gaxgrpc::ApiCall<DeleteModelVersionRequest, lro::Operation> call);
@@ -3342,6 +3521,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_ListModelVersionsRequest(ref ListModelVersionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateModelRequest(ref UpdateModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateExplanationDatasetRequest(ref UpdateExplanationDatasetRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteModelRequest(ref DeleteModelRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3488,6 +3669,33 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_UpdateModelRequest(ref request, ref callSettings);
             return _callUpdateModel.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateExplanationDataset</c>.</summary>
+        public override lro::OperationsClient UpdateExplanationDatasetOperationsClient { get; }
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> UpdateExplanationDataset(UpdateExplanationDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExplanationDatasetRequest(ref request, ref callSettings);
+            return new lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>(_callUpdateExplanationDataset.Sync(request, callSettings), UpdateExplanationDatasetOperationsClient);
+        }
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(UpdateExplanationDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExplanationDatasetRequest(ref request, ref callSettings);
+            return new lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>(await _callUpdateExplanationDataset.Async(request, callSettings).ConfigureAwait(false), UpdateExplanationDatasetOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteModel</c>.</summary>
