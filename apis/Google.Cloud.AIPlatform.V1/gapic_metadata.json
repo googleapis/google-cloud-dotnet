@@ -985,6 +985,12 @@
                 "MergeVersionAliasesAsync"
               ]
             },
+            "UpdateExplanationDataset": {
+              "methods": [
+                "UpdateExplanationDataset",
+                "UpdateExplanationDatasetAsync"
+              ]
+            },
             "UpdateModel": {
               "methods": [
                 "UpdateModel",

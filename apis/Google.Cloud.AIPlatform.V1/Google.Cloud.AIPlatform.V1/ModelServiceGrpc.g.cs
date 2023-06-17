@@ -82,6 +82,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpdateModelRequest> __Marshaller_google_cloud_aiplatform_v1_UpdateModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpdateModelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest> __Marshaller_google_cloud_aiplatform_v1_UpdateExplanationDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteModelRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteModelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteModelVersionRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteModelVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteModelVersionRequest.Parser));
@@ -157,6 +159,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "UpdateModel",
         __Marshaller_google_cloud_aiplatform_v1_UpdateModelRequest,
         __Marshaller_google_cloud_aiplatform_v1_Model);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest, global::Google.LongRunning.Operation> __Method_UpdateExplanationDataset = new grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateExplanationDataset",
+        __Marshaller_google_cloud_aiplatform_v1_UpdateExplanationDatasetRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteModelRequest, global::Google.LongRunning.Operation> __Method_DeleteModel = new grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteModelRequest, global::Google.LongRunning.Operation>(
@@ -320,6 +330,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.Model> UpdateModel(global::Google.Cloud.AIPlatform.V1.UpdateModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Incrementally update the dataset used for an examples model.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateExplanationDataset(global::Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -757,6 +779,54 @@ namespace Google.Cloud.AIPlatform.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Model> UpdateModelAsync(global::Google.Cloud.AIPlatform.V1.UpdateModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateModel, null, options, request);
+      }
+      /// <summary>
+      /// Incrementally update the dataset used for an examples model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateExplanationDataset(global::Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateExplanationDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Incrementally update the dataset used for an examples model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateExplanationDataset(global::Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateExplanationDataset, null, options, request);
+      }
+      /// <summary>
+      /// Incrementally update the dataset used for an examples model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateExplanationDatasetAsync(global::Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateExplanationDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Incrementally update the dataset used for an examples model.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateExplanationDatasetAsync(global::Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateExplanationDataset, null, options, request);
       }
       /// <summary>
       /// Deletes a Model.
@@ -1437,6 +1507,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_ListModels, serviceImpl.ListModels)
           .AddMethod(__Method_ListModelVersions, serviceImpl.ListModelVersions)
           .AddMethod(__Method_UpdateModel, serviceImpl.UpdateModel)
+          .AddMethod(__Method_UpdateExplanationDataset, serviceImpl.UpdateExplanationDataset)
           .AddMethod(__Method_DeleteModel, serviceImpl.DeleteModel)
           .AddMethod(__Method_DeleteModelVersion, serviceImpl.DeleteModelVersion)
           .AddMethod(__Method_MergeVersionAliases, serviceImpl.MergeVersionAliases)
@@ -1463,6 +1534,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_ListModels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListModelsRequest, global::Google.Cloud.AIPlatform.V1.ListModelsResponse>(serviceImpl.ListModels));
       serviceBinder.AddMethod(__Method_ListModelVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest, global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse>(serviceImpl.ListModelVersions));
       serviceBinder.AddMethod(__Method_UpdateModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateModelRequest, global::Google.Cloud.AIPlatform.V1.Model>(serviceImpl.UpdateModel));
+      serviceBinder.AddMethod(__Method_UpdateExplanationDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateExplanationDataset));
       serviceBinder.AddMethod(__Method_DeleteModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteModelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteModel));
       serviceBinder.AddMethod(__Method_DeleteModelVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteModelVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteModelVersion));
       serviceBinder.AddMethod(__Method_MergeVersionAliases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.MergeVersionAliasesRequest, global::Google.Cloud.AIPlatform.V1.Model>(serviceImpl.MergeVersionAliases));
