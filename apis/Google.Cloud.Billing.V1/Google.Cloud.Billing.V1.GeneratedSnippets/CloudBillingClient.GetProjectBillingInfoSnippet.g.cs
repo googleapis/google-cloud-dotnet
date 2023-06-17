@@ -34,7 +34,7 @@ namespace GoogleCSharpSnippets
             // Create client
             CloudBillingClient cloudBillingClient = CloudBillingClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/billingInfo";
             // Make the request
             ProjectBillingInfo response = cloudBillingClient.GetProjectBillingInfo(name);
         }

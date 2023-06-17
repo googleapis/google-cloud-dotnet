@@ -15,10 +15,214 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcbv = Google.Cloud.Billing.V1;
+using sys = System;
 
 namespace Google.Cloud.Billing.V1
 {
+    /// <summary>Resource name for the <c>ProjectBillingInfo</c> resource.</summary>
+    public sealed partial class ProjectBillingInfoName : gax::IResourceName, sys::IEquatable<ProjectBillingInfoName>
+    {
+        /// <summary>The possible contents of <see cref="ProjectBillingInfoName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/billingInfo</c>.</summary>
+            Project = 1,
+        }
+
+        private static gax::PathTemplate s_project = new gax::PathTemplate("projects/{project}/billingInfo");
+
+        /// <summary>Creates a <see cref="ProjectBillingInfoName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="ProjectBillingInfoName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static ProjectBillingInfoName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new ProjectBillingInfoName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="ProjectBillingInfoName"/> with the pattern <c>projects/{project}/billingInfo</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="ProjectBillingInfoName"/> constructed from the provided ids.</returns>
+        public static ProjectBillingInfoName FromProject(string projectId) =>
+            new ProjectBillingInfoName(ResourceNameType.Project, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ProjectBillingInfoName"/> with pattern
+        /// <c>projects/{project}/billingInfo</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ProjectBillingInfoName"/> with pattern
+        /// <c>projects/{project}/billingInfo</c>.
+        /// </returns>
+        public static string Format(string projectId) => FormatProject(projectId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ProjectBillingInfoName"/> with pattern
+        /// <c>projects/{project}/billingInfo</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ProjectBillingInfoName"/> with pattern
+        /// <c>projects/{project}/billingInfo</c>.
+        /// </returns>
+        public static string FormatProject(string projectId) =>
+            s_project.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ProjectBillingInfoName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>projects/{project}/billingInfo</c></description></item></list>
+        /// </remarks>
+        /// <param name="projectBillingInfoName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProjectBillingInfoName"/> if successful.</returns>
+        public static ProjectBillingInfoName Parse(string projectBillingInfoName) => Parse(projectBillingInfoName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ProjectBillingInfoName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>projects/{project}/billingInfo</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="projectBillingInfoName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="ProjectBillingInfoName"/> if successful.</returns>
+        public static ProjectBillingInfoName Parse(string projectBillingInfoName, bool allowUnparsed) =>
+            TryParse(projectBillingInfoName, allowUnparsed, out ProjectBillingInfoName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ProjectBillingInfoName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>projects/{project}/billingInfo</c></description></item></list>
+        /// </remarks>
+        /// <param name="projectBillingInfoName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ProjectBillingInfoName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string projectBillingInfoName, out ProjectBillingInfoName result) =>
+            TryParse(projectBillingInfoName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ProjectBillingInfoName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>projects/{project}/billingInfo</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="projectBillingInfoName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ProjectBillingInfoName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string projectBillingInfoName, bool allowUnparsed, out ProjectBillingInfoName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(projectBillingInfoName, nameof(projectBillingInfoName));
+            gax::TemplatedResourceName resourceName;
+            if (s_project.TryParseName(projectBillingInfoName, out resourceName))
+            {
+                result = FromProject(resourceName[0]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(projectBillingInfoName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private ProjectBillingInfoName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="ProjectBillingInfoName"/> class from the component parts of
+        /// pattern <c>projects/{project}/billingInfo</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        public ProjectBillingInfoName(string projectId) : this(ResourceNameType.Project, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.Project: return s_project.Expand(ProjectId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as ProjectBillingInfoName);
+
+        /// <inheritdoc/>
+        public bool Equals(ProjectBillingInfoName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(ProjectBillingInfoName a, ProjectBillingInfoName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(ProjectBillingInfoName a, ProjectBillingInfoName b) => !(a == b);
+    }
+
     public partial class BillingAccount
     {
         /// <summary>
@@ -27,6 +231,18 @@ namespace Google.Cloud.Billing.V1
         public gagr::BillingAccountName BillingAccountName
         {
             get => string.IsNullOrEmpty(Name) ? null : gagr::BillingAccountName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ProjectBillingInfo
+    {
+        /// <summary>
+        /// <see cref="gcbv::ProjectBillingInfoName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbv::ProjectBillingInfoName ProjectBillingInfoName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::ProjectBillingInfoName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -63,6 +279,18 @@ namespace Google.Cloud.Billing.V1
         public gagr::BillingAccountName BillingAccountName
         {
             get => string.IsNullOrEmpty(Name) ? null : gagr::BillingAccountName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetProjectBillingInfoRequest
+    {
+        /// <summary>
+        /// <see cref="gcbv::ProjectBillingInfoName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbv::ProjectBillingInfoName ProjectBillingInfoName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::ProjectBillingInfoName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
