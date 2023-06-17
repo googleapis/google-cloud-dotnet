@@ -31,7 +31,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "b3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGjBnb29nbGUvY2xvdWQv",
             "ZGlzY292ZXJ5ZW5naW5lL3YxYmV0YS9jb21tb24ucHJvdG8aMmdvb2dsZS9j",
             "bG91ZC9kaXNjb3ZlcnllbmdpbmUvdjFiZXRhL2RvY3VtZW50LnByb3RvGhxn",
-            "b29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvIuQSCg1TZWFyY2hSZXF1ZXN0",
+            "b29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvIsUUCg1TZWFyY2hSZXF1ZXN0",
             "EkwKDnNlcnZpbmdfY29uZmlnGAEgASgJQjTgQQL6QS4KLGRpc2NvdmVyeWVu",
             "Z2luZS5nb29nbGVhcGlzLmNvbS9TZXJ2aW5nQ29uZmlnEjoKBmJyYW5jaBgC",
             "IAEoCUIq+kEnCiVkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vQnJh",
@@ -74,58 +74,63 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "U3BlbGxDb3JyZWN0aW9uU3BlYxJZCgRtb2RlGAEgASgOMksuZ29vZ2xlLmNs",
             "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuU2VhcmNoUmVxdWVzdC5TcGVs",
             "bENvcnJlY3Rpb25TcGVjLk1vZGUiOwoETW9kZRIUChBNT0RFX1VOU1BFQ0lG",
-            "SUVEEAASEwoPU1VHR0VTVElPTl9PTkxZEAESCAoEQVVUTxACGtICChFDb250",
+            "SUVEEAASEwoPU1VHR0VTVElPTl9PTkxZEAESCAoEQVVUTxACGrMEChFDb250",
             "ZW50U2VhcmNoU3BlYxJmCgxzbmlwcGV0X3NwZWMYASABKAsyUC5nb29nbGUu",
             "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5TZWFyY2hSZXF1ZXN0LkNv",
             "bnRlbnRTZWFyY2hTcGVjLlNuaXBwZXRTcGVjEmYKDHN1bW1hcnlfc3BlYxgC",
             "IAEoCzJQLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlNl",
-            "YXJjaFJlcXVlc3QuQ29udGVudFNlYXJjaFNwZWMuU3VtbWFyeVNwZWMaQAoL",
-            "U25pcHBldFNwZWMSGQoRbWF4X3NuaXBwZXRfY291bnQYASABKAUSFgoOcmVm",
-            "ZXJlbmNlX29ubHkYAiABKAgaKwoLU3VtbWFyeVNwZWMSHAoUc3VtbWFyeV9y",
-            "ZXN1bHRfY291bnQYASABKAUaRQoLUGFyYW1zRW50cnkSCwoDa2V5GAEgASgJ",
+            "YXJjaFJlcXVlc3QuQ29udGVudFNlYXJjaFNwZWMuU3VtbWFyeVNwZWMSewoX",
+            "ZXh0cmFjdGl2ZV9jb250ZW50X3NwZWMYAyABKAsyWi5nb29nbGUuY2xvdWQu",
+            "ZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5TZWFyY2hSZXF1ZXN0LkNvbnRlbnRT",
+            "ZWFyY2hTcGVjLkV4dHJhY3RpdmVDb250ZW50U3BlYxpACgtTbmlwcGV0U3Bl",
+            "YxIZChFtYXhfc25pcHBldF9jb3VudBgBIAEoBRIWCg5yZWZlcmVuY2Vfb25s",
+            "eRgCIAEoCBorCgtTdW1tYXJ5U3BlYxIcChRzdW1tYXJ5X3Jlc3VsdF9jb3Vu",
+            "dBgBIAEoBRpiChVFeHRyYWN0aXZlQ29udGVudFNwZWMSIwobbWF4X2V4dHJh",
+            "Y3RpdmVfYW5zd2VyX2NvdW50GAEgASgFEiQKHG1heF9leHRyYWN0aXZlX3Nl",
+            "Z21lbnRfY291bnQYAiABKAUaRQoLUGFyYW1zRW50cnkSCwoDa2V5GAEgASgJ",
             "EiUKBXZhbHVlGAIgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlOgI4ARox",
             "Cg9Vc2VyTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4ASK4CAoOU2VhcmNoUmVzcG9uc2USUQoHcmVzdWx0cxgBIAMoCzJALmdv",
+            "OgI4ASLOCAoOU2VhcmNoUmVzcG9uc2USUQoHcmVzdWx0cxgBIAMoCzJALmdv",
             "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlNlYXJjaFJlc3Bv",
             "bnNlLlNlYXJjaFJlc3VsdBJJCgZmYWNldHMYAiADKAsyOS5nb29nbGUuY2xv",
             "dWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5TZWFyY2hSZXNwb25zZS5GYWNl",
             "dBJkChRndWlkZWRfc2VhcmNoX3Jlc3VsdBgIIAEoCzJGLmdvb2dsZS5jbG91",
             "ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlNlYXJjaFJlc3BvbnNlLkd1aWRl",
             "ZFNlYXJjaFJlc3VsdBISCgp0b3RhbF9zaXplGAMgASgFEhkKEWF0dHJpYnV0",
-            "aW9uX3Rva2VuGAQgASgJEhcKD25leHRfcGFnZV90b2tlbhgFIAEoCRIXCg9j",
-            "b3JyZWN0ZWRfcXVlcnkYByABKAkSTAoHc3VtbWFyeRgJIAEoCzI7Lmdvb2ds",
-            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlNlYXJjaFJlc3BvbnNl",
-            "LlN1bW1hcnkSGAoQYXBwbGllZF9jb250cm9scxgKIAMoCRpbCgxTZWFyY2hS",
-            "ZXN1bHQSCgoCaWQYASABKAkSPwoIZG9jdW1lbnQYAiABKAsyLS5nb29nbGUu",
-            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Eb2N1bWVudBqBAgoFRmFj",
-            "ZXQSCwoDa2V5GAEgASgJElQKBnZhbHVlcxgCIAMoCzJELmdvb2dsZS5jbG91",
-            "ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlNlYXJjaFJlc3BvbnNlLkZhY2V0",
-            "LkZhY2V0VmFsdWUSFQoNZHluYW1pY19mYWNldBgDIAEoCBp+CgpGYWNldFZh",
-            "bHVlEg8KBXZhbHVlGAEgASgJSAASQQoIaW50ZXJ2YWwYAiABKAsyLS5nb29n",
-            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5JbnRlcnZhbEgAEg0K",
-            "BWNvdW50GAMgASgDQg0KC2ZhY2V0X3ZhbHVlGtYBChJHdWlkZWRTZWFyY2hS",
-            "ZXN1bHQSeQoVcmVmaW5lbWVudF9hdHRyaWJ1dGVzGAEgAygLMlouZ29vZ2xl",
-            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuU2VhcmNoUmVzcG9uc2Uu",
-            "R3VpZGVkU2VhcmNoUmVzdWx0LlJlZmluZW1lbnRBdHRyaWJ1dGUaRQoTUmVm",
-            "aW5lbWVudEF0dHJpYnV0ZRIVCg1hdHRyaWJ1dGVfa2V5GAEgASgJEhcKD2F0",
-            "dHJpYnV0ZV92YWx1ZRgCIAEoCRofCgdTdW1tYXJ5EhQKDHN1bW1hcnlfdGV4",
-            "dBgBIAEoCTKjAwoNU2VhcmNoU2VydmljZRK9AgoGU2VhcmNoEjIuZ29vZ2xl",
-            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuU2VhcmNoUmVxdWVzdBoz",
-            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlNlYXJjaFJl",
-            "c3BvbnNlIskBgtPkkwLCASJUL3YxYmV0YS97c2VydmluZ19jb25maWc9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyovc2VydmluZ0NvbmZp",
-            "Z3MvKn06c2VhcmNoOgEqWmciYi92MWJldGEve3NlcnZpbmdfY29uZmlnPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKi9kYXRhU3RvcmVz",
-            "Lyovc2VydmluZ0NvbmZpZ3MvKn06c2VhcmNoOgEqGlLKQR5kaXNjb3Zlcnll",
-            "bmdpbmUuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlz",
-            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQpkCCidjb20uZ29vZ2xlLmNsb3Vk",
-            "LmRpc2NvdmVyeWVuZ2luZS52MWJldGFCElNlYXJjaFNlcnZpY2VQcm90b1AB",
-            "WlFjbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MWJl",
-            "dGEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVND",
-            "T1ZFUllFTkdJTkWqAiNHb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYx",
-            "QmV0YcoCI0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjFiZXRh6gIm",
-            "R29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWJldGFiBnByb3Rv",
-            "Mw=="));
+            "aW9uX3Rva2VuGAQgASgJEhQKDHJlZGlyZWN0X3VyaRgMIAEoCRIXCg9uZXh0",
+            "X3BhZ2VfdG9rZW4YBSABKAkSFwoPY29ycmVjdGVkX3F1ZXJ5GAcgASgJEkwK",
+            "B3N1bW1hcnkYCSABKAsyOy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
+            "LnYxYmV0YS5TZWFyY2hSZXNwb25zZS5TdW1tYXJ5EhgKEGFwcGxpZWRfY29u",
+            "dHJvbHMYCiADKAkaWwoMU2VhcmNoUmVzdWx0EgoKAmlkGAEgASgJEj8KCGRv",
+            "Y3VtZW50GAIgASgLMi0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
+            "MWJldGEuRG9jdW1lbnQagQIKBUZhY2V0EgsKA2tleRgBIAEoCRJUCgZ2YWx1",
+            "ZXMYAiADKAsyRC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0",
+            "YS5TZWFyY2hSZXNwb25zZS5GYWNldC5GYWNldFZhbHVlEhUKDWR5bmFtaWNf",
+            "ZmFjZXQYAyABKAgafgoKRmFjZXRWYWx1ZRIPCgV2YWx1ZRgBIAEoCUgAEkEK",
+            "CGludGVydmFsGAIgASgLMi0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2lu",
+            "ZS52MWJldGEuSW50ZXJ2YWxIABINCgVjb3VudBgDIAEoA0INCgtmYWNldF92",
+            "YWx1ZRrWAQoSR3VpZGVkU2VhcmNoUmVzdWx0EnkKFXJlZmluZW1lbnRfYXR0",
+            "cmlidXRlcxgBIAMoCzJaLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
+            "djFiZXRhLlNlYXJjaFJlc3BvbnNlLkd1aWRlZFNlYXJjaFJlc3VsdC5SZWZp",
+            "bmVtZW50QXR0cmlidXRlGkUKE1JlZmluZW1lbnRBdHRyaWJ1dGUSFQoNYXR0",
+            "cmlidXRlX2tleRgBIAEoCRIXCg9hdHRyaWJ1dGVfdmFsdWUYAiABKAkaHwoH",
+            "U3VtbWFyeRIUCgxzdW1tYXJ5X3RleHQYASABKAkyowMKDVNlYXJjaFNlcnZp",
+            "Y2USvQIKBlNlYXJjaBIyLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
+            "djFiZXRhLlNlYXJjaFJlcXVlc3QaMy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
+            "ZW5naW5lLnYxYmV0YS5TZWFyY2hSZXNwb25zZSLJAYLT5JMCwgEiVC92MWJl",
+            "dGEve3NlcnZpbmdfY29uZmlnPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0",
+            "YVN0b3Jlcy8qL3NlcnZpbmdDb25maWdzLyp9OnNlYXJjaDoBKlpnImIvdjFi",
+            "ZXRhL3tzZXJ2aW5nX2NvbmZpZz1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nv",
+            "bGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qL3NlcnZpbmdDb25maWdzLyp9OnNl",
+            "YXJjaDoBKhpSykEeZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29t0kEu",
+            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
+            "bUKZAgonY29tLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRh",
+            "QhJTZWFyY2hTZXJ2aWNlUHJvdG9QAVpRY2xvdWQuZ29vZ2xlLmNvbS9nby9k",
+            "aXNjb3ZlcnllbmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVyeWVuZ2luZXBiO2Rp",
+            "c2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIjR29vZ2xlLkNs",
+            "b3VkLkRpc2NvdmVyeUVuZ2luZS5WMUJldGHKAiNHb29nbGVcQ2xvdWRcRGlz",
+            "Y292ZXJ5RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVy",
+            "eUVuZ2luZTo6VjFiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -133,10 +138,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.BoostSpec), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.BoostSpec.Parser, new[]{ "ConditionBoostSpecs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.BoostSpec.Types.ConditionBoostSpec), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.BoostSpec.Types.ConditionBoostSpec.Parser, new[]{ "Condition", "Boost" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.QueryExpansionSpec), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.QueryExpansionSpec.Parser, new[]{ "Condition" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.QueryExpansionSpec.Types.Condition) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.SpellCorrectionSpec), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.SpellCorrectionSpec.Parser, new[]{ "Mode" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.SpellCorrectionSpec.Types.Mode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Parser, new[]{ "SnippetSpec", "SummarySpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.SnippetSpec), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.SnippetSpec.Parser, new[]{ "MaxSnippetCount", "ReferenceOnly" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Parser, new[]{ "SummaryResultCount" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Parser, new[]{ "SnippetSpec", "SummarySpec", "ExtractiveContentSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.SnippetSpec), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.SnippetSpec.Parser, new[]{ "MaxSnippetCount", "ReferenceOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Parser, new[]{ "SummaryResultCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.ExtractiveContentSpec), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.ExtractiveContentSpec.Parser, new[]{ "MaxExtractiveAnswerCount", "MaxExtractiveSegmentCount" }, null, null, null, null)}),
             null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Parser, new[]{ "Results", "Facets", "GuidedSearchResult", "TotalSize", "AttributionToken", "NextPageToken", "CorrectedQuery", "Summary", "AppliedControls" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.SearchResult), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.SearchResult.Parser, new[]{ "Id", "Document" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Parser, new[]{ "Results", "Facets", "GuidedSearchResult", "TotalSize", "AttributionToken", "RedirectUri", "NextPageToken", "CorrectedQuery", "Summary", "AppliedControls" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.SearchResult), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.SearchResult.Parser, new[]{ "Id", "Document" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.Facet), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.Facet.Parser, new[]{ "Key", "Values", "DynamicFacet" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.Facet.Types.FacetValue), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.Facet.Types.FacetValue.Parser, new[]{ "Value", "Interval", "Count" }, new[]{ "FacetValue" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.GuidedSearchResult), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.GuidedSearchResult.Parser, new[]{ "RefinementAttributes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.GuidedSearchResult.Types.RefinementAttribute), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.GuidedSearchResult.Types.RefinementAttribute.Parser, new[]{ "AttributeKey", "AttributeValue" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.Summary), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchResponse.Types.Summary.Parser, new[]{ "SummaryText" }, null, null, null, null)})
@@ -2873,6 +2879,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         public ContentSearchSpec(ContentSearchSpec other) : this() {
           snippetSpec_ = other.snippetSpec_ != null ? other.snippetSpec_.Clone() : null;
           summarySpec_ = other.summarySpec_ != null ? other.summarySpec_.Clone() : null;
+          extractiveContentSpec_ = other.extractiveContentSpec_ != null ? other.extractiveContentSpec_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2914,6 +2921,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
         }
 
+        /// <summary>Field number for the "extractive_content_spec" field.</summary>
+        public const int ExtractiveContentSpecFieldNumber = 3;
+        private global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.ExtractiveContentSpec extractiveContentSpec_;
+        /// <summary>
+        /// If there is no extractive_content_spec provided, there will be no
+        /// extractive answer in the search response.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.ExtractiveContentSpec ExtractiveContentSpec {
+          get { return extractiveContentSpec_; }
+          set {
+            extractiveContentSpec_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -2931,6 +2954,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
           if (!object.Equals(SnippetSpec, other.SnippetSpec)) return false;
           if (!object.Equals(SummarySpec, other.SummarySpec)) return false;
+          if (!object.Equals(ExtractiveContentSpec, other.ExtractiveContentSpec)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2940,6 +2964,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           int hash = 1;
           if (snippetSpec_ != null) hash ^= SnippetSpec.GetHashCode();
           if (summarySpec_ != null) hash ^= SummarySpec.GetHashCode();
+          if (extractiveContentSpec_ != null) hash ^= ExtractiveContentSpec.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2966,6 +2991,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             output.WriteRawTag(18);
             output.WriteMessage(SummarySpec);
           }
+          if (extractiveContentSpec_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ExtractiveContentSpec);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2984,6 +3013,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             output.WriteRawTag(18);
             output.WriteMessage(SummarySpec);
           }
+          if (extractiveContentSpec_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ExtractiveContentSpec);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2999,6 +3032,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
           if (summarySpec_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(SummarySpec);
+          }
+          if (extractiveContentSpec_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtractiveContentSpec);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -3023,6 +3059,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               SummarySpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec();
             }
             SummarySpec.MergeFrom(other.SummarySpec);
+          }
+          if (other.extractiveContentSpec_ != null) {
+            if (extractiveContentSpec_ == null) {
+              ExtractiveContentSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.ExtractiveContentSpec();
+            }
+            ExtractiveContentSpec.MergeFrom(other.ExtractiveContentSpec);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -3053,6 +3095,13 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                 input.ReadMessage(SummarySpec);
                 break;
               }
+              case 26: {
+                if (extractiveContentSpec_ == null) {
+                  ExtractiveContentSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.ExtractiveContentSpec();
+                }
+                input.ReadMessage(ExtractiveContentSpec);
+                break;
+              }
             }
           }
         #endif
@@ -3080,6 +3129,13 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                   SummarySpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec();
                 }
                 input.ReadMessage(SummarySpec);
+                break;
+              }
+              case 26: {
+                if (extractiveContentSpec_ == null) {
+                  ExtractiveContentSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Types.ExtractiveContentSpec();
+                }
+                input.ReadMessage(ExtractiveContentSpec);
                 break;
               }
             }
@@ -3145,6 +3201,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             private int maxSnippetCount_;
             /// <summary>
             /// Max number of snippets returned in each search result.
+            ///
+            /// A snippet is an infomartive summary of a content with highlighting for
+            /// UI rendering.
+            ///
             /// If the matching snippets is less than the max_snippet_count, return all
             /// of the snippets; otherwise, return the max_snippet_count.
             ///
@@ -3531,6 +3591,262 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
           }
 
+          /// <summary>
+          /// The specification that configs the extractive content in search results.
+          /// </summary>
+          public sealed partial class ExtractiveContentSpec : pb::IMessage<ExtractiveContentSpec>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<ExtractiveContentSpec> _parser = new pb::MessageParser<ExtractiveContentSpec>(() => new ExtractiveContentSpec());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<ExtractiveContentSpec> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec.Descriptor.NestedTypes[2]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ExtractiveContentSpec() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ExtractiveContentSpec(ExtractiveContentSpec other) : this() {
+              maxExtractiveAnswerCount_ = other.maxExtractiveAnswerCount_;
+              maxExtractiveSegmentCount_ = other.maxExtractiveSegmentCount_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ExtractiveContentSpec Clone() {
+              return new ExtractiveContentSpec(this);
+            }
+
+            /// <summary>Field number for the "max_extractive_answer_count" field.</summary>
+            public const int MaxExtractiveAnswerCountFieldNumber = 1;
+            private int maxExtractiveAnswerCount_;
+            /// <summary>
+            /// The max number of extractive answers returned in each search result.
+            ///
+            /// An extractive answer is a verbatim answer extracted from the original
+            /// document, which provides precise and contextually relevant answer to
+            /// the search query.
+            ///
+            /// If the number of matching answers is less than the
+            /// extractive_answer_count, return all of the answers; otherwise, return
+            /// the extractive_answer_count.
+            ///
+            /// At most 5 answers will be returned for each SearchResult.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int MaxExtractiveAnswerCount {
+              get { return maxExtractiveAnswerCount_; }
+              set {
+                maxExtractiveAnswerCount_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "max_extractive_segment_count" field.</summary>
+            public const int MaxExtractiveSegmentCountFieldNumber = 2;
+            private int maxExtractiveSegmentCount_;
+            /// <summary>
+            /// The max number of extractive segments returned in each search result.
+            ///
+            /// An extractive segment is a text segment extracted from the original
+            /// document which is relevant to the search query and in general more
+            /// verbose than an extrative answer. The segment could then be used as
+            /// input for LLMs to generate summaries and answers.
+            ///
+            /// If the number of matching segments is less than the
+            /// max_extractive_segment_count, return all of the segments; otherwise,
+            /// return the max_extractive_segment_count.
+            ///
+            /// Currently one segment will be returned for each SearchResult.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int MaxExtractiveSegmentCount {
+              get { return maxExtractiveSegmentCount_; }
+              set {
+                maxExtractiveSegmentCount_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as ExtractiveContentSpec);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(ExtractiveContentSpec other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (MaxExtractiveAnswerCount != other.MaxExtractiveAnswerCount) return false;
+              if (MaxExtractiveSegmentCount != other.MaxExtractiveSegmentCount) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (MaxExtractiveAnswerCount != 0) hash ^= MaxExtractiveAnswerCount.GetHashCode();
+              if (MaxExtractiveSegmentCount != 0) hash ^= MaxExtractiveSegmentCount.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (MaxExtractiveAnswerCount != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(MaxExtractiveAnswerCount);
+              }
+              if (MaxExtractiveSegmentCount != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(MaxExtractiveSegmentCount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (MaxExtractiveAnswerCount != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(MaxExtractiveAnswerCount);
+              }
+              if (MaxExtractiveSegmentCount != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(MaxExtractiveSegmentCount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (MaxExtractiveAnswerCount != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxExtractiveAnswerCount);
+              }
+              if (MaxExtractiveSegmentCount != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxExtractiveSegmentCount);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(ExtractiveContentSpec other) {
+              if (other == null) {
+                return;
+              }
+              if (other.MaxExtractiveAnswerCount != 0) {
+                MaxExtractiveAnswerCount = other.MaxExtractiveAnswerCount;
+              }
+              if (other.MaxExtractiveSegmentCount != 0) {
+                MaxExtractiveSegmentCount = other.MaxExtractiveSegmentCount;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    MaxExtractiveAnswerCount = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    MaxExtractiveSegmentCount = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    MaxExtractiveAnswerCount = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    MaxExtractiveSegmentCount = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
         }
         #endregion
 
@@ -3585,6 +3901,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       guidedSearchResult_ = other.guidedSearchResult_ != null ? other.guidedSearchResult_.Clone() : null;
       totalSize_ = other.totalSize_;
       attributionToken_ = other.attributionToken_;
+      redirectUri_ = other.redirectUri_;
       nextPageToken_ = other.nextPageToken_;
       correctedQuery_ = other.correctedQuery_;
       summary_ = other.summary_ != null ? other.summary_.Clone() : null;
@@ -3679,6 +3996,26 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "redirect_uri" field.</summary>
+    public const int RedirectUriFieldNumber = 12;
+    private string redirectUri_ = "";
+    /// <summary>
+    /// The URI of a customer-defined redirect page. If redirect action is
+    /// triggered, no search is performed, and only
+    /// [redirect_uri][google.cloud.discoveryengine.v1beta.SearchResponse.redirect_uri]
+    /// and
+    /// [attribution_token][google.cloud.discoveryengine.v1beta.SearchResponse.attribution_token]
+    /// are set in the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RedirectUri {
+      get { return redirectUri_; }
+      set {
+        redirectUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "next_page_token" field.</summary>
     public const int NextPageTokenFieldNumber = 5;
     private string nextPageToken_ = "";
@@ -3766,6 +4103,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (!object.Equals(GuidedSearchResult, other.GuidedSearchResult)) return false;
       if (TotalSize != other.TotalSize) return false;
       if (AttributionToken != other.AttributionToken) return false;
+      if (RedirectUri != other.RedirectUri) return false;
       if (NextPageToken != other.NextPageToken) return false;
       if (CorrectedQuery != other.CorrectedQuery) return false;
       if (!object.Equals(Summary, other.Summary)) return false;
@@ -3782,6 +4120,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (guidedSearchResult_ != null) hash ^= GuidedSearchResult.GetHashCode();
       if (TotalSize != 0) hash ^= TotalSize.GetHashCode();
       if (AttributionToken.Length != 0) hash ^= AttributionToken.GetHashCode();
+      if (RedirectUri.Length != 0) hash ^= RedirectUri.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
       if (CorrectedQuery.Length != 0) hash ^= CorrectedQuery.GetHashCode();
       if (summary_ != null) hash ^= Summary.GetHashCode();
@@ -3831,6 +4170,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteMessage(Summary);
       }
       appliedControls_.WriteTo(output, _repeated_appliedControls_codec);
+      if (RedirectUri.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(RedirectUri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3868,6 +4211,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteMessage(Summary);
       }
       appliedControls_.WriteTo(ref output, _repeated_appliedControls_codec);
+      if (RedirectUri.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(RedirectUri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3888,6 +4235,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (AttributionToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AttributionToken);
+      }
+      if (RedirectUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RedirectUri);
       }
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
@@ -3924,6 +4274,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (other.AttributionToken.Length != 0) {
         AttributionToken = other.AttributionToken;
+      }
+      if (other.RedirectUri.Length != 0) {
+        RedirectUri = other.RedirectUri;
       }
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
@@ -3995,6 +4348,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             appliedControls_.AddEntriesFrom(input, _repeated_appliedControls_codec);
             break;
           }
+          case 98: {
+            RedirectUri = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -4050,6 +4407,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
           case 82: {
             appliedControls_.AddEntriesFrom(ref input, _repeated_appliedControls_codec);
+            break;
+          }
+          case 98: {
+            RedirectUri = input.ReadString();
             break;
           }
         }
