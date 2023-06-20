@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.8.0, released 2023-06-20
+
+### New features
+
+- Added include_bigquery_export_settings to ExportAgentRequest ([commit d127ca2](https://github.com/googleapis/google-cloud-dotnet/commit/d127ca2ad19c6b3ececae30e974220d308925d17))
+- Added session_ttl to SessionProto ([commit d127ca2](https://github.com/googleapis/google-cloud-dotnet/commit/d127ca2ad19c6b3ececae30e974220d308925d17))
+- Add support for flexible webhook ([commit 79c2a12](https://github.com/googleapis/google-cloud-dotnet/commit/79c2a127df990fdf14ae8657fc7e16dd2321acbf))
+
+### Documentation improvements
+
+- Update synthesize speech configs's documentation ([commit 79c2a12](https://github.com/googleapis/google-cloud-dotnet/commit/79c2a127df990fdf14ae8657fc7e16dd2321acbf))
+
 ## Version 2.7.0, released 2023-05-11
 
 ### New features
