@@ -2826,7 +2826,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int AssistQueryParamsFieldNumber = 5;
     private global::Google.Cloud.Dialogflow.V2.AssistQueryParameters assistQueryParams_;
     /// <summary>
-    /// Parameters for a human assist query.
+    /// Parameters for a human assist query. Only used for POC/demo purpose.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
