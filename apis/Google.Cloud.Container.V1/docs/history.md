@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.14.0, released 2023-06-20
+
+### New features
+
+- Add API for GPU driver installation config ([commit 4d795dd](https://github.com/googleapis/google-cloud-dotnet/commit/4d795dd1790399b7860b481cc66f66b8a7db80e8))
+- Add SecurityPostureConfig API field to allow customers to enable GKE Security Posture capabilities for their clusters ([commit 4d795dd](https://github.com/googleapis/google-cloud-dotnet/commit/4d795dd1790399b7860b481cc66f66b8a7db80e8))
+- Add workloadPolicyConfig API field to allow customer enable NET_ADMIN capability for their autopilot clusters ([commit 4d795dd](https://github.com/googleapis/google-cloud-dotnet/commit/4d795dd1790399b7860b481cc66f66b8a7db80e8))
+- Add a API field to enable FQDN Network Policy on clusters ([commit a694180](https://github.com/googleapis/google-cloud-dotnet/commit/a694180792ddf8433c67d830e90c204f0422d8ba))
+- Turn on public visibility for best effort provision ([commit a694180](https://github.com/googleapis/google-cloud-dotnet/commit/a694180792ddf8433c67d830e90c204f0422d8ba))
+- Add CheckAutopilotCompatibility API to get autopilot compatibility issues for a given standard cluster ([commit a694180](https://github.com/googleapis/google-cloud-dotnet/commit/a694180792ddf8433c67d830e90c204f0422d8ba))
+
 ## Version 3.13.0, released 2023-06-05
 
 ### New features
