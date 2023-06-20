@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.3.0, released 2023-06-20
+
+### New features
+
+- Added resource_reference for name in GetProjectBillingInfoRequest message ([commit a092965](https://github.com/googleapis/google-cloud-dotnet/commit/a092965c2e524581712dec037b73d2f3c0931abb))
+
 ## Version 3.2.0, released 2023-01-18
 
 ### New features
