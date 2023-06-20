@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.8.0, released 2023-06-20
+
+### New features
+
+- Add support for ListSkuGroups and ListSkuGroupBillableSkus APIs in Cloud Channel APIs ([commit 4c49e69](https://github.com/googleapis/google-cloud-dotnet/commit/4c49e69eb380cb8346a6db5291bc71c1913b551d))
+
 ## Version 2.7.0, released 2023-05-26
 
 ### New features
