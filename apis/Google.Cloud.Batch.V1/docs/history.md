@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.2.0, released 2023-06-20
+
+### New features
+
+- Add support for scheduling_policy ([commit 051cc0d](https://github.com/googleapis/google-cloud-dotnet/commit/051cc0dacb387fe65863e9c94ec4afaf27733539))
+
+### Documentation improvements
+
+- Minor clarifications for TaskGroup and min_cpu_platform ([commit 051cc0d](https://github.com/googleapis/google-cloud-dotnet/commit/051cc0dacb387fe65863e9c94ec4afaf27733539))
+
 ## Version 2.1.0, released 2023-05-26
 
 ### New features
