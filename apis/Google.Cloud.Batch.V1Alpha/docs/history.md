@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-alpha12, released 2023-06-20
+
+### New features
+
+- Implement minCpuPlatform ([commit 6fcb3d6](https://github.com/googleapis/google-cloud-dotnet/commit/6fcb3d6168fd713196ffaf82a16af61684111e2e))
+- Enable scheduling_policy in v1 ([commit 6fcb3d6](https://github.com/googleapis/google-cloud-dotnet/commit/6fcb3d6168fd713196ffaf82a16af61684111e2e))
+- Update TaskGroup doc ([commit 6fcb3d6](https://github.com/googleapis/google-cloud-dotnet/commit/6fcb3d6168fd713196ffaf82a16af61684111e2e))
+
 ## Version 1.0.0-alpha11, released 2023-05-26
 
 ### Bug fixes
