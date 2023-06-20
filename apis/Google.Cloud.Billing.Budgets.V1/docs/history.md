@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.2.0, released 2023-06-20
+
+### New features
+
+- Add resource_ancestors field to support filtering by folders & organizations ([commit 735d19b](https://github.com/googleapis/google-cloud-dotnet/commit/735d19b4f06c995cf7cf45df286776f29ea5471c))
+
 ## Version 2.1.0, released 2023-01-19
 
 ### New features
