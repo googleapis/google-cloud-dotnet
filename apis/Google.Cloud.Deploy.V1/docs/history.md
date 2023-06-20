@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.5.0, released 2023-06-20
+
+### New features
+
+- Add support for disabling Pod overprovisioning in the progressive deployment strategy configuration for a Kubernetes Target ([commit c1fc355](https://github.com/googleapis/google-cloud-dotnet/commit/c1fc355a5c2f9253d6f7d29a8ad03914cfe7c2c7))
+
 ## Version 2.4.0, released 2023-05-03
 
 ### New features
