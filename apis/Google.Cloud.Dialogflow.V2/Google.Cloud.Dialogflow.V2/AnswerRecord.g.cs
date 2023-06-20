@@ -1383,8 +1383,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Indicates whether the answer/item was clicked by the human agent
     /// or not. Default to false.
-    /// For knowledge search, the answer record is considered to be clicked if the
-    /// answer was copied or any URI was clicked.
+    /// For knowledge search and knowledge assist, the answer record is considered
+    /// to be clicked if the answer was copied or any URI was clicked.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
