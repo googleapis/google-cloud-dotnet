@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2023-06-20
+
+### New features
+
+- Support extractive content in search ([commit 46a0119](https://github.com/googleapis/google-cloud-dotnet/commit/46a011957e2fa931c9cec6c04371c9dbf95443f0))
+- Add redirected uri in search response ([commit 46a0119](https://github.com/googleapis/google-cloud-dotnet/commit/46a011957e2fa931c9cec6c04371c9dbf95443f0))
+- Support docx/pptx/txt/csv in allowed data format ([commit 46a0119](https://github.com/googleapis/google-cloud-dotnet/commit/46a011957e2fa931c9cec6c04371c9dbf95443f0))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 46a0119](https://github.com/googleapis/google-cloud-dotnet/commit/46a011957e2fa931c9cec6c04371c9dbf95443f0))
+
 ## Version 1.0.0-beta05, released 2023-05-26
 
 ### Bug fixes
