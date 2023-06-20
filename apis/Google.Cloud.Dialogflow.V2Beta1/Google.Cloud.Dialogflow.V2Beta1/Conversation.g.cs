@@ -2507,7 +2507,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dialogflow.V2Beta1.CreateMessageRequest.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.CreateMessageRequest> requests_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.CreateMessageRequest>();
     /// <summary>
-    /// Required. A maximum of 1000 Messages can be created in a batch.
+    /// Required. A maximum of 300 messages can be created in a batch.
     /// [CreateMessageRequest.message.send_time][] is required. All created
     /// messages will have identical
     /// [Message.create_time][google.cloud.dialogflow.v2beta1.Message.create_time].
@@ -3512,7 +3512,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     public const int AssistQueryParamsFieldNumber = 5;
     private global::Google.Cloud.Dialogflow.V2Beta1.AssistQueryParameters assistQueryParams_;
     /// <summary>
-    /// Parameters for a human assist query.
+    /// Parameters for a human assist query. Only used for POC/demo purpose.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
