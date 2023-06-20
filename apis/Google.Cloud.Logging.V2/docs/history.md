@@ -1,5 +1,23 @@
 # Version history
 
+## Version 4.1.0, released 2023-06-20
+
+### New features
+
+- Log Analytics features of the Cloud Logging API ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add ConfigServiceV2.CreateBucketAsync method for creating Log Buckets asynchronously ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add ConfigServiceV2.UpdateBucketAsync method for creating Log Buckets asynchronously ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add ConfigServiceV2.CreateLink method for creating linked datasets for Log Analytics Buckets ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add ConfigServiceV2.DeleteLink method for deleting linked datasets ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add ConfigServiceV2.ListLinks method for listing linked datasets ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add ConfigServiceV2.GetLink methods for describing linked datasets ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add LogBucket.analytics_enabled field that specifies whether Log Bucket's Analytics features are enabled ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add LogBucket.index_configs field that contains a list of Log Bucket's indexed fields and related configuration data ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+
+### Documentation improvements
+
+- Documentation for the Log Analytics features of the Cloud Logging API ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+
 ## Version 4.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
