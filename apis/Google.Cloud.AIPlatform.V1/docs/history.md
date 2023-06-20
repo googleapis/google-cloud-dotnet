@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.16.0, released 2023-06-20
+
+### New features
+
+- Add UpdateExplanationDataset to aiplatform ([commit 8a49530](https://github.com/googleapis/google-cloud-dotnet/commit/8a49530dc8ab6b000c2063b1a4c9385cc1b139f8))
+- Add NVIDIA_A100_80GB to AcceleratorType ([commit 8bed9db](https://github.com/googleapis/google-cloud-dotnet/commit/8bed9dbdf9786825c3ab885a32e99d0f49ea6026))
+- Add blocking_operation_ids to ImportFeatureValuesOperationMetadata ([commit 8bed9db](https://github.com/googleapis/google-cloud-dotnet/commit/8bed9dbdf9786825c3ab885a32e99d0f49ea6026))
+- Support for Model Garden -- A single place to search, discover, and interact with a wide variety of foundation models from Google and Google partners, available on Vertex AI ([commit 617cfa1](https://github.com/googleapis/google-cloud-dotnet/commit/617cfa127c0a381dafd046b2fbb60d245dc12a39))
+
 ## Version 2.15.0, released 2023-05-23
 
 ### New features
