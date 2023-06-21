@@ -30,7 +30,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "LnByb3RvGixnb29nbGUvY2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MS9hcnJv",
             "dy5wcm90bxorZ29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2UvdjEvYXZy",
             "by5wcm90bxosZ29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2UvdjEvdGFi",
-            "bGUucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i/wkK",
+            "bGUucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8isAoK",
             "C1JlYWRTZXNzaW9uEhEKBG5hbWUYASABKAlCA+BBAxI0CgtleHBpcmVfdGlt",
             "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJGCgtk",
             "YXRhX2Zvcm1hdBgDIAEoDjIsLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9y",
@@ -45,50 +45,51 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "dWVyeS5zdG9yYWdlLnYxLlJlYWRTZXNzaW9uLlRhYmxlUmVhZE9wdGlvbnNC",
             "A+BBARJCCgdzdHJlYW1zGAogAygLMiwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
             "LnN0b3JhZ2UudjEuUmVhZFN0cmVhbUID4EEDEioKHWVzdGltYXRlZF90b3Rh",
-            "bF9ieXRlc19zY2FubmVkGAwgASgDQgPgQQMSIAoTZXN0aW1hdGVkX3Jvd19j",
-            "b3VudBgOIAEoA0ID4EEDEhUKCHRyYWNlX2lkGA0gASgJQgPgQQEaQwoOVGFi",
-            "bGVNb2RpZmllcnMSMQoNc25hcHNob3RfdGltZRgBIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXAa9gIKEFRhYmxlUmVhZE9wdGlvbnMSFwoPc2Vs",
-            "ZWN0ZWRfZmllbGRzGAEgAygJEhcKD3Jvd19yZXN0cmljdGlvbhgCIAEoCRJn",
-            "ChthcnJvd19zZXJpYWxpemF0aW9uX29wdGlvbnMYAyABKAsyOy5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5BcnJvd1NlcmlhbGl6YXRpb25P",
-            "cHRpb25zQgPgQQFIABJlChphdnJvX3NlcmlhbGl6YXRpb25fb3B0aW9ucxgE",
-            "IAEoCzI6Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkF2cm9T",
-            "ZXJpYWxpemF0aW9uT3B0aW9uc0ID4EEBSAASIwoRc2FtcGxlX3BlcmNlbnRh",
-            "Z2UYBSABKAFCA+BBAUgBiAEBQiUKI291dHB1dF9mb3JtYXRfc2VyaWFsaXph",
-            "dGlvbl9vcHRpb25zQhQKEl9zYW1wbGVfcGVyY2VudGFnZTpr6kFoCipiaWdx",
-            "dWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vUmVhZFNlc3Npb24SOnByb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zZXNzaW9ucy97",
-            "c2Vzc2lvbn1CCAoGc2NoZW1hIpwBCgpSZWFkU3RyZWFtEhEKBG5hbWUYASAB",
-            "KAlCA+BBAzp76kF4CiliaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20v",
-            "UmVhZFN0cmVhbRJLcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L3Nlc3Npb25zL3tzZXNzaW9ufS9zdHJlYW1zL3tzdHJlYW19IvsE",
-            "CgtXcml0ZVN0cmVhbRIRCgRuYW1lGAEgASgJQgPgQQMSRQoEdHlwZRgCIAEo",
-            "DjIyLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLldyaXRlU3Ry",
-            "ZWFtLlR5cGVCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgtjb21taXRfdGltZRgEIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJICgx0YWJsZV9zY2hl",
-            "bWEYBSABKAsyLS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5U",
-            "YWJsZVNjaGVtYUID4EEDElAKCndyaXRlX21vZGUYByABKA4yNy5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5Xcml0ZVN0cmVhbS5Xcml0ZU1v",
-            "ZGVCA+BBBRIVCghsb2NhdGlvbhgIIAEoCUID4EEFIkYKBFR5cGUSFAoQVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEg0KCUNPTU1JVFRFRBABEgsKB1BFTkRJTkcQAhIM",
-            "CghCVUZGRVJFRBADIjMKCVdyaXRlTW9kZRIaChZXUklURV9NT0RFX1VOU1BF",
-            "Q0lGSUVEEAASCgoGSU5TRVJUEAE6dupBcwoqYmlncXVlcnlzdG9yYWdlLmdv",
-            "b2dsZWFwaXMuY29tL1dyaXRlU3RyZWFtEkVwcm9qZWN0cy97cHJvamVjdH0v",
-            "ZGF0YXNldHMve2RhdGFzZXR9L3RhYmxlcy97dGFibGV9L3N0cmVhbXMve3N0",
-            "cmVhbX0qPgoKRGF0YUZvcm1hdBIbChdEQVRBX0ZPUk1BVF9VTlNQRUNJRklF",
-            "RBAAEggKBEFWUk8QARIJCgVBUlJPVxACKkkKD1dyaXRlU3RyZWFtVmlldxIh",
-            "Ch1XUklURV9TVFJFQU1fVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAES",
-            "CAoERlVMTBACQrsBCiRjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3Jh",
-            "Z2UudjFCC1N0cmVhbVByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYmln",
-            "cXVlcnkvc3RvcmFnZS9hcGl2MS9zdG9yYWdlcGI7c3RvcmFnZXBiqgIgR29v",
-            "Z2xlLkNsb3VkLkJpZ1F1ZXJ5LlN0b3JhZ2UuVjHKAiBHb29nbGVcQ2xvdWRc",
-            "QmlnUXVlcnlcU3RvcmFnZVxWMWIGcHJvdG8z"));
+            "bF9ieXRlc19zY2FubmVkGAwgASgDQgPgQQMSLwoiZXN0aW1hdGVkX3RvdGFs",
+            "X3BoeXNpY2FsX2ZpbGVfc2l6ZRgPIAEoA0ID4EEDEiAKE2VzdGltYXRlZF9y",
+            "b3dfY291bnQYDiABKANCA+BBAxIVCgh0cmFjZV9pZBgNIAEoCUID4EEBGkMK",
+            "DlRhYmxlTW9kaWZpZXJzEjEKDXNuYXBzaG90X3RpbWUYASABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wGvYCChBUYWJsZVJlYWRPcHRpb25zEhcK",
+            "D3NlbGVjdGVkX2ZpZWxkcxgBIAMoCRIXCg9yb3dfcmVzdHJpY3Rpb24YAiAB",
+            "KAkSZwobYXJyb3dfc2VyaWFsaXphdGlvbl9vcHRpb25zGAMgASgLMjsuZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQXJyb3dTZXJpYWxpemF0",
+            "aW9uT3B0aW9uc0ID4EEBSAASZQoaYXZyb19zZXJpYWxpemF0aW9uX29wdGlv",
+            "bnMYBCABKAsyOi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5B",
+            "dnJvU2VyaWFsaXphdGlvbk9wdGlvbnNCA+BBAUgAEiMKEXNhbXBsZV9wZXJj",
+            "ZW50YWdlGAUgASgBQgPgQQFIAYgBAUIlCiNvdXRwdXRfZm9ybWF0X3Nlcmlh",
+            "bGl6YXRpb25fb3B0aW9uc0IUChJfc2FtcGxlX3BlcmNlbnRhZ2U6a+pBaAoq",
+            "YmlncXVlcnlzdG9yYWdlLmdvb2dsZWFwaXMuY29tL1JlYWRTZXNzaW9uEjpw",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc2Vzc2lv",
+            "bnMve3Nlc3Npb259QggKBnNjaGVtYSKcAQoKUmVhZFN0cmVhbRIRCgRuYW1l",
+            "GAEgASgJQgPgQQM6e+pBeAopYmlncXVlcnlzdG9yYWdlLmdvb2dsZWFwaXMu",
+            "Y29tL1JlYWRTdHJlYW0SS3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9zZXNzaW9ucy97c2Vzc2lvbn0vc3RyZWFtcy97c3RyZWFt",
+            "fSL7BAoLV3JpdGVTdHJlYW0SEQoEbmFtZRgBIAEoCUID4EEDEkUKBHR5cGUY",
+            "AiABKA4yMi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5Xcml0",
+            "ZVN0cmVhbS5UeXBlQgPgQQUSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLY29tbWl0X3RpbWUYBCAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSSAoMdGFibGVf",
+            "c2NoZW1hGAUgASgLMi0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2Uu",
+            "djEuVGFibGVTY2hlbWFCA+BBAxJQCgp3cml0ZV9tb2RlGAcgASgOMjcuZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuV3JpdGVTdHJlYW0uV3Jp",
+            "dGVNb2RlQgPgQQUSFQoIbG9jYXRpb24YCCABKAlCA+BBBSJGCgRUeXBlEhQK",
+            "EFRZUEVfVU5TUEVDSUZJRUQQABINCglDT01NSVRURUQQARILCgdQRU5ESU5H",
+            "EAISDAoIQlVGRkVSRUQQAyIzCglXcml0ZU1vZGUSGgoWV1JJVEVfTU9ERV9V",
+            "TlNQRUNJRklFRBAAEgoKBklOU0VSVBABOnbqQXMKKmJpZ3F1ZXJ5c3RvcmFn",
+            "ZS5nb29nbGVhcGlzLmNvbS9Xcml0ZVN0cmVhbRJFcHJvamVjdHMve3Byb2pl",
+            "Y3R9L2RhdGFzZXRzL3tkYXRhc2V0fS90YWJsZXMve3RhYmxlfS9zdHJlYW1z",
+            "L3tzdHJlYW19Kj4KCkRhdGFGb3JtYXQSGwoXREFUQV9GT1JNQVRfVU5TUEVD",
+            "SUZJRUQQABIICgRBVlJPEAESCQoFQVJST1cQAipJCg9Xcml0ZVN0cmVhbVZp",
+            "ZXcSIQodV1JJVEVfU1RSRUFNX1ZJRVdfVU5TUEVDSUZJRUQQABIJCgVCQVNJ",
+            "QxABEggKBEZVTEwQAkK7AQokY29tLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5z",
+            "dG9yYWdlLnYxQgtTdHJlYW1Qcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dv",
+            "L2JpZ3F1ZXJ5L3N0b3JhZ2UvYXBpdjEvc3RvcmFnZXBiO3N0b3JhZ2VwYqoC",
+            "IEdvb2dsZS5DbG91ZC5CaWdRdWVyeS5TdG9yYWdlLlYxygIgR29vZ2xlXENs",
+            "b3VkXEJpZ1F1ZXJ5XFN0b3JhZ2VcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.ArrowReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.AvroReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.TableReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.Storage.V1.DataFormat), typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStreamView), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Parser, new[]{ "Name", "ExpireTime", "DataFormat", "AvroSchema", "ArrowSchema", "Table", "TableModifiers", "ReadOptions", "Streams", "EstimatedTotalBytesScanned", "EstimatedRowCount", "TraceId" }, new[]{ "Schema" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers.Parser, new[]{ "SnapshotTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Parser, new[]{ "Name", "ExpireTime", "DataFormat", "AvroSchema", "ArrowSchema", "Table", "TableModifiers", "ReadOptions", "Streams", "EstimatedTotalBytesScanned", "EstimatedTotalPhysicalFileSize", "EstimatedRowCount", "TraceId" }, new[]{ "Schema" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers.Parser, new[]{ "SnapshotTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Parser, new[]{ "SelectedFields", "RowRestriction", "ArrowSerializationOptions", "AvroSerializationOptions", "SamplePercentage" }, new[]{ "OutputFormatSerializationOptions", "SamplePercentage" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadStream), global::Google.Cloud.BigQuery.Storage.V1.ReadStream.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream), global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Parser, new[]{ "Name", "Type", "CreateTime", "CommitTime", "TableSchema", "WriteMode", "Location" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type), typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode) }, null, null)
@@ -189,6 +190,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       readOptions_ = other.readOptions_ != null ? other.readOptions_.Clone() : null;
       streams_ = other.streams_.Clone();
       estimatedTotalBytesScanned_ = other.estimatedTotalBytesScanned_;
+      estimatedTotalPhysicalFileSize_ = other.estimatedTotalPhysicalFileSize_;
       estimatedRowCount_ = other.estimatedRowCount_;
       traceId_ = other.traceId_;
       switch (other.SchemaCase) {
@@ -372,6 +374,25 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
     }
 
+    /// <summary>Field number for the "estimated_total_physical_file_size" field.</summary>
+    public const int EstimatedTotalPhysicalFileSizeFieldNumber = 15;
+    private long estimatedTotalPhysicalFileSize_;
+    /// <summary>
+    /// Output only. A pre-projected estimate of the total physical size (in bytes)
+    /// of files this session will scan when all streams are completely consumed.
+    /// This estimate does not depend on the selected columns and can be based on
+    /// metadata from the table which might be incomplete or stale. Only set for
+    /// BigLake tables.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long EstimatedTotalPhysicalFileSize {
+      get { return estimatedTotalPhysicalFileSize_; }
+      set {
+        estimatedTotalPhysicalFileSize_ = value;
+      }
+    }
+
     /// <summary>Field number for the "estimated_row_count" field.</summary>
     public const int EstimatedRowCountFieldNumber = 14;
     private long estimatedRowCount_;
@@ -455,6 +476,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (!object.Equals(ReadOptions, other.ReadOptions)) return false;
       if(!streams_.Equals(other.streams_)) return false;
       if (EstimatedTotalBytesScanned != other.EstimatedTotalBytesScanned) return false;
+      if (EstimatedTotalPhysicalFileSize != other.EstimatedTotalPhysicalFileSize) return false;
       if (EstimatedRowCount != other.EstimatedRowCount) return false;
       if (TraceId != other.TraceId) return false;
       if (SchemaCase != other.SchemaCase) return false;
@@ -475,6 +497,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (readOptions_ != null) hash ^= ReadOptions.GetHashCode();
       hash ^= streams_.GetHashCode();
       if (EstimatedTotalBytesScanned != 0L) hash ^= EstimatedTotalBytesScanned.GetHashCode();
+      if (EstimatedTotalPhysicalFileSize != 0L) hash ^= EstimatedTotalPhysicalFileSize.GetHashCode();
       if (EstimatedRowCount != 0L) hash ^= EstimatedRowCount.GetHashCode();
       if (TraceId.Length != 0) hash ^= TraceId.GetHashCode();
       hash ^= (int) schemaCase_;
@@ -541,6 +564,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(112);
         output.WriteInt64(EstimatedRowCount);
       }
+      if (EstimatedTotalPhysicalFileSize != 0L) {
+        output.WriteRawTag(120);
+        output.WriteInt64(EstimatedTotalPhysicalFileSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -596,6 +623,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(112);
         output.WriteInt64(EstimatedRowCount);
       }
+      if (EstimatedTotalPhysicalFileSize != 0L) {
+        output.WriteRawTag(120);
+        output.WriteInt64(EstimatedTotalPhysicalFileSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -633,6 +664,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       size += streams_.CalculateSize(_repeated_streams_codec);
       if (EstimatedTotalBytesScanned != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EstimatedTotalBytesScanned);
+      }
+      if (EstimatedTotalPhysicalFileSize != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EstimatedTotalPhysicalFileSize);
       }
       if (EstimatedRowCount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EstimatedRowCount);
@@ -682,6 +716,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       streams_.Add(other.streams_);
       if (other.EstimatedTotalBytesScanned != 0L) {
         EstimatedTotalBytesScanned = other.EstimatedTotalBytesScanned;
+      }
+      if (other.EstimatedTotalPhysicalFileSize != 0L) {
+        EstimatedTotalPhysicalFileSize = other.EstimatedTotalPhysicalFileSize;
       }
       if (other.EstimatedRowCount != 0L) {
         EstimatedRowCount = other.EstimatedRowCount;
@@ -786,6 +823,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             EstimatedRowCount = input.ReadInt64();
             break;
           }
+          case 120: {
+            EstimatedTotalPhysicalFileSize = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -866,6 +907,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
           case 112: {
             EstimatedRowCount = input.ReadInt64();
+            break;
+          }
+          case 120: {
+            EstimatedTotalPhysicalFileSize = input.ReadInt64();
             break;
           }
         }
@@ -1263,11 +1308,11 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         private double samplePercentage_;
         /// <summary>
         /// Optional. Specifies a table sampling percentage. Specifically, the query
-        /// planner will use TABLESAMPLE SYSTEM (sample_percentage PERCENT). This
-        /// samples at the file-level. It will randomly choose for each file whether
-        /// to include that file in the sample returned. Note, that if the table only
-        /// has one file, then TABLESAMPLE SYSTEM will select that file and return
-        /// all returnable rows contained within.
+        /// planner will use TABLESAMPLE SYSTEM (sample_percentage PERCENT). The
+        /// sampling percentage is applied at the data block granularity. It will
+        /// randomly choose for each data block whether to read the rows in that data
+        /// block. For more details, see
+        /// https://cloud.google.com/bigquery/docs/table-sampling)
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
