@@ -48,7 +48,9 @@ namespace GoogleCSharpSnippets
                 FieldMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAssetsResponse, ListAssetsResponse.Types.ListAssetsResult> response = securityCenterClient.ListAssets(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (ListAssetsResponse.Types.ListAssetsResult item in response)
