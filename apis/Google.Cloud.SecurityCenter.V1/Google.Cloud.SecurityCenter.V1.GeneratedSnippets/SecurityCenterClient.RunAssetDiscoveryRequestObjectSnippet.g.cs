@@ -42,7 +42,9 @@ namespace GoogleCSharpSnippets
                 ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> response = securityCenterClient.RunAssetDiscovery(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<RunAssetDiscoveryResponse, Empty> completedResponse = response.PollUntilCompleted();
@@ -52,7 +54,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> retrievedResponse = securityCenterClient.PollOnceRunAssetDiscovery(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

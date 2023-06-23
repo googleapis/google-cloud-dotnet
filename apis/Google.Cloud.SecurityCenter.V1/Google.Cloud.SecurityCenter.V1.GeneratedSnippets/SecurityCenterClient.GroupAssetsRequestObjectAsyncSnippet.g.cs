@@ -49,7 +49,9 @@ namespace GoogleCSharpSnippets
                 ReadTime = new Timestamp(),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<GroupAssetsResponse, GroupResult> response = securityCenterClient.GroupAssetsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((GroupResult item) =>
