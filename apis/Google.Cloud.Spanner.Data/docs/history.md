@@ -1,5 +1,22 @@
 # Version history
 
+## Version 4.6.0, released 2023-06-26
+
+### Bug fixes
+
+- Makes transactions marked as DisposedBehaviour.Detach actually detach from the session pool. ([commit ab7526f](https://github.com/googleapis/google-cloud-dotnet/commit/ab7526f4d8fed91a5913c0558cfe2bf60516feba))
+- Dispose result streams ([commit d92f88e](https://github.com/googleapis/google-cloud-dotnet/commit/d92f88e681ef91fd92d7155cadf515a0cdfbad78))
+
+### New features
+
+- Support `dataBoostEnabled` field in partitioned read and execute SQL operations. ([commit 25531f2](https://github.com/googleapis/google-cloud-dotnet/commit/25531f25d938b5f680059059d34a72654393c71e))
+- Add DdlStatementActionInfo and add actions to UpdateDatabaseDdlMetadata ([commit 2bdd8bc](https://github.com/googleapis/google-cloud-dotnet/commit/2bdd8bc563477f49203bb78b41a744e696f40e3b))
+- Add support for UpdateDatabase in Cloud Spanner ([commit 3b98d26](https://github.com/googleapis/google-cloud-dotnet/commit/3b98d2699a164b0ad4ee775c96c4c3b2b4598ecb))
+
+### Documentation improvements
+
+- Improvements on DataBoostEnabled docs. ([commit 5791342](https://github.com/googleapis/google-cloud-dotnet/commit/5791342c544ecb49039457e76a9220c36c9f7957))
+
 ## Version 4.5.0, released 2023-05-04
 
 ### New features
