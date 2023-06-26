@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 RowsLimit = 0L,
                 AppProfileId = "",
                 RequestStatsView = ReadRowsRequest.Types.RequestStatsView.Unspecified,
+                Reversed = false,
             };
             // Make the request, returning a streaming response
             using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(request);

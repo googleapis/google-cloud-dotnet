@@ -25,16 +25,17 @@ namespace Google.Cloud.Bigtable.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvYmlndGFibGUvdjIvZmVhdHVyZV9mbGFncy5wcm90bxISZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyIi4KDEZlYXR1cmVGbGFncxIeChZtdXRhdGVfcm93",
-            "c19yYXRlX2xpbWl0GAMgASgIQr0BChZjb20uZ29vZ2xlLmJpZ3RhYmxlLnYy",
-            "QhFGZWF0dXJlRmxhZ3NQcm90b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL3YyO2JpZ3RhYmxlqgIYR29vZ2xl",
-            "LkNsb3VkLkJpZ3RhYmxlLlYyygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxlXFYy",
-            "6gIbR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6OlYyYgZwcm90bzM="));
+            "Z2xlLmJpZ3RhYmxlLnYyIkUKDEZlYXR1cmVGbGFncxIVCg1yZXZlcnNlX3Nj",
+            "YW5zGAEgASgIEh4KFm11dGF0ZV9yb3dzX3JhdGVfbGltaXQYAyABKAhCvQEK",
+            "FmNvbS5nb29nbGUuYmlndGFibGUudjJCEUZlYXR1cmVGbGFnc1Byb3RvUAFa",
+            "Omdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYmlndGFi",
+            "bGUvdjI7YmlndGFibGWqAhhHb29nbGUuQ2xvdWQuQmlndGFibGUuVjLKAhhH",
+            "b29nbGVcQ2xvdWRcQmlndGFibGVcVjLqAhtHb29nbGU6OkNsb3VkOjpCaWd0",
+            "YWJsZTo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "MutateRowsRateLimit" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit" }, null, null, null, null)
           }));
     }
     #endregion
@@ -85,6 +86,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FeatureFlags(FeatureFlags other) : this() {
+      reverseScans_ = other.reverseScans_;
       mutateRowsRateLimit_ = other.mutateRowsRateLimit_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -93,6 +95,22 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FeatureFlags Clone() {
       return new FeatureFlags(this);
+    }
+
+    /// <summary>Field number for the "reverse_scans" field.</summary>
+    public const int ReverseScansFieldNumber = 1;
+    private bool reverseScans_;
+    /// <summary>
+    /// Notify the server that the client supports reverse scans. The server will
+    /// reject ReadRowsRequests with the reverse bit set when this is absent.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReverseScans {
+      get { return reverseScans_; }
+      set {
+        reverseScans_ = value;
+      }
     }
 
     /// <summary>Field number for the "mutate_rows_rate_limit" field.</summary>
@@ -126,6 +144,7 @@ namespace Google.Cloud.Bigtable.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ReverseScans != other.ReverseScans) return false;
       if (MutateRowsRateLimit != other.MutateRowsRateLimit) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -134,6 +153,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (ReverseScans != false) hash ^= ReverseScans.GetHashCode();
       if (MutateRowsRateLimit != false) hash ^= MutateRowsRateLimit.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -153,6 +173,10 @@ namespace Google.Cloud.Bigtable.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (ReverseScans != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(ReverseScans);
+      }
       if (MutateRowsRateLimit != false) {
         output.WriteRawTag(24);
         output.WriteBool(MutateRowsRateLimit);
@@ -167,6 +191,10 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ReverseScans != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(ReverseScans);
+      }
       if (MutateRowsRateLimit != false) {
         output.WriteRawTag(24);
         output.WriteBool(MutateRowsRateLimit);
@@ -181,6 +209,9 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (ReverseScans != false) {
+        size += 1 + 1;
+      }
       if (MutateRowsRateLimit != false) {
         size += 1 + 1;
       }
@@ -195,6 +226,9 @@ namespace Google.Cloud.Bigtable.V2 {
     public void MergeFrom(FeatureFlags other) {
       if (other == null) {
         return;
+      }
+      if (other.ReverseScans != false) {
+        ReverseScans = other.ReverseScans;
       }
       if (other.MutateRowsRateLimit != false) {
         MutateRowsRateLimit = other.MutateRowsRateLimit;
@@ -214,6 +248,10 @@ namespace Google.Cloud.Bigtable.V2 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 8: {
+            ReverseScans = input.ReadBool();
+            break;
+          }
           case 24: {
             MutateRowsRateLimit = input.ReadBool();
             break;
@@ -233,6 +271,10 @@ namespace Google.Cloud.Bigtable.V2 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 8: {
+            ReverseScans = input.ReadBool();
+            break;
+          }
           case 24: {
             MutateRowsRateLimit = input.ReadBool();
             break;
