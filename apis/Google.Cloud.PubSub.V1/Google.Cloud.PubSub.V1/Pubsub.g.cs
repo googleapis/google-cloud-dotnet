@@ -8025,7 +8025,8 @@ namespace Google.Cloud.PubSub.V1 {
     private string filenameSuffix_ = "";
     /// <summary>
     /// User-provided suffix for Cloud Storage filename. See the [object naming
-    /// requirements](https://cloud.google.com/storage/docs/objects#naming).
+    /// requirements](https://cloud.google.com/storage/docs/objects#naming). Must
+    /// not end in "/".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
