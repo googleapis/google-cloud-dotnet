@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.4.0, released 2023-06-27
+
+### New features
+
+- Add forwarding_rule field to Connectivity Test Endpoint proto ([commit 73e23cb](https://github.com/googleapis/google-cloud-dotnet/commit/73e23cbd9816fb4b1f1d4ede8d011f9393974225))
+
+### Documentation improvements
+
+- Update comments in Connectivity Test protos ([commit 874831c](https://github.com/googleapis/google-cloud-dotnet/commit/874831c081fd3f713e108d9ec3835f9f5dfa7cf9))
+
 ## Version 2.3.0, released 2023-01-18
 
 ### New features
