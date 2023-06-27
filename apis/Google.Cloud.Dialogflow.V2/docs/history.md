@@ -1,5 +1,16 @@
 # Version history
 
+## Version 4.11.0, released 2023-06-27
+
+### New features
+
+- Added dialogflow_assist_answer ([commit 4d022ec](https://github.com/googleapis/google-cloud-dotnet/commit/4d022ec34890706a7efdbdacbf8e6f4f3d348b5e))
+- Added session_ttl ([commit 4d022ec](https://github.com/googleapis/google-cloud-dotnet/commit/4d022ec34890706a7efdbdacbf8e6f4f3d348b5e))
+- Added human_agent_side_config ([commit 4d022ec](https://github.com/googleapis/google-cloud-dotnet/commit/4d022ec34890706a7efdbdacbf8e6f4f3d348b5e))
+- Added suggestion_input ([commit 4d022ec](https://github.com/googleapis/google-cloud-dotnet/commit/4d022ec34890706a7efdbdacbf8e6f4f3d348b5e))
+- Added suggest_dialogflow_assists_response ([commit 4d022ec](https://github.com/googleapis/google-cloud-dotnet/commit/4d022ec34890706a7efdbdacbf8e6f4f3d348b5e))
+- Added suggest_entity_extraction_response ([commit 4d022ec](https://github.com/googleapis/google-cloud-dotnet/commit/4d022ec34890706a7efdbdacbf8e6f4f3d348b5e))
+
 ## Version 4.10.0, released 2023-05-11
 
 ### New features
