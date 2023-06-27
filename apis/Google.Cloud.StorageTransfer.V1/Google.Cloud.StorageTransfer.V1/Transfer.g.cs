@@ -634,15 +634,17 @@ namespace Google.Cloud.StorageTransfer.V1 {
     public const int TransferJobFieldNumber = 3;
     private global::Google.Cloud.StorageTransfer.V1.TransferJob transferJob_;
     /// <summary>
-    /// Required. The job to update. `transferJob` is expected to specify one or more of
-    /// five fields: [description][google.storagetransfer.v1.TransferJob.description],
+    /// Required. The job to update. `transferJob` is expected to specify one or
+    /// more of five fields:
+    /// [description][google.storagetransfer.v1.TransferJob.description],
     /// [transfer_spec][google.storagetransfer.v1.TransferJob.transfer_spec],
     /// [notification_config][google.storagetransfer.v1.TransferJob.notification_config],
     /// [logging_config][google.storagetransfer.v1.TransferJob.logging_config], and
-    /// [status][google.storagetransfer.v1.TransferJob.status].  An `UpdateTransferJobRequest` that specifies
-    /// other fields are rejected with the error
-    /// [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. Updating a job status
-    /// to [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED] requires
+    /// [status][google.storagetransfer.v1.TransferJob.status].  An
+    /// `UpdateTransferJobRequest` that specifies other fields are rejected with
+    /// the error [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. Updating a
+    /// job status to
+    /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED] requires
     /// `storagetransfer.jobs.delete` permission.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -664,9 +666,10 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// [transfer_spec][google.storagetransfer.v1.TransferJob.transfer_spec],
     /// [notification_config][google.storagetransfer.v1.TransferJob.notification_config],
     /// [logging_config][google.storagetransfer.v1.TransferJob.logging_config], and
-    /// [status][google.storagetransfer.v1.TransferJob.status].  To update the `transfer_spec` of the job, a
-    /// complete transfer specification must be provided. An incomplete
-    /// specification missing any required fields is rejected with the error
+    /// [status][google.storagetransfer.v1.TransferJob.status].  To update the
+    /// `transfer_spec` of the job, a complete transfer specification must be
+    /// provided. An incomplete specification missing any required fields is
+    /// rejected with the error
     /// [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2859,8 +2862,8 @@ namespace Google.Cloud.StorageTransfer.V1 {
     public const int AgentPoolFieldNumber = 1;
     private global::Google.Cloud.StorageTransfer.V1.AgentPool agentPool_;
     /// <summary>
-    /// Required. The agent pool to update. `agent_pool` is expected to specify following
-    /// fields:
+    /// Required. The agent pool to update. `agent_pool` is expected to specify
+    /// following fields:
     ///
     /// *  [name][google.storagetransfer.v1.AgentPool.name]
     ///

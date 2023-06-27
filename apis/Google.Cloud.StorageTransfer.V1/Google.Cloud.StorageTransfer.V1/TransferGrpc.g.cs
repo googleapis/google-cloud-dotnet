@@ -3,7 +3,7 @@
 //     source: google/storagetransfer/v1/transfer.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -265,8 +265,8 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Updates a transfer job. Updating a job's transfer spec does not affect
       /// transfer operations that are running already.
       ///
-      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
-      /// using this RPC (for example, to set a job's status to
+      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
+      /// field can be modified using this RPC (for example, to set a job's status to
       /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
       /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
       /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -329,9 +329,10 @@ namespace Google.Cloud.StorageTransfer.V1 {
       }
 
       /// <summary>
-      /// Attempts to start a new TransferOperation for the current TransferJob. A
-      /// TransferJob has a maximum of one active TransferOperation. If this method
-      /// is called while a TransferOperation is active, an error will be returned.
+      /// Starts a new operation for the specified transfer job.
+      /// A `TransferJob` has a maximum of one active `TransferOperation`. If this
+      /// method is called while a `TransferOperation` is active, an error is
+      /// returned.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -572,8 +573,8 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Updates a transfer job. Updating a job's transfer spec does not affect
       /// transfer operations that are running already.
       ///
-      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
-      /// using this RPC (for example, to set a job's status to
+      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
+      /// field can be modified using this RPC (for example, to set a job's status to
       /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
       /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
       /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -592,8 +593,8 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Updates a transfer job. Updating a job's transfer spec does not affect
       /// transfer operations that are running already.
       ///
-      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
-      /// using this RPC (for example, to set a job's status to
+      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
+      /// field can be modified using this RPC (for example, to set a job's status to
       /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
       /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
       /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -610,8 +611,8 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Updates a transfer job. Updating a job's transfer spec does not affect
       /// transfer operations that are running already.
       ///
-      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
-      /// using this RPC (for example, to set a job's status to
+      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
+      /// field can be modified using this RPC (for example, to set a job's status to
       /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
       /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
       /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -630,8 +631,8 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// Updates a transfer job. Updating a job's transfer spec does not affect
       /// transfer operations that are running already.
       ///
-      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
-      /// using this RPC (for example, to set a job's status to
+      /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
+      /// field can be modified using this RPC (for example, to set a job's status to
       /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
       /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
       /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -837,9 +838,10 @@ namespace Google.Cloud.StorageTransfer.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ResumeTransferOperation, null, options, request);
       }
       /// <summary>
-      /// Attempts to start a new TransferOperation for the current TransferJob. A
-      /// TransferJob has a maximum of one active TransferOperation. If this method
-      /// is called while a TransferOperation is active, an error will be returned.
+      /// Starts a new operation for the specified transfer job.
+      /// A `TransferJob` has a maximum of one active `TransferOperation`. If this
+      /// method is called while a `TransferOperation` is active, an error is
+      /// returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -852,9 +854,10 @@ namespace Google.Cloud.StorageTransfer.V1 {
         return RunTransferJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Attempts to start a new TransferOperation for the current TransferJob. A
-      /// TransferJob has a maximum of one active TransferOperation. If this method
-      /// is called while a TransferOperation is active, an error will be returned.
+      /// Starts a new operation for the specified transfer job.
+      /// A `TransferJob` has a maximum of one active `TransferOperation`. If this
+      /// method is called while a `TransferOperation` is active, an error is
+      /// returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -865,9 +868,10 @@ namespace Google.Cloud.StorageTransfer.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_RunTransferJob, null, options, request);
       }
       /// <summary>
-      /// Attempts to start a new TransferOperation for the current TransferJob. A
-      /// TransferJob has a maximum of one active TransferOperation. If this method
-      /// is called while a TransferOperation is active, an error will be returned.
+      /// Starts a new operation for the specified transfer job.
+      /// A `TransferJob` has a maximum of one active `TransferOperation`. If this
+      /// method is called while a `TransferOperation` is active, an error is
+      /// returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -880,9 +884,10 @@ namespace Google.Cloud.StorageTransfer.V1 {
         return RunTransferJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Attempts to start a new TransferOperation for the current TransferJob. A
-      /// TransferJob has a maximum of one active TransferOperation. If this method
-      /// is called while a TransferOperation is active, an error will be returned.
+      /// Starts a new operation for the specified transfer job.
+      /// A `TransferJob` has a maximum of one active `TransferOperation`. If this
+      /// method is called while a `TransferOperation` is active, an error is
+      /// returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
