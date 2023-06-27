@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.2.0, released 2023-06-27
+
+### Bug fixes
+
+- Mark fields in Contacts message as REQUIRED ([commit 012b2f7](https://github.com/googleapis/google-cloud-dotnet/commit/012b2f79971ad2f212316e0247f18b82f54f852e))
+
 ## Version 2.1.0, released 2023-01-18
 
 ### New features
