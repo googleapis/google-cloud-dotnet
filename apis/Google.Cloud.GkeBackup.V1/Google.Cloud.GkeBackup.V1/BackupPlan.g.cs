@@ -28,7 +28,7 @@ namespace Google.Cloud.GkeBackup.V1 {
             "Ehlnb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxGh9nb29nbGUvYXBpL2ZpZWxk",
             "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiZn",
             "b29nbGUvY2xvdWQvZ2tlYmFja3VwL3YxL2NvbW1vbi5wcm90bxofZ29vZ2xl",
-            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLXCQoKQmFja3VwUGxhbhIRCgRu",
+            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKwCwoKQmFja3VwUGxhbhIRCgRu",
             "YW1lGAEgASgJQgPgQQMSEAoDdWlkGAIgASgJQgPgQQMSNAoLY3JlYXRlX3Rp",
             "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoL",
             "dXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
@@ -42,29 +42,34 @@ namespace Google.Cloud.GkeBackup.V1 {
             "YWcYCiABKAlCA+BBAxITCgtkZWFjdGl2YXRlZBgLIAEoCBJJCg1iYWNrdXBf",
             "Y29uZmlnGAwgASgLMjIuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5CYWNr",
             "dXBQbGFuLkJhY2t1cENvbmZpZxIgChNwcm90ZWN0ZWRfcG9kX2NvdW50GA0g",
-            "ASgFQgPgQQMaXgoPUmV0ZW50aW9uUG9saWN5Eh8KF2JhY2t1cF9kZWxldGVf",
-            "bG9ja19kYXlzGAEgASgFEhoKEmJhY2t1cF9yZXRhaW5fZGF5cxgCIAEoBRIO",
-            "CgZsb2NrZWQYAyABKAgaMQoIU2NoZWR1bGUSFQoNY3Jvbl9zY2hlZHVsZRgB",
-            "IAEoCRIOCgZwYXVzZWQYAiABKAgawwIKDEJhY2t1cENvbmZpZxIYCg5hbGxf",
-            "bmFtZXNwYWNlcxgBIAEoCEgAEkQKE3NlbGVjdGVkX25hbWVzcGFjZXMYAiAB",
-            "KAsyJS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZXNIABJL",
-            "ChVzZWxlY3RlZF9hcHBsaWNhdGlvbnMYAyABKAsyKi5nb29nbGUuY2xvdWQu",
-            "Z2tlYmFja3VwLnYxLk5hbWVzcGFjZWROYW1lc0gAEhsKE2luY2x1ZGVfdm9s",
-            "dW1lX2RhdGEYBCABKAgSFwoPaW5jbHVkZV9zZWNyZXRzGAUgASgIEkAKDmVu",
-            "Y3J5cHRpb25fa2V5GAYgASgLMiguZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52",
-            "MS5FbmNyeXB0aW9uS2V5Qg4KDGJhY2t1cF9zY29wZRotCgtMYWJlbHNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOmvqQWgKI2drZWJh",
-            "Y2t1cC5nb29nbGVhcGlzLmNvbS9CYWNrdXBQbGFuEkFwcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYmFja3VwUGxhbnMve2JhY2t1",
-            "cF9wbGFufULGAQodY29tLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjFCD0Jh",
-            "Y2t1cFBsYW5Qcm90b1ABWjtjbG91ZC5nb29nbGUuY29tL2dvL2drZWJhY2t1",
-            "cC9hcGl2MS9na2ViYWNrdXBwYjtna2ViYWNrdXBwYqoCGUdvb2dsZS5DbG91",
-            "ZC5Ha2VCYWNrdXAuVjHKAhlHb29nbGVcQ2xvdWRcR2tlQmFja3VwXFYx6gIc",
-            "R29vZ2xlOjpDbG91ZDo6R2tlQmFja3VwOjpWMWIGcHJvdG8z"));
+            "ASgFQgPgQQMSPwoFc3RhdGUYDiABKA4yKy5nb29nbGUuY2xvdWQuZ2tlYmFj",
+            "a3VwLnYxLkJhY2t1cFBsYW4uU3RhdGVCA+BBAxIZCgxzdGF0ZV9yZWFzb24Y",
+            "DyABKAlCA+BBAxpeCg9SZXRlbnRpb25Qb2xpY3kSHwoXYmFja3VwX2RlbGV0",
+            "ZV9sb2NrX2RheXMYASABKAUSGgoSYmFja3VwX3JldGFpbl9kYXlzGAIgASgF",
+            "Eg4KBmxvY2tlZBgDIAEoCBoxCghTY2hlZHVsZRIVCg1jcm9uX3NjaGVkdWxl",
+            "GAEgASgJEg4KBnBhdXNlZBgCIAEoCBrDAgoMQmFja3VwQ29uZmlnEhgKDmFs",
+            "bF9uYW1lc3BhY2VzGAEgASgISAASRAoTc2VsZWN0ZWRfbmFtZXNwYWNlcxgC",
+            "IAEoCzIlLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuTmFtZXNwYWNlc0gA",
+            "EksKFXNlbGVjdGVkX2FwcGxpY2F0aW9ucxgDIAEoCzIqLmdvb2dsZS5jbG91",
+            "ZC5na2ViYWNrdXAudjEuTmFtZXNwYWNlZE5hbWVzSAASGwoTaW5jbHVkZV92",
+            "b2x1bWVfZGF0YRgEIAEoCBIXCg9pbmNsdWRlX3NlY3JldHMYBSABKAgSQAoO",
+            "ZW5jcnlwdGlvbl9rZXkYBiABKAsyKC5nb29nbGUuY2xvdWQuZ2tlYmFja3Vw",
+            "LnYxLkVuY3J5cHRpb25LZXlCDgoMYmFja3VwX3Njb3BlGi0KC0xhYmVsc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiewoFU3RhdGUS",
+            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABITCg9DTFVTVEVSX1BFTkRJTkcQARIQ",
+            "CgxQUk9WSVNJT05JTkcQAhIJCgVSRUFEWRADEgoKBkZBSUxFRBAEEg8KC0RF",
+            "QUNUSVZBVEVEEAUSDAoIREVMRVRJTkcQBjpr6kFoCiNna2ViYWNrdXAuZ29v",
+            "Z2xlYXBpcy5jb20vQmFja3VwUGxhbhJBcHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L2JhY2t1cFBsYW5zL3tiYWNrdXBfcGxhbn1C",
+            "xgEKHWNvbS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxQg9CYWNrdXBQbGFu",
+            "UHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9na2ViYWNrdXAvYXBpdjEv",
+            "Z2tlYmFja3VwcGI7Z2tlYmFja3VwcGKqAhlHb29nbGUuQ2xvdWQuR2tlQmFj",
+            "a3VwLlYxygIZR29vZ2xlXENsb3VkXEdrZUJhY2t1cFxWMeoCHEdvb2dsZTo6",
+            "Q2xvdWQ6OkdrZUJhY2t1cDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeBackup.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan), global::Google.Cloud.GkeBackup.V1.BackupPlan.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Description", "Cluster", "RetentionPolicy", "Labels", "BackupSchedule", "Etag", "Deactivated", "BackupConfig", "ProtectedPodCount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.RetentionPolicy), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.RetentionPolicy.Parser, new[]{ "BackupDeleteLockDays", "BackupRetainDays", "Locked" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan), global::Google.Cloud.GkeBackup.V1.BackupPlan.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Description", "Cluster", "RetentionPolicy", "Labels", "BackupSchedule", "Etag", "Deactivated", "BackupConfig", "ProtectedPodCount", "State", "StateReason" }, null, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.RetentionPolicy), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.RetentionPolicy.Parser, new[]{ "BackupDeleteLockDays", "BackupRetainDays", "Locked" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.Schedule), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.Schedule.Parser, new[]{ "CronSchedule", "Paused" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.BackupConfig), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.BackupConfig.Parser, new[]{ "AllNamespaces", "SelectedNamespaces", "SelectedApplications", "IncludeVolumeData", "IncludeSecrets", "EncryptionKey" }, new[]{ "BackupScope" }, null, null, null),
             null, })
@@ -124,6 +129,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       deactivated_ = other.deactivated_;
       backupConfig_ = other.backupConfig_ != null ? other.backupConfig_.Clone() : null;
       protectedPodCount_ = other.protectedPodCount_;
+      state_ = other.state_;
+      stateReason_ = other.stateReason_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -348,6 +355,40 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
     }
 
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 14;
+    private global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State state_ = global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. State of the BackupPlan. This State field reflects the
+    /// various stages a BackupPlan can be in
+    /// during the Create operation. It will be set to "DEACTIVATED"
+    /// if the BackupPlan is deactivated on an Update
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state_reason" field.</summary>
+    public const int StateReasonFieldNumber = 15;
+    private string stateReason_ = "";
+    /// <summary>
+    /// Output only. Human-readable description of why BackupPlan is in the current
+    /// `state`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StateReason {
+      get { return stateReason_; }
+      set {
+        stateReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -376,6 +417,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (Deactivated != other.Deactivated) return false;
       if (!object.Equals(BackupConfig, other.BackupConfig)) return false;
       if (ProtectedPodCount != other.ProtectedPodCount) return false;
+      if (State != other.State) return false;
+      if (StateReason != other.StateReason) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -396,6 +439,8 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (Deactivated != false) hash ^= Deactivated.GetHashCode();
       if (backupConfig_ != null) hash ^= BackupConfig.GetHashCode();
       if (ProtectedPodCount != 0) hash ^= ProtectedPodCount.GetHashCode();
+      if (State != global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (StateReason.Length != 0) hash ^= StateReason.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -463,6 +508,14 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(104);
         output.WriteInt32(ProtectedPodCount);
       }
+      if (State != global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) State);
+      }
+      if (StateReason.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(StateReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -522,6 +575,14 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(104);
         output.WriteInt32(ProtectedPodCount);
       }
+      if (State != global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) State);
+      }
+      if (StateReason.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(StateReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -568,6 +629,12 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
       if (ProtectedPodCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProtectedPodCount);
+      }
+      if (State != global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (StateReason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StateReason);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -632,6 +699,12 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
       if (other.ProtectedPodCount != 0) {
         ProtectedPodCount = other.ProtectedPodCount;
+      }
+      if (other.State != global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.StateReason.Length != 0) {
+        StateReason = other.StateReason;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -713,6 +786,14 @@ namespace Google.Cloud.GkeBackup.V1 {
           }
           case 104: {
             ProtectedPodCount = input.ReadInt32();
+            break;
+          }
+          case 112: {
+            State = (global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            StateReason = input.ReadString();
             break;
           }
         }
@@ -797,6 +878,14 @@ namespace Google.Cloud.GkeBackup.V1 {
             ProtectedPodCount = input.ReadInt32();
             break;
           }
+          case 112: {
+            State = (global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            StateReason = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -807,6 +896,40 @@ namespace Google.Cloud.GkeBackup.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// State
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Default first value for Enums.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Waiting for cluster state to be RUNNING.
+        /// </summary>
+        [pbr::OriginalName("CLUSTER_PENDING")] ClusterPending = 1,
+        /// <summary>
+        /// The BackupPlan is in the process of being created.
+        /// </summary>
+        [pbr::OriginalName("PROVISIONING")] Provisioning = 2,
+        /// <summary>
+        /// The BackupPlan has successfully been created and is ready for Backups.
+        /// </summary>
+        [pbr::OriginalName("READY")] Ready = 3,
+        /// <summary>
+        /// BackupPlan creation has failed.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 4,
+        /// <summary>
+        /// The BackupPlan has been deactivated.
+        /// </summary>
+        [pbr::OriginalName("DEACTIVATED")] Deactivated = 5,
+        /// <summary>
+        /// The BackupPlan is in the process of being deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETING")] Deleting = 6,
+      }
+
       /// <summary>
       /// RetentionPolicy defines a Backup retention policy for a BackupPlan.
       /// </summary>
@@ -1112,7 +1235,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
 
       /// <summary>
-      /// Schedule defines scheduling parameters for automatically creating Backups
+      /// Defines scheduling parameters for automatically creating Backups
       /// via this BackupPlan.
       /// </summary>
       public sealed partial class Schedule : pb::IMessage<Schedule>
