@@ -2378,7 +2378,7 @@
     },
     {
       "id": "Google.Cloud.GkeBackup.V1",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "grpc",
       "productName": "Backup for GKE",
       "productUrl": "https://cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke",
