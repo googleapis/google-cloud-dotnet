@@ -55,16 +55,16 @@ namespace Google.Cloud.Firestore
         /// <param name="map">The map to (possibly) update.</param>
         internal void ApplyContext(IDeserializationContext context, Dictionary<string, object> map)
         {
-            MaybePopulate(DocumentIdKey, context.DocumentReference);
-            MaybePopulate(CreateTimestampKey, context.CreateTime);
-            MaybePopulate(UpdateTimestampKey, context.UpdateTime);
-            MaybePopulate(ReadTimestampKey, context.ReadTime);
+            MaybePopulate(DocumentIdKey, () => context.DocumentReference);
+            MaybePopulate(CreateTimestampKey, () => context.CreateTime);
+            MaybePopulate(UpdateTimestampKey, () => context.UpdateTime);
+            MaybePopulate(ReadTimestampKey, () => context.ReadTime);
 
-            void MaybePopulate(string key, object value)
+            void MaybePopulate(string key, Func<object> valueProvider)
             {
                 if (key is object)
                 {
-                    map[key] = value;
+                    map[key] = valueProvider();
                 }
             }
         }

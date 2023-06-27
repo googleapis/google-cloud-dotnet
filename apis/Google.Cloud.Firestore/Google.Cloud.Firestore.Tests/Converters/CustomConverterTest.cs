@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using Xunit;
 
 using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
+using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 
 namespace Google.Cloud.Firestore.Tests.Converters
 {
@@ -52,7 +53,7 @@ namespace Google.Cloud.Firestore.Tests.Converters
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
             var snapshot = GetSampleSnapshot(db, "doc1");
             IDeserializationContext context = snapshot;
-            snapshot.Document.Fields["doc-field"] = ProtoHelpers.CreateValue("FieldValue");
+            snapshot.Document.Fields["doc-field"] = CreateValue("FieldValue");
             var converter = CustomConverter.ForConverterType(typeof(DictionaryHolderConverter), typeof(DictionaryHolder));
             var holder = (DictionaryHolder) converter.DeserializeMap(context, snapshot.Document.Fields);
             var dictionary = holder.Dictionary;
@@ -72,7 +73,7 @@ namespace Google.Cloud.Firestore.Tests.Converters
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
             var snapshot = GetSampleSnapshot(db, "doc1");
             IDeserializationContext context = snapshot;
-            var value = ProtoHelpers.CreateMap(("key1", ProtoHelpers.CreateValue("value1")), ("key2", ProtoHelpers.CreateValue("value2")));
+            var value = CreateMap(("key1", CreateValue("value1")), ("key2", CreateValue("value2")));
             var converter = CustomConverter.ForConverterType(typeof(DictionaryHolderConverter), typeof(DictionaryHolder));
             var holder = (DictionaryHolder) converter.DeserializeValue(context, value);
             var dictionary = holder.Dictionary;
@@ -85,6 +86,40 @@ namespace Google.Cloud.Firestore.Tests.Converters
             Assert.Equal(snapshot.CreateTime, dictionary["CreateTime"]);
             Assert.Equal(snapshot.UpdateTime, dictionary["UpdateTime"]);
             Assert.Equal(snapshot.ReadTime, dictionary["ReadTime"]);
+        }
+
+        [Fact]
+        public void DeserializeMap_AggregateQuerySnapshot_Misconfigured()
+        {
+            var readTime = Timestamp.FromProto(CreateProtoTimestamp(1, 2));
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            AggregateQuery query = db.Collection("col").Count();
+            IDeserializationContext context = new AggregateQuerySnapshot(query, readTime, count: 1);
+
+            var converter = CustomConverter.ForConverterType(typeof(DictionaryHolderConverter), typeof(DictionaryHolder));
+            var map = CreateMap("key", CreateValue("value"));
+
+            Assert.Throws<InvalidOperationException>(() => converter.DeserializeValue(context, map));
+        }
+
+        [Fact]
+        public void DeserializeMap_AggregateQuerySnapshot_OnlyReadTime()
+        {
+            var readTime = Timestamp.FromProto(CreateProtoTimestamp(1, 2));
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            AggregateQuery query = db.Collection("col").Count();
+            IDeserializationContext context = new AggregateQuerySnapshot(query, readTime, count: 1);
+
+            var converter = CustomConverter.ForConverterType(typeof(DictionaryHolderConverterForAggregateSnapshot), typeof(DictionaryHolder));
+            var map = CreateMap("key", CreateValue("value"));
+
+            var holder = (DictionaryHolder) converter.DeserializeValue(context, map);
+            var dictionary = holder.Dictionary;
+            // The regular field deserialized from the map
+            Assert.Equal("value", dictionary["key"]);
+
+            // The server-provided value
+            Assert.Equal(readTime, dictionary["ReadTime"]);
         }
 
         public class NullReturningConverter : IFirestoreConverter<string>
@@ -101,6 +136,16 @@ namespace Google.Cloud.Firestore.Tests.Converters
         public class DictionaryHolderConverter : IFirestoreConverter<DictionaryHolder>
         {
             [FirestoreDeserializationConfiguration(DocumentIdKey = "DocumentId", CreateTimestampKey = "CreateTime", UpdateTimestampKey = "UpdateTime", ReadTimestampKey = "ReadTime")]
+            public DictionaryHolder FromFirestore(object value) =>
+                new DictionaryHolder { Dictionary = (Dictionary<string, object>) value };
+
+            public object ToFirestore(DictionaryHolder value) =>
+                throw new NotImplementedException();
+        }
+
+        public class DictionaryHolderConverterForAggregateSnapshot : IFirestoreConverter<DictionaryHolder>
+        {
+            [FirestoreDeserializationConfiguration(ReadTimestampKey = "ReadTime")]
             public DictionaryHolder FromFirestore(object value) =>
                 new DictionaryHolder { Dictionary = (Dictionary<string, object>) value };
 
