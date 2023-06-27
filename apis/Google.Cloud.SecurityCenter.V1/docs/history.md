@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.12.0, released 2023-06-27
+
+### New features
+
+- Mark the Asset APIs as deprecated in client libraries ([commit a7a6d15](https://github.com/googleapis/google-cloud-dotnet/commit/a7a6d15bfd965daaeca76299040f1013b166f5fd))
+
 ## Version 3.11.0, released 2023-06-20
 
 ### New features
