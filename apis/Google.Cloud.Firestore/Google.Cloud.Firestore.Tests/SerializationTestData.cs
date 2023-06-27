@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ namespace Google.Cloud.Firestore.Tests
     internal static class SerializationTestData
     {
         internal static FirestoreDb Database { get; } = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
-        internal static DeserializationContext Context => new DeserializationContext(GetSampleSnapshot(Database, "doc1"));
+        internal static IDeserializationContext Context => GetSampleSnapshot(Database, "doc1");
 
         public static IEnumerable<object[]> BclAndValues { get; } = new List<object[]>
         {

@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ namespace Google.Cloud.Firestore
     /// <summary>
     /// An immutable snapshot of the data for a document.
     /// </summary>
-    public sealed class DocumentSnapshot : IEquatable<DocumentSnapshot>
+    public sealed class DocumentSnapshot : IEquatable<DocumentSnapshot>, IDeserializationContext
     {
         /// <summary>
         /// The proto representation of the document. Primarily visible for testing purposes.
@@ -33,6 +33,8 @@ namespace Google.Cloud.Firestore
         /// The full reference to the document.
         /// </summary>
         public DocumentReference Reference { get; }
+
+        DocumentReference IDeserializationContext.DocumentReference => Reference;
 
         /// <summary>
         /// The database that owns the document.
@@ -99,8 +101,7 @@ namespace Google.Cloud.Firestore
             {
                 return default;
             }
-            var context = new DeserializationContext(this);
-            object deserialized = ValueDeserializer.DeserializeMap(context, Document.Fields, typeof(T));
+            object deserialized = ValueDeserializer.DeserializeMap(context: this, Document.Fields, typeof(T));
             return (T) deserialized;
         }
 
@@ -137,8 +138,7 @@ namespace Google.Cloud.Firestore
         {
             var raw = ExtractValue(path);
             GaxPreconditions.CheckState(raw != null, $"Field {path} not found in document");
-            var context = new DeserializationContext(this);
-            return (T) ValueDeserializer.Deserialize(context, raw, typeof(T));
+            return (T) ValueDeserializer.Deserialize(context: this, raw, typeof(T));
         }
 
         /// <summary>
@@ -162,8 +162,7 @@ namespace Google.Cloud.Firestore
                 value = default;
                 return false;
             }
-            var context = new DeserializationContext(this);
-            value = (T) ValueDeserializer.Deserialize(context, raw, typeof(T));
+            value = (T) ValueDeserializer.Deserialize(context: this, raw, typeof(T));
             return true;
         }
 

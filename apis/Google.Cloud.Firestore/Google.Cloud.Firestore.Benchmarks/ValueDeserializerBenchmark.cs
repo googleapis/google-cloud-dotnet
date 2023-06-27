@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ namespace Google.Cloud.Firestore.Benchmarks
 {
     public class ValueDeserializerBenchmark
     {
-        private static DeserializationContext Context { get; } = new DeserializationContext(GetSampleSnapshot("doc1"));
+        private static IDeserializationContext Context { get; } = GetSampleSnapshot("doc1");
 
         [Benchmark]
         public object DeserializeMap_Attributed() =>

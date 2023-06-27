@@ -1,4 +1,4 @@
-﻿// Copyright 2019, Google LLC
+// Copyright 2019, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,17 +38,17 @@ namespace Google.Cloud.Firestore.Converters
             { typeof(wkt::Timestamp), timestamp => timestamp?.ToProto() },
         };
         
-        private static readonly ConcurrentDictionary<BclType, Action<object, DocumentSnapshot>> s_assigners =
-            new ConcurrentDictionary<BclType, Action<object, DocumentSnapshot>>();
+        private static readonly ConcurrentDictionary<BclType, Action<object, IDeserializationContext>> s_assigners =
+            new ConcurrentDictionary<BclType, Action<object, IDeserializationContext>>();
 
-        internal static void MaybeAssignTimestamps(object value, DocumentSnapshot snapshot)
+        internal static void MaybeAssignTimestamps(object value, IDeserializationContext context)
         {
             if (value == null)
             {
                 return;
             }
             var assigner = s_assigners.GetOrAdd(value.GetType(), MaybeCreateAssigner);
-            assigner?.Invoke(value, snapshot);
+            assigner?.Invoke(value, context);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Google.Cloud.Firestore.Converters
         /// </summary>
         /// <param name="type">The type to inspect for ID properties.</param>
         /// <returns>An assigner, or null if the type doesn't need any timestamp assignments performed on it.</returns>
-        private static Action<object, DocumentSnapshot> MaybeCreateAssigner(BclType type)
+        private static Action<object, IDeserializationContext> MaybeCreateAssigner(BclType type)
         {
             var typeInfo = type.GetTypeInfo();
             if (!typeInfo.IsDefined(typeof(FirestoreDataAttribute)))
@@ -64,19 +64,19 @@ namespace Google.Cloud.Firestore.Converters
                 return null;
             }
 
-            Action<object, DocumentSnapshot> assigner = null;
+            Action<object, IDeserializationContext> assigner = null;
             // We look for static properties specifically to find problems. We'll never use static properties.
             foreach (var property in typeInfo.GetProperties(BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
             {
                 bool hasAttribute = false;
-                assigner += MaybeCreateAssigner<FirestoreDocumentCreateTimestampAttribute>(property, snapshot => snapshot.CreateTime, ref hasAttribute);
-                assigner += MaybeCreateAssigner<FirestoreDocumentUpdateTimestampAttribute>(property, snapshot => snapshot.UpdateTime, ref hasAttribute);
-                assigner += MaybeCreateAssigner<FirestoreDocumentReadTimestampAttribute>(property, snapshot => snapshot.ReadTime, ref hasAttribute);
+                assigner += MaybeCreateAssigner<FirestoreDocumentCreateTimestampAttribute>(property, context => context.CreateTime, ref hasAttribute);
+                assigner += MaybeCreateAssigner<FirestoreDocumentUpdateTimestampAttribute>(property, context => context.UpdateTime, ref hasAttribute);
+                assigner += MaybeCreateAssigner<FirestoreDocumentReadTimestampAttribute>(property, context => context.ReadTime, ref hasAttribute);
             }
             return assigner;
         }
 
-        private static Action<object, DocumentSnapshot> MaybeCreateAssigner<T>(PropertyInfo property, Func<DocumentSnapshot, Timestamp?> timestampSelector, ref bool hasAttribute)
+        private static Action<object, IDeserializationContext> MaybeCreateAssigner<T>(PropertyInfo property, Func<IDeserializationContext, Timestamp?> timestampSelector, ref bool hasAttribute)
             where T : Attribute
         {
             string typeName = property.DeclaringType.FullName;
@@ -112,7 +112,7 @@ namespace Google.Cloud.Firestore.Converters
                 "{0}.{1} does not have a suitable type for {2}.",
                 typeName, property.Name, typeof(T).Name);
 
-            return (value, snapshot) => property.SetValue(value, converter(timestampSelector(snapshot)));
+            return (value, context) => property.SetValue(value, converter(timestampSelector(context)));
         }
     }
 }
