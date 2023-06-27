@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.8.0, released 2023-06-27
+
+### New features
+
+- Add estimated physical file sizes to ReadAPI v1 ([commit d0b88e9](https://github.com/googleapis/google-cloud-dotnet/commit/d0b88e9c69da74879df35f4b8b0a1a15fd6a7bd8))
+
 ## Version 3.7.0, released 2023-05-26
 
 ### New features
