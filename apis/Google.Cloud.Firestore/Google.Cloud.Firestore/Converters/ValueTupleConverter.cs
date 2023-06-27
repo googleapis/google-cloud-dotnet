@@ -1,4 +1,4 @@
-﻿// Copyright 2019, Google LLC
+// Copyright 2019, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -88,7 +88,7 @@ namespace Google.Cloud.Firestore.Converters
             return new ValueTupleConverter(nonNullableType, names);
         }
 
-        public override object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values)
+        public override object DeserializeMap(IDeserializationContext context, IDictionary<string, Value> values)
         {
             // TODO: What if the keys in the map don't match our names, or there are spare/missing ones?
             var accessor = CreateAccessor(Activator.CreateInstance(TargetType));

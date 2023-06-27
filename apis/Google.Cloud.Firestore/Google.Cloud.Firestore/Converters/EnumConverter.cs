@@ -33,7 +33,7 @@ namespace Google.Cloud.Firestore.Converters
             _typeCode = BclType.GetTypeCode(TargetType);
         }
 
-        protected override object DeserializeInteger(DeserializationContext context, long value)
+        protected override object DeserializeInteger(IDeserializationContext context, long value)
         {
             object baseValue = Int64ToEnumBaseType(value);
             return Enum.ToObject(TargetType, baseValue);

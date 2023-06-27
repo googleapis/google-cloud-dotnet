@@ -1,4 +1,4 @@
-﻿// Copyright 2018, Google LLC
+// Copyright 2018, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -147,8 +147,7 @@ namespace Google.Cloud.Firestore.Tests.Converters
             };
             var db = FirestoreDb.Create("project", "database", new FakeFirestoreClient());
             var snapshot = GetSampleSnapshot(db, "doc1");
-            var context = new DeserializationContext(snapshot);
-            Model model = (Model) converter.DeserializeMap(context, map);
+            Model model = (Model) converter.DeserializeMap(snapshot, map);
             Assert.Equal(now, model.Created);
             Assert.Equal(50, model.ReadWrite);
             Assert.Equal(100, model.SeparatedBackingProperty);

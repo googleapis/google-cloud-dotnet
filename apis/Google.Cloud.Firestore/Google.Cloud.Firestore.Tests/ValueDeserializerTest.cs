@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -140,8 +140,7 @@ namespace Google.Cloud.Firestore.Tests
             var registry = new ConverterRegistry() { new SerializationTestData.GuidConverter() };
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient(), converterRegistry: registry);
             var snapshot = GetSampleSnapshot(db, "doc1");
-            var context = new DeserializationContext(snapshot);
-            var pair = (SerializationTestData.GuidPair2) ValueDeserializer.Deserialize(context, value, typeof(SerializationTestData.GuidPair2));
+            var pair = (SerializationTestData.GuidPair2) ValueDeserializer.Deserialize(context: snapshot, value, typeof(SerializationTestData.GuidPair2));
             Assert.Equal("test", pair.Name);
             Assert.Equal(guid1, pair.Guid);
             Assert.Equal(guid2, pair.GuidOrNull);
@@ -438,8 +437,7 @@ namespace Google.Cloud.Firestore.Tests
             string warning = null;
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient()).WithWarningLogger(Log);
             var snapshot = GetSampleSnapshot(db, "doc1");
-            var context = new DeserializationContext(snapshot);
-            ValueDeserializer.Deserialize(context, value, typeof(T));
+            ValueDeserializer.Deserialize(context: snapshot, value, typeof(T));
             return warning;
 
             void Log(string message)

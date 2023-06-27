@@ -30,7 +30,7 @@ namespace Google.Cloud.Firestore.Converters
         {
         }
 
-        protected override object DeserializeArray(DeserializationContext context, RepeatedField<Value> values) =>
+        protected override object DeserializeArray(IDeserializationContext context, RepeatedField<Value> values) =>
             throw new NotSupportedException($"Type {TargetType} cannot be used for deserialization; only serialization.");
     }
 }

@@ -1,4 +1,4 @@
-﻿// Copyright 2018, Google LLC
+// Copyright 2018, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,10 +38,10 @@ namespace Google.Cloud.Firestore.Converters
             TargetType = targetType;
         }
 
-        public virtual object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values) =>
+        public virtual object DeserializeMap(IDeserializationContext context, IDictionary<string, Value> values) =>
             throw new ArgumentException($"Unable to convert map value to {TargetType}");
 
-        public virtual object DeserializeValue(DeserializationContext context, Value value)
+        public virtual object DeserializeValue(IDeserializationContext context, Value value)
         {
             switch (value.ValueTypeCase)
             {
@@ -75,31 +75,31 @@ namespace Google.Cloud.Firestore.Converters
         public virtual void SerializeMap(SerializationContext context, object value, IDictionary<string, Value> map) =>
             throw new ArgumentException($"Unable to convert {TargetType} to a map");
 
-        protected virtual object DeserializeArray(DeserializationContext context, RepeatedField<Value> values) =>
+        protected virtual object DeserializeArray(IDeserializationContext context, RepeatedField<Value> values) =>
             throw new ArgumentException($"Unable to convert array value to {TargetType}");
 
-        protected virtual object DeserializeBoolean(DeserializationContext context, bool value) =>
+        protected virtual object DeserializeBoolean(IDeserializationContext context, bool value) =>
             throw new ArgumentException($"Unable to convert Boolean value to {TargetType}");
 
-        protected virtual object DeserializeBytes(DeserializationContext context, ByteString value) =>
+        protected virtual object DeserializeBytes(IDeserializationContext context, ByteString value) =>
             throw new ArgumentException($"Unable to convert bytes value to {TargetType}");
 
-        protected virtual object DeserializeDouble(DeserializationContext context, double value) =>
+        protected virtual object DeserializeDouble(IDeserializationContext context, double value) =>
             throw new ArgumentException($"Unable to convert double value to {TargetType}");
 
-        protected virtual object DeserializeGeoPoint(DeserializationContext context, LatLng value) =>
+        protected virtual object DeserializeGeoPoint(IDeserializationContext context, LatLng value) =>
             throw new ArgumentException($"Unable to convert LatLng value to {TargetType}");
 
-        protected virtual object DeserializeInteger(DeserializationContext context, long value) =>
+        protected virtual object DeserializeInteger(IDeserializationContext context, long value) =>
             throw new ArgumentException($"Unable to convert integer value to {TargetType}");
 
-        protected virtual object DeserializeReference(DeserializationContext context, string value) =>
+        protected virtual object DeserializeReference(IDeserializationContext context, string value) =>
             throw new ArgumentException($"Unable to convert reference value to {TargetType}");
 
-        protected virtual object DeserializeString(DeserializationContext context, string value) =>
+        protected virtual object DeserializeString(IDeserializationContext context, string value) =>
             throw new ArgumentException($"Unable to convert string value to {TargetType}");
 
-        protected virtual object DeserializeTimestamp(DeserializationContext context, wkt::Timestamp value) =>
+        protected virtual object DeserializeTimestamp(IDeserializationContext context, wkt::Timestamp value) =>
             throw new ArgumentException($"Unable to convert Timestamp value to {TargetType}");
     }
 }

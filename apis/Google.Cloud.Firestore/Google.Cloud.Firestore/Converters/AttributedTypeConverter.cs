@@ -120,7 +120,7 @@ namespace Google.Cloud.Firestore.Converters
                 : CustomConverter.ForConverterType(attribute.ConverterType, targetType);
         }
 
-        public override object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values)
+        public override object DeserializeMap(IDeserializationContext context, IDictionary<string, Value> values)
         {
             object ret = _createInstance();
 
@@ -145,7 +145,7 @@ namespace Google.Cloud.Firestore.Converters
                 }
             }
             AttributedIdAssigner.MaybeAssignId(ret, context.DocumentReference);
-            AttributedTimestampAssigner.MaybeAssignTimestamps(ret, context.Snapshot);
+            AttributedTimestampAssigner.MaybeAssignTimestamps(ret, context);
             return ret;
         }
 
@@ -213,7 +213,7 @@ namespace Google.Cloud.Firestore.Converters
                     : _converter.Serialize(context, propertyValue);
             }
 
-            internal void SetValue(DeserializationContext context, Value value, object target)
+            internal void SetValue(IDeserializationContext context, Value value, object target)
             {
                 object converted =
                     _converter == null ? ValueDeserializer.Deserialize(context, value, _propertyInfo.PropertyType)
