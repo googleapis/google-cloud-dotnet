@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.6.0, released 2023-06-27
+
+### New features
+
+- Add deploy parameters for cloud deploy ([commit 09b648f](https://github.com/googleapis/google-cloud-dotnet/commit/09b648f9964573de91bb23b2da17d788174b3242))
+
 ## Version 2.5.0, released 2023-06-20
 
 ### New features
