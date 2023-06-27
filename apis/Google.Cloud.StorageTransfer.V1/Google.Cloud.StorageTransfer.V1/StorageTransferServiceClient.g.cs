@@ -571,8 +571,8 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Updates a transfer job. Updating a job's transfer spec does not affect
         /// transfer operations that are running already.
         /// 
-        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
-        /// using this RPC (for example, to set a job's status to
+        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
+        /// field can be modified using this RPC (for example, to set a job's status to
         /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
         /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
         /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -587,8 +587,8 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Updates a transfer job. Updating a job's transfer spec does not affect
         /// transfer operations that are running already.
         /// 
-        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
-        /// using this RPC (for example, to set a job's status to
+        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
+        /// field can be modified using this RPC (for example, to set a job's status to
         /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
         /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
         /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -603,8 +603,8 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Updates a transfer job. Updating a job's transfer spec does not affect
         /// transfer operations that are running already.
         /// 
-        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
-        /// using this RPC (for example, to set a job's status to
+        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
+        /// field can be modified using this RPC (for example, to set a job's status to
         /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
         /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
         /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -715,9 +715,10 @@ namespace Google.Cloud.StorageTransfer.V1
             ResumeTransferOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Attempts to start a new TransferOperation for the current TransferJob. A
-        /// TransferJob has a maximum of one active TransferOperation. If this method
-        /// is called while a TransferOperation is active, an error will be returned.
+        /// Starts a new operation for the specified transfer job.
+        /// A `TransferJob` has a maximum of one active `TransferOperation`. If this
+        /// method is called while a `TransferOperation` is active, an error is
+        /// returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -726,9 +727,10 @@ namespace Google.Cloud.StorageTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Attempts to start a new TransferOperation for the current TransferJob. A
-        /// TransferJob has a maximum of one active TransferOperation. If this method
-        /// is called while a TransferOperation is active, an error will be returned.
+        /// Starts a new operation for the specified transfer job.
+        /// A `TransferJob` has a maximum of one active `TransferOperation`. If this
+        /// method is called while a `TransferOperation` is active, an error is
+        /// returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -737,9 +739,10 @@ namespace Google.Cloud.StorageTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Attempts to start a new TransferOperation for the current TransferJob. A
-        /// TransferJob has a maximum of one active TransferOperation. If this method
-        /// is called while a TransferOperation is active, an error will be returned.
+        /// Starts a new operation for the specified transfer job.
+        /// A `TransferJob` has a maximum of one active `TransferOperation`. If this
+        /// method is called while a `TransferOperation` is active, an error is
+        /// returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -961,8 +964,8 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Updates an existing agent pool resource.
         /// </summary>
         /// <param name="agentPool">
-        /// Required. The agent pool to update. `agent_pool` is expected to specify following
-        /// fields:
+        /// Required. The agent pool to update. `agent_pool` is expected to specify
+        /// following fields:
         /// 
         /// *  [name][google.storagetransfer.v1.AgentPool.name]
         /// 
@@ -995,8 +998,8 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Updates an existing agent pool resource.
         /// </summary>
         /// <param name="agentPool">
-        /// Required. The agent pool to update. `agent_pool` is expected to specify following
-        /// fields:
+        /// Required. The agent pool to update. `agent_pool` is expected to specify
+        /// following fields:
         /// 
         /// *  [name][google.storagetransfer.v1.AgentPool.name]
         /// 
@@ -1029,8 +1032,8 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Updates an existing agent pool resource.
         /// </summary>
         /// <param name="agentPool">
-        /// Required. The agent pool to update. `agent_pool` is expected to specify following
-        /// fields:
+        /// Required. The agent pool to update. `agent_pool` is expected to specify
+        /// following fields:
         /// 
         /// *  [name][google.storagetransfer.v1.AgentPool.name]
         /// 
@@ -1479,8 +1482,8 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Updates a transfer job. Updating a job's transfer spec does not affect
         /// transfer operations that are running already.
         /// 
-        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
-        /// using this RPC (for example, to set a job's status to
+        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
+        /// field can be modified using this RPC (for example, to set a job's status to
         /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
         /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
         /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -1498,8 +1501,8 @@ namespace Google.Cloud.StorageTransfer.V1
         /// Updates a transfer job. Updating a job's transfer spec does not affect
         /// transfer operations that are running already.
         /// 
-        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status] field can be modified
-        /// using this RPC (for example, to set a job's status to
+        /// **Note:** The job's [status][google.storagetransfer.v1.TransferJob.status]
+        /// field can be modified using this RPC (for example, to set a job's status to
         /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED],
         /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], or
         /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]).
@@ -1613,9 +1616,10 @@ namespace Google.Cloud.StorageTransfer.V1
         public override lro::OperationsClient RunTransferJobOperationsClient { get; }
 
         /// <summary>
-        /// Attempts to start a new TransferOperation for the current TransferJob. A
-        /// TransferJob has a maximum of one active TransferOperation. If this method
-        /// is called while a TransferOperation is active, an error will be returned.
+        /// Starts a new operation for the specified transfer job.
+        /// A `TransferJob` has a maximum of one active `TransferOperation`. If this
+        /// method is called while a `TransferOperation` is active, an error is
+        /// returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1627,9 +1631,10 @@ namespace Google.Cloud.StorageTransfer.V1
         }
 
         /// <summary>
-        /// Attempts to start a new TransferOperation for the current TransferJob. A
-        /// TransferJob has a maximum of one active TransferOperation. If this method
-        /// is called while a TransferOperation is active, an error will be returned.
+        /// Starts a new operation for the specified transfer job.
+        /// A `TransferJob` has a maximum of one active `TransferOperation`. If this
+        /// method is called while a `TransferOperation` is active, an error is
+        /// returned.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
