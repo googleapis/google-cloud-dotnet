@@ -56,6 +56,9 @@ namespace GoogleCSharpSnippets
                     ComputeRouteMatrixRequest.Types.ExtraComputation.Unspecified,
                 },
                 RegionCode = "",
+                TrafficModel = TrafficModel.Unspecified,
+                ArrivalTime = new Timestamp(),
+                TransitPreferences = new TransitPreferences(),
             };
             // Make the request, returning a streaming response
             using RoutesClient.ComputeRouteMatrixStream response = routesClient.ComputeRouteMatrix(request);

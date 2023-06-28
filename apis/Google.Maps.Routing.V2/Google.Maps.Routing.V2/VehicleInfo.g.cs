@@ -45,8 +45,7 @@ namespace Google.Maps.Routing.V2 {
   }
   #region Messages
   /// <summary>
-  /// Encapsulates the vehicle information, such as the license plate last
-  /// character.
+  /// Contains the vehicle information, such as the vehicle emission type.
   /// </summary>
   public sealed partial class VehicleInfo : pb::IMessage<VehicleInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -97,7 +96,8 @@ namespace Google.Maps.Routing.V2 {
     private global::Google.Maps.Routing.V2.VehicleEmissionType emissionType_ = global::Google.Maps.Routing.V2.VehicleEmissionType.Unspecified;
     /// <summary>
     /// Describes the vehicle's emission type.
-    /// Applies only to the `DRIVE` travel mode.
+    /// Applies only to the `DRIVE`
+    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
