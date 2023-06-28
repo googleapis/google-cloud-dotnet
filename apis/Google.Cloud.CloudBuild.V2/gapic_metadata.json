@@ -40,6 +40,12 @@
                 "DeleteRepositoryAsync"
               ]
             },
+            "FetchGitRefs": {
+              "methods": [
+                "FetchGitRefs",
+                "FetchGitRefsAsync"
+              ]
+            },
             "FetchLinkableRepositories": {
               "methods": [
                 "FetchLinkableRepositories",

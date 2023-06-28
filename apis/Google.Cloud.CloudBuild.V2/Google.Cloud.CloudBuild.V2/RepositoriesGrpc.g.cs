@@ -3,7 +3,7 @@
 //     source: google/devtools/cloudbuild/v2/repositories.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
-  /// Manages connections to source code repostiories.
+  /// Manages connections to source code repositories.
   /// </summary>
   public static partial class RepositoryManager
   {
@@ -105,6 +105,10 @@ namespace Google.Cloud.CloudBuild.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesRequest> __Marshaller_google_devtools_cloudbuild_v2_FetchLinkableRepositoriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesResponse> __Marshaller_google_devtools_cloudbuild_v2_FetchLinkableRepositoriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest> __Marshaller_google_devtools_cloudbuild_v2_FetchGitRefsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V2.FetchGitRefsResponse> __Marshaller_google_devtools_cloudbuild_v2_FetchGitRefsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V2.FetchGitRefsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V2.CreateConnectionRequest, global::Google.LongRunning.Operation> __Method_CreateConnection = new grpc::Method<global::Google.Cloud.CloudBuild.V2.CreateConnectionRequest, global::Google.LongRunning.Operation>(
@@ -209,6 +213,14 @@ namespace Google.Cloud.CloudBuild.V2 {
         "FetchLinkableRepositories",
         __Marshaller_google_devtools_cloudbuild_v2_FetchLinkableRepositoriesRequest,
         __Marshaller_google_devtools_cloudbuild_v2_FetchLinkableRepositoriesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest, global::Google.Cloud.CloudBuild.V2.FetchGitRefsResponse> __Method_FetchGitRefs = new grpc::Method<global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest, global::Google.Cloud.CloudBuild.V2.FetchGitRefsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchGitRefs",
+        __Marshaller_google_devtools_cloudbuild_v2_FetchGitRefsRequest,
+        __Marshaller_google_devtools_cloudbuild_v2_FetchGitRefsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -373,6 +385,18 @@ namespace Google.Cloud.CloudBuild.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesResponse> FetchLinkableRepositories(global::Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetch the list of branches or tags for a given repository.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V2.FetchGitRefsResponse> FetchGitRefs(global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1034,6 +1058,54 @@ namespace Google.Cloud.CloudBuild.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_FetchLinkableRepositories, null, options, request);
       }
+      /// <summary>
+      /// Fetch the list of branches or tags for a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudBuild.V2.FetchGitRefsResponse FetchGitRefs(global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchGitRefs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch the list of branches or tags for a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudBuild.V2.FetchGitRefsResponse FetchGitRefs(global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchGitRefs, null, options, request);
+      }
+      /// <summary>
+      /// Fetch the list of branches or tags for a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V2.FetchGitRefsResponse> FetchGitRefsAsync(global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchGitRefsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch the list of branches or tags for a given repository.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V2.FetchGitRefsResponse> FetchGitRefsAsync(global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchGitRefs, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override RepositoryManagerClient NewInstance(ClientBaseConfiguration configuration)
@@ -1060,7 +1132,8 @@ namespace Google.Cloud.CloudBuild.V2 {
           .AddMethod(__Method_DeleteRepository, serviceImpl.DeleteRepository)
           .AddMethod(__Method_FetchReadWriteToken, serviceImpl.FetchReadWriteToken)
           .AddMethod(__Method_FetchReadToken, serviceImpl.FetchReadToken)
-          .AddMethod(__Method_FetchLinkableRepositories, serviceImpl.FetchLinkableRepositories).Build();
+          .AddMethod(__Method_FetchLinkableRepositories, serviceImpl.FetchLinkableRepositories)
+          .AddMethod(__Method_FetchGitRefs, serviceImpl.FetchGitRefs).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1083,6 +1156,7 @@ namespace Google.Cloud.CloudBuild.V2 {
       serviceBinder.AddMethod(__Method_FetchReadWriteToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V2.FetchReadWriteTokenRequest, global::Google.Cloud.CloudBuild.V2.FetchReadWriteTokenResponse>(serviceImpl.FetchReadWriteToken));
       serviceBinder.AddMethod(__Method_FetchReadToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V2.FetchReadTokenRequest, global::Google.Cloud.CloudBuild.V2.FetchReadTokenResponse>(serviceImpl.FetchReadToken));
       serviceBinder.AddMethod(__Method_FetchLinkableRepositories, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesRequest, global::Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesResponse>(serviceImpl.FetchLinkableRepositories));
+      serviceBinder.AddMethod(__Method_FetchGitRefs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest, global::Google.Cloud.CloudBuild.V2.FetchGitRefsResponse>(serviceImpl.FetchGitRefs));
     }
 
   }
