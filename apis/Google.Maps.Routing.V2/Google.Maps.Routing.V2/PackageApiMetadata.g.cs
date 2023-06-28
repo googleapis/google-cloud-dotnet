@@ -32,6 +32,7 @@ namespace Google.Maps.Routing.V2
         {
             yield return FallbackInfoReflection.Descriptor;
             yield return GeocodingResultsReflection.Descriptor;
+            yield return LocalizedTimeReflection.Descriptor;
             yield return LocationReflection.Descriptor;
             yield return ManeuverReflection.Descriptor;
             yield return NavigationInstructionReflection.Descriptor;
@@ -45,6 +46,9 @@ namespace Google.Maps.Routing.V2
             yield return SpeedReadingIntervalReflection.Descriptor;
             yield return TollInfoReflection.Descriptor;
             yield return TollPassesReflection.Descriptor;
+            yield return TrafficModelReflection.Descriptor;
+            yield return TransitReflection.Descriptor;
+            yield return TransitPreferencesReflection.Descriptor;
             yield return UnitsReflection.Descriptor;
             yield return VehicleEmissionTypeReflection.Descriptor;
             yield return VehicleInfoReflection.Descriptor;

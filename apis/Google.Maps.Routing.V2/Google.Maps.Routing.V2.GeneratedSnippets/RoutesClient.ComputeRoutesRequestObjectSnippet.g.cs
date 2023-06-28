@@ -49,6 +49,7 @@ namespace GoogleCSharpSnippets
                 LanguageCode = "",
                 Units = Units.Unspecified,
                 PolylineEncoding = PolylineEncoding.Unspecified,
+                OptimizeWaypointOrder = false,
                 RequestedReferenceRoutes =
                 {
                     ComputeRoutesRequest.Types.ReferenceRoute.Unspecified,
@@ -58,6 +59,9 @@ namespace GoogleCSharpSnippets
                     ComputeRoutesRequest.Types.ExtraComputation.Unspecified,
                 },
                 RegionCode = "",
+                TrafficModel = TrafficModel.Unspecified,
+                ArrivalTime = new Timestamp(),
+                TransitPreferences = new TransitPreferences(),
             };
             // Make the request
             ComputeRoutesResponse response = routesClient.ComputeRoutes(request);

@@ -34,94 +34,114 @@ namespace Google.Maps.Routing.V2 {
             "dXRlLnByb3RvGixnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3JvdXRlX21vZGlm",
             "aWVycy5wcm90bxouZ29vZ2xlL21hcHMvcm91dGluZy92Mi9yb3V0ZV90cmF2",
             "ZWxfbW9kZS5wcm90bxovZ29vZ2xlL21hcHMvcm91dGluZy92Mi9yb3V0aW5n",
-            "X3ByZWZlcmVuY2UucHJvdG8aImdvb2dsZS9tYXBzL3JvdXRpbmcvdjIvdW5p",
-            "dHMucHJvdG8aJWdvb2dsZS9tYXBzL3JvdXRpbmcvdjIvd2F5cG9pbnQucHJv",
-            "dG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3By",
-            "b3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJv",
-            "dG8i9wgKFENvbXB1dGVSb3V0ZXNSZXF1ZXN0EjUKBm9yaWdpbhgBIAEoCzIg",
-            "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9pbnRCA+BBAhI6CgtkZXN0",
-            "aW5hdGlvbhgCIAEoCzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9p",
-            "bnRCA+BBAhI8Cg1pbnRlcm1lZGlhdGVzGAMgAygLMiAuZ29vZ2xlLm1hcHMu",
-            "cm91dGluZy52Mi5XYXlwb2ludEID4EEBEkEKC3RyYXZlbF9tb2RlGAQgASgO",
-            "MicuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZVRyYXZlbE1vZGVCA+BB",
-            "ARJKChJyb3V0aW5nX3ByZWZlcmVuY2UYBSABKA4yKS5nb29nbGUubWFwcy5y",
-            "b3V0aW5nLnYyLlJvdXRpbmdQcmVmZXJlbmNlQgPgQQESRgoQcG9seWxpbmVf",
-            "cXVhbGl0eRgGIAEoDjInLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUG9seWxp",
-            "bmVRdWFsaXR5QgPgQQESSAoRcG9seWxpbmVfZW5jb2RpbmcYDCABKA4yKC5n",
-            "b29nbGUubWFwcy5yb3V0aW5nLnYyLlBvbHlsaW5lRW5jb2RpbmdCA+BBARI3",
-            "Cg5kZXBhcnR1cmVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBARInChpjb21wdXRlX2FsdGVybmF0aXZlX3JvdXRlcxgIIAEo",
-            "CEID4EEBEkQKD3JvdXRlX21vZGlmaWVycxgJIAEoCzImLmdvb2dsZS5tYXBz",
-            "LnJvdXRpbmcudjIuUm91dGVNb2RpZmllcnNCA+BBARIaCg1sYW5ndWFnZV9j",
-            "b2RlGAogASgJQgPgQQESGAoLcmVnaW9uX2NvZGUYECABKAlCA+BBARIxCgV1",
-            "bml0cxgLIAEoDjIdLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuVW5pdHNCA+BB",
-            "ARJkChpyZXF1ZXN0ZWRfcmVmZXJlbmNlX3JvdXRlcxgOIAMoDjI7Lmdvb2ds",
-            "ZS5tYXBzLnJvdXRpbmcudjIuQ29tcHV0ZVJvdXRlc1JlcXVlc3QuUmVmZXJl",
-            "bmNlUm91dGVCA+BBARJeChJleHRyYV9jb21wdXRhdGlvbnMYDyADKA4yPS5n",
-            "b29nbGUubWFwcy5yb3V0aW5nLnYyLkNvbXB1dGVSb3V0ZXNSZXF1ZXN0LkV4",
-            "dHJhQ29tcHV0YXRpb25CA+BBASJFCg5SZWZlcmVuY2VSb3V0ZRIfChtSRUZF",
-            "UkVOQ0VfUk9VVEVfVU5TUEVDSUZJRUQQABISCg5GVUVMX0VGRklDSUVOVBAB",
-            "Im8KEEV4dHJhQ29tcHV0YXRpb24SIQodRVhUUkFfQ09NUFVUQVRJT05fVU5T",
-            "UEVDSUZJRUQQABIJCgVUT0xMUxABEhQKEEZVRUxfQ09OU1VNUFRJT04QAhIX",
-            "ChNUUkFGRklDX09OX1BPTFlMSU5FEAMiyAEKFUNvbXB1dGVSb3V0ZXNSZXNw",
-            "b25zZRItCgZyb3V0ZXMYASADKAsyHS5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
-            "LlJvdXRlEjsKDWZhbGxiYWNrX2luZm8YAiABKAsyJC5nb29nbGUubWFwcy5y",
-            "b3V0aW5nLnYyLkZhbGxiYWNrSW5mbxJDChFnZW9jb2RpbmdfcmVzdWx0cxgD",
-            "IAEoCzIoLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuR2VvY29kaW5nUmVzdWx0",
-            "cyLMBAoZQ29tcHV0ZVJvdXRlTWF0cml4UmVxdWVzdBI/CgdvcmlnaW5zGAEg",
-            "AygLMikuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1hdHJpeE9yaWdp",
-            "bkID4EECEkkKDGRlc3RpbmF0aW9ucxgCIAMoCzIuLmdvb2dsZS5tYXBzLnJv",
-            "dXRpbmcudjIuUm91dGVNYXRyaXhEZXN0aW5hdGlvbkID4EECEkEKC3RyYXZl",
-            "bF9tb2RlGAMgASgOMicuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZVRy",
-            "YXZlbE1vZGVCA+BBARJKChJyb3V0aW5nX3ByZWZlcmVuY2UYBCABKA4yKS5n",
-            "b29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRpbmdQcmVmZXJlbmNlQgPgQQES",
-            "NwoOZGVwYXJ0dXJlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQESGgoNbGFuZ3VhZ2VfY29kZRgGIAEoCUID4EEBEhgKC3Jl",
-            "Z2lvbl9jb2RlGAkgASgJQgPgQQESYwoSZXh0cmFfY29tcHV0YXRpb25zGAgg",
-            "AygOMkIuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Db21wdXRlUm91dGVNYXRy",
-            "aXhSZXF1ZXN0LkV4dHJhQ29tcHV0YXRpb25CA+BBASJAChBFeHRyYUNvbXB1",
-            "dGF0aW9uEiEKHUVYVFJBX0NPTVBVVEFUSU9OX1VOU1BFQ0lGSUVEEAASCQoF",
-            "VE9MTFMQASKSAQoRUm91dGVNYXRyaXhPcmlnaW4SNwoId2F5cG9pbnQYASAB",
-            "KAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLldheXBvaW50QgPgQQISRAoP",
-            "cm91dGVfbW9kaWZpZXJzGAIgASgLMiYuZ29vZ2xlLm1hcHMucm91dGluZy52",
-            "Mi5Sb3V0ZU1vZGlmaWVyc0ID4EEBIlEKFlJvdXRlTWF0cml4RGVzdGluYXRp",
-            "b24SNwoId2F5cG9pbnQYASABKAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
-            "LldheXBvaW50QgPgQQIi3wMKElJvdXRlTWF0cml4RWxlbWVudBIZCgxvcmln",
-            "aW5faW5kZXgYASABKAVIAIgBARIeChFkZXN0aW5hdGlvbl9pbmRleBgCIAEo",
-            "BUgBiAEBEiIKBnN0YXR1cxgDIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEkYK",
-            "CWNvbmRpdGlvbhgJIAEoDjIzLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91",
-            "dGVNYXRyaXhFbGVtZW50Q29uZGl0aW9uEhcKD2Rpc3RhbmNlX21ldGVycxgE",
-            "IAEoBRIrCghkdXJhdGlvbhgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbhIyCg9zdGF0aWNfZHVyYXRpb24YBiABKAsyGS5nb29nbGUucHJvdG9i",
-            "dWYuRHVyYXRpb24SRAoPdHJhdmVsX2Fkdmlzb3J5GAcgASgLMisuZ29vZ2xl",
-            "Lm1hcHMucm91dGluZy52Mi5Sb3V0ZVRyYXZlbEFkdmlzb3J5EjsKDWZhbGxi",
-            "YWNrX2luZm8YCCABKAsyJC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkZhbGxi",
-            "YWNrSW5mb0IPCg1fb3JpZ2luX2luZGV4QhQKEl9kZXN0aW5hdGlvbl9pbmRl",
-            "eCp0ChtSb3V0ZU1hdHJpeEVsZW1lbnRDb25kaXRpb24SLgoqUk9VVEVfTUFU",
-            "UklYX0VMRU1FTlRfQ09ORElUSU9OX1VOU1BFQ0lGSUVEEAASEAoMUk9VVEVf",
-            "RVhJU1RTEAESEwoPUk9VVEVfTk9UX0ZPVU5EEAIy5AIKBlJvdXRlcxKVAQoN",
-            "Q29tcHV0ZVJvdXRlcxIsLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuQ29tcHV0",
-            "ZVJvdXRlc1JlcXVlc3QaLS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkNvbXB1",
-            "dGVSb3V0ZXNSZXNwb25zZSIngtPkkwIhIhwvZGlyZWN0aW9ucy92Mjpjb21w",
-            "dXRlUm91dGVzOgEqEqcBChJDb21wdXRlUm91dGVNYXRyaXgSMS5nb29nbGUu",
-            "bWFwcy5yb3V0aW5nLnYyLkNvbXB1dGVSb3V0ZU1hdHJpeFJlcXVlc3QaKi5n",
-            "b29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0cml4RWxlbWVudCIwgtPk",
-            "kwIqIiUvZGlzdGFuY2VNYXRyaXgvdjI6Y29tcHV0ZVJvdXRlTWF0cml4OgEq",
-            "MAEaGMpBFXJvdXRlcy5nb29nbGVhcGlzLmNvbULHAQoaY29tLmdvb2dsZS5t",
-            "YXBzLnJvdXRpbmcudjJCElJvdXRlc1NlcnZpY2VQcm90b1ABWjpjbG91ZC5n",
-            "b29nbGUuY29tL2dvL21hcHMvcm91dGluZy9hcGl2Mi9yb3V0aW5ncGI7cm91",
-            "dGluZ3Bi+AEBogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIW",
-            "R29vZ2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGlu",
-            "Zzo6VjJiBnByb3RvMw=="));
+            "X3ByZWZlcmVuY2UucHJvdG8aKmdvb2dsZS9tYXBzL3JvdXRpbmcvdjIvdHJh",
+            "ZmZpY19tb2RlbC5wcm90bxowZ29vZ2xlL21hcHMvcm91dGluZy92Mi90cmFu",
+            "c2l0X3ByZWZlcmVuY2VzLnByb3RvGiJnb29nbGUvbWFwcy9yb3V0aW5nL3Yy",
+            "L3VuaXRzLnByb3RvGiVnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3dheXBvaW50",
+            "LnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2ds",
+            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVz",
+            "LnByb3RvGiBnb29nbGUvdHlwZS9sb2NhbGl6ZWRfdGV4dC5wcm90byKRCwoU",
+            "Q29tcHV0ZVJvdXRlc1JlcXVlc3QSNQoGb3JpZ2luGAEgASgLMiAuZ29vZ2xl",
+            "Lm1hcHMucm91dGluZy52Mi5XYXlwb2ludEID4EECEjoKC2Rlc3RpbmF0aW9u",
+            "GAIgASgLMiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5XYXlwb2ludEID4EEC",
+            "EjwKDWludGVybWVkaWF0ZXMYAyADKAsyIC5nb29nbGUubWFwcy5yb3V0aW5n",
+            "LnYyLldheXBvaW50QgPgQQESQQoLdHJhdmVsX21vZGUYBCABKA4yJy5nb29n",
+            "bGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlVHJhdmVsTW9kZUID4EEBEkoKEnJv",
+            "dXRpbmdfcHJlZmVyZW5jZRgFIAEoDjIpLmdvb2dsZS5tYXBzLnJvdXRpbmcu",
+            "djIuUm91dGluZ1ByZWZlcmVuY2VCA+BBARJGChBwb2x5bGluZV9xdWFsaXR5",
+            "GAYgASgOMicuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZVF1YWxp",
+            "dHlCA+BBARJIChFwb2x5bGluZV9lbmNvZGluZxgMIAEoDjIoLmdvb2dsZS5t",
+            "YXBzLnJvdXRpbmcudjIuUG9seWxpbmVFbmNvZGluZ0ID4EEBEjcKDmRlcGFy",
+            "dHVyZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEBEjUKDGFycml2YWxfdGltZRgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBARInChpjb21wdXRlX2FsdGVybmF0aXZlX3JvdXRlcxgI",
+            "IAEoCEID4EEBEkQKD3JvdXRlX21vZGlmaWVycxgJIAEoCzImLmdvb2dsZS5t",
+            "YXBzLnJvdXRpbmcudjIuUm91dGVNb2RpZmllcnNCA+BBARIaCg1sYW5ndWFn",
+            "ZV9jb2RlGAogASgJQgPgQQESGAoLcmVnaW9uX2NvZGUYECABKAlCA+BBARIx",
+            "CgV1bml0cxgLIAEoDjIdLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuVW5pdHNC",
+            "A+BBARIkChdvcHRpbWl6ZV93YXlwb2ludF9vcmRlchgNIAEoCEID4EEBEmQK",
+            "GnJlcXVlc3RlZF9yZWZlcmVuY2Vfcm91dGVzGA4gAygOMjsuZ29vZ2xlLm1h",
+            "cHMucm91dGluZy52Mi5Db21wdXRlUm91dGVzUmVxdWVzdC5SZWZlcmVuY2VS",
+            "b3V0ZUID4EEBEl4KEmV4dHJhX2NvbXB1dGF0aW9ucxgPIAMoDjI9Lmdvb2ds",
+            "ZS5tYXBzLnJvdXRpbmcudjIuQ29tcHV0ZVJvdXRlc1JlcXVlc3QuRXh0cmFD",
+            "b21wdXRhdGlvbkID4EEBEkAKDXRyYWZmaWNfbW9kZWwYEiABKA4yJC5nb29n",
+            "bGUubWFwcy5yb3V0aW5nLnYyLlRyYWZmaWNNb2RlbEID4EEBEkwKE3RyYW5z",
+            "aXRfcHJlZmVyZW5jZXMYFCABKAsyKi5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
+            "LlRyYW5zaXRQcmVmZXJlbmNlc0ID4EEBIkUKDlJlZmVyZW5jZVJvdXRlEh8K",
+            "G1JFRkVSRU5DRV9ST1VURV9VTlNQRUNJRklFRBAAEhIKDkZVRUxfRUZGSUNJ",
+            "RU5UEAEimwEKEEV4dHJhQ29tcHV0YXRpb24SIQodRVhUUkFfQ09NUFVUQVRJ",
+            "T05fVU5TUEVDSUZJRUQQABIJCgVUT0xMUxABEhQKEEZVRUxfQ09OU1VNUFRJ",
+            "T04QAhIXChNUUkFGRklDX09OX1BPTFlMSU5FEAMSKgomSFRNTF9GT1JNQVRU",
+            "RURfTkFWSUdBVElPTl9JTlNUUlVDVElPTlMQBCLIAQoVQ29tcHV0ZVJvdXRl",
+            "c1Jlc3BvbnNlEi0KBnJvdXRlcxgBIAMoCzIdLmdvb2dsZS5tYXBzLnJvdXRp",
+            "bmcudjIuUm91dGUSOwoNZmFsbGJhY2tfaW5mbxgCIAEoCzIkLmdvb2dsZS5t",
+            "YXBzLnJvdXRpbmcudjIuRmFsbGJhY2tJbmZvEkMKEWdlb2NvZGluZ19yZXN1",
+            "bHRzGAMgASgLMiguZ29vZ2xlLm1hcHMucm91dGluZy52Mi5HZW9jb2RpbmdS",
+            "ZXN1bHRzIpMGChlDb21wdXRlUm91dGVNYXRyaXhSZXF1ZXN0Ej8KB29yaWdp",
+            "bnMYASADKAsyKS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0cml4",
+            "T3JpZ2luQgPgQQISSQoMZGVzdGluYXRpb25zGAIgAygLMi4uZ29vZ2xlLm1h",
+            "cHMucm91dGluZy52Mi5Sb3V0ZU1hdHJpeERlc3RpbmF0aW9uQgPgQQISQQoL",
+            "dHJhdmVsX21vZGUYAyABKA4yJy5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJv",
+            "dXRlVHJhdmVsTW9kZUID4EEBEkoKEnJvdXRpbmdfcHJlZmVyZW5jZRgEIAEo",
+            "DjIpLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGluZ1ByZWZlcmVuY2VC",
+            "A+BBARI3Cg5kZXBhcnR1cmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBARI1CgxhcnJpdmFsX3RpbWUYCyABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQESGgoNbGFuZ3VhZ2VfY29kZRgG",
+            "IAEoCUID4EEBEhgKC3JlZ2lvbl9jb2RlGAkgASgJQgPgQQESYwoSZXh0cmFf",
+            "Y29tcHV0YXRpb25zGAggAygOMkIuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5D",
+            "b21wdXRlUm91dGVNYXRyaXhSZXF1ZXN0LkV4dHJhQ29tcHV0YXRpb25CA+BB",
+            "ARJACg10cmFmZmljX21vZGVsGAogASgOMiQuZ29vZ2xlLm1hcHMucm91dGlu",
+            "Zy52Mi5UcmFmZmljTW9kZWxCA+BBARJMChN0cmFuc2l0X3ByZWZlcmVuY2Vz",
+            "GAwgASgLMiouZ29vZ2xlLm1hcHMucm91dGluZy52Mi5UcmFuc2l0UHJlZmVy",
+            "ZW5jZXNCA+BBASJAChBFeHRyYUNvbXB1dGF0aW9uEiEKHUVYVFJBX0NPTVBV",
+            "VEFUSU9OX1VOU1BFQ0lGSUVEEAASCQoFVE9MTFMQASKSAQoRUm91dGVNYXRy",
+            "aXhPcmlnaW4SNwoId2F5cG9pbnQYASABKAsyIC5nb29nbGUubWFwcy5yb3V0",
+            "aW5nLnYyLldheXBvaW50QgPgQQISRAoPcm91dGVfbW9kaWZpZXJzGAIgASgL",
+            "MiYuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1vZGlmaWVyc0ID4EEB",
+            "IlEKFlJvdXRlTWF0cml4RGVzdGluYXRpb24SNwoId2F5cG9pbnQYASABKAsy",
+            "IC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLldheXBvaW50QgPgQQIijAYKElJv",
+            "dXRlTWF0cml4RWxlbWVudBIZCgxvcmlnaW5faW5kZXgYASABKAVIAIgBARIe",
+            "ChFkZXN0aW5hdGlvbl9pbmRleBgCIAEoBUgBiAEBEiIKBnN0YXR1cxgDIAEo",
+            "CzISLmdvb2dsZS5ycGMuU3RhdHVzEkYKCWNvbmRpdGlvbhgJIAEoDjIzLmdv",
+            "b2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVNYXRyaXhFbGVtZW50Q29uZGl0",
+            "aW9uEhcKD2Rpc3RhbmNlX21ldGVycxgEIAEoBRIrCghkdXJhdGlvbhgFIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIyCg9zdGF0aWNfZHVyYXRp",
+            "b24YBiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SRAoPdHJhdmVs",
+            "X2Fkdmlzb3J5GAcgASgLMisuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0",
+            "ZVRyYXZlbEFkdmlzb3J5EjsKDWZhbGxiYWNrX2luZm8YCCABKAsyJC5nb29n",
+            "bGUubWFwcy5yb3V0aW5nLnYyLkZhbGxiYWNrSW5mbxJUChBsb2NhbGl6ZWRf",
+            "dmFsdWVzGAogASgLMjouZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1h",
+            "dHJpeEVsZW1lbnQuTG9jYWxpemVkVmFsdWVzGtQBCg9Mb2NhbGl6ZWRWYWx1",
+            "ZXMSLAoIZGlzdGFuY2UYASABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRU",
+            "ZXh0EiwKCGR1cmF0aW9uGAIgASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVk",
+            "VGV4dBIzCg9zdGF0aWNfZHVyYXRpb24YAyABKAsyGi5nb29nbGUudHlwZS5M",
+            "b2NhbGl6ZWRUZXh0EjAKDHRyYW5zaXRfZmFyZRgEIAEoCzIaLmdvb2dsZS50",
+            "eXBlLkxvY2FsaXplZFRleHRCDwoNX29yaWdpbl9pbmRleEIUChJfZGVzdGlu",
+            "YXRpb25faW5kZXgqdAobUm91dGVNYXRyaXhFbGVtZW50Q29uZGl0aW9uEi4K",
+            "KlJPVVRFX01BVFJJWF9FTEVNRU5UX0NPTkRJVElPTl9VTlNQRUNJRklFRBAA",
+            "EhAKDFJPVVRFX0VYSVNUUxABEhMKD1JPVVRFX05PVF9GT1VORBACMuQCCgZS",
+            "b3V0ZXMSlQEKDUNvbXB1dGVSb3V0ZXMSLC5nb29nbGUubWFwcy5yb3V0aW5n",
+            "LnYyLkNvbXB1dGVSb3V0ZXNSZXF1ZXN0Gi0uZ29vZ2xlLm1hcHMucm91dGlu",
+            "Zy52Mi5Db21wdXRlUm91dGVzUmVzcG9uc2UiJ4LT5JMCISIcL2RpcmVjdGlv",
+            "bnMvdjI6Y29tcHV0ZVJvdXRlczoBKhKnAQoSQ29tcHV0ZVJvdXRlTWF0cml4",
+            "EjEuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Db21wdXRlUm91dGVNYXRyaXhS",
+            "ZXF1ZXN0GiouZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1hdHJpeEVs",
+            "ZW1lbnQiMILT5JMCKiIlL2Rpc3RhbmNlTWF0cml4L3YyOmNvbXB1dGVSb3V0",
+            "ZU1hdHJpeDoBKjABGhjKQRVyb3V0ZXMuZ29vZ2xlYXBpcy5jb21CxwEKGmNv",
+            "bS5nb29nbGUubWFwcy5yb3V0aW5nLnYyQhJSb3V0ZXNTZXJ2aWNlUHJvdG9Q",
+            "AVo6Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL3JvdXRpbmcvYXBpdjIvcm91",
+            "dGluZ3BiO3JvdXRpbmdwYvgBAaICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91",
+            "dGluZy5WMsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1h",
+            "cHM6OlJvdXRpbmc6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.Routing.V2.FallbackInfoReflection.Descriptor, global::Google.Maps.Routing.V2.GeocodingResultsReflection.Descriptor, global::Google.Maps.Routing.V2.PolylineReflection.Descriptor, global::Google.Maps.Routing.V2.RouteReflection.Descriptor, global::Google.Maps.Routing.V2.RouteModifiersReflection.Descriptor, global::Google.Maps.Routing.V2.RouteTravelModeReflection.Descriptor, global::Google.Maps.Routing.V2.RoutingPreferenceReflection.Descriptor, global::Google.Maps.Routing.V2.UnitsReflection.Descriptor, global::Google.Maps.Routing.V2.WaypointReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.Routing.V2.FallbackInfoReflection.Descriptor, global::Google.Maps.Routing.V2.GeocodingResultsReflection.Descriptor, global::Google.Maps.Routing.V2.PolylineReflection.Descriptor, global::Google.Maps.Routing.V2.RouteReflection.Descriptor, global::Google.Maps.Routing.V2.RouteModifiersReflection.Descriptor, global::Google.Maps.Routing.V2.RouteTravelModeReflection.Descriptor, global::Google.Maps.Routing.V2.RoutingPreferenceReflection.Descriptor, global::Google.Maps.Routing.V2.TrafficModelReflection.Descriptor, global::Google.Maps.Routing.V2.TransitPreferencesReflection.Descriptor, global::Google.Maps.Routing.V2.UnitsReflection.Descriptor, global::Google.Maps.Routing.V2.WaypointReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.RouteMatrixElementCondition), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest), global::Google.Maps.Routing.V2.ComputeRoutesRequest.Parser, new[]{ "Origin", "Destination", "Intermediates", "TravelMode", "RoutingPreference", "PolylineQuality", "PolylineEncoding", "DepartureTime", "ComputeAlternativeRoutes", "RouteModifiers", "LanguageCode", "RegionCode", "Units", "RequestedReferenceRoutes", "ExtraComputations" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest.Types.ReferenceRoute), typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest.Types.ExtraComputation) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest), global::Google.Maps.Routing.V2.ComputeRoutesRequest.Parser, new[]{ "Origin", "Destination", "Intermediates", "TravelMode", "RoutingPreference", "PolylineQuality", "PolylineEncoding", "DepartureTime", "ArrivalTime", "ComputeAlternativeRoutes", "RouteModifiers", "LanguageCode", "RegionCode", "Units", "OptimizeWaypointOrder", "RequestedReferenceRoutes", "ExtraComputations", "TrafficModel", "TransitPreferences" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest.Types.ReferenceRoute), typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest.Types.ExtraComputation) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRoutesResponse), global::Google.Maps.Routing.V2.ComputeRoutesResponse.Parser, new[]{ "Routes", "FallbackInfo", "GeocodingResults" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest), global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest.Parser, new[]{ "Origins", "Destinations", "TravelMode", "RoutingPreference", "DepartureTime", "LanguageCode", "RegionCode", "ExtraComputations" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest.Types.ExtraComputation) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest), global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest.Parser, new[]{ "Origins", "Destinations", "TravelMode", "RoutingPreference", "DepartureTime", "ArrivalTime", "LanguageCode", "RegionCode", "ExtraComputations", "TrafficModel", "TransitPreferences" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest.Types.ExtraComputation) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteMatrixOrigin), global::Google.Maps.Routing.V2.RouteMatrixOrigin.Parser, new[]{ "Waypoint", "RouteModifiers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteMatrixDestination), global::Google.Maps.Routing.V2.RouteMatrixDestination.Parser, new[]{ "Waypoint" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteMatrixElement), global::Google.Maps.Routing.V2.RouteMatrixElement.Parser, new[]{ "OriginIndex", "DestinationIndex", "Status", "Condition", "DistanceMeters", "Duration", "StaticDuration", "TravelAdvisory", "FallbackInfo" }, new[]{ "OriginIndex", "DestinationIndex" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteMatrixElement), global::Google.Maps.Routing.V2.RouteMatrixElement.Parser, new[]{ "OriginIndex", "DestinationIndex", "Status", "Condition", "DistanceMeters", "Duration", "StaticDuration", "TravelAdvisory", "FallbackInfo", "LocalizedValues" }, new[]{ "OriginIndex", "DestinationIndex" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteMatrixElement.Types.LocalizedValues), global::Google.Maps.Routing.V2.RouteMatrixElement.Types.LocalizedValues.Parser, new[]{ "Distance", "Duration", "StaticDuration", "TransitFare" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -196,13 +216,17 @@ namespace Google.Maps.Routing.V2 {
       polylineQuality_ = other.polylineQuality_;
       polylineEncoding_ = other.polylineEncoding_;
       departureTime_ = other.departureTime_ != null ? other.departureTime_.Clone() : null;
+      arrivalTime_ = other.arrivalTime_ != null ? other.arrivalTime_.Clone() : null;
       computeAlternativeRoutes_ = other.computeAlternativeRoutes_;
       routeModifiers_ = other.routeModifiers_ != null ? other.routeModifiers_.Clone() : null;
       languageCode_ = other.languageCode_;
       regionCode_ = other.regionCode_;
       units_ = other.units_;
+      optimizeWaypointOrder_ = other.optimizeWaypointOrder_;
       requestedReferenceRoutes_ = other.requestedReferenceRoutes_.Clone();
       extraComputations_ = other.extraComputations_.Clone();
+      trafficModel_ = other.trafficModel_;
+      transitPreferences_ = other.transitPreferences_ != null ? other.transitPreferences_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -327,8 +351,10 @@ namespace Google.Maps.Routing.V2 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp departureTime_;
     /// <summary>
     /// Optional. The departure time. If you don't set this value, then this value
-    /// defaults to the time that you made the request. If you set this value to a
-    /// time that has already occurred, then the request fails.
+    /// defaults to the time that you made the request.
+    /// NOTE: You can only specify a `departure_time` in the past when
+    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] is set to
+    /// `TRANSIT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -336,6 +362,25 @@ namespace Google.Maps.Routing.V2 {
       get { return departureTime_; }
       set {
         departureTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "arrival_time" field.</summary>
+    public const int ArrivalTimeFieldNumber = 19;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp arrivalTime_;
+    /// <summary>
+    /// Optional. The arrival time.
+    /// NOTE: Can only be set when
+    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] is set to
+    /// `TRANSIT`. You can specify either departure_time or arrival_time, but not
+    /// both.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ArrivalTime {
+      get { return arrivalTime_; }
+      set {
+        arrivalTime_ = value;
       }
     }
 
@@ -413,12 +458,12 @@ namespace Google.Maps.Routing.V2 {
     public const int UnitsFieldNumber = 11;
     private global::Google.Maps.Routing.V2.Units units_ = global::Google.Maps.Routing.V2.Units.Unspecified;
     /// <summary>
-    /// Optional. Specifies the units of measure for the display fields. This
-    /// includes the `instruction` field in
+    /// Optional. Specifies the units of measure for the display fields. These
+    /// fields include the `instruction` field in
     /// [NavigationInstruction][google.maps.routing.v2.NavigationInstruction]. The
     /// units of measure used for the route, leg, step distance, and duration are
     /// not affected by this value. If you don't provide this value, then the
-    /// display units are inferred from the location of the request.
+    /// display units are inferred from the location of the first origin.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -426,6 +471,30 @@ namespace Google.Maps.Routing.V2 {
       get { return units_; }
       set {
         units_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "optimize_waypoint_order" field.</summary>
+    public const int OptimizeWaypointOrderFieldNumber = 13;
+    private bool optimizeWaypointOrder_;
+    /// <summary>
+    /// Optional. If set to true, the service attempts to minimize the overall cost
+    /// of the route by re-ordering the specified intermediate waypoints. The
+    /// request fails if any of the intermediate waypoints is a `via` waypoint. Use
+    /// `ComputeRoutesResponse.Routes.optimized_intermediate_waypoint_index` to
+    /// find the new ordering.
+    /// If `ComputeRoutesResponseroutes.optimized_intermediate_waypoint_index` is
+    /// not requested in the `X-Goog-FieldMask` header, the request fails.
+    /// If `optimize_waypoint_order` is set to false,
+    /// `ComputeRoutesResponse.optimized_intermediate_waypoint_index` will be
+    /// empty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool OptimizeWaypointOrder {
+      get { return optimizeWaypointOrder_; }
+      set {
+        optimizeWaypointOrder_ = value;
       }
     }
 
@@ -464,6 +533,49 @@ namespace Google.Maps.Routing.V2 {
       get { return extraComputations_; }
     }
 
+    /// <summary>Field number for the "traffic_model" field.</summary>
+    public const int TrafficModelFieldNumber = 18;
+    private global::Google.Maps.Routing.V2.TrafficModel trafficModel_ = global::Google.Maps.Routing.V2.TrafficModel.Unspecified;
+    /// <summary>
+    /// Optional. Specifies the assumptions to use when calculating time in
+    /// traffic. This setting affects the value returned in the duration field in
+    /// the [Route][google.maps.routing.v2.Route] and
+    /// [RouteLeg][google.maps.routing.v2.RouteLeg] which contains the predicted
+    /// time in traffic based on historical averages.
+    /// `TrafficModel` is only available for requests that have set
+    /// [RoutingPreference][google.maps.routing.v2.RoutingPreference] to
+    /// `TRAFFIC_AWARE_OPTIMAL` and
+    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] to `DRIVE`.
+    /// Defaults to `BEST_GUESS` if traffic is requested and `TrafficModel` is not
+    /// specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.TrafficModel TrafficModel {
+      get { return trafficModel_; }
+      set {
+        trafficModel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "transit_preferences" field.</summary>
+    public const int TransitPreferencesFieldNumber = 20;
+    private global::Google.Maps.Routing.V2.TransitPreferences transitPreferences_;
+    /// <summary>
+    /// Optional. Specifies preferences that influence the route returned for
+    /// `TRANSIT` routes. NOTE: You can only specify a `transit_preferences` when
+    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] is set to
+    /// `TRANSIT`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.TransitPreferences TransitPreferences {
+      get { return transitPreferences_; }
+      set {
+        transitPreferences_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -487,13 +599,17 @@ namespace Google.Maps.Routing.V2 {
       if (PolylineQuality != other.PolylineQuality) return false;
       if (PolylineEncoding != other.PolylineEncoding) return false;
       if (!object.Equals(DepartureTime, other.DepartureTime)) return false;
+      if (!object.Equals(ArrivalTime, other.ArrivalTime)) return false;
       if (ComputeAlternativeRoutes != other.ComputeAlternativeRoutes) return false;
       if (!object.Equals(RouteModifiers, other.RouteModifiers)) return false;
       if (LanguageCode != other.LanguageCode) return false;
       if (RegionCode != other.RegionCode) return false;
       if (Units != other.Units) return false;
+      if (OptimizeWaypointOrder != other.OptimizeWaypointOrder) return false;
       if(!requestedReferenceRoutes_.Equals(other.requestedReferenceRoutes_)) return false;
       if(!extraComputations_.Equals(other.extraComputations_)) return false;
+      if (TrafficModel != other.TrafficModel) return false;
+      if (!object.Equals(TransitPreferences, other.TransitPreferences)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -509,13 +625,17 @@ namespace Google.Maps.Routing.V2 {
       if (PolylineQuality != global::Google.Maps.Routing.V2.PolylineQuality.Unspecified) hash ^= PolylineQuality.GetHashCode();
       if (PolylineEncoding != global::Google.Maps.Routing.V2.PolylineEncoding.Unspecified) hash ^= PolylineEncoding.GetHashCode();
       if (departureTime_ != null) hash ^= DepartureTime.GetHashCode();
+      if (arrivalTime_ != null) hash ^= ArrivalTime.GetHashCode();
       if (ComputeAlternativeRoutes != false) hash ^= ComputeAlternativeRoutes.GetHashCode();
       if (routeModifiers_ != null) hash ^= RouteModifiers.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
       if (Units != global::Google.Maps.Routing.V2.Units.Unspecified) hash ^= Units.GetHashCode();
+      if (OptimizeWaypointOrder != false) hash ^= OptimizeWaypointOrder.GetHashCode();
       hash ^= requestedReferenceRoutes_.GetHashCode();
       hash ^= extraComputations_.GetHashCode();
+      if (TrafficModel != global::Google.Maps.Routing.V2.TrafficModel.Unspecified) hash ^= TrafficModel.GetHashCode();
+      if (transitPreferences_ != null) hash ^= TransitPreferences.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -579,11 +699,27 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(96);
         output.WriteEnum((int) PolylineEncoding);
       }
+      if (OptimizeWaypointOrder != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(OptimizeWaypointOrder);
+      }
       requestedReferenceRoutes_.WriteTo(output, _repeated_requestedReferenceRoutes_codec);
       extraComputations_.WriteTo(output, _repeated_extraComputations_codec);
       if (RegionCode.Length != 0) {
         output.WriteRawTag(130, 1);
         output.WriteString(RegionCode);
+      }
+      if (TrafficModel != global::Google.Maps.Routing.V2.TrafficModel.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) TrafficModel);
+      }
+      if (arrivalTime_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(ArrivalTime);
+      }
+      if (transitPreferences_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(TransitPreferences);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -640,11 +776,27 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(96);
         output.WriteEnum((int) PolylineEncoding);
       }
+      if (OptimizeWaypointOrder != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(OptimizeWaypointOrder);
+      }
       requestedReferenceRoutes_.WriteTo(ref output, _repeated_requestedReferenceRoutes_codec);
       extraComputations_.WriteTo(ref output, _repeated_extraComputations_codec);
       if (RegionCode.Length != 0) {
         output.WriteRawTag(130, 1);
         output.WriteString(RegionCode);
+      }
+      if (TrafficModel != global::Google.Maps.Routing.V2.TrafficModel.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) TrafficModel);
+      }
+      if (arrivalTime_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(ArrivalTime);
+      }
+      if (transitPreferences_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(TransitPreferences);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -678,6 +830,9 @@ namespace Google.Maps.Routing.V2 {
       if (departureTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DepartureTime);
       }
+      if (arrivalTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ArrivalTime);
+      }
       if (ComputeAlternativeRoutes != false) {
         size += 1 + 1;
       }
@@ -693,8 +848,17 @@ namespace Google.Maps.Routing.V2 {
       if (Units != global::Google.Maps.Routing.V2.Units.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Units);
       }
+      if (OptimizeWaypointOrder != false) {
+        size += 1 + 1;
+      }
       size += requestedReferenceRoutes_.CalculateSize(_repeated_requestedReferenceRoutes_codec);
       size += extraComputations_.CalculateSize(_repeated_extraComputations_codec);
+      if (TrafficModel != global::Google.Maps.Routing.V2.TrafficModel.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) TrafficModel);
+      }
+      if (transitPreferences_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TransitPreferences);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -738,6 +902,12 @@ namespace Google.Maps.Routing.V2 {
         }
         DepartureTime.MergeFrom(other.DepartureTime);
       }
+      if (other.arrivalTime_ != null) {
+        if (arrivalTime_ == null) {
+          ArrivalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ArrivalTime.MergeFrom(other.ArrivalTime);
+      }
       if (other.ComputeAlternativeRoutes != false) {
         ComputeAlternativeRoutes = other.ComputeAlternativeRoutes;
       }
@@ -756,8 +926,20 @@ namespace Google.Maps.Routing.V2 {
       if (other.Units != global::Google.Maps.Routing.V2.Units.Unspecified) {
         Units = other.Units;
       }
+      if (other.OptimizeWaypointOrder != false) {
+        OptimizeWaypointOrder = other.OptimizeWaypointOrder;
+      }
       requestedReferenceRoutes_.Add(other.requestedReferenceRoutes_);
       extraComputations_.Add(other.extraComputations_);
+      if (other.TrafficModel != global::Google.Maps.Routing.V2.TrafficModel.Unspecified) {
+        TrafficModel = other.TrafficModel;
+      }
+      if (other.transitPreferences_ != null) {
+        if (transitPreferences_ == null) {
+          TransitPreferences = new global::Google.Maps.Routing.V2.TransitPreferences();
+        }
+        TransitPreferences.MergeFrom(other.TransitPreferences);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -833,6 +1015,10 @@ namespace Google.Maps.Routing.V2 {
             PolylineEncoding = (global::Google.Maps.Routing.V2.PolylineEncoding) input.ReadEnum();
             break;
           }
+          case 104: {
+            OptimizeWaypointOrder = input.ReadBool();
+            break;
+          }
           case 114:
           case 112: {
             requestedReferenceRoutes_.AddEntriesFrom(input, _repeated_requestedReferenceRoutes_codec);
@@ -845,6 +1031,24 @@ namespace Google.Maps.Routing.V2 {
           }
           case 130: {
             RegionCode = input.ReadString();
+            break;
+          }
+          case 144: {
+            TrafficModel = (global::Google.Maps.Routing.V2.TrafficModel) input.ReadEnum();
+            break;
+          }
+          case 154: {
+            if (arrivalTime_ == null) {
+              ArrivalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ArrivalTime);
+            break;
+          }
+          case 162: {
+            if (transitPreferences_ == null) {
+              TransitPreferences = new global::Google.Maps.Routing.V2.TransitPreferences();
+            }
+            input.ReadMessage(TransitPreferences);
             break;
           }
         }
@@ -922,6 +1126,10 @@ namespace Google.Maps.Routing.V2 {
             PolylineEncoding = (global::Google.Maps.Routing.V2.PolylineEncoding) input.ReadEnum();
             break;
           }
+          case 104: {
+            OptimizeWaypointOrder = input.ReadBool();
+            break;
+          }
           case 114:
           case 112: {
             requestedReferenceRoutes_.AddEntriesFrom(ref input, _repeated_requestedReferenceRoutes_codec);
@@ -934,6 +1142,24 @@ namespace Google.Maps.Routing.V2 {
           }
           case 130: {
             RegionCode = input.ReadString();
+            break;
+          }
+          case 144: {
+            TrafficModel = (global::Google.Maps.Routing.V2.TrafficModel) input.ReadEnum();
+            break;
+          }
+          case 154: {
+            if (arrivalTime_ == null) {
+              ArrivalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ArrivalTime);
+            break;
+          }
+          case 162: {
+            if (transitPreferences_ == null) {
+              TransitPreferences = new global::Google.Maps.Routing.V2.TransitPreferences();
+            }
+            input.ReadMessage(TransitPreferences);
             break;
           }
         }
@@ -981,6 +1207,14 @@ namespace Google.Maps.Routing.V2 {
         /// Traffic aware polylines for the route(s).
         /// </summary>
         [pbr::OriginalName("TRAFFIC_ON_POLYLINE")] TrafficOnPolyline = 3,
+        /// <summary>
+        /// [Navigation
+        /// Instructions][google.maps.routing.v2.NavigationInstructions.instructions]
+        /// presented as a formatted HTML text string. This content
+        /// is meant to be read as-is. This content is for display only.
+        /// Do not programmatically parse it.
+        /// </summary>
+        [pbr::OriginalName("HTML_FORMATTED_NAVIGATION_INSTRUCTIONS")] HtmlFormattedNavigationInstructions = 4,
       }
 
     }
@@ -1319,9 +1553,12 @@ namespace Google.Maps.Routing.V2 {
       travelMode_ = other.travelMode_;
       routingPreference_ = other.routingPreference_;
       departureTime_ = other.departureTime_ != null ? other.departureTime_.Clone() : null;
+      arrivalTime_ = other.arrivalTime_ != null ? other.arrivalTime_.Clone() : null;
       languageCode_ = other.languageCode_;
       regionCode_ = other.regionCode_;
       extraComputations_ = other.extraComputations_.Clone();
+      trafficModel_ = other.trafficModel_;
+      transitPreferences_ = other.transitPreferences_ != null ? other.transitPreferences_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1407,9 +1644,11 @@ namespace Google.Maps.Routing.V2 {
     public const int DepartureTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp departureTime_;
     /// <summary>
-    /// Optional. The departure time. If you don't set this value, this defaults to
-    /// the time that you made the request. If you set this value to a time that
-    /// has already occurred, the request fails.
+    /// Optional. The departure time. If you don't set this value, then this value
+    /// defaults to the time that you made the request.
+    /// NOTE: You can only specify a `departure_time` in the past when
+    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] is set to
+    /// `TRANSIT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1417,6 +1656,25 @@ namespace Google.Maps.Routing.V2 {
       get { return departureTime_; }
       set {
         departureTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "arrival_time" field.</summary>
+    public const int ArrivalTimeFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp arrivalTime_;
+    /// <summary>
+    /// Optional. The arrival time.
+    /// NOTE: Can only be set when
+    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] is set to
+    /// `TRANSIT`. You can specify either departure_time or arrival_time, but not
+    /// both.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ArrivalTime {
+      get { return arrivalTime_; }
+      set {
+        arrivalTime_ = value;
       }
     }
 
@@ -1474,6 +1732,47 @@ namespace Google.Maps.Routing.V2 {
       get { return extraComputations_; }
     }
 
+    /// <summary>Field number for the "traffic_model" field.</summary>
+    public const int TrafficModelFieldNumber = 10;
+    private global::Google.Maps.Routing.V2.TrafficModel trafficModel_ = global::Google.Maps.Routing.V2.TrafficModel.Unspecified;
+    /// <summary>
+    /// Optional. Specifies the assumptions to use when calculating time in
+    /// traffic. This setting affects the value returned in the duration field in
+    /// the [RouteMatrixElement][google.maps.routing.v2.RouteMatrixElement] which
+    /// contains the predicted time in traffic based on historical averages.
+    /// [RoutingPreference][google.maps.routing.v2.RoutingPreference] to
+    /// `TRAFFIC_AWARE_OPTIMAL` and
+    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] to `DRIVE`.
+    /// Defaults to `BEST_GUESS` if traffic is requested and `TrafficModel` is not
+    /// specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.TrafficModel TrafficModel {
+      get { return trafficModel_; }
+      set {
+        trafficModel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "transit_preferences" field.</summary>
+    public const int TransitPreferencesFieldNumber = 12;
+    private global::Google.Maps.Routing.V2.TransitPreferences transitPreferences_;
+    /// <summary>
+    /// Optional. Specifies preferences that influence the route returned for
+    /// `TRANSIT` routes. NOTE: You can only specify a `transit_preferences` when
+    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] is set to
+    /// `TRANSIT`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.TransitPreferences TransitPreferences {
+      get { return transitPreferences_; }
+      set {
+        transitPreferences_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1494,9 +1793,12 @@ namespace Google.Maps.Routing.V2 {
       if (TravelMode != other.TravelMode) return false;
       if (RoutingPreference != other.RoutingPreference) return false;
       if (!object.Equals(DepartureTime, other.DepartureTime)) return false;
+      if (!object.Equals(ArrivalTime, other.ArrivalTime)) return false;
       if (LanguageCode != other.LanguageCode) return false;
       if (RegionCode != other.RegionCode) return false;
       if(!extraComputations_.Equals(other.extraComputations_)) return false;
+      if (TrafficModel != other.TrafficModel) return false;
+      if (!object.Equals(TransitPreferences, other.TransitPreferences)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1509,9 +1811,12 @@ namespace Google.Maps.Routing.V2 {
       if (TravelMode != global::Google.Maps.Routing.V2.RouteTravelMode.TravelModeUnspecified) hash ^= TravelMode.GetHashCode();
       if (RoutingPreference != global::Google.Maps.Routing.V2.RoutingPreference.Unspecified) hash ^= RoutingPreference.GetHashCode();
       if (departureTime_ != null) hash ^= DepartureTime.GetHashCode();
+      if (arrivalTime_ != null) hash ^= ArrivalTime.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
       hash ^= extraComputations_.GetHashCode();
+      if (TrafficModel != global::Google.Maps.Routing.V2.TrafficModel.Unspecified) hash ^= TrafficModel.GetHashCode();
+      if (transitPreferences_ != null) hash ^= TransitPreferences.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1553,6 +1858,18 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(74);
         output.WriteString(RegionCode);
       }
+      if (TrafficModel != global::Google.Maps.Routing.V2.TrafficModel.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) TrafficModel);
+      }
+      if (arrivalTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ArrivalTime);
+      }
+      if (transitPreferences_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(TransitPreferences);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1586,6 +1903,18 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(74);
         output.WriteString(RegionCode);
       }
+      if (TrafficModel != global::Google.Maps.Routing.V2.TrafficModel.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) TrafficModel);
+      }
+      if (arrivalTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ArrivalTime);
+      }
+      if (transitPreferences_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(TransitPreferences);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1607,6 +1936,9 @@ namespace Google.Maps.Routing.V2 {
       if (departureTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DepartureTime);
       }
+      if (arrivalTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArrivalTime);
+      }
       if (LanguageCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
       }
@@ -1614,6 +1946,12 @@ namespace Google.Maps.Routing.V2 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RegionCode);
       }
       size += extraComputations_.CalculateSize(_repeated_extraComputations_codec);
+      if (TrafficModel != global::Google.Maps.Routing.V2.TrafficModel.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TrafficModel);
+      }
+      if (transitPreferences_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransitPreferences);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1640,6 +1978,12 @@ namespace Google.Maps.Routing.V2 {
         }
         DepartureTime.MergeFrom(other.DepartureTime);
       }
+      if (other.arrivalTime_ != null) {
+        if (arrivalTime_ == null) {
+          ArrivalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ArrivalTime.MergeFrom(other.ArrivalTime);
+      }
       if (other.LanguageCode.Length != 0) {
         LanguageCode = other.LanguageCode;
       }
@@ -1647,6 +1991,15 @@ namespace Google.Maps.Routing.V2 {
         RegionCode = other.RegionCode;
       }
       extraComputations_.Add(other.extraComputations_);
+      if (other.TrafficModel != global::Google.Maps.Routing.V2.TrafficModel.Unspecified) {
+        TrafficModel = other.TrafficModel;
+      }
+      if (other.transitPreferences_ != null) {
+        if (transitPreferences_ == null) {
+          TransitPreferences = new global::Google.Maps.Routing.V2.TransitPreferences();
+        }
+        TransitPreferences.MergeFrom(other.TransitPreferences);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1698,6 +2051,24 @@ namespace Google.Maps.Routing.V2 {
             RegionCode = input.ReadString();
             break;
           }
+          case 80: {
+            TrafficModel = (global::Google.Maps.Routing.V2.TrafficModel) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            if (arrivalTime_ == null) {
+              ArrivalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ArrivalTime);
+            break;
+          }
+          case 98: {
+            if (transitPreferences_ == null) {
+              TransitPreferences = new global::Google.Maps.Routing.V2.TransitPreferences();
+            }
+            input.ReadMessage(TransitPreferences);
+            break;
+          }
         }
       }
     #endif
@@ -1747,6 +2118,24 @@ namespace Google.Maps.Routing.V2 {
           }
           case 74: {
             RegionCode = input.ReadString();
+            break;
+          }
+          case 80: {
+            TrafficModel = (global::Google.Maps.Routing.V2.TrafficModel) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            if (arrivalTime_ == null) {
+              ArrivalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ArrivalTime);
+            break;
+          }
+          case 98: {
+            if (transitPreferences_ == null) {
+              TransitPreferences = new global::Google.Maps.Routing.V2.TransitPreferences();
+            }
+            input.ReadMessage(TransitPreferences);
             break;
           }
         }
@@ -2236,7 +2625,7 @@ namespace Google.Maps.Routing.V2 {
   }
 
   /// <summary>
-  /// Encapsulates route information computed for an origin/destination pair in the
+  /// Contains route information computed for an origin/destination pair in the
   /// ComputeRouteMatrix API. This proto can be streamed to the client.
   /// </summary>
   public sealed partial class RouteMatrixElement : pb::IMessage<RouteMatrixElement>
@@ -2284,6 +2673,7 @@ namespace Google.Maps.Routing.V2 {
       staticDuration_ = other.staticDuration_ != null ? other.staticDuration_.Clone() : null;
       travelAdvisory_ = other.travelAdvisory_ != null ? other.travelAdvisory_.Clone() : null;
       fallbackInfo_ = other.fallbackInfo_ != null ? other.fallbackInfo_.Clone() : null;
+      localizedValues_ = other.localizedValues_ != null ? other.localizedValues_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2469,6 +2859,21 @@ namespace Google.Maps.Routing.V2 {
       }
     }
 
+    /// <summary>Field number for the "localized_values" field.</summary>
+    public const int LocalizedValuesFieldNumber = 10;
+    private global::Google.Maps.Routing.V2.RouteMatrixElement.Types.LocalizedValues localizedValues_;
+    /// <summary>
+    /// Text representations of properties of the `RouteMatrixElement`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.RouteMatrixElement.Types.LocalizedValues LocalizedValues {
+      get { return localizedValues_; }
+      set {
+        localizedValues_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2493,6 +2898,7 @@ namespace Google.Maps.Routing.V2 {
       if (!object.Equals(StaticDuration, other.StaticDuration)) return false;
       if (!object.Equals(TravelAdvisory, other.TravelAdvisory)) return false;
       if (!object.Equals(FallbackInfo, other.FallbackInfo)) return false;
+      if (!object.Equals(LocalizedValues, other.LocalizedValues)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2509,6 +2915,7 @@ namespace Google.Maps.Routing.V2 {
       if (staticDuration_ != null) hash ^= StaticDuration.GetHashCode();
       if (travelAdvisory_ != null) hash ^= TravelAdvisory.GetHashCode();
       if (fallbackInfo_ != null) hash ^= FallbackInfo.GetHashCode();
+      if (localizedValues_ != null) hash ^= LocalizedValues.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2563,6 +2970,10 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(72);
         output.WriteEnum((int) Condition);
       }
+      if (localizedValues_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(LocalizedValues);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2609,6 +3020,10 @@ namespace Google.Maps.Routing.V2 {
         output.WriteRawTag(72);
         output.WriteEnum((int) Condition);
       }
+      if (localizedValues_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(LocalizedValues);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2645,6 +3060,9 @@ namespace Google.Maps.Routing.V2 {
       }
       if (fallbackInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FallbackInfo);
+      }
+      if (localizedValues_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LocalizedValues);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2699,6 +3117,12 @@ namespace Google.Maps.Routing.V2 {
           FallbackInfo = new global::Google.Maps.Routing.V2.FallbackInfo();
         }
         FallbackInfo.MergeFrom(other.FallbackInfo);
+      }
+      if (other.localizedValues_ != null) {
+        if (localizedValues_ == null) {
+          LocalizedValues = new global::Google.Maps.Routing.V2.RouteMatrixElement.Types.LocalizedValues();
+        }
+        LocalizedValues.MergeFrom(other.LocalizedValues);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2764,6 +3188,13 @@ namespace Google.Maps.Routing.V2 {
           }
           case 72: {
             Condition = (global::Google.Maps.Routing.V2.RouteMatrixElementCondition) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            if (localizedValues_ == null) {
+              LocalizedValues = new global::Google.Maps.Routing.V2.RouteMatrixElement.Types.LocalizedValues();
+            }
+            input.ReadMessage(LocalizedValues);
             break;
           }
         }
@@ -2832,10 +3263,379 @@ namespace Google.Maps.Routing.V2 {
             Condition = (global::Google.Maps.Routing.V2.RouteMatrixElementCondition) input.ReadEnum();
             break;
           }
+          case 82: {
+            if (localizedValues_ == null) {
+              LocalizedValues = new global::Google.Maps.Routing.V2.RouteMatrixElement.Types.LocalizedValues();
+            }
+            input.ReadMessage(LocalizedValues);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RouteMatrixElement message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Text representations of certain properties.
+      /// </summary>
+      public sealed partial class LocalizedValues : pb::IMessage<LocalizedValues>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<LocalizedValues> _parser = new pb::MessageParser<LocalizedValues>(() => new LocalizedValues());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<LocalizedValues> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Routing.V2.RouteMatrixElement.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LocalizedValues() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LocalizedValues(LocalizedValues other) : this() {
+          distance_ = other.distance_ != null ? other.distance_.Clone() : null;
+          duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+          staticDuration_ = other.staticDuration_ != null ? other.staticDuration_.Clone() : null;
+          transitFare_ = other.transitFare_ != null ? other.transitFare_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LocalizedValues Clone() {
+          return new LocalizedValues(this);
+        }
+
+        /// <summary>Field number for the "distance" field.</summary>
+        public const int DistanceFieldNumber = 1;
+        private global::Google.Type.LocalizedText distance_;
+        /// <summary>
+        /// Travel distance represented in text form.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText Distance {
+          get { return distance_; }
+          set {
+            distance_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "duration" field.</summary>
+        public const int DurationFieldNumber = 2;
+        private global::Google.Type.LocalizedText duration_;
+        /// <summary>
+        /// Duration represented in text form taking traffic conditions into
+        /// consideration. Note: If traffic information was not requested, this value
+        /// is the same value as static_duration.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText Duration {
+          get { return duration_; }
+          set {
+            duration_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "static_duration" field.</summary>
+        public const int StaticDurationFieldNumber = 3;
+        private global::Google.Type.LocalizedText staticDuration_;
+        /// <summary>
+        /// Duration represented in text form without taking traffic conditions into
+        /// consideration.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText StaticDuration {
+          get { return staticDuration_; }
+          set {
+            staticDuration_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "transit_fare" field.</summary>
+        public const int TransitFareFieldNumber = 4;
+        private global::Google.Type.LocalizedText transitFare_;
+        /// <summary>
+        /// Transit fare represented in text form.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.LocalizedText TransitFare {
+          get { return transitFare_; }
+          set {
+            transitFare_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as LocalizedValues);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(LocalizedValues other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Distance, other.Distance)) return false;
+          if (!object.Equals(Duration, other.Duration)) return false;
+          if (!object.Equals(StaticDuration, other.StaticDuration)) return false;
+          if (!object.Equals(TransitFare, other.TransitFare)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (distance_ != null) hash ^= Distance.GetHashCode();
+          if (duration_ != null) hash ^= Duration.GetHashCode();
+          if (staticDuration_ != null) hash ^= StaticDuration.GetHashCode();
+          if (transitFare_ != null) hash ^= TransitFare.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (distance_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Distance);
+          }
+          if (duration_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Duration);
+          }
+          if (staticDuration_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(StaticDuration);
+          }
+          if (transitFare_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(TransitFare);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (distance_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Distance);
+          }
+          if (duration_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Duration);
+          }
+          if (staticDuration_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(StaticDuration);
+          }
+          if (transitFare_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(TransitFare);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (distance_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Distance);
+          }
+          if (duration_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+          }
+          if (staticDuration_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StaticDuration);
+          }
+          if (transitFare_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransitFare);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(LocalizedValues other) {
+          if (other == null) {
+            return;
+          }
+          if (other.distance_ != null) {
+            if (distance_ == null) {
+              Distance = new global::Google.Type.LocalizedText();
+            }
+            Distance.MergeFrom(other.Distance);
+          }
+          if (other.duration_ != null) {
+            if (duration_ == null) {
+              Duration = new global::Google.Type.LocalizedText();
+            }
+            Duration.MergeFrom(other.Duration);
+          }
+          if (other.staticDuration_ != null) {
+            if (staticDuration_ == null) {
+              StaticDuration = new global::Google.Type.LocalizedText();
+            }
+            StaticDuration.MergeFrom(other.StaticDuration);
+          }
+          if (other.transitFare_ != null) {
+            if (transitFare_ == null) {
+              TransitFare = new global::Google.Type.LocalizedText();
+            }
+            TransitFare.MergeFrom(other.TransitFare);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (distance_ == null) {
+                  Distance = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Distance);
+                break;
+              }
+              case 18: {
+                if (duration_ == null) {
+                  Duration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Duration);
+                break;
+              }
+              case 26: {
+                if (staticDuration_ == null) {
+                  StaticDuration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(StaticDuration);
+                break;
+              }
+              case 34: {
+                if (transitFare_ == null) {
+                  TransitFare = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(TransitFare);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (distance_ == null) {
+                  Distance = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Distance);
+                break;
+              }
+              case 18: {
+                if (duration_ == null) {
+                  Duration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(Duration);
+                break;
+              }
+              case 26: {
+                if (staticDuration_ == null) {
+                  StaticDuration = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(StaticDuration);
+                break;
+              }
+              case 34: {
+                if (transitFare_ == null) {
+                  TransitFare = new global::Google.Type.LocalizedText();
+                }
+                input.ReadMessage(TransitFare);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 

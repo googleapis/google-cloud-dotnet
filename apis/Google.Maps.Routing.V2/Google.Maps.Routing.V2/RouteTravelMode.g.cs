@@ -25,14 +25,14 @@ namespace Google.Maps.Routing.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5nb29nbGUvbWFwcy9yb3V0aW5nL3YyL3JvdXRlX3RyYXZlbF9tb2RlLnBy",
-            "b3RvEhZnb29nbGUubWFwcy5yb3V0aW5nLnYyKmEKD1JvdXRlVHJhdmVsTW9k",
+            "b3RvEhZnb29nbGUubWFwcy5yb3V0aW5nLnYyKm4KD1JvdXRlVHJhdmVsTW9k",
             "ZRIbChdUUkFWRUxfTU9ERV9VTlNQRUNJRklFRBAAEgkKBURSSVZFEAESCwoH",
-            "QklDWUNMRRACEggKBFdBTEsQAxIPCgtUV09fV0hFRUxFUhAEQskBChpjb20u",
-            "Z29vZ2xlLm1hcHMucm91dGluZy52MkIUUm91dGVUcmF2ZWxNb2RlUHJvdG9Q",
-            "AVo6Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL3JvdXRpbmcvYXBpdjIvcm91",
-            "dGluZ3BiO3JvdXRpbmdwYvgBAaICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91",
-            "dGluZy5WMsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1h",
-            "cHM6OlJvdXRpbmc6OlYyYgZwcm90bzM="));
+            "QklDWUNMRRACEggKBFdBTEsQAxIPCgtUV09fV0hFRUxFUhAEEgsKB1RSQU5T",
+            "SVQQB0LJAQoaY29tLmdvb2dsZS5tYXBzLnJvdXRpbmcudjJCFFJvdXRlVHJh",
+            "dmVsTW9kZVByb3RvUAFaOmNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9yb3V0",
+            "aW5nL2FwaXYyL3JvdXRpbmdwYjtyb3V0aW5ncGL4AQGiAgVHTVJWMqoCFkdv",
+            "b2dsZS5NYXBzLlJvdXRpbmcuVjLKAhZHb29nbGVcTWFwc1xSb3V0aW5nXFYy",
+            "6gIZR29vZ2xlOjpNYXBzOjpSb3V0aW5nOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.RouteTravelMode), }, null, null));
@@ -70,6 +70,10 @@ namespace Google.Maps.Routing.V2 {
     /// differs from the `BICYCLE` travel mode which covers human-powered mode.
     /// </summary>
     [pbr::OriginalName("TWO_WHEELER")] TwoWheeler = 4,
+    /// <summary>
+    /// Travel by public transit routes, where available.
+    /// </summary>
+    [pbr::OriginalName("TRANSIT")] Transit = 7,
   }
 
   #endregion

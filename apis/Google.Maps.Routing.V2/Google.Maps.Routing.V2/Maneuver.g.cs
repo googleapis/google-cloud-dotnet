@@ -25,7 +25,7 @@ namespace Google.Maps.Routing.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvbWFwcy9yb3V0aW5nL3YyL21hbmV1dmVyLnByb3RvEhZnb29n",
-            "bGUubWFwcy5yb3V0aW5nLnYyKtoCCghNYW5ldXZlchIYChRNQU5FVVZFUl9V",
+            "bGUubWFwcy5yb3V0aW5nLnYyKvcCCghNYW5ldXZlchIYChRNQU5FVVZFUl9V",
             "TlNQRUNJRklFRBAAEhQKEFRVUk5fU0xJR0hUX0xFRlQQARITCg9UVVJOX1NI",
             "QVJQX0xFRlQQAhIOCgpVVFVSTl9MRUZUEAMSDQoJVFVSTl9MRUZUEAQSFQoR",
             "VFVSTl9TTElHSFRfUklHSFQQBRIUChBUVVJOX1NIQVJQX1JJR0hUEAYSDwoL",
@@ -33,11 +33,12 @@ namespace Google.Maps.Routing.V2 {
             "CglSQU1QX0xFRlQQChIOCgpSQU1QX1JJR0hUEAsSCQoFTUVSR0UQDBINCglG",
             "T1JLX0xFRlQQDRIOCgpGT1JLX1JJR0hUEA4SCQoFRkVSUlkQDxIPCgtGRVJS",
             "WV9UUkFJThAQEhMKD1JPVU5EQUJPVVRfTEVGVBAREhQKEFJPVU5EQUJPVVRf",
-            "UklHSFQQEkLCAQoaY29tLmdvb2dsZS5tYXBzLnJvdXRpbmcudjJCDU1hbmV1",
-            "dmVyUHJvdG9QAVo6Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL3JvdXRpbmcv",
-            "YXBpdjIvcm91dGluZ3BiO3JvdXRpbmdwYvgBAaICBUdNUlYyqgIWR29vZ2xl",
-            "Lk1hcHMuUm91dGluZy5WMsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlH",
-            "b29nbGU6Ok1hcHM6OlJvdXRpbmc6OlYyYgZwcm90bzM="));
+            "UklHSFQQEhIKCgZERVBBUlQQExIPCgtOQU1FX0NIQU5HRRAUQsIBChpjb20u",
+            "Z29vZ2xlLm1hcHMucm91dGluZy52MkINTWFuZXV2ZXJQcm90b1ABWjpjbG91",
+            "ZC5nb29nbGUuY29tL2dvL21hcHMvcm91dGluZy9hcGl2Mi9yb3V0aW5ncGI7",
+            "cm91dGluZ3Bi+AEBogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYy",
+            "ygIWR29vZ2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91",
+            "dGluZzo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.Maneuver), }, null, null));
@@ -127,6 +128,14 @@ namespace Google.Maps.Routing.V2 {
     /// Turn right at the roundabout.
     /// </summary>
     [pbr::OriginalName("ROUNDABOUT_RIGHT")] RoundaboutRight = 18,
+    /// <summary>
+    /// Initial maneuver.
+    /// </summary>
+    [pbr::OriginalName("DEPART")] Depart = 19,
+    /// <summary>
+    /// Used to indicate a street name change.
+    /// </summary>
+    [pbr::OriginalName("NAME_CHANGE")] NameChange = 20,
   }
 
   #endregion
