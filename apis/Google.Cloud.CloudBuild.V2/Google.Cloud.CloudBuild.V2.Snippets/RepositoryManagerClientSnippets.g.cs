@@ -2129,5 +2129,94 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for FetchGitRefs</summary>
+        public void FetchGitRefsRequestObject()
+        {
+            // Snippet: FetchGitRefs(FetchGitRefsRequest, CallSettings)
+            // Create client
+            RepositoryManagerClient repositoryManagerClient = RepositoryManagerClient.Create();
+            // Initialize request argument(s)
+            FetchGitRefsRequest request = new FetchGitRefsRequest
+            {
+                RepositoryAsRepositoryName = RepositoryName.FromProjectLocationConnectionRepository("[PROJECT]", "[LOCATION]", "[CONNECTION]", "[REPOSITORY]"),
+                RefType = FetchGitRefsRequest.Types.RefType.Unspecified,
+            };
+            // Make the request
+            FetchGitRefsResponse response = repositoryManagerClient.FetchGitRefs(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchGitRefsAsync</summary>
+        public async Task FetchGitRefsRequestObjectAsync()
+        {
+            // Snippet: FetchGitRefsAsync(FetchGitRefsRequest, CallSettings)
+            // Additional: FetchGitRefsAsync(FetchGitRefsRequest, CancellationToken)
+            // Create client
+            RepositoryManagerClient repositoryManagerClient = await RepositoryManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchGitRefsRequest request = new FetchGitRefsRequest
+            {
+                RepositoryAsRepositoryName = RepositoryName.FromProjectLocationConnectionRepository("[PROJECT]", "[LOCATION]", "[CONNECTION]", "[REPOSITORY]"),
+                RefType = FetchGitRefsRequest.Types.RefType.Unspecified,
+            };
+            // Make the request
+            FetchGitRefsResponse response = await repositoryManagerClient.FetchGitRefsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchGitRefs</summary>
+        public void FetchGitRefs()
+        {
+            // Snippet: FetchGitRefs(string, CallSettings)
+            // Create client
+            RepositoryManagerClient repositoryManagerClient = RepositoryManagerClient.Create();
+            // Initialize request argument(s)
+            string repository = "projects/[PROJECT]/locations/[LOCATION]/connections/[CONNECTION]/repositories/[REPOSITORY]";
+            // Make the request
+            FetchGitRefsResponse response = repositoryManagerClient.FetchGitRefs(repository);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchGitRefsAsync</summary>
+        public async Task FetchGitRefsAsync()
+        {
+            // Snippet: FetchGitRefsAsync(string, CallSettings)
+            // Additional: FetchGitRefsAsync(string, CancellationToken)
+            // Create client
+            RepositoryManagerClient repositoryManagerClient = await RepositoryManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string repository = "projects/[PROJECT]/locations/[LOCATION]/connections/[CONNECTION]/repositories/[REPOSITORY]";
+            // Make the request
+            FetchGitRefsResponse response = await repositoryManagerClient.FetchGitRefsAsync(repository);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchGitRefs</summary>
+        public void FetchGitRefsResourceNames()
+        {
+            // Snippet: FetchGitRefs(RepositoryName, CallSettings)
+            // Create client
+            RepositoryManagerClient repositoryManagerClient = RepositoryManagerClient.Create();
+            // Initialize request argument(s)
+            RepositoryName repository = RepositoryName.FromProjectLocationConnectionRepository("[PROJECT]", "[LOCATION]", "[CONNECTION]", "[REPOSITORY]");
+            // Make the request
+            FetchGitRefsResponse response = repositoryManagerClient.FetchGitRefs(repository);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchGitRefsAsync</summary>
+        public async Task FetchGitRefsResourceNamesAsync()
+        {
+            // Snippet: FetchGitRefsAsync(RepositoryName, CallSettings)
+            // Additional: FetchGitRefsAsync(RepositoryName, CancellationToken)
+            // Create client
+            RepositoryManagerClient repositoryManagerClient = await RepositoryManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            RepositoryName repository = RepositoryName.FromProjectLocationConnectionRepository("[PROJECT]", "[LOCATION]", "[CONNECTION]", "[REPOSITORY]");
+            // Make the request
+            FetchGitRefsResponse response = await repositoryManagerClient.FetchGitRefsAsync(repository);
+            // End snippet
+        }
     }
 }

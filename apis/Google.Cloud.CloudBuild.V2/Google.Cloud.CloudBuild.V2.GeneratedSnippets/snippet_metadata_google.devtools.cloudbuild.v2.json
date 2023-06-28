@@ -3607,6 +3607,293 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchGitRefs_sync",
+      "title": "FetchGitRefsRequestObject",
+      "description": "Snippet for FetchGitRefs",
+      "file": "RepositoryManagerClient.FetchGitRefsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefs",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchGitRefs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.FetchGitRefsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.FetchGitRefsResponse",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchGitRefs",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchGitRefs_async",
+      "title": "FetchGitRefsRequestObjectAsync",
+      "description": "Snippet for FetchGitRefsAsync",
+      "file": "RepositoryManagerClient.FetchGitRefsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefsAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchGitRefsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.FetchGitRefsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.FetchGitRefsResponse>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchGitRefs",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchGitRefs_sync_flattened",
+      "title": "FetchGitRefs",
+      "description": "Snippet for FetchGitRefs",
+      "file": "RepositoryManagerClient.FetchGitRefsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefs",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchGitRefs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.FetchGitRefsResponse",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchGitRefs",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchGitRefs_async_flattened",
+      "title": "FetchGitRefsAsync",
+      "description": "Snippet for FetchGitRefsAsync",
+      "file": "RepositoryManagerClient.FetchGitRefsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefsAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchGitRefsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.FetchGitRefsResponse>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchGitRefs",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchGitRefs_sync_flattened_resourceNames",
+      "title": "FetchGitRefsResourceNames",
+      "description": "Snippet for FetchGitRefs",
+      "file": "RepositoryManagerClient.FetchGitRefsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefs",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchGitRefs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.RepositoryName",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.FetchGitRefsResponse",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchGitRefs",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchGitRefs_async_flattened_resourceNames",
+      "title": "FetchGitRefsResourceNamesAsync",
+      "description": "Snippet for FetchGitRefsAsync",
+      "file": "RepositoryManagerClient.FetchGitRefsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefsAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchGitRefsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.RepositoryName",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.FetchGitRefsResponse>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchGitRefs",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

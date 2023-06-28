@@ -822,6 +822,19 @@ namespace Google.Cloud.CloudBuild.V2
         }
     }
 
+    public partial class GitLabConfig
+    {
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="WebhookSecretSecretVersion"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName WebhookSecretSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(WebhookSecretSecretVersion) ? null : SecretVersionName.Parse(WebhookSecretSecretVersion, allowUnparsed: true);
+            set => WebhookSecretSecretVersion = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ServiceDirectoryConfig
     {
         /// <summary>
@@ -856,6 +869,19 @@ namespace Google.Cloud.CloudBuild.V2
         {
             get => string.IsNullOrEmpty(OauthTokenSecretVersion) ? null : SecretVersionName.Parse(OauthTokenSecretVersion, allowUnparsed: true);
             set => OauthTokenSecretVersion = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UserCredential
+    {
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="UserTokenSecretVersion"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName UserTokenSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(UserTokenSecretVersion) ? null : SecretVersionName.Parse(UserTokenSecretVersion, allowUnparsed: true);
+            set => UserTokenSecretVersion = value?.ToString() ?? "";
         }
     }
 
@@ -980,6 +1006,30 @@ namespace Google.Cloud.CloudBuild.V2
     }
 
     public partial class FetchReadTokenRequest
+    {
+        /// <summary>
+        /// <see cref="RepositoryName"/>-typed view over the <see cref="Repository"/> resource name property.
+        /// </summary>
+        public RepositoryName RepositoryAsRepositoryName
+        {
+            get => string.IsNullOrEmpty(Repository) ? null : RepositoryName.Parse(Repository, allowUnparsed: true);
+            set => Repository = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ProcessWebhookRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchGitRefsRequest
     {
         /// <summary>
         /// <see cref="RepositoryName"/>-typed view over the <see cref="Repository"/> resource name property.
