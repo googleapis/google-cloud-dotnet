@@ -475,6 +475,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::InterconnectRemoteLocationsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddInterconnectRemoteLocationsClient(this IServiceCollection services, sys::Action<gccv::InterconnectRemoteLocationsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::InterconnectRemoteLocationsClientBuilder builder = new gccv::InterconnectRemoteLocationsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gccv::InterconnectsClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.

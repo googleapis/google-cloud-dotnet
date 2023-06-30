@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
                 Project = "",
                 Filter = "",
+                NatName = "",
                 ReturnPartialSuccess = false,
             };
             // Make the request
