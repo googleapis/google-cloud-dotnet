@@ -193,6 +193,18 @@
                 "MacVerifyAsync"
               ]
             },
+            "RawDecrypt": {
+              "methods": [
+                "RawDecrypt",
+                "RawDecryptAsync"
+              ]
+            },
+            "RawEncrypt": {
+              "methods": [
+                "RawEncrypt",
+                "RawEncryptAsync"
+              ]
+            },
             "RestoreCryptoKeyVersion": {
               "methods": [
                 "RestoreCryptoKeyVersion",

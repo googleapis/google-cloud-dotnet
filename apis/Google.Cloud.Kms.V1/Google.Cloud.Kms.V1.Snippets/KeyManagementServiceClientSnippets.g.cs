@@ -2615,6 +2615,98 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for RawEncrypt</summary>
+        public void RawEncryptRequestObject()
+        {
+            // Snippet: RawEncrypt(RawEncryptRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            RawEncryptRequest request = new RawEncryptRequest
+            {
+                Name = "",
+                Plaintext = ByteString.Empty,
+                AdditionalAuthenticatedData = ByteString.Empty,
+                PlaintextCrc32C = 0L,
+                AdditionalAuthenticatedDataCrc32C = 0L,
+                InitializationVector = ByteString.Empty,
+                InitializationVectorCrc32C = 0L,
+            };
+            // Make the request
+            RawEncryptResponse response = keyManagementServiceClient.RawEncrypt(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RawEncryptAsync</summary>
+        public async Task RawEncryptRequestObjectAsync()
+        {
+            // Snippet: RawEncryptAsync(RawEncryptRequest, CallSettings)
+            // Additional: RawEncryptAsync(RawEncryptRequest, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RawEncryptRequest request = new RawEncryptRequest
+            {
+                Name = "",
+                Plaintext = ByteString.Empty,
+                AdditionalAuthenticatedData = ByteString.Empty,
+                PlaintextCrc32C = 0L,
+                AdditionalAuthenticatedDataCrc32C = 0L,
+                InitializationVector = ByteString.Empty,
+                InitializationVectorCrc32C = 0L,
+            };
+            // Make the request
+            RawEncryptResponse response = await keyManagementServiceClient.RawEncryptAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RawDecrypt</summary>
+        public void RawDecryptRequestObject()
+        {
+            // Snippet: RawDecrypt(RawDecryptRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            RawDecryptRequest request = new RawDecryptRequest
+            {
+                Name = "",
+                Ciphertext = ByteString.Empty,
+                AdditionalAuthenticatedData = ByteString.Empty,
+                InitializationVector = ByteString.Empty,
+                TagLength = 0,
+                CiphertextCrc32C = 0L,
+                AdditionalAuthenticatedDataCrc32C = 0L,
+                InitializationVectorCrc32C = 0L,
+            };
+            // Make the request
+            RawDecryptResponse response = keyManagementServiceClient.RawDecrypt(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RawDecryptAsync</summary>
+        public async Task RawDecryptRequestObjectAsync()
+        {
+            // Snippet: RawDecryptAsync(RawDecryptRequest, CallSettings)
+            // Additional: RawDecryptAsync(RawDecryptRequest, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RawDecryptRequest request = new RawDecryptRequest
+            {
+                Name = "",
+                Ciphertext = ByteString.Empty,
+                AdditionalAuthenticatedData = ByteString.Empty,
+                InitializationVector = ByteString.Empty,
+                TagLength = 0,
+                CiphertextCrc32C = 0L,
+                AdditionalAuthenticatedDataCrc32C = 0L,
+                InitializationVectorCrc32C = 0L,
+            };
+            // Make the request
+            RawDecryptResponse response = await keyManagementServiceClient.RawDecryptAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for AsymmetricSign</summary>
         public void AsymmetricSignRequestObject()
         {

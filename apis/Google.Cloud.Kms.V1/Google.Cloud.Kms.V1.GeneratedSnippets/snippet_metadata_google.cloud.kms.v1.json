@@ -7861,6 +7861,200 @@
       ]
     },
     {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_RawEncrypt_sync",
+      "title": "RawEncryptRequestObject",
+      "description": "Snippet for RawEncrypt",
+      "file": "KeyManagementServiceClient.RawEncryptRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RawEncrypt",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.RawEncrypt",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.RawEncryptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.RawEncryptResponse",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "RawEncrypt",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.RawEncrypt",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_RawEncrypt_async",
+      "title": "RawEncryptRequestObjectAsync",
+      "description": "Snippet for RawEncryptAsync",
+      "file": "KeyManagementServiceClient.RawEncryptRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RawEncryptAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.RawEncryptAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.RawEncryptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.RawEncryptResponse>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "RawEncrypt",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.RawEncrypt",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_RawDecrypt_sync",
+      "title": "RawDecryptRequestObject",
+      "description": "Snippet for RawDecrypt",
+      "file": "KeyManagementServiceClient.RawDecryptRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RawDecrypt",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.RawDecrypt",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.RawDecryptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.RawDecryptResponse",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "RawDecrypt",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.RawDecrypt",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_RawDecrypt_async",
+      "title": "RawDecryptRequestObjectAsync",
+      "description": "Snippet for RawDecryptAsync",
+      "file": "KeyManagementServiceClient.RawDecryptRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RawDecryptAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.RawDecryptAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.RawDecryptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.RawDecryptResponse>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "RawDecrypt",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.RawDecrypt",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 51,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudkms_v1_generated_KeyManagementService_AsymmetricSign_sync",
       "title": "AsymmetricSignRequestObject",
       "description": "Snippet for AsymmetricSign",
