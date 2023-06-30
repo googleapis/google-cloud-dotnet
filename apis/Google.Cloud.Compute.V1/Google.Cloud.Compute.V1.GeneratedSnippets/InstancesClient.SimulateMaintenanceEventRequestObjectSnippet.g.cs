@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 Zone = "",
                 Instance = "",
+                RequestId = "",
                 Project = "",
             };
             // Make the request

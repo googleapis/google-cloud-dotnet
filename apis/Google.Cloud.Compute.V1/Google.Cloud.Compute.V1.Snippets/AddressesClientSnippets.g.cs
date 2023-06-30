@@ -755,6 +755,144 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for Move</summary>
+        public void MoveRequestObject()
+        {
+            // Snippet: Move(MoveAddressRequest, CallSettings)
+            // Create client
+            AddressesClient addressesClient = AddressesClient.Create();
+            // Initialize request argument(s)
+            MoveAddressRequest request = new MoveAddressRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                RegionAddressesMoveRequestResource = new RegionAddressesMoveRequest(),
+                Address = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = addressesClient.Move(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = addressesClient.PollOnceMove(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveAsync</summary>
+        public async Task MoveRequestObjectAsync()
+        {
+            // Snippet: MoveAsync(MoveAddressRequest, CallSettings)
+            // Additional: MoveAsync(MoveAddressRequest, CancellationToken)
+            // Create client
+            AddressesClient addressesClient = await AddressesClient.CreateAsync();
+            // Initialize request argument(s)
+            MoveAddressRequest request = new MoveAddressRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                RegionAddressesMoveRequestResource = new RegionAddressesMoveRequest(),
+                Address = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await addressesClient.MoveAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await addressesClient.PollOnceMoveAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Move</summary>
+        public void Move()
+        {
+            // Snippet: Move(string, string, string, RegionAddressesMoveRequest, CallSettings)
+            // Create client
+            AddressesClient addressesClient = AddressesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string address = "";
+            RegionAddressesMoveRequest regionAddressesMoveRequestResource = new RegionAddressesMoveRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = addressesClient.Move(project, region, address, regionAddressesMoveRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = addressesClient.PollOnceMove(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveAsync</summary>
+        public async Task MoveAsync()
+        {
+            // Snippet: MoveAsync(string, string, string, RegionAddressesMoveRequest, CallSettings)
+            // Additional: MoveAsync(string, string, string, RegionAddressesMoveRequest, CancellationToken)
+            // Create client
+            AddressesClient addressesClient = await AddressesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string address = "";
+            RegionAddressesMoveRequest regionAddressesMoveRequestResource = new RegionAddressesMoveRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await addressesClient.MoveAsync(project, region, address, regionAddressesMoveRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await addressesClient.PollOnceMoveAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for SetLabels</summary>
         public void SetLabelsRequestObject()
         {

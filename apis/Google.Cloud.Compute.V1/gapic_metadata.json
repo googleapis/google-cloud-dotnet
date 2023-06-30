@@ -67,6 +67,12 @@
                 "ListAsync"
               ]
             },
+            "Move": {
+              "methods": [
+                "Move",
+                "MoveAsync"
+              ]
+            },
             "SetLabels": {
               "methods": [
                 "SetLabels",
@@ -328,6 +334,12 @@
                 "AggregatedListAsync"
               ]
             },
+            "BulkInsert": {
+              "methods": [
+                "BulkInsert",
+                "BulkInsertAsync"
+              ]
+            },
             "CreateSnapshot": {
               "methods": [
                 "CreateSnapshot",
@@ -386,6 +398,24 @@
               "methods": [
                 "SetLabels",
                 "SetLabelsAsync"
+              ]
+            },
+            "StartAsyncReplication": {
+              "methods": [
+                "StartAsyncReplication",
+                "StartAsyncReplicationAsync"
+              ]
+            },
+            "StopAsyncReplication": {
+              "methods": [
+                "StopAsyncReplication",
+                "StopAsyncReplicationAsync"
+              ]
+            },
+            "StopGroupAsyncReplication": {
+              "methods": [
+                "StopGroupAsyncReplication",
+                "StopGroupAsyncReplicationAsync"
               ]
             },
             "TestIamPermissions": {
@@ -695,6 +725,12 @@
               "methods": [
                 "List",
                 "ListAsync"
+              ]
+            },
+            "Move": {
+              "methods": [
+                "Move",
+                "MoveAsync"
               ]
             },
             "SetLabels": {
@@ -1644,6 +1680,27 @@
       "clients": {
         "grpc": {
           "libraryClient": "InterconnectLocationsClient",
+          "rpcs": {
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "InterconnectRemoteLocations": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "InterconnectRemoteLocationsClient",
           "rpcs": {
             "Get": {
               "methods": [
@@ -2779,6 +2836,12 @@
                 "AddResourcePoliciesAsync"
               ]
             },
+            "BulkInsert": {
+              "methods": [
+                "BulkInsert",
+                "BulkInsertAsync"
+              ]
+            },
             "CreateSnapshot": {
               "methods": [
                 "CreateSnapshot",
@@ -2837,6 +2900,24 @@
               "methods": [
                 "SetLabels",
                 "SetLabelsAsync"
+              ]
+            },
+            "StartAsyncReplication": {
+              "methods": [
+                "StartAsyncReplication",
+                "StartAsyncReplicationAsync"
+              ]
+            },
+            "StopAsyncReplication": {
+              "methods": [
+                "StopAsyncReplication",
+                "StopAsyncReplicationAsync"
+              ]
+            },
+            "StopGroupAsyncReplication": {
+              "methods": [
+                "StopGroupAsyncReplication",
+                "StopGroupAsyncReplicationAsync"
               ]
             },
             "TestIamPermissions": {

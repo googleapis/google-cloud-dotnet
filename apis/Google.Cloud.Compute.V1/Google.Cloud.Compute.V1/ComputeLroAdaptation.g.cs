@@ -38,6 +38,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class MoveAddressRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class SetLabelsAddressRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -167,6 +176,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class BulkInsertDiskRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class CreateSnapshotDiskRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
@@ -213,6 +231,33 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class SetLabelsDiskRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class StartAsyncReplicationDiskRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class StopAsyncReplicationDiskRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class StopGroupAsyncReplicationDiskRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
         {
@@ -384,6 +429,11 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class InsertGlobalAddressRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class MoveGlobalAddressRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
@@ -1507,6 +1557,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class BulkInsertRegionDiskRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class CreateSnapshotRegionDiskRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -1553,6 +1612,33 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class SetLabelsRegionDiskRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class StartAsyncReplicationRegionDiskRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class StopAsyncReplicationRegionDiskRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class StopGroupAsyncReplicationRegionDiskRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {
