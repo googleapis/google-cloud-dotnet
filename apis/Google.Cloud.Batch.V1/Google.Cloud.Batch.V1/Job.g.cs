@@ -1355,6 +1355,9 @@ namespace Google.Cloud.Batch.V1 {
       /// Valid Job states.
       /// </summary>
       public enum State {
+        /// <summary>
+        /// Job state unspecified.
+        /// </summary>
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Job is admitted (validated and persisted) and waiting for resources.
@@ -3200,6 +3203,7 @@ namespace Google.Cloud.Batch.V1 {
         /// * "batch-debian": use Batch Debian images.
         /// * "batch-centos": use Batch CentOS images.
         /// * "batch-cos": use Batch Container-Optimized images.
+        /// * "batch-hpc-centos": use Batch HPC CentOS images.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
