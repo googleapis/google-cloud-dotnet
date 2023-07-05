@@ -1838,7 +1838,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -1887,7 +1888,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -1936,7 +1938,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -1979,7 +1982,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2028,7 +2032,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2077,7 +2082,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2120,7 +2126,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2173,7 +2180,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2226,7 +2234,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2273,7 +2282,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2326,7 +2336,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2379,7 +2390,8 @@ namespace Google.Cloud.Speech.V2
         /// <param name="recognizer">
         /// Required. The name of the Recognizer to use during recognition. The
         /// expected format is
-        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`.
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2502,7 +2514,10 @@ namespace Google.Cloud.Speech.V2
         /// when the transcriptions are finished.
         /// </summary>
         /// <param name="recognizer">
-        /// Required. Resource name of the recognizer to be used for ASR.
+        /// Required. The name of the Recognizer to use during recognition. The
+        /// expected format is
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2551,7 +2566,10 @@ namespace Google.Cloud.Speech.V2
         /// when the transcriptions are finished.
         /// </summary>
         /// <param name="recognizer">
-        /// Required. Resource name of the recognizer to be used for ASR.
+        /// Required. The name of the Recognizer to use during recognition. The
+        /// expected format is
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2600,7 +2618,10 @@ namespace Google.Cloud.Speech.V2
         /// when the transcriptions are finished.
         /// </summary>
         /// <param name="recognizer">
-        /// Required. Resource name of the recognizer to be used for ASR.
+        /// Required. The name of the Recognizer to use during recognition. The
+        /// expected format is
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2640,7 +2661,10 @@ namespace Google.Cloud.Speech.V2
         /// when the transcriptions are finished.
         /// </summary>
         /// <param name="recognizer">
-        /// Required. Resource name of the recognizer to be used for ASR.
+        /// Required. The name of the Recognizer to use during recognition. The
+        /// expected format is
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2689,7 +2713,10 @@ namespace Google.Cloud.Speech.V2
         /// when the transcriptions are finished.
         /// </summary>
         /// <param name="recognizer">
-        /// Required. Resource name of the recognizer to be used for ASR.
+        /// Required. The name of the Recognizer to use during recognition. The
+        /// expected format is
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
@@ -2738,7 +2765,10 @@ namespace Google.Cloud.Speech.V2
         /// when the transcriptions are finished.
         /// </summary>
         /// <param name="recognizer">
-        /// Required. Resource name of the recognizer to be used for ASR.
+        /// Required. The name of the Recognizer to use during recognition. The
+        /// expected format is
+        /// `projects/{project}/locations/{location}/recognizers/{recognizer}`. The
+        /// {recognizer} segment may be set to `_` to use an empty implicit Recognizer.
         /// </param>
         /// <param name="config">
         /// Features and audio metadata to use for the Automatic Speech Recognition.
