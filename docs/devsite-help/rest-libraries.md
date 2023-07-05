@@ -115,10 +115,13 @@ DemoRequest demoRequest = service.Demo(emptyBody);
 // Prepare to send the request using the service HttpClient directly
 Uri uri = demoRequest.CreateRequest().RequestUri;
 HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
 // Execute the request
-HttpResponseMessage response = service.HttpClient.PostAsync(uri, content).Result;
+HttpResponseMessage response = await service.HttpClient.PostAsync(uri, content);
+
 // Check the response status-code, to see if the request completed successfully.
 // If so, then JSON response data can now be read directly from the response
+response.EnsureSuccessStatusCode();
 ```
 
 See issue [#1068](https://github.com/googleapis/google-api-dotnet-client/issues/1068) for more details.
