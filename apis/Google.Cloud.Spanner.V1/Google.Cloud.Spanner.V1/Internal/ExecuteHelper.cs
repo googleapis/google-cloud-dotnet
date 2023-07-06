@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Rpc;
 using Grpc.Core;
 using System.Threading.Tasks;
 
@@ -22,6 +23,9 @@ namespace Google.Cloud.Spanner.V1.Internal
     /// </summary>
     public static class ExecuteHelper
     {
+        internal const string SessionResourceType = "type.googleapis.com/google.spanner.v1.Session";
+        internal const string ResourceInfoMetadataKey = "google.rpc.resourceinfo-bin";
+
         /// <summary>
         /// Waits for <paramref name="task"/> to complete, handling session expiry by marking the session appropriately.
         /// </summary>
@@ -64,10 +68,26 @@ namespace Google.Cloud.Spanner.V1.Internal
         /// <summary>
         /// Determines whether <paramref name="rpcException"/> is due to a session expiry.
         /// </summary>
-        public static bool IsSessionExpiredError(this RpcException rpcException)
+        public static bool IsSessionExpiredError(this RpcException rpcException) =>
+            rpcException?.StatusCode == StatusCode.NotFound &&
+            GetResourceInfoTypeFromTrailers(rpcException) == SessionResourceType;
+
+        private static string GetResourceInfoTypeFromTrailers(RpcException exception)
         {
-            return rpcException != null && rpcException.Status.StatusCode == StatusCode.NotFound &&
-                   rpcException.Message.Contains("Session not found");
+            var entry = exception.Trailers.Get(ResourceInfoMetadataKey);
+            if (entry is null)
+            {
+                return null;
+            }
+            try
+            {
+                return ResourceInfo.Parser.ParseFrom(entry.ValueBytes).ResourceType;
+            }
+            // If anything goes wrong when parsing, just treat it as if the entry was absent.
+            catch
+            {
+                return null;
+            }
         }
     }
 }
