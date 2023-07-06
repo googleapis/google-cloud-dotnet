@@ -50,7 +50,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             "dXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNr",
             "QgPgQQIiXQoXRGVsZXRlQ29ubmVjdGlvblJlcXVlc3QSQgoEbmFtZRgBIAEo",
             "CUI04EEC+kEuCixiaWdxdWVyeWNvbm5lY3Rpb24uZ29vZ2xlYXBpcy5jb20v",
-            "Q29ubmVjdGlvbiLwBQoKQ29ubmVjdGlvbhIMCgRuYW1lGAEgASgJEhUKDWZy",
+            "Q29ubmVjdGlvbiLaBgoKQ29ubmVjdGlvbhIMCgRuYW1lGAEgASgJEhUKDWZy",
             "aWVuZGx5X25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSTAoJY2xv",
             "dWRfc3FsGAQgASgLMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rp",
             "b24udjEuQ2xvdWRTcWxQcm9wZXJ0aWVzSAASQQoDYXdzGAggASgLMjIuZ29v",
@@ -62,95 +62,100 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             "IAEoCzI8Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkNs",
             "b3VkUmVzb3VyY2VQcm9wZXJ0aWVzSAASRQoFc3BhcmsYFyABKAsyNC5nb29n",
             "bGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5TcGFya1Byb3BlcnRp",
-            "ZXNIABIaCg1jcmVhdGlvbl90aW1lGAUgASgDQgPgQQMSHwoSbGFzdF9tb2Rp",
-            "ZmllZF90aW1lGAYgASgDQgPgQQMSGwoOaGFzX2NyZWRlbnRpYWwYByABKAhC",
-            "A+BBAzpz6kFwCixiaWdxdWVyeWNvbm5lY3Rpb24uZ29vZ2xlYXBpcy5jb20v",
-            "Q29ubmVjdGlvbhJAcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L2Nvbm5lY3Rpb25zL3tjb25uZWN0aW9ufUIMCgpwcm9wZXJ0aWVz",
-            "IsoCChJDbG91ZFNxbFByb3BlcnRpZXMSEwoLaW5zdGFuY2VfaWQYASABKAkS",
-            "EAoIZGF0YWJhc2UYAiABKAkSUgoEdHlwZRgDIAEoDjJELmdvb2dsZS5jbG91",
-            "ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkNsb3VkU3FsUHJvcGVydGllcy5E",
-            "YXRhYmFzZVR5cGUSUAoKY3JlZGVudGlhbBgEIAEoCzI3Lmdvb2dsZS5jbG91",
-            "ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkNsb3VkU3FsQ3JlZGVudGlhbEID",
-            "4EEEEh8KEnNlcnZpY2VfYWNjb3VudF9pZBgFIAEoCUID4EEDIkYKDERhdGFi",
-            "YXNlVHlwZRIdChlEQVRBQkFTRV9UWVBFX1VOU1BFQ0lGSUVEEAASDAoIUE9T",
-            "VEdSRVMQARIJCgVNWVNRTBACIjgKEkNsb3VkU3FsQ3JlZGVudGlhbBIQCgh1",
-            "c2VybmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSKBAQoWQ2xvdWRTcGFu",
-            "bmVyUHJvcGVydGllcxIQCghkYXRhYmFzZRgBIAEoCRIXCg91c2VfcGFyYWxs",
-            "ZWxpc20YAiABKAgSIAoYdXNlX3NlcnZlcmxlc3NfYW5hbHl0aWNzGAMgASgI",
-            "EhoKDWRhdGFiYXNlX3JvbGUYBCABKAlCA+BBASLPAQoNQXdzUHJvcGVydGll",
-            "cxJaChJjcm9zc19hY2NvdW50X3JvbGUYAiABKAsyOC5nb29nbGUuY2xvdWQu",
-            "YmlncXVlcnkuY29ubmVjdGlvbi52MS5Bd3NDcm9zc0FjY291bnRSb2xlQgIY",
-            "AUgAEkkKC2FjY2Vzc19yb2xlGAMgASgLMjIuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LmNvbm5lY3Rpb24udjEuQXdzQWNjZXNzUm9sZUgAQhcKFWF1dGhlbnRp",
-            "Y2F0aW9uX21ldGhvZCJeChNBd3NDcm9zc0FjY291bnRSb2xlEhMKC2lhbV9y",
-            "b2xlX2lkGAEgASgJEhgKC2lhbV91c2VyX2lkGAIgASgJQgPgQQMSGAoLZXh0",
-            "ZXJuYWxfaWQYAyABKAlCA+BBAyI2Cg1Bd3NBY2Nlc3NSb2xlEhMKC2lhbV9y",
-            "b2xlX2lkGAEgASgJEhAKCGlkZW50aXR5GAIgASgJIs0BCg9BenVyZVByb3Bl",
-            "cnRpZXMSGAoLYXBwbGljYXRpb24YASABKAlCA+BBAxIWCgljbGllbnRfaWQY",
-            "AiABKAlCA+BBAxIWCglvYmplY3RfaWQYAyABKAlCA+BBAxIaChJjdXN0b21l",
-            "cl90ZW5hbnRfaWQYBCABKAkSFAoMcmVkaXJlY3RfdXJpGAUgASgJEicKH2Zl",
-            "ZGVyYXRlZF9hcHBsaWNhdGlvbl9jbGllbnRfaWQYBiABKAkSFQoIaWRlbnRp",
-            "dHkYByABKAlCA+BBAyI6ChdDbG91ZFJlc291cmNlUHJvcGVydGllcxIfChJz",
-            "ZXJ2aWNlX2FjY291bnRfaWQYASABKAlCA+BBAyJdChZNZXRhc3RvcmVTZXJ2",
-            "aWNlQ29uZmlnEkMKEW1ldGFzdG9yZV9zZXJ2aWNlGAEgASgJQijgQQH6QSIK",
-            "IG1ldGFzdG9yZS5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlIl0KGFNwYXJrSGlz",
-            "dG9yeVNlcnZlckNvbmZpZxJBChBkYXRhcHJvY19jbHVzdGVyGAEgASgJQifg",
-            "QQH6QSEKH2RhdGFwcm9jLmdvb2dsZWFwaXMuY29tL0NsdXN0ZXIi/wEKD1Nw",
-            "YXJrUHJvcGVydGllcxIfChJzZXJ2aWNlX2FjY291bnRfaWQYASABKAlCA+BB",
-            "AxJiChhtZXRhc3RvcmVfc2VydmljZV9jb25maWcYAyABKAsyOy5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5NZXRhc3RvcmVTZXJ2aWNl",
-            "Q29uZmlnQgPgQQESZwobc3BhcmtfaGlzdG9yeV9zZXJ2ZXJfY29uZmlnGAQg",
-            "ASgLMj0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuU3Bh",
-            "cmtIaXN0b3J5U2VydmVyQ29uZmlnQgPgQQEyzA0KEUNvbm5lY3Rpb25TZXJ2",
-            "aWNlEugBChBDcmVhdGVDb25uZWN0aW9uEjwuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LmNvbm5lY3Rpb24udjEuQ3JlYXRlQ29ubmVjdGlvblJlcXVlc3QaLy5n",
-            "b29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5Db25uZWN0aW9u",
-            "ImWC0+STAj0iLy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
-            "L2Nvbm5lY3Rpb25zOgpjb25uZWN0aW9u2kEfcGFyZW50LGNvbm5lY3Rpb24s",
-            "Y29ubmVjdGlvbl9pZBK7AQoNR2V0Q29ubmVjdGlvbhI5Lmdvb2dsZS5jbG91",
-            "ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkdldENvbm5lY3Rpb25SZXF1ZXN0",
-            "Gi8uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuQ29ubmVj",
-            "dGlvbiI+gtPkkwIxEi8vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9jb25uZWN0aW9ucy8qfdpBBG5hbWUSzgEKD0xpc3RDb25uZWN0aW9ucxI7",
-            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkxpc3RDb25u",
-            "ZWN0aW9uc1JlcXVlc3QaPC5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVj",
-            "dGlvbi52MS5MaXN0Q29ubmVjdGlvbnNSZXNwb25zZSJAgtPkkwIxEi8vdjEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jb25uZWN0aW9uc9pB",
-            "BnBhcmVudBLkAQoQVXBkYXRlQ29ubmVjdGlvbhI8Lmdvb2dsZS5jbG91ZC5i",
-            "aWdxdWVyeS5jb25uZWN0aW9uLnYxLlVwZGF0ZUNvbm5lY3Rpb25SZXF1ZXN0",
-            "Gi8uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuQ29ubmVj",
-            "dGlvbiJhgtPkkwI9Mi8vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9jb25uZWN0aW9ucy8qfToKY29ubmVjdGlvbtpBG25hbWUsY29ubmVjdGlv",
-            "bix1cGRhdGVfbWFzaxKoAQoQRGVsZXRlQ29ubmVjdGlvbhI8Lmdvb2dsZS5j",
-            "bG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkRlbGV0ZUNvbm5lY3Rpb25S",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ij6C0+STAjEqLy92MS97",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp92kEE",
-            "bmFtZRKpAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Q",
-            "b2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiXoLT5JMCRSJA",
-            "L3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rp",
-            "b25zLyp9OmdldElhbVBvbGljeToBKtpBEHJlc291cmNlLG9wdGlvbnMSqAEK",
-            "DFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFtUG9saWN5UmVx",
-            "dWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5Il2C0+STAkUiQC92MS97cmVz",
-            "b3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb25uZWN0aW9ucy8qfTpz",
-            "ZXRJYW1Qb2xpY3k6ASraQQ9yZXNvdXJjZSxwb2xpY3kS0wEKElRlc3RJYW1Q",
-            "ZXJtaXNzaW9ucxIoLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25z",
-            "UmVxdWVzdBopLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVz",
-            "cG9uc2UiaILT5JMCSyJGL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2Nvbm5lY3Rpb25zLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKtpB",
-            "FHJlc291cmNlLHBlcm1pc3Npb25zGn7KQSFiaWdxdWVyeWNvbm5lY3Rpb24u",
-            "Z29vZ2xlYXBpcy5jb23SQVdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2JpZ3F1ZXJ5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
-            "Y2xvdWQtcGxhdGZvcm1C/QIKJ2NvbS5nb29nbGUuY2xvdWQuYmlncXVlcnku",
-            "Y29ubmVjdGlvbi52MVABWkdjbG91ZC5nb29nbGUuY29tL2dvL2JpZ3F1ZXJ5",
-            "L2Nvbm5lY3Rpb24vYXBpdjEvY29ubmVjdGlvbnBiO2Nvbm5lY3Rpb25wYqoC",
-            "I0dvb2dsZS5DbG91ZC5CaWdRdWVyeS5Db25uZWN0aW9uLlYxygIjR29vZ2xl",
-            "XENsb3VkXEJpZ1F1ZXJ5XENvbm5lY3Rpb25cVjHqQVkKH2RhdGFwcm9jLmdv",
-            "b2dsZWFwaXMuY29tL0NsdXN0ZXISNnByb2plY3RzL3twcm9qZWN0fS9yZWdp",
-            "b25zL3tyZWdpb259L2NsdXN0ZXJzL3tjbHVzdGVyfepBXgogbWV0YXN0b3Jl",
-            "Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2USOnByb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9zZXJ2aWNlcy97c2VydmljZX1iBnByb3Rv",
-            "Mw=="));
+            "ZXNIABJoChVzYWxlc2ZvcmNlX2RhdGFfY2xvdWQYGCABKAsyQi5nb29nbGUu",
+            "Y2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5TYWxlc2ZvcmNlRGF0YUNs",
+            "b3VkUHJvcGVydGllc0ID4EEBSAASGgoNY3JlYXRpb25fdGltZRgFIAEoA0ID",
+            "4EEDEh8KEmxhc3RfbW9kaWZpZWRfdGltZRgGIAEoA0ID4EEDEhsKDmhhc19j",
+            "cmVkZW50aWFsGAcgASgIQgPgQQM6c+pBcAosYmlncXVlcnljb25uZWN0aW9u",
+            "Lmdvb2dsZWFwaXMuY29tL0Nvbm5lY3Rpb24SQHByb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb25uZWN0aW9ucy97Y29ubmVjdGlv",
+            "bn1CDAoKcHJvcGVydGllcyLKAgoSQ2xvdWRTcWxQcm9wZXJ0aWVzEhMKC2lu",
+            "c3RhbmNlX2lkGAEgASgJEhAKCGRhdGFiYXNlGAIgASgJElIKBHR5cGUYAyAB",
+            "KA4yRC5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5DbG91",
+            "ZFNxbFByb3BlcnRpZXMuRGF0YWJhc2VUeXBlElAKCmNyZWRlbnRpYWwYBCAB",
+            "KAsyNy5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5DbG91",
+            "ZFNxbENyZWRlbnRpYWxCA+BBBBIfChJzZXJ2aWNlX2FjY291bnRfaWQYBSAB",
+            "KAlCA+BBAyJGCgxEYXRhYmFzZVR5cGUSHQoZREFUQUJBU0VfVFlQRV9VTlNQ",
+            "RUNJRklFRBAAEgwKCFBPU1RHUkVTEAESCQoFTVlTUUwQAiI4ChJDbG91ZFNx",
+            "bENyZWRlbnRpYWwSEAoIdXNlcm5hbWUYASABKAkSEAoIcGFzc3dvcmQYAiAB",
+            "KAkisgEKFkNsb3VkU3Bhbm5lclByb3BlcnRpZXMSEAoIZGF0YWJhc2UYASAB",
+            "KAkSFwoPdXNlX3BhcmFsbGVsaXNtGAIgASgIEhcKD21heF9wYXJhbGxlbGlz",
+            "bRgFIAEoBRIgChh1c2Vfc2VydmVybGVzc19hbmFseXRpY3MYAyABKAgSFgoO",
+            "dXNlX2RhdGFfYm9vc3QYBiABKAgSGgoNZGF0YWJhc2Vfcm9sZRgEIAEoCUID",
+            "4EEBIs8BCg1Bd3NQcm9wZXJ0aWVzEloKEmNyb3NzX2FjY291bnRfcm9sZRgC",
+            "IAEoCzI4Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkF3",
+            "c0Nyb3NzQWNjb3VudFJvbGVCAhgBSAASSQoLYWNjZXNzX3JvbGUYAyABKAsy",
+            "Mi5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5Bd3NBY2Nl",
+            "c3NSb2xlSABCFwoVYXV0aGVudGljYXRpb25fbWV0aG9kIl4KE0F3c0Nyb3Nz",
+            "QWNjb3VudFJvbGUSEwoLaWFtX3JvbGVfaWQYASABKAkSGAoLaWFtX3VzZXJf",
+            "aWQYAiABKAlCA+BBAxIYCgtleHRlcm5hbF9pZBgDIAEoCUID4EEDIjYKDUF3",
+            "c0FjY2Vzc1JvbGUSEwoLaWFtX3JvbGVfaWQYASABKAkSEAoIaWRlbnRpdHkY",
+            "AiABKAkizQEKD0F6dXJlUHJvcGVydGllcxIYCgthcHBsaWNhdGlvbhgBIAEo",
+            "CUID4EEDEhYKCWNsaWVudF9pZBgCIAEoCUID4EEDEhYKCW9iamVjdF9pZBgD",
+            "IAEoCUID4EEDEhoKEmN1c3RvbWVyX3RlbmFudF9pZBgEIAEoCRIUCgxyZWRp",
+            "cmVjdF91cmkYBSABKAkSJwofZmVkZXJhdGVkX2FwcGxpY2F0aW9uX2NsaWVu",
+            "dF9pZBgGIAEoCRIVCghpZGVudGl0eRgHIAEoCUID4EEDIjoKF0Nsb3VkUmVz",
+            "b3VyY2VQcm9wZXJ0aWVzEh8KEnNlcnZpY2VfYWNjb3VudF9pZBgBIAEoCUID",
+            "4EEDIl0KFk1ldGFzdG9yZVNlcnZpY2VDb25maWcSQwoRbWV0YXN0b3JlX3Nl",
+            "cnZpY2UYASABKAlCKOBBAfpBIgogbWV0YXN0b3JlLmdvb2dsZWFwaXMuY29t",
+            "L1NlcnZpY2UiXQoYU3BhcmtIaXN0b3J5U2VydmVyQ29uZmlnEkEKEGRhdGFw",
+            "cm9jX2NsdXN0ZXIYASABKAlCJ+BBAfpBIQofZGF0YXByb2MuZ29vZ2xlYXBp",
+            "cy5jb20vQ2x1c3RlciL/AQoPU3BhcmtQcm9wZXJ0aWVzEh8KEnNlcnZpY2Vf",
+            "YWNjb3VudF9pZBgBIAEoCUID4EEDEmIKGG1ldGFzdG9yZV9zZXJ2aWNlX2Nv",
+            "bmZpZxgDIAEoCzI7Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9u",
+            "LnYxLk1ldGFzdG9yZVNlcnZpY2VDb25maWdCA+BBARJnChtzcGFya19oaXN0",
+            "b3J5X3NlcnZlcl9jb25maWcYBCABKAsyPS5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuY29ubmVjdGlvbi52MS5TcGFya0hpc3RvcnlTZXJ2ZXJDb25maWdCA+BB",
+            "ASJfCh1TYWxlc2ZvcmNlRGF0YUNsb3VkUHJvcGVydGllcxIUCgxpbnN0YW5j",
+            "ZV91cmkYASABKAkSFQoIaWRlbnRpdHkYAiABKAlCA+BBAxIRCgl0ZW5hbnRf",
+            "aWQYAyABKAkyzA0KEUNvbm5lY3Rpb25TZXJ2aWNlEugBChBDcmVhdGVDb25u",
+            "ZWN0aW9uEjwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEu",
+            "Q3JlYXRlQ29ubmVjdGlvblJlcXVlc3QaLy5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuY29ubmVjdGlvbi52MS5Db25uZWN0aW9uImWC0+STAj0iLy92MS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Nvbm5lY3Rpb25zOgpjb25u",
+            "ZWN0aW9u2kEfcGFyZW50LGNvbm5lY3Rpb24sY29ubmVjdGlvbl9pZBK7AQoN",
+            "R2V0Q29ubmVjdGlvbhI5Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0",
+            "aW9uLnYxLkdldENvbm5lY3Rpb25SZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5LmNvbm5lY3Rpb24udjEuQ29ubmVjdGlvbiI+gtPkkwIxEi8vdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb25uZWN0aW9ucy8qfdpB",
+            "BG5hbWUSzgEKD0xpc3RDb25uZWN0aW9ucxI7Lmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5jb25uZWN0aW9uLnYxLkxpc3RDb25uZWN0aW9uc1JlcXVlc3QaPC5n",
+            "b29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5MaXN0Q29ubmVj",
+            "dGlvbnNSZXNwb25zZSJAgtPkkwIxEi8vdjEve3BhcmVudD1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qfS9jb25uZWN0aW9uc9pBBnBhcmVudBLkAQoQVXBkYXRl",
+            "Q29ubmVjdGlvbhI8Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9u",
+            "LnYxLlVwZGF0ZUNvbm5lY3Rpb25SZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5LmNvbm5lY3Rpb24udjEuQ29ubmVjdGlvbiJhgtPkkwI9Mi8vdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb25uZWN0aW9ucy8qfToK",
+            "Y29ubmVjdGlvbtpBG25hbWUsY29ubmVjdGlvbix1cGRhdGVfbWFzaxKoAQoQ",
+            "RGVsZXRlQ29ubmVjdGlvbhI8Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25u",
+            "ZWN0aW9uLnYxLkRlbGV0ZUNvbm5lY3Rpb25SZXF1ZXN0GhYuZ29vZ2xlLnBy",
+            "b3RvYnVmLkVtcHR5Ij6C0+STAjEqLy92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp92kEEbmFtZRKpAQoMR2V0SWFtUG9s",
+            "aWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29v",
+            "Z2xlLmlhbS52MS5Qb2xpY3kiXoLT5JMCRSJAL3YxL3tyZXNvdXJjZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp9OmdldElhbVBvbGlj",
+            "eToBKtpBEHJlc291cmNlLG9wdGlvbnMSqAEKDFNldElhbVBvbGljeRIiLmdv",
+            "b2dsZS5pYW0udjEuU2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0u",
+            "djEuUG9saWN5Il2C0+STAkUiQC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9jb25uZWN0aW9ucy8qfTpzZXRJYW1Qb2xpY3k6ASraQQ9y",
+            "ZXNvdXJjZSxwb2xpY3kS0wEKElRlc3RJYW1QZXJtaXNzaW9ucxIoLmdvb2ds",
+            "ZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVxdWVzdBopLmdvb2dsZS5p",
+            "YW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVzcG9uc2UiaILT5JMCSyJGL3Yx",
+            "L3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25z",
+            "Lyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKtpBFHJlc291cmNlLHBlcm1pc3Np",
+            "b25zGn7KQSFiaWdxdWVyeWNvbm5lY3Rpb24uZ29vZ2xlYXBpcy5jb23SQVdo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2JpZ3F1ZXJ5LGh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C/QIK",
+            "J2NvbS5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MVABWkdj",
+            "bG91ZC5nb29nbGUuY29tL2dvL2JpZ3F1ZXJ5L2Nvbm5lY3Rpb24vYXBpdjEv",
+            "Y29ubmVjdGlvbnBiO2Nvbm5lY3Rpb25wYqoCI0dvb2dsZS5DbG91ZC5CaWdR",
+            "dWVyeS5Db25uZWN0aW9uLlYxygIjR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XENv",
+            "bm5lY3Rpb25cVjHqQVkKH2RhdGFwcm9jLmdvb2dsZWFwaXMuY29tL0NsdXN0",
+            "ZXISNnByb2plY3RzL3twcm9qZWN0fS9yZWdpb25zL3tyZWdpb259L2NsdXN0",
+            "ZXJzL3tjbHVzdGVyfepBXgogbWV0YXN0b3JlLmdvb2dsZWFwaXMuY29tL1Nl",
+            "cnZpY2USOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9zZXJ2aWNlcy97c2VydmljZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -160,10 +165,10 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse), global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse.Parser, new[]{ "NextPageToken", "Connections" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest), global::Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest.Parser, new[]{ "Name", "Connection", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest), global::Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.Connection), global::Google.Cloud.BigQuery.Connection.V1.Connection.Parser, new[]{ "Name", "FriendlyName", "Description", "CloudSql", "Aws", "Azure", "CloudSpanner", "CloudResource", "Spark", "CreationTime", "LastModifiedTime", "HasCredential" }, new[]{ "Properties" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.Connection), global::Google.Cloud.BigQuery.Connection.V1.Connection.Parser, new[]{ "Name", "FriendlyName", "Description", "CloudSql", "Aws", "Azure", "CloudSpanner", "CloudResource", "Spark", "SalesforceDataCloud", "CreationTime", "LastModifiedTime", "HasCredential" }, new[]{ "Properties" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSqlProperties), global::Google.Cloud.BigQuery.Connection.V1.CloudSqlProperties.Parser, new[]{ "InstanceId", "Database", "Type", "Credential", "ServiceAccountId" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSqlProperties.Types.DatabaseType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSqlCredential), global::Google.Cloud.BigQuery.Connection.V1.CloudSqlCredential.Parser, new[]{ "Username", "Password" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSpannerProperties), global::Google.Cloud.BigQuery.Connection.V1.CloudSpannerProperties.Parser, new[]{ "Database", "UseParallelism", "UseServerlessAnalytics", "DatabaseRole" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSpannerProperties), global::Google.Cloud.BigQuery.Connection.V1.CloudSpannerProperties.Parser, new[]{ "Database", "UseParallelism", "MaxParallelism", "UseServerlessAnalytics", "UseDataBoost", "DatabaseRole" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.AwsProperties), global::Google.Cloud.BigQuery.Connection.V1.AwsProperties.Parser, new[]{ "CrossAccountRole", "AccessRole" }, new[]{ "AuthenticationMethod" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole), global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole.Parser, new[]{ "IamRoleId", "IamUserId", "ExternalId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.AwsAccessRole), global::Google.Cloud.BigQuery.Connection.V1.AwsAccessRole.Parser, new[]{ "IamRoleId", "Identity" }, null, null, null, null),
@@ -171,7 +176,8 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudResourceProperties), global::Google.Cloud.BigQuery.Connection.V1.CloudResourceProperties.Parser, new[]{ "ServiceAccountId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.MetastoreServiceConfig), global::Google.Cloud.BigQuery.Connection.V1.MetastoreServiceConfig.Parser, new[]{ "MetastoreService" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.SparkHistoryServerConfig), global::Google.Cloud.BigQuery.Connection.V1.SparkHistoryServerConfig.Parser, new[]{ "DataprocCluster" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.SparkProperties), global::Google.Cloud.BigQuery.Connection.V1.SparkProperties.Parser, new[]{ "ServiceAccountId", "MetastoreServiceConfig", "SparkHistoryServerConfig" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.SparkProperties), global::Google.Cloud.BigQuery.Connection.V1.SparkProperties.Parser, new[]{ "ServiceAccountId", "MetastoreServiceConfig", "SparkHistoryServerConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.SalesforceDataCloudProperties), global::Google.Cloud.BigQuery.Connection.V1.SalesforceDataCloudProperties.Parser, new[]{ "InstanceUri", "Identity", "TenantId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1717,6 +1723,9 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         case PropertiesOneofCase.Spark:
           Spark = other.Spark.Clone();
           break;
+        case PropertiesOneofCase.SalesforceDataCloud:
+          SalesforceDataCloud = other.SalesforceDataCloud.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1864,6 +1873,23 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       }
     }
 
+    /// <summary>Field number for the "salesforce_data_cloud" field.</summary>
+    public const int SalesforceDataCloudFieldNumber = 24;
+    /// <summary>
+    /// Optional. Salesforce DataCloud properties. This field is intended for
+    /// use only by Salesforce partner projects. This field contains properties
+    /// for your Salesforce DataCloud connection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Connection.V1.SalesforceDataCloudProperties SalesforceDataCloud {
+      get { return propertiesCase_ == PropertiesOneofCase.SalesforceDataCloud ? (global::Google.Cloud.BigQuery.Connection.V1.SalesforceDataCloudProperties) properties_ : null; }
+      set {
+        properties_ = value;
+        propertiesCase_ = value == null ? PropertiesOneofCase.None : PropertiesOneofCase.SalesforceDataCloud;
+      }
+    }
+
     /// <summary>Field number for the "creation_time" field.</summary>
     public const int CreationTimeFieldNumber = 5;
     private long creationTime_;
@@ -1919,6 +1945,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       CloudSpanner = 21,
       CloudResource = 22,
       Spark = 23,
+      SalesforceDataCloud = 24,
     }
     private PropertiesOneofCase propertiesCase_ = PropertiesOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1958,6 +1985,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       if (!object.Equals(CloudSpanner, other.CloudSpanner)) return false;
       if (!object.Equals(CloudResource, other.CloudResource)) return false;
       if (!object.Equals(Spark, other.Spark)) return false;
+      if (!object.Equals(SalesforceDataCloud, other.SalesforceDataCloud)) return false;
       if (CreationTime != other.CreationTime) return false;
       if (LastModifiedTime != other.LastModifiedTime) return false;
       if (HasCredential != other.HasCredential) return false;
@@ -1978,6 +2006,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       if (propertiesCase_ == PropertiesOneofCase.CloudSpanner) hash ^= CloudSpanner.GetHashCode();
       if (propertiesCase_ == PropertiesOneofCase.CloudResource) hash ^= CloudResource.GetHashCode();
       if (propertiesCase_ == PropertiesOneofCase.Spark) hash ^= Spark.GetHashCode();
+      if (propertiesCase_ == PropertiesOneofCase.SalesforceDataCloud) hash ^= SalesforceDataCloud.GetHashCode();
       if (CreationTime != 0L) hash ^= CreationTime.GetHashCode();
       if (LastModifiedTime != 0L) hash ^= LastModifiedTime.GetHashCode();
       if (HasCredential != false) hash ^= HasCredential.GetHashCode();
@@ -2048,6 +2077,10 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         output.WriteRawTag(186, 1);
         output.WriteMessage(Spark);
       }
+      if (propertiesCase_ == PropertiesOneofCase.SalesforceDataCloud) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(SalesforceDataCloud);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2106,6 +2139,10 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         output.WriteRawTag(186, 1);
         output.WriteMessage(Spark);
       }
+      if (propertiesCase_ == PropertiesOneofCase.SalesforceDataCloud) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(SalesforceDataCloud);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2142,6 +2179,9 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       }
       if (propertiesCase_ == PropertiesOneofCase.Spark) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Spark);
+      }
+      if (propertiesCase_ == PropertiesOneofCase.SalesforceDataCloud) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SalesforceDataCloud);
       }
       if (CreationTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreationTime);
@@ -2218,6 +2258,12 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             Spark = new global::Google.Cloud.BigQuery.Connection.V1.SparkProperties();
           }
           Spark.MergeFrom(other.Spark);
+          break;
+        case PropertiesOneofCase.SalesforceDataCloud:
+          if (SalesforceDataCloud == null) {
+            SalesforceDataCloud = new global::Google.Cloud.BigQuery.Connection.V1.SalesforceDataCloudProperties();
+          }
+          SalesforceDataCloud.MergeFrom(other.SalesforceDataCloud);
           break;
       }
 
@@ -2314,6 +2360,15 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             Spark = subBuilder;
             break;
           }
+          case 194: {
+            global::Google.Cloud.BigQuery.Connection.V1.SalesforceDataCloudProperties subBuilder = new global::Google.Cloud.BigQuery.Connection.V1.SalesforceDataCloudProperties();
+            if (propertiesCase_ == PropertiesOneofCase.SalesforceDataCloud) {
+              subBuilder.MergeFrom(SalesforceDataCloud);
+            }
+            input.ReadMessage(subBuilder);
+            SalesforceDataCloud = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -2405,6 +2460,15 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             }
             input.ReadMessage(subBuilder);
             Spark = subBuilder;
+            break;
+          }
+          case 194: {
+            global::Google.Cloud.BigQuery.Connection.V1.SalesforceDataCloudProperties subBuilder = new global::Google.Cloud.BigQuery.Connection.V1.SalesforceDataCloudProperties();
+            if (propertiesCase_ == PropertiesOneofCase.SalesforceDataCloud) {
+              subBuilder.MergeFrom(SalesforceDataCloud);
+            }
+            input.ReadMessage(subBuilder);
+            SalesforceDataCloud = subBuilder;
             break;
           }
         }
@@ -3083,7 +3147,9 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
     public CloudSpannerProperties(CloudSpannerProperties other) : this() {
       database_ = other.database_;
       useParallelism_ = other.useParallelism_;
+      maxParallelism_ = other.maxParallelism_;
       useServerlessAnalytics_ = other.useServerlessAnalytics_;
+      useDataBoost_ = other.useDataBoost_;
       databaseRole_ = other.databaseRole_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3124,6 +3190,28 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       }
     }
 
+    /// <summary>Field number for the "max_parallelism" field.</summary>
+    public const int MaxParallelismFieldNumber = 5;
+    private int maxParallelism_;
+    /// <summary>
+    /// Allows setting max parallelism per query when executing on Spanner
+    /// independent compute resources. If unspecified, default values of
+    /// parallelism are chosen that are dependent on the Cloud Spanner instance
+    /// configuration.
+    ///
+    /// REQUIRES: `use_parallelism` must be set.
+    /// REQUIRES: Either `use_data_boost` or `use_serverless_analytics` must be
+    /// set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxParallelism {
+      get { return maxParallelism_; }
+      set {
+        maxParallelism_ = value;
+      }
+    }
+
     /// <summary>Field number for the "use_serverless_analytics" field.</summary>
     public const int UseServerlessAnalyticsFieldNumber = 3;
     private bool useServerlessAnalytics_;
@@ -3141,22 +3229,40 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       }
     }
 
+    /// <summary>Field number for the "use_data_boost" field.</summary>
+    public const int UseDataBoostFieldNumber = 6;
+    private bool useDataBoost_;
+    /// <summary>
+    /// If set, the request will be executed via Spanner independent compute
+    /// resources.
+    /// REQUIRES: `use_parallelism` must be set.
+    ///
+    /// NOTE: `use_serverless_analytics` will be deprecated. Prefer
+    /// `use_data_boost` over `use_serverless_analytics`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UseDataBoost {
+      get { return useDataBoost_; }
+      set {
+        useDataBoost_ = value;
+      }
+    }
+
     /// <summary>Field number for the "database_role" field.</summary>
     public const int DatabaseRoleFieldNumber = 4;
     private string databaseRole_ = "";
     /// <summary>
     /// Optional. Cloud Spanner database role for fine-grained access control.
-    /// A database role is a collection of fine-grained access privileges. Example:
-    /// Admin predefines roles that provides user a set of permissions (SELECT,
-    /// INSERT, ..). The user can then specify a predefined role on a connection to
-    /// execute their Cloud Spanner query. The role is passthrough here. If the
-    /// user is not authorized to use the specified role, they get an error. This
-    /// validation happens on Cloud Spanner.
+    /// The Cloud Spanner admin should have provisioned the database role with
+    /// appropriate permissions, such as `SELECT` and `INSERT`. Other users should
+    /// only use roles provided by their Cloud Spanner admins.
     ///
-    /// See https://cloud.google.com/spanner/docs/fgac-about for more details.
+    /// For more details, see [About fine-grained access control]
+    /// (https://cloud.google.com/spanner/docs/fgac-about).
     ///
-    /// REQUIRES: database role name must start with uppercase/lowercase letter
-    /// and only contain uppercase/lowercase letters, numbers, and underscores.
+    /// REQUIRES: The database role name must start with a letter, and can only
+    /// contain letters, numbers, and underscores.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3184,7 +3290,9 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       }
       if (Database != other.Database) return false;
       if (UseParallelism != other.UseParallelism) return false;
+      if (MaxParallelism != other.MaxParallelism) return false;
       if (UseServerlessAnalytics != other.UseServerlessAnalytics) return false;
+      if (UseDataBoost != other.UseDataBoost) return false;
       if (DatabaseRole != other.DatabaseRole) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3195,7 +3303,9 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       int hash = 1;
       if (Database.Length != 0) hash ^= Database.GetHashCode();
       if (UseParallelism != false) hash ^= UseParallelism.GetHashCode();
+      if (MaxParallelism != 0) hash ^= MaxParallelism.GetHashCode();
       if (UseServerlessAnalytics != false) hash ^= UseServerlessAnalytics.GetHashCode();
+      if (UseDataBoost != false) hash ^= UseDataBoost.GetHashCode();
       if (DatabaseRole.Length != 0) hash ^= DatabaseRole.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3231,6 +3341,14 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         output.WriteRawTag(34);
         output.WriteString(DatabaseRole);
       }
+      if (MaxParallelism != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(MaxParallelism);
+      }
+      if (UseDataBoost != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(UseDataBoost);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3257,6 +3375,14 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         output.WriteRawTag(34);
         output.WriteString(DatabaseRole);
       }
+      if (MaxParallelism != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(MaxParallelism);
+      }
+      if (UseDataBoost != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(UseDataBoost);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3273,7 +3399,13 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       if (UseParallelism != false) {
         size += 1 + 1;
       }
+      if (MaxParallelism != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxParallelism);
+      }
       if (UseServerlessAnalytics != false) {
+        size += 1 + 1;
+      }
+      if (UseDataBoost != false) {
         size += 1 + 1;
       }
       if (DatabaseRole.Length != 0) {
@@ -3297,8 +3429,14 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       if (other.UseParallelism != false) {
         UseParallelism = other.UseParallelism;
       }
+      if (other.MaxParallelism != 0) {
+        MaxParallelism = other.MaxParallelism;
+      }
       if (other.UseServerlessAnalytics != false) {
         UseServerlessAnalytics = other.UseServerlessAnalytics;
+      }
+      if (other.UseDataBoost != false) {
+        UseDataBoost = other.UseDataBoost;
       }
       if (other.DatabaseRole.Length != 0) {
         DatabaseRole = other.DatabaseRole;
@@ -3334,6 +3472,14 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             DatabaseRole = input.ReadString();
             break;
           }
+          case 40: {
+            MaxParallelism = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            UseDataBoost = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -3363,6 +3509,14 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
           }
           case 34: {
             DatabaseRole = input.ReadString();
+            break;
+          }
+          case 40: {
+            MaxParallelism = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            UseDataBoost = input.ReadBool();
             break;
           }
         }
@@ -5292,7 +5446,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
     /// The service account does not have any permissions associated with it when
     /// it is created. After creation, customers delegate permissions to the
     /// service account. When the connection is used in the context of a stored
-    /// procedure for Apache Spark in BigQuery, the service account will be used to
+    /// procedure for Apache Spark in BigQuery, the service account is used to
     /// connect to the desired resources in Google Cloud.
     ///
     /// The account ID is in the form of:
@@ -5527,6 +5681,283 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
               SparkHistoryServerConfig = new global::Google.Cloud.BigQuery.Connection.V1.SparkHistoryServerConfig();
             }
             input.ReadMessage(SparkHistoryServerConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Connection properties specific to Salesforce DataCloud. This is intended for
+  /// use only by Salesforce partner projects.
+  /// </summary>
+  public sealed partial class SalesforceDataCloudProperties : pb::IMessage<SalesforceDataCloudProperties>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SalesforceDataCloudProperties> _parser = new pb::MessageParser<SalesforceDataCloudProperties>(() => new SalesforceDataCloudProperties());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SalesforceDataCloudProperties> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Connection.V1.ConnectionReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SalesforceDataCloudProperties() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SalesforceDataCloudProperties(SalesforceDataCloudProperties other) : this() {
+      instanceUri_ = other.instanceUri_;
+      identity_ = other.identity_;
+      tenantId_ = other.tenantId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SalesforceDataCloudProperties Clone() {
+      return new SalesforceDataCloudProperties(this);
+    }
+
+    /// <summary>Field number for the "instance_uri" field.</summary>
+    public const int InstanceUriFieldNumber = 1;
+    private string instanceUri_ = "";
+    /// <summary>
+    /// The URL to the user's Salesforce DataCloud instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InstanceUri {
+      get { return instanceUri_; }
+      set {
+        instanceUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "identity" field.</summary>
+    public const int IdentityFieldNumber = 2;
+    private string identity_ = "";
+    /// <summary>
+    /// Output only. A unique Google-owned and Google-generated service account
+    /// identity for the connection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Identity {
+      get { return identity_; }
+      set {
+        identity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "tenant_id" field.</summary>
+    public const int TenantIdFieldNumber = 3;
+    private string tenantId_ = "";
+    /// <summary>
+    /// The ID of the user's Salesforce tenant.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TenantId {
+      get { return tenantId_; }
+      set {
+        tenantId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SalesforceDataCloudProperties);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SalesforceDataCloudProperties other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (InstanceUri != other.InstanceUri) return false;
+      if (Identity != other.Identity) return false;
+      if (TenantId != other.TenantId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (InstanceUri.Length != 0) hash ^= InstanceUri.GetHashCode();
+      if (Identity.Length != 0) hash ^= Identity.GetHashCode();
+      if (TenantId.Length != 0) hash ^= TenantId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (InstanceUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(InstanceUri);
+      }
+      if (Identity.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Identity);
+      }
+      if (TenantId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TenantId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (InstanceUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(InstanceUri);
+      }
+      if (Identity.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Identity);
+      }
+      if (TenantId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TenantId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (InstanceUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InstanceUri);
+      }
+      if (Identity.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Identity);
+      }
+      if (TenantId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TenantId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SalesforceDataCloudProperties other) {
+      if (other == null) {
+        return;
+      }
+      if (other.InstanceUri.Length != 0) {
+        InstanceUri = other.InstanceUri;
+      }
+      if (other.Identity.Length != 0) {
+        Identity = other.Identity;
+      }
+      if (other.TenantId.Length != 0) {
+        TenantId = other.TenantId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            InstanceUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            Identity = input.ReadString();
+            break;
+          }
+          case 26: {
+            TenantId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            InstanceUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            Identity = input.ReadString();
+            break;
+          }
+          case 26: {
+            TenantId = input.ReadString();
             break;
           }
         }
