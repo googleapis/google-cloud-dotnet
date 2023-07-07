@@ -39,12 +39,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public static IEnumerable<object[]> TestDates =>
             new List<object[]>
             {
-                new object[] { new DateTime(2020, 9, 29) },
-                new object[] { DateTime.SpecifyKind(new DateTime(2020, 10, 29), DateTimeKind.Utc) },
-                new object[] { DateTime.SpecifyKind(new DateTime(2020, 11, 29), DateTimeKind.Local) },
-                new object[] { new DateTime(2020, 12, 29, 0, 0, 0, DateTimeKind.Utc) },
-                new object[] { new DateTime(2020, 12, 29, 0, 0, 0, DateTimeKind.Local) },
-                new object[] { new DateTime(2020, 12, 29, 0, 0, 0, DateTimeKind.Local) },
+                new object[] { new DateTime(2020, 9, 29), "Unspecified" },
+                new object[] { DateTime.SpecifyKind(new DateTime(2020, 10, 29), DateTimeKind.Utc), "Utc" },
+                new object[] { DateTime.SpecifyKind(new DateTime(2020, 11, 29), DateTimeKind.Local), "Local" },
+                new object[] { new DateTime(2020, 12, 29, 0, 0, 0, DateTimeKind.Utc), "Utc" },
+                new object[] { new DateTime(2020, 12, 29, 0, 0, 0, DateTimeKind.Local), "Local" },
+                new object[] { new DateTime(2020, 12, 29, 0, 0, 0, DateTimeKind.Unspecified), "Unspecified" },
             };
 
         public static IEnumerable<object[]> TestDatesWithReadWriteTypes() =>
@@ -55,8 +55,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         [Theory]
         [MemberData(nameof(TestDates))]
-        public async Task WriteDateThenRead_ShouldBeEqual(DateTime expectedDate)
+        public async Task WriteDateThenRead_ShouldBeEqual(DateTime expectedDate, string kind)
         {
+            Assert.NotNull(kind); // Only present to avoid duplicate test IDs
             using var connection = _fixture.GetConnection();
             // Write the date value and read it back.
             await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
@@ -80,8 +81,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [MemberData(nameof(TestDatesWithReadWriteTypes))]
         public async Task WriteDateThenRead_ShouldBeEqual_UseSpannerDateAndDateTime(bool writeAsDateTime, 
             bool readAsDateTime, 
-            DateTime expectedDate)
+            DateTime expectedDate, string kind)
         {
+            Assert.NotNull(kind); // Only present to avoid duplicate test IDs
+
             // Adding a new SpannerDate type in backward compatible fashion.
             // We could write date as SpannerDate and read as DateTime or 
             // write date as DateTime and read as SpannerDate. This is in addition to
@@ -116,17 +119,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public static IEnumerable<object[]> TestTimestamps =>
             new List<object[]>
             {
-                new object[] { new DateTime(2020, 9, 29, 18, 51, 10) },
-                new object[] { DateTime.SpecifyKind(new DateTime(2020, 10, 29, 18, 51, 10), DateTimeKind.Utc) },
-                new object[] { DateTime.SpecifyKind(new DateTime(2020, 11, 29, 18, 51, 10), DateTimeKind.Local) },
-                new object[] { new DateTime(2020, 10, 29, 18, 51, 10, DateTimeKind.Utc) },
-                new object[] { new DateTime(2020, 11, 29, 18, 51, 10, DateTimeKind.Local) },
+                new object[] { new DateTime(2020, 9, 29, 18, 51, 10), "Unspecified" },
+                new object[] { new DateTime(2020, 10, 29, 18, 51, 10, DateTimeKind.Utc), "Utc" },
+                new object[] { new DateTime(2020, 11, 29, 18, 51, 10, DateTimeKind.Local), "Local" },
             };
 
         [Theory]
         [MemberData(nameof(TestTimestamps))]
-        public async Task WriteTimestampThenRead_ShouldBeEqual(DateTime expectedTimestamp)
+        public async Task WriteTimestampThenRead_ShouldBeEqual(DateTime expectedTimestamp, string kind)
         {
+            Assert.NotNull(kind); // Only present to avoid duplicate test IDs
+
             using (var connection = _fixture.GetConnection())
             {
                 // Write the timestamp value and read it back.
