@@ -2088,7 +2088,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         /// Automatically iterates all participants and tries to compile
         /// suggestions.
         ///
-        /// Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
+        /// Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST,
+        /// ENTITY_EXTRACTION.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2790,7 +2791,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         /// <summary>Field number for the "dialogflow_query_source" field.</summary>
         public const int DialogflowQuerySourceFieldNumber = 3;
         /// <summary>
-        /// Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST.
+        /// Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST,
+        /// ENTITY_EXTRACTION.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3580,7 +3582,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           /// <summary>
           /// Dialogflow source setting.
           ///
-          /// Supported feature: DIALOGFLOW_ASSIST.
+          /// Supported feature: DIALOGFLOW_ASSIST, ENTITY_EXTRACTION.
           /// </summary>
           public sealed partial class DialogflowQuerySource : pb::IMessage<DialogflowQuerySource>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
