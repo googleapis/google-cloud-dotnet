@@ -873,8 +873,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// <summary>
         /// Optional. Maps the values extracted from specific fields of the flexible
         /// webhook response into session parameters.
-        ///  - Key: session parameter name
-        ///  - Value: field path in the webhook response
+        /// - Key: session parameter name
+        /// - Value: field path in the webhook response
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -648,6 +648,7 @@ namespace GoogleCSharpSnippets
                 AgentUri = "",
                 DataFormat = ExportAgentRequest.Types.DataFormat.Unspecified,
                 EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+                GitDestination = new ExportAgentRequest.Types.GitDestination(),
                 IncludeBigqueryExportSettings = false,
             };
             // Make the request
@@ -685,6 +686,7 @@ namespace GoogleCSharpSnippets
                 AgentUri = "",
                 DataFormat = ExportAgentRequest.Types.DataFormat.Unspecified,
                 EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+                GitDestination = new ExportAgentRequest.Types.GitDestination(),
                 IncludeBigqueryExportSettings = false,
             };
             // Make the request
