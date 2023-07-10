@@ -25,12 +25,13 @@ namespace Google.Cloud.Deploy.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvZGVwbG95L3YxL2xvZ19lbnVtcy5wcm90bxIWZ29v",
-            "Z2xlLmNsb3VkLmRlcGxveS52MSpmCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJ",
-            "RUQQABIkCiBUWVBFX1BVQlNVQl9OT1RJRklDQVRJT05fRkFJTFVSRRABEiIK",
-            "GlRZUEVfUkVOREVSX1NUQVRVRVNfQ0hBTkdFEAIaAggBQmEKGmNvbS5nb29n",
-            "bGUuY2xvdWQuZGVwbG95LnYxQg1Mb2dFbnVtc1Byb3RvUAFaMmNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vZGVwbG95L2FwaXYxL2RlcGxveXBiO2RlcGxveXBiYgZw",
-            "cm90bzM="));
+            "Z2xlLmNsb3VkLmRlcGxveS52MSqgAQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lG",
+            "SUVEEAASJAogVFlQRV9QVUJTVUJfTk9USUZJQ0FUSU9OX0ZBSUxVUkUQARIe",
+            "ChpUWVBFX1JFU09VUkNFX1NUQVRFX0NIQU5HRRADEhgKFFRZUEVfUFJPQ0VT",
+            "U19BQk9SVEVEEAQSIgoaVFlQRV9SRU5ERVJfU1RBVFVFU19DSEFOR0UQAhoC",
+            "CAFCYQoaY29tLmdvb2dsZS5jbG91ZC5kZXBsb3kudjFCDUxvZ0VudW1zUHJv",
+            "dG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9kZXBsb3kvYXBpdjEvZGVwbG95",
+            "cGI7ZGVwbG95cGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Deploy.V1.Type), }, null, null));
@@ -51,6 +52,14 @@ namespace Google.Cloud.Deploy.V1 {
     /// A Pub/Sub notification failed to be sent.
     /// </summary>
     [pbr::OriginalName("TYPE_PUBSUB_NOTIFICATION_FAILURE")] PubsubNotificationFailure = 1,
+    /// <summary>
+    /// Resource state changed.
+    /// </summary>
+    [pbr::OriginalName("TYPE_RESOURCE_STATE_CHANGE")] ResourceStateChange = 3,
+    /// <summary>
+    /// A process aborted.
+    /// </summary>
+    [pbr::OriginalName("TYPE_PROCESS_ABORTED")] ProcessAborted = 4,
     /// <summary>
     /// Deprecated: This field is never used. Use release_render log type instead.
     /// </summary>
