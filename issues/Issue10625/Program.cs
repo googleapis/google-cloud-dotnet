@@ -13,10 +13,11 @@
 // limitations under the License.
 
 using Google.Cloud.BigQuery.V2;
+using System.Diagnostics;
 
-if (args.Length != 6)
+if (args.Length != 7)
 {
-    Console.WriteLine("Arguments: <project-id> <dataset-id> <table-id> <text-length> <total-rows> <rows-per-insert>");
+    Console.WriteLine("Arguments: <project-id> <dataset-id> <table-id> <text-fields-per-row> <text-length-per-field> <total-rows> <rows-per-insert>");
     return;
 }
 
@@ -24,20 +25,25 @@ Random rng = new Random();
 string projectId = args[0];
 string datasetId = args[1];
 string tableId = args[2];
-int textLength = int.Parse(args[3]);
-int totalRows = int.Parse(args[4]);
-int rowsPerInsert = int.Parse(args[5]);
+int textFieldCount = int.Parse(args[3]);
+int textLengthPerField = int.Parse(args[4]);
+int totalRows = int.Parse(args[5]);
+int rowsPerInsert = int.Parse(args[6]);
 
 var client = BigQueryClient.Create(args[0]);
 var dataset = client.GetOrCreateDataset(datasetId);
 
-var schema = new TableSchemaBuilder
+var schemaBuilder = new TableSchemaBuilder
 {
-    { "id", BigQueryDbType.Int64 },
-    { "text", BigQueryDbType.String },
-}.Build();
-var table = dataset.GetOrCreateTable(tableId, schema);
+    { "id", BigQueryDbType.Int64 }
+};
+for (int i = 0; i < textFieldCount; i++)
+{
+    schemaBuilder.Add($"text{i}", BigQueryDbType.String);
+}
+var table = dataset.GetOrCreateTable(tableId, schemaBuilder.Build());
 
+var stopwatch = Stopwatch.StartNew();
 int insertedRows = 0;
 for (int insertCount = 0; insertedRows < totalRows; insertCount++)
 {
@@ -49,16 +55,32 @@ for (int insertCount = 0; insertedRows < totalRows; insertCount++)
     table.InsertRows(rows);
     insertedRows += rowsPerInsert;
 }
+stopwatch.Stop();
 
-BigQueryInsertRow GenerateRow(int id) => new BigQueryInsertRow(Guid.NewGuid().ToString())
+// Write an easy-to-copy-paste summary
+Console.WriteLine();
+Console.WriteLine($"Text fields per row (in addition to ID): {textFieldCount}");
+Console.WriteLine($"Size of text per field: {textLengthPerField}");
+Console.WriteLine($"Rows per insert: {rowsPerInsert}");
+Console.WriteLine($"Total rows inserted: {insertedRows}");
+Console.WriteLine($"Time taken (seconds): {(int) stopwatch.Elapsed.TotalSeconds}");
+
+BigQueryInsertRow GenerateRow(int id)
 {
-    { "id", id },
-    { "text", GenerateText() }
-};
+    var row = new BigQueryInsertRow(Guid.NewGuid().ToString())
+    {
+        { "id", id },
+    };
+    for (int i = 0; i < textFieldCount; i++)
+    {
+        row[$"text{i}"] = GenerateText();
+    }
+    return row;
+}
 
 string GenerateText()
 {
-    char[] chars = new char[textLength];
+    char[] chars = new char[textLengthPerField];
     for (int i = 0; i < chars.Length; i++)
     {
         // Printable ASCII
