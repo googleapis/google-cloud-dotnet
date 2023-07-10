@@ -1432,7 +1432,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             lro::Operation<ExportTestCasesResponse, ExportTestCasesMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportTestCasesOperationsClient, callSettings);
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1441,7 +1442,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1450,7 +1452,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="parent">
         /// Required. The test case to list results for.
@@ -1477,7 +1480,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="parent">
         /// Required. The test case to list results for.
@@ -1504,7 +1508,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="parent">
         /// Required. The test case to list results for.
@@ -1531,7 +1536,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="parent">
         /// Required. The test case to list results for.
@@ -2150,7 +2156,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2162,7 +2169,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Fetches a list of results for a given test case.
+        /// Fetches the list of run results for the given test case. A maximum of 100
+        /// results are kept for each test case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
