@@ -1951,6 +1951,23 @@ namespace Google.Cloud.Compute.V1
             }
         }
 
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy"/> message.</summary>
+        public static class InstanceGroupManagerInstanceLifecyclePolicy
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy.Types.ForceUpdateOnRepair"/> enum.</summary>
+            public static class ForceUpdateOnRepair
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy.Types.ForceUpdateOnRepair.UndefinedForceUpdateOnRepair"/>.</summary>
+                public const string UndefinedForceUpdateOnRepair = "UNDEFINED_FORCE_UPDATE_ON_REPAIR";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy.Types.ForceUpdateOnRepair.No"/>.</summary>
+                public const string No = "NO";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy.Types.ForceUpdateOnRepair.Yes"/>.</summary>
+                public const string Yes = "YES";
+            }
+        }
+
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerUpdatePolicy"/> message.</summary>
         public static class InstanceGroupManagerUpdatePolicy
         {
@@ -4628,6 +4645,25 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.RouterNat"/> message.</summary>
         public static class RouterNat
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.AutoNetworkTier"/> enum.</summary>
+            public static class AutoNetworkTier
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.AutoNetworkTier.UndefinedAutoNetworkTier"/>.</summary>
+                public const string UndefinedAutoNetworkTier = "UNDEFINED_AUTO_NETWORK_TIER";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.AutoNetworkTier.FixedStandard"/>.</summary>
+                public const string FixedStandard = "FIXED_STANDARD";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.AutoNetworkTier.Premium"/>.</summary>
+                public const string Premium = "PREMIUM";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.AutoNetworkTier.Standard"/>.</summary>
+                public const string Standard = "STANDARD";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.AutoNetworkTier.StandardOverridesFixedStandard"/>.</summary>
+                public const string StandardOverridesFixedStandard = "STANDARD_OVERRIDES_FIXED_STANDARD";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.EndpointTypes"/> enum.</summary>
             public static class EndpointTypes
             {
