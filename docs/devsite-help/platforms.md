@@ -9,6 +9,11 @@ The latest libraries (the ones with dependencies on Google.Api.Gax
 Framework Monikers](https://docs.microsoft.com/en-us/nuget/schema/target-frameworks).
 The `netstandard2.1` target is supported by .NET Core 3.1, and .NET 5+.
 
+Please see the [Google Open Source .NET Support Policy]
+(https://opensource.devsite.corp.google.com/documentation/policies/dotnet-support)
+(which are followed by Google Cloud Libraries for .NET) for details
+on how the set of supported platforms changes over time.
+
 ## Mobile platform support
 
 We do not currently support Xamarin or Unity. While we would like
