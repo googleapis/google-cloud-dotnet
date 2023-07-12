@@ -790,7 +790,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create Featurestores.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featurestore">
         /// Required. The Featurestore to create.
@@ -810,7 +810,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create Featurestores.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featurestore">
         /// Required. The Featurestore to create.
@@ -830,7 +830,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create Featurestores.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featurestore">
         /// Required. The Featurestore to create.
@@ -846,7 +846,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create Featurestores.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featurestore">
         /// Required. The Featurestore to create.
@@ -866,7 +866,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create Featurestores.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featurestore">
         /// Required. The Featurestore to create.
@@ -886,7 +886,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create Featurestores.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featurestore">
         /// Required. The Featurestore to create.
@@ -902,7 +902,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create Featurestores.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featurestore">
         /// Required. The Featurestore to create.
@@ -932,7 +932,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create Featurestores.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featurestore">
         /// Required. The Featurestore to create.
@@ -962,7 +962,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create Featurestores.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featurestore">
         /// Required. The Featurestore to create.
@@ -987,7 +987,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create Featurestores.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featurestore">
         /// Required. The Featurestore to create.
@@ -1017,7 +1017,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create Featurestores.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featurestore">
         /// Required. The Featurestore to create.
@@ -1047,7 +1047,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create Featurestores.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featurestore">
         /// Required. The Featurestore to create.
@@ -4812,6 +4812,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `featurestore_id`: Supports = comparisons.
         /// 
         /// Examples:
+        /// 
         /// * `description = "foo bar"` --&gt; Any Feature with description exactly equal
         /// to `foo bar`
         /// * `value_type = DOUBLE` --&gt; Features whose type is DOUBLE.
@@ -4900,6 +4901,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `featurestore_id`: Supports = comparisons.
         /// 
         /// Examples:
+        /// 
         /// * `description = "foo bar"` --&gt; Any Feature with description exactly equal
         /// to `foo bar`
         /// * `value_type = DOUBLE` --&gt; Features whose type is DOUBLE.
@@ -4988,6 +4990,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `featurestore_id`: Supports = comparisons.
         /// 
         /// Examples:
+        /// 
         /// * `description = "foo bar"` --&gt; Any Feature with description exactly equal
         /// to `foo bar`
         /// * `value_type = DOUBLE` --&gt; Features whose type is DOUBLE.
@@ -5076,6 +5079,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// * `featurestore_id`: Supports = comparisons.
         /// 
         /// Examples:
+        /// 
         /// * `description = "foo bar"` --&gt; Any Feature with description exactly equal
         /// to `foo bar`
         /// * `value_type = DOUBLE` --&gt; Features whose type is DOUBLE.

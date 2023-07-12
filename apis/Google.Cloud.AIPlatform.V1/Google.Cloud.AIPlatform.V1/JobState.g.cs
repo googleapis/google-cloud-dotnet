@@ -25,18 +25,19 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cipnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9qb2Jfc3RhdGUucHJvdG8S",
-            "Gmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxKpACCghKb2JTdGF0ZRIZChVK",
+            "Gmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxKrMCCghKb2JTdGF0ZRIZChVK",
             "T0JfU1RBVEVfVU5TUEVDSUZJRUQQABIUChBKT0JfU1RBVEVfUVVFVUVEEAES",
             "FQoRSk9CX1NUQVRFX1BFTkRJTkcQAhIVChFKT0JfU1RBVEVfUlVOTklORxAD",
             "EhcKE0pPQl9TVEFURV9TVUNDRUVERUQQBBIUChBKT0JfU1RBVEVfRkFJTEVE",
             "EAUSGAoUSk9CX1NUQVRFX0NBTkNFTExJTkcQBhIXChNKT0JfU1RBVEVfQ0FO",
             "Q0VMTEVEEAcSFAoQSk9CX1NUQVRFX1BBVVNFRBAIEhUKEUpPQl9TVEFURV9F",
-            "WFBJUkVEEAkSFgoSSk9CX1NUQVRFX1VQREFUSU5HEApCywEKHmNvbS5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MUINSm9iU3RhdGVQcm90b1ABWj5jbG91",
-            "ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBi",
-            "O2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIa",
-            "R29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpB",
-            "SVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "WFBJUkVEEAkSFgoSSk9CX1NUQVRFX1VQREFUSU5HEAoSIQodSk9CX1NUQVRF",
+            "X1BBUlRJQUxMWV9TVUNDRUVERUQQC0LLAQoeY29tLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxQg1Kb2JTdGF0ZVByb3RvUAFaPmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9y",
+            "bXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xv",
+            "dWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.JobState), }, null, null));
@@ -95,6 +96,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// After updating, the job goes back to the `RUNNING` state.
     /// </summary>
     [pbr::OriginalName("JOB_STATE_UPDATING")] Updating = 10,
+    /// <summary>
+    /// The job is partially succeeded, some results may be missing due to errors.
+    /// </summary>
+    [pbr::OriginalName("JOB_STATE_PARTIALLY_SUCCEEDED")] PartiallySucceeded = 11,
   }
 
   #endregion

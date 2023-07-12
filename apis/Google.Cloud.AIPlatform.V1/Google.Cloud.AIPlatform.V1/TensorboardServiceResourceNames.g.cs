@@ -45,18 +45,6 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
-    public partial class ReadTensorboardUsageRequest
-    {
-        /// <summary>
-        /// <see cref="TensorboardName"/>-typed view over the <see cref="Tensorboard"/> resource name property.
-        /// </summary>
-        public TensorboardName TensorboardAsTensorboardName
-        {
-            get => string.IsNullOrEmpty(Tensorboard) ? null : TensorboardName.Parse(Tensorboard, allowUnparsed: true);
-            set => Tensorboard = value?.ToString() ?? "";
-        }
-    }
-
     public partial class ListTensorboardsRequest
     {
         /// <summary>
@@ -78,6 +66,18 @@ namespace Google.Cloud.AIPlatform.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::TensorboardName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ReadTensorboardUsageRequest
+    {
+        /// <summary>
+        /// <see cref="TensorboardName"/>-typed view over the <see cref="Tensorboard"/> resource name property.
+        /// </summary>
+        public TensorboardName TensorboardAsTensorboardName
+        {
+            get => string.IsNullOrEmpty(Tensorboard) ? null : TensorboardName.Parse(Tensorboard, allowUnparsed: true);
+            set => Tensorboard = value?.ToString() ?? "";
         }
     }
 
