@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 TriggerId = "",
                 Source = new RepoSource(),
-                BuildTriggerName = BuildTriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
+                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
             };
             // Make the request
             Operation<Build, BuildOperationMetadata> response = cloudBuildClient.RunBuildTrigger(request);
