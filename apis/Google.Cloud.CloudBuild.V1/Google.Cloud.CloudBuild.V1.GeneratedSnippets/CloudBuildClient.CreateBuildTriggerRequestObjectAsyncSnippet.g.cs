@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 ProjectId = "",
                 Trigger = new BuildTrigger(),
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             BuildTrigger response = await cloudBuildClient.CreateBuildTriggerAsync(request);

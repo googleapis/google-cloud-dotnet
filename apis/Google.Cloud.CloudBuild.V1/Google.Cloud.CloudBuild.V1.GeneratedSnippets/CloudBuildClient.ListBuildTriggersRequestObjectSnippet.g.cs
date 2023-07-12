@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             ListBuildTriggersRequest request = new ListBuildTriggersRequest
             {
                 ProjectId = "",
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
             PagedEnumerable<ListBuildTriggersResponse, BuildTrigger> response = cloudBuildClient.ListBuildTriggers(request);
