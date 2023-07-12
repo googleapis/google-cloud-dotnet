@@ -358,7 +358,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       ///
       /// For builds that specify `StorageSource`:
       ///
-      /// * If the original build pulled source from Google Cloud Storage without
+      /// * If the original build pulled source from Cloud Storage without
       /// specifying the generation of the object, the new build will use the current
       /// object, which may be different from the original build source.
       /// * If the original build pulled source from Cloud Storage and specified the
@@ -464,6 +464,12 @@ namespace Google.Cloud.CloudBuild.V1 {
 
       /// <summary>
       /// Runs a `BuildTrigger` at a particular source revision.
+      ///
+      /// To run a regional or global trigger, use the POST request
+      /// that includes the location endpoint in the path (ex.
+      /// v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The
+      /// POST request that does not include the location endpoint in the path can
+      /// only be used when running global triggers.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -829,7 +835,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       ///
       /// For builds that specify `StorageSource`:
       ///
-      /// * If the original build pulled source from Google Cloud Storage without
+      /// * If the original build pulled source from Cloud Storage without
       /// specifying the generation of the object, the new build will use the current
       /// object, which may be different from the original build source.
       /// * If the original build pulled source from Cloud Storage and specified the
@@ -868,7 +874,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       ///
       /// For builds that specify `StorageSource`:
       ///
-      /// * If the original build pulled source from Google Cloud Storage without
+      /// * If the original build pulled source from Cloud Storage without
       /// specifying the generation of the object, the new build will use the current
       /// object, which may be different from the original build source.
       /// * If the original build pulled source from Cloud Storage and specified the
@@ -905,7 +911,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       ///
       /// For builds that specify `StorageSource`:
       ///
-      /// * If the original build pulled source from Google Cloud Storage without
+      /// * If the original build pulled source from Cloud Storage without
       /// specifying the generation of the object, the new build will use the current
       /// object, which may be different from the original build source.
       /// * If the original build pulled source from Cloud Storage and specified the
@@ -944,7 +950,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       ///
       /// For builds that specify `StorageSource`:
       ///
-      /// * If the original build pulled source from Google Cloud Storage without
+      /// * If the original build pulled source from Cloud Storage without
       /// specifying the generation of the object, the new build will use the current
       /// object, which may be different from the original build source.
       /// * If the original build pulled source from Cloud Storage and specified the
@@ -1310,6 +1316,12 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Runs a `BuildTrigger` at a particular source revision.
+      ///
+      /// To run a regional or global trigger, use the POST request
+      /// that includes the location endpoint in the path (ex.
+      /// v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The
+      /// POST request that does not include the location endpoint in the path can
+      /// only be used when running global triggers.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1323,6 +1335,12 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Runs a `BuildTrigger` at a particular source revision.
+      ///
+      /// To run a regional or global trigger, use the POST request
+      /// that includes the location endpoint in the path (ex.
+      /// v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The
+      /// POST request that does not include the location endpoint in the path can
+      /// only be used when running global triggers.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1334,6 +1352,12 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Runs a `BuildTrigger` at a particular source revision.
+      ///
+      /// To run a regional or global trigger, use the POST request
+      /// that includes the location endpoint in the path (ex.
+      /// v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The
+      /// POST request that does not include the location endpoint in the path can
+      /// only be used when running global triggers.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1347,6 +1371,12 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Runs a `BuildTrigger` at a particular source revision.
+      ///
+      /// To run a regional or global trigger, use the POST request
+      /// that includes the location endpoint in the path (ex.
+      /// v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The
+      /// POST request that does not include the location endpoint in the path can
+      /// only be used when running global triggers.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

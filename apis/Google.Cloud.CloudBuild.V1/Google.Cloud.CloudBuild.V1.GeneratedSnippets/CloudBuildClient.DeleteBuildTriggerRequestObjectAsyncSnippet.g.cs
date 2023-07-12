@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 ProjectId = "",
                 TriggerId = "",
-                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                BuildTriggerName = BuildTriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
             };
             // Make the request
             await cloudBuildClient.DeleteBuildTriggerAsync(request);

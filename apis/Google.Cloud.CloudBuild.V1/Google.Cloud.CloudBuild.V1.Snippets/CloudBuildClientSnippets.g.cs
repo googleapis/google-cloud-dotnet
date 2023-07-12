@@ -752,7 +752,7 @@ namespace GoogleCSharpSnippets
             {
                 ProjectId = "",
                 Trigger = new BuildTrigger(),
-                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             BuildTrigger response = cloudBuildClient.CreateBuildTrigger(request);
@@ -771,7 +771,7 @@ namespace GoogleCSharpSnippets
             {
                 ProjectId = "",
                 Trigger = new BuildTrigger(),
-                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             BuildTrigger response = await cloudBuildClient.CreateBuildTriggerAsync(request);
@@ -818,7 +818,7 @@ namespace GoogleCSharpSnippets
             {
                 ProjectId = "",
                 TriggerId = "",
-                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                BuildTriggerName = BuildTriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
             };
             // Make the request
             BuildTrigger response = cloudBuildClient.GetBuildTrigger(request);
@@ -837,7 +837,7 @@ namespace GoogleCSharpSnippets
             {
                 ProjectId = "",
                 TriggerId = "",
-                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                BuildTriggerName = BuildTriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
             };
             // Make the request
             BuildTrigger response = await cloudBuildClient.GetBuildTriggerAsync(request);
@@ -883,7 +883,7 @@ namespace GoogleCSharpSnippets
             ListBuildTriggersRequest request = new ListBuildTriggersRequest
             {
                 ProjectId = "",
-                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedEnumerable<ListBuildTriggersResponse, BuildTrigger> response = cloudBuildClient.ListBuildTriggers(request);
@@ -932,7 +932,7 @@ namespace GoogleCSharpSnippets
             ListBuildTriggersRequest request = new ListBuildTriggersRequest
             {
                 ProjectId = "",
-                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListBuildTriggersResponse, BuildTrigger> response = cloudBuildClient.ListBuildTriggersAsync(request);
@@ -1072,7 +1072,7 @@ namespace GoogleCSharpSnippets
             {
                 ProjectId = "",
                 TriggerId = "",
-                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                BuildTriggerName = BuildTriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
             };
             // Make the request
             cloudBuildClient.DeleteBuildTrigger(request);
@@ -1091,7 +1091,7 @@ namespace GoogleCSharpSnippets
             {
                 ProjectId = "",
                 TriggerId = "",
-                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                BuildTriggerName = BuildTriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
             };
             // Make the request
             await cloudBuildClient.DeleteBuildTriggerAsync(request);
@@ -1207,7 +1207,7 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 TriggerId = "",
                 Source = new RepoSource(),
-                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                BuildTriggerName = BuildTriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
             };
             // Make the request
             Operation<Build, BuildOperationMetadata> response = cloudBuildClient.RunBuildTrigger(request);
@@ -1243,7 +1243,7 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 TriggerId = "",
                 Source = new RepoSource(),
-                BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                BuildTriggerName = BuildTriggerName.FromProjectLocationTrigger("[PROJECT]", "[LOCATION]", "[TRIGGER]"),
             };
             // Make the request
             Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.RunBuildTriggerAsync(request);
