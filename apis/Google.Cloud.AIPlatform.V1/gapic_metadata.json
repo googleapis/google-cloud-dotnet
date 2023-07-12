@@ -22,6 +22,12 @@
                 "DeleteDatasetAsync"
               ]
             },
+            "DeleteSavedQuery": {
+              "methods": [
+                "DeleteSavedQuery",
+                "DeleteSavedQueryAsync"
+              ]
+            },
             "ExportData": {
               "methods": [
                 "ExportData",

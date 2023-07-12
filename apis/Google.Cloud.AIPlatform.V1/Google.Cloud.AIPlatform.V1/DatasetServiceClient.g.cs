@@ -64,6 +64,8 @@ namespace Google.Cloud.AIPlatform.V1
             ListDataItemsSettings = existing.ListDataItemsSettings;
             SearchDataItemsSettings = existing.SearchDataItemsSettings;
             ListSavedQueriesSettings = existing.ListSavedQueriesSettings;
+            DeleteSavedQuerySettings = existing.DeleteSavedQuerySettings;
+            DeleteSavedQueryOperationsSettings = existing.DeleteSavedQueryOperationsSettings.Clone();
             GetAnnotationSpecSettings = existing.GetAnnotationSpecSettings;
             ListAnnotationsSettings = existing.ListAnnotationsSettings;
             LocationsSettings = existing.LocationsSettings;
@@ -267,6 +269,36 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatasetServiceClient.DeleteSavedQuery</c> and <c>DatasetServiceClient.DeleteSavedQueryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSavedQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DatasetServiceClient.DeleteSavedQuery</c> and
+        /// <c>DatasetServiceClient.DeleteSavedQueryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteSavedQueryOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DatasetServiceClient.GetAnnotationSpec</c> and <c>DatasetServiceClient.GetAnnotationSpecAsync</c>.
         /// </summary>
         /// <remarks>
@@ -358,8 +390,7 @@ namespace Google.Cloud.AIPlatform.V1
 
     /// <summary>DatasetService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// The service that handles the CRUD of Vertex AI Dataset and its child
-    /// resources.
+    /// The service that manages Vertex AI Dataset and its child resources.
     /// </remarks>
     public abstract partial class DatasetServiceClient
     {
@@ -1678,6 +1709,149 @@ namespace Google.Cloud.AIPlatform.V1
             }, callSettings);
 
         /// <summary>
+        /// Deletes a SavedQuery.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteSavedQuery(DeleteSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a SavedQuery.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteSavedQueryAsync(DeleteSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a SavedQuery.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteSavedQueryAsync(DeleteSavedQueryRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSavedQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteSavedQuery</c>.</summary>
+        public virtual lro::OperationsClient DeleteSavedQueryOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteSavedQuery</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> PollOnceDeleteSavedQuery(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSavedQueryOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteSavedQuery</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> PollOnceDeleteSavedQueryAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSavedQueryOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a SavedQuery.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the SavedQuery to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/savedQueries/{saved_query}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteSavedQuery(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSavedQuery(new DeleteSavedQueryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a SavedQuery.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the SavedQuery to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/savedQueries/{saved_query}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteSavedQueryAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSavedQueryAsync(new DeleteSavedQueryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a SavedQuery.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the SavedQuery to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/savedQueries/{saved_query}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteSavedQueryAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSavedQueryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a SavedQuery.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the SavedQuery to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/savedQueries/{saved_query}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteSavedQuery(SavedQueryName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSavedQuery(new DeleteSavedQueryRequest
+            {
+                SavedQueryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a SavedQuery.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the SavedQuery to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/savedQueries/{saved_query}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteSavedQueryAsync(SavedQueryName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSavedQueryAsync(new DeleteSavedQueryRequest
+            {
+                SavedQueryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a SavedQuery.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the SavedQuery to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/datasets/{dataset}/savedQueries/{saved_query}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteSavedQueryAsync(SavedQueryName name, st::CancellationToken cancellationToken) =>
+            DeleteSavedQueryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets an AnnotationSpec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1919,8 +2093,7 @@ namespace Google.Cloud.AIPlatform.V1
 
     /// <summary>DatasetService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// The service that handles the CRUD of Vertex AI Dataset and its child
-    /// resources.
+    /// The service that manages Vertex AI Dataset and its child resources.
     /// </remarks>
     public sealed partial class DatasetServiceClientImpl : DatasetServiceClient
     {
@@ -1944,6 +2117,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse> _callListSavedQueries;
 
+        private readonly gaxgrpc::ApiCall<DeleteSavedQueryRequest, lro::Operation> _callDeleteSavedQuery;
+
         private readonly gaxgrpc::ApiCall<GetAnnotationSpecRequest, AnnotationSpec> _callGetAnnotationSpec;
 
         private readonly gaxgrpc::ApiCall<ListAnnotationsRequest, ListAnnotationsResponse> _callListAnnotations;
@@ -1963,6 +2138,7 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatasetOperationsSettings, logger);
             ImportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDataOperationsSettings, logger);
             ExportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDataOperationsSettings, logger);
+            DeleteSavedQueryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSavedQueryOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateDataset = clientHelper.BuildApiCall<CreateDatasetRequest, lro::Operation>("CreateDataset", grpcClient.CreateDatasetAsync, grpcClient.CreateDataset, effectiveSettings.CreateDatasetSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -1995,6 +2171,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callListSavedQueries = clientHelper.BuildApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse>("ListSavedQueries", grpcClient.ListSavedQueriesAsync, grpcClient.ListSavedQueries, effectiveSettings.ListSavedQueriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSavedQueries);
             Modify_ListSavedQueriesApiCall(ref _callListSavedQueries);
+            _callDeleteSavedQuery = clientHelper.BuildApiCall<DeleteSavedQueryRequest, lro::Operation>("DeleteSavedQuery", grpcClient.DeleteSavedQueryAsync, grpcClient.DeleteSavedQuery, effectiveSettings.DeleteSavedQuerySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSavedQuery);
+            Modify_DeleteSavedQueryApiCall(ref _callDeleteSavedQuery);
             _callGetAnnotationSpec = clientHelper.BuildApiCall<GetAnnotationSpecRequest, AnnotationSpec>("GetAnnotationSpec", grpcClient.GetAnnotationSpecAsync, grpcClient.GetAnnotationSpec, effectiveSettings.GetAnnotationSpecSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAnnotationSpec);
             Modify_GetAnnotationSpecApiCall(ref _callGetAnnotationSpec);
@@ -2025,6 +2204,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_SearchDataItemsApiCall(ref gaxgrpc::ApiCall<SearchDataItemsRequest, SearchDataItemsResponse> call);
 
         partial void Modify_ListSavedQueriesApiCall(ref gaxgrpc::ApiCall<ListSavedQueriesRequest, ListSavedQueriesResponse> call);
+
+        partial void Modify_DeleteSavedQueryApiCall(ref gaxgrpc::ApiCall<DeleteSavedQueryRequest, lro::Operation> call);
 
         partial void Modify_GetAnnotationSpecApiCall(ref gaxgrpc::ApiCall<GetAnnotationSpecRequest, AnnotationSpec> call);
 
@@ -2060,6 +2241,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_SearchDataItemsRequest(ref SearchDataItemsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSavedQueriesRequest(ref ListSavedQueriesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSavedQueryRequest(ref DeleteSavedQueryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetAnnotationSpecRequest(ref GetAnnotationSpecRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2315,6 +2498,33 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_ListSavedQueriesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSavedQueriesRequest, ListSavedQueriesResponse, SavedQuery>(_callListSavedQueries, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteSavedQuery</c>.</summary>
+        public override lro::OperationsClient DeleteSavedQueryOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a SavedQuery.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteSavedQuery(DeleteSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSavedQueryRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(_callDeleteSavedQuery.Sync(request, callSettings), DeleteSavedQueryOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a SavedQuery.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteSavedQueryAsync(DeleteSavedQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSavedQueryRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteSavedQuery.Async(request, callSettings).ConfigureAwait(false), DeleteSavedQueryOperationsClient);
         }
 
         /// <summary>
