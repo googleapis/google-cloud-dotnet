@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.4.0, released 2023-07-13
+
+### New features
+
+- Added Admin Interface (v1) ([commit bbd1b88](https://github.com/googleapis/google-cloud-dotnet/commit/bbd1b8818823d9cec0994cc232b427f988cf291a))
+- Added gRPC endpoint protocol (v1) ([commit bbd1b88](https://github.com/googleapis/google-cloud-dotnet/commit/bbd1b8818823d9cec0994cc232b427f988cf291a))
+- Added BigQuery as a backend metastore (v1) ([commit bbd1b88](https://github.com/googleapis/google-cloud-dotnet/commit/bbd1b8818823d9cec0994cc232b427f988cf291a))
+
 ## Version 2.3.0, released 2023-04-19
 
 ### New features
