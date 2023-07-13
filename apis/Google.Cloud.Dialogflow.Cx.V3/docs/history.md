@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.9.0, released 2023-07-13
+
+### New features
+
+- Added GitIntegrationSettings to the Agent ([commit 307819a](https://github.com/googleapis/google-cloud-dotnet/commit/307819a2def31c7cbfd2951d9725cb083b05b0e4))
+
 ## Version 2.8.0, released 2023-06-20
 
 ### New features
