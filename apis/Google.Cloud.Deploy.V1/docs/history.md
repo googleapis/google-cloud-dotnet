@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.7.0, released 2023-07-13
+
+### New features
+
+- Added support routeUpdateWaitTime field for Deployment Strategies ([commit 783acf4](https://github.com/googleapis/google-cloud-dotnet/commit/783acf4ab45ca43006ebdd21d510f9121f2610e7))
+
 ## Version 2.6.0, released 2023-06-27
 
 ### New features
