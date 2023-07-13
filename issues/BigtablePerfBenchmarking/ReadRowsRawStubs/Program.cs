@@ -31,7 +31,6 @@ if (args.Length >= 4)
 {
     metadata.Add("x-goog-request-params", args[3]);
 }
-var callOptions = new CallOptions(metadata);
 
 TimeSpan delay = TimeSpan.FromSeconds(10);
 string projectId = args[0];
