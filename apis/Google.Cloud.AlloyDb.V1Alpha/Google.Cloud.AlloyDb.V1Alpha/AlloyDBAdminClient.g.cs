@@ -4288,10 +4288,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha
 
         /// <summary>
         /// Generate a client certificate signed by a Cluster CA.
-        /// The sole purpose of this endpoint is to support the Auth Proxy client and
-        /// the endpoint's behavior is subject to change without notice, so do not rely
-        /// on its behavior remaining constant. Future changes will not break the Auth
-        /// Proxy client.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4301,10 +4301,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha
 
         /// <summary>
         /// Generate a client certificate signed by a Cluster CA.
-        /// The sole purpose of this endpoint is to support the Auth Proxy client and
-        /// the endpoint's behavior is subject to change without notice, so do not rely
-        /// on its behavior remaining constant. Future changes will not break the Auth
-        /// Proxy client.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4314,10 +4314,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha
 
         /// <summary>
         /// Generate a client certificate signed by a Cluster CA.
-        /// The sole purpose of this endpoint is to support the Auth Proxy client and
-        /// the endpoint's behavior is subject to change without notice, so do not rely
-        /// on its behavior remaining constant. Future changes will not break the Auth
-        /// Proxy client.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4327,10 +4327,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha
 
         /// <summary>
         /// Generate a client certificate signed by a Cluster CA.
-        /// The sole purpose of this endpoint is to support the Auth Proxy client and
-        /// the endpoint's behavior is subject to change without notice, so do not rely
-        /// on its behavior remaining constant. Future changes will not break the Auth
-        /// Proxy client.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource. The required format is:
@@ -4346,10 +4346,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha
 
         /// <summary>
         /// Generate a client certificate signed by a Cluster CA.
-        /// The sole purpose of this endpoint is to support the Auth Proxy client and
-        /// the endpoint's behavior is subject to change without notice, so do not rely
-        /// on its behavior remaining constant. Future changes will not break the Auth
-        /// Proxy client.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource. The required format is:
@@ -4365,10 +4365,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha
 
         /// <summary>
         /// Generate a client certificate signed by a Cluster CA.
-        /// The sole purpose of this endpoint is to support the Auth Proxy client and
-        /// the endpoint's behavior is subject to change without notice, so do not rely
-        /// on its behavior remaining constant. Future changes will not break the Auth
-        /// Proxy client.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource. The required format is:
@@ -4381,10 +4381,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha
 
         /// <summary>
         /// Generate a client certificate signed by a Cluster CA.
-        /// The sole purpose of this endpoint is to support the Auth Proxy client and
-        /// the endpoint's behavior is subject to change without notice, so do not rely
-        /// on its behavior remaining constant. Future changes will not break the Auth
-        /// Proxy client.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource. The required format is:
@@ -4400,10 +4400,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha
 
         /// <summary>
         /// Generate a client certificate signed by a Cluster CA.
-        /// The sole purpose of this endpoint is to support the Auth Proxy client and
-        /// the endpoint's behavior is subject to change without notice, so do not rely
-        /// on its behavior remaining constant. Future changes will not break the Auth
-        /// Proxy client.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource. The required format is:
@@ -4419,10 +4419,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha
 
         /// <summary>
         /// Generate a client certificate signed by a Cluster CA.
-        /// The sole purpose of this endpoint is to support the Auth Proxy client and
-        /// the endpoint's behavior is subject to change without notice, so do not rely
-        /// on its behavior remaining constant. Future changes will not break the Auth
-        /// Proxy client.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the parent resource. The required format is:
@@ -6117,10 +6117,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha
 
         /// <summary>
         /// Generate a client certificate signed by a Cluster CA.
-        /// The sole purpose of this endpoint is to support the Auth Proxy client and
-        /// the endpoint's behavior is subject to change without notice, so do not rely
-        /// on its behavior remaining constant. Future changes will not break the Auth
-        /// Proxy client.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6133,10 +6133,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha
 
         /// <summary>
         /// Generate a client certificate signed by a Cluster CA.
-        /// The sole purpose of this endpoint is to support the Auth Proxy client and
-        /// the endpoint's behavior is subject to change without notice, so do not rely
-        /// on its behavior remaining constant. Future changes will not break the Auth
-        /// Proxy client.
+        /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+        /// Auth Proxy client. The endpoint's behavior is subject to change without
+        /// notice, so do not rely on its behavior remaining constant. Future changes
+        /// will not break AlloyDB connectors or the Auth Proxy client.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

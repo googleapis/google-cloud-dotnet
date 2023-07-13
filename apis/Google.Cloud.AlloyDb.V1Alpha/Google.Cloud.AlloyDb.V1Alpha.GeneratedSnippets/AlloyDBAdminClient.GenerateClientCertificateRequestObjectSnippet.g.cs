@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 CertDuration = new Duration(),
                 PublicKey = "",
+                UseMetadataExchange = false,
             };
             // Make the request
             GenerateClientCertificateResponse response = alloyDBAdminClient.GenerateClientCertificate(request);
