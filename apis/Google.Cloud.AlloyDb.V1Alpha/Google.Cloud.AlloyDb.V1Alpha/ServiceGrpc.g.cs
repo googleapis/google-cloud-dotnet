@@ -719,10 +719,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
 
       /// <summary>
       /// Generate a client certificate signed by a Cluster CA.
-      /// The sole purpose of this endpoint is to support the Auth Proxy client and
-      /// the endpoint's behavior is subject to change without notice, so do not rely
-      /// on its behavior remaining constant. Future changes will not break the Auth
-      /// Proxy client.
+      /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+      /// Auth Proxy client. The endpoint's behavior is subject to change without
+      /// notice, so do not rely on its behavior remaining constant. Future changes
+      /// will not break AlloyDB connectors or the Auth Proxy client.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -2064,10 +2064,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
       }
       /// <summary>
       /// Generate a client certificate signed by a Cluster CA.
-      /// The sole purpose of this endpoint is to support the Auth Proxy client and
-      /// the endpoint's behavior is subject to change without notice, so do not rely
-      /// on its behavior remaining constant. Future changes will not break the Auth
-      /// Proxy client.
+      /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+      /// Auth Proxy client. The endpoint's behavior is subject to change without
+      /// notice, so do not rely on its behavior remaining constant. Future changes
+      /// will not break AlloyDB connectors or the Auth Proxy client.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2081,10 +2081,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
       }
       /// <summary>
       /// Generate a client certificate signed by a Cluster CA.
-      /// The sole purpose of this endpoint is to support the Auth Proxy client and
-      /// the endpoint's behavior is subject to change without notice, so do not rely
-      /// on its behavior remaining constant. Future changes will not break the Auth
-      /// Proxy client.
+      /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+      /// Auth Proxy client. The endpoint's behavior is subject to change without
+      /// notice, so do not rely on its behavior remaining constant. Future changes
+      /// will not break AlloyDB connectors or the Auth Proxy client.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2096,10 +2096,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
       }
       /// <summary>
       /// Generate a client certificate signed by a Cluster CA.
-      /// The sole purpose of this endpoint is to support the Auth Proxy client and
-      /// the endpoint's behavior is subject to change without notice, so do not rely
-      /// on its behavior remaining constant. Future changes will not break the Auth
-      /// Proxy client.
+      /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+      /// Auth Proxy client. The endpoint's behavior is subject to change without
+      /// notice, so do not rely on its behavior remaining constant. Future changes
+      /// will not break AlloyDB connectors or the Auth Proxy client.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2113,10 +2113,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
       }
       /// <summary>
       /// Generate a client certificate signed by a Cluster CA.
-      /// The sole purpose of this endpoint is to support the Auth Proxy client and
-      /// the endpoint's behavior is subject to change without notice, so do not rely
-      /// on its behavior remaining constant. Future changes will not break the Auth
-      /// Proxy client.
+      /// The sole purpose of this endpoint is to support AlloyDB connectors and the
+      /// Auth Proxy client. The endpoint's behavior is subject to change without
+      /// notice, so do not rely on its behavior remaining constant. Future changes
+      /// will not break AlloyDB connectors or the Auth Proxy client.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
