@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.9.0, released 2023-07-13
+
+### New features
+
+- Add ResourceExhausted to retryable error for Write API unary calls ([commit a1262a2](https://github.com/googleapis/google-cloud-dotnet/commit/a1262a25eb219cd79c04f9c36914a9cabeb910a4))
+
+### Documentation improvements
+
+- Add multiplexing documentation ([commit a1262a2](https://github.com/googleapis/google-cloud-dotnet/commit/a1262a25eb219cd79c04f9c36914a9cabeb910a4))
+
 ## Version 3.8.0, released 2023-06-27
 
 ### New features
