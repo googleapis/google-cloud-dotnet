@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.5.0, released 2023-07-13
+
+### New features
+
+- Added rpc RenameTagTemplateFieldEnumValue ([commit 3840102](https://github.com/googleapis/google-cloud-dotnet/commit/3840102cdac33930dee4c73ab098b5c5d09839bc))
+- Returning approximate total size for SearchCatalog ([commit 3840102](https://github.com/googleapis/google-cloud-dotnet/commit/3840102cdac33930dee4c73ab098b5c5d09839bc))
+- Returning unreachable locations for SearchCatalog ([commit 3840102](https://github.com/googleapis/google-cloud-dotnet/commit/3840102cdac33930dee4c73ab098b5c5d09839bc))
+- Added Entry.usage_signal ([commit 3840102](https://github.com/googleapis/google-cloud-dotnet/commit/3840102cdac33930dee4c73ab098b5c5d09839bc))
+
+### Documentation improvements
+
+- Update docs of SearchCatalogRequest message ([commit 3840102](https://github.com/googleapis/google-cloud-dotnet/commit/3840102cdac33930dee4c73ab098b5c5d09839bc))
+
 ## Version 2.4.0, released 2023-06-05
 
 ### New features
