@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadRowsRawStubs", "ReadRowsRawStubs\ReadRowsRawStubs.csproj", "{F5A576EB-4913-4482-98C3-525C72C9685E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadRowsGapic", "ReadRowsGapic\ReadRowsGapic.csproj", "{3F3C7BEC-685B-467D-BA71-6F3FD988B7FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F5A576EB-4913-4482-98C3-525C72C9685E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5A576EB-4913-4482-98C3-525C72C9685E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5A576EB-4913-4482-98C3-525C72C9685E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F3C7BEC-685B-467D-BA71-6F3FD988B7FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F3C7BEC-685B-467D-BA71-6F3FD988B7FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F3C7BEC-685B-467D-BA71-6F3FD988B7FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F3C7BEC-685B-467D-BA71-6F3FD988B7FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
