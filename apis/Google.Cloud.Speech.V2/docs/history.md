@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2023-07-13
+
+### New features
+
+- Add `model` and `language_codes` fields in `RecognitionConfig` message + enable default `_` recognizer ([commit d2ecbdf](https://github.com/googleapis/google-cloud-dotnet/commit/d2ecbdff4500db196e8ebe2c75a98ba8fe5554d6))
+
 ## Version 1.0.0-beta05, released 2023-05-11
 
 ### New features
