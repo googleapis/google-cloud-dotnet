@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.2.0, released 2023-07-13
+
+### New features
+
+- Adds support for custom audiences ([commit 5233add](https://github.com/googleapis/google-cloud-dotnet/commit/5233add1e8fb5a8ab6bb5324ac830e4926373357))
+
 ## Version 2.1.0, released 2023-05-03
 
 ### New features
