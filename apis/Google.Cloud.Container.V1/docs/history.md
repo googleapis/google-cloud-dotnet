@@ -1,5 +1,14 @@
 # Version history
 
+## Version 3.15.0, released 2023-07-13
+
+### New features
+
+- Add advanced_datapath_observability_config to monitoring_config ([commit 00a826c](https://github.com/googleapis/google-cloud-dotnet/commit/00a826c3d23b9312dc5ca83ee8feae666d3958be))
+- Add a Pod IP Utilization API ([commit 00a826c](https://github.com/googleapis/google-cloud-dotnet/commit/00a826c3d23b9312dc5ca83ee8feae666d3958be))
+- Add `KUBE_DNS` option to `DNSConfig.cluster_dns` ([commit 2d109b3](https://github.com/googleapis/google-cloud-dotnet/commit/2d109b3edbdda52bd356775ebabdf9edb9291e93))
+- Add Tier 1 cluster-level API network_performance_config ([commit 2d109b3](https://github.com/googleapis/google-cloud-dotnet/commit/2d109b3edbdda52bd356775ebabdf9edb9291e93))
+
 ## Version 3.14.0, released 2023-06-20
 
 ### New features
