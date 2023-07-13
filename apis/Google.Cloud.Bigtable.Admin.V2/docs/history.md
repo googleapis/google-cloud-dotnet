@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.5.0, released 2023-07-13
+
+### New features
+
+- Increase the maximum retention period for a Cloud Bigtable backup from 30 days to 90 days ([commit 0567fa8](https://github.com/googleapis/google-cloud-dotnet/commit/0567fa84747a4ca2e215710692f9abc7f238d017))
+
 ## Version 3.4.0, released 2023-05-26
 
 ### New features
