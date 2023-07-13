@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.6.0, released 2023-07-13
+
+### New features
+
+- Add support for Salesforce connections, which are usable only by allowlisted partners ([commit 1a2b063](https://github.com/googleapis/google-cloud-dotnet/commit/1a2b06397170cbddadd29fa491656fe92f5b199b))
+- Add cloud spanner connection properties - use_data_boost ([commit 1a2b063](https://github.com/googleapis/google-cloud-dotnet/commit/1a2b06397170cbddadd29fa491656fe92f5b199b))
+- Add cloud spanner connection properties - max_parallelism ([commit 1a2b063](https://github.com/googleapis/google-cloud-dotnet/commit/1a2b06397170cbddadd29fa491656fe92f5b199b))
+
 ## Version 2.5.0, released 2023-03-20
 
 ### New features
