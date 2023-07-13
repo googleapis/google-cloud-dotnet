@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta10, released 2023-07-13
+
+### New features
+
+- Add HTML Navigation Instructions feature to ComputeRoutes ([commit a070802](https://github.com/googleapis/google-cloud-dotnet/commit/a070802735f79be867330f82f499c0a6f590a8bc))
+- Add Waypoint Optimization feature to ComputeRoutes ([commit a070802](https://github.com/googleapis/google-cloud-dotnet/commit/a070802735f79be867330f82f499c0a6f590a8bc))
+- Support Transit routes in ComputeRoutes and ComputeRouteMatrix ([commit a070802](https://github.com/googleapis/google-cloud-dotnet/commit/a070802735f79be867330f82f499c0a6f590a8bc))
+- Add TrafficModel feature in ComputeRoutes and ComputeRouteMatrix ([commit a070802](https://github.com/googleapis/google-cloud-dotnet/commit/a070802735f79be867330f82f499c0a6f590a8bc))
+- Support returning localized values in ComputeRoutes and ComputeRouteMatrix ([commit a070802](https://github.com/googleapis/google-cloud-dotnet/commit/a070802735f79be867330f82f499c0a6f590a8bc))
+- Add more navigation instruction maneuvers ([commit a070802](https://github.com/googleapis/google-cloud-dotnet/commit/a070802735f79be867330f82f499c0a6f590a8bc))
+- Add more toll pass values ([commit a070802](https://github.com/googleapis/google-cloud-dotnet/commit/a070802735f79be867330f82f499c0a6f590a8bc))
+
 ## Version 1.0.0-beta09, released 2023-03-27
 
 ### New features
