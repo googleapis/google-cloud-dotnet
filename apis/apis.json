@@ -1191,7 +1191,7 @@
     },
     {
       "id": "Google.Cloud.CloudBuild.V2",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Cloud Build",
       "description": "Recommended Google client library to access the Google Cloud Build API v2, which creates and manages builds on Google Cloud Platform.",
