@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 CryptoKeyAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 ScopeAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+                ResourceTypes = { "", },
             };
             // Make the request
             PagedEnumerable<SearchProtectedResourcesResponse, ProtectedResource> response = keyTrackingServiceClient.SearchProtectedResources(request);
