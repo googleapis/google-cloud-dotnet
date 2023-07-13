@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.9.0, released 2023-07-13
+
+### New features
+
+- Support topic model type V2 ([commit 1ad9bc2](https://github.com/googleapis/google-cloud-dotnet/commit/1ad9bc2a2dca4468dd5a8f5ab8a1da3ecc2070ff))
+
 ## Version 2.8.0, released 2023-06-05
 
 ### New features
