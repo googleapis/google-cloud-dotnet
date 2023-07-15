@@ -68,6 +68,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta3.ImportDocumentsRequest> __Marshaller_google_cloud_documentai_v1beta3_ImportDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1Beta3.ImportDocumentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentRequest> __Marshaller_google_cloud_documentai_v1beta3_GetDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentResponse> __Marshaller_google_cloud_documentai_v1beta3_GetDocumentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta3.BatchDeleteDocumentsRequest> __Marshaller_google_cloud_documentai_v1beta3_BatchDeleteDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1Beta3.BatchDeleteDocumentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta3.GetDatasetSchemaRequest> __Marshaller_google_cloud_documentai_v1beta3_GetDatasetSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1Beta3.GetDatasetSchemaRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta3.DatasetSchema> __Marshaller_google_cloud_documentai_v1beta3_DatasetSchema = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1Beta3.DatasetSchema.Parser));
@@ -80,6 +88,30 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         __ServiceName,
         "UpdateDataset",
         __Marshaller_google_cloud_documentai_v1beta3_UpdateDatasetRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1Beta3.ImportDocumentsRequest, global::Google.LongRunning.Operation> __Method_ImportDocuments = new grpc::Method<global::Google.Cloud.DocumentAI.V1Beta3.ImportDocumentsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportDocuments",
+        __Marshaller_google_cloud_documentai_v1beta3_ImportDocumentsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentRequest, global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentResponse> __Method_GetDocument = new grpc::Method<global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentRequest, global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDocument",
+        __Marshaller_google_cloud_documentai_v1beta3_GetDocumentRequest,
+        __Marshaller_google_cloud_documentai_v1beta3_GetDocumentResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1Beta3.BatchDeleteDocumentsRequest, global::Google.LongRunning.Operation> __Method_BatchDeleteDocuments = new grpc::Method<global::Google.Cloud.DocumentAI.V1Beta3.BatchDeleteDocumentsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeleteDocuments",
+        __Marshaller_google_cloud_documentai_v1beta3_BatchDeleteDocumentsRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -116,6 +148,42 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDataset(global::Google.Cloud.DocumentAI.V1Beta3.UpdateDatasetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Import documents into a dataset.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportDocuments(global::Google.Cloud.DocumentAI.V1Beta3.ImportDocumentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns relevant fields present in the requested document.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentResponse> GetDocument(global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a set of documents.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchDeleteDocuments(global::Google.Cloud.DocumentAI.V1Beta3.BatchDeleteDocumentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -220,6 +288,150 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatasetAsync(global::Google.Cloud.DocumentAI.V1Beta3.UpdateDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDataset, null, options, request);
+      }
+      /// <summary>
+      /// Import documents into a dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportDocuments(global::Google.Cloud.DocumentAI.V1Beta3.ImportDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportDocuments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Import documents into a dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportDocuments(global::Google.Cloud.DocumentAI.V1Beta3.ImportDocumentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportDocuments, null, options, request);
+      }
+      /// <summary>
+      /// Import documents into a dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportDocumentsAsync(global::Google.Cloud.DocumentAI.V1Beta3.ImportDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportDocumentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Import documents into a dataset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportDocumentsAsync(global::Google.Cloud.DocumentAI.V1Beta3.ImportDocumentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportDocuments, null, options, request);
+      }
+      /// <summary>
+      /// Returns relevant fields present in the requested document.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentResponse GetDocument(global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns relevant fields present in the requested document.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentResponse GetDocument(global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDocument, null, options, request);
+      }
+      /// <summary>
+      /// Returns relevant fields present in the requested document.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentResponse> GetDocumentAsync(global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns relevant fields present in the requested document.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentResponse> GetDocumentAsync(global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDocument, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a set of documents.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchDeleteDocuments(global::Google.Cloud.DocumentAI.V1Beta3.BatchDeleteDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteDocuments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a set of documents.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchDeleteDocuments(global::Google.Cloud.DocumentAI.V1Beta3.BatchDeleteDocumentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeleteDocuments, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a set of documents.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchDeleteDocumentsAsync(global::Google.Cloud.DocumentAI.V1Beta3.BatchDeleteDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteDocumentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a set of documents.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchDeleteDocumentsAsync(global::Google.Cloud.DocumentAI.V1Beta3.BatchDeleteDocumentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteDocuments, null, options, request);
       }
       /// <summary>
       /// Gets the `DatasetSchema` of a `Dataset`.
@@ -332,6 +544,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_UpdateDataset, serviceImpl.UpdateDataset)
+          .AddMethod(__Method_ImportDocuments, serviceImpl.ImportDocuments)
+          .AddMethod(__Method_GetDocument, serviceImpl.GetDocument)
+          .AddMethod(__Method_BatchDeleteDocuments, serviceImpl.BatchDeleteDocuments)
           .AddMethod(__Method_GetDatasetSchema, serviceImpl.GetDatasetSchema)
           .AddMethod(__Method_UpdateDatasetSchema, serviceImpl.UpdateDatasetSchema).Build();
     }
@@ -344,6 +559,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DocumentServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_UpdateDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1Beta3.UpdateDatasetRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDataset));
+      serviceBinder.AddMethod(__Method_ImportDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1Beta3.ImportDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportDocuments));
+      serviceBinder.AddMethod(__Method_GetDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentRequest, global::Google.Cloud.DocumentAI.V1Beta3.GetDocumentResponse>(serviceImpl.GetDocument));
+      serviceBinder.AddMethod(__Method_BatchDeleteDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1Beta3.BatchDeleteDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchDeleteDocuments));
       serviceBinder.AddMethod(__Method_GetDatasetSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1Beta3.GetDatasetSchemaRequest, global::Google.Cloud.DocumentAI.V1Beta3.DatasetSchema>(serviceImpl.GetDatasetSchema));
       serviceBinder.AddMethod(__Method_UpdateDatasetSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1Beta3.UpdateDatasetSchemaRequest, global::Google.Cloud.DocumentAI.V1Beta3.DatasetSchema>(serviceImpl.UpdateDatasetSchema));
     }

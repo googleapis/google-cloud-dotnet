@@ -238,12 +238,18 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "YmV0YTMuRG9jdW1lbnQuVGV4dEFuY2hvchIUCgxjaGFuZ2VkX3RleHQYAiAB",
             "KAkSTAoKcHJvdmVuYW5jZRgDIAMoCzI0Lmdvb2dsZS5jbG91ZC5kb2N1bWVu",
             "dGFpLnYxYmV0YTMuRG9jdW1lbnQuUHJvdmVuYW5jZUICGAFCCAoGc291cmNl",
-            "QuQBCiNjb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhM0INRG9j",
-            "dW1lbnRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2RvY3VtZW50YWkv",
-            "YXBpdjFiZXRhMy9kb2N1bWVudGFpcGI7ZG9jdW1lbnRhaXBiqgIfR29vZ2xl",
-            "LkNsb3VkLkRvY3VtZW50QUkuVjFCZXRhM8oCH0dvb2dsZVxDbG91ZFxEb2N1",
-            "bWVudEFJXFYxYmV0YTPqAiJHb29nbGU6OkNsb3VkOjpEb2N1bWVudEFJOjpW",
-            "MWJldGEzYgZwcm90bzM="));
+            "IpsCCgtSZXZpc2lvblJlZhJSCg1yZXZpc2lvbl9jYXNlGAEgASgOMjkuZ29v",
+            "Z2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5SZXZpc2lvblJlZi5SZXZp",
+            "c2lvbkNhc2VIABIVCgtyZXZpc2lvbl9pZBgCIAEoCUgAEiIKGGxhdGVzdF9w",
+            "cm9jZXNzb3JfdmVyc2lvbhgDIAEoCUgAInMKDFJldmlzaW9uQ2FzZRIdChlS",
+            "RVZJU0lPTl9DQVNFX1VOU1BFQ0lGSUVEEAASFwoTTEFURVNUX0hVTUFOX1JF",
+            "VklFVxABEhQKEExBVEVTVF9USU1FU1RBTVAQAhIVChFCQVNFX09DUl9SRVZJ",
+            "U0lPThADQggKBnNvdXJjZULkAQojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVu",
+            "dGFpLnYxYmV0YTNCDURvY3VtZW50UHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9kb2N1bWVudGFpL2FwaXYxYmV0YTMvZG9jdW1lbnRhaXBiO2RvY3Vt",
+            "ZW50YWlwYqoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0YTPKAh9H",
+            "b29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEz6gIiR29vZ2xlOjpDbG91",
+            "ZDo6RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.BarcodeReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.GeometryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -272,7 +278,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Parser, new[]{ "PageRefs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Types.PageRef), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Types.PageRef.Parser, new[]{ "Page", "LayoutType", "LayoutId", "BoundingPoly", "Confidence" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance.Parser, new[]{ "Revision", "Id", "Parents", "Type" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance.Types.OperationType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance.Types.Parent), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance.Types.Parent.Parser, new[]{ "Revision", "Index", "Id" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision.Parser, new[]{ "Agent", "Processor", "Id", "Parent", "ParentIds", "CreateTime", "HumanReview" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision.Types.HumanReview), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision.Types.HumanReview.Parser, new[]{ "State", "StateMessage" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextChange), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextChange.Parser, new[]{ "TextAnchor", "ChangedText", "Provenance" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextChange), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextChange.Parser, new[]{ "TextAnchor", "ChangedText", "Provenance" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef), global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef.Parser, new[]{ "RevisionCase", "RevisionId", "LatestProcessorVersion" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef.Types.RevisionCase) }, null, null)
           }));
     }
     #endregion
@@ -13451,6 +13458,393 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         }
         #endif
 
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The revision reference specifies which revision on the document to read.
+  /// </summary>
+  public sealed partial class RevisionRef : pb::IMessage<RevisionRef>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RevisionRef> _parser = new pb::MessageParser<RevisionRef>(() => new RevisionRef());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RevisionRef> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RevisionRef() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RevisionRef(RevisionRef other) : this() {
+      switch (other.SourceCase) {
+        case SourceOneofCase.RevisionCase:
+          RevisionCase = other.RevisionCase;
+          break;
+        case SourceOneofCase.RevisionId:
+          RevisionId = other.RevisionId;
+          break;
+        case SourceOneofCase.LatestProcessorVersion:
+          LatestProcessorVersion = other.LatestProcessorVersion;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RevisionRef Clone() {
+      return new RevisionRef(this);
+    }
+
+    /// <summary>Field number for the "revision_case" field.</summary>
+    public const int RevisionCaseFieldNumber = 1;
+    /// <summary>
+    /// Reads the revision by the predefined case.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef.Types.RevisionCase RevisionCase {
+      get { return HasRevisionCase ? (global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef.Types.RevisionCase) source_ : global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef.Types.RevisionCase.Unspecified; }
+      set {
+        source_ = value;
+        sourceCase_ = SourceOneofCase.RevisionCase;
+      }
+    }
+    /// <summary>Gets whether the "revision_case" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRevisionCase {
+      get { return sourceCase_ == SourceOneofCase.RevisionCase; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "revision_case" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRevisionCase() {
+      if (HasRevisionCase) {
+        ClearSource();
+      }
+    }
+
+    /// <summary>Field number for the "revision_id" field.</summary>
+    public const int RevisionIdFieldNumber = 2;
+    /// <summary>
+    /// Reads the revision given by the id.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RevisionId {
+      get { return HasRevisionId ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.RevisionId;
+      }
+    }
+    /// <summary>Gets whether the "revision_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRevisionId {
+      get { return sourceCase_ == SourceOneofCase.RevisionId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "revision_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRevisionId() {
+      if (HasRevisionId) {
+        ClearSource();
+      }
+    }
+
+    /// <summary>Field number for the "latest_processor_version" field.</summary>
+    public const int LatestProcessorVersionFieldNumber = 3;
+    /// <summary>
+    /// Reads the revision generated by the processor version.
+    /// The format takes the full resource name of processor version.
+    /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LatestProcessorVersion {
+      get { return HasLatestProcessorVersion ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.LatestProcessorVersion;
+      }
+    }
+    /// <summary>Gets whether the "latest_processor_version" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLatestProcessorVersion {
+      get { return sourceCase_ == SourceOneofCase.LatestProcessorVersion; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "latest_processor_version" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLatestProcessorVersion() {
+      if (HasLatestProcessorVersion) {
+        ClearSource();
+      }
+    }
+
+    private object source_;
+    /// <summary>Enum of possible cases for the "source" oneof.</summary>
+    public enum SourceOneofCase {
+      None = 0,
+      RevisionCase = 1,
+      RevisionId = 2,
+      LatestProcessorVersion = 3,
+    }
+    private SourceOneofCase sourceCase_ = SourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SourceOneofCase SourceCase {
+      get { return sourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSource() {
+      sourceCase_ = SourceOneofCase.None;
+      source_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RevisionRef);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RevisionRef other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RevisionCase != other.RevisionCase) return false;
+      if (RevisionId != other.RevisionId) return false;
+      if (LatestProcessorVersion != other.LatestProcessorVersion) return false;
+      if (SourceCase != other.SourceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasRevisionCase) hash ^= RevisionCase.GetHashCode();
+      if (HasRevisionId) hash ^= RevisionId.GetHashCode();
+      if (HasLatestProcessorVersion) hash ^= LatestProcessorVersion.GetHashCode();
+      hash ^= (int) sourceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasRevisionCase) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) RevisionCase);
+      }
+      if (HasRevisionId) {
+        output.WriteRawTag(18);
+        output.WriteString(RevisionId);
+      }
+      if (HasLatestProcessorVersion) {
+        output.WriteRawTag(26);
+        output.WriteString(LatestProcessorVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasRevisionCase) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) RevisionCase);
+      }
+      if (HasRevisionId) {
+        output.WriteRawTag(18);
+        output.WriteString(RevisionId);
+      }
+      if (HasLatestProcessorVersion) {
+        output.WriteRawTag(26);
+        output.WriteString(LatestProcessorVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasRevisionCase) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RevisionCase);
+      }
+      if (HasRevisionId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RevisionId);
+      }
+      if (HasLatestProcessorVersion) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LatestProcessorVersion);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RevisionRef other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.SourceCase) {
+        case SourceOneofCase.RevisionCase:
+          RevisionCase = other.RevisionCase;
+          break;
+        case SourceOneofCase.RevisionId:
+          RevisionId = other.RevisionId;
+          break;
+        case SourceOneofCase.LatestProcessorVersion:
+          LatestProcessorVersion = other.LatestProcessorVersion;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            source_ = input.ReadEnum();
+            sourceCase_ = SourceOneofCase.RevisionCase;
+            break;
+          }
+          case 18: {
+            RevisionId = input.ReadString();
+            break;
+          }
+          case 26: {
+            LatestProcessorVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            source_ = input.ReadEnum();
+            sourceCase_ = SourceOneofCase.RevisionCase;
+            break;
+          }
+          case 18: {
+            RevisionId = input.ReadString();
+            break;
+          }
+          case 26: {
+            LatestProcessorVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RevisionRef message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Some predefined revision cases.
+      /// </summary>
+      public enum RevisionCase {
+        /// <summary>
+        /// Unspecified case, fallback to read the LATEST_HUMAN_REVIEW.
+        /// </summary>
+        [pbr::OriginalName("REVISION_CASE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The latest revision made by a human.
+        /// </summary>
+        [pbr::OriginalName("LATEST_HUMAN_REVIEW")] LatestHumanReview = 1,
+        /// <summary>
+        /// The latest revision based on timestamp.
+        /// </summary>
+        [pbr::OriginalName("LATEST_TIMESTAMP")] LatestTimestamp = 2,
+        /// <summary>
+        /// The first (OCR) revision.
+        /// </summary>
+        [pbr::OriginalName("BASE_OCR_REVISION")] BaseOcrRevision = 3,
       }
 
     }

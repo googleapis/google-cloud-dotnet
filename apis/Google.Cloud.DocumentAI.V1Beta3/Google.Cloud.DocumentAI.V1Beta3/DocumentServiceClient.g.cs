@@ -49,6 +49,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             UpdateDatasetSettings = existing.UpdateDatasetSettings;
             UpdateDatasetOperationsSettings = existing.UpdateDatasetOperationsSettings.Clone();
+            ImportDocumentsSettings = existing.ImportDocumentsSettings;
+            ImportDocumentsOperationsSettings = existing.ImportDocumentsOperationsSettings.Clone();
+            GetDocumentSettings = existing.GetDocumentSettings;
+            BatchDeleteDocumentsSettings = existing.BatchDeleteDocumentsSettings;
+            BatchDeleteDocumentsOperationsSettings = existing.BatchDeleteDocumentsOperationsSettings.Clone();
             GetDatasetSchemaSettings = existing.GetDatasetSchemaSettings;
             UpdateDatasetSchemaSettings = existing.UpdateDatasetSchemaSettings;
             LocationsSettings = existing.LocationsSettings;
@@ -83,6 +88,79 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateDatasetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DocumentServiceClient.ImportDocuments</c> and <c>DocumentServiceClient.ImportDocumentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportDocumentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DocumentServiceClient.ImportDocuments</c> and
+        /// <c>DocumentServiceClient.ImportDocumentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ImportDocumentsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DocumentServiceClient.GetDocument</c> and <c>DocumentServiceClient.GetDocumentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDocumentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DocumentServiceClient.BatchDeleteDocuments</c> and <c>DocumentServiceClient.BatchDeleteDocumentsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeleteDocumentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DocumentServiceClient.BatchDeleteDocuments</c> and
+        /// <c>DocumentServiceClient.BatchDeleteDocumentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchDeleteDocumentsOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -367,6 +445,365 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             UpdateDatasetAsync(dataset, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Import documents into a dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata> ImportDocuments(ImportDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Import documents into a dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>> ImportDocumentsAsync(ImportDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Import documents into a dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>> ImportDocumentsAsync(ImportDocumentsRequest request, st::CancellationToken cancellationToken) =>
+            ImportDocumentsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ImportDocuments</c>.</summary>
+        public virtual lro::OperationsClient ImportDocumentsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ImportDocuments</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata> PollOnceImportDocuments(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportDocumentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportDocuments</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>> PollOnceImportDocumentsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportDocumentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Import documents into a dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The dataset resource name.
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata> ImportDocuments(string dataset, gaxgrpc::CallSettings callSettings = null) =>
+            ImportDocuments(new ImportDocumentsRequest
+            {
+                Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Import documents into a dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The dataset resource name.
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>> ImportDocumentsAsync(string dataset, gaxgrpc::CallSettings callSettings = null) =>
+            ImportDocumentsAsync(new ImportDocumentsRequest
+            {
+                Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Import documents into a dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The dataset resource name.
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>> ImportDocumentsAsync(string dataset, st::CancellationToken cancellationToken) =>
+            ImportDocumentsAsync(dataset, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Import documents into a dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The dataset resource name.
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata> ImportDocuments(DatasetName dataset, gaxgrpc::CallSettings callSettings = null) =>
+            ImportDocuments(new ImportDocumentsRequest
+            {
+                DatasetAsDatasetName = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Import documents into a dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The dataset resource name.
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>> ImportDocumentsAsync(DatasetName dataset, gaxgrpc::CallSettings callSettings = null) =>
+            ImportDocumentsAsync(new ImportDocumentsRequest
+            {
+                DatasetAsDatasetName = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Import documents into a dataset.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The dataset resource name.
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>> ImportDocumentsAsync(DatasetName dataset, st::CancellationToken cancellationToken) =>
+            ImportDocumentsAsync(dataset, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns relevant fields present in the requested document.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetDocumentResponse GetDocument(GetDocumentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns relevant fields present in the requested document.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetDocumentResponse> GetDocumentAsync(GetDocumentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns relevant fields present in the requested document.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetDocumentResponse> GetDocumentAsync(GetDocumentRequest request, st::CancellationToken cancellationToken) =>
+            GetDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns relevant fields present in the requested document.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The resource name of the dataset that the document belongs to .
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetDocumentResponse GetDocument(string dataset, gaxgrpc::CallSettings callSettings = null) =>
+            GetDocument(new GetDocumentRequest
+            {
+                Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns relevant fields present in the requested document.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The resource name of the dataset that the document belongs to .
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetDocumentResponse> GetDocumentAsync(string dataset, gaxgrpc::CallSettings callSettings = null) =>
+            GetDocumentAsync(new GetDocumentRequest
+            {
+                Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns relevant fields present in the requested document.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The resource name of the dataset that the document belongs to .
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetDocumentResponse> GetDocumentAsync(string dataset, st::CancellationToken cancellationToken) =>
+            GetDocumentAsync(dataset, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns relevant fields present in the requested document.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The resource name of the dataset that the document belongs to .
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetDocumentResponse GetDocument(DatasetName dataset, gaxgrpc::CallSettings callSettings = null) =>
+            GetDocument(new GetDocumentRequest
+            {
+                DatasetAsDatasetName = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns relevant fields present in the requested document.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The resource name of the dataset that the document belongs to .
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetDocumentResponse> GetDocumentAsync(DatasetName dataset, gaxgrpc::CallSettings callSettings = null) =>
+            GetDocumentAsync(new GetDocumentRequest
+            {
+                DatasetAsDatasetName = gax::GaxPreconditions.CheckNotNull(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns relevant fields present in the requested document.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The resource name of the dataset that the document belongs to .
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetDocumentResponse> GetDocumentAsync(DatasetName dataset, st::CancellationToken cancellationToken) =>
+            GetDocumentAsync(dataset, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a set of documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> BatchDeleteDocuments(BatchDeleteDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a set of documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata>> BatchDeleteDocumentsAsync(BatchDeleteDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a set of documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata>> BatchDeleteDocumentsAsync(BatchDeleteDocumentsRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeleteDocumentsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BatchDeleteDocuments</c>.</summary>
+        public virtual lro::OperationsClient BatchDeleteDocumentsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BatchDeleteDocuments</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> PollOnceBatchDeleteDocuments(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteDocumentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchDeleteDocuments</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata>> PollOnceBatchDeleteDocumentsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteDocumentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a set of documents.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The dataset resource name.
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> BatchDeleteDocuments(string dataset, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteDocuments(new BatchDeleteDocumentsRequest
+            {
+                Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a set of documents.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The dataset resource name.
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata>> BatchDeleteDocumentsAsync(string dataset, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteDocumentsAsync(new BatchDeleteDocumentsRequest
+            {
+                Dataset = gax::GaxPreconditions.CheckNotNullOrEmpty(dataset, nameof(dataset)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a set of documents.
+        /// </summary>
+        /// <param name="dataset">
+        /// Required. The dataset resource name.
+        /// Format:
+        /// projects/{project}/locations/{location}/processors/{processor}/dataset
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata>> BatchDeleteDocumentsAsync(string dataset, st::CancellationToken cancellationToken) =>
+            BatchDeleteDocumentsAsync(dataset, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets the `DatasetSchema` of a `Dataset`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -572,6 +1009,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3
     {
         private readonly gaxgrpc::ApiCall<UpdateDatasetRequest, lro::Operation> _callUpdateDataset;
 
+        private readonly gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> _callImportDocuments;
+
+        private readonly gaxgrpc::ApiCall<GetDocumentRequest, GetDocumentResponse> _callGetDocument;
+
+        private readonly gaxgrpc::ApiCall<BatchDeleteDocumentsRequest, lro::Operation> _callBatchDeleteDocuments;
+
         private readonly gaxgrpc::ApiCall<GetDatasetSchemaRequest, DatasetSchema> _callGetDatasetSchema;
 
         private readonly gaxgrpc::ApiCall<UpdateDatasetSchemaRequest, DatasetSchema> _callUpdateDatasetSchema;
@@ -588,10 +1031,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3
             DocumentServiceSettings effectiveSettings = settings ?? DocumentServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             UpdateDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatasetOperationsSettings, logger);
+            ImportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDocumentsOperationsSettings, logger);
+            BatchDeleteDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeleteDocumentsOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callUpdateDataset = clientHelper.BuildApiCall<UpdateDatasetRequest, lro::Operation>("UpdateDataset", grpcClient.UpdateDatasetAsync, grpcClient.UpdateDataset, effectiveSettings.UpdateDatasetSettings).WithGoogleRequestParam("dataset.name", request => request.Dataset?.Name);
             Modify_ApiCall(ref _callUpdateDataset);
             Modify_UpdateDatasetApiCall(ref _callUpdateDataset);
+            _callImportDocuments = clientHelper.BuildApiCall<ImportDocumentsRequest, lro::Operation>("ImportDocuments", grpcClient.ImportDocumentsAsync, grpcClient.ImportDocuments, effectiveSettings.ImportDocumentsSettings).WithGoogleRequestParam("dataset", request => request.Dataset);
+            Modify_ApiCall(ref _callImportDocuments);
+            Modify_ImportDocumentsApiCall(ref _callImportDocuments);
+            _callGetDocument = clientHelper.BuildApiCall<GetDocumentRequest, GetDocumentResponse>("GetDocument", grpcClient.GetDocumentAsync, grpcClient.GetDocument, effectiveSettings.GetDocumentSettings).WithGoogleRequestParam("dataset", request => request.Dataset);
+            Modify_ApiCall(ref _callGetDocument);
+            Modify_GetDocumentApiCall(ref _callGetDocument);
+            _callBatchDeleteDocuments = clientHelper.BuildApiCall<BatchDeleteDocumentsRequest, lro::Operation>("BatchDeleteDocuments", grpcClient.BatchDeleteDocumentsAsync, grpcClient.BatchDeleteDocuments, effectiveSettings.BatchDeleteDocumentsSettings).WithGoogleRequestParam("dataset", request => request.Dataset);
+            Modify_ApiCall(ref _callBatchDeleteDocuments);
+            Modify_BatchDeleteDocumentsApiCall(ref _callBatchDeleteDocuments);
             _callGetDatasetSchema = clientHelper.BuildApiCall<GetDatasetSchemaRequest, DatasetSchema>("GetDatasetSchema", grpcClient.GetDatasetSchemaAsync, grpcClient.GetDatasetSchema, effectiveSettings.GetDatasetSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDatasetSchema);
             Modify_GetDatasetSchemaApiCall(ref _callGetDatasetSchema);
@@ -604,6 +1058,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_UpdateDatasetApiCall(ref gaxgrpc::ApiCall<UpdateDatasetRequest, lro::Operation> call);
+
+        partial void Modify_ImportDocumentsApiCall(ref gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> call);
+
+        partial void Modify_GetDocumentApiCall(ref gaxgrpc::ApiCall<GetDocumentRequest, GetDocumentResponse> call);
+
+        partial void Modify_BatchDeleteDocumentsApiCall(ref gaxgrpc::ApiCall<BatchDeleteDocumentsRequest, lro::Operation> call);
 
         partial void Modify_GetDatasetSchemaApiCall(ref gaxgrpc::ApiCall<GetDatasetSchemaRequest, DatasetSchema> call);
 
@@ -618,6 +1078,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_UpdateDatasetRequest(ref UpdateDatasetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportDocumentsRequest(ref ImportDocumentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDocumentRequest(ref GetDocumentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeleteDocumentsRequest(ref BatchDeleteDocumentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDatasetSchemaRequest(ref GetDatasetSchemaRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -648,6 +1114,84 @@ namespace Google.Cloud.DocumentAI.V1Beta3
         {
             Modify_UpdateDatasetRequest(ref request, ref callSettings);
             return new lro::Operation<Dataset, UpdateDatasetOperationMetadata>(await _callUpdateDataset.Async(request, callSettings).ConfigureAwait(false), UpdateDatasetOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ImportDocuments</c>.</summary>
+        public override lro::OperationsClient ImportDocumentsOperationsClient { get; }
+
+        /// <summary>
+        /// Import documents into a dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata> ImportDocuments(ImportDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportDocumentsRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>(_callImportDocuments.Sync(request, callSettings), ImportDocumentsOperationsClient);
+        }
+
+        /// <summary>
+        /// Import documents into a dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>> ImportDocumentsAsync(ImportDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportDocumentsRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportDocumentsResponse, ImportDocumentsMetadata>(await _callImportDocuments.Async(request, callSettings).ConfigureAwait(false), ImportDocumentsOperationsClient);
+        }
+
+        /// <summary>
+        /// Returns relevant fields present in the requested document.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GetDocumentResponse GetDocument(GetDocumentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDocumentRequest(ref request, ref callSettings);
+            return _callGetDocument.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns relevant fields present in the requested document.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GetDocumentResponse> GetDocumentAsync(GetDocumentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDocumentRequest(ref request, ref callSettings);
+            return _callGetDocument.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>BatchDeleteDocuments</c>.</summary>
+        public override lro::OperationsClient BatchDeleteDocumentsOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a set of documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> BatchDeleteDocuments(BatchDeleteDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteDocumentsRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata>(_callBatchDeleteDocuments.Sync(request, callSettings), BatchDeleteDocumentsOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a set of documents.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata>> BatchDeleteDocumentsAsync(BatchDeleteDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteDocumentsRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata>(await _callBatchDeleteDocuments.Async(request, callSettings).ConfigureAwait(false), BatchDeleteDocumentsOperationsClient);
         }
 
         /// <summary>

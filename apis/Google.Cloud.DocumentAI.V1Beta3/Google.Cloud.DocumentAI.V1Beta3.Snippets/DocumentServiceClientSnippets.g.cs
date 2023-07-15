@@ -152,6 +152,416 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ImportDocuments</summary>
+        public void ImportDocumentsRequestObject()
+        {
+            // Snippet: ImportDocuments(ImportDocumentsRequest, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            ImportDocumentsRequest request = new ImportDocumentsRequest
+            {
+                DatasetAsDatasetName = DatasetName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
+                BatchDocumentsImportConfigs =
+                {
+                    new ImportDocumentsRequest.Types.BatchDocumentsImportConfig(),
+                },
+            };
+            // Make the request
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> response = documentServiceClient.ImportDocuments(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> retrievedResponse = documentServiceClient.PollOnceImportDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDocumentsAsync</summary>
+        public async Task ImportDocumentsRequestObjectAsync()
+        {
+            // Snippet: ImportDocumentsAsync(ImportDocumentsRequest, CallSettings)
+            // Additional: ImportDocumentsAsync(ImportDocumentsRequest, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportDocumentsRequest request = new ImportDocumentsRequest
+            {
+                DatasetAsDatasetName = DatasetName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
+                BatchDocumentsImportConfigs =
+                {
+                    new ImportDocumentsRequest.Types.BatchDocumentsImportConfig(),
+                },
+            };
+            // Make the request
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> response = await documentServiceClient.ImportDocumentsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> retrievedResponse = await documentServiceClient.PollOnceImportDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDocuments</summary>
+        public void ImportDocuments()
+        {
+            // Snippet: ImportDocuments(string, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            string dataset = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/dataset";
+            // Make the request
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> response = documentServiceClient.ImportDocuments(dataset);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> retrievedResponse = documentServiceClient.PollOnceImportDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDocumentsAsync</summary>
+        public async Task ImportDocumentsAsync()
+        {
+            // Snippet: ImportDocumentsAsync(string, CallSettings)
+            // Additional: ImportDocumentsAsync(string, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string dataset = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/dataset";
+            // Make the request
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> response = await documentServiceClient.ImportDocumentsAsync(dataset);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> retrievedResponse = await documentServiceClient.PollOnceImportDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDocuments</summary>
+        public void ImportDocumentsResourceNames()
+        {
+            // Snippet: ImportDocuments(DatasetName, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            DatasetName dataset = DatasetName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
+            // Make the request
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> response = documentServiceClient.ImportDocuments(dataset);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> retrievedResponse = documentServiceClient.PollOnceImportDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDocumentsAsync</summary>
+        public async Task ImportDocumentsResourceNamesAsync()
+        {
+            // Snippet: ImportDocumentsAsync(DatasetName, CallSettings)
+            // Additional: ImportDocumentsAsync(DatasetName, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetName dataset = DatasetName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
+            // Make the request
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> response = await documentServiceClient.ImportDocumentsAsync(dataset);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> retrievedResponse = await documentServiceClient.PollOnceImportDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDocument</summary>
+        public void GetDocumentRequestObject()
+        {
+            // Snippet: GetDocument(GetDocumentRequest, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            GetDocumentRequest request = new GetDocumentRequest
+            {
+                DatasetAsDatasetName = DatasetName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
+                DocumentId = new DocumentId(),
+                ReadMask = new FieldMask(),
+                PageRange = new DocumentPageRange(),
+            };
+            // Make the request
+            GetDocumentResponse response = documentServiceClient.GetDocument(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDocumentAsync</summary>
+        public async Task GetDocumentRequestObjectAsync()
+        {
+            // Snippet: GetDocumentAsync(GetDocumentRequest, CallSettings)
+            // Additional: GetDocumentAsync(GetDocumentRequest, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDocumentRequest request = new GetDocumentRequest
+            {
+                DatasetAsDatasetName = DatasetName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
+                DocumentId = new DocumentId(),
+                ReadMask = new FieldMask(),
+                PageRange = new DocumentPageRange(),
+            };
+            // Make the request
+            GetDocumentResponse response = await documentServiceClient.GetDocumentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDocument</summary>
+        public void GetDocument()
+        {
+            // Snippet: GetDocument(string, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            string dataset = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/dataset";
+            // Make the request
+            GetDocumentResponse response = documentServiceClient.GetDocument(dataset);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDocumentAsync</summary>
+        public async Task GetDocumentAsync()
+        {
+            // Snippet: GetDocumentAsync(string, CallSettings)
+            // Additional: GetDocumentAsync(string, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string dataset = "projects/[PROJECT]/locations/[LOCATION]/processors/[PROCESSOR]/dataset";
+            // Make the request
+            GetDocumentResponse response = await documentServiceClient.GetDocumentAsync(dataset);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDocument</summary>
+        public void GetDocumentResourceNames()
+        {
+            // Snippet: GetDocument(DatasetName, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            DatasetName dataset = DatasetName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
+            // Make the request
+            GetDocumentResponse response = documentServiceClient.GetDocument(dataset);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDocumentAsync</summary>
+        public async Task GetDocumentResourceNamesAsync()
+        {
+            // Snippet: GetDocumentAsync(DatasetName, CallSettings)
+            // Additional: GetDocumentAsync(DatasetName, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetName dataset = DatasetName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]");
+            // Make the request
+            GetDocumentResponse response = await documentServiceClient.GetDocumentAsync(dataset);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteDocuments</summary>
+        public void BatchDeleteDocumentsRequestObject()
+        {
+            // Snippet: BatchDeleteDocuments(BatchDeleteDocumentsRequest, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            BatchDeleteDocumentsRequest request = new BatchDeleteDocumentsRequest
+            {
+                Dataset = "",
+                DatasetDocuments = new BatchDatasetDocuments(),
+            };
+            // Make the request
+            Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> response = documentServiceClient.BatchDeleteDocuments(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchDeleteDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> retrievedResponse = documentServiceClient.PollOnceBatchDeleteDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchDeleteDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteDocumentsAsync</summary>
+        public async Task BatchDeleteDocumentsRequestObjectAsync()
+        {
+            // Snippet: BatchDeleteDocumentsAsync(BatchDeleteDocumentsRequest, CallSettings)
+            // Additional: BatchDeleteDocumentsAsync(BatchDeleteDocumentsRequest, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchDeleteDocumentsRequest request = new BatchDeleteDocumentsRequest
+            {
+                Dataset = "",
+                DatasetDocuments = new BatchDatasetDocuments(),
+            };
+            // Make the request
+            Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> response = await documentServiceClient.BatchDeleteDocumentsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchDeleteDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> retrievedResponse = await documentServiceClient.PollOnceBatchDeleteDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchDeleteDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteDocuments</summary>
+        public void BatchDeleteDocuments()
+        {
+            // Snippet: BatchDeleteDocuments(string, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            string dataset = "";
+            // Make the request
+            Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> response = documentServiceClient.BatchDeleteDocuments(dataset);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchDeleteDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> retrievedResponse = documentServiceClient.PollOnceBatchDeleteDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchDeleteDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteDocumentsAsync</summary>
+        public async Task BatchDeleteDocumentsAsync()
+        {
+            // Snippet: BatchDeleteDocumentsAsync(string, CallSettings)
+            // Additional: BatchDeleteDocumentsAsync(string, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string dataset = "";
+            // Make the request
+            Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> response = await documentServiceClient.BatchDeleteDocumentsAsync(dataset);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchDeleteDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchDeleteDocumentsResponse, BatchDeleteDocumentsMetadata> retrievedResponse = await documentServiceClient.PollOnceBatchDeleteDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchDeleteDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetDatasetSchema</summary>
         public void GetDatasetSchemaRequestObject()
         {
