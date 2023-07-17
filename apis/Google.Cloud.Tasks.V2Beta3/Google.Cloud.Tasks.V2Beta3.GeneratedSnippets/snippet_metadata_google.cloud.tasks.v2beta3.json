@@ -4636,6 +4636,325 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BufferTask_sync",
+      "title": "BufferTaskRequestObject",
+      "description": "Snippet for BufferTask",
+      "file": "CloudTasksClient.BufferTaskRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BufferTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BufferTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.BufferTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.BufferTaskResponse",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BufferTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BufferTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BufferTask_async",
+      "title": "BufferTaskRequestObjectAsync",
+      "description": "Snippet for BufferTaskAsync",
+      "file": "CloudTasksClient.BufferTaskRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BufferTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BufferTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.BufferTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.BufferTaskResponse>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BufferTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BufferTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BufferTask_sync_flattened",
+      "title": "BufferTask",
+      "description": "Snippet for BufferTask",
+      "file": "CloudTasksClient.BufferTaskSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BufferTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BufferTask",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "queue"
+          },
+          {
+            "type": "System.String",
+            "name": "taskId"
+          },
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "body"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.BufferTaskResponse",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BufferTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BufferTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BufferTask_async_flattened",
+      "title": "BufferTaskAsync",
+      "description": "Snippet for BufferTaskAsync",
+      "file": "CloudTasksClient.BufferTaskAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BufferTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BufferTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "queue"
+          },
+          {
+            "type": "System.String",
+            "name": "taskId"
+          },
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "body"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.BufferTaskResponse>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BufferTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BufferTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BufferTask_sync_flattened_resourceNames",
+      "title": "BufferTaskResourceNames",
+      "description": "Snippet for BufferTask",
+      "file": "CloudTasksClient.BufferTaskResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BufferTask",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BufferTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "queue"
+          },
+          {
+            "type": "System.String",
+            "name": "taskId"
+          },
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "body"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.BufferTaskResponse",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BufferTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BufferTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BufferTask_async_flattened_resourceNames",
+      "title": "BufferTaskResourceNamesAsync",
+      "description": "Snippet for BufferTaskAsync",
+      "file": "CloudTasksClient.BufferTaskResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BufferTaskAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BufferTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "queue"
+          },
+          {
+            "type": "System.String",
+            "name": "taskId"
+          },
+          {
+            "type": "Google.Api.HttpBody",
+            "name": "body"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.BufferTaskResponse>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BufferTask",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BufferTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "CloudTasksClient",
           "rpcs": {
+            "BufferTask": {
+              "methods": [
+                "BufferTask",
+                "BufferTaskAsync"
+              ]
+            },
             "CreateQueue": {
               "methods": [
                 "CreateQueue",

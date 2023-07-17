@@ -4441,7 +4441,8 @@
         "Tasks"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.0.0"
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0"
       },
       "shortName": "cloudtasks",
       "serviceConfigFile": "cloudtasks_v2beta3.yaml",
