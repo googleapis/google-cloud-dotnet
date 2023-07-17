@@ -16,6 +16,8 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
@@ -26,10 +28,24 @@ namespace Google.Cloud.Tasks.V2
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
         internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Cloud.Tasks.V2", GetFileDescriptors)
-            .WithRequestNumericEnumJsonEncoding(true);
+            .WithRequestNumericEnumJsonEncoding(true)
+            .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
+            {
+                {
+                    "google.cloud.location.Locations.GetLocation",
+                    // { "get": "/v2/{name=projects/*/locations/*}" }
+                    proto::ByteString.FromBase64("EiEvdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0=")
+                },
+                {
+                    "google.cloud.location.Locations.ListLocations",
+                    // { "get": "/v2/{name=projects/*}/locations" }
+                    proto::ByteString.FromBase64("Eh8vdjIve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
+                },
+            });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return gcl::LocationsReflection.Descriptor;
             yield return CloudtasksReflection.Descriptor;
             yield return QueueReflection.Descriptor;
             yield return TargetReflection.Descriptor;

@@ -251,7 +251,7 @@ namespace Google.Cloud.Tasks.V2 {
     /// <summary>
     /// Output only. The state of the queue.
     ///
-    /// `state` can only be changed by called
+    /// `state` can only be changed by calling
     /// [PauseQueue][google.cloud.tasks.v2.CloudTasks.PauseQueue],
     /// [ResumeQueue][google.cloud.tasks.v2.CloudTasks.ResumeQueue], or uploading
     /// [queue.yaml/xml](https://cloud.google.com/appengine/docs/python/config/queueref).
@@ -1197,7 +1197,7 @@ namespace Google.Cloud.Tasks.V2 {
     /// A task's retry interval starts at
     /// [min_backoff][google.cloud.tasks.v2.RetryConfig.min_backoff], then doubles
     /// `max_doublings` times, then increases linearly, and finally
-    /// retries retries at intervals of
+    /// retries at intervals of
     /// [max_backoff][google.cloud.tasks.v2.RetryConfig.max_backoff] up to
     /// [max_attempts][google.cloud.tasks.v2.RetryConfig.max_attempts] times.
     ///
