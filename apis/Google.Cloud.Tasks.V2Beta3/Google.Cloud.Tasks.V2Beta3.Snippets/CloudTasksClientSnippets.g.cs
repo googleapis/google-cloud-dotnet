@@ -18,6 +18,7 @@
 
 namespace GoogleCSharpSnippets
 {
+    using Google.Api;
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
@@ -1817,6 +1818,105 @@ namespace GoogleCSharpSnippets
             gctv::TaskName name = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
             // Make the request
             gctv::Task response = await cloudTasksClient.RunTaskAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BufferTask</summary>
+        public void BufferTaskRequestObject()
+        {
+            // Snippet: BufferTask(BufferTaskRequest, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            gctv::BufferTaskRequest request = new gctv::BufferTaskRequest
+            {
+                QueueAsQueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                TaskId = "",
+                Body = new HttpBody(),
+            };
+            // Make the request
+            gctv::BufferTaskResponse response = cloudTasksClient.BufferTask(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BufferTaskAsync</summary>
+        public async Task BufferTaskRequestObjectAsync()
+        {
+            // Snippet: BufferTaskAsync(BufferTaskRequest, CallSettings)
+            // Additional: BufferTaskAsync(BufferTaskRequest, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            gctv::BufferTaskRequest request = new gctv::BufferTaskRequest
+            {
+                QueueAsQueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                TaskId = "",
+                Body = new HttpBody(),
+            };
+            // Make the request
+            gctv::BufferTaskResponse response = await cloudTasksClient.BufferTaskAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BufferTask</summary>
+        public void BufferTask()
+        {
+            // Snippet: BufferTask(string, string, HttpBody, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            string queue = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            string taskId = "";
+            HttpBody body = new HttpBody();
+            // Make the request
+            gctv::BufferTaskResponse response = cloudTasksClient.BufferTask(queue, taskId, body);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BufferTaskAsync</summary>
+        public async Task BufferTaskAsync()
+        {
+            // Snippet: BufferTaskAsync(string, string, HttpBody, CallSettings)
+            // Additional: BufferTaskAsync(string, string, HttpBody, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            string queue = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            string taskId = "";
+            HttpBody body = new HttpBody();
+            // Make the request
+            gctv::BufferTaskResponse response = await cloudTasksClient.BufferTaskAsync(queue, taskId, body);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BufferTask</summary>
+        public void BufferTaskResourceNames()
+        {
+            // Snippet: BufferTask(QueueName, string, HttpBody, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            gctv::QueueName queue = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            string taskId = "";
+            HttpBody body = new HttpBody();
+            // Make the request
+            gctv::BufferTaskResponse response = cloudTasksClient.BufferTask(queue, taskId, body);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BufferTaskAsync</summary>
+        public async Task BufferTaskResourceNamesAsync()
+        {
+            // Snippet: BufferTaskAsync(QueueName, string, HttpBody, CallSettings)
+            // Additional: BufferTaskAsync(QueueName, string, HttpBody, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            gctv::QueueName queue = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            string taskId = "";
+            HttpBody body = new HttpBody();
+            // Make the request
+            gctv::BufferTaskResponse response = await cloudTasksClient.BufferTaskAsync(queue, taskId, body);
             // End snippet
         }
     }

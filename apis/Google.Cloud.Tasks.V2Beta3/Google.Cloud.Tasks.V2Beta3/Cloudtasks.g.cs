@@ -27,120 +27,130 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "Citnb29nbGUvY2xvdWQvdGFza3MvdjJiZXRhMy9jbG91ZHRhc2tzLnByb3Rv",
             "Ehpnb29nbGUuY2xvdWQudGFza3MudjJiZXRhMxocZ29vZ2xlL2FwaS9hbm5v",
             "dGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2ds",
-            "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
-            "Y2UucHJvdG8aJmdvb2dsZS9jbG91ZC90YXNrcy92MmJldGEzL3F1ZXVlLnBy",
-            "b3RvGiVnb29nbGUvY2xvdWQvdGFza3MvdjJiZXRhMy90YXNrLnByb3RvGh5n",
-            "b29nbGUvaWFtL3YxL2lhbV9wb2xpY3kucHJvdG8aGmdvb2dsZS9pYW0vdjEv",
-            "cG9saWN5LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdv",
-            "b2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvIrcBChFMaXN0UXVldWVz",
-            "UmVxdWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpBIRIfY2xvdWR0YXNrcy5n",
-            "b29nbGVhcGlzLmNvbS9RdWV1ZRIOCgZmaWx0ZXIYAiABKAkSEQoJcGFnZV9z",
-            "aXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkSMgoJcmVhZF9tYXNrGAUg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEBImAKEkxpc3RR",
-            "dWV1ZXNSZXNwb25zZRIxCgZxdWV1ZXMYASADKAsyIS5nb29nbGUuY2xvdWQu",
-            "dGFza3MudjJiZXRhMy5RdWV1ZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki",
-            "fAoPR2V0UXVldWVSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofY2xv",
-            "dWR0YXNrcy5nb29nbGVhcGlzLmNvbS9RdWV1ZRIyCglyZWFkX21hc2sYAiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQEihAEKEkNyZWF0",
-            "ZVF1ZXVlUmVxdWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpBIRIfY2xvdWR0",
-            "YXNrcy5nb29nbGVhcGlzLmNvbS9RdWV1ZRI1CgVxdWV1ZRgCIAEoCzIhLmdv",
-            "b2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlF1ZXVlQgPgQQIifAoSVXBkYXRl",
-            "UXVldWVSZXF1ZXN0EjUKBXF1ZXVlGAEgASgLMiEuZ29vZ2xlLmNsb3VkLnRh",
-            "c2tzLnYyYmV0YTMuUXVldWVCA+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siSwoSRGVsZXRlUXVldWVSZXF1",
-            "ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofY2xvdWR0YXNrcy5nb29nbGVh",
-            "cGlzLmNvbS9RdWV1ZSJKChFQdXJnZVF1ZXVlUmVxdWVzdBI1CgRuYW1lGAEg",
+            "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvaHR0cGJv",
+            "ZHkucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aJmdvb2dsZS9j",
+            "bG91ZC90YXNrcy92MmJldGEzL3F1ZXVlLnByb3RvGiVnb29nbGUvY2xvdWQv",
+            "dGFza3MvdjJiZXRhMy90YXNrLnByb3RvGh5nb29nbGUvaWFtL3YxL2lhbV9w",
+            "b2xpY3kucHJvdG8aGmdvb2dsZS9pYW0vdjEvcG9saWN5LnByb3RvGhtnb29n",
+            "bGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVs",
+            "ZF9tYXNrLnByb3RvIrcBChFMaXN0UXVldWVzUmVxdWVzdBI3CgZwYXJlbnQY",
+            "ASABKAlCJ+BBAvpBIRIfY2xvdWR0YXNrcy5nb29nbGVhcGlzLmNvbS9RdWV1",
+            "ZRIOCgZmaWx0ZXIYAiABKAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2Vf",
+            "dG9rZW4YBCABKAkSMgoJcmVhZF9tYXNrGAUgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLkZpZWxkTWFza0ID4EEBImAKEkxpc3RRdWV1ZXNSZXNwb25zZRIxCgZx",
+            "dWV1ZXMYASADKAsyIS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5RdWV1",
+            "ZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkifAoPR2V0UXVldWVSZXF1ZXN0",
+            "EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofY2xvdWR0YXNrcy5nb29nbGVhcGlz",
+            "LmNvbS9RdWV1ZRIyCglyZWFkX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuRmllbGRNYXNrQgPgQQEihAEKEkNyZWF0ZVF1ZXVlUmVxdWVzdBI3CgZw",
+            "YXJlbnQYASABKAlCJ+BBAvpBIRIfY2xvdWR0YXNrcy5nb29nbGVhcGlzLmNv",
+            "bS9RdWV1ZRI1CgVxdWV1ZRgCIAEoCzIhLmdvb2dsZS5jbG91ZC50YXNrcy52",
+            "MmJldGEzLlF1ZXVlQgPgQQIifAoSVXBkYXRlUXVldWVSZXF1ZXN0EjUKBXF1",
+            "ZXVlGAEgASgLMiEuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuUXVldWVC",
+            "A+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
+            "aWVsZE1hc2siSwoSRGVsZXRlUXVldWVSZXF1ZXN0EjUKBG5hbWUYASABKAlC",
+            "J+BBAvpBIQofY2xvdWR0YXNrcy5nb29nbGVhcGlzLmNvbS9RdWV1ZSJKChFQ",
+            "dXJnZVF1ZXVlUmVxdWVzdBI1CgRuYW1lGAEgASgJQifgQQL6QSEKH2Nsb3Vk",
+            "dGFza3MuZ29vZ2xlYXBpcy5jb20vUXVldWUiSgoRUGF1c2VRdWV1ZVJlcXVl",
+            "c3QSNQoEbmFtZRgBIAEoCUIn4EEC+kEhCh9jbG91ZHRhc2tzLmdvb2dsZWFw",
+            "aXMuY29tL1F1ZXVlIksKElJlc3VtZVF1ZXVlUmVxdWVzdBI1CgRuYW1lGAEg",
             "ASgJQifgQQL6QSEKH2Nsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb20vUXVldWUi",
-            "SgoRUGF1c2VRdWV1ZVJlcXVlc3QSNQoEbmFtZRgBIAEoCUIn4EEC+kEhCh9j",
-            "bG91ZHRhc2tzLmdvb2dsZWFwaXMuY29tL1F1ZXVlIksKElJlc3VtZVF1ZXVl",
-            "UmVxdWVzdBI1CgRuYW1lGAEgASgJQifgQQL6QSEKH2Nsb3VkdGFza3MuZ29v",
-            "Z2xlYXBpcy5jb20vUXVldWUirwEKEExpc3RUYXNrc1JlcXVlc3QSNgoGcGFy",
-            "ZW50GAEgASgJQibgQQL6QSASHmNsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb20v",
-            "VGFzaxI8Cg1yZXNwb25zZV92aWV3GAIgASgOMiUuZ29vZ2xlLmNsb3VkLnRh",
-            "c2tzLnYyYmV0YTMuVGFzay5WaWV3EhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpw",
-            "YWdlX3Rva2VuGAQgASgJIl0KEUxpc3RUYXNrc1Jlc3BvbnNlEi8KBXRhc2tz",
-            "GAEgAygLMiAuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFzaxIXCg9u",
-            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkihAEKDkdldFRhc2tSZXF1ZXN0EjQKBG5h",
-            "bWUYASABKAlCJuBBAvpBIAoeY2xvdWR0YXNrcy5nb29nbGVhcGlzLmNvbS9U",
-            "YXNrEjwKDXJlc3BvbnNlX3ZpZXcYAiABKA4yJS5nb29nbGUuY2xvdWQudGFz",
-            "a3MudjJiZXRhMy5UYXNrLlZpZXcivgEKEUNyZWF0ZVRhc2tSZXF1ZXN0EjYK",
-            "BnBhcmVudBgBIAEoCUIm4EEC+kEgEh5jbG91ZHRhc2tzLmdvb2dsZWFwaXMu",
-            "Y29tL1Rhc2sSMwoEdGFzaxgCIAEoCzIgLmdvb2dsZS5jbG91ZC50YXNrcy52",
-            "MmJldGEzLlRhc2tCA+BBAhI8Cg1yZXNwb25zZV92aWV3GAMgASgOMiUuZ29v",
-            "Z2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFzay5WaWV3IkkKEURlbGV0ZVRh",
-            "c2tSZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpBIAoeY2xvdWR0YXNrcy5n",
-            "b29nbGVhcGlzLmNvbS9UYXNrIoQBCg5SdW5UYXNrUmVxdWVzdBI0CgRuYW1l",
-            "GAEgASgJQibgQQL6QSAKHmNsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb20vVGFz",
-            "axI8Cg1yZXNwb25zZV92aWV3GAIgASgOMiUuZ29vZ2xlLmNsb3VkLnRhc2tz",
-            "LnYyYmV0YTMuVGFzay5WaWV3MqUWCgpDbG91ZFRhc2tzEq0BCgpMaXN0UXVl",
-            "dWVzEi0uZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuTGlzdFF1ZXVlc1Jl",
-            "cXVlc3QaLi5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5MaXN0UXVldWVz",
-            "UmVzcG9uc2UiQILT5JMCMRIvL3YyYmV0YTMve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qfS9xdWV1ZXPaQQZwYXJlbnQSmgEKCEdldFF1ZXVlEisu",
-            "Z29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuR2V0UXVldWVSZXF1ZXN0GiEu",
-            "Z29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuUXVldWUiPoLT5JMCMRIvL3Yy",
-            "YmV0YTMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9xdWV1ZXMvKn3a",
-            "QQRuYW1lEq8BCgtDcmVhdGVRdWV1ZRIuLmdvb2dsZS5jbG91ZC50YXNrcy52",
-            "MmJldGEzLkNyZWF0ZVF1ZXVlUmVxdWVzdBohLmdvb2dsZS5jbG91ZC50YXNr",
-            "cy52MmJldGEzLlF1ZXVlIk2C0+STAjgiLy92MmJldGEzL3twYXJlbnQ9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKn0vcXVldWVzOgVxdWV1ZdpBDHBhcmVudCxx",
-            "dWV1ZRK6AQoLVXBkYXRlUXVldWUSLi5nb29nbGUuY2xvdWQudGFza3MudjJi",
-            "ZXRhMy5VcGRhdGVRdWV1ZVJlcXVlc3QaIS5nb29nbGUuY2xvdWQudGFza3Mu",
-            "djJiZXRhMy5RdWV1ZSJYgtPkkwI+MjUvdjJiZXRhMy97cXVldWUubmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8qfToFcXVldWXaQRFxdWV1",
-            "ZSx1cGRhdGVfbWFzaxKVAQoLRGVsZXRlUXVldWUSLi5nb29nbGUuY2xvdWQu",
-            "dGFza3MudjJiZXRhMy5EZWxldGVRdWV1ZVJlcXVlc3QaFi5nb29nbGUucHJv",
-            "dG9idWYuRW1wdHkiPoLT5JMCMSovL3YyYmV0YTMve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9xdWV1ZXMvKn3aQQRuYW1lEqcBCgpQdXJnZVF1ZXVl",
-            "Ei0uZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuUHVyZ2VRdWV1ZVJlcXVl",
-            "c3QaIS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5RdWV1ZSJHgtPkkwI6",
-            "IjUvdjJiZXRhMy97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVl",
-            "cy8qfTpwdXJnZToBKtpBBG5hbWUSpwEKClBhdXNlUXVldWUSLS5nb29nbGUu",
-            "Y2xvdWQudGFza3MudjJiZXRhMy5QYXVzZVF1ZXVlUmVxdWVzdBohLmdvb2ds",
-            "ZS5jbG91ZC50YXNrcy52MmJldGEzLlF1ZXVlIkeC0+STAjoiNS92MmJldGEz",
-            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcXVldWVzLyp9OnBhdXNl",
-            "OgEq2kEEbmFtZRKqAQoLUmVzdW1lUXVldWUSLi5nb29nbGUuY2xvdWQudGFz",
-            "a3MudjJiZXRhMy5SZXN1bWVRdWV1ZVJlcXVlc3QaIS5nb29nbGUuY2xvdWQu",
-            "dGFza3MudjJiZXRhMy5RdWV1ZSJIgtPkkwI7IjYvdjJiZXRhMy97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8qfTpyZXN1bWU6ASraQQRu",
-            "YW1lEqEBCgxHZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBv",
-            "bGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSJWgtPkkwJFIkAv",
-            "djJiZXRhMy97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9xdWV1",
-            "ZXMvKn06Z2V0SWFtUG9saWN5OgEq2kEIcmVzb3VyY2USqAEKDFNldElhbVBv",
-            "bGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFtUG9saWN5UmVxdWVzdBoVLmdv",
-            "b2dsZS5pYW0udjEuUG9saWN5Il2C0+STAkUiQC92MmJldGEzL3tyZXNvdXJj",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8qfTpzZXRJYW1Qb2xp",
-            "Y3k6ASraQQ9yZXNvdXJjZSxwb2xpY3kS0wEKElRlc3RJYW1QZXJtaXNzaW9u",
-            "cxIoLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVxdWVzdBop",
-            "Lmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVzcG9uc2UiaILT",
-            "5JMCSyJGL3YyYmV0YTMve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovcXVldWVzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKtpBFHJlc291cmNl",
-            "LHBlcm1pc3Npb25zErIBCglMaXN0VGFza3MSLC5nb29nbGUuY2xvdWQudGFz",
-            "a3MudjJiZXRhMy5MaXN0VGFza3NSZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLnRh",
-            "c2tzLnYyYmV0YTMuTGlzdFRhc2tzUmVzcG9uc2UiSILT5JMCORI3L3YyYmV0",
-            "YTMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8qfS90",
-            "YXNrc9pBBnBhcmVudBKfAQoHR2V0VGFzaxIqLmdvb2dsZS5jbG91ZC50YXNr",
-            "cy52MmJldGEzLkdldFRhc2tSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLnRhc2tz",
-            "LnYyYmV0YTMuVGFzayJGgtPkkwI5EjcvdjJiZXRhMy97bmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8qL3Rhc2tzLyp92kEEbmFtZRKvAQoK",
-            "Q3JlYXRlVGFzaxItLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLkNyZWF0",
-            "ZVRhc2tSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFz",
-            "ayJQgtPkkwI8IjcvdjJiZXRhMy97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovcXVldWVzLyp9L3Rhc2tzOgEq2kELcGFyZW50LHRhc2sSmwEKCkRl",
-            "bGV0ZVRhc2sSLS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5EZWxldGVU",
-            "YXNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJGgtPkkwI5Kjcv",
-            "djJiZXRhMy97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8q",
-            "L3Rhc2tzLyp92kEEbmFtZRKmAQoHUnVuVGFzaxIqLmdvb2dsZS5jbG91ZC50",
-            "YXNrcy52MmJldGEzLlJ1blRhc2tSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLnRh",
-            "c2tzLnYyYmV0YTMuVGFzayJNgtPkkwJAIjsvdjJiZXRhMy97bmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8qL3Rhc2tzLyp9OnJ1bjoBKtpB",
-            "BG5hbWUaTcpBGWNsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb23SQS5odHRwczov",
-            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQoABCh5j",
-            "b20uZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTNCD0Nsb3VkVGFza3NQcm90",
-            "b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2Nsb3VkdGFza3MvYXBpdjJiZXRh",
-            "My9jbG91ZHRhc2tzcGI7Y2xvdWR0YXNrc3BiogIFVEFTS1NiBnByb3RvMw=="));
+            "rwEKEExpc3RUYXNrc1JlcXVlc3QSNgoGcGFyZW50GAEgASgJQibgQQL6QSAS",
+            "HmNsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb20vVGFzaxI8Cg1yZXNwb25zZV92",
+            "aWV3GAIgASgOMiUuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFzay5W",
+            "aWV3EhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJIl0K",
+            "EUxpc3RUYXNrc1Jlc3BvbnNlEi8KBXRhc2tzGAEgAygLMiAuZ29vZ2xlLmNs",
+            "b3VkLnRhc2tzLnYyYmV0YTMuVGFzaxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiAB",
+            "KAkihAEKDkdldFRhc2tSZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpBIAoe",
+            "Y2xvdWR0YXNrcy5nb29nbGVhcGlzLmNvbS9UYXNrEjwKDXJlc3BvbnNlX3Zp",
+            "ZXcYAiABKA4yJS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5UYXNrLlZp",
+            "ZXcivgEKEUNyZWF0ZVRhc2tSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEC",
+            "+kEgEh5jbG91ZHRhc2tzLmdvb2dsZWFwaXMuY29tL1Rhc2sSMwoEdGFzaxgC",
+            "IAEoCzIgLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlRhc2tCA+BBAhI8",
+            "Cg1yZXNwb25zZV92aWV3GAMgASgOMiUuZ29vZ2xlLmNsb3VkLnRhc2tzLnYy",
+            "YmV0YTMuVGFzay5WaWV3IkkKEURlbGV0ZVRhc2tSZXF1ZXN0EjQKBG5hbWUY",
+            "ASABKAlCJuBBAvpBIAoeY2xvdWR0YXNrcy5nb29nbGVhcGlzLmNvbS9UYXNr",
+            "IoQBCg5SdW5UYXNrUmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNs",
+            "b3VkdGFza3MuZ29vZ2xlYXBpcy5jb20vVGFzaxI8Cg1yZXNwb25zZV92aWV3",
+            "GAIgASgOMiUuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFzay5WaWV3",
+            "IokBChFCdWZmZXJUYXNrUmVxdWVzdBI1CgVxdWV1ZRgBIAEoCUIm4EEC+kEg",
+            "Eh5jbG91ZHRhc2tzLmdvb2dsZWFwaXMuY29tL1Rhc2sSFAoHdGFza19pZBgC",
+            "IAEoCUID4EEBEicKBGJvZHkYAyABKAsyFC5nb29nbGUuYXBpLkh0dHBCb2R5",
+            "QgPgQQEiRAoSQnVmZmVyVGFza1Jlc3BvbnNlEi4KBHRhc2sYASABKAsyIC5n",
+            "b29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5UYXNrMvwXCgpDbG91ZFRhc2tz",
+            "Eq0BCgpMaXN0UXVldWVzEi0uZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMu",
+            "TGlzdFF1ZXVlc1JlcXVlc3QaLi5nb29nbGUuY2xvdWQudGFza3MudjJiZXRh",
+            "My5MaXN0UXVldWVzUmVzcG9uc2UiQILT5JMCMRIvL3YyYmV0YTMve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9xdWV1ZXPaQQZwYXJlbnQSmgEK",
+            "CEdldFF1ZXVlEisuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuR2V0UXVl",
+            "dWVSZXF1ZXN0GiEuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuUXVldWUi",
+            "PoLT5JMCMRIvL3YyYmV0YTMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9xdWV1ZXMvKn3aQQRuYW1lEq8BCgtDcmVhdGVRdWV1ZRIuLmdvb2dsZS5j",
+            "bG91ZC50YXNrcy52MmJldGEzLkNyZWF0ZVF1ZXVlUmVxdWVzdBohLmdvb2ds",
+            "ZS5jbG91ZC50YXNrcy52MmJldGEzLlF1ZXVlIk2C0+STAjgiLy92MmJldGEz",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcXVldWVzOgVxdWV1",
+            "ZdpBDHBhcmVudCxxdWV1ZRK6AQoLVXBkYXRlUXVldWUSLi5nb29nbGUuY2xv",
+            "dWQudGFza3MudjJiZXRhMy5VcGRhdGVRdWV1ZVJlcXVlc3QaIS5nb29nbGUu",
+            "Y2xvdWQudGFza3MudjJiZXRhMy5RdWV1ZSJYgtPkkwI+MjUvdjJiZXRhMy97",
+            "cXVldWUubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8qfToF",
+            "cXVldWXaQRFxdWV1ZSx1cGRhdGVfbWFzaxKVAQoLRGVsZXRlUXVldWUSLi5n",
+            "b29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5EZWxldGVRdWV1ZVJlcXVlc3Qa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiPoLT5JMCMSovL3YyYmV0YTMve25h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9xdWV1ZXMvKn3aQQRuYW1lEqcB",
+            "CgpQdXJnZVF1ZXVlEi0uZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuUHVy",
+            "Z2VRdWV1ZVJlcXVlc3QaIS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5R",
+            "dWV1ZSJHgtPkkwI6IjUvdjJiZXRhMy97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL3F1ZXVlcy8qfTpwdXJnZToBKtpBBG5hbWUSpwEKClBhdXNlUXVl",
+            "dWUSLS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5QYXVzZVF1ZXVlUmVx",
+            "dWVzdBohLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlF1ZXVlIkeC0+ST",
+            "AjoiNS92MmJldGEzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcXVl",
+            "dWVzLyp9OnBhdXNlOgEq2kEEbmFtZRKqAQoLUmVzdW1lUXVldWUSLi5nb29n",
+            "bGUuY2xvdWQudGFza3MudjJiZXRhMy5SZXN1bWVRdWV1ZVJlcXVlc3QaIS5n",
+            "b29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5RdWV1ZSJIgtPkkwI7IjYvdjJi",
+            "ZXRhMy97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8qfTpy",
+            "ZXN1bWU6ASraQQRuYW1lEqEBCgxHZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFt",
+            "LnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGlj",
+            "eSJWgtPkkwJFIkAvdjJiZXRhMy97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9xdWV1ZXMvKn06Z2V0SWFtUG9saWN5OgEq2kEIcmVzb3VyY2US",
+            "qAEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFtUG9saWN5",
+            "UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5Il2C0+STAkUiQC92MmJl",
+            "dGEzL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8q",
+            "fTpzZXRJYW1Qb2xpY3k6ASraQQ9yZXNvdXJjZSxwb2xpY3kS0wEKElRlc3RJ",
+            "YW1QZXJtaXNzaW9ucxIoLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Np",
+            "b25zUmVxdWVzdBopLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25z",
+            "UmVzcG9uc2UiaILT5JMCSyJGL3YyYmV0YTMve3Jlc291cmNlPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovcXVldWVzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoB",
+            "KtpBFHJlc291cmNlLHBlcm1pc3Npb25zErIBCglMaXN0VGFza3MSLC5nb29n",
+            "bGUuY2xvdWQudGFza3MudjJiZXRhMy5MaXN0VGFza3NSZXF1ZXN0Gi0uZ29v",
+            "Z2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuTGlzdFRhc2tzUmVzcG9uc2UiSILT",
+            "5JMCORI3L3YyYmV0YTMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L3F1ZXVlcy8qfS90YXNrc9pBBnBhcmVudBKfAQoHR2V0VGFzaxIqLmdvb2ds",
+            "ZS5jbG91ZC50YXNrcy52MmJldGEzLkdldFRhc2tSZXF1ZXN0GiAuZ29vZ2xl",
+            "LmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFzayJGgtPkkwI5EjcvdjJiZXRhMy97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8qL3Rhc2tzLyp9",
+            "2kEEbmFtZRKvAQoKQ3JlYXRlVGFzaxItLmdvb2dsZS5jbG91ZC50YXNrcy52",
+            "MmJldGEzLkNyZWF0ZVRhc2tSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLnRhc2tz",
+            "LnYyYmV0YTMuVGFzayJQgtPkkwI8IjcvdjJiZXRhMy97cGFyZW50PXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovcXVldWVzLyp9L3Rhc2tzOgEq2kELcGFyZW50",
+            "LHRhc2sSmwEKCkRlbGV0ZVRhc2sSLS5nb29nbGUuY2xvdWQudGFza3MudjJi",
+            "ZXRhMy5EZWxldGVUYXNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eSJGgtPkkwI5KjcvdjJiZXRhMy97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL3F1ZXVlcy8qL3Rhc2tzLyp92kEEbmFtZRKmAQoHUnVuVGFzaxIqLmdv",
+            "b2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlJ1blRhc2tSZXF1ZXN0GiAuZ29v",
+            "Z2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFzayJNgtPkkwJAIjsvdjJiZXRh",
+            "My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8qL3Rhc2tz",
+            "Lyp9OnJ1bjoBKtpBBG5hbWUS1AEKCkJ1ZmZlclRhc2sSLS5nb29nbGUuY2xv",
+            "dWQudGFza3MudjJiZXRhMy5CdWZmZXJUYXNrUmVxdWVzdBouLmdvb2dsZS5j",
+            "bG91ZC50YXNrcy52MmJldGEzLkJ1ZmZlclRhc2tSZXNwb25zZSJngtPkkwJM",
+            "IkcvdjJiZXRhMy97cXVldWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9xdWV1",
+            "ZXMvKn0vdGFza3Mve3Rhc2tfaWR9OmJ1ZmZlcjoBKtpBEnF1ZXVlLHRhc2tf",
+            "aWQsYm9keRpNykEZY2xvdWR0YXNrcy5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CgAEK",
+            "HmNvbS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhM0IPQ2xvdWRUYXNrc1By",
+            "b3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vY2xvdWR0YXNrcy9hcGl2MmJl",
+            "dGEzL2Nsb3VkdGFza3NwYjtjbG91ZHRhc2tzcGKiAgVUQVNLU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.QueueReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TaskReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.QueueReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TaskReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest), global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "ReadMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse), global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse.Parser, new[]{ "Queues", "NextPageToken" }, null, null, null, null),
@@ -156,7 +166,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest), global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest.Parser, new[]{ "Name", "ResponseView" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest), global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest.Parser, new[]{ "Parent", "Task", "ResponseView" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest), global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest), global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest.Parser, new[]{ "Name", "ResponseView" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest), global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest.Parser, new[]{ "Name", "ResponseView" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.BufferTaskRequest), global::Google.Cloud.Tasks.V2Beta3.BufferTaskRequest.Parser, new[]{ "Queue", "TaskId", "Body" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.BufferTaskResponse), global::Google.Cloud.Tasks.V2Beta3.BufferTaskResponse.Parser, new[]{ "Task" }, null, null, null, null)
           }));
     }
     #endregion
@@ -164,7 +176,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [ListQueues][google.cloud.tasks.v2beta3.CloudTasks.ListQueues].
+  /// Request message for
+  /// [ListQueues][google.cloud.tasks.v2beta3.CloudTasks.ListQueues].
   /// </summary>
   public sealed partial class ListQueuesRequest : pb::IMessage<ListQueuesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -234,11 +247,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// `filter` can be used to specify a subset of queues. Any [Queue][google.cloud.tasks.v2beta3.Queue]
-    /// field can be used as a filter and several operators as supported.
-    /// For example: `&lt;=, &lt;, >=, >, !=, =, :`. The filter syntax is the same as
-    /// described in
-    /// [Stackdriver's Advanced Logs
+    /// `filter` can be used to specify a subset of queues. Any
+    /// [Queue][google.cloud.tasks.v2beta3.Queue] field can be used as a filter and
+    /// several operators as supported. For example: `&lt;=, &lt;, >=, >, !=, =, :`. The
+    /// filter syntax is the same as described in [Stackdriver's Advanced Logs
     /// Filters](https://cloud.google.com/logging/docs/view/advanced_filters).
     ///
     /// Sample filter "state: PAUSED".
@@ -264,8 +276,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// The maximum page size is 9800. If unspecified, the page size will
     /// be the maximum. Fewer queues than requested might be returned,
     /// even if more queues exist; use the
-    /// [next_page_token][google.cloud.tasks.v2beta3.ListQueuesResponse.next_page_token] in the
-    /// response to determine if more queues exist.
+    /// [next_page_token][google.cloud.tasks.v2beta3.ListQueuesResponse.next_page_token]
+    /// in the response to determine if more queues exist.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -284,10 +296,12 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     ///
     /// To request the first page results, page_token must be empty. To
     /// request the next page of results, page_token must be the value of
-    /// [next_page_token][google.cloud.tasks.v2beta3.ListQueuesResponse.next_page_token] returned
-    /// from the previous call to [ListQueues][google.cloud.tasks.v2beta3.CloudTasks.ListQueues]
-    /// method. It is an error to switch the value of the
-    /// [filter][google.cloud.tasks.v2beta3.ListQueuesRequest.filter] while iterating through pages.
+    /// [next_page_token][google.cloud.tasks.v2beta3.ListQueuesResponse.next_page_token]
+    /// returned from the previous call to
+    /// [ListQueues][google.cloud.tasks.v2beta3.CloudTasks.ListQueues] method. It
+    /// is an error to switch the value of the
+    /// [filter][google.cloud.tasks.v2beta3.ListQueuesRequest.filter] while
+    /// iterating through pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -302,8 +316,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int ReadMaskFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.FieldMask readMask_;
     /// <summary>
-    /// Optional. Read mask is used for a more granular control over what the API returns.
-    /// If the mask is not present all fields will be returned except
+    /// Optional. Read mask is used for a more granular control over what the API
+    /// returns. If the mask is not present all fields will be returned except
     /// [Queue.stats]. [Queue.stats] will be returned only if it was  explicitly
     /// specified in the mask.
     /// </summary>
@@ -555,7 +569,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
-  /// Response message for [ListQueues][google.cloud.tasks.v2beta3.CloudTasks.ListQueues].
+  /// Response message for
+  /// [ListQueues][google.cloud.tasks.v2beta3.CloudTasks.ListQueues].
   /// </summary>
   public sealed partial class ListQueuesResponse : pb::IMessage<ListQueuesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -623,7 +638,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// A token to retrieve next page of results.
     ///
     /// To return the next page of results, call
-    /// [ListQueues][google.cloud.tasks.v2beta3.CloudTasks.ListQueues] with this value as the
+    /// [ListQueues][google.cloud.tasks.v2beta3.CloudTasks.ListQueues] with this
+    /// value as the
     /// [page_token][google.cloud.tasks.v2beta3.ListQueuesRequest.page_token].
     ///
     /// If the next_page_token is empty, there are no more results.
@@ -787,7 +803,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
-  /// Request message for [GetQueue][google.cloud.tasks.v2beta3.CloudTasks.GetQueue].
+  /// Request message for
+  /// [GetQueue][google.cloud.tasks.v2beta3.CloudTasks.GetQueue].
   /// </summary>
   public sealed partial class GetQueueRequest : pb::IMessage<GetQueueRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -854,8 +871,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int ReadMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask readMask_;
     /// <summary>
-    /// Optional. Read mask is used for a more granular control over what the API returns.
-    /// If the mask is not present all fields will be returned except
+    /// Optional. Read mask is used for a more granular control over what the API
+    /// returns. If the mask is not present all fields will be returned except
     /// [Queue.stats]. [Queue.stats] will be returned only if it was  explicitly
     /// specified in the mask.
     /// </summary>
@@ -1035,7 +1052,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
-  /// Request message for [CreateQueue][google.cloud.tasks.v2beta3.CloudTasks.CreateQueue].
+  /// Request message for
+  /// [CreateQueue][google.cloud.tasks.v2beta3.CloudTasks.CreateQueue].
   /// </summary>
   public sealed partial class CreateQueueRequest : pb::IMessage<CreateQueueRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1108,7 +1126,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>
     /// Required. The queue to create.
     ///
-    /// [Queue's name][google.cloud.tasks.v2beta3.Queue.name] cannot be the same as an existing queue.
+    /// [Queue's name][google.cloud.tasks.v2beta3.Queue.name] cannot be the same as
+    /// an existing queue.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1286,7 +1305,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
-  /// Request message for [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue].
+  /// Request message for
+  /// [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue].
   /// </summary>
   public sealed partial class UpdateQueueRequest : pb::IMessage<UpdateQueueRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1339,11 +1359,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>
     /// Required. The queue to create or update.
     ///
-    /// The queue's [name][google.cloud.tasks.v2beta3.Queue.name] must be specified.
+    /// The queue's [name][google.cloud.tasks.v2beta3.Queue.name] must be
+    /// specified.
     ///
     /// Output only fields cannot be modified using UpdateQueue.
     /// Any value specified for an output only field will be ignored.
-    /// The queue's [name][google.cloud.tasks.v2beta3.Queue.name] cannot be changed.
+    /// The queue's [name][google.cloud.tasks.v2beta3.Queue.name] cannot be
+    /// changed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1547,7 +1569,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
-  /// Request message for [DeleteQueue][google.cloud.tasks.v2beta3.CloudTasks.DeleteQueue].
+  /// Request message for
+  /// [DeleteQueue][google.cloud.tasks.v2beta3.CloudTasks.DeleteQueue].
   /// </summary>
   public sealed partial class DeleteQueueRequest : pb::IMessage<DeleteQueueRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1743,7 +1766,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
-  /// Request message for [PurgeQueue][google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue].
+  /// Request message for
+  /// [PurgeQueue][google.cloud.tasks.v2beta3.CloudTasks.PurgeQueue].
   /// </summary>
   public sealed partial class PurgeQueueRequest : pb::IMessage<PurgeQueueRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1939,7 +1963,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
-  /// Request message for [PauseQueue][google.cloud.tasks.v2beta3.CloudTasks.PauseQueue].
+  /// Request message for
+  /// [PauseQueue][google.cloud.tasks.v2beta3.CloudTasks.PauseQueue].
   /// </summary>
   public sealed partial class PauseQueueRequest : pb::IMessage<PauseQueueRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2135,7 +2160,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
-  /// Request message for [ResumeQueue][google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue].
+  /// Request message for
+  /// [ResumeQueue][google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue].
   /// </summary>
   public sealed partial class ResumeQueueRequest : pb::IMessage<ResumeQueueRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2331,7 +2357,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
-  /// Request message for listing tasks using [ListTasks][google.cloud.tasks.v2beta3.CloudTasks.ListTasks].
+  /// Request message for listing tasks using
+  /// [ListTasks][google.cloud.tasks.v2beta3.CloudTasks.ListTasks].
   /// </summary>
   public sealed partial class ListTasksRequest : pb::IMessage<ListTasksRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2400,18 +2427,19 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int ResponseViewFieldNumber = 2;
     private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View responseView_ = global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified;
     /// <summary>
-    /// The response_view specifies which subset of the [Task][google.cloud.tasks.v2beta3.Task] will be
-    /// returned.
+    /// The response_view specifies which subset of the
+    /// [Task][google.cloud.tasks.v2beta3.Task] will be returned.
     ///
-    /// By default response_view is [BASIC][google.cloud.tasks.v2beta3.Task.View.BASIC]; not all
-    /// information is retrieved by default because some data, such as
-    /// payloads, might be desirable to return only when needed because
-    /// of its large size or because of the sensitivity of data that it
-    /// contains.
+    /// By default response_view is
+    /// [BASIC][google.cloud.tasks.v2beta3.Task.View.BASIC]; not all information is
+    /// retrieved by default because some data, such as payloads, might be
+    /// desirable to return only when needed because of its large size or because
+    /// of the sensitivity of data that it contains.
     ///
-    /// Authorization for [FULL][google.cloud.tasks.v2beta3.Task.View.FULL] requires
-    /// `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/)
-    /// permission on the [Task][google.cloud.tasks.v2beta3.Task] resource.
+    /// Authorization for [FULL][google.cloud.tasks.v2beta3.Task.View.FULL]
+    /// requires `cloudtasks.tasks.fullView` [Google
+    /// IAM](https://cloud.google.com/iam/) permission on the
+    /// [Task][google.cloud.tasks.v2beta3.Task] resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2429,8 +2457,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// Maximum page size.
     ///
     /// Fewer tasks than requested might be returned, even if more tasks exist; use
-    /// [next_page_token][google.cloud.tasks.v2beta3.ListTasksResponse.next_page_token] in the response to
-    /// determine if more tasks exist.
+    /// [next_page_token][google.cloud.tasks.v2beta3.ListTasksResponse.next_page_token]
+    /// in the response to determine if more tasks exist.
     ///
     /// The maximum page size is 1000. If unspecified, the page size will be the
     /// maximum.
@@ -2452,9 +2480,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     ///
     /// To request the first page results, page_token must be empty. To
     /// request the next page of results, page_token must be the value of
-    /// [next_page_token][google.cloud.tasks.v2beta3.ListTasksResponse.next_page_token] returned
-    /// from the previous call to [ListTasks][google.cloud.tasks.v2beta3.CloudTasks.ListTasks]
-    /// method.
+    /// [next_page_token][google.cloud.tasks.v2beta3.ListTasksResponse.next_page_token]
+    /// returned from the previous call to
+    /// [ListTasks][google.cloud.tasks.v2beta3.CloudTasks.ListTasks] method.
     ///
     /// The page token is valid for only 2 hours.
     /// </summary>
@@ -2673,7 +2701,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
-  /// Response message for listing tasks using [ListTasks][google.cloud.tasks.v2beta3.CloudTasks.ListTasks].
+  /// Response message for listing tasks using
+  /// [ListTasks][google.cloud.tasks.v2beta3.CloudTasks.ListTasks].
   /// </summary>
   public sealed partial class ListTasksResponse : pb::IMessage<ListTasksResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2741,7 +2770,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// A token to retrieve next page of results.
     ///
     /// To return the next page of results, call
-    /// [ListTasks][google.cloud.tasks.v2beta3.CloudTasks.ListTasks] with this value as the
+    /// [ListTasks][google.cloud.tasks.v2beta3.CloudTasks.ListTasks] with this
+    /// value as the
     /// [page_token][google.cloud.tasks.v2beta3.ListTasksRequest.page_token].
     ///
     /// If the next_page_token is empty, there are no more results.
@@ -2903,7 +2933,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
-  /// Request message for getting a task using [GetTask][google.cloud.tasks.v2beta3.CloudTasks.GetTask].
+  /// Request message for getting a task using
+  /// [GetTask][google.cloud.tasks.v2beta3.CloudTasks.GetTask].
   /// </summary>
   public sealed partial class GetTaskRequest : pb::IMessage<GetTaskRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2970,18 +3001,19 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int ResponseViewFieldNumber = 2;
     private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View responseView_ = global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified;
     /// <summary>
-    /// The response_view specifies which subset of the [Task][google.cloud.tasks.v2beta3.Task] will be
-    /// returned.
+    /// The response_view specifies which subset of the
+    /// [Task][google.cloud.tasks.v2beta3.Task] will be returned.
     ///
-    /// By default response_view is [BASIC][google.cloud.tasks.v2beta3.Task.View.BASIC]; not all
-    /// information is retrieved by default because some data, such as
-    /// payloads, might be desirable to return only when needed because
-    /// of its large size or because of the sensitivity of data that it
-    /// contains.
+    /// By default response_view is
+    /// [BASIC][google.cloud.tasks.v2beta3.Task.View.BASIC]; not all information is
+    /// retrieved by default because some data, such as payloads, might be
+    /// desirable to return only when needed because of its large size or because
+    /// of the sensitivity of data that it contains.
     ///
-    /// Authorization for [FULL][google.cloud.tasks.v2beta3.Task.View.FULL] requires
-    /// `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/)
-    /// permission on the [Task][google.cloud.tasks.v2beta3.Task] resource.
+    /// Authorization for [FULL][google.cloud.tasks.v2beta3.Task.View.FULL]
+    /// requires `cloudtasks.tasks.fullView` [Google
+    /// IAM](https://cloud.google.com/iam/) permission on the
+    /// [Task][google.cloud.tasks.v2beta3.Task] resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3150,7 +3182,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
-  /// Request message for [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask].
+  /// Request message for
+  /// [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask].
   /// </summary>
   public sealed partial class CreateTaskRequest : pb::IMessage<CreateTaskRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3224,13 +3257,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     ///
     /// Task names have the following format:
     /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`.
-    /// The user can optionally specify a task [name][google.cloud.tasks.v2beta3.Task.name]. If a
-    /// name is not specified then the system will generate a random
-    /// unique task id, which will be set in the task returned in the
-    /// [response][google.cloud.tasks.v2beta3.Task.name].
+    /// The user can optionally specify a task
+    /// [name][google.cloud.tasks.v2beta3.Task.name]. If a name is not specified
+    /// then the system will generate a random unique task id, which will be set in
+    /// the task returned in the [response][google.cloud.tasks.v2beta3.Task.name].
     ///
-    /// If [schedule_time][google.cloud.tasks.v2beta3.Task.schedule_time] is not set or is in the
-    /// past then Cloud Tasks will set it to the current time.
+    /// If [schedule_time][google.cloud.tasks.v2beta3.Task.schedule_time] is not
+    /// set or is in the past then Cloud Tasks will set it to the current time.
     ///
     /// Task De-duplication:
     ///
@@ -3239,16 +3272,16 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// that was deleted or executed recently then the call will fail
     /// with [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS].
     /// If the task's queue was created using Cloud Tasks, then another task with
-    /// the same name can't be created for ~1hour after the original task was
+    /// the same name can't be created for ~1 hour after the original task was
     /// deleted or executed. If the task's queue was created using queue.yaml or
     /// queue.xml, then another task with the same name can't be created
-    /// for ~9days after the original task was deleted or executed.
+    /// for ~9 days after the original task was deleted or executed.
     ///
     /// Because there is an extra lookup cost to identify duplicate task
-    /// names, these [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask] calls have significantly
-    /// increased latency. Using hashed strings for the task id or for
-    /// the prefix of the task id is recommended. Choosing task ids that
-    /// are sequential or have sequential prefixes, for example using a
+    /// names, these [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask]
+    /// calls have significantly increased latency. Using hashed strings for the
+    /// task id or for the prefix of the task id is recommended. Choosing task ids
+    /// that are sequential or have sequential prefixes, for example using a
     /// timestamp, causes an increase in latency and error rates in all
     /// task commands. The infrastructure relies on an approximately
     /// uniform distribution of task ids to store and serve tasks
@@ -3267,18 +3300,19 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int ResponseViewFieldNumber = 3;
     private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View responseView_ = global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified;
     /// <summary>
-    /// The response_view specifies which subset of the [Task][google.cloud.tasks.v2beta3.Task] will be
-    /// returned.
+    /// The response_view specifies which subset of the
+    /// [Task][google.cloud.tasks.v2beta3.Task] will be returned.
     ///
-    /// By default response_view is [BASIC][google.cloud.tasks.v2beta3.Task.View.BASIC]; not all
-    /// information is retrieved by default because some data, such as
-    /// payloads, might be desirable to return only when needed because
-    /// of its large size or because of the sensitivity of data that it
-    /// contains.
+    /// By default response_view is
+    /// [BASIC][google.cloud.tasks.v2beta3.Task.View.BASIC]; not all information is
+    /// retrieved by default because some data, such as payloads, might be
+    /// desirable to return only when needed because of its large size or because
+    /// of the sensitivity of data that it contains.
     ///
-    /// Authorization for [FULL][google.cloud.tasks.v2beta3.Task.View.FULL] requires
-    /// `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/)
-    /// permission on the [Task][google.cloud.tasks.v2beta3.Task] resource.
+    /// Authorization for [FULL][google.cloud.tasks.v2beta3.Task.View.FULL]
+    /// requires `cloudtasks.tasks.fullView` [Google
+    /// IAM](https://cloud.google.com/iam/) permission on the
+    /// [Task][google.cloud.tasks.v2beta3.Task] resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3745,18 +3779,19 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int ResponseViewFieldNumber = 2;
     private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View responseView_ = global::Google.Cloud.Tasks.V2Beta3.Task.Types.View.Unspecified;
     /// <summary>
-    /// The response_view specifies which subset of the [Task][google.cloud.tasks.v2beta3.Task] will be
-    /// returned.
+    /// The response_view specifies which subset of the
+    /// [Task][google.cloud.tasks.v2beta3.Task] will be returned.
     ///
-    /// By default response_view is [BASIC][google.cloud.tasks.v2beta3.Task.View.BASIC]; not all
-    /// information is retrieved by default because some data, such as
-    /// payloads, might be desirable to return only when needed because
-    /// of its large size or because of the sensitivity of data that it
-    /// contains.
+    /// By default response_view is
+    /// [BASIC][google.cloud.tasks.v2beta3.Task.View.BASIC]; not all information is
+    /// retrieved by default because some data, such as payloads, might be
+    /// desirable to return only when needed because of its large size or because
+    /// of the sensitivity of data that it contains.
     ///
-    /// Authorization for [FULL][google.cloud.tasks.v2beta3.Task.View.FULL] requires
-    /// `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/)
-    /// permission on the [Task][google.cloud.tasks.v2beta3.Task] resource.
+    /// Authorization for [FULL][google.cloud.tasks.v2beta3.Task.View.FULL]
+    /// requires `cloudtasks.tasks.fullView` [Google
+    /// IAM](https://cloud.google.com/iam/) permission on the
+    /// [Task][google.cloud.tasks.v2beta3.Task] resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3915,6 +3950,503 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           }
           case 16: {
             ResponseView = (global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [BufferTask][google.cloud.tasks.v2beta3.CloudTasks.BufferTask].
+  /// </summary>
+  public sealed partial class BufferTaskRequest : pb::IMessage<BufferTaskRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BufferTaskRequest> _parser = new pb::MessageParser<BufferTaskRequest>(() => new BufferTaskRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BufferTaskRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2Beta3.CloudtasksReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BufferTaskRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BufferTaskRequest(BufferTaskRequest other) : this() {
+      queue_ = other.queue_;
+      taskId_ = other.taskId_;
+      body_ = other.body_ != null ? other.body_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BufferTaskRequest Clone() {
+      return new BufferTaskRequest(this);
+    }
+
+    /// <summary>Field number for the "queue" field.</summary>
+    public const int QueueFieldNumber = 1;
+    private string queue_ = "";
+    /// <summary>
+    /// Required. The parent queue name. For example:
+    /// projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+    ///
+    /// The queue must already exist.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Queue {
+      get { return queue_; }
+      set {
+        queue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "task_id" field.</summary>
+    public const int TaskIdFieldNumber = 2;
+    private string taskId_ = "";
+    /// <summary>
+    /// Optional. Task ID for the task being created. If not provided, a random
+    /// task ID is assigned to the task.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TaskId {
+      get { return taskId_; }
+      set {
+        taskId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "body" field.</summary>
+    public const int BodyFieldNumber = 3;
+    private global::Google.Api.HttpBody body_;
+    /// <summary>
+    /// Optional. Body of the HTTP request.
+    ///
+    /// The body can take any generic value. The value is written to the
+    /// [HttpRequest][payload] of the [Task].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Api.HttpBody Body {
+      get { return body_; }
+      set {
+        body_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BufferTaskRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BufferTaskRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Queue != other.Queue) return false;
+      if (TaskId != other.TaskId) return false;
+      if (!object.Equals(Body, other.Body)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Queue.Length != 0) hash ^= Queue.GetHashCode();
+      if (TaskId.Length != 0) hash ^= TaskId.GetHashCode();
+      if (body_ != null) hash ^= Body.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Queue.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Queue);
+      }
+      if (TaskId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TaskId);
+      }
+      if (body_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Body);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Queue.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Queue);
+      }
+      if (TaskId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TaskId);
+      }
+      if (body_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Body);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Queue.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Queue);
+      }
+      if (TaskId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TaskId);
+      }
+      if (body_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Body);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BufferTaskRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Queue.Length != 0) {
+        Queue = other.Queue;
+      }
+      if (other.TaskId.Length != 0) {
+        TaskId = other.TaskId;
+      }
+      if (other.body_ != null) {
+        if (body_ == null) {
+          Body = new global::Google.Api.HttpBody();
+        }
+        Body.MergeFrom(other.Body);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Queue = input.ReadString();
+            break;
+          }
+          case 18: {
+            TaskId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (body_ == null) {
+              Body = new global::Google.Api.HttpBody();
+            }
+            input.ReadMessage(Body);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Queue = input.ReadString();
+            break;
+          }
+          case 18: {
+            TaskId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (body_ == null) {
+              Body = new global::Google.Api.HttpBody();
+            }
+            input.ReadMessage(Body);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for
+  /// [BufferTask][google.cloud.tasks.v2beta3.CloudTasks.BufferTask].
+  /// </summary>
+  public sealed partial class BufferTaskResponse : pb::IMessage<BufferTaskResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BufferTaskResponse> _parser = new pb::MessageParser<BufferTaskResponse>(() => new BufferTaskResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BufferTaskResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2Beta3.CloudtasksReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BufferTaskResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BufferTaskResponse(BufferTaskResponse other) : this() {
+      task_ = other.task_ != null ? other.task_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BufferTaskResponse Clone() {
+      return new BufferTaskResponse(this);
+    }
+
+    /// <summary>Field number for the "task" field.</summary>
+    public const int TaskFieldNumber = 1;
+    private global::Google.Cloud.Tasks.V2Beta3.Task task_;
+    /// <summary>
+    /// The created task.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Tasks.V2Beta3.Task Task {
+      get { return task_; }
+      set {
+        task_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BufferTaskResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BufferTaskResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Task, other.Task)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (task_ != null) hash ^= Task.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (task_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Task);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (task_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Task);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (task_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Task);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BufferTaskResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.task_ != null) {
+        if (task_ == null) {
+          Task = new global::Google.Cloud.Tasks.V2Beta3.Task();
+        }
+        Task.MergeFrom(other.Task);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (task_ == null) {
+              Task = new global::Google.Cloud.Tasks.V2Beta3.Task();
+            }
+            input.ReadMessage(Task);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (task_ == null) {
+              Task = new global::Google.Cloud.Tasks.V2Beta3.Task();
+            }
+            input.ReadMessage(Task);
             break;
           }
         }

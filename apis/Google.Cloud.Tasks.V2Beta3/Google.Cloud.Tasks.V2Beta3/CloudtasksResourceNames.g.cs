@@ -159,4 +159,14 @@ namespace Google.Cloud.Tasks.V2Beta3
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class BufferTaskRequest
+    {
+        /// <summary><see cref="QueueName"/>-typed view over the <see cref="Queue"/> resource name property.</summary>
+        public QueueName QueueAsQueueName
+        {
+            get => string.IsNullOrEmpty(Queue) ? null : QueueName.Parse(Queue, allowUnparsed: true);
+            set => Queue = value?.ToString() ?? "";
+        }
+    }
 }
