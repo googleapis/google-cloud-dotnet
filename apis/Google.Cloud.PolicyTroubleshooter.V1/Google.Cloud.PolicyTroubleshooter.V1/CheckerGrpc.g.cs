@@ -3,7 +3,7 @@
 //     source: google/cloud/policytroubleshooter/v1/checker.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
 //
 #pragma warning disable 0414, 1591, 8981
 #region Designer generated code
@@ -90,8 +89,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
     public abstract partial class IamCheckerBase
     {
       /// <summary>
-      /// Checks whether a member has a specific permission for a specific resource,
-      /// and explains why the member does or does not have that permission.
+      /// Checks whether a principal has a specific permission for a specific
+      /// resource, and explains why the principal does or does not have that
+      /// permission.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -132,8 +132,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       }
 
       /// <summary>
-      /// Checks whether a member has a specific permission for a specific resource,
-      /// and explains why the member does or does not have that permission.
+      /// Checks whether a principal has a specific permission for a specific
+      /// resource, and explains why the principal does or does not have that
+      /// permission.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -146,8 +147,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
         return TroubleshootIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Checks whether a member has a specific permission for a specific resource,
-      /// and explains why the member does or does not have that permission.
+      /// Checks whether a principal has a specific permission for a specific
+      /// resource, and explains why the principal does or does not have that
+      /// permission.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -158,8 +160,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_TroubleshootIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Checks whether a member has a specific permission for a specific resource,
-      /// and explains why the member does or does not have that permission.
+      /// Checks whether a principal has a specific permission for a specific
+      /// resource, and explains why the principal does or does not have that
+      /// permission.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -172,8 +175,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
         return TroubleshootIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Checks whether a member has a specific permission for a specific resource,
-      /// and explains why the member does or does not have that permission.
+      /// Checks whether a principal has a specific permission for a specific
+      /// resource, and explains why the principal does or does not have that
+      /// permission.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

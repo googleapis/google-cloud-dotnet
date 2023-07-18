@@ -87,24 +87,24 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
   }
   #region Enums
   /// <summary>
-  /// Whether a member has a permission for a resource.
+  /// Whether a principal has a permission for a resource.
   /// </summary>
   public enum AccessState {
     /// <summary>
-    /// Reserved for future use.
+    /// Default value. This value is unused.
     /// </summary>
     [pbr::OriginalName("ACCESS_STATE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// The member has the permission.
+    /// The principal has the permission.
     /// </summary>
     [pbr::OriginalName("GRANTED")] Granted = 1,
     /// <summary>
-    /// The member does not have the permission.
+    /// The principal does not have the permission.
     /// </summary>
     [pbr::OriginalName("NOT_GRANTED")] NotGranted = 2,
     /// <summary>
-    /// The member has the permission only if a condition expression evaluates to
-    /// `true`.
+    /// The principal has the permission only if a condition expression evaluates
+    /// to `true`.
     /// </summary>
     [pbr::OriginalName("UNKNOWN_CONDITIONAL")] UnknownConditional = 3,
     /// <summary>
@@ -115,12 +115,13 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
   }
 
   /// <summary>
-  /// The extent to which a single data point contributes to an overall
+  /// The extent to which a single data point, such as the existence of a binding
+  /// or whether a binding includes a specific principal, contributes to an overall
   /// determination.
   /// </summary>
   public enum HeuristicRelevance {
     /// <summary>
-    /// Reserved for future use.
+    /// Default value. This value is unused.
     /// </summary>
     [pbr::OriginalName("HEURISTIC_RELEVANCE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
@@ -139,7 +140,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
 
   #region Messages
   /// <summary>
-  /// Information about the member, resource, and permission to check.
+  /// Information about the principal, resource, and permission to check.
   /// </summary>
   public sealed partial class AccessTuple : pb::IMessage<AccessTuple>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -191,13 +192,13 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
     public const int PrincipalFieldNumber = 1;
     private string principal_ = "";
     /// <summary>
-    /// Required. The member, or principal, whose access you want to check, in the form of
-    /// the email address that represents that member. For example,
+    /// Required. The principal whose access you want to check, in the form of
+    /// the email address that represents that principal. For example,
     /// `alice@example.com` or
     /// `my-service-account@my-project.iam.gserviceaccount.com`.
     ///
-    /// The member must be a Google Account or a service account. Other types of
-    /// members are not supported.
+    /// The principal must be a Google Account or a service account. Other types of
+    /// principals are not supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -231,7 +232,8 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
     public const int PermissionFieldNumber = 3;
     private string permission_ = "";
     /// <summary>
-    /// Required. The IAM permission to check for the specified member and resource.
+    /// Required. The IAM permission to check for the specified principal and
+    /// resource.
     ///
     /// For a complete list of IAM permissions, see
     /// https://cloud.google.com/iam/help/permissions/reference.
@@ -486,12 +488,12 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
     private global::Google.Cloud.PolicyTroubleshooter.V1.AccessState access_ = global::Google.Cloud.PolicyTroubleshooter.V1.AccessState.Unspecified;
     /// <summary>
     /// Indicates whether _this policy_ provides the specified permission to the
-    /// specified member for the specified resource.
+    /// specified principal for the specified resource.
     ///
-    /// This field does _not_ indicate whether the member actually has the
+    /// This field does _not_ indicate whether the principal actually has the
     /// permission for the resource. There might be another policy that overrides
-    /// this policy. To determine whether the member actually has the permission,
-    /// use the `access` field in the
+    /// this policy. To determine whether the principal actually has the
+    /// permission, use the `access` field in the
     /// [TroubleshootIamPolicyResponse][IamChecker.TroubleshootIamPolicyResponse].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -549,8 +551,8 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation> bindingExplanations_ = new pbc::RepeatedField<global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation>();
     /// <summary>
-    /// Details about how each binding in the policy affects the member's ability,
-    /// or inability, to use the permission for the resource.
+    /// Details about how each binding in the policy affects the principal's
+    /// ability, or inability, to use the permission for the resource.
     ///
     /// If the sender of the request does not have access to the policy, this field
     /// is omitted.
@@ -809,8 +811,8 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
   }
 
   /// <summary>
-  /// Details about how a binding in a policy affects a member's ability to use a
-  /// permission.
+  /// Details about how a binding in a policy affects a principal's ability to use
+  /// a permission.
   /// </summary>
   public sealed partial class BindingExplanation : pb::IMessage<BindingExplanation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -866,13 +868,13 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
     public const int AccessFieldNumber = 1;
     private global::Google.Cloud.PolicyTroubleshooter.V1.AccessState access_ = global::Google.Cloud.PolicyTroubleshooter.V1.AccessState.Unspecified;
     /// <summary>
-    /// Required. Indicates whether _this binding_ provides the specified permission to the
-    /// specified member for the specified resource.
+    /// Required. Indicates whether _this binding_ provides the specified
+    /// permission to the specified principal for the specified resource.
     ///
-    /// This field does _not_ indicate whether the member actually has the
+    /// This field does _not_ indicate whether the principal actually has the
     /// permission for the resource. There might be another binding that overrides
-    /// this binding. To determine whether the member actually has the permission,
-    /// use the `access` field in the
+    /// this binding. To determine whether the principal actually has the
+    /// permission, use the `access` field in the
     /// [TroubleshootIamPolicyResponse][IamChecker.TroubleshootIamPolicyResponse].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -941,24 +943,24 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
         = new pbc::MapField<string, global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation.Types.AnnotatedMembership>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation.Types.AnnotatedMembership.Parser), 42);
     private readonly pbc::MapField<string, global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation.Types.AnnotatedMembership> memberships_ = new pbc::MapField<string, global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation.Types.AnnotatedMembership>();
     /// <summary>
-    /// Indicates whether each member in the binding includes the member specified
-    /// in the request, either directly or indirectly. Each key identifies a member
-    /// in the binding, and each value indicates whether the member in the binding
-    /// includes the member in the request.
+    /// Indicates whether each principal in the binding includes the principal
+    /// specified in the request, either directly or indirectly. Each key
+    /// identifies a principal in the binding, and each value indicates whether the
+    /// principal in the binding includes the principal in the request.
     ///
-    /// For example, suppose that a binding includes the following members:
+    /// For example, suppose that a binding includes the following principals:
     ///
     /// * `user:alice@example.com`
     /// * `group:product-eng@example.com`
     ///
     /// You want to troubleshoot access for `user:bob@example.com`. This user is a
-    /// member of the group `group:product-eng@example.com`.
+    /// principal of the group `group:product-eng@example.com`.
     ///
-    /// For the first member in the binding, the key is `user:alice@example.com`,
-    /// and the `membership` field in the value is set to
+    /// For the first principal in the binding, the key is
+    /// `user:alice@example.com`, and the `membership` field in the value is set to
     /// `MEMBERSHIP_NOT_INCLUDED`.
     ///
-    /// For the second member in the binding, the key is
+    /// For the second principal in the binding, the key is
     /// `group:product-eng@example.com`, and the `membership` field in the value is
     /// set to `MEMBERSHIP_INCLUDED`.
     /// </summary>
@@ -988,11 +990,11 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
     public const int ConditionFieldNumber = 7;
     private global::Google.Type.Expr condition_;
     /// <summary>
-    /// A condition expression that prevents access unless the expression evaluates
-    /// to `true`.
+    /// A condition expression that prevents this binding from granting access
+    /// unless the expression evaluates to `true`.
     ///
     /// To learn about IAM Conditions, see
-    /// http://cloud.google.com/iam/help/conditions/overview.
+    /// https://cloud.google.com/iam/help/conditions/overview.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1287,7 +1289,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       /// </summary>
       public enum RolePermission {
         /// <summary>
-        /// Reserved for future use.
+        /// Default value. This value is unused.
         /// </summary>
         [pbr::OriginalName("ROLE_PERMISSION_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -1305,24 +1307,25 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       }
 
       /// <summary>
-      /// Whether the binding includes the member.
+      /// Whether the binding includes the principal.
       /// </summary>
       public enum Membership {
         /// <summary>
-        /// Reserved for future use.
+        /// Default value. This value is unused.
         /// </summary>
         [pbr::OriginalName("MEMBERSHIP_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// The binding includes the member. The member can be included directly
-        /// or indirectly. For example:
+        /// The binding includes the principal. The principal can be included
+        /// directly or indirectly. For example:
         ///
-        /// * A member is included directly if that member is listed in the binding.
-        /// * A member is included indirectly if that member is in a Google group or
-        ///   G Suite domain that is listed in the binding.
+        /// * A principal is included directly if that principal is listed in the
+        ///   binding.
+        /// * A principal is included indirectly if that principal is in a Google
+        ///   group or Google Workspace domain that is listed in the binding.
         /// </summary>
         [pbr::OriginalName("MEMBERSHIP_INCLUDED")] Included = 1,
         /// <summary>
-        /// The binding does not include the member.
+        /// The binding does not include the principal.
         /// </summary>
         [pbr::OriginalName("MEMBERSHIP_NOT_INCLUDED")] NotIncluded = 2,
         /// <summary>
@@ -1330,14 +1333,14 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
         /// </summary>
         [pbr::OriginalName("MEMBERSHIP_UNKNOWN_INFO_DENIED")] UnknownInfoDenied = 3,
         /// <summary>
-        /// The member is an unsupported type. Only Google Accounts and service
+        /// The principal is an unsupported type. Only Google Accounts and service
         /// accounts are supported.
         /// </summary>
         [pbr::OriginalName("MEMBERSHIP_UNKNOWN_UNSUPPORTED")] UnknownUnsupported = 4,
       }
 
       /// <summary>
-      /// Details about whether the binding includes the member.
+      /// Details about whether the binding includes the principal.
       /// </summary>
       public sealed partial class AnnotatedMembership : pb::IMessage<AnnotatedMembership>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1388,7 +1391,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
         public const int MembershipFieldNumber = 1;
         private global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation.Types.Membership membership_ = global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation.Types.Membership.Unspecified;
         /// <summary>
-        /// Indicates whether the binding includes the member.
+        /// Indicates whether the binding includes the principal.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1403,8 +1406,8 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
         public const int RelevanceFieldNumber = 2;
         private global::Google.Cloud.PolicyTroubleshooter.V1.HeuristicRelevance relevance_ = global::Google.Cloud.PolicyTroubleshooter.V1.HeuristicRelevance.Unspecified;
         /// <summary>
-        /// The relevance of the member's status to the overall determination for the
-        /// binding.
+        /// The relevance of the principal's status to the overall determination for
+        /// the binding.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
