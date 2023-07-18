@@ -28,32 +28,33 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
             "ci5wcm90bxIkZ29vZ2xlLmNsb3VkLnBvbGljeXRyb3VibGVzaG9vdGVyLnYx",
             "Gjdnb29nbGUvY2xvdWQvcG9saWN5dHJvdWJsZXNob290ZXIvdjEvZXhwbGFu",
             "YXRpb25zLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdn",
-            "b29nbGUvYXBpL2NsaWVudC5wcm90byJnChxUcm91Ymxlc2hvb3RJYW1Qb2xp",
-            "Y3lSZXF1ZXN0EkcKDGFjY2Vzc190dXBsZRgBIAEoCzIxLmdvb2dsZS5jbG91",
-            "ZC5wb2xpY3l0cm91Ymxlc2hvb3Rlci52MS5BY2Nlc3NUdXBsZSK1AQodVHJv",
-            "dWJsZXNob290SWFtUG9saWN5UmVzcG9uc2USQQoGYWNjZXNzGAEgASgOMjEu",
-            "Z29vZ2xlLmNsb3VkLnBvbGljeXRyb3VibGVzaG9vdGVyLnYxLkFjY2Vzc1N0",
-            "YXRlElEKEmV4cGxhaW5lZF9wb2xpY2llcxgCIAMoCzI1Lmdvb2dsZS5jbG91",
-            "ZC5wb2xpY3l0cm91Ymxlc2hvb3Rlci52MS5FeHBsYWluZWRQb2xpY3kyqQIK",
-            "CklhbUNoZWNrZXISwQEKFVRyb3VibGVzaG9vdElhbVBvbGljeRJCLmdvb2ds",
-            "ZS5jbG91ZC5wb2xpY3l0cm91Ymxlc2hvb3Rlci52MS5Ucm91Ymxlc2hvb3RJ",
-            "YW1Qb2xpY3lSZXF1ZXN0GkMuZ29vZ2xlLmNsb3VkLnBvbGljeXRyb3VibGVz",
-            "aG9vdGVyLnYxLlRyb3VibGVzaG9vdElhbVBvbGljeVJlc3BvbnNlIh+C0+ST",
-            "AhkiFC92MS9pYW06dHJvdWJsZXNob290OgEqGlfKQSNwb2xpY3l0cm91Ymxl",
-            "c2hvb3Rlci5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ClgIKKGNvbS5nb29nbGUuY2xv",
-            "dWQucG9saWN5dHJvdWJsZXNob290ZXIudjFCD0lBTUNoZWNrZXJQcm90b1AB",
-            "WlxjbG91ZC5nb29nbGUuY29tL2dvL3BvbGljeXRyb3VibGVzaG9vdGVyL2Fw",
-            "aXYxL3BvbGljeXRyb3VibGVzaG9vdGVycGI7cG9saWN5dHJvdWJsZXNob290",
-            "ZXJwYvgBAaoCJEdvb2dsZS5DbG91ZC5Qb2xpY3lUcm91Ymxlc2hvb3Rlci5W",
-            "McoCJEdvb2dsZVxDbG91ZFxQb2xpY3lUcm91Ymxlc2hvb3RlclxWMeoCJ0dv",
-            "b2dsZTo6Q2xvdWQ6OlBvbGljeVRyb3VibGVzaG9vdGVyOjpWMVAAYgZwcm90",
-            "bzM="));
+            "b29nbGUvYXBpL2NsaWVudC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJv",
+            "dG8iZwocVHJvdWJsZXNob290SWFtUG9saWN5UmVxdWVzdBJHCgxhY2Nlc3Nf",
+            "dHVwbGUYASABKAsyMS5nb29nbGUuY2xvdWQucG9saWN5dHJvdWJsZXNob290",
+            "ZXIudjEuQWNjZXNzVHVwbGUi2QEKHVRyb3VibGVzaG9vdElhbVBvbGljeVJl",
+            "c3BvbnNlEkEKBmFjY2VzcxgBIAEoDjIxLmdvb2dsZS5jbG91ZC5wb2xpY3l0",
+            "cm91Ymxlc2hvb3Rlci52MS5BY2Nlc3NTdGF0ZRJRChJleHBsYWluZWRfcG9s",
+            "aWNpZXMYAiADKAsyNS5nb29nbGUuY2xvdWQucG9saWN5dHJvdWJsZXNob290",
+            "ZXIudjEuRXhwbGFpbmVkUG9saWN5EiIKBmVycm9ycxgDIAMoCzISLmdvb2ds",
+            "ZS5ycGMuU3RhdHVzMqkCCgpJYW1DaGVja2VyEsEBChVUcm91Ymxlc2hvb3RJ",
+            "YW1Qb2xpY3kSQi5nb29nbGUuY2xvdWQucG9saWN5dHJvdWJsZXNob290ZXIu",
+            "djEuVHJvdWJsZXNob290SWFtUG9saWN5UmVxdWVzdBpDLmdvb2dsZS5jbG91",
+            "ZC5wb2xpY3l0cm91Ymxlc2hvb3Rlci52MS5Ucm91Ymxlc2hvb3RJYW1Qb2xp",
+            "Y3lSZXNwb25zZSIfgtPkkwIZIhQvdjEvaWFtOnRyb3VibGVzaG9vdDoBKhpX",
+            "ykEjcG9saWN5dHJvdWJsZXNob290ZXIuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQpYC",
+            "Cihjb20uZ29vZ2xlLmNsb3VkLnBvbGljeXRyb3VibGVzaG9vdGVyLnYxQg9J",
+            "QU1DaGVja2VyUHJvdG9QAVpcY2xvdWQuZ29vZ2xlLmNvbS9nby9wb2xpY3l0",
+            "cm91Ymxlc2hvb3Rlci9hcGl2MS9wb2xpY3l0cm91Ymxlc2hvb3RlcnBiO3Bv",
+            "bGljeXRyb3VibGVzaG9vdGVycGL4AQGqAiRHb29nbGUuQ2xvdWQuUG9saWN5",
+            "VHJvdWJsZXNob290ZXIuVjHKAiRHb29nbGVcQ2xvdWRcUG9saWN5VHJvdWJs",
+            "ZXNob290ZXJcVjHqAidHb29nbGU6OkNsb3VkOjpQb2xpY3lUcm91Ymxlc2hv",
+            "b3Rlcjo6VjFQAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.PolicyTroubleshooter.V1.ExplanationsReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.PolicyTroubleshooter.V1.ExplanationsReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest), global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest.Parser, new[]{ "AccessTuple" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse), global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse.Parser, new[]{ "Access", "ExplainedPolicies" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse), global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse.Parser, new[]{ "Access", "ExplainedPolicies", "Errors" }, null, null, null, null)
           }));
     }
     #endregion
@@ -61,7 +62,8 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request for [TroubleshootIamPolicy][google.cloud.policytroubleshooter.v1.IamChecker.TroubleshootIamPolicy].
+  /// Request for
+  /// [TroubleshootIamPolicy][google.cloud.policytroubleshooter.v1.IamChecker.TroubleshootIamPolicy].
   /// </summary>
   public sealed partial class TroubleshootIamPolicyRequest : pb::IMessage<TroubleshootIamPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -111,8 +113,8 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
     public const int AccessTupleFieldNumber = 1;
     private global::Google.Cloud.PolicyTroubleshooter.V1.AccessTuple accessTuple_;
     /// <summary>
-    /// The information to use for checking whether a member has a permission for a
-    /// resource.
+    /// The information to use for checking whether a principal has a permission
+    /// for a resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -266,7 +268,8 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
   }
 
   /// <summary>
-  /// Response for [TroubleshootIamPolicy][google.cloud.policytroubleshooter.v1.IamChecker.TroubleshootIamPolicy].
+  /// Response for
+  /// [TroubleshootIamPolicy][google.cloud.policytroubleshooter.v1.IamChecker.TroubleshootIamPolicy].
   /// </summary>
   public sealed partial class TroubleshootIamPolicyResponse : pb::IMessage<TroubleshootIamPolicyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -304,6 +307,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
     public TroubleshootIamPolicyResponse(TroubleshootIamPolicyResponse other) : this() {
       access_ = other.access_;
       explainedPolicies_ = other.explainedPolicies_.Clone();
+      errors_ = other.errors_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -317,8 +321,8 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
     public const int AccessFieldNumber = 1;
     private global::Google.Cloud.PolicyTroubleshooter.V1.AccessState access_ = global::Google.Cloud.PolicyTroubleshooter.V1.AccessState.Unspecified;
     /// <summary>
-    /// Indicates whether the member has the specified permission for the specified
-    /// resource, based on evaluating all of the applicable IAM policies.
+    /// Indicates whether the principal has the specified permission for the
+    /// specified resource, based on evaluating all of the applicable IAM policies.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -335,9 +339,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.PolicyTroubleshooter.V1.ExplainedPolicy.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.PolicyTroubleshooter.V1.ExplainedPolicy> explainedPolicies_ = new pbc::RepeatedField<global::Google.Cloud.PolicyTroubleshooter.V1.ExplainedPolicy>();
     /// <summary>
-    /// List of IAM policies that were evaluated to check the member's permissions,
-    /// with annotations to indicate how each policy contributed to the final
-    /// result.
+    /// List of IAM policies that were evaluated to check the principal's
+    /// permissions, with annotations to indicate how each policy contributed to
+    /// the final result.
     ///
     /// The list of policies can include the policy for the resource itself. It can
     /// also include policies that are inherited from higher levels of the resource
@@ -350,6 +354,20 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.PolicyTroubleshooter.V1.ExplainedPolicy> ExplainedPolicies {
       get { return explainedPolicies_; }
+    }
+
+    /// <summary>Field number for the "errors" field.</summary>
+    public const int ErrorsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Rpc.Status> _repeated_errors_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Rpc.Status.Parser);
+    private readonly pbc::RepeatedField<global::Google.Rpc.Status> errors_ = new pbc::RepeatedField<global::Google.Rpc.Status>();
+    /// <summary>
+    /// The general errors contained in the troubleshooting response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Rpc.Status> Errors {
+      get { return errors_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -369,6 +387,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       }
       if (Access != other.Access) return false;
       if(!explainedPolicies_.Equals(other.explainedPolicies_)) return false;
+      if(!errors_.Equals(other.errors_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -378,6 +397,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       int hash = 1;
       if (Access != global::Google.Cloud.PolicyTroubleshooter.V1.AccessState.Unspecified) hash ^= Access.GetHashCode();
       hash ^= explainedPolicies_.GetHashCode();
+      hash ^= errors_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -401,6 +421,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
         output.WriteEnum((int) Access);
       }
       explainedPolicies_.WriteTo(output, _repeated_explainedPolicies_codec);
+      errors_.WriteTo(output, _repeated_errors_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -416,6 +437,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
         output.WriteEnum((int) Access);
       }
       explainedPolicies_.WriteTo(ref output, _repeated_explainedPolicies_codec);
+      errors_.WriteTo(ref output, _repeated_errors_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -430,6 +452,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Access);
       }
       size += explainedPolicies_.CalculateSize(_repeated_explainedPolicies_codec);
+      size += errors_.CalculateSize(_repeated_errors_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -446,6 +469,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
         Access = other.Access;
       }
       explainedPolicies_.Add(other.explainedPolicies_);
+      errors_.Add(other.errors_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -469,6 +493,10 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
             explainedPolicies_.AddEntriesFrom(input, _repeated_explainedPolicies_codec);
             break;
           }
+          case 26: {
+            errors_.AddEntriesFrom(input, _repeated_errors_codec);
+            break;
+          }
         }
       }
     #endif
@@ -490,6 +518,10 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
           }
           case 18: {
             explainedPolicies_.AddEntriesFrom(ref input, _repeated_explainedPolicies_codec);
+            break;
+          }
+          case 26: {
+            errors_.AddEntriesFrom(ref input, _repeated_errors_codec);
             break;
           }
         }
