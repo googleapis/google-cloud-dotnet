@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ namespace Google.Cloud.Firestore
         /// <param name="targetType">The target type. The method tries to convert to this type. If the type is
         /// object, it uses the default representation of the value.</param>
         /// <returns>The deserialized value</returns>
-        internal static object Deserialize(DeserializationContext context, Value value, BclType targetType)
+        internal static object Deserialize(IDeserializationContext context, Value value, BclType targetType)
         {
             GaxPreconditions.CheckNotNull(context, nameof(context));
             GaxPreconditions.CheckNotNull(value, nameof(value));
@@ -66,16 +66,16 @@ namespace Google.Cloud.Firestore
             // We deserialize to T and Nullable<T> the same way for all non-null values. Use the converter
             // associated with the non-nullable version of the target type.
             BclType nonNullableTargetType = underlyingType ?? targetType;
-            return context.GetConverter(nonNullableTargetType).DeserializeValue(context, value);
+            return context.Database.SerializationContext.GetConverter(nonNullableTargetType).DeserializeValue(context, value);
         }
 
-        internal static object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values, BclType targetType)
+        internal static object DeserializeMap(IDeserializationContext context, IDictionary<string, Value> values, BclType targetType)
         {
             if (targetType == typeof(object))
             {
                 targetType = typeof(Dictionary<string, object>);
             }
-            return context.GetConverter(targetType).DeserializeMap(context, values);
+            return context.Database.SerializationContext.GetConverter(targetType).DeserializeMap(context, values);
         }
 
         private static BclType GetTargetType(Value value)

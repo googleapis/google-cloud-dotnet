@@ -10,18 +10,6 @@
         "grpc": {
           "libraryClient": "ConfigServiceV2Client",
           "rpcs": {
-            "BeginCreateBucket": {
-              "methods": [
-                "BeginCreateBucket",
-                "BeginCreateBucketAsync"
-              ]
-            },
-            "BeginUpdateBucket": {
-              "methods": [
-                "BeginUpdateBucket",
-                "BeginUpdateBucketAsync"
-              ]
-            },
             "CopyLogEntries": {
               "methods": [
                 "CopyLogEntries",
@@ -32,6 +20,12 @@
               "methods": [
                 "CreateBucket",
                 "CreateBucketAsync"
+              ]
+            },
+            "CreateBucketLongRunning": {
+              "methods": [
+                "CreateBucketLongRunning",
+                "CreateBucketLongRunningAsync"
               ]
             },
             "CreateExclusion": {
@@ -170,6 +164,12 @@
               "methods": [
                 "UpdateBucket",
                 "UpdateBucketAsync"
+              ]
+            },
+            "UpdateBucketLongRunning": {
+              "methods": [
+                "UpdateBucketLongRunning",
+                "UpdateBucketLongRunningAsync"
               ]
             },
             "UpdateCmekSettings": {

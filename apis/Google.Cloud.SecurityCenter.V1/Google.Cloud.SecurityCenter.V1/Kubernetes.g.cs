@@ -138,8 +138,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Pod.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Pod> pods_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Pod>();
     /// <summary>
-    /// Kubernetes Pods associated with the finding. This field will contain Pod
-    /// records for each container that is owned by a Pod.
+    /// Kubernetes
+    /// [Pods](https://cloud.google.com/kubernetes-engine/docs/concepts/pod)
+    /// associated with the finding. This field contains Pod records for each
+    /// container that is owned by a Pod.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +155,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Node.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Node> nodes_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Node>();
     /// <summary>
-    /// Provides Kubernetes Node information.
+    /// Provides Kubernetes
+    /// [node](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture#nodes)
+    /// information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,8 +171,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.NodePool.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.NodePool> nodePools_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.NodePool>();
     /// <summary>
-    /// GKE Node Pools associated with the finding. This field will
-    /// contain NodePool information for each Node, when it is available.
+    /// GKE [node
+    /// pools](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pools)
+    /// associated with the finding. This field contains node pool information for
+    /// each node, when it is available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -182,8 +188,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Role.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Role> roles_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Role>();
     /// <summary>
-    /// Provides Kubernetes role information for findings that involve
-    /// Roles or ClusterRoles.
+    /// Provides Kubernetes role information for findings that involve [Roles or
+    /// ClusterRoles](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -198,7 +204,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Binding> bindings_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Binding>();
     /// <summary>
     /// Provides Kubernetes role binding information for findings that involve
-    /// RoleBindings or ClusterRoleBindings.
+    /// [RoleBindings or
+    /// ClusterRoleBindings](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -212,8 +219,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.AccessReview.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.AccessReview> accessReviews_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.AccessReview>();
     /// <summary>
-    /// Provides information on any Kubernetes access reviews (i.e. privilege
-    /// checks) relevant to the finding.
+    /// Provides information on any Kubernetes access reviews (privilege checks)
+    /// relevant to the finding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -418,7 +425,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Kubernetes Pod.
+      /// A Kubernetes Pod.
       /// </summary>
       public sealed partial class Pod : pb::IMessage<Pod>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -712,7 +719,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
-      /// Kubernetes Nodes associated with the finding.
+      /// Kubernetes nodes associated with the finding.
       /// </summary>
       public sealed partial class Node : pb::IMessage<Node>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -762,8 +769,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int NameFieldNumber = 1;
         private string name_ = "";
         /// <summary>
-        /// Full Resource name of the Compute Engine VM running the
-        /// cluster node.
+        /// [Full resource name](https://google.aip.dev/122#full-resource-names) of
+        /// the Compute Engine VM running the cluster node.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -908,7 +915,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
-      /// Provides GKE Node Pool information.
+      /// Provides GKE node pool information.
       /// </summary>
       public sealed partial class NodePool : pb::IMessage<NodePool>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -959,7 +966,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int NameFieldNumber = 1;
         private string name_ = "";
         /// <summary>
-        /// Kubernetes Node pool name.
+        /// Kubernetes node pool name.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1486,7 +1493,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int NsFieldNumber = 1;
         private string ns_ = "";
         /// <summary>
-        /// Namespace for binding.
+        /// Namespace for the binding.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1501,7 +1508,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int NameFieldNumber = 2;
         private string name_ = "";
         /// <summary>
-        /// Name for binding.
+        /// Name for the binding.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1747,7 +1754,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
-      /// Represents a Kubernetes Subject.
+      /// Represents a Kubernetes subject.
       /// </summary>
       public sealed partial class Subject : pb::IMessage<Subject>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1799,7 +1806,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int KindFieldNumber = 1;
         private global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Subject.Types.AuthType kind_ = global::Google.Cloud.SecurityCenter.V1.Kubernetes.Types.Subject.Types.AuthType.Unspecified;
         /// <summary>
-        /// Authentication type for subject.
+        /// Authentication type for the subject.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1814,7 +1821,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int NsFieldNumber = 2;
         private string ns_ = "";
         /// <summary>
-        /// Namespace for subject.
+        /// Namespace for the subject.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1829,7 +1836,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int NameFieldNumber = 3;
         private string name_ = "";
         /// <summary>
-        /// Name for subject.
+        /// Name for the subject.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2025,7 +2032,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Auth types that can be used for Subject's kind field.
+          /// Auth types that can be used for the subject's kind field.
           /// </summary>
           public enum AuthType {
             /// <summary>
@@ -2037,7 +2044,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             /// </summary>
             [pbr::OriginalName("USER")] User = 1,
             /// <summary>
-            /// Users managed by Kubernetes API with credentials stored as Secrets.
+            /// Users managed by Kubernetes API with credentials stored as secrets.
             /// </summary>
             [pbr::OriginalName("SERVICEACCOUNT")] Serviceaccount = 2,
             /// <summary>
@@ -2052,8 +2059,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
-      /// Conveys information about a Kubernetes access review (e.g. kubectl auth
-      /// can-i ...) that was involved in a finding.
+      /// Conveys information about a Kubernetes access review (such as one returned
+      /// by a [`kubectl auth
+      /// can-i`](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#checking-api-access)
+      /// command) that was involved in a finding.
       /// </summary>
       public sealed partial class AccessReview : pb::IMessage<AccessReview>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2109,7 +2118,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int GroupFieldNumber = 1;
         private string group_ = "";
         /// <summary>
-        /// Group is the API Group of the Resource. "*" means all.
+        /// The API group of the resource. "*" means all.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2141,7 +2150,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int NameFieldNumber = 3;
         private string name_ = "";
         /// <summary>
-        /// Name is the name of the resource being requested. Empty means all.
+        /// The name of the resource being requested. Empty means all.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2156,7 +2165,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int ResourceFieldNumber = 4;
         private string resource_ = "";
         /// <summary>
-        /// Resource is the optional resource type requested. "*" means all.
+        /// The optional resource type requested. "*" means all.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2171,7 +2180,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int SubresourceFieldNumber = 5;
         private string subresource_ = "";
         /// <summary>
-        /// Subresource is the optional subresource type.
+        /// The optional subresource type.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2186,8 +2195,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int VerbFieldNumber = 6;
         private string verb_ = "";
         /// <summary>
-        /// Verb is a Kubernetes resource API verb, like: get, list, watch, create,
-        /// update, delete, proxy. "*" means all.
+        /// A Kubernetes resource API verb, like get, list, watch, create, update,
+        /// delete, proxy. "*" means all.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2202,7 +2211,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int VersionFieldNumber = 7;
         private string version_ = "";
         /// <summary>
-        /// Version is the API Version of the Resource. "*" means all.
+        /// The API version of the resource. "*" means all.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

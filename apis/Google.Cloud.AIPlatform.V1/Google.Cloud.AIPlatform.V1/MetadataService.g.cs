@@ -2674,6 +2674,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///     To filter on metadata fields use traversal operation as follows:
     ///     `metadata.&lt;field_name>.&lt;type_value>`.
     ///     For example: `metadata.field_1.number_value = 10.0`
+    ///     In case the field name contains special characters (such as colon), one
+    ///     can embed it inside double quote.
+    ///     For example: `metadata."field:1".number_value = 10.0`
     /// *   **Context based filtering**:
     ///     To filter Artifacts based on the contexts to which they belong, use the
     ///     function operator with the full resource name
@@ -3246,7 +3249,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Optional. A FieldMask indicating which fields should be updated.
-    /// Functionality of this field is not yet supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5044,6 +5046,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///    To filter on metadata fields use traversal operation as follows:
     ///    `metadata.&lt;field_name>.&lt;type_value>`.
     ///    For example: `metadata.field_1.number_value = 10.0`.
+    ///    In case the field name contains special characters (such as colon), one
+    ///    can embed it inside double quote.
+    ///    For example: `metadata."field:1".number_value = 10.0`
     /// *  **Parent Child filtering**:
     ///    To filter Contexts based on parent-child relationship use the HAS
     ///    operator as follows:
@@ -5620,7 +5625,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Optional. A FieldMask indicating which fields should be updated.
-    /// Functionality of this field is not yet supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8850,6 +8854,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///    To filter on metadata fields use traversal operation as follows:
     ///    `metadata.&lt;field_name>.&lt;type_value>`
     ///    For example: `metadata.field_1.number_value = 10.0`
+    ///    In case the field name contains special characters (such as colon), one
+    ///    can embed it inside double quote.
+    ///    For example: `metadata."field:1".number_value = 10.0`
     /// *  **Context based filtering**:
     ///    To filter Executions based on the contexts to which they belong use
     ///    the function operator with the full resource name:
@@ -9422,7 +9429,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Optional. A FieldMask indicating which fields should be updated.
-    /// Functionality of this field is not yet supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12342,6 +12348,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///    To filter on metadata fields use traversal operation as follows:
     ///    `metadata.&lt;field_name>.&lt;type_value>`.
     ///    For example: `metadata.field_1.number_value = 10.0`
+    ///    In case the field name contains special characters (such as colon), one
+    ///    can embed it inside double quote.
+    ///    For example: `metadata."field:1".number_value = 10.0`
     ///
     /// Each of the above supported filter types can be combined together using
     /// logical operators (`AND` &amp; `OR`). Maximum nested expression depth allowed

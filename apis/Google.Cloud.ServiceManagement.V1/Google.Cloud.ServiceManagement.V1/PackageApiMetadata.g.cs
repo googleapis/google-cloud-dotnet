@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
@@ -32,6 +33,21 @@ namespace Google.Cloud.ServiceManagement.V1
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
                 {
+                    "google.iam.v1.IAMPolicy.GetIamPolicy",
+                    // { "post": "/v1/{resource=services/*}:getIamPolicy", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=services/*/consumers/*}:getIamPolicy", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IiYvdjEve3Jlc291cmNlPXNlcnZpY2VzLyp9OmdldElhbVBvbGljeToBKlo3IjIvdjEve3Jlc291cmNlPXNlcnZpY2VzLyovY29uc3VtZXJzLyp9OmdldElhbVBvbGljeToBKg==")
+                },
+                {
+                    "google.iam.v1.IAMPolicy.SetIamPolicy",
+                    // { "post": "/v1/{resource=services/*}:setIamPolicy", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=services/*/consumers/*}:setIamPolicy", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IiYvdjEve3Jlc291cmNlPXNlcnZpY2VzLyp9OnNldElhbVBvbGljeToBKlo3IjIvdjEve3Jlc291cmNlPXNlcnZpY2VzLyovY29uc3VtZXJzLyp9OnNldElhbVBvbGljeToBKg==")
+                },
+                {
+                    "google.iam.v1.IAMPolicy.TestIamPermissions",
+                    // { "post": "/v1/{resource=services/*}:testIamPermissions", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=services/*/consumers/*}:testIamPermissions", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IiwvdjEve3Jlc291cmNlPXNlcnZpY2VzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlo9IjgvdjEve3Jlc291cmNlPXNlcnZpY2VzLyovY29uc3VtZXJzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKg==")
+                },
+                {
                     "google.longrunning.Operations.ListOperations",
                     // { "get": "/v1/operations" }
                     proto::ByteString.FromBase64("Eg4vdjEvb3BlcmF0aW9ucw==")
@@ -40,6 +56,9 @@ namespace Google.Cloud.ServiceManagement.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return gciv::IamPolicyReflection.Descriptor;
+            yield return gciv::OptionsReflection.Descriptor;
+            yield return gciv::PolicyReflection.Descriptor;
             yield return ResourcesReflection.Descriptor;
             yield return ServicemanagerReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;

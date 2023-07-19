@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.6.0, released 2023-07-13
+
+### New features
+
+- Added support for segment template manifest generation with DASH ([commit b6f1f52](https://github.com/googleapis/google-cloud-dotnet/commit/b6f1f52743c6818e9615bbc84a007759cbf7b064))
+- Added support for batch mode priority ([commit b6f1f52](https://github.com/googleapis/google-cloud-dotnet/commit/b6f1f52743c6818e9615bbc84a007759cbf7b064))
+- Added support for disabling job processing optimizations ([commit b6f1f52](https://github.com/googleapis/google-cloud-dotnet/commit/b6f1f52743c6818e9615bbc84a007759cbf7b064))
+- Added support for content encryption (DRM) ([commit b6f1f52](https://github.com/googleapis/google-cloud-dotnet/commit/b6f1f52743c6818e9615bbc84a007759cbf7b064))
+
 ## Version 2.5.0, released 2023-04-19
 
 ### New features

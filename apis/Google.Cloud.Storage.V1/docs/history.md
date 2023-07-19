@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.6.0, released 2023-06-05
+
+### New features
+
+- Add support for glob pattern storage ([commit d0e4541](https://github.com/googleapis/google-cloud-dotnet/commit/d0e45410df7c08d24bd254826d8a64591aa8c22c))
+
 ## Version 4.5.0, released 2023-04-20
 
 ### New features

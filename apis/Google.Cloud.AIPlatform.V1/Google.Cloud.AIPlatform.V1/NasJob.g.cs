@@ -875,7 +875,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Represents a NasTrial details along with it's parameters. If there is a
+  /// Represents a NasTrial details along with its parameters. If there is a
   /// corresponding train NasTrial, the train NasTrial is also returned.
   /// </summary>
   public sealed partial class NasTrialDetail : pb::IMessage<NasTrialDetail>

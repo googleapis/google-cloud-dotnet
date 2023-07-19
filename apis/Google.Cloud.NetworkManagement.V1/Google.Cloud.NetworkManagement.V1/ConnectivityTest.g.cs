@@ -45,33 +45,33 @@ namespace Google.Cloud.NetworkManagement.V1 {
             "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
             "OnTqQXEKMW5ldHdvcmttYW5hZ2VtZW50Lmdvb2dsZWFwaXMuY29tL0Nvbm5l",
             "Y3Rpdml0eVRlc3QSPHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMvZ2xv",
-            "YmFsL2Nvbm5lY3Rpdml0eVRlc3RzL3t0ZXN0fSK9AgoIRW5kcG9pbnQSEgoK",
+            "YmFsL2Nvbm5lY3Rpdml0eVRlc3RzL3t0ZXN0fSLWAgoIRW5kcG9pbnQSEgoK",
             "aXBfYWRkcmVzcxgBIAEoCRIMCgRwb3J0GAIgASgFEhAKCGluc3RhbmNlGAMg",
-            "ASgJEhoKEmdrZV9tYXN0ZXJfY2x1c3RlchgHIAEoCRIaChJjbG91ZF9zcWxf",
-            "aW5zdGFuY2UYCCABKAkSDwoHbmV0d29yaxgEIAEoCRJNCgxuZXR3b3JrX3R5",
-            "cGUYBSABKA4yNy5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEu",
-            "RW5kcG9pbnQuTmV0d29ya1R5cGUSEgoKcHJvamVjdF9pZBgGIAEoCSJRCgtO",
-            "ZXR3b3JrVHlwZRIcChhORVRXT1JLX1RZUEVfVU5TUEVDSUZJRUQQABIPCgtH",
-            "Q1BfTkVUV09SSxABEhMKD05PTl9HQ1BfTkVUV09SSxACItUCChNSZWFjaGFi",
-            "aWxpdHlEZXRhaWxzEk0KBnJlc3VsdBgBIAEoDjI9Lmdvb2dsZS5jbG91ZC5u",
-            "ZXR3b3JrbWFuYWdlbWVudC52MS5SZWFjaGFiaWxpdHlEZXRhaWxzLlJlc3Vs",
-            "dBIvCgt2ZXJpZnlfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASIQoFZXJyb3IYAyABKAsyEi5nb29nbGUucnBjLlN0YXR1cxI4CgZ0",
-            "cmFjZXMYBSADKAsyKC5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQu",
-            "djEuVHJhY2UiYQoGUmVzdWx0EhYKElJFU1VMVF9VTlNQRUNJRklFRBAAEg0K",
-            "CVJFQUNIQUJMRRABEg8KC1VOUkVBQ0hBQkxFEAISDQoJQU1CSUdVT1VTEAQS",
-            "EAoMVU5ERVRFUk1JTkVEEAVC/QEKJWNvbS5nb29nbGUuY2xvdWQubmV0d29y",
-            "a21hbmFnZW1lbnQudjFCDlRlc3RPdXRlckNsYXNzUAFaU2Nsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vbmV0d29ya21hbmFnZW1lbnQvYXBpdjEvbmV0d29ya21hbmFn",
-            "ZW1lbnRwYjtuZXR3b3JrbWFuYWdlbWVudHBiqgIhR29vZ2xlLkNsb3VkLk5l",
-            "dHdvcmtNYW5hZ2VtZW50LlYxygIhR29vZ2xlXENsb3VkXE5ldHdvcmtNYW5h",
-            "Z2VtZW50XFYx6gIkR29vZ2xlOjpDbG91ZDo6TmV0d29ya01hbmFnZW1lbnQ6",
-            "OlYxYgZwcm90bzM="));
+            "ASgJEhcKD2ZvcndhcmRpbmdfcnVsZRgNIAEoCRIaChJna2VfbWFzdGVyX2Ns",
+            "dXN0ZXIYByABKAkSGgoSY2xvdWRfc3FsX2luc3RhbmNlGAggASgJEg8KB25l",
+            "dHdvcmsYBCABKAkSTQoMbmV0d29ya190eXBlGAUgASgOMjcuZ29vZ2xlLmNs",
+            "b3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkVuZHBvaW50Lk5ldHdvcmtUeXBl",
+            "EhIKCnByb2plY3RfaWQYBiABKAkiUQoLTmV0d29ya1R5cGUSHAoYTkVUV09S",
+            "S19UWVBFX1VOU1BFQ0lGSUVEEAASDwoLR0NQX05FVFdPUksQARITCg9OT05f",
+            "R0NQX05FVFdPUksQAiLVAgoTUmVhY2hhYmlsaXR5RGV0YWlscxJNCgZyZXN1",
+            "bHQYASABKA4yPS5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEu",
+            "UmVhY2hhYmlsaXR5RGV0YWlscy5SZXN1bHQSLwoLdmVyaWZ5X3RpbWUYAiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiEKBWVycm9yGAMgASgL",
+            "MhIuZ29vZ2xlLnJwYy5TdGF0dXMSOAoGdHJhY2VzGAUgAygLMiguZ29vZ2xl",
+            "LmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLlRyYWNlImEKBlJlc3VsdBIW",
+            "ChJSRVNVTFRfVU5TUEVDSUZJRUQQABINCglSRUFDSEFCTEUQARIPCgtVTlJF",
+            "QUNIQUJMRRACEg0KCUFNQklHVU9VUxAEEhAKDFVOREVURVJNSU5FRBAFQv0B",
+            "CiVjb20uZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxQg5UZXN0",
+            "T3V0ZXJDbGFzc1ABWlNjbG91ZC5nb29nbGUuY29tL2dvL25ldHdvcmttYW5h",
+            "Z2VtZW50L2FwaXYxL25ldHdvcmttYW5hZ2VtZW50cGI7bmV0d29ya21hbmFn",
+            "ZW1lbnRwYqoCIUdvb2dsZS5DbG91ZC5OZXR3b3JrTWFuYWdlbWVudC5WMcoC",
+            "IUdvb2dsZVxDbG91ZFxOZXR3b3JrTWFuYWdlbWVudFxWMeoCJEdvb2dsZTo6",
+            "Q2xvdWQ6Ok5ldHdvcmtNYW5hZ2VtZW50OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetworkManagement.V1.TraceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.ConnectivityTest), global::Google.Cloud.NetworkManagement.V1.ConnectivityTest.Parser, new[]{ "Name", "Description", "Source", "Destination", "Protocol", "RelatedProjects", "DisplayName", "Labels", "CreateTime", "UpdateTime", "ReachabilityDetails" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Parser, new[]{ "IpAddress", "Port", "Instance", "GkeMasterCluster", "CloudSqlInstance", "Network", "NetworkType", "ProjectId" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.NetworkType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Parser, new[]{ "IpAddress", "Port", "Instance", "ForwardingRule", "GkeMasterCluster", "CloudSqlInstance", "Network", "NetworkType", "ProjectId" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.NetworkType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails), global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails.Parser, new[]{ "Result", "VerifyTime", "Error", "Traces" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails.Types.Result) }, null, null)
           }));
     }
@@ -780,6 +780,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       ipAddress_ = other.ipAddress_;
       port_ = other.port_;
       instance_ = other.instance_;
+      forwardingRule_ = other.forwardingRule_;
       gkeMasterCluster_ = other.gkeMasterCluster_;
       cloudSqlInstance_ = other.cloudSqlInstance_;
       network_ = other.network_;
@@ -839,6 +840,26 @@ namespace Google.Cloud.NetworkManagement.V1 {
       get { return instance_; }
       set {
         instance_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "forwarding_rule" field.</summary>
+    public const int ForwardingRuleFieldNumber = 13;
+    private string forwardingRule_ = "";
+    /// <summary>
+    /// A forwarding rule and its corresponding IP address represent the frontend
+    /// configuration of a Google Cloud load balancer. Forwarding rules are also
+    /// used for protocol forwarding, Private Service Connect and other network
+    /// services to provide forwarding information in the control plane. Format:
+    ///  projects/{project}/global/forwardingRules/{id} or
+    ///  projects/{project}/regions/{region}/forwardingRules/{id}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ForwardingRule {
+      get { return forwardingRule_; }
+      set {
+        forwardingRule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -946,6 +967,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (IpAddress != other.IpAddress) return false;
       if (Port != other.Port) return false;
       if (Instance != other.Instance) return false;
+      if (ForwardingRule != other.ForwardingRule) return false;
       if (GkeMasterCluster != other.GkeMasterCluster) return false;
       if (CloudSqlInstance != other.CloudSqlInstance) return false;
       if (Network != other.Network) return false;
@@ -961,6 +983,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (IpAddress.Length != 0) hash ^= IpAddress.GetHashCode();
       if (Port != 0) hash ^= Port.GetHashCode();
       if (Instance.Length != 0) hash ^= Instance.GetHashCode();
+      if (ForwardingRule.Length != 0) hash ^= ForwardingRule.GetHashCode();
       if (GkeMasterCluster.Length != 0) hash ^= GkeMasterCluster.GetHashCode();
       if (CloudSqlInstance.Length != 0) hash ^= CloudSqlInstance.GetHashCode();
       if (Network.Length != 0) hash ^= Network.GetHashCode();
@@ -1016,6 +1039,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(66);
         output.WriteString(CloudSqlInstance);
       }
+      if (ForwardingRule.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(ForwardingRule);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1058,6 +1085,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(66);
         output.WriteString(CloudSqlInstance);
       }
+      if (ForwardingRule.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(ForwardingRule);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1076,6 +1107,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
       if (Instance.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Instance);
+      }
+      if (ForwardingRule.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ForwardingRule);
       }
       if (GkeMasterCluster.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GkeMasterCluster);
@@ -1112,6 +1146,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
       if (other.Instance.Length != 0) {
         Instance = other.Instance;
+      }
+      if (other.ForwardingRule.Length != 0) {
+        ForwardingRule = other.ForwardingRule;
       }
       if (other.GkeMasterCluster.Length != 0) {
         GkeMasterCluster = other.GkeMasterCluster;
@@ -1175,6 +1212,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
             CloudSqlInstance = input.ReadString();
             break;
           }
+          case 106: {
+            ForwardingRule = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1220,6 +1261,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
           }
           case 66: {
             CloudSqlInstance = input.ReadString();
+            break;
+          }
+          case 106: {
+            ForwardingRule = input.ReadString();
             break;
           }
         }

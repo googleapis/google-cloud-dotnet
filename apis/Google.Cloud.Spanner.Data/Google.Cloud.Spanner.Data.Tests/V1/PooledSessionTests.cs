@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
+using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Grpc.Core;
@@ -24,6 +25,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Spanner.V1.TransactionOptions.ModeOneofCase;
+using ResourceInfo = Google.Rpc.ResourceInfo;
 
 namespace Google.Cloud.Spanner.V1.Tests
 {
@@ -116,7 +118,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             // Make a request which fails due to the session not being found (because it has expired).
             var request = new BeginTransactionRequest();
             pool.Mock.Setup(client => client.BeginTransactionAsync(request, It.IsAny<CallSettings>()))
-                .ThrowsAsync(new RpcException(new Status(StatusCode.NotFound, "Session not found")))
+                .ThrowsAsync(CreateSessionExpiredException())
                 .Verifiable();
             await Assert.ThrowsAsync<RpcException>(() => pooledSession.BeginTransactionAsync(request, null));
             Assert.True(pooledSession.ServerExpired);
@@ -297,7 +299,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             // Make a request which fails due to the session not being found (because it has expired).
             var request = new BeginTransactionRequest();
             pool.Mock.Setup(client => client.BeginTransactionAsync(request, It.IsAny<CallSettings>()))
-                .ThrowsAsync(new RpcException(new Status(StatusCode.NotFound, "Session not found")))
+                .ThrowsAsync(CreateSessionExpiredException())
                 .Verifiable();
             await Assert.ThrowsAsync<RpcException>(() => pooledSession.BeginTransactionAsync(request, null));
 
@@ -392,6 +394,10 @@ namespace Google.Cloud.Spanner.V1.Tests
             Assert.Equal(pool.RolledBackTransaction, pooledSession.TransactionId);
         }
 
+        private static RpcException CreateSessionExpiredException() =>
+            new RpcException(new Status(StatusCode.NotFound, "Session not found"),
+                new Metadata { { ExecuteHelper.ResourceInfoMetadataKey, new ResourceInfo { ResourceType = ExecuteHelper.SessionResourceType }.ToByteArray() } });
+
         private PooledSession CreateWithTransaction(SessionPool.ISessionPool pool, TransactionOptions.ModeOneofCase mode)
         {
             ByteString transactionId = ByteString.CopyFromUtf8(Guid.NewGuid().ToString());
@@ -425,6 +431,8 @@ namespace Google.Cloud.Spanner.V1.Tests
                 RolledBackTransaction = transactionToRollback;
                 ReleasedSessionDeleted = deleteSession;
             }
+
+            public void Detach(PooledSession session) => throw new NotImplementedException();
 
             public Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
                 throw new NotImplementedException();

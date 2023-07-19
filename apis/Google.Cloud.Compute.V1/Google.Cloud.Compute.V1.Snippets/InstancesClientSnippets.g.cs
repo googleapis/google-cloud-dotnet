@@ -4430,6 +4430,7 @@ namespace GoogleCSharpSnippets
             {
                 Zone = "",
                 Instance = "",
+                RequestId = "",
                 Project = "",
             };
             // Make the request
@@ -4465,6 +4466,7 @@ namespace GoogleCSharpSnippets
             {
                 Zone = "",
                 Instance = "",
+                RequestId = "",
                 Project = "",
             };
             // Make the request

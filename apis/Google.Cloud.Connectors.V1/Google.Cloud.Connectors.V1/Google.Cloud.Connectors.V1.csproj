@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>1.0.0-beta01</Version>
+    <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>Recommended Google client library to access the Google Cloud Integration Connectors API, which enables users to create and manage connections to Google Cloud services and third-party business applications using the Connectors interface.</Description>
+    <PackageTags>services;applications;connections;integration;Google;Cloud</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.4.0, 5.0.0)" />
+    <PackageReference Include="Google.Cloud.Iam.V1" Version="[3.0.0, 4.0.0)" />
+    <PackageReference Include="Google.Cloud.Location" Version="[2.0.0, 3.0.0)" />
+    <PackageReference Include="Google.LongRunning" Version="[3.0.0, 4.0.0)" />
+    <PackageReference Include="Grpc.Core" Version="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
+  </ItemGroup>
+</Project>

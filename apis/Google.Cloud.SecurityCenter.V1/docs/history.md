@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.12.0, released 2023-06-27
+
+### New features
+
+- Mark the Asset APIs as deprecated in client libraries ([commit a7a6d15](https://github.com/googleapis/google-cloud-dotnet/commit/a7a6d15bfd965daaeca76299040f1013b166f5fd))
+
+## Version 3.11.0, released 2023-06-20
+
+### New features
+
+- Add user agent and DLP parent type fields to finding's list of attributes ([commit da7cc14](https://github.com/googleapis/google-cloud-dotnet/commit/da7cc14f384752089e8389d99659e124414f173e))
+
 ## Version 3.10.0, released 2023-05-03
 
 ### New features

@@ -35,7 +35,10 @@ namespace GoogleCSharpSnippets
             // Create client
             CloudBillingClient cloudBillingClient = await CloudBillingClient.CreateAsync();
             // Initialize request argument(s)
-            GetProjectBillingInfoRequest request = new GetProjectBillingInfoRequest { Name = "", };
+            GetProjectBillingInfoRequest request = new GetProjectBillingInfoRequest
+            {
+                ProjectBillingInfoName = ProjectBillingInfoName.FromProject("[PROJECT]"),
+            };
             // Make the request
             ProjectBillingInfo response = await cloudBillingClient.GetProjectBillingInfoAsync(request);
         }

@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.0.0-alpha10, released 2023-06-27
+
+### New features
+
+- Update the `default_uri` field of the `WebStreamData` type to be mutable ([commit e8c8b20](https://github.com/googleapis/google-cloud-dotnet/commit/e8c8b209240faca77da8e750e2feb15b01155982))
+- Add the `ads_web_conversion_data_export_scope` field to the `ReportingAttributionModel` type ([commit e8c8b20](https://github.com/googleapis/google-cloud-dotnet/commit/e8c8b209240faca77da8e750e2feb15b01155982))
+- Add `AdsWebConversionDataExportScope` enum to the Admin API v1alpha ([commit e8c8b20](https://github.com/googleapis/google-cloud-dotnet/commit/e8c8b209240faca77da8e750e2feb15b01155982))
+
+### Documentation improvements
+
+- Announce the deprecation of first-click, linear, time-decay and position-based attribution models ([commit e8c8b20](https://github.com/googleapis/google-cloud-dotnet/commit/e8c8b209240faca77da8e750e2feb15b01155982))
+
 ## Version 2.0.0-alpha09, released 2023-05-16
 
 ### New features

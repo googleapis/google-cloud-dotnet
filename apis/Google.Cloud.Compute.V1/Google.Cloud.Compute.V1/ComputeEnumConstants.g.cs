@@ -230,6 +230,19 @@ namespace Google.Cloud.Compute.V1
                 public const string ReadWrite = "READ_WRITE";
             }
 
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.AttachedDisk.Types.SavedState"/> enum.</summary>
+            public static class SavedState
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AttachedDisk.Types.SavedState.UndefinedSavedState"/>.</summary>
+                public const string UndefinedSavedState = "UNDEFINED_SAVED_STATE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AttachedDisk.Types.SavedState.DiskSavedStateUnspecified"/>.</summary>
+                public const string DiskSavedStateUnspecified = "DISK_SAVED_STATE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AttachedDisk.Types.SavedState.Preserved"/>.</summary>
+                public const string Preserved = "PRESERVED";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.AttachedDisk.Types.Type"/> enum.</summary>
             public static class Type
             {
@@ -1024,6 +1037,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.GeneralPurposeT2D"/>.</summary>
                 public const string GeneralPurposeT2D = "GENERAL_PURPOSE_T2D";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.GraphicsOptimized"/>.</summary>
+                public const string GraphicsOptimized = "GRAPHICS_OPTIMIZED";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimized"/>.</summary>
                 public const string MemoryOptimized = "MEMORY_OPTIMIZED";
 
@@ -1205,6 +1221,35 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.DiskInstantiationConfig.Types.InstantiateFrom.SourceImageFamily"/>.</summary>
                 public const string SourceImageFamily = "SOURCE_IMAGE_FAMILY";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.DiskResourceStatusAsyncReplicationStatus"/> message.</summary>
+        public static class DiskResourceStatusAsyncReplicationStatus
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.DiskResourceStatusAsyncReplicationStatus.Types.State"/> enum.</summary>
+            public static class State
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.DiskResourceStatusAsyncReplicationStatus.Types.State.UndefinedState"/>.</summary>
+                public const string UndefinedState = "UNDEFINED_STATE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.DiskResourceStatusAsyncReplicationStatus.Types.State.Active"/>.</summary>
+                public const string Active = "ACTIVE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.DiskResourceStatusAsyncReplicationStatus.Types.State.Created"/>.</summary>
+                public const string Created = "CREATED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.DiskResourceStatusAsyncReplicationStatus.Types.State.Starting"/>.</summary>
+                public const string Starting = "STARTING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.DiskResourceStatusAsyncReplicationStatus.Types.State.Unspecified"/>.</summary>
+                public const string Unspecified = "STATE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.DiskResourceStatusAsyncReplicationStatus.Types.State.Stopped"/>.</summary>
+                public const string Stopped = "STOPPED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.DiskResourceStatusAsyncReplicationStatus.Types.State.Stopping"/>.</summary>
+                public const string Stopping = "STOPPING";
             }
         }
 
@@ -1906,6 +1951,23 @@ namespace Google.Cloud.Compute.V1
             }
         }
 
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy"/> message.</summary>
+        public static class InstanceGroupManagerInstanceLifecyclePolicy
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy.Types.ForceUpdateOnRepair"/> enum.</summary>
+            public static class ForceUpdateOnRepair
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy.Types.ForceUpdateOnRepair.UndefinedForceUpdateOnRepair"/>.</summary>
+                public const string UndefinedForceUpdateOnRepair = "UNDEFINED_FORCE_UPDATE_ON_REPAIR";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy.Types.ForceUpdateOnRepair.No"/>.</summary>
+                public const string No = "NO";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy.Types.ForceUpdateOnRepair.Yes"/>.</summary>
+                public const string Yes = "YES";
+            }
+        }
+
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerUpdatePolicy"/> message.</summary>
         public static class InstanceGroupManagerUpdatePolicy
         {
@@ -2344,6 +2406,26 @@ namespace Google.Cloud.Compute.V1
             }
         }
 
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InterconnectAttachmentConfigurationConstraints"/> message.</summary>
+        public static class InterconnectAttachmentConfigurationConstraints
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InterconnectAttachmentConfigurationConstraints.Types.BgpMd5"/> enum.</summary>
+            public static class BgpMd5
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectAttachmentConfigurationConstraints.Types.BgpMd5.UndefinedBgpMd5"/>.</summary>
+                public const string UndefinedBgpMd5 = "UNDEFINED_BGP_MD5";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectAttachmentConfigurationConstraints.Types.BgpMd5.Md5Optional"/>.</summary>
+                public const string Md5Optional = "MD5_OPTIONAL";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectAttachmentConfigurationConstraints.Types.BgpMd5.Md5Required"/>.</summary>
+                public const string Md5Required = "MD5_REQUIRED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectAttachmentConfigurationConstraints.Types.BgpMd5.Md5Unsupported"/>.</summary>
+                public const string Md5Unsupported = "MD5_UNSUPPORTED";
+            }
+        }
+
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InterconnectDiagnostics"/> message.</summary>
         public static class InterconnectDiagnostics
         {
@@ -2566,6 +2648,88 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectOutageNotification.Types.State.NsCanceled"/>.</summary>
                 public const string NsCanceled = "NS_CANCELED";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation"/> message.</summary>
+        public static class InterconnectRemoteLocation
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Continent"/> enum.</summary>
+            public static class Continent
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Continent.UndefinedContinent"/>.</summary>
+                public const string UndefinedContinent = "UNDEFINED_CONTINENT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Continent.Africa"/>.</summary>
+                public const string Africa = "AFRICA";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Continent.AsiaPac"/>.</summary>
+                public const string AsiaPac = "ASIA_PAC";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Continent.Europe"/>.</summary>
+                public const string Europe = "EUROPE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Continent.NorthAmerica"/>.</summary>
+                public const string NorthAmerica = "NORTH_AMERICA";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Continent.SouthAmerica"/>.</summary>
+                public const string SouthAmerica = "SOUTH_AMERICA";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Lacp"/> enum.</summary>
+            public static class Lacp
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Lacp.UndefinedLacp"/>.</summary>
+                public const string UndefinedLacp = "UNDEFINED_LACP";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Lacp.Supported"/>.</summary>
+                public const string Supported = "LACP_SUPPORTED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Lacp.Unsupported"/>.</summary>
+                public const string Unsupported = "LACP_UNSUPPORTED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Status"/> enum.</summary>
+            public static class Status
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Status.UndefinedStatus"/>.</summary>
+                public const string UndefinedStatus = "UNDEFINED_STATUS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Status.Available"/>.</summary>
+                public const string Available = "AVAILABLE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocation.Types.Status.Closed"/>.</summary>
+                public const string Closed = "CLOSED";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocationConstraints"/> message.</summary>
+        public static class InterconnectRemoteLocationConstraints
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocationConstraints.Types.PortPairRemoteLocation"/> enum.</summary>
+            public static class PortPairRemoteLocation
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocationConstraints.Types.PortPairRemoteLocation.UndefinedPortPairRemoteLocation"/>.</summary>
+                public const string UndefinedPortPairRemoteLocation = "UNDEFINED_PORT_PAIR_REMOTE_LOCATION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocationConstraints.Types.PortPairRemoteLocation.PortPairMatchingRemoteLocation"/>.</summary>
+                public const string PortPairMatchingRemoteLocation = "PORT_PAIR_MATCHING_REMOTE_LOCATION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocationConstraints.Types.PortPairRemoteLocation.PortPairUnconstrainedRemoteLocation"/>.</summary>
+                public const string PortPairUnconstrainedRemoteLocation = "PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocationConstraints.Types.PortPairVlan"/> enum.</summary>
+            public static class PortPairVlan
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocationConstraints.Types.PortPairVlan.UndefinedPortPairVlan"/>.</summary>
+                public const string UndefinedPortPairVlan = "UNDEFINED_PORT_PAIR_VLAN";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocationConstraints.Types.PortPairVlan.PortPairMatchingVlan"/>.</summary>
+                public const string PortPairMatchingVlan = "PORT_PAIR_MATCHING_VLAN";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectRemoteLocationConstraints.Types.PortPairVlan.PortPairUnconstrainedVlan"/>.</summary>
+                public const string PortPairUnconstrainedVlan = "PORT_PAIR_UNCONSTRAINED_VLAN";
             }
         }
 
@@ -3660,6 +3824,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.CommittedNvidiaK80Gpus"/>.</summary>
                 public const string CommittedNvidiaK80Gpus = "COMMITTED_NVIDIA_K80_GPUS";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.CommittedNvidiaL4Gpus"/>.</summary>
+                public const string CommittedNvidiaL4Gpus = "COMMITTED_NVIDIA_L4_GPUS";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.CommittedNvidiaP100Gpus"/>.</summary>
                 public const string CommittedNvidiaP100Gpus = "COMMITTED_NVIDIA_P100_GPUS";
 
@@ -3813,6 +3980,15 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.NetworkFirewallPolicies"/>.</summary>
                 public const string NetworkFirewallPolicies = "NETWORK_FIREWALL_POLICIES";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.NetLbSecurityPoliciesPerRegion"/>.</summary>
+                public const string NetLbSecurityPoliciesPerRegion = "NET_LB_SECURITY_POLICIES_PER_REGION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.NetLbSecurityPolicyRulesPerRegion"/>.</summary>
+                public const string NetLbSecurityPolicyRulesPerRegion = "NET_LB_SECURITY_POLICY_RULES_PER_REGION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.NetLbSecurityPolicyRuleAttributesPerRegion"/>.</summary>
+                public const string NetLbSecurityPolicyRuleAttributesPerRegion = "NET_LB_SECURITY_POLICY_RULE_ATTRIBUTES_PER_REGION";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.NodeGroups"/>.</summary>
                 public const string NodeGroups = "NODE_GROUPS";
 
@@ -3827,6 +4003,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.NvidiaK80Gpus"/>.</summary>
                 public const string NvidiaK80Gpus = "NVIDIA_K80_GPUS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.NvidiaL4Gpus"/>.</summary>
+                public const string NvidiaL4Gpus = "NVIDIA_L4_GPUS";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.NvidiaP100Gpus"/>.</summary>
                 public const string NvidiaP100Gpus = "NVIDIA_P100_GPUS";
@@ -3869,6 +4048,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.PreemptibleNvidiaK80Gpus"/>.</summary>
                 public const string PreemptibleNvidiaK80Gpus = "PREEMPTIBLE_NVIDIA_K80_GPUS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.PreemptibleNvidiaL4Gpus"/>.</summary>
+                public const string PreemptibleNvidiaL4Gpus = "PREEMPTIBLE_NVIDIA_L4_GPUS";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.PreemptibleNvidiaP100Gpus"/>.</summary>
                 public const string PreemptibleNvidiaP100Gpus = "PREEMPTIBLE_NVIDIA_P100_GPUS";
@@ -3938,6 +4120,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.SecurityPoliciesPerRegion"/>.</summary>
                 public const string SecurityPoliciesPerRegion = "SECURITY_POLICIES_PER_REGION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.SecurityPolicyAdvancedRulesPerRegion"/>.</summary>
+                public const string SecurityPolicyAdvancedRulesPerRegion = "SECURITY_POLICY_ADVANCED_RULES_PER_REGION";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.SecurityPolicyCevalRules"/>.</summary>
                 public const string SecurityPolicyCevalRules = "SECURITY_POLICY_CEVAL_RULES";
@@ -4460,6 +4645,25 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.RouterNat"/> message.</summary>
         public static class RouterNat
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.AutoNetworkTier"/> enum.</summary>
+            public static class AutoNetworkTier
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.AutoNetworkTier.UndefinedAutoNetworkTier"/>.</summary>
+                public const string UndefinedAutoNetworkTier = "UNDEFINED_AUTO_NETWORK_TIER";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.AutoNetworkTier.FixedStandard"/>.</summary>
+                public const string FixedStandard = "FIXED_STANDARD";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.AutoNetworkTier.Premium"/>.</summary>
+                public const string Premium = "PREMIUM";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.AutoNetworkTier.Standard"/>.</summary>
+                public const string Standard = "STANDARD";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.AutoNetworkTier.StandardOverridesFixedStandard"/>.</summary>
+                public const string StandardOverridesFixedStandard = "STANDARD_OVERRIDES_FIXED_STANDARD";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.RouterNat.Types.EndpointTypes"/> enum.</summary>
             public static class EndpointTypes
             {
@@ -4971,6 +5175,41 @@ namespace Google.Cloud.Compute.V1
                 public const string Sni = "SNI";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.XffIp"/>.</summary>
+                public const string XffIp = "XFF_IP";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig"/> message.</summary>
+        public static class SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType"/> enum.</summary>
+            public static class EnforceOnKeyType
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.UndefinedEnforceOnKeyType"/>.</summary>
+                public const string UndefinedEnforceOnKeyType = "UNDEFINED_ENFORCE_ON_KEY_TYPE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.All"/>.</summary>
+                public const string All = "ALL";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.HttpCookie"/>.</summary>
+                public const string HttpCookie = "HTTP_COOKIE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.HttpHeader"/>.</summary>
+                public const string HttpHeader = "HTTP_HEADER";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.HttpPath"/>.</summary>
+                public const string HttpPath = "HTTP_PATH";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.Ip"/>.</summary>
+                public const string Ip = "IP";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.RegionCode"/>.</summary>
+                public const string RegionCode = "REGION_CODE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.Sni"/>.</summary>
+                public const string Sni = "SNI";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.XffIp"/>.</summary>
                 public const string XffIp = "XFF_IP";
             }
         }
@@ -5888,6 +6127,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warning.Types.Code.LargeDeploymentWarning"/>.</summary>
                 public const string LargeDeploymentWarning = "LARGE_DEPLOYMENT_WARNING";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warning.Types.Code.ListOverheadQuotaExceed"/>.</summary>
+                public const string ListOverheadQuotaExceed = "LIST_OVERHEAD_QUOTA_EXCEED";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warning.Types.Code.MissingTypeDependency"/>.</summary>
                 public const string MissingTypeDependency = "MISSING_TYPE_DEPENDENCY";
 
@@ -5979,6 +6221,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warnings.Types.Code.LargeDeploymentWarning"/>.</summary>
                 public const string LargeDeploymentWarning = "LARGE_DEPLOYMENT_WARNING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warnings.Types.Code.ListOverheadQuotaExceed"/>.</summary>
+                public const string ListOverheadQuotaExceed = "LIST_OVERHEAD_QUOTA_EXCEED";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warnings.Types.Code.MissingTypeDependency"/>.</summary>
                 public const string MissingTypeDependency = "MISSING_TYPE_DEPENDENCY";

@@ -27,7 +27,7 @@ public sealed class UpdateMixinsCommand : CommandBase
     {
     }
 
-    protected override void ExecuteImpl(string[] args)
+    protected override int ExecuteImpl(string[] args)
     {
         string id = args[0];
         string committish = args[1];
@@ -42,7 +42,7 @@ public sealed class UpdateMixinsCommand : CommandBase
         if (targetApiFromIndex is null)
         {
             Console.WriteLine($"Package {id} is not in the API index. Assuming it has no mixins.");
-            return;
+            return 0;
         }
 
         bool updated = false;
@@ -59,7 +59,7 @@ public sealed class UpdateMixinsCommand : CommandBase
         if (!updated)
         {
             Console.WriteLine("No new mixins detected");
-            return;
+            return 0;
         }
 
         api.Json["dependencies"] = new JObject(api.Dependencies.Select(pair => new JProperty(pair.Key, pair.Value)));
@@ -69,5 +69,6 @@ public sealed class UpdateMixinsCommand : CommandBase
         string formatted = catalog.FormatJson();
         File.WriteAllText(ApiCatalog.CatalogPath, formatted);
         Console.WriteLine("Updated apis.json and project files");
+        return 0;
     }
 }

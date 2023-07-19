@@ -3,5 +3,6 @@
   "release_level": "preview",
   "client_documentation": "https://googleapis.dev/dotnet/Google.Maps.MapsPlatformDatasets.V1Alpha/latest",
   "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
   "api_shortname": "mapsplatformdatasets"
 }

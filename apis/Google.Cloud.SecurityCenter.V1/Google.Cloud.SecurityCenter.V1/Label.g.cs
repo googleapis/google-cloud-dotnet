@@ -43,8 +43,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
   #region Messages
   /// <summary>
-  /// Label represents a generic name=value label. Label has separate name and
-  /// value fields to support filtering with contains().
+  /// Represents a generic name-value label. A label has separate name and value
+  /// fields to support filtering with the `contains()` function. For more
+  /// information, see [Filtering on array-type
+  /// fields](https://cloud.google.com/security-command-center/docs/how-to-api-list-findings#array-contains-filtering).
   /// </summary>
   public sealed partial class Label : pb::IMessage<Label>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -95,7 +97,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Label name.
+    /// Name of the label.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +112,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ValueFieldNumber = 2;
     private string value_ = "";
     /// <summary>
-    /// Label value.
+    /// Value that corresponds to the label's name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

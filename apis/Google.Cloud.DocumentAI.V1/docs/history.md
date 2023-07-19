@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.7.0, released 2023-06-20
+
+### New features
+
+- Add StyleInfo to document.proto ([commit 0fc4862](https://github.com/googleapis/google-cloud-dotnet/commit/0fc486293b62365947555b688ae8c203657308b1))
+- Add IMPORTING enum to State in processor.proto ([commit 0fc4862](https://github.com/googleapis/google-cloud-dotnet/commit/0fc486293b62365947555b688ae8c203657308b1))
+
 ## Version 3.6.0, released 2023-02-22
 
 ### New features

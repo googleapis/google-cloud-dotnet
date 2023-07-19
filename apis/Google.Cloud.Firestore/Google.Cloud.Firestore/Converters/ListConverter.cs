@@ -44,7 +44,7 @@ namespace Google.Cloud.Firestore.Converters
             _elementType = genericListInterface?.GenericTypeArguments[0] ?? typeof(object);
         }
 
-        protected override object DeserializeArray(DeserializationContext context, RepeatedField<Value> values)
+        protected override object DeserializeArray(IDeserializationContext context, RepeatedField<Value> values)
         {
             // TODO: See if using a compiled expression tree is faster.
             var list = (IList) Activator.CreateInstance(TargetType);

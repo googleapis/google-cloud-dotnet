@@ -47,6 +47,8 @@ namespace Google.Cloud.Compute.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             AddResourcePoliciesSettings = existing.AddResourcePoliciesSettings;
             AddResourcePoliciesOperationsSettings = existing.AddResourcePoliciesOperationsSettings.Clone();
+            BulkInsertSettings = existing.BulkInsertSettings;
+            BulkInsertOperationsSettings = existing.BulkInsertOperationsSettings.Clone();
             CreateSnapshotSettings = existing.CreateSnapshotSettings;
             CreateSnapshotOperationsSettings = existing.CreateSnapshotOperationsSettings.Clone();
             DeleteSettings = existing.DeleteSettings;
@@ -63,6 +65,12 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             SetLabelsSettings = existing.SetLabelsSettings;
             SetLabelsOperationsSettings = existing.SetLabelsOperationsSettings.Clone();
+            StartAsyncReplicationSettings = existing.StartAsyncReplicationSettings;
+            StartAsyncReplicationOperationsSettings = existing.StartAsyncReplicationOperationsSettings.Clone();
+            StopAsyncReplicationSettings = existing.StopAsyncReplicationSettings;
+            StopAsyncReplicationOperationsSettings = existing.StopAsyncReplicationOperationsSettings.Clone();
+            StopGroupAsyncReplicationSettings = existing.StopGroupAsyncReplicationSettings;
+            StopGroupAsyncReplicationOperationsSettings = existing.StopGroupAsyncReplicationOperationsSettings.Clone();
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             UpdateSettings = existing.UpdateSettings;
             UpdateOperationsSettings = existing.UpdateOperationsSettings.Clone();
@@ -97,6 +105,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings AddResourcePoliciesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionDisksClient.BulkInsert</c> and <c>RegionDisksClient.BulkInsertAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BulkInsertSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionDisksClient.BulkInsert</c> and
+        /// <c>RegionDisksClient.BulkInsertAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BulkInsertOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -352,6 +390,97 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings SetLabelsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionDisksClient.StartAsyncReplication</c> and <c>RegionDisksClient.StartAsyncReplicationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StartAsyncReplicationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionDisksClient.StartAsyncReplication</c> and
+        /// <c>RegionDisksClient.StartAsyncReplicationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StartAsyncReplicationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionDisksClient.StopAsyncReplication</c> and <c>RegionDisksClient.StopAsyncReplicationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StopAsyncReplicationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionDisksClient.StopAsyncReplication</c> and
+        /// <c>RegionDisksClient.StopAsyncReplicationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StopAsyncReplicationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionDisksClient.StopGroupAsyncReplication</c> and <c>RegionDisksClient.StopGroupAsyncReplicationAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StopGroupAsyncReplicationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionDisksClient.StopGroupAsyncReplication</c> and
+        /// <c>RegionDisksClient.StopGroupAsyncReplicationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StopGroupAsyncReplicationOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -665,6 +794,120 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> AddResourcePoliciesAsync(string project, string region, string disk, RegionDisksAddResourcePoliciesRequest regionDisksAddResourcePoliciesRequestResource, st::CancellationToken cancellationToken) =>
             AddResourcePoliciesAsync(project, region, disk, regionDisksAddResourcePoliciesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Bulk create a set of disks.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> BulkInsert(BulkInsertRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Bulk create a set of disks.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> BulkInsertAsync(BulkInsertRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Bulk create a set of disks.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> BulkInsertAsync(BulkInsertRegionDiskRequest request, st::CancellationToken cancellationToken) =>
+            BulkInsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BulkInsert</c>.</summary>
+        public virtual lro::OperationsClient BulkInsertOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BulkInsert</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceBulkInsert(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkInsertOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkInsert</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceBulkInsertAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkInsertOperationsClient, callSettings);
+
+        /// <summary>
+        /// Bulk create a set of disks.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="bulkInsertDiskResourceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> BulkInsert(string project, string region, BulkInsertDiskResource bulkInsertDiskResourceResource, gaxgrpc::CallSettings callSettings = null) =>
+            BulkInsert(new BulkInsertRegionDiskRequest
+            {
+                BulkInsertDiskResourceResource = gax::GaxPreconditions.CheckNotNull(bulkInsertDiskResourceResource, nameof(bulkInsertDiskResourceResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Bulk create a set of disks.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="bulkInsertDiskResourceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> BulkInsertAsync(string project, string region, BulkInsertDiskResource bulkInsertDiskResourceResource, gaxgrpc::CallSettings callSettings = null) =>
+            BulkInsertAsync(new BulkInsertRegionDiskRequest
+            {
+                BulkInsertDiskResourceResource = gax::GaxPreconditions.CheckNotNull(bulkInsertDiskResourceResource, nameof(bulkInsertDiskResourceResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Bulk create a set of disks.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="bulkInsertDiskResourceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> BulkInsertAsync(string project, string region, BulkInsertDiskResource bulkInsertDiskResourceResource, st::CancellationToken cancellationToken) =>
+            BulkInsertAsync(project, region, bulkInsertDiskResourceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
@@ -1745,6 +1988,362 @@ namespace Google.Cloud.Compute.V1
             SetLabelsAsync(project, region, resource, regionSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> StartAsyncReplication(StartAsyncReplicationRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StartAsyncReplicationAsync(StartAsyncReplicationRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StartAsyncReplicationAsync(StartAsyncReplicationRegionDiskRequest request, st::CancellationToken cancellationToken) =>
+            StartAsyncReplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StartAsyncReplication</c>.</summary>
+        public virtual lro::OperationsClient StartAsyncReplicationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>StartAsyncReplication</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceStartAsyncReplication(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartAsyncReplicationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StartAsyncReplication</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceStartAsyncReplicationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartAsyncReplicationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="disk">
+        /// The name of the persistent disk.
+        /// </param>
+        /// <param name="regionDisksStartAsyncReplicationRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> StartAsyncReplication(string project, string region, string disk, RegionDisksStartAsyncReplicationRequest regionDisksStartAsyncReplicationRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            StartAsyncReplication(new StartAsyncReplicationRegionDiskRequest
+            {
+                Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                RegionDisksStartAsyncReplicationRequestResource = gax::GaxPreconditions.CheckNotNull(regionDisksStartAsyncReplicationRequestResource, nameof(regionDisksStartAsyncReplicationRequestResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="disk">
+        /// The name of the persistent disk.
+        /// </param>
+        /// <param name="regionDisksStartAsyncReplicationRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StartAsyncReplicationAsync(string project, string region, string disk, RegionDisksStartAsyncReplicationRequest regionDisksStartAsyncReplicationRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            StartAsyncReplicationAsync(new StartAsyncReplicationRegionDiskRequest
+            {
+                Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                RegionDisksStartAsyncReplicationRequestResource = gax::GaxPreconditions.CheckNotNull(regionDisksStartAsyncReplicationRequestResource, nameof(regionDisksStartAsyncReplicationRequestResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="disk">
+        /// The name of the persistent disk.
+        /// </param>
+        /// <param name="regionDisksStartAsyncReplicationRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StartAsyncReplicationAsync(string project, string region, string disk, RegionDisksStartAsyncReplicationRequest regionDisksStartAsyncReplicationRequestResource, st::CancellationToken cancellationToken) =>
+            StartAsyncReplicationAsync(project, region, disk, regionDisksStartAsyncReplicationRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> StopAsyncReplication(StopAsyncReplicationRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StopAsyncReplicationAsync(StopAsyncReplicationRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StopAsyncReplicationAsync(StopAsyncReplicationRegionDiskRequest request, st::CancellationToken cancellationToken) =>
+            StopAsyncReplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StopAsyncReplication</c>.</summary>
+        public virtual lro::OperationsClient StopAsyncReplicationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>StopAsyncReplication</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceStopAsyncReplication(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopAsyncReplicationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StopAsyncReplication</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceStopAsyncReplicationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopAsyncReplicationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="disk">
+        /// The name of the persistent disk.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> StopAsyncReplication(string project, string region, string disk, gaxgrpc::CallSettings callSettings = null) =>
+            StopAsyncReplication(new StopAsyncReplicationRegionDiskRequest
+            {
+                Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="disk">
+        /// The name of the persistent disk.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StopAsyncReplicationAsync(string project, string region, string disk, gaxgrpc::CallSettings callSettings = null) =>
+            StopAsyncReplicationAsync(new StopAsyncReplicationRegionDiskRequest
+            {
+                Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request.
+        /// </param>
+        /// <param name="disk">
+        /// The name of the persistent disk.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StopAsyncReplicationAsync(string project, string region, string disk, st::CancellationToken cancellationToken) =>
+            StopAsyncReplicationAsync(project, region, disk, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> StopGroupAsyncReplication(StopGroupAsyncReplicationRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StopGroupAsyncReplicationAsync(StopGroupAsyncReplicationRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StopGroupAsyncReplicationAsync(StopGroupAsyncReplicationRegionDiskRequest request, st::CancellationToken cancellationToken) =>
+            StopGroupAsyncReplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StopGroupAsyncReplication</c>.</summary>
+        public virtual lro::OperationsClient StopGroupAsyncReplicationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StopGroupAsyncReplication</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceStopGroupAsyncReplication(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopGroupAsyncReplicationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StopGroupAsyncReplication</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceStopGroupAsyncReplicationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopGroupAsyncReplicationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request. This must be the region of the primary or secondary disks in the consistency group.
+        /// </param>
+        /// <param name="disksStopGroupAsyncReplicationResourceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> StopGroupAsyncReplication(string project, string region, DisksStopGroupAsyncReplicationResource disksStopGroupAsyncReplicationResourceResource, gaxgrpc::CallSettings callSettings = null) =>
+            StopGroupAsyncReplication(new StopGroupAsyncReplicationRegionDiskRequest
+            {
+                DisksStopGroupAsyncReplicationResourceResource = gax::GaxPreconditions.CheckNotNull(disksStopGroupAsyncReplicationResourceResource, nameof(disksStopGroupAsyncReplicationResourceResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request. This must be the region of the primary or secondary disks in the consistency group.
+        /// </param>
+        /// <param name="disksStopGroupAsyncReplicationResourceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StopGroupAsyncReplicationAsync(string project, string region, DisksStopGroupAsyncReplicationResource disksStopGroupAsyncReplicationResourceResource, gaxgrpc::CallSettings callSettings = null) =>
+            StopGroupAsyncReplicationAsync(new StopGroupAsyncReplicationRegionDiskRequest
+            {
+                DisksStopGroupAsyncReplicationResourceResource = gax::GaxPreconditions.CheckNotNull(disksStopGroupAsyncReplicationResourceResource, nameof(disksStopGroupAsyncReplicationResourceResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region for this request. This must be the region of the primary or secondary disks in the consistency group.
+        /// </param>
+        /// <param name="disksStopGroupAsyncReplicationResourceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StopGroupAsyncReplicationAsync(string project, string region, DisksStopGroupAsyncReplicationResource disksStopGroupAsyncReplicationResourceResource, st::CancellationToken cancellationToken) =>
+            StopGroupAsyncReplicationAsync(project, region, disksStopGroupAsyncReplicationResourceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1977,6 +2576,8 @@ namespace Google.Cloud.Compute.V1
     {
         private readonly gaxgrpc::ApiCall<AddResourcePoliciesRegionDiskRequest, Operation> _callAddResourcePolicies;
 
+        private readonly gaxgrpc::ApiCall<BulkInsertRegionDiskRequest, Operation> _callBulkInsert;
+
         private readonly gaxgrpc::ApiCall<CreateSnapshotRegionDiskRequest, Operation> _callCreateSnapshot;
 
         private readonly gaxgrpc::ApiCall<DeleteRegionDiskRequest, Operation> _callDelete;
@@ -1997,6 +2598,12 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<SetLabelsRegionDiskRequest, Operation> _callSetLabels;
 
+        private readonly gaxgrpc::ApiCall<StartAsyncReplicationRegionDiskRequest, Operation> _callStartAsyncReplication;
+
+        private readonly gaxgrpc::ApiCall<StopAsyncReplicationRegionDiskRequest, Operation> _callStopAsyncReplication;
+
+        private readonly gaxgrpc::ApiCall<StopGroupAsyncReplicationRegionDiskRequest, Operation> _callStopGroupAsyncReplication;
+
         private readonly gaxgrpc::ApiCall<TestIamPermissionsRegionDiskRequest, TestPermissionsResponse> _callTestIamPermissions;
 
         private readonly gaxgrpc::ApiCall<UpdateRegionDiskRequest, Operation> _callUpdate;
@@ -2013,16 +2620,23 @@ namespace Google.Cloud.Compute.V1
             RegionDisksSettings effectiveSettings = settings ?? RegionDisksSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             AddResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddResourcePoliciesOperationsSettings, logger);
+            BulkInsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.BulkInsertOperationsSettings, logger);
             CreateSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.CreateSnapshotOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
             RemoveResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RemoveResourcePoliciesOperationsSettings, logger);
             ResizeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.ResizeOperationsSettings, logger);
             SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetLabelsOperationsSettings, logger);
+            StartAsyncReplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.StartAsyncReplicationOperationsSettings, logger);
+            StopAsyncReplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.StopAsyncReplicationOperationsSettings, logger);
+            StopGroupAsyncReplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.StopGroupAsyncReplicationOperationsSettings, logger);
             UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.UpdateOperationsSettings, logger);
             _callAddResourcePolicies = clientHelper.BuildApiCall<AddResourcePoliciesRegionDiskRequest, Operation>("AddResourcePolicies", grpcClient.AddResourcePoliciesAsync, grpcClient.AddResourcePolicies, effectiveSettings.AddResourcePoliciesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("disk", request => request.Disk);
             Modify_ApiCall(ref _callAddResourcePolicies);
             Modify_AddResourcePoliciesApiCall(ref _callAddResourcePolicies);
+            _callBulkInsert = clientHelper.BuildApiCall<BulkInsertRegionDiskRequest, Operation>("BulkInsert", grpcClient.BulkInsertAsync, grpcClient.BulkInsert, effectiveSettings.BulkInsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            Modify_ApiCall(ref _callBulkInsert);
+            Modify_BulkInsertApiCall(ref _callBulkInsert);
             _callCreateSnapshot = clientHelper.BuildApiCall<CreateSnapshotRegionDiskRequest, Operation>("CreateSnapshot", grpcClient.CreateSnapshotAsync, grpcClient.CreateSnapshot, effectiveSettings.CreateSnapshotSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("disk", request => request.Disk);
             Modify_ApiCall(ref _callCreateSnapshot);
             Modify_CreateSnapshotApiCall(ref _callCreateSnapshot);
@@ -2053,6 +2667,15 @@ namespace Google.Cloud.Compute.V1
             _callSetLabels = clientHelper.BuildApiCall<SetLabelsRegionDiskRequest, Operation>("SetLabels", grpcClient.SetLabelsAsync, grpcClient.SetLabels, effectiveSettings.SetLabelsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetLabels);
             Modify_SetLabelsApiCall(ref _callSetLabels);
+            _callStartAsyncReplication = clientHelper.BuildApiCall<StartAsyncReplicationRegionDiskRequest, Operation>("StartAsyncReplication", grpcClient.StartAsyncReplicationAsync, grpcClient.StartAsyncReplication, effectiveSettings.StartAsyncReplicationSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("disk", request => request.Disk);
+            Modify_ApiCall(ref _callStartAsyncReplication);
+            Modify_StartAsyncReplicationApiCall(ref _callStartAsyncReplication);
+            _callStopAsyncReplication = clientHelper.BuildApiCall<StopAsyncReplicationRegionDiskRequest, Operation>("StopAsyncReplication", grpcClient.StopAsyncReplicationAsync, grpcClient.StopAsyncReplication, effectiveSettings.StopAsyncReplicationSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("disk", request => request.Disk);
+            Modify_ApiCall(ref _callStopAsyncReplication);
+            Modify_StopAsyncReplicationApiCall(ref _callStopAsyncReplication);
+            _callStopGroupAsyncReplication = clientHelper.BuildApiCall<StopGroupAsyncReplicationRegionDiskRequest, Operation>("StopGroupAsyncReplication", grpcClient.StopGroupAsyncReplicationAsync, grpcClient.StopGroupAsyncReplication, effectiveSettings.StopGroupAsyncReplicationSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
+            Modify_ApiCall(ref _callStopGroupAsyncReplication);
+            Modify_StopGroupAsyncReplicationApiCall(ref _callStopGroupAsyncReplication);
             _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRegionDiskRequest, TestPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
@@ -2065,6 +2688,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_AddResourcePoliciesApiCall(ref gaxgrpc::ApiCall<AddResourcePoliciesRegionDiskRequest, Operation> call);
+
+        partial void Modify_BulkInsertApiCall(ref gaxgrpc::ApiCall<BulkInsertRegionDiskRequest, Operation> call);
 
         partial void Modify_CreateSnapshotApiCall(ref gaxgrpc::ApiCall<CreateSnapshotRegionDiskRequest, Operation> call);
 
@@ -2086,6 +2711,12 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_SetLabelsApiCall(ref gaxgrpc::ApiCall<SetLabelsRegionDiskRequest, Operation> call);
 
+        partial void Modify_StartAsyncReplicationApiCall(ref gaxgrpc::ApiCall<StartAsyncReplicationRegionDiskRequest, Operation> call);
+
+        partial void Modify_StopAsyncReplicationApiCall(ref gaxgrpc::ApiCall<StopAsyncReplicationRegionDiskRequest, Operation> call);
+
+        partial void Modify_StopGroupAsyncReplicationApiCall(ref gaxgrpc::ApiCall<StopGroupAsyncReplicationRegionDiskRequest, Operation> call);
+
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<TestIamPermissionsRegionDiskRequest, TestPermissionsResponse> call);
 
         partial void Modify_UpdateApiCall(ref gaxgrpc::ApiCall<UpdateRegionDiskRequest, Operation> call);
@@ -2096,6 +2727,8 @@ namespace Google.Cloud.Compute.V1
         public override RegionDisks.RegionDisksClient GrpcClient { get; }
 
         partial void Modify_AddResourcePoliciesRegionDiskRequest(ref AddResourcePoliciesRegionDiskRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BulkInsertRegionDiskRequest(ref BulkInsertRegionDiskRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateSnapshotRegionDiskRequest(ref CreateSnapshotRegionDiskRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2116,6 +2749,12 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_SetIamPolicyRegionDiskRequest(ref SetIamPolicyRegionDiskRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetLabelsRegionDiskRequest(ref SetLabelsRegionDiskRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StartAsyncReplicationRegionDiskRequest(ref StartAsyncReplicationRegionDiskRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StopAsyncReplicationRegionDiskRequest(ref StopAsyncReplicationRegionDiskRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StopGroupAsyncReplicationRegionDiskRequest(ref StopGroupAsyncReplicationRegionDiskRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRegionDiskRequest(ref TestIamPermissionsRegionDiskRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2152,6 +2791,39 @@ namespace Google.Cloud.Compute.V1
             GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddResourcePoliciesOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>BulkInsert</c>.</summary>
+        public override lro::OperationsClient BulkInsertOperationsClient { get; }
+
+        /// <summary>
+        /// Bulk create a set of disks.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> BulkInsert(BulkInsertRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkInsertRegionDiskRequest(ref request, ref callSettings);
+            Operation response = _callBulkInsert.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), BulkInsertOperationsClient);
+        }
+
+        /// <summary>
+        /// Bulk create a set of disks.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> BulkInsertAsync(BulkInsertRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkInsertRegionDiskRequest(ref request, ref callSettings);
+            Operation response = await _callBulkInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), BulkInsertOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>CreateSnapshot</c>.</summary>
@@ -2446,6 +3118,105 @@ namespace Google.Cloud.Compute.V1
             GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetLabelsOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>StartAsyncReplication</c>.</summary>
+        public override lro::OperationsClient StartAsyncReplicationOperationsClient { get; }
+
+        /// <summary>
+        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> StartAsyncReplication(StartAsyncReplicationRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartAsyncReplicationRegionDiskRequest(ref request, ref callSettings);
+            Operation response = _callStartAsyncReplication.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), StartAsyncReplicationOperationsClient);
+        }
+
+        /// <summary>
+        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> StartAsyncReplicationAsync(StartAsyncReplicationRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartAsyncReplicationRegionDiskRequest(ref request, ref callSettings);
+            Operation response = await _callStartAsyncReplication.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), StartAsyncReplicationOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>StopAsyncReplication</c>.</summary>
+        public override lro::OperationsClient StopAsyncReplicationOperationsClient { get; }
+
+        /// <summary>
+        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> StopAsyncReplication(StopAsyncReplicationRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopAsyncReplicationRegionDiskRequest(ref request, ref callSettings);
+            Operation response = _callStopAsyncReplication.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), StopAsyncReplicationOperationsClient);
+        }
+
+        /// <summary>
+        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> StopAsyncReplicationAsync(StopAsyncReplicationRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopAsyncReplicationRegionDiskRequest(ref request, ref callSettings);
+            Operation response = await _callStopAsyncReplication.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), StopAsyncReplicationOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>StopGroupAsyncReplication</c>.</summary>
+        public override lro::OperationsClient StopGroupAsyncReplicationOperationsClient { get; }
+
+        /// <summary>
+        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> StopGroupAsyncReplication(StopGroupAsyncReplicationRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopGroupAsyncReplicationRegionDiskRequest(ref request, ref callSettings);
+            Operation response = _callStopGroupAsyncReplication.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), StopGroupAsyncReplicationOperationsClient);
+        }
+
+        /// <summary>
+        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> StopGroupAsyncReplicationAsync(StopGroupAsyncReplicationRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopGroupAsyncReplicationRegionDiskRequest(ref request, ref callSettings);
+            Operation response = await _callStopGroupAsyncReplication.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), StopGroupAsyncReplicationOperationsClient);
         }
 
         /// <summary>

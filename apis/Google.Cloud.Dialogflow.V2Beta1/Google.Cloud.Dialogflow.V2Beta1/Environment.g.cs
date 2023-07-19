@@ -223,9 +223,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Output only. The unique identifier of this agent environment.
     /// Supported formats:
-    /// - `projects/&lt;Project Number / ID>/agent/environments/&lt;Environment ID>`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location
-    ///   ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
+    /// ID>/agent/environments/&lt;Environment ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -260,7 +260,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// Supported formats:
     /// - `projects/&lt;Project ID>/agent/versions/&lt;Version ID>`
     /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent/versions/&lt;Version
-    ///   ID>`
+    /// ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1038,8 +1038,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Required. The agent to list all environments from.
     /// Format:
-    /// - `projects/&lt;Project Number / ID>/agent`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location ID>/agent`
+    /// - `projects/&lt;Project ID>/agent`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1543,8 +1543,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Required. The name of the environment.
     /// Supported formats:
-    /// - `projects/&lt;Project Number / ID>/agent/environments/&lt;Environment ID>`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
     ///   ID>/agent/environments/&lt;Environment ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1745,8 +1745,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Required. The agent to create an environment for.
     /// Supported formats:
-    /// - `projects/&lt;Project Number / ID>/agent`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location ID>/agent`
+    /// - `projects/&lt;Project ID>/agent`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2328,8 +2328,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Required. The name of the environment to delete.
     /// / Format:
-    /// - `projects/&lt;Project Number / ID>/agent/environments/&lt;Environment ID>`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/agent/environments/&lt;Environment ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2530,8 +2530,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Required. The name of the environment to retrieve history for.
     /// Supported formats:
-    /// - `projects/&lt;Project Number / ID>/agent/environments/&lt;Environment ID>`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
     ///   ID>/agent/environments/&lt;Environment ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2811,8 +2811,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Output only. The name of the environment this history is for.
     /// Supported formats:
-    /// - `projects/&lt;Project Number / ID>/agent/environments/&lt;Environment ID>`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
     ///    ID>/agent/environments/&lt;Environment ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

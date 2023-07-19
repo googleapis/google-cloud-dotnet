@@ -99,7 +99,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Container name.
+    /// Name of the container.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -114,8 +114,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// Container image URI provided when configuring a pod/container.
-    /// May identify a container image version using mutable tags.
+    /// Container image URI provided when configuring a pod or container. This
+    /// string can identify a container image version using mutable tags.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -130,9 +130,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ImageIdFieldNumber = 3;
     private string imageId_ = "";
     /// <summary>
-    /// Optional container image id, when provided by the container runtime.
-    /// Uniquely identifies the container image launched using a container image
-    /// digest.
+    /// Optional container image ID, if provided by the container runtime. Uniquely
+    /// identifies the container image launched using a container image digest.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

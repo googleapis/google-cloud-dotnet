@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -60,7 +60,7 @@ namespace Google.Cloud.Spanner.Data
                         try
                         {
                             session = await (session?.WithFreshTransactionOrNewAsync(SpannerConnection.ReadWriteTransactionOptions, cancellationToken) ?? _connection.AcquireReadWriteSessionAsync(cancellationToken)).ConfigureAwait(false);
-                            transaction = new SpannerTransaction(_connection, TransactionMode.ReadWrite, session, null);
+                            transaction = new SpannerTransaction(_connection, TransactionMode.ReadWrite, session, null, true);
 
                             TResult result = await asyncWork(transaction).ConfigureAwait(false);
                             await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
@@ -90,12 +90,12 @@ namespace Google.Cloud.Spanner.Data
                         {
                             if (transaction != null)
                             {
-                                // Let's make sure that the associated session is not released to the pool
-                                // because we'll be attempting to get a fresh transaction for this same session first.
+                                // Since the transaction was marked as retriable, disposing of it won't attempt to dispose of or
+                                // return the underlying session to the pool. That's because we'll be attempting to get a
+                                // fresh transaction for this same session first.
                                 // If that fails will attempt a new session acquisition.
                                 // This session will be disposed of by the pool if it can't be refreshed or by the RunAsync method
                                 // if we are not retrying anymore.
-                                transaction.DisposeBehavior = DisposeBehavior.Detach;
                                 transaction.Dispose();
                             }
                         }

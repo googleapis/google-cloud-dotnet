@@ -544,6 +544,140 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for Move</summary>
+        public void MoveRequestObject()
+        {
+            // Snippet: Move(MoveGlobalAddressRequest, CallSettings)
+            // Create client
+            GlobalAddressesClient globalAddressesClient = GlobalAddressesClient.Create();
+            // Initialize request argument(s)
+            MoveGlobalAddressRequest request = new MoveGlobalAddressRequest
+            {
+                RequestId = "",
+                Project = "",
+                GlobalAddressesMoveRequestResource = new GlobalAddressesMoveRequest(),
+                Address = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = globalAddressesClient.Move(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalAddressesClient.PollOnceMove(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveAsync</summary>
+        public async Task MoveRequestObjectAsync()
+        {
+            // Snippet: MoveAsync(MoveGlobalAddressRequest, CallSettings)
+            // Additional: MoveAsync(MoveGlobalAddressRequest, CancellationToken)
+            // Create client
+            GlobalAddressesClient globalAddressesClient = await GlobalAddressesClient.CreateAsync();
+            // Initialize request argument(s)
+            MoveGlobalAddressRequest request = new MoveGlobalAddressRequest
+            {
+                RequestId = "",
+                Project = "",
+                GlobalAddressesMoveRequestResource = new GlobalAddressesMoveRequest(),
+                Address = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await globalAddressesClient.MoveAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalAddressesClient.PollOnceMoveAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Move</summary>
+        public void Move()
+        {
+            // Snippet: Move(string, string, GlobalAddressesMoveRequest, CallSettings)
+            // Create client
+            GlobalAddressesClient globalAddressesClient = GlobalAddressesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string address = "";
+            GlobalAddressesMoveRequest globalAddressesMoveRequestResource = new GlobalAddressesMoveRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = globalAddressesClient.Move(project, address, globalAddressesMoveRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalAddressesClient.PollOnceMove(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveAsync</summary>
+        public async Task MoveAsync()
+        {
+            // Snippet: MoveAsync(string, string, GlobalAddressesMoveRequest, CallSettings)
+            // Additional: MoveAsync(string, string, GlobalAddressesMoveRequest, CancellationToken)
+            // Create client
+            GlobalAddressesClient globalAddressesClient = await GlobalAddressesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string address = "";
+            GlobalAddressesMoveRequest globalAddressesMoveRequestResource = new GlobalAddressesMoveRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await globalAddressesClient.MoveAsync(project, address, globalAddressesMoveRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalAddressesClient.PollOnceMoveAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for SetLabels</summary>
         public void SetLabelsRequestObject()
         {

@@ -25,14 +25,14 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             string id = args[0];
             string version = args[1];
-            InternalExecute(id, version, quiet: false);
+            return InternalExecute(id, version, quiet: false);
         }
 
-        internal void InternalExecute(string id, string version, bool quiet)
+        internal int InternalExecute(string id, string version, bool quiet)
         {
             var catalog = ApiCatalog.Load();
             var api = catalog[id];
@@ -66,6 +66,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 Console.WriteLine();
                 Console.WriteLine(new ApiVersionPair(id, oldVersion, version));
             }
+            return 0;
         }
     }
 }

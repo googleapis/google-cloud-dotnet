@@ -51,49 +51,50 @@ namespace Google.Cloud.Kms.Inventory.V1 {
             "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5",
             "X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0b0tleVZlcnNp",
             "b25zL3tjcnlwdG9fa2V5X3ZlcnNpb259L3Byb3RlY3RlZFJlc291cmNlc1N1",
-            "bW1hcnkisAEKH1NlYXJjaFByb3RlY3RlZFJlc291cmNlc1JlcXVlc3QSRwoF",
+            "bW1hcnkizQEKH1NlYXJjaFByb3RlY3RlZFJlc291cmNlc1JlcXVlc3QSRwoF",
             "c2NvcGUYAiABKAlCOOBBAvpBMgowY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29v",
             "Z2xlYXBpcy5jb20vT3JnYW5pemF0aW9uEh0KCmNyeXB0b19rZXkYASABKAlC",
             "CeBBAvpBAwoBKhIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgE",
-            "IAEoCSKKAQogU2VhcmNoUHJvdGVjdGVkUmVzb3VyY2VzUmVzcG9uc2USTQoT",
-            "cHJvdGVjdGVkX3Jlc291cmNlcxgBIAMoCzIwLmdvb2dsZS5jbG91ZC5rbXMu",
-            "aW52ZW50b3J5LnYxLlByb3RlY3RlZFJlc291cmNlEhcKD25leHRfcGFnZV90",
-            "b2tlbhgCIAEoCSL5AwoRUHJvdGVjdGVkUmVzb3VyY2USDAoEbmFtZRgBIAEo",
-            "CRIPCgdwcm9qZWN0GAIgASgJEhIKCnByb2plY3RfaWQYCSABKAkSFQoNY2xv",
-            "dWRfcHJvZHVjdBgIIAEoCRIVCg1yZXNvdXJjZV90eXBlGAMgASgJEhAKCGxv",
-            "Y2F0aW9uGAQgASgJEkwKBmxhYmVscxgFIAMoCzI8Lmdvb2dsZS5jbG91ZC5r",
-            "bXMuaW52ZW50b3J5LnYxLlByb3RlY3RlZFJlc291cmNlLkxhYmVsc0VudHJ5",
-            "EkkKEmNyeXB0b19rZXlfdmVyc2lvbhgGIAEoCUIt+kEqCihjbG91ZGttcy5n",
-            "b29nbGVhcGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uEkoKE2NyeXB0b19rZXlf",
-            "dmVyc2lvbnMYCiADKAlCLfpBKgooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20v",
-            "Q3J5cHRvS2V5VmVyc2lvbhI0CgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOifqQSQKH2Nsb3VkYXNzZXQu",
-            "Z29vZ2xlYXBpcy5jb20vQXNzZXQSASoy2gQKEktleVRyYWNraW5nU2Vydmlj",
-            "ZRKBAgocR2V0UHJvdGVjdGVkUmVzb3VyY2VzU3VtbWFyeRJCLmdvb2dsZS5j",
-            "bG91ZC5rbXMuaW52ZW50b3J5LnYxLkdldFByb3RlY3RlZFJlc291cmNlc1N1",
-            "bW1hcnlSZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLmttcy5pbnZlbnRvcnkudjEu",
-            "UHJvdGVjdGVkUmVzb3VyY2VzU3VtbWFyeSJjgtPkkwJWElQvdjEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMv",
-            "Kip9L3Byb3RlY3RlZFJlc291cmNlc1N1bW1hcnnaQQRuYW1lEu4BChhTZWFy",
-            "Y2hQcm90ZWN0ZWRSZXNvdXJjZXMSPi5nb29nbGUuY2xvdWQua21zLmludmVu",
-            "dG9yeS52MS5TZWFyY2hQcm90ZWN0ZWRSZXNvdXJjZXNSZXF1ZXN0Gj8uZ29v",
-            "Z2xlLmNsb3VkLmttcy5pbnZlbnRvcnkudjEuU2VhcmNoUHJvdGVjdGVkUmVz",
-            "b3VyY2VzUmVzcG9uc2UiUYLT5JMCNxI1L3YxL3tzY29wZT1vcmdhbml6YXRp",
-            "b25zLyp9L3Byb3RlY3RlZFJlc291cmNlczpzZWFyY2jaQRFzY29wZSwgY3J5",
-            "cHRvX2tleRpPykEba21zaW52ZW50b3J5Lmdvb2dsZWFwaXMuY29t0kEuaHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULC",
-            "AQohY29tLmdvb2dsZS5jbG91ZC5rbXMuaW52ZW50b3J5LnYxQhdLZXlUcmFj",
-            "a2luZ1NlcnZpY2VQcm90b1ABWj9jbG91ZC5nb29nbGUuY29tL2dvL2ttcy9p",
-            "bnZlbnRvcnkvYXBpdjEvaW52ZW50b3J5cGI7aW52ZW50b3J5cGL4AQGqAh1H",
-            "b29nbGUuQ2xvdWQuS21zLkludmVudG9yeS5WMcoCHUdvb2dsZVxDbG91ZFxL",
-            "bXNcSW52ZW50b3J5XFYxYgZwcm90bzM="));
+            "IAEoCRIbCg5yZXNvdXJjZV90eXBlcxgFIAMoCUID4EEBIooBCiBTZWFyY2hQ",
+            "cm90ZWN0ZWRSZXNvdXJjZXNSZXNwb25zZRJNChNwcm90ZWN0ZWRfcmVzb3Vy",
+            "Y2VzGAEgAygLMjAuZ29vZ2xlLmNsb3VkLmttcy5pbnZlbnRvcnkudjEuUHJv",
+            "dGVjdGVkUmVzb3VyY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIvkDChFQ",
+            "cm90ZWN0ZWRSZXNvdXJjZRIMCgRuYW1lGAEgASgJEg8KB3Byb2plY3QYAiAB",
+            "KAkSEgoKcHJvamVjdF9pZBgJIAEoCRIVCg1jbG91ZF9wcm9kdWN0GAggASgJ",
+            "EhUKDXJlc291cmNlX3R5cGUYAyABKAkSEAoIbG9jYXRpb24YBCABKAkSTAoG",
+            "bGFiZWxzGAUgAygLMjwuZ29vZ2xlLmNsb3VkLmttcy5pbnZlbnRvcnkudjEu",
+            "UHJvdGVjdGVkUmVzb3VyY2UuTGFiZWxzRW50cnkSSQoSY3J5cHRvX2tleV92",
+            "ZXJzaW9uGAYgASgJQi36QSoKKGNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0Ny",
+            "eXB0b0tleVZlcnNpb24SSgoTY3J5cHRvX2tleV92ZXJzaW9ucxgKIAMoCUIt",
+            "+kEqCihjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9u",
+            "EjQKC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAE6J+pBJAofY2xvdWRhc3NldC5nb29nbGVhcGlzLmNvbS9B",
+            "c3NldBIBKjLaBAoSS2V5VHJhY2tpbmdTZXJ2aWNlEoECChxHZXRQcm90ZWN0",
+            "ZWRSZXNvdXJjZXNTdW1tYXJ5EkIuZ29vZ2xlLmNsb3VkLmttcy5pbnZlbnRv",
+            "cnkudjEuR2V0UHJvdGVjdGVkUmVzb3VyY2VzU3VtbWFyeVJlcXVlc3QaOC5n",
+            "b29nbGUuY2xvdWQua21zLmludmVudG9yeS52MS5Qcm90ZWN0ZWRSZXNvdXJj",
+            "ZXNTdW1tYXJ5ImOC0+STAlYSVC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2tleVJpbmdzLyovY3J5cHRvS2V5cy8qKn0vcHJvdGVjdGVkUmVz",
+            "b3VyY2VzU3VtbWFyedpBBG5hbWUS7gEKGFNlYXJjaFByb3RlY3RlZFJlc291",
+            "cmNlcxI+Lmdvb2dsZS5jbG91ZC5rbXMuaW52ZW50b3J5LnYxLlNlYXJjaFBy",
+            "b3RlY3RlZFJlc291cmNlc1JlcXVlc3QaPy5nb29nbGUuY2xvdWQua21zLmlu",
+            "dmVudG9yeS52MS5TZWFyY2hQcm90ZWN0ZWRSZXNvdXJjZXNSZXNwb25zZSJR",
+            "gtPkkwI3EjUvdjEve3Njb3BlPW9yZ2FuaXphdGlvbnMvKn0vcHJvdGVjdGVk",
+            "UmVzb3VyY2VzOnNlYXJjaNpBEXNjb3BlLCBjcnlwdG9fa2V5Gk/KQRtrbXNp",
+            "bnZlbnRvcnkuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQsIBCiFjb20uZ29vZ2xlLmNs",
+            "b3VkLmttcy5pbnZlbnRvcnkudjFCF0tleVRyYWNraW5nU2VydmljZVByb3Rv",
+            "UAFaP2Nsb3VkLmdvb2dsZS5jb20vZ28va21zL2ludmVudG9yeS9hcGl2MS9p",
+            "bnZlbnRvcnlwYjtpbnZlbnRvcnlwYvgBAaoCHUdvb2dsZS5DbG91ZC5LbXMu",
+            "SW52ZW50b3J5LlYxygIdR29vZ2xlXENsb3VkXEttc1xJbnZlbnRvcnlcVjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.GetProtectedResourcesSummaryRequest), global::Google.Cloud.Kms.Inventory.V1.GetProtectedResourcesSummaryRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.ProtectedResourcesSummary), global::Google.Cloud.Kms.Inventory.V1.ProtectedResourcesSummary.Parser, new[]{ "Name", "ResourceCount", "ProjectCount", "ResourceTypes", "CloudProducts", "Locations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.SearchProtectedResourcesRequest), global::Google.Cloud.Kms.Inventory.V1.SearchProtectedResourcesRequest.Parser, new[]{ "Scope", "CryptoKey", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.SearchProtectedResourcesRequest), global::Google.Cloud.Kms.Inventory.V1.SearchProtectedResourcesRequest.Parser, new[]{ "Scope", "CryptoKey", "PageSize", "PageToken", "ResourceTypes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.SearchProtectedResourcesResponse), global::Google.Cloud.Kms.Inventory.V1.SearchProtectedResourcesResponse.Parser, new[]{ "ProtectedResources", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.Inventory.V1.ProtectedResource), global::Google.Cloud.Kms.Inventory.V1.ProtectedResource.Parser, new[]{ "Name", "Project", "ProjectId", "CloudProduct", "ResourceType", "Location", "Labels", "CryptoKeyVersion", "CryptoKeyVersions", "CreateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
@@ -708,6 +709,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       cryptoKey_ = other.cryptoKey_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      resourceTypes_ = other.resourceTypes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -788,6 +790,33 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       }
     }
 
+    /// <summary>Field number for the "resource_types" field.</summary>
+    public const int ResourceTypesFieldNumber = 5;
+    private static readonly pb::FieldCodec<string> _repeated_resourceTypes_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> resourceTypes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of resource types that this request searches for. If
+    /// empty, it will search all the [trackable resource
+    /// types](https://cloud.google.com/kms/docs/view-key-usage#tracked-resource-types).
+    ///
+    /// Regular expressions are also supported. For example:
+    ///
+    /// * `compute.googleapis.com.*` snapshots resources whose type starts
+    /// with `compute.googleapis.com`.
+    /// * `.*Image` snapshots resources whose type ends with `Image`.
+    /// * `.*Image.*` snapshots resources whose type contains `Image`.
+    ///
+    /// See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported
+    /// regular expression syntax. If the regular expression does not match any
+    /// supported resource type, an INVALID_ARGUMENT error will be returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ResourceTypes {
+      get { return resourceTypes_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -807,6 +836,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       if (CryptoKey != other.CryptoKey) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if(!resourceTypes_.Equals(other.resourceTypes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -818,6 +848,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       if (CryptoKey.Length != 0) hash ^= CryptoKey.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      hash ^= resourceTypes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -852,6 +883,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
         output.WriteRawTag(34);
         output.WriteString(PageToken);
       }
+      resourceTypes_.WriteTo(output, _repeated_resourceTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -878,6 +910,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
         output.WriteRawTag(34);
         output.WriteString(PageToken);
       }
+      resourceTypes_.WriteTo(ref output, _repeated_resourceTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -900,6 +933,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
       }
+      size += resourceTypes_.CalculateSize(_repeated_resourceTypes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -924,6 +958,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
       }
+      resourceTypes_.Add(other.resourceTypes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -955,6 +990,10 @@ namespace Google.Cloud.Kms.Inventory.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 42: {
+            resourceTypes_.AddEntriesFrom(input, _repeated_resourceTypes_codec);
+            break;
+          }
         }
       }
     #endif
@@ -984,6 +1023,10 @@ namespace Google.Cloud.Kms.Inventory.V1 {
           }
           case 34: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 42: {
+            resourceTypes_.AddEntriesFrom(ref input, _repeated_resourceTypes_codec);
             break;
           }
         }

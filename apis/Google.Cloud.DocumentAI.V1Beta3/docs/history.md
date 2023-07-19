@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.0.0-beta11, released 2023-06-20
+
+### New features
+
+- Add StyleInfo to document.proto ([commit f2334ad](https://github.com/googleapis/google-cloud-dotnet/commit/f2334ad1e2254fcf81131ba0ee05f0ce04d770cf))
+- Add REPLACE enum to OperationType in document.proto ([commit f2334ad](https://github.com/googleapis/google-cloud-dotnet/commit/f2334ad1e2254fcf81131ba0ee05f0ce04d770cf))
+- Add PropertyMetadata and EntityTypeMetadata to document_schema.proto ([commit f2334ad](https://github.com/googleapis/google-cloud-dotnet/commit/f2334ad1e2254fcf81131ba0ee05f0ce04d770cf))
+- Add IMPORTING enum to State in processor.proto ([commit f2334ad](https://github.com/googleapis/google-cloud-dotnet/commit/f2334ad1e2254fcf81131ba0ee05f0ce04d770cf))
+
 ## Version 2.0.0-beta10, released 2023-03-27
 
 ### New features

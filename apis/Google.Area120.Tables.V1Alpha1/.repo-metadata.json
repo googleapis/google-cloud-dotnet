@@ -3,5 +3,6 @@
   "release_level": "stable",
   "client_documentation": "https://googleapis.dev/dotnet/Google.Area120.Tables.V1Alpha1/latest",
   "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
   "api_shortname": "area120tables"
 }

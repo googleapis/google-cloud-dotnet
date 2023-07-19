@@ -31,7 +31,7 @@ public sealed class UpdateFromBazelCommand : CommandBase
     {
     }
 
-    protected override void ExecuteImpl(string[] args)
+    protected override int ExecuteImpl(string[] args)
     {
         string id = args[0];
         var catalog = ApiCatalog.Load();
@@ -54,6 +54,7 @@ public sealed class UpdateFromBazelCommand : CommandBase
         {
             File.WriteAllText(ApiCatalog.CatalogPath, catalog.FormatJson());
         }
+        return 0;
     }
 
     public bool Update(ApiMetadata api)

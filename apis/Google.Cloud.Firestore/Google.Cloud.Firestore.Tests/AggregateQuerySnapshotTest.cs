@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
+using System;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 
@@ -57,5 +58,19 @@ public class AggregateQuerySnapshotTest
                 // Same aggregate query but different read time and count.
                 new AggregateQuerySnapshot(s_db.Collection("col").Count(), Timestamp.FromProto(CreateProtoTimestamp(3, 4)), 20)
             });
+    }
+
+    [Fact]
+    public void DeserializationContextProperties()
+    {
+        var readTime = Timestamp.FromProto(CreateProtoTimestamp(1, 2));
+        AggregateQuery query = s_db.Collection("col").Count();
+        IDeserializationContext context = new AggregateQuerySnapshot(query, readTime, count: 1);
+
+        Assert.Equal(readTime, context.ReadTime);
+        Assert.Same(s_db, context.Database);
+        Assert.Throws<InvalidOperationException>(() => context.DocumentReference);
+        Assert.Throws<InvalidOperationException>(() => context.UpdateTime);
+        Assert.Throws<InvalidOperationException>(() => context.CreateTime);
     }
 }

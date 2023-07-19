@@ -70,6 +70,8 @@ namespace Google.Cloud.Kms.V1
             RestoreCryptoKeyVersionSettings = existing.RestoreCryptoKeyVersionSettings;
             EncryptSettings = existing.EncryptSettings;
             DecryptSettings = existing.DecryptSettings;
+            RawEncryptSettings = existing.RawEncryptSettings;
+            RawDecryptSettings = existing.RawDecryptSettings;
             AsymmetricSignSettings = existing.AsymmetricSignSettings;
             AsymmetricDecryptSettings = existing.AsymmetricDecryptSettings;
             MacSignSettings = existing.MacSignSettings;
@@ -515,6 +517,30 @@ namespace Google.Cloud.Kms.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DecryptSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.RawEncrypt</c> and <c>KeyManagementServiceClient.RawEncryptAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RawEncryptSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.RawDecrypt</c> and <c>KeyManagementServiceClient.RawDecryptAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RawDecryptSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -4048,6 +4074,84 @@ namespace Google.Cloud.Kms.V1
             DecryptAsync(name, ciphertext, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Encrypts data using portable cryptographic primitives. Most users should
+        /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+        /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+        /// their raw counterparts. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RawEncryptResponse RawEncrypt(RawEncryptRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Encrypts data using portable cryptographic primitives. Most users should
+        /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+        /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+        /// their raw counterparts. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RawEncryptResponse> RawEncryptAsync(RawEncryptRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Encrypts data using portable cryptographic primitives. Most users should
+        /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+        /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+        /// their raw counterparts. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RawEncryptResponse> RawEncryptAsync(RawEncryptRequest request, st::CancellationToken cancellationToken) =>
+            RawEncryptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Decrypts data that was originally encrypted using a raw cryptographic
+        /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RawDecryptResponse RawDecrypt(RawDecryptRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Decrypts data that was originally encrypted using a raw cryptographic
+        /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RawDecryptResponse> RawDecryptAsync(RawDecryptRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Decrypts data that was originally encrypted using a raw cryptographic
+        /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RawDecryptResponse> RawDecryptAsync(RawDecryptRequest request, st::CancellationToken cancellationToken) =>
+            RawDecryptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
         /// with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
         /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
@@ -4977,6 +5081,10 @@ namespace Google.Cloud.Kms.V1
 
         private readonly gaxgrpc::ApiCall<DecryptRequest, DecryptResponse> _callDecrypt;
 
+        private readonly gaxgrpc::ApiCall<RawEncryptRequest, RawEncryptResponse> _callRawEncrypt;
+
+        private readonly gaxgrpc::ApiCall<RawDecryptRequest, RawDecryptResponse> _callRawDecrypt;
+
         private readonly gaxgrpc::ApiCall<AsymmetricSignRequest, AsymmetricSignResponse> _callAsymmetricSign;
 
         private readonly gaxgrpc::ApiCall<AsymmetricDecryptRequest, AsymmetricDecryptResponse> _callAsymmetricDecrypt;
@@ -5064,6 +5172,12 @@ namespace Google.Cloud.Kms.V1
             _callDecrypt = clientHelper.BuildApiCall<DecryptRequest, DecryptResponse>("Decrypt", grpcClient.DecryptAsync, grpcClient.Decrypt, effectiveSettings.DecryptSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDecrypt);
             Modify_DecryptApiCall(ref _callDecrypt);
+            _callRawEncrypt = clientHelper.BuildApiCall<RawEncryptRequest, RawEncryptResponse>("RawEncrypt", grpcClient.RawEncryptAsync, grpcClient.RawEncrypt, effectiveSettings.RawEncryptSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRawEncrypt);
+            Modify_RawEncryptApiCall(ref _callRawEncrypt);
+            _callRawDecrypt = clientHelper.BuildApiCall<RawDecryptRequest, RawDecryptResponse>("RawDecrypt", grpcClient.RawDecryptAsync, grpcClient.RawDecrypt, effectiveSettings.RawDecryptSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRawDecrypt);
+            Modify_RawDecryptApiCall(ref _callRawDecrypt);
             _callAsymmetricSign = clientHelper.BuildApiCall<AsymmetricSignRequest, AsymmetricSignResponse>("AsymmetricSign", grpcClient.AsymmetricSignAsync, grpcClient.AsymmetricSign, effectiveSettings.AsymmetricSignSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAsymmetricSign);
             Modify_AsymmetricSignApiCall(ref _callAsymmetricSign);
@@ -5125,6 +5239,10 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_EncryptApiCall(ref gaxgrpc::ApiCall<EncryptRequest, EncryptResponse> call);
 
         partial void Modify_DecryptApiCall(ref gaxgrpc::ApiCall<DecryptRequest, DecryptResponse> call);
+
+        partial void Modify_RawEncryptApiCall(ref gaxgrpc::ApiCall<RawEncryptRequest, RawEncryptResponse> call);
+
+        partial void Modify_RawDecryptApiCall(ref gaxgrpc::ApiCall<RawDecryptRequest, RawDecryptResponse> call);
 
         partial void Modify_AsymmetricSignApiCall(ref gaxgrpc::ApiCall<AsymmetricSignRequest, AsymmetricSignResponse> call);
 
@@ -5188,6 +5306,10 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_EncryptRequest(ref EncryptRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DecryptRequest(ref DecryptRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RawEncryptRequest(ref RawEncryptRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RawDecryptRequest(ref RawDecryptRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AsymmetricSignRequest(ref AsymmetricSignRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5861,6 +5983,70 @@ namespace Google.Cloud.Kms.V1
         {
             Modify_DecryptRequest(ref request, ref callSettings);
             return _callDecrypt.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Encrypts data using portable cryptographic primitives. Most users should
+        /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+        /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+        /// their raw counterparts. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RawEncryptResponse RawEncrypt(RawEncryptRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RawEncryptRequest(ref request, ref callSettings);
+            return _callRawEncrypt.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Encrypts data using portable cryptographic primitives. Most users should
+        /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+        /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+        /// their raw counterparts. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RawEncryptResponse> RawEncryptAsync(RawEncryptRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RawEncryptRequest(ref request, ref callSettings);
+            return _callRawEncrypt.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Decrypts data that was originally encrypted using a raw cryptographic
+        /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RawDecryptResponse RawDecrypt(RawDecryptRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RawDecryptRequest(ref request, ref callSettings);
+            return _callRawDecrypt.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Decrypts data that was originally encrypted using a raw cryptographic
+        /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be
+        /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RawDecryptResponse> RawDecryptAsync(RawDecryptRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RawDecryptRequest(ref request, ref callSettings);
+            return _callRawDecrypt.Async(request, callSettings);
         }
 
         /// <summary>

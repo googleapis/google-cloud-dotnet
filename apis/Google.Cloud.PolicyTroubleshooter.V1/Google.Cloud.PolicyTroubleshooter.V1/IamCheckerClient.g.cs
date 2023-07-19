@@ -205,8 +205,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
         public virtual IamChecker.IamCheckerClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Checks whether a member has a specific permission for a specific resource,
-        /// and explains why the member does or does not have that permission.
+        /// Checks whether a principal has a specific permission for a specific
+        /// resource, and explains why the principal does or does not have that
+        /// permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -215,8 +216,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Checks whether a member has a specific permission for a specific resource,
-        /// and explains why the member does or does not have that permission.
+        /// Checks whether a principal has a specific permission for a specific
+        /// resource, and explains why the principal does or does not have that
+        /// permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -225,8 +227,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Checks whether a member has a specific permission for a specific resource,
-        /// and explains why the member does or does not have that permission.
+        /// Checks whether a principal has a specific permission for a specific
+        /// resource, and explains why the principal does or does not have that
+        /// permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -274,8 +277,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
         partial void Modify_TroubleshootIamPolicyRequest(ref TroubleshootIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Checks whether a member has a specific permission for a specific resource,
-        /// and explains why the member does or does not have that permission.
+        /// Checks whether a principal has a specific permission for a specific
+        /// resource, and explains why the principal does or does not have that
+        /// permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -287,8 +291,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1
         }
 
         /// <summary>
-        /// Checks whether a member has a specific permission for a specific resource,
-        /// and explains why the member does or does not have that permission.
+        /// Checks whether a principal has a specific permission for a specific
+        /// resource, and explains why the principal does or does not have that
+        /// permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

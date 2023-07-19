@@ -1904,6 +1904,189 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteSavedQuery</summary>
+        public void DeleteSavedQueryRequestObject()
+        {
+            // Snippet: DeleteSavedQuery(DeleteSavedQueryRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteSavedQueryRequest request = new DeleteSavedQueryRequest
+            {
+                SavedQueryName = SavedQueryName.FromProjectLocationDatasetSavedQuery("[PROJECT]", "[LOCATION]", "[DATASET]", "[SAVED_QUERY]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = datasetServiceClient.DeleteSavedQuery(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceDeleteSavedQuery(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQueryAsync</summary>
+        public async Task DeleteSavedQueryRequestObjectAsync()
+        {
+            // Snippet: DeleteSavedQueryAsync(DeleteSavedQueryRequest, CallSettings)
+            // Additional: DeleteSavedQueryAsync(DeleteSavedQueryRequest, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSavedQueryRequest request = new DeleteSavedQueryRequest
+            {
+                SavedQueryName = SavedQueryName.FromProjectLocationDatasetSavedQuery("[PROJECT]", "[LOCATION]", "[DATASET]", "[SAVED_QUERY]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await datasetServiceClient.DeleteSavedQueryAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceDeleteSavedQueryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQuery</summary>
+        public void DeleteSavedQuery()
+        {
+            // Snippet: DeleteSavedQuery(string, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]/savedQueries/[SAVED_QUERY]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = datasetServiceClient.DeleteSavedQuery(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceDeleteSavedQuery(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQueryAsync</summary>
+        public async Task DeleteSavedQueryAsync()
+        {
+            // Snippet: DeleteSavedQueryAsync(string, CallSettings)
+            // Additional: DeleteSavedQueryAsync(string, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]/savedQueries/[SAVED_QUERY]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await datasetServiceClient.DeleteSavedQueryAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceDeleteSavedQueryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQuery</summary>
+        public void DeleteSavedQueryResourceNames()
+        {
+            // Snippet: DeleteSavedQuery(SavedQueryName, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            SavedQueryName name = SavedQueryName.FromProjectLocationDatasetSavedQuery("[PROJECT]", "[LOCATION]", "[DATASET]", "[SAVED_QUERY]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = datasetServiceClient.DeleteSavedQuery(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceDeleteSavedQuery(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQueryAsync</summary>
+        public async Task DeleteSavedQueryResourceNamesAsync()
+        {
+            // Snippet: DeleteSavedQueryAsync(SavedQueryName, CallSettings)
+            // Additional: DeleteSavedQueryAsync(SavedQueryName, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SavedQueryName name = SavedQueryName.FromProjectLocationDatasetSavedQuery("[PROJECT]", "[LOCATION]", "[DATASET]", "[SAVED_QUERY]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await datasetServiceClient.DeleteSavedQueryAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceDeleteSavedQueryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetAnnotationSpec</summary>
         public void GetAnnotationSpecRequestObject()
         {

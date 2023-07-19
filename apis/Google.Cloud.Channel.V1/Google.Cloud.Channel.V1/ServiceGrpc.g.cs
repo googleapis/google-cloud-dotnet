@@ -185,6 +185,14 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest> __Marshaller_google_cloud_channel_v1_DeleteChannelPartnerRepricingConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSkuGroupsRequest> __Marshaller_google_cloud_channel_v1_ListSkuGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSkuGroupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSkuGroupsResponse> __Marshaller_google_cloud_channel_v1_ListSkuGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSkuGroupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest> __Marshaller_google_cloud_channel_v1_ListSkuGroupBillableSkusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse> __Marshaller_google_cloud_channel_v1_ListSkuGroupBillableSkusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.LookupOfferRequest> __Marshaller_google_cloud_channel_v1_LookupOfferRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.LookupOfferRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.Offer> __Marshaller_google_cloud_channel_v1_Offer = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.Offer.Parser));
@@ -512,6 +520,22 @@ namespace Google.Cloud.Channel.V1 {
         "DeleteChannelPartnerRepricingConfig",
         __Marshaller_google_cloud_channel_v1_DeleteChannelPartnerRepricingConfigRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListSkuGroupsRequest, global::Google.Cloud.Channel.V1.ListSkuGroupsResponse> __Method_ListSkuGroups = new grpc::Method<global::Google.Cloud.Channel.V1.ListSkuGroupsRequest, global::Google.Cloud.Channel.V1.ListSkuGroupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSkuGroups",
+        __Marshaller_google_cloud_channel_v1_ListSkuGroupsRequest,
+        __Marshaller_google_cloud_channel_v1_ListSkuGroupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest, global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse> __Method_ListSkuGroupBillableSkus = new grpc::Method<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest, global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSkuGroupBillableSkus",
+        __Marshaller_google_cloud_channel_v1_ListSkuGroupBillableSkusRequest,
+        __Marshaller_google_cloud_channel_v1_ListSkuGroupBillableSkusResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer> __Method_LookupOffer = new grpc::Method<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer>(
@@ -1768,6 +1792,66 @@ namespace Google.Cloud.Channel.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteChannelPartnerRepricingConfig(global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the Rebilling supported SKU groups the account is authorized to
+      /// sell.
+      /// Reference: https://cloud.google.com/skus/sku-groups
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different, or the account doesn't exist.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+      /// The data for each resource is displayed in the alphabetical order of SKU
+      /// group display name.
+      /// The data for each resource is displayed in the ascending order of
+      /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListSkuGroupsResponse> ListSkuGroups(global::Google.Cloud.Channel.V1.ListSkuGroupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the Billable SKUs in a given SKU group.
+      ///
+      /// Possible error codes:
+      /// PERMISSION_DENIED: If the account making the request and the account
+      /// being queried for are different, or the account doesn't exist.
+      /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// INTERNAL: Any non-user error related to technical issue in the
+      /// backend. In this case, contact cloud channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
+      ///
+      /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+      /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse> ListSkuGroupBillableSkus(global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -6703,6 +6787,246 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteChannelPartnerRepricingConfig, null, options, request);
       }
       /// <summary>
+      /// Lists the Rebilling supported SKU groups the account is authorized to
+      /// sell.
+      /// Reference: https://cloud.google.com/skus/sku-groups
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different, or the account doesn't exist.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+      /// The data for each resource is displayed in the alphabetical order of SKU
+      /// group display name.
+      /// The data for each resource is displayed in the ascending order of
+      /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListSkuGroupsResponse ListSkuGroups(global::Google.Cloud.Channel.V1.ListSkuGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSkuGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the Rebilling supported SKU groups the account is authorized to
+      /// sell.
+      /// Reference: https://cloud.google.com/skus/sku-groups
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different, or the account doesn't exist.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+      /// The data for each resource is displayed in the alphabetical order of SKU
+      /// group display name.
+      /// The data for each resource is displayed in the ascending order of
+      /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListSkuGroupsResponse ListSkuGroups(global::Google.Cloud.Channel.V1.ListSkuGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSkuGroups, null, options, request);
+      }
+      /// <summary>
+      /// Lists the Rebilling supported SKU groups the account is authorized to
+      /// sell.
+      /// Reference: https://cloud.google.com/skus/sku-groups
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different, or the account doesn't exist.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+      /// The data for each resource is displayed in the alphabetical order of SKU
+      /// group display name.
+      /// The data for each resource is displayed in the ascending order of
+      /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSkuGroupsResponse> ListSkuGroupsAsync(global::Google.Cloud.Channel.V1.ListSkuGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSkuGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the Rebilling supported SKU groups the account is authorized to
+      /// sell.
+      /// Reference: https://cloud.google.com/skus/sku-groups
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different, or the account doesn't exist.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+      /// The data for each resource is displayed in the alphabetical order of SKU
+      /// group display name.
+      /// The data for each resource is displayed in the ascending order of
+      /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSkuGroupsResponse> ListSkuGroupsAsync(global::Google.Cloud.Channel.V1.ListSkuGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSkuGroups, null, options, request);
+      }
+      /// <summary>
+      /// Lists the Billable SKUs in a given SKU group.
+      ///
+      /// Possible error codes:
+      /// PERMISSION_DENIED: If the account making the request and the account
+      /// being queried for are different, or the account doesn't exist.
+      /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// INTERNAL: Any non-user error related to technical issue in the
+      /// backend. In this case, contact cloud channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
+      ///
+      /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+      /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse ListSkuGroupBillableSkus(global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSkuGroupBillableSkus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the Billable SKUs in a given SKU group.
+      ///
+      /// Possible error codes:
+      /// PERMISSION_DENIED: If the account making the request and the account
+      /// being queried for are different, or the account doesn't exist.
+      /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// INTERNAL: Any non-user error related to technical issue in the
+      /// backend. In this case, contact cloud channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
+      ///
+      /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+      /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse ListSkuGroupBillableSkus(global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSkuGroupBillableSkus, null, options, request);
+      }
+      /// <summary>
+      /// Lists the Billable SKUs in a given SKU group.
+      ///
+      /// Possible error codes:
+      /// PERMISSION_DENIED: If the account making the request and the account
+      /// being queried for are different, or the account doesn't exist.
+      /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// INTERNAL: Any non-user error related to technical issue in the
+      /// backend. In this case, contact cloud channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
+      ///
+      /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+      /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse> ListSkuGroupBillableSkusAsync(global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSkuGroupBillableSkusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the Billable SKUs in a given SKU group.
+      ///
+      /// Possible error codes:
+      /// PERMISSION_DENIED: If the account making the request and the account
+      /// being queried for are different, or the account doesn't exist.
+      /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// INTERNAL: Any non-user error related to technical issue in the
+      /// backend. In this case, contact cloud channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
+      ///
+      /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+      /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse> ListSkuGroupBillableSkusAsync(global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSkuGroupBillableSkus, null, options, request);
+      }
+      /// <summary>
       /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
       ///
       /// Possible error codes:
@@ -7652,6 +7976,8 @@ namespace Google.Cloud.Channel.V1 {
           .AddMethod(__Method_CreateChannelPartnerRepricingConfig, serviceImpl.CreateChannelPartnerRepricingConfig)
           .AddMethod(__Method_UpdateChannelPartnerRepricingConfig, serviceImpl.UpdateChannelPartnerRepricingConfig)
           .AddMethod(__Method_DeleteChannelPartnerRepricingConfig, serviceImpl.DeleteChannelPartnerRepricingConfig)
+          .AddMethod(__Method_ListSkuGroups, serviceImpl.ListSkuGroups)
+          .AddMethod(__Method_ListSkuGroupBillableSkus, serviceImpl.ListSkuGroupBillableSkus)
           .AddMethod(__Method_LookupOffer, serviceImpl.LookupOffer)
           .AddMethod(__Method_ListProducts, serviceImpl.ListProducts)
           .AddMethod(__Method_ListSkus, serviceImpl.ListSkus)
@@ -7707,6 +8033,8 @@ namespace Google.Cloud.Channel.V1 {
       serviceBinder.AddMethod(__Method_CreateChannelPartnerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>(serviceImpl.CreateChannelPartnerRepricingConfig));
       serviceBinder.AddMethod(__Method_UpdateChannelPartnerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>(serviceImpl.UpdateChannelPartnerRepricingConfig));
       serviceBinder.AddMethod(__Method_DeleteChannelPartnerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteChannelPartnerRepricingConfig));
+      serviceBinder.AddMethod(__Method_ListSkuGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListSkuGroupsRequest, global::Google.Cloud.Channel.V1.ListSkuGroupsResponse>(serviceImpl.ListSkuGroups));
+      serviceBinder.AddMethod(__Method_ListSkuGroupBillableSkus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest, global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse>(serviceImpl.ListSkuGroupBillableSkus));
       serviceBinder.AddMethod(__Method_LookupOffer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer>(serviceImpl.LookupOffer));
       serviceBinder.AddMethod(__Method_ListProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListProductsRequest, global::Google.Cloud.Channel.V1.ListProductsResponse>(serviceImpl.ListProducts));
       serviceBinder.AddMethod(__Method_ListSkus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListSkusRequest, global::Google.Cloud.Channel.V1.ListSkusResponse>(serviceImpl.ListSkus));

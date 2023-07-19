@@ -270,5 +270,14 @@ namespace Google.Cloud.AIPlatform.V1
             get => string.IsNullOrEmpty(TrainingPipeline) ? null : TrainingPipelineName.Parse(TrainingPipeline, allowUnparsed: true);
             set => TrainingPipeline = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="PipelineJobName"/>-typed view over the <see cref="PipelineJob"/> resource name property.
+        /// </summary>
+        public PipelineJobName PipelineJobAsPipelineJobName
+        {
+            get => string.IsNullOrEmpty(PipelineJob) ? null : PipelineJobName.Parse(PipelineJob, allowUnparsed: true);
+            set => PipelineJob = value?.ToString() ?? "";
+        }
     }
 }

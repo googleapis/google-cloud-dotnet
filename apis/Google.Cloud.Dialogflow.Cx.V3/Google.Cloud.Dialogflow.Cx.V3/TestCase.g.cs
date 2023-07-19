@@ -2582,7 +2582,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int DescriptionFieldNumber = 2;
     private string description_ = "";
     /// <summary>
-    /// A description of the diff, showing the actual output vs expected output.
+    /// A human readable description of the diff, showing the actual output vs
+    /// expected output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

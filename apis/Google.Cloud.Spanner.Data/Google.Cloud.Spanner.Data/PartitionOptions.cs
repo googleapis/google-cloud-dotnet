@@ -12,25 +12,12 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
-using System.Threading;
-
 namespace Google.Cloud.Spanner.Data;
 
 /// <summary>
-/// An immutable class representing partition options.
+/// Options used to create and read partitions.
+/// Instances of this class are immutable so they can be freely reused.
 /// </summary>
-/// <remarks>
-/// <para>
-/// The specified values of `PartitionSizeBytes` and `MaxPartitions`
-/// are utilized in the RPC call while generating the partition tokens.
-/// </para>
-/// <para>
-/// The specified flag for `DataBoostEnabled` will be stored in the request property
-/// of the <see cref="CommandPartition"/> object and is used when creating a request
-/// to read from the partition. If `DataBoostEnabled` is set to true, the request will be
-/// executed using Spanner-independent compute resources.
-/// </para>
-/// </remarks>
 public sealed class PartitionOptions
 {
     /// <summary>
@@ -60,18 +47,25 @@ public sealed class PartitionOptions
     /// The desired data size for each partition generated.
     /// The default value for this is null, in which case the server will decide the data size for each partition generated.
     /// </summary>
+    /// <remarks>This option is used when creating the partitions.</remarks>
     public long? PartitionSizeBytes { get; }
 
     /// <summary>
     /// The desired maximum number of partitions to return.
     /// The default value for this is null, in which case the server will decide how many partitions to return.
     /// </summary>
+    /// <remarks>This option is used when creating the partitions.</remarks>
     public long? MaxPartitions { get; }
 
     /// <summary>
-    /// If set to true, the request will be executed using Spanner independent compute resources.
+    /// If set to true, the partitioned request will be executed using Spanner independent compute resources.
     /// The default value for this option is false.
     /// </summary>
+    /// <remarks>
+    /// This options is not used when creating the partitions themselves.
+    /// Instead its value is stored in <see cref="CommandPartition.Request"/> and is used when executing the
+    /// partitioned request.
+    /// </remarks>
     public bool DataBoostEnabled { get; }
 
     /// <summary>

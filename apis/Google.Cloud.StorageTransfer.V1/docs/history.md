@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.3.0, released 2023-06-27
+
+### New features
+
+- Add event driven transfer configuration ([commit 218b433](https://github.com/googleapis/google-cloud-dotnet/commit/218b4337b70dd78b804137fea48998890382686b))
+
 ## Version 2.2.0, released 2023-01-16
 
 ### New features

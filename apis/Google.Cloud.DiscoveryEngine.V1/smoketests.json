@@ -2,9 +2,40 @@
   {
     "method": "ListDocuments",
     "client": "DocumentServiceClient",
-    "skip": "b/284167057",
     "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/global/dataStores/default_data_store/branches/default_branch"
+      "parent": "projects/${PROJECT_ID}/locations/global/collections/default_collection/dataStores/default_data_store/branches/default_branch"
+    }
+  },
+  {
+    "method": "ListSchemas",
+    "client": "SchemaServiceClient",
+    "skip": "Not ready yet",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global/collections/default_collection/dataStores/default_data_store"
+    }
+  },
+  {
+    "method": "CompleteQuery",
+    "client": "CompletionServiceClient",
+    "skip": "Not ready yet",
+    "arguments": {
+      "request": {
+        "dataStore": "projects/${PROJECT_ID}/locations/global/collections/default_collection/dataStores/default_data_store",
+        "query": "the cat sat",
+        "queryModel": "document",
+        "userPseudoId": "1234567890"
+      }      
+    }
+  },
+  {
+    "method": "Search",
+    "client": "SearchServiceClient",
+    "skip": "Not ready yet",
+    "arguments": {
+      "request": {
+        "servingConfig": "projects/${PROJECT_ID}/locations/global/collections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_config",
+        "query": "what is artificial intelligence"
+      }      
     }
   }
 ]

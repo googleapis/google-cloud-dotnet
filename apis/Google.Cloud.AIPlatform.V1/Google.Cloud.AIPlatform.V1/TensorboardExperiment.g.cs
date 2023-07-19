@@ -193,7 +193,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// The labels with user-defined metadata to organize your Datasets.
+    /// The labels with user-defined metadata to organize your
+    /// TensorboardExperiment.
     ///
     /// Label keys and values cannot be longer than 64 characters
     /// (Unicode codepoints), can only contain lowercase letters, numeric

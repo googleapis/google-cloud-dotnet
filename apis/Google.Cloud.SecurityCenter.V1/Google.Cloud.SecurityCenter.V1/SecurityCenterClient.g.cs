@@ -1894,9 +1894,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1921,9 +1921,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1948,9 +1948,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1970,9 +1970,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1997,9 +1997,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2024,9 +2024,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2046,9 +2046,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2073,9 +2073,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2100,9 +2100,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2122,9 +2122,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2149,9 +2149,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2176,9 +2176,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="muteConfigId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4148,6 +4148,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="GroupResult"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<GroupAssetsResponse, GroupResult> GroupAssets(GroupAssetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -4158,6 +4159,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="GroupResult"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<GroupAssetsResponse, GroupResult> GroupAssetsAsync(GroupAssetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -4413,6 +4415,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ListAssetsResponse.Types.ListAssetsResult"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListAssetsResponse, ListAssetsResponse.Types.ListAssetsResult> ListAssets(ListAssetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -4424,6 +4427,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ListAssetsResponse.Types.ListAssetsResult"/> resources.
         /// </returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, ListAssetsResponse.Types.ListAssetsResult> ListAssetsAsync(ListAssetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5576,6 +5580,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<RunAssetDiscoveryResponse, wkt::Empty> RunAssetDiscovery(RunAssetDiscoveryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5590,6 +5595,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<RunAssetDiscoveryResponse, wkt::Empty>> RunAssetDiscoveryAsync(RunAssetDiscoveryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5604,6 +5610,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<RunAssetDiscoveryResponse, wkt::Empty>> RunAssetDiscoveryAsync(RunAssetDiscoveryRequest request, st::CancellationToken cancellationToken) =>
             RunAssetDiscoveryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5619,6 +5626,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<RunAssetDiscoveryResponse, wkt::Empty> PollOnceRunAssetDiscovery(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<RunAssetDiscoveryResponse, wkt::Empty>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RunAssetDiscoveryOperationsClient, callSettings);
 
@@ -5631,6 +5639,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<RunAssetDiscoveryResponse, wkt::Empty>> PollOnceRunAssetDiscoveryAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<RunAssetDiscoveryResponse, wkt::Empty>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RunAssetDiscoveryOperationsClient, callSettings);
 
@@ -5648,6 +5657,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<RunAssetDiscoveryResponse, wkt::Empty> RunAssetDiscovery(string parent, gaxgrpc::CallSettings callSettings = null) =>
             RunAssetDiscovery(new RunAssetDiscoveryRequest
             {
@@ -5668,6 +5678,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<RunAssetDiscoveryResponse, wkt::Empty>> RunAssetDiscoveryAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
             RunAssetDiscoveryAsync(new RunAssetDiscoveryRequest
             {
@@ -5688,6 +5699,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<RunAssetDiscoveryResponse, wkt::Empty>> RunAssetDiscoveryAsync(string parent, st::CancellationToken cancellationToken) =>
             RunAssetDiscoveryAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5705,6 +5717,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<RunAssetDiscoveryResponse, wkt::Empty> RunAssetDiscovery(gagr::OrganizationName parent, gaxgrpc::CallSettings callSettings = null) =>
             RunAssetDiscovery(new RunAssetDiscoveryRequest
             {
@@ -5725,6 +5738,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<RunAssetDiscoveryResponse, wkt::Empty>> RunAssetDiscoveryAsync(gagr::OrganizationName parent, gaxgrpc::CallSettings callSettings = null) =>
             RunAssetDiscoveryAsync(new RunAssetDiscoveryRequest
             {
@@ -5745,6 +5759,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<RunAssetDiscoveryResponse, wkt::Empty>> RunAssetDiscoveryAsync(gagr::OrganizationName parent, st::CancellationToken cancellationToken) =>
             RunAssetDiscoveryAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -7118,9 +7133,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7145,9 +7160,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7172,9 +7187,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7194,9 +7209,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7221,9 +7236,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7248,9 +7263,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7270,9 +7285,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7297,9 +7312,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7324,9 +7339,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7346,9 +7361,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7373,9 +7388,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7400,9 +7415,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </param>
         /// <param name="bigQueryExportId">
         /// Required. Unique identifier provided by the client within the parent scope.
-        /// It must consist of lower case letters, numbers, and hyphen, with the first
-        /// character a letter, the last a letter or a number, and a 63 character
-        /// maximum.
+        /// It must consist of only lowercase letters, numbers, and hyphens, must start
+        /// with a letter, must end with either a letter or a number, and must be 63
+        /// characters or less.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8037,13 +8052,17 @@ namespace Google.Cloud.SecurityCenter.V1
             _callGetSource = clientHelper.BuildApiCall<GetSourceRequest, Source>("GetSource", grpcClient.GetSourceAsync, grpcClient.GetSource, effectiveSettings.GetSourceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSource);
             Modify_GetSourceApiCall(ref _callGetSource);
+#pragma warning disable CS0612
             _callGroupAssets = clientHelper.BuildApiCall<GroupAssetsRequest, GroupAssetsResponse>("GroupAssets", grpcClient.GroupAssetsAsync, grpcClient.GroupAssets, effectiveSettings.GroupAssetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGroupAssets);
             Modify_GroupAssetsApiCall(ref _callGroupAssets);
             _callGroupFindings = clientHelper.BuildApiCall<GroupFindingsRequest, GroupFindingsResponse>("GroupFindings", grpcClient.GroupFindingsAsync, grpcClient.GroupFindings, effectiveSettings.GroupFindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callGroupFindings);
             Modify_GroupFindingsApiCall(ref _callGroupFindings);
+#pragma warning disable CS0612
             _callListAssets = clientHelper.BuildApiCall<ListAssetsRequest, ListAssetsResponse>("ListAssets", grpcClient.ListAssetsAsync, grpcClient.ListAssets, effectiveSettings.ListAssetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListAssets);
             Modify_ListAssetsApiCall(ref _callListAssets);
             _callListDescendantSecurityHealthAnalyticsCustomModules = clientHelper.BuildApiCall<ListDescendantSecurityHealthAnalyticsCustomModulesRequest, ListDescendantSecurityHealthAnalyticsCustomModulesResponse>("ListDescendantSecurityHealthAnalyticsCustomModules", grpcClient.ListDescendantSecurityHealthAnalyticsCustomModulesAsync, grpcClient.ListDescendantSecurityHealthAnalyticsCustomModules, effectiveSettings.ListDescendantSecurityHealthAnalyticsCustomModulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -8067,7 +8086,9 @@ namespace Google.Cloud.SecurityCenter.V1
             _callListSources = clientHelper.BuildApiCall<ListSourcesRequest, ListSourcesResponse>("ListSources", grpcClient.ListSourcesAsync, grpcClient.ListSources, effectiveSettings.ListSourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSources);
             Modify_ListSourcesApiCall(ref _callListSources);
+#pragma warning disable CS0612
             _callRunAssetDiscovery = clientHelper.BuildApiCall<RunAssetDiscoveryRequest, lro::Operation>("RunAssetDiscovery", grpcClient.RunAssetDiscoveryAsync, grpcClient.RunAssetDiscovery, effectiveSettings.RunAssetDiscoverySettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callRunAssetDiscovery);
             Modify_RunAssetDiscoveryApiCall(ref _callRunAssetDiscovery);
             _callSetFindingState = clientHelper.BuildApiCall<SetFindingStateRequest, Finding>("SetFindingState", grpcClient.SetFindingStateAsync, grpcClient.SetFindingState, effectiveSettings.SetFindingStateSettings).WithGoogleRequestParam("name", request => request.Name);
@@ -8738,6 +8759,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="GroupResult"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedEnumerable<GroupAssetsResponse, GroupResult> GroupAssets(GroupAssetsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GroupAssetsRequest(ref request, ref callSettings);
@@ -8751,6 +8773,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="GroupResult"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedAsyncEnumerable<GroupAssetsResponse, GroupResult> GroupAssetsAsync(GroupAssetsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GroupAssetsRequest(ref request, ref callSettings);
@@ -8799,6 +8822,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ListAssetsResponse.Types.ListAssetsResult"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedEnumerable<ListAssetsResponse, ListAssetsResponse.Types.ListAssetsResult> ListAssets(ListAssetsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAssetsRequest(ref request, ref callSettings);
@@ -8813,6 +8837,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ListAssetsResponse.Types.ListAssetsResult"/> resources.
         /// </returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedAsyncEnumerable<ListAssetsResponse, ListAssetsResponse.Types.ListAssetsResult> ListAssetsAsync(ListAssetsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAssetsRequest(ref request, ref callSettings);
@@ -9029,6 +9054,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<RunAssetDiscoveryResponse, wkt::Empty> RunAssetDiscovery(RunAssetDiscoveryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RunAssetDiscoveryRequest(ref request, ref callSettings);
@@ -9046,6 +9072,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<RunAssetDiscoveryResponse, wkt::Empty>> RunAssetDiscoveryAsync(RunAssetDiscoveryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RunAssetDiscoveryRequest(ref request, ref callSettings);

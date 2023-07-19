@@ -3,5 +3,6 @@
   "release_level": "unreleased",
   "client_documentation": "https://googleapis.dev/dotnet/Google.Maps.Places.V1/latest",
   "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
   "api_shortname": "places"
 }

@@ -32,7 +32,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             var catalog = ApiCatalog.Load();
             var root = DirectoryLayout.DetermineRootDirectory();
@@ -67,6 +67,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             ApiCatalog.FromJson(json);
 
             File.WriteAllText(ApiCatalog.CatalogPath, json);
+            return 0;
         }
     }
 }

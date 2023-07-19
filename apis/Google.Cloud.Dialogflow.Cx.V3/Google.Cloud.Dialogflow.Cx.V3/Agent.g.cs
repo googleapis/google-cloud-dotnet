@@ -35,7 +35,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "cmF0aW9ucy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBn",
             "b29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxocZ29vZ2xlL3Byb3Rv",
             "YnVmL3N0cnVjdC5wcm90byI4ChRTcGVlY2hUb1RleHRTZXR0aW5ncxIgChhl",
-            "bmFibGVfc3BlZWNoX2FkYXB0YXRpb24YASABKAgi8QUKBUFnZW50EgwKBG5h",
+            "bmFibGVfc3BlZWNoX2FkYXB0YXRpb24YASABKAgi4wgKBUFnZW50EgwKBG5h",
             "bWUYASABKAkSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISJQoVZGVmYXVs",
             "dF9sYW5ndWFnZV9jb2RlGAMgASgJQgbgQQLgQQUSIAoYc3VwcG9ydGVkX2xh",
             "bmd1YWdlX2NvZGVzGAQgAygJEhYKCXRpbWVfem9uZRgFIAEoCUID4EECEhMK",
@@ -48,110 +48,126 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "X3N0YWNrZHJpdmVyX2xvZ2dpbmcYEiABKAhCAhgBEh8KF2VuYWJsZV9zcGVs",
             "bF9jb3JyZWN0aW9uGBQgASgIEg4KBmxvY2tlZBgbIAEoCBJKChFhZHZhbmNl",
             "ZF9zZXR0aW5ncxgWIAEoCzIvLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4",
-            "LnYzLkFkdmFuY2VkU2V0dGluZ3MSVAoXdGV4dF90b19zcGVlY2hfc2V0dGlu",
-            "Z3MYHyABKAsyMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5UZXh0",
-            "VG9TcGVlY2hTZXR0aW5nczpc6kFZCh9kaWFsb2dmbG93Lmdvb2dsZWFwaXMu",
-            "Y29tL0FnZW50EjZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0vYWdlbnRzL3thZ2VudH0icwoRTGlzdEFnZW50c1JlcXVlc3QSNwoG",
-            "cGFyZW50GAEgASgJQifgQQL6QSESH2RpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5j",
-            "b20vQWdlbnQSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyAB",
-            "KAkiYwoSTGlzdEFnZW50c1Jlc3BvbnNlEjQKBmFnZW50cxgBIAMoCzIkLmdv",
-            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkFnZW50EhcKD25leHRfcGFn",
-            "ZV90b2tlbhgCIAEoCSJICg9HZXRBZ2VudFJlcXVlc3QSNQoEbmFtZRgBIAEo",
-            "CUIn4EEC+kEhCh9kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0FnZW50IocB",
-            "ChJDcmVhdGVBZ2VudFJlcXVlc3QSNwoGcGFyZW50GAEgASgJQifgQQL6QSES",
-            "H2RpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vQWdlbnQSOAoFYWdlbnQYAiAB",
+            "LnYzLkFkdmFuY2VkU2V0dGluZ3MSXQoYZ2l0X2ludGVncmF0aW9uX3NldHRp",
+            "bmdzGB4gASgLMjsuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuQWdl",
+            "bnQuR2l0SW50ZWdyYXRpb25TZXR0aW5ncxJUChd0ZXh0X3RvX3NwZWVjaF9z",
+            "ZXR0aW5ncxgfIAEoCzIzLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
+            "LlRleHRUb1NwZWVjaFNldHRpbmdzGpACChZHaXRJbnRlZ3JhdGlvblNldHRp",
+            "bmdzEmUKD2dpdGh1Yl9zZXR0aW5ncxgBIAEoCzJKLmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LmN4LnYzLkFnZW50LkdpdEludGVncmF0aW9uU2V0dGluZ3Mu",
+            "R2l0aHViU2V0dGluZ3NIABp/Cg5HaXRodWJTZXR0aW5ncxIUCgxkaXNwbGF5",
+            "X25hbWUYASABKAkSFgoOcmVwb3NpdG9yeV91cmkYAiABKAkSFwoPdHJhY2tp",
+            "bmdfYnJhbmNoGAMgASgJEhQKDGFjY2Vzc190b2tlbhgEIAEoCRIQCghicmFu",
+            "Y2hlcxgFIAMoCUIOCgxnaXRfc2V0dGluZ3M6XOpBWQofZGlhbG9nZmxvdy5n",
+            "b29nbGVhcGlzLmNvbS9BZ2VudBI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2FnZW50cy97YWdlbnR9InMKEUxpc3RBZ2VudHNS",
+            "ZXF1ZXN0EjcKBnBhcmVudBgBIAEoCUIn4EEC+kEhEh9kaWFsb2dmbG93Lmdv",
+            "b2dsZWFwaXMuY29tL0FnZW50EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdl",
+            "X3Rva2VuGAMgASgJImMKEkxpc3RBZ2VudHNSZXNwb25zZRI0CgZhZ2VudHMY",
+            "ASADKAsyJC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5BZ2VudBIX",
+            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiSAoPR2V0QWdlbnRSZXF1ZXN0EjUK",
+            "BG5hbWUYASABKAlCJ+BBAvpBIQofZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNv",
+            "bS9BZ2VudCKHAQoSQ3JlYXRlQWdlbnRSZXF1ZXN0EjcKBnBhcmVudBgBIAEo",
+            "CUIn4EEC+kEhEh9kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0FnZW50EjgK",
+            "BWFnZW50GAIgASgLMiQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMu",
+            "QWdlbnRCA+BBAiJ/ChJVcGRhdGVBZ2VudFJlcXVlc3QSOAoFYWdlbnQYASAB",
             "KAsyJC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5BZ2VudEID4EEC",
-            "In8KElVwZGF0ZUFnZW50UmVxdWVzdBI4CgVhZ2VudBgBIAEoCzIkLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkFnZW50QgPgQQISLwoLdXBkYXRl",
-            "X21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIksKEkRl",
-            "bGV0ZUFnZW50UmVxdWVzdBI1CgRuYW1lGAEgASgJQifgQQL6QSEKH2RpYWxv",
-            "Z2Zsb3cuZ29vZ2xlYXBpcy5jb20vQWdlbnQixgIKEkV4cG9ydEFnZW50UmVx",
-            "dWVzdBI1CgRuYW1lGAEgASgJQifgQQL6QSEKH2RpYWxvZ2Zsb3cuZ29vZ2xl",
-            "YXBpcy5jb20vQWdlbnQSFgoJYWdlbnRfdXJpGAIgASgJQgPgQQESVgoLZGF0",
-            "YV9mb3JtYXQYAyABKA4yPC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52",
-            "My5FeHBvcnRBZ2VudFJlcXVlc3QuRGF0YUZvcm1hdEID4EEBEkIKC2Vudmly",
-            "b25tZW50GAUgASgJQi3gQQH6QScKJWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5j",
-            "b20vRW52aXJvbm1lbnQiRQoKRGF0YUZvcm1hdBIbChdEQVRBX0ZPUk1BVF9V",
-            "TlNQRUNJRklFRBAAEggKBEJMT0IQARIQCgxKU09OX1BBQ0tBR0UQBCJMChNF",
-            "eHBvcnRBZ2VudFJlc3BvbnNlEhMKCWFnZW50X3VyaRgBIAEoCUgAEhcKDWFn",
-            "ZW50X2NvbnRlbnQYAiABKAxIAEIHCgVhZ2VudCKmAgoTUmVzdG9yZUFnZW50",
-            "UmVxdWVzdBI1CgRuYW1lGAEgASgJQifgQQL6QSEKH2RpYWxvZ2Zsb3cuZ29v",
-            "Z2xlYXBpcy5jb20vQWdlbnQSEwoJYWdlbnRfdXJpGAIgASgJSAASFwoNYWdl",
-            "bnRfY29udGVudBgDIAEoDEgAElgKDnJlc3RvcmVfb3B0aW9uGAUgASgOMkAu",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVzdG9yZUFnZW50UmVx",
-            "dWVzdC5SZXN0b3JlT3B0aW9uIkcKDVJlc3RvcmVPcHRpb24SHgoaUkVTVE9S",
-            "RV9PUFRJT05fVU5TUEVDSUZJRUQQABIICgRLRUVQEAESDAoIRkFMTEJBQ0sQ",
-            "AkIHCgVhZ2VudCJkChRWYWxpZGF0ZUFnZW50UmVxdWVzdBI1CgRuYW1lGAEg",
-            "ASgJQifgQQL6QSEKH2RpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vQWdlbnQS",
-            "FQoNbGFuZ3VhZ2VfY29kZRgCIAEoCSJ/Ch9HZXRBZ2VudFZhbGlkYXRpb25S",
-            "ZXN1bHRSZXF1ZXN0EkUKBG5hbWUYASABKAlCN+BBAvpBMQovZGlhbG9nZmxv",
-            "dy5nb29nbGVhcGlzLmNvbS9BZ2VudFZhbGlkYXRpb25SZXN1bHQSFQoNbGFu",
-            "Z3VhZ2VfY29kZRgCIAEoCSL6AQoVQWdlbnRWYWxpZGF0aW9uUmVzdWx0EgwK",
-            "BG5hbWUYASABKAkSVAoXZmxvd192YWxpZGF0aW9uX3Jlc3VsdHMYAiADKAsy",
-            "My5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5GbG93VmFsaWRhdGlv",
-            "blJlc3VsdDp96kF6Ci9kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0FnZW50",
-            "VmFsaWRhdGlvblJlc3VsdBJHcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L2FnZW50cy97YWdlbnR9L3ZhbGlkYXRpb25SZXN1bHQy",
-            "mQ4KBkFnZW50cxKuAQoKTGlzdEFnZW50cxIwLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LmN4LnYzLkxpc3RBZ2VudHNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cuY3gudjMuTGlzdEFnZW50c1Jlc3BvbnNlIjuC0+STAiwS",
-            "Ki92My97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2FnZW50c9pB",
-            "BnBhcmVudBKbAQoIR2V0QWdlbnQSLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy5jeC52My5HZXRBZ2VudFJlcXVlc3QaJC5nb29nbGUuY2xvdWQuZGlhbG9n",
-            "Zmxvdy5jeC52My5BZ2VudCI5gtPkkwIsEiovdjMve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9hZ2VudHMvKn3aQQRuYW1lErABCgtDcmVhdGVBZ2Vu",
-            "dBIxLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkNyZWF0ZUFnZW50",
-            "UmVxdWVzdBokLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkFnZW50",
-            "IkiC0+STAjMiKi92My97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
-            "L2FnZW50czoFYWdlbnTaQQxwYXJlbnQsYWdlbnQSuwEKC1VwZGF0ZUFnZW50",
-            "EjEuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVXBkYXRlQWdlbnRS",
-            "ZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuQWdlbnQi",
-            "U4LT5JMCOTIwL3YzL3thZ2VudC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovYWdlbnRzLyp9OgVhZ2VudNpBEWFnZW50LHVwZGF0ZV9tYXNrEpMBCgtE",
-            "ZWxldGVBZ2VudBIxLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkRl",
-            "bGV0ZUFnZW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI5gtPk",
-            "kwIsKiovdjMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMv",
-            "Kn3aQQRuYW1lEs0BCgtFeHBvcnRBZ2VudBIxLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LmN4LnYzLkV4cG9ydEFnZW50UmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24ibILT5JMCNiIxL3YzL3tuYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovYWdlbnRzLyp9OmV4cG9ydDoBKspBLQoTRXhwb3J0",
-            "QWdlbnRSZXNwb25zZRIWZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBLSAQoMUmVz",
-            "dG9yZUFnZW50EjIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVz",
-            "dG9yZUFnZW50UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
-            "b24ib4LT5JMCNyIyL3YzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "YWdlbnRzLyp9OnJlc3RvcmU6ASrKQS8KFWdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eRIWZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBK6AQoNVmFsaWRhdGVBZ2VudBIz",
-            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlZhbGlkYXRlQWdlbnRS",
-            "ZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuQWdlbnRW",
-            "YWxpZGF0aW9uUmVzdWx0Ij6C0+STAjgiMy92My97bmFtZT1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2FnZW50cy8qfTp2YWxpZGF0ZToBKhLcAQoYR2V0QWdl",
-            "bnRWYWxpZGF0aW9uUmVzdWx0Ej4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "Y3gudjMuR2V0QWdlbnRWYWxpZGF0aW9uUmVzdWx0UmVxdWVzdBo0Lmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkFnZW50VmFsaWRhdGlvblJlc3Vs",
-            "dCJKgtPkkwI9EjsvdjMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9h",
-            "Z2VudHMvKi92YWxpZGF0aW9uUmVzdWx0fdpBBG5hbWUaeMpBGWRpYWxvZ2Zs",
-            "b3cuZ29vZ2xlYXBpcy5jb23SQVlodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
-            "Y29tL2F1dGgvZGlhbG9nZmxvd0KwAQohY29tLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LmN4LnYzQgpBZ2VudFByb3RvUAFaMWNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vZGlhbG9nZmxvdy9jeC9hcGl2My9jeHBiO2N4cGL4AQGiAgJERqoCHUdv",
-            "b2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6",
-            "RGlhbG9nZmxvdzo6Q1g6OlYzYgZwcm90bzM="));
+            "Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxk",
+            "TWFzayJLChJEZWxldGVBZ2VudFJlcXVlc3QSNQoEbmFtZRgBIAEoCUIn4EEC",
+            "+kEhCh9kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0FnZW50IpgEChJFeHBv",
+            "cnRBZ2VudFJlcXVlc3QSNQoEbmFtZRgBIAEoCUIn4EEC+kEhCh9kaWFsb2dm",
+            "bG93Lmdvb2dsZWFwaXMuY29tL0FnZW50EhYKCWFnZW50X3VyaRgCIAEoCUID",
+            "4EEBElYKC2RhdGFfZm9ybWF0GAMgASgOMjwuZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "Z2Zsb3cuY3gudjMuRXhwb3J0QWdlbnRSZXF1ZXN0LkRhdGFGb3JtYXRCA+BB",
+            "ARJCCgtlbnZpcm9ubWVudBgFIAEoCUIt4EEB+kEnCiVkaWFsb2dmbG93Lmdv",
+            "b2dsZWFwaXMuY29tL0Vudmlyb25tZW50El4KD2dpdF9kZXN0aW5hdGlvbhgG",
+            "IAEoCzJALmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkV4cG9ydEFn",
+            "ZW50UmVxdWVzdC5HaXREZXN0aW5hdGlvbkID4EEBEi0KIGluY2x1ZGVfYmln",
+            "cXVlcnlfZXhwb3J0X3NldHRpbmdzGAcgASgIQgPgQQEaQQoOR2l0RGVzdGlu",
+            "YXRpb24SFwoPdHJhY2tpbmdfYnJhbmNoGAEgASgJEhYKDmNvbW1pdF9tZXNz",
+            "YWdlGAIgASgJIkUKCkRhdGFGb3JtYXQSGwoXREFUQV9GT1JNQVRfVU5TUEVD",
+            "SUZJRUQQABIICgRCTE9CEAESEAoMSlNPTl9QQUNLQUdFEAQiYgoTRXhwb3J0",
+            "QWdlbnRSZXNwb25zZRITCglhZ2VudF91cmkYASABKAlIABIXCg1hZ2VudF9j",
+            "b250ZW50GAIgASgMSAASFAoKY29tbWl0X3NoYRgDIAEoCUgAQgcKBWFnZW50",
+            "IqADChNSZXN0b3JlQWdlbnRSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpB",
+            "IQofZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9BZ2VudBITCglhZ2VudF91",
+            "cmkYAiABKAlIABIXCg1hZ2VudF9jb250ZW50GAMgASgMSAASUgoKZ2l0X3Nv",
+            "dXJjZRgGIAEoCzI8Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlJl",
+            "c3RvcmVBZ2VudFJlcXVlc3QuR2l0U291cmNlSAASWAoOcmVzdG9yZV9vcHRp",
+            "b24YBSABKA4yQC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXN0",
+            "b3JlQWdlbnRSZXF1ZXN0LlJlc3RvcmVPcHRpb24aJAoJR2l0U291cmNlEhcK",
+            "D3RyYWNraW5nX2JyYW5jaBgBIAEoCSJHCg1SZXN0b3JlT3B0aW9uEh4KGlJF",
+            "U1RPUkVfT1BUSU9OX1VOU1BFQ0lGSUVEEAASCAoES0VFUBABEgwKCEZBTExC",
+            "QUNLEAJCBwoFYWdlbnQiZAoUVmFsaWRhdGVBZ2VudFJlcXVlc3QSNQoEbmFt",
+            "ZRgBIAEoCUIn4EEC+kEhCh9kaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0Fn",
+            "ZW50EhUKDWxhbmd1YWdlX2NvZGUYAiABKAkifwofR2V0QWdlbnRWYWxpZGF0",
+            "aW9uUmVzdWx0UmVxdWVzdBJFCgRuYW1lGAEgASgJQjfgQQL6QTEKL2RpYWxv",
+            "Z2Zsb3cuZ29vZ2xlYXBpcy5jb20vQWdlbnRWYWxpZGF0aW9uUmVzdWx0EhUK",
+            "DWxhbmd1YWdlX2NvZGUYAiABKAki+gEKFUFnZW50VmFsaWRhdGlvblJlc3Vs",
+            "dBIMCgRuYW1lGAEgASgJElQKF2Zsb3dfdmFsaWRhdGlvbl9yZXN1bHRzGAIg",
+            "AygLMjMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRmxvd1ZhbGlk",
+            "YXRpb25SZXN1bHQ6fepBegovZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9B",
+            "Z2VudFZhbGlkYXRpb25SZXN1bHQSR3Byb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9hZ2VudHMve2FnZW50fS92YWxpZGF0aW9uUmVz",
+            "dWx0MpkOCgZBZ2VudHMSrgEKCkxpc3RBZ2VudHMSMC5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy5jeC52My5MaXN0QWdlbnRzUmVxdWVzdBoxLmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLkxpc3RBZ2VudHNSZXNwb25zZSI7gtPk",
+            "kwIsEiovdjMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9hZ2Vu",
+            "dHPaQQZwYXJlbnQSmwEKCEdldEFnZW50Ei4uZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "Z2Zsb3cuY3gudjMuR2V0QWdlbnRSZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cuY3gudjMuQWdlbnQiOYLT5JMCLBIqL3YzL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyp92kEEbmFtZRKwAQoLQ3JlYXRl",
+            "QWdlbnQSMS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5DcmVhdGVB",
+            "Z2VudFJlcXVlc3QaJC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5B",
+            "Z2VudCJIgtPkkwIzIiovdjMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qfS9hZ2VudHM6BWFnZW502kEMcGFyZW50LGFnZW50ErsBCgtVcGRhdGVB",
+            "Z2VudBIxLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlVwZGF0ZUFn",
+            "ZW50UmVxdWVzdBokLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkFn",
+            "ZW50IlOC0+STAjkyMC92My97YWdlbnQubmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2FnZW50cy8qfToFYWdlbnTaQRFhZ2VudCx1cGRhdGVfbWFzaxKT",
+            "AQoLRGVsZXRlQWdlbnQSMS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52",
+            "My5EZWxldGVBZ2VudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
+            "OYLT5JMCLCoqL3YzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdl",
+            "bnRzLyp92kEEbmFtZRLNAQoLRXhwb3J0QWdlbnQSMS5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy5jeC52My5FeHBvcnRBZ2VudFJlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uImyC0+STAjYiMS92My97bmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qfTpleHBvcnQ6ASrKQS0KE0V4",
+            "cG9ydEFnZW50UmVzcG9uc2USFmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QS0gEK",
+            "DFJlc3RvcmVBZ2VudBIyLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
+            "LlJlc3RvcmVBZ2VudFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
+            "cmF0aW9uIm+C0+STAjciMi92My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2FnZW50cy8qfTpyZXN0b3JlOgEqykEvChVnb29nbGUucHJvdG9idWYu",
+            "RW1wdHkSFmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSugEKDVZhbGlkYXRlQWdl",
+            "bnQSMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5WYWxpZGF0ZUFn",
+            "ZW50UmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkFn",
+            "ZW50VmFsaWRhdGlvblJlc3VsdCI+gtPkkwI4IjMvdjMve25hbWU9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKn06dmFsaWRhdGU6ASoS3AEKGEdl",
+            "dEFnZW50VmFsaWRhdGlvblJlc3VsdBI+Lmdvb2dsZS5jbG91ZC5kaWFsb2dm",
+            "bG93LmN4LnYzLkdldEFnZW50VmFsaWRhdGlvblJlc3VsdFJlcXVlc3QaNC5n",
+            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5BZ2VudFZhbGlkYXRpb25S",
+            "ZXN1bHQiSoLT5JMCPRI7L3YzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovYWdlbnRzLyovdmFsaWRhdGlvblJlc3VsdH3aQQRuYW1lGnjKQRlkaWFs",
+            "b2dmbG93Lmdvb2dsZWFwaXMuY29t0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCsAEKIWNvbS5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy5jeC52M0IKQWdlbnRQcm90b1ABWjFjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtjeHBi+AEBogICREaq",
+            "Ah1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xv",
+            "dWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettingsReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.SpeechToTextSettings), global::Google.Cloud.Dialogflow.Cx.V3.SpeechToTextSettings.Parser, new[]{ "EnableSpeechAdaptation" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Agent), global::Google.Cloud.Dialogflow.Cx.V3.Agent.Parser, new[]{ "Name", "DisplayName", "DefaultLanguageCode", "SupportedLanguageCodes", "TimeZone", "Description", "AvatarUri", "SpeechToTextSettings", "StartFlow", "SecuritySettings", "EnableStackdriverLogging", "EnableSpellCorrection", "Locked", "AdvancedSettings", "TextToSpeechSettings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Agent), global::Google.Cloud.Dialogflow.Cx.V3.Agent.Parser, new[]{ "Name", "DisplayName", "DefaultLanguageCode", "SupportedLanguageCodes", "TimeZone", "Description", "AvatarUri", "SpeechToTextSettings", "StartFlow", "SecuritySettings", "EnableStackdriverLogging", "EnableSpellCorrection", "Locked", "AdvancedSettings", "GitIntegrationSettings", "TextToSpeechSettings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings), global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings.Parser, new[]{ "GithubSettings" }, new[]{ "GitSettings" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings.Types.GithubSettings), global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings.Types.GithubSettings.Parser, new[]{ "DisplayName", "RepositoryUri", "TrackingBranch", "AccessToken", "Branches" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ListAgentsRequest), global::Google.Cloud.Dialogflow.Cx.V3.ListAgentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ListAgentsResponse), global::Google.Cloud.Dialogflow.Cx.V3.ListAgentsResponse.Parser, new[]{ "Agents", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.GetAgentRequest), global::Google.Cloud.Dialogflow.Cx.V3.GetAgentRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.CreateAgentRequest), global::Google.Cloud.Dialogflow.Cx.V3.CreateAgentRequest.Parser, new[]{ "Parent", "Agent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.UpdateAgentRequest), global::Google.Cloud.Dialogflow.Cx.V3.UpdateAgentRequest.Parser, new[]{ "Agent", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DeleteAgentRequest), global::Google.Cloud.Dialogflow.Cx.V3.DeleteAgentRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest), global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Parser, new[]{ "Name", "AgentUri", "DataFormat", "Environment" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Types.DataFormat) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentResponse), global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentResponse.Parser, new[]{ "AgentUri", "AgentContent" }, new[]{ "Agent" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest), global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Parser, new[]{ "Name", "AgentUri", "AgentContent", "RestoreOption" }, new[]{ "Agent" }, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.RestoreOption) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest), global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Parser, new[]{ "Name", "AgentUri", "DataFormat", "Environment", "GitDestination", "IncludeBigqueryExportSettings" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Types.DataFormat) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Types.GitDestination), global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Types.GitDestination.Parser, new[]{ "TrackingBranch", "CommitMessage" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentResponse), global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentResponse.Parser, new[]{ "AgentUri", "AgentContent", "CommitSha" }, new[]{ "Agent" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest), global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Parser, new[]{ "Name", "AgentUri", "AgentContent", "GitSource", "RestoreOption" }, new[]{ "Agent" }, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.RestoreOption) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.GitSource), global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.GitSource.Parser, new[]{ "TrackingBranch" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ValidateAgentRequest), global::Google.Cloud.Dialogflow.Cx.V3.ValidateAgentRequest.Parser, new[]{ "Name", "LanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.GetAgentValidationResultRequest), global::Google.Cloud.Dialogflow.Cx.V3.GetAgentValidationResultRequest.Parser, new[]{ "Name", "LanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.AgentValidationResult), global::Google.Cloud.Dialogflow.Cx.V3.AgentValidationResult.Parser, new[]{ "Name", "FlowValidationResults" }, null, null, null, null)
@@ -418,6 +434,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       enableSpellCorrection_ = other.enableSpellCorrection_;
       locked_ = other.locked_;
       advancedSettings_ = other.advancedSettings_ != null ? other.advancedSettings_.Clone() : null;
+      gitIntegrationSettings_ = other.gitIntegrationSettings_ != null ? other.gitIntegrationSettings_.Clone() : null;
       textToSpeechSettings_ = other.textToSpeechSettings_ != null ? other.textToSpeechSettings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -669,6 +686,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
 
+    /// <summary>Field number for the "git_integration_settings" field.</summary>
+    public const int GitIntegrationSettingsFieldNumber = 30;
+    private global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings gitIntegrationSettings_;
+    /// <summary>
+    /// Git integration settings for this agent.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings GitIntegrationSettings {
+      get { return gitIntegrationSettings_; }
+      set {
+        gitIntegrationSettings_ = value;
+      }
+    }
+
     /// <summary>Field number for the "text_to_speech_settings" field.</summary>
     public const int TextToSpeechSettingsFieldNumber = 31;
     private global::Google.Cloud.Dialogflow.Cx.V3.TextToSpeechSettings textToSpeechSettings_;
@@ -714,6 +746,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (EnableSpellCorrection != other.EnableSpellCorrection) return false;
       if (Locked != other.Locked) return false;
       if (!object.Equals(AdvancedSettings, other.AdvancedSettings)) return false;
+      if (!object.Equals(GitIntegrationSettings, other.GitIntegrationSettings)) return false;
       if (!object.Equals(TextToSpeechSettings, other.TextToSpeechSettings)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -736,6 +769,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (EnableSpellCorrection != false) hash ^= EnableSpellCorrection.GetHashCode();
       if (Locked != false) hash ^= Locked.GetHashCode();
       if (advancedSettings_ != null) hash ^= AdvancedSettings.GetHashCode();
+      if (gitIntegrationSettings_ != null) hash ^= GitIntegrationSettings.GetHashCode();
       if (textToSpeechSettings_ != null) hash ^= TextToSpeechSettings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -808,6 +842,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(216, 1);
         output.WriteBool(Locked);
       }
+      if (gitIntegrationSettings_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(GitIntegrationSettings);
+      }
       if (textToSpeechSettings_ != null) {
         output.WriteRawTag(250, 1);
         output.WriteMessage(TextToSpeechSettings);
@@ -875,6 +913,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(216, 1);
         output.WriteBool(Locked);
       }
+      if (gitIntegrationSettings_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(GitIntegrationSettings);
+      }
       if (textToSpeechSettings_ != null) {
         output.WriteRawTag(250, 1);
         output.WriteMessage(TextToSpeechSettings);
@@ -928,6 +970,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (advancedSettings_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(AdvancedSettings);
+      }
+      if (gitIntegrationSettings_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GitIntegrationSettings);
       }
       if (textToSpeechSettings_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(TextToSpeechSettings);
@@ -989,6 +1034,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           AdvancedSettings = new global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings();
         }
         AdvancedSettings.MergeFrom(other.AdvancedSettings);
+      }
+      if (other.gitIntegrationSettings_ != null) {
+        if (gitIntegrationSettings_ == null) {
+          GitIntegrationSettings = new global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings();
+        }
+        GitIntegrationSettings.MergeFrom(other.GitIntegrationSettings);
       }
       if (other.textToSpeechSettings_ != null) {
         if (textToSpeechSettings_ == null) {
@@ -1071,6 +1122,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           case 216: {
             Locked = input.ReadBool();
+            break;
+          }
+          case 242: {
+            if (gitIntegrationSettings_ == null) {
+              GitIntegrationSettings = new global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings();
+            }
+            input.ReadMessage(GitIntegrationSettings);
             break;
           }
           case 250: {
@@ -1157,6 +1215,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             Locked = input.ReadBool();
             break;
           }
+          case 242: {
+            if (gitIntegrationSettings_ == null) {
+              GitIntegrationSettings = new global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings();
+            }
+            input.ReadMessage(GitIntegrationSettings);
+            break;
+          }
           case 250: {
             if (textToSpeechSettings_ == null) {
               TextToSpeechSettings = new global::Google.Cloud.Dialogflow.Cx.V3.TextToSpeechSettings();
@@ -1168,6 +1233,605 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Agent message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Settings for connecting to Git repository for an agent.
+      /// </summary>
+      public sealed partial class GitIntegrationSettings : pb::IMessage<GitIntegrationSettings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GitIntegrationSettings> _parser = new pb::MessageParser<GitIntegrationSettings>(() => new GitIntegrationSettings());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GitIntegrationSettings> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.Agent.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GitIntegrationSettings() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GitIntegrationSettings(GitIntegrationSettings other) : this() {
+          switch (other.GitSettingsCase) {
+            case GitSettingsOneofCase.GithubSettings:
+              GithubSettings = other.GithubSettings.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GitIntegrationSettings Clone() {
+          return new GitIntegrationSettings(this);
+        }
+
+        /// <summary>Field number for the "github_settings" field.</summary>
+        public const int GithubSettingsFieldNumber = 1;
+        /// <summary>
+        /// GitHub settings.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings.Types.GithubSettings GithubSettings {
+          get { return gitSettingsCase_ == GitSettingsOneofCase.GithubSettings ? (global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings.Types.GithubSettings) gitSettings_ : null; }
+          set {
+            gitSettings_ = value;
+            gitSettingsCase_ = value == null ? GitSettingsOneofCase.None : GitSettingsOneofCase.GithubSettings;
+          }
+        }
+
+        private object gitSettings_;
+        /// <summary>Enum of possible cases for the "git_settings" oneof.</summary>
+        public enum GitSettingsOneofCase {
+          None = 0,
+          GithubSettings = 1,
+        }
+        private GitSettingsOneofCase gitSettingsCase_ = GitSettingsOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GitSettingsOneofCase GitSettingsCase {
+          get { return gitSettingsCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGitSettings() {
+          gitSettingsCase_ = GitSettingsOneofCase.None;
+          gitSettings_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GitIntegrationSettings);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GitIntegrationSettings other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(GithubSettings, other.GithubSettings)) return false;
+          if (GitSettingsCase != other.GitSettingsCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (gitSettingsCase_ == GitSettingsOneofCase.GithubSettings) hash ^= GithubSettings.GetHashCode();
+          hash ^= (int) gitSettingsCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (gitSettingsCase_ == GitSettingsOneofCase.GithubSettings) {
+            output.WriteRawTag(10);
+            output.WriteMessage(GithubSettings);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (gitSettingsCase_ == GitSettingsOneofCase.GithubSettings) {
+            output.WriteRawTag(10);
+            output.WriteMessage(GithubSettings);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (gitSettingsCase_ == GitSettingsOneofCase.GithubSettings) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GithubSettings);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GitIntegrationSettings other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.GitSettingsCase) {
+            case GitSettingsOneofCase.GithubSettings:
+              if (GithubSettings == null) {
+                GithubSettings = new global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings.Types.GithubSettings();
+              }
+              GithubSettings.MergeFrom(other.GithubSettings);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings.Types.GithubSettings subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings.Types.GithubSettings();
+                if (gitSettingsCase_ == GitSettingsOneofCase.GithubSettings) {
+                  subBuilder.MergeFrom(GithubSettings);
+                }
+                input.ReadMessage(subBuilder);
+                GithubSettings = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings.Types.GithubSettings subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings.Types.GithubSettings();
+                if (gitSettingsCase_ == GitSettingsOneofCase.GithubSettings) {
+                  subBuilder.MergeFrom(GithubSettings);
+                }
+                input.ReadMessage(subBuilder);
+                GithubSettings = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the GitIntegrationSettings message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Settings of integration with GitHub.
+          /// </summary>
+          public sealed partial class GithubSettings : pb::IMessage<GithubSettings>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<GithubSettings> _parser = new pb::MessageParser<GithubSettings>(() => new GithubSettings());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<GithubSettings> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dialogflow.Cx.V3.Agent.Types.GitIntegrationSettings.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public GithubSettings() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public GithubSettings(GithubSettings other) : this() {
+              displayName_ = other.displayName_;
+              repositoryUri_ = other.repositoryUri_;
+              trackingBranch_ = other.trackingBranch_;
+              accessToken_ = other.accessToken_;
+              branches_ = other.branches_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public GithubSettings Clone() {
+              return new GithubSettings(this);
+            }
+
+            /// <summary>Field number for the "display_name" field.</summary>
+            public const int DisplayNameFieldNumber = 1;
+            private string displayName_ = "";
+            /// <summary>
+            /// The unique repository display name for the GitHub repository.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string DisplayName {
+              get { return displayName_; }
+              set {
+                displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "repository_uri" field.</summary>
+            public const int RepositoryUriFieldNumber = 2;
+            private string repositoryUri_ = "";
+            /// <summary>
+            /// The GitHub repository URI related to the agent.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string RepositoryUri {
+              get { return repositoryUri_; }
+              set {
+                repositoryUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "tracking_branch" field.</summary>
+            public const int TrackingBranchFieldNumber = 3;
+            private string trackingBranch_ = "";
+            /// <summary>
+            /// The branch of GitHub repository tracked for this agent.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string TrackingBranch {
+              get { return trackingBranch_; }
+              set {
+                trackingBranch_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "access_token" field.</summary>
+            public const int AccessTokenFieldNumber = 4;
+            private string accessToken_ = "";
+            /// <summary>
+            /// The access token used to authenticate the access to the GitHub
+            /// repository.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string AccessToken {
+              get { return accessToken_; }
+              set {
+                accessToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "branches" field.</summary>
+            public const int BranchesFieldNumber = 5;
+            private static readonly pb::FieldCodec<string> _repeated_branches_codec
+                = pb::FieldCodec.ForString(42);
+            private readonly pbc::RepeatedField<string> branches_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// A list of branches configured to be used from Dialogflow.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> Branches {
+              get { return branches_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as GithubSettings);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(GithubSettings other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (DisplayName != other.DisplayName) return false;
+              if (RepositoryUri != other.RepositoryUri) return false;
+              if (TrackingBranch != other.TrackingBranch) return false;
+              if (AccessToken != other.AccessToken) return false;
+              if(!branches_.Equals(other.branches_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+              if (RepositoryUri.Length != 0) hash ^= RepositoryUri.GetHashCode();
+              if (TrackingBranch.Length != 0) hash ^= TrackingBranch.GetHashCode();
+              if (AccessToken.Length != 0) hash ^= AccessToken.GetHashCode();
+              hash ^= branches_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (DisplayName.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(DisplayName);
+              }
+              if (RepositoryUri.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(RepositoryUri);
+              }
+              if (TrackingBranch.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(TrackingBranch);
+              }
+              if (AccessToken.Length != 0) {
+                output.WriteRawTag(34);
+                output.WriteString(AccessToken);
+              }
+              branches_.WriteTo(output, _repeated_branches_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (DisplayName.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(DisplayName);
+              }
+              if (RepositoryUri.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(RepositoryUri);
+              }
+              if (TrackingBranch.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(TrackingBranch);
+              }
+              if (AccessToken.Length != 0) {
+                output.WriteRawTag(34);
+                output.WriteString(AccessToken);
+              }
+              branches_.WriteTo(ref output, _repeated_branches_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (DisplayName.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+              }
+              if (RepositoryUri.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(RepositoryUri);
+              }
+              if (TrackingBranch.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(TrackingBranch);
+              }
+              if (AccessToken.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(AccessToken);
+              }
+              size += branches_.CalculateSize(_repeated_branches_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(GithubSettings other) {
+              if (other == null) {
+                return;
+              }
+              if (other.DisplayName.Length != 0) {
+                DisplayName = other.DisplayName;
+              }
+              if (other.RepositoryUri.Length != 0) {
+                RepositoryUri = other.RepositoryUri;
+              }
+              if (other.TrackingBranch.Length != 0) {
+                TrackingBranch = other.TrackingBranch;
+              }
+              if (other.AccessToken.Length != 0) {
+                AccessToken = other.AccessToken;
+              }
+              branches_.Add(other.branches_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    DisplayName = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    RepositoryUri = input.ReadString();
+                    break;
+                  }
+                  case 26: {
+                    TrackingBranch = input.ReadString();
+                    break;
+                  }
+                  case 34: {
+                    AccessToken = input.ReadString();
+                    break;
+                  }
+                  case 42: {
+                    branches_.AddEntriesFrom(input, _repeated_branches_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    DisplayName = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    RepositoryUri = input.ReadString();
+                    break;
+                  }
+                  case 26: {
+                    TrackingBranch = input.ReadString();
+                    break;
+                  }
+                  case 34: {
+                    AccessToken = input.ReadString();
+                    break;
+                  }
+                  case 42: {
+                    branches_.AddEntriesFrom(ref input, _repeated_branches_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -2613,6 +3277,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       agentUri_ = other.agentUri_;
       dataFormat_ = other.dataFormat_;
       environment_ = other.environment_;
+      gitDestination_ = other.gitDestination_ != null ? other.gitDestination_.Clone() : null;
+      includeBigqueryExportSettings_ = other.includeBigqueryExportSettings_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2695,6 +3361,36 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
 
+    /// <summary>Field number for the "git_destination" field.</summary>
+    public const int GitDestinationFieldNumber = 6;
+    private global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Types.GitDestination gitDestination_;
+    /// <summary>
+    /// Optional. The Git branch to export the agent to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Types.GitDestination GitDestination {
+      get { return gitDestination_; }
+      set {
+        gitDestination_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "include_bigquery_export_settings" field.</summary>
+    public const int IncludeBigqueryExportSettingsFieldNumber = 7;
+    private bool includeBigqueryExportSettings_;
+    /// <summary>
+    /// Optional. Whether to include BigQuery Export setting.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IncludeBigqueryExportSettings {
+      get { return includeBigqueryExportSettings_; }
+      set {
+        includeBigqueryExportSettings_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2714,6 +3410,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (AgentUri != other.AgentUri) return false;
       if (DataFormat != other.DataFormat) return false;
       if (Environment != other.Environment) return false;
+      if (!object.Equals(GitDestination, other.GitDestination)) return false;
+      if (IncludeBigqueryExportSettings != other.IncludeBigqueryExportSettings) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2725,6 +3423,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (AgentUri.Length != 0) hash ^= AgentUri.GetHashCode();
       if (DataFormat != global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Types.DataFormat.Unspecified) hash ^= DataFormat.GetHashCode();
       if (Environment.Length != 0) hash ^= Environment.GetHashCode();
+      if (gitDestination_ != null) hash ^= GitDestination.GetHashCode();
+      if (IncludeBigqueryExportSettings != false) hash ^= IncludeBigqueryExportSettings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2759,6 +3459,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(42);
         output.WriteString(Environment);
       }
+      if (gitDestination_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(GitDestination);
+      }
+      if (IncludeBigqueryExportSettings != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IncludeBigqueryExportSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2785,6 +3493,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(42);
         output.WriteString(Environment);
       }
+      if (gitDestination_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(GitDestination);
+      }
+      if (IncludeBigqueryExportSettings != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IncludeBigqueryExportSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2806,6 +3522,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (Environment.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Environment);
+      }
+      if (gitDestination_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GitDestination);
+      }
+      if (IncludeBigqueryExportSettings != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2830,6 +3552,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (other.Environment.Length != 0) {
         Environment = other.Environment;
+      }
+      if (other.gitDestination_ != null) {
+        if (gitDestination_ == null) {
+          GitDestination = new global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Types.GitDestination();
+        }
+        GitDestination.MergeFrom(other.GitDestination);
+      }
+      if (other.IncludeBigqueryExportSettings != false) {
+        IncludeBigqueryExportSettings = other.IncludeBigqueryExportSettings;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2860,6 +3591,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           case 42: {
             Environment = input.ReadString();
+            break;
+          }
+          case 50: {
+            if (gitDestination_ == null) {
+              GitDestination = new global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Types.GitDestination();
+            }
+            input.ReadMessage(GitDestination);
+            break;
+          }
+          case 56: {
+            IncludeBigqueryExportSettings = input.ReadBool();
             break;
           }
         }
@@ -2893,6 +3635,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             Environment = input.ReadString();
             break;
           }
+          case 50: {
+            if (gitDestination_ == null) {
+              GitDestination = new global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Types.GitDestination();
+            }
+            input.ReadMessage(GitDestination);
+            break;
+          }
+          case 56: {
+            IncludeBigqueryExportSettings = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -2919,6 +3672,241 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// Agent content will be exported in JSON Package format.
         /// </summary>
         [pbr::OriginalName("JSON_PACKAGE")] JsonPackage = 4,
+      }
+
+      /// <summary>
+      /// Settings for exporting to a git branch.
+      /// </summary>
+      public sealed partial class GitDestination : pb::IMessage<GitDestination>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GitDestination> _parser = new pb::MessageParser<GitDestination>(() => new GitDestination());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GitDestination> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.ExportAgentRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GitDestination() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GitDestination(GitDestination other) : this() {
+          trackingBranch_ = other.trackingBranch_;
+          commitMessage_ = other.commitMessage_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GitDestination Clone() {
+          return new GitDestination(this);
+        }
+
+        /// <summary>Field number for the "tracking_branch" field.</summary>
+        public const int TrackingBranchFieldNumber = 1;
+        private string trackingBranch_ = "";
+        /// <summary>
+        /// Tracking branch for the git push.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string TrackingBranch {
+          get { return trackingBranch_; }
+          set {
+            trackingBranch_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "commit_message" field.</summary>
+        public const int CommitMessageFieldNumber = 2;
+        private string commitMessage_ = "";
+        /// <summary>
+        /// Commit message for the git push.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string CommitMessage {
+          get { return commitMessage_; }
+          set {
+            commitMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GitDestination);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GitDestination other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (TrackingBranch != other.TrackingBranch) return false;
+          if (CommitMessage != other.CommitMessage) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (TrackingBranch.Length != 0) hash ^= TrackingBranch.GetHashCode();
+          if (CommitMessage.Length != 0) hash ^= CommitMessage.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (TrackingBranch.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(TrackingBranch);
+          }
+          if (CommitMessage.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CommitMessage);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (TrackingBranch.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(TrackingBranch);
+          }
+          if (CommitMessage.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CommitMessage);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (TrackingBranch.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(TrackingBranch);
+          }
+          if (CommitMessage.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(CommitMessage);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GitDestination other) {
+          if (other == null) {
+            return;
+          }
+          if (other.TrackingBranch.Length != 0) {
+            TrackingBranch = other.TrackingBranch;
+          }
+          if (other.CommitMessage.Length != 0) {
+            CommitMessage = other.CommitMessage;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                TrackingBranch = input.ReadString();
+                break;
+              }
+              case 18: {
+                CommitMessage = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                TrackingBranch = input.ReadString();
+                break;
+              }
+              case 18: {
+                CommitMessage = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
@@ -2971,6 +3959,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         case AgentOneofCase.AgentContent:
           AgentContent = other.AgentContent;
           break;
+        case AgentOneofCase.CommitSha:
+          CommitSha = other.CommitSha;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3016,7 +4007,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>Field number for the "agent_content" field.</summary>
     public const int AgentContentFieldNumber = 2;
     /// <summary>
-    /// Uncompressed raw byte content for agent.
+    /// Uncompressed raw byte content for agent. This field is populated
+    /// if none of `agent_uri` and `git_destination` are specified in
+    /// [ExportAgentRequest][google.cloud.dialogflow.cx.v3.ExportAgentRequest].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3042,12 +4035,44 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
 
+    /// <summary>Field number for the "commit_sha" field.</summary>
+    public const int CommitShaFieldNumber = 3;
+    /// <summary>
+    /// Commit SHA of the git push. This field is populated if
+    /// `git_destination` are specified in
+    /// [ExportAgentRequest][google.cloud.dialogflow.cx.v3.ExportAgentRequest].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CommitSha {
+      get { return HasCommitSha ? (string) agent_ : ""; }
+      set {
+        agent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        agentCase_ = AgentOneofCase.CommitSha;
+      }
+    }
+    /// <summary>Gets whether the "commit_sha" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCommitSha {
+      get { return agentCase_ == AgentOneofCase.CommitSha; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "commit_sha" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCommitSha() {
+      if (HasCommitSha) {
+        ClearAgent();
+      }
+    }
+
     private object agent_;
     /// <summary>Enum of possible cases for the "agent" oneof.</summary>
     public enum AgentOneofCase {
       None = 0,
       AgentUri = 1,
       AgentContent = 2,
+      CommitSha = 3,
     }
     private AgentOneofCase agentCase_ = AgentOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3080,6 +4105,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (AgentUri != other.AgentUri) return false;
       if (AgentContent != other.AgentContent) return false;
+      if (CommitSha != other.CommitSha) return false;
       if (AgentCase != other.AgentCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3090,6 +4116,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       int hash = 1;
       if (HasAgentUri) hash ^= AgentUri.GetHashCode();
       if (HasAgentContent) hash ^= AgentContent.GetHashCode();
+      if (HasCommitSha) hash ^= CommitSha.GetHashCode();
       hash ^= (int) agentCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3117,6 +4144,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(18);
         output.WriteBytes(AgentContent);
       }
+      if (HasCommitSha) {
+        output.WriteRawTag(26);
+        output.WriteString(CommitSha);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3135,6 +4166,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(18);
         output.WriteBytes(AgentContent);
       }
+      if (HasCommitSha) {
+        output.WriteRawTag(26);
+        output.WriteString(CommitSha);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3150,6 +4185,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (HasAgentContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(AgentContent);
+      }
+      if (HasCommitSha) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CommitSha);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3169,6 +4207,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           break;
         case AgentOneofCase.AgentContent:
           AgentContent = other.AgentContent;
+          break;
+        case AgentOneofCase.CommitSha:
+          CommitSha = other.CommitSha;
           break;
       }
 
@@ -3195,6 +4236,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             AgentContent = input.ReadBytes();
             break;
           }
+          case 26: {
+            CommitSha = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -3216,6 +4261,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           case 18: {
             AgentContent = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            CommitSha = input.ReadString();
             break;
           }
         }
@@ -3271,6 +4320,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           break;
         case AgentOneofCase.AgentContent:
           AgentContent = other.AgentContent;
+          break;
+        case AgentOneofCase.GitSource:
+          GitSource = other.GitSource.Clone();
           break;
       }
 
@@ -3365,6 +4417,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
 
+    /// <summary>Field number for the "git_source" field.</summary>
+    public const int GitSourceFieldNumber = 6;
+    /// <summary>
+    /// Setting for restoring from a git branch
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.GitSource GitSource {
+      get { return agentCase_ == AgentOneofCase.GitSource ? (global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.GitSource) agent_ : null; }
+      set {
+        agent_ = value;
+        agentCase_ = value == null ? AgentOneofCase.None : AgentOneofCase.GitSource;
+      }
+    }
+
     /// <summary>Field number for the "restore_option" field.</summary>
     public const int RestoreOptionFieldNumber = 5;
     private global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.RestoreOption restoreOption_ = global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.RestoreOption.Unspecified;
@@ -3386,6 +4453,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       None = 0,
       AgentUri = 2,
       AgentContent = 3,
+      GitSource = 6,
     }
     private AgentOneofCase agentCase_ = AgentOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3419,6 +4487,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Name != other.Name) return false;
       if (AgentUri != other.AgentUri) return false;
       if (AgentContent != other.AgentContent) return false;
+      if (!object.Equals(GitSource, other.GitSource)) return false;
       if (RestoreOption != other.RestoreOption) return false;
       if (AgentCase != other.AgentCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -3431,6 +4500,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (HasAgentUri) hash ^= AgentUri.GetHashCode();
       if (HasAgentContent) hash ^= AgentContent.GetHashCode();
+      if (agentCase_ == AgentOneofCase.GitSource) hash ^= GitSource.GetHashCode();
       if (RestoreOption != global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.RestoreOption.Unspecified) hash ^= RestoreOption.GetHashCode();
       hash ^= (int) agentCase_;
       if (_unknownFields != null) {
@@ -3467,6 +4537,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(40);
         output.WriteEnum((int) RestoreOption);
       }
+      if (agentCase_ == AgentOneofCase.GitSource) {
+        output.WriteRawTag(50);
+        output.WriteMessage(GitSource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3493,6 +4567,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(40);
         output.WriteEnum((int) RestoreOption);
       }
+      if (agentCase_ == AgentOneofCase.GitSource) {
+        output.WriteRawTag(50);
+        output.WriteMessage(GitSource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3511,6 +4589,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (HasAgentContent) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(AgentContent);
+      }
+      if (agentCase_ == AgentOneofCase.GitSource) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GitSource);
       }
       if (RestoreOption != global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.RestoreOption.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RestoreOption);
@@ -3539,6 +4620,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           break;
         case AgentOneofCase.AgentContent:
           AgentContent = other.AgentContent;
+          break;
+        case AgentOneofCase.GitSource:
+          if (GitSource == null) {
+            GitSource = new global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.GitSource();
+          }
+          GitSource.MergeFrom(other.GitSource);
           break;
       }
 
@@ -3573,6 +4660,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             RestoreOption = (global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.RestoreOption) input.ReadEnum();
             break;
           }
+          case 50: {
+            global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.GitSource subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.GitSource();
+            if (agentCase_ == AgentOneofCase.GitSource) {
+              subBuilder.MergeFrom(GitSource);
+            }
+            input.ReadMessage(subBuilder);
+            GitSource = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -3604,6 +4700,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             RestoreOption = (global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.RestoreOption) input.ReadEnum();
             break;
           }
+          case 50: {
+            global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.GitSource subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Types.GitSource();
+            if (agentCase_ == AgentOneofCase.GitSource) {
+              subBuilder.MergeFrom(GitSource);
+            }
+            input.ReadMessage(subBuilder);
+            GitSource = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -3633,6 +4738,201 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// target agent.
         /// </summary>
         [pbr::OriginalName("FALLBACK")] Fallback = 2,
+      }
+
+      /// <summary>
+      /// Settings for restoring from a git branch
+      /// </summary>
+      public sealed partial class GitSource : pb::IMessage<GitSource>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GitSource> _parser = new pb::MessageParser<GitSource>(() => new GitSource());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GitSource> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.RestoreAgentRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GitSource() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GitSource(GitSource other) : this() {
+          trackingBranch_ = other.trackingBranch_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GitSource Clone() {
+          return new GitSource(this);
+        }
+
+        /// <summary>Field number for the "tracking_branch" field.</summary>
+        public const int TrackingBranchFieldNumber = 1;
+        private string trackingBranch_ = "";
+        /// <summary>
+        /// tracking branch for the git pull
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string TrackingBranch {
+          get { return trackingBranch_; }
+          set {
+            trackingBranch_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GitSource);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GitSource other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (TrackingBranch != other.TrackingBranch) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (TrackingBranch.Length != 0) hash ^= TrackingBranch.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (TrackingBranch.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(TrackingBranch);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (TrackingBranch.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(TrackingBranch);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (TrackingBranch.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(TrackingBranch);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GitSource other) {
+          if (other == null) {
+            return;
+          }
+          if (other.TrackingBranch.Length != 0) {
+            TrackingBranch = other.TrackingBranch;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                TrackingBranch = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                TrackingBranch = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }

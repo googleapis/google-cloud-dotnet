@@ -151,6 +151,51 @@
           }
         }
       }
+    },
+    "DocumentService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DocumentServiceClient",
+          "rpcs": {
+            "BatchDeleteDocuments": {
+              "methods": [
+                "BatchDeleteDocuments",
+                "BatchDeleteDocumentsAsync"
+              ]
+            },
+            "GetDatasetSchema": {
+              "methods": [
+                "GetDatasetSchema",
+                "GetDatasetSchemaAsync"
+              ]
+            },
+            "GetDocument": {
+              "methods": [
+                "GetDocument",
+                "GetDocumentAsync"
+              ]
+            },
+            "ImportDocuments": {
+              "methods": [
+                "ImportDocuments",
+                "ImportDocumentsAsync"
+              ]
+            },
+            "UpdateDataset": {
+              "methods": [
+                "UpdateDataset",
+                "UpdateDatasetAsync"
+              ]
+            },
+            "UpdateDatasetSchema": {
+              "methods": [
+                "UpdateDatasetSchema",
+                "UpdateDatasetSchemaAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

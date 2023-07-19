@@ -29,46 +29,48 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aJ2dvb2ds",
             "ZS9jbG91ZC90YXNrcy92MmJldGEzL3RhcmdldC5wcm90bxoeZ29vZ2xlL3By",
             "b3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvIt8GCgVRdWV1ZRIMCgRuYW1lGAEgASgJEk8KFWFwcF9lbmdp",
+            "YW1wLnByb3RvIpwHCgVRdWV1ZRIMCgRuYW1lGAEgASgJEk8KFWFwcF9lbmdp",
             "bmVfaHR0cF9xdWV1ZRgDIAEoCzIuLmdvb2dsZS5jbG91ZC50YXNrcy52MmJl",
-            "dGEzLkFwcEVuZ2luZUh0dHBRdWV1ZUgAEjsKC3JhdGVfbGltaXRzGAQgASgL",
-            "MiYuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuUmF0ZUxpbWl0cxI9Cgxy",
-            "ZXRyeV9jb25maWcYBSABKAsyJy5nb29nbGUuY2xvdWQudGFza3MudjJiZXRh",
-            "My5SZXRyeUNvbmZpZxI2CgVzdGF0ZRgGIAEoDjInLmdvb2dsZS5jbG91ZC50",
-            "YXNrcy52MmJldGEzLlF1ZXVlLlN0YXRlEi4KCnB1cmdlX3RpbWUYByABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEisKCHRhc2tfdHRsGAggASgL",
-            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjAKDXRvbWJzdG9uZV90dGwY",
-            "CSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SWAoac3RhY2tkcml2",
-            "ZXJfbG9nZ2luZ19jb25maWcYCiABKAsyNC5nb29nbGUuY2xvdWQudGFza3Mu",
-            "djJiZXRhMy5TdGFja2RyaXZlckxvZ2dpbmdDb25maWcSOQoEdHlwZRgLIAEo",
-            "DjImLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlF1ZXVlLlR5cGVCA+BB",
-            "BRI6CgVzdGF0cxgMIAEoCzImLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEz",
-            "LlF1ZXVlU3RhdHNCA+BBAyJFCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklF",
-            "RBAAEgsKB1JVTk5JTkcQARIKCgZQQVVTRUQQAhIMCghESVNBQkxFRBADIjAK",
-            "BFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEggKBFBVTEwQARIICgRQVVNI",
-            "EAI6XOpBWQofY2xvdWR0YXNrcy5nb29nbGVhcGlzLmNvbS9RdWV1ZRI2cHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3F1ZXVlcy97",
-            "cXVldWV9QgwKCnF1ZXVlX3R5cGUiagoKUmF0ZUxpbWl0cxIhChltYXhfZGlz",
-            "cGF0Y2hlc19wZXJfc2Vjb25kGAEgASgBEhYKDm1heF9idXJzdF9zaXplGAIg",
-            "ASgFEiEKGW1heF9jb25jdXJyZW50X2Rpc3BhdGNoZXMYAyABKAUi0QEKC1Jl",
-            "dHJ5Q29uZmlnEhQKDG1heF9hdHRlbXB0cxgBIAEoBRI1ChJtYXhfcmV0cnlf",
-            "ZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLgoL",
-            "bWluX2JhY2tvZmYYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24S",
-            "LgoLbWF4X2JhY2tvZmYYBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
-            "b24SFQoNbWF4X2RvdWJsaW5ncxgFIAEoBSIyChhTdGFja2RyaXZlckxvZ2dp",
-            "bmdDb25maWcSFgoOc2FtcGxpbmdfcmF0aW8YASABKAEi6AEKClF1ZXVlU3Rh",
-            "dHMSGAoLdGFza3NfY291bnQYASABKANCA+BBAxJGCh1vbGRlc3RfZXN0aW1h",
-            "dGVkX2Fycml2YWxfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxInChpleGVjdXRlZF9sYXN0X21pbnV0ZV9jb3VudBgDIAEo",
-            "A0ID4EEDEigKG2NvbmN1cnJlbnRfZGlzcGF0Y2hlc19jb3VudBgEIAEoA0ID",
-            "4EEDEiUKGGVmZmVjdGl2ZV9leGVjdXRpb25fcmF0ZRgFIAEoAUID4EEDQnMK",
-            "HmNvbS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhM0IKUXVldWVQcm90b1AB",
-            "WkNjbG91ZC5nb29nbGUuY29tL2dvL2Nsb3VkdGFza3MvYXBpdjJiZXRhMy9j",
-            "bG91ZHRhc2tzcGI7Y2xvdWR0YXNrc3BiYgZwcm90bzM="));
+            "dGEzLkFwcEVuZ2luZUh0dHBRdWV1ZUgAEjsKC2h0dHBfdGFyZ2V0GA0gASgL",
+            "MiYuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuSHR0cFRhcmdldBI7Cgty",
+            "YXRlX2xpbWl0cxgEIAEoCzImLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEz",
+            "LlJhdGVMaW1pdHMSPQoMcmV0cnlfY29uZmlnGAUgASgLMicuZ29vZ2xlLmNs",
+            "b3VkLnRhc2tzLnYyYmV0YTMuUmV0cnlDb25maWcSNgoFc3RhdGUYBiABKA4y",
+            "Jy5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5RdWV1ZS5TdGF0ZRIuCgpw",
+            "dXJnZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIr",
+            "Cgh0YXNrX3R0bBgIIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIw",
+            "Cg10b21ic3RvbmVfdHRsGAkgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
+            "aW9uElgKGnN0YWNrZHJpdmVyX2xvZ2dpbmdfY29uZmlnGAogASgLMjQuZ29v",
+            "Z2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuU3RhY2tkcml2ZXJMb2dnaW5nQ29u",
+            "ZmlnEjkKBHR5cGUYCyABKA4yJi5nb29nbGUuY2xvdWQudGFza3MudjJiZXRh",
+            "My5RdWV1ZS5UeXBlQgPgQQUSOgoFc3RhdHMYDCABKAsyJi5nb29nbGUuY2xv",
+            "dWQudGFza3MudjJiZXRhMy5RdWV1ZVN0YXRzQgPgQQMiRQoFU3RhdGUSFQoR",
+            "U1RBVEVfVU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESCgoGUEFVU0VEEAIS",
+            "DAoIRElTQUJMRUQQAyIwCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABII",
+            "CgRQVUxMEAESCAoEUFVTSBACOlzqQVkKH2Nsb3VkdGFza3MuZ29vZ2xlYXBp",
+            "cy5jb20vUXVldWUSNnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9xdWV1ZXMve3F1ZXVlfUIMCgpxdWV1ZV90eXBlImoKClJhdGVM",
+            "aW1pdHMSIQoZbWF4X2Rpc3BhdGNoZXNfcGVyX3NlY29uZBgBIAEoARIWCg5t",
+            "YXhfYnVyc3Rfc2l6ZRgCIAEoBRIhChltYXhfY29uY3VycmVudF9kaXNwYXRj",
+            "aGVzGAMgASgFItEBCgtSZXRyeUNvbmZpZxIUCgxtYXhfYXR0ZW1wdHMYASAB",
+            "KAUSNQoSbWF4X3JldHJ5X2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uEi4KC21pbl9iYWNrb2ZmGAMgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uEi4KC21heF9iYWNrb2ZmGAQgASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uEhUKDW1heF9kb3VibGluZ3MYBSABKAUiMgoY",
+            "U3RhY2tkcml2ZXJMb2dnaW5nQ29uZmlnEhYKDnNhbXBsaW5nX3JhdGlvGAEg",
+            "ASgBIugBCgpRdWV1ZVN0YXRzEhgKC3Rhc2tzX2NvdW50GAEgASgDQgPgQQMS",
+            "Rgodb2xkZXN0X2VzdGltYXRlZF9hcnJpdmFsX3RpbWUYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSJwoaZXhlY3V0ZWRfbGFzdF9t",
+            "aW51dGVfY291bnQYAyABKANCA+BBAxIoChtjb25jdXJyZW50X2Rpc3BhdGNo",
+            "ZXNfY291bnQYBCABKANCA+BBAxIlChhlZmZlY3RpdmVfZXhlY3V0aW9uX3Jh",
+            "dGUYBSABKAFCA+BBA0JzCh5jb20uZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0",
+            "YTNCClF1ZXVlUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9jbG91ZHRh",
+            "c2tzL2FwaXYyYmV0YTMvY2xvdWR0YXNrc3BiO2Nsb3VkdGFza3NwYmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Queue), global::Google.Cloud.Tasks.V2Beta3.Queue.Parser, new[]{ "Name", "AppEngineHttpQueue", "RateLimits", "RetryConfig", "State", "PurgeTime", "TaskTtl", "TombstoneTtl", "StackdriverLoggingConfig", "Type", "Stats" }, new[]{ "QueueType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State), typeof(global::Google.Cloud.Tasks.V2Beta3.Queue.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Queue), global::Google.Cloud.Tasks.V2Beta3.Queue.Parser, new[]{ "Name", "AppEngineHttpQueue", "HttpTarget", "RateLimits", "RetryConfig", "State", "PurgeTime", "TaskTtl", "TombstoneTtl", "StackdriverLoggingConfig", "Type", "Stats" }, new[]{ "QueueType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State), typeof(global::Google.Cloud.Tasks.V2Beta3.Queue.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RateLimits), global::Google.Cloud.Tasks.V2Beta3.RateLimits.Parser, new[]{ "MaxDispatchesPerSecond", "MaxBurstSize", "MaxConcurrentDispatches" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RetryConfig), global::Google.Cloud.Tasks.V2Beta3.RetryConfig.Parser, new[]{ "MaxAttempts", "MaxRetryDuration", "MinBackoff", "MaxBackoff", "MaxDoublings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig), global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig.Parser, new[]{ "SamplingRatio" }, null, null, null, null),
@@ -119,6 +121,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Queue(Queue other) : this() {
       name_ = other.name_;
+      httpTarget_ = other.httpTarget_ != null ? other.httpTarget_.Clone() : null;
       rateLimits_ = other.rateLimits_ != null ? other.rateLimits_.Clone() : null;
       retryConfig_ = other.retryConfig_ != null ? other.retryConfig_.Clone() : null;
       state_ = other.state_;
@@ -196,6 +199,21 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
     }
 
+    /// <summary>Field number for the "http_target" field.</summary>
+    public const int HttpTargetFieldNumber = 13;
+    private global::Google.Cloud.Tasks.V2Beta3.HttpTarget httpTarget_;
+    /// <summary>
+    /// Modifies HTTP target for HTTP tasks.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Tasks.V2Beta3.HttpTarget HttpTarget {
+      get { return httpTarget_; }
+      set {
+        httpTarget_ = value;
+      }
+    }
+
     /// <summary>Field number for the "rate_limits" field.</summary>
     public const int RateLimitsFieldNumber = 4;
     private global::Google.Cloud.Tasks.V2Beta3.RateLimits rateLimits_;
@@ -268,7 +286,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>
     /// Output only. The state of the queue.
     ///
-    /// `state` can only be changed by calling
+    /// `state` can only be changed by called
     /// [PauseQueue][google.cloud.tasks.v2beta3.CloudTasks.PauseQueue],
     /// [ResumeQueue][google.cloud.tasks.v2beta3.CloudTasks.ResumeQueue], or
     /// uploading
@@ -451,6 +469,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       if (Name != other.Name) return false;
       if (!object.Equals(AppEngineHttpQueue, other.AppEngineHttpQueue)) return false;
+      if (!object.Equals(HttpTarget, other.HttpTarget)) return false;
       if (!object.Equals(RateLimits, other.RateLimits)) return false;
       if (!object.Equals(RetryConfig, other.RetryConfig)) return false;
       if (State != other.State) return false;
@@ -470,6 +489,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (queueTypeCase_ == QueueTypeOneofCase.AppEngineHttpQueue) hash ^= AppEngineHttpQueue.GetHashCode();
+      if (httpTarget_ != null) hash ^= HttpTarget.GetHashCode();
       if (rateLimits_ != null) hash ^= RateLimits.GetHashCode();
       if (retryConfig_ != null) hash ^= RetryConfig.GetHashCode();
       if (State != global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State.Unspecified) hash ^= State.GetHashCode();
@@ -542,6 +562,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         output.WriteRawTag(98);
         output.WriteMessage(Stats);
       }
+      if (httpTarget_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(HttpTarget);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -596,6 +620,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         output.WriteRawTag(98);
         output.WriteMessage(Stats);
       }
+      if (httpTarget_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(HttpTarget);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -611,6 +639,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       if (queueTypeCase_ == QueueTypeOneofCase.AppEngineHttpQueue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AppEngineHttpQueue);
+      }
+      if (httpTarget_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HttpTarget);
       }
       if (rateLimits_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RateLimits);
@@ -653,6 +684,12 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.httpTarget_ != null) {
+        if (httpTarget_ == null) {
+          HttpTarget = new global::Google.Cloud.Tasks.V2Beta3.HttpTarget();
+        }
+        HttpTarget.MergeFrom(other.HttpTarget);
       }
       if (other.rateLimits_ != null) {
         if (rateLimits_ == null) {
@@ -796,6 +833,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             input.ReadMessage(Stats);
             break;
           }
+          case 106: {
+            if (httpTarget_ == null) {
+              HttpTarget = new global::Google.Cloud.Tasks.V2Beta3.HttpTarget();
+            }
+            input.ReadMessage(HttpTarget);
+            break;
+          }
         }
       }
     #endif
@@ -879,6 +923,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
               Stats = new global::Google.Cloud.Tasks.V2Beta3.QueueStats();
             }
             input.ReadMessage(Stats);
+            break;
+          }
+          case 106: {
+            if (httpTarget_ == null) {
+              HttpTarget = new global::Google.Cloud.Tasks.V2Beta3.HttpTarget();
+            }
+            input.ReadMessage(HttpTarget);
             break;
           }
         }

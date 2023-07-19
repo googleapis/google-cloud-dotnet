@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 LanguageCode = "",
                 Units = Units.Unspecified,
                 PolylineEncoding = PolylineEncoding.Unspecified,
+                OptimizeWaypointOrder = false,
                 RequestedReferenceRoutes =
                 {
                     ComputeRoutesRequest.Types.ReferenceRoute.Unspecified,
@@ -54,6 +55,9 @@ namespace GoogleCSharpSnippets
                     ComputeRoutesRequest.Types.ExtraComputation.Unspecified,
                 },
                 RegionCode = "",
+                TrafficModel = TrafficModel.Unspecified,
+                ArrivalTime = new Timestamp(),
+                TransitPreferences = new TransitPreferences(),
             };
             // Make the request
             ComputeRoutesResponse response = routesClient.ComputeRoutes(request);
@@ -82,6 +86,7 @@ namespace GoogleCSharpSnippets
                 LanguageCode = "",
                 Units = Units.Unspecified,
                 PolylineEncoding = PolylineEncoding.Unspecified,
+                OptimizeWaypointOrder = false,
                 RequestedReferenceRoutes =
                 {
                     ComputeRoutesRequest.Types.ReferenceRoute.Unspecified,
@@ -91,6 +96,9 @@ namespace GoogleCSharpSnippets
                     ComputeRoutesRequest.Types.ExtraComputation.Unspecified,
                 },
                 RegionCode = "",
+                TrafficModel = TrafficModel.Unspecified,
+                ArrivalTime = new Timestamp(),
+                TransitPreferences = new TransitPreferences(),
             };
             // Make the request
             ComputeRoutesResponse response = await routesClient.ComputeRoutesAsync(request);
@@ -123,6 +131,9 @@ namespace GoogleCSharpSnippets
                     ComputeRouteMatrixRequest.Types.ExtraComputation.Unspecified,
                 },
                 RegionCode = "",
+                TrafficModel = TrafficModel.Unspecified,
+                ArrivalTime = new Timestamp(),
+                TransitPreferences = new TransitPreferences(),
             };
             // Make the request, returning a streaming response
             using RoutesClient.ComputeRouteMatrixStream response = routesClient.ComputeRouteMatrix(request);

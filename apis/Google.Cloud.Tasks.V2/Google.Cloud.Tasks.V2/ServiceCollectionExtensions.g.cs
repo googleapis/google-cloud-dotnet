@@ -16,7 +16,9 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using gctv = Google.Cloud.Tasks.V2;
+using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using sys = System;
 using scg = System.Collections.Generic;

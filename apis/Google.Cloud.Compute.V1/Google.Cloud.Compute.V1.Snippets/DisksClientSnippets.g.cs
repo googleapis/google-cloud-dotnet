@@ -361,6 +361,140 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for BulkInsert</summary>
+        public void BulkInsertRequestObject()
+        {
+            // Snippet: BulkInsert(BulkInsertDiskRequest, CallSettings)
+            // Create client
+            DisksClient disksClient = DisksClient.Create();
+            // Initialize request argument(s)
+            BulkInsertDiskRequest request = new BulkInsertDiskRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Project = "",
+                BulkInsertDiskResourceResource = new BulkInsertDiskResource(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = disksClient.BulkInsert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = disksClient.PollOnceBulkInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkInsertAsync</summary>
+        public async Task BulkInsertRequestObjectAsync()
+        {
+            // Snippet: BulkInsertAsync(BulkInsertDiskRequest, CallSettings)
+            // Additional: BulkInsertAsync(BulkInsertDiskRequest, CancellationToken)
+            // Create client
+            DisksClient disksClient = await DisksClient.CreateAsync();
+            // Initialize request argument(s)
+            BulkInsertDiskRequest request = new BulkInsertDiskRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Project = "",
+                BulkInsertDiskResourceResource = new BulkInsertDiskResource(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await disksClient.BulkInsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await disksClient.PollOnceBulkInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkInsert</summary>
+        public void BulkInsert()
+        {
+            // Snippet: BulkInsert(string, string, BulkInsertDiskResource, CallSettings)
+            // Create client
+            DisksClient disksClient = DisksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            BulkInsertDiskResource bulkInsertDiskResourceResource = new BulkInsertDiskResource();
+            // Make the request
+            lro::Operation<Operation, Operation> response = disksClient.BulkInsert(project, zone, bulkInsertDiskResourceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = disksClient.PollOnceBulkInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkInsertAsync</summary>
+        public async Task BulkInsertAsync()
+        {
+            // Snippet: BulkInsertAsync(string, string, BulkInsertDiskResource, CallSettings)
+            // Additional: BulkInsertAsync(string, string, BulkInsertDiskResource, CancellationToken)
+            // Create client
+            DisksClient disksClient = await DisksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            BulkInsertDiskResource bulkInsertDiskResourceResource = new BulkInsertDiskResource();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await disksClient.BulkInsertAsync(project, zone, bulkInsertDiskResourceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await disksClient.PollOnceBulkInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateSnapshot</summary>
         public void CreateSnapshotRequestObject()
         {
@@ -1582,6 +1716,412 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await disksClient.PollOnceSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartAsyncReplication</summary>
+        public void StartAsyncReplicationRequestObject()
+        {
+            // Snippet: StartAsyncReplication(StartAsyncReplicationDiskRequest, CallSettings)
+            // Create client
+            DisksClient disksClient = DisksClient.Create();
+            // Initialize request argument(s)
+            StartAsyncReplicationDiskRequest request = new StartAsyncReplicationDiskRequest
+            {
+                Disk = "",
+                Zone = "",
+                RequestId = "",
+                Project = "",
+                DisksStartAsyncReplicationRequestResource = new DisksStartAsyncReplicationRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = disksClient.StartAsyncReplication(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = disksClient.PollOnceStartAsyncReplication(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartAsyncReplicationAsync</summary>
+        public async Task StartAsyncReplicationRequestObjectAsync()
+        {
+            // Snippet: StartAsyncReplicationAsync(StartAsyncReplicationDiskRequest, CallSettings)
+            // Additional: StartAsyncReplicationAsync(StartAsyncReplicationDiskRequest, CancellationToken)
+            // Create client
+            DisksClient disksClient = await DisksClient.CreateAsync();
+            // Initialize request argument(s)
+            StartAsyncReplicationDiskRequest request = new StartAsyncReplicationDiskRequest
+            {
+                Disk = "",
+                Zone = "",
+                RequestId = "",
+                Project = "",
+                DisksStartAsyncReplicationRequestResource = new DisksStartAsyncReplicationRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await disksClient.StartAsyncReplicationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await disksClient.PollOnceStartAsyncReplicationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartAsyncReplication</summary>
+        public void StartAsyncReplication()
+        {
+            // Snippet: StartAsyncReplication(string, string, string, DisksStartAsyncReplicationRequest, CallSettings)
+            // Create client
+            DisksClient disksClient = DisksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string disk = "";
+            DisksStartAsyncReplicationRequest disksStartAsyncReplicationRequestResource = new DisksStartAsyncReplicationRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = disksClient.StartAsyncReplication(project, zone, disk, disksStartAsyncReplicationRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = disksClient.PollOnceStartAsyncReplication(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartAsyncReplicationAsync</summary>
+        public async Task StartAsyncReplicationAsync()
+        {
+            // Snippet: StartAsyncReplicationAsync(string, string, string, DisksStartAsyncReplicationRequest, CallSettings)
+            // Additional: StartAsyncReplicationAsync(string, string, string, DisksStartAsyncReplicationRequest, CancellationToken)
+            // Create client
+            DisksClient disksClient = await DisksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string disk = "";
+            DisksStartAsyncReplicationRequest disksStartAsyncReplicationRequestResource = new DisksStartAsyncReplicationRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await disksClient.StartAsyncReplicationAsync(project, zone, disk, disksStartAsyncReplicationRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await disksClient.PollOnceStartAsyncReplicationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopAsyncReplication</summary>
+        public void StopAsyncReplicationRequestObject()
+        {
+            // Snippet: StopAsyncReplication(StopAsyncReplicationDiskRequest, CallSettings)
+            // Create client
+            DisksClient disksClient = DisksClient.Create();
+            // Initialize request argument(s)
+            StopAsyncReplicationDiskRequest request = new StopAsyncReplicationDiskRequest
+            {
+                Disk = "",
+                Zone = "",
+                RequestId = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = disksClient.StopAsyncReplication(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = disksClient.PollOnceStopAsyncReplication(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopAsyncReplicationAsync</summary>
+        public async Task StopAsyncReplicationRequestObjectAsync()
+        {
+            // Snippet: StopAsyncReplicationAsync(StopAsyncReplicationDiskRequest, CallSettings)
+            // Additional: StopAsyncReplicationAsync(StopAsyncReplicationDiskRequest, CancellationToken)
+            // Create client
+            DisksClient disksClient = await DisksClient.CreateAsync();
+            // Initialize request argument(s)
+            StopAsyncReplicationDiskRequest request = new StopAsyncReplicationDiskRequest
+            {
+                Disk = "",
+                Zone = "",
+                RequestId = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await disksClient.StopAsyncReplicationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await disksClient.PollOnceStopAsyncReplicationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopAsyncReplication</summary>
+        public void StopAsyncReplication()
+        {
+            // Snippet: StopAsyncReplication(string, string, string, CallSettings)
+            // Create client
+            DisksClient disksClient = DisksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string disk = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = disksClient.StopAsyncReplication(project, zone, disk);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = disksClient.PollOnceStopAsyncReplication(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopAsyncReplicationAsync</summary>
+        public async Task StopAsyncReplicationAsync()
+        {
+            // Snippet: StopAsyncReplicationAsync(string, string, string, CallSettings)
+            // Additional: StopAsyncReplicationAsync(string, string, string, CancellationToken)
+            // Create client
+            DisksClient disksClient = await DisksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string disk = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await disksClient.StopAsyncReplicationAsync(project, zone, disk);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await disksClient.PollOnceStopAsyncReplicationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopGroupAsyncReplication</summary>
+        public void StopGroupAsyncReplicationRequestObject()
+        {
+            // Snippet: StopGroupAsyncReplication(StopGroupAsyncReplicationDiskRequest, CallSettings)
+            // Create client
+            DisksClient disksClient = DisksClient.Create();
+            // Initialize request argument(s)
+            StopGroupAsyncReplicationDiskRequest request = new StopGroupAsyncReplicationDiskRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Project = "",
+                DisksStopGroupAsyncReplicationResourceResource = new DisksStopGroupAsyncReplicationResource(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = disksClient.StopGroupAsyncReplication(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = disksClient.PollOnceStopGroupAsyncReplication(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopGroupAsyncReplicationAsync</summary>
+        public async Task StopGroupAsyncReplicationRequestObjectAsync()
+        {
+            // Snippet: StopGroupAsyncReplicationAsync(StopGroupAsyncReplicationDiskRequest, CallSettings)
+            // Additional: StopGroupAsyncReplicationAsync(StopGroupAsyncReplicationDiskRequest, CancellationToken)
+            // Create client
+            DisksClient disksClient = await DisksClient.CreateAsync();
+            // Initialize request argument(s)
+            StopGroupAsyncReplicationDiskRequest request = new StopGroupAsyncReplicationDiskRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Project = "",
+                DisksStopGroupAsyncReplicationResourceResource = new DisksStopGroupAsyncReplicationResource(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await disksClient.StopGroupAsyncReplicationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await disksClient.PollOnceStopGroupAsyncReplicationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopGroupAsyncReplication</summary>
+        public void StopGroupAsyncReplication()
+        {
+            // Snippet: StopGroupAsyncReplication(string, string, DisksStopGroupAsyncReplicationResource, CallSettings)
+            // Create client
+            DisksClient disksClient = DisksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            DisksStopGroupAsyncReplicationResource disksStopGroupAsyncReplicationResourceResource = new DisksStopGroupAsyncReplicationResource();
+            // Make the request
+            lro::Operation<Operation, Operation> response = disksClient.StopGroupAsyncReplication(project, zone, disksStopGroupAsyncReplicationResourceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = disksClient.PollOnceStopGroupAsyncReplication(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopGroupAsyncReplicationAsync</summary>
+        public async Task StopGroupAsyncReplicationAsync()
+        {
+            // Snippet: StopGroupAsyncReplicationAsync(string, string, DisksStopGroupAsyncReplicationResource, CallSettings)
+            // Additional: StopGroupAsyncReplicationAsync(string, string, DisksStopGroupAsyncReplicationResource, CancellationToken)
+            // Create client
+            DisksClient disksClient = await DisksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            DisksStopGroupAsyncReplicationResource disksStopGroupAsyncReplicationResourceResource = new DisksStopGroupAsyncReplicationResource();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await disksClient.StopGroupAsyncReplicationAsync(project, zone, disksStopGroupAsyncReplicationResourceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await disksClient.PollOnceStopGroupAsyncReplicationAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

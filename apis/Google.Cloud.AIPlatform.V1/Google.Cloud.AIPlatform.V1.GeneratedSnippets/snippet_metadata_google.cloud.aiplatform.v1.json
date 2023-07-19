@@ -2748,6 +2748,293 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_DatasetService_DeleteSavedQuery_sync",
+      "title": "DeleteSavedQueryRequestObject",
+      "description": "Snippet for DeleteSavedQuery",
+      "file": "DatasetServiceClient.DeleteSavedQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSavedQuery",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.DeleteSavedQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteSavedQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSavedQuery",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.DeleteSavedQuery",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_DeleteSavedQuery_async",
+      "title": "DeleteSavedQueryRequestObjectAsync",
+      "description": "Snippet for DeleteSavedQueryAsync",
+      "file": "DatasetServiceClient.DeleteSavedQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSavedQueryAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.DeleteSavedQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteSavedQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSavedQuery",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.DeleteSavedQuery",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_DeleteSavedQuery_sync_flattened",
+      "title": "DeleteSavedQuery",
+      "description": "Snippet for DeleteSavedQuery",
+      "file": "DatasetServiceClient.DeleteSavedQuerySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSavedQuery",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.DeleteSavedQuery",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSavedQuery",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.DeleteSavedQuery",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_DeleteSavedQuery_async_flattened",
+      "title": "DeleteSavedQueryAsync",
+      "description": "Snippet for DeleteSavedQueryAsync",
+      "file": "DatasetServiceClient.DeleteSavedQueryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSavedQueryAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.DeleteSavedQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSavedQuery",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.DeleteSavedQuery",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_DeleteSavedQuery_sync_flattened_resourceNames",
+      "title": "DeleteSavedQueryResourceNames",
+      "description": "Snippet for DeleteSavedQuery",
+      "file": "DatasetServiceClient.DeleteSavedQueryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSavedQuery",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.DeleteSavedQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.SavedQueryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSavedQuery",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.DeleteSavedQuery",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_DatasetService_DeleteSavedQuery_async_flattened_resourceNames",
+      "title": "DeleteSavedQueryResourceNamesAsync",
+      "description": "Snippet for DeleteSavedQueryAsync",
+      "file": "DatasetServiceClient.DeleteSavedQueryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSavedQueryAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient.DeleteSavedQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.SavedQueryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSavedQuery",
+          "fullName": "google.cloud.aiplatform.v1.DatasetService.DeleteSavedQuery",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1.DatasetService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_DatasetService_GetAnnotationSpec_sync",
       "title": "GetAnnotationSpecRequestObject",
       "description": "Snippet for GetAnnotationSpec",
@@ -38274,6 +38561,293 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_ModelGardenService_GetPublisherModel_sync",
+      "title": "GetPublisherModelRequestObject",
+      "description": "Snippet for GetPublisherModel",
+      "file": "ModelGardenServiceClient.GetPublisherModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPublisherModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient.GetPublisherModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetPublisherModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.PublisherModel",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "GetPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelGardenService.GetPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1.ModelGardenService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelGardenService_GetPublisherModel_async",
+      "title": "GetPublisherModelRequestObjectAsync",
+      "description": "Snippet for GetPublisherModelAsync",
+      "file": "ModelGardenServiceClient.GetPublisherModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPublisherModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient.GetPublisherModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetPublisherModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.PublisherModel>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "GetPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelGardenService.GetPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1.ModelGardenService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelGardenService_GetPublisherModel_sync_flattened",
+      "title": "GetPublisherModel",
+      "description": "Snippet for GetPublisherModel",
+      "file": "ModelGardenServiceClient.GetPublisherModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPublisherModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient.GetPublisherModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.PublisherModel",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "GetPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelGardenService.GetPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelGardenService_GetPublisherModel_async_flattened",
+      "title": "GetPublisherModelAsync",
+      "description": "Snippet for GetPublisherModelAsync",
+      "file": "ModelGardenServiceClient.GetPublisherModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPublisherModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient.GetPublisherModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.PublisherModel>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "GetPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelGardenService.GetPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelGardenService_GetPublisherModel_sync_flattened_resourceNames",
+      "title": "GetPublisherModelResourceNames",
+      "description": "Snippet for GetPublisherModel",
+      "file": "ModelGardenServiceClient.GetPublisherModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPublisherModel",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient.GetPublisherModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PublisherModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.PublisherModel",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "GetPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelGardenService.GetPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelGardenService_GetPublisherModel_async_flattened_resourceNames",
+      "title": "GetPublisherModelResourceNamesAsync",
+      "description": "Snippet for GetPublisherModelAsync",
+      "file": "ModelGardenServiceClient.GetPublisherModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPublisherModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient.GetPublisherModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PublisherModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.PublisherModel>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "GetPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1.ModelGardenService.GetPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1.ModelGardenService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_ModelService_UploadModel_sync",
       "title": "UploadModelRequestObject",
       "description": "Snippet for UploadModel",
@@ -39697,6 +40271,293 @@
         {
           "start": 36,
           "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_UpdateExplanationDataset_sync",
+      "title": "UpdateExplanationDatasetRequestObject",
+      "description": "Snippet for UpdateExplanationDataset",
+      "file": "ModelServiceClient.UpdateExplanationDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExplanationDataset",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.UpdateExplanationDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetResponse, Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetOperationMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExplanationDataset",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.UpdateExplanationDataset",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_UpdateExplanationDataset_async",
+      "title": "UpdateExplanationDatasetRequestObjectAsync",
+      "description": "Snippet for UpdateExplanationDatasetAsync",
+      "file": "ModelServiceClient.UpdateExplanationDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExplanationDatasetAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.UpdateExplanationDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetResponse, Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetOperationMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExplanationDataset",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.UpdateExplanationDataset",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_UpdateExplanationDataset_sync_flattened",
+      "title": "UpdateExplanationDataset",
+      "description": "Snippet for UpdateExplanationDataset",
+      "file": "ModelServiceClient.UpdateExplanationDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExplanationDataset",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.UpdateExplanationDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetResponse, Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetOperationMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExplanationDataset",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.UpdateExplanationDataset",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_UpdateExplanationDataset_async_flattened",
+      "title": "UpdateExplanationDatasetAsync",
+      "description": "Snippet for UpdateExplanationDatasetAsync",
+      "file": "ModelServiceClient.UpdateExplanationDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExplanationDatasetAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.UpdateExplanationDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetResponse, Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetOperationMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExplanationDataset",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.UpdateExplanationDataset",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_UpdateExplanationDataset_sync_flattened_resourceNames",
+      "title": "UpdateExplanationDatasetResourceNames",
+      "description": "Snippet for UpdateExplanationDataset",
+      "file": "ModelServiceClient.UpdateExplanationDatasetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExplanationDataset",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.UpdateExplanationDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ModelName",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetResponse, Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetOperationMetadata>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExplanationDataset",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.UpdateExplanationDataset",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_UpdateExplanationDataset_async_flattened_resourceNames",
+      "title": "UpdateExplanationDatasetResourceNamesAsync",
+      "description": "Snippet for UpdateExplanationDatasetAsync",
+      "file": "ModelServiceClient.UpdateExplanationDatasetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExplanationDatasetAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.UpdateExplanationDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ModelName",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetResponse, Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetOperationMetadata>>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExplanationDataset",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.UpdateExplanationDataset",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
           "type": "SHORT"
         }
       ]
@@ -49225,293 +50086,6 @@
       ]
     },
     {
-      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardUsage_sync",
-      "title": "ReadTensorboardUsageRequestObject",
-      "description": "Snippet for ReadTensorboardUsage",
-      "file": "TensorboardServiceClient.ReadTensorboardUsageRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ReadTensorboardUsage",
-        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardUsage",
-        "parameters": [
-          {
-            "type": "Google.Cloud.AIPlatform.V1.ReadTensorboardUsageRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse",
-        "client": {
-          "shortName": "TensorboardServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
-        },
-        "method": {
-          "shortName": "ReadTensorboardUsage",
-          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardUsage",
-          "service": {
-            "shortName": "TensorboardService",
-            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 44,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 42,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardUsage_async",
-      "title": "ReadTensorboardUsageRequestObjectAsync",
-      "description": "Snippet for ReadTensorboardUsageAsync",
-      "file": "TensorboardServiceClient.ReadTensorboardUsageRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ReadTensorboardUsageAsync",
-        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardUsageAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Cloud.AIPlatform.V1.ReadTensorboardUsageRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse>",
-        "client": {
-          "shortName": "TensorboardServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
-        },
-        "method": {
-          "shortName": "ReadTensorboardUsage",
-          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardUsage",
-          "service": {
-            "shortName": "TensorboardService",
-            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 45,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 43,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardUsage_sync_flattened",
-      "title": "ReadTensorboardUsage",
-      "description": "Snippet for ReadTensorboardUsage",
-      "file": "TensorboardServiceClient.ReadTensorboardUsageSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ReadTensorboardUsage",
-        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardUsage",
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "tensorboard"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse",
-        "client": {
-          "shortName": "TensorboardServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
-        },
-        "method": {
-          "shortName": "ReadTensorboardUsage",
-          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardUsage",
-          "service": {
-            "shortName": "TensorboardService",
-            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 41,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 39,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardUsage_async_flattened",
-      "title": "ReadTensorboardUsageAsync",
-      "description": "Snippet for ReadTensorboardUsageAsync",
-      "file": "TensorboardServiceClient.ReadTensorboardUsageAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ReadTensorboardUsageAsync",
-        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardUsageAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "tensorboard"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse>",
-        "client": {
-          "shortName": "TensorboardServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
-        },
-        "method": {
-          "shortName": "ReadTensorboardUsage",
-          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardUsage",
-          "service": {
-            "shortName": "TensorboardService",
-            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardUsage_sync_flattened_resourceNames",
-      "title": "ReadTensorboardUsageResourceNames",
-      "description": "Snippet for ReadTensorboardUsage",
-      "file": "TensorboardServiceClient.ReadTensorboardUsageResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ReadTensorboardUsage",
-        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardUsage",
-        "parameters": [
-          {
-            "type": "Google.Cloud.AIPlatform.V1.TensorboardName",
-            "name": "tensorboard"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse",
-        "client": {
-          "shortName": "TensorboardServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
-        },
-        "method": {
-          "shortName": "ReadTensorboardUsage",
-          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardUsage",
-          "service": {
-            "shortName": "TensorboardService",
-            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 41,
-          "type": "FULL"
-        },
-        {
-          "start": 34,
-          "end": 39,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardUsage_async_flattened_resourceNames",
-      "title": "ReadTensorboardUsageResourceNamesAsync",
-      "description": "Snippet for ReadTensorboardUsageAsync",
-      "file": "TensorboardServiceClient.ReadTensorboardUsageResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ReadTensorboardUsageAsync",
-        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardUsageAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Cloud.AIPlatform.V1.TensorboardName",
-            "name": "tensorboard"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse>",
-        "client": {
-          "shortName": "TensorboardServiceClient",
-          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
-        },
-        "method": {
-          "shortName": "ReadTensorboardUsage",
-          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardUsage",
-          "service": {
-            "shortName": "TensorboardService",
-            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 42,
-          "type": "FULL"
-        },
-        {
-          "start": 35,
-          "end": 40,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
       "regionTag": "aiplatform_v1_generated_TensorboardService_UpdateTensorboard_sync",
       "title": "UpdateTensorboardRequestObject",
       "description": "Snippet for UpdateTensorboard",
@@ -50313,6 +50887,293 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardUsage_sync",
+      "title": "ReadTensorboardUsageRequestObject",
+      "description": "Snippet for ReadTensorboardUsage",
+      "file": "TensorboardServiceClient.ReadTensorboardUsageRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadTensorboardUsage",
+        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardUsage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReadTensorboardUsageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse",
+        "client": {
+          "shortName": "TensorboardServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
+        },
+        "method": {
+          "shortName": "ReadTensorboardUsage",
+          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardUsage",
+          "service": {
+            "shortName": "TensorboardService",
+            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardUsage_async",
+      "title": "ReadTensorboardUsageRequestObjectAsync",
+      "description": "Snippet for ReadTensorboardUsageAsync",
+      "file": "TensorboardServiceClient.ReadTensorboardUsageRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadTensorboardUsageAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardUsageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReadTensorboardUsageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse>",
+        "client": {
+          "shortName": "TensorboardServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
+        },
+        "method": {
+          "shortName": "ReadTensorboardUsage",
+          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardUsage",
+          "service": {
+            "shortName": "TensorboardService",
+            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardUsage_sync_flattened",
+      "title": "ReadTensorboardUsage",
+      "description": "Snippet for ReadTensorboardUsage",
+      "file": "TensorboardServiceClient.ReadTensorboardUsageSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadTensorboardUsage",
+        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardUsage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tensorboard"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse",
+        "client": {
+          "shortName": "TensorboardServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
+        },
+        "method": {
+          "shortName": "ReadTensorboardUsage",
+          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardUsage",
+          "service": {
+            "shortName": "TensorboardService",
+            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardUsage_async_flattened",
+      "title": "ReadTensorboardUsageAsync",
+      "description": "Snippet for ReadTensorboardUsageAsync",
+      "file": "TensorboardServiceClient.ReadTensorboardUsageAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadTensorboardUsageAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardUsageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tensorboard"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse>",
+        "client": {
+          "shortName": "TensorboardServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
+        },
+        "method": {
+          "shortName": "ReadTensorboardUsage",
+          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardUsage",
+          "service": {
+            "shortName": "TensorboardService",
+            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardUsage_sync_flattened_resourceNames",
+      "title": "ReadTensorboardUsageResourceNames",
+      "description": "Snippet for ReadTensorboardUsage",
+      "file": "TensorboardServiceClient.ReadTensorboardUsageResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadTensorboardUsage",
+        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardUsage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TensorboardName",
+            "name": "tensorboard"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse",
+        "client": {
+          "shortName": "TensorboardServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
+        },
+        "method": {
+          "shortName": "ReadTensorboardUsage",
+          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardUsage",
+          "service": {
+            "shortName": "TensorboardService",
+            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_TensorboardService_ReadTensorboardUsage_async_flattened_resourceNames",
+      "title": "ReadTensorboardUsageResourceNamesAsync",
+      "description": "Snippet for ReadTensorboardUsageAsync",
+      "file": "TensorboardServiceClient.ReadTensorboardUsageResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReadTensorboardUsageAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient.ReadTensorboardUsageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TensorboardName",
+            "name": "tensorboard"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReadTensorboardUsageResponse>",
+        "client": {
+          "shortName": "TensorboardServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.TensorboardServiceClient"
+        },
+        "method": {
+          "shortName": "ReadTensorboardUsage",
+          "fullName": "google.cloud.aiplatform.v1.TensorboardService.ReadTensorboardUsage",
+          "service": {
+            "shortName": "TensorboardService",
+            "fullName": "google.cloud.aiplatform.v1.TensorboardService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]

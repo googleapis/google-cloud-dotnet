@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             GetClusterRequest request = new GetClusterRequest
             {
                 ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                View = ClusterView.Unspecified,
             };
             // Make the request
             Cluster response = await alloyDBAdminClient.GetClusterAsync(request);

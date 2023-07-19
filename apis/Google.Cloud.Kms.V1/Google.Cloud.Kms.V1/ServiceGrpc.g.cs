@@ -139,6 +139,14 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DecryptResponse> __Marshaller_google_cloud_kms_v1_DecryptResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.DecryptResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.RawEncryptRequest> __Marshaller_google_cloud_kms_v1_RawEncryptRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.RawEncryptRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.RawEncryptResponse> __Marshaller_google_cloud_kms_v1_RawEncryptResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.RawEncryptResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.RawDecryptRequest> __Marshaller_google_cloud_kms_v1_RawDecryptRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.RawDecryptRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.RawDecryptResponse> __Marshaller_google_cloud_kms_v1_RawDecryptResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.RawDecryptResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricSignRequest> __Marshaller_google_cloud_kms_v1_AsymmetricSignRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.AsymmetricSignRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricSignResponse> __Marshaller_google_cloud_kms_v1_AsymmetricSignResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.AsymmetricSignResponse.Parser));
@@ -326,6 +334,22 @@ namespace Google.Cloud.Kms.V1 {
         "Decrypt",
         __Marshaller_google_cloud_kms_v1_DecryptRequest,
         __Marshaller_google_cloud_kms_v1_DecryptResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.RawEncryptRequest, global::Google.Cloud.Kms.V1.RawEncryptResponse> __Method_RawEncrypt = new grpc::Method<global::Google.Cloud.Kms.V1.RawEncryptRequest, global::Google.Cloud.Kms.V1.RawEncryptResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RawEncrypt",
+        __Marshaller_google_cloud_kms_v1_RawEncryptRequest,
+        __Marshaller_google_cloud_kms_v1_RawEncryptResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.RawDecryptRequest, global::Google.Cloud.Kms.V1.RawDecryptResponse> __Method_RawDecrypt = new grpc::Method<global::Google.Cloud.Kms.V1.RawDecryptRequest, global::Google.Cloud.Kms.V1.RawDecryptResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RawDecrypt",
+        __Marshaller_google_cloud_kms_v1_RawDecryptRequest,
+        __Marshaller_google_cloud_kms_v1_RawDecryptResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricSignRequest, global::Google.Cloud.Kms.V1.AsymmetricSignResponse> __Method_AsymmetricSign = new grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricSignRequest, global::Google.Cloud.Kms.V1.AsymmetricSignResponse>(
@@ -705,6 +729,38 @@ namespace Google.Cloud.Kms.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.DecryptResponse> Decrypt(global::Google.Cloud.Kms.V1.DecryptRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Encrypts data using portable cryptographic primitives. Most users should
+      /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+      /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+      /// their raw counterparts. The
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.RawEncryptResponse> RawEncrypt(global::Google.Cloud.Kms.V1.RawEncryptRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Decrypts data that was originally encrypted using a raw cryptographic
+      /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// must be
+      /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.RawDecryptResponse> RawDecrypt(global::Google.Cloud.Kms.V1.RawDecryptRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2141,6 +2197,134 @@ namespace Google.Cloud.Kms.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_Decrypt, null, options, request);
       }
       /// <summary>
+      /// Encrypts data using portable cryptographic primitives. Most users should
+      /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+      /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+      /// their raw counterparts. The
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.RawEncryptResponse RawEncrypt(global::Google.Cloud.Kms.V1.RawEncryptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RawEncrypt(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Encrypts data using portable cryptographic primitives. Most users should
+      /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+      /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+      /// their raw counterparts. The
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.RawEncryptResponse RawEncrypt(global::Google.Cloud.Kms.V1.RawEncryptRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RawEncrypt, null, options, request);
+      }
+      /// <summary>
+      /// Encrypts data using portable cryptographic primitives. Most users should
+      /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+      /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+      /// their raw counterparts. The
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.RawEncryptResponse> RawEncryptAsync(global::Google.Cloud.Kms.V1.RawEncryptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RawEncryptAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Encrypts data using portable cryptographic primitives. Most users should
+      /// choose [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+      /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] rather than
+      /// their raw counterparts. The
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.RawEncryptResponse> RawEncryptAsync(global::Google.Cloud.Kms.V1.RawEncryptRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RawEncrypt, null, options, request);
+      }
+      /// <summary>
+      /// Decrypts data that was originally encrypted using a raw cryptographic
+      /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// must be
+      /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.RawDecryptResponse RawDecrypt(global::Google.Cloud.Kms.V1.RawDecryptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RawDecrypt(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Decrypts data that was originally encrypted using a raw cryptographic
+      /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// must be
+      /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.RawDecryptResponse RawDecrypt(global::Google.Cloud.Kms.V1.RawDecryptRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RawDecrypt, null, options, request);
+      }
+      /// <summary>
+      /// Decrypts data that was originally encrypted using a raw cryptographic
+      /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// must be
+      /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.RawDecryptResponse> RawDecryptAsync(global::Google.Cloud.Kms.V1.RawDecryptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RawDecryptAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Decrypts data that was originally encrypted using a raw cryptographic
+      /// mechanism. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// must be
+      /// [RAW_ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.RAW_ENCRYPT_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.RawDecryptResponse> RawDecryptAsync(global::Google.Cloud.Kms.V1.RawDecryptRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RawDecrypt, null, options, request);
+      }
+      /// <summary>
       /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
       /// with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
       /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
@@ -2471,6 +2655,8 @@ namespace Google.Cloud.Kms.V1 {
           .AddMethod(__Method_RestoreCryptoKeyVersion, serviceImpl.RestoreCryptoKeyVersion)
           .AddMethod(__Method_Encrypt, serviceImpl.Encrypt)
           .AddMethod(__Method_Decrypt, serviceImpl.Decrypt)
+          .AddMethod(__Method_RawEncrypt, serviceImpl.RawEncrypt)
+          .AddMethod(__Method_RawDecrypt, serviceImpl.RawDecrypt)
           .AddMethod(__Method_AsymmetricSign, serviceImpl.AsymmetricSign)
           .AddMethod(__Method_AsymmetricDecrypt, serviceImpl.AsymmetricDecrypt)
           .AddMethod(__Method_MacSign, serviceImpl.MacSign)
@@ -2506,6 +2692,8 @@ namespace Google.Cloud.Kms.V1 {
       serviceBinder.AddMethod(__Method_RestoreCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(serviceImpl.RestoreCryptoKeyVersion));
       serviceBinder.AddMethod(__Method_Encrypt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.EncryptRequest, global::Google.Cloud.Kms.V1.EncryptResponse>(serviceImpl.Encrypt));
       serviceBinder.AddMethod(__Method_Decrypt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.DecryptRequest, global::Google.Cloud.Kms.V1.DecryptResponse>(serviceImpl.Decrypt));
+      serviceBinder.AddMethod(__Method_RawEncrypt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.RawEncryptRequest, global::Google.Cloud.Kms.V1.RawEncryptResponse>(serviceImpl.RawEncrypt));
+      serviceBinder.AddMethod(__Method_RawDecrypt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.RawDecryptRequest, global::Google.Cloud.Kms.V1.RawDecryptResponse>(serviceImpl.RawDecrypt));
       serviceBinder.AddMethod(__Method_AsymmetricSign, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.AsymmetricSignRequest, global::Google.Cloud.Kms.V1.AsymmetricSignResponse>(serviceImpl.AsymmetricSign));
       serviceBinder.AddMethod(__Method_AsymmetricDecrypt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest, global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse>(serviceImpl.AsymmetricDecrypt));
       serviceBinder.AddMethod(__Method_MacSign, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.MacSignRequest, global::Google.Cloud.Kms.V1.MacSignResponse>(serviceImpl.MacSign));

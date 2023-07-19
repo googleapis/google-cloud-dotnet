@@ -521,6 +521,12 @@ namespace Google.Cloud.Spanner.V1
                 }
             }
 
+            public override void Detach(PooledSession session)
+            {
+                Interlocked.Decrement(ref _activeSessionCount);
+                Interlocked.Decrement(ref _liveOrRequestedSessionCount);
+            }
+
             internal void MaintainPool()
             {
                 if (Shutdown)

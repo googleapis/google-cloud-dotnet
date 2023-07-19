@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Cloud.Spanner.V1;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -413,9 +412,7 @@ namespace Google.Cloud.Spanner.Data
         /// by <see cref="SpannerConnection.CreateCommandWithPartition"/> to create a new <see cref="SpannerCommand"/>
         /// that returns a subset of data.
         /// </summary>
-        /// <param name="options">An instance of <see cref="PartitionOptions"/> class in
-        /// which we can set the maxPartitions, partitionSizeBytes, dataBoostEnabled and
-        /// cancellationToken options for generating and executing partitions.
+        /// <param name="options">The <see cref="PartitionOptions"/> used to create and read partitions.
         /// </param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>The list of partitions that can be used to create <see cref="SpannerCommand"/>

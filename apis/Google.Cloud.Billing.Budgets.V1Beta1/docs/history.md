@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta02, released 2023-06-20
+
+### New features
+
+- Add resource_ancestors field to support filtering by folders & organizations ([commit 1690c59](https://github.com/googleapis/google-cloud-dotnet/commit/1690c591d780e0d63e818be8a2f6beb51463a633))
+
 ## Version 2.0.0-beta01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 SkipHumanReview = false,
                 InlineDocument = new Document(),
                 FieldMask = new FieldMask(),
+                ProcessOptions = new ProcessOptions(),
             };
             // Make the request
             ProcessResponse response = documentProcessorServiceClient.ProcessDocument(request);
@@ -61,6 +62,7 @@ namespace GoogleCSharpSnippets
                 SkipHumanReview = false,
                 InlineDocument = new Document(),
                 FieldMask = new FieldMask(),
+                ProcessOptions = new ProcessOptions(),
             };
             // Make the request
             ProcessResponse response = await documentProcessorServiceClient.ProcessDocumentAsync(request);
@@ -134,6 +136,7 @@ namespace GoogleCSharpSnippets
                 SkipHumanReview = false,
                 InputDocuments = new BatchDocumentsInputConfig(),
                 DocumentOutputConfig = new DocumentOutputConfig(),
+                ProcessOptions = new ProcessOptions(),
             };
             // Make the request
             Operation<BatchProcessResponse, BatchProcessMetadata> response = documentProcessorServiceClient.BatchProcessDocuments(request);
@@ -170,6 +173,7 @@ namespace GoogleCSharpSnippets
                 SkipHumanReview = false,
                 InputDocuments = new BatchDocumentsInputConfig(),
                 DocumentOutputConfig = new DocumentOutputConfig(),
+                ProcessOptions = new ProcessOptions(),
             };
             // Make the request
             Operation<BatchProcessResponse, BatchProcessMetadata> response = await documentProcessorServiceClient.BatchProcessDocumentsAsync(request);
@@ -1135,6 +1139,7 @@ namespace GoogleCSharpSnippets
                 ParentAsProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
                 ProcessorVersion = new ProcessorVersion(),
                 InputData = new TrainProcessorVersionRequest.Types.InputData(),
+                CustomDocumentExtractionOptions = new TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions(),
                 BaseProcessorVersion = "",
                 DocumentSchema = new DocumentSchema(),
             };
@@ -1172,6 +1177,7 @@ namespace GoogleCSharpSnippets
                 ParentAsProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
                 ProcessorVersion = new ProcessorVersion(),
                 InputData = new TrainProcessorVersionRequest.Types.InputData(),
+                CustomDocumentExtractionOptions = new TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions(),
                 BaseProcessorVersion = "",
                 DocumentSchema = new DocumentSchema(),
             };

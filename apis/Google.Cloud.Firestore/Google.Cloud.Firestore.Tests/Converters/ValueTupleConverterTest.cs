@@ -38,7 +38,7 @@ namespace Google.Cloud.Firestore.Tests.Converters
         }.Build();
 
         private static SerializationContext SerializationContext => s_db.SerializationContext;
-        private static DeserializationContext DeserializationContext => new DeserializationContext(GetSampleSnapshot(s_db, "doc1"));
+        private static IDeserializationContext DeserializationContext => GetSampleSnapshot(s_db, "doc1");
 
         private static readonly object[] s_sampleValuesByArity =
         {

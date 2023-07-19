@@ -2029,7 +2029,9 @@ namespace GoogleCSharpSnippets
                 ReadTime = new Timestamp(),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<GroupAssetsResponse, GroupResult> response = securityCenterClient.GroupAssets(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (GroupResult item in response)
@@ -2081,7 +2083,9 @@ namespace GoogleCSharpSnippets
                 ReadTime = new Timestamp(),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<GroupAssetsResponse, GroupResult> response = securityCenterClient.GroupAssetsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((GroupResult item) =>
@@ -2422,7 +2426,9 @@ namespace GoogleCSharpSnippets
                 FieldMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAssetsResponse, ListAssetsResponse.Types.ListAssetsResult> response = securityCenterClient.ListAssets(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (ListAssetsResponse.Types.ListAssetsResult item in response)
@@ -2475,7 +2481,9 @@ namespace GoogleCSharpSnippets
                 FieldMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAssetsResponse, ListAssetsResponse.Types.ListAssetsResult> response = securityCenterClient.ListAssetsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((ListAssetsResponse.Types.ListAssetsResult item) =>
@@ -4825,7 +4833,9 @@ namespace GoogleCSharpSnippets
                 ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> response = securityCenterClient.RunAssetDiscovery(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<RunAssetDiscoveryResponse, Empty> completedResponse = response.PollUntilCompleted();
@@ -4835,7 +4845,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> retrievedResponse = securityCenterClient.PollOnceRunAssetDiscovery(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -4858,7 +4870,9 @@ namespace GoogleCSharpSnippets
                 ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> response = await securityCenterClient.RunAssetDiscoveryAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<RunAssetDiscoveryResponse, Empty> completedResponse = await response.PollUntilCompletedAsync();
@@ -4868,7 +4882,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> retrievedResponse = await securityCenterClient.PollOnceRunAssetDiscoveryAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -4887,7 +4903,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "organizations/[ORGANIZATION]";
             // Make the request
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> response = securityCenterClient.RunAssetDiscovery(parent);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<RunAssetDiscoveryResponse, Empty> completedResponse = response.PollUntilCompleted();
@@ -4897,7 +4915,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> retrievedResponse = securityCenterClient.PollOnceRunAssetDiscovery(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -4917,7 +4937,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "organizations/[ORGANIZATION]";
             // Make the request
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> response = await securityCenterClient.RunAssetDiscoveryAsync(parent);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<RunAssetDiscoveryResponse, Empty> completedResponse = await response.PollUntilCompletedAsync();
@@ -4927,7 +4949,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> retrievedResponse = await securityCenterClient.PollOnceRunAssetDiscoveryAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -4946,7 +4970,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             // Make the request
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> response = securityCenterClient.RunAssetDiscovery(parent);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<RunAssetDiscoveryResponse, Empty> completedResponse = response.PollUntilCompleted();
@@ -4956,7 +4982,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> retrievedResponse = securityCenterClient.PollOnceRunAssetDiscovery(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -4976,7 +5004,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
             // Make the request
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> response = await securityCenterClient.RunAssetDiscoveryAsync(parent);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<RunAssetDiscoveryResponse, Empty> completedResponse = await response.PollUntilCompletedAsync();
@@ -4986,7 +5016,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<RunAssetDiscoveryResponse, Empty> retrievedResponse = await securityCenterClient.PollOnceRunAssetDiscoveryAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

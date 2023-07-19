@@ -237,6 +237,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///              or
     ///            `projects/{project}/locations/{location}/models/{model}@golden`
     /// if no version is specified, the default version will be deployed.
+    ///
+    /// The model resource could also be a publisher model.
+    ///  Example: `publishers/{publisher}/models/{model}`
+    ///              or
+    ///           `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

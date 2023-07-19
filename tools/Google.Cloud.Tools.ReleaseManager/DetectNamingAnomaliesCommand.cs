@@ -26,7 +26,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             var googleapis = Path.Combine(root, "googleapis");
@@ -35,6 +35,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 ReportAnomalies(api);
             }
+            return 0;
         }
 
         private static void ReportAnomalies(ApiIndex.V1.Api api)

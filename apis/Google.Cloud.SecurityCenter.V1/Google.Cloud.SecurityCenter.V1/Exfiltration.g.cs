@@ -48,10 +48,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
   #region Messages
   /// <summary>
-  /// Exfiltration represents a data exfiltration attempt of one or more
-  /// sources to one or more targets. Sources represent the source
-  /// of data that is exfiltrated, and Targets represents the destination the
-  /// data was copied to.
+  /// Exfiltration represents a data exfiltration attempt from one or more sources
+  /// to one or more targets. The `sources` attribute lists the sources of the
+  /// exfiltrated data. The `targets` attribute lists the destinations the data was
+  /// copied to.
   /// </summary>
   public sealed partial class Exfiltration : pb::IMessage<Exfiltration>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -267,7 +267,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
 
   /// <summary>
-  /// Resource that has been exfiltrated or exfiltrated_to.
+  /// Resource where data was exfiltrated from or exfiltrated to.
   /// </summary>
   public sealed partial class ExfilResource : pb::IMessage<ExfilResource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -318,7 +318,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource's URI (https://google.aip.dev/122#full-resource-names)
+    /// The resource's [full resource
+    /// name](https://cloud.google.com/apis/design/resource_names#full_resource_name).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -335,10 +336,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> components_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Subcomponents of the asset that is exfiltrated - these could be
-    /// URIs used during exfiltration, table names, databases, filenames, etc.
-    /// For example, multiple tables may be exfiltrated from the same CloudSQL
-    /// instance, or multiple files from the same Cloud Storage bucket.
+    /// Subcomponents of the asset that was exfiltrated, like URIs used during
+    /// exfiltration, table names, databases, and filenames. For example, multiple
+    /// tables might have been exfiltrated from the same Cloud SQL instance, or
+    /// multiple files might have been exfiltrated from the same Cloud Storage
+    /// bucket.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

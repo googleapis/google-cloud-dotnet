@@ -20,7 +20,7 @@ namespace Google.Cloud.Firestore;
 /// <summary>
 /// An immutable snapshot of aggregate query results.
 /// </summary>
-public sealed class AggregateQuerySnapshot : IEquatable<AggregateQuerySnapshot>
+public sealed class AggregateQuerySnapshot : IEquatable<AggregateQuerySnapshot>, IDeserializationContext
 {
     /// <summary>
     /// The query producing this snapshot.
@@ -58,4 +58,14 @@ public sealed class AggregateQuerySnapshot : IEquatable<AggregateQuerySnapshot>
     /// <inheritdoc />
     public override int GetHashCode() =>
         GaxEqualityHelpers.CombineHashCodes(Query.GetHashCode(), ReadTime.GetHashCode(), Count?.GetHashCode() ?? 0);
+
+    // Explicit interface implementation of IDeserializationContext members.
+
+    FirestoreDb IDeserializationContext.Database => Query.Database;
+    DocumentReference IDeserializationContext.DocumentReference =>
+        throw new InvalidOperationException($"{nameof(IDeserializationContext.DocumentReference)} has no meaning for {nameof(AggregateQuerySnapshot)}");
+    Timestamp? IDeserializationContext.CreateTime =>
+        throw new InvalidOperationException($"{nameof(IDeserializationContext.CreateTime)} has no meaning for {nameof(AggregateQuerySnapshot)}");
+    Timestamp? IDeserializationContext.UpdateTime =>
+        throw new InvalidOperationException($"{nameof(IDeserializationContext.UpdateTime)} has no meaning for {nameof(AggregateQuerySnapshot)}");
 }

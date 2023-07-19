@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.4.0, released 2023-06-20
+
+### New features
+
+- Added RPCs StopAirflowCommand, ExecuteAirflowCommand, PollAirflowCommand, DatabaseFailover, FetchDatabaseProperties ([commit 2e644b4](https://github.com/googleapis/google-cloud-dotnet/commit/2e644b42c98e20244cf95921f1ef074a4f469b42))
+
 ## Version 2.3.0, released 2023-05-03
 
 ### New features

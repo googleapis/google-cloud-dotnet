@@ -3,7 +3,7 @@
 //     source: google/cloud/documentai/v1/document_processor_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.DocumentAI.V1 {
   /// <summary>
-  /// Service to call Cloud DocumentAI to process documents according to the
+  /// Service to call Document AI to process documents according to the
   /// processor's definition. Processors are built using state-of-the-art Google
   /// AI such as natural language, computer vision, and translation to extract
   /// structured information from unstructured or semi-structured documents.
@@ -345,8 +345,9 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
 
       /// <summary>
-      /// Fetches processor types. Note that we do not use ListProcessorTypes here
-      /// because it is not paginated.
+      /// Fetches processor types. Note that we don't use
+      /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+      /// here, because it isn't paginated.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -408,7 +409,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Trains a new processor version.
       /// Operation metadata is returned as
-      /// cloud_documentai_core.TrainProcessorVersionMetadata.
+      /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -481,8 +482,9 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
 
       /// <summary>
-      /// Creates a processor from the type processor that the user chose.
-      /// The processor will be at "ENABLED" state by default after its creation.
+      /// Creates a processor from the
+      /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+      /// processor will be at `ENABLED` state by default after its creation.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -726,8 +728,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchProcessDocuments, null, options, request);
       }
       /// <summary>
-      /// Fetches processor types. Note that we do not use ListProcessorTypes here
-      /// because it is not paginated.
+      /// Fetches processor types. Note that we don't use
+      /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+      /// here, because it isn't paginated.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -740,8 +743,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         return FetchProcessorTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Fetches processor types. Note that we do not use ListProcessorTypes here
-      /// because it is not paginated.
+      /// Fetches processor types. Note that we don't use
+      /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+      /// here, because it isn't paginated.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -752,8 +756,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_FetchProcessorTypes, null, options, request);
       }
       /// <summary>
-      /// Fetches processor types. Note that we do not use ListProcessorTypes here
-      /// because it is not paginated.
+      /// Fetches processor types. Note that we don't use
+      /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+      /// here, because it isn't paginated.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -766,8 +771,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         return FetchProcessorTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Fetches processor types. Note that we do not use ListProcessorTypes here
-      /// because it is not paginated.
+      /// Fetches processor types. Note that we don't use
+      /// [ListProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.ListProcessorTypes]
+      /// here, because it isn't paginated.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -972,7 +978,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Trains a new processor version.
       /// Operation metadata is returned as
-      /// cloud_documentai_core.TrainProcessorVersionMetadata.
+      /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -987,7 +993,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Trains a new processor version.
       /// Operation metadata is returned as
-      /// cloud_documentai_core.TrainProcessorVersionMetadata.
+      /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1000,7 +1006,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Trains a new processor version.
       /// Operation metadata is returned as
-      /// cloud_documentai_core.TrainProcessorVersionMetadata.
+      /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1015,7 +1021,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Trains a new processor version.
       /// Operation metadata is returned as
-      /// cloud_documentai_core.TrainProcessorVersionMetadata.
+      /// [TrainProcessorVersionMetadata][google.cloud.documentai.v1.TrainProcessorVersionMetadata].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1270,8 +1276,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UndeployProcessorVersion, null, options, request);
       }
       /// <summary>
-      /// Creates a processor from the type processor that the user chose.
-      /// The processor will be at "ENABLED" state by default after its creation.
+      /// Creates a processor from the
+      /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+      /// processor will be at `ENABLED` state by default after its creation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1284,8 +1291,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         return CreateProcessor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a processor from the type processor that the user chose.
-      /// The processor will be at "ENABLED" state by default after its creation.
+      /// Creates a processor from the
+      /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+      /// processor will be at `ENABLED` state by default after its creation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1296,8 +1304,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateProcessor, null, options, request);
       }
       /// <summary>
-      /// Creates a processor from the type processor that the user chose.
-      /// The processor will be at "ENABLED" state by default after its creation.
+      /// Creates a processor from the
+      /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+      /// processor will be at `ENABLED` state by default after its creation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1310,8 +1319,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         return CreateProcessorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a processor from the type processor that the user chose.
-      /// The processor will be at "ENABLED" state by default after its creation.
+      /// Creates a processor from the
+      /// [ProcessorType][google.cloud.documentai.v1.ProcessorType] provided. The
+      /// processor will be at `ENABLED` state by default after its creation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

@@ -205,8 +205,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> sliceDimensions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// All possible [dimensions][ModelEvaluationSlice.slice.dimension] of
-    /// ModelEvaluationSlices. The dimensions can be used as the filter of the
+    /// All possible
+    /// [dimensions][google.cloud.aiplatform.v1.ModelEvaluationSlice.Slice.dimension]
+    /// of ModelEvaluationSlices. The dimensions can be used as the filter of the
     /// [ModelService.ListModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.ListModelEvaluationSlices]
     /// request, in the form of `slice.dimension = &lt;dimension>`.
     /// </summary>

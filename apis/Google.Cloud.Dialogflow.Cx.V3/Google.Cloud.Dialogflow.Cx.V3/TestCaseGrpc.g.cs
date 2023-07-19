@@ -369,7 +369,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Fetches a list of results for a given test case.
+      /// Fetches the list of run results for the given test case. A maximum of 100
+      /// results are kept for each test case.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1058,7 +1059,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_ExportTestCases, null, options, request);
       }
       /// <summary>
-      /// Fetches a list of results for a given test case.
+      /// Fetches the list of run results for the given test case. A maximum of 100
+      /// results are kept for each test case.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1071,7 +1073,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return ListTestCaseResults(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Fetches a list of results for a given test case.
+      /// Fetches the list of run results for the given test case. A maximum of 100
+      /// results are kept for each test case.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1082,7 +1085,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_ListTestCaseResults, null, options, request);
       }
       /// <summary>
-      /// Fetches a list of results for a given test case.
+      /// Fetches the list of run results for the given test case. A maximum of 100
+      /// results are kept for each test case.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1095,7 +1099,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return ListTestCaseResultsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Fetches a list of results for a given test case.
+      /// Fetches the list of run results for the given test case. A maximum of 100
+      /// results are kept for each test case.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

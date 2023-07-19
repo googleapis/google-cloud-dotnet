@@ -69,6 +69,9 @@ namespace Google.Cloud.VmwareEngine.V1
             DeleteClusterSettings = existing.DeleteClusterSettings;
             DeleteClusterOperationsSettings = existing.DeleteClusterOperationsSettings.Clone();
             ListSubnetsSettings = existing.ListSubnetsSettings;
+            GetSubnetSettings = existing.GetSubnetSettings;
+            UpdateSubnetSettings = existing.UpdateSubnetSettings;
+            UpdateSubnetOperationsSettings = existing.UpdateSubnetOperationsSettings.Clone();
             ListNodeTypesSettings = existing.ListNodeTypesSettings;
             GetNodeTypeSettings = existing.GetNodeTypeSettings;
             ShowNsxCredentialsSettings = existing.ShowNsxCredentialsSettings;
@@ -97,6 +100,15 @@ namespace Google.Cloud.VmwareEngine.V1
             DeleteVmwareEngineNetworkOperationsSettings = existing.DeleteVmwareEngineNetworkOperationsSettings.Clone();
             GetVmwareEngineNetworkSettings = existing.GetVmwareEngineNetworkSettings;
             ListVmwareEngineNetworksSettings = existing.ListVmwareEngineNetworksSettings;
+            CreatePrivateConnectionSettings = existing.CreatePrivateConnectionSettings;
+            CreatePrivateConnectionOperationsSettings = existing.CreatePrivateConnectionOperationsSettings.Clone();
+            GetPrivateConnectionSettings = existing.GetPrivateConnectionSettings;
+            ListPrivateConnectionsSettings = existing.ListPrivateConnectionsSettings;
+            UpdatePrivateConnectionSettings = existing.UpdatePrivateConnectionSettings;
+            UpdatePrivateConnectionOperationsSettings = existing.UpdatePrivateConnectionOperationsSettings.Clone();
+            DeletePrivateConnectionSettings = existing.DeletePrivateConnectionSettings;
+            DeletePrivateConnectionOperationsSettings = existing.DeletePrivateConnectionOperationsSettings.Clone();
+            ListPrivateConnectionPeeringRoutesSettings = existing.ListPrivateConnectionPeeringRoutesSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -403,6 +415,54 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListSubnetsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.GetSubnet</c> and <c>VmwareEngineClient.GetSubnetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSubnetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.UpdateSubnet</c> and <c>VmwareEngineClient.UpdateSubnetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSubnetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.UpdateSubnet</c> and
+        /// <c>VmwareEngineClient.UpdateSubnetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateSubnetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -858,6 +918,154 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListVmwareEngineNetworksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.CreatePrivateConnection</c> and <c>VmwareEngineClient.CreatePrivateConnectionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreatePrivateConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.CreatePrivateConnection</c> and
+        /// <c>VmwareEngineClient.CreatePrivateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreatePrivateConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.GetPrivateConnection</c> and <c>VmwareEngineClient.GetPrivateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetPrivateConnectionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.ListPrivateConnections</c> and <c>VmwareEngineClient.ListPrivateConnectionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListPrivateConnectionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.UpdatePrivateConnection</c> and <c>VmwareEngineClient.UpdatePrivateConnectionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdatePrivateConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.UpdatePrivateConnection</c> and
+        /// <c>VmwareEngineClient.UpdatePrivateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdatePrivateConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.DeletePrivateConnection</c> and <c>VmwareEngineClient.DeletePrivateConnectionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeletePrivateConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.DeletePrivateConnection</c> and
+        /// <c>VmwareEngineClient.DeletePrivateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeletePrivateConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.ListPrivateConnectionPeeringRoutes</c> and
+        /// <c>VmwareEngineClient.ListPrivateConnectionPeeringRoutesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListPrivateConnectionPeeringRoutesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -3228,6 +3436,280 @@ namespace Google.Cloud.VmwareEngine.V1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subnet GetSubnet(GetSubnetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subnet> GetSubnetAsync(GetSubnetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subnet> GetSubnetAsync(GetSubnetRequest request, st::CancellationToken cancellationToken) =>
+            GetSubnetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subnet to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subnet GetSubnet(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubnet(new GetSubnetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subnet to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subnet> GetSubnetAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubnetAsync(new GetSubnetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subnet to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subnet> GetSubnetAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSubnetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subnet to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subnet GetSubnet(SubnetName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubnet(new GetSubnetRequest
+            {
+                SubnetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subnet to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subnet> GetSubnetAsync(SubnetName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubnetAsync(new GetSubnetRequest
+            {
+                SubnetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subnet to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subnet> GetSubnetAsync(SubnetName name, st::CancellationToken cancellationToken) =>
+            GetSubnetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Subnet, OperationMetadata> UpdateSubnet(UpdateSubnetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Subnet, OperationMetadata>> UpdateSubnetAsync(UpdateSubnetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Subnet, OperationMetadata>> UpdateSubnetAsync(UpdateSubnetRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSubnetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateSubnet</c>.</summary>
+        public virtual lro::OperationsClient UpdateSubnetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateSubnet</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Subnet, OperationMetadata> PollOnceUpdateSubnet(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Subnet, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateSubnetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateSubnet</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Subnet, OperationMetadata>> PollOnceUpdateSubnetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Subnet, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateSubnetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="subnet">
+        /// Required. Subnet description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `Subnet` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Subnet, OperationMetadata> UpdateSubnet(Subnet subnet, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSubnet(new UpdateSubnetRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Subnet = gax::GaxPreconditions.CheckNotNull(subnet, nameof(subnet)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="subnet">
+        /// Required. Subnet description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `Subnet` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Subnet, OperationMetadata>> UpdateSubnetAsync(Subnet subnet, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSubnetAsync(new UpdateSubnetRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Subnet = gax::GaxPreconditions.CheckNotNull(subnet, nameof(subnet)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="subnet">
+        /// Required. Subnet description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `Subnet` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Subnet, OperationMetadata>> UpdateSubnetAsync(Subnet subnet, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSubnetAsync(subnet, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists node types
@@ -6397,6 +6879,976 @@ namespace Google.Cloud.VmwareEngine.V1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> CreatePrivateConnection(CreatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(CreatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(CreatePrivateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            CreatePrivateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreatePrivateConnection</c>.</summary>
+        public virtual lro::OperationsClient CreatePrivateConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreatePrivateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> PollOnceCreatePrivateConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PrivateConnection, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreatePrivateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreatePrivateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> PollOnceCreatePrivateConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PrivateConnection, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreatePrivateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new private
+        /// connection in. Private connection is a regional resource.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="privateConnection">
+        /// Required. The initial description of the new private connection.
+        /// </param>
+        /// <param name="privateConnectionId">
+        /// Required. The user-provided identifier of the new private connection.
+        /// This identifier must be unique among private connection resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> CreatePrivateConnection(string parent, PrivateConnection privateConnection, string privateConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePrivateConnection(new CreatePrivateConnectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PrivateConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(privateConnectionId, nameof(privateConnectionId)),
+                PrivateConnection = gax::GaxPreconditions.CheckNotNull(privateConnection, nameof(privateConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new private
+        /// connection in. Private connection is a regional resource.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="privateConnection">
+        /// Required. The initial description of the new private connection.
+        /// </param>
+        /// <param name="privateConnectionId">
+        /// Required. The user-provided identifier of the new private connection.
+        /// This identifier must be unique among private connection resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(string parent, PrivateConnection privateConnection, string privateConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePrivateConnectionAsync(new CreatePrivateConnectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PrivateConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(privateConnectionId, nameof(privateConnectionId)),
+                PrivateConnection = gax::GaxPreconditions.CheckNotNull(privateConnection, nameof(privateConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new private
+        /// connection in. Private connection is a regional resource.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="privateConnection">
+        /// Required. The initial description of the new private connection.
+        /// </param>
+        /// <param name="privateConnectionId">
+        /// Required. The user-provided identifier of the new private connection.
+        /// This identifier must be unique among private connection resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(string parent, PrivateConnection privateConnection, string privateConnectionId, st::CancellationToken cancellationToken) =>
+            CreatePrivateConnectionAsync(parent, privateConnection, privateConnectionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new private
+        /// connection in. Private connection is a regional resource.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="privateConnection">
+        /// Required. The initial description of the new private connection.
+        /// </param>
+        /// <param name="privateConnectionId">
+        /// Required. The user-provided identifier of the new private connection.
+        /// This identifier must be unique among private connection resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> CreatePrivateConnection(gagr::LocationName parent, PrivateConnection privateConnection, string privateConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePrivateConnection(new CreatePrivateConnectionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PrivateConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(privateConnectionId, nameof(privateConnectionId)),
+                PrivateConnection = gax::GaxPreconditions.CheckNotNull(privateConnection, nameof(privateConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new private
+        /// connection in. Private connection is a regional resource.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="privateConnection">
+        /// Required. The initial description of the new private connection.
+        /// </param>
+        /// <param name="privateConnectionId">
+        /// Required. The user-provided identifier of the new private connection.
+        /// This identifier must be unique among private connection resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(gagr::LocationName parent, PrivateConnection privateConnection, string privateConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePrivateConnectionAsync(new CreatePrivateConnectionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PrivateConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(privateConnectionId, nameof(privateConnectionId)),
+                PrivateConnection = gax::GaxPreconditions.CheckNotNull(privateConnection, nameof(privateConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new private
+        /// connection in. Private connection is a regional resource.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="privateConnection">
+        /// Required. The initial description of the new private connection.
+        /// </param>
+        /// <param name="privateConnectionId">
+        /// Required. The user-provided identifier of the new private connection.
+        /// This identifier must be unique among private connection resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(gagr::LocationName parent, PrivateConnection privateConnection, string privateConnectionId, st::CancellationToken cancellationToken) =>
+            CreatePrivateConnectionAsync(parent, privateConnection, privateConnectionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PrivateConnection GetPrivateConnection(GetPrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(GetPrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(GetPrivateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            GetPrivateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PrivateConnection GetPrivateConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPrivateConnection(new GetPrivateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPrivateConnectionAsync(new GetPrivateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetPrivateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PrivateConnection GetPrivateConnection(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPrivateConnection(new GetPrivateConnectionRequest
+            {
+                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPrivateConnectionAsync(new GetPrivateConnectionRequest
+            {
+                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(PrivateConnectionName name, st::CancellationToken cancellationToken) =>
+            GetPrivateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(ListPrivateConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(ListPrivateConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to query for
+        /// private connections. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPrivateConnections(new ListPrivateConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to query for
+        /// private connections. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPrivateConnectionsAsync(new ListPrivateConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to query for
+        /// private connections. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPrivateConnections(new ListPrivateConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to query for
+        /// private connections. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPrivateConnectionsAsync(new ListPrivateConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> UpdatePrivateConnection(UpdatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> UpdatePrivateConnectionAsync(UpdatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> UpdatePrivateConnectionAsync(UpdatePrivateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            UpdatePrivateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdatePrivateConnection</c>.</summary>
+        public virtual lro::OperationsClient UpdatePrivateConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdatePrivateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> PollOnceUpdatePrivateConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PrivateConnection, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdatePrivateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdatePrivateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> PollOnceUpdatePrivateConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PrivateConnection, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdatePrivateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="privateConnection">
+        /// Required. Private connection description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `PrivateConnection` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> UpdatePrivateConnection(PrivateConnection privateConnection, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePrivateConnection(new UpdatePrivateConnectionRequest
+            {
+                PrivateConnection = gax::GaxPreconditions.CheckNotNull(privateConnection, nameof(privateConnection)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="privateConnection">
+        /// Required. Private connection description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `PrivateConnection` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> UpdatePrivateConnectionAsync(PrivateConnection privateConnection, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePrivateConnectionAsync(new UpdatePrivateConnectionRequest
+            {
+                PrivateConnection = gax::GaxPreconditions.CheckNotNull(privateConnection, nameof(privateConnection)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="privateConnection">
+        /// Required. Private connection description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `PrivateConnection` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> UpdatePrivateConnectionAsync(PrivateConnection privateConnection, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdatePrivateConnectionAsync(privateConnection, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeletePrivateConnection(DeletePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(DeletePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(DeletePrivateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            DeletePrivateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeletePrivateConnection</c>.</summary>
+        public virtual lro::OperationsClient DeletePrivateConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeletePrivateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeletePrivateConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeletePrivateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeletePrivateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeletePrivateConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeletePrivateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeletePrivateConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePrivateConnection(new DeletePrivateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePrivateConnectionAsync(new DeletePrivateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeletePrivateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeletePrivateConnection(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePrivateConnection(new DeletePrivateConnectionRequest
+            {
+                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePrivateConnectionAsync(new DeletePrivateConnectionRequest
+            {
+                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(PrivateConnectionName name, st::CancellationToken cancellationToken) =>
+            DeletePrivateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutes(ListPrivateConnectionPeeringRoutesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutesAsync(ListPrivateConnectionPeeringRoutesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private connection to retrieve peering
+        /// routes from. Resource names are schemeless URIs that follow the conventions
+        /// in https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-west1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPrivateConnectionPeeringRoutes(new ListPrivateConnectionPeeringRoutesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private connection to retrieve peering
+        /// routes from. Resource names are schemeless URIs that follow the conventions
+        /// in https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-west1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPrivateConnectionPeeringRoutesAsync(new ListPrivateConnectionPeeringRoutesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private connection to retrieve peering
+        /// routes from. Resource names are schemeless URIs that follow the conventions
+        /// in https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-west1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutes(PrivateConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPrivateConnectionPeeringRoutes(new ListPrivateConnectionPeeringRoutesRequest
+            {
+                ParentAsPrivateConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private connection to retrieve peering
+        /// routes from. Resource names are schemeless URIs that follow the conventions
+        /// in https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-west1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutesAsync(PrivateConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListPrivateConnectionPeeringRoutesAsync(new ListPrivateConnectionPeeringRoutesRequest
+            {
+                ParentAsPrivateConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>VmwareEngine client wrapper implementation, for convenient use.</summary>
@@ -6428,6 +7880,10 @@ namespace Google.Cloud.VmwareEngine.V1
         private readonly gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> _callDeleteCluster;
 
         private readonly gaxgrpc::ApiCall<ListSubnetsRequest, ListSubnetsResponse> _callListSubnets;
+
+        private readonly gaxgrpc::ApiCall<GetSubnetRequest, Subnet> _callGetSubnet;
+
+        private readonly gaxgrpc::ApiCall<UpdateSubnetRequest, lro::Operation> _callUpdateSubnet;
 
         private readonly gaxgrpc::ApiCall<ListNodeTypesRequest, ListNodeTypesResponse> _callListNodeTypes;
 
@@ -6467,6 +7923,18 @@ namespace Google.Cloud.VmwareEngine.V1
 
         private readonly gaxgrpc::ApiCall<ListVmwareEngineNetworksRequest, ListVmwareEngineNetworksResponse> _callListVmwareEngineNetworks;
 
+        private readonly gaxgrpc::ApiCall<CreatePrivateConnectionRequest, lro::Operation> _callCreatePrivateConnection;
+
+        private readonly gaxgrpc::ApiCall<GetPrivateConnectionRequest, PrivateConnection> _callGetPrivateConnection;
+
+        private readonly gaxgrpc::ApiCall<ListPrivateConnectionsRequest, ListPrivateConnectionsResponse> _callListPrivateConnections;
+
+        private readonly gaxgrpc::ApiCall<UpdatePrivateConnectionRequest, lro::Operation> _callUpdatePrivateConnection;
+
+        private readonly gaxgrpc::ApiCall<DeletePrivateConnectionRequest, lro::Operation> _callDeletePrivateConnection;
+
+        private readonly gaxgrpc::ApiCall<ListPrivateConnectionPeeringRoutesRequest, ListPrivateConnectionPeeringRoutesResponse> _callListPrivateConnectionPeeringRoutes;
+
         /// <summary>
         /// Constructs a client wrapper for the VmwareEngine service, with the specified gRPC client and settings.
         /// </summary>
@@ -6485,6 +7953,7 @@ namespace Google.Cloud.VmwareEngine.V1
             CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings, logger);
             UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings, logger);
             DeleteClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClusterOperationsSettings, logger);
+            UpdateSubnetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSubnetOperationsSettings, logger);
             ResetNsxCredentialsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResetNsxCredentialsOperationsSettings, logger);
             ResetVcenterCredentialsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResetVcenterCredentialsOperationsSettings, logger);
             CreateHcxActivationKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateHcxActivationKeyOperationsSettings, logger);
@@ -6494,6 +7963,9 @@ namespace Google.Cloud.VmwareEngine.V1
             CreateVmwareEngineNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateVmwareEngineNetworkOperationsSettings, logger);
             UpdateVmwareEngineNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateVmwareEngineNetworkOperationsSettings, logger);
             DeleteVmwareEngineNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteVmwareEngineNetworkOperationsSettings, logger);
+            CreatePrivateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreatePrivateConnectionOperationsSettings, logger);
+            UpdatePrivateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdatePrivateConnectionOperationsSettings, logger);
+            DeletePrivateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePrivateConnectionOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListPrivateClouds = clientHelper.BuildApiCall<ListPrivateCloudsRequest, ListPrivateCloudsResponse>("ListPrivateClouds", grpcClient.ListPrivateCloudsAsync, grpcClient.ListPrivateClouds, effectiveSettings.ListPrivateCloudsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -6532,6 +8004,12 @@ namespace Google.Cloud.VmwareEngine.V1
             _callListSubnets = clientHelper.BuildApiCall<ListSubnetsRequest, ListSubnetsResponse>("ListSubnets", grpcClient.ListSubnetsAsync, grpcClient.ListSubnets, effectiveSettings.ListSubnetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSubnets);
             Modify_ListSubnetsApiCall(ref _callListSubnets);
+            _callGetSubnet = clientHelper.BuildApiCall<GetSubnetRequest, Subnet>("GetSubnet", grpcClient.GetSubnetAsync, grpcClient.GetSubnet, effectiveSettings.GetSubnetSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSubnet);
+            Modify_GetSubnetApiCall(ref _callGetSubnet);
+            _callUpdateSubnet = clientHelper.BuildApiCall<UpdateSubnetRequest, lro::Operation>("UpdateSubnet", grpcClient.UpdateSubnetAsync, grpcClient.UpdateSubnet, effectiveSettings.UpdateSubnetSettings).WithGoogleRequestParam("subnet.name", request => request.Subnet?.Name);
+            Modify_ApiCall(ref _callUpdateSubnet);
+            Modify_UpdateSubnetApiCall(ref _callUpdateSubnet);
             _callListNodeTypes = clientHelper.BuildApiCall<ListNodeTypesRequest, ListNodeTypesResponse>("ListNodeTypes", grpcClient.ListNodeTypesAsync, grpcClient.ListNodeTypes, effectiveSettings.ListNodeTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListNodeTypes);
             Modify_ListNodeTypesApiCall(ref _callListNodeTypes);
@@ -6589,6 +8067,24 @@ namespace Google.Cloud.VmwareEngine.V1
             _callListVmwareEngineNetworks = clientHelper.BuildApiCall<ListVmwareEngineNetworksRequest, ListVmwareEngineNetworksResponse>("ListVmwareEngineNetworks", grpcClient.ListVmwareEngineNetworksAsync, grpcClient.ListVmwareEngineNetworks, effectiveSettings.ListVmwareEngineNetworksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListVmwareEngineNetworks);
             Modify_ListVmwareEngineNetworksApiCall(ref _callListVmwareEngineNetworks);
+            _callCreatePrivateConnection = clientHelper.BuildApiCall<CreatePrivateConnectionRequest, lro::Operation>("CreatePrivateConnection", grpcClient.CreatePrivateConnectionAsync, grpcClient.CreatePrivateConnection, effectiveSettings.CreatePrivateConnectionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreatePrivateConnection);
+            Modify_CreatePrivateConnectionApiCall(ref _callCreatePrivateConnection);
+            _callGetPrivateConnection = clientHelper.BuildApiCall<GetPrivateConnectionRequest, PrivateConnection>("GetPrivateConnection", grpcClient.GetPrivateConnectionAsync, grpcClient.GetPrivateConnection, effectiveSettings.GetPrivateConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetPrivateConnection);
+            Modify_GetPrivateConnectionApiCall(ref _callGetPrivateConnection);
+            _callListPrivateConnections = clientHelper.BuildApiCall<ListPrivateConnectionsRequest, ListPrivateConnectionsResponse>("ListPrivateConnections", grpcClient.ListPrivateConnectionsAsync, grpcClient.ListPrivateConnections, effectiveSettings.ListPrivateConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListPrivateConnections);
+            Modify_ListPrivateConnectionsApiCall(ref _callListPrivateConnections);
+            _callUpdatePrivateConnection = clientHelper.BuildApiCall<UpdatePrivateConnectionRequest, lro::Operation>("UpdatePrivateConnection", grpcClient.UpdatePrivateConnectionAsync, grpcClient.UpdatePrivateConnection, effectiveSettings.UpdatePrivateConnectionSettings).WithGoogleRequestParam("private_connection.name", request => request.PrivateConnection?.Name);
+            Modify_ApiCall(ref _callUpdatePrivateConnection);
+            Modify_UpdatePrivateConnectionApiCall(ref _callUpdatePrivateConnection);
+            _callDeletePrivateConnection = clientHelper.BuildApiCall<DeletePrivateConnectionRequest, lro::Operation>("DeletePrivateConnection", grpcClient.DeletePrivateConnectionAsync, grpcClient.DeletePrivateConnection, effectiveSettings.DeletePrivateConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeletePrivateConnection);
+            Modify_DeletePrivateConnectionApiCall(ref _callDeletePrivateConnection);
+            _callListPrivateConnectionPeeringRoutes = clientHelper.BuildApiCall<ListPrivateConnectionPeeringRoutesRequest, ListPrivateConnectionPeeringRoutesResponse>("ListPrivateConnectionPeeringRoutes", grpcClient.ListPrivateConnectionPeeringRoutesAsync, grpcClient.ListPrivateConnectionPeeringRoutes, effectiveSettings.ListPrivateConnectionPeeringRoutesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListPrivateConnectionPeeringRoutes);
+            Modify_ListPrivateConnectionPeeringRoutesApiCall(ref _callListPrivateConnectionPeeringRoutes);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -6617,6 +8113,10 @@ namespace Google.Cloud.VmwareEngine.V1
         partial void Modify_DeleteClusterApiCall(ref gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> call);
 
         partial void Modify_ListSubnetsApiCall(ref gaxgrpc::ApiCall<ListSubnetsRequest, ListSubnetsResponse> call);
+
+        partial void Modify_GetSubnetApiCall(ref gaxgrpc::ApiCall<GetSubnetRequest, Subnet> call);
+
+        partial void Modify_UpdateSubnetApiCall(ref gaxgrpc::ApiCall<UpdateSubnetRequest, lro::Operation> call);
 
         partial void Modify_ListNodeTypesApiCall(ref gaxgrpc::ApiCall<ListNodeTypesRequest, ListNodeTypesResponse> call);
 
@@ -6656,6 +8156,18 @@ namespace Google.Cloud.VmwareEngine.V1
 
         partial void Modify_ListVmwareEngineNetworksApiCall(ref gaxgrpc::ApiCall<ListVmwareEngineNetworksRequest, ListVmwareEngineNetworksResponse> call);
 
+        partial void Modify_CreatePrivateConnectionApiCall(ref gaxgrpc::ApiCall<CreatePrivateConnectionRequest, lro::Operation> call);
+
+        partial void Modify_GetPrivateConnectionApiCall(ref gaxgrpc::ApiCall<GetPrivateConnectionRequest, PrivateConnection> call);
+
+        partial void Modify_ListPrivateConnectionsApiCall(ref gaxgrpc::ApiCall<ListPrivateConnectionsRequest, ListPrivateConnectionsResponse> call);
+
+        partial void Modify_UpdatePrivateConnectionApiCall(ref gaxgrpc::ApiCall<UpdatePrivateConnectionRequest, lro::Operation> call);
+
+        partial void Modify_DeletePrivateConnectionApiCall(ref gaxgrpc::ApiCall<DeletePrivateConnectionRequest, lro::Operation> call);
+
+        partial void Modify_ListPrivateConnectionPeeringRoutesApiCall(ref gaxgrpc::ApiCall<ListPrivateConnectionPeeringRoutesRequest, ListPrivateConnectionPeeringRoutesResponse> call);
+
         partial void OnConstruction(VmwareEngine.VmwareEngineClient grpcClient, VmwareEngineSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC VmwareEngine client</summary>
@@ -6690,6 +8202,10 @@ namespace Google.Cloud.VmwareEngine.V1
         partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSubnetsRequest(ref ListSubnetsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSubnetRequest(ref GetSubnetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSubnetRequest(ref UpdateSubnetRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListNodeTypesRequest(ref ListNodeTypesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6728,6 +8244,18 @@ namespace Google.Cloud.VmwareEngine.V1
         partial void Modify_GetVmwareEngineNetworkRequest(ref GetVmwareEngineNetworkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListVmwareEngineNetworksRequest(ref ListVmwareEngineNetworksRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreatePrivateConnectionRequest(ref CreatePrivateConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetPrivateConnectionRequest(ref GetPrivateConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListPrivateConnectionsRequest(ref ListPrivateConnectionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdatePrivateConnectionRequest(ref UpdatePrivateConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeletePrivateConnectionRequest(ref DeletePrivateConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListPrivateConnectionPeeringRoutesRequest(ref ListPrivateConnectionPeeringRoutesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists `PrivateCloud` resources in a given project and location.
@@ -7122,6 +8650,67 @@ namespace Google.Cloud.VmwareEngine.V1
         {
             Modify_ListSubnetsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSubnetsRequest, ListSubnetsResponse, Subnet>(_callListSubnets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Subnet GetSubnet(GetSubnetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSubnetRequest(ref request, ref callSettings);
+            return _callGetSubnet.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Subnet> GetSubnetAsync(GetSubnetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSubnetRequest(ref request, ref callSettings);
+            return _callGetSubnet.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateSubnet</c>.</summary>
+        public override lro::OperationsClient UpdateSubnetOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Subnet, OperationMetadata> UpdateSubnet(UpdateSubnetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSubnetRequest(ref request, ref callSettings);
+            return new lro::Operation<Subnet, OperationMetadata>(_callUpdateSubnet.Sync(request, callSettings), UpdateSubnetOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Subnet, OperationMetadata>> UpdateSubnetAsync(UpdateSubnetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSubnetRequest(ref request, ref callSettings);
+            return new lro::Operation<Subnet, OperationMetadata>(await _callUpdateSubnet.Async(request, callSettings).ConfigureAwait(false), UpdateSubnetOperationsClient);
         }
 
         /// <summary>
@@ -7652,6 +9241,173 @@ namespace Google.Cloud.VmwareEngine.V1
             Modify_ListVmwareEngineNetworksRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListVmwareEngineNetworksRequest, ListVmwareEngineNetworksResponse, VmwareEngineNetwork>(_callListVmwareEngineNetworks, request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>CreatePrivateConnection</c>.</summary>
+        public override lro::OperationsClient CreatePrivateConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<PrivateConnection, OperationMetadata> CreatePrivateConnection(CreatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePrivateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<PrivateConnection, OperationMetadata>(_callCreatePrivateConnection.Sync(request, callSettings), CreatePrivateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(CreatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePrivateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<PrivateConnection, OperationMetadata>(await _callCreatePrivateConnection.Async(request, callSettings).ConfigureAwait(false), CreatePrivateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PrivateConnection GetPrivateConnection(GetPrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPrivateConnectionRequest(ref request, ref callSettings);
+            return _callGetPrivateConnection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PrivateConnection> GetPrivateConnectionAsync(GetPrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPrivateConnectionRequest(ref request, ref callSettings);
+            return _callGetPrivateConnection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public override gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(ListPrivateConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPrivateConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListPrivateConnectionsRequest, ListPrivateConnectionsResponse, PrivateConnection>(_callListPrivateConnections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(ListPrivateConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPrivateConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPrivateConnectionsRequest, ListPrivateConnectionsResponse, PrivateConnection>(_callListPrivateConnections, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdatePrivateConnection</c>.</summary>
+        public override lro::OperationsClient UpdatePrivateConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<PrivateConnection, OperationMetadata> UpdatePrivateConnection(UpdatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePrivateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<PrivateConnection, OperationMetadata>(_callUpdatePrivateConnection.Sync(request, callSettings), UpdatePrivateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> UpdatePrivateConnectionAsync(UpdatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePrivateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<PrivateConnection, OperationMetadata>(await _callUpdatePrivateConnection.Async(request, callSettings).ConfigureAwait(false), UpdatePrivateConnectionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeletePrivateConnection</c>.</summary>
+        public override lro::OperationsClient DeletePrivateConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeletePrivateConnection(DeletePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeletePrivateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeletePrivateConnection.Sync(request, callSettings), DeletePrivateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(DeletePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeletePrivateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeletePrivateConnection.Async(request, callSettings).ConfigureAwait(false), DeletePrivateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public override gax::PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutes(ListPrivateConnectionPeeringRoutesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPrivateConnectionPeeringRoutesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListPrivateConnectionPeeringRoutesRequest, ListPrivateConnectionPeeringRoutesResponse, PeeringRoute>(_callListPrivateConnectionPeeringRoutes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutesAsync(ListPrivateConnectionPeeringRoutesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPrivateConnectionPeeringRoutesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesRequest, ListPrivateConnectionPeeringRoutesResponse, PeeringRoute>(_callListPrivateConnectionPeeringRoutes, request, callSettings);
+        }
     }
 
     public partial class ListPrivateCloudsRequest : gaxgrpc::IPageRequest
@@ -7679,6 +9435,14 @@ namespace Google.Cloud.VmwareEngine.V1
     }
 
     public partial class ListVmwareEngineNetworksRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListPrivateConnectionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListPrivateConnectionPeeringRoutesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -7734,6 +9498,22 @@ namespace Google.Cloud.VmwareEngine.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<VmwareEngineNetwork> GetEnumerator() => VmwareEngineNetworks.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListPrivateConnectionsResponse : gaxgrpc::IPageResponse<PrivateConnection>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<PrivateConnection> GetEnumerator() => PrivateConnections.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListPrivateConnectionPeeringRoutesResponse : gaxgrpc::IPageResponse<PeeringRoute>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<PeeringRoute> GetEnumerator() => PeeringRoutes.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

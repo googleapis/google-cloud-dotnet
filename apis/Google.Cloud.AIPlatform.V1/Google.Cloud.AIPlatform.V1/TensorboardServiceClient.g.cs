@@ -53,12 +53,12 @@ namespace Google.Cloud.AIPlatform.V1
             CreateTensorboardSettings = existing.CreateTensorboardSettings;
             CreateTensorboardOperationsSettings = existing.CreateTensorboardOperationsSettings.Clone();
             GetTensorboardSettings = existing.GetTensorboardSettings;
-            ReadTensorboardUsageSettings = existing.ReadTensorboardUsageSettings;
             UpdateTensorboardSettings = existing.UpdateTensorboardSettings;
             UpdateTensorboardOperationsSettings = existing.UpdateTensorboardOperationsSettings.Clone();
             ListTensorboardsSettings = existing.ListTensorboardsSettings;
             DeleteTensorboardSettings = existing.DeleteTensorboardSettings;
             DeleteTensorboardOperationsSettings = existing.DeleteTensorboardOperationsSettings.Clone();
+            ReadTensorboardUsageSettings = existing.ReadTensorboardUsageSettings;
             CreateTensorboardExperimentSettings = existing.CreateTensorboardExperimentSettings;
             GetTensorboardExperimentSettings = existing.GetTensorboardExperimentSettings;
             UpdateTensorboardExperimentSettings = existing.UpdateTensorboardExperimentSettings;
@@ -137,19 +137,6 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>TensorboardServiceClient.ReadTensorboardUsage</c> and
-        /// <c>TensorboardServiceClient.ReadTensorboardUsageAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings ReadTensorboardUsageSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>TensorboardServiceClient.UpdateTensorboard</c> and <c>TensorboardServiceClient.UpdateTensorboardAsync</c>
         /// .
         /// </summary>
@@ -221,6 +208,19 @@ namespace Google.Cloud.AIPlatform.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TensorboardServiceClient.ReadTensorboardUsage</c> and
+        /// <c>TensorboardServiceClient.ReadTensorboardUsageAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReadTensorboardUsageSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1015,123 +1015,6 @@ namespace Google.Cloud.AIPlatform.V1
             GetTensorboardAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, st::CancellationToken cancellationToken) =>
-            ReadTensorboardUsageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="tensorboard">
-        /// Required. The name of the Tensorboard resource.
-        /// Format:
-        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
-            ReadTensorboardUsage(new ReadTensorboardUsageRequest
-            {
-                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
-            }, callSettings);
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="tensorboard">
-        /// Required. The name of the Tensorboard resource.
-        /// Format:
-        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
-            ReadTensorboardUsageAsync(new ReadTensorboardUsageRequest
-            {
-                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
-            }, callSettings);
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="tensorboard">
-        /// Required. The name of the Tensorboard resource.
-        /// Format:
-        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(string tensorboard, st::CancellationToken cancellationToken) =>
-            ReadTensorboardUsageAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="tensorboard">
-        /// Required. The name of the Tensorboard resource.
-        /// Format:
-        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
-            ReadTensorboardUsage(new ReadTensorboardUsageRequest
-            {
-                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
-            }, callSettings);
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="tensorboard">
-        /// Required. The name of the Tensorboard resource.
-        /// Format:
-        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
-            ReadTensorboardUsageAsync(new ReadTensorboardUsageRequest
-            {
-                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
-            }, callSettings);
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="tensorboard">
-        /// Required. The name of the Tensorboard resource.
-        /// Format:
-        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(TensorboardName tensorboard, st::CancellationToken cancellationToken) =>
-            ReadTensorboardUsageAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Updates a Tensorboard.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1521,6 +1404,123 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteTensorboardAsync(TensorboardName name, st::CancellationToken cancellationToken) =>
             DeleteTensorboardAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, st::CancellationToken cancellationToken) =>
+            ReadTensorboardUsageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardUsage(new ReadTensorboardUsageRequest
+            {
+                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardUsageAsync(new ReadTensorboardUsageRequest
+            {
+                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(string tensorboard, st::CancellationToken cancellationToken) =>
+            ReadTensorboardUsageAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardUsage(new ReadTensorboardUsageRequest
+            {
+                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardUsageAsync(new ReadTensorboardUsageRequest
+            {
+                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(TensorboardName tensorboard, st::CancellationToken cancellationToken) =>
+            ReadTensorboardUsageAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a TensorboardExperiment.
@@ -4698,13 +4698,13 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<GetTensorboardRequest, Tensorboard> _callGetTensorboard;
 
-        private readonly gaxgrpc::ApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse> _callReadTensorboardUsage;
-
         private readonly gaxgrpc::ApiCall<UpdateTensorboardRequest, lro::Operation> _callUpdateTensorboard;
 
         private readonly gaxgrpc::ApiCall<ListTensorboardsRequest, ListTensorboardsResponse> _callListTensorboards;
 
         private readonly gaxgrpc::ApiCall<DeleteTensorboardRequest, lro::Operation> _callDeleteTensorboard;
+
+        private readonly gaxgrpc::ApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse> _callReadTensorboardUsage;
 
         private readonly gaxgrpc::ApiCall<CreateTensorboardExperimentRequest, TensorboardExperiment> _callCreateTensorboardExperiment;
 
@@ -4777,9 +4777,6 @@ namespace Google.Cloud.AIPlatform.V1
             _callGetTensorboard = clientHelper.BuildApiCall<GetTensorboardRequest, Tensorboard>("GetTensorboard", grpcClient.GetTensorboardAsync, grpcClient.GetTensorboard, effectiveSettings.GetTensorboardSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTensorboard);
             Modify_GetTensorboardApiCall(ref _callGetTensorboard);
-            _callReadTensorboardUsage = clientHelper.BuildApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse>("ReadTensorboardUsage", grpcClient.ReadTensorboardUsageAsync, grpcClient.ReadTensorboardUsage, effectiveSettings.ReadTensorboardUsageSettings).WithGoogleRequestParam("tensorboard", request => request.Tensorboard);
-            Modify_ApiCall(ref _callReadTensorboardUsage);
-            Modify_ReadTensorboardUsageApiCall(ref _callReadTensorboardUsage);
             _callUpdateTensorboard = clientHelper.BuildApiCall<UpdateTensorboardRequest, lro::Operation>("UpdateTensorboard", grpcClient.UpdateTensorboardAsync, grpcClient.UpdateTensorboard, effectiveSettings.UpdateTensorboardSettings).WithGoogleRequestParam("tensorboard.name", request => request.Tensorboard?.Name);
             Modify_ApiCall(ref _callUpdateTensorboard);
             Modify_UpdateTensorboardApiCall(ref _callUpdateTensorboard);
@@ -4789,6 +4786,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callDeleteTensorboard = clientHelper.BuildApiCall<DeleteTensorboardRequest, lro::Operation>("DeleteTensorboard", grpcClient.DeleteTensorboardAsync, grpcClient.DeleteTensorboard, effectiveSettings.DeleteTensorboardSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTensorboard);
             Modify_DeleteTensorboardApiCall(ref _callDeleteTensorboard);
+            _callReadTensorboardUsage = clientHelper.BuildApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse>("ReadTensorboardUsage", grpcClient.ReadTensorboardUsageAsync, grpcClient.ReadTensorboardUsage, effectiveSettings.ReadTensorboardUsageSettings).WithGoogleRequestParam("tensorboard", request => request.Tensorboard);
+            Modify_ApiCall(ref _callReadTensorboardUsage);
+            Modify_ReadTensorboardUsageApiCall(ref _callReadTensorboardUsage);
             _callCreateTensorboardExperiment = clientHelper.BuildApiCall<CreateTensorboardExperimentRequest, TensorboardExperiment>("CreateTensorboardExperiment", grpcClient.CreateTensorboardExperimentAsync, grpcClient.CreateTensorboardExperiment, effectiveSettings.CreateTensorboardExperimentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTensorboardExperiment);
             Modify_CreateTensorboardExperimentApiCall(ref _callCreateTensorboardExperiment);
@@ -4869,13 +4869,13 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_GetTensorboardApiCall(ref gaxgrpc::ApiCall<GetTensorboardRequest, Tensorboard> call);
 
-        partial void Modify_ReadTensorboardUsageApiCall(ref gaxgrpc::ApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse> call);
-
         partial void Modify_UpdateTensorboardApiCall(ref gaxgrpc::ApiCall<UpdateTensorboardRequest, lro::Operation> call);
 
         partial void Modify_ListTensorboardsApiCall(ref gaxgrpc::ApiCall<ListTensorboardsRequest, ListTensorboardsResponse> call);
 
         partial void Modify_DeleteTensorboardApiCall(ref gaxgrpc::ApiCall<DeleteTensorboardRequest, lro::Operation> call);
+
+        partial void Modify_ReadTensorboardUsageApiCall(ref gaxgrpc::ApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse> call);
 
         partial void Modify_CreateTensorboardExperimentApiCall(ref gaxgrpc::ApiCall<CreateTensorboardExperimentRequest, TensorboardExperiment> call);
 
@@ -4938,13 +4938,13 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_GetTensorboardRequest(ref GetTensorboardRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_ReadTensorboardUsageRequest(ref ReadTensorboardUsageRequest request, ref gaxgrpc::CallSettings settings);
-
         partial void Modify_UpdateTensorboardRequest(ref UpdateTensorboardRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListTensorboardsRequest(ref ListTensorboardsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteTensorboardRequest(ref DeleteTensorboardRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReadTensorboardUsageRequest(ref ReadTensorboardUsageRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateTensorboardExperimentRequest(ref CreateTensorboardExperimentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5043,30 +5043,6 @@ namespace Google.Cloud.AIPlatform.V1
             return _callGetTensorboard.Async(request, callSettings);
         }
 
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override ReadTensorboardUsageResponse ReadTensorboardUsage(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ReadTensorboardUsageRequest(ref request, ref callSettings);
-            return _callReadTensorboardUsage.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ReadTensorboardUsageRequest(ref request, ref callSettings);
-            return _callReadTensorboardUsage.Async(request, callSettings);
-        }
-
         /// <summary>The long-running operations client for <c>UpdateTensorboard</c>.</summary>
         public override lro::OperationsClient UpdateTensorboardOperationsClient { get; }
 
@@ -5143,6 +5119,30 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_DeleteTensorboardRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteTensorboard.Async(request, callSettings).ConfigureAwait(false), DeleteTensorboardOperationsClient);
+        }
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReadTensorboardUsageResponse ReadTensorboardUsage(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReadTensorboardUsageRequest(ref request, ref callSettings);
+            return _callReadTensorboardUsage.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReadTensorboardUsageRequest(ref request, ref callSettings);
+            return _callReadTensorboardUsage.Async(request, callSettings);
         }
 
         /// <summary>

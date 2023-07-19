@@ -18,6 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -84,6 +86,8 @@ namespace Google.Cloud.GkeBackup.V1
             DeleteRestoreOperationsSettings = existing.DeleteRestoreOperationsSettings.Clone();
             ListVolumeRestoresSettings = existing.ListVolumeRestoresSettings;
             GetVolumeRestoreSettings = existing.GetVolumeRestoreSettings;
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -665,6 +669,16 @@ namespace Google.Cloud.GkeBackup.V1
         /// </remarks>
         public gaxgrpc::CallSettings GetVolumeRestoreSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BackupForGKESettings"/> object.</returns>
         public BackupForGKESettings Clone() => new BackupForGKESettings(this);
@@ -806,6 +820,12 @@ namespace Google.Cloud.GkeBackup.V1
         /// <summary>The underlying gRPC BackupForGKE client</summary>
         public virtual BackupForGKE.BackupForGKEClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Creates a new BackupPlan in a given location.
         /// </summary>
@@ -864,7 +884,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the BackupPlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="backupPlan">
         /// Required. The BackupPlan resource object to create.
@@ -894,7 +914,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the BackupPlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="backupPlan">
         /// Required. The BackupPlan resource object to create.
@@ -924,7 +944,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the BackupPlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="backupPlan">
         /// Required. The BackupPlan resource object to create.
@@ -949,7 +969,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the BackupPlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="backupPlan">
         /// Required. The BackupPlan resource object to create.
@@ -979,7 +999,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the BackupPlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="backupPlan">
         /// Required. The BackupPlan resource object to create.
@@ -1009,7 +1029,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the BackupPlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="backupPlan">
         /// Required. The BackupPlan resource object to create.
@@ -1052,7 +1072,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the BackupPlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1077,7 +1097,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the BackupPlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1102,7 +1122,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the BackupPlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1127,7 +1147,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the BackupPlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1179,7 +1199,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1194,7 +1214,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1209,7 +1229,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1221,7 +1241,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1236,7 +1256,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1251,7 +1271,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1315,8 +1335,8 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a BackupPlan.
         /// </summary>
         /// <param name="backupPlan">
-        /// Required. A new version of the BackupPlan resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the BackupPlan resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
         /// This is used to specify the fields to be overwritten in the
@@ -1342,8 +1362,8 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a BackupPlan.
         /// </summary>
         /// <param name="backupPlan">
-        /// Required. A new version of the BackupPlan resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the BackupPlan resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
         /// This is used to specify the fields to be overwritten in the
@@ -1369,8 +1389,8 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a BackupPlan.
         /// </summary>
         /// <param name="backupPlan">
-        /// Required. A new version of the BackupPlan resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the BackupPlan resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
         /// This is used to specify the fields to be overwritten in the
@@ -1446,7 +1466,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1461,7 +1481,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1476,7 +1496,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1488,7 +1508,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1503,7 +1523,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1518,7 +1538,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified BackupPlan name.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1583,7 +1603,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan within which to create the Backup.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
         /// The Backup resource to create.
@@ -1613,7 +1633,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan within which to create the Backup.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
         /// The Backup resource to create.
@@ -1643,7 +1663,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan within which to create the Backup.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
         /// The Backup resource to create.
@@ -1668,7 +1688,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan within which to create the Backup.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
         /// The Backup resource to create.
@@ -1698,7 +1718,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan within which to create the Backup.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
         /// The Backup resource to create.
@@ -1728,7 +1748,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan within which to create the Backup.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
         /// The Backup resource to create.
@@ -1771,7 +1791,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan that contains the Backups to list.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1796,7 +1816,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan that contains the Backups to list.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1821,7 +1841,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan that contains the Backups to list.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1846,7 +1866,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The BackupPlan that contains the Backups to list.
-        /// Format: projects/*/locations/*/backupPlans/*
+        /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1898,7 +1918,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1913,7 +1933,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1928,7 +1948,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1940,7 +1960,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1955,7 +1975,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1970,7 +1990,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2034,8 +2054,8 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a Backup.
         /// </summary>
         /// <param name="backup">
-        /// Required. A new version of the Backup resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the Backup resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
         /// This is used to specify the fields to be overwritten in the
@@ -2060,8 +2080,8 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a Backup.
         /// </summary>
         /// <param name="backup">
-        /// Required. A new version of the Backup resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the Backup resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
         /// This is used to specify the fields to be overwritten in the
@@ -2086,8 +2106,8 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a Backup.
         /// </summary>
         /// <param name="backup">
-        /// Required. A new version of the Backup resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the Backup resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
         /// This is used to specify the fields to be overwritten in the
@@ -2162,7 +2182,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2177,7 +2197,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2192,7 +2212,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2204,7 +2224,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2219,7 +2239,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2234,7 +2254,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the Backup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2264,7 +2284,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The Backup that contains the VolumeBackups to list.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2289,7 +2309,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The Backup that contains the VolumeBackups to list.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2314,7 +2334,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The Backup that contains the VolumeBackups to list.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2339,7 +2359,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The Backup that contains the VolumeBackups to list.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2391,7 +2411,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeBackup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2406,7 +2426,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeBackup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2421,7 +2441,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeBackup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2433,7 +2453,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeBackup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2448,7 +2468,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeBackup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2463,7 +2483,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeBackup resource.
-        /// Format: projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*
+        /// Format: `projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2529,7 +2549,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the RestorePlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="restorePlan">
         /// Required. The RestorePlan resource object to create.
@@ -2559,7 +2579,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the RestorePlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="restorePlan">
         /// Required. The RestorePlan resource object to create.
@@ -2589,7 +2609,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the RestorePlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="restorePlan">
         /// Required. The RestorePlan resource object to create.
@@ -2614,7 +2634,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the RestorePlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="restorePlan">
         /// Required. The RestorePlan resource object to create.
@@ -2644,7 +2664,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the RestorePlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="restorePlan">
         /// Required. The RestorePlan resource object to create.
@@ -2674,7 +2694,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location within which to create the RestorePlan.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="restorePlan">
         /// Required. The RestorePlan resource object to create.
@@ -2717,7 +2737,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the RestorePlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2742,7 +2762,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the RestorePlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2767,7 +2787,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the RestorePlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2792,7 +2812,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The location that contains the RestorePlans to list.
-        /// Format: projects/*/locations/*
+        /// Format: `projects/*/locations/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2844,7 +2864,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2859,7 +2879,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2874,7 +2894,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2886,7 +2906,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2901,7 +2921,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2916,7 +2936,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2981,8 +3001,8 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a RestorePlan.
         /// </summary>
         /// <param name="restorePlan">
-        /// Required. A new version of the RestorePlan resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the RestorePlan resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
         /// This is used to specify the fields to be overwritten in the
@@ -3007,8 +3027,8 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a RestorePlan.
         /// </summary>
         /// <param name="restorePlan">
-        /// Required. A new version of the RestorePlan resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the RestorePlan resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
         /// This is used to specify the fields to be overwritten in the
@@ -3033,8 +3053,8 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a RestorePlan.
         /// </summary>
         /// <param name="restorePlan">
-        /// Required. A new version of the RestorePlan resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the RestorePlan resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
         /// This is used to specify the fields to be overwritten in the
@@ -3110,7 +3130,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3125,7 +3145,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3140,7 +3160,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3152,7 +3172,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3167,7 +3187,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3182,7 +3202,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Fully qualified RestorePlan name.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3247,7 +3267,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan within which to create the Restore.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="restore">
         /// Required. The restore resource to create.
@@ -3277,7 +3297,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan within which to create the Restore.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="restore">
         /// Required. The restore resource to create.
@@ -3307,7 +3327,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan within which to create the Restore.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="restore">
         /// Required. The restore resource to create.
@@ -3332,7 +3352,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan within which to create the Restore.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="restore">
         /// Required. The restore resource to create.
@@ -3362,7 +3382,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan within which to create the Restore.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="restore">
         /// Required. The restore resource to create.
@@ -3392,7 +3412,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan within which to create the Restore.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="restore">
         /// Required. The restore resource to create.
@@ -3435,7 +3455,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan that contains the Restores to list.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3460,7 +3480,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan that contains the Restores to list.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3485,7 +3505,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan that contains the Restores to list.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3510,7 +3530,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The RestorePlan that contains the Restores to list.
-        /// Format: projects/*/locations/*/restorePlans/*
+        /// Format: `projects/*/locations/*/restorePlans/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3562,7 +3582,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the restore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3577,7 +3597,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the restore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3592,7 +3612,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the restore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3604,7 +3624,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the restore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3619,7 +3639,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the restore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3634,7 +3654,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the restore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3698,8 +3718,8 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a Restore.
         /// </summary>
         /// <param name="restore">
-        /// Required. A new version of the Restore resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the Restore resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
         /// This is used to specify the fields to be overwritten in the
@@ -3724,8 +3744,8 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a Restore.
         /// </summary>
         /// <param name="restore">
-        /// Required. A new version of the Restore resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the Restore resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
         /// This is used to specify the fields to be overwritten in the
@@ -3750,8 +3770,8 @@ namespace Google.Cloud.GkeBackup.V1
         /// Update a Restore.
         /// </summary>
         /// <param name="restore">
-        /// Required. A new version of the Restore resource that contains updated fields.
-        /// This may be sparsely populated if an `update_mask` is provided.
+        /// Required. A new version of the Restore resource that contains updated
+        /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
         /// This is used to specify the fields to be overwritten in the
@@ -3826,7 +3846,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Restore
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3841,7 +3861,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Restore
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3856,7 +3876,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Restore
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3868,7 +3888,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Restore
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3883,7 +3903,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Restore
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3898,7 +3918,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the Restore
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3928,7 +3948,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The Restore that contains the VolumeRestores to list.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3953,7 +3973,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The Restore that contains the VolumeRestores to list.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3978,7 +3998,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The Restore that contains the VolumeRestores to list.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4003,7 +4023,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The Restore that contains the VolumeRestores to list.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4055,7 +4075,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeRestore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4070,7 +4090,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeRestore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4085,7 +4105,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeRestore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4097,7 +4117,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeRestore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4112,7 +4132,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeRestore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4127,7 +4147,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// </summary>
         /// <param name="name">
         /// Required. Full name of the VolumeRestore resource.
-        /// Format: projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*
+        /// Format: `projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4213,6 +4233,8 @@ namespace Google.Cloud.GkeBackup.V1
             CreateRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRestoreOperationsSettings, logger);
             UpdateRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRestoreOperationsSettings, logger);
             DeleteRestoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRestoreOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateBackupPlan = clientHelper.BuildApiCall<CreateBackupPlanRequest, lro::Operation>("CreateBackupPlan", grpcClient.CreateBackupPlanAsync, grpcClient.CreateBackupPlan, effectiveSettings.CreateBackupPlanSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBackupPlan);
             Modify_CreateBackupPlanApiCall(ref _callCreateBackupPlan);
@@ -4342,6 +4364,12 @@ namespace Google.Cloud.GkeBackup.V1
 
         /// <summary>The underlying gRPC BackupForGKE client</summary>
         public override BackupForGKE.BackupForGKEClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateBackupPlanRequest(ref CreateBackupPlanRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5087,6 +5115,32 @@ namespace Google.Cloud.GkeBackup.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class BackupForGKE
+    {
+        public partial class BackupForGKEClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

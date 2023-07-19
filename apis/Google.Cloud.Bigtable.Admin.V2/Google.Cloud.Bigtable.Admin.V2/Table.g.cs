@@ -3338,7 +3338,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
     /// <summary>
     /// Required. The expiration time of the backup, with microseconds
-    /// granularity that must be at least 6 hours and at most 30 days
+    /// granularity that must be at least 6 hours and at most 90 days
     /// from the time the request is received. Once the `expire_time`
     /// has passed, Cloud Bigtable will delete the backup and free the
     /// resources used by the backup.

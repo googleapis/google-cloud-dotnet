@@ -47,7 +47,7 @@ namespace Google.Cloud.Firestore.Converters
             }
         }
 
-        public override object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values)
+        public override object DeserializeMap(IDeserializationContext context, IDictionary<string, Value> values)
         {
             // TODO: Compile an expression tree on construction, or at least accept an optional delegate for construction
             // (allowing for special-casing of Dictionary<string, object>).

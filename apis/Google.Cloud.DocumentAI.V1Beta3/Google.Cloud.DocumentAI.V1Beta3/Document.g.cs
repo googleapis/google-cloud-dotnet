@@ -32,8 +32,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvGhdn",
             "b29nbGUvdHlwZS9jb2xvci5wcm90bxoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90",
             "bxoaZ29vZ2xlL3R5cGUvZGF0ZXRpbWUucHJvdG8aF2dvb2dsZS90eXBlL21v",
-            "bmV5LnByb3RvGiBnb29nbGUvdHlwZS9wb3N0YWxfYWRkcmVzcy5wcm90byLP",
-            "RAoIRG9jdW1lbnQSEgoDdXJpGAEgASgJQgPgQQFIABIWCgdjb250ZW50GAIg",
+            "bmV5LnByb3RvGiBnb29nbGUvdHlwZS9wb3N0YWxfYWRkcmVzcy5wcm90byKI",
+            "SAoIRG9jdW1lbnQSEgoDdXJpGAEgASgJQgPgQQFIABIWCgdjb250ZW50GAIg",
             "ASgMQgPgQQFIABIRCgltaW1lX3R5cGUYAyABKAkSEQoEdGV4dBgEIAEoCUID",
             "4EEBEkgKC3RleHRfc3R5bGVzGAUgAygLMi8uZ29vZ2xlLmNsb3VkLmRvY3Vt",
             "ZW50YWkudjFiZXRhMy5Eb2N1bWVudC5TdHlsZUICGAESPQoFcGFnZXMYBiAD",
@@ -57,7 +57,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "EksKCWZvbnRfc2l6ZRgHIAEoCzI4Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
             "LnYxYmV0YTMuRG9jdW1lbnQuU3R5bGUuRm9udFNpemUSEwoLZm9udF9mYW1p",
             "bHkYCCABKAkaJgoIRm9udFNpemUSDAoEc2l6ZRgBIAEoAhIMCgR1bml0GAIg",
-            "ASgJGpMoCgRQYWdlEhMKC3BhZ2VfbnVtYmVyGAEgASgFEkMKBWltYWdlGA0g",
+            "ASgJGtArCgRQYWdlEhMKC3BhZ2VfbnVtYmVyGAEgASgFEkMKBWltYWdlGA0g",
             "ASgLMjQuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVu",
             "dC5QYWdlLkltYWdlEkkKCnRyYW5zZm9ybXMYDiADKAsyNS5nb29nbGUuY2xv",
             "dWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuTWF0cml4EksK",
@@ -114,7 +114,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "b3V0ElsKEmRldGVjdGVkX2xhbmd1YWdlcxgCIAMoCzI/Lmdvb2dsZS5jbG91",
             "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5EZXRlY3RlZExh",
             "bmd1YWdlEkwKCnByb3ZlbmFuY2UYAyABKAsyNC5nb29nbGUuY2xvdWQuZG9j",
-            "dW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlByb3ZlbmFuY2VCAhgBGoMECgVU",
+            "dW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlByb3ZlbmFuY2VCAhgBGrwHCgVU",
             "b2tlbhJFCgZsYXlvdXQYASABKAsyNS5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
             "aS52MWJldGEzLkRvY3VtZW50LlBhZ2UuTGF5b3V0EloKDmRldGVjdGVkX2Jy",
             "ZWFrGAIgASgLMkIuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5E",
@@ -122,118 +122,134 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "bGFuZ3VhZ2VzGAMgAygLMj8uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
             "ZXRhMy5Eb2N1bWVudC5QYWdlLkRldGVjdGVkTGFuZ3VhZ2USTAoKcHJvdmVu",
             "YW5jZRgEIAEoCzI0Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMu",
-            "RG9jdW1lbnQuUHJvdmVuYW5jZUICGAEaqwEKDURldGVjdGVkQnJlYWsSVQoE",
-            "dHlwZRgBIAEoDjJHLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMu",
-            "RG9jdW1lbnQuUGFnZS5Ub2tlbi5EZXRlY3RlZEJyZWFrLlR5cGUiQwoEVHlw",
-            "ZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCQoFU1BBQ0UQARIOCgpXSURFX1NQ",
-            "QUNFEAISCgoGSFlQSEVOEAMarAEKBlN5bWJvbBJFCgZsYXlvdXQYASABKAsy",
-            "NS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBh",
-            "Z2UuTGF5b3V0ElsKEmRldGVjdGVkX2xhbmd1YWdlcxgCIAMoCzI/Lmdvb2ds",
-            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5EZXRl",
-            "Y3RlZExhbmd1YWdlGsEBCg1WaXN1YWxFbGVtZW50EkUKBmxheW91dBgBIAEo",
-            "CzI1Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQu",
-            "UGFnZS5MYXlvdXQSDAoEdHlwZRgCIAEoCRJbChJkZXRlY3RlZF9sYW5ndWFn",
-            "ZXMYAyADKAsyPy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRv",
-            "Y3VtZW50LlBhZ2UuRGV0ZWN0ZWRMYW5ndWFnZRrMBQoFVGFibGUSRQoGbGF5",
-            "b3V0GAEgASgLMjUuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5E",
-            "b2N1bWVudC5QYWdlLkxheW91dBJSCgtoZWFkZXJfcm93cxgCIAMoCzI9Lmdv",
-            "b2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5U",
-            "YWJsZS5UYWJsZVJvdxJQCglib2R5X3Jvd3MYAyADKAsyPS5nb29nbGUuY2xv",
-            "dWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuVGFibGUuVGFi",
-            "bGVSb3cSWwoSZGV0ZWN0ZWRfbGFuZ3VhZ2VzGAQgAygLMj8uZ29vZ2xlLmNs",
-            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLkRldGVjdGVk",
-            "TGFuZ3VhZ2USSAoKcHJvdmVuYW5jZRgFIAEoCzI0Lmdvb2dsZS5jbG91ZC5k",
-            "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUHJvdmVuYW5jZRpZCghUYWJs",
-            "ZVJvdxJNCgVjZWxscxgBIAMoCzI+Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
-            "LnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5UYWJsZS5UYWJsZUNlbGwa0wEKCVRh",
-            "YmxlQ2VsbBJFCgZsYXlvdXQYASABKAsyNS5nb29nbGUuY2xvdWQuZG9jdW1l",
-            "bnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuTGF5b3V0EhAKCHJvd19zcGFu",
-            "GAIgASgFEhAKCGNvbF9zcGFuGAMgASgFElsKEmRldGVjdGVkX2xhbmd1YWdl",
-            "cxgEIAMoCzI/Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9j",
-            "dW1lbnQuUGFnZS5EZXRlY3RlZExhbmd1YWdlGv8DCglGb3JtRmllbGQSSQoK",
-            "ZmllbGRfbmFtZRgBIAEoCzI1Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
-            "YmV0YTMuRG9jdW1lbnQuUGFnZS5MYXlvdXQSSgoLZmllbGRfdmFsdWUYAiAB",
-            "KAsyNS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50",
-            "LlBhZ2UuTGF5b3V0EmAKF25hbWVfZGV0ZWN0ZWRfbGFuZ3VhZ2VzGAMgAygL",
-            "Mj8uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5Q",
-            "YWdlLkRldGVjdGVkTGFuZ3VhZ2USYQoYdmFsdWVfZGV0ZWN0ZWRfbGFuZ3Vh",
-            "Z2VzGAQgAygLMj8uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5E",
-            "b2N1bWVudC5QYWdlLkRldGVjdGVkTGFuZ3VhZ2USEgoKdmFsdWVfdHlwZRgF",
-            "IAEoCRIaChJjb3JyZWN0ZWRfa2V5X3RleHQYBiABKAkSHAoUY29ycmVjdGVk",
-            "X3ZhbHVlX3RleHQYByABKAkSSAoKcHJvdmVuYW5jZRgIIAEoCzI0Lmdvb2ds",
-            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUHJvdmVuYW5j",
-            "ZRqTAQoPRGV0ZWN0ZWRCYXJjb2RlEkUKBmxheW91dBgBIAEoCzI1Lmdvb2ds",
-            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5MYXlv",
-            "dXQSOQoHYmFyY29kZRgCIAEoCzIoLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
-            "LnYxYmV0YTMuQmFyY29kZRo9ChBEZXRlY3RlZExhbmd1YWdlEhUKDWxhbmd1",
-            "YWdlX2NvZGUYASABKAkSEgoKY29uZmlkZW5jZRgCIAEoAhrLAQoSSW1hZ2VR",
-            "dWFsaXR5U2NvcmVzEhUKDXF1YWxpdHlfc2NvcmUYASABKAISagoQZGV0ZWN0",
-            "ZWRfZGVmZWN0cxgCIAMoCzJQLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
-            "YmV0YTMuRG9jdW1lbnQuUGFnZS5JbWFnZVF1YWxpdHlTY29yZXMuRGV0ZWN0",
-            "ZWREZWZlY3QaMgoORGV0ZWN0ZWREZWZlY3QSDAoEdHlwZRgBIAEoCRISCgpj",
-            "b25maWRlbmNlGAIgASgCGukGCgZFbnRpdHkSTgoLdGV4dF9hbmNob3IYASAB",
-            "KAsyNC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50",
-            "LlRleHRBbmNob3JCA+BBARIRCgR0eXBlGAIgASgJQgPgQQISGQoMbWVudGlv",
-            "bl90ZXh0GAMgASgJQgPgQQESFwoKbWVudGlvbl9pZBgEIAEoCUID4EEBEhcK",
-            "CmNvbmZpZGVuY2UYBSABKAJCA+BBARJOCgtwYWdlX2FuY2hvchgGIAEoCzI0",
+            "RG9jdW1lbnQuUHJvdmVuYW5jZUICGAESUgoKc3R5bGVfaW5mbxgFIAEoCzI+",
             "Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFn",
-            "ZUFuY2hvckID4EEBEg8KAmlkGAcgASgJQgPgQQESXwoQbm9ybWFsaXplZF92",
-            "YWx1ZRgJIAEoCzJALmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMu",
-            "RG9jdW1lbnQuRW50aXR5Lk5vcm1hbGl6ZWRWYWx1ZUID4EEBEkkKCnByb3Bl",
-            "cnRpZXMYCiADKAsyMC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEz",
-            "LkRvY3VtZW50LkVudGl0eUID4EEBEk0KCnByb3ZlbmFuY2UYCyABKAsyNC5n",
-            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlByb3Zl",
-            "bmFuY2VCA+BBARIVCghyZWRhY3RlZBgMIAEoCEID4EEBGrsCCg9Ob3JtYWxp",
-            "emVkVmFsdWUSKQoLbW9uZXlfdmFsdWUYAiABKAsyEi5nb29nbGUudHlwZS5N",
-            "b25leUgAEicKCmRhdGVfdmFsdWUYAyABKAsyES5nb29nbGUudHlwZS5EYXRl",
-            "SAASLwoOZGF0ZXRpbWVfdmFsdWUYBCABKAsyFS5nb29nbGUudHlwZS5EYXRl",
-            "VGltZUgAEjMKDWFkZHJlc3NfdmFsdWUYBSABKAsyGi5nb29nbGUudHlwZS5Q",
-            "b3N0YWxBZGRyZXNzSAASFwoNYm9vbGVhbl92YWx1ZRgGIAEoCEgAEhcKDWlu",
-            "dGVnZXJfdmFsdWUYByABKAVIABIVCgtmbG9hdF92YWx1ZRgIIAEoAkgAEhEK",
-            "BHRleHQYASABKAlCA+BBAUISChBzdHJ1Y3R1cmVkX3ZhbHVlGkkKDkVudGl0",
-            "eVJlbGF0aW9uEhIKCnN1YmplY3RfaWQYASABKAkSEQoJb2JqZWN0X2lkGAIg",
-            "ASgJEhAKCHJlbGF0aW9uGAMgASgJGq0BCgpUZXh0QW5jaG9yElcKDXRleHRf",
-            "c2VnbWVudHMYASADKAsyQC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJl",
-            "dGEzLkRvY3VtZW50LlRleHRBbmNob3IuVGV4dFNlZ21lbnQSDwoHY29udGVu",
-            "dBgCIAEoCRo1CgtUZXh0U2VnbWVudBITCgtzdGFydF9pbmRleBgBIAEoAxIR",
-            "CgllbmRfaW5kZXgYAiABKAMa5wMKClBhZ2VBbmNob3ISTwoJcGFnZV9yZWZz",
-            "GAEgAygLMjwuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1",
-            "bWVudC5QYWdlQW5jaG9yLlBhZ2VSZWYahwMKB1BhZ2VSZWYSEQoEcGFnZRgB",
-            "IAEoA0ID4EECEmEKC2xheW91dF90eXBlGAIgASgOMkcuZ29vZ2xlLmNsb3Vk",
-            "LmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlQW5jaG9yLlBhZ2VS",
-            "ZWYuTGF5b3V0VHlwZUID4EEBEhgKCWxheW91dF9pZBgDIAEoCUIFGAHgQQES",
-            "SQoNYm91bmRpbmdfcG9seRgEIAEoCzItLmdvb2dsZS5jbG91ZC5kb2N1bWVu",
-            "dGFpLnYxYmV0YTMuQm91bmRpbmdQb2x5QgPgQQESFwoKY29uZmlkZW5jZRgF",
-            "IAEoAkID4EEBIocBCgpMYXlvdXRUeXBlEhsKF0xBWU9VVF9UWVBFX1VOU1BF",
-            "Q0lGSUVEEAASCQoFQkxPQ0sQARINCglQQVJBR1JBUEgQAhIICgRMSU5FEAMS",
-            "CQoFVE9LRU4QBBISCg5WSVNVQUxfRUxFTUVOVBAFEgkKBVRBQkxFEAYSDgoK",
-            "Rk9STV9GSUVMRBAHGrYDCgpQcm92ZW5hbmNlEhQKCHJldmlzaW9uGAEgASgF",
-            "QgIYARIOCgJpZBgCIAEoBUICGAESTAoHcGFyZW50cxgDIAMoCzI7Lmdvb2ds",
-            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUHJvdmVuYW5j",
-            "ZS5QYXJlbnQSUAoEdHlwZRgEIAEoDjJCLmdvb2dsZS5jbG91ZC5kb2N1bWVu",
-            "dGFpLnYxYmV0YTMuRG9jdW1lbnQuUHJvdmVuYW5jZS5PcGVyYXRpb25UeXBl",
-            "GjkKBlBhcmVudBIQCghyZXZpc2lvbhgBIAEoBRINCgVpbmRleBgDIAEoBRIO",
-            "CgJpZBgCIAEoBUICGAEipgEKDU9wZXJhdGlvblR5cGUSHgoaT1BFUkFUSU9O",
-            "X1RZUEVfVU5TUEVDSUZJRUQQABIHCgNBREQQARIKCgZSRU1PVkUQAhIKCgZV",
-            "UERBVEUQBxIPCgdSRVBMQUNFEAMaAggBEhYKDkVWQUxfUkVRVUVTVEVEEAQa",
-            "AggBEhUKDUVWQUxfQVBQUk9WRUQQBRoCCAESFAoMRVZBTF9TS0lQUEVEEAYa",
-            "AggBGqoCCghSZXZpc2lvbhIPCgVhZ2VudBgEIAEoCUgAEhMKCXByb2Nlc3Nv",
-            "chgFIAEoCUgAEgoKAmlkGAEgASgJEhIKBnBhcmVudBgCIAMoBUICGAESEgoK",
-            "cGFyZW50X2lkcxgHIAMoCRIvCgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASVAoMaHVtYW5fcmV2aWV3GAYgASgLMj4u",
-            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5SZXZp",
-            "c2lvbi5IdW1hblJldmlldxozCgtIdW1hblJldmlldxINCgVzdGF0ZRgBIAEo",
-            "CRIVCg1zdGF0ZV9tZXNzYWdlGAIgASgJQggKBnNvdXJjZRq7AQoKVGV4dENo",
-            "YW5nZRJJCgt0ZXh0X2FuY2hvchgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5kb2N1",
-            "bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuVGV4dEFuY2hvchIUCgxjaGFuZ2Vk",
-            "X3RleHQYAiABKAkSTAoKcHJvdmVuYW5jZRgDIAMoCzI0Lmdvb2dsZS5jbG91",
-            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUHJvdmVuYW5jZUICGAFC",
-            "CAoGc291cmNlQuQBCiNjb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
-            "ZXRhM0INRG9jdW1lbnRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2Rv",
-            "Y3VtZW50YWkvYXBpdjFiZXRhMy9kb2N1bWVudGFpcGI7ZG9jdW1lbnRhaXBi",
-            "qgIfR29vZ2xlLkNsb3VkLkRvY3VtZW50QUkuVjFCZXRhM8oCH0dvb2dsZVxD",
-            "bG91ZFxEb2N1bWVudEFJXFYxYmV0YTPqAiJHb29nbGU6OkNsb3VkOjpEb2N1",
-            "bWVudEFJOjpWMWJldGEzYgZwcm90bzM="));
+            "ZS5Ub2tlbi5TdHlsZUluZm8aqwEKDURldGVjdGVkQnJlYWsSVQoEdHlwZRgB",
+            "IAEoDjJHLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1l",
+            "bnQuUGFnZS5Ub2tlbi5EZXRlY3RlZEJyZWFrLlR5cGUiQwoEVHlwZRIUChBU",
+            "WVBFX1VOU1BFQ0lGSUVEEAASCQoFU1BBQ0UQARIOCgpXSURFX1NQQUNFEAIS",
+            "CgoGSFlQSEVOEAMa4gIKCVN0eWxlSW5mbxIRCglmb250X3NpemUYASABKAUS",
+            "FwoPcGl4ZWxfZm9udF9zaXplGAIgASgBEhYKDmxldHRlcl9zcGFjaW5nGAMg",
+            "ASgBEhEKCWZvbnRfdHlwZRgEIAEoCRIMCgRib2xkGAUgASgIEg4KBml0YWxp",
+            "YxgGIAEoCBISCgp1bmRlcmxpbmVkGAcgASgIEhEKCXN0cmlrZW91dBgIIAEo",
+            "CBIRCglzdWJzY3JpcHQYCSABKAgSEwoLc3VwZXJzY3JpcHQYCiABKAgSEQoJ",
+            "c21hbGxjYXBzGAsgASgIEhMKC2ZvbnRfd2VpZ2h0GAwgASgFEhMKC2hhbmR3",
+            "cml0dGVuGA0gASgIEiYKCnRleHRfY29sb3IYDiABKAsyEi5nb29nbGUudHlw",
+            "ZS5Db2xvchIsChBiYWNrZ3JvdW5kX2NvbG9yGA8gASgLMhIuZ29vZ2xlLnR5",
+            "cGUuQ29sb3IarAEKBlN5bWJvbBJFCgZsYXlvdXQYASABKAsyNS5nb29nbGUu",
+            "Y2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuTGF5b3V0",
+            "ElsKEmRldGVjdGVkX2xhbmd1YWdlcxgCIAMoCzI/Lmdvb2dsZS5jbG91ZC5k",
+            "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5EZXRlY3RlZExhbmd1",
+            "YWdlGsEBCg1WaXN1YWxFbGVtZW50EkUKBmxheW91dBgBIAEoCzI1Lmdvb2ds",
+            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5MYXlv",
+            "dXQSDAoEdHlwZRgCIAEoCRJbChJkZXRlY3RlZF9sYW5ndWFnZXMYAyADKAsy",
+            "Py5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBh",
+            "Z2UuRGV0ZWN0ZWRMYW5ndWFnZRrQBQoFVGFibGUSRQoGbGF5b3V0GAEgASgL",
+            "MjUuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5Q",
+            "YWdlLkxheW91dBJSCgtoZWFkZXJfcm93cxgCIAMoCzI9Lmdvb2dsZS5jbG91",
+            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5UYWJsZS5UYWJs",
+            "ZVJvdxJQCglib2R5X3Jvd3MYAyADKAsyPS5nb29nbGUuY2xvdWQuZG9jdW1l",
+            "bnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuVGFibGUuVGFibGVSb3cSWwoS",
+            "ZGV0ZWN0ZWRfbGFuZ3VhZ2VzGAQgAygLMj8uZ29vZ2xlLmNsb3VkLmRvY3Vt",
+            "ZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdlLkRldGVjdGVkTGFuZ3VhZ2US",
+            "TAoKcHJvdmVuYW5jZRgFIAEoCzI0Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
+            "LnYxYmV0YTMuRG9jdW1lbnQuUHJvdmVuYW5jZUICGAEaWQoIVGFibGVSb3cS",
+            "TQoFY2VsbHMYASADKAsyPi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJl",
+            "dGEzLkRvY3VtZW50LlBhZ2UuVGFibGUuVGFibGVDZWxsGtMBCglUYWJsZUNl",
+            "bGwSRQoGbGF5b3V0GAEgASgLMjUuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWku",
+            "djFiZXRhMy5Eb2N1bWVudC5QYWdlLkxheW91dBIQCghyb3dfc3BhbhgCIAEo",
+            "BRIQCghjb2xfc3BhbhgDIAEoBRJbChJkZXRlY3RlZF9sYW5ndWFnZXMYBCAD",
+            "KAsyPy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50",
+            "LlBhZ2UuRGV0ZWN0ZWRMYW5ndWFnZRr/AwoJRm9ybUZpZWxkEkkKCmZpZWxk",
+            "X25hbWUYASABKAsyNS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEz",
+            "LkRvY3VtZW50LlBhZ2UuTGF5b3V0EkoKC2ZpZWxkX3ZhbHVlGAIgASgLMjUu",
+            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5QYWdl",
+            "LkxheW91dBJgChduYW1lX2RldGVjdGVkX2xhbmd1YWdlcxgDIAMoCzI/Lmdv",
+            "b2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZS5E",
+            "ZXRlY3RlZExhbmd1YWdlEmEKGHZhbHVlX2RldGVjdGVkX2xhbmd1YWdlcxgE",
+            "IAMoCzI/Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1l",
+            "bnQuUGFnZS5EZXRlY3RlZExhbmd1YWdlEhIKCnZhbHVlX3R5cGUYBSABKAkS",
+            "GgoSY29ycmVjdGVkX2tleV90ZXh0GAYgASgJEhwKFGNvcnJlY3RlZF92YWx1",
+            "ZV90ZXh0GAcgASgJEkgKCnByb3ZlbmFuY2UYCCABKAsyNC5nb29nbGUuY2xv",
+            "dWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlByb3ZlbmFuY2UakwEK",
+            "D0RldGVjdGVkQmFyY29kZRJFCgZsYXlvdXQYASABKAsyNS5nb29nbGUuY2xv",
+            "dWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2UuTGF5b3V0EjkK",
+            "B2JhcmNvZGUYAiABKAsyKC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJl",
+            "dGEzLkJhcmNvZGUaPQoQRGV0ZWN0ZWRMYW5ndWFnZRIVCg1sYW5ndWFnZV9j",
+            "b2RlGAEgASgJEhIKCmNvbmZpZGVuY2UYAiABKAIaywEKEkltYWdlUXVhbGl0",
+            "eVNjb3JlcxIVCg1xdWFsaXR5X3Njb3JlGAEgASgCEmoKEGRldGVjdGVkX2Rl",
+            "ZmVjdHMYAiADKAsyUC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEz",
+            "LkRvY3VtZW50LlBhZ2UuSW1hZ2VRdWFsaXR5U2NvcmVzLkRldGVjdGVkRGVm",
+            "ZWN0GjIKDkRldGVjdGVkRGVmZWN0EgwKBHR5cGUYASABKAkSEgoKY29uZmlk",
+            "ZW5jZRgCIAEoAhrpBgoGRW50aXR5Ek4KC3RleHRfYW5jaG9yGAEgASgLMjQu",
+            "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5UZXh0",
+            "QW5jaG9yQgPgQQESEQoEdHlwZRgCIAEoCUID4EECEhkKDG1lbnRpb25fdGV4",
+            "dBgDIAEoCUID4EEBEhcKCm1lbnRpb25faWQYBCABKAlCA+BBARIXCgpjb25m",
+            "aWRlbmNlGAUgASgCQgPgQQESTgoLcGFnZV9hbmNob3IYBiABKAsyNC5nb29n",
+            "bGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlBhZ2VBbmNo",
+            "b3JCA+BBARIPCgJpZBgHIAEoCUID4EEBEl8KEG5vcm1hbGl6ZWRfdmFsdWUY",
+            "CSABKAsyQC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3Vt",
+            "ZW50LkVudGl0eS5Ob3JtYWxpemVkVmFsdWVCA+BBARJJCgpwcm9wZXJ0aWVz",
+            "GAogAygLMjAuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1",
+            "bWVudC5FbnRpdHlCA+BBARJNCgpwcm92ZW5hbmNlGAsgASgLMjQuZ29vZ2xl",
+            "LmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5Qcm92ZW5hbmNl",
+            "QgPgQQESFQoIcmVkYWN0ZWQYDCABKAhCA+BBARq7AgoPTm9ybWFsaXplZFZh",
+            "bHVlEikKC21vbmV5X3ZhbHVlGAIgASgLMhIuZ29vZ2xlLnR5cGUuTW9uZXlI",
+            "ABInCgpkYXRlX3ZhbHVlGAMgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUgAEi8K",
+            "DmRhdGV0aW1lX3ZhbHVlGAQgASgLMhUuZ29vZ2xlLnR5cGUuRGF0ZVRpbWVI",
+            "ABIzCg1hZGRyZXNzX3ZhbHVlGAUgASgLMhouZ29vZ2xlLnR5cGUuUG9zdGFs",
+            "QWRkcmVzc0gAEhcKDWJvb2xlYW5fdmFsdWUYBiABKAhIABIXCg1pbnRlZ2Vy",
+            "X3ZhbHVlGAcgASgFSAASFQoLZmxvYXRfdmFsdWUYCCABKAJIABIRCgR0ZXh0",
+            "GAEgASgJQgPgQQFCEgoQc3RydWN0dXJlZF92YWx1ZRpJCg5FbnRpdHlSZWxh",
+            "dGlvbhISCgpzdWJqZWN0X2lkGAEgASgJEhEKCW9iamVjdF9pZBgCIAEoCRIQ",
+            "CghyZWxhdGlvbhgDIAEoCRqtAQoKVGV4dEFuY2hvchJXCg10ZXh0X3NlZ21l",
+            "bnRzGAEgAygLMkAuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5E",
+            "b2N1bWVudC5UZXh0QW5jaG9yLlRleHRTZWdtZW50Eg8KB2NvbnRlbnQYAiAB",
+            "KAkaNQoLVGV4dFNlZ21lbnQSEwoLc3RhcnRfaW5kZXgYASABKAMSEQoJZW5k",
+            "X2luZGV4GAIgASgDGucDCgpQYWdlQW5jaG9yEk8KCXBhZ2VfcmVmcxgBIAMo",
+            "CzI8Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQu",
+            "UGFnZUFuY2hvci5QYWdlUmVmGocDCgdQYWdlUmVmEhEKBHBhZ2UYASABKANC",
+            "A+BBAhJhCgtsYXlvdXRfdHlwZRgCIAEoDjJHLmdvb2dsZS5jbG91ZC5kb2N1",
+            "bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuUGFnZUFuY2hvci5QYWdlUmVmLkxh",
+            "eW91dFR5cGVCA+BBARIYCglsYXlvdXRfaWQYAyABKAlCBRgB4EEBEkkKDWJv",
+            "dW5kaW5nX3BvbHkYBCABKAsyLS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
+            "MWJldGEzLkJvdW5kaW5nUG9seUID4EEBEhcKCmNvbmZpZGVuY2UYBSABKAJC",
+            "A+BBASKHAQoKTGF5b3V0VHlwZRIbChdMQVlPVVRfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEgkKBUJMT0NLEAESDQoJUEFSQUdSQVBIEAISCAoETElORRADEgkKBVRP",
+            "S0VOEAQSEgoOVklTVUFMX0VMRU1FTlQQBRIJCgVUQUJMRRAGEg4KCkZPUk1f",
+            "RklFTEQQBxqyAwoKUHJvdmVuYW5jZRIUCghyZXZpc2lvbhgBIAEoBUICGAES",
+            "DgoCaWQYAiABKAVCAhgBEkwKB3BhcmVudHMYAyADKAsyOy5nb29nbGUuY2xv",
+            "dWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50LlByb3ZlbmFuY2UuUGFy",
+            "ZW50ElAKBHR5cGUYBCABKA4yQi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
+            "MWJldGEzLkRvY3VtZW50LlByb3ZlbmFuY2UuT3BlcmF0aW9uVHlwZRo5CgZQ",
+            "YXJlbnQSEAoIcmV2aXNpb24YASABKAUSDQoFaW5kZXgYAyABKAUSDgoCaWQY",
+            "AiABKAVCAhgBIqIBCg1PcGVyYXRpb25UeXBlEh4KGk9QRVJBVElPTl9UWVBF",
+            "X1VOU1BFQ0lGSUVEEAASBwoDQUREEAESCgoGUkVNT1ZFEAISCgoGVVBEQVRF",
+            "EAcSCwoHUkVQTEFDRRADEhYKDkVWQUxfUkVRVUVTVEVEEAQaAggBEhUKDUVW",
+            "QUxfQVBQUk9WRUQQBRoCCAESFAoMRVZBTF9TS0lQUEVEEAYaAggBGqoCCghS",
+            "ZXZpc2lvbhIPCgVhZ2VudBgEIAEoCUgAEhMKCXByb2Nlc3NvchgFIAEoCUgA",
+            "EgoKAmlkGAEgASgJEhIKBnBhcmVudBgCIAMoBUICGAESEgoKcGFyZW50X2lk",
+            "cxgHIAMoCRIvCgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASVAoMaHVtYW5fcmV2aWV3GAYgASgLMj4uZ29vZ2xlLmNs",
+            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5SZXZpc2lvbi5IdW1h",
+            "blJldmlldxozCgtIdW1hblJldmlldxINCgVzdGF0ZRgBIAEoCRIVCg1zdGF0",
+            "ZV9tZXNzYWdlGAIgASgJQggKBnNvdXJjZRq7AQoKVGV4dENoYW5nZRJJCgt0",
+            "ZXh0X2FuY2hvchgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
+            "YmV0YTMuRG9jdW1lbnQuVGV4dEFuY2hvchIUCgxjaGFuZ2VkX3RleHQYAiAB",
+            "KAkSTAoKcHJvdmVuYW5jZRgDIAMoCzI0Lmdvb2dsZS5jbG91ZC5kb2N1bWVu",
+            "dGFpLnYxYmV0YTMuRG9jdW1lbnQuUHJvdmVuYW5jZUICGAFCCAoGc291cmNl",
+            "IpsCCgtSZXZpc2lvblJlZhJSCg1yZXZpc2lvbl9jYXNlGAEgASgOMjkuZ29v",
+            "Z2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5SZXZpc2lvblJlZi5SZXZp",
+            "c2lvbkNhc2VIABIVCgtyZXZpc2lvbl9pZBgCIAEoCUgAEiIKGGxhdGVzdF9w",
+            "cm9jZXNzb3JfdmVyc2lvbhgDIAEoCUgAInMKDFJldmlzaW9uQ2FzZRIdChlS",
+            "RVZJU0lPTl9DQVNFX1VOU1BFQ0lGSUVEEAASFwoTTEFURVNUX0hVTUFOX1JF",
+            "VklFVxABEhQKEExBVEVTVF9USU1FU1RBTVAQAhIVChFCQVNFX09DUl9SRVZJ",
+            "U0lPThADQggKBnNvdXJjZULkAQojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVu",
+            "dGFpLnYxYmV0YTNCDURvY3VtZW50UHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9kb2N1bWVudGFpL2FwaXYxYmV0YTMvZG9jdW1lbnRhaXBiO2RvY3Vt",
+            "ZW50YWlwYqoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0YTPKAh9H",
+            "b29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEz6gIiR29vZ2xlOjpDbG91",
+            "ZDo6RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.BarcodeReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.GeometryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -246,7 +262,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Block), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Block.Parser, new[]{ "Layout", "DetectedLanguages", "Provenance" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Paragraph), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Paragraph.Parser, new[]{ "Layout", "DetectedLanguages", "Provenance" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Line), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Line.Parser, new[]{ "Layout", "DetectedLanguages", "Provenance" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Parser, new[]{ "Layout", "DetectedBreak", "DetectedLanguages", "Provenance" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.DetectedBreak), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.DetectedBreak.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Parser, new[]{ "Layout", "DetectedBreak", "DetectedLanguages", "Provenance", "StyleInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.DetectedBreak), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.DetectedBreak.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.StyleInfo), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.StyleInfo.Parser, new[]{ "FontSize", "PixelFontSize", "LetterSpacing", "FontType", "Bold", "Italic", "Underlined", "Strikeout", "Subscript", "Superscript", "Smallcaps", "FontWeight", "Handwritten", "TextColor", "BackgroundColor" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Symbol), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Symbol.Parser, new[]{ "Layout", "DetectedLanguages" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.VisualElement), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.VisualElement.Parser, new[]{ "Layout", "Type", "DetectedLanguages" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Table), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Table.Parser, new[]{ "Layout", "HeaderRows", "BodyRows", "DetectedLanguages", "Provenance" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Table.Types.TableRow), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Table.Types.TableRow.Parser, new[]{ "Cells" }, null, null, null, null),
@@ -261,7 +278,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Parser, new[]{ "PageRefs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Types.PageRef), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Types.PageRef.Parser, new[]{ "Page", "LayoutType", "LayoutId", "BoundingPoly", "Confidence" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance.Parser, new[]{ "Revision", "Id", "Parents", "Type" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance.Types.OperationType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance.Types.Parent), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance.Types.Parent.Parser, new[]{ "Revision", "Index", "Id" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision.Parser, new[]{ "Agent", "Processor", "Id", "Parent", "ParentIds", "CreateTime", "HumanReview" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision.Types.HumanReview), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Revision.Types.HumanReview.Parser, new[]{ "State", "StateMessage" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextChange), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextChange.Parser, new[]{ "TextAnchor", "ChangedText", "Provenance" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextChange), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.TextChange.Parser, new[]{ "TextAnchor", "ChangedText", "Provenance" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef), global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef.Parser, new[]{ "RevisionCase", "RevisionId", "LatestProcessorVersion" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef.Types.RevisionCase) }, null, null)
           }));
     }
     #endregion
@@ -340,10 +358,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int UriFieldNumber = 1;
     /// <summary>
     /// Optional. Currently supports Google Cloud Storage URI of the form
-    ///    `gs://bucket_name/object_name`. Object versioning is not supported.
-    ///    See [Google Cloud Storage Request
-    ///    URIs](https://cloud.google.com/storage/docs/reference-uris) for more
-    ///    info.
+    /// `gs://bucket_name/object_name`. Object versioning is not supported.
+    /// For more information, refer to [Google Cloud Storage Request
+    /// URIs](https://cloud.google.com/storage/docs/reference-uris).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -404,9 +421,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int MimeTypeFieldNumber = 3;
     private string mimeType_ = "";
     /// <summary>
-    /// An IANA published MIME type (also referred to as media type). For more
-    /// information, see
-    /// https://www.iana.org/assignments/media-types/media-types.xhtml.
+    /// An IANA published [media type (MIME
+    /// type)](https://www.iana.org/assignments/media-types/media-types.xhtml).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1324,8 +1340,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int FontWeightFieldNumber = 4;
         private string fontWeight_ = "";
         /// <summary>
-        /// Font weight. Possible values are normal, bold, bolder, and lighter.
-        /// https://www.w3schools.com/cssref/pr_font_weight.asp
+        /// [Font weight](https://www.w3schools.com/cssref/pr_font_weight.asp).
+        /// Possible values are `normal`, `bold`, `bolder`, and `lighter`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1340,8 +1356,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int TextStyleFieldNumber = 5;
         private string textStyle_ = "";
         /// <summary>
-        /// Text style. Possible values are normal, italic, and oblique.
-        /// https://www.w3schools.com/cssref/pr_font_font-style.asp
+        /// [Text style](https://www.w3schools.com/cssref/pr_font_font-style.asp).
+        /// Possible values are `normal`, `italic`, and `oblique`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1356,9 +1372,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int TextDecorationFieldNumber = 6;
         private string textDecoration_ = "";
         /// <summary>
-        /// Text decoration. Follows CSS standard.
-        /// &lt;text-decoration-line> &lt;text-decoration-color> &lt;text-decoration-style>
-        /// https://www.w3schools.com/cssref/pr_text_text-decoration.asp
+        /// [Text
+        /// decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp).
+        /// Follows CSS standard. &lt;text-decoration-line> &lt;text-decoration-color>
+        /// &lt;text-decoration-style>
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1807,7 +1824,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int UnitFieldNumber = 2;
             private string unit_ = "";
             /// <summary>
-            /// Unit for the font size. Follows CSS naming (in, px, pt, etc.).
+            /// Unit for the font size. Follows CSS naming (such as `in`, `px`, and
+            /// `pt`).
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2275,7 +2293,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int ImageQualityScoresFieldNumber = 17;
         private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.ImageQualityScores imageQualityScores_;
         /// <summary>
-        /// Image Quality Scores.
+        /// Image quality scores.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3101,7 +3119,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int MimeTypeFieldNumber = 2;
             private string mimeType_ = "";
             /// <summary>
-            /// Encoding mime type for the image.
+            /// Encoding [media type (MIME
+            /// type)](https://www.iana.org/assignments/media-types/media-types.xhtml)
+            /// for the image.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4938,6 +4958,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               detectedBreak_ = other.detectedBreak_ != null ? other.detectedBreak_.Clone() : null;
               detectedLanguages_ = other.detectedLanguages_.Clone();
               provenance_ = other.provenance_ != null ? other.provenance_.Clone() : null;
+              styleInfo_ = other.styleInfo_ != null ? other.styleInfo_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -5009,6 +5030,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               }
             }
 
+            /// <summary>Field number for the "style_info" field.</summary>
+            public const int StyleInfoFieldNumber = 5;
+            private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.StyleInfo styleInfo_;
+            /// <summary>
+            /// Text style attributes.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.StyleInfo StyleInfo {
+              get { return styleInfo_; }
+              set {
+                styleInfo_ = value;
+              }
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
@@ -5028,6 +5064,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               if (!object.Equals(DetectedBreak, other.DetectedBreak)) return false;
               if(!detectedLanguages_.Equals(other.detectedLanguages_)) return false;
               if (!object.Equals(Provenance, other.Provenance)) return false;
+              if (!object.Equals(StyleInfo, other.StyleInfo)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -5039,6 +5076,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               if (detectedBreak_ != null) hash ^= DetectedBreak.GetHashCode();
               hash ^= detectedLanguages_.GetHashCode();
               if (provenance_ != null) hash ^= Provenance.GetHashCode();
+              if (styleInfo_ != null) hash ^= StyleInfo.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -5070,6 +5108,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(34);
                 output.WriteMessage(Provenance);
               }
+              if (styleInfo_ != null) {
+                output.WriteRawTag(42);
+                output.WriteMessage(StyleInfo);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -5093,6 +5135,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(34);
                 output.WriteMessage(Provenance);
               }
+              if (styleInfo_ != null) {
+                output.WriteRawTag(42);
+                output.WriteMessage(StyleInfo);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -5112,6 +5158,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               size += detectedLanguages_.CalculateSize(_repeated_detectedLanguages_codec);
               if (provenance_ != null) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(Provenance);
+              }
+              if (styleInfo_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(StyleInfo);
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -5143,6 +5192,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                   Provenance = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance();
                 }
                 Provenance.MergeFrom(other.Provenance);
+              }
+              if (other.styleInfo_ != null) {
+                if (styleInfo_ == null) {
+                  StyleInfo = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.StyleInfo();
+                }
+                StyleInfo.MergeFrom(other.StyleInfo);
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
@@ -5184,6 +5239,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                     input.ReadMessage(Provenance);
                     break;
                   }
+                  case 42: {
+                    if (styleInfo_ == null) {
+                      StyleInfo = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.StyleInfo();
+                    }
+                    input.ReadMessage(StyleInfo);
+                    break;
+                  }
                 }
               }
             #endif
@@ -5222,6 +5284,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                       Provenance = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance();
                     }
                     input.ReadMessage(Provenance);
+                    break;
+                  }
+                  case 42: {
+                    if (styleInfo_ == null) {
+                      StyleInfo = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Types.StyleInfo();
+                    }
+                    input.ReadMessage(StyleInfo);
                     break;
                   }
                 }
@@ -5457,6 +5526,784 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
 
                 }
                 #endregion
+
+              }
+
+              /// <summary>
+              /// Font and other text style attributes.
+              /// </summary>
+              public sealed partial class StyleInfo : pb::IMessage<StyleInfo>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<StyleInfo> _parser = new pb::MessageParser<StyleInfo>(() => new StyleInfo());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<StyleInfo> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Page.Types.Token.Descriptor.NestedTypes[1]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public StyleInfo() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public StyleInfo(StyleInfo other) : this() {
+                  fontSize_ = other.fontSize_;
+                  pixelFontSize_ = other.pixelFontSize_;
+                  letterSpacing_ = other.letterSpacing_;
+                  fontType_ = other.fontType_;
+                  bold_ = other.bold_;
+                  italic_ = other.italic_;
+                  underlined_ = other.underlined_;
+                  strikeout_ = other.strikeout_;
+                  subscript_ = other.subscript_;
+                  superscript_ = other.superscript_;
+                  smallcaps_ = other.smallcaps_;
+                  fontWeight_ = other.fontWeight_;
+                  handwritten_ = other.handwritten_;
+                  textColor_ = other.textColor_ != null ? other.textColor_.Clone() : null;
+                  backgroundColor_ = other.backgroundColor_ != null ? other.backgroundColor_.Clone() : null;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public StyleInfo Clone() {
+                  return new StyleInfo(this);
+                }
+
+                /// <summary>Field number for the "font_size" field.</summary>
+                public const int FontSizeFieldNumber = 1;
+                private int fontSize_;
+                /// <summary>
+                /// Font size in points (`1` point is `¹⁄₇₂` inches).
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int FontSize {
+                  get { return fontSize_; }
+                  set {
+                    fontSize_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "pixel_font_size" field.</summary>
+                public const int PixelFontSizeFieldNumber = 2;
+                private double pixelFontSize_;
+                /// <summary>
+                /// Font size in pixels, equal to _unrounded
+                /// [font_size][google.cloud.documentai.v1beta3.Document.Page.Token.StyleInfo.font_size]_
+                /// * _resolution_ ÷ `72.0`.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public double PixelFontSize {
+                  get { return pixelFontSize_; }
+                  set {
+                    pixelFontSize_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "letter_spacing" field.</summary>
+                public const int LetterSpacingFieldNumber = 3;
+                private double letterSpacing_;
+                /// <summary>
+                /// Letter spacing in points.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public double LetterSpacing {
+                  get { return letterSpacing_; }
+                  set {
+                    letterSpacing_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "font_type" field.</summary>
+                public const int FontTypeFieldNumber = 4;
+                private string fontType_ = "";
+                /// <summary>
+                /// Name or style of the font.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string FontType {
+                  get { return fontType_; }
+                  set {
+                    fontType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "bold" field.</summary>
+                public const int BoldFieldNumber = 5;
+                private bool bold_;
+                /// <summary>
+                /// Whether the text is bold (equivalent to
+                /// [font_weight][google.cloud.documentai.v1beta3.Document.Page.Token.StyleInfo.font_weight]
+                /// is at least `700`).
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Bold {
+                  get { return bold_; }
+                  set {
+                    bold_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "italic" field.</summary>
+                public const int ItalicFieldNumber = 6;
+                private bool italic_;
+                /// <summary>
+                /// Whether the text is italic.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Italic {
+                  get { return italic_; }
+                  set {
+                    italic_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "underlined" field.</summary>
+                public const int UnderlinedFieldNumber = 7;
+                private bool underlined_;
+                /// <summary>
+                /// Whether the text is underlined.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Underlined {
+                  get { return underlined_; }
+                  set {
+                    underlined_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "strikeout" field.</summary>
+                public const int StrikeoutFieldNumber = 8;
+                private bool strikeout_;
+                /// <summary>
+                /// Whether the text is strikethrough.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Strikeout {
+                  get { return strikeout_; }
+                  set {
+                    strikeout_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "subscript" field.</summary>
+                public const int SubscriptFieldNumber = 9;
+                private bool subscript_;
+                /// <summary>
+                /// Whether the text is a subscript.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Subscript {
+                  get { return subscript_; }
+                  set {
+                    subscript_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "superscript" field.</summary>
+                public const int SuperscriptFieldNumber = 10;
+                private bool superscript_;
+                /// <summary>
+                /// Whether the text is a superscript.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Superscript {
+                  get { return superscript_; }
+                  set {
+                    superscript_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "smallcaps" field.</summary>
+                public const int SmallcapsFieldNumber = 11;
+                private bool smallcaps_;
+                /// <summary>
+                /// Whether the text is in small caps.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Smallcaps {
+                  get { return smallcaps_; }
+                  set {
+                    smallcaps_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "font_weight" field.</summary>
+                public const int FontWeightFieldNumber = 12;
+                private int fontWeight_;
+                /// <summary>
+                /// TrueType weight on a scale `100` (thin) to `1000` (ultra-heavy).
+                /// Normal is `400`, bold is `700`.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int FontWeight {
+                  get { return fontWeight_; }
+                  set {
+                    fontWeight_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "handwritten" field.</summary>
+                public const int HandwrittenFieldNumber = 13;
+                private bool handwritten_;
+                /// <summary>
+                /// Whether the text is handwritten.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Handwritten {
+                  get { return handwritten_; }
+                  set {
+                    handwritten_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "text_color" field.</summary>
+                public const int TextColorFieldNumber = 14;
+                private global::Google.Type.Color textColor_;
+                /// <summary>
+                /// Color of the text.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Type.Color TextColor {
+                  get { return textColor_; }
+                  set {
+                    textColor_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "background_color" field.</summary>
+                public const int BackgroundColorFieldNumber = 15;
+                private global::Google.Type.Color backgroundColor_;
+                /// <summary>
+                /// Color of the background.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Type.Color BackgroundColor {
+                  get { return backgroundColor_; }
+                  set {
+                    backgroundColor_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as StyleInfo);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(StyleInfo other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (FontSize != other.FontSize) return false;
+                  if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PixelFontSize, other.PixelFontSize)) return false;
+                  if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(LetterSpacing, other.LetterSpacing)) return false;
+                  if (FontType != other.FontType) return false;
+                  if (Bold != other.Bold) return false;
+                  if (Italic != other.Italic) return false;
+                  if (Underlined != other.Underlined) return false;
+                  if (Strikeout != other.Strikeout) return false;
+                  if (Subscript != other.Subscript) return false;
+                  if (Superscript != other.Superscript) return false;
+                  if (Smallcaps != other.Smallcaps) return false;
+                  if (FontWeight != other.FontWeight) return false;
+                  if (Handwritten != other.Handwritten) return false;
+                  if (!object.Equals(TextColor, other.TextColor)) return false;
+                  if (!object.Equals(BackgroundColor, other.BackgroundColor)) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (FontSize != 0) hash ^= FontSize.GetHashCode();
+                  if (PixelFontSize != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PixelFontSize);
+                  if (LetterSpacing != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(LetterSpacing);
+                  if (FontType.Length != 0) hash ^= FontType.GetHashCode();
+                  if (Bold != false) hash ^= Bold.GetHashCode();
+                  if (Italic != false) hash ^= Italic.GetHashCode();
+                  if (Underlined != false) hash ^= Underlined.GetHashCode();
+                  if (Strikeout != false) hash ^= Strikeout.GetHashCode();
+                  if (Subscript != false) hash ^= Subscript.GetHashCode();
+                  if (Superscript != false) hash ^= Superscript.GetHashCode();
+                  if (Smallcaps != false) hash ^= Smallcaps.GetHashCode();
+                  if (FontWeight != 0) hash ^= FontWeight.GetHashCode();
+                  if (Handwritten != false) hash ^= Handwritten.GetHashCode();
+                  if (textColor_ != null) hash ^= TextColor.GetHashCode();
+                  if (backgroundColor_ != null) hash ^= BackgroundColor.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (FontSize != 0) {
+                    output.WriteRawTag(8);
+                    output.WriteInt32(FontSize);
+                  }
+                  if (PixelFontSize != 0D) {
+                    output.WriteRawTag(17);
+                    output.WriteDouble(PixelFontSize);
+                  }
+                  if (LetterSpacing != 0D) {
+                    output.WriteRawTag(25);
+                    output.WriteDouble(LetterSpacing);
+                  }
+                  if (FontType.Length != 0) {
+                    output.WriteRawTag(34);
+                    output.WriteString(FontType);
+                  }
+                  if (Bold != false) {
+                    output.WriteRawTag(40);
+                    output.WriteBool(Bold);
+                  }
+                  if (Italic != false) {
+                    output.WriteRawTag(48);
+                    output.WriteBool(Italic);
+                  }
+                  if (Underlined != false) {
+                    output.WriteRawTag(56);
+                    output.WriteBool(Underlined);
+                  }
+                  if (Strikeout != false) {
+                    output.WriteRawTag(64);
+                    output.WriteBool(Strikeout);
+                  }
+                  if (Subscript != false) {
+                    output.WriteRawTag(72);
+                    output.WriteBool(Subscript);
+                  }
+                  if (Superscript != false) {
+                    output.WriteRawTag(80);
+                    output.WriteBool(Superscript);
+                  }
+                  if (Smallcaps != false) {
+                    output.WriteRawTag(88);
+                    output.WriteBool(Smallcaps);
+                  }
+                  if (FontWeight != 0) {
+                    output.WriteRawTag(96);
+                    output.WriteInt32(FontWeight);
+                  }
+                  if (Handwritten != false) {
+                    output.WriteRawTag(104);
+                    output.WriteBool(Handwritten);
+                  }
+                  if (textColor_ != null) {
+                    output.WriteRawTag(114);
+                    output.WriteMessage(TextColor);
+                  }
+                  if (backgroundColor_ != null) {
+                    output.WriteRawTag(122);
+                    output.WriteMessage(BackgroundColor);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (FontSize != 0) {
+                    output.WriteRawTag(8);
+                    output.WriteInt32(FontSize);
+                  }
+                  if (PixelFontSize != 0D) {
+                    output.WriteRawTag(17);
+                    output.WriteDouble(PixelFontSize);
+                  }
+                  if (LetterSpacing != 0D) {
+                    output.WriteRawTag(25);
+                    output.WriteDouble(LetterSpacing);
+                  }
+                  if (FontType.Length != 0) {
+                    output.WriteRawTag(34);
+                    output.WriteString(FontType);
+                  }
+                  if (Bold != false) {
+                    output.WriteRawTag(40);
+                    output.WriteBool(Bold);
+                  }
+                  if (Italic != false) {
+                    output.WriteRawTag(48);
+                    output.WriteBool(Italic);
+                  }
+                  if (Underlined != false) {
+                    output.WriteRawTag(56);
+                    output.WriteBool(Underlined);
+                  }
+                  if (Strikeout != false) {
+                    output.WriteRawTag(64);
+                    output.WriteBool(Strikeout);
+                  }
+                  if (Subscript != false) {
+                    output.WriteRawTag(72);
+                    output.WriteBool(Subscript);
+                  }
+                  if (Superscript != false) {
+                    output.WriteRawTag(80);
+                    output.WriteBool(Superscript);
+                  }
+                  if (Smallcaps != false) {
+                    output.WriteRawTag(88);
+                    output.WriteBool(Smallcaps);
+                  }
+                  if (FontWeight != 0) {
+                    output.WriteRawTag(96);
+                    output.WriteInt32(FontWeight);
+                  }
+                  if (Handwritten != false) {
+                    output.WriteRawTag(104);
+                    output.WriteBool(Handwritten);
+                  }
+                  if (textColor_ != null) {
+                    output.WriteRawTag(114);
+                    output.WriteMessage(TextColor);
+                  }
+                  if (backgroundColor_ != null) {
+                    output.WriteRawTag(122);
+                    output.WriteMessage(BackgroundColor);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (FontSize != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeInt32Size(FontSize);
+                  }
+                  if (PixelFontSize != 0D) {
+                    size += 1 + 8;
+                  }
+                  if (LetterSpacing != 0D) {
+                    size += 1 + 8;
+                  }
+                  if (FontType.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(FontType);
+                  }
+                  if (Bold != false) {
+                    size += 1 + 1;
+                  }
+                  if (Italic != false) {
+                    size += 1 + 1;
+                  }
+                  if (Underlined != false) {
+                    size += 1 + 1;
+                  }
+                  if (Strikeout != false) {
+                    size += 1 + 1;
+                  }
+                  if (Subscript != false) {
+                    size += 1 + 1;
+                  }
+                  if (Superscript != false) {
+                    size += 1 + 1;
+                  }
+                  if (Smallcaps != false) {
+                    size += 1 + 1;
+                  }
+                  if (FontWeight != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeInt32Size(FontWeight);
+                  }
+                  if (Handwritten != false) {
+                    size += 1 + 1;
+                  }
+                  if (textColor_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextColor);
+                  }
+                  if (backgroundColor_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(BackgroundColor);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(StyleInfo other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.FontSize != 0) {
+                    FontSize = other.FontSize;
+                  }
+                  if (other.PixelFontSize != 0D) {
+                    PixelFontSize = other.PixelFontSize;
+                  }
+                  if (other.LetterSpacing != 0D) {
+                    LetterSpacing = other.LetterSpacing;
+                  }
+                  if (other.FontType.Length != 0) {
+                    FontType = other.FontType;
+                  }
+                  if (other.Bold != false) {
+                    Bold = other.Bold;
+                  }
+                  if (other.Italic != false) {
+                    Italic = other.Italic;
+                  }
+                  if (other.Underlined != false) {
+                    Underlined = other.Underlined;
+                  }
+                  if (other.Strikeout != false) {
+                    Strikeout = other.Strikeout;
+                  }
+                  if (other.Subscript != false) {
+                    Subscript = other.Subscript;
+                  }
+                  if (other.Superscript != false) {
+                    Superscript = other.Superscript;
+                  }
+                  if (other.Smallcaps != false) {
+                    Smallcaps = other.Smallcaps;
+                  }
+                  if (other.FontWeight != 0) {
+                    FontWeight = other.FontWeight;
+                  }
+                  if (other.Handwritten != false) {
+                    Handwritten = other.Handwritten;
+                  }
+                  if (other.textColor_ != null) {
+                    if (textColor_ == null) {
+                      TextColor = new global::Google.Type.Color();
+                    }
+                    TextColor.MergeFrom(other.TextColor);
+                  }
+                  if (other.backgroundColor_ != null) {
+                    if (backgroundColor_ == null) {
+                      BackgroundColor = new global::Google.Type.Color();
+                    }
+                    BackgroundColor.MergeFrom(other.BackgroundColor);
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 8: {
+                        FontSize = input.ReadInt32();
+                        break;
+                      }
+                      case 17: {
+                        PixelFontSize = input.ReadDouble();
+                        break;
+                      }
+                      case 25: {
+                        LetterSpacing = input.ReadDouble();
+                        break;
+                      }
+                      case 34: {
+                        FontType = input.ReadString();
+                        break;
+                      }
+                      case 40: {
+                        Bold = input.ReadBool();
+                        break;
+                      }
+                      case 48: {
+                        Italic = input.ReadBool();
+                        break;
+                      }
+                      case 56: {
+                        Underlined = input.ReadBool();
+                        break;
+                      }
+                      case 64: {
+                        Strikeout = input.ReadBool();
+                        break;
+                      }
+                      case 72: {
+                        Subscript = input.ReadBool();
+                        break;
+                      }
+                      case 80: {
+                        Superscript = input.ReadBool();
+                        break;
+                      }
+                      case 88: {
+                        Smallcaps = input.ReadBool();
+                        break;
+                      }
+                      case 96: {
+                        FontWeight = input.ReadInt32();
+                        break;
+                      }
+                      case 104: {
+                        Handwritten = input.ReadBool();
+                        break;
+                      }
+                      case 114: {
+                        if (textColor_ == null) {
+                          TextColor = new global::Google.Type.Color();
+                        }
+                        input.ReadMessage(TextColor);
+                        break;
+                      }
+                      case 122: {
+                        if (backgroundColor_ == null) {
+                          BackgroundColor = new global::Google.Type.Color();
+                        }
+                        input.ReadMessage(BackgroundColor);
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 8: {
+                        FontSize = input.ReadInt32();
+                        break;
+                      }
+                      case 17: {
+                        PixelFontSize = input.ReadDouble();
+                        break;
+                      }
+                      case 25: {
+                        LetterSpacing = input.ReadDouble();
+                        break;
+                      }
+                      case 34: {
+                        FontType = input.ReadString();
+                        break;
+                      }
+                      case 40: {
+                        Bold = input.ReadBool();
+                        break;
+                      }
+                      case 48: {
+                        Italic = input.ReadBool();
+                        break;
+                      }
+                      case 56: {
+                        Underlined = input.ReadBool();
+                        break;
+                      }
+                      case 64: {
+                        Strikeout = input.ReadBool();
+                        break;
+                      }
+                      case 72: {
+                        Subscript = input.ReadBool();
+                        break;
+                      }
+                      case 80: {
+                        Superscript = input.ReadBool();
+                        break;
+                      }
+                      case 88: {
+                        Smallcaps = input.ReadBool();
+                        break;
+                      }
+                      case 96: {
+                        FontWeight = input.ReadInt32();
+                        break;
+                      }
+                      case 104: {
+                        Handwritten = input.ReadBool();
+                        break;
+                      }
+                      case 114: {
+                        if (textColor_ == null) {
+                          TextColor = new global::Google.Type.Color();
+                        }
+                        input.ReadMessage(TextColor);
+                        break;
+                      }
+                      case 122: {
+                        if (backgroundColor_ == null) {
+                          BackgroundColor = new global::Google.Type.Color();
+                        }
+                        input.ReadMessage(BackgroundColor);
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
 
               }
 
@@ -6090,6 +6937,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             /// <summary>
             /// The history of this table.
             /// </summary>
+            [global::System.ObsoleteAttribute]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.Provenance Provenance {
@@ -7622,9 +8470,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int LanguageCodeFieldNumber = 1;
             private string languageCode_ = "";
             /// <summary>
-            /// The BCP-47 language code, such as `en-US` or `sr-Latn`. For more
-            /// information, see
-            /// https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+            /// The [BCP-47 language
+            /// code](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier),
+            /// such as `en-US` or `sr-Latn`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7808,7 +8656,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
 
           /// <summary>
-          /// Image Quality Scores for the page image
+          /// Image quality scores for the page image.
           /// </summary>
           public sealed partial class ImageQualityScores : pb::IMessage<ImageQualityScores>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7859,7 +8707,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public const int QualityScoreFieldNumber = 1;
             private float qualityScore_;
             /// <summary>
-            /// The overall quality score. Range `[0, 1]` where 1 is perfect quality.
+            /// The overall quality score. Range `[0, 1]` where `1` is perfect quality.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8110,8 +8958,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 public const int ConfidenceFieldNumber = 2;
                 private float confidence_;
                 /// <summary>
-                /// Confidence of detected defect. Range `[0, 1]` where 1 indicates
-                /// strong confidence of that the defect exists.
+                /// Confidence of detected defect. Range `[0, 1]` where `1` indicates
+                /// strong confidence that the defect exists.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11275,15 +12123,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             [pbr::OriginalName("REMOVE")] Remove = 2,
             /// <summary>
             /// Updates any fields within the given provenance scope of the message. It
-            /// 'overwrites'  the fields rather than replacing them.  This is
-            /// especially relevant when we just want to update a field value of an
-            /// entity without also affecting all the child properties.
+            /// overwrites the fields rather than replacing them.  Use this when you
+            /// want to update a field value of an entity without also updating all the
+            /// child properties.
             /// </summary>
             [pbr::OriginalName("UPDATE")] Update = 7,
             /// <summary>
             /// Currently unused. Replace an element identified by `parent`.
             /// </summary>
-            [global::System.ObsoleteAttribute]
             [pbr::OriginalName("REPLACE")] Replace = 3,
             /// <summary>
             /// Deprecated. Request human review for the element identified by
@@ -12611,6 +13458,393 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         }
         #endif
 
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The revision reference specifies which revision on the document to read.
+  /// </summary>
+  public sealed partial class RevisionRef : pb::IMessage<RevisionRef>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RevisionRef> _parser = new pb::MessageParser<RevisionRef>(() => new RevisionRef());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RevisionRef> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RevisionRef() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RevisionRef(RevisionRef other) : this() {
+      switch (other.SourceCase) {
+        case SourceOneofCase.RevisionCase:
+          RevisionCase = other.RevisionCase;
+          break;
+        case SourceOneofCase.RevisionId:
+          RevisionId = other.RevisionId;
+          break;
+        case SourceOneofCase.LatestProcessorVersion:
+          LatestProcessorVersion = other.LatestProcessorVersion;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RevisionRef Clone() {
+      return new RevisionRef(this);
+    }
+
+    /// <summary>Field number for the "revision_case" field.</summary>
+    public const int RevisionCaseFieldNumber = 1;
+    /// <summary>
+    /// Reads the revision by the predefined case.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef.Types.RevisionCase RevisionCase {
+      get { return HasRevisionCase ? (global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef.Types.RevisionCase) source_ : global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef.Types.RevisionCase.Unspecified; }
+      set {
+        source_ = value;
+        sourceCase_ = SourceOneofCase.RevisionCase;
+      }
+    }
+    /// <summary>Gets whether the "revision_case" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRevisionCase {
+      get { return sourceCase_ == SourceOneofCase.RevisionCase; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "revision_case" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRevisionCase() {
+      if (HasRevisionCase) {
+        ClearSource();
+      }
+    }
+
+    /// <summary>Field number for the "revision_id" field.</summary>
+    public const int RevisionIdFieldNumber = 2;
+    /// <summary>
+    /// Reads the revision given by the id.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RevisionId {
+      get { return HasRevisionId ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.RevisionId;
+      }
+    }
+    /// <summary>Gets whether the "revision_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRevisionId {
+      get { return sourceCase_ == SourceOneofCase.RevisionId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "revision_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRevisionId() {
+      if (HasRevisionId) {
+        ClearSource();
+      }
+    }
+
+    /// <summary>Field number for the "latest_processor_version" field.</summary>
+    public const int LatestProcessorVersionFieldNumber = 3;
+    /// <summary>
+    /// Reads the revision generated by the processor version.
+    /// The format takes the full resource name of processor version.
+    /// `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LatestProcessorVersion {
+      get { return HasLatestProcessorVersion ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.LatestProcessorVersion;
+      }
+    }
+    /// <summary>Gets whether the "latest_processor_version" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLatestProcessorVersion {
+      get { return sourceCase_ == SourceOneofCase.LatestProcessorVersion; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "latest_processor_version" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLatestProcessorVersion() {
+      if (HasLatestProcessorVersion) {
+        ClearSource();
+      }
+    }
+
+    private object source_;
+    /// <summary>Enum of possible cases for the "source" oneof.</summary>
+    public enum SourceOneofCase {
+      None = 0,
+      RevisionCase = 1,
+      RevisionId = 2,
+      LatestProcessorVersion = 3,
+    }
+    private SourceOneofCase sourceCase_ = SourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SourceOneofCase SourceCase {
+      get { return sourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSource() {
+      sourceCase_ = SourceOneofCase.None;
+      source_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RevisionRef);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RevisionRef other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RevisionCase != other.RevisionCase) return false;
+      if (RevisionId != other.RevisionId) return false;
+      if (LatestProcessorVersion != other.LatestProcessorVersion) return false;
+      if (SourceCase != other.SourceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasRevisionCase) hash ^= RevisionCase.GetHashCode();
+      if (HasRevisionId) hash ^= RevisionId.GetHashCode();
+      if (HasLatestProcessorVersion) hash ^= LatestProcessorVersion.GetHashCode();
+      hash ^= (int) sourceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasRevisionCase) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) RevisionCase);
+      }
+      if (HasRevisionId) {
+        output.WriteRawTag(18);
+        output.WriteString(RevisionId);
+      }
+      if (HasLatestProcessorVersion) {
+        output.WriteRawTag(26);
+        output.WriteString(LatestProcessorVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasRevisionCase) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) RevisionCase);
+      }
+      if (HasRevisionId) {
+        output.WriteRawTag(18);
+        output.WriteString(RevisionId);
+      }
+      if (HasLatestProcessorVersion) {
+        output.WriteRawTag(26);
+        output.WriteString(LatestProcessorVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasRevisionCase) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RevisionCase);
+      }
+      if (HasRevisionId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RevisionId);
+      }
+      if (HasLatestProcessorVersion) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LatestProcessorVersion);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RevisionRef other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.SourceCase) {
+        case SourceOneofCase.RevisionCase:
+          RevisionCase = other.RevisionCase;
+          break;
+        case SourceOneofCase.RevisionId:
+          RevisionId = other.RevisionId;
+          break;
+        case SourceOneofCase.LatestProcessorVersion:
+          LatestProcessorVersion = other.LatestProcessorVersion;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            source_ = input.ReadEnum();
+            sourceCase_ = SourceOneofCase.RevisionCase;
+            break;
+          }
+          case 18: {
+            RevisionId = input.ReadString();
+            break;
+          }
+          case 26: {
+            LatestProcessorVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            source_ = input.ReadEnum();
+            sourceCase_ = SourceOneofCase.RevisionCase;
+            break;
+          }
+          case 18: {
+            RevisionId = input.ReadString();
+            break;
+          }
+          case 26: {
+            LatestProcessorVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RevisionRef message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Some predefined revision cases.
+      /// </summary>
+      public enum RevisionCase {
+        /// <summary>
+        /// Unspecified case, fallback to read the LATEST_HUMAN_REVIEW.
+        /// </summary>
+        [pbr::OriginalName("REVISION_CASE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The latest revision made by a human.
+        /// </summary>
+        [pbr::OriginalName("LATEST_HUMAN_REVIEW")] LatestHumanReview = 1,
+        /// <summary>
+        /// The latest revision based on timestamp.
+        /// </summary>
+        [pbr::OriginalName("LATEST_TIMESTAMP")] LatestTimestamp = 2,
+        /// <summary>
+        /// The first (OCR) revision.
+        /// </summary>
+        [pbr::OriginalName("BASE_OCR_REVISION")] BaseOcrRevision = 3,
       }
 
     }

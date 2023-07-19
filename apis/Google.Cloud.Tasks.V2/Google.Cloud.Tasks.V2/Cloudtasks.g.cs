@@ -156,7 +156,8 @@ namespace Google.Cloud.Tasks.V2 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [ListQueues][google.cloud.tasks.v2.CloudTasks.ListQueues].
+  /// Request message for
+  /// [ListQueues][google.cloud.tasks.v2.CloudTasks.ListQueues].
   /// </summary>
   public sealed partial class ListQueuesRequest : pb::IMessage<ListQueuesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -225,11 +226,10 @@ namespace Google.Cloud.Tasks.V2 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// `filter` can be used to specify a subset of queues. Any [Queue][google.cloud.tasks.v2.Queue]
-    /// field can be used as a filter and several operators as supported.
-    /// For example: `&lt;=, &lt;, >=, >, !=, =, :`. The filter syntax is the same as
-    /// described in
-    /// [Stackdriver's Advanced Logs
+    /// `filter` can be used to specify a subset of queues. Any
+    /// [Queue][google.cloud.tasks.v2.Queue] field can be used as a filter and
+    /// several operators as supported. For example: `&lt;=, &lt;, >=, >, !=, =, :`. The
+    /// filter syntax is the same as described in [Stackdriver's Advanced Logs
     /// Filters](https://cloud.google.com/logging/docs/view/advanced_filters).
     ///
     /// Sample filter "state: PAUSED".
@@ -255,8 +255,8 @@ namespace Google.Cloud.Tasks.V2 {
     /// The maximum page size is 9800. If unspecified, the page size will
     /// be the maximum. Fewer queues than requested might be returned,
     /// even if more queues exist; use the
-    /// [next_page_token][google.cloud.tasks.v2.ListQueuesResponse.next_page_token] in the
-    /// response to determine if more queues exist.
+    /// [next_page_token][google.cloud.tasks.v2.ListQueuesResponse.next_page_token]
+    /// in the response to determine if more queues exist.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -275,10 +275,12 @@ namespace Google.Cloud.Tasks.V2 {
     ///
     /// To request the first page results, page_token must be empty. To
     /// request the next page of results, page_token must be the value of
-    /// [next_page_token][google.cloud.tasks.v2.ListQueuesResponse.next_page_token] returned
-    /// from the previous call to [ListQueues][google.cloud.tasks.v2.CloudTasks.ListQueues]
-    /// method. It is an error to switch the value of the
-    /// [filter][google.cloud.tasks.v2.ListQueuesRequest.filter] while iterating through pages.
+    /// [next_page_token][google.cloud.tasks.v2.ListQueuesResponse.next_page_token]
+    /// returned from the previous call to
+    /// [ListQueues][google.cloud.tasks.v2.CloudTasks.ListQueues] method. It is an
+    /// error to switch the value of the
+    /// [filter][google.cloud.tasks.v2.ListQueuesRequest.filter] while iterating
+    /// through pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -495,7 +497,8 @@ namespace Google.Cloud.Tasks.V2 {
   }
 
   /// <summary>
-  /// Response message for [ListQueues][google.cloud.tasks.v2.CloudTasks.ListQueues].
+  /// Response message for
+  /// [ListQueues][google.cloud.tasks.v2.CloudTasks.ListQueues].
   /// </summary>
   public sealed partial class ListQueuesResponse : pb::IMessage<ListQueuesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -563,8 +566,8 @@ namespace Google.Cloud.Tasks.V2 {
     /// A token to retrieve next page of results.
     ///
     /// To return the next page of results, call
-    /// [ListQueues][google.cloud.tasks.v2.CloudTasks.ListQueues] with this value as the
-    /// [page_token][google.cloud.tasks.v2.ListQueuesRequest.page_token].
+    /// [ListQueues][google.cloud.tasks.v2.CloudTasks.ListQueues] with this value
+    /// as the [page_token][google.cloud.tasks.v2.ListQueuesRequest.page_token].
     ///
     /// If the next_page_token is empty, there are no more results.
     ///
@@ -923,7 +926,8 @@ namespace Google.Cloud.Tasks.V2 {
   }
 
   /// <summary>
-  /// Request message for [CreateQueue][google.cloud.tasks.v2.CloudTasks.CreateQueue].
+  /// Request message for
+  /// [CreateQueue][google.cloud.tasks.v2.CloudTasks.CreateQueue].
   /// </summary>
   public sealed partial class CreateQueueRequest : pb::IMessage<CreateQueueRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -996,7 +1000,8 @@ namespace Google.Cloud.Tasks.V2 {
     /// <summary>
     /// Required. The queue to create.
     ///
-    /// [Queue's name][google.cloud.tasks.v2.Queue.name] cannot be the same as an existing queue.
+    /// [Queue's name][google.cloud.tasks.v2.Queue.name] cannot be the same as an
+    /// existing queue.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1174,7 +1179,8 @@ namespace Google.Cloud.Tasks.V2 {
   }
 
   /// <summary>
-  /// Request message for [UpdateQueue][google.cloud.tasks.v2.CloudTasks.UpdateQueue].
+  /// Request message for
+  /// [UpdateQueue][google.cloud.tasks.v2.CloudTasks.UpdateQueue].
   /// </summary>
   public sealed partial class UpdateQueueRequest : pb::IMessage<UpdateQueueRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1435,7 +1441,8 @@ namespace Google.Cloud.Tasks.V2 {
   }
 
   /// <summary>
-  /// Request message for [DeleteQueue][google.cloud.tasks.v2.CloudTasks.DeleteQueue].
+  /// Request message for
+  /// [DeleteQueue][google.cloud.tasks.v2.CloudTasks.DeleteQueue].
   /// </summary>
   public sealed partial class DeleteQueueRequest : pb::IMessage<DeleteQueueRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1631,7 +1638,8 @@ namespace Google.Cloud.Tasks.V2 {
   }
 
   /// <summary>
-  /// Request message for [PurgeQueue][google.cloud.tasks.v2.CloudTasks.PurgeQueue].
+  /// Request message for
+  /// [PurgeQueue][google.cloud.tasks.v2.CloudTasks.PurgeQueue].
   /// </summary>
   public sealed partial class PurgeQueueRequest : pb::IMessage<PurgeQueueRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1827,7 +1835,8 @@ namespace Google.Cloud.Tasks.V2 {
   }
 
   /// <summary>
-  /// Request message for [PauseQueue][google.cloud.tasks.v2.CloudTasks.PauseQueue].
+  /// Request message for
+  /// [PauseQueue][google.cloud.tasks.v2.CloudTasks.PauseQueue].
   /// </summary>
   public sealed partial class PauseQueueRequest : pb::IMessage<PauseQueueRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2023,7 +2032,8 @@ namespace Google.Cloud.Tasks.V2 {
   }
 
   /// <summary>
-  /// Request message for [ResumeQueue][google.cloud.tasks.v2.CloudTasks.ResumeQueue].
+  /// Request message for
+  /// [ResumeQueue][google.cloud.tasks.v2.CloudTasks.ResumeQueue].
   /// </summary>
   public sealed partial class ResumeQueueRequest : pb::IMessage<ResumeQueueRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2219,7 +2229,8 @@ namespace Google.Cloud.Tasks.V2 {
   }
 
   /// <summary>
-  /// Request message for listing tasks using [ListTasks][google.cloud.tasks.v2.CloudTasks.ListTasks].
+  /// Request message for listing tasks using
+  /// [ListTasks][google.cloud.tasks.v2.CloudTasks.ListTasks].
   /// </summary>
   public sealed partial class ListTasksRequest : pb::IMessage<ListTasksRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2288,11 +2299,11 @@ namespace Google.Cloud.Tasks.V2 {
     public const int ResponseViewFieldNumber = 2;
     private global::Google.Cloud.Tasks.V2.Task.Types.View responseView_ = global::Google.Cloud.Tasks.V2.Task.Types.View.Unspecified;
     /// <summary>
-    /// The response_view specifies which subset of the [Task][google.cloud.tasks.v2.Task] will be
-    /// returned.
+    /// The response_view specifies which subset of the
+    /// [Task][google.cloud.tasks.v2.Task] will be returned.
     ///
-    /// By default response_view is [BASIC][google.cloud.tasks.v2.Task.View.BASIC]; not all
-    /// information is retrieved by default because some data, such as
+    /// By default response_view is [BASIC][google.cloud.tasks.v2.Task.View.BASIC];
+    /// not all information is retrieved by default because some data, such as
     /// payloads, might be desirable to return only when needed because
     /// of its large size or because of the sensitivity of data that it
     /// contains.
@@ -2317,8 +2328,8 @@ namespace Google.Cloud.Tasks.V2 {
     /// Maximum page size.
     ///
     /// Fewer tasks than requested might be returned, even if more tasks exist; use
-    /// [next_page_token][google.cloud.tasks.v2.ListTasksResponse.next_page_token] in the response to
-    /// determine if more tasks exist.
+    /// [next_page_token][google.cloud.tasks.v2.ListTasksResponse.next_page_token]
+    /// in the response to determine if more tasks exist.
     ///
     /// The maximum page size is 1000. If unspecified, the page size will be the
     /// maximum.
@@ -2340,9 +2351,9 @@ namespace Google.Cloud.Tasks.V2 {
     ///
     /// To request the first page results, page_token must be empty. To
     /// request the next page of results, page_token must be the value of
-    /// [next_page_token][google.cloud.tasks.v2.ListTasksResponse.next_page_token] returned
-    /// from the previous call to [ListTasks][google.cloud.tasks.v2.CloudTasks.ListTasks]
-    /// method.
+    /// [next_page_token][google.cloud.tasks.v2.ListTasksResponse.next_page_token]
+    /// returned from the previous call to
+    /// [ListTasks][google.cloud.tasks.v2.CloudTasks.ListTasks] method.
     ///
     /// The page token is valid for only 2 hours.
     /// </summary>
@@ -2561,7 +2572,8 @@ namespace Google.Cloud.Tasks.V2 {
   }
 
   /// <summary>
-  /// Response message for listing tasks using [ListTasks][google.cloud.tasks.v2.CloudTasks.ListTasks].
+  /// Response message for listing tasks using
+  /// [ListTasks][google.cloud.tasks.v2.CloudTasks.ListTasks].
   /// </summary>
   public sealed partial class ListTasksResponse : pb::IMessage<ListTasksResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2629,8 +2641,8 @@ namespace Google.Cloud.Tasks.V2 {
     /// A token to retrieve next page of results.
     ///
     /// To return the next page of results, call
-    /// [ListTasks][google.cloud.tasks.v2.CloudTasks.ListTasks] with this value as the
-    /// [page_token][google.cloud.tasks.v2.ListTasksRequest.page_token].
+    /// [ListTasks][google.cloud.tasks.v2.CloudTasks.ListTasks] with this value as
+    /// the [page_token][google.cloud.tasks.v2.ListTasksRequest.page_token].
     ///
     /// If the next_page_token is empty, there are no more results.
     /// </summary>
@@ -2791,7 +2803,8 @@ namespace Google.Cloud.Tasks.V2 {
   }
 
   /// <summary>
-  /// Request message for getting a task using [GetTask][google.cloud.tasks.v2.CloudTasks.GetTask].
+  /// Request message for getting a task using
+  /// [GetTask][google.cloud.tasks.v2.CloudTasks.GetTask].
   /// </summary>
   public sealed partial class GetTaskRequest : pb::IMessage<GetTaskRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2858,11 +2871,11 @@ namespace Google.Cloud.Tasks.V2 {
     public const int ResponseViewFieldNumber = 2;
     private global::Google.Cloud.Tasks.V2.Task.Types.View responseView_ = global::Google.Cloud.Tasks.V2.Task.Types.View.Unspecified;
     /// <summary>
-    /// The response_view specifies which subset of the [Task][google.cloud.tasks.v2.Task] will be
-    /// returned.
+    /// The response_view specifies which subset of the
+    /// [Task][google.cloud.tasks.v2.Task] will be returned.
     ///
-    /// By default response_view is [BASIC][google.cloud.tasks.v2.Task.View.BASIC]; not all
-    /// information is retrieved by default because some data, such as
+    /// By default response_view is [BASIC][google.cloud.tasks.v2.Task.View.BASIC];
+    /// not all information is retrieved by default because some data, such as
     /// payloads, might be desirable to return only when needed because
     /// of its large size or because of the sensitivity of data that it
     /// contains.
@@ -3038,7 +3051,8 @@ namespace Google.Cloud.Tasks.V2 {
   }
 
   /// <summary>
-  /// Request message for [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask].
+  /// Request message for
+  /// [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask].
   /// </summary>
   public sealed partial class CreateTaskRequest : pb::IMessage<CreateTaskRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3112,13 +3126,13 @@ namespace Google.Cloud.Tasks.V2 {
     ///
     /// Task names have the following format:
     /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`.
-    /// The user can optionally specify a task [name][google.cloud.tasks.v2.Task.name]. If a
-    /// name is not specified then the system will generate a random
-    /// unique task id, which will be set in the task returned in the
-    /// [response][google.cloud.tasks.v2.Task.name].
+    /// The user can optionally specify a task
+    /// [name][google.cloud.tasks.v2.Task.name]. If a name is not specified then
+    /// the system will generate a random unique task id, which will be set in the
+    /// task returned in the [response][google.cloud.tasks.v2.Task.name].
     ///
-    /// If [schedule_time][google.cloud.tasks.v2.Task.schedule_time] is not set or is in the
-    /// past then Cloud Tasks will set it to the current time.
+    /// If [schedule_time][google.cloud.tasks.v2.Task.schedule_time] is not set or
+    /// is in the past then Cloud Tasks will set it to the current time.
     ///
     /// Task De-duplication:
     ///
@@ -3133,10 +3147,10 @@ namespace Google.Cloud.Tasks.V2 {
     /// for ~9days after the original task was deleted or executed.
     ///
     /// Because there is an extra lookup cost to identify duplicate task
-    /// names, these [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask] calls have significantly
-    /// increased latency. Using hashed strings for the task id or for
-    /// the prefix of the task id is recommended. Choosing task ids that
-    /// are sequential or have sequential prefixes, for example using a
+    /// names, these [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask]
+    /// calls have significantly increased latency. Using hashed strings for the
+    /// task id or for the prefix of the task id is recommended. Choosing task ids
+    /// that are sequential or have sequential prefixes, for example using a
     /// timestamp, causes an increase in latency and error rates in all
     /// task commands. The infrastructure relies on an approximately
     /// uniform distribution of task ids to store and serve tasks
@@ -3155,11 +3169,11 @@ namespace Google.Cloud.Tasks.V2 {
     public const int ResponseViewFieldNumber = 3;
     private global::Google.Cloud.Tasks.V2.Task.Types.View responseView_ = global::Google.Cloud.Tasks.V2.Task.Types.View.Unspecified;
     /// <summary>
-    /// The response_view specifies which subset of the [Task][google.cloud.tasks.v2.Task] will be
-    /// returned.
+    /// The response_view specifies which subset of the
+    /// [Task][google.cloud.tasks.v2.Task] will be returned.
     ///
-    /// By default response_view is [BASIC][google.cloud.tasks.v2.Task.View.BASIC]; not all
-    /// information is retrieved by default because some data, such as
+    /// By default response_view is [BASIC][google.cloud.tasks.v2.Task.View.BASIC];
+    /// not all information is retrieved by default because some data, such as
     /// payloads, might be desirable to return only when needed because
     /// of its large size or because of the sensitivity of data that it
     /// contains.
@@ -3633,11 +3647,11 @@ namespace Google.Cloud.Tasks.V2 {
     public const int ResponseViewFieldNumber = 2;
     private global::Google.Cloud.Tasks.V2.Task.Types.View responseView_ = global::Google.Cloud.Tasks.V2.Task.Types.View.Unspecified;
     /// <summary>
-    /// The response_view specifies which subset of the [Task][google.cloud.tasks.v2.Task] will be
-    /// returned.
+    /// The response_view specifies which subset of the
+    /// [Task][google.cloud.tasks.v2.Task] will be returned.
     ///
-    /// By default response_view is [BASIC][google.cloud.tasks.v2.Task.View.BASIC]; not all
-    /// information is retrieved by default because some data, such as
+    /// By default response_view is [BASIC][google.cloud.tasks.v2.Task.View.BASIC];
+    /// not all information is retrieved by default because some data, such as
     /// payloads, might be desirable to return only when needed because
     /// of its large size or because of the sensitivity of data that it
     /// contains.

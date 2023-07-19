@@ -1,4 +1,4 @@
-﻿// Copyright 2018, Google LLC
+// Copyright 2018, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -71,19 +71,19 @@ namespace Google.Cloud.Firestore.Converters
                 .AsReadOnly();
         }
 
-        public object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values)
+        public object DeserializeMap(IDeserializationContext context, IDictionary<string, Value> values)
         {
             var poco = ValueDeserializer.DeserializeMap(context, values, typeof(Dictionary<string, object>));
             return ApplyConversionToPoco(context, poco);
         }
 
-        public object DeserializeValue(DeserializationContext context, Value value)
+        public object DeserializeValue(IDeserializationContext context, Value value)
         {
             var poco = ValueDeserializer.Deserialize(context, value, typeof(object));
             return ApplyConversionToPoco(context, poco);
         }
 
-        private object ApplyConversionToPoco(DeserializationContext context, object poco)
+        private object ApplyConversionToPoco(IDeserializationContext context, object poco)
         {
             if (poco is Dictionary<string, object> dictionary)
             {

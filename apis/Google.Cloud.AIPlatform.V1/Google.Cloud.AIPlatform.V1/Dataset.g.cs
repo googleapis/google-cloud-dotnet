@@ -31,47 +31,47 @@ namespace Google.Cloud.AIPlatform.V1 {
             "GiNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9pby5wcm90bxosZ29vZ2xl",
             "L2Nsb3VkL2FpcGxhdGZvcm0vdjEvc2F2ZWRfcXVlcnkucHJvdG8aHGdvb2ds",
             "ZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
-            "c3RhbXAucHJvdG8ijwUKB0RhdGFzZXQSEQoEbmFtZRgBIAEoCUID4EEDEhkK",
+            "c3RhbXAucHJvdG8irQUKB0RhdGFzZXQSEQoEbmFtZRgBIAEoCUID4EEDEhkK",
             "DGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEhMKC2Rlc2NyaXB0aW9uGBAgASgJ",
             "EiAKE21ldGFkYXRhX3NjaGVtYV91cmkYAyABKAlCA+BBAhItCghtZXRhZGF0",
-            "YRgIIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZUID4EECEjQKC2NyZWF0",
-            "ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "EjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDEgwKBGV0YWcYBiABKAkSPwoGbGFiZWxzGAcgAygLMi8uZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGF0YXNldC5MYWJlbHNFbnRyeRI9",
-            "Cg1zYXZlZF9xdWVyaWVzGAkgAygLMiYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuU2F2ZWRRdWVyeRJDCg9lbmNyeXB0aW9uX3NwZWMYCyABKAsyKi5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbmNyeXB0aW9uU3BlYxIeChFt",
-            "ZXRhZGF0YV9hcnRpZmFjdBgRIAEoCUID4EEDGi0KC0xhYmVsc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6YupBXwohYWlwbGF0Zm9y",
-            "bS5nb29nbGVhcGlzLmNvbS9EYXRhc2V0Ejpwcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YXNldHMve2RhdGFzZXR9IqQDChBJ",
-            "bXBvcnREYXRhQ29uZmlnEjsKCmdjc19zb3VyY2UYASABKAsyJS5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5HY3NTb3VyY2VIABJaChBkYXRhX2l0ZW1f",
-            "bGFiZWxzGAIgAygLMkAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW1w",
-            "b3J0RGF0YUNvbmZpZy5EYXRhSXRlbUxhYmVsc0VudHJ5El0KEWFubm90YXRp",
-            "b25fbGFiZWxzGAMgAygLMkIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "SW1wb3J0RGF0YUNvbmZpZy5Bbm5vdGF0aW9uTGFiZWxzRW50cnkSHgoRaW1w",
-            "b3J0X3NjaGVtYV91cmkYBCABKAlCA+BBAho1ChNEYXRhSXRlbUxhYmVsc0Vu",
-            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaNwoVQW5ub3Rh",
-            "dGlvbkxhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAFCCAoGc291cmNlItgBChBFeHBvcnREYXRhQ29uZmlnEkUKD2djc19kZXN0",
-            "aW5hdGlvbhgBIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdj",
-            "c0Rlc3RpbmF0aW9uSAASSQoOZnJhY3Rpb25fc3BsaXQYBSABKAsyLy5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FeHBvcnRGcmFjdGlvblNwbGl0SAES",
-            "GgoSYW5ub3RhdGlvbnNfZmlsdGVyGAIgASgJQg0KC2Rlc3RpbmF0aW9uQgcK",
-            "BXNwbGl0ImQKE0V4cG9ydEZyYWN0aW9uU3BsaXQSGQoRdHJhaW5pbmdfZnJh",
-            "Y3Rpb24YASABKAESGwoTdmFsaWRhdGlvbl9mcmFjdGlvbhgCIAEoARIVCg10",
-            "ZXN0X2ZyYWN0aW9uGAMgASgBQsoBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjFCDERhdGFzZXRQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dv",
-            "L2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoC",
-            "Gkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJ",
-            "UGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIG",
-            "cHJvdG8z"));
+            "YRgIIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZUID4EECEhwKD2RhdGFf",
+            "aXRlbV9jb3VudBgKIAEoA0ID4EEDEjQKC2NyZWF0ZV90aW1lGAQgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1l",
+            "GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEgwKBGV0",
+            "YWcYBiABKAkSPwoGbGFiZWxzGAcgAygLMi8uZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuRGF0YXNldC5MYWJlbHNFbnRyeRI9Cg1zYXZlZF9xdWVyaWVz",
+            "GAkgAygLMiYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU2F2ZWRRdWVy",
+            "eRJDCg9lbmNyeXB0aW9uX3NwZWMYCyABKAsyKi5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5FbmNyeXB0aW9uU3BlYxIeChFtZXRhZGF0YV9hcnRpZmFj",
+            "dBgRIAEoCUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAE6YupBXwohYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
+            "bS9EYXRhc2V0Ejpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vZGF0YXNldHMve2RhdGFzZXR9IqQDChBJbXBvcnREYXRhQ29uZmln",
+            "EjsKCmdjc19zb3VyY2UYASABKAsyJS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5HY3NTb3VyY2VIABJaChBkYXRhX2l0ZW1fbGFiZWxzGAIgAygLMkAu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW1wb3J0RGF0YUNvbmZpZy5E",
+            "YXRhSXRlbUxhYmVsc0VudHJ5El0KEWFubm90YXRpb25fbGFiZWxzGAMgAygL",
+            "MkIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW1wb3J0RGF0YUNvbmZp",
+            "Zy5Bbm5vdGF0aW9uTGFiZWxzRW50cnkSHgoRaW1wb3J0X3NjaGVtYV91cmkY",
+            "BCABKAlCA+BBAho1ChNEYXRhSXRlbUxhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAEaNwoVQW5ub3RhdGlvbkxhYmVsc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCCAoGc291cmNlItgB",
+            "ChBFeHBvcnREYXRhQ29uZmlnEkUKD2djc19kZXN0aW5hdGlvbhgBIAEoCzIq",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdjc0Rlc3RpbmF0aW9uSAAS",
+            "SQoOZnJhY3Rpb25fc3BsaXQYBSABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5FeHBvcnRGcmFjdGlvblNwbGl0SAESGgoSYW5ub3RhdGlvbnNf",
+            "ZmlsdGVyGAIgASgJQg0KC2Rlc3RpbmF0aW9uQgcKBXNwbGl0ImQKE0V4cG9y",
+            "dEZyYWN0aW9uU3BsaXQSGQoRdHJhaW5pbmdfZnJhY3Rpb24YASABKAESGwoT",
+            "dmFsaWRhdGlvbl9mcmFjdGlvbhgCIAEoARIVCg10ZXN0X2ZyYWN0aW9uGAMg",
+            "ASgBQsoBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDERhdGFz",
+            "ZXRQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBp",
+            "djEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5B",
+            "SVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1H",
+            "b29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.SavedQueryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Dataset), global::Google.Cloud.AIPlatform.V1.Dataset.Parser, new[]{ "Name", "DisplayName", "Description", "MetadataSchemaUri", "Metadata", "CreateTime", "UpdateTime", "Etag", "Labels", "SavedQueries", "EncryptionSpec", "MetadataArtifact" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Dataset), global::Google.Cloud.AIPlatform.V1.Dataset.Parser, new[]{ "Name", "DisplayName", "Description", "MetadataSchemaUri", "Metadata", "DataItemCount", "CreateTime", "UpdateTime", "Etag", "Labels", "SavedQueries", "EncryptionSpec", "MetadataArtifact" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ImportDataConfig), global::Google.Cloud.AIPlatform.V1.ImportDataConfig.Parser, new[]{ "GcsSource", "DataItemLabels", "AnnotationLabels", "ImportSchemaUri" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExportDataConfig), global::Google.Cloud.AIPlatform.V1.ExportDataConfig.Parser, new[]{ "GcsDestination", "FractionSplit", "AnnotationsFilter" }, new[]{ "Destination", "Split" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExportFractionSplit), global::Google.Cloud.AIPlatform.V1.ExportFractionSplit.Parser, new[]{ "TrainingFraction", "ValidationFraction", "TestFraction" }, null, null, null, null)
@@ -123,6 +123,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       description_ = other.description_;
       metadataSchemaUri_ = other.metadataSchemaUri_;
       metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
+      dataItemCount_ = other.dataItemCount_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       etag_ = other.etag_;
@@ -216,6 +217,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return metadata_; }
       set {
         metadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data_item_count" field.</summary>
+    public const int DataItemCountFieldNumber = 10;
+    private long dataItemCount_;
+    /// <summary>
+    /// Output only. The number of DataItems in this Dataset. Only apply for
+    /// non-structured Dataset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long DataItemCount {
+      get { return dataItemCount_; }
+      set {
+        dataItemCount_ = value;
       }
     }
 
@@ -368,6 +385,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Description != other.Description) return false;
       if (MetadataSchemaUri != other.MetadataSchemaUri) return false;
       if (!object.Equals(Metadata, other.Metadata)) return false;
+      if (DataItemCount != other.DataItemCount) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Etag != other.Etag) return false;
@@ -387,6 +405,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (MetadataSchemaUri.Length != 0) hash ^= MetadataSchemaUri.GetHashCode();
       if (metadata_ != null) hash ^= Metadata.GetHashCode();
+      if (DataItemCount != 0L) hash ^= DataItemCount.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
@@ -442,6 +461,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(Metadata);
       }
       savedQueries_.WriteTo(output, _repeated_savedQueries_codec);
+      if (DataItemCount != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(DataItemCount);
+      }
       if (encryptionSpec_ != null) {
         output.WriteRawTag(90);
         output.WriteMessage(EncryptionSpec);
@@ -494,6 +517,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(Metadata);
       }
       savedQueries_.WriteTo(ref output, _repeated_savedQueries_codec);
+      if (DataItemCount != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(DataItemCount);
+      }
       if (encryptionSpec_ != null) {
         output.WriteRawTag(90);
         output.WriteMessage(EncryptionSpec);
@@ -530,6 +557,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (metadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
+      }
+      if (DataItemCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DataItemCount);
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
@@ -577,6 +607,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           Metadata = new global::Google.Protobuf.WellKnownTypes.Value();
         }
         Metadata.MergeFrom(other.Metadata);
+      }
+      if (other.DataItemCount != 0L) {
+        DataItemCount = other.DataItemCount;
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
@@ -664,6 +697,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             savedQueries_.AddEntriesFrom(input, _repeated_savedQueries_codec);
             break;
           }
+          case 80: {
+            DataItemCount = input.ReadInt64();
+            break;
+          }
           case 90: {
             if (encryptionSpec_ == null) {
               EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
@@ -737,6 +774,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 74: {
             savedQueries_.AddEntriesFrom(ref input, _repeated_savedQueries_codec);
+            break;
+          }
+          case 80: {
+            DataItemCount = input.ReadInt64();
             break;
           }
           case 90: {

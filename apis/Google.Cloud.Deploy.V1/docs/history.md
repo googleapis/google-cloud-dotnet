@@ -1,5 +1,23 @@
 # Version history
 
+## Version 2.7.0, released 2023-07-13
+
+### New features
+
+- Added support routeUpdateWaitTime field for Deployment Strategies ([commit 783acf4](https://github.com/googleapis/google-cloud-dotnet/commit/783acf4ab45ca43006ebdd21d510f9121f2610e7))
+
+## Version 2.6.0, released 2023-06-27
+
+### New features
+
+- Add deploy parameters for cloud deploy ([commit 09b648f](https://github.com/googleapis/google-cloud-dotnet/commit/09b648f9964573de91bb23b2da17d788174b3242))
+
+## Version 2.5.0, released 2023-06-20
+
+### New features
+
+- Add support for disabling Pod overprovisioning in the progressive deployment strategy configuration for a Kubernetes Target ([commit c1fc355](https://github.com/googleapis/google-cloud-dotnet/commit/c1fc355a5c2f9253d6f7d29a8ad03914cfe7c2c7))
+
 ## Version 2.4.0, released 2023-05-03
 
 ### New features

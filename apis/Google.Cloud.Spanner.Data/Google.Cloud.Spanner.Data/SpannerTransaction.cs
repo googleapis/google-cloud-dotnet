@@ -59,6 +59,8 @@ namespace Google.Cloud.Spanner.Data
     public sealed class SpannerTransaction : SpannerTransactionBase, ISpannerTransaction
     {
         private readonly List<Mutation> _mutations = new List<Mutation>();
+        // This value will be true if and only if this transaction was created by RetriableTransaction.
+        private readonly bool _isRetriable = false;
         private DisposeBehavior _disposeBehavior = DisposeBehavior.ReleaseToPool;
         private bool _disposed = false;
 
@@ -192,7 +194,8 @@ namespace Google.Cloud.Spanner.Data
             SpannerConnection connection,
             TransactionMode mode,
             PooledSession session,
-            TimestampBound timestampBound)
+            TimestampBound timestampBound,
+            bool isRetriable)
         {
             SpannerConnection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
             CommitTimeout = SpannerConnection.Builder.Timeout;
@@ -200,6 +203,7 @@ namespace Google.Cloud.Spanner.Data
             Mode = mode;
             _session = GaxPreconditions.CheckNotNull(session, nameof(session));
             TimestampBound = timestampBound;
+            _isRetriable = isRetriable;
         }
 
         /// <summary>
@@ -460,6 +464,19 @@ namespace Google.Cloud.Spanner.Data
                 return;
             }
             _disposed = true;
+
+            if (_isRetriable)
+            {
+                // If this transaction is being used by RetriableTransaction, we want to dispose of this instance
+                // but we don't want to do anything with the session, as the RetriableTransaction will attempt to
+                // reuse it with a fresh transaction.
+                // If acquiring a fresh transaction with the existing session fails, the session will be disposed
+                // and a new one with a fresh transaction will be obtained.
+                // If acquiring a fresh transaction succeeds, then the session will be disposed after the RetriableTransaction
+                // succeeds or we have stopped retrying.
+                return;
+            }
+
             switch (DisposeBehavior)
             {
                 case DisposeBehavior.CloseResources:
@@ -475,8 +492,16 @@ namespace Google.Cloud.Spanner.Data
                     }
                     _session.ReleaseToPool(forceDelete: false);
                     break;
+                case DisposeBehavior.Detach:
+                    // A detached transaction is expected to be explicitly shared across processes.
+                    // So we don't release it back to the pool, but we need to mark it as disposed and stop counting it as active
+                    // if it was created in the targeted pool. The first time a detached transaction is created, it will be created
+                    // in the targeted pool, subsequent times (as the transaction ID is used) it will be created in the detached pool
+                    // which doesn't keep track of active transactions/sessions.
+                    _session.DetachFromPool();
+                    break;
                 default:
-                    // Default for detached or unknown DisposeBehavior is to do nothing.
+                    // Default for unknown DisposeBehavior is to do nothing.
                     break;
             }
         }

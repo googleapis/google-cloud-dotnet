@@ -50,7 +50,9 @@ namespace GoogleCSharpSnippets
                 FieldMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAssetsResponse, ListAssetsResponse.Types.ListAssetsResult> response = securityCenterClient.ListAssetsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((ListAssetsResponse.Types.ListAssetsResult item) =>

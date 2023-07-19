@@ -27,77 +27,78 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "CjJnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92MmJldGExL2F1ZGlvX2NvbmZp",
             "Zy5wcm90bxIfZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMRofZ29v",
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
-            "dXJjZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvIi8K",
-            "DVNwZWVjaENvbnRleHQSDwoHcGhyYXNlcxgBIAMoCRINCgVib29zdBgCIAEo",
-            "AiKSAQoOU3BlZWNoV29yZEluZm8SDAoEd29yZBgDIAEoCRIvCgxzdGFydF9v",
-            "ZmZzZXQYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLQoKZW5k",
-            "X29mZnNldBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhISCgpj",
-            "b25maWRlbmNlGAQgASgCInsKDUJhcmdlSW5Db25maWcSNwoUbm9fYmFyZ2Vf",
-            "aW5fZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24S",
-            "MQoOdG90YWxfZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
-            "YXRpb24imQQKEElucHV0QXVkaW9Db25maWcSRgoOYXVkaW9fZW5jb2RpbmcY",
-            "ASABKA4yLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLkF1ZGlv",
-            "RW5jb2RpbmcSGQoRc2FtcGxlX3JhdGVfaGVydHoYAiABKAUSFQoNbGFuZ3Vh",
-            "Z2VfY29kZRgDIAEoCRIYChBlbmFibGVfd29yZF9pbmZvGA0gASgIEhgKDHBo",
-            "cmFzZV9oaW50cxgEIAMoCUICGAESRwoPc3BlZWNoX2NvbnRleHRzGAsgAygL",
-            "Mi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5TcGVlY2hDb250",
-            "ZXh0Eg0KBW1vZGVsGAcgASgJEkoKDW1vZGVsX3ZhcmlhbnQYCiABKA4yMy5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLlNwZWVjaE1vZGVsVmFy",
-            "aWFudBIYChBzaW5nbGVfdXR0ZXJhbmNlGAggASgIEioKImRpc2FibGVfbm9f",
-            "c3BlZWNoX3JlY29nbml6ZWRfZXZlbnQYDiABKAgSRwoPYmFyZ2VfaW5fY29u",
-            "ZmlnGA8gASgLMi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5C",
-            "YXJnZUluQ29uZmlnEiQKHGVuYWJsZV9hdXRvbWF0aWNfcHVuY3R1YXRpb24Y",
-            "ESABKAgiawoUVm9pY2VTZWxlY3Rpb25QYXJhbXMSDAoEbmFtZRgBIAEoCRJF",
-            "Cgtzc21sX2dlbmRlchgCIAEoDjIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyYmV0YTEuU3NtbFZvaWNlR2VuZGVyIrgBChZTeW50aGVzaXplU3BlZWNo",
-            "Q29uZmlnEhUKDXNwZWFraW5nX3JhdGUYASABKAESDQoFcGl0Y2gYAiABKAES",
-            "FgoOdm9sdW1lX2dhaW5fZGIYAyABKAESGgoSZWZmZWN0c19wcm9maWxlX2lk",
-            "GAUgAygJEkQKBXZvaWNlGAQgASgLMjUuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjJiZXRhMS5Wb2ljZVNlbGVjdGlvblBhcmFtcyLcAQoRT3V0cHV0QXVk",
-            "aW9Db25maWcSUQoOYXVkaW9fZW5jb2RpbmcYASABKA4yNC5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy52MmJldGExLk91dHB1dEF1ZGlvRW5jb2RpbmdCA+BB",
-            "AhIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgCIAEoBRJZChhzeW50aGVzaXplX3Nw",
-            "ZWVjaF9jb25maWcYAyABKAsyNy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
-            "MmJldGExLlN5bnRoZXNpemVTcGVlY2hDb25maWciWgoTVGVsZXBob255RHRt",
-            "ZkV2ZW50cxJDCgtkdG1mX2V2ZW50cxgBIAMoDjIuLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LnYyYmV0YTEuVGVsZXBob255RHRtZiJ2ChJTcGVlY2hUb1Rl",
-            "eHRDb25maWcSUQoUc3BlZWNoX21vZGVsX3ZhcmlhbnQYASABKA4yMy5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLlNwZWVjaE1vZGVsVmFyaWFu",
-            "dBINCgVtb2RlbBgCIAEoCSr7AQoNQXVkaW9FbmNvZGluZxIeChpBVURJT19F",
-            "TkNPRElOR19VTlNQRUNJRklFRBAAEhwKGEFVRElPX0VOQ09ESU5HX0xJTkVB",
-            "Ul8xNhABEhcKE0FVRElPX0VOQ09ESU5HX0ZMQUMQAhIYChRBVURJT19FTkNP",
-            "RElOR19NVUxBVxADEhYKEkFVRElPX0VOQ09ESU5HX0FNUhAEEhkKFUFVRElP",
-            "X0VOQ09ESU5HX0FNUl9XQhAFEhsKF0FVRElPX0VOQ09ESU5HX09HR19PUFVT",
-            "EAYSKQolQVVESU9fRU5DT0RJTkdfU1BFRVhfV0lUSF9IRUFERVJfQllURRAH",
-            "KnYKElNwZWVjaE1vZGVsVmFyaWFudBIkCiBTUEVFQ0hfTU9ERUxfVkFSSUFO",
-            "VF9VTlNQRUNJRklFRBAAEhYKElVTRV9CRVNUX0FWQUlMQUJMRRABEhAKDFVT",
-            "RV9TVEFOREFSRBACEhAKDFVTRV9FTkhBTkNFRBADKo0BCg9Tc21sVm9pY2VH",
-            "ZW5kZXISIQodU1NNTF9WT0lDRV9HRU5ERVJfVU5TUEVDSUZJRUQQABIaChZT",
-            "U01MX1ZPSUNFX0dFTkRFUl9NQUxFEAESHAoYU1NNTF9WT0lDRV9HRU5ERVJf",
-            "RkVNQUxFEAISHQoZU1NNTF9WT0lDRV9HRU5ERVJfTkVVVFJBTBADKuwBChNP",
-            "dXRwdXRBdWRpb0VuY29kaW5nEiUKIU9VVFBVVF9BVURJT19FTkNPRElOR19V",
-            "TlNQRUNJRklFRBAAEiMKH09VVFBVVF9BVURJT19FTkNPRElOR19MSU5FQVJf",
-            "MTYQARIdChlPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVAzEAISJQohT1VUUFVU",
-            "X0FVRElPX0VOQ09ESU5HX01QM182NF9LQlBTEAQSIgoeT1VUUFVUX0FVRElP",
-            "X0VOQ09ESU5HX09HR19PUFVTEAMSHwobT1VUUFVUX0FVRElPX0VOQ09ESU5H",
-            "X01VTEFXEAUqlAIKDVRlbGVwaG9ueUR0bWYSHgoaVEVMRVBIT05ZX0RUTUZf",
-            "VU5TUEVDSUZJRUQQABIMCghEVE1GX09ORRABEgwKCERUTUZfVFdPEAISDgoK",
-            "RFRNRl9USFJFRRADEg0KCURUTUZfRk9VUhAEEg0KCURUTUZfRklWRRAFEgwK",
-            "CERUTUZfU0lYEAYSDgoKRFRNRl9TRVZFThAHEg4KCkRUTUZfRUlHSFQQCBIN",
-            "CglEVE1GX05JTkUQCRINCglEVE1GX1pFUk8QChIKCgZEVE1GX0EQCxIKCgZE",
-            "VE1GX0IQDBIKCgZEVE1GX0MQDRIKCgZEVE1GX0QQDhINCglEVE1GX1NUQVIQ",
-            "DxIOCgpEVE1GX1BPVU5EEBBC5QIKI2NvbS5nb29nbGUuY2xvdWQuZGlhbG9n",
-            "Zmxvdy52MmJldGExQhBBdWRpb0NvbmZpZ1Byb3RvUAFaQ2Nsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2MmJldGExL2RpYWxvZ2Zsb3dwYjtk",
-            "aWFsb2dmbG93cGL4AQGiAgJERqoCH0dvb2dsZS5DbG91ZC5EaWFsb2dmbG93",
-            "LlYyQmV0YTHqQVUKG2F1dG9tbC5nb29nbGVhcGlzLmNvbS9Nb2RlbBI2cHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21vZGVscy97",
-            "bW9kZWx96kFiCh9zcGVlY2guZ29vZ2xlYXBpcy5jb20vUGhyYXNlU2V0Ej9w",
-            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcGhyYXNl",
-            "U2V0cy97cGhyYXNlX3NldH1iBnByb3RvMw=="));
+            "dXJjZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvIjkK",
+            "DVNwZWVjaENvbnRleHQSFAoHcGhyYXNlcxgBIAMoCUID4EEBEhIKBWJvb3N0",
+            "GAIgASgCQgPgQQEikgEKDlNwZWVjaFdvcmRJbmZvEgwKBHdvcmQYAyABKAkS",
+            "LwoMc3RhcnRfb2Zmc2V0GAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
+            "aW9uEi0KCmVuZF9vZmZzZXQYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
+            "YXRpb24SEgoKY29uZmlkZW5jZRgEIAEoAiJ7Cg1CYXJnZUluQ29uZmlnEjcK",
+            "FG5vX2JhcmdlX2luX2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
+            "LkR1cmF0aW9uEjEKDnRvdGFsX2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uIqgEChBJbnB1dEF1ZGlvQ29uZmlnEksKDmF1ZGlv",
+            "X2VuY29kaW5nGAEgASgOMi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJi",
+            "ZXRhMS5BdWRpb0VuY29kaW5nQgPgQQISHgoRc2FtcGxlX3JhdGVfaGVydHoY",
+            "AiABKAVCA+BBAhIaCg1sYW5ndWFnZV9jb2RlGAMgASgJQgPgQQISGAoQZW5h",
+            "YmxlX3dvcmRfaW5mbxgNIAEoCBIYCgxwaHJhc2VfaGludHMYBCADKAlCAhgB",
+            "EkcKD3NwZWVjaF9jb250ZXh0cxgLIAMoCzIuLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LnYyYmV0YTEuU3BlZWNoQ29udGV4dBINCgVtb2RlbBgHIAEoCRJK",
+            "Cg1tb2RlbF92YXJpYW50GAogASgOMjMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cudjJiZXRhMS5TcGVlY2hNb2RlbFZhcmlhbnQSGAoQc2luZ2xlX3V0dGVy",
+            "YW5jZRgIIAEoCBIqCiJkaXNhYmxlX25vX3NwZWVjaF9yZWNvZ25pemVkX2V2",
+            "ZW50GA4gASgIEkcKD2JhcmdlX2luX2NvbmZpZxgPIAEoCzIuLmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuQmFyZ2VJbkNvbmZpZxIkChxlbmFi",
+            "bGVfYXV0b21hdGljX3B1bmN0dWF0aW9uGBEgASgIInUKFFZvaWNlU2VsZWN0",
+            "aW9uUGFyYW1zEhEKBG5hbWUYASABKAlCA+BBARJKCgtzc21sX2dlbmRlchgC",
+            "IAEoDjIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuU3NtbFZv",
+            "aWNlR2VuZGVyQgPgQQEi0QEKFlN5bnRoZXNpemVTcGVlY2hDb25maWcSGgoN",
+            "c3BlYWtpbmdfcmF0ZRgBIAEoAUID4EEBEhIKBXBpdGNoGAIgASgBQgPgQQES",
+            "GwoOdm9sdW1lX2dhaW5fZGIYAyABKAFCA+BBARIfChJlZmZlY3RzX3Byb2Zp",
+            "bGVfaWQYBSADKAlCA+BBARJJCgV2b2ljZRgEIAEoCzI1Lmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyYmV0YTEuVm9pY2VTZWxlY3Rpb25QYXJhbXNCA+BB",
+            "ASLcAQoRT3V0cHV0QXVkaW9Db25maWcSUQoOYXVkaW9fZW5jb2RpbmcYASAB",
+            "KA4yNC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLk91dHB1dEF1",
+            "ZGlvRW5jb2RpbmdCA+BBAhIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgCIAEoBRJZ",
+            "ChhzeW50aGVzaXplX3NwZWVjaF9jb25maWcYAyABKAsyNy5nb29nbGUuY2xv",
+            "dWQuZGlhbG9nZmxvdy52MmJldGExLlN5bnRoZXNpemVTcGVlY2hDb25maWci",
+            "WgoTVGVsZXBob255RHRtZkV2ZW50cxJDCgtkdG1mX2V2ZW50cxgBIAMoDjIu",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuVGVsZXBob255RHRt",
+            "ZiJ2ChJTcGVlY2hUb1RleHRDb25maWcSUQoUc3BlZWNoX21vZGVsX3Zhcmlh",
+            "bnQYASABKA4yMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLlNw",
+            "ZWVjaE1vZGVsVmFyaWFudBINCgVtb2RlbBgCIAEoCSqUAgoNVGVsZXBob255",
+            "RHRtZhIeChpURUxFUEhPTllfRFRNRl9VTlNQRUNJRklFRBAAEgwKCERUTUZf",
+            "T05FEAESDAoIRFRNRl9UV08QAhIOCgpEVE1GX1RIUkVFEAMSDQoJRFRNRl9G",
+            "T1VSEAQSDQoJRFRNRl9GSVZFEAUSDAoIRFRNRl9TSVgQBhIOCgpEVE1GX1NF",
+            "VkVOEAcSDgoKRFRNRl9FSUdIVBAIEg0KCURUTUZfTklORRAJEg0KCURUTUZf",
+            "WkVSTxAKEgoKBkRUTUZfQRALEgoKBkRUTUZfQhAMEgoKBkRUTUZfQxANEgoK",
+            "BkRUTUZfRBAOEg0KCURUTUZfU1RBUhAPEg4KCkRUTUZfUE9VTkQQECr7AQoN",
+            "QXVkaW9FbmNvZGluZxIeChpBVURJT19FTkNPRElOR19VTlNQRUNJRklFRBAA",
+            "EhwKGEFVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEhcKE0FVRElPX0VOQ09E",
+            "SU5HX0ZMQUMQAhIYChRBVURJT19FTkNPRElOR19NVUxBVxADEhYKEkFVRElP",
+            "X0VOQ09ESU5HX0FNUhAEEhkKFUFVRElPX0VOQ09ESU5HX0FNUl9XQhAFEhsK",
+            "F0FVRElPX0VOQ09ESU5HX09HR19PUFVTEAYSKQolQVVESU9fRU5DT0RJTkdf",
+            "U1BFRVhfV0lUSF9IRUFERVJfQllURRAHKnYKElNwZWVjaE1vZGVsVmFyaWFu",
+            "dBIkCiBTUEVFQ0hfTU9ERUxfVkFSSUFOVF9VTlNQRUNJRklFRBAAEhYKElVT",
+            "RV9CRVNUX0FWQUlMQUJMRRABEhAKDFVTRV9TVEFOREFSRBACEhAKDFVTRV9F",
+            "TkhBTkNFRBADKo0BCg9Tc21sVm9pY2VHZW5kZXISIQodU1NNTF9WT0lDRV9H",
+            "RU5ERVJfVU5TUEVDSUZJRUQQABIaChZTU01MX1ZPSUNFX0dFTkRFUl9NQUxF",
+            "EAESHAoYU1NNTF9WT0lDRV9HRU5ERVJfRkVNQUxFEAISHQoZU1NNTF9WT0lD",
+            "RV9HRU5ERVJfTkVVVFJBTBADKuwBChNPdXRwdXRBdWRpb0VuY29kaW5nEiUK",
+            "IU9VVFBVVF9BVURJT19FTkNPRElOR19VTlNQRUNJRklFRBAAEiMKH09VVFBV",
+            "VF9BVURJT19FTkNPRElOR19MSU5FQVJfMTYQARIdChlPVVRQVVRfQVVESU9f",
+            "RU5DT0RJTkdfTVAzEAISJQohT1VUUFVUX0FVRElPX0VOQ09ESU5HX01QM182",
+            "NF9LQlBTEAQSIgoeT1VUUFVUX0FVRElPX0VOQ09ESU5HX09HR19PUFVTEAMS",
+            "HwobT1VUUFVUX0FVRElPX0VOQ09ESU5HX01VTEFXEAVC5QIKI2NvbS5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExQhBBdWRpb0NvbmZpZ1Byb3Rv",
+            "UAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2MmJldGEx",
+            "L2RpYWxvZ2Zsb3dwYjtkaWFsb2dmbG93cGL4AQGiAgJERqoCH0dvb2dsZS5D",
+            "bG91ZC5EaWFsb2dmbG93LlYyQmV0YTHqQVUKG2F1dG9tbC5nb29nbGVhcGlz",
+            "LmNvbS9Nb2RlbBI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L21vZGVscy97bW9kZWx96kFiCh9zcGVlY2guZ29vZ2xlYXBpcy5j",
+            "b20vUGhyYXNlU2V0Ej9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vcGhyYXNlU2V0cy97cGhyYXNlX3NldH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2Beta1.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2Beta1.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2Beta1.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2Beta1.OutputAudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2Beta1.TelephonyDtmf), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2Beta1.TelephonyDtmf), typeof(global::Google.Cloud.Dialogflow.V2Beta1.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2Beta1.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2Beta1.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2Beta1.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.SpeechContext), global::Google.Cloud.Dialogflow.V2Beta1.SpeechContext.Parser, new[]{ "Phrases", "Boost" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.SpeechWordInfo), global::Google.Cloud.Dialogflow.V2Beta1.SpeechWordInfo.Parser, new[]{ "Word", "StartOffset", "EndOffset", "Confidence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.BargeInConfig), global::Google.Cloud.Dialogflow.V2Beta1.BargeInConfig.Parser, new[]{ "NoBargeInDuration", "TotalDuration" }, null, null, null, null),
@@ -113,6 +114,81 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
 
   }
   #region Enums
+  /// <summary>
+  /// [DTMF](https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling)
+  /// digit in Telephony Gateway.
+  /// </summary>
+  public enum TelephonyDtmf {
+    /// <summary>
+    /// Not specified. This value may be used to indicate an absent digit.
+    /// </summary>
+    [pbr::OriginalName("TELEPHONY_DTMF_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Number: '1'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_ONE")] DtmfOne = 1,
+    /// <summary>
+    /// Number: '2'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_TWO")] DtmfTwo = 2,
+    /// <summary>
+    /// Number: '3'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_THREE")] DtmfThree = 3,
+    /// <summary>
+    /// Number: '4'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_FOUR")] DtmfFour = 4,
+    /// <summary>
+    /// Number: '5'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_FIVE")] DtmfFive = 5,
+    /// <summary>
+    /// Number: '6'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_SIX")] DtmfSix = 6,
+    /// <summary>
+    /// Number: '7'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_SEVEN")] DtmfSeven = 7,
+    /// <summary>
+    /// Number: '8'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_EIGHT")] DtmfEight = 8,
+    /// <summary>
+    /// Number: '9'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_NINE")] DtmfNine = 9,
+    /// <summary>
+    /// Number: '0'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_ZERO")] DtmfZero = 10,
+    /// <summary>
+    /// Letter: 'A'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_A")] DtmfA = 11,
+    /// <summary>
+    /// Letter: 'B'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_B")] DtmfB = 12,
+    /// <summary>
+    /// Letter: 'C'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_C")] DtmfC = 13,
+    /// <summary>
+    /// Letter: 'D'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_D")] DtmfD = 14,
+    /// <summary>
+    /// Asterisk/star: '*'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_STAR")] DtmfStar = 15,
+    /// <summary>
+    /// Pound/diamond/hash/square/gate/octothorpe: '#'.
+    /// </summary>
+    [pbr::OriginalName("DTMF_POUND")] DtmfPound = 16,
+  }
+
   /// <summary>
   /// Audio encoding of the audio content sent in the conversational query request.
   /// Refer to the
@@ -280,81 +356,6 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// 8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.
     /// </summary>
     [pbr::OriginalName("OUTPUT_AUDIO_ENCODING_MULAW")] Mulaw = 5,
-  }
-
-  /// <summary>
-  /// [DTMF](https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling)
-  /// digit in Telephony Gateway.
-  /// </summary>
-  public enum TelephonyDtmf {
-    /// <summary>
-    /// Not specified. This value may be used to indicate an absent digit.
-    /// </summary>
-    [pbr::OriginalName("TELEPHONY_DTMF_UNSPECIFIED")] Unspecified = 0,
-    /// <summary>
-    /// Number: '1'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_ONE")] DtmfOne = 1,
-    /// <summary>
-    /// Number: '2'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_TWO")] DtmfTwo = 2,
-    /// <summary>
-    /// Number: '3'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_THREE")] DtmfThree = 3,
-    /// <summary>
-    /// Number: '4'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_FOUR")] DtmfFour = 4,
-    /// <summary>
-    /// Number: '5'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_FIVE")] DtmfFive = 5,
-    /// <summary>
-    /// Number: '6'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_SIX")] DtmfSix = 6,
-    /// <summary>
-    /// Number: '7'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_SEVEN")] DtmfSeven = 7,
-    /// <summary>
-    /// Number: '8'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_EIGHT")] DtmfEight = 8,
-    /// <summary>
-    /// Number: '9'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_NINE")] DtmfNine = 9,
-    /// <summary>
-    /// Number: '0'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_ZERO")] DtmfZero = 10,
-    /// <summary>
-    /// Letter: 'A'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_A")] DtmfA = 11,
-    /// <summary>
-    /// Letter: 'B'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_B")] DtmfB = 12,
-    /// <summary>
-    /// Letter: 'C'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_C")] DtmfC = 13,
-    /// <summary>
-    /// Letter: 'D'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_D")] DtmfD = 14,
-    /// <summary>
-    /// Asterisk/star: '*'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_STAR")] DtmfStar = 15,
-    /// <summary>
-    /// Pound/diamond/hash/square/gate/octothorpe: '#'.
-    /// </summary>
-    [pbr::OriginalName("DTMF_POUND")] DtmfPound = 16,
   }
 
   #endregion
@@ -1313,8 +1314,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private int sampleRateHertz_;
     /// <summary>
     /// Required. Sample rate (in Hertz) of the audio content sent in the query.
-    /// Refer to
-    /// [Cloud Speech API
+    /// Refer to [Cloud Speech API
     /// documentation](https://cloud.google.com/speech-to-text/docs/basics) for
     /// more details.
     /// </summary>
@@ -2216,9 +2216,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private double speakingRate_;
     /// <summary>
     /// Optional. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal
-    /// native speed supported by the specific voice. 2.0 is twice as fast, and
-    /// 0.5 is half as fast. If unset(0.0), defaults to the native 1.0 speed. Any
-    /// other values &lt; 0.25 or > 4.0 will return an error.
+    /// native speed supported by the specific voice. 2.0 is twice as fast, and 0.5
+    /// is half as fast. If unset(0.0), defaults to the native 1.0 speed. Any other
+    /// values &lt; 0.25 or > 4.0 will return an error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

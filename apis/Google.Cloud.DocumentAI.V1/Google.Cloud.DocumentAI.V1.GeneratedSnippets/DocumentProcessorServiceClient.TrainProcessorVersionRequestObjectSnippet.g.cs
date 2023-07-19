@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 ParentAsProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
                 ProcessorVersion = new ProcessorVersion(),
                 InputData = new TrainProcessorVersionRequest.Types.InputData(),
+                CustomDocumentExtractionOptions = new TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions(),
                 BaseProcessorVersion = "",
                 DocumentSchema = new DocumentSchema(),
             };

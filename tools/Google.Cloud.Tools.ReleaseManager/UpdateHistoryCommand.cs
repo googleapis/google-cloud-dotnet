@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             foreach (var diff in FindChangedVersions())
             {
@@ -41,6 +41,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                     Execute(diff.Id);
                 }
             }
+            return 0;
         }
 
         private static void Execute(string id)

@@ -18,6 +18,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace Google.Cloud.Tools.ReleaseManager
@@ -36,19 +37,19 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             string id = args[0];
             var smokeTests = LoadSmokeTests(id);
             if (smokeTests.Count == 0)
             {
                 Console.WriteLine($"No smoke tests defined for {id}");
-                return;
+                return 0;
             }
 
             var assembly = PublishAndLoadAssembly(id);
             var templateVariables = CreateTemplateVariables();
-            RunTests(smokeTests, assembly, templateVariables);
+            return RunTests(smokeTests, assembly, templateVariables);
         }
 
         private List<SmokeTest> LoadSmokeTests(string id)
@@ -69,15 +70,41 @@ namespace Google.Cloud.Tools.ReleaseManager
             return Assembly.LoadFrom(assemblyFile);
         }
 
-        private void RunTests(List<SmokeTest> tests, Assembly assembly, IReadOnlyDictionary<string, string> templateVariables)
+        private int RunTests(List<SmokeTest> tests, Assembly assembly, IReadOnlyDictionary<string, string> templateVariables)
         {
             var testOrTests = tests.Count == 1 ? "test" : "tests";
             Console.WriteLine($"Running {tests.Count} smoke {testOrTests}");
 
+            var skipped = new List<string>();
+            var failed = new List<string>();
+
             foreach (var test in tests)
             {
-                test.Execute(assembly, templateVariables);
+                try
+                {
+                    test.Execute(assembly, templateVariables);
+                    if (test.Skip is string)
+                    {
+                        skipped.Add($"{test.Client}.{test.Method}");
+                    }
+                }
+                catch (Exception e)
+                {
+                    failed.Add($"{test.Client}.{test.Method}");
+                    Console.WriteLine($"{test.Client}.{test.Method} failed: {e.GetType().Name} {e.Message}");
+                }
             }
+            Console.WriteLine($"Passed: {tests.Count - skipped.Count - failed.Count}");
+            if (skipped.Any())
+            {
+                Console.WriteLine($"Skipped: {skipped.Count} ({string.Join(", ", skipped)})");
+            }
+            if (failed.Any())
+            {
+                Console.WriteLine($"Failed: {failed.Count} ({string.Join(", ", failed)})");
+                return 1;
+            }
+            return 0;
         }
 
         private static IReadOnlyDictionary<string, string> CreateTemplateVariables()

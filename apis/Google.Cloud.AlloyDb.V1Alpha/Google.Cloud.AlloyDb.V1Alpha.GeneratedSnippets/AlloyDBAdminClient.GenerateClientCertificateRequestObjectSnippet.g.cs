@@ -39,8 +39,9 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
                 RequestId = "",
-                PemCsr = "",
                 CertDuration = new Duration(),
+                PublicKey = "",
+                UseMetadataExchange = false,
             };
             // Make the request
             GenerateClientCertificateResponse response = alloyDBAdminClient.GenerateClientCertificate(request);

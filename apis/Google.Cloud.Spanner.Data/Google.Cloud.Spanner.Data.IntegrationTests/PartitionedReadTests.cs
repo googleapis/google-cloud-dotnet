@@ -12,10 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -26,101 +25,103 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     public class PartitionedReadTests
     {
         private readonly PartitionedReadTableFixture _fixture;
-        private int _rowsRead = 0;
 
         public PartitionedReadTests(PartitionedReadTableFixture fixture) =>
             _fixture = fixture;
 
-        [Theory, CombinatorialData]
-        [Trait(Constants.SupportedOnEmulator, Constants.No)]
-        public async Task DistributedReadAsync(bool query, bool dataBoostEnabled)
+        [SkippableTheory, CombinatorialData]
+        public async Task DistributedReadAsync(bool dataBoostEnabled)
         {
-            int numRows = await GetNumberOfRows();
+            // TODO: xUnit 3 will allow to set traits to individual data rows, and we should use that instead for consistency.
+            Skip.If(dataBoostEnabled && _fixture.RunningOnEmulator, "DataBoostEnabled is not supported on the emulator");
 
-            using var connection = new SpannerConnection(_fixture.ConnectionString);
-            await connection.OpenAsync();
-
-            using var transaction = await connection.BeginReadOnlyTransactionAsync();
-            using var cmd = query
-                ? connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}")
-                : connection.CreateReadCommand(_fixture.TableName, ReadOptions.FromColumns(_fixture.ColumnNames), KeySet.All);
-            transaction.DisposeBehavior = DisposeBehavior.CloseResources;
-            cmd.Transaction = transaction;
-            var partitions = await cmd.GetReaderPartitionsAsync(PartitionOptions.Default.WithPartitionSizeBytes(100).WithDataBoostEnabled(dataBoostEnabled));
-            var transactionId = transaction.TransactionId;
-
-            if (query)
+            TransactionId transactionId = null;
+            try
             {
-                Assert.Equal(dataBoostEnabled, partitions.FirstOrDefault().Request.ExecuteSqlRequest.DataBoostEnabled);
-            }
-            else
-            {
+                (var partitions, transactionId) = await GetPartitionsAsync(
+                    connection => connection.CreateReadCommand(_fixture.TableName, ReadOptions.FromColumns(_fixture.ColumnNames), KeySet.All),
+                    PartitionOptions.Default.WithPartitionSizeBytes(1000).WithDataBoostEnabled(dataBoostEnabled));
+
                 Assert.Equal(dataBoostEnabled, partitions.FirstOrDefault().Request.ReadRequest.DataBoostEnabled);
+                await AssertAllRowsReadAsync(partitions, transactionId);
+            }
+            finally
+            { 
+                DisposeTransaction(transactionId);
             }
 
-            await Task.WhenAll(partitions.Select(
-                    partitions => DistributedReadWorkerAsync(partitions, transactionId)))
-                .ConfigureAwait(false);
-
-            Assert.Equal(numRows, _rowsRead);
         }
 
-        [Theory, CombinatorialData, Obsolete]
-
-        public async Task DistributedReadAsyncWithoutOptions(bool query)
+        [SkippableTheory, CombinatorialData]
+        public async Task DistributedQueryAsync(bool dataBoostEnabled)
         {
-            int numRows = await GetNumberOfRows();
+            // TODO: xUnit 3 will allow to set traits to individual data rows, and we should use that instead for consistency.
+            Skip.If(dataBoostEnabled && _fixture.RunningOnEmulator, "DataBoostEnabled is not supported on the emulator");
 
+            TransactionId transactionId = null;
+            try
+            {
+                (var partitions, transactionId) = await GetPartitionsAsync(
+                connection => connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}"),
+                PartitionOptions.Default.WithPartitionSizeBytes(1000).WithDataBoostEnabled(dataBoostEnabled));
+
+                Assert.Equal(dataBoostEnabled, partitions.FirstOrDefault().Request.ExecuteSqlRequest.DataBoostEnabled);
+                await AssertAllRowsReadAsync(partitions, transactionId);
+            }
+            finally
+            {
+                DisposeTransaction(transactionId);
+            }
+        }
+
+        private async Task AssertAllRowsReadAsync(IEnumerable<CommandPartition> partitions, TransactionId transactionId)
+        {
+            int[] partitionNumRows = await Task.WhenAll(partitions.Select(
+                    partitions => DistributedReadWorkerAsync(partitions, transactionId)));
+            Assert.Equal(_fixture.TableRowCount, partitionNumRows.Sum());
+        }
+
+        private async Task<(IEnumerable<CommandPartition> partitions, TransactionId transactionId)> GetPartitionsAsync(Func<SpannerConnection, SpannerCommand> commandFactory, PartitionOptions options)
+        {
             using var connection = new SpannerConnection(_fixture.ConnectionString);
             await connection.OpenAsync();
 
             using var transaction = await connection.BeginReadOnlyTransactionAsync();
-            using var cmd = query
-                ? connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}")
-                : connection.CreateReadCommand(_fixture.TableName, ReadOptions.FromColumns(_fixture.ColumnNames), KeySet.All);
-            transaction.DisposeBehavior = DisposeBehavior.CloseResources;
+            transaction.DisposeBehavior = DisposeBehavior.Detach;
+
+            using var cmd = commandFactory(connection);
             cmd.Transaction = transaction;
-            var partitions = await cmd.GetReaderPartitionsAsync(1000);
-            var transactionId = transaction.TransactionId;
-
-            //we simulate a serialization/deserialization step in the call to the subtask.
-            await Task.WhenAll(partitions.Select(
-                    x => DistributedReadWorkerAsync(CommandPartition.FromBase64String(x.ToBase64String()),
-                                    TransactionId.FromBase64String(transactionId.ToBase64String()))))
-                .ConfigureAwait(false);
-
-            Assert.Equal(numRows, _rowsRead);
-        }
-
-        private async Task<int> GetNumberOfRows()
-        {
-            using var connection = _fixture.GetConnection();
-            using var cmd = connection.CreateSelectCommand($"SELECT COUNT(*) FROM {_fixture.TableName}");
-            return await cmd.ExecuteScalarAsync<int>();
+            return (await cmd.GetReaderPartitionsAsync(options), transaction.TransactionId);
         }
 
         /// <summary>
         /// TransactionId and CommandPartition are serializable.
         /// </summary>
-        private async Task DistributedReadWorkerAsync(CommandPartition readPartition, TransactionId id)
+        private static async Task<int> DistributedReadWorkerAsync(CommandPartition readPartition, TransactionId id)
         {
+            int readRows = 0;
+
             // Note: we only use state provided by the arguments here.
-            using (var connection = new SpannerConnection(id.ConnectionString))
+            using var connection = new SpannerConnection(id.ConnectionString);
+            using var transaction = connection.BeginReadOnlyTransaction(id);
+            using var cmd = connection.CreateCommandWithPartition(readPartition, transaction);
+            using (var reader = await cmd.ExecuteReaderAsync())            
+            while (await reader.ReadAsync())
             {
-                using (var transaction = connection.BeginReadOnlyTransaction(id))
-                {
-                    using (var cmd = connection.CreateCommandWithPartition(readPartition, transaction))
-                    {
-                        using (var reader = await cmd.ExecuteReaderAsync().ConfigureAwait(false))
-                        {
-                            while (await reader.ReadAsync())
-                            {
-                                Interlocked.Increment(ref _rowsRead);
-                            }
-                        }
-                    }
-                }
+                readRows++;
             }
+            return readRows;
+        }
+
+        private static void DisposeTransaction(TransactionId transactionId)
+        {
+            if (transactionId is null)
+            {
+                return;
+            }
+            using var connection = new SpannerConnection(transactionId.ConnectionString);
+            using var transaction = connection.BeginReadOnlyTransaction(transactionId);
+            transaction.DisposeBehavior = DisposeBehavior.CloseResources;
         }
     }
 }

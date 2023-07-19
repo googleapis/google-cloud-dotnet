@@ -141,11 +141,16 @@ namespace Google.Cloud.Tools.ReleaseManager
             { CSharpWorkspacesPackage, "All" }
         };
 
+        private static readonly IReadOnlyList<string> RenovateIgnorePaths = new List<string>
+        {
+            "issues/**"
+        }.AsReadOnly();
+
         public GenerateProjectsCommand() : base("generate-projects", "Generates project files, coverage files etc from the API catalog")
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             ValidateCommonHiddenProductionDependencies();
             var root = DirectoryLayout.DetermineRootDirectory();
@@ -167,6 +172,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 GenerateOwlBotConfiguration(path, api);
                 GenerateMetadataFile(path, api);
             }
+            return 0;
         }
 
         /// <summary>
@@ -287,7 +293,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             string path = Path.Combine(root, ".github", "renovate.json");
             string json = File.ReadAllText(path);
             JObject jobj = JObject.Parse(json);
-            jobj["ignorePaths"] = new JArray(catalog.Apis.Select(api => $"apis/{api.Id}/{api.Id}/**").ToArray());
+            jobj["ignorePaths"] = new JArray(RenovateIgnorePaths.Concat(catalog.Apis.Select(api => $"apis/{api.Id}/{api.Id}/**")).ToArray());
             json = jobj.ToString(Formatting.Indented);
             File.WriteAllText(path, json);
         }
@@ -577,7 +583,8 @@ api-name: {api.Id}
                 ["distribution_name"] = api.Id,
                 ["release_level"] = releaseLevel,
                 ["client_documentation"] = ApiMetadata.IsCloudPackage(api.Id) ? $"https://cloud.google.com/dotnet/docs/reference/{api.Id}/latest" : $"https://googleapis.dev/dotnet/{api.Id}/latest",
-                ["library_type"] = api.EffectiveMetadataType
+                ["library_type"] = api.EffectiveMetadataType,
+                ["language"] = "dotnet"
             };
             if (api.ShortName is object)
             {

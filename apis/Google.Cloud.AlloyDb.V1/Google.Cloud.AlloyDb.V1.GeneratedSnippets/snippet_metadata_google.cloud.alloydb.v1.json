@@ -367,12 +367,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 44,
+          "end": 45,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 42,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -416,12 +416,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -1423,6 +1423,293 @@
       ]
     },
     {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_PromoteCluster_sync",
+      "title": "PromoteClusterRequestObject",
+      "description": "Snippet for PromoteCluster",
+      "file": "AlloyDBAdminClient.PromoteClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PromoteCluster",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.PromoteCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.PromoteClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Cluster, Google.Cloud.AlloyDb.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "PromoteCluster",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.PromoteCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_PromoteCluster_async",
+      "title": "PromoteClusterRequestObjectAsync",
+      "description": "Snippet for PromoteClusterAsync",
+      "file": "AlloyDBAdminClient.PromoteClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PromoteClusterAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.PromoteClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.PromoteClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Cluster, Google.Cloud.AlloyDb.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "PromoteCluster",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.PromoteCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_PromoteCluster_sync_flattened",
+      "title": "PromoteCluster",
+      "description": "Snippet for PromoteCluster",
+      "file": "AlloyDBAdminClient.PromoteClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PromoteCluster",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.PromoteCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Cluster, Google.Cloud.AlloyDb.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "PromoteCluster",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.PromoteCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_PromoteCluster_async_flattened",
+      "title": "PromoteClusterAsync",
+      "description": "Snippet for PromoteClusterAsync",
+      "file": "AlloyDBAdminClient.PromoteClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PromoteClusterAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.PromoteClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Cluster, Google.Cloud.AlloyDb.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "PromoteCluster",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.PromoteCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_PromoteCluster_sync_flattened_resourceNames",
+      "title": "PromoteClusterResourceNames",
+      "description": "Snippet for PromoteCluster",
+      "file": "AlloyDBAdminClient.PromoteClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PromoteCluster",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.PromoteCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Cluster, Google.Cloud.AlloyDb.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "PromoteCluster",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.PromoteCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_PromoteCluster_async_flattened_resourceNames",
+      "title": "PromoteClusterResourceNamesAsync",
+      "description": "Snippet for PromoteClusterAsync",
+      "file": "AlloyDBAdminClient.PromoteClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PromoteClusterAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.PromoteClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Cluster, Google.Cloud.AlloyDb.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "PromoteCluster",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.PromoteCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "alloydb_v1_generated_AlloyDBAdmin_RestoreCluster_sync",
       "title": "RestoreClusterRequestObject",
       "description": "Snippet for RestoreCluster",
@@ -1515,6 +1802,325 @@
         {
           "start": 37,
           "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateSecondaryCluster_sync",
+      "title": "CreateSecondaryClusterRequestObject",
+      "description": "Snippet for CreateSecondaryCluster",
+      "file": "AlloyDBAdminClient.CreateSecondaryClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecondaryCluster",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateSecondaryCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.CreateSecondaryClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Cluster, Google.Cloud.AlloyDb.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSecondaryCluster",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateSecondaryCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateSecondaryCluster_async",
+      "title": "CreateSecondaryClusterRequestObjectAsync",
+      "description": "Snippet for CreateSecondaryClusterAsync",
+      "file": "AlloyDBAdminClient.CreateSecondaryClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecondaryClusterAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateSecondaryClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.CreateSecondaryClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Cluster, Google.Cloud.AlloyDb.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSecondaryCluster",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateSecondaryCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateSecondaryCluster_sync_flattened",
+      "title": "CreateSecondaryCluster",
+      "description": "Snippet for CreateSecondaryCluster",
+      "file": "AlloyDBAdminClient.CreateSecondaryClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecondaryCluster",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateSecondaryCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Cluster, Google.Cloud.AlloyDb.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSecondaryCluster",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateSecondaryCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateSecondaryCluster_async_flattened",
+      "title": "CreateSecondaryClusterAsync",
+      "description": "Snippet for CreateSecondaryClusterAsync",
+      "file": "AlloyDBAdminClient.CreateSecondaryClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecondaryClusterAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateSecondaryClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Cluster, Google.Cloud.AlloyDb.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSecondaryCluster",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateSecondaryCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateSecondaryCluster_sync_flattened_resourceNames",
+      "title": "CreateSecondaryClusterResourceNames",
+      "description": "Snippet for CreateSecondaryCluster",
+      "file": "AlloyDBAdminClient.CreateSecondaryClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecondaryCluster",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateSecondaryCluster",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Cluster, Google.Cloud.AlloyDb.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSecondaryCluster",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateSecondaryCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateSecondaryCluster_async_flattened_resourceNames",
+      "title": "CreateSecondaryClusterResourceNamesAsync",
+      "description": "Snippet for CreateSecondaryClusterAsync",
+      "file": "AlloyDBAdminClient.CreateSecondaryClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecondaryClusterAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateSecondaryClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Cluster, Google.Cloud.AlloyDb.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSecondaryCluster",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateSecondaryCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
           "type": "SHORT"
         }
       ]
@@ -2445,6 +3051,325 @@
       ]
     },
     {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateSecondaryInstance_sync",
+      "title": "CreateSecondaryInstanceRequestObject",
+      "description": "Snippet for CreateSecondaryInstance",
+      "file": "AlloyDBAdminClient.CreateSecondaryInstanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecondaryInstance",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateSecondaryInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.CreateSecondaryInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Instance, Google.Cloud.AlloyDb.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSecondaryInstance",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateSecondaryInstance",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateSecondaryInstance_async",
+      "title": "CreateSecondaryInstanceRequestObjectAsync",
+      "description": "Snippet for CreateSecondaryInstanceAsync",
+      "file": "AlloyDBAdminClient.CreateSecondaryInstanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecondaryInstanceAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateSecondaryInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.CreateSecondaryInstanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Instance, Google.Cloud.AlloyDb.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSecondaryInstance",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateSecondaryInstance",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateSecondaryInstance_sync_flattened",
+      "title": "CreateSecondaryInstance",
+      "description": "Snippet for CreateSecondaryInstance",
+      "file": "AlloyDBAdminClient.CreateSecondaryInstanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecondaryInstance",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateSecondaryInstance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Instance, Google.Cloud.AlloyDb.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSecondaryInstance",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateSecondaryInstance",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateSecondaryInstance_async_flattened",
+      "title": "CreateSecondaryInstanceAsync",
+      "description": "Snippet for CreateSecondaryInstanceAsync",
+      "file": "AlloyDBAdminClient.CreateSecondaryInstanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecondaryInstanceAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateSecondaryInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Instance, Google.Cloud.AlloyDb.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSecondaryInstance",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateSecondaryInstance",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateSecondaryInstance_sync_flattened_resourceNames",
+      "title": "CreateSecondaryInstanceResourceNames",
+      "description": "Snippet for CreateSecondaryInstance",
+      "file": "AlloyDBAdminClient.CreateSecondaryInstanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecondaryInstance",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateSecondaryInstance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Instance, Google.Cloud.AlloyDb.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSecondaryInstance",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateSecondaryInstance",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateSecondaryInstance_async_flattened_resourceNames",
+      "title": "CreateSecondaryInstanceResourceNamesAsync",
+      "description": "Snippet for CreateSecondaryInstanceAsync",
+      "file": "AlloyDBAdminClient.CreateSecondaryInstanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSecondaryInstanceAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateSecondaryInstanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.Instance",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "instanceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Instance, Google.Cloud.AlloyDb.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateSecondaryInstance",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateSecondaryInstance",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "alloydb_v1_generated_AlloyDBAdmin_BatchCreateInstances_sync",
       "title": "BatchCreateInstancesRequestObject",
       "description": "Snippet for BatchCreateInstances",
@@ -3311,6 +4236,309 @@
         {
           "start": 36,
           "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_InjectFault_sync",
+      "title": "InjectFaultRequestObject",
+      "description": "Snippet for InjectFault",
+      "file": "AlloyDBAdminClient.InjectFaultRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InjectFault",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.InjectFault",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.InjectFaultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Instance, Google.Cloud.AlloyDb.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "InjectFault",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.InjectFault",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_InjectFault_async",
+      "title": "InjectFaultRequestObjectAsync",
+      "description": "Snippet for InjectFaultAsync",
+      "file": "AlloyDBAdminClient.InjectFaultRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InjectFaultAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.InjectFaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.InjectFaultRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Instance, Google.Cloud.AlloyDb.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "InjectFault",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.InjectFault",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_InjectFault_sync_flattened",
+      "title": "InjectFault",
+      "description": "Snippet for InjectFault",
+      "file": "AlloyDBAdminClient.InjectFaultSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InjectFault",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.InjectFault",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.InjectFaultRequest+Types+FaultType",
+            "name": "faultType"
+          },
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Instance, Google.Cloud.AlloyDb.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "InjectFault",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.InjectFault",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_InjectFault_async_flattened",
+      "title": "InjectFaultAsync",
+      "description": "Snippet for InjectFaultAsync",
+      "file": "AlloyDBAdminClient.InjectFaultAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InjectFaultAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.InjectFaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.InjectFaultRequest+Types+FaultType",
+            "name": "faultType"
+          },
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Instance, Google.Cloud.AlloyDb.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "InjectFault",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.InjectFault",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_InjectFault_sync_flattened_resourceNames",
+      "title": "InjectFaultResourceNames",
+      "description": "Snippet for InjectFault",
+      "file": "AlloyDBAdminClient.InjectFaultResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InjectFault",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.InjectFault",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.InjectFaultRequest+Types+FaultType",
+            "name": "faultType"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Instance, Google.Cloud.AlloyDb.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "InjectFault",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.InjectFault",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_InjectFault_async_flattened_resourceNames",
+      "title": "InjectFaultResourceNamesAsync",
+      "description": "Snippet for InjectFaultAsync",
+      "file": "AlloyDBAdminClient.InjectFaultResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InjectFaultAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.InjectFaultAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.InjectFaultRequest+Types+FaultType",
+            "name": "faultType"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1.Instance, Google.Cloud.AlloyDb.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "InjectFault",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.InjectFault",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
           "type": "SHORT"
         }
       ]
@@ -5329,6 +6557,1415 @@
         {
           "start": 39,
           "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_ListUsers_sync",
+      "title": "ListUsersRequestObject",
+      "description": "Snippet for ListUsers",
+      "file": "AlloyDBAdminClient.ListUsersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsers",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.ListUsers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.ListUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AlloyDb.V1.ListUsersResponse, Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.ListUsers",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_ListUsers_async",
+      "title": "ListUsersRequestObjectAsync",
+      "description": "Snippet for ListUsersAsync",
+      "file": "AlloyDBAdminClient.ListUsersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsersAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.ListUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.ListUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AlloyDb.V1.ListUsersResponse, Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.ListUsers",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_ListUsers_sync_flattened",
+      "title": "ListUsers",
+      "description": "Snippet for ListUsers",
+      "file": "AlloyDBAdminClient.ListUsersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsers",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.ListUsers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AlloyDb.V1.ListUsersResponse, Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.ListUsers",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_ListUsers_async_flattened",
+      "title": "ListUsersAsync",
+      "description": "Snippet for ListUsersAsync",
+      "file": "AlloyDBAdminClient.ListUsersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsersAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.ListUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AlloyDb.V1.ListUsersResponse, Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.ListUsers",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_ListUsers_sync_flattened_resourceNames",
+      "title": "ListUsersResourceNames",
+      "description": "Snippet for ListUsers",
+      "file": "AlloyDBAdminClient.ListUsersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsers",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.ListUsers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AlloyDb.V1.ListUsersResponse, Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.ListUsers",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_ListUsers_async_flattened_resourceNames",
+      "title": "ListUsersResourceNamesAsync",
+      "description": "Snippet for ListUsersAsync",
+      "file": "AlloyDBAdminClient.ListUsersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsersAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.ListUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AlloyDb.V1.ListUsersResponse, Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.ListUsers",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GetUser_sync",
+      "title": "GetUserRequestObject",
+      "description": "Snippet for GetUser",
+      "file": "AlloyDBAdminClient.GetUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUser",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GetUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.GetUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.User",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GetUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GetUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GetUser_async",
+      "title": "GetUserRequestObjectAsync",
+      "description": "Snippet for GetUserAsync",
+      "file": "AlloyDBAdminClient.GetUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GetUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.GetUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GetUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GetUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GetUser_sync_flattened",
+      "title": "GetUser",
+      "description": "Snippet for GetUser",
+      "file": "AlloyDBAdminClient.GetUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUser",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GetUser",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.User",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GetUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GetUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GetUser_async_flattened",
+      "title": "GetUserAsync",
+      "description": "Snippet for GetUserAsync",
+      "file": "AlloyDBAdminClient.GetUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GetUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GetUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GetUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GetUser_sync_flattened_resourceNames",
+      "title": "GetUserResourceNames",
+      "description": "Snippet for GetUser",
+      "file": "AlloyDBAdminClient.GetUserResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUser",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GetUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.UserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.User",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GetUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GetUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_GetUser_async_flattened_resourceNames",
+      "title": "GetUserResourceNamesAsync",
+      "description": "Snippet for GetUserAsync",
+      "file": "AlloyDBAdminClient.GetUserResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.GetUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.UserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "GetUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.GetUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateUser_sync",
+      "title": "CreateUserRequestObject",
+      "description": "Snippet for CreateUser",
+      "file": "AlloyDBAdminClient.CreateUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUser",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.CreateUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.User",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateUser_async",
+      "title": "CreateUserRequestObjectAsync",
+      "description": "Snippet for CreateUserAsync",
+      "file": "AlloyDBAdminClient.CreateUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.CreateUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateUser_sync_flattened",
+      "title": "CreateUser",
+      "description": "Snippet for CreateUser",
+      "file": "AlloyDBAdminClient.CreateUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUser",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateUser",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.User",
+            "name": "user"
+          },
+          {
+            "type": "System.String",
+            "name": "userId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.User",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateUser_async_flattened",
+      "title": "CreateUserAsync",
+      "description": "Snippet for CreateUserAsync",
+      "file": "AlloyDBAdminClient.CreateUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.User",
+            "name": "user"
+          },
+          {
+            "type": "System.String",
+            "name": "userId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateUser_sync_flattened_resourceNames",
+      "title": "CreateUserResourceNames",
+      "description": "Snippet for CreateUser",
+      "file": "AlloyDBAdminClient.CreateUserResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUser",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.User",
+            "name": "user"
+          },
+          {
+            "type": "System.String",
+            "name": "userId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.User",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_CreateUser_async_flattened_resourceNames",
+      "title": "CreateUserResourceNamesAsync",
+      "description": "Snippet for CreateUserAsync",
+      "file": "AlloyDBAdminClient.CreateUserResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.CreateUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1.User",
+            "name": "user"
+          },
+          {
+            "type": "System.String",
+            "name": "userId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "CreateUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.CreateUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_UpdateUser_sync",
+      "title": "UpdateUserRequestObject",
+      "description": "Snippet for UpdateUser",
+      "file": "AlloyDBAdminClient.UpdateUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUser",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.UpdateUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.UpdateUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.User",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.UpdateUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_UpdateUser_async",
+      "title": "UpdateUserRequestObjectAsync",
+      "description": "Snippet for UpdateUserAsync",
+      "file": "AlloyDBAdminClient.UpdateUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.UpdateUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.UpdateUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.UpdateUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_UpdateUser_sync_flattened",
+      "title": "UpdateUser",
+      "description": "Snippet for UpdateUser",
+      "file": "AlloyDBAdminClient.UpdateUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUser",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.UpdateUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.User",
+            "name": "user"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AlloyDb.V1.User",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.UpdateUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_UpdateUser_async_flattened",
+      "title": "UpdateUserAsync",
+      "description": "Snippet for UpdateUserAsync",
+      "file": "AlloyDBAdminClient.UpdateUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.UpdateUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.User",
+            "name": "user"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AlloyDb.V1.User>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.UpdateUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_DeleteUser_sync",
+      "title": "DeleteUserRequestObject",
+      "description": "Snippet for DeleteUser",
+      "file": "AlloyDBAdminClient.DeleteUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUser",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.DeleteUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.DeleteUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.DeleteUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_DeleteUser_async",
+      "title": "DeleteUserRequestObjectAsync",
+      "description": "Snippet for DeleteUserAsync",
+      "file": "AlloyDBAdminClient.DeleteUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.DeleteUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.DeleteUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.DeleteUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_DeleteUser_sync_flattened",
+      "title": "DeleteUser",
+      "description": "Snippet for DeleteUser",
+      "file": "AlloyDBAdminClient.DeleteUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUser",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.DeleteUser",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.DeleteUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_DeleteUser_async_flattened",
+      "title": "DeleteUserAsync",
+      "description": "Snippet for DeleteUserAsync",
+      "file": "AlloyDBAdminClient.DeleteUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.DeleteUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.DeleteUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_DeleteUser_sync_flattened_resourceNames",
+      "title": "DeleteUserResourceNames",
+      "description": "Snippet for DeleteUser",
+      "file": "AlloyDBAdminClient.DeleteUserResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUser",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.DeleteUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.UserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.DeleteUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1_generated_AlloyDBAdmin_DeleteUser_async_flattened_resourceNames",
+      "title": "DeleteUserResourceNamesAsync",
+      "description": "Snippet for DeleteUserAsync",
+      "file": "AlloyDBAdminClient.DeleteUserResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient.DeleteUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1.UserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin.DeleteUser",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]

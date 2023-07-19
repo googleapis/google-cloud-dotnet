@@ -1,0 +1,54 @@
+[
+  {
+    "method": "ListLocations",
+    "client": "MigrationCenterClient",
+    "clientNavigationProperty": "LocationsClient",
+    "arguments": {
+      "request": {
+        "name": "projects/${PROJECT_ID}"
+      }
+    }
+  },
+  {
+    "method": "ListReportConfigs",
+    "client": "MigrationCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListSources",
+    "client": "MigrationCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListPreferenceSets",
+    "client": "MigrationCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListGroups",
+    "client": "MigrationCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListAssets",
+    "client": "MigrationCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListImportJobs",
+    "client": "MigrationCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  }
+]

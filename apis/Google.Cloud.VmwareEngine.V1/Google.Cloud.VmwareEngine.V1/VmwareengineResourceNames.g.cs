@@ -357,6 +357,18 @@ namespace Google.Cloud.VmwareEngine.V1
         }
     }
 
+    public partial class GetSubnetRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::SubnetName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::SubnetName SubnetName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::SubnetName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListNodeTypesRequest
     {
         /// <summary>
@@ -557,6 +569,66 @@ namespace Google.Cloud.VmwareEngine.V1
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreatePrivateConnectionRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetPrivateConnectionRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::PrivateConnectionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::PrivateConnectionName PrivateConnectionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::PrivateConnectionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListPrivateConnectionsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeletePrivateConnectionRequest
+    {
+        /// <summary>
+        /// <see cref="gcvv::PrivateConnectionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvv::PrivateConnectionName PrivateConnectionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvv::PrivateConnectionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListPrivateConnectionPeeringRoutesRequest
+    {
+        /// <summary>
+        /// <see cref="PrivateConnectionName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PrivateConnectionName ParentAsPrivateConnectionName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PrivateConnectionName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

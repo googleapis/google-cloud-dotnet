@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.2.0, released 2023-06-27
+
+### New features
+
+- Added new restore scope options ([commit b606f4c](https://github.com/googleapis/google-cloud-dotnet/commit/b606f4c5293289554f5a035f3f8e0ce4c71ef3fe))
+- Added transformation rules for restore ([commit b606f4c](https://github.com/googleapis/google-cloud-dotnet/commit/b606f4c5293289554f5a035f3f8e0ce4c71ef3fe))
+- Added BackupPlan and RestorePlan state information ([commit b606f4c](https://github.com/googleapis/google-cloud-dotnet/commit/b606f4c5293289554f5a035f3f8e0ce4c71ef3fe))
+
+### Documentation improvements
+
+- Minor documentation fixes ([commit c78b468](https://github.com/googleapis/google-cloud-dotnet/commit/c78b46845ade4aafe6388159c5d12796fe150c77))
+
 ## Version 2.1.0, released 2023-01-19
 
 ### New features

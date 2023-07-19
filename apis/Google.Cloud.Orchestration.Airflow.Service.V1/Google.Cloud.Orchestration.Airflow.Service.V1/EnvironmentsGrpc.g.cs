@@ -80,9 +80,27 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteEnvironmentRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_DeleteEnvironmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteEnvironmentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_ExecuteAirflowCommandRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse> __Marshaller_google_cloud_orchestration_airflow_service_v1_ExecuteAirflowCommandResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_StopAirflowCommandRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse> __Marshaller_google_cloud_orchestration_airflow_service_v1_StopAirflowCommandResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_PollAirflowCommandRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse> __Marshaller_google_cloud_orchestration_airflow_service_v1_PollAirflowCommandResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_SaveSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_LoadSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_DatabaseFailoverRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_FetchDatabasePropertiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse> __Marshaller_google_cloud_orchestration_airflow_service_v1_FetchDatabasePropertiesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateEnvironmentRequest, global::Google.LongRunning.Operation> __Method_CreateEnvironment = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateEnvironmentRequest, global::Google.LongRunning.Operation>(
@@ -125,6 +143,30 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse> __Method_ExecuteAirflowCommand = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExecuteAirflowCommand",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_ExecuteAirflowCommandRequest,
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_ExecuteAirflowCommandResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse> __Method_StopAirflowCommand = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "StopAirflowCommand",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_StopAirflowCommandRequest,
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_StopAirflowCommandResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse> __Method_PollAirflowCommand = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PollAirflowCommand",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_PollAirflowCommandRequest,
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_PollAirflowCommandResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest, global::Google.LongRunning.Operation> __Method_SaveSnapshot = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -139,6 +181,22 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         "LoadSnapshot",
         __Marshaller_google_cloud_orchestration_airflow_service_v1_LoadSnapshotRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest, global::Google.LongRunning.Operation> __Method_DatabaseFailover = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DatabaseFailover",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_DatabaseFailoverRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse> __Method_FetchDatabaseProperties = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchDatabaseProperties",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_FetchDatabasePropertiesRequest,
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_FetchDatabasePropertiesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -211,6 +269,42 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       }
 
       /// <summary>
+      /// Executes Airflow CLI command.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse> ExecuteAirflowCommand(global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Stops Airflow CLI command execution.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse> StopAirflowCommand(global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Polls Airflow CLI command execution and fetches logs.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse> PollAirflowCommand(global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates a snapshots of a Cloud Composer environment.
       ///
       /// As a result of this operation, snapshot of environment's state is stored
@@ -236,6 +330,30 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> LoadSnapshot(global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Triggers database failover (only for highly resilient environments).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DatabaseFailover(global::Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches database properties.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse> FetchDatabaseProperties(global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -510,6 +628,150 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteEnvironment, null, options, request);
       }
       /// <summary>
+      /// Executes Airflow CLI command.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse ExecuteAirflowCommand(global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteAirflowCommand(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Executes Airflow CLI command.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse ExecuteAirflowCommand(global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExecuteAirflowCommand, null, options, request);
+      }
+      /// <summary>
+      /// Executes Airflow CLI command.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse> ExecuteAirflowCommandAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteAirflowCommandAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Executes Airflow CLI command.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse> ExecuteAirflowCommandAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExecuteAirflowCommand, null, options, request);
+      }
+      /// <summary>
+      /// Stops Airflow CLI command execution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse StopAirflowCommand(global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StopAirflowCommand(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Stops Airflow CLI command execution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse StopAirflowCommand(global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_StopAirflowCommand, null, options, request);
+      }
+      /// <summary>
+      /// Stops Airflow CLI command execution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse> StopAirflowCommandAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StopAirflowCommandAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Stops Airflow CLI command execution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse> StopAirflowCommandAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_StopAirflowCommand, null, options, request);
+      }
+      /// <summary>
+      /// Polls Airflow CLI command execution and fetches logs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse PollAirflowCommand(global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PollAirflowCommand(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Polls Airflow CLI command execution and fetches logs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse PollAirflowCommand(global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PollAirflowCommand, null, options, request);
+      }
+      /// <summary>
+      /// Polls Airflow CLI command execution and fetches logs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse> PollAirflowCommandAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PollAirflowCommandAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Polls Airflow CLI command execution and fetches logs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse> PollAirflowCommandAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PollAirflowCommand, null, options, request);
+      }
+      /// <summary>
       /// Creates a snapshots of a Cloud Composer environment.
       ///
       /// As a result of this operation, snapshot of environment's state is stored
@@ -629,6 +891,102 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_LoadSnapshot, null, options, request);
       }
+      /// <summary>
+      /// Triggers database failover (only for highly resilient environments).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DatabaseFailover(global::Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DatabaseFailover(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Triggers database failover (only for highly resilient environments).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DatabaseFailover(global::Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DatabaseFailover, null, options, request);
+      }
+      /// <summary>
+      /// Triggers database failover (only for highly resilient environments).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DatabaseFailoverAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DatabaseFailoverAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Triggers database failover (only for highly resilient environments).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DatabaseFailoverAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DatabaseFailover, null, options, request);
+      }
+      /// <summary>
+      /// Fetches database properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse FetchDatabaseProperties(global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchDatabaseProperties(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches database properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse FetchDatabaseProperties(global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchDatabaseProperties, null, options, request);
+      }
+      /// <summary>
+      /// Fetches database properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse> FetchDatabasePropertiesAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchDatabasePropertiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches database properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse> FetchDatabasePropertiesAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchDatabaseProperties, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EnvironmentsClient NewInstance(ClientBaseConfiguration configuration)
@@ -648,8 +1006,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
           .AddMethod(__Method_ListEnvironments, serviceImpl.ListEnvironments)
           .AddMethod(__Method_UpdateEnvironment, serviceImpl.UpdateEnvironment)
           .AddMethod(__Method_DeleteEnvironment, serviceImpl.DeleteEnvironment)
+          .AddMethod(__Method_ExecuteAirflowCommand, serviceImpl.ExecuteAirflowCommand)
+          .AddMethod(__Method_StopAirflowCommand, serviceImpl.StopAirflowCommand)
+          .AddMethod(__Method_PollAirflowCommand, serviceImpl.PollAirflowCommand)
           .AddMethod(__Method_SaveSnapshot, serviceImpl.SaveSnapshot)
-          .AddMethod(__Method_LoadSnapshot, serviceImpl.LoadSnapshot).Build();
+          .AddMethod(__Method_LoadSnapshot, serviceImpl.LoadSnapshot)
+          .AddMethod(__Method_DatabaseFailover, serviceImpl.DatabaseFailover)
+          .AddMethod(__Method_FetchDatabaseProperties, serviceImpl.FetchDatabaseProperties).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -664,8 +1027,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       serviceBinder.AddMethod(__Method_ListEnvironments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListEnvironmentsResponse>(serviceImpl.ListEnvironments));
       serviceBinder.AddMethod(__Method_UpdateEnvironment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateEnvironmentRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateEnvironment));
       serviceBinder.AddMethod(__Method_DeleteEnvironment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteEnvironmentRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteEnvironment));
+      serviceBinder.AddMethod(__Method_ExecuteAirflowCommand, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse>(serviceImpl.ExecuteAirflowCommand));
+      serviceBinder.AddMethod(__Method_StopAirflowCommand, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse>(serviceImpl.StopAirflowCommand));
+      serviceBinder.AddMethod(__Method_PollAirflowCommand, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse>(serviceImpl.PollAirflowCommand));
       serviceBinder.AddMethod(__Method_SaveSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest, global::Google.LongRunning.Operation>(serviceImpl.SaveSnapshot));
       serviceBinder.AddMethod(__Method_LoadSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest, global::Google.LongRunning.Operation>(serviceImpl.LoadSnapshot));
+      serviceBinder.AddMethod(__Method_DatabaseFailover, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest, global::Google.LongRunning.Operation>(serviceImpl.DatabaseFailover));
+      serviceBinder.AddMethod(__Method_FetchDatabaseProperties, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.FetchDatabasePropertiesResponse>(serviceImpl.FetchDatabaseProperties));
     }
 
   }

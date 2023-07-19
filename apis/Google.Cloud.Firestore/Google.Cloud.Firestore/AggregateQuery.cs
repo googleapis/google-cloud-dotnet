@@ -34,6 +34,8 @@ public sealed class AggregateQuery : IEquatable<AggregateQuery>
     private readonly Query _query;
     private readonly IReadOnlyList<Aggregation> _aggregations;
 
+    internal FirestoreDb Database => _query.Database;
+
     internal AggregateQuery(Query query)
     {
         _query = GaxPreconditions.CheckNotNull(query, nameof(query));

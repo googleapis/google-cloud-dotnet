@@ -139,6 +139,18 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class DeleteSavedQueryRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::SavedQueryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::SavedQueryName SavedQueryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::SavedQueryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetAnnotationSpecRequest
     {
         /// <summary>

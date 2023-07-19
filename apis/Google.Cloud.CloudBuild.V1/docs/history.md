@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.5.0, released 2023-07-13
+
+### New features
+
+- Add routing information in Cloud Build GRPC clients ([commit 89156c3](https://github.com/googleapis/google-cloud-dotnet/commit/89156c3719f4dcf1d371fe6a974cf8d62cd9384a))
+- Added e2-medium machine type ([commit dc5d51f](https://github.com/googleapis/google-cloud-dotnet/commit/dc5d51ff8eda2db70bb23bb4034cc65c404c7731))
+- Add repositoryevent to buildtrigger ([commit e207559](https://github.com/googleapis/google-cloud-dotnet/commit/e207559237a093beef962df0b10d973518eac4b4))
+
 ## Version 2.4.0, released 2023-04-19
 
 ### New features
