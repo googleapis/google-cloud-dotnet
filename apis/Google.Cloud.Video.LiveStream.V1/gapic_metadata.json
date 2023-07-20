@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "LivestreamServiceClient",
           "rpcs": {
+            "CreateAsset": {
+              "methods": [
+                "CreateAsset",
+                "CreateAssetAsync"
+              ]
+            },
             "CreateChannel": {
               "methods": [
                 "CreateChannel",
@@ -26,6 +32,12 @@
               "methods": [
                 "CreateInput",
                 "CreateInputAsync"
+              ]
+            },
+            "DeleteAsset": {
+              "methods": [
+                "DeleteAsset",
+                "DeleteAssetAsync"
               ]
             },
             "DeleteChannel": {
@@ -46,6 +58,12 @@
                 "DeleteInputAsync"
               ]
             },
+            "GetAsset": {
+              "methods": [
+                "GetAsset",
+                "GetAssetAsync"
+              ]
+            },
             "GetChannel": {
               "methods": [
                 "GetChannel",
@@ -62,6 +80,18 @@
               "methods": [
                 "GetInput",
                 "GetInputAsync"
+              ]
+            },
+            "GetPool": {
+              "methods": [
+                "GetPool",
+                "GetPoolAsync"
+              ]
+            },
+            "ListAssets": {
+              "methods": [
+                "ListAssets",
+                "ListAssetsAsync"
               ]
             },
             "ListChannels": {
@@ -104,6 +134,12 @@
               "methods": [
                 "UpdateInput",
                 "UpdateInputAsync"
+              ]
+            },
+            "UpdatePool": {
+              "methods": [
+                "UpdatePool",
+                "UpdatePoolAsync"
               ]
             }
           }

@@ -73,6 +73,15 @@ namespace Google.Cloud.Video.LiveStream.V1
             ListEventsSettings = existing.ListEventsSettings;
             GetEventSettings = existing.GetEventSettings;
             DeleteEventSettings = existing.DeleteEventSettings;
+            CreateAssetSettings = existing.CreateAssetSettings;
+            CreateAssetOperationsSettings = existing.CreateAssetOperationsSettings.Clone();
+            DeleteAssetSettings = existing.DeleteAssetSettings;
+            DeleteAssetOperationsSettings = existing.DeleteAssetOperationsSettings.Clone();
+            GetAssetSettings = existing.GetAssetSettings;
+            ListAssetsSettings = existing.ListAssetsSettings;
+            GetPoolSettings = existing.GetPoolSettings;
+            UpdatePoolSettings = existing.UpdatePoolSettings;
+            UpdatePoolOperationsSettings = existing.UpdatePoolOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -450,6 +459,132 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteEventSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.CreateAsset</c> and <c>LivestreamServiceClient.CreateAssetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAssetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LivestreamServiceClient.CreateAsset</c> and
+        /// <c>LivestreamServiceClient.CreateAssetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateAssetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.DeleteAsset</c> and <c>LivestreamServiceClient.DeleteAssetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAssetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LivestreamServiceClient.DeleteAsset</c> and
+        /// <c>LivestreamServiceClient.DeleteAssetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteAssetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.GetAsset</c> and <c>LivestreamServiceClient.GetAssetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAssetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.ListAssets</c> and <c>LivestreamServiceClient.ListAssetsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAssetsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.GetPool</c> and <c>LivestreamServiceClient.GetPoolAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.UpdatePool</c> and <c>LivestreamServiceClient.UpdatePoolAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdatePoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LivestreamServiceClient.UpdatePool</c> and
+        /// <c>LivestreamServiceClient.UpdatePoolAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdatePoolOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -2825,6 +2960,806 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteEventAsync(EventName name, st::CancellationToken cancellationToken) =>
             DeleteEventAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Asset with the provided unique ID in the specified
+        /// region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Asset, OperationMetadata> CreateAsset(CreateAssetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Asset with the provided unique ID in the specified
+        /// region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Asset, OperationMetadata>> CreateAssetAsync(CreateAssetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Asset with the provided unique ID in the specified
+        /// region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Asset, OperationMetadata>> CreateAssetAsync(CreateAssetRequest request, st::CancellationToken cancellationToken) =>
+            CreateAssetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateAsset</c>.</summary>
+        public virtual lro::OperationsClient CreateAssetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateAsset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Asset, OperationMetadata> PollOnceCreateAsset(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Asset, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAssetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAsset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Asset, OperationMetadata>> PollOnceCreateAssetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Asset, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAssetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a Asset with the provided unique ID in the specified
+        /// region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent location for the resource, in the form of:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="asset">
+        /// Required. The asset resource to be created.
+        /// </param>
+        /// <param name="assetId">
+        /// Required. The ID of the asset resource to be created.
+        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
+        /// could contain dashes (-) in between.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Asset, OperationMetadata> CreateAsset(string parent, Asset asset, string assetId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAsset(new CreateAssetRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Asset = gax::GaxPreconditions.CheckNotNull(asset, nameof(asset)),
+                AssetId = gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Asset with the provided unique ID in the specified
+        /// region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent location for the resource, in the form of:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="asset">
+        /// Required. The asset resource to be created.
+        /// </param>
+        /// <param name="assetId">
+        /// Required. The ID of the asset resource to be created.
+        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
+        /// could contain dashes (-) in between.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Asset, OperationMetadata>> CreateAssetAsync(string parent, Asset asset, string assetId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAssetAsync(new CreateAssetRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Asset = gax::GaxPreconditions.CheckNotNull(asset, nameof(asset)),
+                AssetId = gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Asset with the provided unique ID in the specified
+        /// region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent location for the resource, in the form of:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="asset">
+        /// Required. The asset resource to be created.
+        /// </param>
+        /// <param name="assetId">
+        /// Required. The ID of the asset resource to be created.
+        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
+        /// could contain dashes (-) in between.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Asset, OperationMetadata>> CreateAssetAsync(string parent, Asset asset, string assetId, st::CancellationToken cancellationToken) =>
+            CreateAssetAsync(parent, asset, assetId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Asset with the provided unique ID in the specified
+        /// region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent location for the resource, in the form of:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="asset">
+        /// Required. The asset resource to be created.
+        /// </param>
+        /// <param name="assetId">
+        /// Required. The ID of the asset resource to be created.
+        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
+        /// could contain dashes (-) in between.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Asset, OperationMetadata> CreateAsset(gagr::LocationName parent, Asset asset, string assetId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAsset(new CreateAssetRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Asset = gax::GaxPreconditions.CheckNotNull(asset, nameof(asset)),
+                AssetId = gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Asset with the provided unique ID in the specified
+        /// region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent location for the resource, in the form of:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="asset">
+        /// Required. The asset resource to be created.
+        /// </param>
+        /// <param name="assetId">
+        /// Required. The ID of the asset resource to be created.
+        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
+        /// could contain dashes (-) in between.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Asset, OperationMetadata>> CreateAssetAsync(gagr::LocationName parent, Asset asset, string assetId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAssetAsync(new CreateAssetRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Asset = gax::GaxPreconditions.CheckNotNull(asset, nameof(asset)),
+                AssetId = gax::GaxPreconditions.CheckNotNullOrEmpty(assetId, nameof(assetId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Asset with the provided unique ID in the specified
+        /// region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent location for the resource, in the form of:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="asset">
+        /// Required. The asset resource to be created.
+        /// </param>
+        /// <param name="assetId">
+        /// Required. The ID of the asset resource to be created.
+        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
+        /// could contain dashes (-) in between.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Asset, OperationMetadata>> CreateAssetAsync(gagr::LocationName parent, Asset asset, string assetId, st::CancellationToken cancellationToken) =>
+            CreateAssetAsync(parent, asset, assetId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified asset if it is not used.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAsset(DeleteAssetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified asset if it is not used.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAssetAsync(DeleteAssetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified asset if it is not used.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAssetAsync(DeleteAssetRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAssetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteAsset</c>.</summary>
+        public virtual lro::OperationsClient DeleteAssetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteAsset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteAsset(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAssetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAsset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteAssetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAssetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes the specified asset if it is not used.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the asset resource, in the form of:
+        /// `projects/{project}/locations/{location}/assets/{assetId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAsset(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAsset(new DeleteAssetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified asset if it is not used.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the asset resource, in the form of:
+        /// `projects/{project}/locations/{location}/assets/{assetId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAssetAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAssetAsync(new DeleteAssetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified asset if it is not used.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the asset resource, in the form of:
+        /// `projects/{project}/locations/{location}/assets/{assetId}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAssetAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAssetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified asset if it is not used.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the asset resource, in the form of:
+        /// `projects/{project}/locations/{location}/assets/{assetId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAsset(AssetName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAsset(new DeleteAssetRequest
+            {
+                AssetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified asset if it is not used.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the asset resource, in the form of:
+        /// `projects/{project}/locations/{location}/assets/{assetId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAssetAsync(AssetName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAssetAsync(new DeleteAssetRequest
+            {
+                AssetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified asset if it is not used.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the asset resource, in the form of:
+        /// `projects/{project}/locations/{location}/assets/{assetId}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAssetAsync(AssetName name, st::CancellationToken cancellationToken) =>
+            DeleteAssetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified asset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Asset GetAsset(GetAssetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the specified asset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Asset> GetAssetAsync(GetAssetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the specified asset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Asset> GetAssetAsync(GetAssetRequest request, st::CancellationToken cancellationToken) =>
+            GetAssetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified asset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/assets/{asset}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Asset GetAsset(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAsset(new GetAssetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified asset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/assets/{asset}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Asset> GetAssetAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAssetAsync(new GetAssetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified asset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/assets/{asset}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Asset> GetAssetAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAssetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified asset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/assets/{asset}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Asset GetAsset(AssetName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAsset(new GetAssetRequest
+            {
+                AssetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified asset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/assets/{asset}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Asset> GetAssetAsync(AssetName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAssetAsync(new GetAssetRequest
+            {
+                AssetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified asset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/assets/{asset}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Asset> GetAssetAsync(AssetName name, st::CancellationToken cancellationToken) =>
+            GetAssetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of all assets in the specified region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(ListAssetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all assets in the specified region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(ListAssetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all assets in the specified region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent location for the resource, in the form of:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAssets(new ListAssetsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all assets in the specified region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent location for the resource, in the form of:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAssetsAsync(new ListAssetsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all assets in the specified region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent location for the resource, in the form of:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAssets(new ListAssetsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of all assets in the specified region.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent location for the resource, in the form of:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAssetsAsync(new ListAssetsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Pool GetPool(GetPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the specified pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Pool> GetPoolAsync(GetPoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the specified pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Pool> GetPoolAsync(GetPoolRequest request, st::CancellationToken cancellationToken) =>
+            GetPoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified pool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the pool resource, in the form of:
+        /// `projects/{project}/locations/{location}/pools/{poolId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Pool GetPool(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPool(new GetPoolRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified pool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the pool resource, in the form of:
+        /// `projects/{project}/locations/{location}/pools/{poolId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Pool> GetPoolAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPoolAsync(new GetPoolRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified pool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the pool resource, in the form of:
+        /// `projects/{project}/locations/{location}/pools/{poolId}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Pool> GetPoolAsync(string name, st::CancellationToken cancellationToken) =>
+            GetPoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified pool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the pool resource, in the form of:
+        /// `projects/{project}/locations/{location}/pools/{poolId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Pool GetPool(PoolName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPool(new GetPoolRequest
+            {
+                PoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified pool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the pool resource, in the form of:
+        /// `projects/{project}/locations/{location}/pools/{poolId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Pool> GetPoolAsync(PoolName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPoolAsync(new GetPoolRequest
+            {
+                PoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified pool.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the pool resource, in the form of:
+        /// `projects/{project}/locations/{location}/pools/{poolId}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Pool> GetPoolAsync(PoolName name, st::CancellationToken cancellationToken) =>
+            GetPoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the specified pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Pool, OperationMetadata> UpdatePool(UpdatePoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the specified pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pool, OperationMetadata>> UpdatePoolAsync(UpdatePoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the specified pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pool, OperationMetadata>> UpdatePoolAsync(UpdatePoolRequest request, st::CancellationToken cancellationToken) =>
+            UpdatePoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdatePool</c>.</summary>
+        public virtual lro::OperationsClient UpdatePoolOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdatePool</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Pool, OperationMetadata> PollOnceUpdatePool(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Pool, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdatePoolOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdatePool</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Pool, OperationMetadata>> PollOnceUpdatePoolAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Pool, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdatePoolOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the specified pool.
+        /// </summary>
+        /// <param name="pool">
+        /// Required. The pool resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Field mask is used to specify the fields to be overwritten in the Pool
+        /// resource by the update. You can only update the following fields:
+        /// 
+        /// * `networkConfig`
+        /// 
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Pool, OperationMetadata> UpdatePool(Pool pool, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePool(new UpdatePoolRequest
+            {
+                UpdateMask = updateMask,
+                Pool = gax::GaxPreconditions.CheckNotNull(pool, nameof(pool)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified pool.
+        /// </summary>
+        /// <param name="pool">
+        /// Required. The pool resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Field mask is used to specify the fields to be overwritten in the Pool
+        /// resource by the update. You can only update the following fields:
+        /// 
+        /// * `networkConfig`
+        /// 
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pool, OperationMetadata>> UpdatePoolAsync(Pool pool, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePoolAsync(new UpdatePoolRequest
+            {
+                UpdateMask = updateMask,
+                Pool = gax::GaxPreconditions.CheckNotNull(pool, nameof(pool)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified pool.
+        /// </summary>
+        /// <param name="pool">
+        /// Required. The pool resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Field mask is used to specify the fields to be overwritten in the Pool
+        /// resource by the update. You can only update the following fields:
+        /// 
+        /// * `networkConfig`
+        /// 
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Pool, OperationMetadata>> UpdatePoolAsync(Pool pool, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdatePoolAsync(pool, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>LivestreamService client wrapper implementation, for convenient use.</summary>
@@ -2869,6 +3804,18 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         private readonly gaxgrpc::ApiCall<DeleteEventRequest, wkt::Empty> _callDeleteEvent;
 
+        private readonly gaxgrpc::ApiCall<CreateAssetRequest, lro::Operation> _callCreateAsset;
+
+        private readonly gaxgrpc::ApiCall<DeleteAssetRequest, lro::Operation> _callDeleteAsset;
+
+        private readonly gaxgrpc::ApiCall<GetAssetRequest, Asset> _callGetAsset;
+
+        private readonly gaxgrpc::ApiCall<ListAssetsRequest, ListAssetsResponse> _callListAssets;
+
+        private readonly gaxgrpc::ApiCall<GetPoolRequest, Pool> _callGetPool;
+
+        private readonly gaxgrpc::ApiCall<UpdatePoolRequest, lro::Operation> _callUpdatePool;
+
         /// <summary>
         /// Constructs a client wrapper for the LivestreamService service, with the specified gRPC client and settings.
         /// </summary>
@@ -2888,6 +3835,9 @@ namespace Google.Cloud.Video.LiveStream.V1
             CreateInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInputOperationsSettings, logger);
             DeleteInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInputOperationsSettings, logger);
             UpdateInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInputOperationsSettings, logger);
+            CreateAssetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAssetOperationsSettings, logger);
+            DeleteAssetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAssetOperationsSettings, logger);
+            UpdatePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdatePoolOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateChannel = clientHelper.BuildApiCall<CreateChannelRequest, lro::Operation>("CreateChannel", grpcClient.CreateChannelAsync, grpcClient.CreateChannel, effectiveSettings.CreateChannelSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateChannel);
@@ -2937,6 +3887,24 @@ namespace Google.Cloud.Video.LiveStream.V1
             _callDeleteEvent = clientHelper.BuildApiCall<DeleteEventRequest, wkt::Empty>("DeleteEvent", grpcClient.DeleteEventAsync, grpcClient.DeleteEvent, effectiveSettings.DeleteEventSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteEvent);
             Modify_DeleteEventApiCall(ref _callDeleteEvent);
+            _callCreateAsset = clientHelper.BuildApiCall<CreateAssetRequest, lro::Operation>("CreateAsset", grpcClient.CreateAssetAsync, grpcClient.CreateAsset, effectiveSettings.CreateAssetSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAsset);
+            Modify_CreateAssetApiCall(ref _callCreateAsset);
+            _callDeleteAsset = clientHelper.BuildApiCall<DeleteAssetRequest, lro::Operation>("DeleteAsset", grpcClient.DeleteAssetAsync, grpcClient.DeleteAsset, effectiveSettings.DeleteAssetSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAsset);
+            Modify_DeleteAssetApiCall(ref _callDeleteAsset);
+            _callGetAsset = clientHelper.BuildApiCall<GetAssetRequest, Asset>("GetAsset", grpcClient.GetAssetAsync, grpcClient.GetAsset, effectiveSettings.GetAssetSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAsset);
+            Modify_GetAssetApiCall(ref _callGetAsset);
+            _callListAssets = clientHelper.BuildApiCall<ListAssetsRequest, ListAssetsResponse>("ListAssets", grpcClient.ListAssetsAsync, grpcClient.ListAssets, effectiveSettings.ListAssetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAssets);
+            Modify_ListAssetsApiCall(ref _callListAssets);
+            _callGetPool = clientHelper.BuildApiCall<GetPoolRequest, Pool>("GetPool", grpcClient.GetPoolAsync, grpcClient.GetPool, effectiveSettings.GetPoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetPool);
+            Modify_GetPoolApiCall(ref _callGetPool);
+            _callUpdatePool = clientHelper.BuildApiCall<UpdatePoolRequest, lro::Operation>("UpdatePool", grpcClient.UpdatePoolAsync, grpcClient.UpdatePool, effectiveSettings.UpdatePoolSettings).WithGoogleRequestParam("pool.name", request => request.Pool?.Name);
+            Modify_ApiCall(ref _callUpdatePool);
+            Modify_UpdatePoolApiCall(ref _callUpdatePool);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2973,6 +3941,18 @@ namespace Google.Cloud.Video.LiveStream.V1
         partial void Modify_GetEventApiCall(ref gaxgrpc::ApiCall<GetEventRequest, Event> call);
 
         partial void Modify_DeleteEventApiCall(ref gaxgrpc::ApiCall<DeleteEventRequest, wkt::Empty> call);
+
+        partial void Modify_CreateAssetApiCall(ref gaxgrpc::ApiCall<CreateAssetRequest, lro::Operation> call);
+
+        partial void Modify_DeleteAssetApiCall(ref gaxgrpc::ApiCall<DeleteAssetRequest, lro::Operation> call);
+
+        partial void Modify_GetAssetApiCall(ref gaxgrpc::ApiCall<GetAssetRequest, Asset> call);
+
+        partial void Modify_ListAssetsApiCall(ref gaxgrpc::ApiCall<ListAssetsRequest, ListAssetsResponse> call);
+
+        partial void Modify_GetPoolApiCall(ref gaxgrpc::ApiCall<GetPoolRequest, Pool> call);
+
+        partial void Modify_UpdatePoolApiCall(ref gaxgrpc::ApiCall<UpdatePoolRequest, lro::Operation> call);
 
         partial void OnConstruction(LivestreamService.LivestreamServiceClient grpcClient, LivestreamServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3013,6 +3993,18 @@ namespace Google.Cloud.Video.LiveStream.V1
         partial void Modify_GetEventRequest(ref GetEventRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteEventRequest(ref DeleteEventRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAssetRequest(ref CreateAssetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAssetRequest(ref DeleteAssetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAssetRequest(ref GetAssetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAssetsRequest(ref ListAssetsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetPoolRequest(ref GetPoolRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdatePoolRequest(ref UpdatePoolRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateChannel</c>.</summary>
         public override lro::OperationsClient CreateChannelOperationsClient { get; }
@@ -3427,6 +4419,161 @@ namespace Google.Cloud.Video.LiveStream.V1
             Modify_DeleteEventRequest(ref request, ref callSettings);
             return _callDeleteEvent.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>CreateAsset</c>.</summary>
+        public override lro::OperationsClient CreateAssetOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a Asset with the provided unique ID in the specified
+        /// region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Asset, OperationMetadata> CreateAsset(CreateAssetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAssetRequest(ref request, ref callSettings);
+            return new lro::Operation<Asset, OperationMetadata>(_callCreateAsset.Sync(request, callSettings), CreateAssetOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a Asset with the provided unique ID in the specified
+        /// region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Asset, OperationMetadata>> CreateAssetAsync(CreateAssetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAssetRequest(ref request, ref callSettings);
+            return new lro::Operation<Asset, OperationMetadata>(await _callCreateAsset.Async(request, callSettings).ConfigureAwait(false), CreateAssetOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteAsset</c>.</summary>
+        public override lro::OperationsClient DeleteAssetOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes the specified asset if it is not used.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteAsset(DeleteAssetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAssetRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteAsset.Sync(request, callSettings), DeleteAssetOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes the specified asset if it is not used.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAssetAsync(DeleteAssetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAssetRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAsset.Async(request, callSettings).ConfigureAwait(false), DeleteAssetOperationsClient);
+        }
+
+        /// <summary>
+        /// Returns the specified asset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Asset GetAsset(GetAssetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAssetRequest(ref request, ref callSettings);
+            return _callGetAsset.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the specified asset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Asset> GetAssetAsync(GetAssetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAssetRequest(ref request, ref callSettings);
+            return _callGetAsset.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all assets in the specified region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Asset"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAssetsResponse, Asset> ListAssets(ListAssetsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAssetsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAssetsRequest, ListAssetsResponse, Asset>(_callListAssets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all assets in the specified region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Asset"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAssetsResponse, Asset> ListAssetsAsync(ListAssetsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAssetsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAssetsRequest, ListAssetsResponse, Asset>(_callListAssets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the specified pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Pool GetPool(GetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPoolRequest(ref request, ref callSettings);
+            return _callGetPool.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the specified pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Pool> GetPoolAsync(GetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPoolRequest(ref request, ref callSettings);
+            return _callGetPool.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdatePool</c>.</summary>
+        public override lro::OperationsClient UpdatePoolOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the specified pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Pool, OperationMetadata> UpdatePool(UpdatePoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePoolRequest(ref request, ref callSettings);
+            return new lro::Operation<Pool, OperationMetadata>(_callUpdatePool.Sync(request, callSettings), UpdatePoolOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the specified pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Pool, OperationMetadata>> UpdatePoolAsync(UpdatePoolRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePoolRequest(ref request, ref callSettings);
+            return new lro::Operation<Pool, OperationMetadata>(await _callUpdatePool.Async(request, callSettings).ConfigureAwait(false), UpdatePoolOperationsClient);
+        }
     }
 
     public partial class ListChannelsRequest : gaxgrpc::IPageRequest
@@ -3438,6 +4585,10 @@ namespace Google.Cloud.Video.LiveStream.V1
     }
 
     public partial class ListEventsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAssetsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -3461,6 +4612,14 @@ namespace Google.Cloud.Video.LiveStream.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Event> GetEnumerator() => Events.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAssetsResponse : gaxgrpc::IPageResponse<Asset>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Asset> GetEnumerator() => Assets.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
