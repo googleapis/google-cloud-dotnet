@@ -3,7 +3,7 @@
 //     source: google/cloud/servicedirectory/v1beta1/registration_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -469,7 +469,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       }
 
       /// <summary>
-      /// Gets the IAM Policy for a resource (namespace or service only).
+      /// Gets the IAM Policy for a resource
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -481,7 +481,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       }
 
       /// <summary>
-      /// Sets the IAM Policy for a resource (namespace or service only).
+      /// Sets the IAM Policy for a resource
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -493,7 +493,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       }
 
       /// <summary>
-      /// Tests IAM permissions for a resource (namespace or service only).
+      /// Tests IAM permissions for a resource (namespace, service  or
+      /// service workload only).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1262,7 +1263,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteEndpoint, null, options, request);
       }
       /// <summary>
-      /// Gets the IAM Policy for a resource (namespace or service only).
+      /// Gets the IAM Policy for a resource
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1275,7 +1276,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the IAM Policy for a resource (namespace or service only).
+      /// Gets the IAM Policy for a resource
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1286,7 +1287,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets the IAM Policy for a resource (namespace or service only).
+      /// Gets the IAM Policy for a resource
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1299,7 +1300,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the IAM Policy for a resource (namespace or service only).
+      /// Gets the IAM Policy for a resource
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1310,7 +1311,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Sets the IAM Policy for a resource (namespace or service only).
+      /// Sets the IAM Policy for a resource
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1323,7 +1324,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the IAM Policy for a resource (namespace or service only).
+      /// Sets the IAM Policy for a resource
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1334,7 +1335,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Sets the IAM Policy for a resource (namespace or service only).
+      /// Sets the IAM Policy for a resource
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1347,7 +1348,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the IAM Policy for a resource (namespace or service only).
+      /// Sets the IAM Policy for a resource
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1358,7 +1359,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Tests IAM permissions for a resource (namespace or service only).
+      /// Tests IAM permissions for a resource (namespace, service  or
+      /// service workload only).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1371,7 +1373,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Tests IAM permissions for a resource (namespace or service only).
+      /// Tests IAM permissions for a resource (namespace, service  or
+      /// service workload only).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1382,7 +1385,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      /// Tests IAM permissions for a resource (namespace or service only).
+      /// Tests IAM permissions for a resource (namespace, service  or
+      /// service workload only).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1395,7 +1399,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Tests IAM permissions for a resource (namespace or service only).
+      /// Tests IAM permissions for a resource (namespace, service  or
+      /// service workload only).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

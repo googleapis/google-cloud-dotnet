@@ -28,31 +28,31 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
             "aW50LnByb3RvEiVnb29nbGUuY2xvdWQuc2VydmljZWRpcmVjdG9yeS52MWJl",
             "dGExGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUv",
             "YXBpL3Jlc291cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvIpQECghFbmRwb2ludBIRCgRuYW1lGAEgASgJQgPgQQUSFAoHYWRk",
+            "LnByb3RvIqYECghFbmRwb2ludBIRCgRuYW1lGAEgASgJQgPgQQUSFAoHYWRk",
             "cmVzcxgCIAEoCUID4EEBEhEKBHBvcnQYAyABKAVCA+BBARJUCghtZXRhZGF0",
             "YRgEIAMoCzI9Lmdvb2dsZS5jbG91ZC5zZXJ2aWNlZGlyZWN0b3J5LnYxYmV0",
             "YTEuRW5kcG9pbnQuTWV0YWRhdGFFbnRyeUID4EEBEkAKB25ldHdvcmsYBSAB",
             "KAlCL+BBBfpBKQonc2VydmljZWRpcmVjdG9yeS5nb29nbGVhcGlzLmNvbS9O",
             "ZXR3b3JrEjQKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAcgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGi8KDU1ldGFkYXRhRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqWAepBkgEKKHNlcnZpY2Vk",
-            "aXJlY3RvcnkuZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnQSZnByb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9uYW1lc3BhY2VzL3tuYW1l",
-            "c3BhY2V9L3NlcnZpY2VzL3tzZXJ2aWNlfS9lbmRwb2ludHMve2VuZHBvaW50",
-            "fUL1AgopY29tLmdvb2dsZS5jbG91ZC5zZXJ2aWNlZGlyZWN0b3J5LnYxYmV0",
-            "YTFCDUVuZHBvaW50UHJvdG9QAVpVY2xvdWQuZ29vZ2xlLmNvbS9nby9zZXJ2",
-            "aWNlZGlyZWN0b3J5L2FwaXYxYmV0YTEvc2VydmljZWRpcmVjdG9yeXBiO3Nl",
-            "cnZpY2VkaXJlY3RvcnlwYvgBAaoCJUdvb2dsZS5DbG91ZC5TZXJ2aWNlRGly",
-            "ZWN0b3J5LlYxQmV0YTHKAiVHb29nbGVcQ2xvdWRcU2VydmljZURpcmVjdG9y",
-            "eVxWMWJldGEx6gIoR29vZ2xlOjpDbG91ZDo6U2VydmljZURpcmVjdG9yeTo6",
-            "VjFiZXRhMepBYQonc2VydmljZWRpcmVjdG9yeS5nb29nbGVhcGlzLmNvbS9O",
-            "ZXR3b3JrEjZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL2dsb2JhbC9u",
-            "ZXR3b3Jrcy97bmV0d29ya31iBnByb3RvMw=="));
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhAKA3VpZBgIIAEoCUID4EEDGi8K",
+            "DU1ldGFkYXRhRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ATqWAepBkgEKKHNlcnZpY2VkaXJlY3RvcnkuZ29vZ2xlYXBpcy5jb20vRW5k",
+            "cG9pbnQSZnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9uYW1lc3BhY2VzL3tuYW1lc3BhY2V9L3NlcnZpY2VzL3tzZXJ2aWNlfS9l",
+            "bmRwb2ludHMve2VuZHBvaW50fUL1AgopY29tLmdvb2dsZS5jbG91ZC5zZXJ2",
+            "aWNlZGlyZWN0b3J5LnYxYmV0YTFCDUVuZHBvaW50UHJvdG9QAVpVY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9zZXJ2aWNlZGlyZWN0b3J5L2FwaXYxYmV0YTEvc2Vy",
+            "dmljZWRpcmVjdG9yeXBiO3NlcnZpY2VkaXJlY3RvcnlwYvgBAaoCJUdvb2ds",
+            "ZS5DbG91ZC5TZXJ2aWNlRGlyZWN0b3J5LlYxQmV0YTHKAiVHb29nbGVcQ2xv",
+            "dWRcU2VydmljZURpcmVjdG9yeVxWMWJldGEx6gIoR29vZ2xlOjpDbG91ZDo6",
+            "U2VydmljZURpcmVjdG9yeTo6VjFiZXRhMepBYQonc2VydmljZWRpcmVjdG9y",
+            "eS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEjZwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL2dsb2JhbC9uZXR3b3Jrcy97bmV0d29ya31iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceDirectory.V1Beta1.Endpoint), global::Google.Cloud.ServiceDirectory.V1Beta1.Endpoint.Parser, new[]{ "Name", "Address", "Port", "Metadata", "Network", "CreateTime", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceDirectory.V1Beta1.Endpoint), global::Google.Cloud.ServiceDirectory.V1Beta1.Endpoint.Parser, new[]{ "Name", "Address", "Port", "Metadata", "Network", "CreateTime", "UpdateTime", "Uid" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -105,6 +105,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       network_ = other.network_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      uid_ = other.uid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -134,7 +135,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
     public const int AddressFieldNumber = 2;
     private string address_ = "";
     /// <summary>
-    /// Optional. An IPv4 or IPv6 address. Service Directory rejects bad addresses like:
+    /// Optional. An IPv4 or IPv6 address. Service Directory rejects bad addresses
+    /// like:
     ///
     /// *   `8.8.8`
     /// *   `8.8.8.8:53`
@@ -190,10 +192,6 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
     ///     must be a DNS subdomain: a series of DNS labels separated by dots (.),
     ///     not longer than 253 characters in total, followed by a slash (/).
     ///     Metadata that fails to meet these requirements are rejected
-    /// *   The `(*.)google.com/` and `(*.)googleapis.com/` prefixes are reserved
-    ///     for system metadata managed by Service Directory. If the user tries
-    ///     to write to these keyspaces, those entries are silently ignored by
-    ///     the system
     ///
     /// Note: This field is equivalent to the `annotations` field in the v1 API.
     /// They have the same syntax and read/write to the same location in Service
@@ -209,8 +207,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
     public const int NetworkFieldNumber = 5;
     private string network_ = "";
     /// <summary>
-    /// Immutable. The Google Compute Engine network (VPC) of the endpoint in the format
-    /// `projects/&lt;project number>/locations/global/networks/*`.
+    /// Immutable. The Google Compute Engine network (VPC) of the endpoint in the
+    /// format `projects/&lt;project number>/locations/global/networks/*`.
     ///
     /// The project must be specified by project number (project id is rejected).
     /// Incorrectly formatted networks are rejected, but no other validation
@@ -256,6 +254,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 8;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. A globally unique identifier (in UUID4 format) for this
+    /// endpoint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -278,6 +292,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       if (Network != other.Network) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (Uid != other.Uid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -292,6 +307,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       if (Network.Length != 0) hash ^= Network.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -335,6 +351,10 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         output.WriteRawTag(58);
         output.WriteMessage(UpdateTime);
       }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Uid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -370,6 +390,10 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         output.WriteRawTag(58);
         output.WriteMessage(UpdateTime);
       }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Uid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -398,6 +422,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -435,6 +462,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -485,6 +515,10 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 66: {
+            Uid = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -532,6 +566,10 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 66: {
+            Uid = input.ReadString();
             break;
           }
         }

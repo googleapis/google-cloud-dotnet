@@ -19,6 +19,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -66,6 +67,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -450,6 +452,11 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(15000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="RegistrationServiceSettings"/> object.</returns>
         public RegistrationServiceSettings Clone() => new RegistrationServiceSettings(this);
@@ -607,6 +614,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
 
         /// <summary>The underlying gRPC RegistrationService client</summary>
         public virtual RegistrationService.RegistrationServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a namespace, and returns the new namespace.
@@ -821,8 +831,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all namespaces.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the project and location whose namespaces you'd like
-        /// to list.
+        /// Required. The resource name of the project and location whose namespaces
+        /// you'd like to list.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -846,8 +856,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all namespaces.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the project and location whose namespaces you'd like
-        /// to list.
+        /// Required. The resource name of the project and location whose namespaces
+        /// you'd like to list.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -871,8 +881,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all namespaces.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the project and location whose namespaces you'd like
-        /// to list.
+        /// Required. The resource name of the project and location whose namespaces
+        /// you'd like to list.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -896,8 +906,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// Lists all namespaces.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the project and location whose namespaces you'd like
-        /// to list.
+        /// Required. The resource name of the project and location whose namespaces
+        /// you'd like to list.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2403,7 +2413,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             DeleteEndpointAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the IAM Policy for a resource (namespace or service only).
+        /// Gets the IAM Policy for a resource
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2412,7 +2422,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the IAM Policy for a resource (namespace or service only).
+        /// Gets the IAM Policy for a resource
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2421,7 +2431,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the IAM Policy for a resource (namespace or service only).
+        /// Gets the IAM Policy for a resource
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2430,7 +2440,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the IAM Policy for a resource (namespace or service only).
+        /// Sets the IAM Policy for a resource
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2439,7 +2449,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the IAM Policy for a resource (namespace or service only).
+        /// Sets the IAM Policy for a resource
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2448,7 +2458,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the IAM Policy for a resource (namespace or service only).
+        /// Sets the IAM Policy for a resource
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2457,7 +2467,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Tests IAM permissions for a resource (namespace or service only).
+        /// Tests IAM permissions for a resource (namespace, service  or
+        /// service workload only).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2466,7 +2477,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Tests IAM permissions for a resource (namespace or service only).
+        /// Tests IAM permissions for a resource (namespace, service  or
+        /// service workload only).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2475,7 +2487,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Tests IAM permissions for a resource (namespace or service only).
+        /// Tests IAM permissions for a resource (namespace, service  or
+        /// service workload only).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2552,6 +2565,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             GrpcClient = grpcClient;
             RegistrationServiceSettings effectiveSettings = settings ?? RegistrationServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateNamespace = clientHelper.BuildApiCall<CreateNamespaceRequest, Namespace>("CreateNamespace", grpcClient.CreateNamespaceAsync, grpcClient.CreateNamespace, effectiveSettings.CreateNamespaceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateNamespace);
             Modify_CreateNamespaceApiCall(ref _callCreateNamespace);
@@ -2651,6 +2665,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
 
         /// <summary>The underlying gRPC RegistrationService client</summary>
         public override RegistrationService.RegistrationServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_CreateNamespaceRequest(ref CreateNamespaceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3053,7 +3070,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Gets the IAM Policy for a resource (namespace or service only).
+        /// Gets the IAM Policy for a resource
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3065,7 +3082,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Gets the IAM Policy for a resource (namespace or service only).
+        /// Gets the IAM Policy for a resource
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3077,7 +3094,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Sets the IAM Policy for a resource (namespace or service only).
+        /// Sets the IAM Policy for a resource
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3089,7 +3106,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Sets the IAM Policy for a resource (namespace or service only).
+        /// Sets the IAM Policy for a resource
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3101,7 +3118,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Tests IAM permissions for a resource (namespace or service only).
+        /// Tests IAM permissions for a resource (namespace, service  or
+        /// service workload only).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3113,7 +3131,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         }
 
         /// <summary>
-        /// Tests IAM permissions for a resource (namespace or service only).
+        /// Tests IAM permissions for a resource (namespace, service  or
+        /// service workload only).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3159,5 +3178,21 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         public scg::IEnumerator<Endpoint> GetEnumerator() => Endpoints.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class RegistrationService
+    {
+        public partial class RegistrationServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+        }
     }
 }

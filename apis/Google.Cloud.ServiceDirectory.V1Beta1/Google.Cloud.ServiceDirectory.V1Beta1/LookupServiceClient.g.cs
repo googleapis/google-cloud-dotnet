@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -45,6 +46,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ResolveServiceSettings = existing.ResolveServiceSettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -70,6 +72,11 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ResolveServiceSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(15000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="LookupServiceSettings"/> object.</returns>
@@ -212,6 +219,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         /// <summary>The underlying gRPC LookupService client</summary>
         public virtual LookupService.LookupServiceClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Returns a [service][google.cloud.servicedirectory.v1beta1.Service] and its
         /// associated endpoints.
@@ -265,6 +275,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             GrpcClient = grpcClient;
             LookupServiceSettings effectiveSettings = settings ?? LookupServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callResolveService = clientHelper.BuildApiCall<ResolveServiceRequest, ResolveServiceResponse>("ResolveService", grpcClient.ResolveServiceAsync, grpcClient.ResolveService, effectiveSettings.ResolveServiceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResolveService);
             Modify_ResolveServiceApiCall(ref _callResolveService);
@@ -279,6 +290,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
 
         /// <summary>The underlying gRPC LookupService client</summary>
         public override LookupService.LookupServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ResolveServiceRequest(ref ResolveServiceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -308,6 +322,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         {
             Modify_ResolveServiceRequest(ref request, ref callSettings);
             return _callResolveService.Async(request, callSettings);
+        }
+    }
+
+    public static partial class LookupService
+    {
+        public partial class LookupServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

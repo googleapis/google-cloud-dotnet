@@ -29,28 +29,28 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
             "YTEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
             "cGkvcmVzb3VyY2UucHJvdG8aNGdvb2dsZS9jbG91ZC9zZXJ2aWNlZGlyZWN0",
             "b3J5L3YxYmV0YTEvZW5kcG9pbnQucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8i2AMKB1NlcnZpY2USEQoEbmFtZRgBIAEoCUID4EEF",
+            "aW1lc3RhbXAucHJvdG8i6gMKB1NlcnZpY2USEQoEbmFtZRgBIAEoCUID4EEF",
             "ElMKCG1ldGFkYXRhGAIgAygLMjwuZ29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJl",
             "Y3RvcnkudjFiZXRhMS5TZXJ2aWNlLk1ldGFkYXRhRW50cnlCA+BBARJHCgll",
             "bmRwb2ludHMYAyADKAsyLy5nb29nbGUuY2xvdWQuc2VydmljZWRpcmVjdG9y",
             "eS52MWJldGExLkVuZHBvaW50QgPgQQMSNAoLY3JlYXRlX3RpbWUYBiABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3Rp",
-            "bWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMaLwoN",
-            "TWV0YWRhdGFFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "On/qQXwKJ3NlcnZpY2VkaXJlY3RvcnkuZ29vZ2xlYXBpcy5jb20vU2Vydmlj",
-            "ZRJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L25h",
-            "bWVzcGFjZXMve25hbWVzcGFjZX0vc2VydmljZXMve3NlcnZpY2V9QpACCilj",
-            "b20uZ29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJlY3RvcnkudjFiZXRhMUIMU2Vy",
-            "dmljZVByb3RvUAFaVWNsb3VkLmdvb2dsZS5jb20vZ28vc2VydmljZWRpcmVj",
-            "dG9yeS9hcGl2MWJldGExL3NlcnZpY2VkaXJlY3RvcnlwYjtzZXJ2aWNlZGly",
-            "ZWN0b3J5cGL4AQGqAiVHb29nbGUuQ2xvdWQuU2VydmljZURpcmVjdG9yeS5W",
-            "MUJldGExygIlR29vZ2xlXENsb3VkXFNlcnZpY2VEaXJlY3RvcnlcVjFiZXRh",
-            "MeoCKEdvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VEaXJlY3Rvcnk6OlYxYmV0YTFi",
-            "BnByb3RvMw=="));
+            "bWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEAoD",
+            "dWlkGAggASgJQgPgQQMaLwoNTWV0YWRhdGFFbnRyeRILCgNrZXkYASABKAkS",
+            "DQoFdmFsdWUYAiABKAk6AjgBOn/qQXwKJ3NlcnZpY2VkaXJlY3RvcnkuZ29v",
+            "Z2xlYXBpcy5jb20vU2VydmljZRJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L25hbWVzcGFjZXMve25hbWVzcGFjZX0vc2Vydmlj",
+            "ZXMve3NlcnZpY2V9QpACCiljb20uZ29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJl",
+            "Y3RvcnkudjFiZXRhMUIMU2VydmljZVByb3RvUAFaVWNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vc2VydmljZWRpcmVjdG9yeS9hcGl2MWJldGExL3NlcnZpY2VkaXJl",
+            "Y3RvcnlwYjtzZXJ2aWNlZGlyZWN0b3J5cGL4AQGqAiVHb29nbGUuQ2xvdWQu",
+            "U2VydmljZURpcmVjdG9yeS5WMUJldGExygIlR29vZ2xlXENsb3VkXFNlcnZp",
+            "Y2VEaXJlY3RvcnlcVjFiZXRhMeoCKEdvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VE",
+            "aXJlY3Rvcnk6OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ServiceDirectory.V1Beta1.EndpointReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceDirectory.V1Beta1.Service), global::Google.Cloud.ServiceDirectory.V1Beta1.Service.Parser, new[]{ "Name", "Metadata", "Endpoints", "CreateTime", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceDirectory.V1Beta1.Service), global::Google.Cloud.ServiceDirectory.V1Beta1.Service.Parser, new[]{ "Name", "Metadata", "Endpoints", "CreateTime", "UpdateTime", "Uid" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -102,6 +102,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       endpoints_ = other.endpoints_.Clone();
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      uid_ = other.uid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -149,10 +150,6 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
     ///     must be a DNS subdomain: a series of DNS labels separated by dots (.),
     ///     not longer than 253 characters in total, followed by a slash (/).
     ///     Metadata that fails to meet these requirements are rejected
-    /// *   The `(*.)google.com/` and `(*.)googleapis.com/` prefixes are reserved
-    ///     for system metadata managed by Service Directory. If the user tries
-    ///     to write to these keyspaces, those entries are silently ignored by
-    ///     the system
     ///
     /// Note: This field is equivalent to the `annotations` field in the v1 API.
     /// They have the same syntax and read/write to the same location in Service
@@ -171,7 +168,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.ServiceDirectory.V1Beta1.Endpoint> endpoints_ = new pbc::RepeatedField<global::Google.Cloud.ServiceDirectory.V1Beta1.Endpoint>();
     /// <summary>
     /// Output only. Endpoints associated with this service. Returned on
-    /// [LookupService.ResolveService][google.cloud.servicedirectory.v1beta1.LookupService.ResolveService]. Control plane clients should use
+    /// [LookupService.ResolveService][google.cloud.servicedirectory.v1beta1.LookupService.ResolveService].
+    /// Control plane clients should use
     /// [RegistrationService.ListEndpoints][google.cloud.servicedirectory.v1beta1.RegistrationService.ListEndpoints].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -199,9 +197,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
     public const int UpdateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The timestamp when the service was last updated. Note: endpoints being
-    /// created/deleted/updated within the service are not considered service
-    /// updates for the purpose of this timestamp.
+    /// Output only. The timestamp when the service was last updated. Note:
+    /// endpoints being created/deleted/updated within the service are not
+    /// considered service updates for the purpose of this timestamp.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -209,6 +207,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       get { return updateTime_; }
       set {
         updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 8;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. A globally unique identifier (in UUID4 format) for this
+    /// service.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -232,6 +246,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       if(!endpoints_.Equals(other.endpoints_)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (Uid != other.Uid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -244,6 +259,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       hash ^= endpoints_.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -276,6 +292,10 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         output.WriteRawTag(58);
         output.WriteMessage(UpdateTime);
       }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Uid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -300,6 +320,10 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
         output.WriteRawTag(58);
         output.WriteMessage(UpdateTime);
       }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Uid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -320,6 +344,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -349,6 +376,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -391,6 +421,10 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 66: {
+            Uid = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -430,6 +464,10 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 66: {
+            Uid = input.ReadString();
             break;
           }
         }
