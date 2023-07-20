@@ -744,7 +744,7 @@ namespace Google.Cloud.Deploy.V1 {
 
   #region Messages
   /// <summary>
-  /// A `DeliveryPipeline` resource in the Google Cloud Deploy API.
+  /// A `DeliveryPipeline` resource in the Cloud Deploy API.
   ///
   /// A `DeliveryPipeline` defines a pipeline through which a Skaffold
   /// configuration can progress.
@@ -861,7 +861,7 @@ namespace Google.Cloud.Deploy.V1 {
     private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
     /// User annotations. These attributes can only be set and used by the
-    /// user, and not by Google Cloud Deploy.
+    /// user, and not by Cloud Deploy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -876,8 +876,7 @@ namespace Google.Cloud.Deploy.V1 {
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Labels are attributes that can be set and used by both the
-    /// user and by Google Cloud Deploy. Labels must meet the following
-    /// constraints:
+    /// user and by Cloud Deploy. Labels must meet the following constraints:
     ///
     /// * Keys and values can contain only lowercase letters, numeric characters,
     /// underscores, and dashes.
@@ -8148,7 +8147,7 @@ namespace Google.Cloud.Deploy.V1 {
   }
 
   /// <summary>
-  /// A `Target` resource in the Google Cloud Deploy API.
+  /// A `Target` resource in the Cloud Deploy API.
   ///
   /// A `Target` defines a location to which a Skaffold configuration
   /// can be deployed.
@@ -8291,7 +8290,7 @@ namespace Google.Cloud.Deploy.V1 {
     private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. User annotations. These attributes can only be set and used by
-    /// the user, and not by Google Cloud Deploy. See
+    /// the user, and not by Cloud Deploy. See
     /// https://google.aip.dev/128#annotations for more details such as format and
     /// size limitations.
     /// </summary>
@@ -8308,8 +8307,7 @@ namespace Google.Cloud.Deploy.V1 {
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. Labels are attributes that can be set and used by both the
-    /// user and by Google Cloud Deploy. Labels must meet the following
-    /// constraints:
+    /// user and by Cloud Deploy. Labels must meet the following constraints:
     ///
     /// * Keys and values can contain only lowercase letters, numeric characters,
     /// underscores, and dashes.
@@ -12866,7 +12864,7 @@ namespace Google.Cloud.Deploy.V1 {
   }
 
   /// <summary>
-  /// A `Release` resource in the Google Cloud Deploy API.
+  /// A `Release` resource in the Cloud Deploy API.
   ///
   /// A `Release` defines a specific Skaffold configuration instance
   /// that can be deployed.
@@ -12989,9 +12987,8 @@ namespace Google.Cloud.Deploy.V1 {
     private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
     /// User annotations. These attributes can only be set and used by the
-    /// user, and not by Google Cloud Deploy. See
-    /// https://google.aip.dev/128#annotations for more details such as format and
-    /// size limitations.
+    /// user, and not by Cloud Deploy. See https://google.aip.dev/128#annotations
+    /// for more details such as format and size limitations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13006,8 +13003,7 @@ namespace Google.Cloud.Deploy.V1 {
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Labels are attributes that can be set and used by both the
-    /// user and by Google Cloud Deploy. Labels must meet the following
-    /// constraints:
+    /// user and by Cloud Deploy. Labels must meet the following constraints:
     ///
     /// * Keys and values can contain only lowercase letters, numeric characters,
     /// underscores, and dashes.
@@ -13195,8 +13191,8 @@ namespace Google.Cloud.Deploy.V1 {
     private string skaffoldVersion_ = "";
     /// <summary>
     /// The Skaffold version to use when operating on this release, such as
-    /// "1.20.0". Not all versions are valid; Google Cloud Deploy supports a
-    /// specific set of versions.
+    /// "1.20.0". Not all versions are valid; Cloud Deploy supports a specific set
+    /// of versions.
     ///
     /// If unset, the most recent supported Skaffold version will be used.
     /// </summary>
@@ -14284,7 +14280,7 @@ namespace Google.Cloud.Deploy.V1 {
             [pbr::OriginalName("FAILURE_CAUSE_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
             /// Cloud Build is not available, either because it is not enabled or
-            /// because Google Cloud Deploy has insufficient permissions. See [required
+            /// because Cloud Deploy has insufficient permissions. See [required
             /// permission](/deploy/docs/cloud-deploy-service-account#required_permissions).
             /// </summary>
             [pbr::OriginalName("CLOUD_BUILD_UNAVAILABLE")] CloudBuildUnavailable = 1,
@@ -14294,7 +14290,7 @@ namespace Google.Cloud.Deploy.V1 {
             /// </summary>
             [pbr::OriginalName("EXECUTION_FAILED")] ExecutionFailed = 2,
             /// <summary>
-            /// Cloud Build failed to fulfill Google Cloud Deploy's request. See
+            /// Cloud Build failed to fulfill Cloud Deploy's request. See
             /// failure_message for additional details.
             /// </summary>
             [pbr::OriginalName("CLOUD_BUILD_REQUEST_FAILED")] CloudBuildRequestFailed = 3,
@@ -17795,7 +17791,7 @@ namespace Google.Cloud.Deploy.V1 {
   }
 
   /// <summary>
-  /// A `Rollout` resource in the Google Cloud Deploy API.
+  /// A `Rollout` resource in the Cloud Deploy API.
   ///
   /// A `Rollout` contains information around a specific deployment to a `Target`.
   /// </summary>
@@ -17917,9 +17913,8 @@ namespace Google.Cloud.Deploy.V1 {
     private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
     /// User annotations. These attributes can only be set and used by the
-    /// user, and not by Google Cloud Deploy. See
-    /// https://google.aip.dev/128#annotations for more details such as format and
-    /// size limitations.
+    /// user, and not by Cloud Deploy. See https://google.aip.dev/128#annotations
+    /// for more details such as format and size limitations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17934,8 +17929,7 @@ namespace Google.Cloud.Deploy.V1 {
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Labels are attributes that can be set and used by both the
-    /// user and by Google Cloud Deploy. Labels must meet the following
-    /// constraints:
+    /// user and by Cloud Deploy. Labels must meet the following constraints:
     ///
     /// * Keys and values can contain only lowercase letters, numeric characters,
     /// underscores, and dashes.
@@ -18913,8 +18907,8 @@ namespace Google.Cloud.Deploy.V1 {
         /// </summary>
         [pbr::OriginalName("VERIFICATION_CONFIG_NOT_FOUND")] VerificationConfigNotFound = 6,
         /// <summary>
-        /// Cloud Build failed to fulfill Google Cloud Deploy's request. See
-        /// failure_message for additional details.
+        /// Cloud Build failed to fulfill Cloud Deploy's request. See failure_message
+        /// for additional details.
         /// </summary>
         [pbr::OriginalName("CLOUD_BUILD_REQUEST_FAILED")] CloudBuildRequestFailed = 7,
       }
@@ -25808,7 +25802,7 @@ namespace Google.Cloud.Deploy.V1 {
   }
 
   /// <summary>
-  /// A `JobRun` resource in the Google Cloud Deploy API.
+  /// A `JobRun` resource in the Cloud Deploy API.
   ///
   /// A `JobRun` contains information of a single `Rollout` job evaluation.
   /// </summary>
@@ -27034,7 +27028,7 @@ namespace Google.Cloud.Deploy.V1 {
         [pbr::OriginalName("FAILURE_CAUSE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Cloud Build is not available, either because it is not enabled or because
-        /// Google Cloud Deploy has insufficient permissions. See [Required
+        /// Cloud Deploy has insufficient permissions. See [Required
         /// permission](/deploy/docs/cloud-deploy-service-account#required_permissions).
         /// </summary>
         [pbr::OriginalName("CLOUD_BUILD_UNAVAILABLE")] CloudBuildUnavailable = 1,
@@ -27053,8 +27047,8 @@ namespace Google.Cloud.Deploy.V1 {
         /// </summary>
         [pbr::OriginalName("MISSING_RESOURCES_FOR_CANARY")] MissingResourcesForCanary = 4,
         /// <summary>
-        /// Cloud Build failed to fulfill Google Cloud Deploy's request. See
-        /// failure_message for additional details.
+        /// Cloud Build failed to fulfill Cloud Deploy's request. See failure_message
+        /// for additional details.
         /// </summary>
         [pbr::OriginalName("CLOUD_BUILD_REQUEST_FAILED")] CloudBuildRequestFailed = 5,
       }
@@ -27437,7 +27431,7 @@ namespace Google.Cloud.Deploy.V1 {
         [pbr::OriginalName("FAILURE_CAUSE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Cloud Build is not available, either because it is not enabled or because
-        /// Google Cloud Deploy has insufficient permissions. See [required
+        /// Cloud Deploy has insufficient permissions. See [required
         /// permission](/deploy/docs/cloud-deploy-service-account#required_permissions).
         /// </summary>
         [pbr::OriginalName("CLOUD_BUILD_UNAVAILABLE")] CloudBuildUnavailable = 1,
@@ -27455,8 +27449,8 @@ namespace Google.Cloud.Deploy.V1 {
         /// </summary>
         [pbr::OriginalName("VERIFICATION_CONFIG_NOT_FOUND")] VerificationConfigNotFound = 4,
         /// <summary>
-        /// Cloud Build failed to fulfill Google Cloud Deploy's request. See
-        /// failure_message for additional details.
+        /// Cloud Build failed to fulfill Cloud Deploy's request. See failure_message
+        /// for additional details.
         /// </summary>
         [pbr::OriginalName("CLOUD_BUILD_REQUEST_FAILED")] CloudBuildRequestFailed = 5,
       }
