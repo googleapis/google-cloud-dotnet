@@ -1,20 +1,22 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
+// You may obtain a copy of the License at 
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0 
 //
-// Unless required by applicable law or agreed to in writing, software
+// Unless required by applicable law or agreed to in writing, software 
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
+// See the License for the specific language governing permissions and 
 // limitations under the License.
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Grpc.Gcp;
+using Google.Cloud.Bigtable.Common.V2;
+using Google.Protobuf;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -23,6 +25,7 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.V2
 {
+
     public partial class BigtableServiceApiSettings
     {
         /// <summary>
@@ -99,6 +102,11 @@ namespace Google.Cloud.Bigtable.V2
         /// </para>
         /// </remarks>
         public uint MaxChannels { get; set; } = 16;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TableName TableToPrime { get; set; }
 
         /// <summary>
         /// The number of streams open concurrently in a channel which will trigger a new channel to be opened, as
@@ -202,7 +210,21 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <inheritdoc />
-        protected override CallInvoker CreateCallInvoker() => CallInvoker ?? CreateGcpCallInvoker();
+        protected override CallInvoker CreateCallInvoker()
+        {
+            if (CallInvoker != null)
+            {
+                return CallInvoker;
+            }
+            else if (Settings.TableToPrime != null)
+            {
+                return CreateGcpCallInvokerWithRefresh();
+            }
+            else
+            {
+                return CreateGcpCallInvoker();
+            }
+        }
 
         /// <summary>
         /// 
@@ -220,12 +242,44 @@ namespace Google.Cloud.Bigtable.V2
             // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
             if (base.CanUseChannelPool)
             {
-                return CallInvokerPool.GetCallInvoker(endpoint, channelOptions, apiConfig, grpcAdapter);
+                return new GcpCallInvokerPool(ServiceMetadata).GetCallInvoker(endpoint, channelOptions, apiConfig, grpcAdapter);
             }
             else
             {
                 var credentials = GetChannelCredentials();
                 return new GcpCallInvoker(ServiceMetadata, endpoint, credentials, channelOptions, apiConfig, grpcAdapter);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public GcpCallInvokerWithRefresh CreateGcpCallInvokerWithRefresh()
+        {
+            GaxPreconditions.CheckState(CallInvoker is null,
+                "Cannot call {0} on a builder that already has {1} set.", nameof(CreateGcpCallInvoker), nameof(CallInvoker));
+            var endpoint = Endpoint ?? ServiceMetadata.DefaultEndpoint;
+            var channelOptions = GetChannelOptions();
+            var apiConfig = Settings.CreateApiConfig();
+            var grpcAdapter = EffectiveGrpcAdapter;
+            // Although *we* never allow the use of the channel pool, we can use the call invoker pool if and
+            // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
+            if (base.CanUseChannelPool)
+            {
+                return CallInvokerPool.GetCallInvoker(endpoint, channelOptions, apiConfig, grpcAdapter, ChannelPrimer, maintenanceDelay: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromMinutes(45));
+            }
+            else
+            {
+                var credentials = GetChannelCredentials();
+                return new GcpCallInvokerWithRefresh(ServiceMetadata, endpoint, credentials, channelOptions, apiConfig, grpcAdapter, ChannelPrimer, maintenanceDelay: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromMinutes(45));
+            }
+
+            void ChannelPrimer(CallInvoker callInvoker)
+            {
+                var tableName = Settings.TableToPrime;
+                var newClient = new Bigtable.BigtableClient(callInvoker);
+                var res = newClient.ReadRows(new ReadRowsRequest { AppProfileId = Settings.AppProfileId ?? "default", TableNameAsTableName = tableName, Rows = new RowSet { RowKeys = { ByteString.CopyFromUtf8("invalid-rowId") } } });
             }
         }
 
@@ -241,8 +295,21 @@ namespace Google.Cloud.Bigtable.V2
         }
 
         /// <inheritdoc />
-        protected override async Task<CallInvoker> CreateCallInvokerAsync(CancellationToken cancellationToken) =>
-            CallInvoker ?? await CreateGcpCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+        protected override async Task<CallInvoker> CreateCallInvokerAsync(CancellationToken cancellationToken)
+        {
+            if (CallInvoker != null)
+            {
+                return CallInvoker;
+            }
+            else if (Settings.TableToPrime != null)
+            {
+                return await CreateGcpCallInvokerWithRefreshAsync(cancellationToken).ConfigureAwait(false);
+            }
+            else
+            {
+                return await CreateGcpCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            }
+        }
 
         /// <summary>
         /// 
@@ -260,12 +327,44 @@ namespace Google.Cloud.Bigtable.V2
             // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
             if (base.CanUseChannelPool)
             {
-                return await CallInvokerPool.GetCallInvokerAsync(endpoint, channelOptions, apiConfig, grpcAdapter).ConfigureAwait(false);
+                return await new GcpCallInvokerPool(ServiceMetadata).GetCallInvokerAsync(endpoint, channelOptions, apiConfig, grpcAdapter).ConfigureAwait(false);
             }
             else
             {
                 var credentials = await GetChannelCredentialsAsync(cancellationToken).ConfigureAwait(false);
                 return new GcpCallInvoker(ServiceMetadata, endpoint, credentials, channelOptions, apiConfig, grpcAdapter);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<GcpCallInvokerWithRefresh> CreateGcpCallInvokerWithRefreshAsync(CancellationToken cancellationToken)
+        {
+            GaxPreconditions.CheckState(CallInvoker is null,
+                "Cannot call {0} on a builder that already has {1} set.", nameof(CreateGcpCallInvoker), nameof(CallInvoker));
+            var endpoint = Endpoint ?? ServiceMetadata.DefaultEndpoint;
+            var channelOptions = GetChannelOptions();
+            var apiConfig = Settings.CreateApiConfig();
+            var grpcAdapter = EffectiveGrpcAdapter;
+            // Although *we* never allow the use of the channel pool, we can use the call invoker pool if and
+            // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
+            if (base.CanUseChannelPool)
+            {
+                return await CallInvokerPool.GetCallInvokerAsync(endpoint, channelOptions, apiConfig, grpcAdapter, ChannelPrimer, maintenanceDelay: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromMinutes(45)).ConfigureAwait(false);
+            }
+            else
+            {
+                var credentials = await GetChannelCredentialsAsync(cancellationToken).ConfigureAwait(false);
+                return new GcpCallInvokerWithRefresh(ServiceMetadata, endpoint, credentials, channelOptions, apiConfig, grpcAdapter, ChannelPrimer, maintenanceDelay: TimeSpan.FromMinutes(5), timeout: TimeSpan.FromMinutes(45));
+            }
+
+            void ChannelPrimer(CallInvoker callInvoker)
+            {
+                var tableName = Settings.TableToPrime;
+                var newClient = new Bigtable.BigtableClient(callInvoker);
+                var res = newClient.ReadRows(new ReadRowsRequest { AppProfileId = Settings.AppProfileId ?? "default", TableNameAsTableName = tableName, Rows = new RowSet { RowKeys = { ByteString.CopyFromUtf8("invalid-rowId") } } });
             }
         }
 
@@ -275,12 +374,12 @@ namespace Google.Cloud.Bigtable.V2
         /// <inheritdoc />
         protected override bool CanUseChannelPool => false;
 
-        private GcpCallInvokerPool CallInvokerPool => BigtableServiceApiClient.CallInvokerPool;
+        private GcpCallInvokerWithRefreshPool CallInvokerPool => BigtableServiceApiClient.CallInvokerPool;
     }
 
     public partial class BigtableServiceApiClient
     {
-        internal static GcpCallInvokerPool CallInvokerPool { get; } = new GcpCallInvokerPool(ServiceMetadata);
+        internal static GcpCallInvokerWithRefreshPool CallInvokerPool { get; } = new GcpCallInvokerWithRefreshPool(ServiceMetadata);
 
         /// <summary>
         /// Gets the value which specifies routing for replication.
