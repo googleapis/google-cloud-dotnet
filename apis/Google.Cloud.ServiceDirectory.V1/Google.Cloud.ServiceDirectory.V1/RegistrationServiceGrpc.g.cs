@@ -3,7 +3,7 @@
 //     source: google/cloud/servicedirectory/v1/registration_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -287,7 +287,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     public abstract partial class RegistrationServiceBase
     {
       /// <summary>
-      /// Creates a namespace, and returns the new Namespace.
+      /// Creates a namespace, and returns the new namespace.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -348,7 +348,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
       }
 
       /// <summary>
-      /// Creates a service, and returns the new Service.
+      /// Creates a service, and returns the new service.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -409,7 +409,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
       }
 
       /// <summary>
-      /// Creates a endpoint, and returns the new Endpoint.
+      /// Creates an endpoint, and returns the new endpoint.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -433,7 +433,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
       }
 
       /// <summary>
-      /// Gets a endpoint.
+      /// Gets an endpoint.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -445,7 +445,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
       }
 
       /// <summary>
-      /// Updates a endpoint.
+      /// Updates an endpoint.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -457,7 +457,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
       }
 
       /// <summary>
-      /// Deletes a endpoint.
+      /// Deletes an endpoint.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -534,7 +534,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
       }
 
       /// <summary>
-      /// Creates a namespace, and returns the new Namespace.
+      /// Creates a namespace, and returns the new namespace.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -547,7 +547,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CreateNamespace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a namespace, and returns the new Namespace.
+      /// Creates a namespace, and returns the new namespace.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -558,7 +558,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateNamespace, null, options, request);
       }
       /// <summary>
-      /// Creates a namespace, and returns the new Namespace.
+      /// Creates a namespace, and returns the new namespace.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -571,7 +571,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CreateNamespaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a namespace, and returns the new Namespace.
+      /// Creates a namespace, and returns the new namespace.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -778,7 +778,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteNamespace, null, options, request);
       }
       /// <summary>
-      /// Creates a service, and returns the new Service.
+      /// Creates a service, and returns the new service.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -791,7 +791,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CreateService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a service, and returns the new Service.
+      /// Creates a service, and returns the new service.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -802,7 +802,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateService, null, options, request);
       }
       /// <summary>
-      /// Creates a service, and returns the new Service.
+      /// Creates a service, and returns the new service.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -815,7 +815,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CreateServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a service, and returns the new Service.
+      /// Creates a service, and returns the new service.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1022,7 +1022,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteService, null, options, request);
       }
       /// <summary>
-      /// Creates a endpoint, and returns the new Endpoint.
+      /// Creates an endpoint, and returns the new endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1035,7 +1035,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CreateEndpoint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a endpoint, and returns the new Endpoint.
+      /// Creates an endpoint, and returns the new endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1046,7 +1046,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateEndpoint, null, options, request);
       }
       /// <summary>
-      /// Creates a endpoint, and returns the new Endpoint.
+      /// Creates an endpoint, and returns the new endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1059,7 +1059,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CreateEndpointAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a endpoint, and returns the new Endpoint.
+      /// Creates an endpoint, and returns the new endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1118,7 +1118,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEndpoints, null, options, request);
       }
       /// <summary>
-      /// Gets a endpoint.
+      /// Gets an endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1131,7 +1131,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return GetEndpoint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a endpoint.
+      /// Gets an endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1142,7 +1142,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetEndpoint, null, options, request);
       }
       /// <summary>
-      /// Gets a endpoint.
+      /// Gets an endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1155,7 +1155,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return GetEndpointAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a endpoint.
+      /// Gets an endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1166,7 +1166,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetEndpoint, null, options, request);
       }
       /// <summary>
-      /// Updates a endpoint.
+      /// Updates an endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1179,7 +1179,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return UpdateEndpoint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a endpoint.
+      /// Updates an endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1190,7 +1190,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateEndpoint, null, options, request);
       }
       /// <summary>
-      /// Updates a endpoint.
+      /// Updates an endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1203,7 +1203,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return UpdateEndpointAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a endpoint.
+      /// Updates an endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1214,7 +1214,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateEndpoint, null, options, request);
       }
       /// <summary>
-      /// Deletes a endpoint.
+      /// Deletes an endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1227,7 +1227,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return DeleteEndpoint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a endpoint.
+      /// Deletes an endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1238,7 +1238,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteEndpoint, null, options, request);
       }
       /// <summary>
-      /// Deletes a endpoint.
+      /// Deletes an endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1251,7 +1251,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         return DeleteEndpointAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a endpoint.
+      /// Deletes an endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
