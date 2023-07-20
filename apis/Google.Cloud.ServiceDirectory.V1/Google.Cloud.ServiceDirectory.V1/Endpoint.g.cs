@@ -27,25 +27,29 @@ namespace Google.Cloud.ServiceDirectory.V1 {
             "Ci9nb29nbGUvY2xvdWQvc2VydmljZWRpcmVjdG9yeS92MS9lbmRwb2ludC5w",
             "cm90bxIgZ29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJlY3RvcnkudjEaH2dvb2ds",
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
-            "Y2UucHJvdG8i6gIKCEVuZHBvaW50EhEKBG5hbWUYASABKAlCA+BBBRIUCgdh",
+            "Y2UucHJvdG8ivgMKCEVuZHBvaW50EhEKBG5hbWUYASABKAlCA+BBBRIUCgdh",
             "ZGRyZXNzGAIgASgJQgPgQQESEQoEcG9ydBgDIAEoBUID4EEBElUKC2Fubm90",
             "YXRpb25zGAUgAygLMjsuZ29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJlY3Rvcnku",
-            "djEuRW5kcG9pbnQuQW5ub3RhdGlvbnNFbnRyeUID4EEBGjIKEEFubm90YXRp",
-            "b25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqWAepB",
-            "kgEKKHNlcnZpY2VkaXJlY3RvcnkuZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnQS",
-            "ZnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9uYW1l",
-            "c3BhY2VzL3tuYW1lc3BhY2V9L3NlcnZpY2VzL3tzZXJ2aWNlfS9lbmRwb2lu",
-            "dHMve2VuZHBvaW50fUL4AQokY29tLmdvb2dsZS5jbG91ZC5zZXJ2aWNlZGly",
-            "ZWN0b3J5LnYxQg1FbmRwb2ludFByb3RvUAFaUGNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vc2VydmljZWRpcmVjdG9yeS9hcGl2MS9zZXJ2aWNlZGlyZWN0b3J5cGI7",
-            "c2VydmljZWRpcmVjdG9yeXBi+AEBqgIgR29vZ2xlLkNsb3VkLlNlcnZpY2VE",
-            "aXJlY3RvcnkuVjHKAiBHb29nbGVcQ2xvdWRcU2VydmljZURpcmVjdG9yeVxW",
-            "MeoCI0dvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VEaXJlY3Rvcnk6OlYxYgZwcm90",
-            "bzM="));
+            "djEuRW5kcG9pbnQuQW5ub3RhdGlvbnNFbnRyeUID4EEBEkAKB25ldHdvcmsY",
+            "CCABKAlCL+BBBfpBKQonc2VydmljZWRpcmVjdG9yeS5nb29nbGVhcGlzLmNv",
+            "bS9OZXR3b3JrEhAKA3VpZBgJIAEoCUID4EEDGjIKEEFubm90YXRpb25zRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqWAepBkgEKKHNl",
+            "cnZpY2VkaXJlY3RvcnkuZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnQSZnByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9uYW1lc3BhY2Vz",
+            "L3tuYW1lc3BhY2V9L3NlcnZpY2VzL3tzZXJ2aWNlfS9lbmRwb2ludHMve2Vu",
+            "ZHBvaW50fULcAgokY29tLmdvb2dsZS5jbG91ZC5zZXJ2aWNlZGlyZWN0b3J5",
+            "LnYxQg1FbmRwb2ludFByb3RvUAFaUGNsb3VkLmdvb2dsZS5jb20vZ28vc2Vy",
+            "dmljZWRpcmVjdG9yeS9hcGl2MS9zZXJ2aWNlZGlyZWN0b3J5cGI7c2Vydmlj",
+            "ZWRpcmVjdG9yeXBi+AEBqgIgR29vZ2xlLkNsb3VkLlNlcnZpY2VEaXJlY3Rv",
+            "cnkuVjHKAiBHb29nbGVcQ2xvdWRcU2VydmljZURpcmVjdG9yeVxWMeoCI0dv",
+            "b2dsZTo6Q2xvdWQ6OlNlcnZpY2VEaXJlY3Rvcnk6OlYx6kFhCidzZXJ2aWNl",
+            "ZGlyZWN0b3J5Lmdvb2dsZWFwaXMuY29tL05ldHdvcmsSNnByb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMvZ2xvYmFsL25ldHdvcmtzL3tuZXR3b3JrfWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceDirectory.V1.Endpoint), global::Google.Cloud.ServiceDirectory.V1.Endpoint.Parser, new[]{ "Name", "Address", "Port", "Annotations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceDirectory.V1.Endpoint), global::Google.Cloud.ServiceDirectory.V1.Endpoint.Parser, new[]{ "Name", "Address", "Port", "Annotations", "Network", "Uid" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -95,6 +99,8 @@ namespace Google.Cloud.ServiceDirectory.V1 {
       address_ = other.address_;
       port_ = other.port_;
       annotations_ = other.annotations_.Clone();
+      network_ = other.network_;
+      uid_ = other.uid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -124,13 +130,15 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     public const int AddressFieldNumber = 2;
     private string address_ = "";
     /// <summary>
-    /// Optional. An IPv4 or IPv6 address. Service Directory will reject bad
-    /// addresses like:
-    ///   "8.8.8"
-    ///   "8.8.8.8:53"
-    ///   "test:bad:address"
-    ///   "[::1]"
-    ///   "[::1]:8080"
+    /// Optional. An IPv4 or IPv6 address. Service Directory rejects bad addresses
+    /// like:
+    ///
+    /// *   `8.8.8`
+    /// *   `8.8.8.8:53`
+    /// *   `test:bad:address`
+    /// *   `[::1]`
+    /// *   `[::1]:8080`
+    ///
     /// Limited to 45 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -146,7 +154,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     public const int PortFieldNumber = 3;
     private int port_;
     /// <summary>
-    /// Optional. Service Directory will reject values outside of [0, 65535].
+    /// Optional. Service Directory rejects values outside of `[0, 65535]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -164,23 +172,23 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Optional. Annotations for the endpoint. This data can be consumed by
-    /// service clients. Restrictions:
-    ///  - The entire annotations dictionary may contain up to 512 characters,
-    ///    spread accoss all key-value pairs. Annotations that goes beyond any
-    ///    these limits will be rejected.
-    ///  - Valid annotation keys have two segments: an optional prefix and name,
-    ///    separated by a slash (/). The name segment is required and must be 63
-    ///    characters or less, beginning and ending with an alphanumeric character
-    ///    ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and
-    ///    alphanumerics between. The prefix is optional. If specified, the prefix
-    ///    must be a DNS subdomain: a series of DNS labels separated by dots (.),
-    ///    not longer than 253 characters in total, followed by a slash (/).
-    ///    Annotations that fails to meet these requirements will be rejected.
-    ///  - The '(*.)google.com/' and '(*.)googleapis.com/' prefixes are reserved
-    ///    for system annotations managed by Service Directory. If the user tries
-    ///    to write to these keyspaces, those entries will be silently ignored by
-    ///    the system.
-    /// Note: This field is equivalent to the 'metadata' field in the v1beta1 API.
+    /// service clients.
+    ///
+    /// Restrictions:
+    ///
+    /// *   The entire annotations dictionary may contain up to 512 characters,
+    ///     spread accoss all key-value pairs. Annotations that go beyond this
+    ///     limit are rejected
+    /// *   Valid annotation keys have two segments: an optional prefix and name,
+    ///     separated by a slash (/). The name segment is required and must be 63
+    ///     characters or less, beginning and ending with an alphanumeric character
+    ///     ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and
+    ///     alphanumerics between. The prefix is optional. If specified, the prefix
+    ///     must be a DNS subdomain: a series of DNS labels separated by dots (.),
+    ///     not longer than 253 characters in total, followed by a slash (/)
+    ///     Annotations that fails to meet these requirements are rejected.
+    ///
+    /// Note: This field is equivalent to the `metadata` field in the v1beta1 API.
     /// They have the same syntax and read/write to the same location in Service
     /// Directory.
     /// </summary>
@@ -188,6 +196,43 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Annotations {
       get { return annotations_; }
+    }
+
+    /// <summary>Field number for the "network" field.</summary>
+    public const int NetworkFieldNumber = 8;
+    private string network_ = "";
+    /// <summary>
+    /// Immutable. The Google Compute Engine network (VPC) of the endpoint in the
+    /// format `projects/&lt;project number>/locations/global/networks/*`.
+    ///
+    /// The project must be specified by project number (project id is rejected).
+    /// Incorrectly formatted networks are rejected, we also check to make sure
+    /// that you have the servicedirectory.networks.attach permission on the
+    /// project specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Network {
+      get { return network_; }
+      set {
+        network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 9;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. The globally unique identifier of the endpoint in the UUID4
+    /// format.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -209,6 +254,8 @@ namespace Google.Cloud.ServiceDirectory.V1 {
       if (Address != other.Address) return false;
       if (Port != other.Port) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
+      if (Network != other.Network) return false;
+      if (Uid != other.Uid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -220,6 +267,8 @@ namespace Google.Cloud.ServiceDirectory.V1 {
       if (Address.Length != 0) hash ^= Address.GetHashCode();
       if (Port != 0) hash ^= Port.GetHashCode();
       hash ^= Annotations.GetHashCode();
+      if (Network.Length != 0) hash ^= Network.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -251,6 +300,14 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         output.WriteInt32(Port);
       }
       annotations_.WriteTo(output, _map_annotations_codec);
+      if (Network.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Network);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Uid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -274,6 +331,14 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         output.WriteInt32(Port);
       }
       annotations_.WriteTo(ref output, _map_annotations_codec);
+      if (Network.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Network);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Uid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -294,6 +359,12 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Port);
       }
       size += annotations_.CalculateSize(_map_annotations_codec);
+      if (Network.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
+      }
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -316,6 +387,12 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         Port = other.Port;
       }
       annotations_.MergeFrom(other.annotations_);
+      if (other.Network.Length != 0) {
+        Network = other.Network;
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -347,6 +424,14 @@ namespace Google.Cloud.ServiceDirectory.V1 {
             annotations_.AddEntriesFrom(input, _map_annotations_codec);
             break;
           }
+          case 66: {
+            Network = input.ReadString();
+            break;
+          }
+          case 74: {
+            Uid = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -376,6 +461,14 @@ namespace Google.Cloud.ServiceDirectory.V1 {
           }
           case 42: {
             annotations_.AddEntriesFrom(ref input, _map_annotations_codec);
+            break;
+          }
+          case 66: {
+            Network = input.ReadString();
+            break;
+          }
+          case 74: {
+            Uid = input.ReadString();
             break;
           }
         }

@@ -27,22 +27,23 @@ namespace Google.Cloud.ServiceDirectory.V1 {
             "CjBnb29nbGUvY2xvdWQvc2VydmljZWRpcmVjdG9yeS92MS9uYW1lc3BhY2Uu",
             "cHJvdG8SIGdvb2dsZS5jbG91ZC5zZXJ2aWNlZGlyZWN0b3J5LnYxGh9nb29n",
             "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291",
-            "cmNlLnByb3RvIosCCglOYW1lc3BhY2USEQoEbmFtZRgBIAEoCUID4EEFEkwK",
+            "cmNlLnByb3RvIp0CCglOYW1lc3BhY2USEQoEbmFtZRgBIAEoCUID4EEFEkwK",
             "BmxhYmVscxgCIAMoCzI3Lmdvb2dsZS5jbG91ZC5zZXJ2aWNlZGlyZWN0b3J5",
-            "LnYxLk5hbWVzcGFjZS5MYWJlbHNFbnRyeUID4EEBGi0KC0xhYmVsc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6bupBawopc2Vydmlj",
-            "ZWRpcmVjdG9yeS5nb29nbGVhcGlzLmNvbS9OYW1lc3BhY2USPnByb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9uYW1lc3BhY2VzL3tu",
-            "YW1lc3BhY2V9QvkBCiRjb20uZ29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJlY3Rv",
-            "cnkudjFCDk5hbWVzcGFjZVByb3RvUAFaUGNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "c2VydmljZWRpcmVjdG9yeS9hcGl2MS9zZXJ2aWNlZGlyZWN0b3J5cGI7c2Vy",
-            "dmljZWRpcmVjdG9yeXBi+AEBqgIgR29vZ2xlLkNsb3VkLlNlcnZpY2VEaXJl",
-            "Y3RvcnkuVjHKAiBHb29nbGVcQ2xvdWRcU2VydmljZURpcmVjdG9yeVxWMeoC",
-            "I0dvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VEaXJlY3Rvcnk6OlYxYgZwcm90bzM="));
+            "LnYxLk5hbWVzcGFjZS5MYWJlbHNFbnRyeUID4EEBEhAKA3VpZBgFIAEoCUID",
+            "4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAE6bupBawopc2VydmljZWRpcmVjdG9yeS5nb29nbGVhcGlzLmNvbS9O",
+            "YW1lc3BhY2USPnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9uYW1lc3BhY2VzL3tuYW1lc3BhY2V9QvkBCiRjb20uZ29vZ2xlLmNs",
+            "b3VkLnNlcnZpY2VkaXJlY3RvcnkudjFCDk5hbWVzcGFjZVByb3RvUAFaUGNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vc2VydmljZWRpcmVjdG9yeS9hcGl2MS9zZXJ2",
+            "aWNlZGlyZWN0b3J5cGI7c2VydmljZWRpcmVjdG9yeXBi+AEBqgIgR29vZ2xl",
+            "LkNsb3VkLlNlcnZpY2VEaXJlY3RvcnkuVjHKAiBHb29nbGVcQ2xvdWRcU2Vy",
+            "dmljZURpcmVjdG9yeVxWMeoCI0dvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VEaXJl",
+            "Y3Rvcnk6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceDirectory.V1.Namespace), global::Google.Cloud.ServiceDirectory.V1.Namespace.Parser, new[]{ "Name", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceDirectory.V1.Namespace), global::Google.Cloud.ServiceDirectory.V1.Namespace.Parser, new[]{ "Name", "Labels", "Uid" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -90,6 +91,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     public Namespace(Namespace other) : this() {
       name_ = other.name_;
       labels_ = other.labels_.Clone();
+      uid_ = other.uid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -121,14 +123,30 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. Resource labels associated with this Namespace.
-    /// No more than 64 user labels can be associated with a given resource.  Label
+    /// Optional. Resource labels associated with this namespace.
+    /// No more than 64 user labels can be associated with a given resource. Label
     /// keys and values can be no longer than 63 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 5;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. The globally unique identifier of the namespace in the UUID4
+    /// format.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -148,6 +166,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
       }
       if (Name != other.Name) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (Uid != other.Uid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -157,6 +176,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -180,6 +200,10 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         output.WriteString(Name);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (Uid.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Uid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -195,6 +219,10 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         output.WriteString(Name);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (Uid.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Uid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -209,6 +237,9 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -225,6 +256,9 @@ namespace Google.Cloud.ServiceDirectory.V1 {
         Name = other.Name;
       }
       labels_.MergeFrom(other.labels_);
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -248,6 +282,10 @@ namespace Google.Cloud.ServiceDirectory.V1 {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 42: {
+            Uid = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -269,6 +307,10 @@ namespace Google.Cloud.ServiceDirectory.V1 {
           }
           case 18: {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 42: {
+            Uid = input.ReadString();
             break;
           }
         }
