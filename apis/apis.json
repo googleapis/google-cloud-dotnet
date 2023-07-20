@@ -4004,7 +4004,8 @@
       "type": "grpc",
       "description": "Recommended Google client library to access the Service Directory API version v1beta1.",
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.0.0"
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Location": "2.0.0"
       },
       "tags": [
         "services"

@@ -26,10 +26,10 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
           string.Concat(
             "Cjpnb29nbGUvY2xvdWQvc2VydmljZWRpcmVjdG9yeS92MWJldGExL2xvb2t1",
             "cF9zZXJ2aWNlLnByb3RvEiVnb29nbGUuY2xvdWQuc2VydmljZWRpcmVjdG9y",
-            "eS52MWJldGExGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh9nb29n",
-            "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291",
-            "cmNlLnByb3RvGjNnb29nbGUvY2xvdWQvc2VydmljZWRpcmVjdG9yeS92MWJl",
-            "dGExL3NlcnZpY2UucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvIpAB",
+            "eS52MWJldGExGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29n",
+            "bGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
+            "ci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxozZ29vZ2xlL2Ns",
+            "b3VkL3NlcnZpY2VkaXJlY3RvcnkvdjFiZXRhMS9zZXJ2aWNlLnByb3RvIpAB",
             "ChVSZXNvbHZlU2VydmljZVJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv4EEC+kEp",
             "CidzZXJ2aWNlZGlyZWN0b3J5Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2USGgoN",
             "bWF4X2VuZHBvaW50cxgCIAEoBUID4EEBEhwKD2VuZHBvaW50X2ZpbHRlchgD",
@@ -50,7 +50,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
             "JUdvb2dsZVxDbG91ZFxTZXJ2aWNlRGlyZWN0b3J5XFYxYmV0YTHqAihHb29n",
             "bGU6OkNsb3VkOjpTZXJ2aWNlRGlyZWN0b3J5OjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ServiceDirectory.V1Beta1.ServiceReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ServiceDirectory.V1Beta1.ServiceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceDirectory.V1Beta1.ResolveServiceRequest), global::Google.Cloud.ServiceDirectory.V1Beta1.ResolveServiceRequest.Parser, new[]{ "Name", "MaxEndpoints", "EndpointFilter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceDirectory.V1Beta1.ResolveServiceResponse), global::Google.Cloud.ServiceDirectory.V1Beta1.ResolveServiceResponse.Parser, new[]{ "Service" }, null, null, null, null)
@@ -61,7 +61,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
   }
   #region Messages
   /// <summary>
-  /// The request message for [LookupService.ResolveService][google.cloud.servicedirectory.v1beta1.LookupService.ResolveService].
+  /// The request message for
+  /// [LookupService.ResolveService][google.cloud.servicedirectory.v1beta1.LookupService.ResolveService].
   /// Looks up a service by its name, returns the service and its endpoints.
   /// </summary>
   public sealed partial class ResolveServiceRequest : pb::IMessage<ResolveServiceRequest>
@@ -129,8 +130,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
     public const int MaxEndpointsFieldNumber = 2;
     private int maxEndpoints_;
     /// <summary>
-    /// Optional. The maximum number of endpoints to return. Defaults to 25. Maximum is 100.
-    /// If a value less than one is specified, the Default is used.
+    /// Optional. The maximum number of endpoints to return. Defaults to 25.
+    /// Maximum is 100. If a value less than one is specified, the Default is used.
     /// If a value greater than the Maximum is specified, the Maximum is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -170,6 +171,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
     /// `name>projects/my-project/locations/us-east1/namespaces/my-namespace/services/my-service/endpoints/endpoint-c`
     ///     returns endpoints that have name that is alphabetically later than the
     ///     string, so "endpoint-e" is returned but "endpoint-a" is not
+    /// *
+    /// `name=projects/my-project/locations/us-central1/namespaces/my-namespace/services/my-service/endpoints/ep-1`
+    ///      returns the endpoint that has an endpoint_id equal to `ep-1`
     /// *   `metadata.owner!=sd AND metadata.foo=bar` returns endpoints that have
     ///     `owner` in annotation key but value is not `sd` AND have key/value
     ///      `foo=bar`
@@ -371,7 +375,8 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
   }
 
   /// <summary>
-  /// The response message for [LookupService.ResolveService][google.cloud.servicedirectory.v1beta1.LookupService.ResolveService].
+  /// The response message for
+  /// [LookupService.ResolveService][google.cloud.servicedirectory.v1beta1.LookupService.ResolveService].
   /// </summary>
   public sealed partial class ResolveServiceResponse : pb::IMessage<ResolveServiceResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
