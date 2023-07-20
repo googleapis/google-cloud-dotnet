@@ -4616,6 +4616,1705 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_CreateAsset_sync",
+      "title": "CreateAssetRequestObject",
+      "description": "Snippet for CreateAsset",
+      "file": "LivestreamServiceClient.CreateAssetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAsset",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateAsset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.CreateAssetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Asset, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.CreateAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_CreateAsset_async",
+      "title": "CreateAssetRequestObjectAsync",
+      "description": "Snippet for CreateAssetAsync",
+      "file": "LivestreamServiceClient.CreateAssetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAssetAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateAssetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.CreateAssetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Asset, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.CreateAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_CreateAsset_sync_flattened",
+      "title": "CreateAsset",
+      "description": "Snippet for CreateAsset",
+      "file": "LivestreamServiceClient.CreateAssetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAsset",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateAsset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Asset",
+            "name": "asset"
+          },
+          {
+            "type": "System.String",
+            "name": "assetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Asset, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.CreateAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_CreateAsset_async_flattened",
+      "title": "CreateAssetAsync",
+      "description": "Snippet for CreateAssetAsync",
+      "file": "LivestreamServiceClient.CreateAssetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAssetAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateAssetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Asset",
+            "name": "asset"
+          },
+          {
+            "type": "System.String",
+            "name": "assetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Asset, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.CreateAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_CreateAsset_sync_flattened_resourceNames",
+      "title": "CreateAssetResourceNames",
+      "description": "Snippet for CreateAsset",
+      "file": "LivestreamServiceClient.CreateAssetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAsset",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateAsset",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Asset",
+            "name": "asset"
+          },
+          {
+            "type": "System.String",
+            "name": "assetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Asset, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.CreateAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_CreateAsset_async_flattened_resourceNames",
+      "title": "CreateAssetResourceNamesAsync",
+      "description": "Snippet for CreateAssetAsync",
+      "file": "LivestreamServiceClient.CreateAssetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAssetAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.CreateAssetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Asset",
+            "name": "asset"
+          },
+          {
+            "type": "System.String",
+            "name": "assetId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Asset, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.CreateAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_DeleteAsset_sync",
+      "title": "DeleteAssetRequestObject",
+      "description": "Snippet for DeleteAsset",
+      "file": "LivestreamServiceClient.DeleteAssetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAsset",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteAsset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DeleteAssetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.DeleteAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_DeleteAsset_async",
+      "title": "DeleteAssetRequestObjectAsync",
+      "description": "Snippet for DeleteAssetAsync",
+      "file": "LivestreamServiceClient.DeleteAssetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAssetAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteAssetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.DeleteAssetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.DeleteAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_DeleteAsset_sync_flattened",
+      "title": "DeleteAsset",
+      "description": "Snippet for DeleteAsset",
+      "file": "LivestreamServiceClient.DeleteAssetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAsset",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteAsset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.DeleteAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_DeleteAsset_async_flattened",
+      "title": "DeleteAssetAsync",
+      "description": "Snippet for DeleteAssetAsync",
+      "file": "LivestreamServiceClient.DeleteAssetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAssetAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteAssetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.DeleteAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_DeleteAsset_sync_flattened_resourceNames",
+      "title": "DeleteAssetResourceNames",
+      "description": "Snippet for DeleteAsset",
+      "file": "LivestreamServiceClient.DeleteAssetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAsset",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteAsset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.AssetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.DeleteAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_DeleteAsset_async_flattened_resourceNames",
+      "title": "DeleteAssetResourceNamesAsync",
+      "description": "Snippet for DeleteAssetAsync",
+      "file": "LivestreamServiceClient.DeleteAssetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAssetAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.DeleteAssetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.AssetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.DeleteAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetAsset_sync",
+      "title": "GetAssetRequestObject",
+      "description": "Snippet for GetAsset",
+      "file": "LivestreamServiceClient.GetAssetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsset",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetAsset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.GetAssetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.LiveStream.V1.Asset",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetAsset_async",
+      "title": "GetAssetRequestObjectAsync",
+      "description": "Snippet for GetAssetAsync",
+      "file": "LivestreamServiceClient.GetAssetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAssetAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetAssetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.GetAssetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Asset>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetAsset_sync_flattened",
+      "title": "GetAsset",
+      "description": "Snippet for GetAsset",
+      "file": "LivestreamServiceClient.GetAssetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsset",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetAsset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.LiveStream.V1.Asset",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetAsset_async_flattened",
+      "title": "GetAssetAsync",
+      "description": "Snippet for GetAssetAsync",
+      "file": "LivestreamServiceClient.GetAssetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAssetAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetAssetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Asset>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetAsset_sync_flattened_resourceNames",
+      "title": "GetAssetResourceNames",
+      "description": "Snippet for GetAsset",
+      "file": "LivestreamServiceClient.GetAssetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsset",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetAsset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.AssetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.LiveStream.V1.Asset",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetAsset_async_flattened_resourceNames",
+      "title": "GetAssetResourceNamesAsync",
+      "description": "Snippet for GetAssetAsync",
+      "file": "LivestreamServiceClient.GetAssetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAssetAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetAssetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.AssetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Asset>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetAsset",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetAsset",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_ListAssets_sync",
+      "title": "ListAssetsRequestObject",
+      "description": "Snippet for ListAssets",
+      "file": "LivestreamServiceClient.ListAssetsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAssets",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListAssets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ListAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListAssetsResponse, Google.Cloud.Video.LiveStream.V1.Asset>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "ListAssets",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.ListAssets",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_ListAssets_async",
+      "title": "ListAssetsRequestObjectAsync",
+      "description": "Snippet for ListAssetsAsync",
+      "file": "LivestreamServiceClient.ListAssetsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAssetsAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListAssetsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ListAssetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListAssetsResponse, Google.Cloud.Video.LiveStream.V1.Asset>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "ListAssets",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.ListAssets",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_ListAssets_sync_flattened",
+      "title": "ListAssets",
+      "description": "Snippet for ListAssets",
+      "file": "LivestreamServiceClient.ListAssetsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAssets",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListAssets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListAssetsResponse, Google.Cloud.Video.LiveStream.V1.Asset>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "ListAssets",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.ListAssets",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_ListAssets_async_flattened",
+      "title": "ListAssetsAsync",
+      "description": "Snippet for ListAssetsAsync",
+      "file": "LivestreamServiceClient.ListAssetsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAssetsAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListAssetsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListAssetsResponse, Google.Cloud.Video.LiveStream.V1.Asset>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "ListAssets",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.ListAssets",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_ListAssets_sync_flattened_resourceNames",
+      "title": "ListAssetsResourceNames",
+      "description": "Snippet for ListAssets",
+      "file": "LivestreamServiceClient.ListAssetsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAssets",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListAssets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Video.LiveStream.V1.ListAssetsResponse, Google.Cloud.Video.LiveStream.V1.Asset>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "ListAssets",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.ListAssets",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_ListAssets_async_flattened_resourceNames",
+      "title": "ListAssetsResourceNamesAsync",
+      "description": "Snippet for ListAssetsAsync",
+      "file": "LivestreamServiceClient.ListAssetsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAssetsAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.ListAssetsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Video.LiveStream.V1.ListAssetsResponse, Google.Cloud.Video.LiveStream.V1.Asset>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "ListAssets",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.ListAssets",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetPool_sync",
+      "title": "GetPoolRequestObject",
+      "description": "Snippet for GetPool",
+      "file": "LivestreamServiceClient.GetPoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPool",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.GetPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.LiveStream.V1.Pool",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetPool",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetPool",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetPool_async",
+      "title": "GetPoolRequestObjectAsync",
+      "description": "Snippet for GetPoolAsync",
+      "file": "LivestreamServiceClient.GetPoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPoolAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.GetPoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Pool>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetPool",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetPool",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetPool_sync_flattened",
+      "title": "GetPool",
+      "description": "Snippet for GetPool",
+      "file": "LivestreamServiceClient.GetPoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPool",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetPool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.LiveStream.V1.Pool",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetPool",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetPool",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetPool_async_flattened",
+      "title": "GetPoolAsync",
+      "description": "Snippet for GetPoolAsync",
+      "file": "LivestreamServiceClient.GetPoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPoolAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Pool>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetPool",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetPool",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetPool_sync_flattened_resourceNames",
+      "title": "GetPoolResourceNames",
+      "description": "Snippet for GetPool",
+      "file": "LivestreamServiceClient.GetPoolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPool",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetPool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.PoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.LiveStream.V1.Pool",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetPool",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetPool",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_GetPool_async_flattened_resourceNames",
+      "title": "GetPoolResourceNamesAsync",
+      "description": "Snippet for GetPoolAsync",
+      "file": "LivestreamServiceClient.GetPoolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPoolAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.GetPoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.PoolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.Pool>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "GetPool",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.GetPool",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_UpdatePool_sync",
+      "title": "UpdatePoolRequestObject",
+      "description": "Snippet for UpdatePool",
+      "file": "LivestreamServiceClient.UpdatePoolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePool",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdatePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.UpdatePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Pool, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "UpdatePool",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.UpdatePool",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_UpdatePool_async",
+      "title": "UpdatePoolRequestObjectAsync",
+      "description": "Snippet for UpdatePoolAsync",
+      "file": "LivestreamServiceClient.UpdatePoolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePoolAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdatePoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.UpdatePoolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Pool, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "UpdatePool",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.UpdatePool",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_UpdatePool_sync_flattened",
+      "title": "UpdatePool",
+      "description": "Snippet for UpdatePool",
+      "file": "LivestreamServiceClient.UpdatePoolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePool",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdatePool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Pool",
+            "name": "pool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Pool, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "UpdatePool",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.UpdatePool",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_UpdatePool_async_flattened",
+      "title": "UpdatePoolAsync",
+      "description": "Snippet for UpdatePoolAsync",
+      "file": "LivestreamServiceClient.UpdatePoolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePoolAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.UpdatePoolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.Pool",
+            "name": "pool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.Pool, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "UpdatePool",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.UpdatePool",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

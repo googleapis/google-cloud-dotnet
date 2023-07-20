@@ -3,7 +3,7 @@
 //     source: google/cloud/video/livestream/v1/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -115,6 +115,24 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.DeleteEventRequest> __Marshaller_google_cloud_video_livestream_v1_DeleteEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.DeleteEventRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.CreateAssetRequest> __Marshaller_google_cloud_video_livestream_v1_CreateAssetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.CreateAssetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.DeleteAssetRequest> __Marshaller_google_cloud_video_livestream_v1_DeleteAssetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.DeleteAssetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.GetAssetRequest> __Marshaller_google_cloud_video_livestream_v1_GetAssetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.GetAssetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.Asset> __Marshaller_google_cloud_video_livestream_v1_Asset = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.Asset.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.ListAssetsRequest> __Marshaller_google_cloud_video_livestream_v1_ListAssetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.ListAssetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.ListAssetsResponse> __Marshaller_google_cloud_video_livestream_v1_ListAssetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.ListAssetsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.GetPoolRequest> __Marshaller_google_cloud_video_livestream_v1_GetPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.GetPoolRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.Pool> __Marshaller_google_cloud_video_livestream_v1_Pool = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.Pool.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.UpdatePoolRequest> __Marshaller_google_cloud_video_livestream_v1_UpdatePoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.UpdatePoolRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.CreateChannelRequest, global::Google.LongRunning.Operation> __Method_CreateChannel = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.CreateChannelRequest, global::Google.LongRunning.Operation>(
@@ -243,6 +261,54 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         "DeleteEvent",
         __Marshaller_google_cloud_video_livestream_v1_DeleteEventRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.CreateAssetRequest, global::Google.LongRunning.Operation> __Method_CreateAsset = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.CreateAssetRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAsset",
+        __Marshaller_google_cloud_video_livestream_v1_CreateAssetRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.DeleteAssetRequest, global::Google.LongRunning.Operation> __Method_DeleteAsset = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.DeleteAssetRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAsset",
+        __Marshaller_google_cloud_video_livestream_v1_DeleteAssetRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.GetAssetRequest, global::Google.Cloud.Video.LiveStream.V1.Asset> __Method_GetAsset = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.GetAssetRequest, global::Google.Cloud.Video.LiveStream.V1.Asset>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAsset",
+        __Marshaller_google_cloud_video_livestream_v1_GetAssetRequest,
+        __Marshaller_google_cloud_video_livestream_v1_Asset);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.ListAssetsRequest, global::Google.Cloud.Video.LiveStream.V1.ListAssetsResponse> __Method_ListAssets = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.ListAssetsRequest, global::Google.Cloud.Video.LiveStream.V1.ListAssetsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAssets",
+        __Marshaller_google_cloud_video_livestream_v1_ListAssetsRequest,
+        __Marshaller_google_cloud_video_livestream_v1_ListAssetsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.GetPoolRequest, global::Google.Cloud.Video.LiveStream.V1.Pool> __Method_GetPool = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.GetPoolRequest, global::Google.Cloud.Video.LiveStream.V1.Pool>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPool",
+        __Marshaller_google_cloud_video_livestream_v1_GetPoolRequest,
+        __Marshaller_google_cloud_video_livestream_v1_Pool);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.UpdatePoolRequest, global::Google.LongRunning.Operation> __Method_UpdatePool = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.UpdatePoolRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdatePool",
+        __Marshaller_google_cloud_video_livestream_v1_UpdatePoolRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -445,6 +511,79 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEvent(global::Google.Cloud.Video.LiveStream.V1.DeleteEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Asset with the provided unique ID in the specified
+      /// region.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAsset(global::Google.Cloud.Video.LiveStream.V1.CreateAssetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the specified asset if it is not used.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAsset(global::Google.Cloud.Video.LiveStream.V1.DeleteAssetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the specified asset.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.LiveStream.V1.Asset> GetAsset(global::Google.Cloud.Video.LiveStream.V1.GetAssetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of all assets in the specified region.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.LiveStream.V1.ListAssetsResponse> ListAssets(global::Google.Cloud.Video.LiveStream.V1.ListAssetsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the specified pool.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.LiveStream.V1.Pool> GetPool(global::Google.Cloud.Video.LiveStream.V1.GetPoolRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the specified pool.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdatePool(global::Google.Cloud.Video.LiveStream.V1.UpdatePoolRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1258,6 +1397,298 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteEvent, null, options, request);
       }
+      /// <summary>
+      /// Creates a Asset with the provided unique ID in the specified
+      /// region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAsset(global::Google.Cloud.Video.LiveStream.V1.CreateAssetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAsset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Asset with the provided unique ID in the specified
+      /// region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAsset(global::Google.Cloud.Video.LiveStream.V1.CreateAssetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAsset, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Asset with the provided unique ID in the specified
+      /// region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAssetAsync(global::Google.Cloud.Video.LiveStream.V1.CreateAssetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAssetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Asset with the provided unique ID in the specified
+      /// region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAssetAsync(global::Google.Cloud.Video.LiveStream.V1.CreateAssetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAsset, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified asset if it is not used.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAsset(global::Google.Cloud.Video.LiveStream.V1.DeleteAssetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAsset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified asset if it is not used.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAsset(global::Google.Cloud.Video.LiveStream.V1.DeleteAssetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAsset, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified asset if it is not used.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAssetAsync(global::Google.Cloud.Video.LiveStream.V1.DeleteAssetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAssetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified asset if it is not used.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAssetAsync(global::Google.Cloud.Video.LiveStream.V1.DeleteAssetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAsset, null, options, request);
+      }
+      /// <summary>
+      /// Returns the specified asset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.LiveStream.V1.Asset GetAsset(global::Google.Cloud.Video.LiveStream.V1.GetAssetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAsset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the specified asset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.LiveStream.V1.Asset GetAsset(global::Google.Cloud.Video.LiveStream.V1.GetAssetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAsset, null, options, request);
+      }
+      /// <summary>
+      /// Returns the specified asset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.LiveStream.V1.Asset> GetAssetAsync(global::Google.Cloud.Video.LiveStream.V1.GetAssetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAssetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the specified asset.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.LiveStream.V1.Asset> GetAssetAsync(global::Google.Cloud.Video.LiveStream.V1.GetAssetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAsset, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of all assets in the specified region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.LiveStream.V1.ListAssetsResponse ListAssets(global::Google.Cloud.Video.LiveStream.V1.ListAssetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAssets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of all assets in the specified region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.LiveStream.V1.ListAssetsResponse ListAssets(global::Google.Cloud.Video.LiveStream.V1.ListAssetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAssets, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of all assets in the specified region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.LiveStream.V1.ListAssetsResponse> ListAssetsAsync(global::Google.Cloud.Video.LiveStream.V1.ListAssetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAssetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of all assets in the specified region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.LiveStream.V1.ListAssetsResponse> ListAssetsAsync(global::Google.Cloud.Video.LiveStream.V1.ListAssetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAssets, null, options, request);
+      }
+      /// <summary>
+      /// Returns the specified pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.LiveStream.V1.Pool GetPool(global::Google.Cloud.Video.LiveStream.V1.GetPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the specified pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.LiveStream.V1.Pool GetPool(global::Google.Cloud.Video.LiveStream.V1.GetPoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPool, null, options, request);
+      }
+      /// <summary>
+      /// Returns the specified pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.LiveStream.V1.Pool> GetPoolAsync(global::Google.Cloud.Video.LiveStream.V1.GetPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the specified pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.LiveStream.V1.Pool> GetPoolAsync(global::Google.Cloud.Video.LiveStream.V1.GetPoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPool, null, options, request);
+      }
+      /// <summary>
+      /// Updates the specified pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdatePool(global::Google.Cloud.Video.LiveStream.V1.UpdatePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdatePool(global::Google.Cloud.Video.LiveStream.V1.UpdatePoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdatePool, null, options, request);
+      }
+      /// <summary>
+      /// Updates the specified pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdatePoolAsync(global::Google.Cloud.Video.LiveStream.V1.UpdatePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdatePoolAsync(global::Google.Cloud.Video.LiveStream.V1.UpdatePoolRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdatePool, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override LivestreamServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1287,7 +1718,13 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           .AddMethod(__Method_CreateEvent, serviceImpl.CreateEvent)
           .AddMethod(__Method_ListEvents, serviceImpl.ListEvents)
           .AddMethod(__Method_GetEvent, serviceImpl.GetEvent)
-          .AddMethod(__Method_DeleteEvent, serviceImpl.DeleteEvent).Build();
+          .AddMethod(__Method_DeleteEvent, serviceImpl.DeleteEvent)
+          .AddMethod(__Method_CreateAsset, serviceImpl.CreateAsset)
+          .AddMethod(__Method_DeleteAsset, serviceImpl.DeleteAsset)
+          .AddMethod(__Method_GetAsset, serviceImpl.GetAsset)
+          .AddMethod(__Method_ListAssets, serviceImpl.ListAssets)
+          .AddMethod(__Method_GetPool, serviceImpl.GetPool)
+          .AddMethod(__Method_UpdatePool, serviceImpl.UpdatePool).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1313,6 +1750,12 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       serviceBinder.AddMethod(__Method_ListEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.ListEventsRequest, global::Google.Cloud.Video.LiveStream.V1.ListEventsResponse>(serviceImpl.ListEvents));
       serviceBinder.AddMethod(__Method_GetEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.GetEventRequest, global::Google.Cloud.Video.LiveStream.V1.Event>(serviceImpl.GetEvent));
       serviceBinder.AddMethod(__Method_DeleteEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.DeleteEventRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteEvent));
+      serviceBinder.AddMethod(__Method_CreateAsset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.CreateAssetRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAsset));
+      serviceBinder.AddMethod(__Method_DeleteAsset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.DeleteAssetRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAsset));
+      serviceBinder.AddMethod(__Method_GetAsset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.GetAssetRequest, global::Google.Cloud.Video.LiveStream.V1.Asset>(serviceImpl.GetAsset));
+      serviceBinder.AddMethod(__Method_ListAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.ListAssetsRequest, global::Google.Cloud.Video.LiveStream.V1.ListAssetsResponse>(serviceImpl.ListAssets));
+      serviceBinder.AddMethod(__Method_GetPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.GetPoolRequest, global::Google.Cloud.Video.LiveStream.V1.Pool>(serviceImpl.GetPool));
+      serviceBinder.AddMethod(__Method_UpdatePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.UpdatePoolRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdatePool));
     }
 
   }
