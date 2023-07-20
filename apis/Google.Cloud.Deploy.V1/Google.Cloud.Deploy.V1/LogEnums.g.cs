@@ -25,13 +25,14 @@ namespace Google.Cloud.Deploy.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvZGVwbG95L3YxL2xvZ19lbnVtcy5wcm90bxIWZ29v",
-            "Z2xlLmNsb3VkLmRlcGxveS52MSqgAQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lG",
+            "Z2xlLmNsb3VkLmRlcGxveS52MSraAQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lG",
             "SUVEEAASJAogVFlQRV9QVUJTVUJfTk9USUZJQ0FUSU9OX0ZBSUxVUkUQARIe",
             "ChpUWVBFX1JFU09VUkNFX1NUQVRFX0NIQU5HRRADEhgKFFRZUEVfUFJPQ0VT",
-            "U19BQk9SVEVEEAQSIgoaVFlQRV9SRU5ERVJfU1RBVFVFU19DSEFOR0UQAhoC",
-            "CAFCYQoaY29tLmdvb2dsZS5jbG91ZC5kZXBsb3kudjFCDUxvZ0VudW1zUHJv",
-            "dG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9kZXBsb3kvYXBpdjEvZGVwbG95",
-            "cGI7ZGVwbG95cGJiBnByb3RvMw=="));
+            "U19BQk9SVEVEEAQSHQoZVFlQRV9SRVNUUklDVElPTl9WSU9MQVRFRBAFEhkK",
+            "FVRZUEVfUkVTT1VSQ0VfREVMRVRFRBAGEiIKGlRZUEVfUkVOREVSX1NUQVRV",
+            "RVNfQ0hBTkdFEAIaAggBQmEKGmNvbS5nb29nbGUuY2xvdWQuZGVwbG95LnYx",
+            "Qg1Mb2dFbnVtc1Byb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vZGVwbG95",
+            "L2FwaXYxL2RlcGxveXBiO2RlcGxveXBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Deploy.V1.Type), }, null, null));
@@ -60,6 +61,14 @@ namespace Google.Cloud.Deploy.V1 {
     /// A process aborted.
     /// </summary>
     [pbr::OriginalName("TYPE_PROCESS_ABORTED")] ProcessAborted = 4,
+    /// <summary>
+    /// Restriction check failed.
+    /// </summary>
+    [pbr::OriginalName("TYPE_RESTRICTION_VIOLATED")] RestrictionViolated = 5,
+    /// <summary>
+    /// Resource deleted.
+    /// </summary>
+    [pbr::OriginalName("TYPE_RESOURCE_DELETED")] ResourceDeleted = 6,
     /// <summary>
     /// Deprecated: This field is never used. Use release_render log type instead.
     /// </summary>
