@@ -202,7 +202,7 @@ namespace Google.Cloud.Spanner.V1
         private bool MarkAsDisposed() => Interlocked.Exchange(ref _disposed, 1) != 1;
 
         /// <summary>
-        /// Remembers that the transaction in this session has been successfully commmitted or rolled back.
+        /// Remembers that the transaction in this session has been successfully committed or rolled back.
         /// If a session is disposed but still has a read/write transaction that hasn't been committed or rolled back,
         /// the transaction will be rolled back before the session is reused.
         /// </summary>

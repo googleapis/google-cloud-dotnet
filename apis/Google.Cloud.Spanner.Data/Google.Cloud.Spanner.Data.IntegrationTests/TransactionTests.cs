@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15,6 +15,7 @@
 using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
+using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Threading.Tasks;
@@ -133,6 +134,87 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
+        [Theory]
+        [CombinatorialData]
+        public async Task CommittingOrRollingBackTransactionReturnsSessionToPool(bool commit)
+        {
+            // Use a session pool with at most 1 session. This means that we cannot run
+            // two transactions simultaneously, as there are not enough sessions.
+            // Committing the previous transaction should however be enough to return
+            // the session to the pool, and allow us to start another transaction.
+            var builder = new SpannerConnectionStringBuilder
+            {
+                ConnectionString = _fixture.ConnectionString,
+                SessionPoolManager = SessionPoolManager.Create(
+                    new SessionPoolOptions
+                    {
+                        MinimumPooledSessions = 1,
+                        MaximumActiveSessions = 1,
+                        WaitOnResourcesExhausted = ResourcesExhaustedBehavior.Fail
+                    })
+            };
+            using var connection = new SpannerConnection(builder);
+            connection.Open();
+
+            using var tx1 = await connection.BeginTransactionAsync();
+            using var cmd1 = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
+            cmd1.Transaction = tx1;
+            cmd1.Parameters.Add("k", SpannerDbType.String, _key);
+            Assert.Equal(DBNull.Value, await cmd1.ExecuteScalarAsync().ConfigureAwait(false));
+            // Committing the transaction returns the session to the pool.
+            var commitTimestamp = await tx1.CommitAsync();
+            // Committing a transaction twice will return the same commit timestamp twice.
+            Assert.Equal(commitTimestamp, await tx1.CommitAsync());
+            // It is possible to get transaction properties after committing the transaction.
+            Assert.Null(tx1.ReadTimestamp);
+            Assert.NotNull(tx1.TransactionId);
+
+            // It is possible to start another transaction, as the previous session was returned to the pool.
+            using var tx2 = await connection.BeginTransactionAsync();
+            using var cmd2 = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
+            cmd2.Transaction = tx2;
+            cmd2.Parameters.Add("k", SpannerDbType.String, _key);
+            Assert.Equal(DBNull.Value, await cmd2.ExecuteScalarAsync().ConfigureAwait(false));
+            await (commit ? tx2.CommitAsync() : tx2.RollbackAsync());
+
+            // Trying to start two transactions in parallel will fail as we don't have enough sessions.
+            using var tx3 = await connection.BeginTransactionAsync();
+            var exception = await Assert.ThrowsAsync<SpannerException>(() => connection.BeginTransactionAsync());
+            Assert.Equal(ErrorCode.ResourceExhausted, exception.ErrorCode);
+
+            // Commit/rollback the transaction to return the session to the pool.
+            await (commit ? tx3.CommitAsync() : tx3.RollbackAsync());
+            // This will now work.
+            using var tx4 = await connection.BeginTransactionAsync();
+            await (commit ? tx4.CommitAsync() : tx4.RollbackAsync());
+        }
+
+        [Theory]
+        [CombinatorialData]
+        public async Task TransactionCannotBeUsedAfterCommitOrRollback(bool commit)
+        {
+            using var connection = new SpannerConnection(_fixture.ConnectionString);
+            await connection.OpenAsync();
+
+            using var tx = await connection.BeginTransactionAsync();
+            using var cmd = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
+            cmd.Transaction = tx;
+            cmd.Parameters.Add("k", SpannerDbType.String, _key);
+            Assert.Equal(DBNull.Value, await cmd.ExecuteScalarAsync().ConfigureAwait(false));
+            // Committing/rolling back the transaction makes the transaction unusable for any further actions.
+            await (commit ? tx.CommitAsync() : tx.RollbackAsync());
+
+            var exception = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
+                {
+                    using var selectCommand = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
+                    selectCommand.Transaction = tx;
+                    selectCommand.Parameters.Add("k", SpannerDbType.String, _key);
+                    await selectCommand.ExecuteScalarAsync();
+                });
+            Assert.Equal(ErrorCode.FailedPrecondition, exception.ErrorCode);
+        }
+
         [Fact]
         [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public async Task AbortedThrownCorrectly()
@@ -144,7 +226,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // connection 2 reads again -- abort should be thrown.
 
             // Note: deeply nested using statements to ensure that we dispose of everything even in the case of failure,
-            // but we manually dispose of both tx1 and connection1. 
+            // but we manually dispose of both tx1 and connection1.
             using (var connection1 = new SpannerConnection(_fixture.ConnectionString))
             {
                 using (var connection2 = new SpannerConnection(_fixture.ConnectionString))
@@ -190,7 +272,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             }
                             connection1.Dispose();
 
-                            // TX2 READ AGAIN/THROWS            
+                            // TX2 READ AGAIN/THROWS
                             using (var cmd = CreateSelectAllCommandForKey(connection2))
                             {
                                 cmd.Transaction = tx2;
@@ -267,7 +349,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             cmd2.Parameters.Add("Int64Value", SpannerDbType.Int64).Value = 50;
                             cmd2.ExecuteNonQuery();
                         }
-                        
+
                         // Commit mutations from both commands, atomically.
                         transaction.Commit();
                     }
@@ -593,7 +675,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             cmd1.Parameters.Add("StringValue", SpannerDbType.String).Value = "text";
                             await cmd1.ExecuteNonQueryAsync();
                         }
-                
+
                         using (var cmd2 = connection.CreateInsertCommand(_fixture.TableName2))
                         {
                             cmd2.Transaction = transaction;
@@ -601,7 +683,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             cmd2.Parameters.Add("Int64Value", SpannerDbType.Int64).Value = 50;
                             await cmd2.ExecuteNonQueryAsync();
                         }
-                
+
                         await transaction.CommitAsync();
                         // MutationCount == 4, as we inserted 2 rows with 2 columns each.
                         Assert.Equal(4, logger.LastCommitResponse?.CommitStats?.MutationCount);
