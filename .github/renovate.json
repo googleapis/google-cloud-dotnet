@@ -157,6 +157,7 @@
     "apis/Google.Cloud.OsLogin.V1/Google.Cloud.OsLogin.V1/**",
     "apis/Google.Cloud.OsLogin.V1Beta/Google.Cloud.OsLogin.V1Beta/**",
     "apis/Google.Cloud.PhishingProtection.V1Beta1/Google.Cloud.PhishingProtection.V1Beta1/**",
+    "apis/Google.Cloud.PolicySimulator.V1/Google.Cloud.PolicySimulator.V1/**",
     "apis/Google.Cloud.PolicyTroubleshooter.V1/Google.Cloud.PolicyTroubleshooter.V1/**",
     "apis/Google.Cloud.PrivateCatalog.V1Beta1/Google.Cloud.PrivateCatalog.V1Beta1/**",
     "apis/Google.Cloud.Profiler.V2/Google.Cloud.Profiler.V2/**",
