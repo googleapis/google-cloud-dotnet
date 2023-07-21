@@ -550,6 +550,292 @@ namespace Google.Cloud.CloudBuild.V1
         public static bool operator !=(BuildTriggerName a, BuildTriggerName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>GithubEnterpriseConfig</c> resource.</summary>
+    public sealed partial class GithubEnterpriseConfigName : gax::IResourceName, sys::IEquatable<GithubEnterpriseConfigName>
+    {
+        /// <summary>The possible contents of <see cref="GithubEnterpriseConfigName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/githubEnterpriseConfigs/{config}</c>.
+            /// </summary>
+            ProjectConfig = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/githubEnterpriseConfigs/{config}</c>
+            /// .
+            /// </summary>
+            ProjectLocationConfig = 2,
+        }
+
+        private static gax::PathTemplate s_projectConfig = new gax::PathTemplate("projects/{project}/githubEnterpriseConfigs/{config}");
+
+        private static gax::PathTemplate s_projectLocationConfig = new gax::PathTemplate("projects/{project}/locations/{location}/githubEnterpriseConfigs/{config}");
+
+        /// <summary>Creates a <see cref="GithubEnterpriseConfigName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="GithubEnterpriseConfigName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static GithubEnterpriseConfigName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new GithubEnterpriseConfigName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="GithubEnterpriseConfigName"/> with the pattern
+        /// <c>projects/{project}/githubEnterpriseConfigs/{config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="configId">The <c>Config</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="GithubEnterpriseConfigName"/> constructed from the provided ids.
+        /// </returns>
+        public static GithubEnterpriseConfigName FromProjectConfig(string projectId, string configId) =>
+            new GithubEnterpriseConfigName(ResourceNameType.ProjectConfig, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), configId: gax::GaxPreconditions.CheckNotNullOrEmpty(configId, nameof(configId)));
+
+        /// <summary>
+        /// Creates a <see cref="GithubEnterpriseConfigName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/githubEnterpriseConfigs/{config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="configId">The <c>Config</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="GithubEnterpriseConfigName"/> constructed from the provided ids.
+        /// </returns>
+        public static GithubEnterpriseConfigName FromProjectLocationConfig(string projectId, string locationId, string configId) =>
+            new GithubEnterpriseConfigName(ResourceNameType.ProjectLocationConfig, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), configId: gax::GaxPreconditions.CheckNotNullOrEmpty(configId, nameof(configId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="GithubEnterpriseConfigName"/> with pattern
+        /// <c>projects/{project}/githubEnterpriseConfigs/{config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="configId">The <c>Config</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="GithubEnterpriseConfigName"/> with pattern
+        /// <c>projects/{project}/githubEnterpriseConfigs/{config}</c>.
+        /// </returns>
+        public static string Format(string projectId, string configId) => FormatProjectConfig(projectId, configId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="GithubEnterpriseConfigName"/> with pattern
+        /// <c>projects/{project}/githubEnterpriseConfigs/{config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="configId">The <c>Config</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="GithubEnterpriseConfigName"/> with pattern
+        /// <c>projects/{project}/githubEnterpriseConfigs/{config}</c>.
+        /// </returns>
+        public static string FormatProjectConfig(string projectId, string configId) =>
+            s_projectConfig.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(configId, nameof(configId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="GithubEnterpriseConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/githubEnterpriseConfigs/{config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="configId">The <c>Config</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="GithubEnterpriseConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/githubEnterpriseConfigs/{config}</c>.
+        /// </returns>
+        public static string FormatProjectLocationConfig(string projectId, string locationId, string configId) =>
+            s_projectLocationConfig.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(configId, nameof(configId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="GithubEnterpriseConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/githubEnterpriseConfigs/{config}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/githubEnterpriseConfigs/{config}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="githubEnterpriseConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="GithubEnterpriseConfigName"/> if successful.</returns>
+        public static GithubEnterpriseConfigName Parse(string githubEnterpriseConfigName) =>
+            Parse(githubEnterpriseConfigName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="GithubEnterpriseConfigName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/githubEnterpriseConfigs/{config}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/githubEnterpriseConfigs/{config}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="githubEnterpriseConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="GithubEnterpriseConfigName"/> if successful.</returns>
+        public static GithubEnterpriseConfigName Parse(string githubEnterpriseConfigName, bool allowUnparsed) =>
+            TryParse(githubEnterpriseConfigName, allowUnparsed, out GithubEnterpriseConfigName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="GithubEnterpriseConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/githubEnterpriseConfigs/{config}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/githubEnterpriseConfigs/{config}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="githubEnterpriseConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="GithubEnterpriseConfigName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string githubEnterpriseConfigName, out GithubEnterpriseConfigName result) =>
+            TryParse(githubEnterpriseConfigName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="GithubEnterpriseConfigName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/githubEnterpriseConfigs/{config}</c></description></item>
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/githubEnterpriseConfigs/{config}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="githubEnterpriseConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="GithubEnterpriseConfigName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string githubEnterpriseConfigName, bool allowUnparsed, out GithubEnterpriseConfigName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(githubEnterpriseConfigName, nameof(githubEnterpriseConfigName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectConfig.TryParseName(githubEnterpriseConfigName, out resourceName))
+            {
+                result = FromProjectConfig(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (s_projectLocationConfig.TryParseName(githubEnterpriseConfigName, out resourceName))
+            {
+                result = FromProjectLocationConfig(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(githubEnterpriseConfigName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private GithubEnterpriseConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string configId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ConfigId = configId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="GithubEnterpriseConfigName"/> class from the component parts of
+        /// pattern <c>projects/{project}/githubEnterpriseConfigs/{config}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="configId">The <c>Config</c> ID. Must not be <c>null</c> or empty.</param>
+        public GithubEnterpriseConfigName(string projectId, string configId) : this(ResourceNameType.ProjectConfig, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), configId: gax::GaxPreconditions.CheckNotNullOrEmpty(configId, nameof(configId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Config</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ConfigId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectConfig: return s_projectConfig.Expand(ProjectId, ConfigId);
+                case ResourceNameType.ProjectLocationConfig: return s_projectLocationConfig.Expand(ProjectId, LocationId, ConfigId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as GithubEnterpriseConfigName);
+
+        /// <inheritdoc/>
+        public bool Equals(GithubEnterpriseConfigName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(GithubEnterpriseConfigName a, GithubEnterpriseConfigName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(GithubEnterpriseConfigName a, GithubEnterpriseConfigName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>WorkerPool</c> resource.</summary>
     public sealed partial class WorkerPoolName : gax::IResourceName, sys::IEquatable<WorkerPoolName>
     {
@@ -3040,6 +3326,50 @@ namespace Google.Cloud.CloudBuild.V1
         }
     }
 
+    public partial class GitRepoSource
+    {
+        /// <summary>
+        /// <see cref="GithubEnterpriseConfigName"/>-typed view over the <see cref="GithubEnterpriseConfig"/> resource
+        /// name property.
+        /// </summary>
+        public GithubEnterpriseConfigName GithubEnterpriseConfigAsGithubEnterpriseConfigName
+        {
+            get => string.IsNullOrEmpty(GithubEnterpriseConfig) ? null : GithubEnterpriseConfigName.Parse(GithubEnterpriseConfig, allowUnparsed: true);
+            set => GithubEnterpriseConfig = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="RepositoryName"/>-typed view over the <see cref="Repository"/> resource name property.
+        /// </summary>
+        public RepositoryName RepositoryAsRepositoryName
+        {
+            get => string.IsNullOrEmpty(Repository) ? null : RepositoryName.Parse(Repository, allowUnparsed: true);
+            set => Repository = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GitFileSource
+    {
+        /// <summary>
+        /// <see cref="GithubEnterpriseConfigName"/>-typed view over the <see cref="GithubEnterpriseConfig"/> resource
+        /// name property.
+        /// </summary>
+        public GithubEnterpriseConfigName GithubEnterpriseConfigAsGithubEnterpriseConfigName
+        {
+            get => string.IsNullOrEmpty(GithubEnterpriseConfig) ? null : GithubEnterpriseConfigName.Parse(GithubEnterpriseConfig, allowUnparsed: true);
+            set => GithubEnterpriseConfig = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="RepositoryName"/>-typed view over the <see cref="Repository"/> resource name property.
+        /// </summary>
+        public RepositoryName RepositoryAsRepositoryName
+        {
+            get => string.IsNullOrEmpty(Repository) ? null : RepositoryName.Parse(Repository, allowUnparsed: true);
+            set => Repository = value?.ToString() ?? "";
+        }
+    }
+
     public partial class BuildTrigger
     {
         /// <summary>
@@ -3225,6 +3555,71 @@ namespace Google.Cloud.CloudBuild.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gccv::BuildTriggerName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GitHubEnterpriseConfig
+    {
+        /// <summary>
+        /// <see cref="gccv::GithubEnterpriseConfigName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gccv::GithubEnterpriseConfigName GithubEnterpriseConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::GithubEnterpriseConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="PeeredNetwork"/> resource name property.
+        /// </summary>
+        public NetworkName PeeredNetworkAsNetworkName
+        {
+            get => string.IsNullOrEmpty(PeeredNetwork) ? null : NetworkName.Parse(PeeredNetwork, allowUnparsed: true);
+            set => PeeredNetwork = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GitHubEnterpriseSecrets
+    {
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="PrivateKeyVersionName"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName PrivateKeyVersionNameAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(PrivateKeyVersionName) ? null : SecretVersionName.Parse(PrivateKeyVersionName, allowUnparsed: true);
+            set => PrivateKeyVersionName = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="WebhookSecretVersionName"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName WebhookSecretVersionNameAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(WebhookSecretVersionName) ? null : SecretVersionName.Parse(WebhookSecretVersionName, allowUnparsed: true);
+            set => WebhookSecretVersionName = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="OauthSecretVersionName"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName OauthSecretVersionNameAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(OauthSecretVersionName) ? null : SecretVersionName.Parse(OauthSecretVersionName, allowUnparsed: true);
+            set => OauthSecretVersionName = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="OauthClientIdVersionName"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName OauthClientIdVersionNameAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(OauthClientIdVersionName) ? null : SecretVersionName.Parse(OauthClientIdVersionName, allowUnparsed: true);
+            set => OauthClientIdVersionName = value?.ToString() ?? "";
         }
     }
 
