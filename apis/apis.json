@@ -32,7 +32,7 @@
       "generator": "micro",
       "protoPath": "google/analytics/admin/v1beta",
       "shortName": "analyticsadmin",
-      "serviceConfigFile": "analyticsadmin.yaml",
+      "serviceConfigFile": "analyticsadmin_v1beta.yaml",
       "restNumericEnums": true,
       "transport": "grpc+rest"
     },
