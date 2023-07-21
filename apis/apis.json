@@ -3428,6 +3428,28 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Cloud.PolicySimulator.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Policy Simulator",
+      "productUrl": "https://cloud.google.com/policy-intelligence/docs/iam-simulator-overview",
+      "description": "Recommended Google client library to access the Google Cloud Policy Simulator API, which is a collection of endpoints for creating, running, and viewing simulations of IAM policy changes.",
+      "tags": [
+        "iam",
+        "simulation",
+        "policy"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/policysimulator/v1",
+      "shortName": "policysimulator",
+      "serviceConfigFile": "policysimulator_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.PolicyTroubleshooter.V1",
       "version": "2.1.0",
       "type": "grpc",
