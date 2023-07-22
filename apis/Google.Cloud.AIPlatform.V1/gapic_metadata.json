@@ -1109,6 +1109,57 @@
         }
       }
     },
+    "ScheduleService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ScheduleServiceClient",
+          "rpcs": {
+            "CreateSchedule": {
+              "methods": [
+                "CreateSchedule",
+                "CreateScheduleAsync"
+              ]
+            },
+            "DeleteSchedule": {
+              "methods": [
+                "DeleteSchedule",
+                "DeleteScheduleAsync"
+              ]
+            },
+            "GetSchedule": {
+              "methods": [
+                "GetSchedule",
+                "GetScheduleAsync"
+              ]
+            },
+            "ListSchedules": {
+              "methods": [
+                "ListSchedules",
+                "ListSchedulesAsync"
+              ]
+            },
+            "PauseSchedule": {
+              "methods": [
+                "PauseSchedule",
+                "PauseScheduleAsync"
+              ]
+            },
+            "ResumeSchedule": {
+              "methods": [
+                "ResumeSchedule",
+                "ResumeScheduleAsync"
+              ]
+            },
+            "UpdateSchedule": {
+              "methods": [
+                "UpdateSchedule",
+                "UpdateScheduleAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "SpecialistPoolService": {
       "clients": {
         "grpc": {

@@ -150,6 +150,8 @@ namespace Google.Cloud.AIPlatform.V1
             yield return PredictionServiceReflection.Descriptor;
             yield return PublisherModelReflection.Descriptor;
             yield return SavedQueryReflection.Descriptor;
+            yield return ScheduleReflection.Descriptor;
+            yield return ScheduleServiceReflection.Descriptor;
             yield return ServiceNetworkingReflection.Descriptor;
             yield return SpecialistPoolReflection.Descriptor;
             yield return SpecialistPoolServiceReflection.Descriptor;

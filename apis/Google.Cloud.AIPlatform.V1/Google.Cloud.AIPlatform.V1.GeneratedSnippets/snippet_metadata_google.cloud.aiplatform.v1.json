@@ -48100,6 +48100,2174 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_CreateSchedule_sync",
+      "title": "CreateScheduleRequestObject",
+      "description": "Snippet for CreateSchedule",
+      "file": "ScheduleServiceClient.CreateScheduleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.CreateSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.Schedule",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.CreateSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_CreateSchedule_async",
+      "title": "CreateScheduleRequestObjectAsync",
+      "description": "Snippet for CreateScheduleAsync",
+      "file": "ScheduleServiceClient.CreateScheduleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.CreateScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.CreateSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_CreateSchedule_sync_flattened",
+      "title": "CreateSchedule",
+      "description": "Snippet for CreateSchedule",
+      "file": "ScheduleServiceClient.CreateScheduleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.CreateSchedule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Schedule",
+            "name": "schedule"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.Schedule",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.CreateSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_CreateSchedule_async_flattened",
+      "title": "CreateScheduleAsync",
+      "description": "Snippet for CreateScheduleAsync",
+      "file": "ScheduleServiceClient.CreateScheduleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.CreateScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Schedule",
+            "name": "schedule"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.CreateSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_CreateSchedule_sync_flattened_resourceNames",
+      "title": "CreateScheduleResourceNames",
+      "description": "Snippet for CreateSchedule",
+      "file": "ScheduleServiceClient.CreateScheduleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.CreateSchedule",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Schedule",
+            "name": "schedule"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.Schedule",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.CreateSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_CreateSchedule_async_flattened_resourceNames",
+      "title": "CreateScheduleResourceNamesAsync",
+      "description": "Snippet for CreateScheduleAsync",
+      "file": "ScheduleServiceClient.CreateScheduleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.CreateScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Schedule",
+            "name": "schedule"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.CreateSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_DeleteSchedule_sync",
+      "title": "DeleteScheduleRequestObject",
+      "description": "Snippet for DeleteSchedule",
+      "file": "ScheduleServiceClient.DeleteScheduleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.DeleteSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.DeleteSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_DeleteSchedule_async",
+      "title": "DeleteScheduleRequestObjectAsync",
+      "description": "Snippet for DeleteScheduleAsync",
+      "file": "ScheduleServiceClient.DeleteScheduleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.DeleteScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.DeleteSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_DeleteSchedule_sync_flattened",
+      "title": "DeleteSchedule",
+      "description": "Snippet for DeleteSchedule",
+      "file": "ScheduleServiceClient.DeleteScheduleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.DeleteSchedule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.DeleteSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_DeleteSchedule_async_flattened",
+      "title": "DeleteScheduleAsync",
+      "description": "Snippet for DeleteScheduleAsync",
+      "file": "ScheduleServiceClient.DeleteScheduleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.DeleteScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.DeleteSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_DeleteSchedule_sync_flattened_resourceNames",
+      "title": "DeleteScheduleResourceNames",
+      "description": "Snippet for DeleteSchedule",
+      "file": "ScheduleServiceClient.DeleteScheduleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.DeleteSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.DeleteSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_DeleteSchedule_async_flattened_resourceNames",
+      "title": "DeleteScheduleResourceNamesAsync",
+      "description": "Snippet for DeleteScheduleAsync",
+      "file": "ScheduleServiceClient.DeleteScheduleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.DeleteScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.DeleteSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_GetSchedule_sync",
+      "title": "GetScheduleRequestObject",
+      "description": "Snippet for GetSchedule",
+      "file": "ScheduleServiceClient.GetScheduleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.GetSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.Schedule",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.GetSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_GetSchedule_async",
+      "title": "GetScheduleRequestObjectAsync",
+      "description": "Snippet for GetScheduleAsync",
+      "file": "ScheduleServiceClient.GetScheduleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.GetScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.GetSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_GetSchedule_sync_flattened",
+      "title": "GetSchedule",
+      "description": "Snippet for GetSchedule",
+      "file": "ScheduleServiceClient.GetScheduleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.GetSchedule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.Schedule",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.GetSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_GetSchedule_async_flattened",
+      "title": "GetScheduleAsync",
+      "description": "Snippet for GetScheduleAsync",
+      "file": "ScheduleServiceClient.GetScheduleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.GetScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.GetSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_GetSchedule_sync_flattened_resourceNames",
+      "title": "GetScheduleResourceNames",
+      "description": "Snippet for GetSchedule",
+      "file": "ScheduleServiceClient.GetScheduleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.GetSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.Schedule",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.GetSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_GetSchedule_async_flattened_resourceNames",
+      "title": "GetScheduleResourceNamesAsync",
+      "description": "Snippet for GetScheduleAsync",
+      "file": "ScheduleServiceClient.GetScheduleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.GetScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "GetSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.GetSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ListSchedules_sync",
+      "title": "ListSchedulesRequestObject",
+      "description": "Snippet for ListSchedules",
+      "file": "ScheduleServiceClient.ListSchedulesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchedules",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ListSchedules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListSchedulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListSchedulesResponse, Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchedules",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ListSchedules",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ListSchedules_async",
+      "title": "ListSchedulesRequestObjectAsync",
+      "description": "Snippet for ListSchedulesAsync",
+      "file": "ScheduleServiceClient.ListSchedulesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchedulesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ListSchedulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListSchedulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListSchedulesResponse, Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchedules",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ListSchedules",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ListSchedules_sync_flattened",
+      "title": "ListSchedules",
+      "description": "Snippet for ListSchedules",
+      "file": "ScheduleServiceClient.ListSchedulesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchedules",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ListSchedules",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListSchedulesResponse, Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchedules",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ListSchedules",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ListSchedules_async_flattened",
+      "title": "ListSchedulesAsync",
+      "description": "Snippet for ListSchedulesAsync",
+      "file": "ScheduleServiceClient.ListSchedulesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchedulesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ListSchedulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListSchedulesResponse, Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchedules",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ListSchedules",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ListSchedules_sync_flattened_resourceNames",
+      "title": "ListSchedulesResourceNames",
+      "description": "Snippet for ListSchedules",
+      "file": "ScheduleServiceClient.ListSchedulesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchedules",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ListSchedules",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListSchedulesResponse, Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchedules",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ListSchedules",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ListSchedules_async_flattened_resourceNames",
+      "title": "ListSchedulesResourceNamesAsync",
+      "description": "Snippet for ListSchedulesAsync",
+      "file": "ScheduleServiceClient.ListSchedulesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSchedulesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ListSchedulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListSchedulesResponse, Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ListSchedules",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ListSchedules",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_PauseSchedule_sync",
+      "title": "PauseScheduleRequestObject",
+      "description": "Snippet for PauseSchedule",
+      "file": "ScheduleServiceClient.PauseScheduleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.PauseSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PauseScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "PauseSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.PauseSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_PauseSchedule_async",
+      "title": "PauseScheduleRequestObjectAsync",
+      "description": "Snippet for PauseScheduleAsync",
+      "file": "ScheduleServiceClient.PauseScheduleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.PauseScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PauseScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "PauseSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.PauseSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_PauseSchedule_sync_flattened",
+      "title": "PauseSchedule",
+      "description": "Snippet for PauseSchedule",
+      "file": "ScheduleServiceClient.PauseScheduleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.PauseSchedule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "PauseSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.PauseSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_PauseSchedule_async_flattened",
+      "title": "PauseScheduleAsync",
+      "description": "Snippet for PauseScheduleAsync",
+      "file": "ScheduleServiceClient.PauseScheduleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.PauseScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "PauseSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.PauseSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_PauseSchedule_sync_flattened_resourceNames",
+      "title": "PauseScheduleResourceNames",
+      "description": "Snippet for PauseSchedule",
+      "file": "ScheduleServiceClient.PauseScheduleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.PauseSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "PauseSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.PauseSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_PauseSchedule_async_flattened_resourceNames",
+      "title": "PauseScheduleResourceNamesAsync",
+      "description": "Snippet for PauseScheduleAsync",
+      "file": "ScheduleServiceClient.PauseScheduleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.PauseScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "PauseSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.PauseSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ResumeSchedule_sync",
+      "title": "ResumeScheduleRequestObject",
+      "description": "Snippet for ResumeSchedule",
+      "file": "ScheduleServiceClient.ResumeScheduleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ResumeSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ResumeScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ResumeSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ResumeSchedule_async",
+      "title": "ResumeScheduleRequestObjectAsync",
+      "description": "Snippet for ResumeScheduleAsync",
+      "file": "ScheduleServiceClient.ResumeScheduleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ResumeScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ResumeScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ResumeSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ResumeSchedule_sync_flattened1",
+      "title": "ResumeSchedule1",
+      "description": "Snippet for ResumeSchedule",
+      "file": "ScheduleServiceClient.ResumeSchedule1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ResumeSchedule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ResumeSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ResumeSchedule_async_flattened1",
+      "title": "ResumeSchedule1Async",
+      "description": "Snippet for ResumeScheduleAsync",
+      "file": "ScheduleServiceClient.ResumeSchedule1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ResumeScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ResumeSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ResumeSchedule_sync_flattened1_resourceNames",
+      "title": "ResumeSchedule1ResourceNames",
+      "description": "Snippet for ResumeSchedule",
+      "file": "ScheduleServiceClient.ResumeSchedule1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ResumeSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ResumeSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ResumeSchedule_async_flattened1_resourceNames",
+      "title": "ResumeSchedule1ResourceNamesAsync",
+      "description": "Snippet for ResumeScheduleAsync",
+      "file": "ScheduleServiceClient.ResumeSchedule1ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ResumeScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ResumeSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ResumeSchedule_sync_flattened2",
+      "title": "ResumeSchedule2",
+      "description": "Snippet for ResumeSchedule",
+      "file": "ScheduleServiceClient.ResumeSchedule2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ResumeSchedule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "catchUp"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ResumeSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ResumeSchedule_async_flattened2",
+      "title": "ResumeSchedule2Async",
+      "description": "Snippet for ResumeScheduleAsync",
+      "file": "ScheduleServiceClient.ResumeSchedule2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ResumeScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "catchUp"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ResumeSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ResumeSchedule_sync_flattened2_resourceNames",
+      "title": "ResumeSchedule2ResourceNames",
+      "description": "Snippet for ResumeSchedule",
+      "file": "ScheduleServiceClient.ResumeSchedule2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ResumeSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "catchUp"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ResumeSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_ResumeSchedule_async_flattened2_resourceNames",
+      "title": "ResumeSchedule2ResourceNamesAsync",
+      "description": "Snippet for ResumeScheduleAsync",
+      "file": "ScheduleServiceClient.ResumeSchedule2ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.ResumeScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "catchUp"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "ResumeSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.ResumeSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_UpdateSchedule_sync",
+      "title": "UpdateScheduleRequestObject",
+      "description": "Snippet for UpdateSchedule",
+      "file": "ScheduleServiceClient.UpdateScheduleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.UpdateSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.Schedule",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.UpdateSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_UpdateSchedule_async",
+      "title": "UpdateScheduleRequestObjectAsync",
+      "description": "Snippet for UpdateScheduleAsync",
+      "file": "ScheduleServiceClient.UpdateScheduleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.UpdateScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.UpdateSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_UpdateSchedule_sync_flattened",
+      "title": "UpdateSchedule",
+      "description": "Snippet for UpdateSchedule",
+      "file": "ScheduleServiceClient.UpdateScheduleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSchedule",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.UpdateSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Schedule",
+            "name": "schedule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.Schedule",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.UpdateSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ScheduleService_UpdateSchedule_async_flattened",
+      "title": "UpdateScheduleAsync",
+      "description": "Snippet for UpdateScheduleAsync",
+      "file": "ScheduleServiceClient.UpdateScheduleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateScheduleAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient.UpdateScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Schedule",
+            "name": "schedule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.Schedule>",
+        "client": {
+          "shortName": "ScheduleServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ScheduleServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSchedule",
+          "fullName": "google.cloud.aiplatform.v1.ScheduleService.UpdateSchedule",
+          "service": {
+            "shortName": "ScheduleService",
+            "fullName": "google.cloud.aiplatform.v1.ScheduleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_SpecialistPoolService_CreateSpecialistPool_sync",
       "title": "CreateSpecialistPoolRequestObject",
       "description": "Snippet for CreateSpecialistPool",
