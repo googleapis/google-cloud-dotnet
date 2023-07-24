@@ -92,7 +92,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             "aGEuSm9iU3RhdHVzLlN0YXRlEkQKDm5ld190YXNrX3N0YXRlGAMgASgOMiwu",
             "Z29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFza1N0YXR1cy5TdGF0ZSJL",
             "CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIVChFKT0JfU1RBVEVfQ0hB",
-            "TkdFRBABEhYKElRBU0tfU1RBVEVfQ0hBTkdFRBACIpQRChBBbGxvY2F0aW9u",
+            "TkdFRBABEhYKElRBU0tfU1RBVEVfQ0hBTkdFRBACIpkRChBBbGxvY2F0aW9u",
             "UG9saWN5Ek0KCGxvY2F0aW9uGAEgASgLMjsuZ29vZ2xlLmNsb3VkLmJhdGNo",
             "LnYxYWxwaGEuQWxsb2NhdGlvblBvbGljeS5Mb2NhdGlvblBvbGljeRJRCghp",
             "bnN0YW5jZRgCIAEoCzI7Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkFs",
@@ -116,55 +116,55 @@ namespace Google.Cloud.Batch.V1Alpha {
             "dGFfc291cmNlGo8BCgxBdHRhY2hlZERpc2sSRQoIbmV3X2Rpc2sYASABKAsy",
             "MS5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5BbGxvY2F0aW9uUG9saWN5",
             "LkRpc2tIABIXCg1leGlzdGluZ19kaXNrGAIgASgJSAASEwoLZGV2aWNlX25h",
-            "bWUYAyABKAlCCgoIYXR0YWNoZWQaYwoLQWNjZWxlcmF0b3ISDAoEdHlwZRgB",
+            "bWUYAyABKAlCCgoIYXR0YWNoZWQaaAoLQWNjZWxlcmF0b3ISDAoEdHlwZRgB",
             "IAEoCRINCgVjb3VudBgCIAEoAxIfChNpbnN0YWxsX2dwdV9kcml2ZXJzGAMg",
-            "ASgIQgIYARIWCg5kcml2ZXJfdmVyc2lvbhgEIAEoCRq0AwoOSW5zdGFuY2VQ",
-            "b2xpY3kSIQoVYWxsb3dlZF9tYWNoaW5lX3R5cGVzGAEgAygJQgIYARIUCgxt",
-            "YWNoaW5lX3R5cGUYAiABKAkSGAoQbWluX2NwdV9wbGF0Zm9ybRgDIAEoCRJa",
-            "ChJwcm92aXNpb25pbmdfbW9kZWwYBCABKA4yPi5nb29nbGUuY2xvdWQuYmF0",
-            "Y2gudjFhbHBoYS5BbGxvY2F0aW9uUG9saWN5LlByb3Zpc2lvbmluZ01vZGVs",
-            "Ek4KDGFjY2VsZXJhdG9ycxgFIAMoCzI4Lmdvb2dsZS5jbG91ZC5iYXRjaC52",
-            "MWFscGhhLkFsbG9jYXRpb25Qb2xpY3kuQWNjZWxlcmF0b3ISRAoJYm9vdF9k",
-            "aXNrGAggASgLMjEuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQWxsb2Nh",
-            "dGlvblBvbGljeS5EaXNrEkgKBWRpc2tzGAYgAygLMjkuZ29vZ2xlLmNsb3Vk",
-            "LmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGljeS5BdHRhY2hlZERpc2sS",
-            "EwoLcmVzZXJ2YXRpb24YByABKAkatgEKGEluc3RhbmNlUG9saWN5T3JUZW1w",
-            "bGF0ZRJNCgZwb2xpY3kYASABKAsyOy5nb29nbGUuY2xvdWQuYmF0Y2gudjFh",
-            "bHBoYS5BbGxvY2F0aW9uUG9saWN5Lkluc3RhbmNlUG9saWN5SAASGwoRaW5z",
-            "dGFuY2VfdGVtcGxhdGUYAiABKAlIABIbChNpbnN0YWxsX2dwdV9kcml2ZXJz",
-            "GAMgASgIQhEKD3BvbGljeV90ZW1wbGF0ZRpXChBOZXR3b3JrSW50ZXJmYWNl",
-            "Eg8KB25ldHdvcmsYASABKAkSEgoKc3VibmV0d29yaxgCIAEoCRIeChZub19l",
-            "eHRlcm5hbF9pcF9hZGRyZXNzGAMgASgIGmoKDU5ldHdvcmtQb2xpY3kSWQoS",
-            "bmV0d29ya19pbnRlcmZhY2VzGAEgAygLMj0uZ29vZ2xlLmNsb3VkLmJhdGNo",
-            "LnYxYWxwaGEuQWxsb2NhdGlvblBvbGljeS5OZXR3b3JrSW50ZXJmYWNlGjwK",
-            "D1BsYWNlbWVudFBvbGljeRITCgtjb2xsb2NhdGlvbhgBIAEoCRIUCgxtYXhf",
-            "ZGlzdGFuY2UYAiABKAMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4ASJgChFQcm92aXNpb25pbmdNb2RlbBIiCh5QUk9W",
-            "SVNJT05JTkdfTU9ERUxfVU5TUEVDSUZJRUQQABIMCghTVEFOREFSRBABEggK",
-            "BFNQT1QQAhIPCgtQUkVFTVBUSUJMRRADIvcFCglUYXNrR3JvdXASEQoEbmFt",
-            "ZRgBIAEoCUID4EEDEjwKCXRhc2tfc3BlYxgDIAEoCzIkLmdvb2dsZS5jbG91",
-            "ZC5iYXRjaC52MWFscGhhLlRhc2tTcGVjQgPgQQISEgoKdGFza19jb3VudBgE",
-            "IAEoAxITCgtwYXJhbGxlbGlzbRgFIAEoAxJRChFzY2hlZHVsaW5nX3BvbGlj",
-            "eRgGIAEoDjI2Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlRhc2tHcm91",
-            "cC5TY2hlZHVsaW5nUG9saWN5EkcKEWFsbG9jYXRpb25fcG9saWN5GAcgASgL",
-            "MiwuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGlj",
-            "eRJBCgZsYWJlbHMYCCADKAsyMS5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBo",
-            "YS5UYXNrR3JvdXAuTGFiZWxzRW50cnkSQgoRdGFza19lbnZpcm9ubWVudHMY",
-            "CSADKAsyJy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5FbnZpcm9ubWVu",
-            "dBIbChN0YXNrX2NvdW50X3Blcl9ub2RlGAogASgDEhoKEnJlcXVpcmVfaG9z",
-            "dHNfZmlsZRgLIAEoCBIWCg5wZXJtaXNzaXZlX3NzaBgMIAEoCBotCgtMYWJl",
-            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlwKEFNj",
-            "aGVkdWxpbmdQb2xpY3kSIQodU0NIRURVTElOR19QT0xJQ1lfVU5TUEVDSUZJ",
-            "RUQQABIXChNBU19TT09OX0FTX1BPU1NJQkxFEAESDAoISU5fT1JERVIQAjpv",
-            "6kFsCh5iYXRjaC5nb29nbGVhcGlzLmNvbS9UYXNrR3JvdXASSnByb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9qb2JzL3tqb2J9L3Rh",
-            "c2tHcm91cHMve3Rhc2tfZ3JvdXB9Ii8KDlNlcnZpY2VBY2NvdW50Eg0KBWVt",
-            "YWlsGAEgASgJEg4KBnNjb3BlcxgCIAMoCULCAQoeY29tLmdvb2dsZS5jbG91",
-            "ZC5iYXRjaC52MWFscGhhQghKb2JQcm90b1ABWjRjbG91ZC5nb29nbGUuY29t",
-            "L2dvL2JhdGNoL2FwaXYxYWxwaGEvYmF0Y2hwYjtiYXRjaHBiogIDR0NCqgIa",
-            "R29vZ2xlLkNsb3VkLkJhdGNoLlYxQWxwaGHKAhpHb29nbGVcQ2xvdWRcQmF0",
-            "Y2hcVjFhbHBoYeoCHUdvb2dsZTo6Q2xvdWQ6OkJhdGNoOjpWMWFscGhhYgZw",
-            "cm90bzM="));
+            "ASgIQgIYARIbCg5kcml2ZXJfdmVyc2lvbhgEIAEoCUID4EEBGrQDCg5JbnN0",
+            "YW5jZVBvbGljeRIhChVhbGxvd2VkX21hY2hpbmVfdHlwZXMYASADKAlCAhgB",
+            "EhQKDG1hY2hpbmVfdHlwZRgCIAEoCRIYChBtaW5fY3B1X3BsYXRmb3JtGAMg",
+            "ASgJEloKEnByb3Zpc2lvbmluZ19tb2RlbBgEIAEoDjI+Lmdvb2dsZS5jbG91",
+            "ZC5iYXRjaC52MWFscGhhLkFsbG9jYXRpb25Qb2xpY3kuUHJvdmlzaW9uaW5n",
+            "TW9kZWwSTgoMYWNjZWxlcmF0b3JzGAUgAygLMjguZ29vZ2xlLmNsb3VkLmJh",
+            "dGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGljeS5BY2NlbGVyYXRvchJECgli",
+            "b290X2Rpc2sYCCABKAsyMS5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5B",
+            "bGxvY2F0aW9uUG9saWN5LkRpc2sSSAoFZGlza3MYBiADKAsyOS5nb29nbGUu",
+            "Y2xvdWQuYmF0Y2gudjFhbHBoYS5BbGxvY2F0aW9uUG9saWN5LkF0dGFjaGVk",
+            "RGlzaxITCgtyZXNlcnZhdGlvbhgHIAEoCRq2AQoYSW5zdGFuY2VQb2xpY3lP",
+            "clRlbXBsYXRlEk0KBnBvbGljeRgBIAEoCzI7Lmdvb2dsZS5jbG91ZC5iYXRj",
+            "aC52MWFscGhhLkFsbG9jYXRpb25Qb2xpY3kuSW5zdGFuY2VQb2xpY3lIABIb",
+            "ChFpbnN0YW5jZV90ZW1wbGF0ZRgCIAEoCUgAEhsKE2luc3RhbGxfZ3B1X2Ry",
+            "aXZlcnMYAyABKAhCEQoPcG9saWN5X3RlbXBsYXRlGlcKEE5ldHdvcmtJbnRl",
+            "cmZhY2USDwoHbmV0d29yaxgBIAEoCRISCgpzdWJuZXR3b3JrGAIgASgJEh4K",
+            "Fm5vX2V4dGVybmFsX2lwX2FkZHJlc3MYAyABKAgaagoNTmV0d29ya1BvbGlj",
+            "eRJZChJuZXR3b3JrX2ludGVyZmFjZXMYASADKAsyPS5nb29nbGUuY2xvdWQu",
+            "YmF0Y2gudjFhbHBoYS5BbGxvY2F0aW9uUG9saWN5Lk5ldHdvcmtJbnRlcmZh",
+            "Y2UaPAoPUGxhY2VtZW50UG9saWN5EhMKC2NvbGxvY2F0aW9uGAEgASgJEhQK",
+            "DG1heF9kaXN0YW5jZRgCIAEoAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBImAKEVByb3Zpc2lvbmluZ01vZGVsEiIK",
+            "HlBST1ZJU0lPTklOR19NT0RFTF9VTlNQRUNJRklFRBAAEgwKCFNUQU5EQVJE",
+            "EAESCAoEU1BPVBACEg8KC1BSRUVNUFRJQkxFEAMi9wUKCVRhc2tHcm91cBIR",
+            "CgRuYW1lGAEgASgJQgPgQQMSPAoJdGFza19zcGVjGAMgASgLMiQuZ29vZ2xl",
+            "LmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFza1NwZWNCA+BBAhISCgp0YXNrX2Nv",
+            "dW50GAQgASgDEhMKC3BhcmFsbGVsaXNtGAUgASgDElEKEXNjaGVkdWxpbmdf",
+            "cG9saWN5GAYgASgOMjYuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFz",
+            "a0dyb3VwLlNjaGVkdWxpbmdQb2xpY3kSRwoRYWxsb2NhdGlvbl9wb2xpY3kY",
+            "ByABKAsyLC5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5BbGxvY2F0aW9u",
+            "UG9saWN5EkEKBmxhYmVscxgIIAMoCzIxLmdvb2dsZS5jbG91ZC5iYXRjaC52",
+            "MWFscGhhLlRhc2tHcm91cC5MYWJlbHNFbnRyeRJCChF0YXNrX2Vudmlyb25t",
+            "ZW50cxgJIAMoCzInLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkVudmly",
+            "b25tZW50EhsKE3Rhc2tfY291bnRfcGVyX25vZGUYCiABKAMSGgoScmVxdWly",
+            "ZV9ob3N0c19maWxlGAsgASgIEhYKDnBlcm1pc3NpdmVfc3NoGAwgASgIGi0K",
+            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
+            "XAoQU2NoZWR1bGluZ1BvbGljeRIhCh1TQ0hFRFVMSU5HX1BPTElDWV9VTlNQ",
+            "RUNJRklFRBAAEhcKE0FTX1NPT05fQVNfUE9TU0lCTEUQARIMCghJTl9PUkRF",
+            "UhACOm/qQWwKHmJhdGNoLmdvb2dsZWFwaXMuY29tL1Rhc2tHcm91cBJKcHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2pvYnMve2pv",
+            "Yn0vdGFza0dyb3Vwcy97dGFza19ncm91cH0iLwoOU2VydmljZUFjY291bnQS",
+            "DQoFZW1haWwYASABKAkSDgoGc2NvcGVzGAIgAygJQsIBCh5jb20uZ29vZ2xl",
+            "LmNsb3VkLmJhdGNoLnYxYWxwaGFCCEpvYlByb3RvUAFaNGNsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vYmF0Y2gvYXBpdjFhbHBoYS9iYXRjaHBiO2JhdGNocGKiAgNH",
+            "Q0KqAhpHb29nbGUuQ2xvdWQuQmF0Y2guVjFBbHBoYcoCGkdvb2dsZVxDbG91",
+            "ZFxCYXRjaFxWMWFscGhh6gIdR29vZ2xlOjpDbG91ZDo6QmF0Y2g6OlYxYWxw",
+            "aGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -4017,21 +4017,24 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// <summary>Field number for the "image" field.</summary>
         public const int ImageFieldNumber = 4;
         /// <summary>
-        /// Name of a public or custom image used as the data source.
+        /// Name of an image used as the data source.
         /// For example, the following are all valid URLs:
         ///
         /// * Specify the image by its family name:
-        /// projects/{project}/global/images/family/{image_family}
+        /// &lt;pre>&lt;code>projects/&lt;var
+        /// class="apiparam">project&lt;/var>/global/images/family/&lt;var
+        /// class="apiparam">image_family&lt;/var>&lt;/code>&lt;/pre>
         /// * Specify the image version:
-        /// projects/{project}/global/images/{image_version}
-        ///
+        /// &lt;pre>projects/&lt;var
+        /// class="apiparam">project&lt;/var>/global/images/&lt;var
+        /// class="apiparam">image_version&lt;/var>&lt;/code>&lt;/pre>
         /// You can also use Batch customized image in short names.
         /// The following image values are supported for a boot disk:
         ///
-        /// * "batch-debian": use Batch Debian images.
-        /// * "batch-centos": use Batch CentOS images.
-        /// * "batch-cos": use Batch Container-Optimized images.
-        /// * "batch-hpc-centos": use Batch HPC CentOS images.
+        /// * `batch-debian`: use Batch Debian images.
+        /// * `batch-centos`: use Batch CentOS images.
+        /// * `batch-cos`: use Batch Container-Optimized images.
+        /// * `batch-hpc-centos`: use Batch HPC CentOS images.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4838,9 +4841,13 @@ namespace Google.Cloud.Batch.V1Alpha {
         public const int DriverVersionFieldNumber = 4;
         private string driverVersion_ = "";
         /// <summary>
-        /// The accelerator driver version that will be installed for this type.
+        /// Optional. The NVIDIA GPU driver version that should be installed for this
+        /// type.
         ///
-        /// Not yet implemented.
+        /// You can define the specific driver version such as "470.103.01",
+        /// following the driver version requirements in
+        /// https://cloud.google.com/compute/docs/gpus/install-drivers-gpu#minimum-driver.
+        /// Batch will install the specific accelerator driver if qualified.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5625,6 +5632,12 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// third party location and install them for GPUs specified in
         /// policy.accelerators or instance_template on their behalf. Default is
         /// false.
+        ///
+        /// For Container-Optimized Image cases, Batch will install the
+        /// accelerator driver following milestones of
+        /// https://cloud.google.com/container-optimized-os/docs/release-notes. For
+        /// non Container-Optimized Image cases, following
+        /// https://github.com/GoogleCloudPlatform/compute-gpu-installation/blob/main/linux/install_gpu_driver.py.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5912,10 +5925,14 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// You can specify the network as a full or partial URL.
         ///
         /// For example, the following are all valid URLs:
-        ///
-        /// * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
-        /// * projects/{project}/global/networks/{network}
-        /// * global/networks/{network}
+        /// &lt;pre>&lt;code>https://www.googleapis.com/compute/v1/projects/&lt;var
+        /// class="apiparam">project&lt;/var>/global/networks/&lt;var
+        /// class="apiparam">network&lt;/var>&lt;/code>&lt;/pre>
+        /// &lt;pre>&lt;code>projects/&lt;var
+        /// class="apiparam">project&lt;/var>/global/networks/&lt;var
+        /// class="apiparam">network&lt;/var>&lt;/code>&lt;/pre>
+        /// &lt;pre>&lt;code>global/networks/&lt;var
+        /// class="apiparam">network&lt;/var>&lt;/code>&lt;/pre>
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5934,10 +5951,16 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// You can specify the subnetwork as a full or partial URL.
         ///
         /// For example, the following are all valid URLs:
-        ///
-        /// * https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetwork}
-        /// * projects/{project}/regions/{region}/subnetworks/{subnetwork}
-        /// * regions/{region}/subnetworks/{subnetwork}
+        /// &lt;pre>&lt;code>https://www.googleapis.com/compute/v1/projects/&lt;var
+        /// class="apiparam">project&lt;/var>/regions/&lt;var
+        /// class="apiparam">region&lt;/var>/subnetworks/&lt;var
+        /// class="apiparam">subnetwork&lt;/var>&lt;/code>&lt;/pre>
+        /// &lt;pre>&lt;code>projects/&lt;var class="apiparam">project&lt;/var>/regions/&lt;var
+        /// class="apiparam">region&lt;/var>/subnetworks/&lt;var
+        /// class="apiparam">subnetwork&lt;/var>&lt;/code>&lt;/pre>
+        /// &lt;pre>&lt;code>regions/&lt;var
+        /// class="apiparam">region&lt;/var>/subnetworks/&lt;var
+        /// class="apiparam">subnetwork&lt;/var>&lt;/code>&lt;/pre>
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
