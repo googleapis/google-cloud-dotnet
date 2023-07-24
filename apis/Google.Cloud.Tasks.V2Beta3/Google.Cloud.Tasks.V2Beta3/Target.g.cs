@@ -1446,7 +1446,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// `Content-Type` to a media type when the
     ///  [task is created][google.cloud.tasks.v2beta3.CloudTasks.CreateTask].
     ///  For example,`Content-Type` can be set to `"application/octet-stream"` or
-    ///  `"application/json"`. The default value is set to "application/json"`.
+    ///  `"application/json"`. The default value is set to `"application/json"`.
     ///
     /// * User-Agent: This will be set to `"Google-Cloud-Tasks"`.
     ///
