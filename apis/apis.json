@@ -1235,6 +1235,25 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.Commerce.Consumer.Procurement.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Commerce Consumer Procurement",
+      "productUrl": "https://cloud.google.com/marketplace/docs/",
+      "description": "Recommended Google client library to access the Google Cloud Commerce Consumer Procurement API, which enables consumers to procure products served by Cloud Marketplace platform.",
+      "tags": [
+        "marketplace"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/commerce/consumer/procurement/v1",
+      "shortName": "cloudcommerceconsumerprocurement",
+      "serviceConfigFile": "cloudcommerceconsumerprocurement_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Common",
       "version": "2.0.0",
       "targetFrameworks": "netstandard2.1;net462",
