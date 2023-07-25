@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-alpha03, released 2023-07-25
+
+### New features
+
+- Add metadata exchange support for AlloyDB connectors ([commit 5bd7231](https://github.com/googleapis/google-cloud-dotnet/commit/5bd723164f63b63d9bd260ffd7a77b5ab29a1ac8))
+- Adds metadata field describing an AlloyDB backup's quantity based retention ([commit 5bd7231](https://github.com/googleapis/google-cloud-dotnet/commit/5bd723164f63b63d9bd260ffd7a77b5ab29a1ac8))
+
 ## Version 1.0.0-alpha02, released 2023-06-20
 
 ### Bug fixes
