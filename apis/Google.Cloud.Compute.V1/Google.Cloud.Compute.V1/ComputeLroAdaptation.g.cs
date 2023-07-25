@@ -2250,6 +2250,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class PatchResourcePolicyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteRouterRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)

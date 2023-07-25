@@ -3856,6 +3856,12 @@
                 "ListAsync"
               ]
             },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
+              ]
+            },
             "SetIamPolicy": {
               "methods": [
                 "SetIamPolicy",

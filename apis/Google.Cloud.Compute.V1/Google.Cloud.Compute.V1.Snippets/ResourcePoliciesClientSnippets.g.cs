@@ -825,6 +825,146 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for Patch</summary>
+        public void PatchRequestObject()
+        {
+            // Snippet: Patch(PatchResourcePolicyRequest, CallSettings)
+            // Create client
+            ResourcePoliciesClient resourcePoliciesClient = ResourcePoliciesClient.Create();
+            // Initialize request argument(s)
+            PatchResourcePolicyRequest request = new PatchResourcePolicyRequest
+            {
+                RequestId = "",
+                ResourcePolicyResource = new ResourcePolicy(),
+                Region = "",
+                ResourcePolicy = "",
+                Project = "",
+                UpdateMask = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = resourcePoliciesClient.Patch(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = resourcePoliciesClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchAsync</summary>
+        public async Task PatchRequestObjectAsync()
+        {
+            // Snippet: PatchAsync(PatchResourcePolicyRequest, CallSettings)
+            // Additional: PatchAsync(PatchResourcePolicyRequest, CancellationToken)
+            // Create client
+            ResourcePoliciesClient resourcePoliciesClient = await ResourcePoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchResourcePolicyRequest request = new PatchResourcePolicyRequest
+            {
+                RequestId = "",
+                ResourcePolicyResource = new ResourcePolicy(),
+                Region = "",
+                ResourcePolicy = "",
+                Project = "",
+                UpdateMask = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await resourcePoliciesClient.PatchAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await resourcePoliciesClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Patch</summary>
+        public void Patch()
+        {
+            // Snippet: Patch(string, string, string, ResourcePolicy, CallSettings)
+            // Create client
+            ResourcePoliciesClient resourcePoliciesClient = ResourcePoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resourcePolicy = "";
+            ResourcePolicy resourcePolicyResource = new ResourcePolicy();
+            // Make the request
+            lro::Operation<Operation, Operation> response = resourcePoliciesClient.Patch(project, region, resourcePolicy, resourcePolicyResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = resourcePoliciesClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchAsync</summary>
+        public async Task PatchAsync()
+        {
+            // Snippet: PatchAsync(string, string, string, ResourcePolicy, CallSettings)
+            // Additional: PatchAsync(string, string, string, ResourcePolicy, CancellationToken)
+            // Create client
+            ResourcePoliciesClient resourcePoliciesClient = await ResourcePoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string resourcePolicy = "";
+            ResourcePolicy resourcePolicyResource = new ResourcePolicy();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await resourcePoliciesClient.PatchAsync(project, region, resourcePolicy, resourcePolicyResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await resourcePoliciesClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicyRequestObject()
         {
