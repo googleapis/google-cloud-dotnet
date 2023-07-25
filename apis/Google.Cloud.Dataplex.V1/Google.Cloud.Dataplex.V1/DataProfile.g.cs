@@ -26,47 +26,73 @@ namespace Google.Cloud.Dataplex.V1 {
           string.Concat(
             "Citnb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEvZGF0YV9wcm9maWxlLnByb3Rv",
             "Ehhnb29nbGUuY2xvdWQuZGF0YXBsZXgudjEaH2dvb2dsZS9hcGkvZmllbGRf",
-            "YmVoYXZpb3IucHJvdG8aKWdvb2dsZS9jbG91ZC9kYXRhcGxleC92MS9wcm9j",
-            "ZXNzaW5nLnByb3RvIhEKD0RhdGFQcm9maWxlU3BlYyLrCQoRRGF0YVByb2Zp",
-            "bGVSZXN1bHQSEQoJcm93X2NvdW50GAMgASgDEkQKB3Byb2ZpbGUYBCABKAsy",
-            "My5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQu",
-            "UHJvZmlsZRI7CgxzY2FubmVkX2RhdGEYBSABKAsyJS5nb29nbGUuY2xvdWQu",
-            "ZGF0YXBsZXgudjEuU2Nhbm5lZERhdGEavwgKB1Byb2ZpbGUSSQoGZmllbGRz",
-            "GAIgAygLMjkuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxl",
-            "UmVzdWx0LlByb2ZpbGUuRmllbGQa6AcKBUZpZWxkEgwKBG5hbWUYASABKAkS",
-            "DAoEdHlwZRgCIAEoCRIMCgRtb2RlGAMgASgJElYKB3Byb2ZpbGUYBCABKAsy",
-            "RS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQu",
-            "UHJvZmlsZS5GaWVsZC5Qcm9maWxlSW5mbxrcBgoLUHJvZmlsZUluZm8SEgoK",
-            "bnVsbF9yYXRpbxgCIAEoARIWCg5kaXN0aW5jdF9yYXRpbxgDIAEoARJlCgx0",
-            "b3Bfbl92YWx1ZXMYBCADKAsyTy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
-            "RGF0YVByb2ZpbGVSZXN1bHQuUHJvZmlsZS5GaWVsZC5Qcm9maWxlSW5mby5U",
-            "b3BOVmFsdWUSbwoOc3RyaW5nX3Byb2ZpbGUYZSABKAsyVS5nb29nbGUuY2xv",
-            "dWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQuUHJvZmlsZS5GaWVs",
-            "ZC5Qcm9maWxlSW5mby5TdHJpbmdGaWVsZEluZm9IABJxCg9pbnRlZ2VyX3By",
-            "b2ZpbGUYZiABKAsyVi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVBy",
-            "b2ZpbGVSZXN1bHQuUHJvZmlsZS5GaWVsZC5Qcm9maWxlSW5mby5JbnRlZ2Vy",
-            "RmllbGRJbmZvSAASbwoOZG91YmxlX3Byb2ZpbGUYZyABKAsyVS5nb29nbGUu",
-            "Y2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQuUHJvZmlsZS5G",
-            "aWVsZC5Qcm9maWxlSW5mby5Eb3VibGVGaWVsZEluZm9IABpRCg9TdHJpbmdG",
-            "aWVsZEluZm8SEgoKbWluX2xlbmd0aBgBIAEoAxISCgptYXhfbGVuZ3RoGAIg",
-            "ASgDEhYKDmF2ZXJhZ2VfbGVuZ3RoGAMgASgBGmwKEEludGVnZXJGaWVsZElu",
-            "Zm8SDwoHYXZlcmFnZRgBIAEoARIaChJzdGFuZGFyZF9kZXZpYXRpb24YAyAB",
-            "KAESCwoDbWluGAQgASgDEhEKCXF1YXJ0aWxlcxgGIAMoAxILCgNtYXgYBSAB",
-            "KAMaawoPRG91YmxlRmllbGRJbmZvEg8KB2F2ZXJhZ2UYASABKAESGgoSc3Rh",
-            "bmRhcmRfZGV2aWF0aW9uGAMgASgBEgsKA21pbhgEIAEoARIRCglxdWFydGls",
-            "ZXMYBiADKAESCwoDbWF4GAUgASgBGikKCVRvcE5WYWx1ZRINCgV2YWx1ZRgB",
-            "IAEoCRINCgVjb3VudBgCIAEoA0IMCgpmaWVsZF9pbmZvQmwKHGNvbS5nb29n",
-            "bGUuY2xvdWQuZGF0YXBsZXgudjFCEERhdGFQcm9maWxlUHJvdG9QAVo4Y2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9kYXRhcGxleC9hcGl2MS9kYXRhcGxleHBiO2Rh",
-            "dGFwbGV4cGJiBnByb3RvMw=="));
+            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aKWdv",
+            "b2dsZS9jbG91ZC9kYXRhcGxleC92MS9wcm9jZXNzaW5nLnByb3RvIsoECg9E",
+            "YXRhUHJvZmlsZVNwZWMSHQoQc2FtcGxpbmdfcGVyY2VudBgCIAEoAkID4EEB",
+            "EhcKCnJvd19maWx0ZXIYAyABKAlCA+BBARJZChFwb3N0X3NjYW5fYWN0aW9u",
+            "cxgEIAEoCzI5Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUHJvZmls",
+            "ZVNwZWMuUG9zdFNjYW5BY3Rpb25zQgPgQQESVQoOaW5jbHVkZV9maWVsZHMY",
+            "BSABKAsyOC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVT",
+            "cGVjLlNlbGVjdGVkRmllbGRzQgPgQQESVQoOZXhjbHVkZV9maWVsZHMYBiAB",
+            "KAsyOC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVTcGVj",
+            "LlNlbGVjdGVkRmllbGRzQgPgQQEayQEKD1Bvc3RTY2FuQWN0aW9ucxJmCg9i",
+            "aWdxdWVyeV9leHBvcnQYASABKAsySC5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
+            "djEuRGF0YVByb2ZpbGVTcGVjLlBvc3RTY2FuQWN0aW9ucy5CaWdRdWVyeUV4",
+            "cG9ydEID4EEBGk4KDkJpZ1F1ZXJ5RXhwb3J0EjwKDXJlc3VsdHNfdGFibGUY",
+            "ASABKAlCJeBBAfpBHwodYmlncXVlcnkuZ29vZ2xlYXBpcy5jb20vVGFibGUa",
+            "KgoOU2VsZWN0ZWRGaWVsZHMSGAoLZmllbGRfbmFtZXMYASADKAlCA+BBASLk",
+            "DQoRRGF0YVByb2ZpbGVSZXN1bHQSEQoJcm93X2NvdW50GAMgASgDEkQKB3By",
+            "b2ZpbGUYBCABKAsyMy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVBy",
+            "b2ZpbGVSZXN1bHQuUHJvZmlsZRI7CgxzY2FubmVkX2RhdGEYBSABKAsyJS5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuU2Nhbm5lZERhdGESaAoYcG9zdF9z",
+            "Y2FuX2FjdGlvbnNfcmVzdWx0GAYgASgLMkEuZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "bGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlBvc3RTY2FuQWN0aW9uc1Jlc3Vs",
+            "dEID4EEDGs4ICgdQcm9maWxlEkkKBmZpZWxkcxgCIAMoCzI5Lmdvb2dsZS5j",
+            "bG91ZC5kYXRhcGxleC52MS5EYXRhUHJvZmlsZVJlc3VsdC5Qcm9maWxlLkZp",
+            "ZWxkGvcHCgVGaWVsZBIMCgRuYW1lGAEgASgJEgwKBHR5cGUYAiABKAkSDAoE",
+            "bW9kZRgDIAEoCRJWCgdwcm9maWxlGAQgASgLMkUuZ29vZ2xlLmNsb3VkLmRh",
+            "dGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlByb2ZpbGUuRmllbGQuUHJv",
+            "ZmlsZUluZm8a6wYKC1Byb2ZpbGVJbmZvEhIKCm51bGxfcmF0aW8YAiABKAES",
+            "FgoOZGlzdGluY3RfcmF0aW8YAyABKAESZQoMdG9wX25fdmFsdWVzGAQgAygL",
+            "Mk8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0",
+            "LlByb2ZpbGUuRmllbGQuUHJvZmlsZUluZm8uVG9wTlZhbHVlEm8KDnN0cmlu",
+            "Z19wcm9maWxlGGUgASgLMlUuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRh",
+            "dGFQcm9maWxlUmVzdWx0LlByb2ZpbGUuRmllbGQuUHJvZmlsZUluZm8uU3Ry",
+            "aW5nRmllbGRJbmZvSAAScQoPaW50ZWdlcl9wcm9maWxlGGYgASgLMlYuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlByb2Zp",
+            "bGUuRmllbGQuUHJvZmlsZUluZm8uSW50ZWdlckZpZWxkSW5mb0gAEm8KDmRv",
+            "dWJsZV9wcm9maWxlGGcgASgLMlUuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
+            "LkRhdGFQcm9maWxlUmVzdWx0LlByb2ZpbGUuRmllbGQuUHJvZmlsZUluZm8u",
+            "RG91YmxlRmllbGRJbmZvSAAaUQoPU3RyaW5nRmllbGRJbmZvEhIKCm1pbl9s",
+            "ZW5ndGgYASABKAMSEgoKbWF4X2xlbmd0aBgCIAEoAxIWCg5hdmVyYWdlX2xl",
+            "bmd0aBgDIAEoARpsChBJbnRlZ2VyRmllbGRJbmZvEg8KB2F2ZXJhZ2UYASAB",
+            "KAESGgoSc3RhbmRhcmRfZGV2aWF0aW9uGAMgASgBEgsKA21pbhgEIAEoAxIR",
+            "CglxdWFydGlsZXMYBiADKAMSCwoDbWF4GAUgASgDGmsKD0RvdWJsZUZpZWxk",
+            "SW5mbxIPCgdhdmVyYWdlGAEgASgBEhoKEnN0YW5kYXJkX2RldmlhdGlvbhgD",
+            "IAEoARILCgNtaW4YBCABKAESEQoJcXVhcnRpbGVzGAYgAygBEgsKA21heBgF",
+            "IAEoARo4CglUb3BOVmFsdWUSDQoFdmFsdWUYASABKAkSDQoFY291bnQYAiAB",
+            "KAMSDQoFcmF0aW8YAyABKAFCDAoKZmllbGRfaW5mbxr9AgoVUG9zdFNjYW5B",
+            "Y3Rpb25zUmVzdWx0EnsKFmJpZ3F1ZXJ5X2V4cG9ydF9yZXN1bHQYASABKAsy",
+            "Vi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQu",
+            "UG9zdFNjYW5BY3Rpb25zUmVzdWx0LkJpZ1F1ZXJ5RXhwb3J0UmVzdWx0QgPg",
+            "QQMa5gEKFEJpZ1F1ZXJ5RXhwb3J0UmVzdWx0EnAKBXN0YXRlGAEgASgOMlwu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlBv",
+            "c3RTY2FuQWN0aW9uc1Jlc3VsdC5CaWdRdWVyeUV4cG9ydFJlc3VsdC5TdGF0",
+            "ZUID4EEDEhQKB21lc3NhZ2UYAiABKAlCA+BBAyJGCgVTdGF0ZRIVChFTVEFU",
+            "RV9VTlNQRUNJRklFRBAAEg0KCVNVQ0NFRURFRBABEgoKBkZBSUxFRBACEgsK",
+            "B1NLSVBQRUQQA0JsChxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxQhBE",
+            "YXRhUHJvZmlsZVByb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vZGF0YXBs",
+            "ZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxleHBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ProcessingReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ProcessingReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult), global::Google.Cloud.Dataplex.V1.DataProfileResult.Parser, new[]{ "RowCount", "Profile", "ScannedData" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Parser, new[]{ "Name", "Type", "Mode", "Profile" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Parser, new[]{ "NullRatio", "DistinctRatio", "TopNValues", "StringProfile", "IntegerProfile", "DoubleProfile" }, new[]{ "FieldInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.StringFieldInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.StringFieldInfo.Parser, new[]{ "MinLength", "MaxLength", "AverageLength" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Parser, new[]{ "SamplingPercent", "RowFilter", "PostScanActions", "IncludeFields", "ExcludeFields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Parser, new[]{ "BigqueryExport" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport.Parser, new[]{ "ResultsTable" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields.Parser, new[]{ "FieldNames" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult), global::Google.Cloud.Dataplex.V1.DataProfileResult.Parser, new[]{ "RowCount", "Profile", "ScannedData", "PostScanActionsResult" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Parser, new[]{ "Name", "Type", "Mode", "Profile" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Parser, new[]{ "NullRatio", "DistinctRatio", "TopNValues", "StringProfile", "IntegerProfile", "DoubleProfile" }, new[]{ "FieldInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.StringFieldInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.StringFieldInfo.Parser, new[]{ "MinLength", "MaxLength", "AverageLength" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.IntegerFieldInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.IntegerFieldInfo.Parser, new[]{ "Average", "StandardDeviation", "Min", "Quartiles", "Max" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.DoubleFieldInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.DoubleFieldInfo.Parser, new[]{ "Average", "StandardDeviation", "Min", "Quartiles", "Max" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.TopNValue), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.TopNValue.Parser, new[]{ "Value", "Count" }, null, null, null, null)})})})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.TopNValue), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.TopNValue.Parser, new[]{ "Value", "Count", "Ratio" }, null, null, null, null)})})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Parser, new[]{ "BigqueryExportResult" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Parser, new[]{ "State", "Message" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State) }, null, null)})})
           }));
     }
     #endregion
@@ -110,6 +136,11 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataProfileSpec(DataProfileSpec other) : this() {
+      samplingPercent_ = other.samplingPercent_;
+      rowFilter_ = other.rowFilter_;
+      postScanActions_ = other.postScanActions_ != null ? other.postScanActions_.Clone() : null;
+      includeFields_ = other.includeFields_ != null ? other.includeFields_.Clone() : null;
+      excludeFields_ = other.excludeFields_ != null ? other.excludeFields_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -117,6 +148,96 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataProfileSpec Clone() {
       return new DataProfileSpec(this);
+    }
+
+    /// <summary>Field number for the "sampling_percent" field.</summary>
+    public const int SamplingPercentFieldNumber = 2;
+    private float samplingPercent_;
+    /// <summary>
+    /// Optional. The percentage of the records to be selected from the dataset for
+    /// DataScan.
+    ///
+    /// * Value can range between 0.0 and 100.0 with up to 3 significant decimal
+    /// digits.
+    /// * Sampling is not applied if `sampling_percent` is not specified, 0 or
+    /// 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float SamplingPercent {
+      get { return samplingPercent_; }
+      set {
+        samplingPercent_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "row_filter" field.</summary>
+    public const int RowFilterFieldNumber = 3;
+    private string rowFilter_ = "";
+    /// <summary>
+    /// Optional. A filter applied to all rows in a single DataScan job.
+    /// The filter needs to be a valid SQL expression for a WHERE clause in
+    /// BigQuery standard SQL syntax.
+    /// Example: col1 >= 0 AND col2 &lt; 10
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RowFilter {
+      get { return rowFilter_; }
+      set {
+        rowFilter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "post_scan_actions" field.</summary>
+    public const int PostScanActionsFieldNumber = 4;
+    private global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions postScanActions_;
+    /// <summary>
+    /// Optional. Actions to take upon job completion..
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions PostScanActions {
+      get { return postScanActions_; }
+      set {
+        postScanActions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "include_fields" field.</summary>
+    public const int IncludeFieldsFieldNumber = 5;
+    private global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields includeFields_;
+    /// <summary>
+    /// Optional. The fields to include in data profile.
+    ///
+    /// If not specified, all fields at the time of profile scan job execution are
+    /// included, except for ones listed in `exclude_fields`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields IncludeFields {
+      get { return includeFields_; }
+      set {
+        includeFields_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "exclude_fields" field.</summary>
+    public const int ExcludeFieldsFieldNumber = 6;
+    private global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields excludeFields_;
+    /// <summary>
+    /// Optional. The fields to exclude from data profile.
+    ///
+    /// If specified, the fields will be excluded from data profile, regardless of
+    /// `include_fields` value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields ExcludeFields {
+      get { return excludeFields_; }
+      set {
+        excludeFields_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -134,6 +255,11 @@ namespace Google.Cloud.Dataplex.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SamplingPercent, other.SamplingPercent)) return false;
+      if (RowFilter != other.RowFilter) return false;
+      if (!object.Equals(PostScanActions, other.PostScanActions)) return false;
+      if (!object.Equals(IncludeFields, other.IncludeFields)) return false;
+      if (!object.Equals(ExcludeFields, other.ExcludeFields)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -141,6 +267,11 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (SamplingPercent != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SamplingPercent);
+      if (RowFilter.Length != 0) hash ^= RowFilter.GetHashCode();
+      if (postScanActions_ != null) hash ^= PostScanActions.GetHashCode();
+      if (includeFields_ != null) hash ^= IncludeFields.GetHashCode();
+      if (excludeFields_ != null) hash ^= ExcludeFields.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -159,6 +290,26 @@ namespace Google.Cloud.Dataplex.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (SamplingPercent != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(SamplingPercent);
+      }
+      if (RowFilter.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RowFilter);
+      }
+      if (postScanActions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PostScanActions);
+      }
+      if (includeFields_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(IncludeFields);
+      }
+      if (excludeFields_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ExcludeFields);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -169,6 +320,26 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SamplingPercent != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(SamplingPercent);
+      }
+      if (RowFilter.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RowFilter);
+      }
+      if (postScanActions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PostScanActions);
+      }
+      if (includeFields_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(IncludeFields);
+      }
+      if (excludeFields_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ExcludeFields);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -179,6 +350,21 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (SamplingPercent != 0F) {
+        size += 1 + 4;
+      }
+      if (RowFilter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RowFilter);
+      }
+      if (postScanActions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PostScanActions);
+      }
+      if (includeFields_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IncludeFields);
+      }
+      if (excludeFields_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExcludeFields);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -190,6 +376,30 @@ namespace Google.Cloud.Dataplex.V1 {
     public void MergeFrom(DataProfileSpec other) {
       if (other == null) {
         return;
+      }
+      if (other.SamplingPercent != 0F) {
+        SamplingPercent = other.SamplingPercent;
+      }
+      if (other.RowFilter.Length != 0) {
+        RowFilter = other.RowFilter;
+      }
+      if (other.postScanActions_ != null) {
+        if (postScanActions_ == null) {
+          PostScanActions = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions();
+        }
+        PostScanActions.MergeFrom(other.PostScanActions);
+      }
+      if (other.includeFields_ != null) {
+        if (includeFields_ == null) {
+          IncludeFields = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields();
+        }
+        IncludeFields.MergeFrom(other.IncludeFields);
+      }
+      if (other.excludeFields_ != null) {
+        if (excludeFields_ == null) {
+          ExcludeFields = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields();
+        }
+        ExcludeFields.MergeFrom(other.ExcludeFields);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -206,6 +416,35 @@ namespace Google.Cloud.Dataplex.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 21: {
+            SamplingPercent = input.ReadFloat();
+            break;
+          }
+          case 26: {
+            RowFilter = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (postScanActions_ == null) {
+              PostScanActions = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions();
+            }
+            input.ReadMessage(PostScanActions);
+            break;
+          }
+          case 42: {
+            if (includeFields_ == null) {
+              IncludeFields = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields();
+            }
+            input.ReadMessage(IncludeFields);
+            break;
+          }
+          case 50: {
+            if (excludeFields_ == null) {
+              ExcludeFields = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields();
+            }
+            input.ReadMessage(ExcludeFields);
+            break;
+          }
         }
       }
     #endif
@@ -221,10 +460,647 @@ namespace Google.Cloud.Dataplex.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 21: {
+            SamplingPercent = input.ReadFloat();
+            break;
+          }
+          case 26: {
+            RowFilter = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (postScanActions_ == null) {
+              PostScanActions = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions();
+            }
+            input.ReadMessage(PostScanActions);
+            break;
+          }
+          case 42: {
+            if (includeFields_ == null) {
+              IncludeFields = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields();
+            }
+            input.ReadMessage(IncludeFields);
+            break;
+          }
+          case 50: {
+            if (excludeFields_ == null) {
+              ExcludeFields = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields();
+            }
+            input.ReadMessage(ExcludeFields);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DataProfileSpec message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The configuration of post scan actions of DataProfileScan job.
+      /// </summary>
+      public sealed partial class PostScanActions : pb::IMessage<PostScanActions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PostScanActions> _parser = new pb::MessageParser<PostScanActions>(() => new PostScanActions());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PostScanActions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.DataProfileSpec.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PostScanActions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PostScanActions(PostScanActions other) : this() {
+          bigqueryExport_ = other.bigqueryExport_ != null ? other.bigqueryExport_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PostScanActions Clone() {
+          return new PostScanActions(this);
+        }
+
+        /// <summary>Field number for the "bigquery_export" field.</summary>
+        public const int BigqueryExportFieldNumber = 1;
+        private global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport bigqueryExport_;
+        /// <summary>
+        /// Optional. If set, results will be exported to the provided BigQuery
+        /// table.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport BigqueryExport {
+          get { return bigqueryExport_; }
+          set {
+            bigqueryExport_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PostScanActions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PostScanActions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(BigqueryExport, other.BigqueryExport)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (bigqueryExport_ != null) hash ^= BigqueryExport.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (bigqueryExport_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(BigqueryExport);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (bigqueryExport_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(BigqueryExport);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (bigqueryExport_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigqueryExport);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PostScanActions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.bigqueryExport_ != null) {
+            if (bigqueryExport_ == null) {
+              BigqueryExport = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport();
+            }
+            BigqueryExport.MergeFrom(other.BigqueryExport);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (bigqueryExport_ == null) {
+                  BigqueryExport = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport();
+                }
+                input.ReadMessage(BigqueryExport);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (bigqueryExport_ == null) {
+                  BigqueryExport = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport();
+                }
+                input.ReadMessage(BigqueryExport);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the PostScanActions message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The configuration of BigQuery export post scan action.
+          /// </summary>
+          public sealed partial class BigQueryExport : pb::IMessage<BigQueryExport>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<BigQueryExport> _parser = new pb::MessageParser<BigQueryExport>(() => new BigQueryExport());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<BigQueryExport> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BigQueryExport() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BigQueryExport(BigQueryExport other) : this() {
+              resultsTable_ = other.resultsTable_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BigQueryExport Clone() {
+              return new BigQueryExport(this);
+            }
+
+            /// <summary>Field number for the "results_table" field.</summary>
+            public const int ResultsTableFieldNumber = 1;
+            private string resultsTable_ = "";
+            /// <summary>
+            /// Optional. The BigQuery table to export DataProfileScan results to.
+            /// Format:
+            /// projects/{project}/datasets/{dataset}/tables/{table}
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string ResultsTable {
+              get { return resultsTable_; }
+              set {
+                resultsTable_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as BigQueryExport);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(BigQueryExport other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (ResultsTable != other.ResultsTable) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (ResultsTable.Length != 0) hash ^= ResultsTable.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (ResultsTable.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(ResultsTable);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (ResultsTable.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(ResultsTable);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (ResultsTable.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(ResultsTable);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(BigQueryExport other) {
+              if (other == null) {
+                return;
+              }
+              if (other.ResultsTable.Length != 0) {
+                ResultsTable = other.ResultsTable;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    ResultsTable = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    ResultsTable = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// The specification for fields to include or exclude in data profile scan.
+      /// </summary>
+      public sealed partial class SelectedFields : pb::IMessage<SelectedFields>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SelectedFields> _parser = new pb::MessageParser<SelectedFields>(() => new SelectedFields());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SelectedFields> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.DataProfileSpec.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SelectedFields() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SelectedFields(SelectedFields other) : this() {
+          fieldNames_ = other.fieldNames_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SelectedFields Clone() {
+          return new SelectedFields(this);
+        }
+
+        /// <summary>Field number for the "field_names" field.</summary>
+        public const int FieldNamesFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_fieldNames_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> fieldNames_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. Expected input is a list of fully qualified names of fields as
+        /// in the schema.
+        ///
+        /// Only top-level field names for nested fields are supported.
+        /// For instance, if 'x' is of nested field type, listing 'x' is supported
+        /// but 'x.y.z' is not supported. Here 'y' and 'y.z' are nested fields of
+        /// 'x'.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> FieldNames {
+          get { return fieldNames_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SelectedFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SelectedFields other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!fieldNames_.Equals(other.fieldNames_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= fieldNames_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          fieldNames_.WriteTo(output, _repeated_fieldNames_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          fieldNames_.WriteTo(ref output, _repeated_fieldNames_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += fieldNames_.CalculateSize(_repeated_fieldNames_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SelectedFields other) {
+          if (other == null) {
+            return;
+          }
+          fieldNames_.Add(other.fieldNames_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                fieldNames_.AddEntriesFrom(input, _repeated_fieldNames_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                fieldNames_.AddEntriesFrom(ref input, _repeated_fieldNames_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -269,6 +1145,7 @@ namespace Google.Cloud.Dataplex.V1 {
       rowCount_ = other.rowCount_;
       profile_ = other.profile_ != null ? other.profile_.Clone() : null;
       scannedData_ = other.scannedData_ != null ? other.scannedData_.Clone() : null;
+      postScanActionsResult_ = other.postScanActionsResult_ != null ? other.postScanActionsResult_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -323,6 +1200,21 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "post_scan_actions_result" field.</summary>
+    public const int PostScanActionsResultFieldNumber = 6;
+    private global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult postScanActionsResult_;
+    /// <summary>
+    /// Output only. The result of post scan actions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult PostScanActionsResult {
+      get { return postScanActionsResult_; }
+      set {
+        postScanActionsResult_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -341,6 +1233,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (RowCount != other.RowCount) return false;
       if (!object.Equals(Profile, other.Profile)) return false;
       if (!object.Equals(ScannedData, other.ScannedData)) return false;
+      if (!object.Equals(PostScanActionsResult, other.PostScanActionsResult)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -351,6 +1244,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (RowCount != 0L) hash ^= RowCount.GetHashCode();
       if (profile_ != null) hash ^= Profile.GetHashCode();
       if (scannedData_ != null) hash ^= ScannedData.GetHashCode();
+      if (postScanActionsResult_ != null) hash ^= PostScanActionsResult.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -381,6 +1275,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ScannedData);
       }
+      if (postScanActionsResult_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PostScanActionsResult);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -403,6 +1301,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ScannedData);
       }
+      if (postScanActionsResult_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PostScanActionsResult);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -421,6 +1323,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (scannedData_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ScannedData);
+      }
+      if (postScanActionsResult_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PostScanActionsResult);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -448,6 +1353,12 @@ namespace Google.Cloud.Dataplex.V1 {
           ScannedData = new global::Google.Cloud.Dataplex.V1.ScannedData();
         }
         ScannedData.MergeFrom(other.ScannedData);
+      }
+      if (other.postScanActionsResult_ != null) {
+        if (postScanActionsResult_ == null) {
+          PostScanActionsResult = new global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult();
+        }
+        PostScanActionsResult.MergeFrom(other.PostScanActionsResult);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -482,6 +1393,13 @@ namespace Google.Cloud.Dataplex.V1 {
             input.ReadMessage(ScannedData);
             break;
           }
+          case 50: {
+            if (postScanActionsResult_ == null) {
+              PostScanActionsResult = new global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult();
+            }
+            input.ReadMessage(PostScanActionsResult);
+            break;
+          }
         }
       }
     #endif
@@ -513,6 +1431,13 @@ namespace Google.Cloud.Dataplex.V1 {
               ScannedData = new global::Google.Cloud.Dataplex.V1.ScannedData();
             }
             input.ReadMessage(ScannedData);
+            break;
+          }
+          case 50: {
+            if (postScanActionsResult_ == null) {
+              PostScanActionsResult = new global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult();
+            }
+            input.ReadMessage(PostScanActionsResult);
             break;
           }
         }
@@ -1146,10 +2071,11 @@ namespace Google.Cloud.Dataplex.V1 {
                     = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.TopNValue.Parser);
                 private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.TopNValue> topNValues_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.TopNValue>();
                 /// <summary>
-                /// The list of top N non-null values and number of times they occur in
-                /// the scanned data. N is 10 or equal to the number of distinct values
-                /// in the field, whichever is smaller. Not available for complex
-                /// non-groupable field type RECORD and fields with REPEATABLE mode.
+                /// The list of top N non-null values, frequency and ratio with which
+                /// they occur in the scanned data. N is 10 or equal to the number of
+                /// distinct values in the field, whichever is smaller. Not available for
+                /// complex non-groupable field type RECORD and fields with REPEATABLE
+                /// mode.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1903,8 +2829,9 @@ namespace Google.Cloud.Dataplex.V1 {
                     /// below this point. The third quartile (Q3) splits off the highest
                     /// 25% of data from the lowest 75%. It is known as the upper or 75th
                     /// empirical quartile, as 75% of the data lies below this point.
-                    /// Here, the quartiles is provided as an ordered list of quartile
-                    /// values for the scanned data, occurring in order Q1, median, Q3.
+                    /// Here, the quartiles is provided as an ordered list of approximate
+                    /// quartile values for the scanned data, occurring in order Q1,
+                    /// median, Q3.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2548,6 +3475,7 @@ namespace Google.Cloud.Dataplex.V1 {
                     public TopNValue(TopNValue other) : this() {
                       value_ = other.value_;
                       count_ = other.count_;
+                      ratio_ = other.ratio_;
                       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
                     }
 
@@ -2587,6 +3515,22 @@ namespace Google.Cloud.Dataplex.V1 {
                       }
                     }
 
+                    /// <summary>Field number for the "ratio" field.</summary>
+                    public const int RatioFieldNumber = 3;
+                    private double ratio_;
+                    /// <summary>
+                    /// Ratio of the corresponding value in the field against the total
+                    /// number of rows in the scanned data.
+                    /// </summary>
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public double Ratio {
+                      get { return ratio_; }
+                      set {
+                        ratio_ = value;
+                      }
+                    }
+
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public override bool Equals(object other) {
@@ -2604,6 +3548,7 @@ namespace Google.Cloud.Dataplex.V1 {
                       }
                       if (Value != other.Value) return false;
                       if (Count != other.Count) return false;
+                      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Ratio, other.Ratio)) return false;
                       return Equals(_unknownFields, other._unknownFields);
                     }
 
@@ -2613,6 +3558,7 @@ namespace Google.Cloud.Dataplex.V1 {
                       int hash = 1;
                       if (Value.Length != 0) hash ^= Value.GetHashCode();
                       if (Count != 0L) hash ^= Count.GetHashCode();
+                      if (Ratio != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Ratio);
                       if (_unknownFields != null) {
                         hash ^= _unknownFields.GetHashCode();
                       }
@@ -2639,6 +3585,10 @@ namespace Google.Cloud.Dataplex.V1 {
                         output.WriteRawTag(16);
                         output.WriteInt64(Count);
                       }
+                      if (Ratio != 0D) {
+                        output.WriteRawTag(25);
+                        output.WriteDouble(Ratio);
+                      }
                       if (_unknownFields != null) {
                         _unknownFields.WriteTo(output);
                       }
@@ -2657,6 +3607,10 @@ namespace Google.Cloud.Dataplex.V1 {
                         output.WriteRawTag(16);
                         output.WriteInt64(Count);
                       }
+                      if (Ratio != 0D) {
+                        output.WriteRawTag(25);
+                        output.WriteDouble(Ratio);
+                      }
                       if (_unknownFields != null) {
                         _unknownFields.WriteTo(ref output);
                       }
@@ -2672,6 +3626,9 @@ namespace Google.Cloud.Dataplex.V1 {
                       }
                       if (Count != 0L) {
                         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Count);
+                      }
+                      if (Ratio != 0D) {
+                        size += 1 + 8;
                       }
                       if (_unknownFields != null) {
                         size += _unknownFields.CalculateSize();
@@ -2690,6 +3647,9 @@ namespace Google.Cloud.Dataplex.V1 {
                       }
                       if (other.Count != 0L) {
                         Count = other.Count;
+                      }
+                      if (other.Ratio != 0D) {
+                        Ratio = other.Ratio;
                       }
                       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
                     }
@@ -2712,6 +3672,10 @@ namespace Google.Cloud.Dataplex.V1 {
                           }
                           case 16: {
                             Count = input.ReadInt64();
+                            break;
+                          }
+                          case 25: {
+                            Ratio = input.ReadDouble();
                             break;
                           }
                         }
@@ -2737,6 +3701,10 @@ namespace Google.Cloud.Dataplex.V1 {
                             Count = input.ReadInt64();
                             break;
                           }
+                          case 25: {
+                            Ratio = input.ReadDouble();
+                            break;
+                          }
                         }
                       }
                     }
@@ -2747,6 +3715,484 @@ namespace Google.Cloud.Dataplex.V1 {
                 }
                 #endregion
 
+              }
+
+            }
+            #endregion
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// The result of post scan actions of DataProfileScan job.
+      /// </summary>
+      public sealed partial class PostScanActionsResult : pb::IMessage<PostScanActionsResult>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PostScanActionsResult> _parser = new pb::MessageParser<PostScanActionsResult>(() => new PostScanActionsResult());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PostScanActionsResult> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.DataProfileResult.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PostScanActionsResult() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PostScanActionsResult(PostScanActionsResult other) : this() {
+          bigqueryExportResult_ = other.bigqueryExportResult_ != null ? other.bigqueryExportResult_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PostScanActionsResult Clone() {
+          return new PostScanActionsResult(this);
+        }
+
+        /// <summary>Field number for the "bigquery_export_result" field.</summary>
+        public const int BigqueryExportResultFieldNumber = 1;
+        private global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult bigqueryExportResult_;
+        /// <summary>
+        /// Output only. The result of BigQuery export post scan action.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult BigqueryExportResult {
+          get { return bigqueryExportResult_; }
+          set {
+            bigqueryExportResult_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PostScanActionsResult);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PostScanActionsResult other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(BigqueryExportResult, other.BigqueryExportResult)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (bigqueryExportResult_ != null) hash ^= BigqueryExportResult.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (bigqueryExportResult_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(BigqueryExportResult);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (bigqueryExportResult_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(BigqueryExportResult);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (bigqueryExportResult_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigqueryExportResult);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PostScanActionsResult other) {
+          if (other == null) {
+            return;
+          }
+          if (other.bigqueryExportResult_ != null) {
+            if (bigqueryExportResult_ == null) {
+              BigqueryExportResult = new global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult();
+            }
+            BigqueryExportResult.MergeFrom(other.BigqueryExportResult);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (bigqueryExportResult_ == null) {
+                  BigqueryExportResult = new global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult();
+                }
+                input.ReadMessage(BigqueryExportResult);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (bigqueryExportResult_ == null) {
+                  BigqueryExportResult = new global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult();
+                }
+                input.ReadMessage(BigqueryExportResult);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the PostScanActionsResult message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The result of BigQuery export post scan action.
+          /// </summary>
+          public sealed partial class BigQueryExportResult : pb::IMessage<BigQueryExportResult>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<BigQueryExportResult> _parser = new pb::MessageParser<BigQueryExportResult>(() => new BigQueryExportResult());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<BigQueryExportResult> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BigQueryExportResult() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BigQueryExportResult(BigQueryExportResult other) : this() {
+              state_ = other.state_;
+              message_ = other.message_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BigQueryExportResult Clone() {
+              return new BigQueryExportResult(this);
+            }
+
+            /// <summary>Field number for the "state" field.</summary>
+            public const int StateFieldNumber = 1;
+            private global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State state_ = global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State.Unspecified;
+            /// <summary>
+            /// Output only. Execution state for the BigQuery exporting.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State State {
+              get { return state_; }
+              set {
+                state_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "message" field.</summary>
+            public const int MessageFieldNumber = 2;
+            private string message_ = "";
+            /// <summary>
+            /// Output only. Additional information about the BigQuery exporting.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Message {
+              get { return message_; }
+              set {
+                message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as BigQueryExportResult);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(BigQueryExportResult other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (State != other.State) return false;
+              if (Message != other.Message) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (State != global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State.Unspecified) hash ^= State.GetHashCode();
+              if (Message.Length != 0) hash ^= Message.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (State != global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) State);
+              }
+              if (Message.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(Message);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (State != global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) State);
+              }
+              if (Message.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(Message);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (State != global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+              }
+              if (Message.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(BigQueryExportResult other) {
+              if (other == null) {
+                return;
+              }
+              if (other.State != global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State.Unspecified) {
+                State = other.State;
+              }
+              if (other.Message.Length != 0) {
+                Message = other.Message;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    State = (global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State) input.ReadEnum();
+                    break;
+                  }
+                  case 18: {
+                    Message = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    State = (global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State) input.ReadEnum();
+                    break;
+                  }
+                  case 18: {
+                    Message = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the BigQueryExportResult message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Execution state for the exporting.
+              /// </summary>
+              public enum State {
+                /// <summary>
+                /// The exporting state is unspecified.
+                /// </summary>
+                [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+                /// <summary>
+                /// The exporting completed successfully.
+                /// </summary>
+                [pbr::OriginalName("SUCCEEDED")] Succeeded = 1,
+                /// <summary>
+                /// The exporting is no longer running due to an error.
+                /// </summary>
+                [pbr::OriginalName("FAILED")] Failed = 2,
+                /// <summary>
+                /// The exporting is skipped due to no valid scan result to export
+                /// (usually caused by scan failed).
+                /// </summary>
+                [pbr::OriginalName("SKIPPED")] Skipped = 3,
               }
 
             }

@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             ListDataScanJobsRequest request = new ListDataScanJobsRequest
             {
                 ParentAsDataScanName = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListDataScanJobsResponse, DataScanJob> response = dataScanServiceClient.ListDataScanJobs(request);

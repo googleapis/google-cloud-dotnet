@@ -4652,6 +4652,8 @@ namespace GoogleCSharpSnippets
             gcdv::RunTaskRequest request = new gcdv::RunTaskRequest
             {
                 TaskName = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
+                Labels = { { "", "" }, },
+                Args = { { "", "" }, },
             };
             // Make the request
             gcdv::RunTaskResponse response = dataplexServiceClient.RunTask(request);
@@ -4669,6 +4671,8 @@ namespace GoogleCSharpSnippets
             gcdv::RunTaskRequest request = new gcdv::RunTaskRequest
             {
                 TaskName = gcdv::TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
+                Labels = { { "", "" }, },
+                Args = { { "", "" }, },
             };
             // Make the request
             gcdv::RunTaskResponse response = await dataplexServiceClient.RunTaskAsync(request);

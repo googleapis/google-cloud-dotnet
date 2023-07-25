@@ -65,6 +65,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcdv::DataTaxonomyServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDataTaxonomyServiceClient(this IServiceCollection services, sys::Action<gcdv::DataTaxonomyServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::DataTaxonomyServiceClientBuilder builder = new gcdv::DataTaxonomyServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcdv::DataplexServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">

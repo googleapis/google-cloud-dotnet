@@ -3908,12 +3908,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 78,
+          "end": 79,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 76,
+          "end": 77,
           "type": "SHORT"
         }
       ]
@@ -3957,12 +3957,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 82,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 40,
-          "end": 80,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -4185,6 +4185,4242 @@
         {
           "start": 40,
           "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataTaxonomy_sync",
+      "title": "CreateDataTaxonomyRequestObject",
+      "description": "Snippet for CreateDataTaxonomy",
+      "file": "DataTaxonomyServiceClient.CreateDataTaxonomyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTaxonomy",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateDataTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataTaxonomy, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataTaxonomy_async",
+      "title": "CreateDataTaxonomyRequestObjectAsync",
+      "description": "Snippet for CreateDataTaxonomyAsync",
+      "file": "DataTaxonomyServiceClient.CreateDataTaxonomyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTaxonomyAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataTaxonomyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateDataTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataTaxonomy, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataTaxonomy_sync_flattened",
+      "title": "CreateDataTaxonomy",
+      "description": "Snippet for CreateDataTaxonomy",
+      "file": "DataTaxonomyServiceClient.CreateDataTaxonomySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTaxonomy",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataTaxonomy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomy",
+            "name": "dataTaxonomy"
+          },
+          {
+            "type": "System.String",
+            "name": "dataTaxonomyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataTaxonomy, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataTaxonomy_async_flattened",
+      "title": "CreateDataTaxonomyAsync",
+      "description": "Snippet for CreateDataTaxonomyAsync",
+      "file": "DataTaxonomyServiceClient.CreateDataTaxonomyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTaxonomyAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataTaxonomyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomy",
+            "name": "dataTaxonomy"
+          },
+          {
+            "type": "System.String",
+            "name": "dataTaxonomyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataTaxonomy, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataTaxonomy_sync_flattened_resourceNames",
+      "title": "CreateDataTaxonomyResourceNames",
+      "description": "Snippet for CreateDataTaxonomy",
+      "file": "DataTaxonomyServiceClient.CreateDataTaxonomyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTaxonomy",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomy",
+            "name": "dataTaxonomy"
+          },
+          {
+            "type": "System.String",
+            "name": "dataTaxonomyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataTaxonomy, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataTaxonomy_async_flattened_resourceNames",
+      "title": "CreateDataTaxonomyResourceNamesAsync",
+      "description": "Snippet for CreateDataTaxonomyAsync",
+      "file": "DataTaxonomyServiceClient.CreateDataTaxonomyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataTaxonomyAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataTaxonomyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomy",
+            "name": "dataTaxonomy"
+          },
+          {
+            "type": "System.String",
+            "name": "dataTaxonomyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataTaxonomy, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_UpdateDataTaxonomy_sync",
+      "title": "UpdateDataTaxonomyRequestObject",
+      "description": "Snippet for UpdateDataTaxonomy",
+      "file": "DataTaxonomyServiceClient.UpdateDataTaxonomyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataTaxonomy",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.UpdateDataTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateDataTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataTaxonomy, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.UpdateDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_UpdateDataTaxonomy_async",
+      "title": "UpdateDataTaxonomyRequestObjectAsync",
+      "description": "Snippet for UpdateDataTaxonomyAsync",
+      "file": "DataTaxonomyServiceClient.UpdateDataTaxonomyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataTaxonomyAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.UpdateDataTaxonomyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateDataTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataTaxonomy, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.UpdateDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_UpdateDataTaxonomy_sync_flattened",
+      "title": "UpdateDataTaxonomy",
+      "description": "Snippet for UpdateDataTaxonomy",
+      "file": "DataTaxonomyServiceClient.UpdateDataTaxonomySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataTaxonomy",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.UpdateDataTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomy",
+            "name": "dataTaxonomy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataTaxonomy, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.UpdateDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_UpdateDataTaxonomy_async_flattened",
+      "title": "UpdateDataTaxonomyAsync",
+      "description": "Snippet for UpdateDataTaxonomyAsync",
+      "file": "DataTaxonomyServiceClient.UpdateDataTaxonomyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataTaxonomyAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.UpdateDataTaxonomyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomy",
+            "name": "dataTaxonomy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataTaxonomy, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.UpdateDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataTaxonomy_sync",
+      "title": "DeleteDataTaxonomyRequestObject",
+      "description": "Snippet for DeleteDataTaxonomy",
+      "file": "DataTaxonomyServiceClient.DeleteDataTaxonomyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTaxonomy",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteDataTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataTaxonomy_async",
+      "title": "DeleteDataTaxonomyRequestObjectAsync",
+      "description": "Snippet for DeleteDataTaxonomyAsync",
+      "file": "DataTaxonomyServiceClient.DeleteDataTaxonomyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTaxonomyAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataTaxonomyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteDataTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataTaxonomy_sync_flattened",
+      "title": "DeleteDataTaxonomy",
+      "description": "Snippet for DeleteDataTaxonomy",
+      "file": "DataTaxonomyServiceClient.DeleteDataTaxonomySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTaxonomy",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataTaxonomy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataTaxonomy_async_flattened",
+      "title": "DeleteDataTaxonomyAsync",
+      "description": "Snippet for DeleteDataTaxonomyAsync",
+      "file": "DataTaxonomyServiceClient.DeleteDataTaxonomyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTaxonomyAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataTaxonomyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataTaxonomy_sync_flattened_resourceNames",
+      "title": "DeleteDataTaxonomyResourceNames",
+      "description": "Snippet for DeleteDataTaxonomy",
+      "file": "DataTaxonomyServiceClient.DeleteDataTaxonomyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTaxonomy",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataTaxonomy_async_flattened_resourceNames",
+      "title": "DeleteDataTaxonomyResourceNamesAsync",
+      "description": "Snippet for DeleteDataTaxonomyAsync",
+      "file": "DataTaxonomyServiceClient.DeleteDataTaxonomyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataTaxonomyAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataTaxonomyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataTaxonomies_sync",
+      "title": "ListDataTaxonomiesRequestObject",
+      "description": "Snippet for ListDataTaxonomies",
+      "file": "DataTaxonomyServiceClient.ListDataTaxonomiesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTaxonomies",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataTaxonomies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListDataTaxonomiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataTaxonomiesResponse, Google.Cloud.Dataplex.V1.DataTaxonomy>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTaxonomies",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataTaxonomies",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataTaxonomies_async",
+      "title": "ListDataTaxonomiesRequestObjectAsync",
+      "description": "Snippet for ListDataTaxonomiesAsync",
+      "file": "DataTaxonomyServiceClient.ListDataTaxonomiesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTaxonomiesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataTaxonomiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListDataTaxonomiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataTaxonomiesResponse, Google.Cloud.Dataplex.V1.DataTaxonomy>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTaxonomies",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataTaxonomies",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataTaxonomies_sync_flattened",
+      "title": "ListDataTaxonomies",
+      "description": "Snippet for ListDataTaxonomies",
+      "file": "DataTaxonomyServiceClient.ListDataTaxonomiesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTaxonomies",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataTaxonomies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataTaxonomiesResponse, Google.Cloud.Dataplex.V1.DataTaxonomy>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTaxonomies",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataTaxonomies",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataTaxonomies_async_flattened",
+      "title": "ListDataTaxonomiesAsync",
+      "description": "Snippet for ListDataTaxonomiesAsync",
+      "file": "DataTaxonomyServiceClient.ListDataTaxonomiesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTaxonomiesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataTaxonomiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataTaxonomiesResponse, Google.Cloud.Dataplex.V1.DataTaxonomy>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTaxonomies",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataTaxonomies",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataTaxonomies_sync_flattened_resourceNames",
+      "title": "ListDataTaxonomiesResourceNames",
+      "description": "Snippet for ListDataTaxonomies",
+      "file": "DataTaxonomyServiceClient.ListDataTaxonomiesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTaxonomies",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataTaxonomies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataTaxonomiesResponse, Google.Cloud.Dataplex.V1.DataTaxonomy>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTaxonomies",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataTaxonomies",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataTaxonomies_async_flattened_resourceNames",
+      "title": "ListDataTaxonomiesResourceNamesAsync",
+      "description": "Snippet for ListDataTaxonomiesAsync",
+      "file": "DataTaxonomyServiceClient.ListDataTaxonomiesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataTaxonomiesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataTaxonomiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataTaxonomiesResponse, Google.Cloud.Dataplex.V1.DataTaxonomy>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataTaxonomies",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataTaxonomies",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataTaxonomy_sync",
+      "title": "GetDataTaxonomyRequestObject",
+      "description": "Snippet for GetDataTaxonomy",
+      "file": "DataTaxonomyServiceClient.GetDataTaxonomyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTaxonomy",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetDataTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.DataTaxonomy",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataTaxonomy_async",
+      "title": "GetDataTaxonomyRequestObjectAsync",
+      "description": "Snippet for GetDataTaxonomyAsync",
+      "file": "DataTaxonomyServiceClient.GetDataTaxonomyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTaxonomyAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataTaxonomyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetDataTaxonomyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataTaxonomy>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataTaxonomy_sync_flattened",
+      "title": "GetDataTaxonomy",
+      "description": "Snippet for GetDataTaxonomy",
+      "file": "DataTaxonomyServiceClient.GetDataTaxonomySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTaxonomy",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataTaxonomy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.DataTaxonomy",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataTaxonomy_async_flattened",
+      "title": "GetDataTaxonomyAsync",
+      "description": "Snippet for GetDataTaxonomyAsync",
+      "file": "DataTaxonomyServiceClient.GetDataTaxonomyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTaxonomyAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataTaxonomyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataTaxonomy>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataTaxonomy_sync_flattened_resourceNames",
+      "title": "GetDataTaxonomyResourceNames",
+      "description": "Snippet for GetDataTaxonomy",
+      "file": "DataTaxonomyServiceClient.GetDataTaxonomyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTaxonomy",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataTaxonomy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.DataTaxonomy",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataTaxonomy_async_flattened_resourceNames",
+      "title": "GetDataTaxonomyResourceNamesAsync",
+      "description": "Snippet for GetDataTaxonomyAsync",
+      "file": "DataTaxonomyServiceClient.GetDataTaxonomyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataTaxonomyAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataTaxonomyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataTaxonomy>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataTaxonomy",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataTaxonomy",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataAttributeBinding_sync",
+      "title": "CreateDataAttributeBindingRequestObject",
+      "description": "Snippet for CreateDataAttributeBinding",
+      "file": "DataTaxonomyServiceClient.CreateDataAttributeBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAttributeBinding",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataAttributeBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateDataAttributeBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttributeBinding, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataAttributeBinding_async",
+      "title": "CreateDataAttributeBindingRequestObjectAsync",
+      "description": "Snippet for CreateDataAttributeBindingAsync",
+      "file": "DataTaxonomyServiceClient.CreateDataAttributeBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAttributeBindingAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataAttributeBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateDataAttributeBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttributeBinding, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataAttributeBinding_sync_flattened",
+      "title": "CreateDataAttributeBinding",
+      "description": "Snippet for CreateDataAttributeBinding",
+      "file": "DataTaxonomyServiceClient.CreateDataAttributeBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAttributeBinding",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataAttributeBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeBinding",
+            "name": "dataAttributeBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "dataAttributeBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttributeBinding, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataAttributeBinding_async_flattened",
+      "title": "CreateDataAttributeBindingAsync",
+      "description": "Snippet for CreateDataAttributeBindingAsync",
+      "file": "DataTaxonomyServiceClient.CreateDataAttributeBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAttributeBindingAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataAttributeBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeBinding",
+            "name": "dataAttributeBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "dataAttributeBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttributeBinding, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataAttributeBinding_sync_flattened_resourceNames",
+      "title": "CreateDataAttributeBindingResourceNames",
+      "description": "Snippet for CreateDataAttributeBinding",
+      "file": "DataTaxonomyServiceClient.CreateDataAttributeBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAttributeBinding",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataAttributeBinding",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeBinding",
+            "name": "dataAttributeBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "dataAttributeBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttributeBinding, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataAttributeBinding_async_flattened_resourceNames",
+      "title": "CreateDataAttributeBindingResourceNamesAsync",
+      "description": "Snippet for CreateDataAttributeBindingAsync",
+      "file": "DataTaxonomyServiceClient.CreateDataAttributeBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAttributeBindingAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataAttributeBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeBinding",
+            "name": "dataAttributeBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "dataAttributeBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttributeBinding, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_UpdateDataAttributeBinding_sync",
+      "title": "UpdateDataAttributeBindingRequestObject",
+      "description": "Snippet for UpdateDataAttributeBinding",
+      "file": "DataTaxonomyServiceClient.UpdateDataAttributeBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataAttributeBinding",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.UpdateDataAttributeBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateDataAttributeBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttributeBinding, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.UpdateDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_UpdateDataAttributeBinding_async",
+      "title": "UpdateDataAttributeBindingRequestObjectAsync",
+      "description": "Snippet for UpdateDataAttributeBindingAsync",
+      "file": "DataTaxonomyServiceClient.UpdateDataAttributeBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataAttributeBindingAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.UpdateDataAttributeBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateDataAttributeBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttributeBinding, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.UpdateDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_UpdateDataAttributeBinding_sync_flattened",
+      "title": "UpdateDataAttributeBinding",
+      "description": "Snippet for UpdateDataAttributeBinding",
+      "file": "DataTaxonomyServiceClient.UpdateDataAttributeBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataAttributeBinding",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.UpdateDataAttributeBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeBinding",
+            "name": "dataAttributeBinding"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttributeBinding, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.UpdateDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_UpdateDataAttributeBinding_async_flattened",
+      "title": "UpdateDataAttributeBindingAsync",
+      "description": "Snippet for UpdateDataAttributeBindingAsync",
+      "file": "DataTaxonomyServiceClient.UpdateDataAttributeBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataAttributeBindingAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.UpdateDataAttributeBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeBinding",
+            "name": "dataAttributeBinding"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttributeBinding, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.UpdateDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataAttributeBinding_sync",
+      "title": "DeleteDataAttributeBindingRequestObject",
+      "description": "Snippet for DeleteDataAttributeBinding",
+      "file": "DataTaxonomyServiceClient.DeleteDataAttributeBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAttributeBinding",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataAttributeBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteDataAttributeBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataAttributeBinding_async",
+      "title": "DeleteDataAttributeBindingRequestObjectAsync",
+      "description": "Snippet for DeleteDataAttributeBindingAsync",
+      "file": "DataTaxonomyServiceClient.DeleteDataAttributeBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAttributeBindingAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataAttributeBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteDataAttributeBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataAttributeBinding_sync_flattened",
+      "title": "DeleteDataAttributeBinding",
+      "description": "Snippet for DeleteDataAttributeBinding",
+      "file": "DataTaxonomyServiceClient.DeleteDataAttributeBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAttributeBinding",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataAttributeBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataAttributeBinding_async_flattened",
+      "title": "DeleteDataAttributeBindingAsync",
+      "description": "Snippet for DeleteDataAttributeBindingAsync",
+      "file": "DataTaxonomyServiceClient.DeleteDataAttributeBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAttributeBindingAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataAttributeBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataAttributeBinding_sync_flattened_resourceNames",
+      "title": "DeleteDataAttributeBindingResourceNames",
+      "description": "Snippet for DeleteDataAttributeBinding",
+      "file": "DataTaxonomyServiceClient.DeleteDataAttributeBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAttributeBinding",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataAttributeBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataAttributeBinding_async_flattened_resourceNames",
+      "title": "DeleteDataAttributeBindingResourceNamesAsync",
+      "description": "Snippet for DeleteDataAttributeBindingAsync",
+      "file": "DataTaxonomyServiceClient.DeleteDataAttributeBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAttributeBindingAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataAttributeBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataAttributeBindings_sync",
+      "title": "ListDataAttributeBindingsRequestObject",
+      "description": "Snippet for ListDataAttributeBindings",
+      "file": "DataTaxonomyServiceClient.ListDataAttributeBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataAttributeBindings",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataAttributeBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListDataAttributeBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataAttributeBindingsResponse, Google.Cloud.Dataplex.V1.DataAttributeBinding>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataAttributeBindings",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataAttributeBindings",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataAttributeBindings_async",
+      "title": "ListDataAttributeBindingsRequestObjectAsync",
+      "description": "Snippet for ListDataAttributeBindingsAsync",
+      "file": "DataTaxonomyServiceClient.ListDataAttributeBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataAttributeBindingsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataAttributeBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListDataAttributeBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataAttributeBindingsResponse, Google.Cloud.Dataplex.V1.DataAttributeBinding>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataAttributeBindings",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataAttributeBindings",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataAttributeBindings_sync_flattened",
+      "title": "ListDataAttributeBindings",
+      "description": "Snippet for ListDataAttributeBindings",
+      "file": "DataTaxonomyServiceClient.ListDataAttributeBindingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataAttributeBindings",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataAttributeBindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataAttributeBindingsResponse, Google.Cloud.Dataplex.V1.DataAttributeBinding>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataAttributeBindings",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataAttributeBindings",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataAttributeBindings_async_flattened",
+      "title": "ListDataAttributeBindingsAsync",
+      "description": "Snippet for ListDataAttributeBindingsAsync",
+      "file": "DataTaxonomyServiceClient.ListDataAttributeBindingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataAttributeBindingsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataAttributeBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataAttributeBindingsResponse, Google.Cloud.Dataplex.V1.DataAttributeBinding>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataAttributeBindings",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataAttributeBindings",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataAttributeBindings_sync_flattened_resourceNames",
+      "title": "ListDataAttributeBindingsResourceNames",
+      "description": "Snippet for ListDataAttributeBindings",
+      "file": "DataTaxonomyServiceClient.ListDataAttributeBindingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataAttributeBindings",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataAttributeBindings",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataAttributeBindingsResponse, Google.Cloud.Dataplex.V1.DataAttributeBinding>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataAttributeBindings",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataAttributeBindings",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataAttributeBindings_async_flattened_resourceNames",
+      "title": "ListDataAttributeBindingsResourceNamesAsync",
+      "description": "Snippet for ListDataAttributeBindingsAsync",
+      "file": "DataTaxonomyServiceClient.ListDataAttributeBindingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataAttributeBindingsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataAttributeBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataAttributeBindingsResponse, Google.Cloud.Dataplex.V1.DataAttributeBinding>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataAttributeBindings",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataAttributeBindings",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataAttributeBinding_sync",
+      "title": "GetDataAttributeBindingRequestObject",
+      "description": "Snippet for GetDataAttributeBinding",
+      "file": "DataTaxonomyServiceClient.GetDataAttributeBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataAttributeBinding",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataAttributeBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetDataAttributeBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.DataAttributeBinding",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataAttributeBinding_async",
+      "title": "GetDataAttributeBindingRequestObjectAsync",
+      "description": "Snippet for GetDataAttributeBindingAsync",
+      "file": "DataTaxonomyServiceClient.GetDataAttributeBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataAttributeBindingAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataAttributeBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetDataAttributeBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataAttributeBinding>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataAttributeBinding_sync_flattened",
+      "title": "GetDataAttributeBinding",
+      "description": "Snippet for GetDataAttributeBinding",
+      "file": "DataTaxonomyServiceClient.GetDataAttributeBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataAttributeBinding",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataAttributeBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.DataAttributeBinding",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataAttributeBinding_async_flattened",
+      "title": "GetDataAttributeBindingAsync",
+      "description": "Snippet for GetDataAttributeBindingAsync",
+      "file": "DataTaxonomyServiceClient.GetDataAttributeBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataAttributeBindingAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataAttributeBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataAttributeBinding>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataAttributeBinding_sync_flattened_resourceNames",
+      "title": "GetDataAttributeBindingResourceNames",
+      "description": "Snippet for GetDataAttributeBinding",
+      "file": "DataTaxonomyServiceClient.GetDataAttributeBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataAttributeBinding",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataAttributeBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.DataAttributeBinding",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataAttributeBinding_async_flattened_resourceNames",
+      "title": "GetDataAttributeBindingResourceNamesAsync",
+      "description": "Snippet for GetDataAttributeBindingAsync",
+      "file": "DataTaxonomyServiceClient.GetDataAttributeBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataAttributeBindingAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataAttributeBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataAttributeBinding>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataAttributeBinding",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataAttributeBinding",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataAttribute_sync",
+      "title": "CreateDataAttributeRequestObject",
+      "description": "Snippet for CreateDataAttribute",
+      "file": "DataTaxonomyServiceClient.CreateDataAttributeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAttribute",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataAttribute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateDataAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttribute, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataAttribute_async",
+      "title": "CreateDataAttributeRequestObjectAsync",
+      "description": "Snippet for CreateDataAttributeAsync",
+      "file": "DataTaxonomyServiceClient.CreateDataAttributeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAttributeAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataAttributeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateDataAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttribute, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataAttribute_sync_flattened",
+      "title": "CreateDataAttribute",
+      "description": "Snippet for CreateDataAttribute",
+      "file": "DataTaxonomyServiceClient.CreateDataAttributeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAttribute",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataAttribute",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttribute",
+            "name": "dataAttribute"
+          },
+          {
+            "type": "System.String",
+            "name": "dataAttributeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttribute, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataAttribute_async_flattened",
+      "title": "CreateDataAttributeAsync",
+      "description": "Snippet for CreateDataAttributeAsync",
+      "file": "DataTaxonomyServiceClient.CreateDataAttributeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAttributeAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataAttributeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttribute",
+            "name": "dataAttribute"
+          },
+          {
+            "type": "System.String",
+            "name": "dataAttributeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttribute, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataAttribute_sync_flattened_resourceNames",
+      "title": "CreateDataAttributeResourceNames",
+      "description": "Snippet for CreateDataAttribute",
+      "file": "DataTaxonomyServiceClient.CreateDataAttributeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAttribute",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataAttribute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttribute",
+            "name": "dataAttribute"
+          },
+          {
+            "type": "System.String",
+            "name": "dataAttributeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttribute, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_CreateDataAttribute_async_flattened_resourceNames",
+      "title": "CreateDataAttributeResourceNamesAsync",
+      "description": "Snippet for CreateDataAttributeAsync",
+      "file": "DataTaxonomyServiceClient.CreateDataAttributeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataAttributeAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.CreateDataAttributeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttribute",
+            "name": "dataAttribute"
+          },
+          {
+            "type": "System.String",
+            "name": "dataAttributeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttribute, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.CreateDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_UpdateDataAttribute_sync",
+      "title": "UpdateDataAttributeRequestObject",
+      "description": "Snippet for UpdateDataAttribute",
+      "file": "DataTaxonomyServiceClient.UpdateDataAttributeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataAttribute",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.UpdateDataAttribute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateDataAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttribute, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.UpdateDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_UpdateDataAttribute_async",
+      "title": "UpdateDataAttributeRequestObjectAsync",
+      "description": "Snippet for UpdateDataAttributeAsync",
+      "file": "DataTaxonomyServiceClient.UpdateDataAttributeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataAttributeAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.UpdateDataAttributeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateDataAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttribute, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.UpdateDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_UpdateDataAttribute_sync_flattened",
+      "title": "UpdateDataAttribute",
+      "description": "Snippet for UpdateDataAttribute",
+      "file": "DataTaxonomyServiceClient.UpdateDataAttributeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataAttribute",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.UpdateDataAttribute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttribute",
+            "name": "dataAttribute"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttribute, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.UpdateDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_UpdateDataAttribute_async_flattened",
+      "title": "UpdateDataAttributeAsync",
+      "description": "Snippet for UpdateDataAttributeAsync",
+      "file": "DataTaxonomyServiceClient.UpdateDataAttributeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataAttributeAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.UpdateDataAttributeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttribute",
+            "name": "dataAttribute"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.DataAttribute, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.UpdateDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataAttribute_sync",
+      "title": "DeleteDataAttributeRequestObject",
+      "description": "Snippet for DeleteDataAttribute",
+      "file": "DataTaxonomyServiceClient.DeleteDataAttributeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAttribute",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataAttribute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteDataAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataAttribute_async",
+      "title": "DeleteDataAttributeRequestObjectAsync",
+      "description": "Snippet for DeleteDataAttributeAsync",
+      "file": "DataTaxonomyServiceClient.DeleteDataAttributeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAttributeAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataAttributeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteDataAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataAttribute_sync_flattened",
+      "title": "DeleteDataAttribute",
+      "description": "Snippet for DeleteDataAttribute",
+      "file": "DataTaxonomyServiceClient.DeleteDataAttributeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAttribute",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataAttribute",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataAttribute_async_flattened",
+      "title": "DeleteDataAttributeAsync",
+      "description": "Snippet for DeleteDataAttributeAsync",
+      "file": "DataTaxonomyServiceClient.DeleteDataAttributeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAttributeAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataAttributeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataAttribute_sync_flattened_resourceNames",
+      "title": "DeleteDataAttributeResourceNames",
+      "description": "Snippet for DeleteDataAttribute",
+      "file": "DataTaxonomyServiceClient.DeleteDataAttributeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAttribute",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataAttribute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_DeleteDataAttribute_async_flattened_resourceNames",
+      "title": "DeleteDataAttributeResourceNamesAsync",
+      "description": "Snippet for DeleteDataAttributeAsync",
+      "file": "DataTaxonomyServiceClient.DeleteDataAttributeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataAttributeAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.DeleteDataAttributeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.DeleteDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataAttributes_sync",
+      "title": "ListDataAttributesRequestObject",
+      "description": "Snippet for ListDataAttributes",
+      "file": "DataTaxonomyServiceClient.ListDataAttributesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataAttributes",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataAttributes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListDataAttributesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataAttributesResponse, Google.Cloud.Dataplex.V1.DataAttribute>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataAttributes",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataAttributes",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataAttributes_async",
+      "title": "ListDataAttributesRequestObjectAsync",
+      "description": "Snippet for ListDataAttributesAsync",
+      "file": "DataTaxonomyServiceClient.ListDataAttributesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataAttributesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataAttributesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListDataAttributesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataAttributesResponse, Google.Cloud.Dataplex.V1.DataAttribute>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataAttributes",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataAttributes",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataAttributes_sync_flattened",
+      "title": "ListDataAttributes",
+      "description": "Snippet for ListDataAttributes",
+      "file": "DataTaxonomyServiceClient.ListDataAttributesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataAttributes",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataAttributes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataAttributesResponse, Google.Cloud.Dataplex.V1.DataAttribute>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataAttributes",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataAttributes",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataAttributes_async_flattened",
+      "title": "ListDataAttributesAsync",
+      "description": "Snippet for ListDataAttributesAsync",
+      "file": "DataTaxonomyServiceClient.ListDataAttributesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataAttributesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataAttributesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataAttributesResponse, Google.Cloud.Dataplex.V1.DataAttribute>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataAttributes",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataAttributes",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataAttributes_sync_flattened_resourceNames",
+      "title": "ListDataAttributesResourceNames",
+      "description": "Snippet for ListDataAttributes",
+      "file": "DataTaxonomyServiceClient.ListDataAttributesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataAttributes",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataAttributes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListDataAttributesResponse, Google.Cloud.Dataplex.V1.DataAttribute>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataAttributes",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataAttributes",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_ListDataAttributes_async_flattened_resourceNames",
+      "title": "ListDataAttributesResourceNamesAsync",
+      "description": "Snippet for ListDataAttributesAsync",
+      "file": "DataTaxonomyServiceClient.ListDataAttributesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataAttributesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.ListDataAttributesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataTaxonomyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListDataAttributesResponse, Google.Cloud.Dataplex.V1.DataAttribute>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataAttributes",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.ListDataAttributes",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataAttribute_sync",
+      "title": "GetDataAttributeRequestObject",
+      "description": "Snippet for GetDataAttribute",
+      "file": "DataTaxonomyServiceClient.GetDataAttributeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataAttribute",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataAttribute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetDataAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.DataAttribute",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataAttribute_async",
+      "title": "GetDataAttributeRequestObjectAsync",
+      "description": "Snippet for GetDataAttributeAsync",
+      "file": "DataTaxonomyServiceClient.GetDataAttributeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataAttributeAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataAttributeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetDataAttributeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataAttribute>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataAttribute_sync_flattened",
+      "title": "GetDataAttribute",
+      "description": "Snippet for GetDataAttribute",
+      "file": "DataTaxonomyServiceClient.GetDataAttributeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataAttribute",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataAttribute",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.DataAttribute",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataAttribute_async_flattened",
+      "title": "GetDataAttributeAsync",
+      "description": "Snippet for GetDataAttributeAsync",
+      "file": "DataTaxonomyServiceClient.GetDataAttributeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataAttributeAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataAttributeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataAttribute>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataAttribute_sync_flattened_resourceNames",
+      "title": "GetDataAttributeResourceNames",
+      "description": "Snippet for GetDataAttribute",
+      "file": "DataTaxonomyServiceClient.GetDataAttributeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataAttribute",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataAttribute",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.DataAttribute",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataTaxonomyService_GetDataAttribute_async_flattened_resourceNames",
+      "title": "GetDataAttributeResourceNamesAsync",
+      "description": "Snippet for GetDataAttributeAsync",
+      "file": "DataTaxonomyServiceClient.GetDataAttributeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataAttributeAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient.GetDataAttributeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataAttributeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.DataAttribute>",
+        "client": {
+          "shortName": "DataTaxonomyServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataTaxonomyServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataAttribute",
+          "fullName": "google.cloud.dataplex.v1.DataTaxonomyService.GetDataAttribute",
+          "service": {
+            "shortName": "DataTaxonomyService",
+            "fullName": "google.cloud.dataplex.v1.DataTaxonomyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
           "type": "SHORT"
         }
       ]
@@ -11151,12 +15387,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 44,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 42,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -11200,12 +15436,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 47,
+          "end": 49,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 45,
+          "end": 47,
           "type": "SHORT"
         }
       ]

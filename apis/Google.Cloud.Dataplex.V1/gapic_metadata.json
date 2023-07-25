@@ -119,6 +119,105 @@
         }
       }
     },
+    "DataTaxonomyService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataTaxonomyServiceClient",
+          "rpcs": {
+            "CreateDataAttribute": {
+              "methods": [
+                "CreateDataAttribute",
+                "CreateDataAttributeAsync"
+              ]
+            },
+            "CreateDataAttributeBinding": {
+              "methods": [
+                "CreateDataAttributeBinding",
+                "CreateDataAttributeBindingAsync"
+              ]
+            },
+            "CreateDataTaxonomy": {
+              "methods": [
+                "CreateDataTaxonomy",
+                "CreateDataTaxonomyAsync"
+              ]
+            },
+            "DeleteDataAttribute": {
+              "methods": [
+                "DeleteDataAttribute",
+                "DeleteDataAttributeAsync"
+              ]
+            },
+            "DeleteDataAttributeBinding": {
+              "methods": [
+                "DeleteDataAttributeBinding",
+                "DeleteDataAttributeBindingAsync"
+              ]
+            },
+            "DeleteDataTaxonomy": {
+              "methods": [
+                "DeleteDataTaxonomy",
+                "DeleteDataTaxonomyAsync"
+              ]
+            },
+            "GetDataAttribute": {
+              "methods": [
+                "GetDataAttribute",
+                "GetDataAttributeAsync"
+              ]
+            },
+            "GetDataAttributeBinding": {
+              "methods": [
+                "GetDataAttributeBinding",
+                "GetDataAttributeBindingAsync"
+              ]
+            },
+            "GetDataTaxonomy": {
+              "methods": [
+                "GetDataTaxonomy",
+                "GetDataTaxonomyAsync"
+              ]
+            },
+            "ListDataAttributeBindings": {
+              "methods": [
+                "ListDataAttributeBindings",
+                "ListDataAttributeBindingsAsync"
+              ]
+            },
+            "ListDataAttributes": {
+              "methods": [
+                "ListDataAttributes",
+                "ListDataAttributesAsync"
+              ]
+            },
+            "ListDataTaxonomies": {
+              "methods": [
+                "ListDataTaxonomies",
+                "ListDataTaxonomiesAsync"
+              ]
+            },
+            "UpdateDataAttribute": {
+              "methods": [
+                "UpdateDataAttribute",
+                "UpdateDataAttributeAsync"
+              ]
+            },
+            "UpdateDataAttributeBinding": {
+              "methods": [
+                "UpdateDataAttributeBinding",
+                "UpdateDataAttributeBindingAsync"
+              ]
+            },
+            "UpdateDataTaxonomy": {
+              "methods": [
+                "UpdateDataTaxonomy",
+                "UpdateDataTaxonomyAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "DataplexService": {
       "clients": {
         "grpc": {
