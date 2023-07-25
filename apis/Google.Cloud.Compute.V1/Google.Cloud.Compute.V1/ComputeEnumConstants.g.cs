@@ -1265,6 +1265,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.DistributionPolicy.Types.TargetShape.Any"/>.</summary>
                 public const string Any = "ANY";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.DistributionPolicy.Types.TargetShape.AnySingleZone"/>.</summary>
+                public const string AnySingleZone = "ANY_SINGLE_ZONE";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.DistributionPolicy.Types.TargetShape.Balanced"/>.</summary>
                 public const string Balanced = "BALANCED";
 
@@ -4195,6 +4198,23 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.XpnServiceProjects"/>.</summary>
                 public const string XpnServiceProjects = "XPN_SERVICE_PROJECTS";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.QuotaExceededInfo"/> message.</summary>
+        public static class QuotaExceededInfo
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.QuotaExceededInfo.Types.RolloutStatus"/> enum.</summary>
+            public static class RolloutStatus
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaExceededInfo.Types.RolloutStatus.UndefinedRolloutStatus"/>.</summary>
+                public const string UndefinedRolloutStatus = "UNDEFINED_ROLLOUT_STATUS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaExceededInfo.Types.RolloutStatus.InProgress"/>.</summary>
+                public const string InProgress = "IN_PROGRESS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaExceededInfo.Types.RolloutStatus.Unspecified"/>.</summary>
+                public const string Unspecified = "ROLLOUT_STATUS_UNSPECIFIED";
             }
         }
 
