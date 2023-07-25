@@ -37,6 +37,8 @@ namespace GoogleCSharpSnippets
             RunTaskRequest request = new RunTaskRequest
             {
                 TaskName = TaskName.FromProjectLocationLakeTask("[PROJECT]", "[LOCATION]", "[LAKE]", "[TASK]"),
+                Labels = { { "", "" }, },
+                Args = { { "", "" }, },
             };
             // Make the request
             RunTaskResponse response = dataplexServiceClient.RunTask(request);

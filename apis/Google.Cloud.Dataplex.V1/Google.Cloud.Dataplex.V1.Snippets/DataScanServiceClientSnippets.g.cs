@@ -1095,6 +1095,7 @@ namespace GoogleCSharpSnippets
             gcdv::ListDataScanJobsRequest request = new gcdv::ListDataScanJobsRequest
             {
                 ParentAsDataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<gcdv::ListDataScanJobsResponse, gcdv::DataScanJob> response = dataScanServiceClient.ListDataScanJobs(request);
@@ -1143,6 +1144,7 @@ namespace GoogleCSharpSnippets
             gcdv::ListDataScanJobsRequest request = new gcdv::ListDataScanJobsRequest
             {
                 ParentAsDataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<gcdv::ListDataScanJobsResponse, gcdv::DataScanJob> response = dataScanServiceClient.ListDataScanJobsAsync(request);

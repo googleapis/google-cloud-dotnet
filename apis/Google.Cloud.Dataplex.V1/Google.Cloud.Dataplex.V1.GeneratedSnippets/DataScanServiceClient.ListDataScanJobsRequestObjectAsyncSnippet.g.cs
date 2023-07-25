@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
             gcdv::ListDataScanJobsRequest request = new gcdv::ListDataScanJobsRequest
             {
                 ParentAsDataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<gcdv::ListDataScanJobsResponse, gcdv::DataScanJob> response = dataScanServiceClient.ListDataScanJobsAsync(request);
