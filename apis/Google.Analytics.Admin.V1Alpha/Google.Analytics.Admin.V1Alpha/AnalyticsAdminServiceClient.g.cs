@@ -6145,7 +6145,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The measurement protocol secret to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6153,7 +6154,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateMeasurementProtocolSecret(new UpdateMeasurementProtocolSecretRequest
             {
                 MeasurementProtocolSecret = gax::GaxPreconditions.CheckNotNull(measurementProtocolSecret, nameof(measurementProtocolSecret)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -6163,7 +6164,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The measurement protocol secret to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6171,7 +6173,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateMeasurementProtocolSecretAsync(new UpdateMeasurementProtocolSecretRequest
             {
                 MeasurementProtocolSecret = gax::GaxPreconditions.CheckNotNull(measurementProtocolSecret, nameof(measurementProtocolSecret)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -6181,7 +6183,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The measurement protocol secret to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be
+        /// updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

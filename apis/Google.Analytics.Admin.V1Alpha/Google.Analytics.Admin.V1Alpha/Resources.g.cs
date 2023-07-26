@@ -273,7 +273,7 @@ namespace Google.Analytics.Admin.V1Alpha {
             "RUlHSFRfTU9OVEhTEAUSEAoMRklGVFlfTU9OVEhTEAY6ZepBYgozYW5hbHl0",
             "aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRGF0YVJldGVudGlvblNldHRpbmdz",
             "Eitwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZGF0YVJldGVudGlvblNldHRpbmdz",
-            "IsMMChNBdHRyaWJ1dGlvblNldHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxKX",
+            "IqUNChNBdHRyaWJ1dGlvblNldHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxKX",
             "AQosYWNxdWlzaXRpb25fY29udmVyc2lvbl9ldmVudF9sb29rYmFja193aW5k",
             "b3cYAiABKA4yXC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXR0",
             "cmlidXRpb25TZXR0aW5ncy5BY3F1aXNpdGlvbkNvbnZlcnNpb25FdmVudExv",
@@ -296,100 +296,102 @@ namespace Google.Analytics.Admin.V1Alpha {
             "X1VOU1BFQ0lGSUVEEAASMgouT1RIRVJfQ09OVkVSU0lPTl9FVkVOVF9MT09L",
             "QkFDS19XSU5ET1dfMzBfREFZUxABEjIKLk9USEVSX0NPTlZFUlNJT05fRVZF",
             "TlRfTE9PS0JBQ0tfV0lORE9XXzYwX0RBWVMQAhIyCi5PVEhFUl9DT05WRVJT",
-            "SU9OX0VWRU5UX0xPT0tCQUNLX1dJTkRPV185MF9EQVlTEAMinAIKGVJlcG9y",
+            "SU9OX0VWRU5UX0xPT0tCQUNLX1dJTkRPV185MF9EQVlTEAMi6wIKGVJlcG9y",
             "dGluZ0F0dHJpYnV0aW9uTW9kZWwSKwonUkVQT1JUSU5HX0FUVFJJQlVUSU9O",
-            "X01PREVMX1VOU1BFQ0lGSUVEEAASHQoZQ1JPU1NfQ0hBTk5FTF9EQVRBX0RS",
-            "SVZFThABEhwKGENST1NTX0NIQU5ORUxfTEFTVF9DTElDSxACEh0KGUNST1NT",
-            "X0NIQU5ORUxfRklSU1RfQ0xJQ0sQAxIYChRDUk9TU19DSEFOTkVMX0xJTkVB",
-            "UhAEEiAKHENST1NTX0NIQU5ORUxfUE9TSVRJT05fQkFTRUQQBRIcChhDUk9T",
-            "U19DSEFOTkVMX1RJTUVfREVDQVkQBhIcChhBRFNfUFJFRkVSUkVEX0xBU1Rf",
-            "Q0xJQ0sQByKTAQofQWRzV2ViQ29udmVyc2lvbkRhdGFFeHBvcnRTY29wZRI0",
-            "CjBBRFNfV0VCX0NPTlZFUlNJT05fREFUQV9FWFBPUlRfU0NPUEVfVU5TUEVD",
-            "SUZJRUQQABIUChBOT1RfU0VMRUNURURfWUVUEAESEQoNQ1JPU1NfQ0hBTk5F",
-            "TBACEhEKDUFEU19QUkVGRVJSRUQQAzph6kFeCjFhbmFseXRpY3NhZG1pbi5n",
-            "b29nbGVhcGlzLmNvbS9BdHRyaWJ1dGlvblNldHRpbmdzEilwcm9wZXJ0aWVz",
-            "L3twcm9wZXJ0eX0vYXR0cmlidXRpb25TZXR0aW5ncyLxAQoNQWNjZXNzQmlu",
-            "ZGluZxIOCgR1c2VyGAIgASgJSAASEQoEbmFtZRgBIAEoCUID4EEDEg0KBXJv",
-            "bGVzGAMgAygJOpwB6kGYAQorYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5j",
-            "b20vQWNjZXNzQmluZGluZxIyYWNjb3VudHMve2FjY291bnR9L2FjY2Vzc0Jp",
-            "bmRpbmdzL3thY2Nlc3NfYmluZGluZ30SNXByb3BlcnRpZXMve3Byb3BlcnR5",
-            "fS9hY2Nlc3NCaW5kaW5ncy97YWNjZXNzX2JpbmRpbmd9Qg8KDWFjY2Vzc190",
-            "YXJnZXQihQMKDEJpZ1F1ZXJ5TGluaxIRCgRuYW1lGAEgASgJQgPgQQMSFAoH",
-            "cHJvamVjdBgCIAEoCUID4EEFEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhwKFGRhaWx5X2V4cG9ydF9l",
-            "bmFibGVkGAQgASgIEiAKGHN0cmVhbWluZ19leHBvcnRfZW5hYmxlZBgFIAEo",
-            "CBIfChdpbnRyYWRheV9leHBvcnRfZW5hYmxlZBgJIAEoCBIeChZpbmNsdWRl",
-            "X2FkdmVydGlzaW5nX2lkGAYgASgIEhYKDmV4cG9ydF9zdHJlYW1zGAcgAygJ",
-            "EhcKD2V4Y2x1ZGVkX2V2ZW50cxgIIAMoCTpk6kFhCiphbmFseXRpY3NhZG1p",
-            "bi5nb29nbGVhcGlzLmNvbS9CaWdRdWVyeUxpbmsSM3Byb3BlcnRpZXMve3By",
-            "b3BlcnR5fS9iaWdRdWVyeUxpbmtzL3tiaWdxdWVyeV9saW5rfSLzAwobRW5o",
-            "YW5jZWRNZWFzdXJlbWVudFNldHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxIW",
-            "Cg5zdHJlYW1fZW5hYmxlZBgCIAEoCBIXCg9zY3JvbGxzX2VuYWJsZWQYAyAB",
-            "KAgSHwoXb3V0Ym91bmRfY2xpY2tzX2VuYWJsZWQYBCABKAgSGwoTc2l0ZV9z",
-            "ZWFyY2hfZW5hYmxlZBgFIAEoCBIgChh2aWRlb19lbmdhZ2VtZW50X2VuYWJs",
-            "ZWQYBiABKAgSHgoWZmlsZV9kb3dubG9hZHNfZW5hYmxlZBgHIAEoCBIcChRw",
-            "YWdlX2NoYW5nZXNfZW5hYmxlZBgIIAEoCBIhChlmb3JtX2ludGVyYWN0aW9u",
-            "c19lbmFibGVkGAkgASgIEiMKFnNlYXJjaF9xdWVyeV9wYXJhbWV0ZXIYCiAB",
-            "KAlCA+BBAhIbChN1cmlfcXVlcnlfcGFyYW1ldGVyGAsgASgJOowB6kGIAQo5",
-            "YW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRW5oYW5jZWRNZWFzdXJl",
-            "bWVudFNldHRpbmdzEktwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZGF0YVN0cmVh",
-            "bXMve2RhdGFfc3RyZWFtfS9lbmhhbmNlZE1lYXN1cmVtZW50U2V0dGluZ3Mi",
-            "QgoQQ29ubmVjdGVkU2l0ZVRhZxIZCgxkaXNwbGF5X25hbWUYASABKAlCA+BB",
-            "AhITCgZ0YWdfaWQYAiABKAlCA+BBAiKgAQoLQWRTZW5zZUxpbmsSEQoEbmFt",
-            "ZRgBIAEoCUID4EEDEhsKDmFkX2NsaWVudF9jb2RlGAIgASgJQgPgQQU6YepB",
-            "XgopYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWRTZW5zZUxpbmsS",
-            "MXByb3BlcnRpZXMve3Byb3BlcnR5fS9hZFNlbnNlTGlua3Mve2Fkc2Vuc2Vf",
-            "bGlua30qqgQKEEluZHVzdHJ5Q2F0ZWdvcnkSIQodSU5EVVNUUllfQ0FURUdP",
-            "UllfVU5TUEVDSUZJRUQQABIOCgpBVVRPTU9USVZFEAESIwofQlVTSU5FU1Nf",
-            "QU5EX0lORFVTVFJJQUxfTUFSS0VUUxACEgsKB0ZJTkFOQ0UQAxIOCgpIRUFM",
-            "VEhDQVJFEAQSDgoKVEVDSE5PTE9HWRAFEgoKBlRSQVZFTBAGEgkKBU9USEVS",
-            "EAcSGgoWQVJUU19BTkRfRU5URVJUQUlOTUVOVBAIEhYKEkJFQVVUWV9BTkRf",
-            "RklUTkVTUxAJEhgKFEJPT0tTX0FORF9MSVRFUkFUVVJFEAoSEgoORk9PRF9B",
-            "TkRfRFJJTksQCxIJCgVHQU1FUxAMEhcKE0hPQkJJRVNfQU5EX0xFSVNVUkUQ",
-            "DRITCg9IT01FX0FORF9HQVJERU4QDhIYChRJTlRFUk5FVF9BTkRfVEVMRUNP",
-            "TRAPEhYKEkxBV19BTkRfR09WRVJOTUVOVBAQEggKBE5FV1MQERIWChJPTkxJ",
-            "TkVfQ09NTVVOSVRJRVMQEhIWChJQRU9QTEVfQU5EX1NPQ0lFVFkQExIUChBQ",
-            "RVRTX0FORF9BTklNQUxTEBQSDwoLUkVBTF9FU1RBVEUQFRINCglSRUZFUkVO",
-            "Q0UQFhILCgdTQ0lFTkNFEBcSCgoGU1BPUlRTEBgSFgoSSk9CU19BTkRfRURV",
-            "Q0FUSU9OEBkSDAoIU0hPUFBJTkcQGipmCgxTZXJ2aWNlTGV2ZWwSHQoZU0VS",
-            "VklDRV9MRVZFTF9VTlNQRUNJRklFRBAAEh0KGUdPT0dMRV9BTkFMWVRJQ1Nf",
-            "U1RBTkRBUkQQARIYChRHT09HTEVfQU5BTFlUSUNTXzM2MBACKkoKCUFjdG9y",
-            "VHlwZRIaChZBQ1RPUl9UWVBFX1VOU1BFQ0lGSUVEEAASCAoEVVNFUhABEgoK",
-            "BlNZU1RFTRACEgsKB1NVUFBPUlQQAypQCgpBY3Rpb25UeXBlEhsKF0FDVElP",
-            "Tl9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHQ1JFQVRFRBABEgsKB1VQREFURUQQ",
-            "AhILCgdERUxFVEVEEAMqxQQKGUNoYW5nZUhpc3RvcnlSZXNvdXJjZVR5cGUS",
-            "LAooQ0hBTkdFX0hJU1RPUllfUkVTT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAA",
-            "EgsKB0FDQ09VTlQQARIMCghQUk9QRVJUWRACEhEKDUZJUkVCQVNFX0xJTksQ",
-            "BhITCg9HT09HTEVfQURTX0xJTksQBxIbChdHT09HTEVfU0lHTkFMU19TRVRU",
-            "SU5HUxAIEhQKEENPTlZFUlNJT05fRVZFTlQQCRIfChtNRUFTVVJFTUVOVF9Q",
-            "Uk9UT0NPTF9TRUNSRVQQChIUChBDVVNUT01fRElNRU5TSU9OEAsSEQoNQ1VT",
-            "VE9NX01FVFJJQxAMEhsKF0RBVEFfUkVURU5USU9OX1NFVFRJTkdTEA0SJQoh",
-            "RElTUExBWV9WSURFT18zNjBfQURWRVJUSVNFUl9MSU5LEA4SLgoqRElTUExB",
-            "WV9WSURFT18zNjBfQURWRVJUSVNFUl9MSU5LX1BST1BPU0FMEA8SFwoTU0VB",
-            "UkNIX0FEU18zNjBfTElOSxAQEg8KC0RBVEFfU1RSRUFNEBISGAoUQVRUUklC",
-            "VVRJT05fU0VUVElOR1MQFBIVChFFWFBBTkRFRF9EQVRBX1NFVBAVEhEKDUNI",
-            "QU5ORUxfR1JPVVAQFhIhCh1FTkhBTkNFRF9NRUFTVVJFTUVOVF9TRVRUSU5H",
-            "UxAYEhAKDEFEU0VOU0VfTElOSxAbEgwKCEFVRElFTkNFEBwSFQoRRVZFTlRf",
-            "Q1JFQVRFX1JVTEUQHSpzChJHb29nbGVTaWduYWxzU3RhdGUSJAogR09PR0xF",
-            "X1NJR05BTFNfU1RBVEVfVU5TUEVDSUZJRUQQABIaChZHT09HTEVfU0lHTkFM",
-            "U19FTkFCTEVEEAESGwoXR09PR0xFX1NJR05BTFNfRElTQUJMRUQQAiqOAQoU",
-            "R29vZ2xlU2lnbmFsc0NvbnNlbnQSJgoiR09PR0xFX1NJR05BTFNfQ09OU0VO",
-            "VF9VTlNQRUNJRklFRBAAEiQKIEdPT0dMRV9TSUdOQUxTX0NPTlNFTlRfQ09O",
-            "U0VOVEVEEAISKAokR09PR0xFX1NJR05BTFNfQ09OU0VOVF9OT1RfQ09OU0VO",
-            "VEVEEAEqewodTGlua1Byb3Bvc2FsSW5pdGlhdGluZ1Byb2R1Y3QSMAosTElO",
-            "S19QUk9QT1NBTF9JTklUSUFUSU5HX1BST0RVQ1RfVU5TUEVDSUZJRUQQABIU",
-            "ChBHT09HTEVfQU5BTFlUSUNTEAESEgoOTElOS0VEX1BST0RVQ1QQAirEAQoR",
-            "TGlua1Byb3Bvc2FsU3RhdGUSIwofTElOS19QUk9QT1NBTF9TVEFURV9VTlNQ",
-            "RUNJRklFRBAAEikKJUFXQUlUSU5HX1JFVklFV19GUk9NX0dPT0dMRV9BTkFM",
-            "WVRJQ1MQARInCiNBV0FJVElOR19SRVZJRVdfRlJPTV9MSU5LRURfUFJPRFVD",
-            "VBACEg0KCVdJVEhEUkFXThADEgwKCERFQ0xJTkVEEAQSCwoHRVhQSVJFRBAF",
-            "EgwKCE9CU09MRVRFEAYqggEKDFByb3BlcnR5VHlwZRIdChlQUk9QRVJUWV9U",
-            "WVBFX1VOU1BFQ0lGSUVEEAASGgoWUFJPUEVSVFlfVFlQRV9PUkRJTkFSWRAB",
-            "Eh0KGVBST1BFUlRZX1RZUEVfU1VCUFJPUEVSVFkQAhIYChRQUk9QRVJUWV9U",
-            "WVBFX1JPTExVUBADQnYKImNvbS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYx",
-            "YWxwaGFCDlJlc291cmNlc1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "YW5hbHl0aWNzL2FkbWluL2FwaXYxYWxwaGEvYWRtaW5wYjthZG1pbnBiYgZw",
-            "cm90bzM="));
+            "X01PREVMX1VOU1BFQ0lGSUVEEAASKQolUEFJRF9BTkRfT1JHQU5JQ19DSEFO",
+            "TkVMU19EQVRBX0RSSVZFThABEigKJFBBSURfQU5EX09SR0FOSUNfQ0hBTk5F",
+            "TFNfTEFTVF9DTElDSxACEikKJVBBSURfQU5EX09SR0FOSUNfQ0hBTk5FTFNf",
+            "RklSU1RfQ0xJQ0sQAxIkCiBQQUlEX0FORF9PUkdBTklDX0NIQU5ORUxTX0xJ",
+            "TkVBUhAEEiwKKFBBSURfQU5EX09SR0FOSUNfQ0hBTk5FTFNfUE9TSVRJT05f",
+            "QkFTRUQQBRIoCiRQQUlEX0FORF9PUkdBTklDX0NIQU5ORUxTX1RJTUVfREVD",
+            "QVkQBhIjCh9HT09HTEVfUEFJRF9DSEFOTkVMU19MQVNUX0NMSUNLEAcipgEK",
+            "H0Fkc1dlYkNvbnZlcnNpb25EYXRhRXhwb3J0U2NvcGUSNAowQURTX1dFQl9D",
+            "T05WRVJTSU9OX0RBVEFfRVhQT1JUX1NDT1BFX1VOU1BFQ0lGSUVEEAASFAoQ",
+            "Tk9UX1NFTEVDVEVEX1lFVBABEh0KGVBBSURfQU5EX09SR0FOSUNfQ0hBTk5F",
+            "TFMQAhIYChRHT09HTEVfUEFJRF9DSEFOTkVMUxADOmHqQV4KMWFuYWx5dGlj",
+            "c2FkbWluLmdvb2dsZWFwaXMuY29tL0F0dHJpYnV0aW9uU2V0dGluZ3MSKXBy",
+            "b3BlcnRpZXMve3Byb3BlcnR5fS9hdHRyaWJ1dGlvblNldHRpbmdzIvEBCg1B",
+            "Y2Nlc3NCaW5kaW5nEg4KBHVzZXIYAiABKAlIABIRCgRuYW1lGAEgASgJQgPg",
+            "QQMSDQoFcm9sZXMYAyADKAk6nAHqQZgBCithbmFseXRpY3NhZG1pbi5nb29n",
+            "bGVhcGlzLmNvbS9BY2Nlc3NCaW5kaW5nEjJhY2NvdW50cy97YWNjb3VudH0v",
+            "YWNjZXNzQmluZGluZ3Mve2FjY2Vzc19iaW5kaW5nfRI1cHJvcGVydGllcy97",
+            "cHJvcGVydHl9L2FjY2Vzc0JpbmRpbmdzL3thY2Nlc3NfYmluZGluZ31CDwoN",
+            "YWNjZXNzX3RhcmdldCKFAwoMQmlnUXVlcnlMaW5rEhEKBG5hbWUYASABKAlC",
+            "A+BBAxIUCgdwcm9qZWN0GAIgASgJQgPgQQUSNAoLY3JlYXRlX3RpbWUYAyAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSHAoUZGFpbHlf",
+            "ZXhwb3J0X2VuYWJsZWQYBCABKAgSIAoYc3RyZWFtaW5nX2V4cG9ydF9lbmFi",
+            "bGVkGAUgASgIEh8KF2ludHJhZGF5X2V4cG9ydF9lbmFibGVkGAkgASgIEh4K",
+            "FmluY2x1ZGVfYWR2ZXJ0aXNpbmdfaWQYBiABKAgSFgoOZXhwb3J0X3N0cmVh",
+            "bXMYByADKAkSFwoPZXhjbHVkZWRfZXZlbnRzGAggAygJOmTqQWEKKmFuYWx5",
+            "dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0JpZ1F1ZXJ5TGluaxIzcHJvcGVy",
+            "dGllcy97cHJvcGVydHl9L2JpZ1F1ZXJ5TGlua3Mve2JpZ3F1ZXJ5X2xpbmt9",
+            "IvMDChtFbmhhbmNlZE1lYXN1cmVtZW50U2V0dGluZ3MSEQoEbmFtZRgBIAEo",
+            "CUID4EEDEhYKDnN0cmVhbV9lbmFibGVkGAIgASgIEhcKD3Njcm9sbHNfZW5h",
+            "YmxlZBgDIAEoCBIfChdvdXRib3VuZF9jbGlja3NfZW5hYmxlZBgEIAEoCBIb",
+            "ChNzaXRlX3NlYXJjaF9lbmFibGVkGAUgASgIEiAKGHZpZGVvX2VuZ2FnZW1l",
+            "bnRfZW5hYmxlZBgGIAEoCBIeChZmaWxlX2Rvd25sb2Fkc19lbmFibGVkGAcg",
+            "ASgIEhwKFHBhZ2VfY2hhbmdlc19lbmFibGVkGAggASgIEiEKGWZvcm1faW50",
+            "ZXJhY3Rpb25zX2VuYWJsZWQYCSABKAgSIwoWc2VhcmNoX3F1ZXJ5X3BhcmFt",
+            "ZXRlchgKIAEoCUID4EECEhsKE3VyaV9xdWVyeV9wYXJhbWV0ZXIYCyABKAk6",
+            "jAHqQYgBCjlhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9FbmhhbmNl",
+            "ZE1lYXN1cmVtZW50U2V0dGluZ3MSS3Byb3BlcnRpZXMve3Byb3BlcnR5fS9k",
+            "YXRhU3RyZWFtcy97ZGF0YV9zdHJlYW19L2VuaGFuY2VkTWVhc3VyZW1lbnRT",
+            "ZXR0aW5ncyJCChBDb25uZWN0ZWRTaXRlVGFnEhkKDGRpc3BsYXlfbmFtZRgB",
+            "IAEoCUID4EECEhMKBnRhZ19pZBgCIAEoCUID4EECIqABCgtBZFNlbnNlTGlu",
+            "axIRCgRuYW1lGAEgASgJQgPgQQMSGwoOYWRfY2xpZW50X2NvZGUYAiABKAlC",
+            "A+BBBTph6kFeCilhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BZFNl",
+            "bnNlTGluaxIxcHJvcGVydGllcy97cHJvcGVydHl9L2FkU2Vuc2VMaW5rcy97",
+            "YWRzZW5zZV9saW5rfSqqBAoQSW5kdXN0cnlDYXRlZ29yeRIhCh1JTkRVU1RS",
+            "WV9DQVRFR09SWV9VTlNQRUNJRklFRBAAEg4KCkFVVE9NT1RJVkUQARIjCh9C",
+            "VVNJTkVTU19BTkRfSU5EVVNUUklBTF9NQVJLRVRTEAISCwoHRklOQU5DRRAD",
+            "Eg4KCkhFQUxUSENBUkUQBBIOCgpURUNITk9MT0dZEAUSCgoGVFJBVkVMEAYS",
+            "CQoFT1RIRVIQBxIaChZBUlRTX0FORF9FTlRFUlRBSU5NRU5UEAgSFgoSQkVB",
+            "VVRZX0FORF9GSVRORVNTEAkSGAoUQk9PS1NfQU5EX0xJVEVSQVRVUkUQChIS",
+            "Cg5GT09EX0FORF9EUklOSxALEgkKBUdBTUVTEAwSFwoTSE9CQklFU19BTkRf",
+            "TEVJU1VSRRANEhMKD0hPTUVfQU5EX0dBUkRFThAOEhgKFElOVEVSTkVUX0FO",
+            "RF9URUxFQ09NEA8SFgoSTEFXX0FORF9HT1ZFUk5NRU5UEBASCAoETkVXUxAR",
+            "EhYKEk9OTElORV9DT01NVU5JVElFUxASEhYKElBFT1BMRV9BTkRfU09DSUVU",
+            "WRATEhQKEFBFVFNfQU5EX0FOSU1BTFMQFBIPCgtSRUFMX0VTVEFURRAVEg0K",
+            "CVJFRkVSRU5DRRAWEgsKB1NDSUVOQ0UQFxIKCgZTUE9SVFMQGBIWChJKT0JT",
+            "X0FORF9FRFVDQVRJT04QGRIMCghTSE9QUElORxAaKmYKDFNlcnZpY2VMZXZl",
+            "bBIdChlTRVJWSUNFX0xFVkVMX1VOU1BFQ0lGSUVEEAASHQoZR09PR0xFX0FO",
+            "QUxZVElDU19TVEFOREFSRBABEhgKFEdPT0dMRV9BTkFMWVRJQ1NfMzYwEAIq",
+            "SgoJQWN0b3JUeXBlEhoKFkFDVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIICgRV",
+            "U0VSEAESCgoGU1lTVEVNEAISCwoHU1VQUE9SVBADKlAKCkFjdGlvblR5cGUS",
+            "GwoXQUNUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABILCgdDUkVBVEVEEAESCwoH",
+            "VVBEQVRFRBACEgsKB0RFTEVURUQQAyrFBAoZQ2hhbmdlSGlzdG9yeVJlc291",
+            "cmNlVHlwZRIsCihDSEFOR0VfSElTVE9SWV9SRVNPVVJDRV9UWVBFX1VOU1BF",
+            "Q0lGSUVEEAASCwoHQUNDT1VOVBABEgwKCFBST1BFUlRZEAISEQoNRklSRUJB",
+            "U0VfTElOSxAGEhMKD0dPT0dMRV9BRFNfTElOSxAHEhsKF0dPT0dMRV9TSUdO",
+            "QUxTX1NFVFRJTkdTEAgSFAoQQ09OVkVSU0lPTl9FVkVOVBAJEh8KG01FQVNV",
+            "UkVNRU5UX1BST1RPQ09MX1NFQ1JFVBAKEhQKEENVU1RPTV9ESU1FTlNJT04Q",
+            "CxIRCg1DVVNUT01fTUVUUklDEAwSGwoXREFUQV9SRVRFTlRJT05fU0VUVElO",
+            "R1MQDRIlCiFESVNQTEFZX1ZJREVPXzM2MF9BRFZFUlRJU0VSX0xJTksQDhIu",
+            "CipESVNQTEFZX1ZJREVPXzM2MF9BRFZFUlRJU0VSX0xJTktfUFJPUE9TQUwQ",
+            "DxIXChNTRUFSQ0hfQURTXzM2MF9MSU5LEBASDwoLREFUQV9TVFJFQU0QEhIY",
+            "ChRBVFRSSUJVVElPTl9TRVRUSU5HUxAUEhUKEUVYUEFOREVEX0RBVEFfU0VU",
+            "EBUSEQoNQ0hBTk5FTF9HUk9VUBAWEiEKHUVOSEFOQ0VEX01FQVNVUkVNRU5U",
+            "X1NFVFRJTkdTEBgSEAoMQURTRU5TRV9MSU5LEBsSDAoIQVVESUVOQ0UQHBIV",
+            "ChFFVkVOVF9DUkVBVEVfUlVMRRAdKnMKEkdvb2dsZVNpZ25hbHNTdGF0ZRIk",
+            "CiBHT09HTEVfU0lHTkFMU19TVEFURV9VTlNQRUNJRklFRBAAEhoKFkdPT0dM",
+            "RV9TSUdOQUxTX0VOQUJMRUQQARIbChdHT09HTEVfU0lHTkFMU19ESVNBQkxF",
+            "RBACKo4BChRHb29nbGVTaWduYWxzQ29uc2VudBImCiJHT09HTEVfU0lHTkFM",
+            "U19DT05TRU5UX1VOU1BFQ0lGSUVEEAASJAogR09PR0xFX1NJR05BTFNfQ09O",
+            "U0VOVF9DT05TRU5URUQQAhIoCiRHT09HTEVfU0lHTkFMU19DT05TRU5UX05P",
+            "VF9DT05TRU5URUQQASp7Ch1MaW5rUHJvcG9zYWxJbml0aWF0aW5nUHJvZHVj",
+            "dBIwCixMSU5LX1BST1BPU0FMX0lOSVRJQVRJTkdfUFJPRFVDVF9VTlNQRUNJ",
+            "RklFRBAAEhQKEEdPT0dMRV9BTkFMWVRJQ1MQARISCg5MSU5LRURfUFJPRFVD",
+            "VBACKsQBChFMaW5rUHJvcG9zYWxTdGF0ZRIjCh9MSU5LX1BST1BPU0FMX1NU",
+            "QVRFX1VOU1BFQ0lGSUVEEAASKQolQVdBSVRJTkdfUkVWSUVXX0ZST01fR09P",
+            "R0xFX0FOQUxZVElDUxABEicKI0FXQUlUSU5HX1JFVklFV19GUk9NX0xJTktF",
+            "RF9QUk9EVUNUEAISDQoJV0lUSERSQVdOEAMSDAoIREVDTElORUQQBBILCgdF",
+            "WFBJUkVEEAUSDAoIT0JTT0xFVEUQBiqCAQoMUHJvcGVydHlUeXBlEh0KGVBS",
+            "T1BFUlRZX1RZUEVfVU5TUEVDSUZJRUQQABIaChZQUk9QRVJUWV9UWVBFX09S",
+            "RElOQVJZEAESHQoZUFJPUEVSVFlfVFlQRV9TVUJQUk9QRVJUWRACEhgKFFBS",
+            "T1BFUlRZX1RZUEVfUk9MTFVQEANCdgoiY29tLmdvb2dsZS5hbmFseXRpY3Mu",
+            "YWRtaW4udjFhbHBoYUIOUmVzb3VyY2VzUHJvdG9QAVo+Y2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9hbmFseXRpY3MvYWRtaW4vYXBpdjFhbHBoYS9hZG1pbnBiO2Fk",
+            "bWlucGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Analytics.Admin.V1Alpha.AudienceReflection.Descriptor, global::Google.Analytics.Admin.V1Alpha.ChannelGroupReflection.Descriptor, global::Google.Analytics.Admin.V1Alpha.EventCreateAndEditReflection.Descriptor, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSetReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Alpha.ServiceLevel), typeof(global::Google.Analytics.Admin.V1Alpha.ActorType), typeof(global::Google.Analytics.Admin.V1Alpha.ActionType), typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryResourceType), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsState), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsConsent), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalState), typeof(global::Google.Analytics.Admin.V1Alpha.PropertyType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -12476,68 +12478,75 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// Data-driven attribution distributes credit for the conversion based on
         /// data for each conversion event. Each Data-driven model is specific to
         /// each advertiser and each conversion event.
+        /// Previously CROSS_CHANNEL_DATA_DRIVEN
         /// </summary>
-        [pbr::OriginalName("CROSS_CHANNEL_DATA_DRIVEN")] CrossChannelDataDriven = 1,
+        [pbr::OriginalName("PAID_AND_ORGANIC_CHANNELS_DATA_DRIVEN")] PaidAndOrganicChannelsDataDriven = 1,
         /// <summary>
         /// Ignores direct traffic and attributes 100% of the conversion value to the
         /// last channel that the customer clicked through (or engaged view through
         /// for YouTube) before converting.
+        /// Previously CROSS_CHANNEL_LAST_CLICK
         /// </summary>
-        [pbr::OriginalName("CROSS_CHANNEL_LAST_CLICK")] CrossChannelLastClick = 2,
+        [pbr::OriginalName("PAID_AND_ORGANIC_CHANNELS_LAST_CLICK")] PaidAndOrganicChannelsLastClick = 2,
         /// <summary>
         /// Starting in June 2023, new properties can no longer use this model.
         /// See
         /// [Analytics
-        /// Help](https://support.google.com/analytics/answer/9164320?hl=en#040623)
+        /// Help](https://support.google.com/analytics/answer/9164320#040623)
         /// for more details.
         /// Starting in September 2023, we will sunset this model for all properties.
         ///
         /// Gives all credit for the conversion to the first channel that a customer
         /// clicked (or engaged view through for YouTube) before converting.
+        /// Previously CROSS_CHANNEL_FIRST_CLICK
         /// </summary>
-        [pbr::OriginalName("CROSS_CHANNEL_FIRST_CLICK")] CrossChannelFirstClick = 3,
+        [pbr::OriginalName("PAID_AND_ORGANIC_CHANNELS_FIRST_CLICK")] PaidAndOrganicChannelsFirstClick = 3,
         /// <summary>
         /// Starting in June 2023, new properties can no longer use this model.
         /// See
         /// [Analytics
-        /// Help](https://support.google.com/analytics/answer/9164320?hl=en#040623)
+        /// Help](https://support.google.com/analytics/answer/9164320#040623)
         /// for more details.
         /// Starting in September 2023, we will sunset this model for all properties.
         ///
         /// Distributes the credit for the conversion equally across all the channels
         /// a customer clicked (or engaged view through for YouTube) before
         /// converting.
+        /// Previously CROSS_CHANNEL_LINEAR
         /// </summary>
-        [pbr::OriginalName("CROSS_CHANNEL_LINEAR")] CrossChannelLinear = 4,
+        [pbr::OriginalName("PAID_AND_ORGANIC_CHANNELS_LINEAR")] PaidAndOrganicChannelsLinear = 4,
         /// <summary>
         /// Starting in June 2023, new properties can no longer use this model.
         /// See
         /// [Analytics
-        /// Help](https://support.google.com/analytics/answer/9164320?hl=en#040623)
+        /// Help](https://support.google.com/analytics/answer/9164320#040623)
         /// for more details.
         /// Starting in September 2023, we will sunset this model for all properties.
         ///
         /// Attributes 40% credit to the first and last interaction, and the
         /// remaining 20% credit is distributed evenly to the middle interactions.
+        /// Previously CROSS_CHANNEL_POSITION_BASED
         /// </summary>
-        [pbr::OriginalName("CROSS_CHANNEL_POSITION_BASED")] CrossChannelPositionBased = 5,
+        [pbr::OriginalName("PAID_AND_ORGANIC_CHANNELS_POSITION_BASED")] PaidAndOrganicChannelsPositionBased = 5,
         /// <summary>
         /// Starting in June 2023, new properties can no longer use this model.
         /// See
         /// [Analytics
-        /// Help](https://support.google.com/analytics/answer/9164320?hl=en#040623)
+        /// Help](https://support.google.com/analytics/answer/9164320#040623)
         /// for more details.
         /// Starting in September 2023, we will sunset this model for all properties.
         ///
         /// Gives more credit to the touchpoints that happened closer in time to
         /// the conversion.
+        /// Previously CROSS_CHANNEL_TIME_DECAY
         /// </summary>
-        [pbr::OriginalName("CROSS_CHANNEL_TIME_DECAY")] CrossChannelTimeDecay = 6,
+        [pbr::OriginalName("PAID_AND_ORGANIC_CHANNELS_TIME_DECAY")] PaidAndOrganicChannelsTimeDecay = 6,
         /// <summary>
-        /// Attributes 100% of the conversion value to the last Google Ads channel
+        /// Attributes 100% of the conversion value to the last Google Paid channel
         /// that the customer clicked through before converting.
+        /// Previously ADS_PREFERRED_LAST_CLICK
         /// </summary>
-        [pbr::OriginalName("ADS_PREFERRED_LAST_CLICK")] AdsPreferredLastClick = 7,
+        [pbr::OriginalName("GOOGLE_PAID_CHANNELS_LAST_CLICK")] GooglePaidChannelsLastClick = 7,
       }
 
       /// <summary>
@@ -12554,13 +12563,18 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// </summary>
         [pbr::OriginalName("NOT_SELECTED_YET")] NotSelectedYet = 1,
         /// <summary>
-        /// The Ads Web Conversion Data export scope is Cross Channel.
+        /// Paid and organic channels are eligible to receive conversion credit, but
+        /// only credit assigned to Google Ads channels will appear in your Ads
+        /// accounts. To learn more, see [Paid and Organic
+        /// channels](https://support.google.com/analytics/answer/10632359).
         /// </summary>
-        [pbr::OriginalName("CROSS_CHANNEL")] CrossChannel = 2,
+        [pbr::OriginalName("PAID_AND_ORGANIC_CHANNELS")] PaidAndOrganicChannels = 2,
         /// <summary>
-        /// The Ads Web Conversion Data export scope is Ads Preferred.
+        /// Only Google Ads paid channels are eligible to receive conversion credit.
+        /// To learn more, see [Google Paid
+        /// channels](https://support.google.com/analytics/answer/10632359).
         /// </summary>
-        [pbr::OriginalName("ADS_PREFERRED")] AdsPreferred = 3,
+        [pbr::OriginalName("GOOGLE_PAID_CHANNELS")] GooglePaidChannels = 3,
       }
 
     }
