@@ -91,14 +91,17 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
             "UEVDSUZJRUQQABIuCipMSU5FX0lURU1fQ0hBTkdFX1NUQVRFX1JFQVNPTl9U",
             "WVBFX0VYUElSRUQQARI1CjFMSU5FX0lURU1fQ0hBTkdFX1NUQVRFX1JFQVNP",
             "Tl9UWVBFX1VTRVJfQ0FOQ0VMTEVEEAISNwozTElORV9JVEVNX0NIQU5HRV9T",
-            "VEFURV9SRUFTT05fVFlQRV9TWVNURU1fQ0FOQ0VMTEVEEANCnwIKMWNvbS5n",
+            "VEFURV9SRUFTT05fVFlQRV9TWVNURU1fQ0FOQ0VMTEVEEANCtAMKMWNvbS5n",
             "b29nbGUuY2xvdWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3VyZW1lbnQudjFQ",
             "AVpTY2xvdWQuZ29vZ2xlLmNvbS9nby9jb21tZXJjZS9jb25zdW1lci9wcm9j",
-            "dXJlbWVudC9hcGl2MS9wcm9jdXJlbWVudHBiO3Byb2N1cmVtZW50cGLqQZEB",
-            "Ciljb21tZXJjZW9mZmVyY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9PZmZlchIp",
-            "c2VydmljZXMve3NlcnZpY2V9L3N0YW5kYXJkT2ZmZXJzL3tvZmZlcn0SOWJp",
-            "bGxpbmdBY2NvdW50cy97Y29uc3VtZXJfYmlsbGluZ19hY2NvdW50fS9vZmZl",
-            "cnMve29mZmVyfWIGcHJvdG8z"));
+            "dXJlbWVudC9hcGl2MS9wcm9jdXJlbWVudHBiO3Byb2N1cmVtZW50cGKqAi1H",
+            "b29nbGUuQ2xvdWQuQ29tbWVyY2UuQ29uc3VtZXIuUHJvY3VyZW1lbnQuVjHK",
+            "Ai1Hb29nbGVcQ2xvdWRcQ29tbWVyY2VcQ29uc3VtZXJcUHJvY3VyZW1lbnRc",
+            "VjHqAjJHb29nbGU6OkNsb3VkOjpDb21tZXJjZTo6Q29uc3VtZXI6OlByb2N1",
+            "cmVtZW50OjpWMepBkQEKKWNvbW1lcmNlb2ZmZXJjYXRhbG9nLmdvb2dsZWFw",
+            "aXMuY29tL09mZmVyEilzZXJ2aWNlcy97c2VydmljZX0vc3RhbmRhcmRPZmZl",
+            "cnMve29mZmVyfRI5YmlsbGluZ0FjY291bnRzL3tjb25zdW1lcl9iaWxsaW5n",
+            "X2FjY291bnR9L29mZmVycy97b2ZmZXJ9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemChangeType), typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemChangeState), typeof(global::Google.Cloud.Commerce.Consumer.Procurement.V1.LineItemChangeStateReasonType), }, null, new pbr::GeneratedClrTypeInfo[] {
