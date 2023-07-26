@@ -40,6 +40,8 @@ namespace GoogleCSharpSnippets
                 ChallengeAsChallengeName = ChallengeName.FromProjectLocationUuid("[PROJECT]", "[LOCATION]", "[UUID]"),
                 GcpCredentials = new GcpCredentials(),
                 TpmAttestation = new TpmAttestation(),
+                ConfidentialSpaceInfo = new ConfidentialSpaceInfo(),
+                TokenOptions = new TokenOptions(),
             };
             // Make the request
             VerifyAttestationResponse response = await confidentialComputingClient.VerifyAttestationAsync(request);
