@@ -25,17 +25,18 @@ namespace Google.Cloud.Bigtable.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvYmlndGFibGUvdjIvZmVhdHVyZV9mbGFncy5wcm90bxISZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyIkUKDEZlYXR1cmVGbGFncxIVCg1yZXZlcnNlX3Nj",
-            "YW5zGAEgASgIEh4KFm11dGF0ZV9yb3dzX3JhdGVfbGltaXQYAyABKAhCvQEK",
-            "FmNvbS5nb29nbGUuYmlndGFibGUudjJCEUZlYXR1cmVGbGFnc1Byb3RvUAFa",
-            "Omdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYmlndGFi",
-            "bGUvdjI7YmlndGFibGWqAhhHb29nbGUuQ2xvdWQuQmlndGFibGUuVjLKAhhH",
-            "b29nbGVcQ2xvdWRcQmlndGFibGVcVjLqAhtHb29nbGU6OkNsb3VkOjpCaWd0",
-            "YWJsZTo6VjJiBnByb3RvMw=="));
+            "Z2xlLmJpZ3RhYmxlLnYyImkKDEZlYXR1cmVGbGFncxIVCg1yZXZlcnNlX3Nj",
+            "YW5zGAEgASgIEh4KFm11dGF0ZV9yb3dzX3JhdGVfbGltaXQYAyABKAgSIgoa",
+            "bGFzdF9zY2FubmVkX3Jvd19yZXNwb25zZXMYBCABKAhCvQEKFmNvbS5nb29n",
+            "bGUuYmlndGFibGUudjJCEUZlYXR1cmVGbGFnc1Byb3RvUAFaOmdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYmlndGFibGUvdjI7Ymln",
+            "dGFibGWqAhhHb29nbGUuQ2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xv",
+            "dWRcQmlndGFibGVcVjLqAhtHb29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6VjJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "LastScannedRowResponses" }, null, null, null, null)
           }));
     }
     #endregion
@@ -88,6 +89,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public FeatureFlags(FeatureFlags other) : this() {
       reverseScans_ = other.reverseScans_;
       mutateRowsRateLimit_ = other.mutateRowsRateLimit_;
+      lastScannedRowResponses_ = other.lastScannedRowResponses_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -129,6 +131,22 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "last_scanned_row_responses" field.</summary>
+    public const int LastScannedRowResponsesFieldNumber = 4;
+    private bool lastScannedRowResponses_;
+    /// <summary>
+    /// Notify the server that the client supports the last_scanned_row field
+    /// in ReadRowsResponse for long-running sparse scans.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool LastScannedRowResponses {
+      get { return lastScannedRowResponses_; }
+      set {
+        lastScannedRowResponses_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -146,6 +164,7 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (ReverseScans != other.ReverseScans) return false;
       if (MutateRowsRateLimit != other.MutateRowsRateLimit) return false;
+      if (LastScannedRowResponses != other.LastScannedRowResponses) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -155,6 +174,7 @@ namespace Google.Cloud.Bigtable.V2 {
       int hash = 1;
       if (ReverseScans != false) hash ^= ReverseScans.GetHashCode();
       if (MutateRowsRateLimit != false) hash ^= MutateRowsRateLimit.GetHashCode();
+      if (LastScannedRowResponses != false) hash ^= LastScannedRowResponses.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -181,6 +201,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(24);
         output.WriteBool(MutateRowsRateLimit);
       }
+      if (LastScannedRowResponses != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(LastScannedRowResponses);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -199,6 +223,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(24);
         output.WriteBool(MutateRowsRateLimit);
       }
+      if (LastScannedRowResponses != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(LastScannedRowResponses);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -213,6 +241,9 @@ namespace Google.Cloud.Bigtable.V2 {
         size += 1 + 1;
       }
       if (MutateRowsRateLimit != false) {
+        size += 1 + 1;
+      }
+      if (LastScannedRowResponses != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -232,6 +263,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.MutateRowsRateLimit != false) {
         MutateRowsRateLimit = other.MutateRowsRateLimit;
+      }
+      if (other.LastScannedRowResponses != false) {
+        LastScannedRowResponses = other.LastScannedRowResponses;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,6 +290,10 @@ namespace Google.Cloud.Bigtable.V2 {
             MutateRowsRateLimit = input.ReadBool();
             break;
           }
+          case 32: {
+            LastScannedRowResponses = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -277,6 +315,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 24: {
             MutateRowsRateLimit = input.ReadBool();
+            break;
+          }
+          case 32: {
+            LastScannedRowResponses = input.ReadBool();
             break;
           }
         }
