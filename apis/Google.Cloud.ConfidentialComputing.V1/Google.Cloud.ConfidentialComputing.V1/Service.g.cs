@@ -39,58 +39,104 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             "FkNyZWF0ZUNoYWxsZW5nZVJlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6",
             "QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhJICgljaGFs",
             "bGVuZ2UYAiABKAsyMC5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0",
-            "aW5nLnYxLkNoYWxsZW5nZUID4EECIo8CChhWZXJpZnlBdHRlc3RhdGlvblJl",
+            "aW5nLnYxLkNoYWxsZW5nZUID4EECIsQDChhWZXJpZnlBdHRlc3RhdGlvblJl",
             "cXVlc3QSSQoJY2hhbGxlbmdlGAEgASgJQjbgQQL6QTAKLmNvbmZpZGVudGlh",
             "bGNvbXB1dGluZy5nb29nbGVhcGlzLmNvbS9DaGFsbGVuZ2USUwoPZ2NwX2Ny",
             "ZWRlbnRpYWxzGAIgASgLMjUuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNv",
             "bXB1dGluZy52MS5HY3BDcmVkZW50aWFsc0ID4EEBElMKD3RwbV9hdHRlc3Rh",
             "dGlvbhgDIAEoCzI1Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRp",
-            "bmcudjEuVHBtQXR0ZXN0YXRpb25CA+BBAiI7ChlWZXJpZnlBdHRlc3RhdGlv",
-            "blJlc3BvbnNlEh4KEW9pZGNfY2xhaW1zX3Rva2VuGAIgASgJQgPgQQMiMwoO",
-            "R2NwQ3JlZGVudGlhbHMSIQoZc2VydmljZV9hY2NvdW50X2lkX3Rva2VucxgC",
-            "IAMoCSKPAwoOVHBtQXR0ZXN0YXRpb24SSwoGcXVvdGVzGAEgAygLMjsuZ29v",
-            "Z2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5UcG1BdHRlc3Rh",
-            "dGlvbi5RdW90ZRIVCg10Y2dfZXZlbnRfbG9nGAIgASgMEhsKE2Nhbm9uaWNh",
-            "bF9ldmVudF9sb2cYAyABKAwSDwoHYWtfY2VydBgEIAEoDBISCgpjZXJ0X2No",
-            "YWluGAUgAygMGtYBCgVRdW90ZRIRCgloYXNoX2FsZ28YASABKAUSXgoKcGNy",
-            "X3ZhbHVlcxgCIAMoCzJKLmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21w",
-            "dXRpbmcudjEuVHBtQXR0ZXN0YXRpb24uUXVvdGUuUGNyVmFsdWVzRW50cnkS",
-            "EQoJcmF3X3F1b3RlGAMgASgMEhUKDXJhd19zaWduYXR1cmUYBCABKAwaMAoO",
-            "UGNyVmFsdWVzRW50cnkSCwoDa2V5GAEgASgFEg0KBXZhbHVlGAIgASgMOgI4",
-            "ATK3BAoVQ29uZmlkZW50aWFsQ29tcHV0aW5nEtgBCg9DcmVhdGVDaGFsbGVu",
-            "Z2USPS5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkNy",
-            "ZWF0ZUNoYWxsZW5nZVJlcXVlc3QaMC5nb29nbGUuY2xvdWQuY29uZmlkZW50",
-            "aWFsY29tcHV0aW5nLnYxLkNoYWxsZW5nZSJUgtPkkwI7Ii4vdjEve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jaGFsbGVuZ2VzOgljaGFsbGVu",
-            "Z2XaQRBwYXJlbnQsY2hhbGxlbmdlEugBChFWZXJpZnlBdHRlc3RhdGlvbhI/",
-            "Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVmVyaWZ5",
-            "QXR0ZXN0YXRpb25SZXF1ZXN0GkAuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlh",
-            "bGNvbXB1dGluZy52MS5WZXJpZnlBdHRlc3RhdGlvblJlc3BvbnNlIlCC0+ST",
-            "AkoiRS92MS97Y2hhbGxlbmdlPXByb2plY3RzLyovbG9jYXRpb25zLyovY2hh",
-            "bGxlbmdlcy8qfTp2ZXJpZnlBdHRlc3RhdGlvbjoBKhpYykEkY29uZmlkZW50",
-            "aWFsY29tcHV0aW5nLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKXAgopY29tLmdvb2ds",
-            "ZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjFCDFNlcnZpY2VQcm90",
-            "b1ABWl9jbG91ZC5nb29nbGUuY29tL2dvL2NvbmZpZGVudGlhbGNvbXB1dGlu",
-            "Zy9hcGl2MS9jb25maWRlbnRpYWxjb21wdXRpbmdwYjtjb25maWRlbnRpYWxj",
-            "b21wdXRpbmdwYqoCJUdvb2dsZS5DbG91ZC5Db25maWRlbnRpYWxDb21wdXRp",
-            "bmcuVjHKAiVHb29nbGVcQ2xvdWRcQ29uZmlkZW50aWFsQ29tcHV0aW5nXFYx",
-            "6gIoR29vZ2xlOjpDbG91ZDo6Q29uZmlkZW50aWFsQ29tcHV0aW5nOjpWMWIG",
-            "cHJvdG8z"));
+            "bmcudjEuVHBtQXR0ZXN0YXRpb25CA+BBAhJiChdjb25maWRlbnRpYWxfc3Bh",
+            "Y2VfaW5mbxgEIAEoCzI8Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21w",
+            "dXRpbmcudjEuQ29uZmlkZW50aWFsU3BhY2VJbmZvQgPgQQESTwoNdG9rZW5f",
+            "b3B0aW9ucxgFIAEoCzIzLmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21w",
+            "dXRpbmcudjEuVG9rZW5PcHRpb25zQgPgQQEiOwoZVmVyaWZ5QXR0ZXN0YXRp",
+            "b25SZXNwb25zZRIeChFvaWRjX2NsYWltc190b2tlbhgCIAEoCUID4EEDIjMK",
+            "DkdjcENyZWRlbnRpYWxzEiEKGXNlcnZpY2VfYWNjb3VudF9pZF90b2tlbnMY",
+            "AiADKAkiOQoMVG9rZW5PcHRpb25zEhUKCGF1ZGllbmNlGAEgASgJQgPgQQES",
+            "EgoFbm9uY2UYAiADKAlCA+BBASKPAwoOVHBtQXR0ZXN0YXRpb24SSwoGcXVv",
+            "dGVzGAEgAygLMjsuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGlu",
+            "Zy52MS5UcG1BdHRlc3RhdGlvbi5RdW90ZRIVCg10Y2dfZXZlbnRfbG9nGAIg",
+            "ASgMEhsKE2Nhbm9uaWNhbF9ldmVudF9sb2cYAyABKAwSDwoHYWtfY2VydBgE",
+            "IAEoDBISCgpjZXJ0X2NoYWluGAUgAygMGtYBCgVRdW90ZRIRCgloYXNoX2Fs",
+            "Z28YASABKAUSXgoKcGNyX3ZhbHVlcxgCIAMoCzJKLmdvb2dsZS5jbG91ZC5j",
+            "b25maWRlbnRpYWxjb21wdXRpbmcudjEuVHBtQXR0ZXN0YXRpb24uUXVvdGUu",
+            "UGNyVmFsdWVzRW50cnkSEQoJcmF3X3F1b3RlGAMgASgMEhUKDXJhd19zaWdu",
+            "YXR1cmUYBCABKAwaMAoOUGNyVmFsdWVzRW50cnkSCwoDa2V5GAEgASgFEg0K",
+            "BXZhbHVlGAIgASgMOgI4ASJqChVDb25maWRlbnRpYWxTcGFjZUluZm8SUQoP",
+            "c2lnbmVkX2VudGl0aWVzGAEgAygLMjMuZ29vZ2xlLmNsb3VkLmNvbmZpZGVu",
+            "dGlhbGNvbXB1dGluZy52MS5TaWduZWRFbnRpdHlCA+BBASJ3CgxTaWduZWRF",
+            "bnRpdHkSZwoaY29udGFpbmVyX2ltYWdlX3NpZ25hdHVyZXMYASADKAsyPi5n",
+            "b29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkNvbnRhaW5l",
+            "ckltYWdlU2lnbmF0dXJlQgPgQQEirwEKF0NvbnRhaW5lckltYWdlU2lnbmF0",
+            "dXJlEhQKB3BheWxvYWQYASABKAxCA+BBAhIWCglzaWduYXR1cmUYAiABKAxC",
+            "A+BBAhIXCgpwdWJsaWNfa2V5GAMgASgMQgPgQQISTQoHc2lnX2FsZxgEIAEo",
+            "DjI3Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuU2ln",
+            "bmluZ0FsZ29yaXRobUID4EECKn8KEFNpZ25pbmdBbGdvcml0aG0SIQodU0lH",
+            "TklOR19BTEdPUklUSE1fVU5TUEVDSUZJRUQQABIVChFSU0FTU0FfUFNTX1NI",
+            "QTI1NhABEhoKFlJTQVNTQV9QS0NTMVYxNV9TSEEyNTYQAhIVChFFQ0RTQV9Q",
+            "MjU2X1NIQTI1NhADMrcEChVDb25maWRlbnRpYWxDb21wdXRpbmcS2AEKD0Ny",
+            "ZWF0ZUNoYWxsZW5nZRI9Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21w",
+            "dXRpbmcudjEuQ3JlYXRlQ2hhbGxlbmdlUmVxdWVzdBowLmdvb2dsZS5jbG91",
+            "ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuQ2hhbGxlbmdlIlSC0+STAjsi",
+            "Li92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2NoYWxsZW5n",
+            "ZXM6CWNoYWxsZW5nZdpBEHBhcmVudCxjaGFsbGVuZ2US6AEKEVZlcmlmeUF0",
+            "dGVzdGF0aW9uEj8uZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGlu",
+            "Zy52MS5WZXJpZnlBdHRlc3RhdGlvblJlcXVlc3QaQC5nb29nbGUuY2xvdWQu",
+            "Y29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlZlcmlmeUF0dGVzdGF0aW9uUmVz",
+            "cG9uc2UiUILT5JMCSiJFL3YxL3tjaGFsbGVuZ2U9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9jaGFsbGVuZ2VzLyp9OnZlcmlmeUF0dGVzdGF0aW9uOgEqGljK",
+            "QSRjb25maWRlbnRpYWxjb21wdXRpbmcuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQpcC",
+            "Ciljb20uZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MUIM",
+            "U2VydmljZVByb3RvUAFaX2Nsb3VkLmdvb2dsZS5jb20vZ28vY29uZmlkZW50",
+            "aWFsY29tcHV0aW5nL2FwaXYxL2NvbmZpZGVudGlhbGNvbXB1dGluZ3BiO2Nv",
+            "bmZpZGVudGlhbGNvbXB1dGluZ3BiqgIlR29vZ2xlLkNsb3VkLkNvbmZpZGVu",
+            "dGlhbENvbXB1dGluZy5WMcoCJUdvb2dsZVxDbG91ZFxDb25maWRlbnRpYWxD",
+            "b21wdXRpbmdcVjHqAihHb29nbGU6OkNsb3VkOjpDb25maWRlbnRpYWxDb21w",
+            "dXRpbmc6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.Challenge), global::Google.Cloud.ConfidentialComputing.V1.Challenge.Parser, new[]{ "Name", "CreateTime", "ExpireTime", "Used", "TpmNonce" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.CreateChallengeRequest), global::Google.Cloud.ConfidentialComputing.V1.CreateChallengeRequest.Parser, new[]{ "Parent", "Challenge" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest.Parser, new[]{ "Challenge", "GcpCredentials", "TpmAttestation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest.Parser, new[]{ "Challenge", "GcpCredentials", "TpmAttestation", "ConfidentialSpaceInfo", "TokenOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse), global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse.Parser, new[]{ "OidcClaimsToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.GcpCredentials), global::Google.Cloud.ConfidentialComputing.V1.GcpCredentials.Parser, new[]{ "ServiceAccountIdTokens" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation), global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation.Parser, new[]{ "Quotes", "TcgEventLog", "CanonicalEventLog", "AkCert", "CertChain" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation.Types.Quote), global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation.Types.Quote.Parser, new[]{ "HashAlgo", "PcrValues", "RawQuote", "RawSignature" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenOptions), global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Parser, new[]{ "Audience", "Nonce" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation), global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation.Parser, new[]{ "Quotes", "TcgEventLog", "CanonicalEventLog", "AkCert", "CertChain" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation.Types.Quote), global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation.Types.Quote.Parser, new[]{ "HashAlgo", "PcrValues", "RawQuote", "RawSignature" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.ConfidentialSpaceInfo), global::Google.Cloud.ConfidentialComputing.V1.ConfidentialSpaceInfo.Parser, new[]{ "SignedEntities" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.SignedEntity), global::Google.Cloud.ConfidentialComputing.V1.SignedEntity.Parser, new[]{ "ContainerImageSignatures" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.ContainerImageSignature), global::Google.Cloud.ConfidentialComputing.V1.ContainerImageSignature.Parser, new[]{ "Payload", "Signature", "PublicKey", "SigAlg" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// SigningAlgorithm enumerates all the supported signing algorithms.
+  /// </summary>
+  public enum SigningAlgorithm {
+    /// <summary>
+    /// Unspecified signing algorithm.
+    /// </summary>
+    [pbr::OriginalName("SIGNING_ALGORITHM_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// RSASSA-PSS with a SHA256 digest.
+    /// </summary>
+    [pbr::OriginalName("RSASSA_PSS_SHA256")] RsassaPssSha256 = 1,
+    /// <summary>
+    /// RSASSA-PKCS1 v1.5 with a SHA256 digest.
+    /// </summary>
+    [pbr::OriginalName("RSASSA_PKCS1V15_SHA256")] RsassaPkcs1V15Sha256 = 2,
+    /// <summary>
+    /// ECDSA on the P-256 Curve with a SHA256 digest.
+    /// </summary>
+    [pbr::OriginalName("ECDSA_P256_SHA256")] EcdsaP256Sha256 = 3,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// A Challenge from the server used to guarantee freshness of attestations
@@ -754,6 +800,8 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       challenge_ = other.challenge_;
       gcpCredentials_ = other.gcpCredentials_ != null ? other.gcpCredentials_.Clone() : null;
       tpmAttestation_ = other.tpmAttestation_ != null ? other.tpmAttestation_.Clone() : null;
+      confidentialSpaceInfo_ = other.confidentialSpaceInfo_ != null ? other.confidentialSpaceInfo_.Clone() : null;
+      tokenOptions_ = other.tokenOptions_ != null ? other.tokenOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -812,6 +860,37 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
     }
 
+    /// <summary>Field number for the "confidential_space_info" field.</summary>
+    public const int ConfidentialSpaceInfoFieldNumber = 4;
+    private global::Google.Cloud.ConfidentialComputing.V1.ConfidentialSpaceInfo confidentialSpaceInfo_;
+    /// <summary>
+    /// Optional. Optional information related to the Confidential Space TEE.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.ConfidentialSpaceInfo ConfidentialSpaceInfo {
+      get { return confidentialSpaceInfo_; }
+      set {
+        confidentialSpaceInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "token_options" field.</summary>
+    public const int TokenOptionsFieldNumber = 5;
+    private global::Google.Cloud.ConfidentialComputing.V1.TokenOptions tokenOptions_;
+    /// <summary>
+    /// Optional. A collection of optional, workload-specified claims that modify
+    /// the token output.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.TokenOptions TokenOptions {
+      get { return tokenOptions_; }
+      set {
+        tokenOptions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -830,6 +909,8 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       if (Challenge != other.Challenge) return false;
       if (!object.Equals(GcpCredentials, other.GcpCredentials)) return false;
       if (!object.Equals(TpmAttestation, other.TpmAttestation)) return false;
+      if (!object.Equals(ConfidentialSpaceInfo, other.ConfidentialSpaceInfo)) return false;
+      if (!object.Equals(TokenOptions, other.TokenOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -840,6 +921,8 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       if (Challenge.Length != 0) hash ^= Challenge.GetHashCode();
       if (gcpCredentials_ != null) hash ^= GcpCredentials.GetHashCode();
       if (tpmAttestation_ != null) hash ^= TpmAttestation.GetHashCode();
+      if (confidentialSpaceInfo_ != null) hash ^= ConfidentialSpaceInfo.GetHashCode();
+      if (tokenOptions_ != null) hash ^= TokenOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -870,6 +953,14 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(TpmAttestation);
       }
+      if (confidentialSpaceInfo_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ConfidentialSpaceInfo);
+      }
+      if (tokenOptions_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TokenOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -892,6 +983,14 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(TpmAttestation);
       }
+      if (confidentialSpaceInfo_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ConfidentialSpaceInfo);
+      }
+      if (tokenOptions_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TokenOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -910,6 +1009,12 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
       if (tpmAttestation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TpmAttestation);
+      }
+      if (confidentialSpaceInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConfidentialSpaceInfo);
+      }
+      if (tokenOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TokenOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -937,6 +1042,18 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
           TpmAttestation = new global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation();
         }
         TpmAttestation.MergeFrom(other.TpmAttestation);
+      }
+      if (other.confidentialSpaceInfo_ != null) {
+        if (confidentialSpaceInfo_ == null) {
+          ConfidentialSpaceInfo = new global::Google.Cloud.ConfidentialComputing.V1.ConfidentialSpaceInfo();
+        }
+        ConfidentialSpaceInfo.MergeFrom(other.ConfidentialSpaceInfo);
+      }
+      if (other.tokenOptions_ != null) {
+        if (tokenOptions_ == null) {
+          TokenOptions = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions();
+        }
+        TokenOptions.MergeFrom(other.TokenOptions);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -971,6 +1088,20 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             input.ReadMessage(TpmAttestation);
             break;
           }
+          case 34: {
+            if (confidentialSpaceInfo_ == null) {
+              ConfidentialSpaceInfo = new global::Google.Cloud.ConfidentialComputing.V1.ConfidentialSpaceInfo();
+            }
+            input.ReadMessage(ConfidentialSpaceInfo);
+            break;
+          }
+          case 42: {
+            if (tokenOptions_ == null) {
+              TokenOptions = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions();
+            }
+            input.ReadMessage(TokenOptions);
+            break;
+          }
         }
       }
     #endif
@@ -1002,6 +1133,20 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
               TpmAttestation = new global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation();
             }
             input.ReadMessage(TpmAttestation);
+            break;
+          }
+          case 34: {
+            if (confidentialSpaceInfo_ == null) {
+              ConfidentialSpaceInfo = new global::Google.Cloud.ConfidentialComputing.V1.ConfidentialSpaceInfo();
+            }
+            input.ReadMessage(ConfidentialSpaceInfo);
+            break;
+          }
+          case 42: {
+            if (tokenOptions_ == null) {
+              TokenOptions = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions();
+            }
+            input.ReadMessage(TokenOptions);
             break;
           }
         }
@@ -1393,6 +1538,233 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
   }
 
   /// <summary>
+  /// Options to modify claims in the token to generate custom-purpose tokens.
+  /// </summary>
+  public sealed partial class TokenOptions : pb::IMessage<TokenOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TokenOptions> _parser = new pb::MessageParser<TokenOptions>(() => new TokenOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TokenOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TokenOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TokenOptions(TokenOptions other) : this() {
+      audience_ = other.audience_;
+      nonce_ = other.nonce_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TokenOptions Clone() {
+      return new TokenOptions(this);
+    }
+
+    /// <summary>Field number for the "audience" field.</summary>
+    public const int AudienceFieldNumber = 1;
+    private string audience_ = "";
+    /// <summary>
+    /// Optional. Optional string to issue the token with a custom audience claim.
+    /// Required if one or more nonces are specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Audience {
+      get { return audience_; }
+      set {
+        audience_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nonce" field.</summary>
+    public const int NonceFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_nonce_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> nonce_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Optional parameter to place one or more nonces in the eat_nonce
+    /// claim in the output token. The minimum size for JSON-encoded EATs is 10
+    /// bytes and the maximum size is 74 bytes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Nonce {
+      get { return nonce_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TokenOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TokenOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Audience != other.Audience) return false;
+      if(!nonce_.Equals(other.nonce_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Audience.Length != 0) hash ^= Audience.GetHashCode();
+      hash ^= nonce_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Audience.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Audience);
+      }
+      nonce_.WriteTo(output, _repeated_nonce_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Audience.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Audience);
+      }
+      nonce_.WriteTo(ref output, _repeated_nonce_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Audience.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Audience);
+      }
+      size += nonce_.CalculateSize(_repeated_nonce_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TokenOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Audience.Length != 0) {
+        Audience = other.Audience;
+      }
+      nonce_.Add(other.nonce_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Audience = input.ReadString();
+            break;
+          }
+          case 18: {
+            nonce_.AddEntriesFrom(input, _repeated_nonce_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Audience = input.ReadString();
+            break;
+          }
+          case 18: {
+            nonce_.AddEntriesFrom(ref input, _repeated_nonce_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// TPM2 data containing everything necessary to validate any platform state
   /// measured into the TPM.
   /// </summary>
@@ -1410,7 +1782,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2042,6 +2414,702 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// ConfidentialSpaceInfo contains information related to the Confidential Space
+  /// TEE.
+  /// </summary>
+  public sealed partial class ConfidentialSpaceInfo : pb::IMessage<ConfidentialSpaceInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ConfidentialSpaceInfo> _parser = new pb::MessageParser<ConfidentialSpaceInfo>(() => new ConfidentialSpaceInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ConfidentialSpaceInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConfidentialSpaceInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConfidentialSpaceInfo(ConfidentialSpaceInfo other) : this() {
+      signedEntities_ = other.signedEntities_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConfidentialSpaceInfo Clone() {
+      return new ConfidentialSpaceInfo(this);
+    }
+
+    /// <summary>Field number for the "signed_entities" field.</summary>
+    public const int SignedEntitiesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.ConfidentialComputing.V1.SignedEntity> _repeated_signedEntities_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.ConfidentialComputing.V1.SignedEntity.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.SignedEntity> signedEntities_ = new pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.SignedEntity>();
+    /// <summary>
+    /// Optional. A list of signed entities containing container image signatures
+    /// that can be used for server-side signature verification.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.SignedEntity> SignedEntities {
+      get { return signedEntities_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ConfidentialSpaceInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ConfidentialSpaceInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!signedEntities_.Equals(other.signedEntities_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= signedEntities_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      signedEntities_.WriteTo(output, _repeated_signedEntities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      signedEntities_.WriteTo(ref output, _repeated_signedEntities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += signedEntities_.CalculateSize(_repeated_signedEntities_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ConfidentialSpaceInfo other) {
+      if (other == null) {
+        return;
+      }
+      signedEntities_.Add(other.signedEntities_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            signedEntities_.AddEntriesFrom(input, _repeated_signedEntities_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            signedEntities_.AddEntriesFrom(ref input, _repeated_signedEntities_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// SignedEntity represents an OCI image object containing everything necessary
+  /// to verify container image signatures.
+  /// </summary>
+  public sealed partial class SignedEntity : pb::IMessage<SignedEntity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SignedEntity> _parser = new pb::MessageParser<SignedEntity>(() => new SignedEntity());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SignedEntity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SignedEntity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SignedEntity(SignedEntity other) : this() {
+      containerImageSignatures_ = other.containerImageSignatures_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SignedEntity Clone() {
+      return new SignedEntity(this);
+    }
+
+    /// <summary>Field number for the "container_image_signatures" field.</summary>
+    public const int ContainerImageSignaturesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.ConfidentialComputing.V1.ContainerImageSignature> _repeated_containerImageSignatures_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.ConfidentialComputing.V1.ContainerImageSignature.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.ContainerImageSignature> containerImageSignatures_ = new pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.ContainerImageSignature>();
+    /// <summary>
+    /// Optional. A list of container image signatures attached to an OCI image
+    /// object.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.ContainerImageSignature> ContainerImageSignatures {
+      get { return containerImageSignatures_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SignedEntity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SignedEntity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!containerImageSignatures_.Equals(other.containerImageSignatures_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= containerImageSignatures_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      containerImageSignatures_.WriteTo(output, _repeated_containerImageSignatures_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      containerImageSignatures_.WriteTo(ref output, _repeated_containerImageSignatures_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += containerImageSignatures_.CalculateSize(_repeated_containerImageSignatures_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SignedEntity other) {
+      if (other == null) {
+        return;
+      }
+      containerImageSignatures_.Add(other.containerImageSignatures_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            containerImageSignatures_.AddEntriesFrom(input, _repeated_containerImageSignatures_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            containerImageSignatures_.AddEntriesFrom(ref input, _repeated_containerImageSignatures_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ContainerImageSignature holds necessary metadata to verify a container image
+  /// signature.
+  /// </summary>
+  public sealed partial class ContainerImageSignature : pb::IMessage<ContainerImageSignature>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ContainerImageSignature> _parser = new pb::MessageParser<ContainerImageSignature>(() => new ContainerImageSignature());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ContainerImageSignature> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContainerImageSignature() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContainerImageSignature(ContainerImageSignature other) : this() {
+      payload_ = other.payload_;
+      signature_ = other.signature_;
+      publicKey_ = other.publicKey_;
+      sigAlg_ = other.sigAlg_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContainerImageSignature Clone() {
+      return new ContainerImageSignature(this);
+    }
+
+    /// <summary>Field number for the "payload" field.</summary>
+    public const int PayloadFieldNumber = 1;
+    private pb::ByteString payload_ = pb::ByteString.Empty;
+    /// <summary>
+    /// Required. The binary signature payload following the SimpleSigning format
+    /// https://github.com/sigstore/cosign/blob/main/specs/SIGNATURE_SPEC.md#simple-signing.
+    /// This payload includes the container image digest.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Payload {
+      get { return payload_; }
+      set {
+        payload_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "signature" field.</summary>
+    public const int SignatureFieldNumber = 2;
+    private pb::ByteString signature_ = pb::ByteString.Empty;
+    /// <summary>
+    /// Required. A signature over the payload.
+    /// The container image digest is incorporated into the signature as follows:
+    /// 1. Generate a SimpleSigning format payload that includes the container
+    /// image digest.
+    /// 2. Generate a signature over SHA256 digest of the payload.
+    /// The signature generation process can be represented as follows:
+    /// `Sign(sha256(SimpleSigningPayload(sha256(Image Manifest))))`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Signature {
+      get { return signature_; }
+      set {
+        signature_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "public_key" field.</summary>
+    public const int PublicKeyFieldNumber = 3;
+    private pb::ByteString publicKey_ = pb::ByteString.Empty;
+    /// <summary>
+    /// Required. An associated public key used to verify the signature.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString PublicKey {
+      get { return publicKey_; }
+      set {
+        publicKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sig_alg" field.</summary>
+    public const int SigAlgFieldNumber = 4;
+    private global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm sigAlg_ = global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm.Unspecified;
+    /// <summary>
+    /// Required. The algorithm used to produce the container image signature.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm SigAlg {
+      get { return sigAlg_; }
+      set {
+        sigAlg_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ContainerImageSignature);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ContainerImageSignature other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Payload != other.Payload) return false;
+      if (Signature != other.Signature) return false;
+      if (PublicKey != other.PublicKey) return false;
+      if (SigAlg != other.SigAlg) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Payload.Length != 0) hash ^= Payload.GetHashCode();
+      if (Signature.Length != 0) hash ^= Signature.GetHashCode();
+      if (PublicKey.Length != 0) hash ^= PublicKey.GetHashCode();
+      if (SigAlg != global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm.Unspecified) hash ^= SigAlg.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Payload.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Payload);
+      }
+      if (Signature.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Signature);
+      }
+      if (PublicKey.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(PublicKey);
+      }
+      if (SigAlg != global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) SigAlg);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Payload.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Payload);
+      }
+      if (Signature.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Signature);
+      }
+      if (PublicKey.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(PublicKey);
+      }
+      if (SigAlg != global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) SigAlg);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Payload.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Payload);
+      }
+      if (Signature.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Signature);
+      }
+      if (PublicKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(PublicKey);
+      }
+      if (SigAlg != global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SigAlg);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ContainerImageSignature other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Payload.Length != 0) {
+        Payload = other.Payload;
+      }
+      if (other.Signature.Length != 0) {
+        Signature = other.Signature;
+      }
+      if (other.PublicKey.Length != 0) {
+        PublicKey = other.PublicKey;
+      }
+      if (other.SigAlg != global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm.Unspecified) {
+        SigAlg = other.SigAlg;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Payload = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Signature = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            PublicKey = input.ReadBytes();
+            break;
+          }
+          case 32: {
+            SigAlg = (global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Payload = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Signature = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            PublicKey = input.ReadBytes();
+            break;
+          }
+          case 32: {
+            SigAlg = (global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
