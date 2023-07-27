@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1beta_generated_CompletionService_CompleteQuery_sync]
+    // [START discoveryengine_v1beta_generated_ConversationalSearchService_GetConversation_async_flattened_resourceNames]
     using Google.Cloud.DiscoveryEngine.V1Beta;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedCompletionServiceClientSnippets
+    public sealed partial class GeneratedConversationalSearchServiceClientSnippets
     {
-        /// <summary>Snippet for CompleteQuery</summary>
+        /// <summary>Snippet for GetConversationAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,22 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CompleteQueryRequestObject()
+        public async Task GetConversationResourceNamesAsync()
         {
             // Create client
-            CompletionServiceClient completionServiceClient = CompletionServiceClient.Create();
+            ConversationalSearchServiceClient conversationalSearchServiceClient = await ConversationalSearchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CompleteQueryRequest request = new CompleteQueryRequest
-            {
-                DataStoreAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
-                Query = "",
-                QueryModel = "",
-                UserPseudoId = "",
-                IncludeTailSuggestions = false,
-            };
+            ConversationName name = ConversationName.FromProjectLocationDataStoreConversation("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[CONVERSATION]");
             // Make the request
-            CompleteQueryResponse response = completionServiceClient.CompleteQuery(request);
+            Conversation response = await conversationalSearchServiceClient.GetConversationAsync(name);
         }
     }
-    // [END discoveryengine_v1beta_generated_CompletionService_CompleteQuery_sync]
+    // [END discoveryengine_v1beta_generated_ConversationalSearchService_GetConversation_async_flattened_resourceNames]
 }

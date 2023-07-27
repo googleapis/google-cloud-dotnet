@@ -16,12 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1beta_generated_CompletionService_CompleteQuery_sync]
+    // [START discoveryengine_v1beta_generated_ConversationalSearchService_DeleteConversation_sync]
     using Google.Cloud.DiscoveryEngine.V1Beta;
 
-    public sealed partial class GeneratedCompletionServiceClientSnippets
+    public sealed partial class GeneratedConversationalSearchServiceClientSnippets
     {
-        /// <summary>Snippet for CompleteQuery</summary>
+        /// <summary>Snippet for DeleteConversation</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,22 +29,18 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CompleteQueryRequestObject()
+        public void DeleteConversationRequestObject()
         {
             // Create client
-            CompletionServiceClient completionServiceClient = CompletionServiceClient.Create();
+            ConversationalSearchServiceClient conversationalSearchServiceClient = ConversationalSearchServiceClient.Create();
             // Initialize request argument(s)
-            CompleteQueryRequest request = new CompleteQueryRequest
+            DeleteConversationRequest request = new DeleteConversationRequest
             {
-                DataStoreAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
-                Query = "",
-                QueryModel = "",
-                UserPseudoId = "",
-                IncludeTailSuggestions = false,
+                ConversationName = ConversationName.FromProjectLocationDataStoreConversation("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[CONVERSATION]"),
             };
             // Make the request
-            CompleteQueryResponse response = completionServiceClient.CompleteQuery(request);
+            conversationalSearchServiceClient.DeleteConversation(request);
         }
     }
-    // [END discoveryengine_v1beta_generated_CompletionService_CompleteQuery_sync]
+    // [END discoveryengine_v1beta_generated_ConversationalSearchService_DeleteConversation_sync]
 }

@@ -126,8 +126,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int StructDataFieldNumber = 4;
     /// <summary>
     /// The structured JSON data for the document. It should conform to the
-    /// registered
-    /// [Schema.schema][google.cloud.discoveryengine.v1beta.Schema.schema] or an
+    /// registered [Schema][google.cloud.discoveryengine.v1beta.Schema] or an
     /// `INVALID_ARGUMENT` error is thrown.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -144,8 +143,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int JsonDataFieldNumber = 5;
     /// <summary>
     /// The JSON string representation of the document. It should conform to the
-    /// registered
-    /// [Schema.schema][google.cloud.discoveryengine.v1beta.Schema.schema] or an
+    /// registered [Schema][google.cloud.discoveryengine.v1beta.Schema] or an
     /// `INVALID_ARGUMENT` error is thrown.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

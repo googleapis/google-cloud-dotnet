@@ -47,6 +47,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcdv::ConversationalSearchServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddConversationalSearchServiceClient(this IServiceCollection services, sys::Action<gcdv::ConversationalSearchServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::ConversationalSearchServiceClientBuilder builder = new gcdv::ConversationalSearchServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcdv::DocumentServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
