@@ -3389,6 +3389,26 @@ namespace Google.Cloud.Deploy.V1
         }
     }
 
+    public partial class PredeployJobRun
+    {
+        /// <summary><see cref="BuildName"/>-typed view over the <see cref="Build"/> resource name property.</summary>
+        public BuildName BuildAsBuildName
+        {
+            get => string.IsNullOrEmpty(Build) ? null : BuildName.Parse(Build, allowUnparsed: true);
+            set => Build = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class PostdeployJobRun
+    {
+        /// <summary><see cref="BuildName"/>-typed view over the <see cref="Build"/> resource name property.</summary>
+        public BuildName BuildAsBuildName
+        {
+            get => string.IsNullOrEmpty(Build) ? null : BuildName.Parse(Build, allowUnparsed: true);
+            set => Build = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListJobRunsRequest
     {
         /// <summary>
