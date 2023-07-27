@@ -190,15 +190,15 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     ///   have a valid
     ///   [Document.id][google.cloud.discoveryengine.v1beta.Document.id].
     /// * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by
-    ///   `input_uris` will become a document, with the ID set to the first 128
+    ///   `input_uris` becomes a document, with the ID set to the first 128
     ///   bits of SHA256(URI) encoded as a hex string.
     /// * `custom`: One custom data JSON per row in arbitrary format that conforms
-    ///   the defined [Schema][google.cloud.discoveryengine.v1beta.Schema] of the
-    ///   data store. This can only be used by the GENERIC Data Store vertical.
-    /// * `csv`: A CSV file with header conforming the defined
+    ///   to the defined [Schema][google.cloud.discoveryengine.v1beta.Schema] of
+    ///   the data store. This can only be used by Gen App Builder.
+    /// * `csv`: A CSV file with header conforming to the defined
     /// [Schema][google.cloud.discoveryengine.v1beta.Schema] of the
-    ///   data store. Each entry after the header will be imported as a Document.
-    ///   This can only be used by the GENERIC Data Store vertical.
+    ///   data store. Each entry after the header is imported as a Document.
+    ///   This can only be used by Gen App Builder.
     ///
     /// Supported values for user even imports:
     ///
@@ -519,9 +519,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     ///   [Document.json_data][google.cloud.discoveryengine.v1beta.Document.json_data]
     ///   or
     ///   [Document.struct_data][google.cloud.discoveryengine.v1beta.Document.struct_data].
-    /// * `custom`: One custom data per row in arbitrary format that conforms the
-    ///   defined [Schema][google.cloud.discoveryengine.v1beta.Schema] of the data
-    ///   store. This can only be used by the GENERIC Data Store vertical.
+    /// * `custom`: One custom data per row in arbitrary format that conforms to
+    ///   the defined [Schema][google.cloud.discoveryengine.v1beta.Schema] of the
+    ///   data store. This can only be used by Gen App Builder.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -879,7 +879,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int GcsPrefixFieldNumber = 1;
     /// <summary>
     /// Cloud Storage prefix for import errors. This must be an empty,
-    /// existing Cloud Storage directory. Import errors will be written to
+    /// existing Cloud Storage directory. Import errors are written to
     /// sharded files in this directory, one per line, as a JSON-encoded
     /// `google.rpc.Status` message.
     /// </summary>
@@ -2016,7 +2016,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   }
 
   /// <summary>
-  /// Metadata related to the progress of the Import operation. This will be
+  /// Metadata related to the progress of the Import operation. This is
   /// returned by the google.longrunning.Operation.metadata field.
   /// </summary>
   public sealed partial class ImportUserEventsMetadata : pb::IMessage<ImportUserEventsMetadata>
@@ -2351,8 +2351,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   }
 
   /// <summary>
-  /// Metadata related to the progress of the ImportDocuments operation. This will
-  /// be returned by the google.longrunning.Operation.metadata field.
+  /// Metadata related to the progress of the ImportDocuments operation. This is
+  /// returned by the google.longrunning.Operation.metadata field.
   /// </summary>
   public sealed partial class ImportDocumentsMetadata : pb::IMessage<ImportDocumentsMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2857,7 +2857,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// `false`, [Document.id][google.cloud.discoveryengine.v1beta.Document.id]s
     /// have to be specified using
     /// [id_field][google.cloud.discoveryengine.v1beta.ImportDocumentsRequest.id_field],
-    /// otherwises, documents without IDs will fail to be imported.
+    /// otherwise, documents without IDs fail to be imported.
     ///
     /// Only set this field when using
     /// [GcsSource][google.cloud.discoveryengine.v1beta.GcsSource] or
@@ -2890,12 +2890,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// [BigQuerySource][google.cloud.discoveryengine.v1beta.BigQuerySource] it is
     /// the column name of the BigQuery table where the unique ids are stored.
     ///
-    /// The values of the JSON field or the BigQuery column will be used as the
+    /// The values of the JSON field or the BigQuery column are used as the
     /// [Document.id][google.cloud.discoveryengine.v1beta.Document.id]s. The JSON
     /// field or the BigQuery column must be of string type, and the values must be
     /// set as valid strings conform to
     /// [RFC-1034](https://tools.ietf.org/html/rfc1034) with 1-63 characters.
-    /// Otherwise, documents without valid IDs will fail to be imported.
+    /// Otherwise, documents without valid IDs fail to be imported.
     ///
     /// Only set this field when using
     /// [GcsSource][google.cloud.discoveryengine.v1beta.GcsSource] or
@@ -3305,7 +3305,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       /// </summary>
       public enum ReconciliationMode {
         /// <summary>
-        /// Defaults to INCREMENTAL.
+        /// Defaults to `INCREMENTAL`.
         /// </summary>
         [pbr::OriginalName("RECONCILIATION_MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>

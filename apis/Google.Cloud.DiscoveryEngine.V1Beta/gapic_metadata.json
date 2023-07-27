@@ -20,6 +20,51 @@
         }
       }
     },
+    "ConversationalSearchService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ConversationalSearchServiceClient",
+          "rpcs": {
+            "ConverseConversation": {
+              "methods": [
+                "ConverseConversation",
+                "ConverseConversationAsync"
+              ]
+            },
+            "CreateConversation": {
+              "methods": [
+                "CreateConversation",
+                "CreateConversationAsync"
+              ]
+            },
+            "DeleteConversation": {
+              "methods": [
+                "DeleteConversation",
+                "DeleteConversationAsync"
+              ]
+            },
+            "GetConversation": {
+              "methods": [
+                "GetConversation",
+                "GetConversationAsync"
+              ]
+            },
+            "ListConversations": {
+              "methods": [
+                "ListConversations",
+                "ListConversationsAsync"
+              ]
+            },
+            "UpdateConversation": {
+              "methods": [
+                "UpdateConversation",
+                "UpdateConversationAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "DocumentService": {
       "clients": {
         "grpc": {

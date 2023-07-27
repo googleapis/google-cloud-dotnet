@@ -16,15 +16,16 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1beta_generated_SearchService_Search_sync]
+    // [START discoveryengine_v1beta_generated_ConversationalSearchService_ListConversations_async]
     using Google.Api.Gax;
     using Google.Cloud.DiscoveryEngine.V1Beta;
-    using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Linq;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedSearchServiceClientSnippets
+    public sealed partial class GeneratedConversationalSearchServiceClientSnippets
     {
-        /// <summary>Snippet for Search</summary>
+        /// <summary>Snippet for ListConversationsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,62 +33,45 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void SearchRequestObject()
+        public async Task ListConversationsRequestObjectAsync()
         {
             // Create client
-            SearchServiceClient searchServiceClient = SearchServiceClient.Create();
+            ConversationalSearchServiceClient conversationalSearchServiceClient = await ConversationalSearchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            SearchRequest request = new SearchRequest
+            ListConversationsRequest request = new ListConversationsRequest
             {
-                ServingConfigAsServingConfigName = ServingConfigName.FromProjectLocationDataStoreServingConfig("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SERVING_CONFIG]"),
-                BranchAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
-                Query = "",
-                Offset = 0,
+                ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
                 Filter = "",
                 OrderBy = "",
-                FacetSpecs =
-                {
-                    new SearchRequest.Types.FacetSpec(),
-                },
-                BoostSpec = new SearchRequest.Types.BoostSpec(),
-                Params = { { "", new Value() }, },
-                QueryExpansionSpec = new SearchRequest.Types.QueryExpansionSpec(),
-                SpellCorrectionSpec = new SearchRequest.Types.SpellCorrectionSpec(),
-                UserPseudoId = "",
-                ImageQuery = new SearchRequest.Types.ImageQuery(),
-                SafeSearch = false,
-                UserInfo = new UserInfo(),
-                UserLabels = { { "", "" }, },
-                ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
             };
             // Make the request
-            PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);
+            PagedAsyncEnumerable<ListConversationsResponse, Conversation> response = conversationalSearchServiceClient.ListConversationsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (SearchResponse.Types.SearchResult item in response)
+            await response.ForEachAsync((Conversation item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            }
+            });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (SearchResponse page in response.AsRawResponses())
+            await response.AsRawResponses().ForEachAsync((ListConversationsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (SearchResponse.Types.SearchResult item in page)
+                foreach (Conversation item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            }
+            });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<SearchResponse.Types.SearchResult> singlePage = response.ReadPage(pageSize);
+            Page<Conversation> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (SearchResponse.Types.SearchResult item in singlePage)
+            foreach (Conversation item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -96,5 +80,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END discoveryengine_v1beta_generated_SearchService_Search_sync]
+    // [END discoveryengine_v1beta_generated_ConversationalSearchService_ListConversations_async]
 }

@@ -56,6 +56,7 @@ namespace GoogleCSharpSnippets
                 QueryExpansionSpec = new SearchRequest.Types.QueryExpansionSpec(),
                 SpellCorrectionSpec = new SearchRequest.Types.SpellCorrectionSpec(),
                 UserPseudoId = "",
+                ImageQuery = new SearchRequest.Types.ImageQuery(),
                 SafeSearch = false,
                 UserInfo = new UserInfo(),
                 UserLabels = { { "", "" }, },

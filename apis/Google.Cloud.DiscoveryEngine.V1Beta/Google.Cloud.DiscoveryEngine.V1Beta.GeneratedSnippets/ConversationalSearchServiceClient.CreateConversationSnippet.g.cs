@@ -16,12 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1beta_generated_CompletionService_CompleteQuery_sync]
+    // [START discoveryengine_v1beta_generated_ConversationalSearchService_CreateConversation_sync_flattened]
     using Google.Cloud.DiscoveryEngine.V1Beta;
 
-    public sealed partial class GeneratedCompletionServiceClientSnippets
+    public sealed partial class GeneratedConversationalSearchServiceClientSnippets
     {
-        /// <summary>Snippet for CompleteQuery</summary>
+        /// <summary>Snippet for CreateConversation</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,22 +29,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CompleteQueryRequestObject()
+        public void CreateConversation()
         {
             // Create client
-            CompletionServiceClient completionServiceClient = CompletionServiceClient.Create();
+            ConversationalSearchServiceClient conversationalSearchServiceClient = ConversationalSearchServiceClient.Create();
             // Initialize request argument(s)
-            CompleteQueryRequest request = new CompleteQueryRequest
-            {
-                DataStoreAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
-                Query = "",
-                QueryModel = "",
-                UserPseudoId = "",
-                IncludeTailSuggestions = false,
-            };
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]";
+            Conversation conversation = new Conversation();
             // Make the request
-            CompleteQueryResponse response = completionServiceClient.CompleteQuery(request);
+            Conversation response = conversationalSearchServiceClient.CreateConversation(parent, conversation);
         }
     }
-    // [END discoveryengine_v1beta_generated_CompletionService_CompleteQuery_sync]
+    // [END discoveryengine_v1beta_generated_ConversationalSearchService_CreateConversation_sync_flattened]
 }
