@@ -50,6 +50,7 @@ namespace Google.Cloud.AIPlatform.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             PredictSettings = existing.PredictSettings;
             RawPredictSettings = existing.RawPredictSettings;
+            ServerStreamingPredictSettings = existing.ServerStreamingPredictSettings;
             ExplainSettings = existing.ExplainSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
@@ -81,6 +82,19 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings RawPredictSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PredictionServiceClient.ServerStreamingPredict</c> and
+        /// <c>PredictionServiceClient.ServerStreamingPredictAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ServerStreamingPredictSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -810,6 +824,24 @@ namespace Google.Cloud.AIPlatform.V1
             RawPredictAsync(endpoint, httpBody, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Server streaming methods for
+        /// <see cref="ServerStreamingPredict(StreamingPredictRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class ServerStreamingPredictStream : gaxgrpc::ServerStreamingBase<StreamingPredictResponse>
+        {
+        }
+
+        /// <summary>
+        /// Perform a server-side streaming online prediction request for Vertex
+        /// LLM streaming.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ServerStreamingPredictStream ServerStreamingPredict(StreamingPredictRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
         /// Perform an online explanation.
         /// 
         /// If
@@ -1189,6 +1221,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<RawPredictRequest, ga::HttpBody> _callRawPredict;
 
+        private readonly gaxgrpc::ApiServerStreamingCall<StreamingPredictRequest, StreamingPredictResponse> _callServerStreamingPredict;
+
         private readonly gaxgrpc::ApiCall<ExplainRequest, ExplainResponse> _callExplain;
 
         /// <summary>
@@ -1210,6 +1244,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callRawPredict = clientHelper.BuildApiCall<RawPredictRequest, ga::HttpBody>("RawPredict", grpcClient.RawPredictAsync, grpcClient.RawPredict, effectiveSettings.RawPredictSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callRawPredict);
             Modify_RawPredictApiCall(ref _callRawPredict);
+            _callServerStreamingPredict = clientHelper.BuildApiCall<StreamingPredictRequest, StreamingPredictResponse>("ServerStreamingPredict", grpcClient.ServerStreamingPredict, effectiveSettings.ServerStreamingPredictSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
+            Modify_ApiCall(ref _callServerStreamingPredict);
+            Modify_ServerStreamingPredictApiCall(ref _callServerStreamingPredict);
             _callExplain = clientHelper.BuildApiCall<ExplainRequest, ExplainResponse>("Explain", grpcClient.ExplainAsync, grpcClient.Explain, effectiveSettings.ExplainSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callExplain);
             Modify_ExplainApiCall(ref _callExplain);
@@ -1218,9 +1255,13 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiServerStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
         partial void Modify_PredictApiCall(ref gaxgrpc::ApiCall<PredictRequest, PredictResponse> call);
 
         partial void Modify_RawPredictApiCall(ref gaxgrpc::ApiCall<RawPredictRequest, ga::HttpBody> call);
+
+        partial void Modify_ServerStreamingPredictApiCall(ref gaxgrpc::ApiServerStreamingCall<StreamingPredictRequest, StreamingPredictResponse> call);
 
         partial void Modify_ExplainApiCall(ref gaxgrpc::ApiCall<ExplainRequest, ExplainResponse> call);
 
@@ -1238,6 +1279,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_PredictRequest(ref PredictRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RawPredictRequest(ref RawPredictRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StreamingPredictRequest(ref StreamingPredictRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExplainRequest(ref ExplainRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1307,6 +1350,28 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_RawPredictRequest(ref request, ref callSettings);
             return _callRawPredict.Async(request, callSettings);
+        }
+
+        internal sealed partial class ServerStreamingPredictStreamImpl : ServerStreamingPredictStream
+        {
+            /// <summary>Construct the server streaming method for <c>ServerStreamingPredict</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public ServerStreamingPredictStreamImpl(grpccore::AsyncServerStreamingCall<StreamingPredictResponse> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<StreamingPredictResponse> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// Perform a server-side streaming online prediction request for Vertex
+        /// LLM streaming.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override PredictionServiceClient.ServerStreamingPredictStream ServerStreamingPredict(StreamingPredictRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StreamingPredictRequest(ref request, ref callSettings);
+            return new ServerStreamingPredictStreamImpl(_callServerStreamingPredict.Call(request, callSettings));
         }
 
         /// <summary>

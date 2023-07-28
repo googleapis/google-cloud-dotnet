@@ -72,6 +72,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Api.HttpBody> __Marshaller_google_api_HttpBody = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Api.HttpBody.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.StreamingPredictRequest> __Marshaller_google_cloud_aiplatform_v1_StreamingPredictRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.StreamingPredictRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.StreamingPredictResponse> __Marshaller_google_cloud_aiplatform_v1_StreamingPredictResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.StreamingPredictResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ExplainRequest> __Marshaller_google_cloud_aiplatform_v1_ExplainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ExplainRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ExplainResponse> __Marshaller_google_cloud_aiplatform_v1_ExplainResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ExplainResponse.Parser));
@@ -91,6 +95,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "RawPredict",
         __Marshaller_google_cloud_aiplatform_v1_RawPredictRequest,
         __Marshaller_google_api_HttpBody);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.StreamingPredictRequest, global::Google.Cloud.AIPlatform.V1.StreamingPredictResponse> __Method_ServerStreamingPredict = new grpc::Method<global::Google.Cloud.AIPlatform.V1.StreamingPredictRequest, global::Google.Cloud.AIPlatform.V1.StreamingPredictResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "ServerStreamingPredict",
+        __Marshaller_google_cloud_aiplatform_v1_StreamingPredictRequest,
+        __Marshaller_google_cloud_aiplatform_v1_StreamingPredictResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ExplainRequest, global::Google.Cloud.AIPlatform.V1.ExplainResponse> __Method_Explain = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ExplainRequest, global::Google.Cloud.AIPlatform.V1.ExplainResponse>(
@@ -140,6 +152,20 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Api.HttpBody> RawPredict(global::Google.Cloud.AIPlatform.V1.RawPredictRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Perform a server-side streaming online prediction request for Vertex
+      /// LLM streaming.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task ServerStreamingPredict(global::Google.Cloud.AIPlatform.V1.StreamingPredictRequest request, grpc::IServerStreamWriter<global::Google.Cloud.AIPlatform.V1.StreamingPredictResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -332,6 +358,32 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_RawPredict, null, options, request);
       }
       /// <summary>
+      /// Perform a server-side streaming online prediction request for Vertex
+      /// LLM streaming.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.AIPlatform.V1.StreamingPredictResponse> ServerStreamingPredict(global::Google.Cloud.AIPlatform.V1.StreamingPredictRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ServerStreamingPredict(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Perform a server-side streaming online prediction request for Vertex
+      /// LLM streaming.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.AIPlatform.V1.StreamingPredictResponse> ServerStreamingPredict(global::Google.Cloud.AIPlatform.V1.StreamingPredictRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_ServerStreamingPredict, null, options, request);
+      }
+      /// <summary>
       /// Perform an online explanation.
       ///
       /// If
@@ -435,6 +487,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_Predict, serviceImpl.Predict)
           .AddMethod(__Method_RawPredict, serviceImpl.RawPredict)
+          .AddMethod(__Method_ServerStreamingPredict, serviceImpl.ServerStreamingPredict)
           .AddMethod(__Method_Explain, serviceImpl.Explain).Build();
     }
 
@@ -447,6 +500,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     {
       serviceBinder.AddMethod(__Method_Predict, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.PredictRequest, global::Google.Cloud.AIPlatform.V1.PredictResponse>(serviceImpl.Predict));
       serviceBinder.AddMethod(__Method_RawPredict, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.RawPredictRequest, global::Google.Api.HttpBody>(serviceImpl.RawPredict));
+      serviceBinder.AddMethod(__Method_ServerStreamingPredict, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.AIPlatform.V1.StreamingPredictRequest, global::Google.Cloud.AIPlatform.V1.StreamingPredictResponse>(serviceImpl.ServerStreamingPredict));
       serviceBinder.AddMethod(__Method_Explain, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ExplainRequest, global::Google.Cloud.AIPlatform.V1.ExplainResponse>(serviceImpl.Explain));
     }
 
