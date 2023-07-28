@@ -939,8 +939,8 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     ///
     /// The resulting files will be nested deeper than the specified URL prefix.
     /// The final output URL will be provided in the
-    /// [google.datastore.admin.v1.ExportEntitiesResponse.output_url][google.datastore.admin.v1.ExportEntitiesResponse.output_url] field. That
-    /// value should be used for subsequent ImportEntities operations.
+    /// [google.datastore.admin.v1.ExportEntitiesResponse.output_url][google.datastore.admin.v1.ExportEntitiesResponse.output_url]
+    /// field. That value should be used for subsequent ImportEntities operations.
     ///
     /// By nesting the data files deeper, the same Cloud Storage bucket can be used
     /// in multiple ExportEntities operations without conflict.
@@ -1242,8 +1242,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     public const int InputUrlFieldNumber = 3;
     private string inputUrl_ = "";
     /// <summary>
-    /// Required. The full resource URL of the external storage location. Currently, only
-    /// Google Cloud Storage is supported. So input_url should be of the form:
+    /// Required. The full resource URL of the external storage location.
+    /// Currently, only Google Cloud Storage is supported. So input_url should be
+    /// of the form:
     /// `gs://BUCKET_NAME[/NAMESPACE_PATH]/OVERALL_EXPORT_METADATA_FILE`, where
     /// `BUCKET_NAME` is the name of the Cloud Storage bucket, `NAMESPACE_PATH` is
     /// an optional Cloud Storage namespace path (this is not a Cloud Datastore
@@ -2197,7 +2198,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     private string inputUrl_ = "";
     /// <summary>
     /// The location of the import metadata file. This will be the same value as
-    /// the [google.datastore.admin.v1.ExportEntitiesResponse.output_url][google.datastore.admin.v1.ExportEntitiesResponse.output_url] field.
+    /// the
+    /// [google.datastore.admin.v1.ExportEntitiesResponse.output_url][google.datastore.admin.v1.ExportEntitiesResponse.output_url]
+    /// field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3193,7 +3196,8 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   }
 
   /// <summary>
-  /// The request for [google.datastore.admin.v1.DatastoreAdmin.GetIndex][google.datastore.admin.v1.DatastoreAdmin.GetIndex].
+  /// The request for
+  /// [google.datastore.admin.v1.DatastoreAdmin.GetIndex][google.datastore.admin.v1.DatastoreAdmin.GetIndex].
   /// </summary>
   public sealed partial class GetIndexRequest : pb::IMessage<GetIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

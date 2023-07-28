@@ -156,7 +156,8 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     public const int AncestorFieldNumber = 5;
     private global::Google.Cloud.Datastore.Admin.V1.Index.Types.AncestorMode ancestor_ = global::Google.Cloud.Datastore.Admin.V1.Index.Types.AncestorMode.Unspecified;
     /// <summary>
-    /// Required. The index's ancestor mode.  Must not be ANCESTOR_MODE_UNSPECIFIED.
+    /// Required. The index's ancestor mode.  Must not be
+    /// ANCESTOR_MODE_UNSPECIFIED.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -174,6 +175,10 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.Admin.V1.Index.Types.IndexedProperty> properties_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.Admin.V1.Index.Types.IndexedProperty>();
     /// <summary>
     /// Required. An ordered sequence of property names and their index attributes.
+    ///
+    /// Requires:
+    ///
+    /// * A maximum of 100 properties.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -587,7 +592,8 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         public const int DirectionFieldNumber = 2;
         private global::Google.Cloud.Datastore.Admin.V1.Index.Types.Direction direction_ = global::Google.Cloud.Datastore.Admin.V1.Index.Types.Direction.Unspecified;
         /// <summary>
-        /// Required. The indexed property's direction.  Must not be DIRECTION_UNSPECIFIED.
+        /// Required. The indexed property's direction.  Must not be
+        /// DIRECTION_UNSPECIFIED.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
