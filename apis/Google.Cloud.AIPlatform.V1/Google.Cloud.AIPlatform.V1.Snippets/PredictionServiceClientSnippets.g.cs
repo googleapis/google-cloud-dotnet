@@ -19,6 +19,7 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Api;
+    using Google.Api.Gax.Grpc;
     using Google.Cloud.AIPlatform.V1;
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -216,6 +217,34 @@ namespace GoogleCSharpSnippets
             HttpBody httpBody = new HttpBody();
             // Make the request
             HttpBody response = await predictionServiceClient.RawPredictAsync(endpoint, httpBody);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ServerStreamingPredict</summary>
+        public async Task ServerStreamingPredictRequestObject()
+        {
+            // Snippet: ServerStreamingPredict(StreamingPredictRequest, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            StreamingPredictRequest request = new StreamingPredictRequest
+            {
+                EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+                Inputs = { new Tensor(), },
+                Parameters = new Tensor(),
+            };
+            // Make the request, returning a streaming response
+            using PredictionServiceClient.ServerStreamingPredictStream response = predictionServiceClient.ServerStreamingPredict(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<StreamingPredictResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                StreamingPredictResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
             // End snippet
         }
 

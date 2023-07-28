@@ -47765,6 +47765,54 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_PredictionService_ServerStreamingPredict_sync",
+      "title": "ServerStreamingPredictRequestObject",
+      "description": "Snippet for ServerStreamingPredict",
+      "file": "PredictionServiceClient.ServerStreamingPredictRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ServerStreamingPredict",
+        "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient.ServerStreamingPredict",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.StreamingPredictRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.PredictionServiceClient+ServerStreamingPredictStream",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "ServerStreamingPredict",
+          "fullName": "google.cloud.aiplatform.v1.PredictionService.ServerStreamingPredict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.aiplatform.v1.PredictionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_PredictionService_Explain_sync",
       "title": "ExplainRequestObject",
       "description": "Snippet for Explain",
