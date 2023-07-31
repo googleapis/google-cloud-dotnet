@@ -1860,7 +1860,7 @@
         "Grpc.Core": "2.46.6"
       },
       "testDependencies": {
-        "Microsoft.AspNetCore.Mvc.Core": "2.1.16"
+        "Microsoft.AspNetCore.Mvc.Core": "2.1.38"
       },
       "shortName": "dialogflow",
       "serviceConfigFile": "dialogflow_v2.yaml",
