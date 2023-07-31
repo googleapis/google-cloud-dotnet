@@ -1139,6 +1139,7 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 TriggerId = "",
                 Trigger = new BuildTrigger(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             BuildTrigger response = cloudBuildClient.UpdateBuildTrigger(request);
@@ -1158,6 +1159,7 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 TriggerId = "",
                 Trigger = new BuildTrigger(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             BuildTrigger response = await cloudBuildClient.UpdateBuildTriggerAsync(request);

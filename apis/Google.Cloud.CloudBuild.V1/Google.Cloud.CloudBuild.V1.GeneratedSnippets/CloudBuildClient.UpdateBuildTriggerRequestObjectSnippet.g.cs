@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START cloudbuild_v1_generated_CloudBuild_UpdateBuildTrigger_sync]
     using Google.Cloud.CloudBuild.V1;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedCloudBuildClientSnippets
     {
@@ -39,6 +40,7 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 TriggerId = "",
                 Trigger = new BuildTrigger(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             BuildTrigger response = cloudBuildClient.UpdateBuildTrigger(request);

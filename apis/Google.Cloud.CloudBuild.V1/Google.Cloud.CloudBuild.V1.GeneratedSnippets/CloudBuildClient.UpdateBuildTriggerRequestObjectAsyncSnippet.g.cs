@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START cloudbuild_v1_generated_CloudBuild_UpdateBuildTrigger_async]
     using Google.Cloud.CloudBuild.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudBuildClientSnippets
@@ -40,6 +41,7 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 TriggerId = "",
                 Trigger = new BuildTrigger(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             BuildTrigger response = await cloudBuildClient.UpdateBuildTriggerAsync(request);
