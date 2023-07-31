@@ -75,7 +75,7 @@ namespace Google.Cloud.Batch.V1 {
             "bG91ZC5iYXRjaC52MS5Kb2JTdGF0dXMuU3RhdGUSPwoObmV3X3Rhc2tfc3Rh",
             "dGUYAyABKA4yJy5nb29nbGUuY2xvdWQuYmF0Y2gudjEuVGFza1N0YXR1cy5T",
             "dGF0ZSJLCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIVChFKT0JfU1RB",
-            "VEVfQ0hBTkdFRBABEhYKElRBU0tfU1RBVEVfQ0hBTkdFRBACIvINChBBbGxv",
+            "VEVfQ0hBTkdFRBABEhYKElRBU0tfU1RBVEVfQ0hBTkdFRBACIo8OChBBbGxv",
             "Y2F0aW9uUG9saWN5EkgKCGxvY2F0aW9uGAEgASgLMjYuZ29vZ2xlLmNsb3Vk",
             "LmJhdGNoLnYxLkFsbG9jYXRpb25Qb2xpY3kuTG9jYXRpb25Qb2xpY3kSUwoJ",
             "aW5zdGFuY2VzGAggAygLMkAuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxLkFsbG9j",
@@ -92,47 +92,48 @@ namespace Google.Cloud.Batch.V1 {
             "ZXJmYWNlGAYgASgJQg0KC2RhdGFfc291cmNlGooBCgxBdHRhY2hlZERpc2sS",
             "QAoIbmV3X2Rpc2sYASABKAsyLC5nb29nbGUuY2xvdWQuYmF0Y2gudjEuQWxs",
             "b2NhdGlvblBvbGljeS5EaXNrSAASFwoNZXhpc3RpbmdfZGlzaxgCIAEoCUgA",
-            "EhMKC2RldmljZV9uYW1lGAMgASgJQgoKCGF0dGFjaGVkGksKC0FjY2VsZXJh",
+            "EhMKC2RldmljZV9uYW1lGAMgASgJQgoKCGF0dGFjaGVkGmgKC0FjY2VsZXJh",
             "dG9yEgwKBHR5cGUYASABKAkSDQoFY291bnQYAiABKAMSHwoTaW5zdGFsbF9n",
-            "cHVfZHJpdmVycxgDIAEoCEICGAEa6AIKDkluc3RhbmNlUG9saWN5EhQKDG1h",
-            "Y2hpbmVfdHlwZRgCIAEoCRIYChBtaW5fY3B1X3BsYXRmb3JtGAMgASgJElUK",
-            "EnByb3Zpc2lvbmluZ19tb2RlbBgEIAEoDjI5Lmdvb2dsZS5jbG91ZC5iYXRj",
-            "aC52MS5BbGxvY2F0aW9uUG9saWN5LlByb3Zpc2lvbmluZ01vZGVsEkkKDGFj",
-            "Y2VsZXJhdG9ycxgFIAMoCzIzLmdvb2dsZS5jbG91ZC5iYXRjaC52MS5BbGxv",
-            "Y2F0aW9uUG9saWN5LkFjY2VsZXJhdG9yEj8KCWJvb3RfZGlzaxgIIAEoCzIs",
-            "Lmdvb2dsZS5jbG91ZC5iYXRjaC52MS5BbGxvY2F0aW9uUG9saWN5LkRpc2sS",
-            "QwoFZGlza3MYBiADKAsyNC5nb29nbGUuY2xvdWQuYmF0Y2gudjEuQWxsb2Nh",
-            "dGlvblBvbGljeS5BdHRhY2hlZERpc2sasQEKGEluc3RhbmNlUG9saWN5T3JU",
-            "ZW1wbGF0ZRJICgZwb2xpY3kYASABKAsyNi5nb29nbGUuY2xvdWQuYmF0Y2gu",
-            "djEuQWxsb2NhdGlvblBvbGljeS5JbnN0YW5jZVBvbGljeUgAEhsKEWluc3Rh",
-            "bmNlX3RlbXBsYXRlGAIgASgJSAASGwoTaW5zdGFsbF9ncHVfZHJpdmVycxgD",
-            "IAEoCEIRCg9wb2xpY3lfdGVtcGxhdGUaVwoQTmV0d29ya0ludGVyZmFjZRIP",
-            "CgduZXR3b3JrGAEgASgJEhIKCnN1Ym5ldHdvcmsYAiABKAkSHgoWbm9fZXh0",
-            "ZXJuYWxfaXBfYWRkcmVzcxgDIAEoCBplCg1OZXR3b3JrUG9saWN5ElQKEm5l",
-            "dHdvcmtfaW50ZXJmYWNlcxgBIAMoCzI4Lmdvb2dsZS5jbG91ZC5iYXRjaC52",
-            "MS5BbGxvY2F0aW9uUG9saWN5Lk5ldHdvcmtJbnRlcmZhY2UaPAoPUGxhY2Vt",
-            "ZW50UG9saWN5EhMKC2NvbGxvY2F0aW9uGAEgASgJEhQKDG1heF9kaXN0YW5j",
-            "ZRgCIAEoAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAk6AjgBImAKEVByb3Zpc2lvbmluZ01vZGVsEiIKHlBST1ZJU0lPTklO",
-            "R19NT0RFTF9VTlNQRUNJRklFRBAAEgwKCFNUQU5EQVJEEAESCAoEU1BPVBAC",
-            "Eg8KC1BSRUVNUFRJQkxFEAMirQQKCVRhc2tHcm91cBIRCgRuYW1lGAEgASgJ",
-            "QgPgQQMSNwoJdGFza19zcGVjGAMgASgLMh8uZ29vZ2xlLmNsb3VkLmJhdGNo",
-            "LnYxLlRhc2tTcGVjQgPgQQISEgoKdGFza19jb3VudBgEIAEoAxITCgtwYXJh",
-            "bGxlbGlzbRgFIAEoAxJMChFzY2hlZHVsaW5nX3BvbGljeRgGIAEoDjIxLmdv",
-            "b2dsZS5jbG91ZC5iYXRjaC52MS5UYXNrR3JvdXAuU2NoZWR1bGluZ1BvbGlj",
-            "eRI9ChF0YXNrX2Vudmlyb25tZW50cxgJIAMoCzIiLmdvb2dsZS5jbG91ZC5i",
-            "YXRjaC52MS5FbnZpcm9ubWVudBIbChN0YXNrX2NvdW50X3Blcl9ub2RlGAog",
-            "ASgDEhoKEnJlcXVpcmVfaG9zdHNfZmlsZRgLIAEoCBIWCg5wZXJtaXNzaXZl",
-            "X3NzaBgMIAEoCCJcChBTY2hlZHVsaW5nUG9saWN5EiEKHVNDSEVEVUxJTkdf",
-            "UE9MSUNZX1VOU1BFQ0lGSUVEEAASFwoTQVNfU09PTl9BU19QT1NTSUJMRRAB",
-            "EgwKCElOX09SREVSEAI6b+pBbAoeYmF0Y2guZ29vZ2xlYXBpcy5jb20vVGFz",
-            "a0dyb3VwEkpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vam9icy97am9ifS90YXNrR3JvdXBzL3t0YXNrX2dyb3VwfSIvCg5TZXJ2",
-            "aWNlQWNjb3VudBINCgVlbWFpbBgBIAEoCRIOCgZzY29wZXMYAiADKAlCqQEK",
-            "GWNvbS5nb29nbGUuY2xvdWQuYmF0Y2gudjFCCEpvYlByb3RvUAFaL2Nsb3Vk",
-            "Lmdvb2dsZS5jb20vZ28vYmF0Y2gvYXBpdjEvYmF0Y2hwYjtiYXRjaHBiogID",
-            "R0NCqgIVR29vZ2xlLkNsb3VkLkJhdGNoLlYxygIVR29vZ2xlXENsb3VkXEJh",
-            "dGNoXFYx6gIYR29vZ2xlOjpDbG91ZDo6QmF0Y2g6OlYxYgZwcm90bzM="));
+            "cHVfZHJpdmVycxgDIAEoCEICGAESGwoOZHJpdmVyX3ZlcnNpb24YBCABKAlC",
+            "A+BBARroAgoOSW5zdGFuY2VQb2xpY3kSFAoMbWFjaGluZV90eXBlGAIgASgJ",
+            "EhgKEG1pbl9jcHVfcGxhdGZvcm0YAyABKAkSVQoScHJvdmlzaW9uaW5nX21v",
+            "ZGVsGAQgASgOMjkuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxLkFsbG9jYXRpb25Q",
+            "b2xpY3kuUHJvdmlzaW9uaW5nTW9kZWwSSQoMYWNjZWxlcmF0b3JzGAUgAygL",
+            "MjMuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxLkFsbG9jYXRpb25Qb2xpY3kuQWNj",
+            "ZWxlcmF0b3ISPwoJYm9vdF9kaXNrGAggASgLMiwuZ29vZ2xlLmNsb3VkLmJh",
+            "dGNoLnYxLkFsbG9jYXRpb25Qb2xpY3kuRGlzaxJDCgVkaXNrcxgGIAMoCzI0",
+            "Lmdvb2dsZS5jbG91ZC5iYXRjaC52MS5BbGxvY2F0aW9uUG9saWN5LkF0dGFj",
+            "aGVkRGlzaxqxAQoYSW5zdGFuY2VQb2xpY3lPclRlbXBsYXRlEkgKBnBvbGlj",
+            "eRgBIAEoCzI2Lmdvb2dsZS5jbG91ZC5iYXRjaC52MS5BbGxvY2F0aW9uUG9s",
+            "aWN5Lkluc3RhbmNlUG9saWN5SAASGwoRaW5zdGFuY2VfdGVtcGxhdGUYAiAB",
+            "KAlIABIbChNpbnN0YWxsX2dwdV9kcml2ZXJzGAMgASgIQhEKD3BvbGljeV90",
+            "ZW1wbGF0ZRpXChBOZXR3b3JrSW50ZXJmYWNlEg8KB25ldHdvcmsYASABKAkS",
+            "EgoKc3VibmV0d29yaxgCIAEoCRIeChZub19leHRlcm5hbF9pcF9hZGRyZXNz",
+            "GAMgASgIGmUKDU5ldHdvcmtQb2xpY3kSVAoSbmV0d29ya19pbnRlcmZhY2Vz",
+            "GAEgAygLMjguZ29vZ2xlLmNsb3VkLmJhdGNoLnYxLkFsbG9jYXRpb25Qb2xp",
+            "Y3kuTmV0d29ya0ludGVyZmFjZRo8Cg9QbGFjZW1lbnRQb2xpY3kSEwoLY29s",
+            "bG9jYXRpb24YASABKAkSFAoMbWF4X2Rpc3RhbmNlGAIgASgDGi0KC0xhYmVs",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiYAoRUHJv",
+            "dmlzaW9uaW5nTW9kZWwSIgoeUFJPVklTSU9OSU5HX01PREVMX1VOU1BFQ0lG",
+            "SUVEEAASDAoIU1RBTkRBUkQQARIICgRTUE9UEAISDwoLUFJFRU1QVElCTEUQ",
+            "AyKtBAoJVGFza0dyb3VwEhEKBG5hbWUYASABKAlCA+BBAxI3Cgl0YXNrX3Nw",
+            "ZWMYAyABKAsyHy5nb29nbGUuY2xvdWQuYmF0Y2gudjEuVGFza1NwZWNCA+BB",
+            "AhISCgp0YXNrX2NvdW50GAQgASgDEhMKC3BhcmFsbGVsaXNtGAUgASgDEkwK",
+            "EXNjaGVkdWxpbmdfcG9saWN5GAYgASgOMjEuZ29vZ2xlLmNsb3VkLmJhdGNo",
+            "LnYxLlRhc2tHcm91cC5TY2hlZHVsaW5nUG9saWN5Ej0KEXRhc2tfZW52aXJv",
+            "bm1lbnRzGAkgAygLMiIuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxLkVudmlyb25t",
+            "ZW50EhsKE3Rhc2tfY291bnRfcGVyX25vZGUYCiABKAMSGgoScmVxdWlyZV9o",
+            "b3N0c19maWxlGAsgASgIEhYKDnBlcm1pc3NpdmVfc3NoGAwgASgIIlwKEFNj",
+            "aGVkdWxpbmdQb2xpY3kSIQodU0NIRURVTElOR19QT0xJQ1lfVU5TUEVDSUZJ",
+            "RUQQABIXChNBU19TT09OX0FTX1BPU1NJQkxFEAESDAoISU5fT1JERVIQAjpv",
+            "6kFsCh5iYXRjaC5nb29nbGVhcGlzLmNvbS9UYXNrR3JvdXASSnByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9qb2JzL3tqb2J9L3Rh",
+            "c2tHcm91cHMve3Rhc2tfZ3JvdXB9Ii8KDlNlcnZpY2VBY2NvdW50Eg0KBWVt",
+            "YWlsGAEgASgJEg4KBnNjb3BlcxgCIAMoCUKpAQoZY29tLmdvb2dsZS5jbG91",
+            "ZC5iYXRjaC52MUIISm9iUHJvdG9QAVovY2xvdWQuZ29vZ2xlLmNvbS9nby9i",
+            "YXRjaC9hcGl2MS9iYXRjaHBiO2JhdGNocGKiAgNHQ0KqAhVHb29nbGUuQ2xv",
+            "dWQuQmF0Y2guVjHKAhVHb29nbGVcQ2xvdWRcQmF0Y2hcVjHqAhhHb29nbGU6",
+            "OkNsb3VkOjpCYXRjaDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1.TaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -145,7 +146,7 @@ namespace Google.Cloud.Batch.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy), global::Google.Cloud.Batch.V1.AllocationPolicy.Parser, new[]{ "Location", "Instances", "ServiceAccount", "Labels", "Network", "Placement" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.ProvisioningModel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.LocationPolicy), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.LocationPolicy.Parser, new[]{ "AllowedLocations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.Disk), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.Disk.Parser, new[]{ "Image", "Snapshot", "Type", "SizeGb", "DiskInterface" }, new[]{ "DataSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.AttachedDisk), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.AttachedDisk.Parser, new[]{ "NewDisk", "ExistingDisk", "DeviceName" }, new[]{ "Attached" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.Accelerator), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.Accelerator.Parser, new[]{ "Type", "Count", "InstallGpuDrivers" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.Accelerator), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.Accelerator.Parser, new[]{ "Type", "Count", "InstallGpuDrivers", "DriverVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.InstancePolicy), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.InstancePolicy.Parser, new[]{ "MachineType", "MinCpuPlatform", "ProvisioningModel", "Accelerators", "BootDisk", "Disks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.InstancePolicyOrTemplate), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.InstancePolicyOrTemplate.Parser, new[]{ "Policy", "InstanceTemplate", "InstallGpuDrivers" }, new[]{ "PolicyTemplate" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1.AllocationPolicy.Types.NetworkInterface), global::Google.Cloud.Batch.V1.AllocationPolicy.Types.NetworkInterface.Parser, new[]{ "Network", "Subnetwork", "NoExternalIpAddress" }, null, null, null, null),
@@ -3189,21 +3190,24 @@ namespace Google.Cloud.Batch.V1 {
         /// <summary>Field number for the "image" field.</summary>
         public const int ImageFieldNumber = 4;
         /// <summary>
-        /// Name of a public or custom image used as the data source.
+        /// Name of an image used as the data source.
         /// For example, the following are all valid URLs:
         ///
         /// * Specify the image by its family name:
-        /// projects/{project}/global/images/family/{image_family}
+        /// &lt;pre>&lt;code>projects/&lt;var
+        /// class="apiparam">project&lt;/var>/global/images/family/&lt;var
+        /// class="apiparam">image_family&lt;/var>&lt;/code>&lt;/pre>
         /// * Specify the image version:
-        /// projects/{project}/global/images/{image_version}
-        ///
+        /// &lt;pre>projects/&lt;var
+        /// class="apiparam">project&lt;/var>/global/images/&lt;var
+        /// class="apiparam">image_version&lt;/var>&lt;/code>&lt;/pre>
         /// You can also use Batch customized image in short names.
         /// The following image values are supported for a boot disk:
         ///
-        /// * "batch-debian": use Batch Debian images.
-        /// * "batch-centos": use Batch CentOS images.
-        /// * "batch-cos": use Batch Container-Optimized images.
-        /// * "batch-hpc-centos": use Batch HPC CentOS images.
+        /// * `batch-debian`: use Batch Debian images.
+        /// * `batch-centos`: use Batch CentOS images.
+        /// * `batch-cos`: use Batch Container-Optimized images.
+        /// * `batch-hpc-centos`: use Batch HPC CentOS images.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3949,6 +3953,7 @@ namespace Google.Cloud.Batch.V1 {
           type_ = other.type_;
           count_ = other.count_;
           installGpuDrivers_ = other.installGpuDrivers_;
+          driverVersion_ = other.driverVersion_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4005,6 +4010,27 @@ namespace Google.Cloud.Batch.V1 {
           }
         }
 
+        /// <summary>Field number for the "driver_version" field.</summary>
+        public const int DriverVersionFieldNumber = 4;
+        private string driverVersion_ = "";
+        /// <summary>
+        /// Optional. The NVIDIA GPU driver version that should be installed for this
+        /// type.
+        ///
+        /// You can define the specific driver version such as "470.103.01",
+        /// following the driver version requirements in
+        /// https://cloud.google.com/compute/docs/gpus/install-drivers-gpu#minimum-driver.
+        /// Batch will install the specific accelerator driver if qualified.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string DriverVersion {
+          get { return driverVersion_; }
+          set {
+            driverVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -4023,6 +4049,7 @@ namespace Google.Cloud.Batch.V1 {
           if (Type != other.Type) return false;
           if (Count != other.Count) return false;
           if (InstallGpuDrivers != other.InstallGpuDrivers) return false;
+          if (DriverVersion != other.DriverVersion) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4033,6 +4060,7 @@ namespace Google.Cloud.Batch.V1 {
           if (Type.Length != 0) hash ^= Type.GetHashCode();
           if (Count != 0L) hash ^= Count.GetHashCode();
           if (InstallGpuDrivers != false) hash ^= InstallGpuDrivers.GetHashCode();
+          if (DriverVersion.Length != 0) hash ^= DriverVersion.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4063,6 +4091,10 @@ namespace Google.Cloud.Batch.V1 {
             output.WriteRawTag(24);
             output.WriteBool(InstallGpuDrivers);
           }
+          if (DriverVersion.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(DriverVersion);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4085,6 +4117,10 @@ namespace Google.Cloud.Batch.V1 {
             output.WriteRawTag(24);
             output.WriteBool(InstallGpuDrivers);
           }
+          if (DriverVersion.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(DriverVersion);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4103,6 +4139,9 @@ namespace Google.Cloud.Batch.V1 {
           }
           if (InstallGpuDrivers != false) {
             size += 1 + 1;
+          }
+          if (DriverVersion.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DriverVersion);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -4124,6 +4163,9 @@ namespace Google.Cloud.Batch.V1 {
           }
           if (other.InstallGpuDrivers != false) {
             InstallGpuDrivers = other.InstallGpuDrivers;
+          }
+          if (other.DriverVersion.Length != 0) {
+            DriverVersion = other.DriverVersion;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -4152,6 +4194,10 @@ namespace Google.Cloud.Batch.V1 {
                 InstallGpuDrivers = input.ReadBool();
                 break;
               }
+              case 34: {
+                DriverVersion = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -4177,6 +4223,10 @@ namespace Google.Cloud.Batch.V1 {
               }
               case 24: {
                 InstallGpuDrivers = input.ReadBool();
+                break;
+              }
+              case 34: {
+                DriverVersion = input.ReadString();
                 break;
               }
             }
@@ -4684,6 +4734,12 @@ namespace Google.Cloud.Batch.V1 {
         /// third party location and install them for GPUs specified in
         /// policy.accelerators or instance_template on their behalf. Default is
         /// false.
+        ///
+        /// For Container-Optimized Image cases, Batch will install the
+        /// accelerator driver following milestones of
+        /// https://cloud.google.com/container-optimized-os/docs/release-notes. For
+        /// non Container-Optimized Image cases, following
+        /// https://github.com/GoogleCloudPlatform/compute-gpu-installation/blob/main/linux/install_gpu_driver.py.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4971,10 +5027,14 @@ namespace Google.Cloud.Batch.V1 {
         /// You can specify the network as a full or partial URL.
         ///
         /// For example, the following are all valid URLs:
-        ///
-        /// * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
-        /// * projects/{project}/global/networks/{network}
-        /// * global/networks/{network}
+        /// &lt;pre>&lt;code>https://www.googleapis.com/compute/v1/projects/&lt;var
+        /// class="apiparam">project&lt;/var>/global/networks/&lt;var
+        /// class="apiparam">network&lt;/var>&lt;/code>&lt;/pre>
+        /// &lt;pre>&lt;code>projects/&lt;var
+        /// class="apiparam">project&lt;/var>/global/networks/&lt;var
+        /// class="apiparam">network&lt;/var>&lt;/code>&lt;/pre>
+        /// &lt;pre>&lt;code>global/networks/&lt;var
+        /// class="apiparam">network&lt;/var>&lt;/code>&lt;/pre>
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4993,10 +5053,16 @@ namespace Google.Cloud.Batch.V1 {
         /// You can specify the subnetwork as a full or partial URL.
         ///
         /// For example, the following are all valid URLs:
-        ///
-        /// * https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetwork}
-        /// * projects/{project}/regions/{region}/subnetworks/{subnetwork}
-        /// * regions/{region}/subnetworks/{subnetwork}
+        /// &lt;pre>&lt;code>https://www.googleapis.com/compute/v1/projects/&lt;var
+        /// class="apiparam">project&lt;/var>/regions/&lt;var
+        /// class="apiparam">region&lt;/var>/subnetworks/&lt;var
+        /// class="apiparam">subnetwork&lt;/var>&lt;/code>&lt;/pre>
+        /// &lt;pre>&lt;code>projects/&lt;var class="apiparam">project&lt;/var>/regions/&lt;var
+        /// class="apiparam">region&lt;/var>/subnetworks/&lt;var
+        /// class="apiparam">subnetwork&lt;/var>&lt;/code>&lt;/pre>
+        /// &lt;pre>&lt;code>regions/&lt;var
+        /// class="apiparam">region&lt;/var>/subnetworks/&lt;var
+        /// class="apiparam">subnetwork&lt;/var>&lt;/code>&lt;/pre>
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

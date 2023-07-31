@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
             {
                 Parent = "",
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<gcbv::ListJobsResponse, gcbv::Job> response = batchServiceClient.ListJobsAsync(request);
