@@ -327,12 +327,12 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Required. The input specification. It can be set to:
     ///
-    /// 1.  an audio config
-    ///     which instructs the speech recognizer how to process the speech audio,
+    /// 1. an audio config which instructs the speech recognizer how to process
+    /// the speech audio,
     ///
-    /// 2.  a conversational query in the form of text, or
+    /// 2. a conversational query in the form of text, or
     ///
-    /// 3.  an event that specifies which intent to trigger.
+    /// 3. an event that specifies which intent to trigger.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1673,12 +1673,12 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// <summary>
   /// Represents the query input. It can contain either:
   ///
-  /// 1.  An audio config which
-  ///     instructs the speech recognizer how to process the speech audio.
+  /// 1. An audio config which instructs the speech recognizer how to process the
+  /// speech audio.
   ///
-  /// 2.  A conversational query in the form of text.
+  /// 2. A conversational query in the form of text.
   ///
-  /// 3.  An event that specifies which intent to trigger.
+  /// 3. An event that specifies which intent to trigger.
   /// </summary>
   public sealed partial class QueryInput : pb::IMessage<QueryInput>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2235,16 +2235,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// map, associative array, symbol table, dictionary, or JSON object
     /// composed of a collection of (MapKey, MapValue) pairs:
     ///
-    /// -   MapKey type: string
-    /// -   MapKey value: parameter name
-    /// -   MapValue type:
-    ///     -   If parameter's entity type is a composite entity: map
-    ///     -   Else: depending on parameter value type, could be one of string,
-    ///         number, boolean, null, list or map
-    /// -   MapValue value:
-    ///     -   If parameter's entity type is a composite entity:
-    ///         map from composite entity property names to property values
-    ///     -   Else: parameter value
+    /// * MapKey type: string
+    /// * MapKey value: parameter name
+    /// * MapValue type: If parameter's entity type is a composite entity then use
+    /// map, otherwise, depending on the parameter value type, it could be one of
+    /// string, number, boolean, null, list or map.
+    /// * MapValue value: If parameter's entity type is a composite entity then use
+    /// map from composite entity property names to property values, otherwise,
+    /// use parameter value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3754,12 +3752,12 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Required. The input specification. It can be set to:
     ///
-    /// 1.  an audio config which instructs the speech recognizer how to process
-    ///     the speech audio,
+    /// 1. an audio config which instructs the speech recognizer how to process
+    /// the speech audio,
     ///
-    /// 2.  a conversational query in the form of text, or
+    /// 2. a conversational query in the form of text, or
     ///
-    /// 3.  an event that specifies which intent to trigger.
+    /// 3. an event that specifies which intent to trigger.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6541,16 +6539,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// map, associative array, symbol table, dictionary, or JSON object
     /// composed of a collection of (MapKey, MapValue) pairs:
     ///
-    /// -   MapKey type: string
-    /// -   MapKey value: parameter name
-    /// -   MapValue type:
-    ///     -   If parameter's entity type is a composite entity: map
-    ///     -   Else: depending on parameter value type, could be one of string,
-    ///         number, boolean, null, list or map
-    /// -   MapValue value:
-    ///     -   If parameter's entity type is a composite entity:
-    ///         map from composite entity property names to property values
-    ///     -   Else: parameter value
+    /// * MapKey type: string
+    /// * MapKey value: parameter name
+    /// * MapValue type: If parameter's entity type is a composite entity then use
+    /// map, otherwise, depending on the parameter value type, it could be one of
+    /// string, number, boolean, null, list or map.
+    /// * MapValue value: If parameter's entity type is a composite entity then use
+    /// map from composite entity property names to property values, otherwise,
+    /// use parameter value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

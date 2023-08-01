@@ -974,6 +974,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   ///
   /// The flow goes like below:
   ///
+  /// ```
   /// --> Time
   ///
   /// without speech detection  | utterance only | utterance or no-speech event
@@ -981,6 +982,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   ///           +-------------+ | +------------+ | +---------------+
   /// ----------+ no barge-in +-|-+  barge-in  +-|-+ normal period +-----------
   ///           +-------------+ | +------------+ | +---------------+
+  /// ```
   ///
   /// No-speech event is a response with END_OF_UTTERANCE without any transcript
   /// following up.
@@ -1379,9 +1381,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
     /// for more details.
     ///
-    /// This field is deprecated. Please use [speech_contexts]() instead. If you
-    /// specify both [phrase_hints]() and [speech_contexts](), Dialogflow will
-    /// treat the [phrase_hints]() as a single additional [SpeechContext]().
+    /// This field is deprecated. Please use [`speech_contexts`]() instead. If you
+    /// specify both [`phrase_hints`]() and [`speech_contexts`](), Dialogflow will
+    /// treat the [`phrase_hints`]() as a single additional [`SpeechContext`]().
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
