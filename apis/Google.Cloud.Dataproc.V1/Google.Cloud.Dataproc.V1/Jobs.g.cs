@@ -327,7 +327,9 @@ namespace Google.Cloud.Dataproc.V1 {
     /// The per-package log levels for the driver. This may include
     /// "root" package name to configure rootLogger.
     /// Examples:
-    ///   'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+    /// - 'com.google = FATAL'
+    /// - 'root = INFO'
+    /// - 'org.apache = DEBUG'
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -710,7 +712,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure Hadoop.
     /// Properties that conflict with values set by the Dataproc API may be
-    /// overwritten. Can include properties set in /etc/hadoop/conf/*-site and
+    /// overwritten. Can include properties set in `/etc/hadoop/conf/*-site` and
     /// classes in user code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2294,7 +2296,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>
     /// Optional. A mapping of property names and values, used to configure Hive.
     /// Properties that conflict with values set by the Dataproc API may be
-    /// overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml,
+    /// overwritten. Can include properties set in `/etc/hadoop/conf/*-site.xml`,
     /// /etc/hive/conf/hive-site.xml, and classes in user code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3161,7 +3163,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>
     /// Optional. A mapping of property names to values, used to configure Pig.
     /// Properties that conflict with values set by the Dataproc API may be
-    /// overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml,
+    /// overwritten. Can include properties set in `/etc/hadoop/conf/*-site.xml`,
     /// /etc/pig/conf/pig.properties, and classes in user code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
