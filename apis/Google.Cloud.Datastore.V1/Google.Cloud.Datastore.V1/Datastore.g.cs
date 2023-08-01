@@ -6058,9 +6058,12 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "read_time" field.</summary>
     public const int ReadTimeFieldNumber = 4;
     /// <summary>
-    /// Reads entities as they were at the given time. This may not be older
-    /// than 270 seconds.  This value is only supported for Cloud Firestore in
-    /// Datastore mode.
+    /// Reads entities as they were at the given time. This value is only
+    /// supported for Cloud Firestore in Datastore mode.
+    ///
+    /// This must be a microsecond precision timestamp within the past one hour,
+    /// or if Point-in-Time Recovery is enabled, can additionally be a whole
+    /// minute timestamp within the past 7 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6909,7 +6912,10 @@ namespace Google.Cloud.Datastore.V1 {
         private global::Google.Protobuf.WellKnownTypes.Timestamp readTime_;
         /// <summary>
         /// Reads entities at the given time.
-        /// This may not be older than 60 seconds.
+        ///
+        /// This must be a microsecond precision timestamp within the past one hour,
+        /// or if Point-in-Time Recovery is enabled, can additionally be a whole
+        /// minute timestamp within the past 7 days.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
