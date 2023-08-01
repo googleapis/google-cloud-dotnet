@@ -403,7 +403,10 @@ namespace Google.Cloud.Firestore.V1 {
     public const int ReadTimeFieldNumber = 5;
     /// <summary>
     /// Reads the version of the document at the given time.
-    /// This may not be older than 270 seconds.
+    ///
+    /// This must be a microsecond precision timestamp within the past one hour,
+    /// or if Point-in-Time Recovery is enabled, can additionally be a whole
+    /// minute timestamp within the past 7 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -881,7 +884,9 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>
     /// Perform the read at the provided time.
     ///
-    /// This may not be older than 270 seconds.
+    /// This must be a microsecond precision timestamp within the past one hour,
+    /// or if Point-in-Time Recovery is enabled, can additionally be a whole
+    /// minute timestamp within the past 7 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2672,7 +2677,10 @@ namespace Google.Cloud.Firestore.V1 {
     public const int ReadTimeFieldNumber = 7;
     /// <summary>
     /// Reads documents as they were at the given time.
-    /// This may not be older than 270 seconds.
+    ///
+    /// This must be a microsecond precision timestamp within the past one hour,
+    /// or if Point-in-Time Recovery is enabled, can additionally be a whole
+    /// minute timestamp within the past 7 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4717,7 +4725,10 @@ namespace Google.Cloud.Firestore.V1 {
     public const int ReadTimeFieldNumber = 7;
     /// <summary>
     /// Reads documents as they were at the given time.
-    /// This may not be older than 270 seconds.
+    ///
+    /// This must be a microsecond precision timestamp within the past one hour,
+    /// or if Point-in-Time Recovery is enabled, can additionally be a whole
+    /// minute timestamp within the past 7 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5634,9 +5645,9 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>
     /// Executes the query at the given timestamp.
     ///
-    /// Requires:
-    ///
-    /// * Cannot be more than 270 seconds in the past.
+    /// This must be a microsecond precision timestamp within the past one hour,
+    /// or if Point-in-Time Recovery is enabled, can additionally be a whole
+    /// minute timestamp within the past 7 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6447,7 +6458,10 @@ namespace Google.Cloud.Firestore.V1 {
     public const int ReadTimeFieldNumber = 6;
     /// <summary>
     /// Reads documents as they were at the given time.
-    /// This may not be older than 270 seconds.
+    ///
+    /// This must be a microsecond precision timestamp within the past one hour,
+    /// or if Point-in-Time Recovery is enabled, can additionally be a whole
+    /// minute timestamp within the past 7 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10133,7 +10147,10 @@ namespace Google.Cloud.Firestore.V1 {
     public const int ReadTimeFieldNumber = 4;
     /// <summary>
     /// Reads documents as they were at the given time.
-    /// This may not be older than 270 seconds.
+    ///
+    /// This must be a microsecond precision timestamp within the past one hour,
+    /// or if Point-in-Time Recovery is enabled, can additionally be a whole
+    /// minute timestamp within the past 7 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

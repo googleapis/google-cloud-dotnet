@@ -841,6 +841,9 @@ namespace Google.Cloud.Firestore.V1 {
     public static partial class Types {
       /// <summary>
       /// Options for a transaction that can be used to read and write documents.
+      ///
+      /// Firestore does not allow 3rd party auth requests to create read-write.
+      /// transactions.
       /// </summary>
       public sealed partial class ReadWrite : pb::IMessage<ReadWrite>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1090,7 +1093,10 @@ namespace Google.Cloud.Firestore.V1 {
         public const int ReadTimeFieldNumber = 2;
         /// <summary>
         /// Reads documents at the given time.
-        /// This may not be older than 60 seconds.
+        ///
+        /// This must be a microsecond precision timestamp within the past one
+        /// hour, or if Point-in-Time Recovery is enabled, can additionally be a
+        /// whole minute timestamp within the past 7 days.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
