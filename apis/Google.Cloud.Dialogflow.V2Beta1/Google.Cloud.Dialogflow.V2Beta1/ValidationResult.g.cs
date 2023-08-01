@@ -122,16 +122,16 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// The names of the entries that the error is associated with.
     /// Format:
     ///
-    /// - "projects/&lt;Project ID>/agent", if the error is associated with the entire
+    /// - `projects/&lt;Project ID>/agent`, if the error is associated with the entire
     /// agent.
-    /// - "projects/&lt;Project ID>/agent/intents/&lt;Intent ID>", if the error is
+    /// - `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`, if the error is
     /// associated with certain intents.
-    /// - "projects/&lt;Project
-    /// ID>/agent/intents/&lt;Intent Id>/trainingPhrases/&lt;Training Phrase ID>", if the
-    /// error is associated with certain intent training phrases.
-    /// - "projects/&lt;Project ID>/agent/intents/&lt;Intent Id>/parameters/&lt;Parameter
-    /// ID>", if the error is associated with certain intent parameters.
-    /// - "projects/&lt;Project ID>/agent/entities/&lt;Entity ID>", if the error is
+    /// - `projects/&lt;Project ID>/agent/intents/&lt;Intent
+    /// Id>/trainingPhrases/&lt;Training Phrase ID>`, if the error is associated with
+    /// certain intent training phrases.
+    /// - `projects/&lt;Project ID>/agent/intents/&lt;Intent Id>/parameters/&lt;Parameter
+    /// ID>`, if the error is associated with certain intent parameters.
+    /// - `projects/&lt;Project ID>/agent/entities/&lt;Entity ID>`, if the error is
     /// associated with certain entities.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

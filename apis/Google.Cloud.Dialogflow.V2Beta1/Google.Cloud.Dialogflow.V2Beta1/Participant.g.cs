@@ -3884,16 +3884,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// map, associative array, symbol table, dictionary, or JSON object
     /// composed of a collection of (MapKey, MapValue) pairs:
     ///
-    /// -   MapKey type: string
-    /// -   MapKey value: parameter name
-    /// -   MapValue type:
-    ///     -   If parameter's entity type is a composite entity: map
-    ///     -   Else: depending on parameter value type, could be one of string,
-    ///         number, boolean, null, list or map
-    /// -   MapValue value:
-    ///     -   If parameter's entity type is a composite entity:
-    ///         map from composite entity property names to property values
-    ///     -   Else: parameter value
+    /// * MapKey type: string
+    /// * MapKey value: parameter name
+    /// * MapValue type: If parameter's entity type is a composite entity then use
+    /// map, otherwise, depending on the parameter value type, it could be one of
+    /// string, number, boolean, null, list or map.
+    /// * MapValue value: If parameter's entity type is a composite entity then use
+    /// map from composite entity property names to property values, otherwise,
+    /// use parameter value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5080,12 +5078,12 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// participant.
     ///
     /// Given two messages under the same participant:
-    ///  - If send time are different regardless of whether the content of the
-    ///  messages are exactly the same, the conversation will regard them as
-    ///  two distinct messages sent by the participant.
-    ///  - If send time is the same regardless of whether the content of the
-    ///  messages are exactly the same, the conversation will regard them as
-    ///  same message, and ignore the message received later.
+    /// * If send time are different regardless of whether the content of the
+    /// messages are exactly the same, the conversation will regard them as
+    /// two distinct messages sent by the participant.
+    /// * If send time is the same regardless of whether the content of the
+    /// messages are exactly the same, the conversation will regard them as
+    /// same message, and ignore the message received later.
     ///
     /// If the value is not provided, a new request will always be regarded as a
     /// new message without any de-duplication.
