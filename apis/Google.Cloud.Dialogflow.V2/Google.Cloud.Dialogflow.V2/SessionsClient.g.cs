@@ -352,12 +352,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
         /// 
-        /// 1.  an audio config
-        /// which instructs the speech recognizer how to process the speech audio,
+        /// 1. an audio config which instructs the speech recognizer how to process
+        /// the speech audio,
         /// 
-        /// 2.  a conversational query in the form of text, or
+        /// 2. a conversational query in the form of text, or
         /// 
-        /// 3.  an event that specifies which intent to trigger.
+        /// 3. an event that specifies which intent to trigger.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -407,12 +407,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
         /// 
-        /// 1.  an audio config
-        /// which instructs the speech recognizer how to process the speech audio,
+        /// 1. an audio config which instructs the speech recognizer how to process
+        /// the speech audio,
         /// 
-        /// 2.  a conversational query in the form of text, or
+        /// 2. a conversational query in the form of text, or
         /// 
-        /// 3.  an event that specifies which intent to trigger.
+        /// 3. an event that specifies which intent to trigger.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -462,12 +462,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
         /// 
-        /// 1.  an audio config
-        /// which instructs the speech recognizer how to process the speech audio,
+        /// 1. an audio config which instructs the speech recognizer how to process
+        /// the speech audio,
         /// 
-        /// 2.  a conversational query in the form of text, or
+        /// 2. a conversational query in the form of text, or
         /// 
-        /// 3.  an event that specifies which intent to trigger.
+        /// 3. an event that specifies which intent to trigger.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -513,12 +513,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
         /// 
-        /// 1.  an audio config
-        /// which instructs the speech recognizer how to process the speech audio,
+        /// 1. an audio config which instructs the speech recognizer how to process
+        /// the speech audio,
         /// 
-        /// 2.  a conversational query in the form of text, or
+        /// 2. a conversational query in the form of text, or
         /// 
-        /// 3.  an event that specifies which intent to trigger.
+        /// 3. an event that specifies which intent to trigger.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -568,12 +568,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
         /// 
-        /// 1.  an audio config
-        /// which instructs the speech recognizer how to process the speech audio,
+        /// 1. an audio config which instructs the speech recognizer how to process
+        /// the speech audio,
         /// 
-        /// 2.  a conversational query in the form of text, or
+        /// 2. a conversational query in the form of text, or
         /// 
-        /// 3.  an event that specifies which intent to trigger.
+        /// 3. an event that specifies which intent to trigger.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -623,12 +623,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
         /// 
-        /// 1.  an audio config
-        /// which instructs the speech recognizer how to process the speech audio,
+        /// 1. an audio config which instructs the speech recognizer how to process
+        /// the speech audio,
         /// 
-        /// 2.  a conversational query in the form of text, or
+        /// 2. a conversational query in the form of text, or
         /// 
-        /// 3.  an event that specifies which intent to trigger.
+        /// 3. an event that specifies which intent to trigger.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
