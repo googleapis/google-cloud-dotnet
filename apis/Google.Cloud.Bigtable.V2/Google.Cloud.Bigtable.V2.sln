@@ -3,33 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.V2", "Google.Cloud.Bigtable.V2\Google.Cloud.Bigtable.V2.csproj", "{3591B1CE-A56A-44BA-B30B-82CF991ADFF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2", "Google.Cloud.Bigtable.V2\Google.Cloud.Bigtable.V2.csproj", "{3591B1CE-A56A-44BA-B30B-82CF991ADFF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.V2.GenerateClient", "Google.Cloud.Bigtable.V2.GenerateClient\Google.Cloud.Bigtable.V2.GenerateClient.csproj", "{9951EDF4-DFD8-41A0-BBDA-1C52A26A436F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2.GenerateClient", "Google.Cloud.Bigtable.V2.GenerateClient\Google.Cloud.Bigtable.V2.GenerateClient.csproj", "{9951EDF4-DFD8-41A0-BBDA-1C52A26A436F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.SourceManipulation", "..\..\tools\Google.Cloud.Tools.SourceManipulation\Google.Cloud.Tools.SourceManipulation.csproj", "{02AD6755-D6D5-4966-B6AB-2E31435C4800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2.GeneratedSnippets", "Google.Cloud.Bigtable.V2.GeneratedSnippets\Google.Cloud.Bigtable.V2.GeneratedSnippets.csproj", "{7861EF40-D2C9-4413-85E1-A877F87BC7A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.Common", "..\..\tools\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj", "{09A33CDE-AE75-471C-AB43-425C57071091}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.Admin.V2", "..\Google.Cloud.Bigtable.Admin.V2\Google.Cloud.Bigtable.Admin.V2\Google.Cloud.Bigtable.Admin.V2.csproj", "{E119DA5E-4786-4B35-A988-BA8EB3A4BB6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.V2.GeneratedSnippets", "Google.Cloud.Bigtable.V2.GeneratedSnippets\Google.Cloud.Bigtable.V2.GeneratedSnippets.csproj", "{7861EF40-D2C9-4413-85E1-A877F87BC7A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{F915B7A7-5B83-4595-B163-F66A9A4FC634}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.Admin.V2", "..\Google.Cloud.Bigtable.Admin.V2\Google.Cloud.Bigtable.Admin.V2\Google.Cloud.Bigtable.Admin.V2.csproj", "{E119DA5E-4786-4B35-A988-BA8EB3A4BB6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2.IntegrationTests", "Google.Cloud.Bigtable.V2.IntegrationTests\Google.Cloud.Bigtable.V2.IntegrationTests.csproj", "{AEE83D1F-457B-4085-B70F-06E0CFD62FD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{F915B7A7-5B83-4595-B163-F66A9A4FC634}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2.Snippets", "Google.Cloud.Bigtable.V2.Snippets\Google.Cloud.Bigtable.V2.Snippets.csproj", "{84ED43AF-6905-4E15-A3AE-D3838AB0ABC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.V2.IntegrationTests", "Google.Cloud.Bigtable.V2.IntegrationTests\Google.Cloud.Bigtable.V2.IntegrationTests.csproj", "{AEE83D1F-457B-4085-B70F-06E0CFD62FD2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.V2.Snippets", "Google.Cloud.Bigtable.V2.Snippets\Google.Cloud.Bigtable.V2.Snippets.csproj", "{84ED43AF-6905-4E15-A3AE-D3838AB0ABC0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.V2.Tests", "Google.Cloud.Bigtable.V2.Tests\Google.Cloud.Bigtable.V2.Tests.csproj", "{E5F8C087-FAFE-4C3A-8619-4B31C2D7EF01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2.Tests", "Google.Cloud.Bigtable.V2.Tests\Google.Cloud.Bigtable.V2.Tests.csproj", "{E5F8C087-FAFE-4C3A-8619-4B31C2D7EF01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3591B1CE-A56A-44BA-B30B-82CF991ADFF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -40,14 +33,6 @@ Global
 		{9951EDF4-DFD8-41A0-BBDA-1C52A26A436F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9951EDF4-DFD8-41A0-BBDA-1C52A26A436F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9951EDF4-DFD8-41A0-BBDA-1C52A26A436F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02AD6755-D6D5-4966-B6AB-2E31435C4800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02AD6755-D6D5-4966-B6AB-2E31435C4800}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02AD6755-D6D5-4966-B6AB-2E31435C4800}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02AD6755-D6D5-4966-B6AB-2E31435C4800}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09A33CDE-AE75-471C-AB43-425C57071091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09A33CDE-AE75-471C-AB43-425C57071091}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09A33CDE-AE75-471C-AB43-425C57071091}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09A33CDE-AE75-471C-AB43-425C57071091}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7861EF40-D2C9-4413-85E1-A877F87BC7A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7861EF40-D2C9-4413-85E1-A877F87BC7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7861EF40-D2C9-4413-85E1-A877F87BC7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -72,5 +57,8 @@ Global
 		{E5F8C087-FAFE-4C3A-8619-4B31C2D7EF01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5F8C087-FAFE-4C3A-8619-4B31C2D7EF01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5F8C087-FAFE-4C3A-8619-4B31C2D7EF01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
