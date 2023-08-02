@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,8 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Tools.Common;
-using Google.Cloud.Tools.SourceManipulation;
 using Microsoft.Build.Locator;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -35,7 +33,7 @@ using gax = Google.Api.Gax;
 
 namespace Google.Cloud.Bigtable.V2.GenerateClient
 {
-    class Program
+    internal class Program
     {
         private const string AppProfileIdPropertyName = "AppProfileId";
         private const string CancellationTokenParameterName = "cancellationToken";
