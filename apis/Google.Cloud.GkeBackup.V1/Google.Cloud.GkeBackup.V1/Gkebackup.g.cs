@@ -2448,11 +2448,11 @@ namespace Google.Cloud.GkeBackup.V1 {
     /// The client-provided short name for the Backup resource.
     /// This name must:
     ///
-    ///  - be between 1 and 63 characters long (inclusive)
-    ///  - consist of only lower-case ASCII letters, numbers, and dashes
-    ///  - start with a lower-case letter
-    ///  - end with a lower-case letter or number
-    ///  - be unique within the set of Backups in this BackupPlan
+    /// - be between 1 and 63 characters long (inclusive)
+    /// - consist of only lower-case ASCII letters, numbers, and dashes
+    /// - start with a lower-case letter
+    /// - end with a lower-case letter or number
+    /// - be unique within the set of Backups in this BackupPlan
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4860,11 +4860,11 @@ namespace Google.Cloud.GkeBackup.V1 {
     /// Required. The client-provided short name for the RestorePlan resource.
     /// This name must:
     ///
-    ///  - be between 1 and 63 characters long (inclusive)
-    ///  - consist of only lower-case ASCII letters, numbers, and dashes
-    ///  - start with a lower-case letter
-    ///  - end with a lower-case letter or number
-    ///  - be unique within the set of RestorePlans in this location
+    /// - be between 1 and 63 characters long (inclusive)
+    /// - consist of only lower-case ASCII letters, numbers, and dashes
+    /// - start with a lower-case letter
+    /// - end with a lower-case letter or number
+    /// - be unique within the set of RestorePlans in this location
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6512,11 +6512,11 @@ namespace Google.Cloud.GkeBackup.V1 {
     /// Required. The client-provided short name for the Restore resource.
     /// This name must:
     ///
-    ///  - be between 1 and 63 characters long (inclusive)
-    ///  - consist of only lower-case ASCII letters, numbers, and dashes
-    ///  - start with a lower-case letter
-    ///  - end with a lower-case letter or number
-    ///  - be unique within the set of Restores in this RestorePlan.
+    /// - be between 1 and 63 characters long (inclusive)
+    /// - consist of only lower-case ASCII letters, numbers, and dashes
+    /// - start with a lower-case letter
+    /// - end with a lower-case letter or number
+    /// - be unique within the set of Restores in this RestorePlan.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
