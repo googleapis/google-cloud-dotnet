@@ -1812,7 +1812,7 @@
       "testDependencies": {
         "Google.Api.Gax.Testing": "4.4.0",
         "Google.Cloud.ErrorReporting.V1Beta1": "3.0.0-beta02",
-        "Microsoft.Extensions.Hosting": "6.0.0"
+        "Microsoft.Extensions.Hosting": "6.0.1"
       }
     },
     {
@@ -3552,8 +3552,8 @@
       "testDependencies": {
         "Google.Api.Gax.Testing": "4.4.0",
         "Google.Apis.CloudResourceManager.v1": "1.60.0.2950",
-        "Microsoft.Extensions.DependencyInjection": "6.0.0",
-        "Microsoft.Extensions.Hosting": "6.0.0",
+        "Microsoft.Extensions.DependencyInjection": "6.0.1",
+        "Microsoft.Extensions.Hosting": "6.0.1",
         "Microsoft.Extensions.Hosting.Abstractions": "6.0.0",
         "System.ValueTuple": "4.5.0",
         "Xunit.Combinatorial": "1.4.1"
@@ -4203,8 +4203,8 @@
         "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3",
         "Google.Api.Gax.Grpc.Testing": "4.4.0",
         "Google.Api.Gax.Testing": "4.4.0",
-        "Microsoft.Extensions.Configuration": "6.0.0",
-        "Microsoft.Extensions.DependencyInjection": "6.0.0",
+        "Microsoft.Extensions.Configuration": "6.0.1",
+        "Microsoft.Extensions.DependencyInjection": "6.0.1",
         "Xunit.Combinatorial": "1.4.1"
       }
     },
