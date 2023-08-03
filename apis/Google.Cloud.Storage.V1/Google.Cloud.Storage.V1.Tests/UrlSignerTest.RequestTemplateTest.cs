@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google Inc. All Rights Reserved.
+// Copyright 2020 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -96,7 +96,7 @@ namespace Google.Cloud.Storage.V1.Tests
 
                 var expectedHeaders = ToExpectedEntries(headers);
                 Assert.NotSame(requestTemplate, newRequestTemplate);
-                Assert.Equal(expectedHeaders, newRequestTemplate.RequestHeaders);
+                AssertDictionariesEqual(expectedHeaders, newRequestTemplate.RequestHeaders);
             }
 
             [Fact]
@@ -113,7 +113,7 @@ namespace Google.Cloud.Storage.V1.Tests
 
                 var expectedHeaders = ToExpectedEntries(headers);
                 Assert.NotSame(requestTemplate, newRequestTemplate);
-                Assert.Equal(expectedHeaders, newRequestTemplate.ContentHeaders);
+                AssertDictionariesEqual(expectedHeaders, newRequestTemplate.ContentHeaders);
             }
 
             [Fact]
@@ -130,7 +130,22 @@ namespace Google.Cloud.Storage.V1.Tests
 
                 var expectedParameters = ToExpectedEntries(queryParameters);
                 Assert.NotSame(requestTemplate, newRequestTemplate);
-                Assert.Equal(expectedParameters, newRequestTemplate.QueryParameters);
+                AssertDictionariesEqual(expectedParameters, newRequestTemplate.QueryParameters);
+            }
+
+            private void AssertDictionariesEqual(
+                IReadOnlyDictionary<string, IReadOnlyCollection<string>> expected,
+                IReadOnlyDictionary<string, IReadOnlyCollection<string>> actual)
+            {
+                // xUnit 2.5.0 changed the behavior of Assert.Equal; previously we could just use
+                // Assert.Equal(expected, actual) for this.
+                Assert.Equal(
+                    expected.Keys.OrderBy(key => key, StringComparer.Ordinal),
+                    actual.Keys.OrderBy(key => key, StringComparer.Ordinal));
+                foreach (var key in expected.Keys)
+                {
+                    Assert.Equal(expected[key], actual[key]);
+                }
             }
 
             private IReadOnlyDictionary<string, IReadOnlyCollection<string>> ToExpectedEntries(
