@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 Query = "",
                 OrderBy = "",
                 Scope = new SearchCatalogRequest.Types.Scope(),
+                AdminSearch = false,
             };
             // Make the request
             PagedEnumerable<SearchCatalogResponse, SearchCatalogResult> response = dataCatalogClient.SearchCatalog(request);
