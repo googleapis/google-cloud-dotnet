@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 Query = "",
                 OrderBy = "",
                 Scope = new SearchCatalogRequest.Types.Scope(),
+                AdminSearch = false,
             };
             // Make the request
             PagedAsyncEnumerable<SearchCatalogResponse, SearchCatalogResult> response = dataCatalogClient.SearchCatalogAsync(request);
