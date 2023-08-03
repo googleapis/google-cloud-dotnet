@@ -343,7 +343,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 var list = GetEntries(level);
                 if (list.Count != 0)
                 {
-                    Assert.True(false, $"Level {level}:{Environment.NewLine}{string.Join(Environment.NewLine, list)}");
+                    Assert.Fail($"Level {level}:{Environment.NewLine}{string.Join(Environment.NewLine, list)}");
                 }
             }
         }

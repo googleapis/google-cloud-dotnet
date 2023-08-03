@@ -542,7 +542,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 }
                 catch (Exception e)
                 {
-                    Assert.True(false, infoAddendum + e.Message);
+                    Assert.Fail(infoAddendum + e.Message);
                     throw;
                 }
             });
@@ -573,7 +573,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 }
                 catch (Exception e)
                 {
-                    Assert.True(false, infoAddendum + e);
+                    Assert.Fail(infoAddendum + e);
                     throw;
                 }
             });

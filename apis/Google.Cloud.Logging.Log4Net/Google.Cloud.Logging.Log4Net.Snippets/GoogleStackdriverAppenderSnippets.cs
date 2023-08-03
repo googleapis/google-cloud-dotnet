@@ -110,7 +110,7 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
                     }
                     Thread.Sleep(1_000);
                 }
-                Assert.False(true, "Log entry failed to appear in Google Cloud Logging.");
+                Assert.Fail("Log entry failed to appear in Google Cloud Logging.");
             }
             finally
             {
@@ -191,7 +191,7 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
                     }
                     Thread.Sleep(1_000);
                 }
-                Assert.False(true, "Log entry failed to appear in Google Cloud Logging.");
+                Assert.Fail("Log entry failed to appear in Google Cloud Logging.");
             }
             finally
             {
