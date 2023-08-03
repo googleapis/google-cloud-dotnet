@@ -227,7 +227,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             {
                 if (watchdogCts.IsCancellationRequested)
                 {
-                    Assert.True(false, "Test cancelled by watchdog");
+                    Assert.Fail("Test cancelled by watchdog");
                 }
                 if (subTask.IsCompleted)
                 {

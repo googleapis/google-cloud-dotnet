@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All rights reserved.
+// Copyright 2017 Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -372,7 +372,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                             Assert.Equal("Apt. 2", column.Cells[0].Value.ToStringUtf8());
                             break;
                         default:
-                            Assert.True(false, $"Unexpected column qualifier: {column.Qualifier.ToStringUtf8()}");
+                            Assert.Fail($"Unexpected column qualifier: {column.Qualifier.ToStringUtf8()}");
                             break;
                     }
                 }
