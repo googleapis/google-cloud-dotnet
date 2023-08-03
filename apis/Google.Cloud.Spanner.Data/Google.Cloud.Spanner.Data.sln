@@ -3,35 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.Data", "Google.Cloud.Spanner.Data\Google.Cloud.Spanner.Data.csproj", "{7DCC1BDC-25E5-4F92-8283-218AC74FE54D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data", "Google.Cloud.Spanner.Data\Google.Cloud.Spanner.Data.csproj", "{7DCC1BDC-25E5-4F92-8283-218AC74FE54D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.Admin.Database.V1", "..\Google.Cloud.Spanner.Admin.Database.V1\Google.Cloud.Spanner.Admin.Database.V1\Google.Cloud.Spanner.Admin.Database.V1.csproj", "{52C2E139-C3E8-4F8B-BDE0-1FF04E185934}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Admin.Database.V1", "..\Google.Cloud.Spanner.Admin.Database.V1\Google.Cloud.Spanner.Admin.Database.V1\Google.Cloud.Spanner.Admin.Database.V1.csproj", "{52C2E139-C3E8-4F8B-BDE0-1FF04E185934}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.Admin.Instance.V1", "..\Google.Cloud.Spanner.Admin.Instance.V1\Google.Cloud.Spanner.Admin.Instance.V1\Google.Cloud.Spanner.Admin.Instance.V1.csproj", "{85865B2C-6862-4487-83A2-662A9A11056E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Admin.Instance.V1", "..\Google.Cloud.Spanner.Admin.Instance.V1\Google.Cloud.Spanner.Admin.Instance.V1\Google.Cloud.Spanner.Admin.Instance.V1.csproj", "{85865B2C-6862-4487-83A2-662A9A11056E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.V1", "..\Google.Cloud.Spanner.V1\Google.Cloud.Spanner.V1\Google.Cloud.Spanner.V1.csproj", "{7C8DAFB7-D4FB-4F84-B2F0-8DDDF9189C7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.V1", "..\Google.Cloud.Spanner.V1\Google.Cloud.Spanner.V1\Google.Cloud.Spanner.V1.csproj", "{7C8DAFB7-D4FB-4F84-B2F0-8DDDF9189C7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.Data.CleanTestData", "Google.Cloud.Spanner.Data.CleanTestData\Google.Cloud.Spanner.Data.CleanTestData.csproj", "{876D5A77-7E78-4393-9D46-4FFA1BE8E998}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.CleanTestData", "Google.Cloud.Spanner.Data.CleanTestData\Google.Cloud.Spanner.Data.CleanTestData.csproj", "{876D5A77-7E78-4393-9D46-4FFA1BE8E998}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.Data.CommonTesting", "Google.Cloud.Spanner.Data.CommonTesting\Google.Cloud.Spanner.Data.CommonTesting.csproj", "{AC240564-C455-4491-B269-7D8365F9441A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.CommonTesting", "Google.Cloud.Spanner.Data.CommonTesting\Google.Cloud.Spanner.Data.CommonTesting.csproj", "{AC240564-C455-4491-B269-7D8365F9441A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4E92E1CC-53F3-4F76-97D3-8EAC94FD9C10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4E92E1CC-53F3-4F76-97D3-8EAC94FD9C10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.Data.IntegrationTests", "Google.Cloud.Spanner.Data.IntegrationTests\Google.Cloud.Spanner.Data.IntegrationTests.csproj", "{58D627C7-8379-42B9-81EE-0EFE4D828E89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.IntegrationTests", "Google.Cloud.Spanner.Data.IntegrationTests\Google.Cloud.Spanner.Data.IntegrationTests.csproj", "{58D627C7-8379-42B9-81EE-0EFE4D828E89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.Data.Snippets", "Google.Cloud.Spanner.Data.Snippets\Google.Cloud.Spanner.Data.Snippets.csproj", "{56FA0C91-55A5-41E9-A9DB-1FF821392F64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.Snippets", "Google.Cloud.Spanner.Data.Snippets\Google.Cloud.Spanner.Data.Snippets.csproj", "{56FA0C91-55A5-41E9-A9DB-1FF821392F64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.Data.Tests", "Google.Cloud.Spanner.Data.Tests\Google.Cloud.Spanner.Data.Tests.csproj", "{34D6C047-BE15-46B3-A13B-931872C21190}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.Tests", "Google.Cloud.Spanner.Data.Tests\Google.Cloud.Spanner.Data.Tests.csproj", "{34D6C047-BE15-46B3-A13B-931872C21190}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Spanner.Data.Ycsb", "Google.Cloud.Spanner.Data.Ycsb\Google.Cloud.Spanner.Data.Ycsb.csproj", "{A621242A-D6E5-470F-B4A7-2787A584CA0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Data.Ycsb", "Google.Cloud.Spanner.Data.Ycsb\Google.Cloud.Spanner.Data.Ycsb.csproj", "{A621242A-D6E5-470F-B4A7-2787A584CA0F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Common.V1", "..\Google.Cloud.Spanner.Common.V1\Google.Cloud.Spanner.Common.V1\Google.Cloud.Spanner.Common.V1.csproj", "{9F7BA7B7-E91D-4E7D-AF6A-2334C026AC2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7DCC1BDC-25E5-4F92-8283-218AC74FE54D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -78,5 +77,12 @@ Global
 		{A621242A-D6E5-470F-B4A7-2787A584CA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A621242A-D6E5-470F-B4A7-2787A584CA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A621242A-D6E5-470F-B4A7-2787A584CA0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F7BA7B7-E91D-4E7D-AF6A-2334C026AC2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7BA7B7-E91D-4E7D-AF6A-2334C026AC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7BA7B7-E91D-4E7D-AF6A-2334C026AC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7BA7B7-E91D-4E7D-AF6A-2334C026AC2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
