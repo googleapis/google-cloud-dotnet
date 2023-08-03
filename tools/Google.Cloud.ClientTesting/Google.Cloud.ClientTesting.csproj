@@ -11,8 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="xunit.assert" Version="2.4.2" />
-    <PackageReference Include="xunit.core" Version="2.4.2" />
+    <PackageReference Include="xunit.assert" Version="2.5.0" />
+    <PackageReference Include="xunit.core" Version="2.5.0" />
     <PackageReference Include="Xunit.SkippableFact" Version="1.4.13" />
     <PackageReference Include="Google.Apis" Version="1.61.0" />
     <PackageReference Include="Grpc.Core.Api" Version="2.53.0" />
