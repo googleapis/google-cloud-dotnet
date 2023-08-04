@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.0.0-beta03, released 2023-08-04
+
+### New features
+
+- Add BufferTask RPC method for CloudTasks service for v2beta3 ([commit 36504a4](https://github.com/googleapis/google-cloud-dotnet/commit/36504a43d32649cb13b347bd18263c341eaf2c26))
+- Add YAML config for GetLocation and ListLocations for v2beta3 ([commit 36504a4](https://github.com/googleapis/google-cloud-dotnet/commit/36504a43d32649cb13b347bd18263c341eaf2c26))
+
+### Documentation improvements
+
+- Minor formatting ([commit 7c49dff](https://github.com/googleapis/google-cloud-dotnet/commit/7c49dffc44bf828460d367673ec802778832cd1d))
+
 ## Version 3.0.0-beta02, released 2023-01-19
 
 ### New features
