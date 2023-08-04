@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-alpha14, released 2023-08-04
+
+### New features
+
+- Enable gpu driver version field on v1 ([commit 08fd6c5](https://github.com/googleapis/google-cloud-dotnet/commit/08fd6c54e8590932815a9afac40513afd68133aa))
+
+### Documentation improvements
+
+- Mark `order_by` field in `ListTasksRequest` as not implemented. ([commit 08fd6c5](https://github.com/googleapis/google-cloud-dotnet/commit/08fd6c54e8590932815a9afac40513afd68133aa))
+- Improve url examples in comments ([commit 08fd6c5](https://github.com/googleapis/google-cloud-dotnet/commit/08fd6c54e8590932815a9afac40513afd68133aa))
+
 ## Version 1.0.0-alpha13, released 2023-07-13
 
 ### New features
