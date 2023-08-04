@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.1.0, released 2023-08-04
+
+### New features
+
+- Adding notification types ([commit 2a8a2a6](https://github.com/googleapis/google-cloud-dotnet/commit/2a8a2a66470a14a906c8d56d3ab2544fe279ceba))
+
 ## Version 1.0.0, released 2023-06-12
 
 No API surface changes; just dependency updates and promotion to 1.0.0.
