@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.8.0, released 2023-08-04
+
+### New features
+
+- Added http configuration and document publishing for v1beta2 ([commit 0090f90](https://github.com/googleapis/google-cloud-dotnet/commit/0090f900aca37d59a2948fe0000644383f752778))
+- Added ImportDocuments, GetDocument and BatchDeleteDocuments RPCs for v1beta3 ([commit 0090f90](https://github.com/googleapis/google-cloud-dotnet/commit/0090f900aca37d59a2948fe0000644383f752778))
+
 ## Version 3.7.0, released 2023-06-20
 
 ### New features
