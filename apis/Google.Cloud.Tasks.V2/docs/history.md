@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.2.0, released 2023-08-04
+
+### New features
+
+- Increase timeout of RPC methods to 20s for v2 ([commit f2145a6](https://github.com/googleapis/google-cloud-dotnet/commit/f2145a6c006382a1e136aeca6db3f07c914d195e))
+- Add YAML config for GetLocation and ListLocation for v2 ([commit f2145a6](https://github.com/googleapis/google-cloud-dotnet/commit/f2145a6c006382a1e136aeca6db3f07c914d195e))
+- Add UploadQueueYaml, BufferTask RPC method for CloudTasks service for v2beta2 ([commit f2145a6](https://github.com/googleapis/google-cloud-dotnet/commit/f2145a6c006382a1e136aeca6db3f07c914d195e))
+- Set deadline for GetLocation, ListLocations and UploadQueueYaml RPCs for v2beta2 ([commit f2145a6](https://github.com/googleapis/google-cloud-dotnet/commit/f2145a6c006382a1e136aeca6db3f07c914d195e))
+- Add BufferTask RPC method for CloudTasks service for v2beta3 ([commit f2145a6](https://github.com/googleapis/google-cloud-dotnet/commit/f2145a6c006382a1e136aeca6db3f07c914d195e))
+- Add YAML config for GetLocation and ListLocations for v2beta3 ([commit f2145a6](https://github.com/googleapis/google-cloud-dotnet/commit/f2145a6c006382a1e136aeca6db3f07c914d195e))
+
 ## Version 3.1.0, released 2023-01-11
 
 This is primarily a promotion of the previous beta, which includes
