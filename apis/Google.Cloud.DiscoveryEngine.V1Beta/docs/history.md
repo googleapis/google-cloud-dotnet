@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2023-08-04
+
+### New features
+
+- Support conversational / multi-turn search ([commit 64ec2a2](https://github.com/googleapis/google-cloud-dotnet/commit/64ec2a218d13e5b31c64ea8e2b8fa0d30214198d))
+- Support tail suggestions in completion API ([commit 64ec2a2](https://github.com/googleapis/google-cloud-dotnet/commit/64ec2a218d13e5b31c64ea8e2b8fa0d30214198d))
+- Support image search ([commit 64ec2a2](https://github.com/googleapis/google-cloud-dotnet/commit/64ec2a218d13e5b31c64ea8e2b8fa0d30214198d))
+- Add skip reason for search summarization ([commit 64ec2a2](https://github.com/googleapis/google-cloud-dotnet/commit/64ec2a218d13e5b31c64ea8e2b8fa0d30214198d))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 64ec2a2](https://github.com/googleapis/google-cloud-dotnet/commit/64ec2a218d13e5b31c64ea8e2b8fa0d30214198d))
+
 ## Version 1.0.0-beta06, released 2023-06-20
 
 ### New features
