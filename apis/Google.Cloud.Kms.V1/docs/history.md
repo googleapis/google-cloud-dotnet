@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.7.0, released 2023-08-04
+
+### New features
+
+- Add interoperable symmetric encryption system ([commit 0a36eb9](https://github.com/googleapis/google-cloud-dotnet/commit/0a36eb98bd94e46576c52d63e5c6b44910e41ba2))
+
+### Documentation improvements
+
+- Minor formatting ([commit 2d4d254](https://github.com/googleapis/google-cloud-dotnet/commit/2d4d254457a1bb700638f18409522f631be92300))
+
 ## Version 3.6.0, released 2023-07-13
 
 ### New features
