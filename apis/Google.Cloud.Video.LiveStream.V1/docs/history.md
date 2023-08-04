@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.3.0, released 2023-08-04
+
+### New features
+
+- Added support for slate events which allow users to create and insert a slate into a live stream to replace the main live stream content ([commit 9efd50b](https://github.com/googleapis/google-cloud-dotnet/commit/9efd50b73fa6c514ce2b6a8d7567bc07584ed7ae))
+- Added a new asset resource which can be used as the content of slate events ([commit 9efd50b](https://github.com/googleapis/google-cloud-dotnet/commit/9efd50b73fa6c514ce2b6a8d7567bc07584ed7ae))
+- Added a new pool resource for protecting input endpoints within a VPC Service Controls perimeter ([commit 9efd50b](https://github.com/googleapis/google-cloud-dotnet/commit/9efd50b73fa6c514ce2b6a8d7567bc07584ed7ae))
+
 ## Version 1.2.0, released 2023-03-27
 
 ### New features
