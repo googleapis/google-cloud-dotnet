@@ -68,10 +68,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             "bnRpdHkSZwoaY29udGFpbmVyX2ltYWdlX3NpZ25hdHVyZXMYASADKAsyPi5n",
             "b29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkNvbnRhaW5l",
             "ckltYWdlU2lnbmF0dXJlQgPgQQEirwEKF0NvbnRhaW5lckltYWdlU2lnbmF0",
-            "dXJlEhQKB3BheWxvYWQYASABKAxCA+BBAhIWCglzaWduYXR1cmUYAiABKAxC",
-            "A+BBAhIXCgpwdWJsaWNfa2V5GAMgASgMQgPgQQISTQoHc2lnX2FsZxgEIAEo",
+            "dXJlEhQKB3BheWxvYWQYASABKAxCA+BBARIWCglzaWduYXR1cmUYAiABKAxC",
+            "A+BBARIXCgpwdWJsaWNfa2V5GAMgASgMQgPgQQESTQoHc2lnX2FsZxgEIAEo",
             "DjI3Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuU2ln",
-            "bmluZ0FsZ29yaXRobUID4EECKn8KEFNpZ25pbmdBbGdvcml0aG0SIQodU0lH",
+            "bmluZ0FsZ29yaXRobUID4EEBKn8KEFNpZ25pbmdBbGdvcml0aG0SIQodU0lH",
             "TklOR19BTEdPUklUSE1fVU5TUEVDSUZJRUQQABIVChFSU0FTU0FfUFNTX1NI",
             "QTI1NhABEhoKFlJTQVNTQV9QS0NTMVYxNV9TSEEyNTYQAhIVChFFQ0RTQV9Q",
             "MjU2X1NIQTI1NhADMrcEChVDb25maWRlbnRpYWxDb21wdXRpbmcS2AEKD0Ny",
@@ -2844,7 +2844,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     public const int PayloadFieldNumber = 1;
     private pb::ByteString payload_ = pb::ByteString.Empty;
     /// <summary>
-    /// Required. The binary signature payload following the SimpleSigning format
+    /// Optional. The binary signature payload following the SimpleSigning format
     /// https://github.com/sigstore/cosign/blob/main/specs/SIGNATURE_SPEC.md#simple-signing.
     /// This payload includes the container image digest.
     /// </summary>
@@ -2861,7 +2861,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     public const int SignatureFieldNumber = 2;
     private pb::ByteString signature_ = pb::ByteString.Empty;
     /// <summary>
-    /// Required. A signature over the payload.
+    /// Optional. A signature over the payload.
     /// The container image digest is incorporated into the signature as follows:
     /// 1. Generate a SimpleSigning format payload that includes the container
     /// image digest.
@@ -2882,7 +2882,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     public const int PublicKeyFieldNumber = 3;
     private pb::ByteString publicKey_ = pb::ByteString.Empty;
     /// <summary>
-    /// Required. An associated public key used to verify the signature.
+    /// Optional. Reserved for future use.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2897,7 +2897,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     public const int SigAlgFieldNumber = 4;
     private global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm sigAlg_ = global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm.Unspecified;
     /// <summary>
-    /// Required. The algorithm used to produce the container image signature.
+    /// Optional. Reserved for future use.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
