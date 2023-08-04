@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.8.0, released 2023-08-04
+
+### New features
+
+- Added support for predeploy and postdeploy actions ([commit 4023fa4](https://github.com/googleapis/google-cloud-dotnet/commit/4023fa4d8fb3b5fdaffb698b5f1a1687dfaf53d3))
+
+### Documentation improvements
+
+- Small documentation updates ([commit 36b0942](https://github.com/googleapis/google-cloud-dotnet/commit/36b094211c9288e882cc0444ab0b8d8dac41fc10))
+
 ## Version 2.7.0, released 2023-07-13
 
 ### New features
