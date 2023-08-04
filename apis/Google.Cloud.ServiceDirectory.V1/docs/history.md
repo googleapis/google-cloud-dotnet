@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.2.0, released 2023-08-04
+
+### New features
+
+- Added network and uid fields in Endpoint message ([commit 2ac10dd](https://github.com/googleapis/google-cloud-dotnet/commit/2ac10dd0784cc229899d7b135c5f10ccd249c501))
+- Added uid field to Namespace message ([commit 2ac10dd](https://github.com/googleapis/google-cloud-dotnet/commit/2ac10dd0784cc229899d7b135c5f10ccd249c501))
+- Added uid field to Service message ([commit 2ac10dd](https://github.com/googleapis/google-cloud-dotnet/commit/2ac10dd0784cc229899d7b135c5f10ccd249c501))
+- Enable Location methods ([commit 2ac10dd](https://github.com/googleapis/google-cloud-dotnet/commit/2ac10dd0784cc229899d7b135c5f10ccd249c501))
+
+### Documentation improvements
+
+- Updated docs for ResolveServiceRequest message ([commit 2ac10dd](https://github.com/googleapis/google-cloud-dotnet/commit/2ac10dd0784cc229899d7b135c5f10ccd249c501))
+- Updated docs for ListServicesRequest and ListEndpointsRequest message ([commit 2ac10dd](https://github.com/googleapis/google-cloud-dotnet/commit/2ac10dd0784cc229899d7b135c5f10ccd249c501))
+
 ## Version 2.1.0, released 2023-01-19
 
 ### New features
