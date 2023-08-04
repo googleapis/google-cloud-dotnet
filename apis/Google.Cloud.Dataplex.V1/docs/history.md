@@ -1,5 +1,20 @@
 # Version history
 
+## Version 2.5.0, released 2023-08-04
+
+### New features
+
+- New service DataTaxonomyService and related messages ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- DataProfileSpec message with DataProfileScan related settings ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added TopNValue.ratio ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added DataQualitySpec.sampling_percent, row_filter ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added DataQualityRule.name, description ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added ListDataScanJobsRequest.filter to filter ListDataScanJob results ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added JobEvent.execution_trigger ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added DataScanEvent.data_profile_configs, data_quality_configs, post_scan_actions_result ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added RunTaskRequest.labels, args ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+- Added Job.labels, trigger, execution_spec ([commit ad1c59f](https://github.com/googleapis/google-cloud-dotnet/commit/ad1c59fab41af76e678bce4a8d902a755d50e800))
+
 ## Version 2.4.0, released 2023-05-03
 
 ### New features
