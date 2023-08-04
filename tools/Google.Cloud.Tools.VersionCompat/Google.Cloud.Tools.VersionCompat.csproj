@@ -8,7 +8,7 @@
   <ItemGroup>
     <PackageReference Include="Mono.Cecil" Version="0.11.5" />
     <PackageReference Include="SharpCompress" Version="0.33.0" />
-    <PackageReference Include="System.Collections.Immutable" Version="6.0.0" />
+    <PackageReference Include="System.Collections.Immutable" Version="7.0.0" />
   </ItemGroup>
 
 </Project>

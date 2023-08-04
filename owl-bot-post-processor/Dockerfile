@@ -23,7 +23,7 @@
 # To launch a bash shell in the container, run:
 #   docker run --rm -it --entrypoint bash gcr.io/cloud-devrel-public-resources/owlbot-dotnet:latest
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0.410-jammy
+FROM mcr.microsoft.com/dotnet/sdk:7.0.306-jammy
 
 # Additional tooling required to regenerate libraries and project files.
 
