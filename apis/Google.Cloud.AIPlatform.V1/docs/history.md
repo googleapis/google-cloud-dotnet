@@ -1,5 +1,21 @@
 # Version history
 
+## Version 2.17.0, released 2023-08-04
+
+### New features
+
+- Add `PredictionService.ServerStreamingPredict` method ([commit 48c78fe](https://github.com/googleapis/google-cloud-dotnet/commit/48c78fe766c4163c6cd9e2726e9a35583ddd6dda))
+- Add `StreamingPredictRequest` type ([commit 48c78fe](https://github.com/googleapis/google-cloud-dotnet/commit/48c78fe766c4163c6cd9e2726e9a35583ddd6dda))
+- Add `StreamingPredictResponse` type ([commit 48c78fe](https://github.com/googleapis/google-cloud-dotnet/commit/48c78fe766c4163c6cd9e2726e9a35583ddd6dda))
+- Add `Tensor` type ([commit 48c78fe](https://github.com/googleapis/google-cloud-dotnet/commit/48c78fe766c4163c6cd9e2726e9a35583ddd6dda))
+- ScheduleService (schedule_service.proto) creates and manages Schedule resources to launch scheduled pipelines runs ([commit dc5bfd6](https://github.com/googleapis/google-cloud-dotnet/commit/dc5bfd69d99d3e8b0290656645c7fba0acd2718e))
+- Schedule (schedule.proto) periodically schedules runs to make API calls ([commit dc5bfd6](https://github.com/googleapis/google-cloud-dotnet/commit/dc5bfd69d99d3e8b0290656645c7fba0acd2718e))
+- Add data_item_count to Dataset ([commit 445fa0e](https://github.com/googleapis/google-cloud-dotnet/commit/445fa0e87ace33fa1fee4c90a4a531fee6a9456c))
+- Add DeleteSavedQuery to DatasetService ([commit 445fa0e](https://github.com/googleapis/google-cloud-dotnet/commit/445fa0e87ace33fa1fee4c90a4a531fee6a9456c))
+- Add JOB_STATE_PARTIALLY_SUCCEEDED to JobState ([commit 445fa0e](https://github.com/googleapis/google-cloud-dotnet/commit/445fa0e87ace33fa1fee4c90a4a531fee6a9456c))
+- Add pipeline_job to Model ([commit 445fa0e](https://github.com/googleapis/google-cloud-dotnet/commit/445fa0e87ace33fa1fee4c90a4a531fee6a9456c))
+- Add reserved_ip_ranges to PipelineJob ([commit 445fa0e](https://github.com/googleapis/google-cloud-dotnet/commit/445fa0e87ace33fa1fee4c90a4a531fee6a9456c))
+
 ## Version 2.16.0, released 2023-06-20
 
 ### New features
