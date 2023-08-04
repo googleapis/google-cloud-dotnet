@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.0.0-beta12, released 2023-08-04
+
+### New features
+
+- Exposed Import PV external_processor_version_source to v1beta3 public ([commit 5962731](https://github.com/googleapis/google-cloud-dotnet/commit/5962731b3c78e602fe5d2ebca4caa16f9b7958dc))
+- **BREAKING CHANGE** Removed id field from Document message ([commit 359acc0](https://github.com/googleapis/google-cloud-dotnet/commit/359acc0963e3df766561d2193150e06fc1aaf150))
+- Added http configuration and document publishing for v1beta2 ([commit 359acc0](https://github.com/googleapis/google-cloud-dotnet/commit/359acc0963e3df766561d2193150e06fc1aaf150))
+- Added ImportDocuments, GetDocument and BatchDeleteDocuments RPCs for v1beta3 ([commit 359acc0](https://github.com/googleapis/google-cloud-dotnet/commit/359acc0963e3df766561d2193150e06fc1aaf150))
+
 ## Version 2.0.0-beta11, released 2023-06-20
 
 ### New features
