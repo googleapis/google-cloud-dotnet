@@ -1168,7 +1168,7 @@
     },
     {
       "id": "Google.Cloud.CloudBuild.V1",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "type": "grpc",
       "productName": "Cloud Build",
       "productUrl": "https://cloud.google.com/cloud-build",

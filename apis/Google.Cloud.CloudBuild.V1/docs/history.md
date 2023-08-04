@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.6.0, released 2023-08-04
+
+### New features
+
+- Add update_mask to UpdateBuildTriggerRequest proto ([commit 1b10e84](https://github.com/googleapis/google-cloud-dotnet/commit/1b10e842187af385bf22f2ab334785539c72a0c3))
+- Add automap_substitutions flag to use substitutions as envs in Cloud Build ([commit ae515fb](https://github.com/googleapis/google-cloud-dotnet/commit/ae515fb363445ea21c06500acce5d53a08d34081))
+- Add git_file_source and git_repo_source to build_trigger ([commit 510e913](https://github.com/googleapis/google-cloud-dotnet/commit/510e9133c70a36d731b563d10225d5238422be75))
+
 ## Version 2.5.0, released 2023-07-13
 
 ### New features
