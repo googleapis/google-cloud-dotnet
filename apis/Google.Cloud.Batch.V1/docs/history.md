@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.3.0, released 2023-08-04
+
+### New features
+
+- Add comment to the unsupported order_by field of ListTasksRequest ([commit 036fc52](https://github.com/googleapis/google-cloud-dotnet/commit/036fc5238c20c5a7e6cf6ff2f428548bccbe432c))
+- Enable gpu driver version field on v1 ([commit 036fc52](https://github.com/googleapis/google-cloud-dotnet/commit/036fc5238c20c5a7e6cf6ff2f428548bccbe432c))
+- Allow order_by for v1 ListJobs ([commit 036fc52](https://github.com/googleapis/google-cloud-dotnet/commit/036fc5238c20c5a7e6cf6ff2f428548bccbe432c))
+- Improve url examples formats on Batch API comments ([commit 036fc52](https://github.com/googleapis/google-cloud-dotnet/commit/036fc5238c20c5a7e6cf6ff2f428548bccbe432c))
+
+### Documentation improvements
+
+- Add image shortcut example for Batch HPC CentOS Image ([commit 9b54ce0](https://github.com/googleapis/google-cloud-dotnet/commit/9b54ce00cd23033e05278b9bf5a03b2e516bd95c))
+
 ## Version 2.2.0, released 2023-06-20
 
 ### New features
