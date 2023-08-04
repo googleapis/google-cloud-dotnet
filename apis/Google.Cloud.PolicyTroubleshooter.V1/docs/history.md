@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.2.0, released 2023-08-04
+
+### New features
+
+- Include errors in troubleshoot response ([commit 5543e86](https://github.com/googleapis/google-cloud-dotnet/commit/5543e8685f83cb45fa0399a34aebaae3927e991f))
+
+### Documentation improvements
+
+- Update documentation for ToubleshootIamPolicy RPC method ([commit 5543e86](https://github.com/googleapis/google-cloud-dotnet/commit/5543e8685f83cb45fa0399a34aebaae3927e991f))
+
 ## Version 2.1.0, released 2023-01-18
 
 ### New features

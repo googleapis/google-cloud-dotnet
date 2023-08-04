@@ -3470,7 +3470,7 @@
     },
     {
       "id": "Google.Cloud.PolicyTroubleshooter.V1",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "grpc",
       "productName": "Policy Troubleshooter",
       "productUrl": "https://cloud.google.com/iam/docs/reference/policytroubleshooter/rest",
