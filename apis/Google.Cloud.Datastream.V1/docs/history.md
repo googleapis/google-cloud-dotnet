@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.4.0, released 2023-08-04
+
+### New features
+
+- Add precision and scale to MysqlColumn ([commit 0612a03](https://github.com/googleapis/google-cloud-dotnet/commit/0612a03dc591591ff48726846d054fd334f79d97))
+
 ## Version 2.3.0, released 2023-05-11
 
 ### New features
