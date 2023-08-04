@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.0.0-alpha11, released 2023-08-04
+
+### Bug fixes
+
+- **BREAKING CHANGE** Update the `ReportingAttributionModel` enum to rename `CROSS_CHANNEL_DATA_DRIVEN` to `PAID_AND_ORGANIC_CHANNELS_DATA_DRIVEN`, `CROSS_CHANNEL_LAST_CLICK` to `PAID_AND_ORGANIC_CHANNELS_LAST_CLICK`, `CROSS_CHANNEL_FIRST_CLICK` to `PAID_AND_ORGANIC_CHANNELS_FIRST_CLICK`, `CROSS_CHANNEL_LINEAR` to `PAID_AND_ORGANIC_CHANNELS_LINEAR`, `CROSS_CHANNEL_POSITION_BASED` to `PAID_AND_ORGANIC_CHANNELS_POSITION_BASED` `CROSS_CHANNEL_TIME_DECAY` to `PAID_AND_ORGANIC_CHANNELS_TIME_DECAY`, `ADS_PREFERRED_LAST_CLICK` to `GOOGLE_PAID_CHANNELS_LAST_CLICK` ([commit c79ae51](https://github.com/googleapis/google-cloud-dotnet/commit/c79ae51d613741a86429d3a9b151867f9622d9db))
+- **BREAKING CHANGE** Update the `AdsWebConversionDataExportScope` enum to rename `CROSS_CHANNEL` to `PAID_AND_ORGANIC_CHANNELS`, `ADS_PREFERRED` to `GOOGLE_PAID_CHANNELS` ([commit c79ae51](https://github.com/googleapis/google-cloud-dotnet/commit/c79ae51d613741a86429d3a9b151867f9622d9db))
+
 ## Version 2.0.0-alpha10, released 2023-06-27
 
 ### New features
