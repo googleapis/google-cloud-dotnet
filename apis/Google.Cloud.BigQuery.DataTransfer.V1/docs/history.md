@@ -1,5 +1,16 @@
 # Version history
 
+## Version 4.4.0, released 2023-08-04
+
+### New features
+
+- Add EncryptionConfiguration to TransferConfig ([commit b3e6563](https://github.com/googleapis/google-cloud-dotnet/commit/b3e65636477e5b1e6940e13bcfeee7e360585fb0))
+- Add List type to Data source parameter. ([commit b3e6563](https://github.com/googleapis/google-cloud-dotnet/commit/b3e65636477e5b1e6940e13bcfeee7e360585fb0))
+
+### Documentation improvements
+
+- Minor comment update ([commit 0736781](https://github.com/googleapis/google-cloud-dotnet/commit/0736781d303db2ef56a5365a2ff824fbde4e10fb))
+
 ## Version 4.3.0, released 2023-01-19
 
 ### New features
