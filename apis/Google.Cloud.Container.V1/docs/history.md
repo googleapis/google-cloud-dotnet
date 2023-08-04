@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.16.0, released 2023-08-04
+
+### New features
+
+- Add Multi-networking API ([commit 2f08555](https://github.com/googleapis/google-cloud-dotnet/commit/2f0855553815527f505e11e48f5bb354b28ae7ce))
+- Add policy_name to PlacementPolicy message within a node pool ([commit 2f08555](https://github.com/googleapis/google-cloud-dotnet/commit/2f0855553815527f505e11e48f5bb354b28ae7ce))
+
 ## Version 3.15.0, released 2023-07-13
 
 ### New features
