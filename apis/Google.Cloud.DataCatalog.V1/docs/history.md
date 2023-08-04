@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.6.0, released 2023-08-04
+
+### New features
+
+- Add support for admin_search in SearchCatalog() API method ([commit 725097f](https://github.com/googleapis/google-cloud-dotnet/commit/725097f63070b90a2af5cf8947e2666b91782110))
+
 ## Version 2.5.0, released 2023-07-13
 
 ### New features
