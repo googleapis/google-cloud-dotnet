@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.7.0, released 2023-08-04
+
+### New features
+
+- Add last_scanned_row_key feature ([commit 8ed082d](https://github.com/googleapis/google-cloud-dotnet/commit/8ed082d39a3cf87df915b5f294fc0099a7941129))
+- Add experimental reverse scan for public preview ([commit 132fa75](https://github.com/googleapis/google-cloud-dotnet/commit/132fa75640c28dc851d2da10f6ff0b696bd249b1))
+
+### Documentation improvements
+
+- Fix formatting for reversed order field example ([commit 5b10786](https://github.com/googleapis/google-cloud-dotnet/commit/5b107861e31136cb169dc84b070227d15cbbdc4b))
+
 ## Version 3.6.0, released 2023-05-26
 
 ### Bug fixes
