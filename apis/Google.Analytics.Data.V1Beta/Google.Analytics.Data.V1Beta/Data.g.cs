@@ -362,8 +362,8 @@ namespace Google.Analytics.Data.V1Beta {
 
   #region Messages
   /// <summary>
-  /// A contiguous set of days: startDate, startDate + 1, ..., endDate. Requests
-  /// are allowed up to 4 date ranges.
+  /// A contiguous set of days: `startDate`, `startDate + 1`, ..., `endDate`.
+  /// Requests are allowed up to 4 date ranges.
   /// </summary>
   public sealed partial class DateRange : pb::IMessage<DateRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -647,8 +647,8 @@ namespace Google.Analytics.Data.V1Beta {
   }
 
   /// <summary>
-  /// A contiguous set of minutes: startMinutesAgo, startMinutesAgo + 1, ...,
-  /// endMinutesAgo. Requests are allowed up to 2 minute ranges.
+  /// A contiguous set of minutes: `startMinutesAgo`, `startMinutesAgo + 1`, ...,
+  /// `endMinutesAgo`. Requests are allowed up to 2 minute ranges.
   /// </summary>
   public sealed partial class MinuteRange : pb::IMessage<MinuteRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5900,7 +5900,7 @@ namespace Google.Analytics.Data.V1Beta {
     /// single pivot requests.
     ///
     /// The product of the `limit` for each `pivot` in a `RunPivotReportRequest`
-    /// must not exceed 100,000. For example, a two pivot request with `limit:
+    /// must not exceed 250,000. For example, a two pivot request with `limit:
     /// 1000` in each pivot will fail because the product is `1,000,000`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7325,6 +7325,18 @@ namespace Google.Analytics.Data.V1Beta {
     /// <summary>
     /// If true, indicates some buckets of dimension combinations are rolled into
     /// "(other)" row. This can happen for high cardinality reports.
+    ///
+    /// The metadata parameter dataLossFromOtherRow is populated based on the
+    /// aggregated data table used in the report. The parameter will be accurately
+    /// populated regardless of the filters and limits in the report.
+    ///
+    /// For example, the (other) row could be dropped from the report because the
+    /// request contains a filter on sessionSource = google. This parameter will
+    /// still be populated if data loss from other row was present in the input
+    /// aggregate data used to generate this report.
+    ///
+    /// To learn more, see [About the (other) row and data
+    /// sampling](https://support.google.com/analytics/answer/13208658#reports).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10124,8 +10136,8 @@ namespace Google.Analytics.Data.V1Beta {
     public const int TokensPerDayFieldNumber = 1;
     private global::Google.Analytics.Data.V1Beta.QuotaStatus tokensPerDay_;
     /// <summary>
-    /// Standard Analytics Properties can use up to 25,000 tokens per day;
-    /// Analytics 360 Properties can use 250,000 tokens per day. Most requests
+    /// Standard Analytics Properties can use up to 200,000 tokens per day;
+    /// Analytics 360 Properties can use 2,000,000 tokens per day. Most requests
     /// consume fewer than 10 tokens.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10141,8 +10153,8 @@ namespace Google.Analytics.Data.V1Beta {
     public const int TokensPerHourFieldNumber = 2;
     private global::Google.Analytics.Data.V1Beta.QuotaStatus tokensPerHour_;
     /// <summary>
-    /// Standard Analytics Properties can use up to 5,000 tokens per hour;
-    /// Analytics 360 Properties can use 50,000 tokens per hour. An API request
+    /// Standard Analytics Properties can use up to 40,000 tokens per hour;
+    /// Analytics 360 Properties can use 400,000 tokens per hour. An API request
     /// consumes a single number of tokens, and that number is deducted from all of
     /// the hourly, daily, and per project hourly quotas.
     /// </summary>
@@ -10210,9 +10222,9 @@ namespace Google.Analytics.Data.V1Beta {
     public const int TokensPerProjectPerHourFieldNumber = 6;
     private global::Google.Analytics.Data.V1Beta.QuotaStatus tokensPerProjectPerHour_;
     /// <summary>
-    /// Analytics Properties can use up to 25% of their tokens per project per
-    /// hour. This amounts to standard Analytics Properties can use up to 1,250
-    /// tokens per project per hour, and Analytics 360 Properties can use 12,500
+    /// Analytics Properties can use up to 35% of their tokens per project per
+    /// hour. This amounts to standard Analytics Properties can use up to 14,000
+    /// tokens per project per hour, and Analytics 360 Properties can use 140,000
     /// tokens per project per hour. An API request consumes a single number of
     /// tokens, and that number is deducted from all of the hourly, daily, and per
     /// project hourly quotas.
