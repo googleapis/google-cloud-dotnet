@@ -1,4 +1,4 @@
-// Copyright 2020 Google LLC
+﻿// Copyright 2020 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -126,7 +126,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(BigQueryInsertStatus.SomeRowsInserted, results.Status);
             Assert.Equal(3, results.OriginalRowsWithErrors);
             Assert.Equal(8, results.InsertAttemptRowCount);
-            AssertErrorsEqual(expectedInsertRowErrors, results);
+            Assert.Equal(expectedInsertRowErrors, results.Errors.ToList(), new BigQueryInsertRowErrorEqualityComparer());
             Assert.Same(results, results.ThrowOnNoneInserted());
             AssertException(results.ThrowOnNotAllInserted, expectedSingleErrors, BigQueryInsertStatus.SomeRowsInserted);
             AssertException(results.ThrowOnAnyError, expectedSingleErrors, BigQueryInsertStatus.SomeRowsInserted);
@@ -179,7 +179,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(BigQueryInsertStatus.NoRowsInserted, results.Status);
             Assert.Equal(3, results.OriginalRowsWithErrors);
             Assert.Equal(8, results.InsertAttemptRowCount);
-            AssertErrorsEqual(expectedInsertRowErrors, results);
+            Assert.Equal(expectedInsertRowErrors, results.Errors.ToList(), new BigQueryInsertRowErrorEqualityComparer());
             AssertException(results.ThrowOnNoneInserted, expectedSingleErrors, BigQueryInsertStatus.NoRowsInserted);
             AssertException(results.ThrowOnNotAllInserted, expectedSingleErrors, BigQueryInsertStatus.NoRowsInserted);
             AssertException(results.ThrowOnAnyError, expectedSingleErrors, BigQueryInsertStatus.NoRowsInserted);
@@ -230,7 +230,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(BigQueryInsertStatus.NoRowsInserted, results.Status);
             Assert.Equal(3, results.OriginalRowsWithErrors);
             Assert.Equal(3, results.InsertAttemptRowCount);
-            AssertErrorsEqual(expectedInsertRowErrors, results);
+            Assert.Equal(expectedInsertRowErrors, results.Errors.ToList(), new BigQueryInsertRowErrorEqualityComparer());
             AssertException(results.ThrowOnNoneInserted, expectedSingleErrors, BigQueryInsertStatus.NoRowsInserted);
             AssertException(results.ThrowOnNotAllInserted, expectedSingleErrors, BigQueryInsertStatus.NoRowsInserted);
             AssertException(results.ThrowOnAnyError, expectedSingleErrors, BigQueryInsertStatus.NoRowsInserted);
@@ -294,7 +294,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(BigQueryInsertStatus.SomeRowsInserted, results.Status);
             Assert.Equal(3, results.OriginalRowsWithErrors);
             Assert.Equal(8, results.InsertAttemptRowCount);
-            AssertErrorsEqual(expectedInsertRowErrors, results);
+            Assert.Equal(expectedInsertRowErrors, results.Errors.ToList(), new BigQueryInsertRowErrorEqualityComparer());
             Assert.Same(results, results.ThrowOnNoneInserted());
             AssertException(results.ThrowOnNotAllInserted, expectedSingleErrors, BigQueryInsertStatus.SomeRowsInserted);
             AssertException(results.ThrowOnAnyError, expectedSingleErrors, BigQueryInsertStatus.SomeRowsInserted);
@@ -319,20 +319,26 @@ namespace Google.Cloud.BigQuery.V2.Tests
             public override string Name => "fake_service_name";
         }
 
-        private void AssertErrorsEqual(List<BigQueryInsertRowErrors> expectedErrors, BigQueryInsertResults results)
+        public class BigQueryInsertRowErrorEqualityComparer : IEqualityComparer<BigQueryInsertRowErrors>
         {
-            // In xUnit 2.4.2, we were able to use Assert.Equal with a custom equality comparer.
-            // That no longer appears to work in 2.5.0; it's unclear why at the moment.
-            var actualErrors = results.Errors.ToList();
-            Assert.Equal(expectedErrors.Count, actualErrors.Count);
-            for (int i = 0; i < expectedErrors.Count; i++)
+            public bool Equals(BigQueryInsertRowErrors x, BigQueryInsertRowErrors y)
             {
-                var expected = expectedErrors[i];
-                var actual = actualErrors[i];
-                Assert.Equal(expected.OriginalRowIndex, actual.OriginalRowIndex);
-                Assert.Equal(expected.OriginalRow, actual.OriginalRow);
-                Assert.Equal(expected, actual, new SingleErrorEqualityComparer());
+                if (x == y)
+                {
+                    return true;
+                }
+                if (x == null || y == null)
+                {
+                    return false;
+                }
+
+                return x.OriginalRowIndex == y.OriginalRowIndex &&
+                    // This is good enough for the purposes of this test.
+                    x.OriginalRow == y.OriginalRow &&
+                    x.SequenceEqual(y, new SingleErrorEqualityComparer());
             }
+
+            public int GetHashCode(BigQueryInsertRowErrors obj) => throw new NotImplementedException();
         }
 
         public class SingleErrorEqualityComparer : IEqualityComparer<SingleError>
