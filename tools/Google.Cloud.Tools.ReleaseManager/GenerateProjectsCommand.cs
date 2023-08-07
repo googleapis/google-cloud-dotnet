@@ -107,7 +107,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static readonly Dictionary<string, string> CommonTestDependencies = new Dictionary<string, string>
         {
             { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
-            { "Microsoft.NET.Test.Sdk", "17.6.3" },
+            { "Microsoft.NET.Test.Sdk", "17.7.0" },
             { "xunit", "2.5.0" },
             { "xunit.runner.visualstudio", "2.5.0" },
             { "Xunit.SkippableFact", "1.4.13" },
