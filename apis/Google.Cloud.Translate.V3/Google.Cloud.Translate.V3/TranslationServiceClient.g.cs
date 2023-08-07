@@ -736,7 +736,7 @@ namespace Google.Cloud.Translate.V3
         /// For example,
         /// `projects/{project-number-or-id}/locations/global/models/general/nmt`.
         /// 
-        /// If not provided, the default Google model (NMT) will be used.
+        /// If not provided, the default Google model (NMT) will be used
         /// </param>
         /// <param name="mimeType">
         /// Optional. The format of the source text, for example, "text/html",
@@ -809,7 +809,7 @@ namespace Google.Cloud.Translate.V3
         /// For example,
         /// `projects/{project-number-or-id}/locations/global/models/general/nmt`.
         /// 
-        /// If not provided, the default Google model (NMT) will be used.
+        /// If not provided, the default Google model (NMT) will be used
         /// </param>
         /// <param name="mimeType">
         /// Optional. The format of the source text, for example, "text/html",
@@ -882,7 +882,7 @@ namespace Google.Cloud.Translate.V3
         /// For example,
         /// `projects/{project-number-or-id}/locations/global/models/general/nmt`.
         /// 
-        /// If not provided, the default Google model (NMT) will be used.
+        /// If not provided, the default Google model (NMT) will be used
         /// </param>
         /// <param name="mimeType">
         /// Optional. The format of the source text, for example, "text/html",
@@ -944,7 +944,7 @@ namespace Google.Cloud.Translate.V3
         /// For example,
         /// `projects/{project-number-or-id}/locations/global/models/general/nmt`.
         /// 
-        /// If not provided, the default Google model (NMT) will be used.
+        /// If not provided, the default Google model (NMT) will be used
         /// </param>
         /// <param name="mimeType">
         /// Optional. The format of the source text, for example, "text/html",
@@ -1017,7 +1017,7 @@ namespace Google.Cloud.Translate.V3
         /// For example,
         /// `projects/{project-number-or-id}/locations/global/models/general/nmt`.
         /// 
-        /// If not provided, the default Google model (NMT) will be used.
+        /// If not provided, the default Google model (NMT) will be used
         /// </param>
         /// <param name="mimeType">
         /// Optional. The format of the source text, for example, "text/html",
@@ -1090,7 +1090,7 @@ namespace Google.Cloud.Translate.V3
         /// For example,
         /// `projects/{project-number-or-id}/locations/global/models/general/nmt`.
         /// 
-        /// If not provided, the default Google model (NMT) will be used.
+        /// If not provided, the default Google model (NMT) will be used
         /// </param>
         /// <param name="mimeType">
         /// Optional. The format of the source text, for example, "text/html",

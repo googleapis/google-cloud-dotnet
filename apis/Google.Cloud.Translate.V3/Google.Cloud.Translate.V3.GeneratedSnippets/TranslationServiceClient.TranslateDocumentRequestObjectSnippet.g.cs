@@ -47,6 +47,7 @@ namespace GoogleCSharpSnippets
                 CustomizedAttribution = "",
                 IsTranslateNativePdfOnly = false,
                 EnableShadowRemovalNativePdf = false,
+                EnableRotationCorrection = false,
             };
             // Make the request
             TranslateDocumentResponse response = translationServiceClient.TranslateDocument(request);
