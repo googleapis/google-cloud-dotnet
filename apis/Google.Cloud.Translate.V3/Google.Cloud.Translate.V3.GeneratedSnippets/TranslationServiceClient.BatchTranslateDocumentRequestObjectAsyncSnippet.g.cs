@@ -57,6 +57,8 @@ namespace GoogleCSharpSnippets
                 },
                 FormatConversions = { { "", "" }, },
                 CustomizedAttribution = "",
+                EnableShadowRemovalNativePdf = false,
+                EnableRotationCorrection = false,
             };
             // Make the request
             Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> response = await translationServiceClient.BatchTranslateDocumentAsync(request);

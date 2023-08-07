@@ -437,6 +437,7 @@ namespace GoogleCSharpSnippets
                 CustomizedAttribution = "",
                 IsTranslateNativePdfOnly = false,
                 EnableShadowRemovalNativePdf = false,
+                EnableRotationCorrection = false,
             };
             // Make the request
             TranslateDocumentResponse response = translationServiceClient.TranslateDocument(request);
@@ -464,6 +465,7 @@ namespace GoogleCSharpSnippets
                 CustomizedAttribution = "",
                 IsTranslateNativePdfOnly = false,
                 EnableShadowRemovalNativePdf = false,
+                EnableRotationCorrection = false,
             };
             // Make the request
             TranslateDocumentResponse response = await translationServiceClient.TranslateDocumentAsync(request);
@@ -588,6 +590,8 @@ namespace GoogleCSharpSnippets
                 },
                 FormatConversions = { { "", "" }, },
                 CustomizedAttribution = "",
+                EnableShadowRemovalNativePdf = false,
+                EnableRotationCorrection = false,
             };
             // Make the request
             Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> response = translationServiceClient.BatchTranslateDocument(request);
@@ -638,6 +642,8 @@ namespace GoogleCSharpSnippets
                 },
                 FormatConversions = { { "", "" }, },
                 CustomizedAttribution = "",
+                EnableShadowRemovalNativePdf = false,
+                EnableRotationCorrection = false,
             };
             // Make the request
             Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> response = await translationServiceClient.BatchTranslateDocumentAsync(request);
