@@ -22,5 +22,15 @@ PYTHON3=$(source ../toolversions.sh && echo $PYTHON3)
 sed -i "s/python3/$PYTHON3/g" /tmp/publisher-script
 source /tmp/publisher-script
 
-# Secrets are already populated, let's not do that again
-./release.sh --skippopulatesecrets
+echo "Not really doing a release"
+
+# We use COMMITTISH_OVERRIDE in the real release, but
+# it's fine to use it here as a way of failing.
+if [[ "$COMMITTISH_OVERRIDE" != "" ]]
+then
+  echo "Failing! $COMMITTISH_OVERRIDE"
+  exit 1
+fi
+
+echo "Fake release succeeded!"
+
