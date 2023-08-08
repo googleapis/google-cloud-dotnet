@@ -111,7 +111,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "xunit", "2.5.0" },
             { "xunit.runner.visualstudio", "2.5.0" },
             { "Xunit.SkippableFact", "1.4.13" },
-            { "Moq", "4.18.4" },
+            { "Moq", "4.20.0" },
             { "System.Linq.Async", "6.0.1" },
         };
 
