@@ -16,7 +16,6 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
@@ -48,14 +47,16 @@ namespace Google.Cloud.BareMetalSolution.V2
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return BaremetalsolutionReflection.Descriptor;
+            yield return CommonReflection.Descriptor;
             yield return InstanceReflection.Descriptor;
             yield return LunReflection.Descriptor;
             yield return NetworkReflection.Descriptor;
             yield return NfsShareReflection.Descriptor;
+            yield return OsimageReflection.Descriptor;
+            yield return ProvisioningReflection.Descriptor;
+            yield return SshKeyReflection.Descriptor;
             yield return VolumeReflection.Descriptor;
-            yield return gciv::IamPolicyReflection.Descriptor;
-            yield return gciv::OptionsReflection.Descriptor;
-            yield return gciv::PolicyReflection.Descriptor;
+            yield return VolumeSnapshotReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

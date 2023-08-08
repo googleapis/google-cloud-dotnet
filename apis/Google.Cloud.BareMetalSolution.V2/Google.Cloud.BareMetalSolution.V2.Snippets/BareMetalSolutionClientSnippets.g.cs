@@ -521,6 +521,99 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for RenameInstance</summary>
+        public void RenameInstanceRequestObject()
+        {
+            // Snippet: RenameInstance(RenameInstanceRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            RenameInstanceRequest request = new RenameInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                NewInstanceId = "",
+            };
+            // Make the request
+            Instance response = bareMetalSolutionClient.RenameInstance(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameInstanceAsync</summary>
+        public async Task RenameInstanceRequestObjectAsync()
+        {
+            // Snippet: RenameInstanceAsync(RenameInstanceRequest, CallSettings)
+            // Additional: RenameInstanceAsync(RenameInstanceRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            RenameInstanceRequest request = new RenameInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                NewInstanceId = "",
+            };
+            // Make the request
+            Instance response = await bareMetalSolutionClient.RenameInstanceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameInstance</summary>
+        public void RenameInstance()
+        {
+            // Snippet: RenameInstance(string, string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            string newInstanceId = "";
+            // Make the request
+            Instance response = bareMetalSolutionClient.RenameInstance(name, newInstanceId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameInstanceAsync</summary>
+        public async Task RenameInstanceAsync()
+        {
+            // Snippet: RenameInstanceAsync(string, string, CallSettings)
+            // Additional: RenameInstanceAsync(string, string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            string newInstanceId = "";
+            // Make the request
+            Instance response = await bareMetalSolutionClient.RenameInstanceAsync(name, newInstanceId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameInstance</summary>
+        public void RenameInstanceResourceNames()
+        {
+            // Snippet: RenameInstance(InstanceName, string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            string newInstanceId = "";
+            // Make the request
+            Instance response = bareMetalSolutionClient.RenameInstance(name, newInstanceId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameInstanceAsync</summary>
+        public async Task RenameInstanceResourceNamesAsync()
+        {
+            // Snippet: RenameInstanceAsync(InstanceName, string, CallSettings)
+            // Additional: RenameInstanceAsync(InstanceName, string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            string newInstanceId = "";
+            // Make the request
+            Instance response = await bareMetalSolutionClient.RenameInstanceAsync(name, newInstanceId);
+            // End snippet
+        }
+
         /// <summary>Snippet for ResetInstance</summary>
         public void ResetInstanceRequestObject()
         {
@@ -1070,6 +1163,372 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for EnableInteractiveSerialConsole</summary>
+        public void EnableInteractiveSerialConsoleRequestObject()
+        {
+            // Snippet: EnableInteractiveSerialConsole(EnableInteractiveSerialConsoleRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            EnableInteractiveSerialConsoleRequest request = new EnableInteractiveSerialConsoleRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            // Make the request
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> response = bareMetalSolutionClient.EnableInteractiveSerialConsole(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            EnableInteractiveSerialConsoleResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceEnableInteractiveSerialConsole(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EnableInteractiveSerialConsoleResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableInteractiveSerialConsoleAsync</summary>
+        public async Task EnableInteractiveSerialConsoleRequestObjectAsync()
+        {
+            // Snippet: EnableInteractiveSerialConsoleAsync(EnableInteractiveSerialConsoleRequest, CallSettings)
+            // Additional: EnableInteractiveSerialConsoleAsync(EnableInteractiveSerialConsoleRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            EnableInteractiveSerialConsoleRequest request = new EnableInteractiveSerialConsoleRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            // Make the request
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> response = await bareMetalSolutionClient.EnableInteractiveSerialConsoleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            EnableInteractiveSerialConsoleResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceEnableInteractiveSerialConsoleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EnableInteractiveSerialConsoleResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableInteractiveSerialConsole</summary>
+        public void EnableInteractiveSerialConsole()
+        {
+            // Snippet: EnableInteractiveSerialConsole(string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            // Make the request
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> response = bareMetalSolutionClient.EnableInteractiveSerialConsole(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            EnableInteractiveSerialConsoleResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceEnableInteractiveSerialConsole(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EnableInteractiveSerialConsoleResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableInteractiveSerialConsoleAsync</summary>
+        public async Task EnableInteractiveSerialConsoleAsync()
+        {
+            // Snippet: EnableInteractiveSerialConsoleAsync(string, CallSettings)
+            // Additional: EnableInteractiveSerialConsoleAsync(string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            // Make the request
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> response = await bareMetalSolutionClient.EnableInteractiveSerialConsoleAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            EnableInteractiveSerialConsoleResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceEnableInteractiveSerialConsoleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EnableInteractiveSerialConsoleResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableInteractiveSerialConsole</summary>
+        public void EnableInteractiveSerialConsoleResourceNames()
+        {
+            // Snippet: EnableInteractiveSerialConsole(InstanceName, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            // Make the request
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> response = bareMetalSolutionClient.EnableInteractiveSerialConsole(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            EnableInteractiveSerialConsoleResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceEnableInteractiveSerialConsole(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EnableInteractiveSerialConsoleResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableInteractiveSerialConsoleAsync</summary>
+        public async Task EnableInteractiveSerialConsoleResourceNamesAsync()
+        {
+            // Snippet: EnableInteractiveSerialConsoleAsync(InstanceName, CallSettings)
+            // Additional: EnableInteractiveSerialConsoleAsync(InstanceName, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            // Make the request
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> response = await bareMetalSolutionClient.EnableInteractiveSerialConsoleAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            EnableInteractiveSerialConsoleResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EnableInteractiveSerialConsoleResponse, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceEnableInteractiveSerialConsoleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EnableInteractiveSerialConsoleResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableInteractiveSerialConsole</summary>
+        public void DisableInteractiveSerialConsoleRequestObject()
+        {
+            // Snippet: DisableInteractiveSerialConsole(DisableInteractiveSerialConsoleRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            DisableInteractiveSerialConsoleRequest request = new DisableInteractiveSerialConsoleRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            // Make the request
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> response = bareMetalSolutionClient.DisableInteractiveSerialConsole(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DisableInteractiveSerialConsoleResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceDisableInteractiveSerialConsole(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DisableInteractiveSerialConsoleResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableInteractiveSerialConsoleAsync</summary>
+        public async Task DisableInteractiveSerialConsoleRequestObjectAsync()
+        {
+            // Snippet: DisableInteractiveSerialConsoleAsync(DisableInteractiveSerialConsoleRequest, CallSettings)
+            // Additional: DisableInteractiveSerialConsoleAsync(DisableInteractiveSerialConsoleRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            DisableInteractiveSerialConsoleRequest request = new DisableInteractiveSerialConsoleRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            // Make the request
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> response = await bareMetalSolutionClient.DisableInteractiveSerialConsoleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DisableInteractiveSerialConsoleResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceDisableInteractiveSerialConsoleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DisableInteractiveSerialConsoleResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableInteractiveSerialConsole</summary>
+        public void DisableInteractiveSerialConsole()
+        {
+            // Snippet: DisableInteractiveSerialConsole(string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            // Make the request
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> response = bareMetalSolutionClient.DisableInteractiveSerialConsole(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DisableInteractiveSerialConsoleResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceDisableInteractiveSerialConsole(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DisableInteractiveSerialConsoleResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableInteractiveSerialConsoleAsync</summary>
+        public async Task DisableInteractiveSerialConsoleAsync()
+        {
+            // Snippet: DisableInteractiveSerialConsoleAsync(string, CallSettings)
+            // Additional: DisableInteractiveSerialConsoleAsync(string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            // Make the request
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> response = await bareMetalSolutionClient.DisableInteractiveSerialConsoleAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DisableInteractiveSerialConsoleResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceDisableInteractiveSerialConsoleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DisableInteractiveSerialConsoleResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableInteractiveSerialConsole</summary>
+        public void DisableInteractiveSerialConsoleResourceNames()
+        {
+            // Snippet: DisableInteractiveSerialConsole(InstanceName, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            // Make the request
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> response = bareMetalSolutionClient.DisableInteractiveSerialConsole(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DisableInteractiveSerialConsoleResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceDisableInteractiveSerialConsole(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DisableInteractiveSerialConsoleResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableInteractiveSerialConsoleAsync</summary>
+        public async Task DisableInteractiveSerialConsoleResourceNamesAsync()
+        {
+            // Snippet: DisableInteractiveSerialConsoleAsync(InstanceName, CallSettings)
+            // Additional: DisableInteractiveSerialConsoleAsync(InstanceName, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            // Make the request
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> response = await bareMetalSolutionClient.DisableInteractiveSerialConsoleAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DisableInteractiveSerialConsoleResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DisableInteractiveSerialConsoleResponse, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceDisableInteractiveSerialConsoleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DisableInteractiveSerialConsoleResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DetachLun</summary>
         public void DetachLunRequestObject()
         {
@@ -1081,6 +1540,7 @@ namespace GoogleCSharpSnippets
             {
                 InstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 LunAsLunName = LunName.FromProjectLocationVolumeLun("[PROJECT]", "[LOCATION]", "[VOLUME]", "[LUN]"),
+                SkipReboot = false,
             };
             // Make the request
             Operation<Instance, OperationMetadata> response = bareMetalSolutionClient.DetachLun(request);
@@ -1115,6 +1575,7 @@ namespace GoogleCSharpSnippets
             {
                 InstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 LunAsLunName = LunName.FromProjectLocationVolumeLun("[PROJECT]", "[LOCATION]", "[VOLUME]", "[LUN]"),
+                SkipReboot = false,
             };
             // Make the request
             Operation<Instance, OperationMetadata> response = await bareMetalSolutionClient.DetachLunAsync(request);
@@ -1256,6 +1717,468 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Instance retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSSHKeys</summary>
+        public void ListSSHKeysRequestObject()
+        {
+            // Snippet: ListSSHKeys(ListSSHKeysRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            ListSSHKeysRequest request = new ListSSHKeysRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSSHKeysResponse, SSHKey> response = bareMetalSolutionClient.ListSSHKeys(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SSHKey item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSSHKeysResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SSHKey item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SSHKey> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SSHKey item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSSHKeysAsync</summary>
+        public async Task ListSSHKeysRequestObjectAsync()
+        {
+            // Snippet: ListSSHKeysAsync(ListSSHKeysRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSSHKeysRequest request = new ListSSHKeysRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSSHKeysResponse, SSHKey> response = bareMetalSolutionClient.ListSSHKeysAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SSHKey item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSSHKeysResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SSHKey item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SSHKey> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SSHKey item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSSHKeys</summary>
+        public void ListSSHKeys()
+        {
+            // Snippet: ListSSHKeys(string, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListSSHKeysResponse, SSHKey> response = bareMetalSolutionClient.ListSSHKeys(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SSHKey item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSSHKeysResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SSHKey item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SSHKey> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SSHKey item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSSHKeysAsync</summary>
+        public async Task ListSSHKeysAsync()
+        {
+            // Snippet: ListSSHKeysAsync(string, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListSSHKeysResponse, SSHKey> response = bareMetalSolutionClient.ListSSHKeysAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SSHKey item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSSHKeysResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SSHKey item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SSHKey> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SSHKey item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSSHKeys</summary>
+        public void ListSSHKeysResourceNames()
+        {
+            // Snippet: ListSSHKeys(LocationName, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListSSHKeysResponse, SSHKey> response = bareMetalSolutionClient.ListSSHKeys(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SSHKey item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSSHKeysResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SSHKey item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SSHKey> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SSHKey item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSSHKeysAsync</summary>
+        public async Task ListSSHKeysResourceNamesAsync()
+        {
+            // Snippet: ListSSHKeysAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListSSHKeysResponse, SSHKey> response = bareMetalSolutionClient.ListSSHKeysAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SSHKey item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSSHKeysResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SSHKey item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SSHKey> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SSHKey item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSSHKey</summary>
+        public void CreateSSHKeyRequestObject()
+        {
+            // Snippet: CreateSSHKey(CreateSSHKeyRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            CreateSSHKeyRequest request = new CreateSSHKeyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                SshKey = new SSHKey(),
+                SshKeyId = "",
+            };
+            // Make the request
+            SSHKey response = bareMetalSolutionClient.CreateSSHKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSSHKeyAsync</summary>
+        public async Task CreateSSHKeyRequestObjectAsync()
+        {
+            // Snippet: CreateSSHKeyAsync(CreateSSHKeyRequest, CallSettings)
+            // Additional: CreateSSHKeyAsync(CreateSSHKeyRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSSHKeyRequest request = new CreateSSHKeyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                SshKey = new SSHKey(),
+                SshKeyId = "",
+            };
+            // Make the request
+            SSHKey response = await bareMetalSolutionClient.CreateSSHKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSSHKey</summary>
+        public void CreateSSHKey()
+        {
+            // Snippet: CreateSSHKey(string, SSHKey, string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            SSHKey sshKey = new SSHKey();
+            string sshKeyId = "";
+            // Make the request
+            SSHKey response = bareMetalSolutionClient.CreateSSHKey(parent, sshKey, sshKeyId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSSHKeyAsync</summary>
+        public async Task CreateSSHKeyAsync()
+        {
+            // Snippet: CreateSSHKeyAsync(string, SSHKey, string, CallSettings)
+            // Additional: CreateSSHKeyAsync(string, SSHKey, string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            SSHKey sshKey = new SSHKey();
+            string sshKeyId = "";
+            // Make the request
+            SSHKey response = await bareMetalSolutionClient.CreateSSHKeyAsync(parent, sshKey, sshKeyId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSSHKey</summary>
+        public void CreateSSHKeyResourceNames()
+        {
+            // Snippet: CreateSSHKey(LocationName, SSHKey, string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            SSHKey sshKey = new SSHKey();
+            string sshKeyId = "";
+            // Make the request
+            SSHKey response = bareMetalSolutionClient.CreateSSHKey(parent, sshKey, sshKeyId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSSHKeyAsync</summary>
+        public async Task CreateSSHKeyResourceNamesAsync()
+        {
+            // Snippet: CreateSSHKeyAsync(LocationName, SSHKey, string, CallSettings)
+            // Additional: CreateSSHKeyAsync(LocationName, SSHKey, string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            SSHKey sshKey = new SSHKey();
+            string sshKeyId = "";
+            // Make the request
+            SSHKey response = await bareMetalSolutionClient.CreateSSHKeyAsync(parent, sshKey, sshKeyId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSSHKey</summary>
+        public void DeleteSSHKeyRequestObject()
+        {
+            // Snippet: DeleteSSHKey(DeleteSSHKeyRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            DeleteSSHKeyRequest request = new DeleteSSHKeyRequest
+            {
+                SshKeyName = SshKeyName.FromProjectLocationSshKey("[PROJECT]", "[LOCATION]", "[SSH_KEY]"),
+            };
+            // Make the request
+            bareMetalSolutionClient.DeleteSSHKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSSHKeyAsync</summary>
+        public async Task DeleteSSHKeyRequestObjectAsync()
+        {
+            // Snippet: DeleteSSHKeyAsync(DeleteSSHKeyRequest, CallSettings)
+            // Additional: DeleteSSHKeyAsync(DeleteSSHKeyRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSSHKeyRequest request = new DeleteSSHKeyRequest
+            {
+                SshKeyName = SshKeyName.FromProjectLocationSshKey("[PROJECT]", "[LOCATION]", "[SSH_KEY]"),
+            };
+            // Make the request
+            await bareMetalSolutionClient.DeleteSSHKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSSHKey</summary>
+        public void DeleteSSHKey()
+        {
+            // Snippet: DeleteSSHKey(string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sshKeys/[SSH_KEY]";
+            // Make the request
+            bareMetalSolutionClient.DeleteSSHKey(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSSHKeyAsync</summary>
+        public async Task DeleteSSHKeyAsync()
+        {
+            // Snippet: DeleteSSHKeyAsync(string, CallSettings)
+            // Additional: DeleteSSHKeyAsync(string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sshKeys/[SSH_KEY]";
+            // Make the request
+            await bareMetalSolutionClient.DeleteSSHKeyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSSHKey</summary>
+        public void DeleteSSHKeyResourceNames()
+        {
+            // Snippet: DeleteSSHKey(SshKeyName, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            SshKeyName name = SshKeyName.FromProjectLocationSshKey("[PROJECT]", "[LOCATION]", "[SSH_KEY]");
+            // Make the request
+            bareMetalSolutionClient.DeleteSSHKey(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSSHKeyAsync</summary>
+        public async Task DeleteSSHKeyResourceNamesAsync()
+        {
+            // Snippet: DeleteSSHKeyAsync(SshKeyName, CallSettings)
+            // Additional: DeleteSSHKeyAsync(SshKeyName, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            SshKeyName name = SshKeyName.FromProjectLocationSshKey("[PROJECT]", "[LOCATION]", "[SSH_KEY]");
+            // Make the request
+            await bareMetalSolutionClient.DeleteSSHKeyAsync(name);
             // End snippet
         }
 
@@ -1748,6 +2671,282 @@ namespace GoogleCSharpSnippets
             {
                 // If it has completed, then access the result
                 Volume retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameVolume</summary>
+        public void RenameVolumeRequestObject()
+        {
+            // Snippet: RenameVolume(RenameVolumeRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            RenameVolumeRequest request = new RenameVolumeRequest
+            {
+                VolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+                NewVolumeId = "",
+            };
+            // Make the request
+            Volume response = bareMetalSolutionClient.RenameVolume(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameVolumeAsync</summary>
+        public async Task RenameVolumeRequestObjectAsync()
+        {
+            // Snippet: RenameVolumeAsync(RenameVolumeRequest, CallSettings)
+            // Additional: RenameVolumeAsync(RenameVolumeRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            RenameVolumeRequest request = new RenameVolumeRequest
+            {
+                VolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+                NewVolumeId = "",
+            };
+            // Make the request
+            Volume response = await bareMetalSolutionClient.RenameVolumeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameVolume</summary>
+        public void RenameVolume()
+        {
+            // Snippet: RenameVolume(string, string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            string newVolumeId = "";
+            // Make the request
+            Volume response = bareMetalSolutionClient.RenameVolume(name, newVolumeId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameVolumeAsync</summary>
+        public async Task RenameVolumeAsync()
+        {
+            // Snippet: RenameVolumeAsync(string, string, CallSettings)
+            // Additional: RenameVolumeAsync(string, string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            string newVolumeId = "";
+            // Make the request
+            Volume response = await bareMetalSolutionClient.RenameVolumeAsync(name, newVolumeId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameVolume</summary>
+        public void RenameVolumeResourceNames()
+        {
+            // Snippet: RenameVolume(VolumeName, string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            VolumeName name = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            string newVolumeId = "";
+            // Make the request
+            Volume response = bareMetalSolutionClient.RenameVolume(name, newVolumeId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameVolumeAsync</summary>
+        public async Task RenameVolumeResourceNamesAsync()
+        {
+            // Snippet: RenameVolumeAsync(VolumeName, string, CallSettings)
+            // Additional: RenameVolumeAsync(VolumeName, string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            VolumeName name = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            string newVolumeId = "";
+            // Make the request
+            Volume response = await bareMetalSolutionClient.RenameVolumeAsync(name, newVolumeId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvictVolume</summary>
+        public void EvictVolumeRequestObject()
+        {
+            // Snippet: EvictVolume(EvictVolumeRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            EvictVolumeRequest request = new EvictVolumeRequest
+            {
+                VolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = bareMetalSolutionClient.EvictVolume(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceEvictVolume(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvictVolumeAsync</summary>
+        public async Task EvictVolumeRequestObjectAsync()
+        {
+            // Snippet: EvictVolumeAsync(EvictVolumeRequest, CallSettings)
+            // Additional: EvictVolumeAsync(EvictVolumeRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            EvictVolumeRequest request = new EvictVolumeRequest
+            {
+                VolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await bareMetalSolutionClient.EvictVolumeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceEvictVolumeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvictVolume</summary>
+        public void EvictVolume()
+        {
+            // Snippet: EvictVolume(string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = bareMetalSolutionClient.EvictVolume(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceEvictVolume(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvictVolumeAsync</summary>
+        public async Task EvictVolumeAsync()
+        {
+            // Snippet: EvictVolumeAsync(string, CallSettings)
+            // Additional: EvictVolumeAsync(string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await bareMetalSolutionClient.EvictVolumeAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceEvictVolumeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvictVolume</summary>
+        public void EvictVolumeResourceNames()
+        {
+            // Snippet: EvictVolume(VolumeName, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            VolumeName name = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = bareMetalSolutionClient.EvictVolume(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceEvictVolume(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvictVolumeAsync</summary>
+        public async Task EvictVolumeResourceNamesAsync()
+        {
+            // Snippet: EvictVolumeAsync(VolumeName, CallSettings)
+            // Additional: EvictVolumeAsync(VolumeName, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            VolumeName name = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await bareMetalSolutionClient.EvictVolumeAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceEvictVolumeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -2521,6 +3720,732 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateVolumeSnapshot</summary>
+        public void CreateVolumeSnapshotRequestObject()
+        {
+            // Snippet: CreateVolumeSnapshot(CreateVolumeSnapshotRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            CreateVolumeSnapshotRequest request = new CreateVolumeSnapshotRequest
+            {
+                ParentAsVolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+                VolumeSnapshot = new VolumeSnapshot(),
+            };
+            // Make the request
+            VolumeSnapshot response = bareMetalSolutionClient.CreateVolumeSnapshot(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateVolumeSnapshotAsync</summary>
+        public async Task CreateVolumeSnapshotRequestObjectAsync()
+        {
+            // Snippet: CreateVolumeSnapshotAsync(CreateVolumeSnapshotRequest, CallSettings)
+            // Additional: CreateVolumeSnapshotAsync(CreateVolumeSnapshotRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateVolumeSnapshotRequest request = new CreateVolumeSnapshotRequest
+            {
+                ParentAsVolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+                VolumeSnapshot = new VolumeSnapshot(),
+            };
+            // Make the request
+            VolumeSnapshot response = await bareMetalSolutionClient.CreateVolumeSnapshotAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateVolumeSnapshot</summary>
+        public void CreateVolumeSnapshot()
+        {
+            // Snippet: CreateVolumeSnapshot(string, VolumeSnapshot, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            VolumeSnapshot volumeSnapshot = new VolumeSnapshot();
+            // Make the request
+            VolumeSnapshot response = bareMetalSolutionClient.CreateVolumeSnapshot(parent, volumeSnapshot);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateVolumeSnapshotAsync</summary>
+        public async Task CreateVolumeSnapshotAsync()
+        {
+            // Snippet: CreateVolumeSnapshotAsync(string, VolumeSnapshot, CallSettings)
+            // Additional: CreateVolumeSnapshotAsync(string, VolumeSnapshot, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            VolumeSnapshot volumeSnapshot = new VolumeSnapshot();
+            // Make the request
+            VolumeSnapshot response = await bareMetalSolutionClient.CreateVolumeSnapshotAsync(parent, volumeSnapshot);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateVolumeSnapshot</summary>
+        public void CreateVolumeSnapshotResourceNames()
+        {
+            // Snippet: CreateVolumeSnapshot(VolumeName, VolumeSnapshot, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            VolumeName parent = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            VolumeSnapshot volumeSnapshot = new VolumeSnapshot();
+            // Make the request
+            VolumeSnapshot response = bareMetalSolutionClient.CreateVolumeSnapshot(parent, volumeSnapshot);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateVolumeSnapshotAsync</summary>
+        public async Task CreateVolumeSnapshotResourceNamesAsync()
+        {
+            // Snippet: CreateVolumeSnapshotAsync(VolumeName, VolumeSnapshot, CallSettings)
+            // Additional: CreateVolumeSnapshotAsync(VolumeName, VolumeSnapshot, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            VolumeName parent = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            VolumeSnapshot volumeSnapshot = new VolumeSnapshot();
+            // Make the request
+            VolumeSnapshot response = await bareMetalSolutionClient.CreateVolumeSnapshotAsync(parent, volumeSnapshot);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreVolumeSnapshot</summary>
+        public void RestoreVolumeSnapshotRequestObject()
+        {
+            // Snippet: RestoreVolumeSnapshot(RestoreVolumeSnapshotRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            RestoreVolumeSnapshotRequest request = new RestoreVolumeSnapshotRequest
+            {
+                VolumeSnapshotAsVolumeSnapshotName = VolumeSnapshotName.FromProjectLocationVolumeSnapshot("[PROJECT]", "[LOCATION]", "[VOLUME]", "[SNAPSHOT]"),
+            };
+            // Make the request
+            Operation<VolumeSnapshot, OperationMetadata> response = bareMetalSolutionClient.RestoreVolumeSnapshot(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VolumeSnapshot, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            VolumeSnapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VolumeSnapshot, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceRestoreVolumeSnapshot(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VolumeSnapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreVolumeSnapshotAsync</summary>
+        public async Task RestoreVolumeSnapshotRequestObjectAsync()
+        {
+            // Snippet: RestoreVolumeSnapshotAsync(RestoreVolumeSnapshotRequest, CallSettings)
+            // Additional: RestoreVolumeSnapshotAsync(RestoreVolumeSnapshotRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreVolumeSnapshotRequest request = new RestoreVolumeSnapshotRequest
+            {
+                VolumeSnapshotAsVolumeSnapshotName = VolumeSnapshotName.FromProjectLocationVolumeSnapshot("[PROJECT]", "[LOCATION]", "[VOLUME]", "[SNAPSHOT]"),
+            };
+            // Make the request
+            Operation<VolumeSnapshot, OperationMetadata> response = await bareMetalSolutionClient.RestoreVolumeSnapshotAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VolumeSnapshot, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            VolumeSnapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VolumeSnapshot, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceRestoreVolumeSnapshotAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VolumeSnapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreVolumeSnapshot</summary>
+        public void RestoreVolumeSnapshot()
+        {
+            // Snippet: RestoreVolumeSnapshot(string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string volumeSnapshot = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]/snapshots/[SNAPSHOT]";
+            // Make the request
+            Operation<VolumeSnapshot, OperationMetadata> response = bareMetalSolutionClient.RestoreVolumeSnapshot(volumeSnapshot);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VolumeSnapshot, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            VolumeSnapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VolumeSnapshot, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceRestoreVolumeSnapshot(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VolumeSnapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreVolumeSnapshotAsync</summary>
+        public async Task RestoreVolumeSnapshotAsync()
+        {
+            // Snippet: RestoreVolumeSnapshotAsync(string, CallSettings)
+            // Additional: RestoreVolumeSnapshotAsync(string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string volumeSnapshot = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]/snapshots/[SNAPSHOT]";
+            // Make the request
+            Operation<VolumeSnapshot, OperationMetadata> response = await bareMetalSolutionClient.RestoreVolumeSnapshotAsync(volumeSnapshot);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VolumeSnapshot, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            VolumeSnapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VolumeSnapshot, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceRestoreVolumeSnapshotAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VolumeSnapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreVolumeSnapshot</summary>
+        public void RestoreVolumeSnapshotResourceNames()
+        {
+            // Snippet: RestoreVolumeSnapshot(VolumeSnapshotName, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            VolumeSnapshotName volumeSnapshot = VolumeSnapshotName.FromProjectLocationVolumeSnapshot("[PROJECT]", "[LOCATION]", "[VOLUME]", "[SNAPSHOT]");
+            // Make the request
+            Operation<VolumeSnapshot, OperationMetadata> response = bareMetalSolutionClient.RestoreVolumeSnapshot(volumeSnapshot);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VolumeSnapshot, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            VolumeSnapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VolumeSnapshot, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceRestoreVolumeSnapshot(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VolumeSnapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreVolumeSnapshotAsync</summary>
+        public async Task RestoreVolumeSnapshotResourceNamesAsync()
+        {
+            // Snippet: RestoreVolumeSnapshotAsync(VolumeSnapshotName, CallSettings)
+            // Additional: RestoreVolumeSnapshotAsync(VolumeSnapshotName, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            VolumeSnapshotName volumeSnapshot = VolumeSnapshotName.FromProjectLocationVolumeSnapshot("[PROJECT]", "[LOCATION]", "[VOLUME]", "[SNAPSHOT]");
+            // Make the request
+            Operation<VolumeSnapshot, OperationMetadata> response = await bareMetalSolutionClient.RestoreVolumeSnapshotAsync(volumeSnapshot);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VolumeSnapshot, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            VolumeSnapshot result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VolumeSnapshot, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceRestoreVolumeSnapshotAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VolumeSnapshot retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVolumeSnapshot</summary>
+        public void DeleteVolumeSnapshotRequestObject()
+        {
+            // Snippet: DeleteVolumeSnapshot(DeleteVolumeSnapshotRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            DeleteVolumeSnapshotRequest request = new DeleteVolumeSnapshotRequest
+            {
+                VolumeSnapshotName = VolumeSnapshotName.FromProjectLocationVolumeSnapshot("[PROJECT]", "[LOCATION]", "[VOLUME]", "[SNAPSHOT]"),
+            };
+            // Make the request
+            bareMetalSolutionClient.DeleteVolumeSnapshot(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVolumeSnapshotAsync</summary>
+        public async Task DeleteVolumeSnapshotRequestObjectAsync()
+        {
+            // Snippet: DeleteVolumeSnapshotAsync(DeleteVolumeSnapshotRequest, CallSettings)
+            // Additional: DeleteVolumeSnapshotAsync(DeleteVolumeSnapshotRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteVolumeSnapshotRequest request = new DeleteVolumeSnapshotRequest
+            {
+                VolumeSnapshotName = VolumeSnapshotName.FromProjectLocationVolumeSnapshot("[PROJECT]", "[LOCATION]", "[VOLUME]", "[SNAPSHOT]"),
+            };
+            // Make the request
+            await bareMetalSolutionClient.DeleteVolumeSnapshotAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVolumeSnapshot</summary>
+        public void DeleteVolumeSnapshot()
+        {
+            // Snippet: DeleteVolumeSnapshot(string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]/snapshots/[SNAPSHOT]";
+            // Make the request
+            bareMetalSolutionClient.DeleteVolumeSnapshot(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVolumeSnapshotAsync</summary>
+        public async Task DeleteVolumeSnapshotAsync()
+        {
+            // Snippet: DeleteVolumeSnapshotAsync(string, CallSettings)
+            // Additional: DeleteVolumeSnapshotAsync(string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]/snapshots/[SNAPSHOT]";
+            // Make the request
+            await bareMetalSolutionClient.DeleteVolumeSnapshotAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVolumeSnapshot</summary>
+        public void DeleteVolumeSnapshotResourceNames()
+        {
+            // Snippet: DeleteVolumeSnapshot(VolumeSnapshotName, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            VolumeSnapshotName name = VolumeSnapshotName.FromProjectLocationVolumeSnapshot("[PROJECT]", "[LOCATION]", "[VOLUME]", "[SNAPSHOT]");
+            // Make the request
+            bareMetalSolutionClient.DeleteVolumeSnapshot(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVolumeSnapshotAsync</summary>
+        public async Task DeleteVolumeSnapshotResourceNamesAsync()
+        {
+            // Snippet: DeleteVolumeSnapshotAsync(VolumeSnapshotName, CallSettings)
+            // Additional: DeleteVolumeSnapshotAsync(VolumeSnapshotName, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            VolumeSnapshotName name = VolumeSnapshotName.FromProjectLocationVolumeSnapshot("[PROJECT]", "[LOCATION]", "[VOLUME]", "[SNAPSHOT]");
+            // Make the request
+            await bareMetalSolutionClient.DeleteVolumeSnapshotAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVolumeSnapshot</summary>
+        public void GetVolumeSnapshotRequestObject()
+        {
+            // Snippet: GetVolumeSnapshot(GetVolumeSnapshotRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            GetVolumeSnapshotRequest request = new GetVolumeSnapshotRequest
+            {
+                VolumeSnapshotName = VolumeSnapshotName.FromProjectLocationVolumeSnapshot("[PROJECT]", "[LOCATION]", "[VOLUME]", "[SNAPSHOT]"),
+            };
+            // Make the request
+            VolumeSnapshot response = bareMetalSolutionClient.GetVolumeSnapshot(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVolumeSnapshotAsync</summary>
+        public async Task GetVolumeSnapshotRequestObjectAsync()
+        {
+            // Snippet: GetVolumeSnapshotAsync(GetVolumeSnapshotRequest, CallSettings)
+            // Additional: GetVolumeSnapshotAsync(GetVolumeSnapshotRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            GetVolumeSnapshotRequest request = new GetVolumeSnapshotRequest
+            {
+                VolumeSnapshotName = VolumeSnapshotName.FromProjectLocationVolumeSnapshot("[PROJECT]", "[LOCATION]", "[VOLUME]", "[SNAPSHOT]"),
+            };
+            // Make the request
+            VolumeSnapshot response = await bareMetalSolutionClient.GetVolumeSnapshotAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVolumeSnapshot</summary>
+        public void GetVolumeSnapshot()
+        {
+            // Snippet: GetVolumeSnapshot(string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]/snapshots/[SNAPSHOT]";
+            // Make the request
+            VolumeSnapshot response = bareMetalSolutionClient.GetVolumeSnapshot(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVolumeSnapshotAsync</summary>
+        public async Task GetVolumeSnapshotAsync()
+        {
+            // Snippet: GetVolumeSnapshotAsync(string, CallSettings)
+            // Additional: GetVolumeSnapshotAsync(string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]/snapshots/[SNAPSHOT]";
+            // Make the request
+            VolumeSnapshot response = await bareMetalSolutionClient.GetVolumeSnapshotAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVolumeSnapshot</summary>
+        public void GetVolumeSnapshotResourceNames()
+        {
+            // Snippet: GetVolumeSnapshot(VolumeSnapshotName, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            VolumeSnapshotName name = VolumeSnapshotName.FromProjectLocationVolumeSnapshot("[PROJECT]", "[LOCATION]", "[VOLUME]", "[SNAPSHOT]");
+            // Make the request
+            VolumeSnapshot response = bareMetalSolutionClient.GetVolumeSnapshot(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVolumeSnapshotAsync</summary>
+        public async Task GetVolumeSnapshotResourceNamesAsync()
+        {
+            // Snippet: GetVolumeSnapshotAsync(VolumeSnapshotName, CallSettings)
+            // Additional: GetVolumeSnapshotAsync(VolumeSnapshotName, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            VolumeSnapshotName name = VolumeSnapshotName.FromProjectLocationVolumeSnapshot("[PROJECT]", "[LOCATION]", "[VOLUME]", "[SNAPSHOT]");
+            // Make the request
+            VolumeSnapshot response = await bareMetalSolutionClient.GetVolumeSnapshotAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVolumeSnapshots</summary>
+        public void ListVolumeSnapshotsRequestObject()
+        {
+            // Snippet: ListVolumeSnapshots(ListVolumeSnapshotsRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            ListVolumeSnapshotsRequest request = new ListVolumeSnapshotsRequest
+            {
+                ParentAsVolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+            };
+            // Make the request
+            PagedEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> response = bareMetalSolutionClient.ListVolumeSnapshots(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (VolumeSnapshot item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListVolumeSnapshotsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VolumeSnapshot item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VolumeSnapshot> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VolumeSnapshot item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVolumeSnapshotsAsync</summary>
+        public async Task ListVolumeSnapshotsRequestObjectAsync()
+        {
+            // Snippet: ListVolumeSnapshotsAsync(ListVolumeSnapshotsRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            ListVolumeSnapshotsRequest request = new ListVolumeSnapshotsRequest
+            {
+                ParentAsVolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> response = bareMetalSolutionClient.ListVolumeSnapshotsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((VolumeSnapshot item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListVolumeSnapshotsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VolumeSnapshot item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VolumeSnapshot> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VolumeSnapshot item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVolumeSnapshots</summary>
+        public void ListVolumeSnapshots()
+        {
+            // Snippet: ListVolumeSnapshots(string, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            // Make the request
+            PagedEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> response = bareMetalSolutionClient.ListVolumeSnapshots(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (VolumeSnapshot item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListVolumeSnapshotsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VolumeSnapshot item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VolumeSnapshot> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VolumeSnapshot item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVolumeSnapshotsAsync</summary>
+        public async Task ListVolumeSnapshotsAsync()
+        {
+            // Snippet: ListVolumeSnapshotsAsync(string, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            // Make the request
+            PagedAsyncEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> response = bareMetalSolutionClient.ListVolumeSnapshotsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((VolumeSnapshot item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListVolumeSnapshotsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VolumeSnapshot item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VolumeSnapshot> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VolumeSnapshot item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVolumeSnapshots</summary>
+        public void ListVolumeSnapshotsResourceNames()
+        {
+            // Snippet: ListVolumeSnapshots(VolumeName, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            VolumeName parent = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            // Make the request
+            PagedEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> response = bareMetalSolutionClient.ListVolumeSnapshots(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (VolumeSnapshot item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListVolumeSnapshotsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VolumeSnapshot item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VolumeSnapshot> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VolumeSnapshot item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVolumeSnapshotsAsync</summary>
+        public async Task ListVolumeSnapshotsResourceNamesAsync()
+        {
+            // Snippet: ListVolumeSnapshotsAsync(VolumeName, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            VolumeName parent = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            // Make the request
+            PagedAsyncEnumerable<ListVolumeSnapshotsResponse, VolumeSnapshot> response = bareMetalSolutionClient.ListVolumeSnapshotsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((VolumeSnapshot item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListVolumeSnapshotsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VolumeSnapshot item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VolumeSnapshot> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VolumeSnapshot item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for GetLun</summary>
         public void GetLunRequestObject()
         {
@@ -2881,6 +4806,189 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvictLun</summary>
+        public void EvictLunRequestObject()
+        {
+            // Snippet: EvictLun(EvictLunRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            EvictLunRequest request = new EvictLunRequest
+            {
+                LunName = LunName.FromProjectLocationVolumeLun("[PROJECT]", "[LOCATION]", "[VOLUME]", "[LUN]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = bareMetalSolutionClient.EvictLun(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceEvictLun(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvictLunAsync</summary>
+        public async Task EvictLunRequestObjectAsync()
+        {
+            // Snippet: EvictLunAsync(EvictLunRequest, CallSettings)
+            // Additional: EvictLunAsync(EvictLunRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            EvictLunRequest request = new EvictLunRequest
+            {
+                LunName = LunName.FromProjectLocationVolumeLun("[PROJECT]", "[LOCATION]", "[VOLUME]", "[LUN]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await bareMetalSolutionClient.EvictLunAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceEvictLunAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvictLun</summary>
+        public void EvictLun()
+        {
+            // Snippet: EvictLun(string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]/luns/[LUN]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = bareMetalSolutionClient.EvictLun(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceEvictLun(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvictLunAsync</summary>
+        public async Task EvictLunAsync()
+        {
+            // Snippet: EvictLunAsync(string, CallSettings)
+            // Additional: EvictLunAsync(string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]/luns/[LUN]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await bareMetalSolutionClient.EvictLunAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceEvictLunAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvictLun</summary>
+        public void EvictLunResourceNames()
+        {
+            // Snippet: EvictLun(LunName, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            LunName name = LunName.FromProjectLocationVolumeLun("[PROJECT]", "[LOCATION]", "[VOLUME]", "[LUN]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = bareMetalSolutionClient.EvictLun(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceEvictLun(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for EvictLunAsync</summary>
+        public async Task EvictLunResourceNamesAsync()
+        {
+            // Snippet: EvictLunAsync(LunName, CallSettings)
+            // Additional: EvictLunAsync(LunName, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            LunName name = LunName.FromProjectLocationVolumeLun("[PROJECT]", "[LOCATION]", "[VOLUME]", "[LUN]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await bareMetalSolutionClient.EvictLunAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceEvictLunAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -3374,6 +5482,1459 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 NfsShare retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNfsShare</summary>
+        public void CreateNfsShareRequestObject()
+        {
+            // Snippet: CreateNfsShare(CreateNfsShareRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            CreateNfsShareRequest request = new CreateNfsShareRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                NfsShare = new NfsShare(),
+            };
+            // Make the request
+            Operation<NfsShare, OperationMetadata> response = bareMetalSolutionClient.CreateNfsShare(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NfsShare, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            NfsShare result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NfsShare, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceCreateNfsShare(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NfsShare retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNfsShareAsync</summary>
+        public async Task CreateNfsShareRequestObjectAsync()
+        {
+            // Snippet: CreateNfsShareAsync(CreateNfsShareRequest, CallSettings)
+            // Additional: CreateNfsShareAsync(CreateNfsShareRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateNfsShareRequest request = new CreateNfsShareRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                NfsShare = new NfsShare(),
+            };
+            // Make the request
+            Operation<NfsShare, OperationMetadata> response = await bareMetalSolutionClient.CreateNfsShareAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NfsShare, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            NfsShare result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NfsShare, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceCreateNfsShareAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NfsShare retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNfsShare</summary>
+        public void CreateNfsShare()
+        {
+            // Snippet: CreateNfsShare(string, NfsShare, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            NfsShare nfsShare = new NfsShare();
+            // Make the request
+            Operation<NfsShare, OperationMetadata> response = bareMetalSolutionClient.CreateNfsShare(parent, nfsShare);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NfsShare, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            NfsShare result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NfsShare, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceCreateNfsShare(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NfsShare retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNfsShareAsync</summary>
+        public async Task CreateNfsShareAsync()
+        {
+            // Snippet: CreateNfsShareAsync(string, NfsShare, CallSettings)
+            // Additional: CreateNfsShareAsync(string, NfsShare, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            NfsShare nfsShare = new NfsShare();
+            // Make the request
+            Operation<NfsShare, OperationMetadata> response = await bareMetalSolutionClient.CreateNfsShareAsync(parent, nfsShare);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NfsShare, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            NfsShare result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NfsShare, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceCreateNfsShareAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NfsShare retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNfsShare</summary>
+        public void CreateNfsShareResourceNames()
+        {
+            // Snippet: CreateNfsShare(LocationName, NfsShare, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            NfsShare nfsShare = new NfsShare();
+            // Make the request
+            Operation<NfsShare, OperationMetadata> response = bareMetalSolutionClient.CreateNfsShare(parent, nfsShare);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NfsShare, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            NfsShare result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NfsShare, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceCreateNfsShare(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NfsShare retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateNfsShareAsync</summary>
+        public async Task CreateNfsShareResourceNamesAsync()
+        {
+            // Snippet: CreateNfsShareAsync(LocationName, NfsShare, CallSettings)
+            // Additional: CreateNfsShareAsync(LocationName, NfsShare, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            NfsShare nfsShare = new NfsShare();
+            // Make the request
+            Operation<NfsShare, OperationMetadata> response = await bareMetalSolutionClient.CreateNfsShareAsync(parent, nfsShare);
+
+            // Poll until the returned long-running operation is complete
+            Operation<NfsShare, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            NfsShare result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<NfsShare, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceCreateNfsShareAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                NfsShare retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameNfsShare</summary>
+        public void RenameNfsShareRequestObject()
+        {
+            // Snippet: RenameNfsShare(RenameNfsShareRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            RenameNfsShareRequest request = new RenameNfsShareRequest
+            {
+                NFSShareName = NFSShareName.FromProjectLocationNfsShare("[PROJECT]", "[LOCATION]", "[NFS_SHARE]"),
+                NewNfsshareId = "",
+            };
+            // Make the request
+            NfsShare response = bareMetalSolutionClient.RenameNfsShare(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameNfsShareAsync</summary>
+        public async Task RenameNfsShareRequestObjectAsync()
+        {
+            // Snippet: RenameNfsShareAsync(RenameNfsShareRequest, CallSettings)
+            // Additional: RenameNfsShareAsync(RenameNfsShareRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            RenameNfsShareRequest request = new RenameNfsShareRequest
+            {
+                NFSShareName = NFSShareName.FromProjectLocationNfsShare("[PROJECT]", "[LOCATION]", "[NFS_SHARE]"),
+                NewNfsshareId = "",
+            };
+            // Make the request
+            NfsShare response = await bareMetalSolutionClient.RenameNfsShareAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameNfsShare</summary>
+        public void RenameNfsShare()
+        {
+            // Snippet: RenameNfsShare(string, string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/nfsShares/[NFS_SHARE]";
+            string newNfsshareId = "";
+            // Make the request
+            NfsShare response = bareMetalSolutionClient.RenameNfsShare(name, newNfsshareId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameNfsShareAsync</summary>
+        public async Task RenameNfsShareAsync()
+        {
+            // Snippet: RenameNfsShareAsync(string, string, CallSettings)
+            // Additional: RenameNfsShareAsync(string, string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/nfsShares/[NFS_SHARE]";
+            string newNfsshareId = "";
+            // Make the request
+            NfsShare response = await bareMetalSolutionClient.RenameNfsShareAsync(name, newNfsshareId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameNfsShare</summary>
+        public void RenameNfsShareResourceNames()
+        {
+            // Snippet: RenameNfsShare(NFSShareName, string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            NFSShareName name = NFSShareName.FromProjectLocationNfsShare("[PROJECT]", "[LOCATION]", "[NFS_SHARE]");
+            string newNfsshareId = "";
+            // Make the request
+            NfsShare response = bareMetalSolutionClient.RenameNfsShare(name, newNfsshareId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameNfsShareAsync</summary>
+        public async Task RenameNfsShareResourceNamesAsync()
+        {
+            // Snippet: RenameNfsShareAsync(NFSShareName, string, CallSettings)
+            // Additional: RenameNfsShareAsync(NFSShareName, string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            NFSShareName name = NFSShareName.FromProjectLocationNfsShare("[PROJECT]", "[LOCATION]", "[NFS_SHARE]");
+            string newNfsshareId = "";
+            // Make the request
+            NfsShare response = await bareMetalSolutionClient.RenameNfsShareAsync(name, newNfsshareId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNfsShare</summary>
+        public void DeleteNfsShareRequestObject()
+        {
+            // Snippet: DeleteNfsShare(DeleteNfsShareRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            DeleteNfsShareRequest request = new DeleteNfsShareRequest
+            {
+                NFSShareName = NFSShareName.FromProjectLocationNfsShare("[PROJECT]", "[LOCATION]", "[NFS_SHARE]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = bareMetalSolutionClient.DeleteNfsShare(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceDeleteNfsShare(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNfsShareAsync</summary>
+        public async Task DeleteNfsShareRequestObjectAsync()
+        {
+            // Snippet: DeleteNfsShareAsync(DeleteNfsShareRequest, CallSettings)
+            // Additional: DeleteNfsShareAsync(DeleteNfsShareRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteNfsShareRequest request = new DeleteNfsShareRequest
+            {
+                NFSShareName = NFSShareName.FromProjectLocationNfsShare("[PROJECT]", "[LOCATION]", "[NFS_SHARE]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await bareMetalSolutionClient.DeleteNfsShareAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceDeleteNfsShareAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNfsShare</summary>
+        public void DeleteNfsShare()
+        {
+            // Snippet: DeleteNfsShare(string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/nfsShares/[NFS_SHARE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = bareMetalSolutionClient.DeleteNfsShare(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceDeleteNfsShare(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNfsShareAsync</summary>
+        public async Task DeleteNfsShareAsync()
+        {
+            // Snippet: DeleteNfsShareAsync(string, CallSettings)
+            // Additional: DeleteNfsShareAsync(string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/nfsShares/[NFS_SHARE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await bareMetalSolutionClient.DeleteNfsShareAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceDeleteNfsShareAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNfsShare</summary>
+        public void DeleteNfsShareResourceNames()
+        {
+            // Snippet: DeleteNfsShare(NFSShareName, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            NFSShareName name = NFSShareName.FromProjectLocationNfsShare("[PROJECT]", "[LOCATION]", "[NFS_SHARE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = bareMetalSolutionClient.DeleteNfsShare(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = bareMetalSolutionClient.PollOnceDeleteNfsShare(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNfsShareAsync</summary>
+        public async Task DeleteNfsShareResourceNamesAsync()
+        {
+            // Snippet: DeleteNfsShareAsync(NFSShareName, CallSettings)
+            // Additional: DeleteNfsShareAsync(NFSShareName, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            NFSShareName name = NFSShareName.FromProjectLocationNfsShare("[PROJECT]", "[LOCATION]", "[NFS_SHARE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await bareMetalSolutionClient.DeleteNfsShareAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await bareMetalSolutionClient.PollOnceDeleteNfsShareAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProvisioningQuotas</summary>
+        public void ListProvisioningQuotasRequestObject()
+        {
+            // Snippet: ListProvisioningQuotas(ListProvisioningQuotasRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            ListProvisioningQuotasRequest request = new ListProvisioningQuotasRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> response = bareMetalSolutionClient.ListProvisioningQuotas(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ProvisioningQuota item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProvisioningQuotasResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProvisioningQuota item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProvisioningQuota> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProvisioningQuota item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProvisioningQuotasAsync</summary>
+        public async Task ListProvisioningQuotasRequestObjectAsync()
+        {
+            // Snippet: ListProvisioningQuotasAsync(ListProvisioningQuotasRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            ListProvisioningQuotasRequest request = new ListProvisioningQuotasRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> response = bareMetalSolutionClient.ListProvisioningQuotasAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ProvisioningQuota item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProvisioningQuotasResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProvisioningQuota item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProvisioningQuota> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProvisioningQuota item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProvisioningQuotas</summary>
+        public void ListProvisioningQuotas()
+        {
+            // Snippet: ListProvisioningQuotas(string, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> response = bareMetalSolutionClient.ListProvisioningQuotas(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ProvisioningQuota item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProvisioningQuotasResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProvisioningQuota item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProvisioningQuota> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProvisioningQuota item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProvisioningQuotasAsync</summary>
+        public async Task ListProvisioningQuotasAsync()
+        {
+            // Snippet: ListProvisioningQuotasAsync(string, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> response = bareMetalSolutionClient.ListProvisioningQuotasAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ProvisioningQuota item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProvisioningQuotasResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProvisioningQuota item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProvisioningQuota> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProvisioningQuota item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProvisioningQuotas</summary>
+        public void ListProvisioningQuotasResourceNames()
+        {
+            // Snippet: ListProvisioningQuotas(LocationName, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> response = bareMetalSolutionClient.ListProvisioningQuotas(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ProvisioningQuota item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProvisioningQuotasResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProvisioningQuota item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProvisioningQuota> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProvisioningQuota item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProvisioningQuotasAsync</summary>
+        public async Task ListProvisioningQuotasResourceNamesAsync()
+        {
+            // Snippet: ListProvisioningQuotasAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListProvisioningQuotasResponse, ProvisioningQuota> response = bareMetalSolutionClient.ListProvisioningQuotasAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ProvisioningQuota item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProvisioningQuotasResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProvisioningQuota item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProvisioningQuota> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProvisioningQuota item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitProvisioningConfig</summary>
+        public void SubmitProvisioningConfigRequestObject()
+        {
+            // Snippet: SubmitProvisioningConfig(SubmitProvisioningConfigRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            SubmitProvisioningConfigRequest request = new SubmitProvisioningConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ProvisioningConfig = new ProvisioningConfig(),
+                Email = "",
+            };
+            // Make the request
+            SubmitProvisioningConfigResponse response = bareMetalSolutionClient.SubmitProvisioningConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitProvisioningConfigAsync</summary>
+        public async Task SubmitProvisioningConfigRequestObjectAsync()
+        {
+            // Snippet: SubmitProvisioningConfigAsync(SubmitProvisioningConfigRequest, CallSettings)
+            // Additional: SubmitProvisioningConfigAsync(SubmitProvisioningConfigRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            SubmitProvisioningConfigRequest request = new SubmitProvisioningConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ProvisioningConfig = new ProvisioningConfig(),
+                Email = "",
+            };
+            // Make the request
+            SubmitProvisioningConfigResponse response = await bareMetalSolutionClient.SubmitProvisioningConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitProvisioningConfig</summary>
+        public void SubmitProvisioningConfig()
+        {
+            // Snippet: SubmitProvisioningConfig(string, ProvisioningConfig, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ProvisioningConfig provisioningConfig = new ProvisioningConfig();
+            // Make the request
+            SubmitProvisioningConfigResponse response = bareMetalSolutionClient.SubmitProvisioningConfig(parent, provisioningConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitProvisioningConfigAsync</summary>
+        public async Task SubmitProvisioningConfigAsync()
+        {
+            // Snippet: SubmitProvisioningConfigAsync(string, ProvisioningConfig, CallSettings)
+            // Additional: SubmitProvisioningConfigAsync(string, ProvisioningConfig, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ProvisioningConfig provisioningConfig = new ProvisioningConfig();
+            // Make the request
+            SubmitProvisioningConfigResponse response = await bareMetalSolutionClient.SubmitProvisioningConfigAsync(parent, provisioningConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitProvisioningConfig</summary>
+        public void SubmitProvisioningConfigResourceNames()
+        {
+            // Snippet: SubmitProvisioningConfig(LocationName, ProvisioningConfig, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ProvisioningConfig provisioningConfig = new ProvisioningConfig();
+            // Make the request
+            SubmitProvisioningConfigResponse response = bareMetalSolutionClient.SubmitProvisioningConfig(parent, provisioningConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SubmitProvisioningConfigAsync</summary>
+        public async Task SubmitProvisioningConfigResourceNamesAsync()
+        {
+            // Snippet: SubmitProvisioningConfigAsync(LocationName, ProvisioningConfig, CallSettings)
+            // Additional: SubmitProvisioningConfigAsync(LocationName, ProvisioningConfig, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ProvisioningConfig provisioningConfig = new ProvisioningConfig();
+            // Make the request
+            SubmitProvisioningConfigResponse response = await bareMetalSolutionClient.SubmitProvisioningConfigAsync(parent, provisioningConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProvisioningConfig</summary>
+        public void GetProvisioningConfigRequestObject()
+        {
+            // Snippet: GetProvisioningConfig(GetProvisioningConfigRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            GetProvisioningConfigRequest request = new GetProvisioningConfigRequest
+            {
+                ProvisioningConfigName = ProvisioningConfigName.FromProjectLocationProvisioningConfig("[PROJECT]", "[LOCATION]", "[PROVISIONING_CONFIG]"),
+            };
+            // Make the request
+            ProvisioningConfig response = bareMetalSolutionClient.GetProvisioningConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProvisioningConfigAsync</summary>
+        public async Task GetProvisioningConfigRequestObjectAsync()
+        {
+            // Snippet: GetProvisioningConfigAsync(GetProvisioningConfigRequest, CallSettings)
+            // Additional: GetProvisioningConfigAsync(GetProvisioningConfigRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            GetProvisioningConfigRequest request = new GetProvisioningConfigRequest
+            {
+                ProvisioningConfigName = ProvisioningConfigName.FromProjectLocationProvisioningConfig("[PROJECT]", "[LOCATION]", "[PROVISIONING_CONFIG]"),
+            };
+            // Make the request
+            ProvisioningConfig response = await bareMetalSolutionClient.GetProvisioningConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProvisioningConfig</summary>
+        public void GetProvisioningConfig()
+        {
+            // Snippet: GetProvisioningConfig(string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/provisioningConfigs/[PROVISIONING_CONFIG]";
+            // Make the request
+            ProvisioningConfig response = bareMetalSolutionClient.GetProvisioningConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProvisioningConfigAsync</summary>
+        public async Task GetProvisioningConfigAsync()
+        {
+            // Snippet: GetProvisioningConfigAsync(string, CallSettings)
+            // Additional: GetProvisioningConfigAsync(string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/provisioningConfigs/[PROVISIONING_CONFIG]";
+            // Make the request
+            ProvisioningConfig response = await bareMetalSolutionClient.GetProvisioningConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProvisioningConfig</summary>
+        public void GetProvisioningConfigResourceNames()
+        {
+            // Snippet: GetProvisioningConfig(ProvisioningConfigName, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            ProvisioningConfigName name = ProvisioningConfigName.FromProjectLocationProvisioningConfig("[PROJECT]", "[LOCATION]", "[PROVISIONING_CONFIG]");
+            // Make the request
+            ProvisioningConfig response = bareMetalSolutionClient.GetProvisioningConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProvisioningConfigAsync</summary>
+        public async Task GetProvisioningConfigResourceNamesAsync()
+        {
+            // Snippet: GetProvisioningConfigAsync(ProvisioningConfigName, CallSettings)
+            // Additional: GetProvisioningConfigAsync(ProvisioningConfigName, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            ProvisioningConfigName name = ProvisioningConfigName.FromProjectLocationProvisioningConfig("[PROJECT]", "[LOCATION]", "[PROVISIONING_CONFIG]");
+            // Make the request
+            ProvisioningConfig response = await bareMetalSolutionClient.GetProvisioningConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateProvisioningConfig</summary>
+        public void CreateProvisioningConfigRequestObject()
+        {
+            // Snippet: CreateProvisioningConfig(CreateProvisioningConfigRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            CreateProvisioningConfigRequest request = new CreateProvisioningConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ProvisioningConfig = new ProvisioningConfig(),
+                Email = "",
+            };
+            // Make the request
+            ProvisioningConfig response = bareMetalSolutionClient.CreateProvisioningConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateProvisioningConfigAsync</summary>
+        public async Task CreateProvisioningConfigRequestObjectAsync()
+        {
+            // Snippet: CreateProvisioningConfigAsync(CreateProvisioningConfigRequest, CallSettings)
+            // Additional: CreateProvisioningConfigAsync(CreateProvisioningConfigRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateProvisioningConfigRequest request = new CreateProvisioningConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ProvisioningConfig = new ProvisioningConfig(),
+                Email = "",
+            };
+            // Make the request
+            ProvisioningConfig response = await bareMetalSolutionClient.CreateProvisioningConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateProvisioningConfig</summary>
+        public void CreateProvisioningConfig()
+        {
+            // Snippet: CreateProvisioningConfig(string, ProvisioningConfig, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ProvisioningConfig provisioningConfig = new ProvisioningConfig();
+            // Make the request
+            ProvisioningConfig response = bareMetalSolutionClient.CreateProvisioningConfig(parent, provisioningConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateProvisioningConfigAsync</summary>
+        public async Task CreateProvisioningConfigAsync()
+        {
+            // Snippet: CreateProvisioningConfigAsync(string, ProvisioningConfig, CallSettings)
+            // Additional: CreateProvisioningConfigAsync(string, ProvisioningConfig, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ProvisioningConfig provisioningConfig = new ProvisioningConfig();
+            // Make the request
+            ProvisioningConfig response = await bareMetalSolutionClient.CreateProvisioningConfigAsync(parent, provisioningConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateProvisioningConfig</summary>
+        public void CreateProvisioningConfigResourceNames()
+        {
+            // Snippet: CreateProvisioningConfig(LocationName, ProvisioningConfig, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ProvisioningConfig provisioningConfig = new ProvisioningConfig();
+            // Make the request
+            ProvisioningConfig response = bareMetalSolutionClient.CreateProvisioningConfig(parent, provisioningConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateProvisioningConfigAsync</summary>
+        public async Task CreateProvisioningConfigResourceNamesAsync()
+        {
+            // Snippet: CreateProvisioningConfigAsync(LocationName, ProvisioningConfig, CallSettings)
+            // Additional: CreateProvisioningConfigAsync(LocationName, ProvisioningConfig, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ProvisioningConfig provisioningConfig = new ProvisioningConfig();
+            // Make the request
+            ProvisioningConfig response = await bareMetalSolutionClient.CreateProvisioningConfigAsync(parent, provisioningConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProvisioningConfig</summary>
+        public void UpdateProvisioningConfigRequestObject()
+        {
+            // Snippet: UpdateProvisioningConfig(UpdateProvisioningConfigRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            UpdateProvisioningConfigRequest request = new UpdateProvisioningConfigRequest
+            {
+                ProvisioningConfig = new ProvisioningConfig(),
+                UpdateMask = new FieldMask(),
+                Email = "",
+            };
+            // Make the request
+            ProvisioningConfig response = bareMetalSolutionClient.UpdateProvisioningConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProvisioningConfigAsync</summary>
+        public async Task UpdateProvisioningConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateProvisioningConfigAsync(UpdateProvisioningConfigRequest, CallSettings)
+            // Additional: UpdateProvisioningConfigAsync(UpdateProvisioningConfigRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateProvisioningConfigRequest request = new UpdateProvisioningConfigRequest
+            {
+                ProvisioningConfig = new ProvisioningConfig(),
+                UpdateMask = new FieldMask(),
+                Email = "",
+            };
+            // Make the request
+            ProvisioningConfig response = await bareMetalSolutionClient.UpdateProvisioningConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProvisioningConfig</summary>
+        public void UpdateProvisioningConfig()
+        {
+            // Snippet: UpdateProvisioningConfig(ProvisioningConfig, FieldMask, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            ProvisioningConfig provisioningConfig = new ProvisioningConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ProvisioningConfig response = bareMetalSolutionClient.UpdateProvisioningConfig(provisioningConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProvisioningConfigAsync</summary>
+        public async Task UpdateProvisioningConfigAsync()
+        {
+            // Snippet: UpdateProvisioningConfigAsync(ProvisioningConfig, FieldMask, CallSettings)
+            // Additional: UpdateProvisioningConfigAsync(ProvisioningConfig, FieldMask, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            ProvisioningConfig provisioningConfig = new ProvisioningConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ProvisioningConfig response = await bareMetalSolutionClient.UpdateProvisioningConfigAsync(provisioningConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameNetwork</summary>
+        public void RenameNetworkRequestObject()
+        {
+            // Snippet: RenameNetwork(RenameNetworkRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            RenameNetworkRequest request = new RenameNetworkRequest
+            {
+                NetworkName = NetworkName.FromProjectLocationNetwork("[PROJECT]", "[LOCATION]", "[NETWORK]"),
+                NewNetworkId = "",
+            };
+            // Make the request
+            Network response = bareMetalSolutionClient.RenameNetwork(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameNetworkAsync</summary>
+        public async Task RenameNetworkRequestObjectAsync()
+        {
+            // Snippet: RenameNetworkAsync(RenameNetworkRequest, CallSettings)
+            // Additional: RenameNetworkAsync(RenameNetworkRequest, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            RenameNetworkRequest request = new RenameNetworkRequest
+            {
+                NetworkName = NetworkName.FromProjectLocationNetwork("[PROJECT]", "[LOCATION]", "[NETWORK]"),
+                NewNetworkId = "",
+            };
+            // Make the request
+            Network response = await bareMetalSolutionClient.RenameNetworkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameNetwork</summary>
+        public void RenameNetwork()
+        {
+            // Snippet: RenameNetwork(string, string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/networks/[NETWORK]";
+            string newNetworkId = "";
+            // Make the request
+            Network response = bareMetalSolutionClient.RenameNetwork(name, newNetworkId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameNetworkAsync</summary>
+        public async Task RenameNetworkAsync()
+        {
+            // Snippet: RenameNetworkAsync(string, string, CallSettings)
+            // Additional: RenameNetworkAsync(string, string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/networks/[NETWORK]";
+            string newNetworkId = "";
+            // Make the request
+            Network response = await bareMetalSolutionClient.RenameNetworkAsync(name, newNetworkId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameNetwork</summary>
+        public void RenameNetworkResourceNames()
+        {
+            // Snippet: RenameNetwork(NetworkName, string, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            NetworkName name = NetworkName.FromProjectLocationNetwork("[PROJECT]", "[LOCATION]", "[NETWORK]");
+            string newNetworkId = "";
+            // Make the request
+            Network response = bareMetalSolutionClient.RenameNetwork(name, newNetworkId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameNetworkAsync</summary>
+        public async Task RenameNetworkResourceNamesAsync()
+        {
+            // Snippet: RenameNetworkAsync(NetworkName, string, CallSettings)
+            // Additional: RenameNetworkAsync(NetworkName, string, CancellationToken)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName name = NetworkName.FromProjectLocationNetwork("[PROJECT]", "[LOCATION]", "[NETWORK]");
+            string newNetworkId = "";
+            // Make the request
+            Network response = await bareMetalSolutionClient.RenameNetworkAsync(name, newNetworkId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOSImages</summary>
+        public void ListOSImagesRequestObject()
+        {
+            // Snippet: ListOSImages(ListOSImagesRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            ListOSImagesRequest request = new ListOSImagesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListOSImagesResponse, OSImage> response = bareMetalSolutionClient.ListOSImages(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (OSImage item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListOSImagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OSImage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OSImage> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OSImage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOSImagesAsync</summary>
+        public async Task ListOSImagesRequestObjectAsync()
+        {
+            // Snippet: ListOSImagesAsync(ListOSImagesRequest, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            ListOSImagesRequest request = new ListOSImagesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListOSImagesResponse, OSImage> response = bareMetalSolutionClient.ListOSImagesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((OSImage item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListOSImagesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OSImage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OSImage> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OSImage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOSImages</summary>
+        public void ListOSImages()
+        {
+            // Snippet: ListOSImages(string, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListOSImagesResponse, OSImage> response = bareMetalSolutionClient.ListOSImages(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (OSImage item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListOSImagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OSImage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OSImage> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OSImage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOSImagesAsync</summary>
+        public async Task ListOSImagesAsync()
+        {
+            // Snippet: ListOSImagesAsync(string, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListOSImagesResponse, OSImage> response = bareMetalSolutionClient.ListOSImagesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((OSImage item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListOSImagesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OSImage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OSImage> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OSImage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOSImages</summary>
+        public void ListOSImagesResourceNames()
+        {
+            // Snippet: ListOSImages(LocationName, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = BareMetalSolutionClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListOSImagesResponse, OSImage> response = bareMetalSolutionClient.ListOSImages(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (OSImage item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListOSImagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OSImage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OSImage> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OSImage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOSImagesAsync</summary>
+        public async Task ListOSImagesResourceNamesAsync()
+        {
+            // Snippet: ListOSImagesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BareMetalSolutionClient bareMetalSolutionClient = await BareMetalSolutionClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListOSImagesResponse, OSImage> response = bareMetalSolutionClient.ListOSImagesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((OSImage item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListOSImagesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (OSImage item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<OSImage> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (OSImage item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

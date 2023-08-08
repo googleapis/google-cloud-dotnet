@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 InstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 LunAsLunName = LunName.FromProjectLocationVolumeLun("[PROJECT]", "[LOCATION]", "[VOLUME]", "[LUN]"),
+                SkipReboot = false,
             };
             // Make the request
             Operation<Instance, OperationMetadata> response = await bareMetalSolutionClient.DetachLunAsync(request);

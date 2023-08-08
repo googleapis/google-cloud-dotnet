@@ -27,8 +27,8 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             "Ci9nb29nbGUvY2xvdWQvYmFyZW1ldGFsc29sdXRpb24vdjIvbmV0d29yay5w",
             "cm90bxIhZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyGh9nb29n",
             "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291",
-            "cmNlLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byLs",
-            "BQoHTmV0d29yaxIRCgRuYW1lGAUgASgJQgPgQQMSCgoCaWQYCiABKAkSPQoE",
+            "cmNlLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byKo",
+            "BwoHTmV0d29yaxIRCgRuYW1lGAUgASgJQgPgQQMSCgoCaWQYCiABKAkSPQoE",
             "dHlwZRgCIAEoDjIvLmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52",
             "Mi5OZXR3b3JrLlR5cGUSEgoKaXBfYWRkcmVzcxgDIAEoCRITCgttYWNfYWRk",
             "cmVzcxgEIAMoCRI/CgVzdGF0ZRgGIAEoDjIwLmdvb2dsZS5jbG91ZC5iYXJl",
@@ -38,62 +38,80 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             "b2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52Mi5OZXR3b3JrLkxhYmVs",
             "c0VudHJ5EhUKDXNlcnZpY2VzX2NpZHIYDCABKAkSUgoMcmVzZXJ2YXRpb25z",
             "GA0gAygLMjwuZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLk5l",
-            "dHdvcmtBZGRyZXNzUmVzZXJ2YXRpb24aLQoLTGFiZWxzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASI1CgRUeXBlEhQKEFRZUEVfVU5T",
-            "UEVDSUZJRUQQABIKCgZDTElFTlQQARILCgdQUklWQVRFEAIiQQoFU3RhdGUS",
-            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABIQCgxQUk9WSVNJT05JTkcQARIPCgtQ",
-            "Uk9WSVNJT05FRBACOmnqQWYKKGJhcmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFw",
-            "aXMuY29tL05ldHdvcmsSOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9uZXR3b3Jrcy97bmV0d29ya30iVQoZTmV0d29ya0FkZHJl",
-            "c3NSZXNlcnZhdGlvbhIVCg1zdGFydF9hZGRyZXNzGAEgASgJEhMKC2VuZF9h",
-            "ZGRyZXNzGAIgASgJEgwKBG5vdGUYAyABKAkimwMKA1ZSRhIMCgRuYW1lGAEg",
-            "ASgJEjsKBXN0YXRlGAUgASgOMiwuZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNv",
-            "bHV0aW9uLnYyLlZSRi5TdGF0ZRJECgpxb3NfcG9saWN5GAYgASgLMjAuZ29v",
-            "Z2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLlZSRi5Rb3NQb2xpY3kS",
-            "TwoQdmxhbl9hdHRhY2htZW50cxgHIAMoCzI1Lmdvb2dsZS5jbG91ZC5iYXJl",
-            "bWV0YWxzb2x1dGlvbi52Mi5WUkYuVmxhbkF0dGFjaG1lbnQaIwoJUW9zUG9s",
-            "aWN5EhYKDmJhbmR3aWR0aF9nYnBzGAEgASgBGkoKDlZsYW5BdHRhY2htZW50",
-            "EhQKDHBlZXJfdmxhbl9pZBgBIAEoAxIPCgdwZWVyX2lwGAIgASgJEhEKCXJv",
-            "dXRlcl9pcBgDIAEoCSJBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAA",
-            "EhAKDFBST1ZJU0lPTklORxABEg8KC1BST1ZJU0lPTkVEEAIi1wIKEExvZ2lj",
-            "YWxJbnRlcmZhY2USbwoabG9naWNhbF9uZXR3b3JrX2ludGVyZmFjZXMYASAD",
-            "KAsySy5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIuTG9naWNh",
-            "bEludGVyZmFjZS5Mb2dpY2FsTmV0d29ya0ludGVyZmFjZRIMCgRuYW1lGAIg",
-            "ASgJEhcKD2ludGVyZmFjZV9pbmRleBgDIAEoBRqqAQoXTG9naWNhbE5ldHdv",
-            "cmtJbnRlcmZhY2USDwoHbmV0d29yaxgBIAEoCRISCgppcF9hZGRyZXNzGAIg",
-            "ASgJEhcKD2RlZmF1bHRfZ2F0ZXdheRgDIAEoCBJFCgxuZXR3b3JrX3R5cGUY",
-            "BCABKA4yLy5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIuTmV0",
-            "d29yay5UeXBlEgoKAmlkGAUgASgJIlMKEUdldE5ldHdvcmtSZXF1ZXN0Ej4K",
-            "BG5hbWUYASABKAlCMOBBAvpBKgooYmFyZW1ldGFsc29sdXRpb24uZ29vZ2xl",
-            "YXBpcy5jb20vTmV0d29yayKHAQoTTGlzdE5ldHdvcmtzUmVxdWVzdBI5CgZw",
-            "YXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29t",
-            "L0xvY2F0aW9uEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMg",
-            "ASgJEg4KBmZpbHRlchgEIAEoCSKCAQoUTGlzdE5ldHdvcmtzUmVzcG9uc2US",
-            "PAoIbmV0d29ya3MYASADKAsyKi5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29s",
-            "dXRpb24udjIuTmV0d29yaxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoL",
-            "dW5yZWFjaGFibGUYAyADKAkiiQEKFFVwZGF0ZU5ldHdvcmtSZXF1ZXN0EkAK",
-            "B25ldHdvcmsYASABKAsyKi5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRp",
-            "b24udjIuTmV0d29ya0ID4EECEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLkZpZWxkTWFzayJdCgxOZXR3b3JrVXNhZ2USOwoHbmV0",
-            "d29yaxgBIAEoCzIqLmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52",
-            "Mi5OZXR3b3JrEhAKCHVzZWRfaXBzGAIgAygJIlYKF0xpc3ROZXR3b3JrVXNh",
-            "Z2VSZXF1ZXN0EjsKCGxvY2F0aW9uGAEgASgJQingQQL6QSMKIWxvY2F0aW9u",
-            "cy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbiJdChhMaXN0TmV0d29ya1VzYWdl",
-            "UmVzcG9uc2USQQoIbmV0d29ya3MYASADKAsyLy5nb29nbGUuY2xvdWQuYmFy",
-            "ZW1ldGFsc29sdXRpb24udjIuTmV0d29ya1VzYWdlQvsBCiVjb20uZ29vZ2xl",
-            "LmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyQgxOZXR3b3JrUHJvdG9QAVpT",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYXJlbWV0YWxzb2x1dGlvbi9hcGl2Mi9i",
-            "YXJlbWV0YWxzb2x1dGlvbnBiO2JhcmVtZXRhbHNvbHV0aW9ucGKqAiFHb29n",
-            "bGUuQ2xvdWQuQmFyZU1ldGFsU29sdXRpb24uVjLKAiFHb29nbGVcQ2xvdWRc",
-            "QmFyZU1ldGFsU29sdXRpb25cVjLqAiRHb29nbGU6OkNsb3VkOjpCYXJlTWV0",
-            "YWxTb2x1dGlvbjo6VjJiBnByb3RvMw=="));
+            "dHdvcmtBZGRyZXNzUmVzZXJ2YXRpb24SEAoDcG9kGA4gASgJQgPgQQMSTwoM",
+            "bW91bnRfcG9pbnRzGA8gAygLMjQuZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNv",
+            "bHV0aW9uLnYyLk5ldHdvcmtNb3VudFBvaW50QgPgQQQSHAoUanVtYm9fZnJh",
+            "bWVzX2VuYWJsZWQYECABKAgSFwoKZ2F0ZXdheV9pcBgRIAEoCUID4EEDGi0K",
+            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
+            "NQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoGQ0xJRU5UEAESCwoH",
+            "UFJJVkFURRACImMKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASEAoM",
+            "UFJPVklTSU9OSU5HEAESDwoLUFJPVklTSU9ORUQQAhISCg5ERVBST1ZJU0lP",
+            "TklORxADEgwKCFVQREFUSU5HEAQ6aepBZgooYmFyZW1ldGFsc29sdXRpb24u",
+            "Z29vZ2xlYXBpcy5jb20vTmV0d29yaxI6cHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L25ldHdvcmtzL3tuZXR3b3JrfSJVChlOZXR3",
+            "b3JrQWRkcmVzc1Jlc2VydmF0aW9uEhUKDXN0YXJ0X2FkZHJlc3MYASABKAkS",
+            "EwoLZW5kX2FkZHJlc3MYAiABKAkSDAoEbm90ZRgDIAEoCSLlBAoDVlJGEgwK",
+            "BG5hbWUYASABKAkSOwoFc3RhdGUYBSABKA4yLC5nb29nbGUuY2xvdWQuYmFy",
+            "ZW1ldGFsc29sdXRpb24udjIuVlJGLlN0YXRlEkQKCnFvc19wb2xpY3kYBiAB",
+            "KAsyMC5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIuVlJGLlFv",
+            "c1BvbGljeRJPChB2bGFuX2F0dGFjaG1lbnRzGAcgAygLMjUuZ29vZ2xlLmNs",
+            "b3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLlZSRi5WbGFuQXR0YWNobWVudBoj",
+            "CglRb3NQb2xpY3kSFgoOYmFuZHdpZHRoX2dicHMYASABKAEakwIKDlZsYW5B",
+            "dHRhY2htZW50EhQKDHBlZXJfdmxhbl9pZBgBIAEoAxIPCgdwZWVyX2lwGAIg",
+            "ASgJEhEKCXJvdXRlcl9pcBgDIAEoCRIYCgtwYWlyaW5nX2tleRgEIAEoCUID",
+            "4EEEEkQKCnFvc19wb2xpY3kYBSABKAsyMC5nb29nbGUuY2xvdWQuYmFyZW1l",
+            "dGFsc29sdXRpb24udjIuVlJGLlFvc1BvbGljeRIPCgJpZBgGIAEoCUID4EEF",
+            "ElYKF2ludGVyY29ubmVjdF9hdHRhY2htZW50GAcgASgJQjXgQQH6QS8KLWNv",
+            "bXB1dGUuZ29vZ2xlYXBpcy5jb20vSW50ZXJjb25uZWN0QXR0YWNobWVudCJB",
+            "CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhAKDFBST1ZJU0lPTklO",
+            "RxABEg8KC1BST1ZJU0lPTkVEEAIi2wIKEExvZ2ljYWxJbnRlcmZhY2USbwoa",
+            "bG9naWNhbF9uZXR3b3JrX2ludGVyZmFjZXMYASADKAsySy5nb29nbGUuY2xv",
+            "dWQuYmFyZW1ldGFsc29sdXRpb24udjIuTG9naWNhbEludGVyZmFjZS5Mb2dp",
+            "Y2FsTmV0d29ya0ludGVyZmFjZRIMCgRuYW1lGAIgASgJEhsKD2ludGVyZmFj",
+            "ZV9pbmRleBgDIAEoBUICGAEaqgEKF0xvZ2ljYWxOZXR3b3JrSW50ZXJmYWNl",
+            "Eg8KB25ldHdvcmsYASABKAkSEgoKaXBfYWRkcmVzcxgCIAEoCRIXCg9kZWZh",
+            "dWx0X2dhdGV3YXkYAyABKAgSRQoMbmV0d29ya190eXBlGAQgASgOMi8uZ29v",
+            "Z2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLk5ldHdvcmsuVHlwZRIK",
+            "CgJpZBgFIAEoCSJTChFHZXROZXR3b3JrUmVxdWVzdBI+CgRuYW1lGAEgASgJ",
+            "QjDgQQL6QSoKKGJhcmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMuY29tL05l",
+            "dHdvcmsihwEKE0xpc3ROZXR3b3Jrc1JlcXVlc3QSOQoGcGFyZW50GAEgASgJ",
+            "QingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIR",
+            "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0",
+            "ZXIYBCABKAkiggEKFExpc3ROZXR3b3Jrc1Jlc3BvbnNlEjwKCG5ldHdvcmtz",
+            "GAEgAygLMiouZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLk5l",
+            "dHdvcmsSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxl",
+            "GAMgAygJIokBChRVcGRhdGVOZXR3b3JrUmVxdWVzdBJACgduZXR3b3JrGAEg",
+            "ASgLMiouZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLk5ldHdv",
+            "cmtCA+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5GaWVsZE1hc2siXQoMTmV0d29ya1VzYWdlEjsKB25ldHdvcmsYASABKAsy",
+            "Ki5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIuTmV0d29yaxIQ",
+            "Cgh1c2VkX2lwcxgCIAMoCSJWChdMaXN0TmV0d29ya1VzYWdlUmVxdWVzdBI7",
+            "Cghsb2NhdGlvbhgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBp",
+            "cy5jb20vTG9jYXRpb24iXQoYTGlzdE5ldHdvcmtVc2FnZVJlc3BvbnNlEkEK",
+            "CG5ldHdvcmtzGAEgAygLMi8uZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0",
+            "aW9uLnYyLk5ldHdvcmtVc2FnZSKdAQoRTmV0d29ya01vdW50UG9pbnQSQAoI",
+            "aW5zdGFuY2UYASABKAlCLvpBKwopYmFyZW1ldGFsc29sdXRpb24uZ29vZ2xl",
+            "YXBpcy5jb20vSW5zdGFuY2USGQoRbG9naWNhbF9pbnRlcmZhY2UYAiABKAkS",
+            "FwoPZGVmYXVsdF9nYXRld2F5GAMgASgIEhIKCmlwX2FkZHJlc3MYBCABKAki",
+            "cwoUUmVuYW1lTmV0d29ya1JlcXVlc3QSPgoEbmFtZRgBIAEoCUIw4EEC+kEq",
+            "CihiYXJlbWV0YWxzb2x1dGlvbi5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEhsK",
+            "Dm5ld19uZXR3b3JrX2lkGAIgASgJQgPgQQJChQMKJWNvbS5nb29nbGUuY2xv",
+            "dWQuYmFyZW1ldGFsc29sdXRpb24udjJCDE5ldHdvcmtQcm90b1ABWlNjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2JhcmVtZXRhbHNvbHV0aW9uL2FwaXYyL2JhcmVt",
+            "ZXRhbHNvbHV0aW9ucGI7YmFyZW1ldGFsc29sdXRpb25wYqoCIUdvb2dsZS5D",
+            "bG91ZC5CYXJlTWV0YWxTb2x1dGlvbi5WMsoCIUdvb2dsZVxDbG91ZFxCYXJl",
+            "TWV0YWxTb2x1dGlvblxWMuoCJEdvb2dsZTo6Q2xvdWQ6OkJhcmVNZXRhbFNv",
+            "bHV0aW9uOjpWMupBhgEKLWNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vSW50ZXJj",
+            "b25uZWN0QXR0YWNobWVudBJVcHJvamVjdHMve3Byb2plY3R9L3JlZ2lvbnMv",
+            "e3JlZ2lvbn0vaW50ZXJjb25uZWN0QXR0YWNobWVudHMve2ludGVyY29ubmVj",
+            "dF9hdHRhY2htZW50fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.Network), global::Google.Cloud.BareMetalSolution.V2.Network.Parser, new[]{ "Name", "Id", "Type", "IpAddress", "MacAddress", "State", "VlanId", "Cidr", "Vrf", "Labels", "ServicesCidr", "Reservations" }, null, new[]{ typeof(global::Google.Cloud.BareMetalSolution.V2.Network.Types.Type), typeof(global::Google.Cloud.BareMetalSolution.V2.Network.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.Network), global::Google.Cloud.BareMetalSolution.V2.Network.Parser, new[]{ "Name", "Id", "Type", "IpAddress", "MacAddress", "State", "VlanId", "Cidr", "Vrf", "Labels", "ServicesCidr", "Reservations", "Pod", "MountPoints", "JumboFramesEnabled", "GatewayIp" }, null, new[]{ typeof(global::Google.Cloud.BareMetalSolution.V2.Network.Types.Type), typeof(global::Google.Cloud.BareMetalSolution.V2.Network.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.NetworkAddressReservation), global::Google.Cloud.BareMetalSolution.V2.NetworkAddressReservation.Parser, new[]{ "StartAddress", "EndAddress", "Note" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.VRF), global::Google.Cloud.BareMetalSolution.V2.VRF.Parser, new[]{ "Name", "State", "QosPolicy", "VlanAttachments" }, null, new[]{ typeof(global::Google.Cloud.BareMetalSolution.V2.VRF.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.VRF.Types.QosPolicy), global::Google.Cloud.BareMetalSolution.V2.VRF.Types.QosPolicy.Parser, new[]{ "BandwidthGbps" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.VRF.Types.VlanAttachment), global::Google.Cloud.BareMetalSolution.V2.VRF.Types.VlanAttachment.Parser, new[]{ "PeerVlanId", "PeerIp", "RouterIp" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.VRF.Types.VlanAttachment), global::Google.Cloud.BareMetalSolution.V2.VRF.Types.VlanAttachment.Parser, new[]{ "PeerVlanId", "PeerIp", "RouterIp", "PairingKey", "QosPolicy", "Id", "InterconnectAttachment" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.LogicalInterface), global::Google.Cloud.BareMetalSolution.V2.LogicalInterface.Parser, new[]{ "LogicalNetworkInterfaces", "Name", "InterfaceIndex" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.LogicalInterface.Types.LogicalNetworkInterface), global::Google.Cloud.BareMetalSolution.V2.LogicalInterface.Types.LogicalNetworkInterface.Parser, new[]{ "Network", "IpAddress", "DefaultGateway", "NetworkType", "Id" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.GetNetworkRequest), global::Google.Cloud.BareMetalSolution.V2.GetNetworkRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ListNetworksRequest), global::Google.Cloud.BareMetalSolution.V2.ListNetworksRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
@@ -101,7 +119,9 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.UpdateNetworkRequest), global::Google.Cloud.BareMetalSolution.V2.UpdateNetworkRequest.Parser, new[]{ "Network", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.NetworkUsage), global::Google.Cloud.BareMetalSolution.V2.NetworkUsage.Parser, new[]{ "Network", "UsedIps" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ListNetworkUsageRequest), global::Google.Cloud.BareMetalSolution.V2.ListNetworkUsageRequest.Parser, new[]{ "Location" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ListNetworkUsageResponse), global::Google.Cloud.BareMetalSolution.V2.ListNetworkUsageResponse.Parser, new[]{ "Networks" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ListNetworkUsageResponse), global::Google.Cloud.BareMetalSolution.V2.ListNetworkUsageResponse.Parser, new[]{ "Networks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.NetworkMountPoint), global::Google.Cloud.BareMetalSolution.V2.NetworkMountPoint.Parser, new[]{ "Instance", "LogicalInterface", "DefaultGateway", "IpAddress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.RenameNetworkRequest), global::Google.Cloud.BareMetalSolution.V2.RenameNetworkRequest.Parser, new[]{ "Name", "NewNetworkId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -157,6 +177,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       labels_ = other.labels_.Clone();
       servicesCidr_ = other.servicesCidr_;
       reservations_ = other.reservations_.Clone();
+      pod_ = other.pod_;
+      mountPoints_ = other.mountPoints_.Clone();
+      jumboFramesEnabled_ = other.jumboFramesEnabled_;
+      gatewayIp_ = other.gatewayIp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -349,6 +373,65 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       get { return reservations_; }
     }
 
+    /// <summary>Field number for the "pod" field.</summary>
+    public const int PodFieldNumber = 14;
+    private string pod_ = "";
+    /// <summary>
+    /// Output only. Pod name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Pod {
+      get { return pod_; }
+      set {
+        pod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mount_points" field.</summary>
+    public const int MountPointsFieldNumber = 15;
+    private static readonly pb::FieldCodec<global::Google.Cloud.BareMetalSolution.V2.NetworkMountPoint> _repeated_mountPoints_codec
+        = pb::FieldCodec.ForMessage(122, global::Google.Cloud.BareMetalSolution.V2.NetworkMountPoint.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.BareMetalSolution.V2.NetworkMountPoint> mountPoints_ = new pbc::RepeatedField<global::Google.Cloud.BareMetalSolution.V2.NetworkMountPoint>();
+    /// <summary>
+    /// Input only. List of mount points to attach the network to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.BareMetalSolution.V2.NetworkMountPoint> MountPoints {
+      get { return mountPoints_; }
+    }
+
+    /// <summary>Field number for the "jumbo_frames_enabled" field.</summary>
+    public const int JumboFramesEnabledFieldNumber = 16;
+    private bool jumboFramesEnabled_;
+    /// <summary>
+    /// Whether network uses standard frames or jumbo ones.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool JumboFramesEnabled {
+      get { return jumboFramesEnabled_; }
+      set {
+        jumboFramesEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gateway_ip" field.</summary>
+    public const int GatewayIpFieldNumber = 17;
+    private string gatewayIp_ = "";
+    /// <summary>
+    /// Output only. Gateway ip address.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GatewayIp {
+      get { return gatewayIp_; }
+      set {
+        gatewayIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -376,6 +459,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (!Labels.Equals(other.Labels)) return false;
       if (ServicesCidr != other.ServicesCidr) return false;
       if(!reservations_.Equals(other.reservations_)) return false;
+      if (Pod != other.Pod) return false;
+      if(!mountPoints_.Equals(other.mountPoints_)) return false;
+      if (JumboFramesEnabled != other.JumboFramesEnabled) return false;
+      if (GatewayIp != other.GatewayIp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -395,6 +482,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       hash ^= Labels.GetHashCode();
       if (ServicesCidr.Length != 0) hash ^= ServicesCidr.GetHashCode();
       hash ^= reservations_.GetHashCode();
+      if (Pod.Length != 0) hash ^= Pod.GetHashCode();
+      hash ^= mountPoints_.GetHashCode();
+      if (JumboFramesEnabled != false) hash ^= JumboFramesEnabled.GetHashCode();
+      if (GatewayIp.Length != 0) hash ^= GatewayIp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -452,6 +543,19 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         output.WriteString(ServicesCidr);
       }
       reservations_.WriteTo(output, _repeated_reservations_codec);
+      if (Pod.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Pod);
+      }
+      mountPoints_.WriteTo(output, _repeated_mountPoints_codec);
+      if (JumboFramesEnabled != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(JumboFramesEnabled);
+      }
+      if (GatewayIp.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(GatewayIp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -501,6 +605,19 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         output.WriteString(ServicesCidr);
       }
       reservations_.WriteTo(ref output, _repeated_reservations_codec);
+      if (Pod.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Pod);
+      }
+      mountPoints_.WriteTo(ref output, _repeated_mountPoints_codec);
+      if (JumboFramesEnabled != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(JumboFramesEnabled);
+      }
+      if (GatewayIp.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(GatewayIp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -541,6 +658,16 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServicesCidr);
       }
       size += reservations_.CalculateSize(_repeated_reservations_codec);
+      if (Pod.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Pod);
+      }
+      size += mountPoints_.CalculateSize(_repeated_mountPoints_codec);
+      if (JumboFramesEnabled != false) {
+        size += 2 + 1;
+      }
+      if (GatewayIp.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(GatewayIp);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -586,6 +713,16 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         ServicesCidr = other.ServicesCidr;
       }
       reservations_.Add(other.reservations_);
+      if (other.Pod.Length != 0) {
+        Pod = other.Pod;
+      }
+      mountPoints_.Add(other.mountPoints_);
+      if (other.JumboFramesEnabled != false) {
+        JumboFramesEnabled = other.JumboFramesEnabled;
+      }
+      if (other.GatewayIp.Length != 0) {
+        GatewayIp = other.GatewayIp;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -650,6 +787,22 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           }
           case 106: {
             reservations_.AddEntriesFrom(input, _repeated_reservations_codec);
+            break;
+          }
+          case 114: {
+            Pod = input.ReadString();
+            break;
+          }
+          case 122: {
+            mountPoints_.AddEntriesFrom(input, _repeated_mountPoints_codec);
+            break;
+          }
+          case 128: {
+            JumboFramesEnabled = input.ReadBool();
+            break;
+          }
+          case 138: {
+            GatewayIp = input.ReadString();
             break;
           }
         }
@@ -718,6 +871,22 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             reservations_.AddEntriesFrom(ref input, _repeated_reservations_codec);
             break;
           }
+          case 114: {
+            Pod = input.ReadString();
+            break;
+          }
+          case 122: {
+            mountPoints_.AddEntriesFrom(ref input, _repeated_mountPoints_codec);
+            break;
+          }
+          case 128: {
+            JumboFramesEnabled = input.ReadBool();
+            break;
+          }
+          case 138: {
+            GatewayIp = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -762,6 +931,14 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         /// The Network has been provisioned.
         /// </summary>
         [pbr::OriginalName("PROVISIONED")] Provisioned = 2,
+        /// <summary>
+        /// The Network is being deprovisioned.
+        /// </summary>
+        [pbr::OriginalName("DEPROVISIONING")] Deprovisioning = 3,
+        /// <summary>
+        /// The Network is being updated.
+        /// </summary>
+        [pbr::OriginalName("UPDATING")] Updating = 4,
       }
 
     }
@@ -1133,6 +1310,9 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     private global::Google.Cloud.BareMetalSolution.V2.VRF.Types.QosPolicy qosPolicy_;
     /// <summary>
     /// The QOS policy applied to this VRF.
+    /// The value is only meaningful when all the vlan attachments have the same
+    /// QoS. This field should not be used for new integrations, use vlan
+    /// attachment level qos instead. The field is left for backward-compatibility.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1617,6 +1797,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           peerVlanId_ = other.peerVlanId_;
           peerIp_ = other.peerIp_;
           routerIp_ = other.routerIp_;
+          pairingKey_ = other.pairingKey_;
+          qosPolicy_ = other.qosPolicy_ != null ? other.qosPolicy_.Clone() : null;
+          id_ = other.id_;
+          interconnectAttachment_ = other.interconnectAttachment_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1671,6 +1855,68 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           }
         }
 
+        /// <summary>Field number for the "pairing_key" field.</summary>
+        public const int PairingKeyFieldNumber = 4;
+        private string pairingKey_ = "";
+        /// <summary>
+        /// Input only. Pairing key.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PairingKey {
+          get { return pairingKey_; }
+          set {
+            pairingKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "qos_policy" field.</summary>
+        public const int QosPolicyFieldNumber = 5;
+        private global::Google.Cloud.BareMetalSolution.V2.VRF.Types.QosPolicy qosPolicy_;
+        /// <summary>
+        /// The QOS policy applied to this VLAN attachment.
+        /// This value should be preferred to using qos at vrf level.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.BareMetalSolution.V2.VRF.Types.QosPolicy QosPolicy {
+          get { return qosPolicy_; }
+          set {
+            qosPolicy_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "id" field.</summary>
+        public const int IdFieldNumber = 6;
+        private string id_ = "";
+        /// <summary>
+        /// Immutable. The identifier of the attachment within vrf.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Id {
+          get { return id_; }
+          set {
+            id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "interconnect_attachment" field.</summary>
+        public const int InterconnectAttachmentFieldNumber = 7;
+        private string interconnectAttachment_ = "";
+        /// <summary>
+        /// Optional. The name of the vlan attachment within vrf. This is of the form
+        /// projects/{project_number}/regions/{region}/interconnectAttachments/{interconnect_attachment}
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string InterconnectAttachment {
+          get { return interconnectAttachment_; }
+          set {
+            interconnectAttachment_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1689,6 +1935,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           if (PeerVlanId != other.PeerVlanId) return false;
           if (PeerIp != other.PeerIp) return false;
           if (RouterIp != other.RouterIp) return false;
+          if (PairingKey != other.PairingKey) return false;
+          if (!object.Equals(QosPolicy, other.QosPolicy)) return false;
+          if (Id != other.Id) return false;
+          if (InterconnectAttachment != other.InterconnectAttachment) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1699,6 +1949,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           if (PeerVlanId != 0L) hash ^= PeerVlanId.GetHashCode();
           if (PeerIp.Length != 0) hash ^= PeerIp.GetHashCode();
           if (RouterIp.Length != 0) hash ^= RouterIp.GetHashCode();
+          if (PairingKey.Length != 0) hash ^= PairingKey.GetHashCode();
+          if (qosPolicy_ != null) hash ^= QosPolicy.GetHashCode();
+          if (Id.Length != 0) hash ^= Id.GetHashCode();
+          if (InterconnectAttachment.Length != 0) hash ^= InterconnectAttachment.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1729,6 +1983,22 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             output.WriteRawTag(26);
             output.WriteString(RouterIp);
           }
+          if (PairingKey.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(PairingKey);
+          }
+          if (qosPolicy_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(QosPolicy);
+          }
+          if (Id.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(Id);
+          }
+          if (InterconnectAttachment.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(InterconnectAttachment);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1751,6 +2021,22 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             output.WriteRawTag(26);
             output.WriteString(RouterIp);
           }
+          if (PairingKey.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(PairingKey);
+          }
+          if (qosPolicy_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(QosPolicy);
+          }
+          if (Id.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(Id);
+          }
+          if (InterconnectAttachment.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(InterconnectAttachment);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1769,6 +2055,18 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           }
           if (RouterIp.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(RouterIp);
+          }
+          if (PairingKey.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PairingKey);
+          }
+          if (qosPolicy_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(QosPolicy);
+          }
+          if (Id.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+          }
+          if (InterconnectAttachment.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(InterconnectAttachment);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1790,6 +2088,21 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           }
           if (other.RouterIp.Length != 0) {
             RouterIp = other.RouterIp;
+          }
+          if (other.PairingKey.Length != 0) {
+            PairingKey = other.PairingKey;
+          }
+          if (other.qosPolicy_ != null) {
+            if (qosPolicy_ == null) {
+              QosPolicy = new global::Google.Cloud.BareMetalSolution.V2.VRF.Types.QosPolicy();
+            }
+            QosPolicy.MergeFrom(other.QosPolicy);
+          }
+          if (other.Id.Length != 0) {
+            Id = other.Id;
+          }
+          if (other.InterconnectAttachment.Length != 0) {
+            InterconnectAttachment = other.InterconnectAttachment;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1818,6 +2131,25 @@ namespace Google.Cloud.BareMetalSolution.V2 {
                 RouterIp = input.ReadString();
                 break;
               }
+              case 34: {
+                PairingKey = input.ReadString();
+                break;
+              }
+              case 42: {
+                if (qosPolicy_ == null) {
+                  QosPolicy = new global::Google.Cloud.BareMetalSolution.V2.VRF.Types.QosPolicy();
+                }
+                input.ReadMessage(QosPolicy);
+                break;
+              }
+              case 50: {
+                Id = input.ReadString();
+                break;
+              }
+              case 58: {
+                InterconnectAttachment = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -1843,6 +2175,25 @@ namespace Google.Cloud.BareMetalSolution.V2 {
               }
               case 26: {
                 RouterIp = input.ReadString();
+                break;
+              }
+              case 34: {
+                PairingKey = input.ReadString();
+                break;
+              }
+              case 42: {
+                if (qosPolicy_ == null) {
+                  QosPolicy = new global::Google.Cloud.BareMetalSolution.V2.VRF.Types.QosPolicy();
+                }
+                input.ReadMessage(QosPolicy);
+                break;
+              }
+              case 50: {
+                Id = input.ReadString();
+                break;
+              }
+              case 58: {
+                InterconnectAttachment = input.ReadString();
                 break;
               }
             }
@@ -1944,8 +2295,9 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     private int interfaceIndex_;
     /// <summary>
     /// The index of the logical interface mapping to the index of the hardware
-    /// bond or nic on the chosen network template.
+    /// bond or nic on the chosen network template. This field is deprecated.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int InterfaceIndex {
@@ -3326,7 +3678,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     /// <summary>
     /// The list of fields to update.
     /// The only currently supported fields are:
-    ///   `labels`, `reservations`
+    ///   `labels`, `reservations`, `vrf.vlan_attachments`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4115,6 +4467,557 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             break;
           case 10: {
             networks_.AddEntriesFrom(ref input, _repeated_networks_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Mount point for a network.
+  /// </summary>
+  public sealed partial class NetworkMountPoint : pb::IMessage<NetworkMountPoint>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NetworkMountPoint> _parser = new pb::MessageParser<NetworkMountPoint>(() => new NetworkMountPoint());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NetworkMountPoint> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.NetworkReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NetworkMountPoint() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NetworkMountPoint(NetworkMountPoint other) : this() {
+      instance_ = other.instance_;
+      logicalInterface_ = other.logicalInterface_;
+      defaultGateway_ = other.defaultGateway_;
+      ipAddress_ = other.ipAddress_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NetworkMountPoint Clone() {
+      return new NetworkMountPoint(this);
+    }
+
+    /// <summary>Field number for the "instance" field.</summary>
+    public const int InstanceFieldNumber = 1;
+    private string instance_ = "";
+    /// <summary>
+    /// Instance to attach network to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Instance {
+      get { return instance_; }
+      set {
+        instance_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "logical_interface" field.</summary>
+    public const int LogicalInterfaceFieldNumber = 2;
+    private string logicalInterface_ = "";
+    /// <summary>
+    /// Logical interface to detach from.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LogicalInterface {
+      get { return logicalInterface_; }
+      set {
+        logicalInterface_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "default_gateway" field.</summary>
+    public const int DefaultGatewayFieldNumber = 3;
+    private bool defaultGateway_;
+    /// <summary>
+    /// Network should be a default gateway.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DefaultGateway {
+      get { return defaultGateway_; }
+      set {
+        defaultGateway_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ip_address" field.</summary>
+    public const int IpAddressFieldNumber = 4;
+    private string ipAddress_ = "";
+    /// <summary>
+    /// Ip address of the server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IpAddress {
+      get { return ipAddress_; }
+      set {
+        ipAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NetworkMountPoint);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NetworkMountPoint other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Instance != other.Instance) return false;
+      if (LogicalInterface != other.LogicalInterface) return false;
+      if (DefaultGateway != other.DefaultGateway) return false;
+      if (IpAddress != other.IpAddress) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Instance.Length != 0) hash ^= Instance.GetHashCode();
+      if (LogicalInterface.Length != 0) hash ^= LogicalInterface.GetHashCode();
+      if (DefaultGateway != false) hash ^= DefaultGateway.GetHashCode();
+      if (IpAddress.Length != 0) hash ^= IpAddress.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Instance.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Instance);
+      }
+      if (LogicalInterface.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LogicalInterface);
+      }
+      if (DefaultGateway != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(DefaultGateway);
+      }
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IpAddress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Instance.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Instance);
+      }
+      if (LogicalInterface.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LogicalInterface);
+      }
+      if (DefaultGateway != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(DefaultGateway);
+      }
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IpAddress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Instance.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Instance);
+      }
+      if (LogicalInterface.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LogicalInterface);
+      }
+      if (DefaultGateway != false) {
+        size += 1 + 1;
+      }
+      if (IpAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IpAddress);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NetworkMountPoint other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Instance.Length != 0) {
+        Instance = other.Instance;
+      }
+      if (other.LogicalInterface.Length != 0) {
+        LogicalInterface = other.LogicalInterface;
+      }
+      if (other.DefaultGateway != false) {
+        DefaultGateway = other.DefaultGateway;
+      }
+      if (other.IpAddress.Length != 0) {
+        IpAddress = other.IpAddress;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Instance = input.ReadString();
+            break;
+          }
+          case 18: {
+            LogicalInterface = input.ReadString();
+            break;
+          }
+          case 24: {
+            DefaultGateway = input.ReadBool();
+            break;
+          }
+          case 34: {
+            IpAddress = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Instance = input.ReadString();
+            break;
+          }
+          case 18: {
+            LogicalInterface = input.ReadString();
+            break;
+          }
+          case 24: {
+            DefaultGateway = input.ReadBool();
+            break;
+          }
+          case 34: {
+            IpAddress = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message requesting rename of a server.
+  /// </summary>
+  public sealed partial class RenameNetworkRequest : pb::IMessage<RenameNetworkRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RenameNetworkRequest> _parser = new pb::MessageParser<RenameNetworkRequest>(() => new RenameNetworkRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RenameNetworkRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.NetworkReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RenameNetworkRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RenameNetworkRequest(RenameNetworkRequest other) : this() {
+      name_ = other.name_;
+      newNetworkId_ = other.newNetworkId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RenameNetworkRequest Clone() {
+      return new RenameNetworkRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The `name` field is used to identify the network.
+    /// Format: projects/{project}/locations/{location}/networks/{network}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "new_network_id" field.</summary>
+    public const int NewNetworkIdFieldNumber = 2;
+    private string newNetworkId_ = "";
+    /// <summary>
+    /// Required. The new `id` of the network.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NewNetworkId {
+      get { return newNetworkId_; }
+      set {
+        newNetworkId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RenameNetworkRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RenameNetworkRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (NewNetworkId != other.NewNetworkId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (NewNetworkId.Length != 0) hash ^= NewNetworkId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (NewNetworkId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NewNetworkId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (NewNetworkId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NewNetworkId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (NewNetworkId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NewNetworkId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RenameNetworkRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.NewNetworkId.Length != 0) {
+        NewNetworkId = other.NewNetworkId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            NewNetworkId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            NewNetworkId = input.ReadString();
             break;
           }
         }

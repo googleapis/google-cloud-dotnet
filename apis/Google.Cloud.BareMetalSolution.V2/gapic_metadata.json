@@ -10,10 +10,76 @@
         "grpc": {
           "libraryClient": "BareMetalSolutionClient",
           "rpcs": {
+            "CreateNfsShare": {
+              "methods": [
+                "CreateNfsShare",
+                "CreateNfsShareAsync"
+              ]
+            },
+            "CreateProvisioningConfig": {
+              "methods": [
+                "CreateProvisioningConfig",
+                "CreateProvisioningConfigAsync"
+              ]
+            },
+            "CreateSSHKey": {
+              "methods": [
+                "CreateSSHKey",
+                "CreateSSHKeyAsync"
+              ]
+            },
+            "CreateVolumeSnapshot": {
+              "methods": [
+                "CreateVolumeSnapshot",
+                "CreateVolumeSnapshotAsync"
+              ]
+            },
+            "DeleteNfsShare": {
+              "methods": [
+                "DeleteNfsShare",
+                "DeleteNfsShareAsync"
+              ]
+            },
+            "DeleteSSHKey": {
+              "methods": [
+                "DeleteSSHKey",
+                "DeleteSSHKeyAsync"
+              ]
+            },
+            "DeleteVolumeSnapshot": {
+              "methods": [
+                "DeleteVolumeSnapshot",
+                "DeleteVolumeSnapshotAsync"
+              ]
+            },
             "DetachLun": {
               "methods": [
                 "DetachLun",
                 "DetachLunAsync"
+              ]
+            },
+            "DisableInteractiveSerialConsole": {
+              "methods": [
+                "DisableInteractiveSerialConsole",
+                "DisableInteractiveSerialConsoleAsync"
+              ]
+            },
+            "EnableInteractiveSerialConsole": {
+              "methods": [
+                "EnableInteractiveSerialConsole",
+                "EnableInteractiveSerialConsoleAsync"
+              ]
+            },
+            "EvictLun": {
+              "methods": [
+                "EvictLun",
+                "EvictLunAsync"
+              ]
+            },
+            "EvictVolume": {
+              "methods": [
+                "EvictVolume",
+                "EvictVolumeAsync"
               ]
             },
             "GetInstance": {
@@ -40,10 +106,22 @@
                 "GetNfsShareAsync"
               ]
             },
+            "GetProvisioningConfig": {
+              "methods": [
+                "GetProvisioningConfig",
+                "GetProvisioningConfigAsync"
+              ]
+            },
             "GetVolume": {
               "methods": [
                 "GetVolume",
                 "GetVolumeAsync"
+              ]
+            },
+            "GetVolumeSnapshot": {
+              "methods": [
+                "GetVolumeSnapshot",
+                "GetVolumeSnapshotAsync"
               ]
             },
             "ListInstances": {
@@ -76,10 +154,58 @@
                 "ListNfsSharesAsync"
               ]
             },
+            "ListOSImages": {
+              "methods": [
+                "ListOSImages",
+                "ListOSImagesAsync"
+              ]
+            },
+            "ListProvisioningQuotas": {
+              "methods": [
+                "ListProvisioningQuotas",
+                "ListProvisioningQuotasAsync"
+              ]
+            },
+            "ListSSHKeys": {
+              "methods": [
+                "ListSSHKeys",
+                "ListSSHKeysAsync"
+              ]
+            },
+            "ListVolumeSnapshots": {
+              "methods": [
+                "ListVolumeSnapshots",
+                "ListVolumeSnapshotsAsync"
+              ]
+            },
             "ListVolumes": {
               "methods": [
                 "ListVolumes",
                 "ListVolumesAsync"
+              ]
+            },
+            "RenameInstance": {
+              "methods": [
+                "RenameInstance",
+                "RenameInstanceAsync"
+              ]
+            },
+            "RenameNetwork": {
+              "methods": [
+                "RenameNetwork",
+                "RenameNetworkAsync"
+              ]
+            },
+            "RenameNfsShare": {
+              "methods": [
+                "RenameNfsShare",
+                "RenameNfsShareAsync"
+              ]
+            },
+            "RenameVolume": {
+              "methods": [
+                "RenameVolume",
+                "RenameVolumeAsync"
               ]
             },
             "ResetInstance": {
@@ -94,6 +220,12 @@
                 "ResizeVolumeAsync"
               ]
             },
+            "RestoreVolumeSnapshot": {
+              "methods": [
+                "RestoreVolumeSnapshot",
+                "RestoreVolumeSnapshotAsync"
+              ]
+            },
             "StartInstance": {
               "methods": [
                 "StartInstance",
@@ -104,6 +236,12 @@
               "methods": [
                 "StopInstance",
                 "StopInstanceAsync"
+              ]
+            },
+            "SubmitProvisioningConfig": {
+              "methods": [
+                "SubmitProvisioningConfig",
+                "SubmitProvisioningConfigAsync"
               ]
             },
             "UpdateInstance": {
@@ -122,6 +260,12 @@
               "methods": [
                 "UpdateNfsShare",
                 "UpdateNfsShareAsync"
+              ]
+            },
+            "UpdateProvisioningConfig": {
+              "methods": [
+                "UpdateProvisioningConfig",
+                "UpdateProvisioningConfigAsync"
               ]
             },
             "UpdateVolume": {

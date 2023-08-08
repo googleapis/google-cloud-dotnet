@@ -27,63 +27,86 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             "Ci5nb29nbGUvY2xvdWQvYmFyZW1ldGFsc29sdXRpb24vdjIvdm9sdW1lLnBy",
             "b3RvEiFnb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIaH2dvb2ds",
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
-            "Y2UucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvIssJ",
-            "CgZWb2x1bWUSEQoEbmFtZRgBIAEoCUID4EEDEgoKAmlkGAsgASgJEksKDHN0",
-            "b3JhZ2VfdHlwZRgCIAEoDjI1Lmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1",
-            "dGlvbi52Mi5Wb2x1bWUuU3RvcmFnZVR5cGUSPgoFc3RhdGUYAyABKA4yLy5n",
-            "b29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIuVm9sdW1lLlN0YXRl",
-            "EhoKEnJlcXVlc3RlZF9zaXplX2dpYhgEIAEoAxIYChBjdXJyZW50X3NpemVf",
-            "Z2liGAUgASgDEhoKEmVtZXJnZW5jeV9zaXplX2dpYhgOIAEoAxIbChNhdXRv",
-            "X2dyb3duX3NpemVfZ2liGAYgASgDEhsKE3JlbWFpbmluZ19zcGFjZV9naWIY",
-            "ByABKAMSaAobc25hcHNob3RfcmVzZXJ2YXRpb25fZGV0YWlsGAggASgLMkMu",
-            "Z29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLlZvbHVtZS5TbmFw",
-            "c2hvdFJlc2VydmF0aW9uRGV0YWlsEmsKHXNuYXBzaG90X2F1dG9fZGVsZXRl",
-            "X2JlaGF2aW9yGAkgASgOMkQuZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0",
-            "aW9uLnYyLlZvbHVtZS5TbmFwc2hvdEF1dG9EZWxldGVCZWhhdmlvchJFCgZs",
-            "YWJlbHMYDCADKAsyNS5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24u",
-            "djIuVm9sdW1lLkxhYmVsc0VudHJ5EhgKEHNuYXBzaG90X2VuYWJsZWQYDSAB",
-            "KAgSEAoDcG9kGA8gASgJQgPgQQUaogEKGVNuYXBzaG90UmVzZXJ2YXRpb25E",
-            "ZXRhaWwSGgoScmVzZXJ2ZWRfc3BhY2VfZ2liGAEgASgDEiMKG3Jlc2VydmVk",
-            "X3NwYWNlX3VzZWRfcGVyY2VudBgCIAEoBRIkChxyZXNlcnZlZF9zcGFjZV9y",
-            "ZW1haW5pbmdfZ2liGAMgASgDEh4KFnJlc2VydmVkX3NwYWNlX3BlcmNlbnQY",
-            "BCABKAUaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgJOgI4ASI9CgtTdG9yYWdlVHlwZRIcChhTVE9SQUdFX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIHCgNTU0QQARIHCgNIREQQAiJFCgVTdGF0ZRIVChFTVEFURV9V",
-            "TlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIMCghERUxF",
-            "VElORxADIn0KGlNuYXBzaG90QXV0b0RlbGV0ZUJlaGF2aW9yEi0KKVNOQVBT",
-            "SE9UX0FVVE9fREVMRVRFX0JFSEFWSU9SX1VOU1BFQ0lGSUVEEAASDAoIRElT",
-            "QUJMRUQQARIQCgxPTERFU1RfRklSU1QQAhIQCgxORVdFU1RfRklSU1QQAzpm",
-            "6kFjCidiYXJlbWV0YWxzb2x1dGlvbi5nb29nbGVhcGlzLmNvbS9Wb2x1bWUS",
-            "OHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS92b2x1",
-            "bWVzL3t2b2x1bWV9IlEKEEdldFZvbHVtZVJlcXVlc3QSPQoEbmFtZRgBIAEo",
-            "CUIv4EEC+kEpCidiYXJlbWV0YWxzb2x1dGlvbi5nb29nbGVhcGlzLmNvbS9W",
-            "b2x1bWUihgEKEkxpc3RWb2x1bWVzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlC",
-            "KeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhEK",
-            "CXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRl",
-            "chgEIAEoCSJ/ChNMaXN0Vm9sdW1lc1Jlc3BvbnNlEjoKB3ZvbHVtZXMYASAD",
-            "KAsyKS5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIuVm9sdW1l",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMo",
-            "CSKGAQoTVXBkYXRlVm9sdW1lUmVxdWVzdBI+CgZ2b2x1bWUYASABKAsyKS5n",
-            "b29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIuVm9sdW1lQgPgQQIS",
-            "LwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
-            "YXNrImgKE1Jlc2l6ZVZvbHVtZVJlcXVlc3QSPwoGdm9sdW1lGAEgASgJQi/g",
-            "QQL6QSkKJ2JhcmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMuY29tL1ZvbHVt",
-            "ZRIQCghzaXplX2dpYhgCIAEoA0L6AQolY29tLmdvb2dsZS5jbG91ZC5iYXJl",
-            "bWV0YWxzb2x1dGlvbi52MkILVm9sdW1lUHJvdG9QAVpTY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9iYXJlbWV0YWxzb2x1dGlvbi9hcGl2Mi9iYXJlbWV0YWxzb2x1",
-            "dGlvbnBiO2JhcmVtZXRhbHNvbHV0aW9ucGKqAiFHb29nbGUuQ2xvdWQuQmFy",
-            "ZU1ldGFsU29sdXRpb24uVjLKAiFHb29nbGVcQ2xvdWRcQmFyZU1ldGFsU29s",
-            "dXRpb25cVjLqAiRHb29nbGU6OkNsb3VkOjpCYXJlTWV0YWxTb2x1dGlvbjo6",
-            "VjJiBnByb3RvMw=="));
+            "Y2UucHJvdG8aLmdvb2dsZS9jbG91ZC9iYXJlbWV0YWxzb2x1dGlvbi92Mi9j",
+            "b21tb24ucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3Rv",
+            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIuwOCgZWb2x1bWUS",
+            "EQoEbmFtZRgBIAEoCUID4EEDEgoKAmlkGAsgASgJEksKDHN0b3JhZ2VfdHlw",
+            "ZRgCIAEoDjI1Lmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52Mi5W",
+            "b2x1bWUuU3RvcmFnZVR5cGUSPgoFc3RhdGUYAyABKA4yLy5nb29nbGUuY2xv",
+            "dWQuYmFyZW1ldGFsc29sdXRpb24udjIuVm9sdW1lLlN0YXRlEhoKEnJlcXVl",
+            "c3RlZF9zaXplX2dpYhgEIAEoAxIlCh1vcmlnaW5hbGx5X3JlcXVlc3RlZF9z",
+            "aXplX2dpYhgQIAEoAxIYChBjdXJyZW50X3NpemVfZ2liGAUgASgDEhoKEmVt",
+            "ZXJnZW5jeV9zaXplX2dpYhgOIAEoAxIUCgxtYXhfc2l6ZV9naWIYESABKAMS",
+            "GwoTYXV0b19ncm93bl9zaXplX2dpYhgGIAEoAxIbChNyZW1haW5pbmdfc3Bh",
+            "Y2VfZ2liGAcgASgDEmgKG3NuYXBzaG90X3Jlc2VydmF0aW9uX2RldGFpbBgI",
+            "IAEoCzJDLmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52Mi5Wb2x1",
+            "bWUuU25hcHNob3RSZXNlcnZhdGlvbkRldGFpbBJrCh1zbmFwc2hvdF9hdXRv",
+            "X2RlbGV0ZV9iZWhhdmlvchgJIAEoDjJELmdvb2dsZS5jbG91ZC5iYXJlbWV0",
+            "YWxzb2x1dGlvbi52Mi5Wb2x1bWUuU25hcHNob3RBdXRvRGVsZXRlQmVoYXZp",
+            "b3ISRQoGbGFiZWxzGAwgAygLMjUuZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNv",
+            "bHV0aW9uLnYyLlZvbHVtZS5MYWJlbHNFbnRyeRIYChBzbmFwc2hvdF9lbmFi",
+            "bGVkGA0gASgIEhAKA3BvZBgPIAEoCUID4EEFEkkKCHByb3RvY29sGBIgASgO",
+            "MjIuZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLlZvbHVtZS5Q",
+            "cm90b2NvbEID4EEDEhgKC2Jvb3Rfdm9sdW1lGBMgASgIQgPgQQMSVwoQcGVy",
+            "Zm9ybWFuY2VfdGllchgUIAEoDjI4Lmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxz",
+            "b2x1dGlvbi52Mi5Wb2x1bWVQZXJmb3JtYW5jZVRpZXJCA+BBBRISCgVub3Rl",
+            "cxgVIAEoCUID4EEEElMKEHdvcmtsb2FkX3Byb2ZpbGUYFiABKA4yOS5nb29n",
+            "bGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIuVm9sdW1lLldvcmtsb2Fk",
+            "UHJvZmlsZRI0CgtleHBpcmVfdGltZRgYIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAxJECglpbnN0YW5jZXMYGSADKAlCMeBBA/pBKwop",
+            "YmFyZW1ldGFsc29sdXRpb24uZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USFQoI",
+            "YXR0YWNoZWQYGiABKAhCA+BBAxqiAQoZU25hcHNob3RSZXNlcnZhdGlvbkRl",
+            "dGFpbBIaChJyZXNlcnZlZF9zcGFjZV9naWIYASABKAMSIwobcmVzZXJ2ZWRf",
+            "c3BhY2VfdXNlZF9wZXJjZW50GAIgASgFEiQKHHJlc2VydmVkX3NwYWNlX3Jl",
+            "bWFpbmluZ19naWIYAyABKAMSHgoWcmVzZXJ2ZWRfc3BhY2VfcGVyY2VudBgE",
+            "IAEoBRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBIj0KC1N0b3JhZ2VUeXBlEhwKGFNUT1JBR0VfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEgcKA1NTRBABEgcKA0hERBACImEKBVN0YXRlEhUKEVNUQVRFX1VO",
+            "U1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEgwKCERFTEVU",
+            "SU5HEAMSDAoIVVBEQVRJTkcQBBIMCghDT09MX09GRhAFIn0KGlNuYXBzaG90",
+            "QXV0b0RlbGV0ZUJlaGF2aW9yEi0KKVNOQVBTSE9UX0FVVE9fREVMRVRFX0JF",
+            "SEFWSU9SX1VOU1BFQ0lGSUVEEAASDAoIRElTQUJMRUQQARIQCgxPTERFU1Rf",
+            "RklSU1QQAhIQCgxORVdFU1RfRklSU1QQAyJACghQcm90b2NvbBIYChRQUk9U",
+            "T0NPTF9VTlNQRUNJRklFRBAAEhEKDUZJQlJFX0NIQU5ORUwQARIHCgNORlMQ",
+            "AiJKCg9Xb3JrbG9hZFByb2ZpbGUSIAocV09SS0xPQURfUFJPRklMRV9VTlNQ",
+            "RUNJRklFRBAAEgsKB0dFTkVSSUMQARIICgRIQU5BEAI6ZupBYwonYmFyZW1l",
+            "dGFsc29sdXRpb24uZ29vZ2xlYXBpcy5jb20vVm9sdW1lEjhwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdm9sdW1lcy97dm9sdW1l",
+            "fSJRChBHZXRWb2x1bWVSZXF1ZXN0Ej0KBG5hbWUYASABKAlCL+BBAvpBKQon",
+            "YmFyZW1ldGFsc29sdXRpb24uZ29vZ2xlYXBpcy5jb20vVm9sdW1lIoYBChJM",
+            "aXN0Vm9sdW1lc1JlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxv",
+            "Y2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIRCglwYWdlX3NpemUY",
+            "AiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkifwoT",
+            "TGlzdFZvbHVtZXNSZXNwb25zZRI6Cgd2b2x1bWVzGAEgAygLMikuZ29vZ2xl",
+            "LmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLlZvbHVtZRIXCg9uZXh0X3Bh",
+            "Z2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkihgEKE1VwZGF0",
+            "ZVZvbHVtZVJlcXVlc3QSPgoGdm9sdW1lGAEgASgLMikuZ29vZ2xlLmNsb3Vk",
+            "LmJhcmVtZXRhbHNvbHV0aW9uLnYyLlZvbHVtZUID4EECEi8KC3VwZGF0ZV9t",
+            "YXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJwChNSZW5h",
+            "bWVWb2x1bWVSZXF1ZXN0Ej0KBG5hbWUYASABKAlCL+BBAvpBKQonYmFyZW1l",
+            "dGFsc29sdXRpb24uZ29vZ2xlYXBpcy5jb20vVm9sdW1lEhoKDW5ld192b2x1",
+            "bWVfaWQYAiABKAlCA+BBAiJTChJFdmljdFZvbHVtZVJlcXVlc3QSPQoEbmFt",
+            "ZRgBIAEoCUIv4EEC+kEpCidiYXJlbWV0YWxzb2x1dGlvbi5nb29nbGVhcGlz",
+            "LmNvbS9Wb2x1bWUiaAoTUmVzaXplVm9sdW1lUmVxdWVzdBI/CgZ2b2x1bWUY",
+            "ASABKAlCL+BBAvpBKQonYmFyZW1ldGFsc29sdXRpb24uZ29vZ2xlYXBpcy5j",
+            "b20vVm9sdW1lEhAKCHNpemVfZ2liGAIgASgDQvoBCiVjb20uZ29vZ2xlLmNs",
+            "b3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyQgtWb2x1bWVQcm90b1ABWlNjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2JhcmVtZXRhbHNvbHV0aW9uL2FwaXYyL2JhcmVt",
+            "ZXRhbHNvbHV0aW9ucGI7YmFyZW1ldGFsc29sdXRpb25wYqoCIUdvb2dsZS5D",
+            "bG91ZC5CYXJlTWV0YWxTb2x1dGlvbi5WMsoCIUdvb2dsZVxDbG91ZFxCYXJl",
+            "TWV0YWxTb2x1dGlvblxWMuoCJEdvb2dsZTo6Q2xvdWQ6OkJhcmVNZXRhbFNv",
+            "bHV0aW9uOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BareMetalSolution.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.Volume), global::Google.Cloud.BareMetalSolution.V2.Volume.Parser, new[]{ "Name", "Id", "StorageType", "State", "RequestedSizeGib", "CurrentSizeGib", "EmergencySizeGib", "AutoGrownSizeGib", "RemainingSpaceGib", "SnapshotReservationDetail", "SnapshotAutoDeleteBehavior", "Labels", "SnapshotEnabled", "Pod" }, null, new[]{ typeof(global::Google.Cloud.BareMetalSolution.V2.Volume.Types.StorageType), typeof(global::Google.Cloud.BareMetalSolution.V2.Volume.Types.State), typeof(global::Google.Cloud.BareMetalSolution.V2.Volume.Types.SnapshotAutoDeleteBehavior) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.Volume.Types.SnapshotReservationDetail), global::Google.Cloud.BareMetalSolution.V2.Volume.Types.SnapshotReservationDetail.Parser, new[]{ "ReservedSpaceGib", "ReservedSpaceUsedPercent", "ReservedSpaceRemainingGib", "ReservedSpacePercent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.Volume), global::Google.Cloud.BareMetalSolution.V2.Volume.Parser, new[]{ "Name", "Id", "StorageType", "State", "RequestedSizeGib", "OriginallyRequestedSizeGib", "CurrentSizeGib", "EmergencySizeGib", "MaxSizeGib", "AutoGrownSizeGib", "RemainingSpaceGib", "SnapshotReservationDetail", "SnapshotAutoDeleteBehavior", "Labels", "SnapshotEnabled", "Pod", "Protocol", "BootVolume", "PerformanceTier", "Notes", "WorkloadProfile", "ExpireTime", "Instances", "Attached" }, null, new[]{ typeof(global::Google.Cloud.BareMetalSolution.V2.Volume.Types.StorageType), typeof(global::Google.Cloud.BareMetalSolution.V2.Volume.Types.State), typeof(global::Google.Cloud.BareMetalSolution.V2.Volume.Types.SnapshotAutoDeleteBehavior), typeof(global::Google.Cloud.BareMetalSolution.V2.Volume.Types.Protocol), typeof(global::Google.Cloud.BareMetalSolution.V2.Volume.Types.WorkloadProfile) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.Volume.Types.SnapshotReservationDetail), global::Google.Cloud.BareMetalSolution.V2.Volume.Types.SnapshotReservationDetail.Parser, new[]{ "ReservedSpaceGib", "ReservedSpaceUsedPercent", "ReservedSpaceRemainingGib", "ReservedSpacePercent" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.GetVolumeRequest), global::Google.Cloud.BareMetalSolution.V2.GetVolumeRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ListVolumesRequest), global::Google.Cloud.BareMetalSolution.V2.ListVolumesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ListVolumesResponse), global::Google.Cloud.BareMetalSolution.V2.ListVolumesResponse.Parser, new[]{ "Volumes", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.UpdateVolumeRequest), global::Google.Cloud.BareMetalSolution.V2.UpdateVolumeRequest.Parser, new[]{ "Volume", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.RenameVolumeRequest), global::Google.Cloud.BareMetalSolution.V2.RenameVolumeRequest.Parser, new[]{ "Name", "NewVolumeId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.EvictVolumeRequest), global::Google.Cloud.BareMetalSolution.V2.EvictVolumeRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ResizeVolumeRequest), global::Google.Cloud.BareMetalSolution.V2.ResizeVolumeRequest.Parser, new[]{ "Volume", "SizeGib" }, null, null, null, null)
           }));
     }
@@ -133,8 +156,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       storageType_ = other.storageType_;
       state_ = other.state_;
       requestedSizeGib_ = other.requestedSizeGib_;
+      originallyRequestedSizeGib_ = other.originallyRequestedSizeGib_;
       currentSizeGib_ = other.currentSizeGib_;
       emergencySizeGib_ = other.emergencySizeGib_;
+      maxSizeGib_ = other.maxSizeGib_;
       autoGrownSizeGib_ = other.autoGrownSizeGib_;
       remainingSpaceGib_ = other.remainingSpaceGib_;
       snapshotReservationDetail_ = other.snapshotReservationDetail_ != null ? other.snapshotReservationDetail_.Clone() : null;
@@ -142,6 +167,14 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       labels_ = other.labels_.Clone();
       snapshotEnabled_ = other.snapshotEnabled_;
       pod_ = other.pod_;
+      protocol_ = other.protocol_;
+      bootVolume_ = other.bootVolume_;
+      performanceTier_ = other.performanceTier_;
+      notes_ = other.notes_;
+      workloadProfile_ = other.workloadProfile_;
+      expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
+      instances_ = other.instances_.Clone();
+      attached_ = other.attached_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -230,6 +263,21 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
     }
 
+    /// <summary>Field number for the "originally_requested_size_gib" field.</summary>
+    public const int OriginallyRequestedSizeGibFieldNumber = 16;
+    private long originallyRequestedSizeGib_;
+    /// <summary>
+    /// Originally requested size, in GiB.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long OriginallyRequestedSizeGib {
+      get { return originallyRequestedSizeGib_; }
+      set {
+        originallyRequestedSizeGib_ = value;
+      }
+    }
+
     /// <summary>Field number for the "current_size_gib" field.</summary>
     public const int CurrentSizeGibFieldNumber = 5;
     private long currentSizeGib_;
@@ -260,6 +308,21 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       get { return emergencySizeGib_; }
       set {
         emergencySizeGib_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_size_gib" field.</summary>
+    public const int MaxSizeGibFieldNumber = 17;
+    private long maxSizeGib_;
+    /// <summary>
+    /// Maximum size volume can be expanded to in case of evergency, in GiB.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MaxSizeGib {
+      get { return maxSizeGib_; }
+      set {
+        maxSizeGib_ = value;
       }
     }
 
@@ -369,6 +432,132 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
     }
 
+    /// <summary>Field number for the "protocol" field.</summary>
+    public const int ProtocolFieldNumber = 18;
+    private global::Google.Cloud.BareMetalSolution.V2.Volume.Types.Protocol protocol_ = global::Google.Cloud.BareMetalSolution.V2.Volume.Types.Protocol.Unspecified;
+    /// <summary>
+    /// Output only. Storage protocol for the Volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BareMetalSolution.V2.Volume.Types.Protocol Protocol {
+      get { return protocol_; }
+      set {
+        protocol_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "boot_volume" field.</summary>
+    public const int BootVolumeFieldNumber = 19;
+    private bool bootVolume_;
+    /// <summary>
+    /// Output only. Whether this volume is a boot volume. A boot volume is one
+    /// which contains a boot LUN.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BootVolume {
+      get { return bootVolume_; }
+      set {
+        bootVolume_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "performance_tier" field.</summary>
+    public const int PerformanceTierFieldNumber = 20;
+    private global::Google.Cloud.BareMetalSolution.V2.VolumePerformanceTier performanceTier_ = global::Google.Cloud.BareMetalSolution.V2.VolumePerformanceTier.Unspecified;
+    /// <summary>
+    /// Immutable. Performance tier of the Volume.
+    /// Default is SHARED.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BareMetalSolution.V2.VolumePerformanceTier PerformanceTier {
+      get { return performanceTier_; }
+      set {
+        performanceTier_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "notes" field.</summary>
+    public const int NotesFieldNumber = 21;
+    private string notes_ = "";
+    /// <summary>
+    /// Input only. User-specified notes for new Volume.
+    /// Used to provision Volumes that require manual intervention.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Notes {
+      get { return notes_; }
+      set {
+        notes_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "workload_profile" field.</summary>
+    public const int WorkloadProfileFieldNumber = 22;
+    private global::Google.Cloud.BareMetalSolution.V2.Volume.Types.WorkloadProfile workloadProfile_ = global::Google.Cloud.BareMetalSolution.V2.Volume.Types.WorkloadProfile.Unspecified;
+    /// <summary>
+    /// The workload profile for the volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BareMetalSolution.V2.Volume.Types.WorkloadProfile WorkloadProfile {
+      get { return workloadProfile_; }
+      set {
+        workloadProfile_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expire_time" field.</summary>
+    public const int ExpireTimeFieldNumber = 24;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
+    /// <summary>
+    /// Output only. Time after which volume will be fully deleted.
+    /// It is filled only for volumes in COOLOFF state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
+      get { return expireTime_; }
+      set {
+        expireTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "instances" field.</summary>
+    public const int InstancesFieldNumber = 25;
+    private static readonly pb::FieldCodec<string> _repeated_instances_codec
+        = pb::FieldCodec.ForString(202);
+    private readonly pbc::RepeatedField<string> instances_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. Instances this Volume is attached to.
+    /// This field is set only in Get requests.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Instances {
+      get { return instances_; }
+    }
+
+    /// <summary>Field number for the "attached" field.</summary>
+    public const int AttachedFieldNumber = 26;
+    private bool attached_;
+    /// <summary>
+    /// Output only. Is the Volume attached at at least one instance.
+    /// This field is a lightweight counterpart of `instances` field.
+    /// It is filled in List responses as well.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Attached {
+      get { return attached_; }
+      set {
+        attached_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -389,8 +578,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (StorageType != other.StorageType) return false;
       if (State != other.State) return false;
       if (RequestedSizeGib != other.RequestedSizeGib) return false;
+      if (OriginallyRequestedSizeGib != other.OriginallyRequestedSizeGib) return false;
       if (CurrentSizeGib != other.CurrentSizeGib) return false;
       if (EmergencySizeGib != other.EmergencySizeGib) return false;
+      if (MaxSizeGib != other.MaxSizeGib) return false;
       if (AutoGrownSizeGib != other.AutoGrownSizeGib) return false;
       if (RemainingSpaceGib != other.RemainingSpaceGib) return false;
       if (!object.Equals(SnapshotReservationDetail, other.SnapshotReservationDetail)) return false;
@@ -398,6 +589,14 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (!Labels.Equals(other.Labels)) return false;
       if (SnapshotEnabled != other.SnapshotEnabled) return false;
       if (Pod != other.Pod) return false;
+      if (Protocol != other.Protocol) return false;
+      if (BootVolume != other.BootVolume) return false;
+      if (PerformanceTier != other.PerformanceTier) return false;
+      if (Notes != other.Notes) return false;
+      if (WorkloadProfile != other.WorkloadProfile) return false;
+      if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
+      if(!instances_.Equals(other.instances_)) return false;
+      if (Attached != other.Attached) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -410,8 +609,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (StorageType != global::Google.Cloud.BareMetalSolution.V2.Volume.Types.StorageType.Unspecified) hash ^= StorageType.GetHashCode();
       if (State != global::Google.Cloud.BareMetalSolution.V2.Volume.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (RequestedSizeGib != 0L) hash ^= RequestedSizeGib.GetHashCode();
+      if (OriginallyRequestedSizeGib != 0L) hash ^= OriginallyRequestedSizeGib.GetHashCode();
       if (CurrentSizeGib != 0L) hash ^= CurrentSizeGib.GetHashCode();
       if (EmergencySizeGib != 0L) hash ^= EmergencySizeGib.GetHashCode();
+      if (MaxSizeGib != 0L) hash ^= MaxSizeGib.GetHashCode();
       if (AutoGrownSizeGib != 0L) hash ^= AutoGrownSizeGib.GetHashCode();
       if (RemainingSpaceGib != 0L) hash ^= RemainingSpaceGib.GetHashCode();
       if (snapshotReservationDetail_ != null) hash ^= SnapshotReservationDetail.GetHashCode();
@@ -419,6 +620,14 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       hash ^= Labels.GetHashCode();
       if (SnapshotEnabled != false) hash ^= SnapshotEnabled.GetHashCode();
       if (Pod.Length != 0) hash ^= Pod.GetHashCode();
+      if (Protocol != global::Google.Cloud.BareMetalSolution.V2.Volume.Types.Protocol.Unspecified) hash ^= Protocol.GetHashCode();
+      if (BootVolume != false) hash ^= BootVolume.GetHashCode();
+      if (PerformanceTier != global::Google.Cloud.BareMetalSolution.V2.VolumePerformanceTier.Unspecified) hash ^= PerformanceTier.GetHashCode();
+      if (Notes.Length != 0) hash ^= Notes.GetHashCode();
+      if (WorkloadProfile != global::Google.Cloud.BareMetalSolution.V2.Volume.Types.WorkloadProfile.Unspecified) hash ^= WorkloadProfile.GetHashCode();
+      if (expireTime_ != null) hash ^= ExpireTime.GetHashCode();
+      hash ^= instances_.GetHashCode();
+      if (Attached != false) hash ^= Attached.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -490,6 +699,43 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         output.WriteRawTag(122);
         output.WriteString(Pod);
       }
+      if (OriginallyRequestedSizeGib != 0L) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt64(OriginallyRequestedSizeGib);
+      }
+      if (MaxSizeGib != 0L) {
+        output.WriteRawTag(136, 1);
+        output.WriteInt64(MaxSizeGib);
+      }
+      if (Protocol != global::Google.Cloud.BareMetalSolution.V2.Volume.Types.Protocol.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) Protocol);
+      }
+      if (BootVolume != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(BootVolume);
+      }
+      if (PerformanceTier != global::Google.Cloud.BareMetalSolution.V2.VolumePerformanceTier.Unspecified) {
+        output.WriteRawTag(160, 1);
+        output.WriteEnum((int) PerformanceTier);
+      }
+      if (Notes.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(Notes);
+      }
+      if (WorkloadProfile != global::Google.Cloud.BareMetalSolution.V2.Volume.Types.WorkloadProfile.Unspecified) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) WorkloadProfile);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(ExpireTime);
+      }
+      instances_.WriteTo(output, _repeated_instances_codec);
+      if (Attached != false) {
+        output.WriteRawTag(208, 1);
+        output.WriteBool(Attached);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -553,6 +799,43 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         output.WriteRawTag(122);
         output.WriteString(Pod);
       }
+      if (OriginallyRequestedSizeGib != 0L) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt64(OriginallyRequestedSizeGib);
+      }
+      if (MaxSizeGib != 0L) {
+        output.WriteRawTag(136, 1);
+        output.WriteInt64(MaxSizeGib);
+      }
+      if (Protocol != global::Google.Cloud.BareMetalSolution.V2.Volume.Types.Protocol.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) Protocol);
+      }
+      if (BootVolume != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(BootVolume);
+      }
+      if (PerformanceTier != global::Google.Cloud.BareMetalSolution.V2.VolumePerformanceTier.Unspecified) {
+        output.WriteRawTag(160, 1);
+        output.WriteEnum((int) PerformanceTier);
+      }
+      if (Notes.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(Notes);
+      }
+      if (WorkloadProfile != global::Google.Cloud.BareMetalSolution.V2.Volume.Types.WorkloadProfile.Unspecified) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) WorkloadProfile);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(ExpireTime);
+      }
+      instances_.WriteTo(ref output, _repeated_instances_codec);
+      if (Attached != false) {
+        output.WriteRawTag(208, 1);
+        output.WriteBool(Attached);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -578,11 +861,17 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (RequestedSizeGib != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(RequestedSizeGib);
       }
+      if (OriginallyRequestedSizeGib != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(OriginallyRequestedSizeGib);
+      }
       if (CurrentSizeGib != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CurrentSizeGib);
       }
       if (EmergencySizeGib != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EmergencySizeGib);
+      }
+      if (MaxSizeGib != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(MaxSizeGib);
       }
       if (AutoGrownSizeGib != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(AutoGrownSizeGib);
@@ -602,6 +891,28 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
       if (Pod.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Pod);
+      }
+      if (Protocol != global::Google.Cloud.BareMetalSolution.V2.Volume.Types.Protocol.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Protocol);
+      }
+      if (BootVolume != false) {
+        size += 2 + 1;
+      }
+      if (PerformanceTier != global::Google.Cloud.BareMetalSolution.V2.VolumePerformanceTier.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) PerformanceTier);
+      }
+      if (Notes.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Notes);
+      }
+      if (WorkloadProfile != global::Google.Cloud.BareMetalSolution.V2.Volume.Types.WorkloadProfile.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) WorkloadProfile);
+      }
+      if (expireTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
+      }
+      size += instances_.CalculateSize(_repeated_instances_codec);
+      if (Attached != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -630,11 +941,17 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (other.RequestedSizeGib != 0L) {
         RequestedSizeGib = other.RequestedSizeGib;
       }
+      if (other.OriginallyRequestedSizeGib != 0L) {
+        OriginallyRequestedSizeGib = other.OriginallyRequestedSizeGib;
+      }
       if (other.CurrentSizeGib != 0L) {
         CurrentSizeGib = other.CurrentSizeGib;
       }
       if (other.EmergencySizeGib != 0L) {
         EmergencySizeGib = other.EmergencySizeGib;
+      }
+      if (other.MaxSizeGib != 0L) {
+        MaxSizeGib = other.MaxSizeGib;
       }
       if (other.AutoGrownSizeGib != 0L) {
         AutoGrownSizeGib = other.AutoGrownSizeGib;
@@ -657,6 +974,31 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
       if (other.Pod.Length != 0) {
         Pod = other.Pod;
+      }
+      if (other.Protocol != global::Google.Cloud.BareMetalSolution.V2.Volume.Types.Protocol.Unspecified) {
+        Protocol = other.Protocol;
+      }
+      if (other.BootVolume != false) {
+        BootVolume = other.BootVolume;
+      }
+      if (other.PerformanceTier != global::Google.Cloud.BareMetalSolution.V2.VolumePerformanceTier.Unspecified) {
+        PerformanceTier = other.PerformanceTier;
+      }
+      if (other.Notes.Length != 0) {
+        Notes = other.Notes;
+      }
+      if (other.WorkloadProfile != global::Google.Cloud.BareMetalSolution.V2.Volume.Types.WorkloadProfile.Unspecified) {
+        WorkloadProfile = other.WorkloadProfile;
+      }
+      if (other.expireTime_ != null) {
+        if (expireTime_ == null) {
+          ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ExpireTime.MergeFrom(other.ExpireTime);
+      }
+      instances_.Add(other.instances_);
+      if (other.Attached != false) {
+        Attached = other.Attached;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -730,6 +1072,49 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           }
           case 122: {
             Pod = input.ReadString();
+            break;
+          }
+          case 128: {
+            OriginallyRequestedSizeGib = input.ReadInt64();
+            break;
+          }
+          case 136: {
+            MaxSizeGib = input.ReadInt64();
+            break;
+          }
+          case 144: {
+            Protocol = (global::Google.Cloud.BareMetalSolution.V2.Volume.Types.Protocol) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            BootVolume = input.ReadBool();
+            break;
+          }
+          case 160: {
+            PerformanceTier = (global::Google.Cloud.BareMetalSolution.V2.VolumePerformanceTier) input.ReadEnum();
+            break;
+          }
+          case 170: {
+            Notes = input.ReadString();
+            break;
+          }
+          case 176: {
+            WorkloadProfile = (global::Google.Cloud.BareMetalSolution.V2.Volume.Types.WorkloadProfile) input.ReadEnum();
+            break;
+          }
+          case 194: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 202: {
+            instances_.AddEntriesFrom(input, _repeated_instances_codec);
+            break;
+          }
+          case 208: {
+            Attached = input.ReadBool();
             break;
           }
         }
@@ -806,6 +1191,49 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             Pod = input.ReadString();
             break;
           }
+          case 128: {
+            OriginallyRequestedSizeGib = input.ReadInt64();
+            break;
+          }
+          case 136: {
+            MaxSizeGib = input.ReadInt64();
+            break;
+          }
+          case 144: {
+            Protocol = (global::Google.Cloud.BareMetalSolution.V2.Volume.Types.Protocol) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            BootVolume = input.ReadBool();
+            break;
+          }
+          case 160: {
+            PerformanceTier = (global::Google.Cloud.BareMetalSolution.V2.VolumePerformanceTier) input.ReadEnum();
+            break;
+          }
+          case 170: {
+            Notes = input.ReadString();
+            break;
+          }
+          case 176: {
+            WorkloadProfile = (global::Google.Cloud.BareMetalSolution.V2.Volume.Types.WorkloadProfile) input.ReadEnum();
+            break;
+          }
+          case 194: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 202: {
+            instances_.AddEntriesFrom(ref input, _repeated_instances_codec);
+            break;
+          }
+          case 208: {
+            Attached = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -854,6 +1282,15 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         /// The storage volume has been requested to be deleted.
         /// </summary>
         [pbr::OriginalName("DELETING")] Deleting = 3,
+        /// <summary>
+        /// The storage volume is being updated.
+        /// </summary>
+        [pbr::OriginalName("UPDATING")] Updating = 4,
+        /// <summary>
+        /// The storage volume is in cool off state. It will be deleted after
+        /// `expire_time`.
+        /// </summary>
+        [pbr::OriginalName("COOL_OFF")] CoolOff = 5,
       }
 
       /// <summary>
@@ -878,6 +1315,43 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         /// Delete the newest snapshots first.
         /// </summary>
         [pbr::OriginalName("NEWEST_FIRST")] NewestFirst = 3,
+      }
+
+      /// <summary>
+      /// Storage protocol.
+      /// </summary>
+      public enum Protocol {
+        /// <summary>
+        /// Value is not specified.
+        /// </summary>
+        [pbr::OriginalName("PROTOCOL_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Fibre Channel protocol.
+        /// </summary>
+        [pbr::OriginalName("FIBRE_CHANNEL")] FibreChannel = 1,
+        /// <summary>
+        /// NFS protocol means Volume is a NFS Share volume.
+        /// Such volumes cannot be manipulated via Volumes API.
+        /// </summary>
+        [pbr::OriginalName("NFS")] Nfs = 2,
+      }
+
+      /// <summary>
+      /// The possible values for a workload profile.
+      /// </summary>
+      public enum WorkloadProfile {
+        /// <summary>
+        /// The workload profile is in an unknown state.
+        /// </summary>
+        [pbr::OriginalName("WORKLOAD_PROFILE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The workload profile is generic.
+        /// </summary>
+        [pbr::OriginalName("GENERIC")] Generic = 1,
+        /// <summary>
+        /// The workload profile is hana.
+        /// </summary>
+        [pbr::OriginalName("HANA")] Hana = 2,
       }
 
       /// <summary>
@@ -2044,11 +2518,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     /// <summary>
     /// The list of fields to update.
     /// The only currently supported fields are:
-    ///   `snapshot_auto_delete_behavior`
-    ///   `snapshot_schedule_policy_name`
     ///   'labels'
-    ///   'snapshot_enabled'
-    ///   'snapshot_reservation_detail.reserved_space_percent'
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2235,6 +2705,437 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   }
 
   /// <summary>
+  /// Message requesting rename of a server.
+  /// </summary>
+  public sealed partial class RenameVolumeRequest : pb::IMessage<RenameVolumeRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RenameVolumeRequest> _parser = new pb::MessageParser<RenameVolumeRequest>(() => new RenameVolumeRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RenameVolumeRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.VolumeReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RenameVolumeRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RenameVolumeRequest(RenameVolumeRequest other) : this() {
+      name_ = other.name_;
+      newVolumeId_ = other.newVolumeId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RenameVolumeRequest Clone() {
+      return new RenameVolumeRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The `name` field is used to identify the volume.
+    /// Format: projects/{project}/locations/{location}/volumes/{volume}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "new_volume_id" field.</summary>
+    public const int NewVolumeIdFieldNumber = 2;
+    private string newVolumeId_ = "";
+    /// <summary>
+    /// Required. The new `id` of the volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NewVolumeId {
+      get { return newVolumeId_; }
+      set {
+        newVolumeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RenameVolumeRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RenameVolumeRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (NewVolumeId != other.NewVolumeId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (NewVolumeId.Length != 0) hash ^= NewVolumeId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (NewVolumeId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NewVolumeId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (NewVolumeId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NewVolumeId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (NewVolumeId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NewVolumeId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RenameVolumeRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.NewVolumeId.Length != 0) {
+        NewVolumeId = other.NewVolumeId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            NewVolumeId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            NewVolumeId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for skip volume cooloff and delete it.
+  /// </summary>
+  public sealed partial class EvictVolumeRequest : pb::IMessage<EvictVolumeRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EvictVolumeRequest> _parser = new pb::MessageParser<EvictVolumeRequest>(() => new EvictVolumeRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EvictVolumeRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.VolumeReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvictVolumeRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvictVolumeRequest(EvictVolumeRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvictVolumeRequest Clone() {
+      return new EvictVolumeRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the Volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EvictVolumeRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EvictVolumeRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EvictVolumeRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request for emergency resize Volume.
   /// </summary>
   public sealed partial class ResizeVolumeRequest : pb::IMessage<ResizeVolumeRequest>
@@ -2251,7 +3152,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BareMetalSolution.V2.VolumeReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.BareMetalSolution.V2.VolumeReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
