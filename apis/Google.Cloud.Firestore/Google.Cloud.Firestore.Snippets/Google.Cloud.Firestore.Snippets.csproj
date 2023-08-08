@@ -13,7 +13,7 @@
     <ProjectReference Include="..\Google.Cloud.Firestore\Google.Cloud.Firestore.csproj" />
     <PackageReference Include="Grpc.Core.Testing" Version="[2.46.6, 3.0.0)" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.0" />
-    <PackageReference Include="Moq" Version="4.18.4" />
+    <PackageReference Include="Moq" Version="4.20.0" />
     <PackageReference Include="System.Linq.Async" Version="6.0.1" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
     <PackageReference Include="Xunit.Combinatorial" Version="1.5.25" />
