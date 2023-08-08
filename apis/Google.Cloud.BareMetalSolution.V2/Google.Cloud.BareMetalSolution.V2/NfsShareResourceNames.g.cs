@@ -302,4 +302,40 @@ namespace Google.Cloud.BareMetalSolution.V2
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class RenameNfsShareRequest
+    {
+        /// <summary>
+        /// <see cref="gcbv::NFSShareName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbv::NFSShareName NFSShareName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::NFSShareName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateNfsShareRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteNfsShareRequest
+    {
+        /// <summary>
+        /// <see cref="gcbv::NFSShareName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbv::NFSShareName NFSShareName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::NFSShareName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

@@ -261,6 +261,14 @@ namespace Google.Cloud.BareMetalSolution.V2
             get => string.IsNullOrEmpty(Name) ? null : gcbv::VolumeName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Instances"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<InstanceName> InstancesAsInstanceNames
+        {
+            get => new gax::ResourceNameList<InstanceName>(Instances, s => string.IsNullOrEmpty(s) ? null : InstanceName.Parse(s, allowUnparsed: true));
+        }
     }
 
     public partial class GetVolumeRequest
@@ -284,6 +292,30 @@ namespace Google.Cloud.BareMetalSolution.V2
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RenameVolumeRequest
+    {
+        /// <summary>
+        /// <see cref="gcbv::VolumeName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbv::VolumeName VolumeName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::VolumeName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class EvictVolumeRequest
+    {
+        /// <summary>
+        /// <see cref="gcbv::VolumeName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbv::VolumeName VolumeName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::VolumeName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 

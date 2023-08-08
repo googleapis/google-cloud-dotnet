@@ -27,43 +27,49 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             "Citnb29nbGUvY2xvdWQvYmFyZW1ldGFsc29sdXRpb24vdjIvbHVuLnByb3Rv",
             "EiFnb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
-            "cHJvdG8i0wUKA0x1bhIRCgRuYW1lGAEgASgJQgPgQQMSCgoCaWQYCiABKAkS",
-            "OwoFc3RhdGUYAiABKA4yLC5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRp",
-            "b24udjIuTHVuLlN0YXRlEg8KB3NpemVfZ2IYAyABKAMSVAoSbXVsdGlwcm90",
-            "b2NvbF90eXBlGAQgASgOMjguZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0",
-            "aW9uLnYyLkx1bi5NdWx0aXByb3RvY29sVHlwZRJECg5zdG9yYWdlX3ZvbHVt",
-            "ZRgFIAEoCUIs+kEpCidiYXJlbWV0YWxzb2x1dGlvbi5nb29nbGVhcGlzLmNv",
-            "bS9Wb2x1bWUSEQoJc2hhcmVhYmxlGAYgASgIEhAKCGJvb3RfbHVuGAcgASgI",
-            "EkgKDHN0b3JhZ2VfdHlwZRgIIAEoDjIyLmdvb2dsZS5jbG91ZC5iYXJlbWV0",
-            "YWxzb2x1dGlvbi52Mi5MdW4uU3RvcmFnZVR5cGUSDAoEd3dpZBgJIAEoCSJT",
-            "CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAES",
-            "DAoIVVBEQVRJTkcQAhIJCgVSRUFEWRADEgwKCERFTEVUSU5HEAQiQgoRTXVs",
-            "dGlwcm90b2NvbFR5cGUSIgoeTVVMVElQUk9UT0NPTF9UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASCQoFTElOVVgQASI9CgtTdG9yYWdlVHlwZRIcChhTVE9SQUdFX1RZ",
-            "UEVfVU5TUEVDSUZJRUQQABIHCgNTU0QQARIHCgNIREQQAjpu6kFrCiRiYXJl",
-            "bWV0YWxzb2x1dGlvbi5nb29nbGVhcGlzLmNvbS9MdW4SQ3Byb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS92b2x1bWVzL3t2b2x1bWV9",
-            "L2x1bnMve2x1bn0iSwoNR2V0THVuUmVxdWVzdBI6CgRuYW1lGAEgASgJQizg",
-            "QQL6QSYKJGJhcmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMuY29tL0x1biJ5",
-            "Cg9MaXN0THVuc1JlcXVlc3QSPwoGcGFyZW50GAEgASgJQi/gQQL6QSkKJ2Jh",
-            "cmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMuY29tL1ZvbHVtZRIRCglwYWdl",
-            "X3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJ2ChBMaXN0THVuc1Jl",
-            "c3BvbnNlEjQKBGx1bnMYASADKAsyJi5nb29nbGUuY2xvdWQuYmFyZW1ldGFs",
-            "c29sdXRpb24udjIuTHVuEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1",
-            "bnJlYWNoYWJsZRgDIAMoCUL3AQolY29tLmdvb2dsZS5jbG91ZC5iYXJlbWV0",
-            "YWxzb2x1dGlvbi52MkIITHVuUHJvdG9QAVpTY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9iYXJlbWV0YWxzb2x1dGlvbi9hcGl2Mi9iYXJlbWV0YWxzb2x1dGlvbnBi",
-            "O2JhcmVtZXRhbHNvbHV0aW9ucGKqAiFHb29nbGUuQ2xvdWQuQmFyZU1ldGFs",
-            "U29sdXRpb24uVjLKAiFHb29nbGVcQ2xvdWRcQmFyZU1ldGFsU29sdXRpb25c",
-            "VjLqAiRHb29nbGU6OkNsb3VkOjpCYXJlTWV0YWxTb2x1dGlvbjo6VjJiBnBy",
-            "b3RvMw=="));
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i3QYKA0x1",
+            "bhIRCgRuYW1lGAEgASgJQgPgQQMSCgoCaWQYCiABKAkSOwoFc3RhdGUYAiAB",
+            "KA4yLC5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIuTHVuLlN0",
+            "YXRlEg8KB3NpemVfZ2IYAyABKAMSVAoSbXVsdGlwcm90b2NvbF90eXBlGAQg",
+            "ASgOMjguZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLkx1bi5N",
+            "dWx0aXByb3RvY29sVHlwZRJECg5zdG9yYWdlX3ZvbHVtZRgFIAEoCUIs+kEp",
+            "CidiYXJlbWV0YWxzb2x1dGlvbi5nb29nbGVhcGlzLmNvbS9Wb2x1bWUSEQoJ",
+            "c2hhcmVhYmxlGAYgASgIEhAKCGJvb3RfbHVuGAcgASgIEkgKDHN0b3JhZ2Vf",
+            "dHlwZRgIIAEoDjIyLmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52",
+            "Mi5MdW4uU3RvcmFnZVR5cGUSDAoEd3dpZBgJIAEoCRI0CgtleHBpcmVfdGlt",
+            "ZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJECglp",
+            "bnN0YW5jZXMYDCADKAlCMeBBA/pBKwopYmFyZW1ldGFsc29sdXRpb24uZ29v",
+            "Z2xlYXBpcy5jb20vSW5zdGFuY2UiYQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVD",
+            "SUZJRUQQABIMCghDUkVBVElORxABEgwKCFVQREFUSU5HEAISCQoFUkVBRFkQ",
+            "AxIMCghERUxFVElORxAEEgwKCENPT0xfT0ZGEAUiQgoRTXVsdGlwcm90b2Nv",
+            "bFR5cGUSIgoeTVVMVElQUk9UT0NPTF9UWVBFX1VOU1BFQ0lGSUVEEAASCQoF",
+            "TElOVVgQASI9CgtTdG9yYWdlVHlwZRIcChhTVE9SQUdFX1RZUEVfVU5TUEVD",
+            "SUZJRUQQABIHCgNTU0QQARIHCgNIREQQAjpu6kFrCiRiYXJlbWV0YWxzb2x1",
+            "dGlvbi5nb29nbGVhcGlzLmNvbS9MdW4SQ3Byb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS92b2x1bWVzL3t2b2x1bWV9L2x1bnMve2x1",
+            "bn0iSwoNR2V0THVuUmVxdWVzdBI6CgRuYW1lGAEgASgJQizgQQL6QSYKJGJh",
+            "cmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMuY29tL0x1biJ5Cg9MaXN0THVu",
+            "c1JlcXVlc3QSPwoGcGFyZW50GAEgASgJQi/gQQL6QSkKJ2JhcmVtZXRhbHNv",
+            "bHV0aW9uLmdvb2dsZWFwaXMuY29tL1ZvbHVtZRIRCglwYWdlX3NpemUYAiAB",
+            "KAUSEgoKcGFnZV90b2tlbhgDIAEoCSJ2ChBMaXN0THVuc1Jlc3BvbnNlEjQK",
+            "BGx1bnMYASADKAsyJi5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24u",
+            "djIuTHVuEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJs",
+            "ZRgDIAMoCSJNCg9FdmljdEx1blJlcXVlc3QSOgoEbmFtZRgBIAEoCUIs4EEC",
+            "+kEmCiRiYXJlbWV0YWxzb2x1dGlvbi5nb29nbGVhcGlzLmNvbS9MdW5C9wEK",
+            "JWNvbS5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjJCCEx1blBy",
+            "b3RvUAFaU2Nsb3VkLmdvb2dsZS5jb20vZ28vYmFyZW1ldGFsc29sdXRpb24v",
+            "YXBpdjIvYmFyZW1ldGFsc29sdXRpb25wYjtiYXJlbWV0YWxzb2x1dGlvbnBi",
+            "qgIhR29vZ2xlLkNsb3VkLkJhcmVNZXRhbFNvbHV0aW9uLlYyygIhR29vZ2xl",
+            "XENsb3VkXEJhcmVNZXRhbFNvbHV0aW9uXFYy6gIkR29vZ2xlOjpDbG91ZDo6",
+            "QmFyZU1ldGFsU29sdXRpb246OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.Lun), global::Google.Cloud.BareMetalSolution.V2.Lun.Parser, new[]{ "Name", "Id", "State", "SizeGb", "MultiprotocolType", "StorageVolume", "Shareable", "BootLun", "StorageType", "Wwid" }, null, new[]{ typeof(global::Google.Cloud.BareMetalSolution.V2.Lun.Types.State), typeof(global::Google.Cloud.BareMetalSolution.V2.Lun.Types.MultiprotocolType), typeof(global::Google.Cloud.BareMetalSolution.V2.Lun.Types.StorageType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.Lun), global::Google.Cloud.BareMetalSolution.V2.Lun.Parser, new[]{ "Name", "Id", "State", "SizeGb", "MultiprotocolType", "StorageVolume", "Shareable", "BootLun", "StorageType", "Wwid", "ExpireTime", "Instances" }, null, new[]{ typeof(global::Google.Cloud.BareMetalSolution.V2.Lun.Types.State), typeof(global::Google.Cloud.BareMetalSolution.V2.Lun.Types.MultiprotocolType), typeof(global::Google.Cloud.BareMetalSolution.V2.Lun.Types.StorageType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.GetLunRequest), global::Google.Cloud.BareMetalSolution.V2.GetLunRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ListLunsRequest), global::Google.Cloud.BareMetalSolution.V2.ListLunsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ListLunsResponse), global::Google.Cloud.BareMetalSolution.V2.ListLunsResponse.Parser, new[]{ "Luns", "NextPageToken", "Unreachable" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ListLunsResponse), global::Google.Cloud.BareMetalSolution.V2.ListLunsResponse.Parser, new[]{ "Luns", "NextPageToken", "Unreachable" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.EvictLunRequest), global::Google.Cloud.BareMetalSolution.V2.EvictLunRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -117,6 +123,8 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       bootLun_ = other.bootLun_;
       storageType_ = other.storageType_;
       wwid_ = other.wwid_;
+      expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
+      instances_ = other.instances_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -277,6 +285,36 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
     }
 
+    /// <summary>Field number for the "expire_time" field.</summary>
+    public const int ExpireTimeFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
+    /// <summary>
+    /// Output only. Time after which LUN will be fully deleted.
+    /// It is filled only for LUNs in COOL_OFF state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
+      get { return expireTime_; }
+      set {
+        expireTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "instances" field.</summary>
+    public const int InstancesFieldNumber = 12;
+    private static readonly pb::FieldCodec<string> _repeated_instances_codec
+        = pb::FieldCodec.ForString(98);
+    private readonly pbc::RepeatedField<string> instances_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. Instances this Lun is attached to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Instances {
+      get { return instances_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -302,6 +340,8 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (BootLun != other.BootLun) return false;
       if (StorageType != other.StorageType) return false;
       if (Wwid != other.Wwid) return false;
+      if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
+      if(!instances_.Equals(other.instances_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -319,6 +359,8 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (BootLun != false) hash ^= BootLun.GetHashCode();
       if (StorageType != global::Google.Cloud.BareMetalSolution.V2.Lun.Types.StorageType.Unspecified) hash ^= StorageType.GetHashCode();
       if (Wwid.Length != 0) hash ^= Wwid.GetHashCode();
+      if (expireTime_ != null) hash ^= ExpireTime.GetHashCode();
+      hash ^= instances_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -377,6 +419,11 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         output.WriteRawTag(82);
         output.WriteString(Id);
       }
+      if (expireTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ExpireTime);
+      }
+      instances_.WriteTo(output, _repeated_instances_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -427,6 +474,11 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         output.WriteRawTag(82);
         output.WriteString(Id);
       }
+      if (expireTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ExpireTime);
+      }
+      instances_.WriteTo(ref output, _repeated_instances_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -467,6 +519,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (Wwid.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Wwid);
       }
+      if (expireTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
+      }
+      size += instances_.CalculateSize(_repeated_instances_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -509,6 +565,13 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (other.Wwid.Length != 0) {
         Wwid = other.Wwid;
       }
+      if (other.expireTime_ != null) {
+        if (expireTime_ == null) {
+          ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ExpireTime.MergeFrom(other.ExpireTime);
+      }
+      instances_.Add(other.instances_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -562,6 +625,17 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           }
           case 82: {
             Id = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 98: {
+            instances_.AddEntriesFrom(input, _repeated_instances_codec);
             break;
           }
         }
@@ -619,6 +693,17 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             Id = input.ReadString();
             break;
           }
+          case 90: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 98: {
+            instances_.AddEntriesFrom(ref input, _repeated_instances_codec);
+            break;
+          }
         }
       }
     }
@@ -653,6 +738,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         /// The LUN has been requested to be deleted.
         /// </summary>
         [pbr::OriginalName("DELETING")] Deleting = 4,
+        /// <summary>
+        /// The LUN is in cool off state. It will be deleted after `expire_time`.
+        /// </summary>
+        [pbr::OriginalName("COOL_OFF")] CoolOff = 5,
       }
 
       /// <summary>
@@ -1407,6 +1496,201 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           }
           case 26: {
             unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for skip lun cooloff and delete it.
+  /// </summary>
+  public sealed partial class EvictLunRequest : pb::IMessage<EvictLunRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EvictLunRequest> _parser = new pb::MessageParser<EvictLunRequest>(() => new EvictLunRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EvictLunRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.LunReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvictLunRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvictLunRequest(EvictLunRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvictLunRequest Clone() {
+      return new EvictLunRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the lun.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EvictLunRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EvictLunRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EvictLunRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
             break;
           }
         }

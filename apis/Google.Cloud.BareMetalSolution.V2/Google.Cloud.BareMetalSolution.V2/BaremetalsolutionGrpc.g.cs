@@ -3,7 +3,7 @@
 //     source: google/cloud/baremetalsolution/v2/baremetalsolution.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -83,13 +83,31 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.RenameInstanceRequest> __Marshaller_google_cloud_baremetalsolution_v2_RenameInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.RenameInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ResetInstanceRequest> __Marshaller_google_cloud_baremetalsolution_v2_ResetInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ResetInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.StartInstanceRequest> __Marshaller_google_cloud_baremetalsolution_v2_StartInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.StartInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.StopInstanceRequest> __Marshaller_google_cloud_baremetalsolution_v2_StopInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.StopInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleRequest> __Marshaller_google_cloud_baremetalsolution_v2_EnableInteractiveSerialConsoleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleRequest> __Marshaller_google_cloud_baremetalsolution_v2_DisableInteractiveSerialConsoleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.DetachLunRequest> __Marshaller_google_cloud_baremetalsolution_v2_DetachLunRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.DetachLunRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysRequest> __Marshaller_google_cloud_baremetalsolution_v2_ListSSHKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysResponse> __Marshaller_google_cloud_baremetalsolution_v2_ListSSHKeysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.CreateSSHKeyRequest> __Marshaller_google_cloud_baremetalsolution_v2_CreateSSHKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.CreateSSHKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.SSHKey> __Marshaller_google_cloud_baremetalsolution_v2_SSHKey = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.SSHKey.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.DeleteSSHKeyRequest> __Marshaller_google_cloud_baremetalsolution_v2_DeleteSSHKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.DeleteSSHKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ListVolumesRequest> __Marshaller_google_cloud_baremetalsolution_v2_ListVolumesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ListVolumesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -100,6 +118,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.Volume> __Marshaller_google_cloud_baremetalsolution_v2_Volume = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.Volume.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.UpdateVolumeRequest> __Marshaller_google_cloud_baremetalsolution_v2_UpdateVolumeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.UpdateVolumeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.RenameVolumeRequest> __Marshaller_google_cloud_baremetalsolution_v2_RenameVolumeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.RenameVolumeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.EvictVolumeRequest> __Marshaller_google_cloud_baremetalsolution_v2_EvictVolumeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.EvictVolumeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ResizeVolumeRequest> __Marshaller_google_cloud_baremetalsolution_v2_ResizeVolumeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ResizeVolumeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -117,6 +139,20 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.UpdateNetworkRequest> __Marshaller_google_cloud_baremetalsolution_v2_UpdateNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.UpdateNetworkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.CreateVolumeSnapshotRequest> __Marshaller_google_cloud_baremetalsolution_v2_CreateVolumeSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.CreateVolumeSnapshotRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot> __Marshaller_google_cloud_baremetalsolution_v2_VolumeSnapshot = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.RestoreVolumeSnapshotRequest> __Marshaller_google_cloud_baremetalsolution_v2_RestoreVolumeSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.RestoreVolumeSnapshotRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.DeleteVolumeSnapshotRequest> __Marshaller_google_cloud_baremetalsolution_v2_DeleteVolumeSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.DeleteVolumeSnapshotRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.GetVolumeSnapshotRequest> __Marshaller_google_cloud_baremetalsolution_v2_GetVolumeSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.GetVolumeSnapshotRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsRequest> __Marshaller_google_cloud_baremetalsolution_v2_ListVolumeSnapshotsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsResponse> __Marshaller_google_cloud_baremetalsolution_v2_ListVolumeSnapshotsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.GetLunRequest> __Marshaller_google_cloud_baremetalsolution_v2_GetLunRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.GetLunRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.Lun> __Marshaller_google_cloud_baremetalsolution_v2_Lun = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.Lun.Parser));
@@ -124,6 +160,8 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ListLunsRequest> __Marshaller_google_cloud_baremetalsolution_v2_ListLunsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ListLunsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ListLunsResponse> __Marshaller_google_cloud_baremetalsolution_v2_ListLunsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ListLunsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.EvictLunRequest> __Marshaller_google_cloud_baremetalsolution_v2_EvictLunRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.EvictLunRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.GetNfsShareRequest> __Marshaller_google_cloud_baremetalsolution_v2_GetNfsShareRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.GetNfsShareRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -134,6 +172,34 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ListNfsSharesResponse> __Marshaller_google_cloud_baremetalsolution_v2_ListNfsSharesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ListNfsSharesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.UpdateNfsShareRequest> __Marshaller_google_cloud_baremetalsolution_v2_UpdateNfsShareRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.UpdateNfsShareRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.CreateNfsShareRequest> __Marshaller_google_cloud_baremetalsolution_v2_CreateNfsShareRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.CreateNfsShareRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.RenameNfsShareRequest> __Marshaller_google_cloud_baremetalsolution_v2_RenameNfsShareRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.RenameNfsShareRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.DeleteNfsShareRequest> __Marshaller_google_cloud_baremetalsolution_v2_DeleteNfsShareRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.DeleteNfsShareRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasRequest> __Marshaller_google_cloud_baremetalsolution_v2_ListProvisioningQuotasRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasResponse> __Marshaller_google_cloud_baremetalsolution_v2_ListProvisioningQuotasResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigRequest> __Marshaller_google_cloud_baremetalsolution_v2_SubmitProvisioningConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigResponse> __Marshaller_google_cloud_baremetalsolution_v2_SubmitProvisioningConfigResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.GetProvisioningConfigRequest> __Marshaller_google_cloud_baremetalsolution_v2_GetProvisioningConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.GetProvisioningConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig> __Marshaller_google_cloud_baremetalsolution_v2_ProvisioningConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.CreateProvisioningConfigRequest> __Marshaller_google_cloud_baremetalsolution_v2_CreateProvisioningConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.CreateProvisioningConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.UpdateProvisioningConfigRequest> __Marshaller_google_cloud_baremetalsolution_v2_UpdateProvisioningConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.UpdateProvisioningConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.RenameNetworkRequest> __Marshaller_google_cloud_baremetalsolution_v2_RenameNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.RenameNetworkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ListOSImagesRequest> __Marshaller_google_cloud_baremetalsolution_v2_ListOSImagesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ListOSImagesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BareMetalSolution.V2.ListOSImagesResponse> __Marshaller_google_cloud_baremetalsolution_v2_ListOSImagesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BareMetalSolution.V2.ListOSImagesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ListInstancesRequest, global::Google.Cloud.BareMetalSolution.V2.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ListInstancesRequest, global::Google.Cloud.BareMetalSolution.V2.ListInstancesResponse>(
@@ -160,6 +226,14 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.RenameInstanceRequest, global::Google.Cloud.BareMetalSolution.V2.Instance> __Method_RenameInstance = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.RenameInstanceRequest, global::Google.Cloud.BareMetalSolution.V2.Instance>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RenameInstance",
+        __Marshaller_google_cloud_baremetalsolution_v2_RenameInstanceRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_Instance);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ResetInstanceRequest, global::Google.LongRunning.Operation> __Method_ResetInstance = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ResetInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -184,12 +258,52 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleRequest, global::Google.LongRunning.Operation> __Method_EnableInteractiveSerialConsole = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "EnableInteractiveSerialConsole",
+        __Marshaller_google_cloud_baremetalsolution_v2_EnableInteractiveSerialConsoleRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleRequest, global::Google.LongRunning.Operation> __Method_DisableInteractiveSerialConsole = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DisableInteractiveSerialConsole",
+        __Marshaller_google_cloud_baremetalsolution_v2_DisableInteractiveSerialConsoleRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.DetachLunRequest, global::Google.LongRunning.Operation> __Method_DetachLun = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.DetachLunRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DetachLun",
         __Marshaller_google_cloud_baremetalsolution_v2_DetachLunRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysRequest, global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysResponse> __Method_ListSSHKeys = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysRequest, global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSSHKeys",
+        __Marshaller_google_cloud_baremetalsolution_v2_ListSSHKeysRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_ListSSHKeysResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.CreateSSHKeyRequest, global::Google.Cloud.BareMetalSolution.V2.SSHKey> __Method_CreateSSHKey = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.CreateSSHKeyRequest, global::Google.Cloud.BareMetalSolution.V2.SSHKey>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSSHKey",
+        __Marshaller_google_cloud_baremetalsolution_v2_CreateSSHKeyRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_SSHKey);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.DeleteSSHKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSSHKey = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.DeleteSSHKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSSHKey",
+        __Marshaller_google_cloud_baremetalsolution_v2_DeleteSSHKeyRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ListVolumesRequest, global::Google.Cloud.BareMetalSolution.V2.ListVolumesResponse> __Method_ListVolumes = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ListVolumesRequest, global::Google.Cloud.BareMetalSolution.V2.ListVolumesResponse>(
@@ -213,6 +327,22 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         __ServiceName,
         "UpdateVolume",
         __Marshaller_google_cloud_baremetalsolution_v2_UpdateVolumeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.RenameVolumeRequest, global::Google.Cloud.BareMetalSolution.V2.Volume> __Method_RenameVolume = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.RenameVolumeRequest, global::Google.Cloud.BareMetalSolution.V2.Volume>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RenameVolume",
+        __Marshaller_google_cloud_baremetalsolution_v2_RenameVolumeRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_Volume);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.EvictVolumeRequest, global::Google.LongRunning.Operation> __Method_EvictVolume = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.EvictVolumeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "EvictVolume",
+        __Marshaller_google_cloud_baremetalsolution_v2_EvictVolumeRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -256,6 +386,46 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.CreateVolumeSnapshotRequest, global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot> __Method_CreateVolumeSnapshot = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.CreateVolumeSnapshotRequest, global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateVolumeSnapshot",
+        __Marshaller_google_cloud_baremetalsolution_v2_CreateVolumeSnapshotRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_VolumeSnapshot);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.RestoreVolumeSnapshotRequest, global::Google.LongRunning.Operation> __Method_RestoreVolumeSnapshot = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.RestoreVolumeSnapshotRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RestoreVolumeSnapshot",
+        __Marshaller_google_cloud_baremetalsolution_v2_RestoreVolumeSnapshotRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.DeleteVolumeSnapshotRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteVolumeSnapshot = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.DeleteVolumeSnapshotRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteVolumeSnapshot",
+        __Marshaller_google_cloud_baremetalsolution_v2_DeleteVolumeSnapshotRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.GetVolumeSnapshotRequest, global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot> __Method_GetVolumeSnapshot = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.GetVolumeSnapshotRequest, global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetVolumeSnapshot",
+        __Marshaller_google_cloud_baremetalsolution_v2_GetVolumeSnapshotRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_VolumeSnapshot);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsRequest, global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsResponse> __Method_ListVolumeSnapshots = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsRequest, global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListVolumeSnapshots",
+        __Marshaller_google_cloud_baremetalsolution_v2_ListVolumeSnapshotsRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_ListVolumeSnapshotsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.GetLunRequest, global::Google.Cloud.BareMetalSolution.V2.Lun> __Method_GetLun = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.GetLunRequest, global::Google.Cloud.BareMetalSolution.V2.Lun>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -270,6 +440,14 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         "ListLuns",
         __Marshaller_google_cloud_baremetalsolution_v2_ListLunsRequest,
         __Marshaller_google_cloud_baremetalsolution_v2_ListLunsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.EvictLunRequest, global::Google.LongRunning.Operation> __Method_EvictLun = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.EvictLunRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "EvictLun",
+        __Marshaller_google_cloud_baremetalsolution_v2_EvictLunRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.GetNfsShareRequest, global::Google.Cloud.BareMetalSolution.V2.NfsShare> __Method_GetNfsShare = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.GetNfsShareRequest, global::Google.Cloud.BareMetalSolution.V2.NfsShare>(
@@ -294,6 +472,86 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         "UpdateNfsShare",
         __Marshaller_google_cloud_baremetalsolution_v2_UpdateNfsShareRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.CreateNfsShareRequest, global::Google.LongRunning.Operation> __Method_CreateNfsShare = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.CreateNfsShareRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateNfsShare",
+        __Marshaller_google_cloud_baremetalsolution_v2_CreateNfsShareRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.RenameNfsShareRequest, global::Google.Cloud.BareMetalSolution.V2.NfsShare> __Method_RenameNfsShare = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.RenameNfsShareRequest, global::Google.Cloud.BareMetalSolution.V2.NfsShare>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RenameNfsShare",
+        __Marshaller_google_cloud_baremetalsolution_v2_RenameNfsShareRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_NfsShare);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.DeleteNfsShareRequest, global::Google.LongRunning.Operation> __Method_DeleteNfsShare = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.DeleteNfsShareRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteNfsShare",
+        __Marshaller_google_cloud_baremetalsolution_v2_DeleteNfsShareRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasRequest, global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasResponse> __Method_ListProvisioningQuotas = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasRequest, global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListProvisioningQuotas",
+        __Marshaller_google_cloud_baremetalsolution_v2_ListProvisioningQuotasRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_ListProvisioningQuotasResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigRequest, global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigResponse> __Method_SubmitProvisioningConfig = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigRequest, global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SubmitProvisioningConfig",
+        __Marshaller_google_cloud_baremetalsolution_v2_SubmitProvisioningConfigRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_SubmitProvisioningConfigResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.GetProvisioningConfigRequest, global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig> __Method_GetProvisioningConfig = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.GetProvisioningConfigRequest, global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetProvisioningConfig",
+        __Marshaller_google_cloud_baremetalsolution_v2_GetProvisioningConfigRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_ProvisioningConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.CreateProvisioningConfigRequest, global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig> __Method_CreateProvisioningConfig = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.CreateProvisioningConfigRequest, global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateProvisioningConfig",
+        __Marshaller_google_cloud_baremetalsolution_v2_CreateProvisioningConfigRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_ProvisioningConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.UpdateProvisioningConfigRequest, global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig> __Method_UpdateProvisioningConfig = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.UpdateProvisioningConfigRequest, global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateProvisioningConfig",
+        __Marshaller_google_cloud_baremetalsolution_v2_UpdateProvisioningConfigRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_ProvisioningConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.RenameNetworkRequest, global::Google.Cloud.BareMetalSolution.V2.Network> __Method_RenameNetwork = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.RenameNetworkRequest, global::Google.Cloud.BareMetalSolution.V2.Network>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RenameNetwork",
+        __Marshaller_google_cloud_baremetalsolution_v2_RenameNetworkRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_Network);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ListOSImagesRequest, global::Google.Cloud.BareMetalSolution.V2.ListOSImagesResponse> __Method_ListOSImages = new grpc::Method<global::Google.Cloud.BareMetalSolution.V2.ListOSImagesRequest, global::Google.Cloud.BareMetalSolution.V2.ListOSImagesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListOSImages",
+        __Marshaller_google_cloud_baremetalsolution_v2_ListOSImagesRequest,
+        __Marshaller_google_cloud_baremetalsolution_v2_ListOSImagesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -342,6 +600,19 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
 
       /// <summary>
+      /// RenameInstance sets a new name for an instance.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.Instance> RenameInstance(global::Google.Cloud.BareMetalSolution.V2.RenameInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Perform an ungraceful, hard reset on a server. Equivalent to shutting the
       /// power off and then turning it back on.
       /// </summary>
@@ -379,6 +650,30 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
 
       /// <summary>
+      /// Enable the interactive serial console feature on an instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> EnableInteractiveSerialConsole(global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Disable the interactive serial console feature on an instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DisableInteractiveSerialConsole(global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Detach LUN from Instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -386,6 +681,44 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DetachLun(global::Google.Cloud.BareMetalSolution.V2.DetachLunRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the public SSH keys registered for the specified project.
+      /// These SSH keys are used only for the interactive serial console feature.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysResponse> ListSSHKeys(global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Register a public SSH key in the specified project for use with the
+      /// interactive serial console feature.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.SSHKey> CreateSSHKey(global::Google.Cloud.BareMetalSolution.V2.CreateSSHKeyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a public SSH key registered in the specified project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSSHKey(global::Google.Cloud.BareMetalSolution.V2.DeleteSSHKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -422,6 +755,32 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateVolume(global::Google.Cloud.BareMetalSolution.V2.UpdateVolumeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// RenameVolume sets a new name for a volume.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.Volume> RenameVolume(global::Google.Cloud.BareMetalSolution.V2.RenameVolumeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Skips volume's cooloff and deletes it now.
+      /// Volume must be in cooloff state.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> EvictVolume(global::Google.Cloud.BareMetalSolution.V2.EvictVolumeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -488,6 +847,72 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
 
       /// <summary>
+      /// Takes a snapshot of a boot volume.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot> CreateVolumeSnapshot(global::Google.Cloud.BareMetalSolution.V2.CreateVolumeSnapshotRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Uses the specified snapshot to restore its parent volume.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestoreVolumeSnapshot(global::Google.Cloud.BareMetalSolution.V2.RestoreVolumeSnapshotRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a volume snapshot.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteVolumeSnapshot(global::Google.Cloud.BareMetalSolution.V2.DeleteVolumeSnapshotRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the specified snapshot resource.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot> GetVolumeSnapshot(global::Google.Cloud.BareMetalSolution.V2.GetVolumeSnapshotRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves the list of snapshots for the specified volume.
+      /// Returns a response with an empty list of snapshots if called
+      /// for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsResponse> ListVolumeSnapshots(global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Get details of a single storage logical unit number(LUN).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -507,6 +932,19 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.ListLunsResponse> ListLuns(global::Google.Cloud.BareMetalSolution.V2.ListLunsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Skips lun's cooloff and deletes it now.
+      /// Lun must be in cooloff state.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> EvictLun(global::Google.Cloud.BareMetalSolution.V2.EvictLunRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -543,6 +981,128 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateNfsShare(global::Google.Cloud.BareMetalSolution.V2.UpdateNfsShareRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create an NFS share.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateNfsShare(global::Google.Cloud.BareMetalSolution.V2.CreateNfsShareRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// RenameNfsShare sets a new name for an nfsshare.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.NfsShare> RenameNfsShare(global::Google.Cloud.BareMetalSolution.V2.RenameNfsShareRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Delete an NFS share. The underlying volume is automatically deleted.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteNfsShare(global::Google.Cloud.BareMetalSolution.V2.DeleteNfsShareRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List the budget details to provision resources on a given project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasResponse> ListProvisioningQuotas(global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Submit a provisiong configuration for a given project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigResponse> SubmitProvisioningConfig(global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get ProvisioningConfig by name.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig> GetProvisioningConfig(global::Google.Cloud.BareMetalSolution.V2.GetProvisioningConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create new ProvisioningConfig.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig> CreateProvisioningConfig(global::Google.Cloud.BareMetalSolution.V2.CreateProvisioningConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update existing ProvisioningConfig.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig> UpdateProvisioningConfig(global::Google.Cloud.BareMetalSolution.V2.UpdateProvisioningConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// RenameNetwork sets a new name for a network.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.Network> RenameNetwork(global::Google.Cloud.BareMetalSolution.V2.RenameNetworkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves the list of OS images which are currently approved.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BareMetalSolution.V2.ListOSImagesResponse> ListOSImages(global::Google.Cloud.BareMetalSolution.V2.ListOSImagesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -721,6 +1281,58 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInstance, null, options, request);
       }
       /// <summary>
+      /// RenameInstance sets a new name for an instance.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.Instance RenameInstance(global::Google.Cloud.BareMetalSolution.V2.RenameInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RenameInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// RenameInstance sets a new name for an instance.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.Instance RenameInstance(global::Google.Cloud.BareMetalSolution.V2.RenameInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RenameInstance, null, options, request);
+      }
+      /// <summary>
+      /// RenameInstance sets a new name for an instance.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.Instance> RenameInstanceAsync(global::Google.Cloud.BareMetalSolution.V2.RenameInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RenameInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// RenameInstance sets a new name for an instance.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.Instance> RenameInstanceAsync(global::Google.Cloud.BareMetalSolution.V2.RenameInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RenameInstance, null, options, request);
+      }
+      /// <summary>
       /// Perform an ungraceful, hard reset on a server. Equivalent to shutting the
       /// power off and then turning it back on.
       /// </summary>
@@ -869,6 +1481,102 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_StopInstance, null, options, request);
       }
       /// <summary>
+      /// Enable the interactive serial console feature on an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EnableInteractiveSerialConsole(global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnableInteractiveSerialConsole(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enable the interactive serial console feature on an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EnableInteractiveSerialConsole(global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_EnableInteractiveSerialConsole, null, options, request);
+      }
+      /// <summary>
+      /// Enable the interactive serial console feature on an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnableInteractiveSerialConsoleAsync(global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnableInteractiveSerialConsoleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enable the interactive serial console feature on an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnableInteractiveSerialConsoleAsync(global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_EnableInteractiveSerialConsole, null, options, request);
+      }
+      /// <summary>
+      /// Disable the interactive serial console feature on an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DisableInteractiveSerialConsole(global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableInteractiveSerialConsole(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disable the interactive serial console feature on an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DisableInteractiveSerialConsole(global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DisableInteractiveSerialConsole, null, options, request);
+      }
+      /// <summary>
+      /// Disable the interactive serial console feature on an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableInteractiveSerialConsoleAsync(global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableInteractiveSerialConsoleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disable the interactive serial console feature on an instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableInteractiveSerialConsoleAsync(global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DisableInteractiveSerialConsole, null, options, request);
+      }
+      /// <summary>
       /// Detach LUN from Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -915,6 +1623,158 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DetachLunAsync(global::Google.Cloud.BareMetalSolution.V2.DetachLunRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DetachLun, null, options, request);
+      }
+      /// <summary>
+      /// Lists the public SSH keys registered for the specified project.
+      /// These SSH keys are used only for the interactive serial console feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysResponse ListSSHKeys(global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSSHKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the public SSH keys registered for the specified project.
+      /// These SSH keys are used only for the interactive serial console feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysResponse ListSSHKeys(global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSSHKeys, null, options, request);
+      }
+      /// <summary>
+      /// Lists the public SSH keys registered for the specified project.
+      /// These SSH keys are used only for the interactive serial console feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysResponse> ListSSHKeysAsync(global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSSHKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the public SSH keys registered for the specified project.
+      /// These SSH keys are used only for the interactive serial console feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysResponse> ListSSHKeysAsync(global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSSHKeys, null, options, request);
+      }
+      /// <summary>
+      /// Register a public SSH key in the specified project for use with the
+      /// interactive serial console feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.SSHKey CreateSSHKey(global::Google.Cloud.BareMetalSolution.V2.CreateSSHKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSSHKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Register a public SSH key in the specified project for use with the
+      /// interactive serial console feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.SSHKey CreateSSHKey(global::Google.Cloud.BareMetalSolution.V2.CreateSSHKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSSHKey, null, options, request);
+      }
+      /// <summary>
+      /// Register a public SSH key in the specified project for use with the
+      /// interactive serial console feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.SSHKey> CreateSSHKeyAsync(global::Google.Cloud.BareMetalSolution.V2.CreateSSHKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSSHKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Register a public SSH key in the specified project for use with the
+      /// interactive serial console feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.SSHKey> CreateSSHKeyAsync(global::Google.Cloud.BareMetalSolution.V2.CreateSSHKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSSHKey, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a public SSH key registered in the specified project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSSHKey(global::Google.Cloud.BareMetalSolution.V2.DeleteSSHKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSSHKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a public SSH key registered in the specified project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSSHKey(global::Google.Cloud.BareMetalSolution.V2.DeleteSSHKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSSHKey, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a public SSH key registered in the specified project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSSHKeyAsync(global::Google.Cloud.BareMetalSolution.V2.DeleteSSHKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSSHKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a public SSH key registered in the specified project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSSHKeyAsync(global::Google.Cloud.BareMetalSolution.V2.DeleteSSHKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSSHKey, null, options, request);
       }
       /// <summary>
       /// List storage volumes in a given project and location.
@@ -1059,6 +1919,110 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateVolumeAsync(global::Google.Cloud.BareMetalSolution.V2.UpdateVolumeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateVolume, null, options, request);
+      }
+      /// <summary>
+      /// RenameVolume sets a new name for a volume.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.Volume RenameVolume(global::Google.Cloud.BareMetalSolution.V2.RenameVolumeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RenameVolume(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// RenameVolume sets a new name for a volume.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.Volume RenameVolume(global::Google.Cloud.BareMetalSolution.V2.RenameVolumeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RenameVolume, null, options, request);
+      }
+      /// <summary>
+      /// RenameVolume sets a new name for a volume.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.Volume> RenameVolumeAsync(global::Google.Cloud.BareMetalSolution.V2.RenameVolumeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RenameVolumeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// RenameVolume sets a new name for a volume.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.Volume> RenameVolumeAsync(global::Google.Cloud.BareMetalSolution.V2.RenameVolumeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RenameVolume, null, options, request);
+      }
+      /// <summary>
+      /// Skips volume's cooloff and deletes it now.
+      /// Volume must be in cooloff state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EvictVolume(global::Google.Cloud.BareMetalSolution.V2.EvictVolumeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EvictVolume(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Skips volume's cooloff and deletes it now.
+      /// Volume must be in cooloff state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EvictVolume(global::Google.Cloud.BareMetalSolution.V2.EvictVolumeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_EvictVolume, null, options, request);
+      }
+      /// <summary>
+      /// Skips volume's cooloff and deletes it now.
+      /// Volume must be in cooloff state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EvictVolumeAsync(global::Google.Cloud.BareMetalSolution.V2.EvictVolumeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EvictVolumeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Skips volume's cooloff and deletes it now.
+      /// Volume must be in cooloff state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EvictVolumeAsync(global::Google.Cloud.BareMetalSolution.V2.EvictVolumeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_EvictVolume, null, options, request);
       }
       /// <summary>
       /// Emergency Volume resize.
@@ -1305,6 +2269,270 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateNetwork, null, options, request);
       }
       /// <summary>
+      /// Takes a snapshot of a boot volume.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot CreateVolumeSnapshot(global::Google.Cloud.BareMetalSolution.V2.CreateVolumeSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateVolumeSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Takes a snapshot of a boot volume.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot CreateVolumeSnapshot(global::Google.Cloud.BareMetalSolution.V2.CreateVolumeSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateVolumeSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Takes a snapshot of a boot volume.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot> CreateVolumeSnapshotAsync(global::Google.Cloud.BareMetalSolution.V2.CreateVolumeSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateVolumeSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Takes a snapshot of a boot volume.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot> CreateVolumeSnapshotAsync(global::Google.Cloud.BareMetalSolution.V2.CreateVolumeSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateVolumeSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Uses the specified snapshot to restore its parent volume.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RestoreVolumeSnapshot(global::Google.Cloud.BareMetalSolution.V2.RestoreVolumeSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestoreVolumeSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Uses the specified snapshot to restore its parent volume.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RestoreVolumeSnapshot(global::Google.Cloud.BareMetalSolution.V2.RestoreVolumeSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RestoreVolumeSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Uses the specified snapshot to restore its parent volume.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreVolumeSnapshotAsync(global::Google.Cloud.BareMetalSolution.V2.RestoreVolumeSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestoreVolumeSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Uses the specified snapshot to restore its parent volume.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreVolumeSnapshotAsync(global::Google.Cloud.BareMetalSolution.V2.RestoreVolumeSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RestoreVolumeSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a volume snapshot.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteVolumeSnapshot(global::Google.Cloud.BareMetalSolution.V2.DeleteVolumeSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteVolumeSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a volume snapshot.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteVolumeSnapshot(global::Google.Cloud.BareMetalSolution.V2.DeleteVolumeSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteVolumeSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a volume snapshot.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteVolumeSnapshotAsync(global::Google.Cloud.BareMetalSolution.V2.DeleteVolumeSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteVolumeSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a volume snapshot.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteVolumeSnapshotAsync(global::Google.Cloud.BareMetalSolution.V2.DeleteVolumeSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteVolumeSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Returns the specified snapshot resource.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot GetVolumeSnapshot(global::Google.Cloud.BareMetalSolution.V2.GetVolumeSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetVolumeSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the specified snapshot resource.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot GetVolumeSnapshot(global::Google.Cloud.BareMetalSolution.V2.GetVolumeSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetVolumeSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Returns the specified snapshot resource.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot> GetVolumeSnapshotAsync(global::Google.Cloud.BareMetalSolution.V2.GetVolumeSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetVolumeSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the specified snapshot resource.
+      /// Returns INVALID_ARGUMENT if called for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot> GetVolumeSnapshotAsync(global::Google.Cloud.BareMetalSolution.V2.GetVolumeSnapshotRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetVolumeSnapshot, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the list of snapshots for the specified volume.
+      /// Returns a response with an empty list of snapshots if called
+      /// for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsResponse ListVolumeSnapshots(global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListVolumeSnapshots(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the list of snapshots for the specified volume.
+      /// Returns a response with an empty list of snapshots if called
+      /// for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsResponse ListVolumeSnapshots(global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListVolumeSnapshots, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the list of snapshots for the specified volume.
+      /// Returns a response with an empty list of snapshots if called
+      /// for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsResponse> ListVolumeSnapshotsAsync(global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListVolumeSnapshotsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the list of snapshots for the specified volume.
+      /// Returns a response with an empty list of snapshots if called
+      /// for a non-boot volume.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsResponse> ListVolumeSnapshotsAsync(global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListVolumeSnapshots, null, options, request);
+      }
+      /// <summary>
       /// Get details of a single storage logical unit number(LUN).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1399,6 +2627,58 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ListLunsResponse> ListLunsAsync(global::Google.Cloud.BareMetalSolution.V2.ListLunsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListLuns, null, options, request);
+      }
+      /// <summary>
+      /// Skips lun's cooloff and deletes it now.
+      /// Lun must be in cooloff state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EvictLun(global::Google.Cloud.BareMetalSolution.V2.EvictLunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EvictLun(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Skips lun's cooloff and deletes it now.
+      /// Lun must be in cooloff state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EvictLun(global::Google.Cloud.BareMetalSolution.V2.EvictLunRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_EvictLun, null, options, request);
+      }
+      /// <summary>
+      /// Skips lun's cooloff and deletes it now.
+      /// Lun must be in cooloff state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EvictLunAsync(global::Google.Cloud.BareMetalSolution.V2.EvictLunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EvictLunAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Skips lun's cooloff and deletes it now.
+      /// Lun must be in cooloff state.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EvictLunAsync(global::Google.Cloud.BareMetalSolution.V2.EvictLunRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_EvictLun, null, options, request);
       }
       /// <summary>
       /// Get details of a single NFS share.
@@ -1544,6 +2824,494 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateNfsShare, null, options, request);
       }
+      /// <summary>
+      /// Create an NFS share.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateNfsShare(global::Google.Cloud.BareMetalSolution.V2.CreateNfsShareRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateNfsShare(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create an NFS share.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateNfsShare(global::Google.Cloud.BareMetalSolution.V2.CreateNfsShareRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateNfsShare, null, options, request);
+      }
+      /// <summary>
+      /// Create an NFS share.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateNfsShareAsync(global::Google.Cloud.BareMetalSolution.V2.CreateNfsShareRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateNfsShareAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create an NFS share.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateNfsShareAsync(global::Google.Cloud.BareMetalSolution.V2.CreateNfsShareRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateNfsShare, null, options, request);
+      }
+      /// <summary>
+      /// RenameNfsShare sets a new name for an nfsshare.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.NfsShare RenameNfsShare(global::Google.Cloud.BareMetalSolution.V2.RenameNfsShareRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RenameNfsShare(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// RenameNfsShare sets a new name for an nfsshare.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.NfsShare RenameNfsShare(global::Google.Cloud.BareMetalSolution.V2.RenameNfsShareRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RenameNfsShare, null, options, request);
+      }
+      /// <summary>
+      /// RenameNfsShare sets a new name for an nfsshare.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.NfsShare> RenameNfsShareAsync(global::Google.Cloud.BareMetalSolution.V2.RenameNfsShareRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RenameNfsShareAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// RenameNfsShare sets a new name for an nfsshare.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.NfsShare> RenameNfsShareAsync(global::Google.Cloud.BareMetalSolution.V2.RenameNfsShareRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RenameNfsShare, null, options, request);
+      }
+      /// <summary>
+      /// Delete an NFS share. The underlying volume is automatically deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteNfsShare(global::Google.Cloud.BareMetalSolution.V2.DeleteNfsShareRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteNfsShare(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete an NFS share. The underlying volume is automatically deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteNfsShare(global::Google.Cloud.BareMetalSolution.V2.DeleteNfsShareRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteNfsShare, null, options, request);
+      }
+      /// <summary>
+      /// Delete an NFS share. The underlying volume is automatically deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteNfsShareAsync(global::Google.Cloud.BareMetalSolution.V2.DeleteNfsShareRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteNfsShareAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete an NFS share. The underlying volume is automatically deleted.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteNfsShareAsync(global::Google.Cloud.BareMetalSolution.V2.DeleteNfsShareRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteNfsShare, null, options, request);
+      }
+      /// <summary>
+      /// List the budget details to provision resources on a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasResponse ListProvisioningQuotas(global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListProvisioningQuotas(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List the budget details to provision resources on a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasResponse ListProvisioningQuotas(global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListProvisioningQuotas, null, options, request);
+      }
+      /// <summary>
+      /// List the budget details to provision resources on a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasResponse> ListProvisioningQuotasAsync(global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListProvisioningQuotasAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List the budget details to provision resources on a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasResponse> ListProvisioningQuotasAsync(global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListProvisioningQuotas, null, options, request);
+      }
+      /// <summary>
+      /// Submit a provisiong configuration for a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigResponse SubmitProvisioningConfig(global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SubmitProvisioningConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submit a provisiong configuration for a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigResponse SubmitProvisioningConfig(global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SubmitProvisioningConfig, null, options, request);
+      }
+      /// <summary>
+      /// Submit a provisiong configuration for a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigResponse> SubmitProvisioningConfigAsync(global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SubmitProvisioningConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submit a provisiong configuration for a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigResponse> SubmitProvisioningConfigAsync(global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SubmitProvisioningConfig, null, options, request);
+      }
+      /// <summary>
+      /// Get ProvisioningConfig by name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig GetProvisioningConfig(global::Google.Cloud.BareMetalSolution.V2.GetProvisioningConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetProvisioningConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get ProvisioningConfig by name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig GetProvisioningConfig(global::Google.Cloud.BareMetalSolution.V2.GetProvisioningConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetProvisioningConfig, null, options, request);
+      }
+      /// <summary>
+      /// Get ProvisioningConfig by name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig> GetProvisioningConfigAsync(global::Google.Cloud.BareMetalSolution.V2.GetProvisioningConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetProvisioningConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get ProvisioningConfig by name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig> GetProvisioningConfigAsync(global::Google.Cloud.BareMetalSolution.V2.GetProvisioningConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetProvisioningConfig, null, options, request);
+      }
+      /// <summary>
+      /// Create new ProvisioningConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig CreateProvisioningConfig(global::Google.Cloud.BareMetalSolution.V2.CreateProvisioningConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateProvisioningConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create new ProvisioningConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig CreateProvisioningConfig(global::Google.Cloud.BareMetalSolution.V2.CreateProvisioningConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateProvisioningConfig, null, options, request);
+      }
+      /// <summary>
+      /// Create new ProvisioningConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig> CreateProvisioningConfigAsync(global::Google.Cloud.BareMetalSolution.V2.CreateProvisioningConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateProvisioningConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create new ProvisioningConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig> CreateProvisioningConfigAsync(global::Google.Cloud.BareMetalSolution.V2.CreateProvisioningConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateProvisioningConfig, null, options, request);
+      }
+      /// <summary>
+      /// Update existing ProvisioningConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig UpdateProvisioningConfig(global::Google.Cloud.BareMetalSolution.V2.UpdateProvisioningConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateProvisioningConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update existing ProvisioningConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig UpdateProvisioningConfig(global::Google.Cloud.BareMetalSolution.V2.UpdateProvisioningConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateProvisioningConfig, null, options, request);
+      }
+      /// <summary>
+      /// Update existing ProvisioningConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig> UpdateProvisioningConfigAsync(global::Google.Cloud.BareMetalSolution.V2.UpdateProvisioningConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateProvisioningConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update existing ProvisioningConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig> UpdateProvisioningConfigAsync(global::Google.Cloud.BareMetalSolution.V2.UpdateProvisioningConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateProvisioningConfig, null, options, request);
+      }
+      /// <summary>
+      /// RenameNetwork sets a new name for a network.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.Network RenameNetwork(global::Google.Cloud.BareMetalSolution.V2.RenameNetworkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RenameNetwork(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// RenameNetwork sets a new name for a network.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.Network RenameNetwork(global::Google.Cloud.BareMetalSolution.V2.RenameNetworkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RenameNetwork, null, options, request);
+      }
+      /// <summary>
+      /// RenameNetwork sets a new name for a network.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.Network> RenameNetworkAsync(global::Google.Cloud.BareMetalSolution.V2.RenameNetworkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RenameNetworkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// RenameNetwork sets a new name for a network.
+      /// Use with caution, previous names become immediately invalidated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.Network> RenameNetworkAsync(global::Google.Cloud.BareMetalSolution.V2.RenameNetworkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RenameNetwork, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the list of OS images which are currently approved.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ListOSImagesResponse ListOSImages(global::Google.Cloud.BareMetalSolution.V2.ListOSImagesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListOSImages(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the list of OS images which are currently approved.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BareMetalSolution.V2.ListOSImagesResponse ListOSImages(global::Google.Cloud.BareMetalSolution.V2.ListOSImagesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListOSImages, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the list of OS images which are currently approved.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ListOSImagesResponse> ListOSImagesAsync(global::Google.Cloud.BareMetalSolution.V2.ListOSImagesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListOSImagesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the list of OS images which are currently approved.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BareMetalSolution.V2.ListOSImagesResponse> ListOSImagesAsync(global::Google.Cloud.BareMetalSolution.V2.ListOSImagesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListOSImages, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override BareMetalSolutionClient NewInstance(ClientBaseConfiguration configuration)
@@ -1561,23 +3329,47 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           .AddMethod(__Method_ListInstances, serviceImpl.ListInstances)
           .AddMethod(__Method_GetInstance, serviceImpl.GetInstance)
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
+          .AddMethod(__Method_RenameInstance, serviceImpl.RenameInstance)
           .AddMethod(__Method_ResetInstance, serviceImpl.ResetInstance)
           .AddMethod(__Method_StartInstance, serviceImpl.StartInstance)
           .AddMethod(__Method_StopInstance, serviceImpl.StopInstance)
+          .AddMethod(__Method_EnableInteractiveSerialConsole, serviceImpl.EnableInteractiveSerialConsole)
+          .AddMethod(__Method_DisableInteractiveSerialConsole, serviceImpl.DisableInteractiveSerialConsole)
           .AddMethod(__Method_DetachLun, serviceImpl.DetachLun)
+          .AddMethod(__Method_ListSSHKeys, serviceImpl.ListSSHKeys)
+          .AddMethod(__Method_CreateSSHKey, serviceImpl.CreateSSHKey)
+          .AddMethod(__Method_DeleteSSHKey, serviceImpl.DeleteSSHKey)
           .AddMethod(__Method_ListVolumes, serviceImpl.ListVolumes)
           .AddMethod(__Method_GetVolume, serviceImpl.GetVolume)
           .AddMethod(__Method_UpdateVolume, serviceImpl.UpdateVolume)
+          .AddMethod(__Method_RenameVolume, serviceImpl.RenameVolume)
+          .AddMethod(__Method_EvictVolume, serviceImpl.EvictVolume)
           .AddMethod(__Method_ResizeVolume, serviceImpl.ResizeVolume)
           .AddMethod(__Method_ListNetworks, serviceImpl.ListNetworks)
           .AddMethod(__Method_ListNetworkUsage, serviceImpl.ListNetworkUsage)
           .AddMethod(__Method_GetNetwork, serviceImpl.GetNetwork)
           .AddMethod(__Method_UpdateNetwork, serviceImpl.UpdateNetwork)
+          .AddMethod(__Method_CreateVolumeSnapshot, serviceImpl.CreateVolumeSnapshot)
+          .AddMethod(__Method_RestoreVolumeSnapshot, serviceImpl.RestoreVolumeSnapshot)
+          .AddMethod(__Method_DeleteVolumeSnapshot, serviceImpl.DeleteVolumeSnapshot)
+          .AddMethod(__Method_GetVolumeSnapshot, serviceImpl.GetVolumeSnapshot)
+          .AddMethod(__Method_ListVolumeSnapshots, serviceImpl.ListVolumeSnapshots)
           .AddMethod(__Method_GetLun, serviceImpl.GetLun)
           .AddMethod(__Method_ListLuns, serviceImpl.ListLuns)
+          .AddMethod(__Method_EvictLun, serviceImpl.EvictLun)
           .AddMethod(__Method_GetNfsShare, serviceImpl.GetNfsShare)
           .AddMethod(__Method_ListNfsShares, serviceImpl.ListNfsShares)
-          .AddMethod(__Method_UpdateNfsShare, serviceImpl.UpdateNfsShare).Build();
+          .AddMethod(__Method_UpdateNfsShare, serviceImpl.UpdateNfsShare)
+          .AddMethod(__Method_CreateNfsShare, serviceImpl.CreateNfsShare)
+          .AddMethod(__Method_RenameNfsShare, serviceImpl.RenameNfsShare)
+          .AddMethod(__Method_DeleteNfsShare, serviceImpl.DeleteNfsShare)
+          .AddMethod(__Method_ListProvisioningQuotas, serviceImpl.ListProvisioningQuotas)
+          .AddMethod(__Method_SubmitProvisioningConfig, serviceImpl.SubmitProvisioningConfig)
+          .AddMethod(__Method_GetProvisioningConfig, serviceImpl.GetProvisioningConfig)
+          .AddMethod(__Method_CreateProvisioningConfig, serviceImpl.CreateProvisioningConfig)
+          .AddMethod(__Method_UpdateProvisioningConfig, serviceImpl.UpdateProvisioningConfig)
+          .AddMethod(__Method_RenameNetwork, serviceImpl.RenameNetwork)
+          .AddMethod(__Method_ListOSImages, serviceImpl.ListOSImages).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1590,23 +3382,47 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       serviceBinder.AddMethod(__Method_ListInstances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.ListInstancesRequest, global::Google.Cloud.BareMetalSolution.V2.ListInstancesResponse>(serviceImpl.ListInstances));
       serviceBinder.AddMethod(__Method_GetInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.GetInstanceRequest, global::Google.Cloud.BareMetalSolution.V2.Instance>(serviceImpl.GetInstance));
       serviceBinder.AddMethod(__Method_UpdateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.UpdateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstance));
+      serviceBinder.AddMethod(__Method_RenameInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.RenameInstanceRequest, global::Google.Cloud.BareMetalSolution.V2.Instance>(serviceImpl.RenameInstance));
       serviceBinder.AddMethod(__Method_ResetInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.ResetInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.ResetInstance));
       serviceBinder.AddMethod(__Method_StartInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.StartInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.StartInstance));
       serviceBinder.AddMethod(__Method_StopInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.StopInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.StopInstance));
+      serviceBinder.AddMethod(__Method_EnableInteractiveSerialConsole, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.EnableInteractiveSerialConsoleRequest, global::Google.LongRunning.Operation>(serviceImpl.EnableInteractiveSerialConsole));
+      serviceBinder.AddMethod(__Method_DisableInteractiveSerialConsole, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.DisableInteractiveSerialConsoleRequest, global::Google.LongRunning.Operation>(serviceImpl.DisableInteractiveSerialConsole));
       serviceBinder.AddMethod(__Method_DetachLun, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.DetachLunRequest, global::Google.LongRunning.Operation>(serviceImpl.DetachLun));
+      serviceBinder.AddMethod(__Method_ListSSHKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysRequest, global::Google.Cloud.BareMetalSolution.V2.ListSSHKeysResponse>(serviceImpl.ListSSHKeys));
+      serviceBinder.AddMethod(__Method_CreateSSHKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.CreateSSHKeyRequest, global::Google.Cloud.BareMetalSolution.V2.SSHKey>(serviceImpl.CreateSSHKey));
+      serviceBinder.AddMethod(__Method_DeleteSSHKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.DeleteSSHKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSSHKey));
       serviceBinder.AddMethod(__Method_ListVolumes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.ListVolumesRequest, global::Google.Cloud.BareMetalSolution.V2.ListVolumesResponse>(serviceImpl.ListVolumes));
       serviceBinder.AddMethod(__Method_GetVolume, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.GetVolumeRequest, global::Google.Cloud.BareMetalSolution.V2.Volume>(serviceImpl.GetVolume));
       serviceBinder.AddMethod(__Method_UpdateVolume, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.UpdateVolumeRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateVolume));
+      serviceBinder.AddMethod(__Method_RenameVolume, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.RenameVolumeRequest, global::Google.Cloud.BareMetalSolution.V2.Volume>(serviceImpl.RenameVolume));
+      serviceBinder.AddMethod(__Method_EvictVolume, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.EvictVolumeRequest, global::Google.LongRunning.Operation>(serviceImpl.EvictVolume));
       serviceBinder.AddMethod(__Method_ResizeVolume, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.ResizeVolumeRequest, global::Google.LongRunning.Operation>(serviceImpl.ResizeVolume));
       serviceBinder.AddMethod(__Method_ListNetworks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.ListNetworksRequest, global::Google.Cloud.BareMetalSolution.V2.ListNetworksResponse>(serviceImpl.ListNetworks));
       serviceBinder.AddMethod(__Method_ListNetworkUsage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.ListNetworkUsageRequest, global::Google.Cloud.BareMetalSolution.V2.ListNetworkUsageResponse>(serviceImpl.ListNetworkUsage));
       serviceBinder.AddMethod(__Method_GetNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.GetNetworkRequest, global::Google.Cloud.BareMetalSolution.V2.Network>(serviceImpl.GetNetwork));
       serviceBinder.AddMethod(__Method_UpdateNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.UpdateNetworkRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateNetwork));
+      serviceBinder.AddMethod(__Method_CreateVolumeSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.CreateVolumeSnapshotRequest, global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot>(serviceImpl.CreateVolumeSnapshot));
+      serviceBinder.AddMethod(__Method_RestoreVolumeSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.RestoreVolumeSnapshotRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreVolumeSnapshot));
+      serviceBinder.AddMethod(__Method_DeleteVolumeSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.DeleteVolumeSnapshotRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteVolumeSnapshot));
+      serviceBinder.AddMethod(__Method_GetVolumeSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.GetVolumeSnapshotRequest, global::Google.Cloud.BareMetalSolution.V2.VolumeSnapshot>(serviceImpl.GetVolumeSnapshot));
+      serviceBinder.AddMethod(__Method_ListVolumeSnapshots, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsRequest, global::Google.Cloud.BareMetalSolution.V2.ListVolumeSnapshotsResponse>(serviceImpl.ListVolumeSnapshots));
       serviceBinder.AddMethod(__Method_GetLun, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.GetLunRequest, global::Google.Cloud.BareMetalSolution.V2.Lun>(serviceImpl.GetLun));
       serviceBinder.AddMethod(__Method_ListLuns, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.ListLunsRequest, global::Google.Cloud.BareMetalSolution.V2.ListLunsResponse>(serviceImpl.ListLuns));
+      serviceBinder.AddMethod(__Method_EvictLun, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.EvictLunRequest, global::Google.LongRunning.Operation>(serviceImpl.EvictLun));
       serviceBinder.AddMethod(__Method_GetNfsShare, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.GetNfsShareRequest, global::Google.Cloud.BareMetalSolution.V2.NfsShare>(serviceImpl.GetNfsShare));
       serviceBinder.AddMethod(__Method_ListNfsShares, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.ListNfsSharesRequest, global::Google.Cloud.BareMetalSolution.V2.ListNfsSharesResponse>(serviceImpl.ListNfsShares));
       serviceBinder.AddMethod(__Method_UpdateNfsShare, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.UpdateNfsShareRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateNfsShare));
+      serviceBinder.AddMethod(__Method_CreateNfsShare, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.CreateNfsShareRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateNfsShare));
+      serviceBinder.AddMethod(__Method_RenameNfsShare, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.RenameNfsShareRequest, global::Google.Cloud.BareMetalSolution.V2.NfsShare>(serviceImpl.RenameNfsShare));
+      serviceBinder.AddMethod(__Method_DeleteNfsShare, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.DeleteNfsShareRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteNfsShare));
+      serviceBinder.AddMethod(__Method_ListProvisioningQuotas, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasRequest, global::Google.Cloud.BareMetalSolution.V2.ListProvisioningQuotasResponse>(serviceImpl.ListProvisioningQuotas));
+      serviceBinder.AddMethod(__Method_SubmitProvisioningConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigRequest, global::Google.Cloud.BareMetalSolution.V2.SubmitProvisioningConfigResponse>(serviceImpl.SubmitProvisioningConfig));
+      serviceBinder.AddMethod(__Method_GetProvisioningConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.GetProvisioningConfigRequest, global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig>(serviceImpl.GetProvisioningConfig));
+      serviceBinder.AddMethod(__Method_CreateProvisioningConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.CreateProvisioningConfigRequest, global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig>(serviceImpl.CreateProvisioningConfig));
+      serviceBinder.AddMethod(__Method_UpdateProvisioningConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.UpdateProvisioningConfigRequest, global::Google.Cloud.BareMetalSolution.V2.ProvisioningConfig>(serviceImpl.UpdateProvisioningConfig));
+      serviceBinder.AddMethod(__Method_RenameNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.RenameNetworkRequest, global::Google.Cloud.BareMetalSolution.V2.Network>(serviceImpl.RenameNetwork));
+      serviceBinder.AddMethod(__Method_ListOSImages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BareMetalSolution.V2.ListOSImagesRequest, global::Google.Cloud.BareMetalSolution.V2.ListOSImagesResponse>(serviceImpl.ListOSImages));
     }
 
   }

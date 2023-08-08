@@ -28,24 +28,30 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             "LnByb3RvEiFnb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24udjIaH2dv",
             "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
             "b3VyY2UucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3Rv",
-            "Io8HCghOZnNTaGFyZRIRCgRuYW1lGAEgASgJQgPgQQMSGQoMbmZzX3NoYXJl",
-            "X2lkGAIgASgJQgPgQQMSQAoFc3RhdGUYAyABKA4yMS5nb29nbGUuY2xvdWQu",
-            "YmFyZW1ldGFsc29sdXRpb24udjIuTmZzU2hhcmUuU3RhdGUSPAoGdm9sdW1l",
-            "GAQgASgJQiz6QSkKJ2JhcmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMuY29t",
-            "L1ZvbHVtZRJSCg9hbGxvd2VkX2NsaWVudHMYBSADKAsyOS5nb29nbGUuY2xv",
-            "dWQuYmFyZW1ldGFsc29sdXRpb24udjIuTmZzU2hhcmUuQWxsb3dlZENsaWVu",
-            "dBJHCgZsYWJlbHMYBiADKAsyNy5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29s",
-            "dXRpb24udjIuTmZzU2hhcmUuTGFiZWxzRW50cnkalwIKDUFsbG93ZWRDbGll",
-            "bnQSPgoHbmV0d29yaxgBIAEoCUIt+kEqCihiYXJlbWV0YWxzb2x1dGlvbi5n",
-            "b29nbGVhcGlzLmNvbS9OZXR3b3JrEhAKCHNoYXJlX2lwGAIgASgJEhwKFGFs",
-            "bG93ZWRfY2xpZW50c19jaWRyGAMgASgJElcKEW1vdW50X3Blcm1pc3Npb25z",
-            "GAQgASgOMjwuZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLk5m",
-            "c1NoYXJlLk1vdW50UGVybWlzc2lvbnMSEQoJYWxsb3dfZGV2GAUgASgIEhIK",
-            "CmFsbG93X3N1aWQYBiABKAgSFgoObm9fcm9vdF9zcXVhc2gYByABKAgaLQoL",
-            "TGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASIv",
-            "CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEg8KC1BST1ZJU0lPTkVE",
-            "EAEiTwoQTW91bnRQZXJtaXNzaW9ucxIhCh1NT1VOVF9QRVJNSVNTSU9OU19V",
-            "TlNQRUNJRklFRBAAEggKBFJFQUQQARIOCgpSRUFEX1dSSVRFEAI6bepBagop",
+            "Ip0JCghOZnNTaGFyZRIRCgRuYW1lGAEgASgJQgPgQQUSGQoMbmZzX3NoYXJl",
+            "X2lkGAIgASgJQgPgQQMSDwoCaWQYCCABKAlCA+BBAxJFCgVzdGF0ZRgDIAEo",
+            "DjIxLmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52Mi5OZnNTaGFy",
+            "ZS5TdGF0ZUID4EEDEj8KBnZvbHVtZRgEIAEoCUIv4EED+kEpCidiYXJlbWV0",
+            "YWxzb2x1dGlvbi5nb29nbGVhcGlzLmNvbS9Wb2x1bWUSUgoPYWxsb3dlZF9j",
+            "bGllbnRzGAUgAygLMjkuZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9u",
+            "LnYyLk5mc1NoYXJlLkFsbG93ZWRDbGllbnQSRwoGbGFiZWxzGAYgAygLMjcu",
+            "Z29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLk5mc1NoYXJlLkxh",
+            "YmVsc0VudHJ5EhoKEnJlcXVlc3RlZF9zaXplX2dpYhgHIAEoAxJSCgxzdG9y",
+            "YWdlX3R5cGUYCSABKA4yNy5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRp",
+            "b24udjIuTmZzU2hhcmUuU3RvcmFnZVR5cGVCA+BBBRqzAgoNQWxsb3dlZENs",
+            "aWVudBI+CgduZXR3b3JrGAEgASgJQi36QSoKKGJhcmVtZXRhbHNvbHV0aW9u",
+            "Lmdvb2dsZWFwaXMuY29tL05ldHdvcmsSFQoIc2hhcmVfaXAYAiABKAlCA+BB",
+            "AxIcChRhbGxvd2VkX2NsaWVudHNfY2lkchgDIAEoCRJXChFtb3VudF9wZXJt",
+            "aXNzaW9ucxgEIAEoDjI8Lmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlv",
+            "bi52Mi5OZnNTaGFyZS5Nb3VudFBlcm1pc3Npb25zEhEKCWFsbG93X2RldhgF",
+            "IAEoCBISCgphbGxvd19zdWlkGAYgASgIEhYKDm5vX3Jvb3Rfc3F1YXNoGAcg",
+            "ASgIEhUKCG5mc19wYXRoGAggASgJQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJZCgVTdGF0ZRIVChFTVEFU",
+            "RV9VTlNQRUNJRklFRBAAEg8KC1BST1ZJU0lPTkVEEAESDAoIQ1JFQVRJTkcQ",
+            "AhIMCghVUERBVElORxADEgwKCERFTEVUSU5HEAQiTwoQTW91bnRQZXJtaXNz",
+            "aW9ucxIhCh1NT1VOVF9QRVJNSVNTSU9OU19VTlNQRUNJRklFRBAAEggKBFJF",
+            "QUQQARIOCgpSRUFEX1dSSVRFEAIiPQoLU3RvcmFnZVR5cGUSHAoYU1RPUkFH",
+            "RV9UWVBFX1VOU1BFQ0lGSUVEEAASBwoDU1NEEAESBwoDSEREEAI6bepBagop",
             "YmFyZW1ldGFsc29sdXRpb24uZ29vZ2xlYXBpcy5jb20vTkZTU2hhcmUSPXBy",
             "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9uZnNTaGFy",
             "ZXMve25mc19zaGFyZX0iVQoSR2V0TmZzU2hhcmVSZXF1ZXN0Ej8KBG5hbWUY",
@@ -59,22 +65,33 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             "dW5yZWFjaGFibGUYAyADKAkijQEKFVVwZGF0ZU5mc1NoYXJlUmVxdWVzdBJD",
             "CgluZnNfc2hhcmUYASABKAsyKy5nb29nbGUuY2xvdWQuYmFyZW1ldGFsc29s",
             "dXRpb24udjIuTmZzU2hhcmVCA+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tC/AEKJWNvbS5nb29nbGUuY2xv",
-            "dWQuYmFyZW1ldGFsc29sdXRpb24udjJCDU5mc1NoYXJlUHJvdG9QAVpTY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9iYXJlbWV0YWxzb2x1dGlvbi9hcGl2Mi9iYXJl",
-            "bWV0YWxzb2x1dGlvbnBiO2JhcmVtZXRhbHNvbHV0aW9ucGKqAiFHb29nbGUu",
-            "Q2xvdWQuQmFyZU1ldGFsU29sdXRpb24uVjLKAiFHb29nbGVcQ2xvdWRcQmFy",
-            "ZU1ldGFsU29sdXRpb25cVjLqAiRHb29nbGU6OkNsb3VkOjpCYXJlTWV0YWxT",
-            "b2x1dGlvbjo6VjJiBnByb3RvMw=="));
+            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sidgoVUmVuYW1lTmZzU2hhcmVS",
+            "ZXF1ZXN0Ej8KBG5hbWUYASABKAlCMeBBAvpBKwopYmFyZW1ldGFsc29sdXRp",
+            "b24uZ29vZ2xlYXBpcy5jb20vTkZTU2hhcmUSHAoPbmV3X25mc3NoYXJlX2lk",
+            "GAIgASgJQgPgQQIilwEKFUNyZWF0ZU5mc1NoYXJlUmVxdWVzdBI5CgZwYXJl",
+            "bnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xv",
+            "Y2F0aW9uEkMKCW5mc19zaGFyZRgCIAEoCzIrLmdvb2dsZS5jbG91ZC5iYXJl",
+            "bWV0YWxzb2x1dGlvbi52Mi5OZnNTaGFyZUID4EECIlgKFURlbGV0ZU5mc1No",
+            "YXJlUmVxdWVzdBI/CgRuYW1lGAEgASgJQjHgQQL6QSsKKWJhcmVtZXRhbHNv",
+            "bHV0aW9uLmdvb2dsZWFwaXMuY29tL05GU1NoYXJlQvwBCiVjb20uZ29vZ2xl",
+            "LmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyQg1OZnNTaGFyZVByb3RvUAFa",
+            "U2Nsb3VkLmdvb2dsZS5jb20vZ28vYmFyZW1ldGFsc29sdXRpb24vYXBpdjIv",
+            "YmFyZW1ldGFsc29sdXRpb25wYjtiYXJlbWV0YWxzb2x1dGlvbnBiqgIhR29v",
+            "Z2xlLkNsb3VkLkJhcmVNZXRhbFNvbHV0aW9uLlYyygIhR29vZ2xlXENsb3Vk",
+            "XEJhcmVNZXRhbFNvbHV0aW9uXFYy6gIkR29vZ2xlOjpDbG91ZDo6QmFyZU1l",
+            "dGFsU29sdXRpb246OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.NfsShare), global::Google.Cloud.BareMetalSolution.V2.NfsShare.Parser, new[]{ "Name", "NfsShareId", "State", "Volume", "AllowedClients", "Labels" }, null, new[]{ typeof(global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.State), typeof(global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.MountPermissions) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.AllowedClient), global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.AllowedClient.Parser, new[]{ "Network", "ShareIp", "AllowedClientsCidr", "MountPermissions", "AllowDev", "AllowSuid", "NoRootSquash" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.NfsShare), global::Google.Cloud.BareMetalSolution.V2.NfsShare.Parser, new[]{ "Name", "NfsShareId", "Id", "State", "Volume", "AllowedClients", "Labels", "RequestedSizeGib", "StorageType" }, null, new[]{ typeof(global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.State), typeof(global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.MountPermissions), typeof(global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.StorageType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.AllowedClient), global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.AllowedClient.Parser, new[]{ "Network", "ShareIp", "AllowedClientsCidr", "MountPermissions", "AllowDev", "AllowSuid", "NoRootSquash", "NfsPath" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.GetNfsShareRequest), global::Google.Cloud.BareMetalSolution.V2.GetNfsShareRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ListNfsSharesRequest), global::Google.Cloud.BareMetalSolution.V2.ListNfsSharesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.ListNfsSharesResponse), global::Google.Cloud.BareMetalSolution.V2.ListNfsSharesResponse.Parser, new[]{ "NfsShares", "NextPageToken", "Unreachable" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.UpdateNfsShareRequest), global::Google.Cloud.BareMetalSolution.V2.UpdateNfsShareRequest.Parser, new[]{ "NfsShare", "UpdateMask" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.UpdateNfsShareRequest), global::Google.Cloud.BareMetalSolution.V2.UpdateNfsShareRequest.Parser, new[]{ "NfsShare", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.RenameNfsShareRequest), global::Google.Cloud.BareMetalSolution.V2.RenameNfsShareRequest.Parser, new[]{ "Name", "NewNfsshareId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.CreateNfsShareRequest), global::Google.Cloud.BareMetalSolution.V2.CreateNfsShareRequest.Parser, new[]{ "Parent", "NfsShare" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BareMetalSolution.V2.DeleteNfsShareRequest), global::Google.Cloud.BareMetalSolution.V2.DeleteNfsShareRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -120,10 +137,13 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     public NfsShare(NfsShare other) : this() {
       name_ = other.name_;
       nfsShareId_ = other.nfsShareId_;
+      id_ = other.id_;
       state_ = other.state_;
       volume_ = other.volume_;
       allowedClients_ = other.allowedClients_.Clone();
       labels_ = other.labels_.Clone();
+      requestedSizeGib_ = other.requestedSizeGib_;
+      storageType_ = other.storageType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -137,7 +157,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The name of the NFS share.
+    /// Immutable. The name of the NFS share.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,6 +173,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     private string nfsShareId_ = "";
     /// <summary>
     /// Output only. An identifier for the NFS share, generated by the backend.
+    /// This field will be deprecated in the future, use `id` instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -163,11 +184,27 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
     }
 
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 8;
+    private string id_ = "";
+    /// <summary>
+    /// Output only. An identifier for the NFS share, generated by the backend.
+    /// This is the same value as nfs_share_id and will replace it in the future.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 3;
     private global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.State state_ = global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.State.Unspecified;
     /// <summary>
-    /// The state of the NFS share.
+    /// Output only. The state of the NFS share.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -182,7 +219,8 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     public const int VolumeFieldNumber = 4;
     private string volume_ = "";
     /// <summary>
-    /// The volume containing the share.
+    /// Output only. The underlying volume of the share. Created automatically
+    /// during provisioning.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -221,6 +259,36 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "requested_size_gib" field.</summary>
+    public const int RequestedSizeGibFieldNumber = 7;
+    private long requestedSizeGib_;
+    /// <summary>
+    /// The requested size, in GiB.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long RequestedSizeGib {
+      get { return requestedSizeGib_; }
+      set {
+        requestedSizeGib_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "storage_type" field.</summary>
+    public const int StorageTypeFieldNumber = 9;
+    private global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.StorageType storageType_ = global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.StorageType.Unspecified;
+    /// <summary>
+    /// Immutable. The storage type of the underlying volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.StorageType StorageType {
+      get { return storageType_; }
+      set {
+        storageType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -238,10 +306,13 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
       if (Name != other.Name) return false;
       if (NfsShareId != other.NfsShareId) return false;
+      if (Id != other.Id) return false;
       if (State != other.State) return false;
       if (Volume != other.Volume) return false;
       if(!allowedClients_.Equals(other.allowedClients_)) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (RequestedSizeGib != other.RequestedSizeGib) return false;
+      if (StorageType != other.StorageType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -251,10 +322,13 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (NfsShareId.Length != 0) hash ^= NfsShareId.GetHashCode();
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (State != global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (Volume.Length != 0) hash ^= Volume.GetHashCode();
       hash ^= allowedClients_.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (RequestedSizeGib != 0L) hash ^= RequestedSizeGib.GetHashCode();
+      if (StorageType != global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.StorageType.Unspecified) hash ^= StorageType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -291,6 +365,18 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
       allowedClients_.WriteTo(output, _repeated_allowedClients_codec);
       labels_.WriteTo(output, _map_labels_codec);
+      if (RequestedSizeGib != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(RequestedSizeGib);
+      }
+      if (Id.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Id);
+      }
+      if (StorageType != global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.StorageType.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) StorageType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -319,6 +405,18 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
       allowedClients_.WriteTo(ref output, _repeated_allowedClients_codec);
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (RequestedSizeGib != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(RequestedSizeGib);
+      }
+      if (Id.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Id);
+      }
+      if (StorageType != global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.StorageType.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) StorageType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -335,6 +433,9 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (NfsShareId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NfsShareId);
       }
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
       if (State != global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
@@ -343,6 +444,12 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
       size += allowedClients_.CalculateSize(_repeated_allowedClients_codec);
       size += labels_.CalculateSize(_map_labels_codec);
+      if (RequestedSizeGib != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RequestedSizeGib);
+      }
+      if (StorageType != global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.StorageType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) StorageType);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -361,6 +468,9 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       if (other.NfsShareId.Length != 0) {
         NfsShareId = other.NfsShareId;
       }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
       if (other.State != global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.State.Unspecified) {
         State = other.State;
       }
@@ -369,6 +479,12 @@ namespace Google.Cloud.BareMetalSolution.V2 {
       }
       allowedClients_.Add(other.allowedClients_);
       labels_.MergeFrom(other.labels_);
+      if (other.RequestedSizeGib != 0L) {
+        RequestedSizeGib = other.RequestedSizeGib;
+      }
+      if (other.StorageType != global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.StorageType.Unspecified) {
+        StorageType = other.StorageType;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -406,6 +522,18 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           }
           case 50: {
             labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 56: {
+            RequestedSizeGib = input.ReadInt64();
+            break;
+          }
+          case 66: {
+            Id = input.ReadString();
+            break;
+          }
+          case 72: {
+            StorageType = (global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.StorageType) input.ReadEnum();
             break;
           }
         }
@@ -447,6 +575,18 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
+          case 56: {
+            RequestedSizeGib = input.ReadInt64();
+            break;
+          }
+          case 66: {
+            Id = input.ReadString();
+            break;
+          }
+          case 72: {
+            StorageType = (global::Google.Cloud.BareMetalSolution.V2.NfsShare.Types.StorageType) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -469,6 +609,18 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         /// The share has been provisioned.
         /// </summary>
         [pbr::OriginalName("PROVISIONED")] Provisioned = 1,
+        /// <summary>
+        /// The NFS Share is being created.
+        /// </summary>
+        [pbr::OriginalName("CREATING")] Creating = 2,
+        /// <summary>
+        /// The NFS Share is being updated.
+        /// </summary>
+        [pbr::OriginalName("UPDATING")] Updating = 3,
+        /// <summary>
+        /// The NFS Share has been requested to be deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETING")] Deleting = 4,
       }
 
       /// <summary>
@@ -487,6 +639,24 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         /// NFS share can be mount with read-write permissions.
         /// </summary>
         [pbr::OriginalName("READ_WRITE")] ReadWrite = 2,
+      }
+
+      /// <summary>
+      /// The storage type for a volume.
+      /// </summary>
+      public enum StorageType {
+        /// <summary>
+        /// The storage type for this volume is unknown.
+        /// </summary>
+        [pbr::OriginalName("STORAGE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The storage type for this volume is SSD.
+        /// </summary>
+        [pbr::OriginalName("SSD")] Ssd = 1,
+        /// <summary>
+        /// This storage type for this volume is HDD.
+        /// </summary>
+        [pbr::OriginalName("HDD")] Hdd = 2,
       }
 
       /// <summary>
@@ -533,6 +703,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           allowDev_ = other.allowDev_;
           allowSuid_ = other.allowSuid_;
           noRootSquash_ = other.noRootSquash_;
+          nfsPath_ = other.nfsPath_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -561,7 +732,8 @@ namespace Google.Cloud.BareMetalSolution.V2 {
         public const int ShareIpFieldNumber = 2;
         private string shareIp_ = "";
         /// <summary>
-        /// The IP address of the share on this network.
+        /// Output only. The IP address of the share on this network. Assigned
+        /// automatically during provisioning based on the network's services_cidr.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -649,6 +821,23 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           }
         }
 
+        /// <summary>Field number for the "nfs_path" field.</summary>
+        public const int NfsPathFieldNumber = 8;
+        private string nfsPath_ = "";
+        /// <summary>
+        /// Output only. The path to access NFS, in format shareIP:/InstanceID
+        /// InstanceID is the generated ID instead of customer provided name.
+        /// example like "10.0.0.0:/g123456789-nfs001"
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string NfsPath {
+          get { return nfsPath_; }
+          set {
+            nfsPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -671,6 +860,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           if (AllowDev != other.AllowDev) return false;
           if (AllowSuid != other.AllowSuid) return false;
           if (NoRootSquash != other.NoRootSquash) return false;
+          if (NfsPath != other.NfsPath) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -685,6 +875,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           if (AllowDev != false) hash ^= AllowDev.GetHashCode();
           if (AllowSuid != false) hash ^= AllowSuid.GetHashCode();
           if (NoRootSquash != false) hash ^= NoRootSquash.GetHashCode();
+          if (NfsPath.Length != 0) hash ^= NfsPath.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -731,6 +922,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             output.WriteRawTag(56);
             output.WriteBool(NoRootSquash);
           }
+          if (NfsPath.Length != 0) {
+            output.WriteRawTag(66);
+            output.WriteString(NfsPath);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -769,6 +964,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             output.WriteRawTag(56);
             output.WriteBool(NoRootSquash);
           }
+          if (NfsPath.Length != 0) {
+            output.WriteRawTag(66);
+            output.WriteString(NfsPath);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -799,6 +998,9 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           }
           if (NoRootSquash != false) {
             size += 1 + 1;
+          }
+          if (NfsPath.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(NfsPath);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -832,6 +1034,9 @@ namespace Google.Cloud.BareMetalSolution.V2 {
           }
           if (other.NoRootSquash != false) {
             NoRootSquash = other.NoRootSquash;
+          }
+          if (other.NfsPath.Length != 0) {
+            NfsPath = other.NfsPath;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -876,6 +1081,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
                 NoRootSquash = input.ReadBool();
                 break;
               }
+              case 66: {
+                NfsPath = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -917,6 +1126,10 @@ namespace Google.Cloud.BareMetalSolution.V2 {
               }
               case 56: {
                 NoRootSquash = input.ReadBool();
+                break;
+              }
+              case 66: {
+                NfsPath = input.ReadString();
                 break;
               }
             }
@@ -1696,7 +1909,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   }
 
   /// <summary>
-  /// Message requesting to updating a NFS share.
+  /// Message requesting to updating an NFS share.
   /// </summary>
   public sealed partial class UpdateNfsShareRequest : pb::IMessage<UpdateNfsShareRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1768,6 +1981,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
     /// The list of fields to update.
     /// The only currently supported fields are:
     ///   `labels`
+    ///   `allowed_clients`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1944,6 +2158,681 @@ namespace Google.Cloud.BareMetalSolution.V2 {
               UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
             input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message requesting rename of a server.
+  /// </summary>
+  public sealed partial class RenameNfsShareRequest : pb::IMessage<RenameNfsShareRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RenameNfsShareRequest> _parser = new pb::MessageParser<RenameNfsShareRequest>(() => new RenameNfsShareRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RenameNfsShareRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.NfsShareReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RenameNfsShareRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RenameNfsShareRequest(RenameNfsShareRequest other) : this() {
+      name_ = other.name_;
+      newNfsshareId_ = other.newNfsshareId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RenameNfsShareRequest Clone() {
+      return new RenameNfsShareRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The `name` field is used to identify the nfsshare.
+    /// Format: projects/{project}/locations/{location}/nfsshares/{nfsshare}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "new_nfsshare_id" field.</summary>
+    public const int NewNfsshareIdFieldNumber = 2;
+    private string newNfsshareId_ = "";
+    /// <summary>
+    /// Required. The new `id` of the nfsshare.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NewNfsshareId {
+      get { return newNfsshareId_; }
+      set {
+        newNfsshareId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RenameNfsShareRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RenameNfsShareRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (NewNfsshareId != other.NewNfsshareId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (NewNfsshareId.Length != 0) hash ^= NewNfsshareId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (NewNfsshareId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NewNfsshareId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (NewNfsshareId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NewNfsshareId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (NewNfsshareId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NewNfsshareId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RenameNfsShareRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.NewNfsshareId.Length != 0) {
+        NewNfsshareId = other.NewNfsshareId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            NewNfsshareId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            NewNfsshareId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message for creating an NFS share.
+  /// </summary>
+  public sealed partial class CreateNfsShareRequest : pb::IMessage<CreateNfsShareRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateNfsShareRequest> _parser = new pb::MessageParser<CreateNfsShareRequest>(() => new CreateNfsShareRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateNfsShareRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.NfsShareReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateNfsShareRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateNfsShareRequest(CreateNfsShareRequest other) : this() {
+      parent_ = other.parent_;
+      nfsShare_ = other.nfsShare_ != null ? other.nfsShare_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateNfsShareRequest Clone() {
+      return new CreateNfsShareRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent project and location.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "nfs_share" field.</summary>
+    public const int NfsShareFieldNumber = 2;
+    private global::Google.Cloud.BareMetalSolution.V2.NfsShare nfsShare_;
+    /// <summary>
+    /// Required. The NfsShare to create.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BareMetalSolution.V2.NfsShare NfsShare {
+      get { return nfsShare_; }
+      set {
+        nfsShare_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateNfsShareRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateNfsShareRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(NfsShare, other.NfsShare)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (nfsShare_ != null) hash ^= NfsShare.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (nfsShare_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(NfsShare);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (nfsShare_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(NfsShare);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (nfsShare_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NfsShare);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateNfsShareRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.nfsShare_ != null) {
+        if (nfsShare_ == null) {
+          NfsShare = new global::Google.Cloud.BareMetalSolution.V2.NfsShare();
+        }
+        NfsShare.MergeFrom(other.NfsShare);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (nfsShare_ == null) {
+              NfsShare = new global::Google.Cloud.BareMetalSolution.V2.NfsShare();
+            }
+            input.ReadMessage(NfsShare);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (nfsShare_ == null) {
+              NfsShare = new global::Google.Cloud.BareMetalSolution.V2.NfsShare();
+            }
+            input.ReadMessage(NfsShare);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message for deleting an NFS share.
+  /// </summary>
+  public sealed partial class DeleteNfsShareRequest : pb::IMessage<DeleteNfsShareRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteNfsShareRequest> _parser = new pb::MessageParser<DeleteNfsShareRequest>(() => new DeleteNfsShareRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteNfsShareRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BareMetalSolution.V2.NfsShareReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteNfsShareRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteNfsShareRequest(DeleteNfsShareRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteNfsShareRequest Clone() {
+      return new DeleteNfsShareRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the NFS share to delete.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteNfsShareRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteNfsShareRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteNfsShareRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
             break;
           }
         }
