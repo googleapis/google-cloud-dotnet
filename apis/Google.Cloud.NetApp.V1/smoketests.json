@@ -1,0 +1,40 @@
+[
+  {
+    "method": "ListLocations",
+    "client": "NetAppClient",
+    "clientNavigationProperty": "LocationsClient",
+    "arguments": {
+      "request": {
+        "name": "projects/${PROJECT_ID}"
+      }
+    }
+  },
+  {
+    "method": "ListActiveDirectories",
+    "client": "NetAppClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListKmsConfigs",
+    "client": "NetAppClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListStoragePools",
+    "client": "NetAppClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListVolumes",
+    "client": "NetAppClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  }
+]

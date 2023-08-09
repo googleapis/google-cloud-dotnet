@@ -3014,6 +3014,28 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.NetApp.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "NetApp",
+      "productUrl": "https://cloud.google.com/netapp/volumes/docs/discover/overview",
+      "description": "Recommended Google client library to access the Google Cloud NetApp Volumes API, which is a fully-managed, cloud-based data storage service that provides advanced data management capabilities and highly scalable performance with global availability.",
+      "tags": [
+        "storage",
+        "volumes",
+        "availability"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/netapp/v1",
+      "shortName": "netapp",
+      "serviceConfigFile": "netapp_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.NetworkConnectivity.V1",
       "version": "2.3.0",
       "type": "grpc",
