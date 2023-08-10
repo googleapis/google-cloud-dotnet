@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_sync_flattened_resourceNames]
+    // [START dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_sync_flattened_resourceNames1]
     using Google.Cloud.Dialogflow.Cx.V3;
 
     public sealed partial class GeneratedTransitionRouteGroupsClientSnippets
@@ -29,7 +29,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateTransitionRouteGroupResourceNames()
+        public void CreateTransitionRouteGroupResourceNames1()
         {
             // Create client
             TransitionRouteGroupsClient transitionRouteGroupsClient = TransitionRouteGroupsClient.Create();
@@ -40,5 +40,5 @@ namespace GoogleCSharpSnippets
             TransitionRouteGroup response = transitionRouteGroupsClient.CreateTransitionRouteGroup(parent, transitionRouteGroup);
         }
     }
-    // [END dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_sync_flattened_resourceNames]
+    // [END dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_sync_flattened_resourceNames1]
 }

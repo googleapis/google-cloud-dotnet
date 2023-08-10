@@ -16,14 +16,16 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_sync_flattened_resourceNames]
+    // [START dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_async_flattened_resourceNames2]
     using Google.Api.Gax;
     using Google.Cloud.Dialogflow.Cx.V3;
     using System;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedTransitionRouteGroupsClientSnippets
     {
-        /// <summary>Snippet for ListTransitionRouteGroups</summary>
+        /// <summary>Snippet for ListTransitionRouteGroupsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,24 +33,24 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListTransitionRouteGroupsResourceNames()
+        public async Task ListTransitionRouteGroupsResourceNames2Async()
         {
             // Create client
-            TransitionRouteGroupsClient transitionRouteGroupsClient = TransitionRouteGroupsClient.Create();
+            TransitionRouteGroupsClient transitionRouteGroupsClient = await TransitionRouteGroupsClient.CreateAsync();
             // Initialize request argument(s)
-            FlowName parent = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]");
+            AgentName parent = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]");
             // Make the request
-            PagedEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> response = transitionRouteGroupsClient.ListTransitionRouteGroups(parent);
+            PagedAsyncEnumerable<ListTransitionRouteGroupsResponse, TransitionRouteGroup> response = transitionRouteGroupsClient.ListTransitionRouteGroupsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (TransitionRouteGroup item in response)
+            await response.ForEachAsync((TransitionRouteGroup item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            }
+            });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListTransitionRouteGroupsResponse page in response.AsRawResponses())
+            await response.AsRawResponses().ForEachAsync((ListTransitionRouteGroupsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -57,11 +59,11 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            }
+            });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<TransitionRouteGroup> singlePage = response.ReadPage(pageSize);
+            Page<TransitionRouteGroup> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (TransitionRouteGroup item in singlePage)
@@ -73,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_sync_flattened_resourceNames]
+    // [END dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_async_flattened_resourceNames2]
 }

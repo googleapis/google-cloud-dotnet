@@ -10880,12 +10880,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 62,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -10929,12 +10929,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 63,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -19640,10 +19640,10 @@
       ]
     },
     {
-      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_sync_flattened_resourceNames",
-      "title": "ListTransitionRouteGroupsResourceNames",
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_sync_flattened_resourceNames1",
+      "title": "ListTransitionRouteGroupsResourceNames1",
       "description": "Snippet for ListTransitionRouteGroups",
-      "file": "TransitionRouteGroupsClient.ListTransitionRouteGroupsResourceNamesSnippet.g.cs",
+      "file": "TransitionRouteGroupsClient.ListTransitionRouteGroupsResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListTransitionRouteGroups",
@@ -19695,10 +19695,10 @@
       ]
     },
     {
-      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_async_flattened_resourceNames",
-      "title": "ListTransitionRouteGroupsResourceNamesAsync",
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_async_flattened_resourceNames1",
+      "title": "ListTransitionRouteGroupsResourceNames1Async",
       "description": "Snippet for ListTransitionRouteGroupsAsync",
-      "file": "TransitionRouteGroupsClient.ListTransitionRouteGroupsResourceNamesAsyncSnippet.g.cs",
+      "file": "TransitionRouteGroupsClient.ListTransitionRouteGroupsResourceNames1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListTransitionRouteGroupsAsync",
@@ -19707,6 +19707,117 @@
         "parameters": [
           {
             "type": "Google.Cloud.Dialogflow.Cx.V3.FlowName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsResponse, Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup>",
+        "client": {
+          "shortName": "TransitionRouteGroupsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient"
+        },
+        "method": {
+          "shortName": "ListTransitionRouteGroups",
+          "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups.ListTransitionRouteGroups",
+          "service": {
+            "shortName": "TransitionRouteGroups",
+            "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_sync_flattened_resourceNames2",
+      "title": "ListTransitionRouteGroupsResourceNames2",
+      "description": "Snippet for ListTransitionRouteGroups",
+      "file": "TransitionRouteGroupsClient.ListTransitionRouteGroupsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTransitionRouteGroups",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient.ListTransitionRouteGroups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsResponse, Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup>",
+        "client": {
+          "shortName": "TransitionRouteGroupsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient"
+        },
+        "method": {
+          "shortName": "ListTransitionRouteGroups",
+          "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups.ListTransitionRouteGroups",
+          "service": {
+            "shortName": "TransitionRouteGroups",
+            "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_async_flattened_resourceNames2",
+      "title": "ListTransitionRouteGroupsResourceNames2Async",
+      "description": "Snippet for ListTransitionRouteGroupsAsync",
+      "file": "TransitionRouteGroupsClient.ListTransitionRouteGroupsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTransitionRouteGroupsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient.ListTransitionRouteGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
             "name": "parent"
           },
           {
@@ -20238,10 +20349,10 @@
       ]
     },
     {
-      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_sync_flattened_resourceNames",
-      "title": "CreateTransitionRouteGroupResourceNames",
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_sync_flattened_resourceNames1",
+      "title": "CreateTransitionRouteGroupResourceNames1",
       "description": "Snippet for CreateTransitionRouteGroup",
-      "file": "TransitionRouteGroupsClient.CreateTransitionRouteGroupResourceNamesSnippet.g.cs",
+      "file": "TransitionRouteGroupsClient.CreateTransitionRouteGroupResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateTransitionRouteGroup",
@@ -20289,10 +20400,10 @@
       ]
     },
     {
-      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_async_flattened_resourceNames",
-      "title": "CreateTransitionRouteGroupResourceNamesAsync",
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_async_flattened_resourceNames1",
+      "title": "CreateTransitionRouteGroupResourceNames1Async",
       "description": "Snippet for CreateTransitionRouteGroupAsync",
-      "file": "TransitionRouteGroupsClient.CreateTransitionRouteGroupResourceNamesAsyncSnippet.g.cs",
+      "file": "TransitionRouteGroupsClient.CreateTransitionRouteGroupResourceNames1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateTransitionRouteGroupAsync",
@@ -20301,6 +20412,109 @@
         "parameters": [
           {
             "type": "Google.Cloud.Dialogflow.Cx.V3.FlowName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup",
+            "name": "transitionRouteGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup>",
+        "client": {
+          "shortName": "TransitionRouteGroupsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient"
+        },
+        "method": {
+          "shortName": "CreateTransitionRouteGroup",
+          "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups.CreateTransitionRouteGroup",
+          "service": {
+            "shortName": "TransitionRouteGroups",
+            "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_sync_flattened_resourceNames2",
+      "title": "CreateTransitionRouteGroupResourceNames2",
+      "description": "Snippet for CreateTransitionRouteGroup",
+      "file": "TransitionRouteGroupsClient.CreateTransitionRouteGroupResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTransitionRouteGroup",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient.CreateTransitionRouteGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup",
+            "name": "transitionRouteGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup",
+        "client": {
+          "shortName": "TransitionRouteGroupsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient"
+        },
+        "method": {
+          "shortName": "CreateTransitionRouteGroup",
+          "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups.CreateTransitionRouteGroup",
+          "service": {
+            "shortName": "TransitionRouteGroups",
+            "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_async_flattened_resourceNames2",
+      "title": "CreateTransitionRouteGroupResourceNames2Async",
+      "description": "Snippet for CreateTransitionRouteGroupAsync",
+      "file": "TransitionRouteGroupsClient.CreateTransitionRouteGroupResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTransitionRouteGroupAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient.CreateTransitionRouteGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
             "name": "parent"
           },
           {
