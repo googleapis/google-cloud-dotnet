@@ -47,65 +47,75 @@ namespace Google.Cloud.NetworkManagement.V1 {
             "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOnTqQXEKMW5l",
             "dHdvcmttYW5hZ2VtZW50Lmdvb2dsZWFwaXMuY29tL0Nvbm5lY3Rpdml0eVRl",
             "c3QSPHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMvZ2xvYmFsL2Nvbm5l",
-            "Y3Rpdml0eVRlc3RzL3t0ZXN0fSLtBQoIRW5kcG9pbnQSEgoKaXBfYWRkcmVz",
+            "Y3Rpdml0eVRlc3RzL3t0ZXN0fSKaCQoIRW5kcG9pbnQSEgoKaXBfYWRkcmVz",
             "cxgBIAEoCRIMCgRwb3J0GAIgASgFEhAKCGluc3RhbmNlGAMgASgJEhcKD2Zv",
-            "cndhcmRpbmdfcnVsZRgNIAEoCRIaChJna2VfbWFzdGVyX2NsdXN0ZXIYByAB",
-            "KAkSGgoSY2xvdWRfc3FsX2luc3RhbmNlGAggASgJElkKDmNsb3VkX2Z1bmN0",
-            "aW9uGAogASgLMkEuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYx",
-            "LkVuZHBvaW50LkNsb3VkRnVuY3Rpb25FbmRwb2ludBJgChJhcHBfZW5naW5l",
-            "X3ZlcnNpb24YCyABKAsyRC5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1l",
-            "bnQudjEuRW5kcG9pbnQuQXBwRW5naW5lVmVyc2lvbkVuZHBvaW50EmAKEmNs",
-            "b3VkX3J1bl9yZXZpc2lvbhgMIAEoCzJELmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
-            "bWFuYWdlbWVudC52MS5FbmRwb2ludC5DbG91ZFJ1blJldmlzaW9uRW5kcG9p",
-            "bnQSDwoHbmV0d29yaxgEIAEoCRJNCgxuZXR3b3JrX3R5cGUYBSABKA4yNy5n",
-            "b29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuRW5kcG9pbnQuTmV0",
-            "d29ya1R5cGUSEgoKcHJvamVjdF9pZBgGIAEoCRokChVDbG91ZEZ1bmN0aW9u",
-            "RW5kcG9pbnQSCwoDdXJpGAEgASgJGicKGEFwcEVuZ2luZVZlcnNpb25FbmRw",
-            "b2ludBILCgN1cmkYASABKAkaJwoYQ2xvdWRSdW5SZXZpc2lvbkVuZHBvaW50",
-            "EgsKA3VyaRgBIAEoCSJRCgtOZXR3b3JrVHlwZRIcChhORVRXT1JLX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABIPCgtHQ1BfTkVUV09SSxABEhMKD05PTl9HQ1BfTkVU",
-            "V09SSxACItUCChNSZWFjaGFiaWxpdHlEZXRhaWxzEk0KBnJlc3VsdBgBIAEo",
-            "DjI9Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5SZWFjaGFi",
-            "aWxpdHlEZXRhaWxzLlJlc3VsdBIvCgt2ZXJpZnlfdGltZRgCIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASIQoFZXJyb3IYAyABKAsyEi5nb29n",
-            "bGUucnBjLlN0YXR1cxI4CgZ0cmFjZXMYBSADKAsyKC5nb29nbGUuY2xvdWQu",
-            "bmV0d29ya21hbmFnZW1lbnQudjEuVHJhY2UiYQoGUmVzdWx0EhYKElJFU1VM",
-            "VF9VTlNQRUNJRklFRBAAEg0KCVJFQUNIQUJMRRABEg8KC1VOUkVBQ0hBQkxF",
-            "EAISDQoJQU1CSUdVT1VTEAQSEAoMVU5ERVRFUk1JTkVEEAUiPAoRTGF0ZW5j",
-            "eVBlcmNlbnRpbGUSDwoHcGVyY2VudBgBIAEoBRIWCg5sYXRlbmN5X21pY3Jv",
-            "cxgCIAEoAyJoChNMYXRlbmN5RGlzdHJpYnV0aW9uElEKE2xhdGVuY3lfcGVy",
-            "Y2VudGlsZXMYASADKAsyNC5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1l",
-            "bnQudjEuTGF0ZW5jeVBlcmNlbnRpbGUi3gYKDlByb2JpbmdEZXRhaWxzEk8K",
-            "BnJlc3VsdBgBIAEoDjI/Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVu",
-            "dC52MS5Qcm9iaW5nRGV0YWlscy5Qcm9iaW5nUmVzdWx0Ei8KC3ZlcmlmeV90",
-            "aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIhCgVlcnJv",
-            "chgDIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzElgKC2Fib3J0X2NhdXNlGAQg",
-            "ASgOMkMuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLlByb2Jp",
-            "bmdEZXRhaWxzLlByb2JpbmdBYm9ydENhdXNlEhgKEHNlbnRfcHJvYmVfY291",
-            "bnQYBSABKAUSHgoWc3VjY2Vzc2Z1bF9wcm9iZV9jb3VudBgGIAEoBRJGCg1l",
-            "bmRwb2ludF9pbmZvGAcgASgLMi8uZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5h",
-            "Z2VtZW50LnYxLkVuZHBvaW50SW5mbxJPCg9wcm9iaW5nX2xhdGVuY3kYCCAB",
-            "KAsyNi5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuTGF0ZW5j",
-            "eURpc3RyaWJ1dGlvbhJjChtkZXN0aW5hdGlvbl9lZ3Jlc3NfbG9jYXRpb24Y",
-            "CSABKAsyPi5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuUHJv",
-            "YmluZ0RldGFpbHMuRWRnZUxvY2F0aW9uGikKDEVkZ2VMb2NhdGlvbhIZChFt",
-            "ZXRyb3BvbGl0YW5fYXJlYRgBIAEoCSKAAQoNUHJvYmluZ1Jlc3VsdBIeChpQ",
-            "Uk9CSU5HX1JFU1VMVF9VTlNQRUNJRklFRBAAEg0KCVJFQUNIQUJMRRABEg8K",
-            "C1VOUkVBQ0hBQkxFEAISHQoZUkVBQ0hBQklMSVRZX0lOQ09OU0lTVEVOVBAD",
-            "EhAKDFVOREVURVJNSU5FRBAEImcKEVByb2JpbmdBYm9ydENhdXNlEiMKH1BS",
-            "T0JJTkdfQUJPUlRfQ0FVU0VfVU5TUEVDSUZJRUQQABIVChFQRVJNSVNTSU9O",
-            "X0RFTklFRBABEhYKEk5PX1NPVVJDRV9MT0NBVElPThACQv0BCiVjb20uZ29v",
-            "Z2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxQg5UZXN0T3V0ZXJDbGFz",
-            "c1ABWlNjbG91ZC5nb29nbGUuY29tL2dvL25ldHdvcmttYW5hZ2VtZW50L2Fw",
-            "aXYxL25ldHdvcmttYW5hZ2VtZW50cGI7bmV0d29ya21hbmFnZW1lbnRwYqoC",
-            "IUdvb2dsZS5DbG91ZC5OZXR3b3JrTWFuYWdlbWVudC5WMcoCIUdvb2dsZVxD",
-            "bG91ZFxOZXR3b3JrTWFuYWdlbWVudFxWMeoCJEdvb2dsZTo6Q2xvdWQ6Ok5l",
-            "dHdvcmtNYW5hZ2VtZW50OjpWMWIGcHJvdG8z"));
+            "cndhcmRpbmdfcnVsZRgNIAEoCRJqChZmb3J3YXJkaW5nX3J1bGVfdGFyZ2V0",
+            "GA4gASgOMkAuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkVu",
+            "ZHBvaW50LkZvcndhcmRpbmdSdWxlVGFyZ2V0QgPgQQNIAIgBARIiChBsb2Fk",
+            "X2JhbGFuY2VyX2lkGA8gASgJQgPgQQNIAYgBARJZChJsb2FkX2JhbGFuY2Vy",
+            "X3R5cGUYECABKA4yMy5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQu",
+            "djEuTG9hZEJhbGFuY2VyVHlwZUID4EEDSAKIAQESGgoSZ2tlX21hc3Rlcl9j",
+            "bHVzdGVyGAcgASgJEhoKEmNsb3VkX3NxbF9pbnN0YW5jZRgIIAEoCRJZCg5j",
+            "bG91ZF9mdW5jdGlvbhgKIAEoCzJBLmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFu",
+            "YWdlbWVudC52MS5FbmRwb2ludC5DbG91ZEZ1bmN0aW9uRW5kcG9pbnQSYAoS",
+            "YXBwX2VuZ2luZV92ZXJzaW9uGAsgASgLMkQuZ29vZ2xlLmNsb3VkLm5ldHdv",
+            "cmttYW5hZ2VtZW50LnYxLkVuZHBvaW50LkFwcEVuZ2luZVZlcnNpb25FbmRw",
+            "b2ludBJgChJjbG91ZF9ydW5fcmV2aXNpb24YDCABKAsyRC5nb29nbGUuY2xv",
+            "dWQubmV0d29ya21hbmFnZW1lbnQudjEuRW5kcG9pbnQuQ2xvdWRSdW5SZXZp",
+            "c2lvbkVuZHBvaW50Eg8KB25ldHdvcmsYBCABKAkSTQoMbmV0d29ya190eXBl",
+            "GAUgASgOMjcuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkVu",
+            "ZHBvaW50Lk5ldHdvcmtUeXBlEhIKCnByb2plY3RfaWQYBiABKAkaJAoVQ2xv",
+            "dWRGdW5jdGlvbkVuZHBvaW50EgsKA3VyaRgBIAEoCRonChhBcHBFbmdpbmVW",
+            "ZXJzaW9uRW5kcG9pbnQSCwoDdXJpGAEgASgJGicKGENsb3VkUnVuUmV2aXNp",
+            "b25FbmRwb2ludBILCgN1cmkYASABKAkiUQoLTmV0d29ya1R5cGUSHAoYTkVU",
+            "V09SS19UWVBFX1VOU1BFQ0lGSUVEEAASDwoLR0NQX05FVFdPUksQARITCg9O",
+            "T05fR0NQX05FVFdPUksQAiJ5ChRGb3J3YXJkaW5nUnVsZVRhcmdldBImCiJG",
+            "T1JXQVJESU5HX1JVTEVfVEFSR0VUX1VOU1BFQ0lGSUVEEAASDAoISU5TVEFO",
+            "Q0UQARIRCg1MT0FEX0JBTEFOQ0VSEAISDwoLVlBOX0dBVEVXQVkQAxIHCgNQ",
+            "U0MQBEIZChdfZm9yd2FyZGluZ19ydWxlX3RhcmdldEITChFfbG9hZF9iYWxh",
+            "bmNlcl9pZEIVChNfbG9hZF9iYWxhbmNlcl90eXBlItUCChNSZWFjaGFiaWxp",
+            "dHlEZXRhaWxzEk0KBnJlc3VsdBgBIAEoDjI9Lmdvb2dsZS5jbG91ZC5uZXR3",
+            "b3JrbWFuYWdlbWVudC52MS5SZWFjaGFiaWxpdHlEZXRhaWxzLlJlc3VsdBIv",
+            "Cgt2ZXJpZnlfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASIQoFZXJyb3IYAyABKAsyEi5nb29nbGUucnBjLlN0YXR1cxI4CgZ0cmFj",
+            "ZXMYBSADKAsyKC5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEu",
+            "VHJhY2UiYQoGUmVzdWx0EhYKElJFU1VMVF9VTlNQRUNJRklFRBAAEg0KCVJF",
+            "QUNIQUJMRRABEg8KC1VOUkVBQ0hBQkxFEAISDQoJQU1CSUdVT1VTEAQSEAoM",
+            "VU5ERVRFUk1JTkVEEAUiPAoRTGF0ZW5jeVBlcmNlbnRpbGUSDwoHcGVyY2Vu",
+            "dBgBIAEoBRIWCg5sYXRlbmN5X21pY3JvcxgCIAEoAyJoChNMYXRlbmN5RGlz",
+            "dHJpYnV0aW9uElEKE2xhdGVuY3lfcGVyY2VudGlsZXMYASADKAsyNC5nb29n",
+            "bGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuTGF0ZW5jeVBlcmNlbnRp",
+            "bGUi3gYKDlByb2JpbmdEZXRhaWxzEk8KBnJlc3VsdBgBIAEoDjI/Lmdvb2ds",
+            "ZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5Qcm9iaW5nRGV0YWlscy5Q",
+            "cm9iaW5nUmVzdWx0Ei8KC3ZlcmlmeV90aW1lGAIgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBIhCgVlcnJvchgDIAEoCzISLmdvb2dsZS5ycGMu",
+            "U3RhdHVzElgKC2Fib3J0X2NhdXNlGAQgASgOMkMuZ29vZ2xlLmNsb3VkLm5l",
+            "dHdvcmttYW5hZ2VtZW50LnYxLlByb2JpbmdEZXRhaWxzLlByb2JpbmdBYm9y",
+            "dENhdXNlEhgKEHNlbnRfcHJvYmVfY291bnQYBSABKAUSHgoWc3VjY2Vzc2Z1",
+            "bF9wcm9iZV9jb3VudBgGIAEoBRJGCg1lbmRwb2ludF9pbmZvGAcgASgLMi8u",
+            "Z29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkVuZHBvaW50SW5m",
+            "bxJPCg9wcm9iaW5nX2xhdGVuY3kYCCABKAsyNi5nb29nbGUuY2xvdWQubmV0",
+            "d29ya21hbmFnZW1lbnQudjEuTGF0ZW5jeURpc3RyaWJ1dGlvbhJjChtkZXN0",
+            "aW5hdGlvbl9lZ3Jlc3NfbG9jYXRpb24YCSABKAsyPi5nb29nbGUuY2xvdWQu",
+            "bmV0d29ya21hbmFnZW1lbnQudjEuUHJvYmluZ0RldGFpbHMuRWRnZUxvY2F0",
+            "aW9uGikKDEVkZ2VMb2NhdGlvbhIZChFtZXRyb3BvbGl0YW5fYXJlYRgBIAEo",
+            "CSKAAQoNUHJvYmluZ1Jlc3VsdBIeChpQUk9CSU5HX1JFU1VMVF9VTlNQRUNJ",
+            "RklFRBAAEg0KCVJFQUNIQUJMRRABEg8KC1VOUkVBQ0hBQkxFEAISHQoZUkVB",
+            "Q0hBQklMSVRZX0lOQ09OU0lTVEVOVBADEhAKDFVOREVURVJNSU5FRBAEImcK",
+            "EVByb2JpbmdBYm9ydENhdXNlEiMKH1BST0JJTkdfQUJPUlRfQ0FVU0VfVU5T",
+            "UEVDSUZJRUQQABIVChFQRVJNSVNTSU9OX0RFTklFRBABEhYKEk5PX1NPVVJD",
+            "RV9MT0NBVElPThACQv0BCiVjb20uZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5h",
+            "Z2VtZW50LnYxQg5UZXN0T3V0ZXJDbGFzc1ABWlNjbG91ZC5nb29nbGUuY29t",
+            "L2dvL25ldHdvcmttYW5hZ2VtZW50L2FwaXYxL25ldHdvcmttYW5hZ2VtZW50",
+            "cGI7bmV0d29ya21hbmFnZW1lbnRwYqoCIUdvb2dsZS5DbG91ZC5OZXR3b3Jr",
+            "TWFuYWdlbWVudC5WMcoCIUdvb2dsZVxDbG91ZFxOZXR3b3JrTWFuYWdlbWVu",
+            "dFxWMeoCJEdvb2dsZTo6Q2xvdWQ6Ok5ldHdvcmtNYW5hZ2VtZW50OjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetworkManagement.V1.TraceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.ConnectivityTest), global::Google.Cloud.NetworkManagement.V1.ConnectivityTest.Parser, new[]{ "Name", "Description", "Source", "Destination", "Protocol", "RelatedProjects", "DisplayName", "Labels", "CreateTime", "UpdateTime", "ReachabilityDetails", "ProbingDetails" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Parser, new[]{ "IpAddress", "Port", "Instance", "ForwardingRule", "GkeMasterCluster", "CloudSqlInstance", "CloudFunction", "AppEngineVersion", "CloudRunRevision", "Network", "NetworkType", "ProjectId" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.NetworkType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudFunctionEndpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudFunctionEndpoint.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Parser, new[]{ "IpAddress", "Port", "Instance", "ForwardingRule", "ForwardingRuleTarget", "LoadBalancerId", "LoadBalancerType", "GkeMasterCluster", "CloudSqlInstance", "CloudFunction", "AppEngineVersion", "CloudRunRevision", "Network", "NetworkType", "ProjectId" }, new[]{ "ForwardingRuleTarget", "LoadBalancerId", "LoadBalancerType" }, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.NetworkType), typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.ForwardingRuleTarget) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudFunctionEndpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudFunctionEndpoint.Parser, new[]{ "Uri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.AppEngineVersionEndpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.AppEngineVersionEndpoint.Parser, new[]{ "Uri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudRunRevisionEndpoint), global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.CloudRunRevisionEndpoint.Parser, new[]{ "Uri" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails), global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails.Parser, new[]{ "Result", "VerifyTime", "Error", "Traces" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.ReachabilityDetails.Types.Result) }, null, null),
@@ -841,6 +851,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   {
     private static readonly pb::MessageParser<Endpoint> _parser = new pb::MessageParser<Endpoint>(() => new Endpoint());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Endpoint> Parser { get { return _parser; } }
@@ -868,10 +879,14 @@ namespace Google.Cloud.NetworkManagement.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Endpoint(Endpoint other) : this() {
+      _hasBits0 = other._hasBits0;
       ipAddress_ = other.ipAddress_;
       port_ = other.port_;
       instance_ = other.instance_;
       forwardingRule_ = other.forwardingRule_;
+      forwardingRuleTarget_ = other.forwardingRuleTarget_;
+      loadBalancerId_ = other.loadBalancerId_;
+      loadBalancerType_ = other.loadBalancerType_;
       gkeMasterCluster_ = other.gkeMasterCluster_;
       cloudSqlInstance_ = other.cloudSqlInstance_;
       cloudFunction_ = other.cloudFunction_ != null ? other.cloudFunction_.Clone() : null;
@@ -895,7 +910,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     /// <summary>
     /// The IP address of the endpoint, which can be an external or internal IP.
     /// An IPv6 address is only allowed when the test's destination is a
-    /// [global load balancer VIP](/load-balancing/docs/load-balancing-overview).
+    /// [global load balancer
+    /// VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -955,6 +971,96 @@ namespace Google.Cloud.NetworkManagement.V1 {
       set {
         forwardingRule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "forwarding_rule_target" field.</summary>
+    public const int ForwardingRuleTargetFieldNumber = 14;
+    private readonly static global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.ForwardingRuleTarget ForwardingRuleTargetDefaultValue = global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.ForwardingRuleTarget.Unspecified;
+
+    private global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.ForwardingRuleTarget forwardingRuleTarget_;
+    /// <summary>
+    /// Output only. Specifies the type of the target of the forwarding rule.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.ForwardingRuleTarget ForwardingRuleTarget {
+      get { if ((_hasBits0 & 1) != 0) { return forwardingRuleTarget_; } else { return ForwardingRuleTargetDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        forwardingRuleTarget_ = value;
+      }
+    }
+    /// <summary>Gets whether the "forwarding_rule_target" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasForwardingRuleTarget {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "forwarding_rule_target" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearForwardingRuleTarget() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "load_balancer_id" field.</summary>
+    public const int LoadBalancerIdFieldNumber = 15;
+    private readonly static string LoadBalancerIdDefaultValue = "";
+
+    private string loadBalancerId_;
+    /// <summary>
+    /// Output only. ID of the load balancer the forwarding rule points to. Empty
+    /// for forwarding rules not related to load balancers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LoadBalancerId {
+      get { return loadBalancerId_ ?? LoadBalancerIdDefaultValue; }
+      set {
+        loadBalancerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "load_balancer_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLoadBalancerId {
+      get { return loadBalancerId_ != null; }
+    }
+    /// <summary>Clears the value of the "load_balancer_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLoadBalancerId() {
+      loadBalancerId_ = null;
+    }
+
+    /// <summary>Field number for the "load_balancer_type" field.</summary>
+    public const int LoadBalancerTypeFieldNumber = 16;
+    private readonly static global::Google.Cloud.NetworkManagement.V1.LoadBalancerType LoadBalancerTypeDefaultValue = global::Google.Cloud.NetworkManagement.V1.LoadBalancerType.Unspecified;
+
+    private global::Google.Cloud.NetworkManagement.V1.LoadBalancerType loadBalancerType_;
+    /// <summary>
+    /// Output only. Type of the load balancer the forwarding rule points to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkManagement.V1.LoadBalancerType LoadBalancerType {
+      get { if ((_hasBits0 & 2) != 0) { return loadBalancerType_; } else { return LoadBalancerTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        loadBalancerType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "load_balancer_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLoadBalancerType {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "load_balancer_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLoadBalancerType() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "gke_master_cluster" field.</summary>
@@ -1109,6 +1215,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (Port != other.Port) return false;
       if (Instance != other.Instance) return false;
       if (ForwardingRule != other.ForwardingRule) return false;
+      if (ForwardingRuleTarget != other.ForwardingRuleTarget) return false;
+      if (LoadBalancerId != other.LoadBalancerId) return false;
+      if (LoadBalancerType != other.LoadBalancerType) return false;
       if (GkeMasterCluster != other.GkeMasterCluster) return false;
       if (CloudSqlInstance != other.CloudSqlInstance) return false;
       if (!object.Equals(CloudFunction, other.CloudFunction)) return false;
@@ -1128,6 +1237,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (Port != 0) hash ^= Port.GetHashCode();
       if (Instance.Length != 0) hash ^= Instance.GetHashCode();
       if (ForwardingRule.Length != 0) hash ^= ForwardingRule.GetHashCode();
+      if (HasForwardingRuleTarget) hash ^= ForwardingRuleTarget.GetHashCode();
+      if (HasLoadBalancerId) hash ^= LoadBalancerId.GetHashCode();
+      if (HasLoadBalancerType) hash ^= LoadBalancerType.GetHashCode();
       if (GkeMasterCluster.Length != 0) hash ^= GkeMasterCluster.GetHashCode();
       if (CloudSqlInstance.Length != 0) hash ^= CloudSqlInstance.GetHashCode();
       if (cloudFunction_ != null) hash ^= CloudFunction.GetHashCode();
@@ -1202,6 +1314,18 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(106);
         output.WriteString(ForwardingRule);
       }
+      if (HasForwardingRuleTarget) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) ForwardingRuleTarget);
+      }
+      if (HasLoadBalancerId) {
+        output.WriteRawTag(122);
+        output.WriteString(LoadBalancerId);
+      }
+      if (HasLoadBalancerType) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) LoadBalancerType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1260,6 +1384,18 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(106);
         output.WriteString(ForwardingRule);
       }
+      if (HasForwardingRuleTarget) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) ForwardingRuleTarget);
+      }
+      if (HasLoadBalancerId) {
+        output.WriteRawTag(122);
+        output.WriteString(LoadBalancerId);
+      }
+      if (HasLoadBalancerType) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) LoadBalancerType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1281,6 +1417,15 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
       if (ForwardingRule.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ForwardingRule);
+      }
+      if (HasForwardingRuleTarget) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ForwardingRuleTarget);
+      }
+      if (HasLoadBalancerId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LoadBalancerId);
+      }
+      if (HasLoadBalancerType) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) LoadBalancerType);
       }
       if (GkeMasterCluster.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GkeMasterCluster);
@@ -1329,6 +1474,15 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
       if (other.ForwardingRule.Length != 0) {
         ForwardingRule = other.ForwardingRule;
+      }
+      if (other.HasForwardingRuleTarget) {
+        ForwardingRuleTarget = other.ForwardingRuleTarget;
+      }
+      if (other.HasLoadBalancerId) {
+        LoadBalancerId = other.LoadBalancerId;
+      }
+      if (other.HasLoadBalancerType) {
+        LoadBalancerType = other.LoadBalancerType;
       }
       if (other.GkeMasterCluster.Length != 0) {
         GkeMasterCluster = other.GkeMasterCluster;
@@ -1435,6 +1589,18 @@ namespace Google.Cloud.NetworkManagement.V1 {
             ForwardingRule = input.ReadString();
             break;
           }
+          case 112: {
+            ForwardingRuleTarget = (global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.ForwardingRuleTarget) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            LoadBalancerId = input.ReadString();
+            break;
+          }
+          case 128: {
+            LoadBalancerType = (global::Google.Cloud.NetworkManagement.V1.LoadBalancerType) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -1507,6 +1673,18 @@ namespace Google.Cloud.NetworkManagement.V1 {
             ForwardingRule = input.ReadString();
             break;
           }
+          case 112: {
+            ForwardingRuleTarget = (global::Google.Cloud.NetworkManagement.V1.Endpoint.Types.ForwardingRuleTarget) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            LoadBalancerId = input.ReadString();
+            break;
+          }
+          case 128: {
+            LoadBalancerType = (global::Google.Cloud.NetworkManagement.V1.LoadBalancerType) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -1538,6 +1716,33 @@ namespace Google.Cloud.NetworkManagement.V1 {
         /// provider.
         /// </summary>
         [pbr::OriginalName("NON_GCP_NETWORK")] NonGcpNetwork = 2,
+      }
+
+      /// <summary>
+      /// Type of the target of a forwarding rule.
+      /// </summary>
+      public enum ForwardingRuleTarget {
+        /// <summary>
+        /// Forwarding rule target is unknown.
+        /// </summary>
+        [pbr::OriginalName("FORWARDING_RULE_TARGET_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Compute Engine instance for protocol forwarding.
+        /// </summary>
+        [pbr::OriginalName("INSTANCE")] Instance = 1,
+        /// <summary>
+        /// Load Balancer. The specific type can be found from [load_balancer_type]
+        /// [google.cloud.networkmanagement.v1.Endpoint.load_balancer_type].
+        /// </summary>
+        [pbr::OriginalName("LOAD_BALANCER")] LoadBalancer = 2,
+        /// <summary>
+        /// Classic Cloud VPN Gateway.
+        /// </summary>
+        [pbr::OriginalName("VPN_GATEWAY")] VpnGateway = 3,
+        /// <summary>
+        /// Forwarding Rule is a Private Service Connect endpoint.
+        /// </summary>
+        [pbr::OriginalName("PSC")] Psc = 4,
       }
 
       /// <summary>
