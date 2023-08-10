@@ -9182,6 +9182,206 @@
       ]
     },
     {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateConversionEvent_sync",
+      "title": "UpdateConversionEventRequestObject",
+      "description": "Snippet for UpdateConversionEvent",
+      "file": "AnalyticsAdminServiceClient.UpdateConversionEventRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversionEvent",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateConversionEvent",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.ConversionEvent",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversionEvent",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateConversionEvent",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateConversionEvent_async",
+      "title": "UpdateConversionEventRequestObjectAsync",
+      "description": "Snippet for UpdateConversionEventAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateConversionEventRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversionEventAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateConversionEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ConversionEvent>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversionEvent",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateConversionEvent",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateConversionEvent_sync_flattened",
+      "title": "UpdateConversionEvent",
+      "description": "Snippet for UpdateConversionEvent",
+      "file": "AnalyticsAdminServiceClient.UpdateConversionEventSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversionEvent",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateConversionEvent",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ConversionEvent",
+            "name": "conversionEvent"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Admin.V1Alpha.ConversionEvent",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversionEvent",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateConversionEvent",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_UpdateConversionEvent_async_flattened",
+      "title": "UpdateConversionEventAsync",
+      "description": "Snippet for UpdateConversionEventAsync",
+      "file": "AnalyticsAdminServiceClient.UpdateConversionEventAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversionEventAsync",
+        "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient.UpdateConversionEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Admin.V1Alpha.ConversionEvent",
+            "name": "conversionEvent"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Admin.V1Alpha.ConversionEvent>",
+        "client": {
+          "shortName": "AnalyticsAdminServiceClient",
+          "fullName": "Google.Analytics.Admin.V1Alpha.AnalyticsAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversionEvent",
+          "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService.UpdateConversionEvent",
+          "service": {
+            "shortName": "AnalyticsAdminService",
+            "fullName": "google.analytics.admin.v1alpha.AnalyticsAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "analyticsadmin_v1alpha_generated_AnalyticsAdminService_GetConversionEvent_sync",
       "title": "GetConversionEventRequestObject",
       "description": "Snippet for GetConversionEvent",

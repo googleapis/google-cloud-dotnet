@@ -658,6 +658,12 @@
                 "UpdateChannelGroupAsync"
               ]
             },
+            "UpdateConversionEvent": {
+              "methods": [
+                "UpdateConversionEvent",
+                "UpdateConversionEventAsync"
+              ]
+            },
             "UpdateCustomDimension": {
               "methods": [
                 "UpdateCustomDimension",
