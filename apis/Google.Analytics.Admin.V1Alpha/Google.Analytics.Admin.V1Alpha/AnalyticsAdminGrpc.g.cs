@@ -194,6 +194,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> __Marshaller_google_analytics_admin_v1alpha_ConversionEvent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateConversionEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest> __Marshaller_google_analytics_admin_v1alpha_GetConversionEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteConversionEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest.Parser));
@@ -756,6 +758,14 @@ namespace Google.Analytics.Admin.V1Alpha {
         __ServiceName,
         "CreateConversionEvent",
         __Marshaller_google_analytics_admin_v1alpha_CreateConversionEventRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ConversionEvent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent> __Method_UpdateConversionEvent = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateConversionEvent",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateConversionEventRequest,
         __Marshaller_google_analytics_admin_v1alpha_ConversionEvent);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -1955,6 +1965,18 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> CreateConversionEvent(global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> UpdateConversionEvent(global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -5159,6 +5181,54 @@ namespace Google.Analytics.Admin.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> CreateConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateConversionEvent, null, options, request);
+      }
+      /// <summary>
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ConversionEvent UpdateConversionEvent(global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConversionEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ConversionEvent UpdateConversionEvent(global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateConversionEvent, null, options, request);
+      }
+      /// <summary>
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> UpdateConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConversionEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> UpdateConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateConversionEvent, null, options, request);
       }
       /// <summary>
       /// Retrieve a single conversion event.
@@ -9342,6 +9412,7 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_GetGoogleSignalsSettings, serviceImpl.GetGoogleSignalsSettings)
           .AddMethod(__Method_UpdateGoogleSignalsSettings, serviceImpl.UpdateGoogleSignalsSettings)
           .AddMethod(__Method_CreateConversionEvent, serviceImpl.CreateConversionEvent)
+          .AddMethod(__Method_UpdateConversionEvent, serviceImpl.UpdateConversionEvent)
           .AddMethod(__Method_GetConversionEvent, serviceImpl.GetConversionEvent)
           .AddMethod(__Method_DeleteConversionEvent, serviceImpl.DeleteConversionEvent)
           .AddMethod(__Method_ListConversionEvents, serviceImpl.ListConversionEvents)
@@ -9473,6 +9544,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_GetGoogleSignalsSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings>(serviceImpl.GetGoogleSignalsSettings));
       serviceBinder.AddMethod(__Method_UpdateGoogleSignalsSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings>(serviceImpl.UpdateGoogleSignalsSettings));
       serviceBinder.AddMethod(__Method_CreateConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(serviceImpl.CreateConversionEvent));
+      serviceBinder.AddMethod(__Method_UpdateConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(serviceImpl.UpdateConversionEvent));
       serviceBinder.AddMethod(__Method_GetConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(serviceImpl.GetConversionEvent));
       serviceBinder.AddMethod(__Method_DeleteConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteConversionEvent));
       serviceBinder.AddMethod(__Method_ListConversionEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest, global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse>(serviceImpl.ListConversionEvents));
