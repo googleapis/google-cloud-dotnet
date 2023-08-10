@@ -95,155 +95,164 @@ namespace Google.Cloud.NetworkManagement.V1 {
             "SUZJRUQQABIlCiFISUVSQVJDSElDQUxfRklSRVdBTExfUE9MSUNZX1JVTEUQ",
             "ARIVChFWUENfRklSRVdBTExfUlVMRRACEh0KGUlNUExJRURfVlBDX0ZJUkVX",
             "QUxMX1JVTEUQAxIvCitTRVJWRVJMRVNTX1ZQQ19BQ0NFU1NfTUFOQUdFRF9G",
-            "SVJFV0FMTF9SVUxFEAQi9wUKCVJvdXRlSW5mbxJKCgpyb3V0ZV90eXBlGAgg",
+            "SVJFV0FMTF9SVUxFEAQi5ggKCVJvdXRlSW5mbxJKCgpyb3V0ZV90eXBlGAgg",
             "ASgOMjYuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLlJvdXRl",
             "SW5mby5Sb3V0ZVR5cGUSTwoNbmV4dF9ob3BfdHlwZRgJIAEoDjI4Lmdvb2ds",
             "ZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5Sb3V0ZUluZm8uTmV4dEhv",
-            "cFR5cGUSFAoMZGlzcGxheV9uYW1lGAEgASgJEgsKA3VyaRgCIAEoCRIVCg1k",
-            "ZXN0X2lwX3JhbmdlGAMgASgJEhAKCG5leHRfaG9wGAQgASgJEhMKC25ldHdv",
-            "cmtfdXJpGAUgASgJEhAKCHByaW9yaXR5GAYgASgFEhUKDWluc3RhbmNlX3Rh",
-            "Z3MYByADKAkiiQEKCVJvdXRlVHlwZRIaChZST1VURV9UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASCgoGU1VCTkVUEAESCgoGU1RBVElDEAISCwoHRFlOQU1JQxADEhIK",
-            "DlBFRVJJTkdfU1VCTkVUEAQSEgoOUEVFUklOR19TVEFUSUMQBRITCg9QRUVS",
-            "SU5HX0RZTkFNSUMQBiK2AgoLTmV4dEhvcFR5cGUSHQoZTkVYVF9IT1BfVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEg8KC05FWFRfSE9QX0lQEAESFQoRTkVYVF9IT1Bf",
-            "SU5TVEFOQ0UQAhIUChBORVhUX0hPUF9ORVRXT1JLEAMSFAoQTkVYVF9IT1Bf",
-            "UEVFUklORxAEEhkKFU5FWFRfSE9QX0lOVEVSQ09OTkVDVBAFEhcKE05FWFRf",
-            "SE9QX1ZQTl9UVU5ORUwQBhIYChRORVhUX0hPUF9WUE5fR0FURVdBWRAHEh0K",
-            "GU5FWFRfSE9QX0lOVEVSTkVUX0dBVEVXQVkQCBIWChJORVhUX0hPUF9CTEFD",
-            "S0hPTEUQCRIQCgxORVhUX0hPUF9JTEIQChIdChlORVhUX0hPUF9ST1VURVJf",
-            "QVBQTElBTkNFEAsinwEKEkZvcndhcmRpbmdSdWxlSW5mbxIUCgxkaXNwbGF5",
-            "X25hbWUYASABKAkSCwoDdXJpGAIgASgJEhgKEG1hdGNoZWRfcHJvdG9jb2wY",
-            "AyABKAkSGgoSbWF0Y2hlZF9wb3J0X3JhbmdlGAYgASgJEgsKA3ZpcBgEIAEo",
-            "CRIOCgZ0YXJnZXQYBSABKAkSEwoLbmV0d29ya191cmkYByABKAkivgQKEExv",
-            "YWRCYWxhbmNlckluZm8SYAoSbG9hZF9iYWxhbmNlcl90eXBlGAEgASgOMkQu",
-            "Z29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkxvYWRCYWxhbmNl",
-            "ckluZm8uTG9hZEJhbGFuY2VyVHlwZRIYChBoZWFsdGhfY2hlY2tfdXJpGAIg",
-            "ASgJEkgKCGJhY2tlbmRzGAMgAygLMjYuZ29vZ2xlLmNsb3VkLm5ldHdvcmtt",
-            "YW5hZ2VtZW50LnYxLkxvYWRCYWxhbmNlckJhY2tlbmQSVQoMYmFja2VuZF90",
-            "eXBlGAQgASgOMj8uZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYx",
-            "LkxvYWRCYWxhbmNlckluZm8uQmFja2VuZFR5cGUSEwoLYmFja2VuZF91cmkY",
-            "BSABKAkijwEKEExvYWRCYWxhbmNlclR5cGUSIgoeTE9BRF9CQUxBTkNFUl9U",
-            "WVBFX1VOU1BFQ0lGSUVEEAASFAoQSU5URVJOQUxfVENQX1VEUBABEhMKD05F",
-            "VFdPUktfVENQX1VEUBACEg4KCkhUVFBfUFJPWFkQAxINCglUQ1BfUFJPWFkQ",
-            "BBINCglTU0xfUFJPWFkQBSJmCgtCYWNrZW5kVHlwZRIcChhCQUNLRU5EX1RZ",
-            "UEVfVU5TUEVDSUZJRUQQABITCg9CQUNLRU5EX1NFUlZJQ0UQARIPCgtUQVJH",
-            "RVRfUE9PTBACEhMKD1RBUkdFVF9JTlNUQU5DRRADIvYCChNMb2FkQmFsYW5j",
-            "ZXJCYWNrZW5kEhQKDGRpc3BsYXlfbmFtZRgBIAEoCRILCgN1cmkYAiABKAkS",
-            "dAobaGVhbHRoX2NoZWNrX2ZpcmV3YWxsX3N0YXRlGAMgASgOMk8uZ29vZ2xl",
-            "LmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkxvYWRCYWxhbmNlckJhY2tl",
-            "bmQuSGVhbHRoQ2hlY2tGaXJld2FsbFN0YXRlEiwKJGhlYWx0aF9jaGVja19h",
-            "bGxvd2luZ19maXJld2FsbF9ydWxlcxgEIAMoCRIsCiRoZWFsdGhfY2hlY2tf",
-            "YmxvY2tpbmdfZmlyZXdhbGxfcnVsZXMYBSADKAkiagoYSGVhbHRoQ2hlY2tG",
-            "aXJld2FsbFN0YXRlEisKJ0hFQUxUSF9DSEVDS19GSVJFV0FMTF9TVEFURV9V",
-            "TlNQRUNJRklFRBAAEg4KCkNPTkZJR1VSRUQQARIRCg1NSVNDT05GSUdVUkVE",
-            "EAIihAEKDlZwbkdhdGV3YXlJbmZvEhQKDGRpc3BsYXlfbmFtZRgBIAEoCRIL",
-            "CgN1cmkYAiABKAkSEwoLbmV0d29ya191cmkYAyABKAkSEgoKaXBfYWRkcmVz",
-            "cxgEIAEoCRIWCg52cG5fdHVubmVsX3VyaRgFIAEoCRIOCgZyZWdpb24YBiAB",
-            "KAki7gIKDVZwblR1bm5lbEluZm8SFAoMZGlzcGxheV9uYW1lGAEgASgJEgsK",
-            "A3VyaRgCIAEoCRIWCg5zb3VyY2VfZ2F0ZXdheRgDIAEoCRIWCg5yZW1vdGVf",
-            "Z2F0ZXdheRgEIAEoCRIZChFyZW1vdGVfZ2F0ZXdheV9pcBgFIAEoCRIZChFz",
-            "b3VyY2VfZ2F0ZXdheV9pcBgGIAEoCRITCgtuZXR3b3JrX3VyaRgHIAEoCRIO",
-            "CgZyZWdpb24YCCABKAkSUgoMcm91dGluZ190eXBlGAkgASgOMjwuZ29vZ2xl",
-            "LmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLlZwblR1bm5lbEluZm8uUm91",
-            "dGluZ1R5cGUiWwoLUm91dGluZ1R5cGUSHAoYUk9VVElOR19UWVBFX1VOU1BF",
-            "Q0lGSUVEEAASDwoLUk9VVEVfQkFTRUQQARIQCgxQT0xJQ1lfQkFTRUQQAhIL",
-            "CgdEWU5BTUlDEAMi0QEKDEVuZHBvaW50SW5mbxIRCglzb3VyY2VfaXAYASAB",
-            "KAkSFgoOZGVzdGluYXRpb25faXAYAiABKAkSEAoIcHJvdG9jb2wYAyABKAkS",
-            "EwoLc291cmNlX3BvcnQYBCABKAUSGAoQZGVzdGluYXRpb25fcG9ydBgFIAEo",
-            "BRIaChJzb3VyY2VfbmV0d29ya191cmkYBiABKAkSHwoXZGVzdGluYXRpb25f",
-            "bmV0d29ya191cmkYByABKAkSGAoQc291cmNlX2FnZW50X3VyaRgIIAEoCSK0",
-            "AgoLRGVsaXZlckluZm8SRQoGdGFyZ2V0GAEgASgOMjUuZ29vZ2xlLmNsb3Vk",
-            "Lm5ldHdvcmttYW5hZ2VtZW50LnYxLkRlbGl2ZXJJbmZvLlRhcmdldBIUCgxy",
-            "ZXNvdXJjZV91cmkYAiABKAkixwEKBlRhcmdldBIWChJUQVJHRVRfVU5TUEVD",
-            "SUZJRUQQABIMCghJTlNUQU5DRRABEgwKCElOVEVSTkVUEAISDgoKR09PR0xF",
-            "X0FQSRADEg4KCkdLRV9NQVNURVIQBBIWChJDTE9VRF9TUUxfSU5TVEFOQ0UQ",
-            "BRIZChVQU0NfUFVCTElTSEVEX1NFUlZJQ0UQBhISCg5QU0NfR09PR0xFX0FQ",
-            "SRAHEg4KClBTQ19WUENfU0MQCBISCg5TRVJWRVJMRVNTX05FRxAJIqICCgtG",
-            "b3J3YXJkSW5mbxJFCgZ0YXJnZXQYASABKA4yNS5nb29nbGUuY2xvdWQubmV0",
-            "d29ya21hbmFnZW1lbnQudjEuRm9yd2FyZEluZm8uVGFyZ2V0EhQKDHJlc291",
-            "cmNlX3VyaRgCIAEoCSK1AQoGVGFyZ2V0EhYKElRBUkdFVF9VTlNQRUNJRklF",
-            "RBAAEg8KC1BFRVJJTkdfVlBDEAESDwoLVlBOX0dBVEVXQVkQAhIQCgxJTlRF",
-            "UkNPTk5FQ1QQAxIOCgpHS0VfTUFTVEVSEAQSIgoeSU1QT1JURURfQ1VTVE9N",
-            "X1JPVVRFX05FWFRfSE9QEAUSFgoSQ0xPVURfU1FMX0lOU1RBTkNFEAYSEwoP",
-            "QU5PVEhFUl9QUk9KRUNUEAci+wUKCUFib3J0SW5mbxJBCgVjYXVzZRgBIAEo",
-            "DjIyLmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5BYm9ydElu",
-            "Zm8uQ2F1c2USFAoMcmVzb3VyY2VfdXJpGAIgASgJEiMKG3Byb2plY3RzX21p",
-            "c3NpbmdfcGVybWlzc2lvbhgDIAMoCSLvBAoFQ2F1c2USFQoRQ0FVU0VfVU5T",
-            "UEVDSUZJRUQQABITCg9VTktOT1dOX05FVFdPUksQARIOCgpVTktOT1dOX0lQ",
-            "EAISEwoPVU5LTk9XTl9QUk9KRUNUEAMSFQoRUEVSTUlTU0lPTl9ERU5JRUQQ",
-            "BBIWChJOT19TT1VSQ0VfTE9DQVRJT04QBRIUChBJTlZBTElEX0FSR1VNRU5U",
-            "EAYSEgoOTk9fRVhURVJOQUxfSVAQBxIaChZVTklOVEVOREVEX0RFU1RJTkFU",
-            "SU9OEAgSEgoOVFJBQ0VfVE9PX0xPTkcQCRISCg5JTlRFUk5BTF9FUlJPUhAK",
-            "Eh0KGVNPVVJDRV9FTkRQT0lOVF9OT1RfRk9VTkQQCxIdChlNSVNNQVRDSEVE",
-            "X1NPVVJDRV9ORVRXT1JLEAwSIgoeREVTVElOQVRJT05fRU5EUE9JTlRfTk9U",
-            "X0ZPVU5EEA0SIgoeTUlTTUFUQ0hFRF9ERVNUSU5BVElPTl9ORVRXT1JLEA4S",
-            "DwoLVU5TVVBQT1JURUQQDxIZChVNSVNNQVRDSEVEX0lQX1ZFUlNJT04QEBIm",
-            "CiJHS0VfS09OTkVDVElWSVRZX1BST1hZX1VOU1VQUE9SVEVEEBESHQoZUkVT",
-            "T1VSQ0VfQ09ORklHX05PVF9GT1VORBASEjEKLUdPT0dMRV9NQU5BR0VEX1NF",
-            "UlZJQ0VfQU1CSUdVT1VTX1BTQ19FTkRQT0lOVBATEiQKIFNPVVJDRV9QU0Nf",
-            "Q0xPVURfU1FMX1VOU1VQUE9SVEVEEBQSJgoiU09VUkNFX0ZPUldBUkRJTkdf",
-            "UlVMRV9VTlNVUFBPUlRFRBAVIsULCghEcm9wSW5mbxJACgVjYXVzZRgBIAEo",
-            "DjIxLmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5Ecm9wSW5m",
-            "by5DYXVzZRIUCgxyZXNvdXJjZV91cmkYAiABKAki4AoKBUNhdXNlEhUKEUNB",
-            "VVNFX1VOU1BFQ0lGSUVEEAASHAoYVU5LTk9XTl9FWFRFUk5BTF9BRERSRVNT",
-            "EAESGQoVRk9SRUlHTl9JUF9ESVNBTExPV0VEEAISEQoNRklSRVdBTExfUlVM",
-            "RRADEgwKCE5PX1JPVVRFEAQSEwoPUk9VVEVfQkxBQ0tIT0xFEAUSFwoTUk9V",
-            "VEVfV1JPTkdfTkVUV09SSxAGEh8KG1BSSVZBVEVfVFJBRkZJQ19UT19JTlRF",
-            "Uk5FVBAHEiQKIFBSSVZBVEVfR09PR0xFX0FDQ0VTU19ESVNBTExPV0VEEAgS",
-            "FwoTTk9fRVhURVJOQUxfQUREUkVTUxAJEhwKGFVOS05PV05fSU5URVJOQUxf",
-            "QUREUkVTUxAKEhwKGEZPUldBUkRJTkdfUlVMRV9NSVNNQVRDSBALEiMKH0ZP",
-            "UldBUkRJTkdfUlVMRV9SRUdJT05fTUlTTUFUQ0gQGRIgChxGT1JXQVJESU5H",
-            "X1JVTEVfTk9fSU5TVEFOQ0VTEAwSOAo0RklSRVdBTExfQkxPQ0tJTkdfTE9B",
-            "RF9CQUxBTkNFUl9CQUNLRU5EX0hFQUxUSF9DSEVDSxANEhgKFElOU1RBTkNF",
-            "X05PVF9SVU5OSU5HEA4SGwoXR0tFX0NMVVNURVJfTk9UX1JVTk5JTkcQGxIi",
-            "Ch5DTE9VRF9TUUxfSU5TVEFOQ0VfTk9UX1JVTk5JTkcQHBIYChRUUkFGRklD",
-            "X1RZUEVfQkxPQ0tFRBAPEiIKHkdLRV9NQVNURVJfVU5BVVRIT1JJWkVEX0FD",
-            "Q0VTUxAQEioKJkNMT1VEX1NRTF9JTlNUQU5DRV9VTkFVVEhPUklaRURfQUND",
-            "RVNTEBESHgoaRFJPUFBFRF9JTlNJREVfR0tFX1NFUlZJQ0UQEhIkCiBEUk9Q",
-            "UEVEX0lOU0lERV9DTE9VRF9TUUxfU0VSVklDRRATEiUKIUdPT0dMRV9NQU5B",
-            "R0VEX1NFUlZJQ0VfTk9fUEVFUklORxAUEioKJkdPT0dMRV9NQU5BR0VEX1NF",
-            "UlZJQ0VfTk9fUFNDX0VORFBPSU5UECYSHAoYR0tFX1BTQ19FTkRQT0lOVF9N",
-            "SVNTSU5HECQSJAogQ0xPVURfU1FMX0lOU1RBTkNFX05PX0lQX0FERFJFU1MQ",
-            "FRIlCiFHS0VfQ09OVFJPTF9QTEFORV9SRUdJT05fTUlTTUFUQ0gQHhIzCi9Q",
-            "VUJMSUNfR0tFX0NPTlRST0xfUExBTkVfVE9fUFJJVkFURV9ERVNUSU5BVElP",
-            "ThAfEh4KGkdLRV9DT05UUk9MX1BMQU5FX05PX1JPVVRFECASOgo2Q0xPVURf",
-            "U1FMX0lOU1RBTkNFX05PVF9DT05GSUdVUkVEX0ZPUl9FWFRFUk5BTF9UUkFG",
-            "RklDECESNAowUFVCTElDX0NMT1VEX1NRTF9JTlNUQU5DRV9UT19QUklWQVRF",
-            "X0RFU1RJTkFUSU9OECISHwobQ0xPVURfU1FMX0lOU1RBTkNFX05PX1JPVVRF",
-            "ECMSHQoZQ0xPVURfRlVOQ1RJT05fTk9UX0FDVElWRRAWEhkKFVZQQ19DT05O",
-            "RUNUT1JfTk9UX1NFVBAXEh0KGVZQQ19DT05ORUNUT1JfTk9UX1JVTk5JTkcQ",
-            "GBIfChtQU0NfQ09OTkVDVElPTl9OT1RfQUNDRVBURUQQGhIgChxDTE9VRF9S",
-            "VU5fUkVWSVNJT05fTk9UX1JFQURZEB0SJwojRFJPUFBFRF9JTlNJREVfUFND",
-            "X1NFUlZJQ0VfUFJPRFVDRVIQJRIlCiFMT0FEX0JBTEFOQ0VSX0hBU19OT19Q",
-            "Uk9YWV9TVUJORVQQJyJrCg1HS0VNYXN0ZXJJbmZvEhMKC2NsdXN0ZXJfdXJp",
-            "GAIgASgJEhsKE2NsdXN0ZXJfbmV0d29ya191cmkYBCABKAkSEwoLaW50ZXJu",
-            "YWxfaXAYBSABKAkSEwoLZXh0ZXJuYWxfaXAYBiABKAkiiAEKFENsb3VkU1FM",
-            "SW5zdGFuY2VJbmZvEhQKDGRpc3BsYXlfbmFtZRgBIAEoCRILCgN1cmkYAiAB",
-            "KAkSEwoLbmV0d29ya191cmkYBCABKAkSEwoLaW50ZXJuYWxfaXAYBSABKAkS",
-            "EwoLZXh0ZXJuYWxfaXAYBiABKAkSDgoGcmVnaW9uGAcgASgJIlwKEUNsb3Vk",
-            "RnVuY3Rpb25JbmZvEhQKDGRpc3BsYXlfbmFtZRgBIAEoCRILCgN1cmkYAiAB",
-            "KAkSEAoIbG9jYXRpb24YAyABKAkSEgoKdmVyc2lvbl9pZBgEIAEoAyJgChRD",
-            "bG91ZFJ1blJldmlzaW9uSW5mbxIUCgxkaXNwbGF5X25hbWUYASABKAkSCwoD",
-            "dXJpGAIgASgJEhAKCGxvY2F0aW9uGAQgASgJEhMKC3NlcnZpY2VfdXJpGAUg",
-            "ASgJIl8KFEFwcEVuZ2luZVZlcnNpb25JbmZvEhQKDGRpc3BsYXlfbmFtZRgB",
-            "IAEoCRILCgN1cmkYAiABKAkSDwoHcnVudGltZRgDIAEoCRITCgtlbnZpcm9u",
-            "bWVudBgEIAEoCSJHChBWcGNDb25uZWN0b3JJbmZvEhQKDGRpc3BsYXlfbmFt",
-            "ZRgBIAEoCRILCgN1cmkYAiABKAkSEAoIbG9jYXRpb24YAyABKAkq9gIKEExv",
-            "YWRCYWxhbmNlclR5cGUSIgoeTE9BRF9CQUxBTkNFUl9UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASIAocSFRUUFNfQURWQU5DRURfTE9BRF9CQUxBTkNFUhABEhcKE0hU",
-            "VFBTX0xPQURfQkFMQU5DRVIQAhIgChxSRUdJT05BTF9IVFRQU19MT0FEX0JB",
-            "TEFOQ0VSEAMSIAocSU5URVJOQUxfSFRUUFNfTE9BRF9CQUxBTkNFUhAEEhsK",
-            "F1NTTF9QUk9YWV9MT0FEX0JBTEFOQ0VSEAUSGwoXVENQX1BST1hZX0xPQURf",
-            "QkFMQU5DRVIQBhIkCiBJTlRFUk5BTF9UQ1BfUFJPWFlfTE9BRF9CQUxBTkNF",
-            "UhAHEhkKFU5FVFdPUktfTE9BRF9CQUxBTkNFUhAIEiAKHExFR0FDWV9ORVRX",
-            "T1JLX0xPQURfQkFMQU5DRVIQCRIiCh5UQ1BfVURQX0lOVEVSTkFMX0xPQURf",
-            "QkFMQU5DRVIQCkL5AQolY29tLmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdl",
-            "bWVudC52MUIKVHJhY2VQcm90b1ABWlNjbG91ZC5nb29nbGUuY29tL2dvL25l",
-            "dHdvcmttYW5hZ2VtZW50L2FwaXYxL25ldHdvcmttYW5hZ2VtZW50cGI7bmV0",
-            "d29ya21hbmFnZW1lbnRwYqoCIUdvb2dsZS5DbG91ZC5OZXR3b3JrTWFuYWdl",
-            "bWVudC5WMcoCIUdvb2dsZVxDbG91ZFxOZXR3b3JrTWFuYWdlbWVudFxWMeoC",
-            "JEdvb2dsZTo6Q2xvdWQ6Ok5ldHdvcmtNYW5hZ2VtZW50OjpWMWIGcHJvdG8z"));
+            "cFR5cGUSTAoLcm91dGVfc2NvcGUYDiABKA4yNy5nb29nbGUuY2xvdWQubmV0",
+            "d29ya21hbmFnZW1lbnQudjEuUm91dGVJbmZvLlJvdXRlU2NvcGUSFAoMZGlz",
+            "cGxheV9uYW1lGAEgASgJEgsKA3VyaRgCIAEoCRIVCg1kZXN0X2lwX3Jhbmdl",
+            "GAMgASgJEhAKCG5leHRfaG9wGAQgASgJEhMKC25ldHdvcmtfdXJpGAUgASgJ",
+            "EhAKCHByaW9yaXR5GAYgASgFEhUKDWluc3RhbmNlX3RhZ3MYByADKAkSFAoM",
+            "c3JjX2lwX3JhbmdlGAogASgJEhgKEGRlc3RfcG9ydF9yYW5nZXMYCyADKAkS",
+            "FwoPc3JjX3BvcnRfcmFuZ2VzGAwgAygJEhEKCXByb3RvY29scxgNIAMoCRIY",
+            "CgtuY2NfaHViX3VyaRgPIAEoCUgAiAEBEhoKDW5jY19zcG9rZV91cmkYECAB",
+            "KAlIAYgBASKbAQoJUm91dGVUeXBlEhoKFlJPVVRFX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIKCgZTVUJORVQQARIKCgZTVEFUSUMQAhILCgdEWU5BTUlDEAMSEgoO",
+            "UEVFUklOR19TVUJORVQQBBISCg5QRUVSSU5HX1NUQVRJQxAFEhMKD1BFRVJJ",
+            "TkdfRFlOQU1JQxAGEhAKDFBPTElDWV9CQVNFRBAHIswCCgtOZXh0SG9wVHlw",
+            "ZRIdChlORVhUX0hPUF9UWVBFX1VOU1BFQ0lGSUVEEAASDwoLTkVYVF9IT1Bf",
+            "SVAQARIVChFORVhUX0hPUF9JTlNUQU5DRRACEhQKEE5FWFRfSE9QX05FVFdP",
+            "UksQAxIUChBORVhUX0hPUF9QRUVSSU5HEAQSGQoVTkVYVF9IT1BfSU5URVJD",
+            "T05ORUNUEAUSFwoTTkVYVF9IT1BfVlBOX1RVTk5FTBAGEhgKFE5FWFRfSE9Q",
+            "X1ZQTl9HQVRFV0FZEAcSHQoZTkVYVF9IT1BfSU5URVJORVRfR0FURVdBWRAI",
+            "EhYKEk5FWFRfSE9QX0JMQUNLSE9MRRAJEhAKDE5FWFRfSE9QX0lMQhAKEh0K",
+            "GU5FWFRfSE9QX1JPVVRFUl9BUFBMSUFOQ0UQCxIUChBORVhUX0hPUF9OQ0Nf",
+            "SFVCEAwiQwoKUm91dGVTY29wZRIbChdST1VURV9TQ09QRV9VTlNQRUNJRklF",
+            "RBAAEgsKB05FVFdPUksQARILCgdOQ0NfSFVCEAJCDgoMX25jY19odWJfdXJp",
+            "QhAKDl9uY2Nfc3Bva2VfdXJpIp8BChJGb3J3YXJkaW5nUnVsZUluZm8SFAoM",
+            "ZGlzcGxheV9uYW1lGAEgASgJEgsKA3VyaRgCIAEoCRIYChBtYXRjaGVkX3By",
+            "b3RvY29sGAMgASgJEhoKEm1hdGNoZWRfcG9ydF9yYW5nZRgGIAEoCRILCgN2",
+            "aXAYBCABKAkSDgoGdGFyZ2V0GAUgASgJEhMKC25ldHdvcmtfdXJpGAcgASgJ",
+            "Ir4EChBMb2FkQmFsYW5jZXJJbmZvEmAKEmxvYWRfYmFsYW5jZXJfdHlwZRgB",
+            "IAEoDjJELmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5Mb2Fk",
+            "QmFsYW5jZXJJbmZvLkxvYWRCYWxhbmNlclR5cGUSGAoQaGVhbHRoX2NoZWNr",
+            "X3VyaRgCIAEoCRJICghiYWNrZW5kcxgDIAMoCzI2Lmdvb2dsZS5jbG91ZC5u",
+            "ZXR3b3JrbWFuYWdlbWVudC52MS5Mb2FkQmFsYW5jZXJCYWNrZW5kElUKDGJh",
+            "Y2tlbmRfdHlwZRgEIAEoDjI/Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdl",
+            "bWVudC52MS5Mb2FkQmFsYW5jZXJJbmZvLkJhY2tlbmRUeXBlEhMKC2JhY2tl",
+            "bmRfdXJpGAUgASgJIo8BChBMb2FkQmFsYW5jZXJUeXBlEiIKHkxPQURfQkFM",
+            "QU5DRVJfVFlQRV9VTlNQRUNJRklFRBAAEhQKEElOVEVSTkFMX1RDUF9VRFAQ",
+            "ARITCg9ORVRXT1JLX1RDUF9VRFAQAhIOCgpIVFRQX1BST1hZEAMSDQoJVENQ",
+            "X1BST1hZEAQSDQoJU1NMX1BST1hZEAUiZgoLQmFja2VuZFR5cGUSHAoYQkFD",
+            "S0VORF9UWVBFX1VOU1BFQ0lGSUVEEAASEwoPQkFDS0VORF9TRVJWSUNFEAES",
+            "DwoLVEFSR0VUX1BPT0wQAhITCg9UQVJHRVRfSU5TVEFOQ0UQAyL2AgoTTG9h",
+            "ZEJhbGFuY2VyQmFja2VuZBIUCgxkaXNwbGF5X25hbWUYASABKAkSCwoDdXJp",
+            "GAIgASgJEnQKG2hlYWx0aF9jaGVja19maXJld2FsbF9zdGF0ZRgDIAEoDjJP",
+            "Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5Mb2FkQmFsYW5j",
+            "ZXJCYWNrZW5kLkhlYWx0aENoZWNrRmlyZXdhbGxTdGF0ZRIsCiRoZWFsdGhf",
+            "Y2hlY2tfYWxsb3dpbmdfZmlyZXdhbGxfcnVsZXMYBCADKAkSLAokaGVhbHRo",
+            "X2NoZWNrX2Jsb2NraW5nX2ZpcmV3YWxsX3J1bGVzGAUgAygJImoKGEhlYWx0",
+            "aENoZWNrRmlyZXdhbGxTdGF0ZRIrCidIRUFMVEhfQ0hFQ0tfRklSRVdBTExf",
+            "U1RBVEVfVU5TUEVDSUZJRUQQABIOCgpDT05GSUdVUkVEEAESEQoNTUlTQ09O",
+            "RklHVVJFRBACIoQBCg5WcG5HYXRld2F5SW5mbxIUCgxkaXNwbGF5X25hbWUY",
+            "ASABKAkSCwoDdXJpGAIgASgJEhMKC25ldHdvcmtfdXJpGAMgASgJEhIKCmlw",
+            "X2FkZHJlc3MYBCABKAkSFgoOdnBuX3R1bm5lbF91cmkYBSABKAkSDgoGcmVn",
+            "aW9uGAYgASgJIu4CCg1WcG5UdW5uZWxJbmZvEhQKDGRpc3BsYXlfbmFtZRgB",
+            "IAEoCRILCgN1cmkYAiABKAkSFgoOc291cmNlX2dhdGV3YXkYAyABKAkSFgoO",
+            "cmVtb3RlX2dhdGV3YXkYBCABKAkSGQoRcmVtb3RlX2dhdGV3YXlfaXAYBSAB",
+            "KAkSGQoRc291cmNlX2dhdGV3YXlfaXAYBiABKAkSEwoLbmV0d29ya191cmkY",
+            "ByABKAkSDgoGcmVnaW9uGAggASgJElIKDHJvdXRpbmdfdHlwZRgJIAEoDjI8",
+            "Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5WcG5UdW5uZWxJ",
+            "bmZvLlJvdXRpbmdUeXBlIlsKC1JvdXRpbmdUeXBlEhwKGFJPVVRJTkdfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEg8KC1JPVVRFX0JBU0VEEAESEAoMUE9MSUNZX0JB",
+            "U0VEEAISCwoHRFlOQU1JQxADItEBCgxFbmRwb2ludEluZm8SEQoJc291cmNl",
+            "X2lwGAEgASgJEhYKDmRlc3RpbmF0aW9uX2lwGAIgASgJEhAKCHByb3RvY29s",
+            "GAMgASgJEhMKC3NvdXJjZV9wb3J0GAQgASgFEhgKEGRlc3RpbmF0aW9uX3Bv",
+            "cnQYBSABKAUSGgoSc291cmNlX25ldHdvcmtfdXJpGAYgASgJEh8KF2Rlc3Rp",
+            "bmF0aW9uX25ldHdvcmtfdXJpGAcgASgJEhgKEHNvdXJjZV9hZ2VudF91cmkY",
+            "CCABKAkitAIKC0RlbGl2ZXJJbmZvEkUKBnRhcmdldBgBIAEoDjI1Lmdvb2ds",
+            "ZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5EZWxpdmVySW5mby5UYXJn",
+            "ZXQSFAoMcmVzb3VyY2VfdXJpGAIgASgJIscBCgZUYXJnZXQSFgoSVEFSR0VU",
+            "X1VOU1BFQ0lGSUVEEAASDAoISU5TVEFOQ0UQARIMCghJTlRFUk5FVBACEg4K",
+            "CkdPT0dMRV9BUEkQAxIOCgpHS0VfTUFTVEVSEAQSFgoSQ0xPVURfU1FMX0lO",
+            "U1RBTkNFEAUSGQoVUFNDX1BVQkxJU0hFRF9TRVJWSUNFEAYSEgoOUFNDX0dP",
+            "T0dMRV9BUEkQBxIOCgpQU0NfVlBDX1NDEAgSEgoOU0VSVkVSTEVTU19ORUcQ",
+            "CSKvAgoLRm9yd2FyZEluZm8SRQoGdGFyZ2V0GAEgASgOMjUuZ29vZ2xlLmNs",
+            "b3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkZvcndhcmRJbmZvLlRhcmdldBIU",
+            "CgxyZXNvdXJjZV91cmkYAiABKAkiwgEKBlRhcmdldBIWChJUQVJHRVRfVU5T",
+            "UEVDSUZJRUQQABIPCgtQRUVSSU5HX1ZQQxABEg8KC1ZQTl9HQVRFV0FZEAIS",
+            "EAoMSU5URVJDT05ORUNUEAMSDgoKR0tFX01BU1RFUhAEEiIKHklNUE9SVEVE",
+            "X0NVU1RPTV9ST1VURV9ORVhUX0hPUBAFEhYKEkNMT1VEX1NRTF9JTlNUQU5D",
+            "RRAGEhMKD0FOT1RIRVJfUFJPSkVDVBAHEgsKB05DQ19IVUIQCCL7BQoJQWJv",
+            "cnRJbmZvEkEKBWNhdXNlGAEgASgOMjIuZ29vZ2xlLmNsb3VkLm5ldHdvcmtt",
+            "YW5hZ2VtZW50LnYxLkFib3J0SW5mby5DYXVzZRIUCgxyZXNvdXJjZV91cmkY",
+            "AiABKAkSIwobcHJvamVjdHNfbWlzc2luZ19wZXJtaXNzaW9uGAMgAygJIu8E",
+            "CgVDYXVzZRIVChFDQVVTRV9VTlNQRUNJRklFRBAAEhMKD1VOS05PV05fTkVU",
+            "V09SSxABEg4KClVOS05PV05fSVAQAhITCg9VTktOT1dOX1BST0pFQ1QQAxIV",
+            "ChFQRVJNSVNTSU9OX0RFTklFRBAEEhYKEk5PX1NPVVJDRV9MT0NBVElPThAF",
+            "EhQKEElOVkFMSURfQVJHVU1FTlQQBhISCg5OT19FWFRFUk5BTF9JUBAHEhoK",
+            "FlVOSU5URU5ERURfREVTVElOQVRJT04QCBISCg5UUkFDRV9UT09fTE9ORxAJ",
+            "EhIKDklOVEVSTkFMX0VSUk9SEAoSHQoZU09VUkNFX0VORFBPSU5UX05PVF9G",
+            "T1VORBALEh0KGU1JU01BVENIRURfU09VUkNFX05FVFdPUksQDBIiCh5ERVNU",
+            "SU5BVElPTl9FTkRQT0lOVF9OT1RfRk9VTkQQDRIiCh5NSVNNQVRDSEVEX0RF",
+            "U1RJTkFUSU9OX05FVFdPUksQDhIPCgtVTlNVUFBPUlRFRBAPEhkKFU1JU01B",
+            "VENIRURfSVBfVkVSU0lPThAQEiYKIkdLRV9LT05ORUNUSVZJVFlfUFJPWFlf",
+            "VU5TVVBQT1JURUQQERIdChlSRVNPVVJDRV9DT05GSUdfTk9UX0ZPVU5EEBIS",
+            "MQotR09PR0xFX01BTkFHRURfU0VSVklDRV9BTUJJR1VPVVNfUFNDX0VORFBP",
+            "SU5UEBMSJAogU09VUkNFX1BTQ19DTE9VRF9TUUxfVU5TVVBQT1JURUQQFBIm",
+            "CiJTT1VSQ0VfRk9SV0FSRElOR19SVUxFX1VOU1VQUE9SVEVEEBUixQsKCERy",
+            "b3BJbmZvEkAKBWNhdXNlGAEgASgOMjEuZ29vZ2xlLmNsb3VkLm5ldHdvcmtt",
+            "YW5hZ2VtZW50LnYxLkRyb3BJbmZvLkNhdXNlEhQKDHJlc291cmNlX3VyaRgC",
+            "IAEoCSLgCgoFQ2F1c2USFQoRQ0FVU0VfVU5TUEVDSUZJRUQQABIcChhVTktO",
+            "T1dOX0VYVEVSTkFMX0FERFJFU1MQARIZChVGT1JFSUdOX0lQX0RJU0FMTE9X",
+            "RUQQAhIRCg1GSVJFV0FMTF9SVUxFEAMSDAoITk9fUk9VVEUQBBITCg9ST1VU",
+            "RV9CTEFDS0hPTEUQBRIXChNST1VURV9XUk9OR19ORVRXT1JLEAYSHwobUFJJ",
+            "VkFURV9UUkFGRklDX1RPX0lOVEVSTkVUEAcSJAogUFJJVkFURV9HT09HTEVf",
+            "QUNDRVNTX0RJU0FMTE9XRUQQCBIXChNOT19FWFRFUk5BTF9BRERSRVNTEAkS",
+            "HAoYVU5LTk9XTl9JTlRFUk5BTF9BRERSRVNTEAoSHAoYRk9SV0FSRElOR19S",
+            "VUxFX01JU01BVENIEAsSIwofRk9SV0FSRElOR19SVUxFX1JFR0lPTl9NSVNN",
+            "QVRDSBAZEiAKHEZPUldBUkRJTkdfUlVMRV9OT19JTlNUQU5DRVMQDBI4CjRG",
+            "SVJFV0FMTF9CTE9DS0lOR19MT0FEX0JBTEFOQ0VSX0JBQ0tFTkRfSEVBTFRI",
+            "X0NIRUNLEA0SGAoUSU5TVEFOQ0VfTk9UX1JVTk5JTkcQDhIbChdHS0VfQ0xV",
+            "U1RFUl9OT1RfUlVOTklORxAbEiIKHkNMT1VEX1NRTF9JTlNUQU5DRV9OT1Rf",
+            "UlVOTklORxAcEhgKFFRSQUZGSUNfVFlQRV9CTE9DS0VEEA8SIgoeR0tFX01B",
+            "U1RFUl9VTkFVVEhPUklaRURfQUNDRVNTEBASKgomQ0xPVURfU1FMX0lOU1RB",
+            "TkNFX1VOQVVUSE9SSVpFRF9BQ0NFU1MQERIeChpEUk9QUEVEX0lOU0lERV9H",
+            "S0VfU0VSVklDRRASEiQKIERST1BQRURfSU5TSURFX0NMT1VEX1NRTF9TRVJW",
+            "SUNFEBMSJQohR09PR0xFX01BTkFHRURfU0VSVklDRV9OT19QRUVSSU5HEBQS",
+            "KgomR09PR0xFX01BTkFHRURfU0VSVklDRV9OT19QU0NfRU5EUE9JTlQQJhIc",
+            "ChhHS0VfUFNDX0VORFBPSU5UX01JU1NJTkcQJBIkCiBDTE9VRF9TUUxfSU5T",
+            "VEFOQ0VfTk9fSVBfQUREUkVTUxAVEiUKIUdLRV9DT05UUk9MX1BMQU5FX1JF",
+            "R0lPTl9NSVNNQVRDSBAeEjMKL1BVQkxJQ19HS0VfQ09OVFJPTF9QTEFORV9U",
+            "T19QUklWQVRFX0RFU1RJTkFUSU9OEB8SHgoaR0tFX0NPTlRST0xfUExBTkVf",
+            "Tk9fUk9VVEUQIBI6CjZDTE9VRF9TUUxfSU5TVEFOQ0VfTk9UX0NPTkZJR1VS",
+            "RURfRk9SX0VYVEVSTkFMX1RSQUZGSUMQIRI0CjBQVUJMSUNfQ0xPVURfU1FM",
+            "X0lOU1RBTkNFX1RPX1BSSVZBVEVfREVTVElOQVRJT04QIhIfChtDTE9VRF9T",
+            "UUxfSU5TVEFOQ0VfTk9fUk9VVEUQIxIdChlDTE9VRF9GVU5DVElPTl9OT1Rf",
+            "QUNUSVZFEBYSGQoVVlBDX0NPTk5FQ1RPUl9OT1RfU0VUEBcSHQoZVlBDX0NP",
+            "Tk5FQ1RPUl9OT1RfUlVOTklORxAYEh8KG1BTQ19DT05ORUNUSU9OX05PVF9B",
+            "Q0NFUFRFRBAaEiAKHENMT1VEX1JVTl9SRVZJU0lPTl9OT1RfUkVBRFkQHRIn",
+            "CiNEUk9QUEVEX0lOU0lERV9QU0NfU0VSVklDRV9QUk9EVUNFUhAlEiUKIUxP",
+            "QURfQkFMQU5DRVJfSEFTX05PX1BST1hZX1NVQk5FVBAnImsKDUdLRU1hc3Rl",
+            "ckluZm8SEwoLY2x1c3Rlcl91cmkYAiABKAkSGwoTY2x1c3Rlcl9uZXR3b3Jr",
+            "X3VyaRgEIAEoCRITCgtpbnRlcm5hbF9pcBgFIAEoCRITCgtleHRlcm5hbF9p",
+            "cBgGIAEoCSKIAQoUQ2xvdWRTUUxJbnN0YW5jZUluZm8SFAoMZGlzcGxheV9u",
+            "YW1lGAEgASgJEgsKA3VyaRgCIAEoCRITCgtuZXR3b3JrX3VyaRgEIAEoCRIT",
+            "CgtpbnRlcm5hbF9pcBgFIAEoCRITCgtleHRlcm5hbF9pcBgGIAEoCRIOCgZy",
+            "ZWdpb24YByABKAkiXAoRQ2xvdWRGdW5jdGlvbkluZm8SFAoMZGlzcGxheV9u",
+            "YW1lGAEgASgJEgsKA3VyaRgCIAEoCRIQCghsb2NhdGlvbhgDIAEoCRISCgp2",
+            "ZXJzaW9uX2lkGAQgASgDImAKFENsb3VkUnVuUmV2aXNpb25JbmZvEhQKDGRp",
+            "c3BsYXlfbmFtZRgBIAEoCRILCgN1cmkYAiABKAkSEAoIbG9jYXRpb24YBCAB",
+            "KAkSEwoLc2VydmljZV91cmkYBSABKAkiXwoUQXBwRW5naW5lVmVyc2lvbklu",
+            "Zm8SFAoMZGlzcGxheV9uYW1lGAEgASgJEgsKA3VyaRgCIAEoCRIPCgdydW50",
+            "aW1lGAMgASgJEhMKC2Vudmlyb25tZW50GAQgASgJIkcKEFZwY0Nvbm5lY3Rv",
+            "ckluZm8SFAoMZGlzcGxheV9uYW1lGAEgASgJEgsKA3VyaRgCIAEoCRIQCghs",
+            "b2NhdGlvbhgDIAEoCSr2AgoQTG9hZEJhbGFuY2VyVHlwZRIiCh5MT0FEX0JB",
+            "TEFOQ0VSX1RZUEVfVU5TUEVDSUZJRUQQABIgChxIVFRQU19BRFZBTkNFRF9M",
+            "T0FEX0JBTEFOQ0VSEAESFwoTSFRUUFNfTE9BRF9CQUxBTkNFUhACEiAKHFJF",
+            "R0lPTkFMX0hUVFBTX0xPQURfQkFMQU5DRVIQAxIgChxJTlRFUk5BTF9IVFRQ",
+            "U19MT0FEX0JBTEFOQ0VSEAQSGwoXU1NMX1BST1hZX0xPQURfQkFMQU5DRVIQ",
+            "BRIbChdUQ1BfUFJPWFlfTE9BRF9CQUxBTkNFUhAGEiQKIElOVEVSTkFMX1RD",
+            "UF9QUk9YWV9MT0FEX0JBTEFOQ0VSEAcSGQoVTkVUV09SS19MT0FEX0JBTEFO",
+            "Q0VSEAgSIAocTEVHQUNZX05FVFdPUktfTE9BRF9CQUxBTkNFUhAJEiIKHlRD",
+            "UF9VRFBfSU5URVJOQUxfTE9BRF9CQUxBTkNFUhAKQvkBCiVjb20uZ29vZ2xl",
+            "LmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxQgpUcmFjZVByb3RvUAFaU2Ns",
+            "b3VkLmdvb2dsZS5jb20vZ28vbmV0d29ya21hbmFnZW1lbnQvYXBpdjEvbmV0",
+            "d29ya21hbmFnZW1lbnRwYjtuZXR3b3JrbWFuYWdlbWVudHBiqgIhR29vZ2xl",
+            "LkNsb3VkLk5ldHdvcmtNYW5hZ2VtZW50LlYxygIhR29vZ2xlXENsb3VkXE5l",
+            "dHdvcmtNYW5hZ2VtZW50XFYx6gIkR29vZ2xlOjpDbG91ZDo6TmV0d29ya01h",
+            "bmFnZW1lbnQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetworkManagement.V1.LoadBalancerType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -252,7 +261,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.InstanceInfo), global::Google.Cloud.NetworkManagement.V1.InstanceInfo.Parser, new[]{ "DisplayName", "Uri", "Interface", "NetworkUri", "InternalIp", "ExternalIp", "NetworkTags", "ServiceAccount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.NetworkInfo), global::Google.Cloud.NetworkManagement.V1.NetworkInfo.Parser, new[]{ "DisplayName", "Uri", "MatchedIpRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.FirewallInfo), global::Google.Cloud.NetworkManagement.V1.FirewallInfo.Parser, new[]{ "DisplayName", "Uri", "Direction", "Action", "Priority", "NetworkUri", "TargetTags", "TargetServiceAccounts", "Policy", "FirewallRuleType" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.FirewallInfo.Types.FirewallRuleType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.RouteInfo), global::Google.Cloud.NetworkManagement.V1.RouteInfo.Parser, new[]{ "RouteType", "NextHopType", "DisplayName", "Uri", "DestIpRange", "NextHop", "NetworkUri", "Priority", "InstanceTags" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteType), typeof(global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.NextHopType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.RouteInfo), global::Google.Cloud.NetworkManagement.V1.RouteInfo.Parser, new[]{ "RouteType", "NextHopType", "RouteScope", "DisplayName", "Uri", "DestIpRange", "NextHop", "NetworkUri", "Priority", "InstanceTags", "SrcIpRange", "DestPortRanges", "SrcPortRanges", "Protocols", "NccHubUri", "NccSpokeUri" }, new[]{ "NccHubUri", "NccSpokeUri" }, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteType), typeof(global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.NextHopType), typeof(global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteScope) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.ForwardingRuleInfo), global::Google.Cloud.NetworkManagement.V1.ForwardingRuleInfo.Parser, new[]{ "DisplayName", "Uri", "MatchedProtocol", "MatchedPortRange", "Vip", "Target", "NetworkUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.LoadBalancerInfo), global::Google.Cloud.NetworkManagement.V1.LoadBalancerInfo.Parser, new[]{ "LoadBalancerType", "HealthCheckUri", "Backends", "BackendType", "BackendUri" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.LoadBalancerInfo.Types.LoadBalancerType), typeof(global::Google.Cloud.NetworkManagement.V1.LoadBalancerInfo.Types.BackendType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.LoadBalancerBackend), global::Google.Cloud.NetworkManagement.V1.LoadBalancerBackend.Parser, new[]{ "DisplayName", "Uri", "HealthCheckFirewallState", "HealthCheckAllowingFirewallRules", "HealthCheckBlockingFirewallRules" }, null, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.LoadBalancerBackend.Types.HealthCheckFirewallState) }, null, null),
@@ -3490,6 +3499,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public RouteInfo(RouteInfo other) : this() {
       routeType_ = other.routeType_;
       nextHopType_ = other.nextHopType_;
+      routeScope_ = other.routeScope_;
       displayName_ = other.displayName_;
       uri_ = other.uri_;
       destIpRange_ = other.destIpRange_;
@@ -3497,6 +3507,12 @@ namespace Google.Cloud.NetworkManagement.V1 {
       networkUri_ = other.networkUri_;
       priority_ = other.priority_;
       instanceTags_ = other.instanceTags_.Clone();
+      srcIpRange_ = other.srcIpRange_;
+      destPortRanges_ = other.destPortRanges_.Clone();
+      srcPortRanges_ = other.srcPortRanges_.Clone();
+      protocols_ = other.protocols_.Clone();
+      nccHubUri_ = other.nccHubUri_;
+      nccSpokeUri_ = other.nccSpokeUri_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3536,11 +3552,26 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
     }
 
+    /// <summary>Field number for the "route_scope" field.</summary>
+    public const int RouteScopeFieldNumber = 14;
+    private global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteScope routeScope_ = global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteScope.Unspecified;
+    /// <summary>
+    /// Indicates where route is applicable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteScope RouteScope {
+      get { return routeScope_; }
+      set {
+        routeScope_ = value;
+      }
+    }
+
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 1;
     private string displayName_ = "";
     /// <summary>
-    /// Name of a Compute Engine route.
+    /// Name of a route.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3555,10 +3586,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int UriFieldNumber = 2;
     private string uri_ = "";
     /// <summary>
-    /// URI of a Compute Engine route.
-    /// Dynamic route from cloud router does not have a URI.
+    /// URI of a route.
+    /// Dynamic, peering static and peering dynamic routes do not have an URI.
     /// Advertised route from Google Cloud VPC to on-premises network also does
-    /// not have a URI.
+    /// not have an URI.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3603,7 +3634,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NetworkUriFieldNumber = 5;
     private string networkUri_ = "";
     /// <summary>
-    /// URI of a Compute Engine network.
+    /// URI of a Compute Engine network. NETWORK routes only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3643,6 +3674,121 @@ namespace Google.Cloud.NetworkManagement.V1 {
       get { return instanceTags_; }
     }
 
+    /// <summary>Field number for the "src_ip_range" field.</summary>
+    public const int SrcIpRangeFieldNumber = 10;
+    private string srcIpRange_ = "";
+    /// <summary>
+    /// Source IP address range of the route. Policy based routes only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SrcIpRange {
+      get { return srcIpRange_; }
+      set {
+        srcIpRange_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dest_port_ranges" field.</summary>
+    public const int DestPortRangesFieldNumber = 11;
+    private static readonly pb::FieldCodec<string> _repeated_destPortRanges_codec
+        = pb::FieldCodec.ForString(90);
+    private readonly pbc::RepeatedField<string> destPortRanges_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Destination port ranges of the route. Policy based routes only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DestPortRanges {
+      get { return destPortRanges_; }
+    }
+
+    /// <summary>Field number for the "src_port_ranges" field.</summary>
+    public const int SrcPortRangesFieldNumber = 12;
+    private static readonly pb::FieldCodec<string> _repeated_srcPortRanges_codec
+        = pb::FieldCodec.ForString(98);
+    private readonly pbc::RepeatedField<string> srcPortRanges_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Source port ranges of the route. Policy based routes only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> SrcPortRanges {
+      get { return srcPortRanges_; }
+    }
+
+    /// <summary>Field number for the "protocols" field.</summary>
+    public const int ProtocolsFieldNumber = 13;
+    private static readonly pb::FieldCodec<string> _repeated_protocols_codec
+        = pb::FieldCodec.ForString(106);
+    private readonly pbc::RepeatedField<string> protocols_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Protocols of the route. Policy based routes only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Protocols {
+      get { return protocols_; }
+    }
+
+    /// <summary>Field number for the "ncc_hub_uri" field.</summary>
+    public const int NccHubUriFieldNumber = 15;
+    private readonly static string NccHubUriDefaultValue = "";
+
+    private string nccHubUri_;
+    /// <summary>
+    /// URI of a NCC Hub. NCC_HUB routes only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NccHubUri {
+      get { return nccHubUri_ ?? NccHubUriDefaultValue; }
+      set {
+        nccHubUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "ncc_hub_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNccHubUri {
+      get { return nccHubUri_ != null; }
+    }
+    /// <summary>Clears the value of the "ncc_hub_uri" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNccHubUri() {
+      nccHubUri_ = null;
+    }
+
+    /// <summary>Field number for the "ncc_spoke_uri" field.</summary>
+    public const int NccSpokeUriFieldNumber = 16;
+    private readonly static string NccSpokeUriDefaultValue = "";
+
+    private string nccSpokeUri_;
+    /// <summary>
+    /// URI of a NCC Spoke. NCC_HUB routes only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NccSpokeUri {
+      get { return nccSpokeUri_ ?? NccSpokeUriDefaultValue; }
+      set {
+        nccSpokeUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "ncc_spoke_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNccSpokeUri {
+      get { return nccSpokeUri_ != null; }
+    }
+    /// <summary>Clears the value of the "ncc_spoke_uri" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNccSpokeUri() {
+      nccSpokeUri_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3660,6 +3806,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
       if (RouteType != other.RouteType) return false;
       if (NextHopType != other.NextHopType) return false;
+      if (RouteScope != other.RouteScope) return false;
       if (DisplayName != other.DisplayName) return false;
       if (Uri != other.Uri) return false;
       if (DestIpRange != other.DestIpRange) return false;
@@ -3667,6 +3814,12 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (NetworkUri != other.NetworkUri) return false;
       if (Priority != other.Priority) return false;
       if(!instanceTags_.Equals(other.instanceTags_)) return false;
+      if (SrcIpRange != other.SrcIpRange) return false;
+      if(!destPortRanges_.Equals(other.destPortRanges_)) return false;
+      if(!srcPortRanges_.Equals(other.srcPortRanges_)) return false;
+      if(!protocols_.Equals(other.protocols_)) return false;
+      if (NccHubUri != other.NccHubUri) return false;
+      if (NccSpokeUri != other.NccSpokeUri) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3676,6 +3829,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       int hash = 1;
       if (RouteType != global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteType.Unspecified) hash ^= RouteType.GetHashCode();
       if (NextHopType != global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.NextHopType.Unspecified) hash ^= NextHopType.GetHashCode();
+      if (RouteScope != global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteScope.Unspecified) hash ^= RouteScope.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
       if (DestIpRange.Length != 0) hash ^= DestIpRange.GetHashCode();
@@ -3683,6 +3837,12 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (NetworkUri.Length != 0) hash ^= NetworkUri.GetHashCode();
       if (Priority != 0) hash ^= Priority.GetHashCode();
       hash ^= instanceTags_.GetHashCode();
+      if (SrcIpRange.Length != 0) hash ^= SrcIpRange.GetHashCode();
+      hash ^= destPortRanges_.GetHashCode();
+      hash ^= srcPortRanges_.GetHashCode();
+      hash ^= protocols_.GetHashCode();
+      if (HasNccHubUri) hash ^= NccHubUri.GetHashCode();
+      if (HasNccSpokeUri) hash ^= NccSpokeUri.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3734,6 +3894,25 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(72);
         output.WriteEnum((int) NextHopType);
       }
+      if (SrcIpRange.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(SrcIpRange);
+      }
+      destPortRanges_.WriteTo(output, _repeated_destPortRanges_codec);
+      srcPortRanges_.WriteTo(output, _repeated_srcPortRanges_codec);
+      protocols_.WriteTo(output, _repeated_protocols_codec);
+      if (RouteScope != global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteScope.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) RouteScope);
+      }
+      if (HasNccHubUri) {
+        output.WriteRawTag(122);
+        output.WriteString(NccHubUri);
+      }
+      if (HasNccSpokeUri) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(NccSpokeUri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3777,6 +3956,25 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(72);
         output.WriteEnum((int) NextHopType);
       }
+      if (SrcIpRange.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(SrcIpRange);
+      }
+      destPortRanges_.WriteTo(ref output, _repeated_destPortRanges_codec);
+      srcPortRanges_.WriteTo(ref output, _repeated_srcPortRanges_codec);
+      protocols_.WriteTo(ref output, _repeated_protocols_codec);
+      if (RouteScope != global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteScope.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) RouteScope);
+      }
+      if (HasNccHubUri) {
+        output.WriteRawTag(122);
+        output.WriteString(NccHubUri);
+      }
+      if (HasNccSpokeUri) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(NccSpokeUri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3792,6 +3990,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
       if (NextHopType != global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.NextHopType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NextHopType);
+      }
+      if (RouteScope != global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteScope.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RouteScope);
       }
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
@@ -3812,6 +4013,18 @@ namespace Google.Cloud.NetworkManagement.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Priority);
       }
       size += instanceTags_.CalculateSize(_repeated_instanceTags_codec);
+      if (SrcIpRange.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SrcIpRange);
+      }
+      size += destPortRanges_.CalculateSize(_repeated_destPortRanges_codec);
+      size += srcPortRanges_.CalculateSize(_repeated_srcPortRanges_codec);
+      size += protocols_.CalculateSize(_repeated_protocols_codec);
+      if (HasNccHubUri) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NccHubUri);
+      }
+      if (HasNccSpokeUri) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(NccSpokeUri);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3829,6 +4042,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
       if (other.NextHopType != global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.NextHopType.Unspecified) {
         NextHopType = other.NextHopType;
+      }
+      if (other.RouteScope != global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteScope.Unspecified) {
+        RouteScope = other.RouteScope;
       }
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
@@ -3849,6 +4065,18 @@ namespace Google.Cloud.NetworkManagement.V1 {
         Priority = other.Priority;
       }
       instanceTags_.Add(other.instanceTags_);
+      if (other.SrcIpRange.Length != 0) {
+        SrcIpRange = other.SrcIpRange;
+      }
+      destPortRanges_.Add(other.destPortRanges_);
+      srcPortRanges_.Add(other.srcPortRanges_);
+      protocols_.Add(other.protocols_);
+      if (other.HasNccHubUri) {
+        NccHubUri = other.NccHubUri;
+      }
+      if (other.HasNccSpokeUri) {
+        NccSpokeUri = other.NccSpokeUri;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3898,6 +4126,34 @@ namespace Google.Cloud.NetworkManagement.V1 {
           }
           case 72: {
             NextHopType = (global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.NextHopType) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            SrcIpRange = input.ReadString();
+            break;
+          }
+          case 90: {
+            destPortRanges_.AddEntriesFrom(input, _repeated_destPortRanges_codec);
+            break;
+          }
+          case 98: {
+            srcPortRanges_.AddEntriesFrom(input, _repeated_srcPortRanges_codec);
+            break;
+          }
+          case 106: {
+            protocols_.AddEntriesFrom(input, _repeated_protocols_codec);
+            break;
+          }
+          case 112: {
+            RouteScope = (global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteScope) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            NccHubUri = input.ReadString();
+            break;
+          }
+          case 130: {
+            NccSpokeUri = input.ReadString();
             break;
           }
         }
@@ -3951,6 +4207,34 @@ namespace Google.Cloud.NetworkManagement.V1 {
             NextHopType = (global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.NextHopType) input.ReadEnum();
             break;
           }
+          case 82: {
+            SrcIpRange = input.ReadString();
+            break;
+          }
+          case 90: {
+            destPortRanges_.AddEntriesFrom(ref input, _repeated_destPortRanges_codec);
+            break;
+          }
+          case 98: {
+            srcPortRanges_.AddEntriesFrom(ref input, _repeated_srcPortRanges_codec);
+            break;
+          }
+          case 106: {
+            protocols_.AddEntriesFrom(ref input, _repeated_protocols_codec);
+            break;
+          }
+          case 112: {
+            RouteScope = (global::Google.Cloud.NetworkManagement.V1.RouteInfo.Types.RouteScope) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            NccHubUri = input.ReadString();
+            break;
+          }
+          case 130: {
+            NccSpokeUri = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -3994,6 +4278,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
         /// A dynamic route received from peering network.
         /// </summary>
         [pbr::OriginalName("PEERING_DYNAMIC")] PeeringDynamic = 6,
+        /// <summary>
+        /// Policy based route.
+        /// </summary>
+        [pbr::OriginalName("POLICY_BASED")] PolicyBased = 7,
       }
 
       /// <summary>
@@ -4054,6 +4342,28 @@ namespace Google.Cloud.NetworkManagement.V1 {
         /// instance](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/ra-overview).
         /// </summary>
         [pbr::OriginalName("NEXT_HOP_ROUTER_APPLIANCE")] NextHopRouterAppliance = 11,
+        /// <summary>
+        /// Next hop is an NCC hub.
+        /// </summary>
+        [pbr::OriginalName("NEXT_HOP_NCC_HUB")] NextHopNccHub = 12,
+      }
+
+      /// <summary>
+      /// Indicates where routes are applicable.
+      /// </summary>
+      public enum RouteScope {
+        /// <summary>
+        /// Unspecified scope. Default value.
+        /// </summary>
+        [pbr::OriginalName("ROUTE_SCOPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Route is applicable to packets in Network.
+        /// </summary>
+        [pbr::OriginalName("NETWORK")] Network = 1,
+        /// <summary>
+        /// Route is applicable to packets using NCC Hub's routing table.
+        /// </summary>
+        [pbr::OriginalName("NCC_HUB")] NccHub = 2,
       }
 
     }
@@ -7250,6 +7560,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
         /// Forwarded to a VPC network in another project.
         /// </summary>
         [pbr::OriginalName("ANOTHER_PROJECT")] AnotherProject = 7,
+        /// <summary>
+        /// Forwarded to an NCC Hub.
+        /// </summary>
+        [pbr::OriginalName("NCC_HUB")] NccHub = 8,
       }
 
     }
