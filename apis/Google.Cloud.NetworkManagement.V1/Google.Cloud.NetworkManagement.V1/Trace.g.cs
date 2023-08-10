@@ -166,10 +166,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
             "RBAAEg8KC1BFRVJJTkdfVlBDEAESDwoLVlBOX0dBVEVXQVkQAhIQCgxJTlRF",
             "UkNPTk5FQ1QQAxIOCgpHS0VfTUFTVEVSEAQSIgoeSU1QT1JURURfQ1VTVE9N",
             "X1JPVVRFX05FWFRfSE9QEAUSFgoSQ0xPVURfU1FMX0lOU1RBTkNFEAYSEwoP",
-            "QU5PVEhFUl9QUk9KRUNUEAcimAQKCUFib3J0SW5mbxJBCgVjYXVzZRgBIAEo",
+            "QU5PVEhFUl9QUk9KRUNUEAci+wUKCUFib3J0SW5mbxJBCgVjYXVzZRgBIAEo",
             "DjIyLmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5BYm9ydElu",
             "Zm8uQ2F1c2USFAoMcmVzb3VyY2VfdXJpGAIgASgJEiMKG3Byb2plY3RzX21p",
-            "c3NpbmdfcGVybWlzc2lvbhgDIAMoCSKMAwoFQ2F1c2USFQoRQ0FVU0VfVU5T",
+            "c3NpbmdfcGVybWlzc2lvbhgDIAMoCSLvBAoFQ2F1c2USFQoRQ0FVU0VfVU5T",
             "UEVDSUZJRUQQABITCg9VTktOT1dOX05FVFdPUksQARIOCgpVTktOT1dOX0lQ",
             "EAISEwoPVU5LTk9XTl9QUk9KRUNUEAMSFQoRUEVSTUlTU0lPTl9ERU5JRUQQ",
             "BBIWChJOT19TT1VSQ0VfTE9DQVRJT04QBRIUChBJTlZBTElEX0FSR1VNRU5U",
@@ -178,56 +178,72 @@ namespace Google.Cloud.NetworkManagement.V1 {
             "Eh0KGVNPVVJDRV9FTkRQT0lOVF9OT1RfRk9VTkQQCxIdChlNSVNNQVRDSEVE",
             "X1NPVVJDRV9ORVRXT1JLEAwSIgoeREVTVElOQVRJT05fRU5EUE9JTlRfTk9U",
             "X0ZPVU5EEA0SIgoeTUlTTUFUQ0hFRF9ERVNUSU5BVElPTl9ORVRXT1JLEA4S",
-            "DwoLVU5TVVBQT1JURUQQDyK5BwoIRHJvcEluZm8SQAoFY2F1c2UYASABKA4y",
-            "MS5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuRHJvcEluZm8u",
-            "Q2F1c2USFAoMcmVzb3VyY2VfdXJpGAIgASgJItQGCgVDYXVzZRIVChFDQVVT",
-            "RV9VTlNQRUNJRklFRBAAEhwKGFVOS05PV05fRVhURVJOQUxfQUREUkVTUxAB",
-            "EhkKFUZPUkVJR05fSVBfRElTQUxMT1dFRBACEhEKDUZJUkVXQUxMX1JVTEUQ",
-            "AxIMCghOT19ST1VURRAEEhMKD1JPVVRFX0JMQUNLSE9MRRAFEhcKE1JPVVRF",
-            "X1dST05HX05FVFdPUksQBhIfChtQUklWQVRFX1RSQUZGSUNfVE9fSU5URVJO",
-            "RVQQBxIkCiBQUklWQVRFX0dPT0dMRV9BQ0NFU1NfRElTQUxMT1dFRBAIEhcK",
-            "E05PX0VYVEVSTkFMX0FERFJFU1MQCRIcChhVTktOT1dOX0lOVEVSTkFMX0FE",
-            "RFJFU1MQChIcChhGT1JXQVJESU5HX1JVTEVfTUlTTUFUQ0gQCxIgChxGT1JX",
-            "QVJESU5HX1JVTEVfTk9fSU5TVEFOQ0VTEAwSOAo0RklSRVdBTExfQkxPQ0tJ",
-            "TkdfTE9BRF9CQUxBTkNFUl9CQUNLRU5EX0hFQUxUSF9DSEVDSxANEhgKFElO",
-            "U1RBTkNFX05PVF9SVU5OSU5HEA4SGAoUVFJBRkZJQ19UWVBFX0JMT0NLRUQQ",
-            "DxIiCh5HS0VfTUFTVEVSX1VOQVVUSE9SSVpFRF9BQ0NFU1MQEBIqCiZDTE9V",
-            "RF9TUUxfSU5TVEFOQ0VfVU5BVVRIT1JJWkVEX0FDQ0VTUxAREh4KGkRST1BQ",
-            "RURfSU5TSURFX0dLRV9TRVJWSUNFEBISJAogRFJPUFBFRF9JTlNJREVfQ0xP",
-            "VURfU1FMX1NFUlZJQ0UQExIlCiFHT09HTEVfTUFOQUdFRF9TRVJWSUNFX05P",
-            "X1BFRVJJTkcQFBIkCiBDTE9VRF9TUUxfSU5TVEFOQ0VfTk9fSVBfQUREUkVT",
-            "UxAVEh0KGUNMT1VEX0ZVTkNUSU9OX05PVF9BQ1RJVkUQFhIZChVWUENfQ09O",
-            "TkVDVE9SX05PVF9TRVQQFxIdChlWUENfQ09OTkVDVE9SX05PVF9SVU5OSU5H",
-            "EBgSIwofRk9SV0FSRElOR19SVUxFX1JFR0lPTl9NSVNNQVRDSBAZEh8KG1BT",
-            "Q19DT05ORUNUSU9OX05PVF9BQ0NFUFRFRBAaImsKDUdLRU1hc3RlckluZm8S",
-            "EwoLY2x1c3Rlcl91cmkYAiABKAkSGwoTY2x1c3Rlcl9uZXR3b3JrX3VyaRgE",
-            "IAEoCRITCgtpbnRlcm5hbF9pcBgFIAEoCRITCgtleHRlcm5hbF9pcBgGIAEo",
-            "CSKIAQoUQ2xvdWRTUUxJbnN0YW5jZUluZm8SFAoMZGlzcGxheV9uYW1lGAEg",
-            "ASgJEgsKA3VyaRgCIAEoCRITCgtuZXR3b3JrX3VyaRgEIAEoCRITCgtpbnRl",
-            "cm5hbF9pcBgFIAEoCRITCgtleHRlcm5hbF9pcBgGIAEoCRIOCgZyZWdpb24Y",
-            "ByABKAkiXAoRQ2xvdWRGdW5jdGlvbkluZm8SFAoMZGlzcGxheV9uYW1lGAEg",
-            "ASgJEgsKA3VyaRgCIAEoCRIQCghsb2NhdGlvbhgDIAEoCRISCgp2ZXJzaW9u",
-            "X2lkGAQgASgDImAKFENsb3VkUnVuUmV2aXNpb25JbmZvEhQKDGRpc3BsYXlf",
-            "bmFtZRgBIAEoCRILCgN1cmkYAiABKAkSEAoIbG9jYXRpb24YBCABKAkSEwoL",
-            "c2VydmljZV91cmkYBSABKAkiXwoUQXBwRW5naW5lVmVyc2lvbkluZm8SFAoM",
-            "ZGlzcGxheV9uYW1lGAEgASgJEgsKA3VyaRgCIAEoCRIPCgdydW50aW1lGAMg",
-            "ASgJEhMKC2Vudmlyb25tZW50GAQgASgJIkcKEFZwY0Nvbm5lY3RvckluZm8S",
-            "FAoMZGlzcGxheV9uYW1lGAEgASgJEgsKA3VyaRgCIAEoCRIQCghsb2NhdGlv",
-            "bhgDIAEoCSr2AgoQTG9hZEJhbGFuY2VyVHlwZRIiCh5MT0FEX0JBTEFOQ0VS",
-            "X1RZUEVfVU5TUEVDSUZJRUQQABIgChxIVFRQU19BRFZBTkNFRF9MT0FEX0JB",
-            "TEFOQ0VSEAESFwoTSFRUUFNfTE9BRF9CQUxBTkNFUhACEiAKHFJFR0lPTkFM",
-            "X0hUVFBTX0xPQURfQkFMQU5DRVIQAxIgChxJTlRFUk5BTF9IVFRQU19MT0FE",
-            "X0JBTEFOQ0VSEAQSGwoXU1NMX1BST1hZX0xPQURfQkFMQU5DRVIQBRIbChdU",
-            "Q1BfUFJPWFlfTE9BRF9CQUxBTkNFUhAGEiQKIElOVEVSTkFMX1RDUF9QUk9Y",
-            "WV9MT0FEX0JBTEFOQ0VSEAcSGQoVTkVUV09SS19MT0FEX0JBTEFOQ0VSEAgS",
-            "IAocTEVHQUNZX05FVFdPUktfTE9BRF9CQUxBTkNFUhAJEiIKHlRDUF9VRFBf",
-            "SU5URVJOQUxfTE9BRF9CQUxBTkNFUhAKQvkBCiVjb20uZ29vZ2xlLmNsb3Vk",
-            "Lm5ldHdvcmttYW5hZ2VtZW50LnYxQgpUcmFjZVByb3RvUAFaU2Nsb3VkLmdv",
-            "b2dsZS5jb20vZ28vbmV0d29ya21hbmFnZW1lbnQvYXBpdjEvbmV0d29ya21h",
-            "bmFnZW1lbnRwYjtuZXR3b3JrbWFuYWdlbWVudHBiqgIhR29vZ2xlLkNsb3Vk",
-            "Lk5ldHdvcmtNYW5hZ2VtZW50LlYxygIhR29vZ2xlXENsb3VkXE5ldHdvcmtN",
-            "YW5hZ2VtZW50XFYx6gIkR29vZ2xlOjpDbG91ZDo6TmV0d29ya01hbmFnZW1l",
-            "bnQ6OlYxYgZwcm90bzM="));
+            "DwoLVU5TVVBQT1JURUQQDxIZChVNSVNNQVRDSEVEX0lQX1ZFUlNJT04QEBIm",
+            "CiJHS0VfS09OTkVDVElWSVRZX1BST1hZX1VOU1VQUE9SVEVEEBESHQoZUkVT",
+            "T1VSQ0VfQ09ORklHX05PVF9GT1VORBASEjEKLUdPT0dMRV9NQU5BR0VEX1NF",
+            "UlZJQ0VfQU1CSUdVT1VTX1BTQ19FTkRQT0lOVBATEiQKIFNPVVJDRV9QU0Nf",
+            "Q0xPVURfU1FMX1VOU1VQUE9SVEVEEBQSJgoiU09VUkNFX0ZPUldBUkRJTkdf",
+            "UlVMRV9VTlNVUFBPUlRFRBAVIsULCghEcm9wSW5mbxJACgVjYXVzZRgBIAEo",
+            "DjIxLmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5Ecm9wSW5m",
+            "by5DYXVzZRIUCgxyZXNvdXJjZV91cmkYAiABKAki4AoKBUNhdXNlEhUKEUNB",
+            "VVNFX1VOU1BFQ0lGSUVEEAASHAoYVU5LTk9XTl9FWFRFUk5BTF9BRERSRVNT",
+            "EAESGQoVRk9SRUlHTl9JUF9ESVNBTExPV0VEEAISEQoNRklSRVdBTExfUlVM",
+            "RRADEgwKCE5PX1JPVVRFEAQSEwoPUk9VVEVfQkxBQ0tIT0xFEAUSFwoTUk9V",
+            "VEVfV1JPTkdfTkVUV09SSxAGEh8KG1BSSVZBVEVfVFJBRkZJQ19UT19JTlRF",
+            "Uk5FVBAHEiQKIFBSSVZBVEVfR09PR0xFX0FDQ0VTU19ESVNBTExPV0VEEAgS",
+            "FwoTTk9fRVhURVJOQUxfQUREUkVTUxAJEhwKGFVOS05PV05fSU5URVJOQUxf",
+            "QUREUkVTUxAKEhwKGEZPUldBUkRJTkdfUlVMRV9NSVNNQVRDSBALEiMKH0ZP",
+            "UldBUkRJTkdfUlVMRV9SRUdJT05fTUlTTUFUQ0gQGRIgChxGT1JXQVJESU5H",
+            "X1JVTEVfTk9fSU5TVEFOQ0VTEAwSOAo0RklSRVdBTExfQkxPQ0tJTkdfTE9B",
+            "RF9CQUxBTkNFUl9CQUNLRU5EX0hFQUxUSF9DSEVDSxANEhgKFElOU1RBTkNF",
+            "X05PVF9SVU5OSU5HEA4SGwoXR0tFX0NMVVNURVJfTk9UX1JVTk5JTkcQGxIi",
+            "Ch5DTE9VRF9TUUxfSU5TVEFOQ0VfTk9UX1JVTk5JTkcQHBIYChRUUkFGRklD",
+            "X1RZUEVfQkxPQ0tFRBAPEiIKHkdLRV9NQVNURVJfVU5BVVRIT1JJWkVEX0FD",
+            "Q0VTUxAQEioKJkNMT1VEX1NRTF9JTlNUQU5DRV9VTkFVVEhPUklaRURfQUND",
+            "RVNTEBESHgoaRFJPUFBFRF9JTlNJREVfR0tFX1NFUlZJQ0UQEhIkCiBEUk9Q",
+            "UEVEX0lOU0lERV9DTE9VRF9TUUxfU0VSVklDRRATEiUKIUdPT0dMRV9NQU5B",
+            "R0VEX1NFUlZJQ0VfTk9fUEVFUklORxAUEioKJkdPT0dMRV9NQU5BR0VEX1NF",
+            "UlZJQ0VfTk9fUFNDX0VORFBPSU5UECYSHAoYR0tFX1BTQ19FTkRQT0lOVF9N",
+            "SVNTSU5HECQSJAogQ0xPVURfU1FMX0lOU1RBTkNFX05PX0lQX0FERFJFU1MQ",
+            "FRIlCiFHS0VfQ09OVFJPTF9QTEFORV9SRUdJT05fTUlTTUFUQ0gQHhIzCi9Q",
+            "VUJMSUNfR0tFX0NPTlRST0xfUExBTkVfVE9fUFJJVkFURV9ERVNUSU5BVElP",
+            "ThAfEh4KGkdLRV9DT05UUk9MX1BMQU5FX05PX1JPVVRFECASOgo2Q0xPVURf",
+            "U1FMX0lOU1RBTkNFX05PVF9DT05GSUdVUkVEX0ZPUl9FWFRFUk5BTF9UUkFG",
+            "RklDECESNAowUFVCTElDX0NMT1VEX1NRTF9JTlNUQU5DRV9UT19QUklWQVRF",
+            "X0RFU1RJTkFUSU9OECISHwobQ0xPVURfU1FMX0lOU1RBTkNFX05PX1JPVVRF",
+            "ECMSHQoZQ0xPVURfRlVOQ1RJT05fTk9UX0FDVElWRRAWEhkKFVZQQ19DT05O",
+            "RUNUT1JfTk9UX1NFVBAXEh0KGVZQQ19DT05ORUNUT1JfTk9UX1JVTk5JTkcQ",
+            "GBIfChtQU0NfQ09OTkVDVElPTl9OT1RfQUNDRVBURUQQGhIgChxDTE9VRF9S",
+            "VU5fUkVWSVNJT05fTk9UX1JFQURZEB0SJwojRFJPUFBFRF9JTlNJREVfUFND",
+            "X1NFUlZJQ0VfUFJPRFVDRVIQJRIlCiFMT0FEX0JBTEFOQ0VSX0hBU19OT19Q",
+            "Uk9YWV9TVUJORVQQJyJrCg1HS0VNYXN0ZXJJbmZvEhMKC2NsdXN0ZXJfdXJp",
+            "GAIgASgJEhsKE2NsdXN0ZXJfbmV0d29ya191cmkYBCABKAkSEwoLaW50ZXJu",
+            "YWxfaXAYBSABKAkSEwoLZXh0ZXJuYWxfaXAYBiABKAkiiAEKFENsb3VkU1FM",
+            "SW5zdGFuY2VJbmZvEhQKDGRpc3BsYXlfbmFtZRgBIAEoCRILCgN1cmkYAiAB",
+            "KAkSEwoLbmV0d29ya191cmkYBCABKAkSEwoLaW50ZXJuYWxfaXAYBSABKAkS",
+            "EwoLZXh0ZXJuYWxfaXAYBiABKAkSDgoGcmVnaW9uGAcgASgJIlwKEUNsb3Vk",
+            "RnVuY3Rpb25JbmZvEhQKDGRpc3BsYXlfbmFtZRgBIAEoCRILCgN1cmkYAiAB",
+            "KAkSEAoIbG9jYXRpb24YAyABKAkSEgoKdmVyc2lvbl9pZBgEIAEoAyJgChRD",
+            "bG91ZFJ1blJldmlzaW9uSW5mbxIUCgxkaXNwbGF5X25hbWUYASABKAkSCwoD",
+            "dXJpGAIgASgJEhAKCGxvY2F0aW9uGAQgASgJEhMKC3NlcnZpY2VfdXJpGAUg",
+            "ASgJIl8KFEFwcEVuZ2luZVZlcnNpb25JbmZvEhQKDGRpc3BsYXlfbmFtZRgB",
+            "IAEoCRILCgN1cmkYAiABKAkSDwoHcnVudGltZRgDIAEoCRITCgtlbnZpcm9u",
+            "bWVudBgEIAEoCSJHChBWcGNDb25uZWN0b3JJbmZvEhQKDGRpc3BsYXlfbmFt",
+            "ZRgBIAEoCRILCgN1cmkYAiABKAkSEAoIbG9jYXRpb24YAyABKAkq9gIKEExv",
+            "YWRCYWxhbmNlclR5cGUSIgoeTE9BRF9CQUxBTkNFUl9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASIAocSFRUUFNfQURWQU5DRURfTE9BRF9CQUxBTkNFUhABEhcKE0hU",
+            "VFBTX0xPQURfQkFMQU5DRVIQAhIgChxSRUdJT05BTF9IVFRQU19MT0FEX0JB",
+            "TEFOQ0VSEAMSIAocSU5URVJOQUxfSFRUUFNfTE9BRF9CQUxBTkNFUhAEEhsK",
+            "F1NTTF9QUk9YWV9MT0FEX0JBTEFOQ0VSEAUSGwoXVENQX1BST1hZX0xPQURf",
+            "QkFMQU5DRVIQBhIkCiBJTlRFUk5BTF9UQ1BfUFJPWFlfTE9BRF9CQUxBTkNF",
+            "UhAHEhkKFU5FVFdPUktfTE9BRF9CQUxBTkNFUhAIEiAKHExFR0FDWV9ORVRX",
+            "T1JLX0xPQURfQkFMQU5DRVIQCRIiCh5UQ1BfVURQX0lOVEVSTkFMX0xPQURf",
+            "QkFMQU5DRVIQCkL5AQolY29tLmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdl",
+            "bWVudC52MUIKVHJhY2VQcm90b1ABWlNjbG91ZC5nb29nbGUuY29tL2dvL25l",
+            "dHdvcmttYW5hZ2VtZW50L2FwaXYxL25ldHdvcmttYW5hZ2VtZW50cGI7bmV0",
+            "d29ya21hbmFnZW1lbnRwYqoCIUdvb2dsZS5DbG91ZC5OZXR3b3JrTWFuYWdl",
+            "bWVudC5WMcoCIUdvb2dsZVxDbG91ZFxOZXR3b3JrTWFuYWdlbWVudFxWMeoC",
+            "JEdvb2dsZTo6Q2xvdWQ6Ok5ldHdvcmtNYW5hZ2VtZW50OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetworkManagement.V1.LoadBalancerType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -7593,6 +7609,36 @@ namespace Google.Cloud.NetworkManagement.V1 {
         /// Aborted because the test scenario is not supported.
         /// </summary>
         [pbr::OriginalName("UNSUPPORTED")] Unsupported = 15,
+        /// <summary>
+        /// Aborted because the source and destination resources have no common IP
+        /// version.
+        /// </summary>
+        [pbr::OriginalName("MISMATCHED_IP_VERSION")] MismatchedIpVersion = 16,
+        /// <summary>
+        /// Aborted because the connection between the control plane and the node of
+        /// the source cluster is initiated by the node and managed by the
+        /// Konnectivity proxy.
+        /// </summary>
+        [pbr::OriginalName("GKE_KONNECTIVITY_PROXY_UNSUPPORTED")] GkeKonnectivityProxyUnsupported = 17,
+        /// <summary>
+        /// Aborted because expected resource configuration was missing.
+        /// </summary>
+        [pbr::OriginalName("RESOURCE_CONFIG_NOT_FOUND")] ResourceConfigNotFound = 18,
+        /// <summary>
+        /// Aborted because a PSC endpoint selection for the Google-managed service
+        /// is ambiguous (several PSC endpoints satisfy test input).
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_MANAGED_SERVICE_AMBIGUOUS_PSC_ENDPOINT")] GoogleManagedServiceAmbiguousPscEndpoint = 19,
+        /// <summary>
+        /// Aborted because tests with a PSC-based Cloud SQL instance as a source are
+        /// not supported.
+        /// </summary>
+        [pbr::OriginalName("SOURCE_PSC_CLOUD_SQL_UNSUPPORTED")] SourcePscCloudSqlUnsupported = 20,
+        /// <summary>
+        /// Aborted because tests with a forwarding rule as a source are not
+        /// supported.
+        /// </summary>
+        [pbr::OriginalName("SOURCE_FORWARDING_RULE_UNSUPPORTED")] SourceForwardingRuleUnsupported = 21,
       }
 
     }
@@ -7903,6 +7949,11 @@ namespace Google.Cloud.NetworkManagement.V1 {
         /// </summary>
         [pbr::OriginalName("FORWARDING_RULE_MISMATCH")] ForwardingRuleMismatch = 11,
         /// <summary>
+        /// Packet could be dropped because it was sent from a different region
+        /// to a regional forwarding without global access.
+        /// </summary>
+        [pbr::OriginalName("FORWARDING_RULE_REGION_MISMATCH")] ForwardingRuleRegionMismatch = 25,
+        /// <summary>
         /// Forwarding rule does not have backends configured.
         /// </summary>
         [pbr::OriginalName("FORWARDING_RULE_NO_INSTANCES")] ForwardingRuleNoInstances = 12,
@@ -7918,6 +7969,14 @@ namespace Google.Cloud.NetworkManagement.V1 {
         /// running state.
         /// </summary>
         [pbr::OriginalName("INSTANCE_NOT_RUNNING")] InstanceNotRunning = 14,
+        /// <summary>
+        /// Packet sent from or to a GKE cluster that is not in running state.
+        /// </summary>
+        [pbr::OriginalName("GKE_CLUSTER_NOT_RUNNING")] GkeClusterNotRunning = 27,
+        /// <summary>
+        /// Packet sent from or to a Cloud SQL instance that is not in running state.
+        /// </summary>
+        [pbr::OriginalName("CLOUD_SQL_INSTANCE_NOT_RUNNING")] CloudSqlInstanceNotRunning = 28,
         /// <summary>
         /// The type of traffic is blocked and the user cannot configure a firewall
         /// rule to enable it. See [Always blocked
@@ -7953,12 +8012,53 @@ namespace Google.Cloud.NetworkManagement.V1 {
         /// </summary>
         [pbr::OriginalName("GOOGLE_MANAGED_SERVICE_NO_PEERING")] GoogleManagedServiceNoPeering = 20,
         /// <summary>
+        /// Packet was dropped because the Google-managed service uses Private
+        /// Service Connect (PSC), but the PSC endpoint is not found in the project.
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_MANAGED_SERVICE_NO_PSC_ENDPOINT")] GoogleManagedServiceNoPscEndpoint = 38,
+        /// <summary>
+        /// Packet was dropped because the GKE cluster uses Private Service Connect
+        /// (PSC), but the PSC endpoint is not found in the project.
+        /// </summary>
+        [pbr::OriginalName("GKE_PSC_ENDPOINT_MISSING")] GkePscEndpointMissing = 36,
+        /// <summary>
         /// Packet was dropped because the Cloud SQL instance has neither a private
         /// nor a public IP address.
         /// </summary>
         [pbr::OriginalName("CLOUD_SQL_INSTANCE_NO_IP_ADDRESS")] CloudSqlInstanceNoIpAddress = 21,
         /// <summary>
-        /// Packet could be dropped because the Cloud function is not in an active
+        /// Packet was dropped because a GKE cluster private endpoint is
+        /// unreachable from a region different from the cluster's region.
+        /// </summary>
+        [pbr::OriginalName("GKE_CONTROL_PLANE_REGION_MISMATCH")] GkeControlPlaneRegionMismatch = 30,
+        /// <summary>
+        /// Packet sent from a public GKE cluster control plane to a private
+        /// IP address.
+        /// </summary>
+        [pbr::OriginalName("PUBLIC_GKE_CONTROL_PLANE_TO_PRIVATE_DESTINATION")] PublicGkeControlPlaneToPrivateDestination = 31,
+        /// <summary>
+        /// Packet was dropped because there is no route from a GKE cluster
+        /// control plane to a destination network.
+        /// </summary>
+        [pbr::OriginalName("GKE_CONTROL_PLANE_NO_ROUTE")] GkeControlPlaneNoRoute = 32,
+        /// <summary>
+        /// Packet sent from a Cloud SQL instance to an external IP address is not
+        /// allowed. The Cloud SQL instance is not configured to send packets to
+        /// external IP addresses.
+        /// </summary>
+        [pbr::OriginalName("CLOUD_SQL_INSTANCE_NOT_CONFIGURED_FOR_EXTERNAL_TRAFFIC")] CloudSqlInstanceNotConfiguredForExternalTraffic = 33,
+        /// <summary>
+        /// Packet sent from a Cloud SQL instance with only a public IP address to a
+        /// private IP address.
+        /// </summary>
+        [pbr::OriginalName("PUBLIC_CLOUD_SQL_INSTANCE_TO_PRIVATE_DESTINATION")] PublicCloudSqlInstanceToPrivateDestination = 34,
+        /// <summary>
+        /// Packet was dropped because there is no route from a Cloud SQL
+        /// instance to a destination network.
+        /// </summary>
+        [pbr::OriginalName("CLOUD_SQL_INSTANCE_NO_ROUTE")] CloudSqlInstanceNoRoute = 35,
+        /// <summary>
+        /// Packet could be dropped because the Cloud Function is not in an active
         /// status.
         /// </summary>
         [pbr::OriginalName("CLOUD_FUNCTION_NOT_ACTIVE")] CloudFunctionNotActive = 22,
@@ -7972,14 +8072,23 @@ namespace Google.Cloud.NetworkManagement.V1 {
         /// </summary>
         [pbr::OriginalName("VPC_CONNECTOR_NOT_RUNNING")] VpcConnectorNotRunning = 24,
         /// <summary>
-        /// Packet could be dropped because it was sent from a different region
-        /// to a regional forwarding without global access.
-        /// </summary>
-        [pbr::OriginalName("FORWARDING_RULE_REGION_MISMATCH")] ForwardingRuleRegionMismatch = 25,
-        /// <summary>
-        /// Privte Service Connect (PSC) connection is not in accepted state.
+        /// The Private Service Connect endpoint is in a project that is not approved
+        /// to connect to the service.
         /// </summary>
         [pbr::OriginalName("PSC_CONNECTION_NOT_ACCEPTED")] PscConnectionNotAccepted = 26,
+        /// <summary>
+        /// Packet sent from a Cloud Run revision that is not ready.
+        /// </summary>
+        [pbr::OriginalName("CLOUD_RUN_REVISION_NOT_READY")] CloudRunRevisionNotReady = 29,
+        /// <summary>
+        /// Packet was dropped inside Private Service Connect service producer.
+        /// </summary>
+        [pbr::OriginalName("DROPPED_INSIDE_PSC_SERVICE_PRODUCER")] DroppedInsidePscServiceProducer = 37,
+        /// <summary>
+        /// Packet sent to a load balancer, which requires a proxy-only subnet and
+        /// the subnet is not found.
+        /// </summary>
+        [pbr::OriginalName("LOAD_BALANCER_HAS_NO_PROXY_SUBNET")] LoadBalancerHasNoProxySubnet = 39,
       }
 
     }
